@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -82,6 +83,8 @@ export default function GlobalSearchBar() {;
       return;      return
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 class ErrorBoundary extends React.Component {
@@ -136,6 +139,10 @@ export default function GlobalSearchBar() {;
     }
     const id = setTimeout(run, 150);
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
         const j = await r.json();
         setSuggestions(j.suggestions || []);
@@ -150,9 +157,12 @@ export default function GlobalSearchBar() {;
     return () => clearTimeout(id)
   }, [query]);
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
@@ -250,6 +260,10 @@ export default function GlobalSearchBar() {;
     rec && rec.start();
   };
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -269,6 +283,7 @@ export default function GlobalSearchBar() {;
           <ul className="max-h-64 overflow-auto py-1 text-sm">;
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     controller.current?.abort();
@@ -388,6 +403,8 @@ export default function GlobalSearchBar() {;
               <li key={i}>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <button
                   type="button"
                   onClick={() => {
@@ -395,11 +412,17 @@ export default function GlobalSearchBar() {;
                     setOpen(false);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
 
                   }}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    router && router.push(`/search?q=${encodeURIComponent(s)}`);
+
+                  }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -412,6 +435,7 @@ export default function GlobalSearchBar() {;
 
 
                   {s}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
@@ -426,6 +450,8 @@ export default function GlobalSearchBar() {;
                   {s}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </button>
               </li>
             ))}
@@ -433,6 +459,7 @@ export default function GlobalSearchBar() {;
         </div>
       )}
     </form>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   );
@@ -617,3 +644,10 @@ if (return) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+);  )
+}
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -31,6 +32,8 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -77,10 +80,18 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
+=======
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
   const schema = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const schema = {
@@ -100,13 +111,18 @@ export default function TalentMarketplace() {
         keywords='AI talent marketplace, hire developers, tech freelancers'
         canonical='https://app.ziontechgroup.com/features/talent-marketplace'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   return (
@@ -129,6 +145,7 @@ export default function TalentMarketplace() {
           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function TalentMarketplace() {
@@ -149,6 +166,8 @@ export default function TalentMarketplace() {
         canonical='https://app.ziontechgroup.com/features/talent-marketplace'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
@@ -162,12 +181,15 @@ export default function TalentMarketplace() {
         type="application/ld+json"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -201,6 +223,7 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -286,6 +309,12 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
+=======
+
+
+
+          <div className="text-center">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
             </Button>
@@ -295,6 +324,7 @@ export default function TalentMarketplace() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 =======
@@ -302,6 +332,11 @@ export default function TalentMarketplace() {
 ;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -338,6 +373,7 @@ export default function TalentMarketplace() {;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <img;
               src="https: //placehold.co/800x400";
               alt="Screenshot of talent directory";
@@ -364,18 +400,24 @@ export default function TalentMarketplace() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href="/talent">Browse Talent</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -387,3 +429,5 @@ export default function TalentMarketplace() {;
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

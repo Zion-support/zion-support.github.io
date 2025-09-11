@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {
   DropdownMenu
@@ -16,6 +19,7 @@ import {
 export function UserMenu() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
+<<<<<<< HEAD
 =======
 
 import { Link  } from './react-router-dom';
@@ -25,20 +29,27 @@ import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar
 import { Button  } from '@/components / ui / button';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
+<<<<<<< HEAD
 <<<<<<< HEAD
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
@@ -51,21 +62,30 @@ function UserMenu() {
   const { toast } = use_toast ();
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSignOut = async () => {
     try {
       await logout ();
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -73,6 +93,7 @@ import {;
   DropdownMenuSeparator,;
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function UserMenu() {;
   const { user, logout } = useAuth();
@@ -95,6 +116,8 @@ export function UserMenu() {;
 <<<<<<< HEAD
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function UserMenu() {;
   const { user, logout } = useAuth();
@@ -127,6 +150,7 @@ export function UserMenu() {
       });
     }
   }
+<<<<<<< HEAD
 =======
 
       });
@@ -136,11 +160,14 @@ export function UserMenu() {
       toast({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
         variant: "destructive"})
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
       });
     }
@@ -150,6 +177,11 @@ export function UserMenu() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!user) {;
     return (
       <div className="hidden md: flex items-center space-x-4">;
@@ -159,6 +191,7 @@ export function UserMenu() {
         <Link
           to="/signup"
           className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Link } from "react-router-dom",;
@@ -199,11 +232,14 @@ export function UserMenu() {;
         >;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           Register;
         </Link>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (!user) {
@@ -224,10 +260,15 @@ export function UserMenu() {;
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-8 w-8 rounded-full">
           <Avatar className="h-8 w-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -237,6 +278,8 @@ export function UserMenu() {;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <AvatarImage
               src={user.avatarUrl |""}
               alt={user.displayName |"User Avatar"}
@@ -246,14 +289,18 @@ export function UserMenu() {;
             </AvatarFallback>
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -264,6 +311,8 @@ export function UserMenu() {;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="text-sm font-medium leading-none">
             {user.displayName |"User"}
           </div>
@@ -272,8 +321,11 @@ export function UserMenu() {;
           </div>
           <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
           <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
@@ -292,6 +344,7 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   return (;
@@ -312,6 +365,10 @@ export function UserMenu() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 import { Link } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -360,11 +417,15 @@ export function UserMenu() {;
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />;
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />;
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Avatar>;
           <span className="sr-only">Open user menu</span>;
         </Button>;
@@ -372,18 +433,24 @@ export function UserMenu() {;
       <DropdownMenuContent align="end">;
         <div className="grid gap-2 px-2 py-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>;
           <div className="text-muted-foreground text-xs leading-none">{user.email}</div>;
           <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>;
           <div className="text-muted-foreground text-xs leading-none">{user.email}</div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="text-sm font-medium leading-none">;
             {user && user.displayName || "User"}
           </div>;
           <div className="text-muted-foreground text-xs leading-none">;
             {user && user.email}
           </div>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
         <DropdownMenuSeparator />;
         <DropdownMenuItem asChild>;
@@ -403,11 +470,17 @@ export function UserMenu() {;
       </DropdownMenuContent>;
     </DropdownMenu>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
@@ -475,6 +548,7 @@ if ( {) {
         <DropdownMenuItem on_click={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>);
+<<<<<<< HEAD
 }
 ;
 
@@ -510,3 +584,12 @@ const handleSignOut = async () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+=======
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

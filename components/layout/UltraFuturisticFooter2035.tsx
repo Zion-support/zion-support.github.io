@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -39,6 +43,8 @@ import { motion } from 'framer-motion';
 
 import {
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Zap
   Globe
   Phone
@@ -93,6 +99,7 @@ import {
   Headphones;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight
 
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -136,6 +143,8 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Zap,
   Globe,
   Phone,
@@ -187,6 +196,7 @@ import {
   HelpCircle,
   FileText,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Video,
   Headphones,;} from 'lucide-react';import { 
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
@@ -201,10 +211,16 @@ import {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
 
@@ -219,12 +235,18 @@ const contactInfo = {
 
   }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
 
   {
+<<<<<<< HEAD
 
     title: 'Industry Solutions',
 
@@ -797,6 +819,169 @@ const footerSections = [;
     title: 'Resources',;
     description: 'Documentation, support, and learning',;
     icon: <BookOpen className='w-5 h-5 text-cyan-400' />,    links: [      { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },;
+=======
+    title: 'Quantum & Emerging Tech'
+    description: 'Breakthrough quantum and space technologies'
+    icon: <Atom className='w-5 h-5 text-blue-400' />
+    links: [
+      {
+        name: 'Space Resource Mining'
+        href: '/space-resource-mining-platform'
+      }
+      {
+        name: 'Quantum Internet Security'
+        href: '/quantum-internet-security-platform'
+      }
+      {
+        name: 'Quantum-Secure Cloud Infrastructure'
+        href: '/quantum-secure-cloud-infrastructure'
+      }
+      {
+        name: 'Quantum Financial Trading Platform'
+        href: '/quantum-financial-trading'
+      }
+      {
+        name: 'AI-Powered Space Technology'
+        href: '/ai-powered-space-technology'
+      }
+      {
+        name: 'Brain-Computer Interface'
+        href: '/brain-computer-interface-platform'
+      }
+      {
+        name: 'Quantum Materials Discovery'
+        href: '/quantum-materials-discovery-platform'
+      }
+      {
+        name: 'Autonomous Vehicle AI'
+        href: '/autonomous-vehicle-ai-platform'
+      }
+      {
+        name: 'Quantum Bio-Computing'
+        href: '/quantum-bio-computing-platform'
+      }
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' }
+      { name: 'Quantum Robotics', href: '/quantum-robotics' }
+    ]
+  }
+  {
+    title: 'Enterprise IT'
+    description: 'Advanced enterprise infrastructure solutions'
+    icon: <Shield className='w-5 h-5 text-purple-400' />
+    links: [
+      {
+        name: 'Quantum-Secure Cloud'
+        href: '/quantum-secure-cloud-infrastructure'
+      }
+      {
+        name: 'Autonomous IT Operations'
+        href: '/autonomous-it-operations-center'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration'
+      }
+      {
+        name: 'Blockchain Infrastructure'
+        href: '/blockchain-infrastructure-platform'
+      }
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' }
+      {
+        name: 'Quantum Cloud Infrastructure'
+        href: '/quantum-cloud-infrastructure'
+      }
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' }
+      { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity' }
+    ]
+  }
+  {
+    title: 'Micro SAAS'
+    description: 'Innovative business solutions for modern enterprises'
+    icon: <Rocket className='w-5 h-5 text-emerald-400' />,    links: [
+      { name: 'AI Content Generator', href: '/ai-content-generator' }
+      { name: 'AI Code Review', href: '/ai-code-review' }
+      { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber-pro' },  {
+    title: 'AI & Consciousness'
+    description: 'Revolutionary AI platforms and solutions'
+    icon: <Brain className="w-5 h-5 text-cyan-400" />
+    links: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' }
+      { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' }
+      { name: 'AI Autonomous Business Operations', href: '/ai-autonomous-business-operations' }
+      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant' }
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training' }
+      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform' }
+      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine' }
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' }
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' }
+    ]
+  }
+  {
+    title: 'Quantum & Emerging Tech'
+    description: 'Breakthrough quantum and space technologies'
+    icon: <Atom className="w-5 h-5 text-blue-400" />
+    links: [
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' }
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' }
+      { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' }
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading' }
+      { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology' }
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' }
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' }
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform' }
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' }
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' }
+      { name: 'Quantum Robotics', href: '/quantum-robotics' }
+    ]
+  }
+  {
+    title: 'Enterprise IT'
+    description: 'Advanced enterprise infrastructure solutions'
+    icon: <Shield className="w-5 h-5 text-purple-400" />
+    links: [
+      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure' }
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' }
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' }
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' }
+      { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity' }
+    ]
+  }
+  {
+    title: 'Micro SAAS'
+    description: 'Innovative business solutions for modern enterprises'
+    icon: <Rocket className="w-5 h-5 text-emerald-400" />
+    links: [
+      { name: 'AI Content Generator', href: '/ai-content-generator' }
+      { name: 'AI Code Review', href: '/ai-code-review' }
+      { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber-pro' }
+      {
+        name: 'AI Legal Contract Analyzer'
+        href: '/ai-legal-contract-analyzer'
+      }
+      { name: 'AI Sales Automation', href: '/ai-sales-automation' }
+      { name: 'AI HR Recruitment', href: '/ai-hr-recruitment' }
+      { name: 'AI Customer Service', href: '/ai-customer-service' }
+    ]
+  }
+  {
+    title: 'Industry Solutions'
+    description: 'Industry-specific technology solutions'
+    icon: <Building className='w-5 h-5 text-orange-400' />,    links: [    icon: <Building className="w-5 h-5 text-orange-400" />
+    links: [
+      { name: 'Healthcare Solutions', href: '/healthcare-solutions' }
+      { name: 'Financial Services', href: '/financial-solutions' }
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' }
+      { name: 'Retail Technology', href: '/retail-technology-solutions' }
+      { name: 'Education Technology', href: '/education-technology-solutions' }
+      {
+        name: 'Government Solutions'
+        href: '/government-technology-solutions'
+      }
+      { name: 'Energy & Utilities', href: '/energy-utilities-solutions' }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       { name: 'Biotech AI Research', href: '/biotech-ai-research-platform' }
     ]
   }
@@ -811,6 +996,7 @@ const footerSections = [;
     title: 'Resources'
     description: 'Documentation, support, and learning'
     icon: <BookOpen className='w-5 h-5 text-cyan-400' />,    description: 'Documentation, support, and learning';
+<<<<<<< HEAD
     icon: <BookOpen className="w-5 h-5 text-cyan-400" />,;
     links: [;
       { name: 'Documentation', href: '/docs' },;
@@ -825,6 +1011,22 @@ const footerSections = [;
       { name: 'Services Advertising', href: '/services-advertising' },;
     ],;
   },;
+=======
+    icon: <BookOpen className="w-5 h-5 text-cyan-400" />
+    links: [
+      { name: 'Documentation', href: '/docs' }
+      { name: 'API Reference', href: '/api-documentation' }
+      { name: 'Case Studies', href: '/case-studies' }
+      { name: 'Blog & News', href: '/blog' }
+      { name: 'Support Center', href: '/support' }
+      { name: 'Developer Portal', href: '/developer' }
+      { name: 'Training & Certification', href: '/training' }
+      { name: 'Community Forum', href: '/community' }
+      { name: 'Market Pricing', href: '/market-pricing' }
+      { name: 'Services Advertising', href: '/services-advertising' }
+    ]
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
   };
   {
@@ -834,6 +1036,7 @@ const footerSections = [;
 
     links: [
 
+<<<<<<< HEAD
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api-documentation' },
       { name: 'Case Studies', href: '/case-studies' },
@@ -927,6 +1130,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
       </div>
 <div className="relative z-10">
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <footer className="relative bg-black text-white overflow-hidden">
       {/* Background Effects */}
@@ -977,15 +1183,22 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
       <div className="relative z-10">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Main Footer Content */}
         <div className='container mx-auto px-4 py-20'>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8'>;
             {/* Company Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.6 }}
                 className='space-y-6'>;
                 <div className='flex items-center gap-3'>;
@@ -1002,8 +1215,13 @@ const UltraFuturisticFooter2035: React.FC = () => {
     ],
   },
 ];
+<<<<<<< HEAD
 ;
 const social_links = [;
+=======
+
+const socialLinks = [
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     name: 'Twitter',
     href: 'https://twitter.com / ziontechgroup',
@@ -1107,23 +1325,33 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     </h3>;
                     <p className='text - sm text - gray - 400'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Revolutionary Technology Solutions;
                     </p>;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
+<<<<<<< HEAD
                 
                 <p className="text-gray-300 leading-relaxed max-w-md">
                   Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. 
@@ -1243,6 +1471,11 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   {socialLinks.map((social) => (
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                <div className="flex items-center gap-4">
+                  {socialLinks.map((social) => (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <a
                       key={social && social.name}
                       href={social && social.href}
@@ -1254,8 +1487,15 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       {social.icon}
                     </a>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
+=======
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </div>;
               </motion && motion.div>;
@@ -1266,15 +1506,20 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
               <motion&& motion.div
                 key={section && section.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1283,6 +1528,16 @@ const UltraFuturisticFooter2035: React.FC = () => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
+=======
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className='space-y-4'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+              >
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='flex items-center gap-4'>
                   {socialLinks.map(social => (
                     <a
@@ -1298,6 +1553,10 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {/* Social Links */}
 
@@ -1341,10 +1600,14 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   {section.links.map((link) => (
                     <li key={link.name}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Link
                         href={link && link.href}
                         className={`text-sm transition-colors duration-200 ${
@@ -1367,40 +1630,59 @@ const UltraFuturisticFooter2035: React.FC = () => {
                             ? 'text-cyan-400 hover:text-cyan-300' 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                           link && link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
                             : 'text-gray-400 hover:text-white'
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         }`}
                       >
                         {link.name}
                       </Link>
                     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
                 </ul>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
+=======
+          </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1410,11 +1692,26 @@ const UltraFuturisticFooter2035: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Bottom Section */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className='mt-16 pt-8 border-t border-gray-800/50'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -1423,10 +1720,14 @@ const UltraFuturisticFooter2035: React.FC = () => {
               </div>
               <div className='flex items-center gap-6 text-sm text-gray-400'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             className='mt-16 pt-8 border-t border-gray-800/50'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
@@ -1434,6 +1735,10 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 © 2025 Zion Tech Group. All rights reserved.;
               </div>;
               <div className='flex items-center gap-6 text-sm text-gray-400'>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
 
           {/* Bottom Section */}
@@ -1462,16 +1767,22 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 <Link
                   href='/cookies'
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-16 pt-8 border-t border-gray-800/50"
           >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-16 pt-8 border-t border-gray-800/50"
           >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-sm text-gray-400">
                 © 2025 Zion Tech Group. All rights reserved.
@@ -1505,8 +1816,26 @@ const UltraFuturisticFooter2035: React.FC = () => {
               </div>;
               <button
                 onClick={scrollToTop}
+<<<<<<< HEAD
 
 
+=======
+                className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'
+                aria-label='Scroll to top'
+              >
+                <ArrowUp className='w-5 h-5' />              </button>                className="p-2 bg-gray-800/50 hover: bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
+                aria-label="Scroll to top"
+              >
+                <ArrowUp className="w-5 h-5" />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+/* Animated grid */
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 
@@ -1532,24 +1861,35 @@ const UltraFuturisticFooter2035: React.FC = () => {
 }</div> {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="p-2 bg-gray-800/50 hover: bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="w-5 h-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               </button>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </motion.div>
         </div>
       </div>
     </footer>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 
 };
@@ -1563,6 +1903,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
   footerSections && footerSections.map ( (section, index) => (<motion&& motion.div key= {
   section && section.title 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
@@ -1572,6 +1913,12 @@ const UltraFuturisticFooter2035: React.FC = () => {
   /* Animated grid */ 
 /* Animated grid */ 
   /* Animated grid */ 
+=======
+  );
+};
+
+  /* Animated grid */ 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social.icon
 }</a>) )
@@ -1586,6 +1933,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
   link && link.href 
 }className= {
   `text-sm transition-colors duration-200 $ {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1830,3 +2178,7 @@ export default UltraFuturisticFooter2035;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   country: CountryPricing
   onSelect: (country: CountryPricing,) => void
   onQuote?: (country: CountryPricing,) => void
@@ -101,6 +102,8 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Get region flag based on country name (for demo purposes)
 
   const getRegionEmoji = (countryName: string | undefined): string => {
@@ -124,7 +127,10 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       "South Korea": "🇰🇷",
       "South Africa": "🇿🇦",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Default if no flag is found
       "default": "🌐"
     },
@@ -161,6 +167,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
 
 
+<<<<<<< HEAD
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -221,6 +228,8 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
             </Badge>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           {isPopular && (
             <Badge className="bg-zion-purple text-white border-none">Popular</Badge>
@@ -232,16 +241,22 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           ${country.pricePerIncident.toFixed(2)}
         </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='space-y-2 text-zion-slate-light'>
           <div className='flex items-start'>
             <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
             <span>
               Typical response time: {getResponseTime(country.country)}
             </span>
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
@@ -264,6 +279,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>
         </div>
       </CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <CardFooter className="flex flex-col space-y-2">
         <Button
@@ -307,6 +323,8 @@ import { Button } from "@/components/ui/button",;
 import Link from 'next/link',;
 import { Badge } from "@/components/ui/badge",;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import {;
@@ -318,7 +336,10 @@ import {;
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryServiceCardProps {;
@@ -411,9 +432,12 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           className={`w-full ${;
             isPopular;
 <<<<<<< HEAD
+<<<<<<< HEAD
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple';
               : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light';
     >;
@@ -465,11 +489,15 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
             is_popular;
               ? 'bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
               : 'bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }`}
         >;
           Select Service;
         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button;
           variant="outline";
@@ -489,13 +517,21 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           className='w-full text-zion-cyan hover:text-zion-purple'>;
           <Link href='/contact'>Contact Sales</Link>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          className='w-full text-zion-cyan hover:text-zion-purple'>;
+          <Link href='/contact'>Contact Sales</Link>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Button>;
       </CardFooter>;
     </Card>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Button;
           variant='outline';
@@ -513,7 +549,10 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <CardFooter className="flex flex-col space-y-2">
         <Button
           onClick={() => onSelect(country)}
@@ -535,6 +574,10 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         >
 
           Get Quote
+<<<<<<< HEAD
+=======
+        </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Button
           asChild
           variant="ghost"
@@ -542,6 +585,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         >
           <Link href="/contact">Contact Sales</Link>
         </Button>
+<<<<<<< HEAD
       </CardFooter>;
     </Card>;
   );
@@ -677,3 +721,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
   )
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      </CardFooter>
+    </Card>
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

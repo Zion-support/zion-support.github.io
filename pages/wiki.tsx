@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 generateZionWiki;
   buildMarkdownFromWiki;
   buildWikitextFromWiki;
@@ -8,6 +9,8 @@ generateZionWiki;
   slugify} from '../utils/data/zionContent';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
   return (
@@ -22,6 +25,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
 }
 
 export default function WikiPage() {
+<<<<<<< HEAD
   const wiki = useMemo(() => generateZionWiki(), []);
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]);
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]);
@@ -331,6 +335,8 @@ function CopyButton({ text, label }: { text: string, label: string }) {;
   }
 }
 export default function WikiPage() {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const wiki = useMemo(() => generateZionWiki(), []),
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
@@ -350,6 +356,7 @@ export default function WikiPage() {
   }
 }
               </Link>
+<<<<<<< HEAD
             </li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -365,6 +372,24 @@ export default function WikiPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </li>
+          ))}
+          <li>
+            <a href="#references" className="opacity-80 hover:opacity-100">References</a>
+            <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          </li>
+        </ul>
+      </aside>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -377,21 +402,29 @@ export default function WikiPage() {
         </div>
         <p>{wiki.intro}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             ))}
           </section>
         ))}
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -399,7 +432,10 @@ export default function WikiPage() {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -413,15 +449,21 @@ export default function WikiPage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
+<<<<<<< HEAD
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -433,6 +475,12 @@ export default function WikiPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          ))}
+        </ol>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -442,31 +490,44 @@ export default function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 {md}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+{md}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 {md  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </article>
     </div>;
@@ -474,6 +535,7 @@ export default function WikiPage() {
 };
     </div>
   )
+<<<<<<< HEAD
 =======
         </div>
       </article>
@@ -537,10 +599,13 @@ export default function WikiPage() {
 
     </div>
   )
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -548,3 +613,7 @@ export default function WikiPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

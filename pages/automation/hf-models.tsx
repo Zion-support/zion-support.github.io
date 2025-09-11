@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -53,6 +54,11 @@ import data from '../../data/hf-models.json',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/hf-models.json',
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function HfModelsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
@@ -70,6 +76,7 @@ export default function HfModelsPage() {
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+<<<<<<< HEAD
               <a className="font-medium underline" href={`https://huggingface.co/${it.modelId}`} target="_blank" rel="noreferrer">{it.modelId}</a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes} · {it.pipeline_tag}</div>
             </li>
@@ -99,6 +106,9 @@ export default function HfModelsPage() {
               <a className="font-medium underline" href={`https://huggingface.co/${it.modelId}`} target="_blank" rel="noreferrer">{it.modelId}</Link>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes} · {it.pipeline_tag}</div>
             </li>
           ))  } catch (error) {
@@ -115,6 +125,7 @@ export default function HfModelsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
@@ -126,3 +137,9 @@ export default function HfModelsPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

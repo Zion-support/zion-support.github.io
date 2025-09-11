@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 import { useState } from 'react'
@@ -23,12 +24,15 @@ import Skeleton from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean
   projectDescription?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface AIMatchingResultsProps {
 
@@ -38,6 +42,8 @@ interface AIMatchingResultsProps {
   projectDescription?: string;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   serviceType?: string;interface AIMatchingResultsProps {
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem,) => void
@@ -47,6 +53,7 @@ interface AIMatchingResultsProps {
   serviceType?: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function AIMatchingResults({
@@ -61,6 +68,8 @@ export function AIMatchingResults({
   // Group matches by category
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -97,9 +106,13 @@ function AIMatchingResults() {
     equipment: matches.filter (match =>;
       match.category.toLowerCase ().includes ('equipment')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {
@@ -127,10 +140,15 @@ if ( {) {
       </div>);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -141,9 +159,13 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
 import Skeleton from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
@@ -157,9 +179,13 @@ interface AIMatchingResultsProps {;
   serviceType?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function AIMatchingResults(): any ({;
   matches,;
   onSelectMatch,;
@@ -169,9 +195,13 @@ export function AIMatchingResults(): any ({;
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState('all');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Group matches by category;
   const categories = {;
     all: matches,;
@@ -186,9 +216,13 @@ export function AIMatchingResults(): any ({;
     ),;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {;
     const lowerCategory = category && category.toLowerCase();
@@ -209,9 +243,13 @@ export function AIMatchingResults(): any ({;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (matches && matches.length === 0) {;
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
@@ -226,6 +264,7 @@ export function AIMatchingResults(): any ({;
             <div className='bg-zion-blue-light/20 p-3 rounded-md text-left'>;
               <p className='text-xs text-zion-slate-light'>Your search:</p>;
               <p className='text-sm text-white'>{projectDescription}</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
@@ -357,6 +396,8 @@ export function AIMatchingResults({;
   return (
     <div className='space-y-4'>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           )}
 
@@ -367,13 +408,19 @@ export function AIMatchingResults({;
   }
   return (
     <div className='space-y-4'>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Tabs
         defaultValue='all'
         value={activeTab}
         onValueChange={setActiveTab}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className='w-full'>;
         <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>;
           <TabsTrigger
@@ -394,32 +441,55 @@ export function AIMatchingResults({;
           <TabsTrigger
             value='equipment'
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='data-[state=active]:bg-zion-purple/20'>;
             Equipment ({categories && categories.equipment.length});
           </TabsTrigger>;
         </TabsList>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {Object && Object.entries(categories).map(([tab, items]) => (;
           <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>;
             {items && items.length > 0 ? (;
               items && items.map(match => {;
                 const CategoryIcon = getCategoryIcon(match && match.category);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onClick={() => onSelectMatch && onSelectMatch(match)}                  >;
                     <div className='flex'>;
                       <div
                         className={cn(
                           'w-2',
                           match && match.category.toLowerCase().includes('talent')
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
                               : 'bg-green-500'
                         )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />;
                       <div className='flex-1 p-4'>;
                         <div className='flex items-start gap-4'>;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <AvatarImage
                                 src={match && match.image}
                                 alt={match && match.title}
@@ -429,6 +499,10 @@ export function AIMatchingResults({;
                                 <CategoryIcon className='h-6 w-6 text-zion-purple' />;
                               </AvatarFallback>;
                             )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Check condition
 if ( {) {
   $2
@@ -507,6 +581,7 @@ if ( {) {
                               <AvatarImage;
                                 src={match.image}
                                 alt={match.title}
+<<<<<<< HEAD
         className='w-full'
       >
         <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>
@@ -571,6 +646,8 @@ if ( {) {
                             <div className='flex justify-between'>
                               <div>
                                 <h3 className='font-medium text-white'>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               />) : (
                               <AvatarFallback className='bg - zion - purple / 20'>;
                                 <CategoryIcon className='h - 6 w - 6 text - zion - purple' />;
@@ -580,6 +657,7 @@ if ( {) {
                             <div className='flex justify - between'>;
                               <div>;
                                 <h3 className='font - medium text - white'>;
+<<<<<<< HEAD
                                   {match.title}
                                 </h3>
                                 <p className='text-zion-slate-light text-sm'>
@@ -607,11 +685,65 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                                  {match.title}
+                                </h3>;
+                                <p className='text - zion - slate - light text - sm'>;
+                                  {match.description}
+                                </p>;
+                              </div>;
+                              {match.price && (
+                                <div className='text - right ml - 2'>;
+                                  <div className='font - medium text - white'>;
+                                    ${match.price}
+
+                          </Avatar>;
+
+                          <div className='flex-1'>;
+                            <div className='flex justify-between'>;
+                              <div>;
+                                <h3 className='font-medium text-white'>;
+                                  {match && match.title}
+                                </h3>;
+                                <p className='text-zion-slate-light text-sm'>;
+                                  {match && match.description}
+                                </p>;
+                              </div>;
+                              {match && match.price && (;
+                                <div className='text-right ml-2'>;
+                                  <div className='font-medium text-white'>;
+                                    ${match && match.price}
+                                  </div>;
+                                  <div className='text-xs text-zion-slate-light'>;
+                                    {match && match.category;
+                                      .toLowerCase();
+                                      .includes('talent');
+                                      ? '/hour';
+
+                                      : ''}
+                                  </div>;
+                                </div>;
+                              )}
+
+
+
+
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                   </div>
                                 </div>
                               )}
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <div className='mt-2 flex flex-wrap gap-1'>
                               <Badge variant='outline'>{match.category}</Badge>
                               {match.skills &&
@@ -633,6 +765,7 @@ if ( {) {
               <div className='text-center py-8 text-zion-slate-light'>
                 No {tab} matches found.
               </div>
+<<<<<<< HEAD
                           </Avatar>;
                           <div className='flex-1'>;
                             <div className='flex justify-between'>;
@@ -734,6 +867,8 @@ if ( {) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline">
@@ -745,6 +880,7 @@ if ( {) {
                                 </Badge>;
                               ))}
                             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                             ;
                             <div className="mt-2 flex flex-wrap gap-1">;
@@ -765,6 +901,8 @@ if ( {) {
                               ))}
                             </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                             <div className='mt-2 flex flex-wrap gap-1'>;
                               <Badge variant='outline'>{match && match.category}</Badge>;
@@ -795,17 +933,26 @@ if ( {) {
                                     <Badge key={i} variant='outline'>;
                                       {skill}
                                     </Badge>))}                            </div>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </div>;
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
           </TabsContent>;
         ))}
@@ -815,6 +962,7 @@ if ( {) {
 ;
 
 
+<<<<<<< HEAD
                   </Card>;
                 );
               });
@@ -831,15 +979,21 @@ if ( {) {
 };
 ;
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       </Tabs>;
     </div>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   </Card>);
@@ -850,6 +1004,7 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </Card>;
                 ),;
@@ -899,3 +1054,6 @@ if (isLoading) {";
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

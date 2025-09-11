@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
@@ -22,6 +23,8 @@ export function TalentOnboardingSteps() {
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return <OnboardingTracker steps={steps} />
 
 import React from 'react';
@@ -38,6 +41,7 @@ function TalentOnboardingSteps() {
   const steps: OnboardingStep[] = [;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const steps: OnboardingStep[] = [
     {
@@ -87,12 +91,19 @@ export function TalentOnboardingSteps() {
 }
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const steps: OnboardingStep[] = [
     {
       id: "profile",
@@ -113,6 +124,7 @@ export function TalentOnboardingSteps() {
       link: "/profile/availability",
       action: "Set"},
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: "match",
       label: "Receive your first job match",
@@ -170,3 +182,9 @@ export function TalentOnboardingSteps() {;
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

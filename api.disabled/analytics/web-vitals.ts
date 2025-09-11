@@ -1,14 +1,5 @@
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
 export {};
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -28,6 +19,8 @@ export default async function handler(
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 module.exports = {};
 module.exports = {};
 module.exports = {};
@@ -38,6 +31,7 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -59,3 +53,8 @@ module.exports = {};
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

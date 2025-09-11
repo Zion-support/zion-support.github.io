@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export interface EmergingTechInnovationService {
@@ -7,10 +8,19 @@ export interface EmergingTechInnovationService {;
 import { ServiceVariant } from '../types/service-variants';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { ServiceVariant } from '../types/service-variants';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface EmergingTechInnovationService {
 
 export interface EmergingTechInnovationService {;
+<<<<<<< HEAD
+=======
+export interface EmergingTechInnovationService {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   tagline: string;
@@ -44,25 +54,35 @@ export interface EmergingTechInnovationService {;
     website: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   market_advantage: string;
 ;
 const contact = {
@@ -71,9 +91,13 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -86,10 +110,15 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface EmergingTechInnovation {
   id: string, name: string,
   tagline: string, price: string,
@@ -118,6 +147,7 @@ export interface EmergingTechInnovation {
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Revolutionary quantum internet protocol stack that enables quantum-secure communication, quantum key distribution, and quantum networking across global infrastructure.',
   website: 'https://ziontechgroup.com';
@@ -1193,6 +1223,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
   }
 ];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
@@ -1200,6 +1232,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
   {
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1207,12 +1240,26 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+    ];
+    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -1678,6 +1725,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
+<<<<<<< HEAD
 
   }
 ];
@@ -2160,5 +2208,11 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
   }
 ];
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

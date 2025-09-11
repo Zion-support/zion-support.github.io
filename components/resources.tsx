@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
@@ -166,6 +167,8 @@ import React from 'react';
 
 export default Resources;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
@@ -173,8 +176,21 @@ import React from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
 
+<<<<<<< HEAD
 
 };
+=======
+=======
+export default ResourcesPage;
+import React from 'react';
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default ResourcesPage;
 
 =======
@@ -231,4 +247,10 @@ export default ResourcesPage;
 import React from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default Resources;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

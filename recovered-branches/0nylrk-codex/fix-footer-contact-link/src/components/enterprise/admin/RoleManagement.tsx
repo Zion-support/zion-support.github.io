@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -9,9 +12,12 @@ import {Switch} from "@/components/ui/switch";
 import {toast} from "@/hooks/use-toast";
 import {InfoIcon} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import {
   Table,
@@ -29,6 +35,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function RoleManagement() {
@@ -38,6 +45,11 @@ export function RoleManagement() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -57,7 +69,10 @@ function RoleManagement() {
   // Mock team members data;
   const team_members = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 1
       name: "Alex Johnson"
@@ -65,15 +80,20 @@ function RoleManagement() {
       role: "Admin"
       permissions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         view_candidates: true,
         edit_candidates: true,
         create_jobs: true,
         manage_team: true,
         view_billing: true,
         manage_billing: true}},
+<<<<<<< HEAD
 <<<<<<< HEAD
         viewCandidates: true
         editCandidates: true
@@ -84,6 +104,9 @@ function RoleManagement() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 2
       name: "Jamie Smith"
@@ -91,15 +114,20 @@ function RoleManagement() {
       role: "Recruiter"
       permissions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         view_candidates: true,
         edit_candidates: true,
         create_jobs: true,
         manage_team: false,
         view_billing: false,
         manage_billing: false}},
+<<<<<<< HEAD
 <<<<<<< HEAD
         viewCandidates: true
         editCandidates: true
@@ -110,6 +138,9 @@ function RoleManagement() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 3
       name: "Sam Williams"
@@ -117,15 +148,20 @@ function RoleManagement() {
       role: "Manager"
       permissions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         view_candidates: true,
         edit_candidates: false,
         create_jobs: true,
         manage_team: false,
         view_billing: true,
         manage_billing: false}},
+<<<<<<< HEAD
 <<<<<<< HEAD
         viewCandidates: true
         editCandidates: false
@@ -136,12 +172,16 @@ function RoleManagement() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 4
       name: "Taylor Brown"
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         viewCandidates: true
         editCandidates: false
@@ -164,6 +204,8 @@ function RoleManagement() {
     "Manager": "Can view candidates and create jobs";
     "Viewer": "Read-only access to candidates"}
   },
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const roleDescriptions: Record<string string> = {
     "Admin": "Full access to all features and settings",
@@ -171,6 +213,7 @@ function RoleManagement() {
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
 
+<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <div>
@@ -365,6 +408,8 @@ import {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
@@ -372,10 +417,14 @@ export function RoleManagement() {;
       id: 1,;
       name: "Alex Johnson",;
 <<<<<<< HEAD
+<<<<<<< HEAD
       email: "alex@example.com",;
 =======
       email: "alex@example && example.com",;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      email: "alex@example && example.com",;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       role: "Admin",;
       permissions: {;
         viewCandidates: true,;
@@ -388,10 +437,14 @@ export function RoleManagement() {;
       id: 2,;
       name: "Jamie Smith",;
 <<<<<<< HEAD
+<<<<<<< HEAD
       email: "jamie@example.com",;
 =======
       email: "jamie@example && example.com",;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      email: "jamie@example && example.com",;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       role: "Recruiter",;
       permissions: {;
         viewCandidates: true,;
@@ -404,10 +457,14 @@ export function RoleManagement() {;
       id: 3,;
       name: "Sam Williams",;
 <<<<<<< HEAD
+<<<<<<< HEAD
       email: "sam@example.com",;
 =======
       email: "sam@example && example.com",;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      email: "sam@example && example.com",;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       role: "Manager",;
       permissions: {;
         viewCandidates: true,;
@@ -420,7 +477,10 @@ export function RoleManagement() {;
       id: 4,;
       name: "Taylor Brown",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       email: "taylor@example && example.com",;
       role: "Viewer",;
       permissions: {;
@@ -445,10 +505,17 @@ export function RoleManagement() {;
     "Manager": "Can view candidates and create jobs";
     "Viewer": "Read-only access to candidates"}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       title: "Permission updated",
 
+=======
+
+      title: "Permission updated",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className="space-y-6">;
@@ -512,6 +579,7 @@ export function RoleManagement() {;
                 </TableCell>
                 <TableCell className="text-center">
 
+<<<<<<< HEAD
 
 import React from "react",;
 import {;
@@ -641,6 +709,11 @@ export function RoleManagement() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        </div>;
+      </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -726,6 +799,7 @@ export function RoleManagement() {;
           </TableHeader>;
           <TableBody>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             {teamMembers.map((member) => (;
               <TableRow key={member.id}>;
                 <TableCell>;
@@ -740,6 +814,8 @@ export function RoleManagement() {;
                     defaultValue={member.role}
                   >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {teamMembers && teamMembers.map((member) => (;
               <TableRow key={member && member.id}>;
                 <TableCell>;
@@ -752,7 +828,10 @@ export function RoleManagement() {;
                   <select
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member && member.role}>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <option value="Admin">Admin</option>;
                     <option value="Recruiter">Recruiter</option>;
                     <option value="Manager">Manager</option>;
@@ -761,6 +840,7 @@ export function RoleManagement() {;
                 </TableCell>;
                 <TableCell className="text-center">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Switch ;
                     checked={member.permissions.viewCandidates} ;
                     onCheckedChange={(checked) => ;
@@ -770,15 +850,21 @@ export function RoleManagement() {;
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewCandidates", checked);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Switch
                     checked={member && member.permissions.viewCandidates} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "viewCandidates", checked);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   />;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Switch ;
                     checked={member.permissions.editCandidates} ;
@@ -789,15 +875,21 @@ export function RoleManagement() {;
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "editCandidates", checked);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Switch
                     checked={member && member.permissions.editCandidates} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "editCandidates", checked);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   />;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Switch ;
                     checked={member.permissions.createJobs} ;
@@ -808,15 +900,21 @@ export function RoleManagement() {;
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "createJobs", checked);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Switch
                     checked={member && member.permissions.createJobs} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "createJobs", checked);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   />;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Switch ;
                     checked={member.permissions.manageTeam} ;
@@ -827,15 +925,21 @@ export function RoleManagement() {;
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "manageTeam", checked);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Switch
                     checked={member && member.permissions.manageTeam} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "manageTeam", checked);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   />;
                 </TableCell>;
                 <TableCell className="text-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Switch ;
                     checked={member.permissions.viewBilling} ;
@@ -846,31 +950,53 @@ export function RoleManagement() {;
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Switch
                     checked={member && member.permissions.viewBilling} 
                     onCheckedChange={(checked) => ;
                       handlePermissionChange(member && member.id, "viewBilling", checked);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   />;
                 </TableCell>;
               </TableRow>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <Switch 
                     checked={member.permissions.viewBilling} 
 
+<<<<<<< HEAD
             ))}
 
             ))}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </TableBody>;
         </Table>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         view_candidates: true,
         edit_candidates: false,
         create_jobs: false,
@@ -1054,6 +1180,7 @@ export function RoleManagement() {;
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  import {
   Table;
@@ -1085,3 +1212,6 @@ TooltipProvider;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

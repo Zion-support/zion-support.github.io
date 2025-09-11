@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
@@ -10,6 +13,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -110,6 +114,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -137,11 +143,15 @@ import React, { useState, useEffect } from 'react';
 import Layout from './layout / Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
 } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -159,10 +169,15 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
+=======
+
+// Import our new innovative services
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Loading fallback component
 const LoadingFallback = () => (
@@ -186,6 +201,10 @@ className="text-center"
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Loading fallback component;
 const LoadingFallback = () => (;
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
@@ -193,6 +212,7 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
+<<<<<<< HEAD
 <<<<<<< HEAD
       setIsVisible(true)
     }, 800);
@@ -649,14 +669,19 @@ const LoadingFallback = () =>: any (
 
 import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
  } from 'lucide-react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Import our new innovative services
 
 
@@ -670,7 +695,10 @@ import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-
 const LoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -760,6 +788,7 @@ if ( {) {
     }
   }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
@@ -768,6 +797,9 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const fadeInUp = {
     initial: { opacity: 0, coordinate_y: 60 },
     animate: { opacity: 1, coordinate_y: 0 },
@@ -777,6 +809,7 @@ if ( {) {
   const stagger_container = {
     animate: {
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         stagger_children: 0.1,
         delay_children: 0.2,
@@ -887,6 +920,8 @@ if ( {) {
               }}
               transition={{
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 ease: 'easeInOut',              }}
             />;
@@ -898,13 +933,25 @@ if ( {) {
                 opacity: [0.3, 0.7, 0.3],
 
               }}
+<<<<<<< HEAD
               transition={{
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+              }}
+=======
+              }}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 duration: 6,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
             <motion.div;
@@ -919,6 +966,8 @@ if ( {) {
 />;
           </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />
           </div>
@@ -927,11 +976,15 @@ if ( {) {
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Hero Content */}
           <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -997,27 +1050,40 @@ if ( {) {
           <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
               className='mb-8'            >          <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               className='mb-8'            >
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='mb-8'              className="mb-8"
 =======
               className="mb-8"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className="mb-8"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-5xl md:text-7xl font-bold mb-6'
               >
@@ -1025,6 +1091,9 @@ if ( {) {
 =======
                 className="text-5xl md:text-7xl font-bold mb-6"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className="text-5xl md:text-7xl font-bold mb-6"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                   Future of Technology
@@ -1033,6 +1102,7 @@ if ( {) {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'
@@ -1045,6 +1115,11 @@ if ( {) {
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.
               </motion.p>
@@ -1061,23 +1136,31 @@ if ( {) {
               </motion && motion.p>;
             </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -1086,6 +1169,8 @@ if ( {) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8, delay: 0.6 }}
               className='flex flex-col sm:flex-row gap-4 justify-center items-center'
             >
@@ -1105,7 +1190,12 @@ if ( {) {
                 Get Started
               </Link>
               <Link
+<<<<<<< HEAD
                 href="/services"
+=======
+                href='/services'
+                className='px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105'                href="/services"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Services
@@ -1113,6 +1203,7 @@ if ( {) {
             </motion.div>
 
 
+<<<<<<< HEAD
 
 
 
@@ -1132,17 +1223,30 @@ if ( {) {
 
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             >
               <div className='text-center'>
@@ -1178,7 +1282,10 @@ if ( {) {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
@@ -1222,12 +1329,16 @@ if ( {) {
             <motion&& motion.div
 
 =======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Featured Services Section */}
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1244,10 +1355,19 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1257,6 +1377,13 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className='text-center mb-16'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -1279,6 +1406,10 @@ if ( {) {
                 Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />;
@@ -1396,6 +1527,16 @@ if ( {) {
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
+=======
+
+            <motion.div
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text - center mb - 16';
@@ -1412,12 +1553,17 @@ if ( {) {
             </motion.div>;
             {/* Service Categories Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
@@ -1431,10 +1577,15 @@ if ( {) {
             </motion && motion.div>;
             {/* Service Categories Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -1522,20 +1673,72 @@ if ( {) {
                   href: '/emerging - tech',
                 },              ].map ((service, index) => (                  icon: <Sparkles className="w - 12 h - 12" />,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   title: "Emerging Tech",
                   description: "Cutting - edge technologies that define the future of innovation",
                   color: "from - yellow - 400 to - orange - 500",
                   href: "/emerging - tech";
                 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
             <motion.div
 
 
+=======
+                {
+                  icon: <Atom className='w-12 h-12' />
+                  title: 'Quantum Technology'
+                  description:
+                    'Breakthrough quantum computing solutions for next-generation applications'
+                  color: 'from-purple-400 to-pink-500'
+                  href: '/quantum-services'
+                }
+                {
+                  icon: <Rocket className='w-12 h-12' />
+                  title: 'Space Technology'
+                  description:
+                    'Advanced space exploration and resource management platforms'
+                  color: 'from-emerald-400 to-teal-500'
+                  href: '/space-technology'
+                }
+                {
+                  icon: <Shield className='w-12 h-12' />
+                  title: 'Enterprise Solutions'
+                  description:
+                    'Advanced infrastructure and security solutions for modern enterprises'
+                  color: 'from-orange-400 to-red-500'
+                  href: '/enterprise-solutions'
+                }
+                {
+                  icon: <Target className='w-12 h-12' />
+                  title: 'Micro SAAS'
+                  description:
+                    'Innovative business solutions that drive growth and efficiency'
+                  color: 'from-indigo-400 to-purple-500'
+                  href: '/micro-saas'
+                }
+                {
+                  icon: <Sparkles className='w-12 h-12' />
+                  title: 'Emerging Tech'
+                  description:
+                    'Cutting-edge technologies that define the future of innovation'
+                  color: 'from-yellow-400 to-orange-500'
+                  href: '/emerging-tech'
+                },              ].map((service, index) => (                  icon: <Sparkles className="w-12 h-12" />
+                  title: "Emerging Tech"
+                  description: "Cutting-edge technologies that define the future of innovation"
+                  color: "from-yellow-400 to-orange-500"
+                  href: "/emerging-tech"
+                }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1563,7 +1766,10 @@ if ( {) {
                       <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                         <span className="mr-2">Learn More</span>
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+<<<<<<< HEAD
                       </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                   </Link>
                 </motion.div>
@@ -1572,6 +1778,7 @@ if ( {) {
           </div>
         </section>
         {/* Latest Innovations Section */}
+<<<<<<< HEAD
         <section
           id='latest-innovations'
           className='py-20 relative bg-gray-900/30'
@@ -1591,6 +1798,8 @@ if ( {) {
 
 
         {/* Latest Innovations Section */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -1598,6 +1807,7 @@ if ( {) {
 
             <motion.div
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1611,6 +1821,16 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='text-center mb-16'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -1633,10 +1853,14 @@ if ( {) {
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
@@ -1731,6 +1955,7 @@ if ( {) {
                 .slice (0, 4);
                 .map ((service, index) => (
                   <motion.div;
+<<<<<<< HEAD
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {revolutionary2043AdvancedServices
                 .slice(0, 4)
@@ -1779,6 +2004,9 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
                 <motion.div
@@ -1816,19 +2044,26 @@ className="group"
               ))}
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* View All Services CTA */}
             <motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* View All Services CTA */}
             <motion&& motion.div
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Contact CTA Section */}
         <section id='contact-cta' className='py-20 relative'>;
@@ -1882,12 +2117,22 @@ className="group"
     </Layout>;
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               <Link
                 href="/services"
+<<<<<<< HEAD
 
 
+=======
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105"
+              >
+                View All Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Link>
 
@@ -1909,7 +2154,10 @@ className="group"
 
         {/* Contact CTA Section */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   animate: {;
   transition: {;
   staggerChildren: 0 && 0.1, delayChildren: 0 && 0.2 ;
@@ -1924,9 +2172,13 @@ className="group"
   /* View All Services CTA */ ;
 }<motion && motion.div > <Link href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > View All Services <ArrowRight className="ml-2 w-5 h-5" /> </a> </motion && motion.div> </div> </section> <motion&& motion.div initial= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -1935,14 +2187,19 @@ className="group"
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   duration: 0 && 0.8 
 }viewport= {
   {
   once: true 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion && motion.div> </div> </section> </div> </Layout>) ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 };export default Homepage2045;export default Homepage2045;
         {/* Contact CTA Section */}
@@ -1965,12 +2222,17 @@ className="group"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };export default Homepage2045;export default Homepage2045;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Link>
 
@@ -1979,12 +2241,18 @@ className="group"
         </section>
         {/* Contact CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='contact-cta' className='py-20 relative'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1994,15 +2262,20 @@ className="group"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -2025,12 +2298,17 @@ className="group"
                 </span>
               </h2>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Ready to Transform?
                 </span>
               </h2>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how our revolutionary technology solutions can drive your business into the future.
               </p>
@@ -2043,11 +2321,15 @@ className="group"
                 </Link>
                 <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                   href='tel:+1 302 464 0950'
                   className='px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105'                  href="tel:+1 302 464 0950"
 =======
                   href="tel:+1 302 464 0950"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  href="tel:+1 302 464 0950"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105"
                 >
                   Call Now
@@ -2058,6 +2340,7 @@ className="group"
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2088,6 +2371,8 @@ className="group"
 };
   /* CTA Buttons */ 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 };
 export default Homepage2045;
@@ -2173,24 +2458,37 @@ export default Homepage2045;
     </Layout>);
   animate: {
   transition: {
+<<<<<<< HEAD
 
 
+=======
+  staggerChildren: 0.1, delayChildren: 0.2
+}
+  /* CTA Buttons */
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   staggerChildren: 0.1, delayChildren: 0.2 
 
 
 };
   /* CTA Buttons */ 
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
   /* Stats */
 }<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)
 }</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</div> {
   /* View All Services CTA */;
 }<motion.div > <Link href="/services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > View All Services <ArrowRight className="ml - 2 w - 5 h - 5" /> </a> </motion.div> </div> </section> <motion.div initial= {
@@ -2207,6 +2505,7 @@ export default Homepage2045;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   once: true;
 }> Ready to Transform? </span> </h2> <p className="text - xl text - gray - 300 mb - 8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>);
 }export default Homepage2045;export default Homepage2045;
@@ -2217,20 +2516,42 @@ export default Homepage2045;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };export default Homepage2045;
 
 export default Homepage2045;
 <<<<<<< HEAD
+<<<<<<< HEAD
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+=======
+
+=======
+  once: true 
+
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+
+};export default Homepage2045;
+
+export default Homepage2045;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+};export default Homepage2045;
+
+export default Homepage2045;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };export default Homepage2045;export default Homepage2045;
 };export default Homepage2045;
 
+<<<<<<< HEAD
 export default Homepage2045;
 =======
 
@@ -2246,3 +2567,6 @@ export default Homepage2045;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

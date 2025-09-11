@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next / head';
 
@@ -22,6 +26,7 @@ import {
   Clock,
   TrendingUp,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
 import React from 'react';
@@ -253,6 +258,16 @@ import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 export default function PortfolioPage() {
   const projects = [
+=======
+} from 'lucide-react';
+import EnhancedNavigation from '../components / EnhancedNavigation';
+import EnhancedFooter from '../components / EnhancedFooter';
+export default /**
+ * PortfolioPage - Function description
+ */
+function PortfolioPage() {
+  const projects = [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: "AI-Powered Financial Analytics Platform",
       description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling",
@@ -350,6 +365,7 @@ export default function PortfolioPage() {
         <meta
           name='description'
           content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
+<<<<<<< HEAD
         />
         <meta property='og:title' content='Our Work - Zion Tech Group' />
         <meta
@@ -438,6 +454,8 @@ import { motion } from 'framer-motion';
         <meta
           name='description'
           content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <meta property='og:title' content='Our Work - Zion Tech Group' />;
         <meta
@@ -457,7 +475,10 @@ import { motion } from 'framer-motion';
             animate={{ opacity: 1, y: 0 }}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
@@ -465,6 +486,7 @@ import { motion } from 'framer-motion';
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Innovative technology solutions that drive business transformation and growth
             </p>
+<<<<<<< HEAD
           </motion.div>
           <motion.div
 <<<<<<< HEAD
@@ -484,6 +506,11 @@ import { motion } from 'framer-motion';
   }
 }
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+          </motion.div>
+          <motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -521,17 +548,25 @@ import { motion } from 'framer-motion';
                 key={stat && stat.label}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover how we've helped organizations leverage cutting-edge technology to solve
+=======
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Discover how we've helped organizations leverage cutting-edge technology to solve 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               complex challenges and achieve remarkable results.
             </p>
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
@@ -758,10 +793,14 @@ export default function PortfolioPage(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -797,6 +836,8 @@ export default function PortfolioPage(req, res) {
             {categories.map((category) => (
               <button
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -810,10 +851,64 @@ export default function PortfolioPage(req, res) {
         <div className='max-w-7xl mx-auto'>
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (              <button
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
+                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Projects Grid */}
+      <section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-white/70">{stat.label}</div>
+              </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Category Filter */}
+      <section className='py-8 px-6'>;
+        <div className='max-w-7xl mx-auto'>;
+          <div className='flex flex-wrap justify-center gap-4'>;
+            {categories && categories.map(category => (              <button
+
+=======
+
+      {/* Category Filter */}
+      <section className="py-8 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
@@ -824,8 +919,11 @@ export default function PortfolioPage(req, res) {
               >;
                 {category}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </button>;
             ))}
 
@@ -843,12 +941,16 @@ export default function PortfolioPage(req, res) {
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Projects Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
               </button>
             ))}
@@ -1063,6 +1165,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <motion.div
                 key={project.title  } catch (error) {
     console.error("Error:", error);
@@ -1090,6 +1194,37 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
+<<<<<<< HEAD
+=======
+                key={project.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -1097,11 +1232,15 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                       <project.icon className="w-6 h-6 text-white" />
                     </div>
                     <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
+<<<<<<< HEAD
                       {project.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                      {project.category}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </span>
                   </div>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1144,11 +1283,45 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>                      View Details
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
+<<<<<<< HEAD
+=======
+                  
+=======
+
+                  <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
+                  <p className="text-white/70 mb-6">{project.description}</p>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span key={tech} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">
+<<<<<<< HEAD
+=======
+
+
+                    </div>;
+                  </div>;
+
+                  <div className='mb-6'>;
+                    <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>;
+                      Results;
+                    </h4>;
+                    <ul className='space-y-1'>;
+                      {project && project.results.map(result => (;
+
+
+                        <li
+                          key={result}
+                          className='text-sm text-white/80 flex items-center'>;
+                          <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
+                        </li>;
+
+=======
+                  
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {tech  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1162,12 +1335,17 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Results</h4>
                     <ul className="space-y-1">
                       {project.results.map((result) => (
                         <li key={result} className="text-sm text-white/80 flex items-center">
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+<<<<<<< HEAD
                           {result  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1185,26 +1363,43 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
                   
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          {result}
+                        </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                      ))}
+
+                  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </button>
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                     </ul>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 =======
 
                     </ul>;
@@ -1240,6 +1435,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -1252,6 +1449,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -1266,6 +1464,24 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          </div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* CTA Section */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+=======
+
+      {/* CTA Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1287,14 +1503,20 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
           >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>
@@ -1308,20 +1530,30 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 Schedule Consultation
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <EnhancedFooter />
     </div>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <EnhancedFooter />
+    </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ),
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
@@ -1343,7 +1575,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -1364,6 +1599,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <EnhancedFooter />;
     </div>;
   ),;
@@ -1383,6 +1622,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }</div> </div> </li>) ) ;
 }</ul> </div> View Details </button> </div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <EnhancedFooter />
@@ -1406,6 +1646,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }</div> </div> </li>) )
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -1413,6 +1656,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1581,6 +1825,16 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb - 8';
+=======
+
+  duration: 0 && 0.8 
+
+}viewport= {
+  {
+  once: true
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >;
             <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
               Our Work;
@@ -1728,6 +1982,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 Start Your Project;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Schedule Consultation;
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
   )
@@ -1744,6 +1999,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               </button>;
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 Schedule Consultation;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </button>;
             </div>;
           </motion.div>;
@@ -1751,9 +2008,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
       </section>;
       <EnhancedFooter />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
   } catch (error) {
@@ -1765,7 +2026,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

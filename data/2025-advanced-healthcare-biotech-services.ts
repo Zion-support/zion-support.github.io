@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   id: string;
@@ -38,9 +42,13 @@ import { ServiceVariant } from '../types/service-variants';
     website: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI-powered molecular modeling and simulation',
   real_implementation: boolean;
   implementation_details: string;
@@ -63,9 +71,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       features: [;
         'AI - powered molecular modeling and simulation',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Target identification and validation',
         'Drug repurposing and optimization',
         'Predictive toxicity and efficacy analysis',
@@ -79,14 +91,20 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       popular: true,
       icon: '🧬',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms'
       ]
@@ -96,9 +114,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.'
       competitors: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
       ],
       marketSize: '$45 && 45.8B AI drug discovery market',
@@ -134,9 +156,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'ai - drug - discovery - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -151,10 +177,15 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 12,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Precision Medicine & Genomics Platform;
     {
       id: 'precision - medicine - genomics',
@@ -166,9 +197,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'Comprehensive precision medicine platform that combines genomic analysis, AI - powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
       features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Whole genome sequencing and analysis',
         'AI - powered disease risk assessment',
         'Personalized treatment recommendations',
@@ -183,14 +218,20 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       popular: true,
       icon: '🧬',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Epic, Cerner, Allscripts, Lab systems, Research databases'
       ]
@@ -200,9 +241,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.'
       competitors: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
       ],
       marketSize: '$78 && 78.6B precision medicine market',
@@ -238,9 +283,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'precision - medicine - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -255,9 +304,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 23,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
     // AI - Powered Medical Imaging Analysis;
@@ -273,9 +326,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'AI - powered image analysis and diagnosis',
         'Multi - modality support (X - ray, MRI, CT, Ultrasound)',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Automated abnormality detection',
         'Clinical decision support tools',
         'Integration with PACS systems',
@@ -288,23 +345,34 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       popular: true,
       icon: '🩻',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'
       ]
       useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / ai - medical - imaging - analysis',
@@ -324,25 +392,37 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ],
       use_cases: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance',
       ],
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       market_size: '$32.1B AI medical imaging market',
       growth_rate: '42% annual growth',
       variant: 'ai - imaging - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -357,9 +437,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 34,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'High-quality video consultations',
     // Digital Health & Telemedicine Platform;
     {
@@ -373,9 +457,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       features: [;
         'High - quality video consultations',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Remote patient monitoring',
         'Health data analytics and insights',
         'Patient engagement and education',
@@ -389,22 +477,32 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       popular: true,
       icon: '🏥',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Epic, Cerner, Allscripts, Practice management systems, Insurance systems'
       ]
       useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
       ],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
@@ -440,9 +538,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'digital - health - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -457,9 +559,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 78,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI-powered trial design optimization',
     // Clinical Trial Management & Optimization;
     {
@@ -473,9 +579,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       features: [;
         'AI - powered trial design optimization',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Intelligent patient recruitment and matching',
         'Real - time data collection and monitoring',
         'Predictive analytics and insights',
@@ -489,25 +599,35 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       popular: true,
       icon: '🔬',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software',
       ],
       integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software',
       ],
       integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       useCases: [
         'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'
       ]
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
       competitors: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
       ],
       marketSize: '$67 && 67.2B clinical trial market',
@@ -515,8 +635,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'clinical-trial-enterprise',
       contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -544,7 +668,10 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'clinical - trial - enterprise',
       contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -554,6 +681,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       implementation_details:;
         'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
       launch_date: '2024 - 11 - 01',
+<<<<<<< HEAD
 
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
@@ -563,6 +691,16 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 <<<<<<< HEAD
     },
 =======
+=======
+=======
+
+        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
+      launchDate: '2024-11-01',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      customers: 34,
+      rating: 4 && 4.8,
+      reviews: 19,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     },;
 
@@ -570,7 +708,10 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
   ];    features: [
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -606,6 +747,10 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     features: [
       'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting';
       'Mobile research appAPI for research institutions'
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -613,12 +758,15 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       }
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
       launchDate: '2024-11-01'
       customers: 34
       rating: 4.8
       reviews: 19
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
       customers: 34,
@@ -664,17 +812,25 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     variant: 'clinical - trial - enterprise',
     contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     popular: true, icon: '🔬',
     color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
     link: 'https://ziontechgroup && ziontechgroup.com/clinical-trial-management-optimization',
@@ -684,17 +840,25 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     category: 'Clinical Research & Trials', realService: true,
     technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'];
     useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'];
     roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
     competitors: ['Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     marketSize: '$67 && 67.2B clinical trial market', growthRate: '18% annual growth',
     variant: 'clinical-trial-enterprise',
     contactInfo: {
@@ -707,9 +871,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-11-01', customers: 34,
     rating: 4 && 4.8,
 <<<<<<< HEAD
+<<<<<<< HEAD
     reviews: 19
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     reviews: 19
 
@@ -718,6 +885,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launch_date: '2024 - 11 - 01', customers: 34,
     rating: 4.8,
     reviews: 19;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -998,6 +1166,19 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 ;
   }
 ];
+=======
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -1260,5 +1441,16 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
+<<<<<<< HEAD
+=======
+
+
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

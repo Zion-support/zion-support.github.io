@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -16,6 +17,10 @@ import { MobileProjectView } from "../components/projects/MobileProjectView",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Mock data
 
 const projectData = {
@@ -24,6 +29,7 @@ const projectData = {
   client: {
     name: "TechCorp Inc."
     avatar: ""
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -41,6 +47,9 @@ const projectData = {;
     name: "TechCorp Inc.",;
     avatar: "";
   };
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   startDate: "Oct 15, 2023";
   endDate: "Jan 15, 2024";
   status: "in_progress",;
@@ -70,6 +79,7 @@ const milestonesData = [;
     id: "milestone-3",;
     title: "Product Pages",;
     dueDate: "Dec 30, 2023";
+<<<<<<< HEAD
     status: "pending" as const,;
     paymentStatus: "pending" as const,;
     amount: "$5,000";
@@ -120,6 +130,10 @@ const milestonesData = [
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    status: "pending" as const
+    paymentStatus: "pending" as const
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   startDate: "Oct 15, 2023",
   endDate: "Jan 15, 2024",
@@ -153,9 +167,12 @@ const milestonesData = [
     status: "pending" as const,
     paymentStatus: "pending" as const,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     amount: "$5,000"
   }
 ],
@@ -169,10 +186,14 @@ export function MobileProjects() {
       />
       <main className="py-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <MobileProjectView
           project={projectData}
         <MobileProjectView 
           project={projectData} 
+<<<<<<< HEAD
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -233,6 +254,8 @@ export function MobileProjects() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <MobileProjectView 
           project={projectData} 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           milestones={milestonesData}
@@ -242,20 +265,35 @@ export function MobileProjects() {;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
+=======
+
+      />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <main className="py-4">;
         <MobileProjectView
           project={projectData} 
           milestones={milestonesData}
         />;
       </main>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <BottomNavigation />;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -322,6 +360,7 @@ function MobileProjects() {
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
 
 };
 ;
@@ -406,3 +445,12 @@ export function MobileProjects() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

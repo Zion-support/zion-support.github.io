@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         const inner_index = await r.json (),
         results.push ({ id: j.id || f.name, file: f.name, generated_at: j.generated_at, insights: j.insights });
 =======
@@ -38,6 +39,11 @@ async function fetchFromGitHub(): Promise<any[]> {
         results.push({ id: j.id |f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
       } catch {
         // ignore
+=======
+
+      } catch {
+        // ignore;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
 return results;
@@ -46,18 +52,28 @@ return results;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async /**
  * handler - Function description
  */
 function handler() {
 const dir = path.join (process.cwd (), 'automation_logs'),
   try {
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
+=======
+    if () {) {
+  $2
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
       // Check condition
 if ( {) {
@@ -73,7 +89,10 @@ if ( {) {
           }
         }),
         return res.status (200).json ({ logs });
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       }
     }
@@ -81,30 +100,42 @@ if ( {) {
     // fall through to GitHub;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const remote = await fetchFromGitHub (),
   return res.status (200).json ({ logs: remote });
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return res.status(200).json({ logs: remote });
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (fs.existsSync(dir)) {
       const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse()
@@ -236,3 +267,6 @@ export default async function handler(req, res) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

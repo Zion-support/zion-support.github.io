@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 export default function StudioHostPage() {;
   const [persona, setPersona] = useState<PersonaConfig>({;
@@ -20,6 +21,8 @@ export default function StudioHostPage() {
     voice: 'Visionary',
     language: 'English',;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -43,13 +46,17 @@ import React, { useState } from 'react';
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
@@ -74,27 +81,41 @@ export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
         method: 'POST',
@@ -155,7 +176,10 @@ function StudioHostPage() {
       set_generating (false);    }      const data = await res.json ();
       set_episode (data.episode);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (e) {
       console.error (e);
       alert ('Failed to generate episode');
@@ -163,6 +187,7 @@ function StudioHostPage() {
       set_generating (false);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -233,6 +258,8 @@ if (return) {
       alert ('Failed to update RSS');
     } finally {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
     }
@@ -245,7 +272,10 @@ if (return) {
     setPublishing(true);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
       <section className='space-y-3'>;
@@ -253,6 +283,10 @@ if (return) {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Voice</label>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <select
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
@@ -284,9 +318,13 @@ if (return) {
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <label className='block text - sm font - medium'>Language</label>;
             <input;
               className='mt - 1 w - full border rounded p - 2';
@@ -294,26 +332,38 @@ if (return) {
               on_change={e =>;
                 set_persona ({ ...persona, language: e.target.value });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-8">
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">AI Persona</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div>
             <label className='block text-sm font-medium'>Invitee Name</label>
               value={persona && persona.cloneStyleText || ''}
@@ -377,8 +427,32 @@ if (return) {
             <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
             <select
               className="mt-1 w-full border rounded p-2"
+<<<<<<< HEAD
 
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+=======
+              value={persona.voice}
+              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
+            >
+              <option value="Visionary">Visionary</option>
+              <option value="Grounded">Grounded</option>
+              <option value="Technical">Technical</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
+            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+
+    }
+  };
+
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </section>
@@ -387,6 +461,7 @@ if (return) {
         <h2 className="text-xl font-semibold">Episode Generator</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
           </div>
@@ -397,6 +472,8 @@ if (return) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
@@ -420,12 +497,18 @@ if (return) {
       </section>
       {episode && (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="space-y-4">
 =======
 
         <section className="space-y-4">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        <section className="space-y-4">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
             <p className="text-sm text-gray-600">ID: {episode.id}</p>
@@ -434,12 +517,18 @@ if (return) {
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {episode.questions?.map((q: string, idx: number) => (
 =======
 
                 {episode.questions?.map((q: string, idx: number) => (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                {episode.questions?.map((q: string, idx: number) => (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <li key={idx}>{q}</li>
               value={persona && persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
@@ -514,6 +603,10 @@ if (return) {
       setEpisode(data.episode)
     } catch (e) {
       console.error(e),
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleGenerate = async () => {
     setGenerating(true);
     try {
@@ -706,6 +799,10 @@ if (return) {
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
   };
@@ -755,6 +852,7 @@ if (return) {
                   <li key={idx}>{q}</li>
 
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </ol>
             </div>
@@ -1002,6 +1100,14 @@ if (return) {
               <div className='flex gap - 3'>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+              </ol>
+            </div>
+              <div className='flex gap - 3'>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex gap-3'>
                 {episode.audio.mp3Url && (
                   <a;
@@ -1021,6 +1127,7 @@ if (return) {
                   <a;
                     href={episode.audio.mp4Url}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                     className='text - blue - 600 underline';
@@ -1038,10 +1145,13 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 disabled={publishing}
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
+<<<<<<< HEAD
 
 ;
 
@@ -1065,6 +1175,15 @@ if (return) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {episode.audio && (
 
                 {publishing ? 'Publishing…' : 'Update RSS'}
@@ -1073,8 +1192,13 @@ if (return) {
             {episode.audio && (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

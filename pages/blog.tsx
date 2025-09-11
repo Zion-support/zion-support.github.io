@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -46,6 +47,11 @@ import Layout from '../components/layout/Layout',;
 import React, { useState } from 'react',
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function BlogPage() {
 	return (
 		<Layout>
@@ -60,6 +66,7 @@ export default function BlogPage() {
 		</Layout>
 	)
 }
+<<<<<<< HEAD
 =======
 =======
 import React, { useState } from 'react',
@@ -86,6 +93,8 @@ return (
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -93,7 +102,10 @@ return (
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,14 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next / head';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -32,27 +36,51 @@ function DocsPage() {
       links: [
 =======
 
+=======
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
         { name: 'Overview', href: '/enhanced-services-showcase' },
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
         { name: 'Contact Sales', href: '/contact' }]
     };
+<<<<<<< HEAD
+=======
+export default function DocsPage() {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     {
       title: 'AI Services Docs'
       links: [
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { name: 'AI Guardrails', href: '/ai-guardrails' },
         { name: 'AI Evals', href: '/ai-evals' },
         { name: 'Agentic RAG', href: '/agentic-rag' }]
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
       title: 'IT & Platform Docs'
@@ -77,6 +105,8 @@ function DocsPage() {
         { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
 }];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     {
       title: 'IT & Platform Docs'
@@ -87,20 +117,27 @@ function DocsPage() {
         { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
     }];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const external = [
     { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
     { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
     { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
     { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const quickLinks = [
     {
       title: 'API Status',
       description: 'Check service availability and performance',
+<<<<<<< HEAD
 <<<<<<< HEAD
 icon: <CheckCircle className="w-6 h-6" />,
       href: '/status',
@@ -159,6 +196,11 @@ icon: <CheckCircle className="w-6 h-6" />,
       href: '/status',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      icon: <CheckCircle className="w-6 h-6" />,
+      href: '/status',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'text-green-400'
     }
     {
@@ -176,17 +218,23 @@ icon: <CheckCircle className="w-6 h-6" />,
       color: 'text-purple-400'
     }
     {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'Community Forum'
       description: 'Connect with other developers and users'
       icon: <ExternalLink className='w-6 h-6' />
       href: '/community'
       color: 'text-yellow-400'
     }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'Community Forum',
       description: 'Connect with other developers and users',
       icon: <ExternalLink className='w-6 h-6' />,
@@ -194,10 +242,13 @@ icon: <CheckCircle className="w-6 h-6" />,
       color: 'text-yellow-400',
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
@@ -212,10 +263,15 @@ icon: <CheckCircle className="w-6 h-6" />,
     const matchesCategory = selectedCategory === 'all' |doc.category === selectedCategory;
     return matchesSearch && matchesCategory
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function DocsPage() {;
   const contact = {;
     mobile: '+1 302 464 0950',;
@@ -225,6 +281,7 @@ export default function DocsPage() {;
   });
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
+<<<<<<< HEAD
       case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced': return 'bg-red-500/20 text-red-400';
@@ -321,14 +378,23 @@ export default function DocsPage() {;
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   };
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
 
@@ -338,6 +404,7 @@ export default function DocsPage() {;
       day: 'numeric'
     });  };      day: 'numeric'
     })
+<<<<<<< HEAD
 
       case 'Advanced': return 'bg-red-500/20 text-red-400',;
       default: return 'bg-gray-500/20 text-gray-400';
@@ -362,6 +429,11 @@ export default function DocsPage() {;
   return (
 =======
   };
+=======
+  }
+
+  };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const formatDate = (dateString: string) => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
@@ -374,7 +446,10 @@ export default function DocsPage() {;
 
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/docs' />;
       </Head>;
@@ -391,9 +466,13 @@ export default function DocsPage() {;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             {sections && sections.map(s => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={s && s.title}
                 className='p-6 bg-black/40 border border-gray-700/50'>;
@@ -404,6 +483,7 @@ export default function DocsPage() {;
                   {s && s.links.map(l => (;
                     <li key={l && l.name}>;
                       <a
+<<<<<<< HEAD
 <<<<<<< HEAD
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
@@ -592,6 +672,8 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                   {s.links.map(l => (
                     <li key={l.name}>
                       <a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         href={l.href}
                         className='text-cyan-400 hover:underline'
                       >
@@ -612,16 +694,20 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                     <li key={l.name}>
                       <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
                     </li>
+<<<<<<< HEAD
 =======
 
 
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </a>                    </li>
 
                     </li>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ))}
                 </ul>
@@ -638,6 +724,9 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </ul>;
@@ -654,7 +743,10 @@ icon: <ExternalLink className='w - 6 h - 6' />,
               {external && external.map(e => (;
                 <li key={e && e.name}>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a
                     href={e && e.url}
                     target='_blank'
@@ -664,10 +756,15 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                   </a>;
                 </li>              ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
@@ -689,6 +786,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
             </h2>;
             <div className='flex flex-col sm:flex-row gap-3'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </ul>
           </Card>
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
@@ -699,6 +797,9 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 href='/contact'
                 className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>;
@@ -742,15 +843,22 @@ icon: <ExternalLink className='w - 6 h - 6' />,
               <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
               <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Card>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
@@ -840,11 +948,15 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -853,14 +965,22 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               ))}
             </ul>
           </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const filtered = flags.filter(f =>
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -19,10 +20,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const filtered = flags.filter(f =>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    const filtered = flags.filter(f =>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       (!status || f.status === status) &&
       (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType || f.contentType === contentType)
+<<<<<<< HEAD
 <<<<<<< HEAD
 ),
     return res.status(200).json({ flags: filtered })
@@ -58,6 +65,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const init = req.body |{}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     return res.status(200).json({ flags: filtered });
   }
@@ -67,11 +76,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
 
     const init = req.body || {};
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const flag = await createFlag(init);
       return res.status(201).json({ flag });
     } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -161,7 +174,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+      return res.status(400).json({ error: e.message || 'Invalid payload' });
+    }
+  }
+
+  res.setHeader('Allow', 'GET,POST');
+  return res.status(405).end('Method Not Allowed');
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

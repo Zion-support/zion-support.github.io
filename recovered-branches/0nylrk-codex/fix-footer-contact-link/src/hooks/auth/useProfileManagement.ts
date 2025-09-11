@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
@@ -9,11 +10,18 @@ import type { UserProfile } from "@/types/auth";
 
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
       setIsLoading(true)
       if (!data.id) {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -29,11 +37,14 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
 setIsLoading(true),
       if (!data && data.id) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return { error: "User ID is required" }
       }
       // Update user metadata
       const { error: authError } = await supabase && supabase.auth.updateUser({
         data: {
+<<<<<<< HEAD
           display_name: data && data.displayName;
           user_type: data && data.userType,
           headline: data && data.headline}});
@@ -80,6 +91,13 @@ if ( {) {
           display_name: data.displayName;
           user_type: data.userType
           headline: data.headline}});
+=======
+
+          display_name: data && data.displayName;
+          user_type: data && data.userType,
+          headline: data && data.headline}});
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (authError) {
         toast({
           title: "Profile update failed";
@@ -87,10 +105,13 @@ if ( {) {
           variant: "destructive"});
         return { error: authError }
       }
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -100,6 +121,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -107,10 +129,16 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
         .update({
+<<<<<<< HEAD
 
           display_name: data && data.displayName;
           user_type: data && data.userType;
@@ -120,6 +148,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           profile_complete: data && data.profileComplete,
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           display_name: data.displayName;
           user_type: data.userType;
           bio: data.bio;
@@ -133,10 +163,13 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           title: "Profile update failed";
           description: profileError.message
           variant: "destructive"});
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           display_name: data.displayName,
           user_type: data.userType,
           bio: data.bio,
@@ -144,9 +177,12 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           avatar_url: data.avatarUrl || data.avatar_url,
           profile_complete: data.profileComplete,
 <<<<<<< HEAD
+<<<<<<< HEAD
           title: "Profile update failed";
           description: profileError && profileError.message,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           updated_at: new Date().toISOString()})
         .eq("id", data && data.id);
@@ -154,7 +190,10 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       if (profileError) {
         toast({
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Update profiles table;
       const { error: profile_error } = await supabase;
         .from ("profiles");
@@ -175,11 +214,19 @@ if ( {) {
         toast ({
           title: "Profile update failed";
           description: profile_error.message,
+<<<<<<< HEAD
           updated_at: new Date().toISOString()})
         .eq("id", data.id),
 
       if (profileError) {
         toast({
+=======
+
+          variant: "destructive"});
+        return { error: profile_error }
+      }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title: "Profile update failed",
           description: profileError.message,
           variant: "destructive"}),
@@ -193,6 +240,7 @@ if ( {) {
 
       return { success: true }
     } catch (error: any) {
+<<<<<<< HEAD
       console.error("Profile update error:", error),
       toast({
         title: "Profile update failed";
@@ -271,12 +319,24 @@ if ( {) {
       toast ({
         title: "Profile update failed";
         description: error && error.message || "An unexpected error occurred",
+=======
+      console && console.error("Profile update error:", error);
+      toast({
+        title: "Profile update failed";
+
+        description: error && error.message || "An unexpected error occurred",
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   return { update_profile }
 }
@@ -291,6 +351,7 @@ if ( {) {
 
   return { updateProfile }
 };
+<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -415,3 +476,5 @@ return {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

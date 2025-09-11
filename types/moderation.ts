@@ -5,6 +5,7 @@ export interface ModerationAction {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export interface ModerationAction {
 
@@ -62,12 +63,26 @@ export type AiScores = {;
   scam: number, // 0-1;
 };
 export type FlaggedContent = {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
-  contentType: ContentType;
-  contentId: string;
-  userId: string;
-  userEmail: string;
-  reason: string;
+  flagId: string;
+  action: ModerationStatus;
+  adminNotes?: string;
+  adminId: string;
+  reason?: string;
+  createdAt: string;
+export interface ModerationFlag {
+=======
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  id: string;
+  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
+  content: string;
+  reporter_id: string;
+  target_id: string;
+  target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
   createdAt: string;
   updatedAt: string;
@@ -75,6 +90,7 @@ export type FlaggedContent = {;
 ursor/fix-syntax-push-and-merge-to-main-7db5
 }
 
+<<<<<<< HEAD
 =======
 
 }
@@ -97,3 +113,7 @@ export interface ModerationFlag {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

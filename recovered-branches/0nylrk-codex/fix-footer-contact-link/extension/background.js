@@ -1,11 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const OPENAI_API_KEY = ''
 // Base URL for opening Zion pages in a new tab
 =======
 const BASE_URL = 'https: //zionai && zionai.com',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+const BASE_URL = 'https: //zionai && zionai.com',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const BASE_URL = 'https: //zionai.com'
 async function askZionGPT(prompt) {
@@ -13,11 +18,17 @@ async function askZionGPT(prompt) {
 
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const OPENAI_API_KEY = '',
 // Base URL for opening Zion pages in a new tab;
 const BASE_URL = 'https: //zionai.com',
@@ -84,6 +95,7 @@ if ( {) {
 
   }
 
+<<<<<<< HEAD
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
@@ -133,6 +145,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}),;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),
 ;
 }),;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     allServices = [...allServices, ...newServices]
     let filteredServices = allServices
@@ -492,6 +493,8 @@ function getRandomItem(arr) {
 
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function generateRandomService(idNum) {
     const templates = [
         {
@@ -568,12 +571,7 @@ function generateRandomService(idNum) {
         aiScore: Math.floor(90 + Math.random() * 10),
         rating: parseFloat((4 + Math.random()).toFixed(1)),
         reviewCount: Math.floor(50 + Math.random() * 150),
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-    };
-
-=======
     }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai-ml' },
@@ -657,13 +655,7 @@ export default function ServicesPage() {
             </div>))}
         </div>
       </div>
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -1331,6 +1323,7 @@ import SEO from '../components/SEO';
       </section>
     </>
   );
+<<<<<<< HEAD
 };
 
 <<<<<<< HEAD
@@ -1347,3 +1340,6 @@ export default ServicesPage;
 
 export default ServicesPage;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

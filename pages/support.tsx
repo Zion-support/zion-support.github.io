@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   BookOpen, Video, FileText, Search, Filter,
   CheckCircle, ArrowRight, Brain, Atom, Rocket,
 import React, { useState } from 'react';
@@ -31,6 +32,10 @@ import {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   BookOpen, Video, FileText, Search, Filter,
   CheckCircle, ArrowRight, Brain, Atom, Rocket,
   Shield, Zap, Users, Star, TrendingUp, Code
@@ -48,18 +53,27 @@ export default function Support() {
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'quantum-solutions'
       name: 'Quantum Solutions'
       icon: <Atom className="w-8 h-8 text-purple-400" />
       description: 'Help with quantum computing and cryptography'
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'quantum-solutions',
       name: 'Quantum Solutions',
       icon: <Atom className="w-8 h-8 text-purple-400" />,
       description: 'Help with quantum computing and cryptography',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       articles: 18
     }
     {
@@ -67,6 +81,7 @@ export default function Support() {
       name: 'Autonomous Systems'
       icon: <Rocket className="w-8 h-8 text-green-400" />
       description: 'Support for self-managing business operations'
+<<<<<<< HEAD
 =======
 
       articles: 18
@@ -74,11 +89,16 @@ export default function Support() {
     {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'autonomous-systems',
       name: 'Autonomous Systems',
       icon: <Rocket className="w-8 h-8 text-green-400" />,
       description: 'Support for self-managing business operations',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       articles: 32
     }
     {
@@ -86,6 +106,7 @@ export default function Support() {
       name: 'Enterprise IT'
       icon: <Shield className="w-8 h-8 text-blue-400" />
       description: 'Infrastructure and security support'
+<<<<<<< HEAD
 =======
 
       articles: 32
@@ -93,11 +114,16 @@ export default function Support() {
     {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'enterprise-it',
       name: 'Enterprise IT',
       icon: <Shield className="w-8 h-8 text-blue-400" />,
       description: 'Infrastructure and security support',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       articles: 28
     }
     {
@@ -105,6 +131,7 @@ export default function Support() {
       name: 'Billing & Account'
       icon: <Zap className="w-8 h-8 text-yellow-400" />
       description: 'Payment, invoices, and account management'
+<<<<<<< HEAD
 =======
 
       articles: 28
@@ -112,14 +139,19 @@ export default function Support() {
     {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'billing',
       name: 'Billing & Account',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       description: 'Payment, invoices, and account management',
 <<<<<<< HEAD
+<<<<<<< HEAD
       id: 'technical',
       name: 'Technical Issues',
       icon: <Code className="w - 8 h - 8 text - orange - 400" />,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       articles: 15
     }
     {
@@ -226,6 +258,7 @@ export default function Support() {
       {/* Hero Section */}
       id: 'technical',
       name: 'Technical Issues',
+<<<<<<< HEAD
       icon: <Code className="w-8 h-8 text-orange-400" />,
 =======
 
@@ -258,44 +291,74 @@ export default function Support() {
       action: 'Start Chat',
       color: 'from-cyan-500 to-blue-600',
       available: true
+=======
+      icon: <Code className="w - 8 h - 8 text - orange - 400" />,
+      description: 'Bug reports and technical troubleshooting',
+      articles: 42;
+    }
+  ],
+  const quick_actions = [;
+    {
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      icon: <MessageCircle className="w - 8 h - 8 text - cyan - 400" />,
+      action: 'Start Chat',
+      color: 'from - cyan - 500 to - blue - 600',
+      available: true;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       title: 'Phone Support',
       description: 'Speak directly with our experts',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: <Phone className="w - 8 h - 8 text - green - 400" />,
       action: 'Call Now',
       color: 'from - green - 500 to - emerald - 600',
       available: true;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: <Phone className="w-8 h-8 text-green-400" />,
       action: 'Call Now',
       color: 'from-green-500 to-emerald-600',
       available: true
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       title: 'Email Support',
       description: 'Send us a detailed message',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: <Mail className="w - 8 h - 8 text - purple - 400" />,
       action: 'Send Email',
       color: 'from - purple - 500 to - pink - 600',
       available: true;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: <Mail className="w-8 h-8 text-purple-400" />,
       action: 'Send Email',
       color: 'from-purple-500 to-pink-600',
       available: true
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       title: 'Video Call',
       description: 'Screen share and visual assistance',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: <Video className="w - 8 h - 8 text - orange - 400" />,
       action: 'Schedule Call',
       color: 'from - orange - 500 to - red - 600',
@@ -320,21 +383,33 @@ export default function Support() {
     {
       title: 'Troubleshooting Autonomous System Errors',
       category: 'Autonomous Systems',
+<<<<<<< HEAD
 read_time: '6 min read',
+=======
+      read_time: '6 min read',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       views: '3.1k',
       helpful: '92%';
     },
     {
       title: 'API Integration Best Practices',
       category: 'Technical Issues',
+<<<<<<< HEAD
 read_time: '7 min read',
+=======
+      read_time: '7 min read',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       views: '4.2k',
       helpful: '96%';
     },
     {
       title: 'Understanding Your Invoice and Billing',
       category: 'Billing & Account',
+<<<<<<< HEAD
 read_time: '3 min read',
+=======
+      read_time: '3 min read',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       views: '1.5k',
       helpful: '89%';
     }
@@ -348,17 +423,29 @@ read_time: '3 min read',
     {
       day: 'Saturday',
       hours: '10:00 AM - 6:00 PM EST',
+<<<<<<< HEAD
 status: 'Available';
+=======
+      status: 'Available';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       day: 'Sunday',
       hours: '12:00 PM - 6:00 PM EST',
+<<<<<<< HEAD
 status: 'Limited';
+=======
+      status: 'Limited';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   ],
   const filtered_categories = selected_category === 'all';
     ? support_categories;
     : support_categories.filter (cat => cat.id === selected_category),
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <div className="min-h-screen bg-black text-white">
@@ -367,6 +454,7 @@ status: 'Limited';
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20" />
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 20 }  } catch (error) {
@@ -655,6 +743,8 @@ status: 'Limited';
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20" />
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -673,14 +763,27 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+<<<<<<< HEAD
               Get the support you need for our AI consciousness, quantum computing
               Get the support you need for our AI consciousness, quantum computing, 
+=======
+
+
+              Get the support you need for our AI consciousness, quantum computing, 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
             {/* Search Bar */}
@@ -692,6 +795,13 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
@@ -710,6 +820,12 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
               </div>
@@ -732,11 +848,19 @@ status: 'Limited';
         </div>
       </section>
       {/* Quick Actions */}
+<<<<<<< HEAD
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+      <section className="py - 20">;
+        <div className="container mx - auto px - 4">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0.8 }}
       {/* Quick Actions */  } catch (error) {
     console.error("Error:", error);
@@ -761,6 +885,12 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -771,13 +901,17 @@ status: 'Limited';
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickActions.map((action, index) => (
               <motion.div
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={action.title}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 className="group cursor - pointer";
@@ -787,6 +921,8 @@ status: 'Limited';
                     {action.icon}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={action.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -813,14 +949,19 @@ status: 'Limited';
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    {action.icon}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {action.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{action.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{action.description}</p>
@@ -990,6 +1131,9 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{action.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{action.description}</p>
@@ -1014,6 +1158,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                   </button>;
                 </div>;
               </motion.div>;
@@ -1025,6 +1170,16 @@ status: 'Limited';
           </div>;
         </div>;
       </section>;
+=======
+
+                  </button>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Support Categories */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1048,6 +1203,12 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1061,6 +1222,10 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="flex justify-center mb-12">
             <div className="flex flex-wrap gap-3">
               <button
@@ -1078,6 +1243,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
               >;
                 All Categories;
               </button>;
@@ -1102,6 +1268,21 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              >;
+                All Categories;
+              </button>;
+              {support_categories.map ((category) => (
+                <button;
+                  key={category.id}
+                  on_click={() => setSelectedCategory (category.id)}
+                  className={`px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
+                    selected_category === category.id;
+                      ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                      : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50';
+                  }`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   {category.name  } catch (error) {
     console.error("Error:", error);
@@ -1119,13 +1300,17 @@ status: 'Limited';
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCategories.map((category, index) => (
               <motion.div
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={category.id}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 className="group cursor - pointer";
@@ -1138,6 +1323,8 @@ status: 'Limited';
                         {category.name}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1167,14 +1354,19 @@ status: 'Limited';
                     <div className="flex-shrink-0">{category.icon}</div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        {category.name}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed">{category.description}</p>
                     </div>
@@ -1316,6 +1508,9 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed">{category.description}</p>
                     </div>
@@ -1369,6 +1564,12 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1381,13 +1582,17 @@ status: 'Limited';
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
                 <motion.div
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={channel.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   </div>;
@@ -1412,12 +1617,17 @@ status: 'Limited';
           </div>;
         </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="text - center p - 6 bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 2xl border border - gray - 700 / 30 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <div className="flex justify - center mb - 4">;
                     {channel.icon}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={channel.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1467,6 +1677,7 @@ status: 'Limited';
                     </div>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1606,14 +1817,22 @@ status: 'Limited';
                     </div>
                   </div>
                 </motion.div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
             </div>
           </div>
         </section>
         {/* Search and Filter */}
+<<<<<<< HEAD
         <section className="py-12 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-6 items-center">
+=======
+        <section className="py - 12 px - 4">;
+          <div className="max - w-6xl mx - auto">;
+            <div className="flex flex - col lg:flex - row gap - 6 items - center">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Search Bar */}
               ))  } catch (error) {
     console.error("Error:", error);
@@ -1636,6 +1855,12 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex-1 w-full lg:w-auto">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -1654,11 +1879,18 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
               </div>
               {/* Category Filter */}
+<<<<<<< HEAD
               <div className="flex flex-wrap gap-2">
                 {supportCategories.map((category) => (
                   <button
@@ -1668,21 +1900,38 @@ status: 'Limited';
                       selectedCategory === category.id
                         ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
                         : 'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-cyan-500/20 hover:border-cyan-500/50'
+=======
+              <div className="flex flex - wrap gap - 2">;
+                {support_categories.map ((category) => (
+                  <button;
+                    key={category.id}
+                    on_click={() => setSelectedCategory (category.id)}
+                    className={`px - 4 py - 2 rounded - lg border transition - all duration - 300 flex items - center gap - 2 ${
+                      selected_category === category.id;
+                        ? 'bg - cyan - 500 / 20 border - cyan - 500 / 50 text - cyan - 400';
+                        : 'bg - gray - 800 / 50 border - gray - 600 text - gray - 300 hover:bg - cyan - 500 / 20 hover:border - cyan - 500 / 50';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }`}
                   >;
                     {category.icon}
                     {category.name}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <span className="text - sm text - gray - 400">({category.count})</span>;
                   </button>))}
 =======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1735,9 +1984,13 @@ status: 'Limited';
         </section>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* FAQ Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1749,6 +2002,7 @@ status: 'Limited';
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <span className="text-sm text-gray-400">({category.count})</span>
                   </button>
@@ -1834,6 +2088,8 @@ status: 'Limited';
           </div>;
         </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 question: "What is AI Consciousness Evolution?",
                 answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self - aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence.";
@@ -1859,13 +2115,17 @@ status: 'Limited';
 
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
                 <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
                 <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
               </div>
+<<<<<<< HEAD
 
       {/* FAQs */  } catch (error) {
     console.error("Error:", error);
@@ -2013,6 +2273,8 @@ status: 'Limited';
                 <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
                 <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
               </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* FAQs */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2077,6 +2339,12 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -2086,12 +2354,30 @@ status: 'Limited';
                 Quick answers to common questions and solutions
               </p>
             </motion.div>
+<<<<<<< HEAD
             {filteredFAQs.length === 0 ? (
 =======
 
                         </span>))}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+              className="text - center mb - 16";
+            >;
+              <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
+                Frequently Asked Questions;
+              </h2>;
+              <p className="text - xl text - gray - 300">;
+                Quick answers to common questions and solutions;
+              </p>;
+            </motion.div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            {filteredFAQs.length === 0 ? (
+
+                        </span>))}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-center py-20">
                 <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-semibold text-white mb-4">No results found</h3>
@@ -2101,6 +2387,7 @@ status: 'Limited';
               <div className="space-y-6">
                 {filteredFAQs.map((faq, index) => (
                   <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2226,6 +2513,12 @@ status: 'Limited';
               {resources.map ((resource, index) => (
                 <motion.div;
 <<<<<<< HEAD
+=======
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2246,6 +2539,11 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30"
                   >
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
@@ -2291,6 +2589,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                     </div>;
                   </motion.div>;
                 ))  } catch (error) {
@@ -2306,6 +2605,15 @@ status: 'Limited';
 }
           </div>;
         </section>;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    </div>;
+                  </motion.div>))}
+              </div>)}
+          </div>;
+        </section>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Support Resources */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2329,6 +2637,12 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -2341,13 +2655,17 @@ status: 'Limited';
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
                 <motion.div
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={resource.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -2387,10 +2705,13 @@ status: 'Limited';
                   <div className="flex items-center justify-between">
                     <span className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full text-xs">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="p - 6 bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 2xl border border - gray - 700 / 30 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <div className="flex justify - center mb - 4">;
                     {resource.icon}
+<<<<<<< HEAD
                   </div>;
                   <h3 className="text - lg font - bold text - white mb - 2">{resource.title}</h3>;
                   <p className="text - gray - 300 text - sm mb - 4">{resource.description}</p>;
@@ -2405,6 +2726,8 @@ status: 'Limited';
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={resource.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2440,8 +2763,15 @@ status: 'Limited';
                   <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full text-xs">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      {resource.category}
+                    </span>
+                    <a
+                      href={resource.link}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {resource.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2455,6 +2785,10 @@ status: 'Limited';
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                     >
                       Access
@@ -2473,6 +2807,7 @@ status: 'Limited';
           <div className="max-w-4xl mx-auto space-y-4">
             {popularArticles.map((article, index) => (
               <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                       {resource.category  } catch (error) {
@@ -2529,10 +2864,13 @@ status: 'Limited';
               <motion.div;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={article.title}
                 initial={{ opacity: 0, coordinate_x: -20 }}
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 className="group cursor - pointer";
@@ -2549,6 +2887,8 @@ status: 'Limited';
                           {article.category}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={article.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2577,6 +2917,7 @@ status: 'Limited';
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {article.title  } catch (error) {
@@ -3212,12 +3553,18 @@ export default SupportPage,
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {article.title}
                         {article.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </h3>
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <span className="flex items-center gap-1">
@@ -3240,6 +3587,11 @@ export default SupportPage,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </span>
                         <span className="flex items-center gap-1">
                           <TrendingUp className="w-4 h-4" />
@@ -3276,6 +3628,11 @@ export default SupportPage,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -3295,13 +3652,24 @@ export default SupportPage,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Support Hours & Availability
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+<<<<<<< HEAD
                 Our expert support team is available to help you succeed with our 
                 Our expert support team is available to help you succeed with our
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 revolutionary technology solutions.
               </p>
               <div className="space-y-4">
@@ -3356,15 +3724,33 @@ export default SupportPage,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="relative"
             >
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
                   For urgent technical issues or critical support needs
                   For urgent technical issues or critical support needs,
                   For urgent technical issues or critical support needs, 
                   For urgent technical issues or critical support needs,
+=======
+
+
+                  For urgent technical issues or critical support needs,
+
+=======
+                  For urgent technical issues or critical support needs, 
+                  For urgent technical issues or critical support needs,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   our team is available around the clock.
                 </p>
                 <div className="space-y-4">
@@ -3390,6 +3776,12 @@ export default SupportPage,
                     <ArrowRight className="w-5 h-5" />
                   </a>
                   </Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </div>
             </motion.div>
@@ -3402,6 +3794,11 @@ export default SupportPage,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -3420,14 +3817,25 @@ export default SupportPage,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
               Our support team is dedicated to ensuring your success with our
               Our support team is dedicated to ensuring your success with our 
               Our support team is dedicated to ensuring your success with our
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -3439,6 +3847,12 @@ export default SupportPage,
                 <ArrowRight className="w-5 h-5" />
               </a>
               </Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a
                 href="/resources"
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
@@ -3456,13 +3870,17 @@ export default Support
           </div>
         </section>
         {/* Contact Support */}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 export default Support,
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Contact Support */}
         {/* Contact Support */  } catch (error) {
@@ -3473,6 +3891,9 @@ export default Support,
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -3492,9 +3913,13 @@ export default Support,
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Still Need Help?
@@ -3510,6 +3935,7 @@ export default Support,
                   Contact Support
                   <ArrowRight className="w-5 h-5 ml-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </a>
                 </Link>
 =======
@@ -3520,6 +3946,13 @@ export default Support,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                </a>
+                </Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <a
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center"
@@ -3542,10 +3975,14 @@ export default Support,
     </Layout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default SupportPage;
 
 },
+<<<<<<< HEAD
 ;
 export default SupportPage,;
 ;
@@ -3712,3 +4149,7 @@ export default SupportPage;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

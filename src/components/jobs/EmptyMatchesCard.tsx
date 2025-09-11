@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Card } from '@/components/ui/card'
@@ -13,6 +14,14 @@ export function EmptyMatchesCard({
 }: EmptyMatchesCardProps) {
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+=======
+export function EmptyMatchesCard(): any ({;
+  onRefresh,;
+  isProcessing,;
+}: EmptyMatchesCardProps) {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>
       <div className='mb-4 flex justify-center'>
@@ -25,6 +34,7 @@ import { Button } from "@/components/ui/button";
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button 
         onClick = {onRefresh,}
         disabled = {isProcessing,}
+<<<<<<< HEAD
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -43,6 +53,9 @@ export function EmptyMatchesCard(): any ({;
   onRefresh,;
   isProcessing,;
 }: EmptyMatchesCardProps) {;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
@@ -51,6 +64,7 @@ export function EmptyMatchesCard(): any ({;
       </div>
       <h3 className="text-lg font-medium mb-2">No talent matches yet</h3>
       <p className="text-muted-foreground mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
         Run AI matching to find talents that match this job's requirements.
       </p>
@@ -64,6 +78,8 @@ export function EmptyMatchesCard(): any ({;
         onClick={onRefresh} 
         disabled={isProcessing}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         Run AI matching to find talents that match this job&apos,s requirements.
       </p>
       <Button 
@@ -72,11 +88,15 @@ export function EmptyMatchesCard(): any ({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className="mx-auto"
       >
         {isProcessing ? (
           <>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button
         onClick = {onRefresh,}
@@ -87,11 +107,14 @@ export function EmptyMatchesCard(): any ({;
       >
         {isProcessing ? (
           <>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />            Processing...
           </>
         ) : (
           <>
             <Sparkles className='mr-2 h-4 w-4' />            Find AI Matches            <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
+<<<<<<< HEAD
 
 
 
@@ -111,10 +134,16 @@ export function EmptyMatchesCard(): any ({;
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Processing...
           </>
         ) : (
           <>
+<<<<<<< HEAD
 
 
 
@@ -176,10 +205,28 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+}
+
+
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+            <Sparkles className="mr-2 h-4 w-4" />
+            Find AI Matches
+          </>
+        )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </Button>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
 import { Card } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -225,3 +272,5 @@ function EmptyMatchesCard() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

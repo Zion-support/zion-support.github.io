@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function JobApplicantsPage() {
@@ -16,12 +17,15 @@ export default function JobApplicantsPage() {;
     fetcher;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {use_router} from 'next / router';
 =======
@@ -154,6 +158,8 @@ export default function JobApplicantsPage() {
   const job = jobData?.job
   const applications = (appsData?.applications as any[]) || []
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
@@ -227,6 +233,7 @@ export default function JobApplicantsPage() {_const _router = useRouter();
             </div>
           );
         })}
+<<<<<<< HEAD
       </div>
     </div>
 );
@@ -249,3 +256,9 @@ export default function JobApplicantsPage() {_const _router = useRouter();
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      </div>;
+    </div>;
+  );
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

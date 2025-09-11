@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
@@ -77,6 +78,8 @@ export default function EmergingTechPage() {
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }]
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function EmergingTechPage() {
@@ -88,6 +91,7 @@ export default function EmergingTechPage() {
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -111,6 +115,8 @@ export default function EmergingTechPage() {
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function EmergingTechPage() {_const _features = [
     'Blockchain, _tokenization, _and smart contract audits', _'IoT and edge orchestration with zero-trust patterns', _'5G private networks and campus connectivity', _'Metaverse and spatial computing experimentation'];
   const _solutions = [
@@ -134,6 +140,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -144,13 +151,21 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a href="/contact" className="px-8 py-4">Start a Pilot</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </header>
           <section>
@@ -161,11 +176,15 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
+<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </section>
           <section>
@@ -175,6 +194,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </a>
               ))}
@@ -187,10 +207,17 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -198,12 +225,20 @@ ursor/fix-lint-push-and-merge-to-main-ce13
   }
 
 }
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -258,6 +293,7 @@ function EmergingTechPage() {
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
+<<<<<<< HEAD
   );
 };
                 </Link>
@@ -266,15 +302,20 @@ function EmergingTechPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </section>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </Layout>;
   );
@@ -282,6 +323,7 @@ function EmergingTechPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 }
@@ -290,3 +332,10 @@ function EmergingTechPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

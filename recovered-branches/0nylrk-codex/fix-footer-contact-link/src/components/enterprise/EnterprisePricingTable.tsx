@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Check, X} from "lucide-react";
@@ -32,6 +33,10 @@ import { Badge } from "@/components/ui/badge",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -55,6 +60,7 @@ export function EnterprisePricingTable() {
     {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: "Business",;
       price: "$1,999";
 
@@ -72,6 +78,8 @@ export function EnterprisePricingTable() {
       name: "Business",
       price: "$1,999",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       name: "Business",;
       price: "$1,999";
@@ -79,17 +87,23 @@ export function EnterprisePricingTable() {
 =======
       name: "Business",
       price: "$1,999",
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: [
         { name: "Private hiring portal", included: true }
         { name: "Dedicated talent pool", included: true }
@@ -137,6 +151,7 @@ export function EnterprisePricingTable() {
                     <div className="flex flex-col items-center">
                       {plan.popular && (
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -148,6 +163,8 @@ import {Badge} from "@/components/ui/badge";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Check, X } from "lucide-react",;
@@ -160,9 +177,13 @@ import {;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function EnterprisePricingTable() {;
   const plans = [;
     {;
@@ -185,10 +206,14 @@ export function EnterprisePricingTable() {;
     {;
       name: "Business",;
 <<<<<<< HEAD
+<<<<<<< HEAD
       price: "$1,999",;
 =======
       price: "$1,999";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      price: "$1,999";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       billing: "/month",;
       description: "Ideal for growing companies",;
       users: "Up to 50 users",;
@@ -218,6 +243,7 @@ export function EnterprisePricingTable() {;
         { name: "Admin dashboard", included: true },;
         { name: "Team collaboration", included: true },;
         { name: "API access", included: true },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -291,11 +317,16 @@ export function EnterprisePricingTable() {;
         { name: "Dedicated success manager", included: true }]}];
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { name: "Custom integrations", included: true },;
         { name: "Dedicated success manager", included: true }]}],;
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section id="pricing" className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
@@ -305,17 +336,24 @@ export function EnterprisePricingTable() {;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="overflow-x-auto">;
           <Table className="border rounded-lg">;
             <TableHeader>;
               <TableRow>;
                 <TableHead className="w-[200px]">Plan Features</TableHead>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {plans && plans.map((plan) => (;
                   <TableHead key={plan && plan.name} className="text-center">;
                     <div className="flex flex-col items-center">;
@@ -325,7 +363,10 @@ export function EnterprisePricingTable() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       )}
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
@@ -342,6 +383,7 @@ export function EnterprisePricingTable() {;
                         className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
                         variant={plan && plan.popular ? 'default' : 'outline'}>;
                         {plan && plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+<<<<<<< HEAD
                 {plans.map((plan) => (;
                   <TableHead key={plan.name} className="text-center">;
                     <div className="flex flex-col items-center">;
@@ -355,13 +397,49 @@ export function EnterprisePricingTable() {;
                         <Check className="h-5 w-5 text-green-500 mx-auto" />;
                       ) :(;
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;                      )}
+=======
+                      </Button>;
+                    </div>;
+                  </TableHead>;
+                ))}
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {plans[0].features && features.map((feature, index) => (;
+                <TableRow key={feature && feature.name}>;
+                  <TableCell className="font-medium">{feature && feature.name}</TableCell>;
+                  {plans && plans.map((plan) => (;
+                    <TableCell key={`${plan && plan.name}-${feature && feature.name}`} className="text-center">;
+                      {plan && plan.features[index].included ? (;
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />;
+                      ) : (;
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />;
+                      )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </TableCell>;
                   ))}
                 </TableRow>;
               ))}
+<<<<<<< HEAD
             </TableBody>;
           </Table>;
         </div>;
+=======
+
+            </TableBody>;
+          </Table>;
+        </div>;
+
+        <div className="mt-8 text-center text-sm text-muted-foreground">;
+          All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated support;
+        </div>;
+      </div>;
+    </section>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';
@@ -483,6 +561,7 @@ function EnterprisePricingTable() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
         <div className="mt-8 text-center text-sm text-muted-foreground">;
@@ -666,3 +745,6 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

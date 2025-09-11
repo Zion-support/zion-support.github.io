@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,7 +28,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -40,6 +46,7 @@ import z from "zod";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",
 import { Header } from "@/components/Header",
@@ -64,6 +71,10 @@ export default function Contact() {
     email: ""
     subject: ""
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 export default function Contact() {;
   const [formData, setFormData] = useState({;
     name: "",;
@@ -77,7 +88,10 @@ export default function Contact() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -86,6 +100,7 @@ export default function Contact() {
     subject: "",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     message: "";
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -93,11 +108,15 @@ export default function Contact() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
 
+<<<<<<< HEAD
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
@@ -113,13 +132,24 @@ export default function Contact() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
       // Basic validation with Zod
       const schema = z.object({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         name: z.string().min(2, "Name must be at least 2 characters");
         email: z.string().email("Invalid email address")
         subject: z.string().min(2, "Subject must be at least 2 characters");
@@ -128,9 +158,12 @@ export default function Contact() {
       schema.parse(formData);
       // Simulate form submission
       setIsSubmitting(true);
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         name: z.string().min(2, "Name must be at least 2 characters"),
         email: z.string().email("Invalid email address"),
         subject: z.string().min(2, "Subject must be at least 2 characters"),
@@ -143,6 +176,7 @@ export default function Contact() {
       setIsSubmitting(true),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       setTimeout(() => {
         setIsSubmitting(false),
 =======
@@ -151,6 +185,10 @@ export default function Contact() {
       setTimeout(() => {
         setIsSubmitting(false);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      setTimeout(() => {
+        setIsSubmitting(false);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         toast({
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
@@ -177,6 +215,7 @@ export default function Contact() {
         })
       }
     }
+<<<<<<< HEAD
 
 
   },
@@ -189,45 +228,64 @@ export default function Contact() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
         })});
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Error in AI chat:", error),
 =======
       console.error("Error in AI chat:", error);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console.error("Error in AI chat:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -235,12 +293,22 @@ export default function Contact() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
     const { name, value } = e && e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
+<<<<<<< HEAD
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault(),;
+=======
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       // Basic validation with Zod;
       const schema = z && z.object({;
@@ -249,14 +317,27 @@ export default function Contact() {
         subject: z && z.string().min(2, "Subject must be at least 2 characters");
         message: z && z.string().min(10, "Message must be at least 10 characters");
       });
+<<<<<<< HEAD
       schema && schema.parse(formData);
       // Simulate form submission;
       setIsSubmitting(true);
+=======
+
+      schema && schema.parse(formData);
+
+      // Simulate form submission;
+      setIsSubmitting(true);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setTimeout(() => {;
         setIsSubmitting(false);
         toast({;
           title: "Message Sent",;
           description: "We've received your message and will get back to you soon."}),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Reset form;
         setFormData({;
           name: "",;
@@ -280,6 +361,7 @@ export default function Contact() {
         });
       }
     }
+<<<<<<< HEAD
   };
   // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise<void> => {;
@@ -334,6 +416,8 @@ function Contact() {
   const handle_change = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>) =>: any {
     const { name, value } = e.target;
     setFormData (prev => ({ ...prev, [name]: value }));
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ;
   const handle_submit = (e: React.FormEvent) =>: any {
@@ -415,10 +499,20 @@ if ( {) {
   }
 ;
   const offices = [;
+<<<<<<< HEAD
     {
       name: "Headquarters"
       address: "123 Tech Avenue, San Francisco, CA 94105";
   };
+=======
+
+    {
+      name: "Headquarters"
+      address: "123 Tech Avenue, San Francisco, CA 94105";
+
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const offices = [;
     {;
       name: "Headquarters",;
@@ -432,6 +526,7 @@ if ( {) {
       phone: "+1 302 464 0950", ;
       email: "commercial@ziontechgroup && ziontechgroup.com";
 
+<<<<<<< HEAD
       }),
       return Promise.resolve()
     }
@@ -455,6 +550,10 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+  ];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const offices = [
@@ -473,6 +572,7 @@ if ( {) {
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   ];
   return (
@@ -482,12 +582,17 @@ if ( {) {
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <AppLayout>;
       <SEO
         title="Contact Zion - Get in Touch" 
         description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
         keywords="contact Zion, AI marketplace support, tech platform contact"
         canonical="https://app && app.ziontechgroup.com/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -618,6 +723,8 @@ export default function Contact() {;
         canonical="https://app.ziontechgroup.com/contact";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -628,10 +735,14 @@ export default function Contact() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>;
@@ -640,14 +751,19 @@ export default function Contact() {;
                 our team is ready to answer all your questions.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <form onSubmit={handleSubmit} className="space-y-6">;
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
                   <div>;
                     <label htmlFor="name" className="block text-white mb-2">Your Name</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <AppLayout>
@@ -681,16 +797,22 @@ export default function Contact() {;
                       name="name"
                       value={formData.name}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     <Input
                       id="name"
                       name="name"
                       value={formData && formData.name}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="John Doe"
                       required
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <Input ;
                       id="name";
@@ -703,10 +825,14 @@ export default function Contact() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     />;
                   </div>;
                   <div>;
                     <label htmlFor="email" className="block text-white mb-2">Email Address</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     />
                   </div>
@@ -715,10 +841,14 @@ export default function Contact() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Input
                       id="email"
                       name="email"
                       type="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     />;
                   </div>;
@@ -726,6 +856,8 @@ export default function Contact() {;
                 <div>;
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       value={formData && formData.email}
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
@@ -739,11 +871,15 @@ export default function Contact() {;
                 <div>;
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Input
                     id="subject"
                     name="subject"
                     value={formData && formData.subject}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       value={formData.email}
                       onChange={handleChange}
@@ -761,16 +897,21 @@ export default function Contact() {;
                     value={formData.subject}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={handleChange}
                     className="bg-zion-blue-dark border-zion-blue-light text-white"
                     placeholder="How can we help you?"
                     required
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />;
                 </div>;
                 <div>;
                   <label htmlFor="message" className="block text-white mb-2">Message</label>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   />;
                 </div>;
@@ -778,11 +919,15 @@ export default function Contact() {;
                 <div>;
                   <label htmlFor="message" className="block text-white mb-2">Message</label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Textarea
                     id="message"
                     name="message"
                     value={formData && formData.message}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />
                 </div>
@@ -794,6 +939,8 @@ export default function Contact() {;
                     value={formData.message}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={handleChange}
                     className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
                     placeholder="Tell us what you'd like to know..."
@@ -801,6 +948,7 @@ export default function Contact() {;
 
                   />;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Button
                   type="submit" 
@@ -821,6 +969,21 @@ export default function Contact() {;
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
+=======
+
+                <Button
+                  type="submit" 
+
+=======
+
+                <Button 
+                  type="submit" 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Button>
               </form>
             </div>
@@ -911,6 +1074,7 @@ export default function Contact() {;
       </main>
 
 
+<<<<<<< HEAD
 
 
 =======
@@ -932,6 +1096,8 @@ export default function Contact() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -1122,6 +1288,7 @@ export default function Contact() {;
                 >;
                   {isSubmitting ? "Sending..." : "Send Message"}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -1227,6 +1394,8 @@ export default function Contact() {;
                 ></iframe>;
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </Button>;
               </form>;
@@ -1270,7 +1439,10 @@ export default function Contact() {;
                   title="Zion Office Locations"></iframe>;
               </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="mt-8">;
                 <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">;
                   <div className="flex items-center">;
@@ -1283,6 +1455,7 @@ export default function Contact() {;
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Button;
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
@@ -1290,6 +1463,8 @@ export default function Contact() {;
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
@@ -1440,7 +1615,10 @@ export default function Contact() {;
                     on_click={() => setIsChatOpen (true)}
                     className="w - full mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     Chat With Our AI Assistant;
                   </Button>;
@@ -1448,6 +1626,7 @@ export default function Contact() {;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
@@ -1462,6 +1641,8 @@ export default function Contact() {;
               >;
                 <MessageSquare className="mr-2 h-5 w-5" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;
             <h2 className="text - 3xl font - bold text - white mb - 6">Need immediate assistance?</h2>;
@@ -1474,11 +1655,15 @@ export default function Contact() {;
                 className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
               >;
                 <MessageSquare className="mr - 2 h - 5 w - 5" />;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Chat With AI;
               </Button>;
               <Button;
                 variant="outline";
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";
                 asChild;
@@ -1486,13 +1671,18 @@ export default function Contact() {;
                 <a href="mailto:support@ziontechgroup.com">;
                   <Mail className="mr-2 h-5 w-5" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10";
                 as_child;
               >;
                 <a href="mailto:support@ziontechgroup.com">;
                   <Mail className="mr - 2 h - 5 w - 5" />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Email Support;
                 </a>;
               </Button>;
@@ -1501,7 +1691,10 @@ export default function Contact() {;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1518,12 +1711,16 @@ export default function Contact() {;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Support Bot';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </AppLayout>;
   );
 }
@@ -1537,6 +1734,15 @@ export default function Contact() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </AppLayout>
+  )
+}
+    </AppLayout>;
+  );
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant;
@@ -1551,6 +1757,7 @@ export default function Contact() {;
           onSendMessage={handleSendMessage}
         />)}
     </AppLayout>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       {/* Chat Assistant Modal */}
@@ -1625,10 +1832,15 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

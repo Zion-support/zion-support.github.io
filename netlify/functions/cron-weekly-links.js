@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.text();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 async function fetchHtml(url) {
@@ -10,7 +13,10 @@ async function fetchHtml(url) {
   return resp && resp.text();
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -22,9 +28,13 @@ function extractLinks(html, base) {
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -50,9 +60,13 @@ function extract_links() {
   return Array.from (new Set (links));
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -64,9 +78,13 @@ exports && exports.handler = async function () {
     const checked = [];
     const broken = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
           }
         }
@@ -129,17 +147,25 @@ if ( {) {
         content: JSON.stringify (report, null, 2),
         message: 'chore (automation): weekly link check',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         token,
       });
     }
     return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
   return resp.text()
@@ -150,6 +176,7 @@ if ( {) {
 
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
@@ -200,6 +227,8 @@ exports.handler = async function () {
     }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const report = { updated_at: Date.now (), checked: checked.length, broken },
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
@@ -212,21 +241,28 @@ if ( {) {
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, broken: broken.length }) }
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }),
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+<<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };async function fetchHtml(url) {
@@ -309,6 +345,11 @@ exports && exports.handler = async function() {
   }
 }
 
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };async function fetchHtml(url) {
@@ -365,12 +406,20 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -428,8 +477,11 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

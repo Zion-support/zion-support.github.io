@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {useTheme} from "@/hooks/useTheme";
@@ -19,6 +20,9 @@ import { Card, CardContent } from "@/components/ui/card",
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Language {
 
   code: string
@@ -29,6 +33,7 @@ interface Language {
 const languages: Language[] = [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
 
@@ -38,6 +43,8 @@ const languages: Language[] = [
   { code: "de", name: "Deutsch", flag: "🇩🇪" }
   { code: "zh", name: "中文", flag: "🇨🇳" }]
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {useTheme} from "@/hooks/useTheme";
@@ -64,13 +71,17 @@ export function LanguageThemeSelector() {;
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "zh", name: "中文", flag: "🇨🇳" }],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme();
@@ -97,12 +108,18 @@ export function LanguageThemeSelector() {
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}
@@ -114,11 +131,14 @@ export function LanguageThemeSelector() {
                 </div>
                 {selectedLanguage === language.code && (
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Check className="h-4 w-4 text-primary" />
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Check className="h-4 w-4 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -142,6 +162,7 @@ export function LanguageThemeSelector() {;
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 interface Language {;
   code:string,;
@@ -164,10 +185,14 @@ export function LanguageThemeSelector() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-8 px-4">;
       <div className="space-y-2">;
         <h2 className="text-xl font-medium">Select your language</h2>;
         <p className="text-muted-foreground">Choose your preferred language</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="grid grid-cols-2 gap-3 mt-4">;
           {languages.map((language) => (;
@@ -179,6 +204,8 @@ export function LanguageThemeSelector() {;
                   : "border-border hover:border-primary/40";
               }`}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="grid grid-cols-2 gap-3 mt-4">;
           {languages && languages.map((language) => (;
@@ -191,7 +218,10 @@ export function LanguageThemeSelector() {;
                   : "border-border hover:border-primary/40"
               }`}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={() => setSelectedLanguage(language.code)}
             >
               <CardContent className="p-3 flex items-center justify-between">
@@ -200,6 +230,7 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
+<<<<<<< HEAD
 <<<<<<< HEAD
               onClick={() => setSelectedLanguage(language && language.code)}
             >;
@@ -229,15 +260,21 @@ export function LanguageThemeSelector() {;
                 {selectedLanguage === language.code && (;
                   <Check className="h-4 w-4 text-primary" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   <Check className="h-4 w-4 text-primary" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
       </div>;
@@ -253,6 +290,8 @@ export function LanguageThemeSelector() {;
         <p className="text-muted-foreground">Select your preferred appearance</p>
         <div className="flex gap-3 mt-4">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>;
       </div>;
@@ -263,12 +302,16 @@ export function LanguageThemeSelector() {;
 
         <div className="flex gap-3 mt-4">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'light'
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
+<<<<<<< HEAD
 ;
       <div className="space-y-2">;
         <h2 className="text-xl font-medium">Choose theme</h2>;
@@ -280,6 +323,8 @@ export function LanguageThemeSelector() {;
               theme === 'light' ;
                 ? "border-primary bg-primary/5" ;
                 :"border-border hover:border-primary/40";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }`}
             onClick={() => setTheme('light')}
           >;
@@ -294,6 +339,7 @@ export function LanguageThemeSelector() {;
           </Card>;
 
 
+<<<<<<< HEAD
             </CardContent>;
           </Card>;
 
@@ -316,16 +362,27 @@ export function LanguageThemeSelector() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <Card
+=======
+
+          <Card 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
+<<<<<<< HEAD
           ;
           <Card ;
             className={`flex-1 cursor-pointer transition-all ${;
               theme === 'dark' ;
                 ? "border-primary bg-primary/5" ;
                 :"border-border hover:border-primary/40";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }`}
             onClick={() => setTheme('dark')}
           >;
@@ -336,9 +393,17 @@ export function LanguageThemeSelector() {;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
@@ -422,6 +487,7 @@ function LanguageThemeSelector() {
               {theme === 'dark' && (
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}
 <<<<<<< HEAD
+<<<<<<< HEAD
             }`}
             onClick={() => setTheme('dark')}
           >
@@ -441,6 +507,9 @@ function LanguageThemeSelector() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </CardContent>;
           </Card>;
         </div>;
@@ -449,6 +518,7 @@ function LanguageThemeSelector() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </div>);
@@ -492,3 +562,8 @@ flag: string
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

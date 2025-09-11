@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import * as React from 'react';
 import * as LabelPrimitive from '@radix-ui/react-label';
@@ -18,10 +19,15 @@ const FormFieldContext = React.createContext<FormFieldContextValue>({
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -33,6 +39,7 @@ import {
   FormProvider,
   useFormContext} from "react-hook-form"
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <FormFieldContext && FormFieldContext.Provider value={{ name: props && props.name }}>;
       <Controller {...props} />;
@@ -43,6 +50,9 @@ const useFormField = () => {;
   const fieldContext = React && React.useContext(;
     FormFieldContext;
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
@@ -52,12 +62,16 @@ type FormFieldContextValue = {;
   name: string,;
 };
 
+<<<<<<< HEAD
 const FormFieldContext = React && React.createContext<FormFieldContextValue>({;
   name: '',;
 });
 
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+const FormField = ({ ...props }: any) => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
 };
@@ -66,13 +80,17 @@ const useFormField = () => {;
   const fieldContext = React && React.useContext(;
     FormFieldContext;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ) as FormFieldContextValue;
   const itemContext = React && React.useContext(;
     FormItemContext;
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
@@ -95,6 +113,11 @@ const FormField = ({ ...props }: any) => {
     </FormFieldContext.Provider>
 
 <<<<<<< HEAD
+=======
+    <FormFieldContext.Provider value={{ name: props.name }}>
+      <Controller {...props} />
+    </FormFieldContext.Provider>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 const useFormField = () => {
@@ -106,8 +129,11 @@ const useFormField = () => {
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
   const fieldState = getFieldState(fieldContext.name, formState);
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
 
@@ -118,6 +144,7 @@ const useFormField = () => {
 
   const fieldState = getFieldState(fieldContext.name, formState)
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const fieldState = getFieldState(fieldContext && fieldContext.name, formState);
@@ -279,10 +306,13 @@ const FormItem = React.forwardRef<
 type FormItemContextValue = {;
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!fieldContext) {
     throw new Error('useFormField should be used within <FormField>');
   }
   if (!itemContext) {
+<<<<<<< HEAD
 
 
   const fieldState = getFieldState(fieldContext && fieldContext.name, formState);
@@ -293,6 +323,8 @@ type FormItemContextValue = {;
 
   if (!itemContext) {;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     throw new Error('useFormField should be used within <FormItem>');
   }
   const { id } = itemContext as FormItemContextValue;
@@ -321,6 +353,7 @@ type FormItemContextValue = {;
 
 
 const FormItemContext = React.createContext<FormItemContextValue | null>(null)
+<<<<<<< HEAD
 
 
 
@@ -332,6 +365,12 @@ const FormItem = React && React.forwardRef<;
 >(({ className, ...props }, ref) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const id = useReactId();
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
 FormItem && FormItem.displayName = 'FormItem';
@@ -387,11 +426,15 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
 
     >;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {body}
     </p>;
   );
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
   id: string;
 }
@@ -415,6 +458,14 @@ FormMessage && FormMessage.displayName = 'FormMessage';
     </FormItemContext.Provider>
 
 <<<<<<< HEAD
+=======
+
+FormMessage && FormMessage.displayName = 'FormMessage';
+=======
+    <FormItemContext.Provider value={{ id }}>
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+    </FormItemContext.Provider>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 });
 FormItem.displayName = 'FormItem';
@@ -454,8 +505,11 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<
   const body = error ? String(error?.message) : children;
   if (!body) {
     return null;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 })
 FormItem.displayName = "FormItem"
@@ -467,6 +521,7 @@ const FormLabel = React.forwardRef<
   const { error, formItemId } = useFormField()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <Label
       ref={ref}
@@ -476,6 +531,9 @@ const FormLabel = React.forwardRef<
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     />
   )
 })
@@ -487,6 +545,7 @@ const FormControl = React.forwardRef<
 >(({ ...props }, ref) => {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <Slot
@@ -501,6 +560,8 @@ const FormControl = React.forwardRef<
       {...props}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     />
@@ -515,6 +576,7 @@ const FormDescription = React.forwardRef<
   const { formDescriptionId } = useFormField()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <p
       ref={ref}
@@ -523,6 +585,8 @@ const FormDescription = React.forwardRef<
       {...props}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     />
@@ -540,18 +604,25 @@ const FormMessage = React.forwardRef<
   if (!body) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return null
     return null;
     return null
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
     >
       {body}
     </p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 });
 FormMessage.displayName = 'FormMessage';
@@ -565,18 +636,25 @@ export {
   FormMessage
   FormField
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 })
 FormMessage.displayName = "FormMessage"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 FormMessage.displayName = "FormMessage";
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export {;
   useFormField,;
   Form,;
@@ -586,7 +664,10 @@ export {;
   FormDescription,;
   FormMessage,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   FormField,;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -718,7 +799,10 @@ if ( {) {
 });
 FormMessage.display_name = 'FormMessage';
 ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export {
   useFormField,
   Form,
@@ -727,6 +811,7 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
+<<<<<<< HEAD
 <<<<<<< HEAD
   FormField,
 }
@@ -829,3 +914,8 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

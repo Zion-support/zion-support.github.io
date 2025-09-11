@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -11,6 +12,8 @@
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function RetailTechnologySolutions() {
@@ -21,6 +24,7 @@ export default function RetailTechnologySolutions() {
 			slug="retail-technology-solutions"
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
 			subtitle="Higher margins and better experiences powered by AI."
+<<<<<<< HEAD
 			pricePerMonthUSD={1999}
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
@@ -35,6 +39,12 @@ export default function RetailTechnologySolutions() {
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}
 =======
+=======
+
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
@@ -62,6 +72,7 @@ return (
     industries={["Retail", "CPG", "E‑commerce"]}
     canonical="https: //ziontechgroup.com / retail - technology - solutions";
   />);
+<<<<<<< HEAD
 		/>
 	)
 
@@ -69,10 +80,17 @@ return (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -80,10 +98,14 @@ return (
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
 			features={[
@@ -93,6 +115,7 @@ return (
 				"Store ops: labor planning and task automation",
 				"Omni-channel journey orchestration",
 				"Integrations: POS, eCom, WMS, ESP, CDP"
+<<<<<<< HEAD
 <<<<<<< HEAD
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}
@@ -127,3 +150,8 @@ return (
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

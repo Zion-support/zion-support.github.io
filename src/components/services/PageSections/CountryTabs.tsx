@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useState, useEffect  } from 'react';
 import { useState, useEffect } from 'react'
@@ -27,6 +28,8 @@ interface CountryTabsProps {
 import { useState, useEffect } from 'react',;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input',;
 import { Button } from '@/components/ui/button',;
@@ -37,7 +40,10 @@ import {;
   PaginationButton,;
   PaginationNext,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   PaginationPrevious,;
 } from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -46,7 +52,10 @@ import { CountryPricing } from '@/data/onsiteServicePricing';
 
 
   setSearchQuery: (query: string) => void;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function CountryTabs(): any ({;
   popularCountries,;
   filteredCountries,;
@@ -58,6 +67,7 @@ export function CountryTabs(): any ({;
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
+<<<<<<< HEAD
   useEffect(() => {;
     setCurrentPage(1);
   }, [searchQuery]);
@@ -68,6 +78,8 @@ export function CountryTabs(): any ({;
   );
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function CountryTabs({
   popularCountries,
@@ -76,6 +88,7 @@ export function CountryTabs({
   onQuote,
   searchQuery,
 
+<<<<<<< HEAD
   PaginationPrevious} from '@/components/ui/pagination',;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
 import { CountryServiceCard } from '@/components/services/CountryServiceCard',;
@@ -118,6 +131,8 @@ export function CountryTabs({
     setCurrentPage(1)
   }, [searchQuery])
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -126,6 +141,7 @@ export function CountryTabs({
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
+<<<<<<< HEAD
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
   )
@@ -135,6 +151,12 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
 
+=======
+  )
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -148,11 +170,20 @@ export function CountryTabs({
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
   ),
   return (
     <Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
+=======
+  )
+  ),
+
+  return (
+    <Tabs defaultValue='featured' className='w-full'>;
+      <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <TabsTrigger
           value="featured"
           className="data-[state=active]:bg-zion-purple"
@@ -166,6 +197,7 @@ export function CountryTabs({
       <TabsContent value='featured' className='mt-0'>
         <div className='mb-6'>
           <h2 className='text-2xl font-bold text-white text-center'>
+<<<<<<< HEAD
 =======
 
   ),
@@ -187,21 +219,29 @@ export function CountryTabs({
           <h2 className='text-2xl font-bold text-white text-center'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Featured Service Locations
           </h2>
           <p className="text-zion-slate-light text-center mt-2">
             Browse our most popular service destinations
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {filteredCountries
@@ -231,6 +271,11 @@ export function CountryTabs({
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {filteredCountries
+            .filter(country => popularCountries.includes(country.country))
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             .map(country => (              <CountryServiceCard
                 key = {country.country,}
                 country = {country,}
@@ -240,6 +285,7 @@ export function CountryTabs({
               />
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </TabsContent>
       <TabsContent value='all' className='mt-0'>
@@ -247,6 +293,8 @@ export function CountryTabs({
           <div className='relative'>
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>;
       </TabsContent>;
@@ -256,12 +304,16 @@ export function CountryTabs({
           <div className='relative'>;
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Input
               type='text'
               placeholder='Search by country...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
               onChange={e => setSearchQuery(e.target.value)}            />
           </div>
@@ -276,6 +328,8 @@ export function CountryTabs({
             />;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               onChange={e => setSearchQuery(e && e.target.value)}            />;
           </div>;
@@ -290,7 +344,10 @@ export function CountryTabs({
               onQuote = {onQuote,}
               isPopular = {popularCountries.includes(country.country),}
             />
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
@@ -330,6 +387,7 @@ export function CountryTabs({
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
             />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ))}
         </div>
@@ -348,6 +406,8 @@ export function CountryTabs({
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -389,7 +449,10 @@ export function CountryTabs({
               isPopular={popularCountries.includes(country.country)}
             />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ))}
 
         </div>;
@@ -404,6 +467,7 @@ export function CountryTabs({
                     onClick={e => {;
                       e && e.preventDefault();
                       setCurrentPage(Math && Math.max(1, currentPage - 1));
+<<<<<<< HEAD
 <<<<<<< HEAD
                     onClick={(e) => {;
                       e.preventDefault(),;
@@ -463,6 +527,8 @@ export function CountryTabs({
                       setCurrentPage(Math.min(totalPages, currentPage + 1));
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }}
                   />;
                 </PaginationItem>;
@@ -475,7 +541,10 @@ export function CountryTabs({
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 
@@ -609,7 +678,10 @@ function CountryTabs() {
 }
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     onClick={(e) => {;
@@ -626,6 +698,7 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
+<<<<<<< HEAD
                         onClick={e => {
                           e.preventDefault()
                           setCurrentPage(page) }}
@@ -662,3 +735,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                     href={`?page=${currentPage + 1}`}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+                )}
+                <PaginationItem>;
+                  <PaginationNext;
+                    href={`?page=${currentPage + 1}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

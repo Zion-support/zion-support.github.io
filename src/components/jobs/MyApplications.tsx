@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react"
 import { useJobApplications } from "@/hooks/useJobApplications"
@@ -26,10 +27,13 @@ import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 default:
         return <Badge variant="outline">{status}</Badge>
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { applications, isLoading, error } = useJobApplications()
   const getStatusBadge = (status: ApplicationStatus,) => {
@@ -64,6 +68,9 @@ export function MyApplications() {
 =======
 import {ApplicationStatus} from "@/types/jobs";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import {ApplicationStatus} from "@/types/jobs";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -94,6 +101,7 @@ import {ApplicationStatus} from "@/types/jobs";
   return (
     <div className="grid gap-4 md:grid-cols-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
       {applications.map((application,) => (
       {applications.map((application) => (
 =======
@@ -102,10 +110,17 @@ import {ApplicationStatus} from "@/types/jobs";
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      {applications.map((application,) => (
+      {applications.map((application) => (
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
+<<<<<<< HEAD
 <<<<<<< HEAD
       {applications.map((application,) => (
           <CardHeader className="pb-2">
@@ -119,6 +134,10 @@ import {ApplicationStatus} from "@/types/jobs";
                 {application.job?.title || "Unknown Job"}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                {application.job?.title |"Unknown Job"}
+                {application.job?.title || "Unknown Job"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </CardTitle>
               {getStatusBadge(application.status)}
             </div>
@@ -131,9 +150,12 @@ import {ApplicationStatus} from "@/types/jobs";
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -145,6 +167,10 @@ import Link from "next/link",;
 import { ApplicationStatus } from "@/types/jobs",;
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getStatusBadge = (status: ApplicationStatus,) => {;
     switch (status) {;
       case "new": return <Badge variant="secondary">New</Badge>;
@@ -153,6 +179,10 @@ export function MyApplications() {;
         return <Badge variant="outline">{status}</Badge>;
     }
   },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center p-8">;
@@ -161,13 +191,19 @@ export function MyApplications() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (error) {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (error) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
         <p>{error}</p>;
@@ -175,11 +211,18 @@ export function MyApplications() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (applications && applications.length === 0) {;
+=======
+
+
+  if (applications && applications.length === 0) {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
@@ -194,10 +237,15 @@ export function MyApplications() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (;
     <div className="grid gap-4 md:grid-cols-2">;
       {applications.map((application) => (;
@@ -222,7 +270,14 @@ export function MyApplications() {;
                   {application.cover_letter}
                 </p>
               )}
+<<<<<<< HEAD
 
+=======
+              <div className="flex justify-between items-center">
+                <Button
+                  variant="outline"
+                  size="sm"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               
               <div className="flex justify-between items-center">
                 <Button 
@@ -251,6 +306,7 @@ export function MyApplications() {;
             </div>;
             <p className="text-sm text-muted-foreground">;
               Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -325,10 +381,13 @@ export function MyApplications() {;
             <p className="text-sm text-muted-foreground">;
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </p>;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-3">;
+<<<<<<< HEAD
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
                   {application.cover_letter}
@@ -358,6 +417,31 @@ export function MyApplications() {;
 
                 
 
+=======
+              {application && application.cover_letter && (;
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
+                  {application && application.cover_letter}
+                </p>;
+              )}
+
+              <div className="flex justify-between items-center">;
+                <Button
+                  variant="outline" 
+                  size="sm" 
+                  className="text-xs"
+                  asChild>;
+                  <Link href={`/jobs/${application && application.job_id}`}>;
+                    <ExternalLink className="h-3 w-3 mr-1" /> View Job;
+                  </Link>;
+                </Button>;
+
+                <Button
+
+                
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button 
 
                   variant="default" 
@@ -365,6 +449,7 @@ export function MyApplications() {;
                   className="text-xs"
                   asChild>;
                   <Link href={`/messages?jobId=${application && application.job_id}`}>;
+<<<<<<< HEAD
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
                   {application.cover_letter}
@@ -390,6 +475,8 @@ export function MyApplications() {;
                   asChild;
                 >;
                   <Link href={`/messages?jobId=${application.job_id}`}>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
                   </Link>;
                 </Button>;
@@ -398,6 +485,7 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
     </div>
   )
 }
@@ -407,6 +495,12 @@ export function MyApplications() {;
     </div>;
 }
 ;
+=======
+
+    </div>;
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },
   // Check condition
@@ -492,6 +586,7 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),; export function MyApplications () {;
   const {;
   applications,  isLoading, error ;
@@ -541,11 +636,14 @@ default: return <Badge variant="outline"> {;
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </div>;
@@ -553,12 +651,18 @@ default: return <Badge variant="outline"> {;
 }
 <<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>;
   );
 };
 }
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

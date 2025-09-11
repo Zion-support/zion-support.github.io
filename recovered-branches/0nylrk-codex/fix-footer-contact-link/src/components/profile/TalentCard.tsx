@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
@@ -22,11 +23,18 @@ export function TalentCard({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {Link} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
@@ -92,6 +100,8 @@ import { TalentProfile } from "@/types/talent",;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -101,17 +111,27 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function TalentCard(): any ({;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export function TalentCard(): any ({;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
@@ -119,6 +139,7 @@ export function TalentCard(): any ({;
       onViewProfile(talent && talent.id);
     }
   };
+<<<<<<< HEAD
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -184,6 +205,8 @@ export function TalentCard({;
       onViewProfile(talent && talent.id);
     }
   };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
@@ -194,6 +217,7 @@ export function TalentCard({;
   };
 =======
 
+<<<<<<< HEAD
 
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
@@ -206,6 +230,10 @@ export function TalentCard({;
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) || [],
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
@@ -226,7 +254,10 @@ export function TalentCard({;
                   {talent && talent.full_name?.charAt(0) || "T"}
                 </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </div>;
             {talent && talent.is_verified && (;
@@ -235,17 +266,24 @@ export function TalentCard({;
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleToggleSave = (e: React.MouseEvent) => {;
     e.preventDefault(),;
@@ -289,11 +327,16 @@ export function TalentCard({;
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={handleToggleSave}
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
@@ -301,6 +344,7 @@ export function TalentCard({;
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -323,6 +367,11 @@ export function TalentCard({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -335,6 +384,7 @@ export function TalentCard({;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {talent.profile_picture_url ? (;
                 <img ;
@@ -410,6 +460,10 @@ export function TalentCard({;
                   <span>{talent.availability_type}</span>
                 </div>
               )}
+=======
+                </div>;
+              )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
@@ -446,6 +500,7 @@ export function TalentCard({;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
         {/* Skills */}
         {skills.length > 0 && (;
           <div className="mt-4">;
@@ -486,17 +541,36 @@ export function TalentCard({;
 <<<<<<< HEAD
 =======
               ))}
+=======
+
+        {/* Skills */}
+        {skills && skills.length > 0 && (;
+          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills && skills.map((skill, index) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                <span
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
+                  {skill}
+                </span>;
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
         {/* Hourly Rate & Actions */}
@@ -506,6 +580,8 @@ export function TalentCard({;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -515,6 +591,7 @@ export function TalentCard({;
             {talent && talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent && talent.hourly_rate}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
@@ -584,6 +661,12 @@ isAuthenticated: boolean
           <div className="flex items-center gap-2">
             {isAuthenticated && (
 =======
+=======
+                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -595,11 +678,15 @@ isAuthenticated: boolean
           <div className="flex items-center gap-2">;
             {isAuthenticated && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
@@ -610,11 +697,17 @@ isAuthenticated: boolean
                 Hire;
               </Button>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+                Hire;
+              </Button>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
             <Button
               size="sm"
               variant="ghost"
               onClick={handleViewProfile}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
@@ -627,6 +720,8 @@ isAuthenticated: boolean
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light">;
               View <ArrowRight className="ml-1 h-4 w-4" />;
@@ -787,4 +882,7 @@ if ( {) {
     </Card>);
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

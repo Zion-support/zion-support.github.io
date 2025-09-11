@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 
 import { useState  } from 'react';
@@ -22,11 +23,14 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
       return;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     setError(null)
     try {
@@ -113,11 +117,19 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
   }
   },
 
+=======
+  }
+  },
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
+<<<<<<< HEAD
         <Button
           onClick = {handleCategorizeSkills,}
           disabled = {isEnhancing |!bulkSkills.trim(),}
@@ -154,11 +166,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <label className="text-sm font-medium" htmlFor="input-Enter multiple skills (comma separated)">Enter multiple skills (comma separated)</label>
           <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value = {bulkSkills,}
+<<<<<<< HEAD
             onChange = {(e,) => setBulkSkills(e.target.value),}
           />
         </div>
@@ -182,6 +197,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="gap-2"
+=======
+
+
+
+
+          className="gap-2"
+        >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isEnhancing ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
@@ -190,10 +213,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           Categorize with AI
         </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       set_error (err.message || 'Failed to categorize skills');
     }
@@ -250,6 +276,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           AI will identify skills and categorize them automatically. This may take a moment to process.;
         </p>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
@@ -281,3 +308,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 '";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>;
+    </div>;
+  );
+};
+
+'"
+
+'";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = {
   room: Room | null,
   onLeave: () => void,
@@ -7,6 +8,8 @@ type Props = {
 };
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +31,10 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -36,10 +42,15 @@ import React from 'react';
   const toggleMic = async () => {
     if (!room) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   accent?: 'blue' | 'cyan';};type Props = {;
   room: Room | null,;
   onLeave: () => void,;
@@ -56,10 +67,15 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled)
   };
@@ -68,12 +84,16 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
     setCamEnabled(enabled)
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
   const toggleCam = async () => {;
     if (!room) return;
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   const toggleCam = async () => {;
     if (!room) return;
@@ -85,7 +105,10 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
         await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (e) {;
       console && console.warn('Screen share failed', e);    }
     try {
@@ -95,12 +118,18 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       console.warn('Screen share failed', e)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 
   };
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
@@ -108,13 +137,18 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
   };
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
       </button>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -133,6 +167,9 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 import type { Room } from 'livekit - client';
@@ -231,6 +268,7 @@ if (return) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -313,11 +351,18 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   return (
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
@@ -23,12 +24,18 @@ import OpenAI from 'openai';
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (!limited) {
     bucket.timestamps.push(now);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
@@ -55,6 +62,9 @@ function isRateLimited(ip: string): boolean {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -62,11 +72,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -78,12 +91,17 @@ function isRateLimited(ip: string): boolean {
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
 <<<<<<< HEAD
+<<<<<<< HEAD
   bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -96,6 +114,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   // Auth via Bearer token
 <<<<<<< HEAD
+<<<<<<< HEAD
 const authHeader = req.headers.authorization |''
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
   if (!token |token !== process.env.OPERATOR_API_TOKEN) {
@@ -103,14 +122,25 @@ const authHeader = req.headers.authorization |''
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
 const ip = (req.headers['x-forwarded-for'] as string)?.split()[0]?.trim() |req.socket.remoteAddress |'unknown'
   if (isRateLimited(ip)) {
     return res.status(429).json({ error: 'Too Many Requests' })
+<<<<<<< HEAD
   }
   try {
+=======
+
+  }
+  try {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const { prompt, system, temperature } = (typeof req.body === 'string') ? JSON.parse(req.body) : req.body
     if (!prompt |typeof prompt !== 'string') {
       return res.status(400).json({ error: 'Missing prompt' })
@@ -128,6 +158,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     return res.status(200).json({ text })
   } catch (err: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -136,6 +167,9 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     console.error('Operator error', err)
     return res.status(500).json({ error: 'Internal Server Error' })
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 }
@@ -216,14 +250,20 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -234,6 +274,10 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
@@ -287,6 +331,7 @@ export default async function handler(req, res) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 }
 }
@@ -294,3 +339,6 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

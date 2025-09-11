@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 
@@ -24,6 +27,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   adminOnly = false;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import { Navigate  } from 'react-router-dom';
@@ -57,15 +61,22 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -82,9 +93,12 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children,
   adminOnly = false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
@@ -95,10 +109,13 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -119,16 +136,22 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return <>{children}</>
 }
 export default ProtectedRoute;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
@@ -146,9 +169,12 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
   adminOnly = false,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import {Navigate} from 'react-router-dom';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   tenantAdminAllowed = false,;
   requiredUserType;
@@ -191,6 +217,7 @@ import {Navigate} from 'react-router-dom';
 
 
 export default ProtectedRoute;
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -312,3 +339,5 @@ export default ProtectedRoute;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

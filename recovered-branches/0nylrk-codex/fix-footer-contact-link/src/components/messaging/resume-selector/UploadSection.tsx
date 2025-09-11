@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from "lucide-react";
@@ -14,6 +15,10 @@ import React from 'react',
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {
+=======
+
+interface UploadSectionProps {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
@@ -21,6 +26,7 @@ export function UploadSection({
   customFile
   onFileUpload
 }: UploadSectionProps) {
+<<<<<<< HEAD
 =======
 
 interface UploadSectionProps {;
@@ -28,10 +34,13 @@ interface UploadSectionProps {;
   onFileUpload: (e: React && React.ChangeEvent<HTMLInputElement>) => void;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from "lucide-react";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
 import { Button } from "@/components/ui/button",
@@ -40,6 +49,12 @@ import { Upload, FileText } from 'lucide-react',
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
+=======
+interface UploadSectionProps {
+  customFile: File | null,
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
@@ -60,6 +75,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           />
         </Button>
       </div>
+<<<<<<< HEAD
 =======
 interface UploadSectionProps {
   customFile: File | null,
@@ -97,6 +113,12 @@ export function UploadSection({ customFile, onFileUpload } UploadSectionProps) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -104,6 +126,7 @@ export function UploadSection({ customFile, onFileUpload } UploadSectionProps) {
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
               <span className="text-white">{customFile.name}</span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -115,6 +138,8 @@ export function UploadSection({ customFile, onFileUpload } UploadSectionProps) {
   );
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <span className="text-xs text-zion-slate">
               {Math.round(customFile.size / 1024)} KB
             </span>
@@ -125,7 +150,10 @@ export function UploadSection({ customFile, onFileUpload } UploadSectionProps) {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react',;
@@ -150,6 +178,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             accept=".pdf";
             onChange={onFileUpload}
 <<<<<<< HEAD
+<<<<<<< HEAD
           />;
         </Button>;
       </div>;
@@ -170,17 +199,23 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </Button>;
       </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
         </Button>;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {customFile && (;
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">;
           <div className="flex items-center justify-between">;
             <div className="flex items-center">;
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className="text-white">{customFile.name}</span>;
             </div>;
@@ -190,6 +225,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
       )}
     </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <span className="text-white">{customFile && customFile.name}</span>;
             </div>;
             <span className="text-xs text-zion-slate">;
@@ -197,12 +234,18 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>;
           </div>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
     </div>;
   );
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <input;
             type="file";
             className="absolute inset - 0 w - full h - full opacity - 0 cursor - pointer";
@@ -224,6 +267,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           </div>;
         </div>)}
     </div>);
+<<<<<<< HEAD
 }
 
 
@@ -254,3 +298,12 @@ onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

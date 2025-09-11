@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!scope |!startDate |!projectType) {
       return
 import React, { useState } from 'react'
@@ -21,12 +22,15 @@ import { Badge } from '@/components/ui/badge'
 interface AIMilestoneGeneratorProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AIMilestoneGeneratorProps {;
   scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onAddMilestone: (milestone: GeneratedMilestone) => void
 export function AIMilestoneGenerator({
@@ -53,6 +57,8 @@ export function AIMilestoneGenerator({
     if (!scope || !startDate || !projectType) {
       return;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -61,7 +67,10 @@ export function AIMilestoneGenerator({
       return;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const input: MilestoneInput = {
       scope
@@ -134,12 +143,15 @@ if ( {) {
     setSelectedMilestones({})
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   const toggleMilestoneSelection = (index: number,) => {
     setSelectedMilestones(prev => ({
       ...prev
       [index]: !prev[index]
     }))
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const toggleMilestoneSelection = (index: number, ) =>: any {
     setSelectedMilestones (prev => ({
@@ -147,7 +159,10 @@ if ( {) {
       [index]: !prev[index],
     }));
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
     onAddMilestone(milestone)
@@ -157,15 +172,25 @@ if ( {) {
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return dateString
     }
   }
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -185,9 +210,13 @@ interface AIMilestoneGeneratorProps {;
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 }
 ;
@@ -244,6 +273,7 @@ export function AIMilestoneGenerator({;
       return dateString;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium flex items-center">
@@ -251,6 +281,11 @@ export function AIMilestoneGenerator({;
           AI Milestone Generator
         </h3>
         <Button
+=======
+
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -271,6 +306,7 @@ export function AIMilestoneGenerator({;
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
 
+<<<<<<< HEAD
           disabled={isGenerating |!scope |!startDate |!projectType}        >
 ursor/fix-website-loading-errors-and-merge-6662
   },
@@ -312,6 +348,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -332,6 +372,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-sm text-muted-foreground">
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -359,6 +400,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 project scope;
               </p>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 onClick={handleAddToProject}
                 disabled={!Object && Object.values(selectedMilestones).some(Boolean)}>;
@@ -370,6 +413,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {generatedMilestones && generatedMilestones.map((milestone, index) => (;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Button
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}              >
@@ -380,6 +424,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               {generatedMilestones.map((milestone, index) => (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <AccordionItem
                   value={`item-${index}`}
                   key={index}
@@ -493,16 +539,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       variant="ghost"
@@ -532,6 +584,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                       variant="ghost"
@@ -541,9 +595,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       <Plus className='h-4 w-4' />
+=======
+
+
+                    >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Plus className="h-4 w-4" />
                     </Button>
                   </div>
@@ -561,6 +621,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </AccordionContent>
                 </AccordionItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </Accordion>
           </CardContent>
@@ -571,6 +632,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       onClick={e => {;
                         e && e.stopPropagation();
@@ -597,11 +660,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               ))}
               ))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -612,6 +679,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>;
   );
@@ -645,5 +714,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>;
         </Card>)}
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -22,16 +22,28 @@ import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function CaseStudiesPage() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>;
       <SEO
@@ -52,12 +64,17 @@ export default function CaseStudiesPage() {
     </UltraFuturisticBackground>;
   );export default function CaseStudiesPage() {;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CaseStudiesPage() {
 
   return (
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function CaseStudiesPage() {
   return (
@@ -73,6 +90,9 @@ export default function CaseStudiesPage() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import SEO from '../components / SEO';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -110,6 +130,7 @@ function CaseStudiesPage() {
       </div>;
     </UltraFuturisticBackground>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="container mx-auto px-4 py-16 text-white">
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
@@ -159,6 +180,10 @@ export default function CaseStudiesPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AI, cloud, and automation projects." canonical="https: //ziontechgroup.com/case-studies/" />
       <div className="container mx-auto px-4 py-16 text-white">
@@ -166,9 +191,12 @@ export default function CaseStudiesPage() {
         <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </UltraFuturisticBackground>
   );
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </UltraFuturisticBackground>;
   );
 }
@@ -176,6 +204,7 @@ export default function CaseStudiesPage() {
 }
     </UltraFuturisticBackground>
   );
+<<<<<<< HEAD
 }
 }
 =======
@@ -186,3 +215,7 @@ export default function CaseStudiesPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

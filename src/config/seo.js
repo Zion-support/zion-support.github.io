@@ -1,6 +1,7 @@
 // SEO Meta Tags Configuration
 export const defaultSEO = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default defaultSEO
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -53,6 +54,8 @@ export default defaultSEO;
 ;
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     type: 'website',
     locale: 'en_US',
@@ -108,5 +111,9 @@ export default defaultSEO;
 
 export default defaultSEO;
 ;
+<<<<<<< HEAD
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

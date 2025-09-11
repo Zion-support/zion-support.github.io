@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface CardProps {
+<<<<<<< HEAD
   children?: React.ReactNode;
   title?: string;
   description?: string;
@@ -33,3 +34,17 @@ const Card: React.FC<CardProps> = ({
 };
 
 export default Card;
+=======
+  title: string;
+  description: string;
+  className?: string;
+}
+
+export default function Card({ children, className = '' }: CardProps) {
+  return (
+    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

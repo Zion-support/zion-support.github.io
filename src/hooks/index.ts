@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {useState} from 'react'
 export const useLocalStorage = (key: string, initialValue: unknown) => {
 
@@ -47,3 +48,15 @@ export const useLocalStorage = (key: string, initialValue: unknown) => {
   return [stored_value, set_value] as const;
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export function useScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

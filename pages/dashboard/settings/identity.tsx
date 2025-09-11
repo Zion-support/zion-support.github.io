@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
@@ -28,6 +32,7 @@ export default function IdentitySettingsPage() {
 
 
     try {
+<<<<<<< HEAD
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
@@ -123,6 +128,9 @@ export default function IdentitySettingsPage(req, res) {
   const [error, setError] = useState('');
   async function load() {;
     try {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
@@ -135,7 +143,10 @@ export default function IdentitySettingsPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -159,6 +170,7 @@ export default function IdentitySettingsPage(req, res) {
           <ProfileBadges profile={profile |undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
+<<<<<<< HEAD
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
         </div>
         <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
@@ -172,15 +184,23 @@ export default function IdentitySettingsPage(req, res) {
           <ProfileBadges profile={profile || undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </main>
     </>
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -201,6 +221,7 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
@@ -212,3 +233,9 @@ export default function IdentitySettingsPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

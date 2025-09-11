@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 
+=======
+import React from 'react',
+import React from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 
 import {
@@ -33,6 +38,10 @@ export default function AIGuardrailsPage() {
   };
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const features = [
     'Prompt/output policy engine with allow/deny lists'
     'Jailbreak and prompt injection detection'
@@ -40,6 +49,10 @@ export default function AIGuardrailsPage() {
     'Toxicity, bias and safety classifiers'
     'Human handoff flows and escalation policies'
     'Audit logs, alerting and exportable evidence'
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -87,6 +100,7 @@ import Head from 'next/head';
               AI Guardrails Suite;
             </h1>;
             <p className='mt-4 text-xl text-gray-300'>;
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next / head';
 import {
@@ -106,12 +120,19 @@ import {
   ExternalLink;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+import React from 'react';
+import Head from 'next / head';
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Check,
   Shield,
   ShieldAlert,
   Lock,
   Phone,
   Mail,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -170,6 +191,8 @@ function AIGuardrailsPage() {
                     className='w-full bg-gradient-to-r from-rose-500 to-orange-600 text-white'>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 10'>;
             <Card className='lg:col - span - 2 bg - black / 30 border border - rose - 500 / 30'>;
               <div className='p - 6'>;
@@ -202,6 +225,7 @@ function AIGuardrailsPage() {
                     href='/contact';
                     className='w - full bg - gradient - to - r from - rose - 500 to - orange - 600 text - white';
                   >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -518,6 +542,8 @@ export default function AIGuardrailsPage() {
                     href='/contact';
                     className='w - full bg - gradient - to - r from - rose - 500 to - orange - 600 text - white';
                   >;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     Request Demo;
                   </Button>;
@@ -550,7 +576,10 @@ export default function AIGuardrailsPage() {
               </p>;
             </Card>;
           </div>;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               </Button>;
@@ -558,6 +587,7 @@ export default function AIGuardrailsPage() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -586,10 +616,20 @@ export default function AIGuardrailsPage() {
 }
 <<<<<<< HEAD
 );
+=======
+
+
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 	);
 }
 	);
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

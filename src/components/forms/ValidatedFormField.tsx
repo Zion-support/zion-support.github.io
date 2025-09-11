@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'
 import {
@@ -27,6 +28,8 @@ import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -47,15 +50,21 @@ import {;
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 interface ValidationRule {;
 <<<<<<< HEAD
 interface ValidationRule {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+interface ValidationRule {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
+<<<<<<< HEAD
 <<<<<<< HEAD
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
@@ -74,6 +83,10 @@ interface ValidatedFormFieldProps {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name: string
   label: string
   type?:
@@ -95,10 +108,15 @@ interface ValidatedFormFieldProps {
   disabled?: boolean
   showValidIcon?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -130,10 +148,14 @@ export function ValidatedFormField({
     if (!fieldValue |!isTouched) {
       setValidationState('idle')
 <<<<<<< HEAD
+<<<<<<< HEAD
       return;
 =======
       return
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      return
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     if (debounceTimer) {
       clearTimeout(debounceTimer)
@@ -228,14 +250,18 @@ if ( {) {
     return () => {
       if (timer) clearTimeout(timer)
     }
+<<<<<<< HEAD
     return () => {
       if (timer) clearTimeout(timer)
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [fieldValue, isTouched, debounceMs])
   const validateField = (value: any): string | null => {
     if (
       validation.required &&
       (!value |(typeof value === 'string' && value.trim() === ''))
+<<<<<<< HEAD
   }, [field_value, is_touched, debounce_ms]);
   const validate_field = (value: any): string | null => {
     if (=== ''))) {
@@ -244,6 +270,8 @@ if ( {) {
     ) {
       return `${label} is required`
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ) {
       return `${label} is required`
     }
@@ -261,12 +289,17 @@ if ( {) {
     if (validation.custom) {
       return validation.custom(value)
     }
+<<<<<<< HEAD
     return null
+=======
+    return null;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const getValidationIcon = () => {
     if (!showValidIcon |!isTouched |validationState === 'idle') return null
     switch (validationState) {
       case 'validating':
+<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
@@ -304,6 +337,8 @@ if (return null) {
 }
     switch (validation_state) {
       case 'validating':;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return (
           <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
         )
@@ -326,8 +361,11 @@ if (return null) {
         return ''
     }
   }
+<<<<<<< HEAD
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
@@ -346,12 +384,16 @@ interface ValidationRule {;
   maxLength?: number,;
   pattern?: RegExp,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {;
   name: string;
@@ -375,6 +417,7 @@ interface ValidatedFormFieldProps {;
   disabled?: boolean;
   showValidIcon?: boolean;
   debounceMs?: number;
+<<<<<<< HEAD
 export function ValidatedFormField(): any ({;
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
@@ -432,6 +475,10 @@ interface ValidatedFormFieldProps {;
 export function ValidatedFormField({;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export function ValidatedFormField(): any ({;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name,;
   label,;
   type = 'text',;
@@ -443,6 +490,7 @@ export function ValidatedFormField({;
   className,;
   disabled = false,;
   showValidIcon = true,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   debounceMs = 300}: ValidatedFormFieldProps) {;
   const [showPassword, setShowPassword] = useState(false),;
@@ -600,6 +648,8 @@ export function ValidatedFormField({;
               className = {baseClasses,}
               rows = {4,}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   debounceMs = 300,;
 }: ValidatedFormFieldProps) {;
   const [showPassword, setShowPassword] = useState(false);
@@ -679,6 +729,7 @@ export function ValidatedFormField({;
         return (
           <div className='relative'>;
             <Textarea
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -710,12 +761,15 @@ export function ValidatedFormField({;
         return (
           <div className="relative">
             <Textarea
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               disabled = {disabled,}
               className = {baseClasses,}
               rows = {4,}
               disabled={disabled}
               className={baseClasses}
               rows={4}
+<<<<<<< HEAD
               {...form.register(name)}
             />
             <div className="absolute top-2 right-2">
@@ -739,6 +793,20 @@ export function ValidatedFormField({;
       case 'select':
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+              {...form.register(name)}
+            />
+            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
+          </div>
+
+              {...form && form.register(name)}
+            />;
+            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
+          </div>;
+        );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         ),
 
@@ -746,9 +814,13 @@ export function ValidatedFormField({;
       case 'select':;
         return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
               <SelectTrigger className={baseClasses}>
@@ -758,6 +830,11 @@ export function ValidatedFormField({;
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {option.label}
                   </SelectItem>
                 ))}
@@ -768,6 +845,7 @@ export function ValidatedFormField({;
             </div>
           </div>
         )
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       case 'checkbox':
             >              <SelectTrigger className={baseClasses}>;
@@ -903,6 +981,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ),
 
 
@@ -911,13 +991,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               </SelectContent>;
             </Select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
           </div>;
         );
 
       case 'checkbox':;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return (
           <div className='flex items-center space-x-2'>;
             <Checkbox
@@ -928,6 +1014,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             />;
             <label
               htmlFor={name}
+<<<<<<< HEAD
 <<<<<<< HEAD
         )
         ),
@@ -986,6 +1073,29 @@ ursor/fix-website-loading-errors-and-merge-6662
       case 'password':;
         return (
           <div className='relative'>;
+=======
+              className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+
+
+              {label}
+            </label>;
+            {getValidationIcon()}
+          </div>
+        )
+        ),
+
+
+
+      case 'password':
+          </div>;
+        );
+
+      case 'password':;
+        return (
+          <div className="relative">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Input
               type = {showPassword ? 'text' : 'password',}
               disabled = {disabled,}
@@ -994,25 +1104,36 @@ ursor/fix-website-loading-errors-and-merge-6662
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 type='button'
                 variant='ghost'
                 size='sm'
                 className='h-7 w-7 p-0'
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}              >
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 type="button"
                 variant="ghost"
                 size="sm"
@@ -1026,6 +1147,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 ) : (
                   <Eye className="h-4 w-4" />
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </Button>
             </div>
@@ -1118,6 +1240,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         ),
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </Button>
+            </div>
+          </div>
+        )
+        ),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       default:
@@ -1128,7 +1258,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
       default:;
         return (
+<<<<<<< HEAD
           <div className='relative'>;
+=======
+          <div className="relative">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Input
 
 
@@ -1140,22 +1274,32 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="absolute inset-y-0 right-0 flex items-center pr-3">
               {getValidationIcon()}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         );
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   },;
   if (type === 'checkbox') {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   if (type === 'checkbox') {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (;
       <FormField;
         control={form.control}
@@ -1170,6 +1314,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
 <<<<<<< HEAD
+<<<<<<< HEAD
         render={() => (;
           <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
             <FormControl>{renderField()}</FormControl>            {(fieldError || description) && (;
@@ -1179,10 +1324,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {fieldError && fieldError.message}
                   </FormMessage>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     {fieldError.message}
                   </FormMessage>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 )}
                 {description && !fieldError && (
@@ -1303,19 +1451,30 @@ if ( {) {
             {validation.required && (
                     {fieldError.message}
                   </FormMessage>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
                 {description && !fieldError && (
                   <p className='text-sm text-muted-foreground'>{description}</p>
                   <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
                 )}
               </div>
             )}
           </FormItem>
+=======
+
+                )}
+              </div>;
+            )}
+          </FormItem>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
       />
     )
   }
       render={() => (
+<<<<<<< HEAD
         <FormItem>
           <FormLabel className='text-sm font-medium'>
             {label}
@@ -1328,16 +1487,28 @@ if ( {) {
               {fieldError && (
                 <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
                   <AlertCircle className='h-3 w-3' />
+=======
+        <FormItem>;
+          <FormLabel className='text - sm font - medium'>;
+            {label}
+            {validation.required && (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
       />;
     );
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       render={() => (;
         <FormItem>;
           <FormLabel className='text-sm font-medium'>;
             {label}
+<<<<<<< HEAD
 <<<<<<< HEAD
             {validation && validation.required && (;
               <span className='text-red-500 ml-1'>*</span>;
@@ -1361,6 +1532,8 @@ if ( {) {
     }
   }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             {validation.required && <span className="text-red-500 ml-1">*</span>}
           </FormLabel>
@@ -1378,6 +1551,7 @@ if ( {) {
                 </FormMessage>
               )}
               {description && !fieldError && (
+<<<<<<< HEAD
 
                 <p className="text-sm text-muted-foreground">{description}</p>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1576,6 +1750,11 @@ export const commonValidations = {;
               {description && !fieldError && (
                 <p className='text-sm text-muted-foreground'>{description}</p>
                 <p className="text-sm text-muted-foreground">{description}</p>
+=======
+                <p className='text-sm text-muted-foreground'>{description}</p>
+                <p className="text-sm text-muted-foreground">{description}</p>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </div>
           )}
@@ -1627,11 +1806,16 @@ export const commonValidations = {
     }
   }}
     }
+<<<<<<< HEAD
   }}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }},
     };
   }};
+<<<<<<< HEAD
     />;
   );
 }
@@ -1642,11 +1826,28 @@ export const validationPatterns = {;
   phone: /^[\+]?[1-9][\d]{0,15}$/,;
   url: /^https?:\/\/.+/,;
   strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/},;
+=======
+
+
+    />;
+  );
+
+// Validation helpers for common patterns;
+export const validationPatterns = {;
+  email: /^[a-zA-Z0-9 && 9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,;
+  phone: /^[\+]?[1-9][\d]{0,15}$/,;
+  url: /^https?:\/\/.+/,;
+  strongPassword:;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,;
+};
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Pre-configured validation rules;
 export const commonValidations = {;
   required: { required: true },;
   email: {;
     required: true,;
+<<<<<<< HEAD
     pattern: validationPatterns.email,;
     custom: (value: string) => {;
       if (value && !validationPatterns.email.test(value)) {;
@@ -1654,10 +1855,20 @@ export const commonValidations = {;
       }
       return null;
     }
+=======
+    pattern: validationPatterns && validationPatterns.email,;
+    custom: (value: string,) => {;
+      if (value && !validationPatterns && validationPatterns.email.test(value)) {;
+        return 'Please enter a valid email address';
+      }
+      return null;
+    },;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   password: {;
     required: true,;
     minLength: 8,;
+<<<<<<< HEAD
     custom: (value: string) => {;
       if (value && !validationPatterns.strongPassword.test(value)) {;
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
@@ -1679,10 +1890,30 @@ export const commonValidations = {;
     }
   }};
 =======
+=======
+    custom: (value: string,) => {;
+      if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {;
+        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
+      }
+      return null;
+    },;
+  },;
+  phone: {;
+    pattern: validationPatterns && validationPatterns.phone,;
+    custom: (value: string,) => {;
+      if (value && !validationPatterns && validationPatterns.phone.test(value)) {;
+        return 'Please enter a valid phone number';
+      }
+      return null;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
   }},
     }
+<<<<<<< HEAD
   }};
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

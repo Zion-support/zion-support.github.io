@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,20 +9,29 @@ import Layout from './layout/Layout';
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import Layout from './layout/Layout',
 import React from 'react';
 import Layout from './layout/Layout';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -52,6 +62,10 @@ import { motion } from 'framer-motion';
 
 
 const Homepage2026: React.FC = () => {;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout>;
       {/* Main Content */}
@@ -71,6 +85,10 @@ const Homepage2026: React.FC = () => {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
@@ -78,6 +96,7 @@ const Homepage2026: React.FC = () => {;
               {/* Company Badge */}
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
+<<<<<<< HEAD
 import {
 
 <<<<<<< HEAD
@@ -100,6 +119,13 @@ import {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ArrowRight,
   Star,
   Brain,
@@ -114,7 +140,10 @@ import {
   Rocket,
   CheckCircle,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Phone,;
   Mail,;} from 'lucide-react';import {
@@ -127,13 +156,20 @@ const Homepage2026: React.FC = () => {
   return (
     <Layout>;
       {/* Main Content */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <main className='relative z-10'>
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}
@@ -166,10 +202,15 @@ const Homepage2026: React.FC = () => {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -265,6 +306,14 @@ const Homepage2026: React.FC = () => {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
@@ -331,9 +380,12 @@ const Homepage2026: React.FC = () => {
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'>;
                 <Star className='w-4 h-4' />;
                 <span>Innovation Leader 2026</span>;
@@ -436,9 +488,13 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 </Link>;
                 <Link href="/services">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <button className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105">;
                     All Services;
                   </button>;
@@ -446,13 +502,18 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 <a href="mailto:kleber@ziontechgroup.com">;
                   <button className="px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Get Started;
                   </button>;
                 </a>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -468,10 +529,25 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+              
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
@@ -501,6 +577,8 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
           </div>
         </section>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* Company Stats */}
@@ -508,7 +586,10 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>;
           <div className='max-w-6xl mx-auto relative z-10'>            <motion&& motion.div
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Company Stats */}
         <section className='py-20 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
@@ -523,10 +604,15 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Company Stats */}
         <section className="py-20 px-4 bg-black/30 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
@@ -535,6 +621,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
             >
@@ -555,6 +642,11 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
             >
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className="text-center mb-16"
+            >
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We deliver innovative solutions that drive real business transformation
@@ -565,6 +657,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center'
               >
@@ -578,10 +671,16 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 className="text-center"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                className="text-center"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Starting at $69/month for specialized business solutions
 =======
@@ -589,12 +688,18 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                   Starting at $69/month for specialized business solutions
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  Starting at $69/month for specialized business solutions
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center'
               >
@@ -608,10 +713,16 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 className="text-center"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                className="text-center"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-4xl mb-4">🏗️</div>
                 <h3 className="text-xl font-semibold text-white mb-2">IT Infrastructure</h3>
                 <p className="text-gray-300 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Starting at $499/month for robust infrastructure solutions
 =======
@@ -619,12 +730,18 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                   Starting at $499/month for robust infrastructure solutions
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  Starting at $499/month for robust infrastructure solutions
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center'
               >
@@ -638,10 +755,16 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 className="text-center"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                className="text-center"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
                 <p className="text-gray-300 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Starting at $199/month for intelligent automation
 =======
@@ -649,12 +772,18 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                   Starting at $199/month for intelligent automation
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  Starting at $199/month for intelligent automation
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center'
               >
@@ -668,23 +797,37 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 className="text-center"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                className="text-center"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>
                 <p className="text-gray-300 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
                   Starting at $179/month for next-generation AI
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  Starting at $179/month for next-generation AI
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
               </motion.div>
             </div>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
@@ -775,10 +918,17 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
         </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Service Categories */}
         <section className='py-20 px-4'>;
           <div className='max-w-6xl mx-auto'>            <motion&& motion.div
+=======
+        {/* Service Categories */}
+        <section className='py-20 px-4'>;
+          <div className='max-w-6xl mx-auto'>            <motion&& motion.div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Service Categories */}
         <section className='py-20 px-4'>
           <div className='max-w-6xl mx-auto'>            <motion.div
@@ -791,13 +941,19 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* Service Categories */}
         <section className="py-20 px-4">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Service Categories */}
         <section className='py-20 px-4'>
           <div className='max-w-6xl mx-auto'>            <motion.div
@@ -807,16 +963,20 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               className='text-center mb-16'        <section className="py-20 px-4">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Service Categories */}
         <section className="py-20 px-4">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
             >
@@ -836,6 +996,8 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
               <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -854,16 +1016,21 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
             </motion && motion.div>;
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* AI Automation Services */}
               <motion&& motion.div
+=======
+              {/* AI Automation Services */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               {/* AI Automation Services */}
 
 
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
@@ -877,13 +1044,22 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               {/* AI Automation Services */}
 
               <motion.div
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className='text-5xl mb-6'>🤖</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -939,6 +1115,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300"
@@ -951,6 +1128,8 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'>🤖</div>;
@@ -1146,12 +1325,25 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* IT Infrastructure Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               >
                 <div className='text-5xl mb-6'>🏗️</div>
@@ -1261,23 +1453,31 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 </Link>;
               </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Micro SAAS Solutions */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1294,6 +1494,14 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -1349,6 +1557,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300"
@@ -1361,6 +1570,8 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'>🚀</div>;
@@ -1490,12 +1701,25 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Cutting-Edge AI Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               >
                 <div className='text-5xl mb-6'>🧠</div>
@@ -1553,7 +1777,10 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
@@ -1616,7 +1843,10 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -1629,9 +1859,13 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               className='space-y-6'>;
               <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -1642,10 +1876,15 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 services can drive your success;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Contact Information */}
               <div className='bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8'>;
                 <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>;
@@ -1658,10 +1897,15 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                       <div className='text-sm text-gray-400'>Website</div>;
                       <a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Contact Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
@@ -1669,6 +1913,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='space-y-6'
             >
@@ -2079,11 +2324,18 @@ className="space-y-6"
 };
 export default Homepage2026;  );
 };
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default Homepage2026;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                 <a;
                   href='mailto:kleber@ziontechgroup.com';
@@ -2121,7 +2373,12 @@ export default Homepage2026);
 export default Homepage2026;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 };
@@ -2130,6 +2387,7 @@ export default Homepage2026;  )
 }
 export default Homepage2026;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -2146,3 +2404,6 @@ export default Homepage2026;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

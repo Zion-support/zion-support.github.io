@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -16,12 +17,19 @@ import { Button } from "@/components/ui/button",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: "talent-1"
       name: "Jessica Lee"
       role: "UI/UX Designer"
@@ -73,6 +81,7 @@ export function TalentPool() {
     }
   ],
 
+<<<<<<< HEAD
 
 =======
 
@@ -86,6 +95,8 @@ import {Button} from "@/components/ui/button";
       name: "Jessica Lee",
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "available": return <Badge className="bg-green-500">Available</Badge>,
@@ -96,6 +107,7 @@ import {Button} from "@/components/ui/button";
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+<<<<<<< HEAD
 
   },
 
@@ -104,6 +116,10 @@ import {Button} from "@/components/ui/button";
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <Card>
@@ -135,20 +151,27 @@ import {Button} from "@/components/ui/button";
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Badge key={index} variant="secondary" className="text-xs">
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Badge key={index} variant="secondary" className="text-xs">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function TalentPool() {;
   // Mock talent data;
   const talents = [;
@@ -157,35 +180,48 @@ export function TalentPool() {;
       name: "Jessica Lee",;
       role: "UI/UX Designer",;
 <<<<<<< HEAD
+<<<<<<< HEAD
       skills: ["Figma", "Sketch", "User Testing"],;
       status: "available",;
       match: 95;
     },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       skills: ["Figma", "Sketch", "User Testing"];
       status: "available",;
       match: 95;
     };
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {;
       id: "talent-2",;
       name: "Marcus Wright",;
       role: "Full Stack Developer",;
+<<<<<<< HEAD
 <<<<<<< HEAD
       skills: ["React", "Node.js", "MongoDB"],;
       status: "interviewing",;
       match: 92;
     },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       skills: ["React", "Node && Node.js", "MongoDB"];
       status: "interviewing",;
       match: 92;
     };
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {;
       id: "talent-3",;
       name: "Aisha Patel",;
       role: "Product Manager",;
+<<<<<<< HEAD
 <<<<<<< HEAD
       case "hired":;
         return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>,;
@@ -250,6 +286,8 @@ export function TalentPool() {;
   };
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       skills: ["Agile", "Roadmapping", "User Research"];
       status: "available",;
       match: 88;
@@ -272,7 +310,10 @@ export function TalentPool() {;
   }
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -280,7 +321,10 @@ export function TalentPool() {;
             <CardTitle>Dedicated Talent Pool</CardTitle>;
             <CardDescription>Candidates matched to your company</CardDescription>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -338,13 +382,19 @@ function TalentPool() {
             <CardTitle > Dedicated Talent Pool</CardTitle>;
             <CardDescription > Candidates matched to your company</CardDescription>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           <Button size="sm">View All</Button>;
         </div>;
       </CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   {getStatusBadge(talent.status)}
                   <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
@@ -368,14 +418,25 @@ function TalentPool() {
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
 
+=======
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </CardContent>;
     </Card>;
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <CardContent className="p - 0">;
         <div className="divide - y divide - border">;
           {talents.map ((talent) => (
@@ -388,6 +449,7 @@ function TalentPool() {
                 <div className="flex items - center gap - 2">;
                   {getStatusBadge (talent.status)}
                   <Badge variant="outline" className="bg - purple - 100 text - purple - 800 border - purple - 200">;
+<<<<<<< HEAD
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
           {talents.map((talent) => (;
@@ -488,3 +550,27 @@ return (<Card> <CardHeader> <div className="flex items-center justify-between" >
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    {talent.match}% Match;
+                  </Badge>;
+                </div>;
+              </div>;
+              <div className="mt - 2 flex flex - wrap gap - 1">;
+                {talent.skills.map ((skill, index) => (
+                  <Badge key={index} variant="secondary" className="text - xs">;
+                    {skill}
+                  </Badge>))}
+              </div>;
+              <div className="mt - 3 flex gap - 2">;
+                <Button size="sm" variant="outline">View Profile</Button>;
+                <Button size="sm">Contact</Button>;
+              </div>;
+            </div>))}
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

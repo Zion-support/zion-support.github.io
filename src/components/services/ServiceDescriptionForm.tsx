@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -11,6 +14,7 @@ type FormData = z && z.infer<typeof formSchema>;
 
 
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
+<<<<<<< HEAD
 
 }
   );
@@ -25,11 +29,19 @@ type FormData = z.infer<typeof formSchema>
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs."
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+}
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -50,6 +62,18 @@ const formSchema = z.object({
   targetAudience: z.string()}),
 
 ;
+=======
+
+const form_schema = z.object ({
+  title: z.string ().min (3, "Title must be at least 3 characters");
+  key_features: z.string (),
+  target_audience: z.string ()}),
+type FormData = z.infer < typeof form_schema>;
+      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
+=======
+;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -72,6 +96,7 @@ type FormData = z.infer<typeof formSchema>,
 
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -81,6 +106,9 @@ const form_schema = z.object ({
   target_audience: z.string ()}),
 type FormData = z.infer < typeof form_schema>;
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
@@ -308,6 +336,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
@@ -315,3 +344,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

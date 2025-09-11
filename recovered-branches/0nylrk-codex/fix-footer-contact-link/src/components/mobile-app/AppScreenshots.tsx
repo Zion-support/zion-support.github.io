@@ -1,14 +1,20 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // These would be replaced with actual screenshots
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useRef } from "react";
@@ -36,12 +42,16 @@ export const AppScreenshots: React.FC = () => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -66,6 +76,8 @@ export const AppScreenshots: React.FC = () => {
             <ChevronLeft className="h-6 w-6" />
           </Button>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
@@ -89,6 +101,7 @@ export const AppScreenshots: React.FC = () => {;
         behavior: "smooth"});
 
     }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
     }
@@ -96,6 +109,11 @@ export const AppScreenshots: React.FC = () => {;
   },
 
 
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
 
@@ -103,10 +121,13 @@ export const AppScreenshots: React.FC = () => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div
           <div 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -120,15 +141,21 @@ export const AppScreenshots: React.FC = () => {;
                   src={screenshot.src}
                   alt={screenshot.alt}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full h-full object-cover"
                 />
               </div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button
             variant="ghost"
@@ -137,14 +164,21 @@ export const AppScreenshots: React.FC = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button 
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -155,12 +189,17 @@ export const AppScreenshots: React.FC = () => {;
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -183,6 +222,7 @@ export const AppScreenshots: React.FC = () => {;
     }
   };
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -216,6 +256,9 @@ export const AppScreenshots:React.FC = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -224,6 +267,7 @@ export const AppScreenshots:React.FC = () => {;
             Take a visual tour through the Zion app's intuitive interface.;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <div className="relative">;
@@ -237,20 +281,28 @@ export const AppScreenshots:React.FC = () => {;
             size="icon";
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="relative">;
           <Button
             variant="ghost" 
             size="icon" 
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick={() => scroll("left")}
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div
             ref={scrollContainerRef}
@@ -271,11 +323,15 @@ export const AppScreenshots:React.FC = () => {;
 
           </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div;
             ref={scrollContainerRef}
@@ -301,6 +357,8 @@ export const AppScreenshots:React.FC = () => {;
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick={() => scroll("right")}
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -309,6 +367,7 @@ export const AppScreenshots:React.FC = () => {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -442,3 +501,7 @@ Take a visual tour through the Zion app's intuitive interface. </p> </div> <div 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

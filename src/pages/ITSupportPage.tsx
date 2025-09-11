@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
@@ -10,11 +11,14 @@ import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
     {import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -43,6 +47,10 @@ export default function ITSupportPage() {
   ]
   const testimonials = [
 =======
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { ServiceLandingTemplate } from '@/components / services / ServiceLandingTemplate';
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
@@ -80,6 +88,7 @@ function ITSupportPage() {
   ];
   const testimonials = [;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: 'Lisa Wong'
@@ -102,10 +111,20 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ITSupportPage() {
   const benefits = [
     {
@@ -132,9 +151,13 @@ export default function ITSupportPage() {
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -172,10 +195,26 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 
 
 
+<<<<<<< HEAD
     <ServiceLandingTemplate
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+=======
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+    <ServiceLandingTemplate
+      title="IT Support Services"
+      subtitle="Reliable assistance to keep your business technology operating smoothly."
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+
+;
+}
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -226,6 +265,7 @@ export default function ITSupportPage() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       avatar: "/placeholder.svg"}],
 
@@ -295,6 +335,21 @@ export default function ITSupportPage() {;
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes.";
       benefits={benefits}
       testimonials={testimonials}
+=======
+    <ServiceLandingTemplate
+      title="IT Support Services"
+      subtitle="Reliable assistance to keep your business technology operating smoothly."
+      heroImage="https://placehold && placehold.co/600x300/192134/9b87f5?text=IT+Support"
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+      benefits = {benefits,}
+      testimonials = {testimonials,}
+      ctaText="Get IT Support"
+      ctaLink="/request-quote"
+    />;
+  );      benefits={benefits}
+      testimonials={testimonials}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ctaText="Get IT Support";
       ctaLink="/request-quote";
     />;
@@ -324,6 +379,9 @@ export default function ITSupportPage() {;
     />);
 }
 ;
+<<<<<<< HEAD
 =======
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

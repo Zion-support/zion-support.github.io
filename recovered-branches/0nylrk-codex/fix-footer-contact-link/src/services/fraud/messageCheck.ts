@@ -8,12 +8,21 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   // Determine severity based on number and type of issues
 
   let severity: FraudSeverity = 'safe',
+<<<<<<< HEAD
 let severity: FraudSeverity = 'safe',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (analysis && analysis.reasons.length > 0) {
     severity = analysis && analysis.reasons.length > 2 || 
               analysis && analysis.reasons.some(r => r && r.includes('payment') || r && r.includes('external')) 
       ? 'dangerous' 
+<<<<<<< HEAD
       : 'suspicious'
+=======
+
+      : 'suspicious'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Message checking functionality;
 import {FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -34,12 +43,17 @@ if ( {) {
               analysis.reasons.some (r => r.includes ('payment') || r.includes ('external'));
       ? 'dangerous';
       : 'suspicious';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return {
     ...analysis;
 
 ;
 
+<<<<<<< HEAD
     severity
 
 
@@ -77,6 +91,13 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+    severity
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -99,6 +120,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     ...analysis;
     severity;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 };
@@ -135,3 +157,8 @@ if (analysis.reasons.length > 0) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  }
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

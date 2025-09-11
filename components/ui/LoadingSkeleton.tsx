@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 
     <motion.div;
@@ -12,6 +13,8 @@
     />);
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +35,13 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+interface SkeletonProps {
+  className?: string;
+  height?: string;
+  width?: string;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return (
@@ -45,13 +55,17 @@ import { motion } from 'framer-motion';
 
     />);
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
 interface ServiceCardSkeletonProps {
   class_name?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Skeleton: React.FC<SkeletonProps> = ({ ;
   className = '',;
@@ -79,6 +93,8 @@ const Skeleton: React.FC<SkeletonProps> = ({
         opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
       transition={{
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ class_name = '' }) => {
   return (
     <div className={`p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl ${class_name}`}>;
@@ -94,7 +110,10 @@ export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ clas
       <Skeleton className="h - 4 w - 4/6" />;
     </div>);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
@@ -109,9 +128,13 @@ interface HeroSkeletonProps {
   class_name?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' }) => {
   return (
     <div className={`min - h-screen flex items - center justify - center px - 6 py - 20 ${class_name}`}>;
@@ -125,6 +148,10 @@ export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' })
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
@@ -138,6 +165,7 @@ interface StatsSkeletonProps {
 interface StatsSkeletonProps {
   class_name?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     />
   )
@@ -238,6 +266,8 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
       </div>
     </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>
 
@@ -250,7 +280,10 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
         repeat: Infinity,
         ease: "easeInOut"}}
     />;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 };
 interface ServiceCardSkeletonProps {;
@@ -271,12 +304,18 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />;
     </div>;
   );
+<<<<<<< HEAD
   )
 
 <<<<<<< HEAD
   )
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  )
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 interface HeroSkeletonProps {;
   className?: string;
@@ -325,7 +364,10 @@ export default Skeleton;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' }) => {
   return (
@@ -355,15 +397,23 @@ export default Skeleton;
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

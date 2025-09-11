@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -31,6 +32,8 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -77,10 +80,18 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
+=======
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Internationalization() {
   const schema = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const schema = {
@@ -100,13 +111,18 @@ export default function Internationalization() {
         keywords='i18n, multi-language marketplace, localized listings'
         canonical='https://app.ziontechgroup.com/features/internationalization'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Internationalization",
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
     "url": "https://app.ziontechgroup.com/features/internationalization"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   return (
@@ -142,6 +158,7 @@ export default function Internationalization() {
           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Internationalization() {
@@ -162,6 +179,8 @@ export default function Internationalization() {
         canonical='https://app.ziontechgroup.com/features/internationalization'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
@@ -175,12 +194,15 @@ export default function Internationalization() {
         type="application/ld+json"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -214,6 +236,7 @@ export default function Internationalization() {
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -299,6 +322,12 @@ export default function Internationalization() {
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
+=======
+
+
+
+          <div className="text-center">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
             </Button>
@@ -308,6 +337,7 @@ export default function Internationalization() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 =======
@@ -315,6 +345,11 @@ export default function Internationalization() {
 ;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -351,6 +386,7 @@ export default function Internationalization() {;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <img;
               src="https://placehold.co/800x400";
               alt="Screenshot of language options";
@@ -377,18 +413,24 @@ export default function Internationalization() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of language options"
               className="object-cover"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href="/">Explore Zion</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -400,3 +442,5 @@ export default function Internationalization() {;
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

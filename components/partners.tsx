@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function PartnersPage() {;
 import React from 'react';
 import Head from 'next/head';
@@ -39,6 +40,17 @@ export default function PartnersPage() {
 export default function PartnersPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import Head from 'next/head';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+export default function PartnersPage() {
+=======
+
+export default function PartnersPage() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -47,9 +59,13 @@ export default function PartnersPage() {
           name='description'
           content='Technology and go-to-market partners powering our customer outcomes.'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />;
       </Head>;
@@ -69,9 +85,13 @@ export default function PartnersPage() {
         </ul>;
         <div className='pt-4 text-slate-300'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           Partner with us:{' '}
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
             kleber@ziontechgroup.com
@@ -81,14 +101,20 @@ export default function PartnersPage() {
     </div>;
   );	return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function PartnersPage() {
 	return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function PartnersPage() {
 	return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Partners | Zion Tech Group</title>
@@ -104,6 +130,7 @@ export default function PartnersPage() {
 					<li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>
 					<li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>
 				</ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
@@ -202,6 +229,8 @@ function PartnersPage() {
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
@@ -209,6 +238,9 @@ function PartnersPage() {
 }
 	),
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

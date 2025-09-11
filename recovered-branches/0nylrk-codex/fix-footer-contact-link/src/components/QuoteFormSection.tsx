@@ -1,12 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 export function QuoteFormSection() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,6 +25,8 @@ import { useState } from "react";
 
   const handleSubmit = (e: React.FormEvent) => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,15 +36,22 @@ import { useState } from "react";
     setIsSubmitting(true);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -46,11 +60,14 @@ export function QuoteFormSection() {
       (setIsSubmitting(false), setIsSubmitted(true));
     }, 1000);
   }
+<<<<<<< HEAD
 =======
 
   const handleSubmit = (e: React.FormEvent) => {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -61,6 +78,7 @@ export function QuoteFormSection() {
     }, 1000)
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
 e.preventDefault();
@@ -74,6 +92,8 @@ e.preventDefault();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,6 +150,7 @@ e.preventDefault();
                     Name
                   </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -147,14 +168,25 @@ export function QuoteFormSection() {;
     e.preventDefault(),;
     setIsSubmitting(true),;
     ;
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Simulate form submission;
     setTimeout(() => {;
       setIsSubmitting(false),;
       setIsSubmitted(true);
+<<<<<<< HEAD
     }, 1000),;
   },;
 ;
   return (;
+=======
+    }, 1000);
+  };
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -163,12 +195,20 @@ export function QuoteFormSection() {;
             Request your instant commercial proposal and discover how Zion can revolutionize your IT operations;
           </p>;
         </div>;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">;
           {isSubmitted ? (;
             <div className="text-center py-8">;
               <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple/20 rounded-full mb-6">;
+<<<<<<< HEAD
                 <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
+=======
+                <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path>;
                 </svg>;
               </div>;
@@ -176,7 +216,11 @@ export function QuoteFormSection() {;
               <p className="text-zion-slate-light mb-6">;
                 Thank you for your interest in Zion's services. Our team will prepare your personalized commercial proposal and contact you shortly.;
               </p>;
+<<<<<<< HEAD
               <Button ;
+=======
+              <Button
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() => setIsSubmitted(false)}
                 variant="outline" ;
                 className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
@@ -184,7 +228,11 @@ export function QuoteFormSection() {;
                 Submit Another Request;
               </Button>;
             </div>;
+<<<<<<< HEAD
           ) :(;
+=======
+          ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <form onSubmit={handleSubmit}>;
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">;
                 <div>;
@@ -192,14 +240,19 @@ export function QuoteFormSection() {;
                     Name;
                   </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Input
                     id="name"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Input;
                     id="name";
@@ -209,12 +262,16 @@ export function QuoteFormSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </div>;
                 <div>;
                   <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Company;
                   </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />
                 </div>
@@ -228,10 +285,14 @@ export function QuoteFormSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Input
                     id="company"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Input;
                     id="company";
@@ -240,12 +301,16 @@ export function QuoteFormSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </div>;
                 <div>;
                   <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Email;
                   </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />
                 </div>
@@ -259,11 +324,15 @@ export function QuoteFormSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Input
                     id="email"
                     type="email"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Input;
                     id="email";
@@ -273,12 +342,16 @@ export function QuoteFormSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </div>;
                 <div>;
                   <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Phone;
                   </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />
                 </div>
@@ -292,10 +365,14 @@ export function QuoteFormSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Input
                     id="phone"
                     type="tel"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />
                 </div>
@@ -323,12 +400,17 @@ export function QuoteFormSection() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <label
                         htmlFor={`interest-${index}`}
@@ -338,6 +420,10 @@ export function QuoteFormSection() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -431,6 +517,7 @@ export function QuoteFormSection() {;
                   />;
                 </div>;
               </div>;
+<<<<<<< HEAD
                   <Input;
                     id="phone";
                     type="tel";
@@ -439,6 +526,9 @@ export function QuoteFormSection() {;
                 </div>;
               </div>;
               ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="mt-6">;
                 <label htmlFor="interest" className="block text-sm font-medium text-zion-slate-light mb-1">;
                   I'm interested in (select all that apply);
@@ -446,31 +536,50 @@ export function QuoteFormSection() {;
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
                     <div key={index} className="flex items-center">;
+<<<<<<< HEAD
 
                       />;
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">;
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                      <input
+                        id={`interest-${index}`}
+                        type="checkbox"
+                        className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />
 
 
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
+<<<<<<< HEAD
                       <input;
                         id={`interest-${index}`}
                         type="checkbox";
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50";
                       />;
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {item}
                       </label>;
                     </div>;
                   ))}
+<<<<<<< HEAD
                 </div>;
               </div>;
               ;
+=======
+
+                </div>;
+              </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="mt-6">;
                 <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">;
                   Additional Details;
                 </label>;
+<<<<<<< HEAD
                 <textarea;
                   id="message";
                   rows={4}
@@ -485,6 +594,20 @@ export function QuoteFormSection() {;
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3";
                 >;
                   {isSubmitting ? "Sending..." :"Get Your Free Commercial Proposal"}
+=======
+                <textarea
+                  id="message"
+                  rows={4}
+                  className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"></textarea>;
+              </div>;
+
+              <div className="mt-6">;
+                <Button
+                  type="submit" 
+                  disabled={isSubmitting} 
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3">;
+                  {isSubmitting ? "Sending..." : "Get Your Free Commercial Proposal"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Button>;
               </div>;
             </form>;
@@ -492,6 +615,13 @@ export function QuoteFormSection() {;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+=======
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button  } from './ui / button';
 import { Input  } from './ui / input';
 import { GradientHeading  } from './GradientHeading';
@@ -677,6 +807,7 @@ function QuoteFormSection() {
     </section>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  export function QuoteFormSection () {
   const [isSubmitted, setIsSubmitted] = useState (false);
@@ -743,3 +874,6 @@ return (<section className="py-20 bg-zion-blue" > <div className="container mx-a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

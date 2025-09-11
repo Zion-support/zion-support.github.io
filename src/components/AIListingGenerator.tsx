@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
@@ -25,11 +26,14 @@ suggestedPrice: {
 max: number
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 })
       // Check condition
 if (?.error) {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 keyPoints: string[]
 }interface AIListingGeneratorProps {
@@ -163,6 +167,16 @@ interface AIListingGeneratorProps {;
     targetAudience?: string;
   }
 }
+=======
+        throw new Error ((data as any).error);
+      }
+      setGeneratedContent ((data as any)?.generated || null);
+      toast ({
+        title: 'Content Generated',
+        description: 'AI has created optimized listing content for you.',
+      });
+    } catch (error) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast(),
@@ -190,11 +204,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     }
   },
 
+<<<<<<< HEAD
     if (!title |!category) {
       toast({
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
@@ -291,6 +308,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "AI has created optimized listing content for you."
       })
     } catch (error) {
+<<<<<<< HEAD
 =======
         throw new Error ((data as any).error);
       }
@@ -302,21 +320,27 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     } catch (error) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       logErrorToProduction('Error generating content:', { data: error }),
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
 <<<<<<< HEAD
+<<<<<<< HEAD
       })
     } finally {
       setIsLoading(false)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       })
     } finally {
       setIsLoading (false);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
@@ -432,6 +456,11 @@ if ( {) {
 export function AIListingGenerator({ onApplyGenerated, initialValues;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -441,20 +470,26 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             AI Listing Optimizer
           </CardTitle>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className='text-sm text-zion-slate-light'>
             Provide basic information and let AI generate optimized
             SEO-friendly content for your listing
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <p className='text-sm text-zion-slate-light'>
             Provide basic information and let AI generate optimized
             SEO-friendly content for your listing
           <p className="text-sm text-zion-slate-light">
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing
+<<<<<<< HEAD
 =======
 
           <p className="text-sm text-zion-slate-light">
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -462,15 +497,21 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
             <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               id='title'
               value={title}
               onChange={e => handleInputChange(e, 'title')}
               placeholder='Enter your product or service title'
               className='bg-zion-blue border border-zion-blue-light text-white'
               disabled={isLoading}            />
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               id="title"
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
@@ -479,12 +520,21 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               disabled={isLoading}
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
+            <Input
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               id='category'
               value={category}
               onChange={e => handleInputChange(e, 'category')}
               placeholder='e.g. AI Tool, Digital Product, Service'
               className='bg-zion-blue border border-zion-blue-light text-white'
               disabled={isLoading}            />
+<<<<<<< HEAD
 =======
 
           </div>
@@ -493,6 +543,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             <Input
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               id="category"
               value={category}
               onChange={(e) => handleInputChange(e, 'category')}
@@ -501,23 +553,33 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               disabled={isLoading}
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
             <Textarea
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               id='keyFeatures'
               value={keyFeatures}
               onChange={e => handleInputChange(e, 'keyFeatures')}
               placeholder='Briefly describe the main features or benefits'
               className='bg-zion-blue border border-zion-blue-light text-white min-h-20'
               disabled={isLoading}            />
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               id="keyFeatures"
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
@@ -526,14 +588,21 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               disabled={isLoading}
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           <div className="space-y-2">
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
             <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               id='targetAudience'
               value={targetAudience}
               onChange={e => handleInputChange(e, 'targetAudience')}
@@ -546,6 +615,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
             className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'          >
+<<<<<<< HEAD
 
           </div>
           <div className="space-y-2">
@@ -581,6 +651,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               id="targetAudience"
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
@@ -629,6 +701,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             : 'Failed to generate content. Please try again.',;
         variant: 'destructive',;
 <<<<<<< HEAD
+<<<<<<< HEAD
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
@@ -641,10 +714,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
         variant: "destructive";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   const handleApply = () => {;
@@ -719,6 +795,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   const handleApply = () => {;
@@ -815,16 +893,23 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           >
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {isLoading ? (
               <>Generating Optimized Content...</>
             ) : (
               <>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Sparkles className="h-4 w-4 mr-2" />
 =======
                 <Sparkles className='h-4 w-4 mr-2' />
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <Sparkles className='h-4 w-4 mr-2' />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Generate Optimized Content
               </>
             )}
@@ -833,10 +918,16 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
       </Card>
       {isLoading && (
 <<<<<<< HEAD
+<<<<<<< HEAD
       )}
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
           <CardHeader>
             <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />
+=======
+        <Card className='border border-zion-blue-light bg-zion-blue-dark overflow-hidden'>
+          <CardHeader>
+            <Skeleton className='h-8 w-3/4 bg-zion-blue-light/20' />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </CardHeader>
           <CardContent className='space-y-4'>
             <Skeleton className='h-32 w-full bg-zion-blue-light/20' />
@@ -844,6 +935,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className='h-6 w-16 bg-zion-blue-light/20' />
               ))}
+<<<<<<< HEAD
             </div>
             <Skeleton className='h-8 w-1/3 bg-zion-blue-light/20' />
             <div className='space-y-2'>
@@ -880,11 +972,16 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
                 <Skeleton key={i} className='h-6 w-16 bg-zion-blue-light/20' />;
 
               ))}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
             <Skeleton className='h-8 w-1/3 bg-zion-blue-light/20' />;
             <div className='space-y-2'>;
               {[...Array(3)].map((_, i) => (;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Skeleton
     <div className='space - y-6'>;
       <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
@@ -1012,10 +1109,15 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           </CardContent>;
         </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       )}
 
@@ -1029,6 +1131,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
               <p className="text-white">{generatedContent.description}</p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             <div>
@@ -1058,6 +1161,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
             </div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+            
+            <div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
                 Suggested Price Range
               </h3>
@@ -1095,10 +1203,28 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <div>
+              <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
+                Key Selling Points
+              </h3>
+              <ul className='list-disc pl-5 text-white space-y-1'>
+                {generatedContent.keyPoints.map((point, index) => (                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button
+              onClick={handleApply}
+              className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'            >
+            
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
               <ul className="list-disc pl-5 text-white space-y-1">
@@ -1162,6 +1288,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <ul className='list - disc pl - 5 text - white space - y-1'>;
                 {generated_content.key_points.map ((point, index) => (                  <li key={index}>{point}</li>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
@@ -1171,29 +1298,41 @@ ursor/fix-website-loading-errors-and-merge-6662
                 ))}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </ul>;
             </div>;
           </CardContent>;
           <CardFooter>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button;
               onClick={handleApply}
               className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </CardFooter>
         </Card>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -1208,6 +1347,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   value: string ;
 }, field: string) => {;
   switch (field) {;
@@ -1249,6 +1391,7 @@ if ( {) {
 }setIsLoading (true);
 }catch (error) {';
 <<<<<<< HEAD
+<<<<<<< HEAD
   toast ({
   return;
 }setIsLoading (true)
@@ -1281,11 +1424,16 @@ toast ({
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   logErrorToProduction ('Error generating content:', {
 
     </div>;
   );
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   target: {;
   value: string ;
@@ -1362,15 +1510,24 @@ toast ({
 }</div>);
 }'"  );
 }
+<<<<<<< HEAD
     </div>;
   );
+=======
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

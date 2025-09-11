@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</Link>
@@ -14,6 +15,8 @@
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import SEO from '../components/SEO';
 export default function MLOpsStarterPage() {
@@ -29,12 +32,19 @@ export default function MLOpsStarterPage() {
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
 						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</Link>
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 					</div>
 				</div>
 			</section>
 		</>
 	)
 };
+<<<<<<< HEAD
 =======
 =======
 import React from 'react',
@@ -63,13 +73,18 @@ return (
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

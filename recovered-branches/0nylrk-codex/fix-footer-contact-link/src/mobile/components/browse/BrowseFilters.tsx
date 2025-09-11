@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -71,6 +72,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     }
   },
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
@@ -83,23 +86,33 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger
 import { Badge } from '@/components / ui / badge';
 import { Label } from '@/components / ui / label';
 
+<<<<<<< HEAD
+=======
+import { Label } from "@/components/ui/label",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -154,12 +167,16 @@ interface BrowseFiltersProps {
                         max={20}
                         step={1}
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -174,30 +191,42 @@ interface BrowseFiltersProps {;
   type: "jobs" | "talents";
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const addFilter = (filter: string) => {;
     if (!activeFilters && activeFilters.includes(filter)) {;
       setActiveFilters([...activeFilters, filter]);
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const removeFilter = (filter: string) => {;
     setActiveFilters(activeFilters && activeFilters.filter(f => f !== filter));
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const removeFilter = (filter: string) => {;
     setActiveFilters(activeFilters && activeFilters.filter(f => f !== filter));
   };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-3">;
       <div className="flex justify-between items-center px-4">;
@@ -214,9 +243,13 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>;
               </SheetHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="py-6 space-y-6">;
                 {type === "jobs" ? (;
                   <>;
@@ -230,9 +263,13 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                       </div>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-2">;
                       <Label>Experience Level</Label>;
                       <div className="flex gap-2 flex-wrap">;
@@ -254,9 +291,13 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                       </div>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-2">;
                       <Label>Experience (years)</Label>;
                       <Slider
@@ -264,9 +305,13 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                         max={20} 
                         step={1} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         className="my-4"
                       />;
                       <div className="flex justify-between text-xs text-muted-foreground">;
@@ -277,15 +322,21 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                   </>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="space-y-2">;
                   <Label>Location</Label>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <div className="space-y-2">;
                   <Label>Location</Label>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * BrowseFilters - Function description
  */
@@ -366,6 +417,7 @@ function BrowseFilters() {
                   </>)}
                 <div className="space - y-2">;
                   <Label > Location</Label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -466,6 +518,9 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;
@@ -478,6 +533,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                     </SelectContent>;
                   </Select>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ;
                 <div className="space-y-2">;
@@ -517,6 +573,8 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
           <Select>;
             <SelectTrigger className="w-[120px] h-8">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <div className="space - y-2">;
                   <Label > Salary Range</Label>;
@@ -551,7 +609,10 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
           <Select>;
             <SelectTrigger className="w-[120px] h - 8">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -560,6 +621,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           {activeFilters.map((filter) => (;
@@ -575,6 +637,10 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
 
                 className="h-3 w-3 cursor-pointer" 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                className="h-3 w-3 cursor-pointer" 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() => removeFilter(filter)} ;
               />;
             </Badge>;
@@ -583,12 +649,18 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {active_filters.map ((filter) => (
             <Badge;
               key={filter}
@@ -605,6 +677,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),;}
  
@@ -706,3 +779,6 @@ if (!activeFilters.includes (filter) ) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

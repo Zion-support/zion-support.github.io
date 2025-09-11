@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -17,11 +18,16 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
 import { Link } from "react-router-dom",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -175,9 +181,12 @@ export function ClientDashboard() {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -188,7 +197,10 @@ import {Link} from "react-router-dom";
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -196,6 +208,7 @@ import { Badge } from "@/components/ui/badge",;
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",;
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -212,6 +225,10 @@ export function ClientDashboard() {;
 export function ClientDashboard() {;
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export function ClientDashboard() {;
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6 px-4 pb-24">;
       <section className="mt-4">;
         <Button className="w-full py-6" size="lg">;
@@ -219,10 +236,14 @@ export function ClientDashboard() {;
         </Button>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Active Projects</h2>;
@@ -233,10 +254,14 @@ export function ClientDashboard() {;
           </Link>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card>;
           <CardContent className="p-4">;
             <div className="space-y-4">;
@@ -248,16 +273,21 @@ export function ClientDashboard() {;
                 <Badge>3 Milestones</Badge>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="space-y-1">;
                 <div className="flex justify-between text-sm">;
                   <span>Progress</span>;
                   <span className="font-medium">60%</span>;
                 </div>;
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">;
+<<<<<<< HEAD
                   <div className="h-full bg-primary rounded-full" style={{width:'60%'}}></div>;
                 </div>;
               </div>;
@@ -269,6 +299,12 @@ export function ClientDashboard() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>;
+                </div>;
+              </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex justify-between items-center">;
                 <div className="flex -space-x-2">;
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">;
@@ -277,7 +313,10 @@ export function ClientDashboard() {;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -332,7 +371,10 @@ function ClientDashboard() {
                   <div className="w - 7 h - 7 rounded - full bg - secondary / 20 border - 2 border - background flex items - center justify - center">;
                     <UserCheck className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 </div>;
                 <Button size="sm" variant="outline">View Details</Button>;
@@ -341,6 +383,7 @@ function ClientDashboard() {
           </CardContent>;
         </Card>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       <section>;
@@ -376,6 +419,8 @@ function ClientDashboard() {
               </div>;
               <div className="flex gap-2 mt-3">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <section>;
         <div className="flex items - center justify - between mb - 4">;
@@ -410,12 +455,16 @@ function ClientDashboard() {
               </div>;
               <div className="flex gap - 2 mt - 3">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           <Card>;
@@ -441,6 +490,8 @@ function ClientDashboard() {
               </div>;
               <div className="flex gap-2 mt-3">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <Card>;
             <CardContent className="p - 4">;
@@ -465,7 +516,10 @@ function ClientDashboard() {
               </div>;
               <div className="flex gap - 2 mt - 3">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;
@@ -473,6 +527,7 @@ function ClientDashboard() {
           </Card>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>);
       ;
@@ -518,6 +573,8 @@ function ClientDashboard() {
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <section>;
         <div className="flex items - center justify - between mb - 4">;
@@ -551,12 +608,21 @@ function ClientDashboard() {
           </CardContent>;
         </Card>;
       </section>;
+<<<<<<< HEAD
     </div>);
 }
 
 =======
+=======
+    </div>;
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

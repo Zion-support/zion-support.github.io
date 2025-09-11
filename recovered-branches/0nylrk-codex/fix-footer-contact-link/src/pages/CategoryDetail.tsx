@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useParams, Link} from "react-router-dom";
 import {Header} from "@/components/header/Header";
 import {Footer} from "@/components/Footer";
@@ -44,18 +45,26 @@ export default function CategoryDetail() {
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
     icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
   // Map of category slugs to their display data
   const categoryData = {
@@ -74,8 +83,11 @@ export default function CategoryDetail() {
       description: "Rent or buy specialized hardware, servers, and devices";
       icon: <Code className="w-6 h-6" />
     }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }),
 
   // Map of category slugs to their display data
@@ -96,14 +108,18 @@ export default function CategoryDetail() {
       icon: <Code className="w-6 h-6" />
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -117,10 +133,15 @@ export default function CategoryDetail() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -134,10 +155,15 @@ export default function CategoryDetail() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -151,10 +177,15 @@ export default function CategoryDetail() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -168,10 +199,15 @@ export default function CategoryDetail() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -185,10 +221,15 @@ export default function CategoryDetail() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -202,10 +243,15 @@ export default function CategoryDetail() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -219,11 +265,16 @@ export default function CategoryDetail() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     },
 =======
@@ -237,11 +288,16 @@ export default function CategoryDetail() {
     },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
       icon: <Briefcase className="w-6 h-6" />
     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -253,24 +309,35 @@ export default function CategoryDetail() {
     setIsLoading(true);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  useEffect(() => {
+    setIsLoading(true);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   useEffect(() => {
     setIsLoading(true),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
       description: "Explore our collection in this category"
       icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     setCategory(currentCategory);
     // Filter listings by category
@@ -278,8 +345,11 @@ export default function CategoryDetail() {
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
     );
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     
     setCategory(currentCategory),
@@ -291,6 +361,9 @@ export default function CategoryDetail() {
     ),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings :
       Array(4).fill(null).map((_, index) => ({
@@ -301,6 +374,7 @@ export default function CategoryDetail() {
         price: Math.floor(Math.random() * 500) + 50
         currency: "$"
         tags: [`${slug}`, "ai", "tool"];
+<<<<<<< HEAD
 =======
 
     // If we don't have real listings for this category, generate placeholder listings
@@ -308,6 +382,8 @@ export default function CategoryDetail() {
       Array(4).fill(null).map((_, index) => ({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: `${slug}-${index}`,
         title: `${currentCategory.title} Product ${index + 1}`,
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
@@ -316,14 +392,18 @@ export default function CategoryDetail() {
         currency: "$",
         tags: [`${slug}`, "ai", "tool"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         author: {
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
           avatarUrl: undefined
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -457,6 +537,8 @@ export default function CategoryDetail() {;
     setIsLoading(false);
   }, [slug]);
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         images: [`/placeholder.svg`]
         createdAt: new Date().toISOString()
@@ -464,12 +546,17 @@ export default function CategoryDetail() {;
         reviewCount: Math.floor(Math.random() * 100)
       }));
     setListings(listingsToShow);
+<<<<<<< HEAD
     setIsLoading(false)
   }, [slug]);
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    setIsLoading(false);
+  }, [slug]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         },
         images: [`/placeholder.svg`],
         createdAt: new Date().toISOString(),
@@ -482,10 +569,13 @@ export default function CategoryDetail() {;
   }, [slug]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId)
@@ -493,6 +583,7 @@ export default function CategoryDetail() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -508,6 +599,11 @@ export default function CategoryDetail() {;
       
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      });
+      }),
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -517,6 +613,7 @@ export default function CategoryDetail() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -524,6 +621,8 @@ export default function CategoryDetail() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useParams, Link } from "react-router-dom",;
 import { Header } from "@/components/header/Header",;
 import { Footer } from "@/components/Footer",;
@@ -646,26 +745,42 @@ export default function CategoryDetail() {;
     setIsLoading(false);
   }, [slug]),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
     const listing = listings && listings.find(item => item && item.id === listingId),;
+=======
+
+  // Handle requesting a quote;
+  const handleRequestQuote = (listingId: string) => {;
+    const listing = listings && listings.find(item => item && item.id === listingId),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (listing) {;
       toast({;
         title: "Quote Requested",;
         description: `Your quote request for ${listing && listing.title} has been sent.`;
       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Navigate to the quote request page with the listing information;
       navigate("/request-quote", {;
         state: { ;
           serviceType: listing && listing.category,;
           specificItem: {;
+<<<<<<< HEAD
             id: listing && listing.id,;
             title: listing && listing.title,;
             category: listing && listing.category,;
             image: listing && listing.images?.[0];
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { use_params, Link } from './react-router-dom';
 import { Header } from '@/components / header / Header';
 import { Footer } from '@/components / Footer';
@@ -819,6 +934,7 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
     const listing = listings.find(item => item.id === listingId),;
@@ -836,21 +952,31 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             id: listing.id,;
             title: listing.title,;
             category: listing.category;
             image: listing.images?.[0];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       });
     }
 
+<<<<<<< HEAD
   },
 
 <<<<<<< HEAD
@@ -867,11 +993,23 @@ if ( {) {
   }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+  },
+
+=======
+  };
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   return (
     <>;
@@ -887,9 +1025,13 @@ if ( {) {
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {category.icon}
               </div>;
             </div>;
@@ -898,6 +1040,7 @@ if ( {) {
             </GradientHeading>;
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
         }
@@ -929,6 +1072,8 @@ if ( {) {
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               {category.description}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </p>
           </div>
           {isLoading ? (
@@ -938,6 +1083,7 @@ if ( {) {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {listings.map((listing) => (
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -1167,6 +1313,8 @@ export default function CategoryDetail() {;
             </div>;
           )}
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <ProductListingCard
                   key={listing.id}
                 <ProductListingCard 
@@ -1183,19 +1331,28 @@ export default function CategoryDetail() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </div>;
       <Footer />;
     </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </p>;
           </div>;
           {is_loading ? (
@@ -1214,6 +1371,7 @@ export default function CategoryDetail() {;
       </div>;
       <Footer />;
     </>);
+<<<<<<< HEAD
   ),; export default function CategoryDetail () {
   //Cast to specify the expected route param type since useParams may be untyped const {
   slug 
@@ -1343,3 +1501,9 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SearchSuggestion {
 export interface SearchSuggestion {;
   text: string;
@@ -43,6 +44,8 @@ export interface SearchHighlight {;
   match: string,;
   locations: {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
   icon_url?: string;
 }
@@ -57,7 +60,10 @@ export interface FilterOptions {
     value: string;
   }[];
   locations: {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     label: string,
     value: string;
   }[];
@@ -68,16 +74,23 @@ export interface FilterOptions {
   rating_options: number[];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface SearchSuggestion {;
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -132,3 +145,5 @@ export interface FilterOptions {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

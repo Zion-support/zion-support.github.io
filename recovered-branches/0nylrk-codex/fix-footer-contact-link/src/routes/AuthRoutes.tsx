@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import Login from "@/pages/Login";
@@ -81,10 +82,21 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding",;
 
 const AuthRoutes = () => {
 const AuthRoutes = () => {;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const AuthRoutes = () => {
+=======
+const AuthRoutes = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Routes>;
       {/* Auth Routes */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AuthRoutes = () => {;
   return (
@@ -110,10 +122,13 @@ const AuthRoutes = () => {;
       {/* Auth Routes */}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route path="/login" element={<Login />} />;
       <Route path="/signup" element={<Signup />} />;
       <Route path="/forgot-password" element={<ForgotPassword />} />;
       <Route path="/update-password" element={<UpdatePassword />} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       {/* Onboarding Routes */}
@@ -125,17 +140,23 @@ const AuthRoutes = () => {;
         path="/onboarding";
         element={;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Onboarding Routes */}
       <Route
         path="/onboarding" 
         element={
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <Onboarding />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Route ;
         path="/talent-onboarding" ;
@@ -148,11 +169,17 @@ const AuthRoutes = () => {;
         path="/talent-onboarding" 
         element={
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <Route
+        path="/talent-onboarding" 
+        element={
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <TalentOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Route ;
         path="/service-onboarding" ;
@@ -165,12 +192,18 @@ const AuthRoutes = () => {;
         path="/service-onboarding" 
         element={
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <Route
+        path="/service-onboarding" 
+        element={
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <ServiceOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
     </Routes>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -257,3 +290,16 @@ export default AuthRoutes;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+};
+
+
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default AuthRoutes;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

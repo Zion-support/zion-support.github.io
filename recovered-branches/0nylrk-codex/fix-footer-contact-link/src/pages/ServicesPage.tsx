@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -33,6 +34,10 @@ import { Globe } from "lucide-react",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -44,10 +49,13 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -58,8 +66,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 124}
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-2"
     title: "Cloud Infrastructure Management"
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
@@ -67,9 +78,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 3000
     currency: "$"
     tags: ["Cloud", "DevOps", "Security"];
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-2",
     title: "Cloud Infrastructure Management",
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
@@ -78,10 +92,13 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Cloud", "DevOps", "Security"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "CloudPro Experts"
       id: "cloud-pro"}
@@ -91,8 +108,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.7
     reviewCount: 92}
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-3"
     title: "Big Data Analysis & Insights"
     description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services."
@@ -100,9 +120,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 4500
     currency: "$"
     tags: ["Big Data", "Analytics", "Business Intelligence"];
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-3",
     title: "Big Data Analysis & Insights",
     description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
@@ -111,10 +134,13 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Big Data", "Analytics", "Business Intelligence"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "DataMind Solutions"
       id: "datamind"
@@ -125,8 +151,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 78}
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-4"
     title: "Cybersecurity Assessment & Protection"
     description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats."
@@ -134,9 +163,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 6000
     currency: "$"
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-4",
     title: "Cybersecurity Assessment & Protection",
     description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
@@ -145,10 +177,13 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "SecureNet Team"
       id: "secure-net"}
@@ -158,8 +193,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 103}
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-5"
     title: "IT Infrastructure Modernization"
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
@@ -167,9 +205,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 8500
     currency: "$"
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-5",
     title: "IT Infrastructure Modernization",
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
@@ -178,10 +219,13 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -191,8 +235,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.6
     reviewCount: 67}
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-6"
     title: "AI Strategy & Implementation"
     description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage."
@@ -200,9 +247,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 7500
     currency: "$"
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"];
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "service-6",
     title: "AI Strategy & Implementation",
     description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
@@ -211,10 +261,13 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "AI Future Consulting"
       id: "ai-future"
@@ -232,6 +285,7 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function ServicesPage() {
@@ -289,6 +343,8 @@ import { Link } from "react-router-dom",;
 import { Globe } from "lucide-react",;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -296,7 +352,10 @@ import {TrustedBySection} from "@/components/TrustedBySection";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 import {Globe} from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample service listings;
 const SERVICE_LISTINGS: ProductListing[] = [;
   {;
@@ -306,6 +365,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Development",;
     price: 5000,;
     currency: "$",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     tags: ["AI Integration", "Machine Learning", "Enterprise"],;
     author: {;
@@ -317,6 +377,8 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     aiScore: 95,;
     rating: 4.9,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
     author: {;
       name: "TechSolutions Inc.",;
@@ -326,11 +388,15 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     createdAt: "2023-12-10T14:48:00 && 00.000Z",;
     aiScore: 95,;
     rating: 4 && 4.9,;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     reviewCount: 124},;
   {;
     id: "service-2",;
     title: "Cloud Infrastructure Management",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",;
     category: "Management",;
@@ -345,6 +411,8 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     aiScore: 88,;
     rating: 4.7,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
     category: "Management",;
     price: 3000,;
@@ -357,7 +425,10 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     createdAt: "2023-11-20T09:30:00 && 00.000Z",;
     aiScore: 88,;
     rating: 4 && 4.7,;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     reviewCount: 92},;
   {;
     id: "service-3",;
@@ -366,6 +437,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Analytics",;
     price: 4500,;
     currency: "$",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     tags: ["Big Data", "Analytics", "Business Intelligence"],;
     author: {;
@@ -377,6 +449,8 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     aiScore: 92,;
     rating: 4.8,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     tags: ["Big Data", "Analytics", "Business Intelligence"];
     author: {;
       name: "DataMind Solutions",;
@@ -386,7 +460,10 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     createdAt: "2024-01-05T11:15:00 && 00.000Z",;
     aiScore: 92,;
     rating: 4 && 4.8,;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     reviewCount: 78},;
   {;
     id: "service-4",;
@@ -395,6 +472,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     category: "Security",;
     price: 6000,;
     currency: "$",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],;
     author: {;
@@ -405,6 +483,8 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     aiScore: 89,;
     rating: 4.9,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
     author: {;
       name: "SecureNet Team",;
@@ -413,11 +493,15 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     createdAt: "2023-12-28T16:22:00 && 00.000Z",;
     aiScore: 89,;
     rating: 4 && 4.9,;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     reviewCount: 103},;
   {;
     id: "service-5",;
     title: "IT Infrastructure Modernization",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
@@ -583,6 +667,8 @@ export default function ServicesPage() {;
   return (;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 import { DynamicListingPage } from '@/components / DynamicListingPage';
 import { ProductListing } from '@/types / listings';
 import { AppLayout } from '@/layout / AppLayout';
@@ -668,7 +754,10 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     currency: "$",;
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <AppLayout>;
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">;
@@ -683,7 +772,10 @@ const SERVICE_LISTINGS: ProductListing[] = [;
             <Link to="/request-quote">;
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
     author: {
       name: "ModernizeIT Consulting",
@@ -737,7 +829,10 @@ function ServicesPage() {
             <Link to="/request - quote">;
               <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Request a Quote;
               </Button>;
             </Link>;
@@ -746,7 +841,10 @@ function ServicesPage() {
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <TrustedBySection />;
     </AppLayout>;
@@ -754,7 +852,10 @@ function ServicesPage() {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <DynamicListingPage;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
@@ -765,6 +866,7 @@ function ServicesPage() {
       />;
       <TrustedBySection />;
     </AppLayout>);
+<<<<<<< HEAD
       <DynamicListingPage ;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
@@ -787,12 +889,18 @@ reviewCount: 85
   {
   min: 3000, max: 10000 
 }
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }/> <TrustedBySection /> </AppLayout>) 
 }
@@ -812,3 +920,6 @@ reviewCount: 85
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

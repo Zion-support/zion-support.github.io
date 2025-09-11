@@ -1,21 +1,32 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string
@@ -34,6 +45,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  };
+
+  if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
+    return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   if (!txId |!token |typeof amount !== "number" |!fromSubnet |!toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
@@ -41,6 +60,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const version = nextVersionFor(state, txId)
   const event = {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     eventId: uuidv4(), type: "token_transfer" as const,
     payload: {
@@ -55,6 +75,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string,
@@ -68,13 +90,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
 import { sign_payload  } from '../../../utils / sync / signature';,
@@ -381,6 +407,8 @@ export default async function handler(req, res) {
       .filter((p) => !p.paused)
       .map(async (peer) => {
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
@@ -388,12 +416,15 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -510,6 +541,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
@@ -517,3 +549,7 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

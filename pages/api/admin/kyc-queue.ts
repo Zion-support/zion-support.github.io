@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { KycProfile } from '../../../utils/kyc',;
 import fs from 'fs',;
@@ -22,11 +23,17 @@ import path from 'path';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
   try {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     const raw = fs.readFileSync(FILE, 'utf8')
@@ -48,10 +55,20 @@ function load(): Record<string, KycProfile> {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {
     return {};
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 function save(db: Record<string, KycProfile>) {
 
@@ -124,3 +141,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

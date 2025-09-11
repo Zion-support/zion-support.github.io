@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, {
   createContext
@@ -17,11 +18,14 @@ interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
+<<<<<<< HEAD
   create_context,
   useContext,
   useState,
@@ -179,6 +183,9 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             label: 'Log In'
             onClick: loginAction
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   create_context,
   useContext,
@@ -266,7 +273,10 @@ if ( {) {
         ? {
             label: 'Retry',
             on_click: retry_action,
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         : undefined,
     });
@@ -282,6 +292,9 @@ if ( {) {
             on_click: login_action,
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         : undefined
     })
   }, [])
@@ -294,6 +307,7 @@ if ( {) {
     showNetworkError
     showAuthError
     clearAllErrors
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         : undefined,
@@ -314,20 +328,29 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const reportError = useCallback((error: Error, context?: any,) => {;
     // Log to console for development;
     if (process && process.env.NODE_ENV === 'development') {;
       logErrorToProduction('Global Error Handler:', error, context);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Report to Sentry for production;
     if (process && process.env.NODE_ENV === 'production') {;
       Sentry && Sentry.withScope(scope => {        if (context) {;
@@ -339,18 +362,26 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     }
   }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const showRetryableError = useCallback(;
     (error: Error, retryAction?: () => void) => {;
       const errorKey = error && error.message;
       const currentRetryCount = retryCount[errorKey] || 0;
       reportError(error, { retryCount: currentRetryCount });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Show user-friendly error message with retry option;
       toast({;
         title: 'Something went wrong',;
@@ -373,9 +404,13 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     [retryCount, reportError];
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const showNetworkError = useCallback((retryAction?: () => void) => {;
     const isOnline = typeof navigator !== 'undefined' ? navigator && navigator.onLine : true;
     toast({;
@@ -389,6 +424,7 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
             label: 'Retry',;
             onClick: retryAction,;
           }
+<<<<<<< HEAD
         : undefined,;
     });
   }, []);
@@ -868,6 +904,9 @@ import { Button } from '@/components/ui/button',;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -892,6 +931,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     // Log to console for development;
     if (process.env.NODE_ENV === 'development') {;
       logErrorToProduction('Global Error Handler:', error, context);
+<<<<<<< HEAD
   reportError:(error:Error, context?:any) => void,;
   showRetryableError:(error:Error, retryAction?:() => void) => void,;
   showNetworkError:(retryAction?:() => void) => void,;
@@ -911,6 +951,8 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
     // Log to console for development;
     if (process.env.NODE_ENV === 'development') {;
       logErrorToProduction('Global Error Handler:', error, context),;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 ;
     // Report to Sentry for production;
@@ -986,6 +1028,7 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
     showRetryableError,
     showNetworkError,
     showAuthError,
+<<<<<<< HEAD
 <<<<<<< HEAD
     clearAllErrors,
   }
@@ -1406,9 +1449,16 @@ if (options?.onError) {;
 }'"
   const message = error.message.toLowerCase(),
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
+<<<<<<< HEAD
   const message = error.message.toLowerCase(),
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const message = error.message.toLowerCase(),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

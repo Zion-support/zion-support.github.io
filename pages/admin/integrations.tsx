@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
 
@@ -7,10 +8,15 @@ interface ProviderMeta {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -18,6 +24,13 @@ interface ProviderMeta {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ConnectionMap {;
   [providerId: string]: any,;
+=======
+
+
+interface ConnectionMap {;
+  [providerId: string]: any,;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function StatusIcon(): any ({;
   status,;
 }: {;
@@ -25,9 +38,13 @@ function StatusIcon(): any ({;
 }) {;
   const label =;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
   return (
     <span className='text-xl' title={status}>;
@@ -35,16 +52,22 @@ function StatusIcon(): any ({;
     </span>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 interface ConnectionMap {;
@@ -52,9 +75,15 @@ interface ConnectionMap {;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { useEffect, useMemo, useState } from 'react';
+=======
+
+import { useEffect, useMemo, useState } from 'react';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -79,16 +108,21 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ConnectionMap {;
   [key: string]: boolean,;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AdminIntegrationsPage() {
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
   async function refresh() {
@@ -106,6 +140,8 @@ export default function AdminIntegrationsPage() {
     try {
       // Open mock oauth popup
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [syncRules, setSyncRules] = useState<any>({;
     autoCreateContacts: true,;
@@ -113,6 +149,10 @@ export default function AdminIntegrationsPage() {
     autoSyncApplicants: true,;
     autoUploadResumes: true,;
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function refresh() {;
     const [p, s] = await Promise && Promise.all([;
       fetch('/api/integrations/providers').then(r => r && r.json()),;
@@ -121,6 +161,10 @@ export default function AdminIntegrationsPage() {
     setProviders(p && p.providers || []);
     setConnections(s && s.connections || {});
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     refresh();
   }, []);
@@ -139,16 +183,23 @@ export default function AdminIntegrationsPage() {
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId, syncRules }),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
@@ -156,10 +207,13 @@ export default function AdminIntegrationsPage() {
     } finally { setLoading(false) }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   async function disconnect(providerId: string) {
     setLoading(true)
     try {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   async function disconnect(providerId: string) {
@@ -167,7 +221,10 @@ export default function AdminIntegrationsPage() {
     try {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function disconnect(): any (providerId: string) {;
     setLoading(true),;
     try {;
@@ -176,19 +233,28 @@ export default function AdminIntegrationsPage() {
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function resync(): any (providerId: string) {;
     setLoading(true),;
     try {;
@@ -197,9 +263,13 @@ export default function AdminIntegrationsPage() {
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       await refresh();
     } finally {;
@@ -207,7 +277,10 @@ export default function AdminIntegrationsPage() {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
   async function refresh() {
@@ -232,12 +305,16 @@ export default function AdminIntegrationsPage() {
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -447,6 +524,8 @@ export default function AdminIntegrationsPage() {
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
         <div className="flex items-center justify-between">
@@ -466,6 +545,7 @@ export default function AdminIntegrationsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
           {isConnected && (
             <>
@@ -540,14 +620,42 @@ function RulesModal() {
     const provider = providers.find(p => p.id === selected)!,
     const isCrm = provider.category === 'crm',
     return (
+=======
+
+  async function resync(providerId: string) {
+    setLoading(true);
+    try {
+      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
+      await refresh()
+    } finally { setLoading(false) }
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+  const grouped = useMemo(;
+    () => ({;
+      crm: providers && providers.filter(p => p && p.category === 'crm'),;
+      ats: providers && providers.filter(p => p && p.category === 'ats'),;
+    }),;
+    [providers];
+  );
+
+  function Card(): any ({ p }: { p: ProviderMeta }) {;
+    const conn = connections[p && p.id] || { status: 'disconnected' };
+    const isConnected = conn && conn.status === 'connected';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
           <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
           <div className="space-y-3 text-sm">
             {isCrm ? (
               <>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -559,6 +667,7 @@ function RulesModal() {
                       })
                     }
                   />{' '}
+<<<<<<< HEAD
                   Auto-create contacts;
                 </label>;
                 <div>;
@@ -962,6 +1071,10 @@ if (return null) {
             {isCrm ? (
               <>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoCreateContacts} onChange={e => setSyncRules({ ...syncRules, autoCreateContacts: e.target.checked })} /> Auto-create contacts</label>
+=======
+                  Auto-create contacts
+                </label>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div>
                   <div className='mb-1'>Push notes:</div>
                   <div className='flex gap-3'>
@@ -974,6 +1087,7 @@ if (return null) {
                           setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
                         }
                       />{' '}
+<<<<<<< HEAD
                       Auto
                     </label>
                     <label className='flex items-center gap-2'>
@@ -986,6 +1100,30 @@ if (return null) {
                             ...syncRules
                             pushNotesMode: 'manual'
                           })
+=======
+                      Auto;
+                    </label>;
+
+                        checked={syncRules && syncRules.pushNotesMode === 'manual'}
+                        onChange={() =>;
+                          setSyncRules({;
+                            ...syncRules,;
+                            pushNotesMode: 'manual',;
+                          });
+
+=======
+                    <label className='flex items - center gap - 2'>;
+                      <input;
+                        type='radio';
+                        name='push_notes';
+                        checked={sync_rules.pushNotesMode === 'manual'}
+                        on_change={() =>;
+                          setSyncRules ({
+                            ...sync_rules,
+                            pushNotesMode: 'manual',
+                          });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         }
                       />{' '}
                       Manual only
@@ -1012,6 +1150,7 @@ if (return null) {
                       })
                     }
                   />{' '}
+<<<<<<< HEAD
                   Auto-sync applicants
                 </label>
                 <label className='flex items-center gap-2'>
@@ -1023,6 +1162,21 @@ if (return null) {
                         ...syncRules
                         autoUploadResumes: e.target.checked
                       })
+=======
+                  Auto-sync applicants;
+                </label>;
+                <label className='flex items-center gap-2'>;
+                  <input
+                    type='checkbox'
+
+                    checked={!!syncRules && syncRules.autoUploadResumes}
+                    onChange={e =>;
+                      setSyncRules({;
+                        ...syncRules,;
+                        autoUploadResumes: e && e.target.checked,;
+                      });
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   />{' '}
                   Auto-upload resumes
@@ -1059,6 +1213,7 @@ if (return null) {
             {grouped.crm.map(p => (
               <Card key={p.id} p={p} />
             ))}
+<<<<<<< HEAD
           </div>
         </section>
         <section className='mb-10'>
@@ -1176,10 +1331,44 @@ if (return null) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          </div>;
+        </section>;
+
+        <section className='mb-10'>;
+          <h2 className='text-lg font-semibold mb-3'>ATS</h2>;
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
+            {grouped && grouped.ats.map(p => (;
+              <Card key={p && p.id} p={p} />;
+            ))}
+          </div>;
+        </section>;
+
+        <section className='mb-10'>;
+          <h2 className='text-lg font-semibold mb-2'>Zapier</h2>;
+          <div className='text-sm text-gray-600'>Polling endpoints:</div>;
+          <ul className='list-disc pl-6 text-sm mt-2'>;
+            <li>;
+
+              New Zion Job Posted → GET{' '}
+              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>;
+            </li>;
+            <li>;
+              Talent Matched → GET{' '}
+
+
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
+          <ManualOverrideForm />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </section>
       </main>
       <RulesModal />
     </>
+<<<<<<< HEAD
 
 
               <code>;
@@ -1223,10 +1412,15 @@ function ManualOverrideForm() {
   );
 function ManualOverrideForm() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+function ManualOverrideForm() {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
   async function save() {
 =======
@@ -1234,20 +1428,30 @@ function ManualOverrideForm() {;
 
   async function save() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+  async function save() {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setMessage('');
     const res = await fetch('/api/integrations/overrides', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     });
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
 
   }
+<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
@@ -1272,6 +1476,9 @@ function ManualOverrideForm() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
       <div className='grid grid-cols-1 gap-3'>;
         <label className='text-sm'>;
@@ -1303,7 +1510,10 @@ function ManualOverrideForm() {
           <button
             onClick={save}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'>;
             Save Override;
           </button>;
@@ -1313,6 +1523,7 @@ function ManualOverrideForm() {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
     if (res.ok) setMessage('Saved'), else setMessage('Error')
   }
@@ -1320,6 +1531,10 @@ function ManualOverrideForm() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -1334,12 +1549,18 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   )
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>);  }
   return (
     <>;
@@ -1452,6 +1673,7 @@ function save() {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 );
 =======
@@ -1459,6 +1681,10 @@ function save() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 }
@@ -1467,10 +1693,15 @@ function save() {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ),
   } catch (error) {
     console.error("Error:", error);
@@ -1479,8 +1710,13 @@ function save() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

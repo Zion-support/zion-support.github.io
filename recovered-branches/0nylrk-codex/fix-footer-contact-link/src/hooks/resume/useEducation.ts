@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
@@ -9,6 +10,9 @@ export function useEducation() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
@@ -16,10 +20,15 @@ import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -31,6 +40,7 @@ export function useEducation() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
@@ -38,6 +48,10 @@ export function useEducation() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -54,27 +68,37 @@ export function useEducation() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     setIsLoading(true),
     setError(null),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const { error } = await supabase
         .from('education')
         .insert({
 <<<<<<< HEAD
+<<<<<<< HEAD
           institution: education && education.institution;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           resume_id: resumeId;
           institution: education.institution;
           degree: education.degree;
@@ -87,6 +111,7 @@ export function useEducation() {;
           location: education.location
         });
       if (error) throw error;
+<<<<<<< HEAD
 =======
 
           institution: education && education.institution;
@@ -104,6 +129,8 @@ export function useEducation() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           resume_id: resumeId,
           institution: education.institution,
           degree: education.degree,
@@ -119,10 +146,13 @@ export function useEducation() {;
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
@@ -130,6 +160,7 @@ export function useEducation() {;
       setIsLoading(false)
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -144,6 +175,10 @@ export function useEducation() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -177,14 +212,19 @@ export function useEducation() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from 'react',;
@@ -294,10 +334,13 @@ export function useEducation() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const { error } = await supabase
         .from('education')
         .update({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -312,6 +355,8 @@ export function useEducation() {;
           institution_logo_url: education && education.institution_logo_url,
           location: education && education.location
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           institution: education.institution;
           degree: education.degree;
           field_of_study: education.field_of_study;
@@ -324,6 +369,7 @@ export function useEducation() {;
         })
         .eq('id', eduId);
       if (error) throw error;
+<<<<<<< HEAD
 =======
 
         })
@@ -332,6 +378,8 @@ export function useEducation() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           institution: education.institution,
           degree: education.degree,
           field_of_study: education.field_of_study,
@@ -347,10 +395,13 @@ export function useEducation() {;
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education')
@@ -358,6 +409,7 @@ export function useEducation() {;
       setIsLoading(false)
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -372,6 +424,10 @@ export function useEducation() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -405,24 +461,32 @@ export function useEducation() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     setIsLoading(true),
     setError(null),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const { error } = await supabase
         .from('education')
         .delete()
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         .eq('id', eduId);
@@ -430,24 +494,34 @@ export function useEducation() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .eq('id', eduId);
+      if (error) throw error;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .eq('id', eduId),
       
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return showSuccessToast("Education deleted", "Your education has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   return {
@@ -456,6 +530,7 @@ export function useEducation() {;
     addEducation;
     updateEducation;
 
+<<<<<<< HEAD
     deleteEducation
   }
 }
@@ -475,6 +550,10 @@ export function useEducation() {;
       setIsLoading(false);
     }
 =======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 import {useState} from 'react';
@@ -499,7 +578,10 @@ if ( {) {
       return false;
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   return {;
     isLoading,;
@@ -508,13 +590,18 @@ if ( {) {
     updateEducation;
     deleteEducation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
 }
+<<<<<<< HEAD
 ;
     try {
       const { error } = await supabase;
@@ -688,3 +775,7 @@ deleteEducation
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

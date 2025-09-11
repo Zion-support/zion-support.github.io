@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { updateProposalMeta } from '../../../utils/data/proposals';
@@ -19,11 +20,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ meta: updated })
   } catch (error: any) {
+=======
+
+import { updateProposalMeta } from '../../../utils/data/proposals';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     res.status(500).json({ error: error?.message |'Failed to update status' })
   }
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -40,6 +47,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { updateProposalMeta } from '../../../utils/data/proposals';
 export default function handler(req, res) {
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { updateProposalMeta } from '../../../utils / data / proposals',
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const { id, status } = req.body || {};
@@ -56,6 +75,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -104,6 +124,14 @@ function handler() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

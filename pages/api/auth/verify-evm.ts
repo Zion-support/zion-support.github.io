@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
@@ -23,6 +24,10 @@ export default async function handler(
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -30,6 +35,7 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature" });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
@@ -51,16 +57,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: "Nonce mismatch" });
+=======
+    const nonce = match[1];
+    if (!String(message).includes(`Nonce: ${nonce}`))
+      return res && res.status(400).json({ error: "Nonce mismatch" });
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const token = jwt && jwt.sign(
       { sub: address && address.toLowerCase(), chain: "evm", chainId },
       JWT_SECRET,
@@ -80,12 +95,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
   }
 }
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
 import { ethers  } from './ethers';
@@ -136,8 +155,11 @@ function handler() {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Verify failed" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 
@@ -145,11 +167,15 @@ function handler() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status(500).json({ error: e?.message |"Verify failed" });
     return res.status(500).json({ error: e?.message || "Verify failed" });
@@ -191,3 +217,6 @@ export default async function handler(req, res) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

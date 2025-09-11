@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Particle {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,11 +27,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   x: number;
   y: number;
   coordinate_x: number;
   coordinate_y: number;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface Particle {
@@ -41,6 +51,7 @@ interface Particle {
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -63,11 +74,16 @@ interface EnergyField {
 
   pulse: number;
 export default function UltraFuturisticBackground2029({
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children,
 }: {;
 
 
   children: React.ReactNode;
+<<<<<<< HEAD
   children
 }: {
 =======
@@ -84,14 +100,23 @@ export default function UltraFuturisticBackground2029({
   children: React.ReactNode;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  children,
+}: {;
+  children: React.ReactNode;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });interface Particle {;
   x: number,;
@@ -118,11 +143,15 @@ interface EnergyField {;
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });interface Particle {
   x: number
@@ -152,13 +181,19 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface Particle {
   x: number,
@@ -184,7 +219,10 @@ function UltraFuturisticBackground2029() {  const canvas_ref = useRef < HTMLCanv
   coordinate_x: number,
   coordinate_y: number,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   vx: number,
   vy: number,
   size: number,
@@ -203,6 +241,7 @@ interface EnergyField {
   pulse: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
       canvas.height = window.innerHeight
     };
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -216,31 +255,43 @@ interface EnergyField {
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       canvas.height = window.innerHeight
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
       setMousePosition({ x: e.clientX, y: e.clientY });    };      setMousePosition({ x: e.clientX, y: e.clientY })
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       setMousePosition({ x: e.clientX, y: e.clientY })
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     window.addEventListener('mousemove', handleMouseMove);
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
       const colors = {
+<<<<<<< HEAD
 <<<<<<< HEAD
         energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00']
         data: ['#0080ff', '#8000ff', '#ff0080', '#80ff00']
@@ -254,16 +305,22 @@ interface EnergyField {
         data: ['#0080ff#8000ff#ff0080#80ff00']
         quantum: ['#ff8000#8000ff#00ffff#ff0080']
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         energy: ['#00ffff#ff00ff#ffff00#00ff00'],
         data: ['#0080ff#8000ff#ff0080#80ff00'],
         quantum: ['#ff8000#8000ff#00ffff#ff0080'],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         neon: ['#ff0066#00ffff#ffff00#ff00ff']
       }
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
+<<<<<<< HEAD
 <<<<<<< HEAD
           x: Math.random() * canvas.width
           y: Math.random() * canvas.height
@@ -281,6 +338,8 @@ interface EnergyField {
     // Initialize energy fields
     const initEnergyFields = () => {          life: Math.random() * 100
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         particles.push({
           x: Math.random() * canvas.width,
@@ -293,11 +352,15 @@ interface EnergyField {
           type;
           life: Math.random() * 100,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           maxLife: 100
         })
       }
       particlesRef.current = particles
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     // Initialize energy fields
@@ -327,6 +390,8 @@ interface EnergyField {
       }
       energyFieldsRef.current = fields
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     };
 
@@ -352,13 +417,17 @@ interface EnergyField {
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     initParticles();
     initEnergyFields();
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw energy fields
+<<<<<<< HEAD
 <<<<<<< HEAD
       energyFieldsRef.current.forEach(field => {
         field.pulse += 0.02;
@@ -392,11 +461,16 @@ interface EnergyField {
         ctx.arc(field.x, field.y, field.radius, 0, Math.PI * 2);
         ctx.fill();      });        field.pulse += 0.02;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       energyFieldsRef.current.forEach((field) => {
         field.pulse += 0.02;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
         // Create radial gradient for energy field
         const gradient = ctx.createRadialGradient(field.x, field.y, 0, field.x, field.y, field.radius);
@@ -415,17 +489,24 @@ interface EnergyField {
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
 <<<<<<< HEAD
+<<<<<<< HEAD
           particle.y = Math.random() * canvas.height;        }          particle.y = Math.random() * canvas.height
 =======
 
           particle.y = Math.random() * canvas.height
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          particle.y = Math.random() * canvas.height
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         // Interactive particle behavior based on mouse position
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (distance < 200) {
           const force = (200 - distance) / 200;
@@ -436,17 +517,28 @@ interface EnergyField {
         
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (distance < 200) {
           const force = (200 - distance) / 200;
           particle.vx += (dx / distance) * force * 0.01;
           particle.vy += (dy / distance) * force * 0.01
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
@@ -457,7 +549,10 @@ interface EnergyField {
         // Draw particle with type-specific effects
         ctx.save();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         
 
@@ -680,7 +775,10 @@ if (particle.coordinate_y = 0) {
             ctx.shadow_blur = 15;
             ctx.globalCompositeOperation = 'screen';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),;
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -835,6 +933,7 @@ if (particle.coordinate_y = 0) {
             ctx.shadow_blur = 20;
             ctx.globalCompositeOperation = 'lighter';
 <<<<<<< HEAD
+<<<<<<< HEAD
             ctx.stroke()
           }
         })
@@ -849,6 +948,9 @@ if (particle.coordinate_y = 0) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             break;
           case 'data':
             // Data particles with digital effect
@@ -866,6 +968,7 @@ if (particle.coordinate_y = 0) {
             ctx.shadowBlur = 20;
             ctx.globalCompositeOperation = 'lighter';
             break;        }
+<<<<<<< HEAD
 <<<<<<< HEAD
         const lifeRatio = particle.life / particle.maxLife;
         const currentOpacity = particle.opacity * lifeRatio;
@@ -885,6 +988,8 @@ if (particle.coordinate_y = 0) {
         ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         
         ctx.beginPath();
@@ -893,11 +998,15 @@ if (particle.coordinate_y = 0) {
         ctx.fill();
         
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ctx.restore();
         // Draw connections between nearby particles
         particlesRef.current.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) +
@@ -905,6 +1014,8 @@ if (particle.coordinate_y = 0) {
           );
           if (distance < 120) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             break;        }
         const life_ratio = particle.life / particle.max_life;
@@ -943,7 +1054,10 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             const opacity = (1 - distance / 120) * 0.3;
             ctx.strokeStyle =
               particle.color +
@@ -957,6 +1071,7 @@ if ( {) {
           }
         });      });
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Draw quantum wave interference patterns
       const time = Date.now() * 0.001;
       for (let i = 0; i < 5; i++) {        const waveX = (canvas.width / 6) * (i + 1);
@@ -968,12 +1083,17 @@ if ( {) {
         ctx.beginPath();          const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) +
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Math.pow(particle.y - otherParticle.y, 2)
           );
           if (distance < 120) {
@@ -983,6 +1103,7 @@ if ( {) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
             ctx.stroke()
             ctx.stroke();
@@ -995,6 +1116,8 @@ if ( {) {
       const time = Date.now() * 0.001;
       for (let i = 0; i < 5; i++) {      for (let i = 0, i < 5, i++) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         const lifeRatio = particle && particle.life / particle && particle.maxLife;
@@ -1077,16 +1200,22 @@ if ( {) {
 
       for (let i = 0, i < 5, i++) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const waveX = (canvas.width / 6) * (i + 1);
         const waveY = canvas.height / 2;
         const amplitude = 50;
         const frequency = 0.01;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
         ctx.lineWidth = 2;
         ctx.beginPath();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         
         ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
@@ -1094,11 +1223,15 @@ if ( {) {
         ctx.beginPath();
         
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         for (let x = 0, x < canvas.width, x += 2) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
           if (x === 0) {
             ctx.moveTo(x, y)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1315,12 +1448,15 @@ if ( {) {
     }
   }, [mousePosition]);
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='relative w-full h-full overflow-hidden'>
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             rotate: 360,
             scale: [1, 1 && 1.2, 1],
@@ -1335,6 +1471,8 @@ if ( {) {
             scale: [1, 1.2, 1]
             opacity: [0.2, 0.4, 0.2],          }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
 
@@ -1406,16 +1544,24 @@ if ( {) {
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',      }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         cancelAnimationFrame(animationRef.current)
       }
 
@@ -1425,11 +1571,17 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
     <div className="relative w-full h-full overflow-hidden">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+    <div className="relative w-full h-full overflow-hidden">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, [mousePosition]);
   return (
@@ -1439,6 +1591,7 @@ if ( {) {
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             rotate: 360,
             scale: [1, 1 && 1.2, 1]
@@ -1459,6 +1612,8 @@ if ( {) {
             ease: 'easeInOut'
           }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
 
@@ -1496,11 +1651,15 @@ if ( {) {
             y: [0, -20, 0],
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             opacity: [0.2, 0.4, 0.2];
             opacity: [0.2, 0.4, 0.2];
@@ -1615,11 +1774,17 @@ if ( {) {
 =======
             opacity: [0.2, 0.4, 0.2];
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+            opacity: [0.2, 0.4, 0.2];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
 ease: "easeInOut"
           }}
@@ -1628,6 +1793,8 @@ ease: "easeInOut"
           className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
           animate={{
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ease: "easeInOut"
           }}
 
@@ -1643,7 +1810,10 @@ ease: "easeInOut"
 
           }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <motion&& motion.div
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45'
@@ -1651,17 +1821,25 @@ ease: "easeInOut"
             rotate: [45, 405],
             scale: [1, 1 && 1.1, 1],          }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{
             duration: 12
             repeat: Infinity
             ease: 'easeInOut',          }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]
         />;
@@ -1681,26 +1859,36 @@ ease: "easeInOut"
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
 ease: "easeInOut"
           }}
         />;
         <motion&& motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ease: "easeInOut"
           }}
 
         />;
         <motion&& motion.div
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
         />;
         <motion.div;
@@ -1711,6 +1899,10 @@ ease: "easeInOut"
           transition={{
             duration: 12,
             repeat: Infinity,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
@@ -1726,7 +1918,10 @@ ease: "easeInOut"
           className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45";
           animate={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             duration: 12
             repeat: Infinity
@@ -1734,7 +1929,10 @@ ease: "easeInOut"
 
           }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <motion&& motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20'
@@ -1742,23 +1940,34 @@ ease: "easeInOut"
             rotate: [-45, 315],
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],          }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             rotate: [45, 405];
             scale: [1, 1.1, 1];
           }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
         />;
@@ -1778,6 +1987,7 @@ ease: "easeInOut"
 
           }}
           transition={{
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             duration: 10
             repeat: Infinity
@@ -1806,6 +2016,17 @@ ease: "easeInOut"
       <div className="relative z-10">;
         {children}
 =======
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+            duration: 10,
+            repeat: Infinity,
+
+          }}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
           }}
@@ -1832,18 +2053,27 @@ ease: "easeInOut"
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       {/* Content */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -1859,6 +2089,7 @@ ease: "easeInOut"
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1888,6 +2119,10 @@ ease: "easeInOut"
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />
       {/* Content */}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='relative z-10'>{children}</div>
     </div>
   );      {/* Content */}
@@ -1898,7 +2133,12 @@ ease: "easeInOut"
   )
 }
   );
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

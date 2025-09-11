@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  
  
 }function getAllServices () : Service[] {
@@ -20,15 +21,24 @@ fallback: false
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }function getAllServices () : Service[] {
 
 
 2) 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   service.name 
 }| Zion Tech Group</title> ;
 };
 null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   service.name
 }| Zion Tech Group</title>
@@ -47,15 +57,20 @@ null;
 2) 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
 }</ul> </div> <div>) ) 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '')
@@ -80,9 +95,13 @@ null;
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   service.marketPosition 
 }</p>
 }{
@@ -90,6 +109,7 @@ null;
   service.roi 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   service.marketPosition
 }</p>
@@ -103,10 +123,13 @@ null;
   service.roi 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</p>
 }{
   service.competitors?.length ? () : null
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -207,11 +230,21 @@ export default ServiceDetail
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  service.name
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+
+}
+export default ServiceDetail
+export default ServiceDetail
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 };
 export default ServiceDetail 
 export default ServiceDetail
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 ;
@@ -221,3 +254,7 @@ export default ServiceDetail
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

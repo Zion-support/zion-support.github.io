@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -256,6 +257,8 @@ const ContactForm: React.FC = () => {;
         phone: '',
         service: '',
 message: '',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 interface FormData {
@@ -396,23 +399,33 @@ const ContactForm: React.FC = () => {
             <option value="ai - services">AI Services</option>;
             <option value="cloud - solutions">Cloud Solutions</option>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <option value="consulting">Consulting</option>;
             <option value="other">Other</option>;
           </select>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           />;
         </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <button
           type="submit"
           disabled={isSubmitting}
@@ -429,6 +442,7 @@ const ContactForm: React.FC = () => {
       </form>;
     </div>;
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -485,3 +499,9 @@ export default ContactForm;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContactForm;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+};
+
+export default ContactForm;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

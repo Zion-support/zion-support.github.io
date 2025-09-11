@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 type Question = {
   id: string,
@@ -44,6 +45,8 @@ export default function Quiz({ questions, onComplete }: Props) {;
   );
   function submit() {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -67,7 +70,10 @@ import React, { useState } from 'react';
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setSubmitted(true);
     onComplete(score);
   }
@@ -83,31 +89,44 @@ import React, { useState } from 'react';
               <label key={i} className='flex items-center gap-2'>;
                 <input
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 };
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   type='radio'                  name={q.id}
   function submit() {
     setSubmitted(true);
 
+=======
+                  type='radio'                  name={q.id}
+  function submit() {
+    setSubmitted(true);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     onComplete(score)
   }
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   type='radio'                  name={q && q.id}
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Quiz({ questions, onComplete }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
+<<<<<<< HEAD
 <<<<<<< HEAD
   function submit() {
     setSubmitted(true);
@@ -121,6 +140,13 @@ export default function Quiz({ questions, onComplete }: Props) {
 
     setSubmitted(true)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  function submit() {
+
+    setSubmitted(true)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     onComplete(score)
   }
@@ -136,6 +162,7 @@ export default function Quiz({ questions, onComplete }: Props) {
                   type="radio"
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   answer_index: number;
 }
@@ -220,6 +247,9 @@ function submit() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='mt - 2 text - sm'>;
               {answers[q.id] === q.answer_index ? (
                 <span className='text - green - 600'>Correct</span>) : (
@@ -241,7 +271,13 @@ function submit() {
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
+<<<<<<< HEAD
                 />
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <span>{opt}</span>
               </label>
             ))}
@@ -260,6 +296,7 @@ function submit() {
           )}
         </div>
       ))}
+<<<<<<< HEAD
 
   );
 }
@@ -302,3 +339,9 @@ function submit() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

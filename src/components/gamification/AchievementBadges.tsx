@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Achievement {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -9,12 +10,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface Achievement {
 
   id: string
   title: string
   description: string
   achieved: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface AchievementBadgesProps {
   achievements: Achievement[]
@@ -29,6 +33,9 @@ export interface Achievement {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
@@ -38,11 +45,15 @@ export interface Achievement {
   description: string,
   achieved: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 interface AchievementBadgesProps {
   achievements: Achievement[]
 import { BadgeCheck } from 'lucide-react';
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 export interface Achievement {;
   id: string,;
@@ -54,11 +65,17 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 export interface Achievement {
   id: string;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+export interface Achievement {
+  id: string;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title: string;
   description: string;
   achieved: boolean;
 interface AchievementBadgesProps {
   achievements: Achievement[];
+<<<<<<< HEAD
   achievements: Achievement[];
 
 
@@ -70,11 +87,17 @@ interface AchievementBadgesProps {;
   achievements: Achievement[];
 }
 =======
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface Achievement {
   id: string
   title: string
   description: string
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   achieved: boolean
 }
@@ -118,6 +141,7 @@ interface AchievementBadgesProps {;
 export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <CardTitle>Achievements</CardTitle>
@@ -147,11 +171,16 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
           </div>
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </CardContent>
     </Card>;
@@ -165,10 +194,16 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
   );
 }
@@ -213,3 +248,5 @@ function AchievementBadges() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

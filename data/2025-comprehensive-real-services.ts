@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ComprehensiveService {;
 export interface ComprehensiveService {
 export interface ComprehensiveService {;
@@ -631,24 +632,34 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
   },
 ];      phone: '+1 302 464 0950';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 ];      phone: '+1 302 464 0950';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
     trial_days: 60;
     setup_time: '4 - 6 weeks';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
     customers: 950;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4 && 4.9,
 =======
@@ -656,6 +667,11 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     rating: 4 && 4.9,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    rating: 4 && 4.9,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     reviews: 520
   }
 ];
@@ -953,14 +969,20 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     contact: {
       
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
+<<<<<<< HEAD
     reviews: 520;
 
 export interface ComprehensiveService {;
@@ -1516,3 +1538,13 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
 ;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    reviews: 520;
+=======
+
+export interface ComprehensiveService {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

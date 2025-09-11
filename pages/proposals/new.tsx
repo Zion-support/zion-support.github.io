@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,6 +21,8 @@ import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const NewProposal: NextPage = () => {
   const [jobBrief, setJobBrief] = useState('')
   const [resumeSummary, setResumeSummary] = useState('')
@@ -37,9 +40,12 @@ const NewProposal: NextPage = () => {
   const pitchPrompt = useMemo(() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div>
       <Head>
@@ -62,6 +68,7 @@ const NewProposal: NextPage = () => {
         <AIAssistant
           buttonLabel="Generate Pitch Based on Profile & Job"
           title="Generate Proposal"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           defaultPrompt={pitchPrompt}
@@ -70,6 +77,11 @@ const NewProposal: NextPage = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          defaultPrompt={pitchPrompt}
+          onAccept={setCoverLetter}
+          authorizationToken={operatorToken}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           defaultPrompt={pitchPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -88,6 +100,7 @@ const NewProposal: NextPage = () => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 export default NewProposal,
 
@@ -98,11 +111,15 @@ export default NewProposal,
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
       </div>
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export default NewProposal;
@@ -119,14 +136,25 @@ export default NewProposal,
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
+
 },
 export default NewProposal,
 
 =======
 },
+<<<<<<< HEAD
 
 export default NewProposal,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default NewProposal,
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -7,11 +7,14 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== "GET") {;
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
@@ -20,8 +23,11 @@ export default async function handler(
 
 
 
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
   try {
@@ -31,6 +37,12 @@ export default async function handler(
     return res
       .status(500)
 
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .json({ error: error?.message || "Failed to list proposals" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -38,7 +50,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -46,8 +61,12 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     const proposals = listProposals();
     res.status(200).json({ proposals })
   } catch (error: any) {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res.status(500).json({ error: error?.message || 'Failed to list proposals' })
+=======
+    res.status(500).json({ error: error?.message || 'Failed to list proposals' });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -60,6 +79,10 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
@@ -73,6 +96,7 @@ if ( {) {
     return res;
       .status (500);
       .json ({ error: error?.message || "Failed to list proposals" });
+<<<<<<< HEAD
 
       .json({ error: error?.message |"Failed to list proposals" });
       .json({ error: error?.message || "Failed to list proposals" });
@@ -100,6 +124,11 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -112,14 +141,20 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
   }
 }
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

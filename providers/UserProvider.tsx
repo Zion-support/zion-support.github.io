@@ -9,6 +9,7 @@
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 import React, {;
   createContext,;
   useContext,;
@@ -18,10 +19,16 @@ import React, {;
 export type UserRole = 'client' | 'talent';
 export type User = {;
 
+=======
+export type UserRole = 'client' | 'talent';
+
+export type User = {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   email: string;
   role: UserRole;
+<<<<<<< HEAD
   avatarUrl?: string;
   onboardingCompleted: boolean;
 import React, {
@@ -251,6 +258,38 @@ export function UserProvider({ children } { children:React.ReactNode }) {;
 
 
 
+=======
+  avatar?: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export interface UserContextType {
+  user: User | null;
+  loading: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  updateUser: (userData: Partial<User>) => Promise<void>;
+}
+
+const UserContext = createContext<UserContextType | undefined>(undefined);
+
+export const useUser = () => {
+  const context = useContext(UserContext);
+  if (context === undefined) {
+    throw new Error('useUser must be used within a UserProvider');
+  }
+  return context;
+};
+
+interface UserProviderProps {
+  children: React.ReactNode;
+}
+
+export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   useEffect(() => {
     // Check for existing user session
@@ -269,6 +308,7 @@ export function UserProvider({ children } { children:React.ReactNode }) {;
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
     try {
+<<<<<<< HEAD
 
       if (user) {
         localStorage.setItem('zion.user', JSON.stringify(user));
@@ -495,3 +535,58 @@ function use_user() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      // Mock login logic - replace with actual authentication
+      const mockUser: User = {
+        id: '1',
+        name: 'John Doe',
+        email,
+        role: 'client',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Login error:', error);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const logout = (): void => {
+    setUser(null);
+    localStorage.removeItem('user');
+  };
+
+  const updateUser = async (userData: Partial<User>): Promise<void> => {
+    if (!user) return;
+    
+    const updatedUser = {
+      ...user,
+      ...userData,
+      updatedAt: new Date().toISOString(),
+    };
+    
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+  };
+
+  const contextValue = useMemo(
+    () => ({
+      user,
+      loading,
+      login,
+      logout,
+      updateUser,
+    }),
+    [user, loading]
+  );
+
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
+};
+
+export default UserProvider;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

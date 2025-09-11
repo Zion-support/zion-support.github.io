@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from &quot;react&quot;
 import type { CSSProperties } from &quot;react&quot;
 import { Sheet, SheetContent } from &quot;@/components/ui/sheet&quot;
@@ -12,8 +15,11 @@ export interface SidebarProps extends React.ComponentProps<&quot;div&quot;> {
   side?: &quot;left&quot; | &quot;right&quot;
   variant?: &quot;sidebar&quot; | &quot;floating&quot; | &quot;inset&quot;
   collapsible?: &quot;offcanvas&quot; | &quot;icon&quot; | &quot;none&quot;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from "react"
 import type { CSSProperties } from "react"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
@@ -25,6 +31,7 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   side?: "left" | "right"
   variant?: "sidebar" | "floating" | "inset"
   collapsible?: "offcanvas" | "icon" | "none"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   if (props.collapsible === "none") {
@@ -38,10 +45,13 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
         className={cn(
           &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   if (props.collapsible === &quot;none&quot;) {
@@ -51,10 +61,19 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+  if (props.collapsible === &quot;none&quot;) {
+
+=======
+
+  if (props.collapsible === "none") {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div
         className={cn(
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
+<<<<<<< HEAD
 <<<<<<< HEAD
           props.className
         )}
@@ -65,6 +84,11 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
         )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          props.className
+        )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from &quot;react & quot;
 import type { CSSProperties } from &quot;react & quot;
 import { Sheet, SheetContent } from &quot;@/components / ui / sheet & quot;
@@ -88,6 +112,7 @@ if ( {) {
         className={cn (
           &quot;flex h - full w-[--sidebar - width] flex - col bg - sidebar text - sidebar - foreground & quot;,
           props.class_name)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import * as React from "react";
@@ -118,15 +143,21 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ref={ref}
         {...props}
       >;
         {props.children}
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>);
   }
 // Check condition
@@ -149,6 +180,7 @@ if ( {) {
         </SheetContent>;
       </Sheet>);
   }
+<<<<<<< HEAD
 
   return (
 
@@ -183,32 +215,45 @@ if (isMobile) {
       </Sheet>
     )
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (;
     <div;
       ref={ref}
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   return (;
     <div;
       ref={ref}
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="group peer hidden md:block text-sidebar-foreground"
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       className="group peer hidden md:block text-sidebar-foreground"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
       data-side={props.side}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >;
       {/* This is what handles the sidebar gap on desktop */}
 <div
@@ -219,6 +264,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
             ? &quot;group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]&quot;
             : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     >;
@@ -226,6 +272,8 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
           "group-data-[collapsible=offcanvas]:w-0",
           "group-data-[side=right]:rotate-180",
@@ -233,15 +281,21 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
       />
       <div
         className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex&quot;
           props.side === &quot;left&quot;
             ? &quot;left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]&quot;
@@ -250,10 +304,13 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
             ? &quot;p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]&quot;
             : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l&quot;
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
           props.side === "left"
             ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
@@ -263,6 +320,9 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           props.className
         )}
         {...props}
@@ -284,10 +344,16 @@ export const SidebarRail = React.forwardRef<
 Sidebar.displayName = "Sidebar"
 
 export const SidebarRail = React.forwardRef<
+<<<<<<< HEAD
   HTMLButtonElement,;
   React.ComponentProps<&quot;button&quot;>
   HTMLButtonElement,
   React.ComponentProps<"button">
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -299,6 +365,7 @@ export const SidebarRail = React.forwardRef<
       onClick={toggleSidebar}
       title="Toggle Sidebar"
       className={cn(
+<<<<<<< HEAD
 
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
           props.side === "left"
@@ -400,12 +467,15 @@ export const SidebarRail = React.forwardRef<
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex&quot;
         &quot;[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize&quot;
         &quot;[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize&quot;
         &quot;group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar&quot;
         &quot;[[data-side=left][data-collapsible=offcanvas]_&]:-right-2&quot;
         &quot;[[data-side=right][data-collapsible=offcanvas]_&]:-left-2&quot;
+<<<<<<< HEAD
 =======
     </div>);
 });
@@ -423,6 +493,8 @@ export const SidebarRail = React.forward_ref<;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
         "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
@@ -430,16 +502,20 @@ export const SidebarRail = React.forward_ref<;
         "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 
 
 SidebarRail.displayName = "SidebarRail"
@@ -448,6 +524,8 @@ export const SidebarInset = React.forwardRef<
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 SidebarRail.displayName = &quot;SidebarRail&quot;
 export const SidebarInset = React.forwardRef<
   HTMLDivElement
@@ -455,6 +533,7 @@ export const SidebarInset = React.forwardRef<
 SidebarRail.displayName = "SidebarRail"
 
 export const SidebarInset = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;main">
   HTMLDivElement,
@@ -462,11 +541,17 @@ export const SidebarInset = React.forwardRef<
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >((props, ref) => {
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -477,18 +562,24 @@ export const SidebarInset = React.forwardRef<
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "relative flex min-h-svh flex-1 flex-col bg-background&quot;
         &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -623,3 +714,7 @@ SidebarInset.displayName = "SidebarInset"
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+SidebarInset.displayName = &quot;SidebarInset"
+SidebarInset.displayName = "SidebarInset"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

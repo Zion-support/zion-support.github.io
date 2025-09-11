@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Calendar, RefreshCw} from "@/components/icons";
 import {Card, CardContent} from "@/components/ui/card";
@@ -28,12 +29,17 @@ import { format } from "date-fns",
 import type { DateRange } from "@/types/dateRange",
 import type { QuoteStatus } from "@/types/quotes",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -48,9 +54,32 @@ interface QuotesFilterProps {
   onReset: () => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface QuotesFilterProps {;
   searchQuery: string,;
   setSearchQuery: (value: string) => void,;
@@ -63,15 +92,21 @@ interface QuotesFilterProps {;
   onReset: () => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 
   searchQuery;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Calendar, RefreshCw } from '@/components / icons';
 import { Card, CardContent } from '@/components / ui / card';
@@ -97,14 +132,19 @@ interface QuotesFilterProps {
 export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   search_query;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   setSearchQuery;
   status_filter;
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
+<<<<<<< HEAD
 <<<<<<< HEAD
   date_range;
   setDateRange,
@@ -131,6 +171,12 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   setDateRange
   searchQuery,
@@ -142,6 +188,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   dateRange,
   setDateRange,
   onReset
+<<<<<<< HEAD
 }) => {
   return (
     <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">
@@ -196,6 +243,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
   onReset
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
   date_range;
   setDateRange,
   on_reset;
@@ -210,7 +259,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
               onChange={(e) => setSearchQuery(e && e.target.value)}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant="outline"
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
@@ -234,6 +286,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                 <CalendarComponent
                   initialFocus
 <<<<<<< HEAD
+<<<<<<< HEAD
                   mode="range"
               onChange={(e) => setSearchQuery(e && e.target.value)}
             />;
@@ -244,6 +297,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   mode="range"
 import React from "react",;
 import { Calendar, RefreshCw } from "@/components/icons",;
@@ -269,6 +324,7 @@ interface QuotesFilterProps {;
 }
 ;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+<<<<<<< HEAD
 ;
 interface QuotesFilterProps {;
   searchQuery:string,;
@@ -283,6 +339,8 @@ interface QuotesFilterProps {;
 }
 ;
 export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   searchQuery,;
   setSearchQuery,;
   statusFilter,;
@@ -290,7 +348,10 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
   archiveFilter,;
   setArchiveFilter,;
   dateRange,;
+<<<<<<< HEAD
   setDateRange,;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   setDateRange;
   onReset;
 }) => {;
@@ -305,6 +366,7 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
             />;
           </div>;
           ;
@@ -314,11 +376,16 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
             />;
           </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
           </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Status</p>;
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>;
@@ -327,7 +394,10 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
               </SelectTrigger>;
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
     <Card className="mb - 6 bg - zion - blue - dark border - zion - blue - light">;
       <CardContent className="p - 6">;
@@ -348,7 +418,10 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
               </SelectTrigger>;
               <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <SelectItem value="all">All Statuses</SelectItem>;
                 <SelectItem value="new">New</SelectItem>;
                 <SelectItem value="in_review">In Review</SelectItem>;
@@ -358,6 +431,7 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           <div>;
@@ -371,6 +445,8 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
               </SelectTrigger>;
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div>;
             <p className="text - zion - slate - light text - sm mb - 2">Archive</p>;
@@ -380,13 +456,17 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
               </SelectTrigger>;
               <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <SelectItem value="active">Active Only</SelectItem>;
                 <SelectItem value="archived">Archived Only</SelectItem>;
                 <SelectItem value="all">All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>;
@@ -415,16 +495,22 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
                 <CalendarComponent
                   initialFocus
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />
               </PopoverContent>
@@ -484,11 +570,49 @@ export const QuotesFilter:React.FC<QuotesFilterProps> = ({;
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+=======
+
+=======
+
+},
+
+
+=======
+          <div>;
+            <p className="text - zion - slate - light text - sm mb - 2">Date Range</p>;
+            <Popover>;
+              <PopoverTrigger as_child>;
+                <Button;
+                  variant="outline";
+                  className="w - full justify - start text - left font - normal bg - zion - blue border - zion - blue - light text - white";
+                >;
+                  <Calendar className="mr - 2 h - 4 w - 4 text - zion - slate - light" />;
+                  {date_range?.from ? (
+                    date_range.to ? (
+                      <>;
+                        {format (date_range.from, "LLL dd, y")} -{" "}
+                        {format (date_range.to, "LLL dd, y")}
+                      </>) : (
+                      format (date_range.from, "LLL dd, y"))) : (
+                    <span > Date range</span>)}
+                </Button>;
+              </PopoverTrigger>;
+              <PopoverContent className="w - auto p - 0 bg - zion - blue - dark border - zion - blue - light" align="start">;
+                <CalendarComponent;
+                  initial_focus;
+                  mode="range";
+                  default_month={date_range?.from}
+                  selected={date_range}
+                  on_select={setDateRange}
+                  numberOfMonths={2}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 />;
               </PopoverContent>;
             </Popover>;
           </div>;
         </div>;
+<<<<<<< HEAD
         ;
         <div className="mt-4 flex justify-end">;
           <Button ;
@@ -538,3 +662,20 @@ onReset
 },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        <div className="mt - 4 flex justify - end">;
+          <Button;
+            variant="outline";
+            on_click={on_reset}
+            className="border - zion - blue - light text - zion - slate - light";
+          >;
+            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

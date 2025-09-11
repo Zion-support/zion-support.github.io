@@ -1,7 +1,10 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,21 +24,47 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  const services = [
+    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' }
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' }
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' }
+    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' }
+    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
     { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
     { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
     { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
     { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
   const company = [
@@ -46,14 +75,21 @@ import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
   const closeAllDropdowns = () => {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const EnhancedNavigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
@@ -91,6 +127,10 @@ const EnhancedNavigation: React.FC = () => {;
   };
 
   const closeAllDropdowns = () => {;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setActiveDropdown(null);
     setIsOpen(false);
   }
@@ -122,6 +162,7 @@ const EnhancedNavigation: React.FC = () => {;
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('services')}
+<<<<<<< HEAD
 
 
               
@@ -129,6 +170,20 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'services' && (
                 <motion.div
+=======
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+              </button>
+              
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {activeDropdown === 'services' && (
+                <motion.div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Services</span>;
@@ -137,6 +192,10 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'services' && (;
                 <motion&& motion.div
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -162,13 +221,25 @@ const EnhancedNavigation: React.FC = () => {;
                   </div>;
                 </motion && motion.div>;
               )}
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Company Dropdown */}
             <div className="relative">;
               <button
@@ -212,6 +283,7 @@ const EnhancedNavigation: React.FC = () => {;
             {/* CTA Button */}
             <Link
               href="/contact"
+<<<<<<< HEAD
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors">;
               Get Started;
             </Link>;
@@ -221,20 +293,47 @@ const EnhancedNavigation: React.FC = () => {;
 
 
 
+=======
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
+=======
+          </button>
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </button>;
         </div>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
@@ -294,9 +393,13 @@ const EnhancedNavigation: React.FC = () => {;
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
@@ -507,9 +610,13 @@ const EnhancedNavigation: React.FC = () => {
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </motion.div>)}
       </div>;
     </nav>);
@@ -518,6 +625,7 @@ const EnhancedNavigation: React.FC = () => {
 export default EnhancedNavigation;
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default EnhancedNavigation;
@@ -783,14 +891,21 @@ export default EnhancedNavigation;
 export default EnhancedNavigation;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 export default EnhancedNavigation;
 
 =======
 export default EnhancedNavigation;
+<<<<<<< HEAD
 =======
 export default EnhancedNavigation;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default EnhancedNavigation;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

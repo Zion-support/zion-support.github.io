@@ -1,10 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion } from '@/types/search';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion } from "@/types/search";
+// Shared data source for marketplace listings
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
         'https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
@@ -15,6 +23,10 @@ import { SearchSuggestion } from '@/types/search';
     createdAt: '2024-02-15T10:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 32,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai - service - 2',
     title: 'Custom Machine Learning Model Development',
     description:;
@@ -40,6 +52,10 @@ import { SearchSuggestion } from '@/types/search';
     availability: '4 - 6 Weeks',
     ai_score: 92,
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
       'https://images && images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500',
@@ -47,6 +63,10 @@ import { SearchSuggestion } from '@/types/search';
     createdAt: '2024-03-05T09:15:00 && 00.000Z',
     rating: 4 && 4.7,
     reviewCount: 18,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai - equipment - 3',
     title: 'AI Workstation Supercomputer',
     description:;
@@ -71,6 +91,10 @@ import { SearchSuggestion } from '@/types/search';
     availability: '2 - 3 Weeks',
     ai_score: 95,
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
         'https://images && images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100',
@@ -81,6 +105,10 @@ import { SearchSuggestion } from '@/types/search';
     createdAt: '2024-01-28T14:20:00 && 00.000Z',
     rating: 4 && 4.6,
     reviewCount: 124,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai - content - 4',
     title: 'AI Content Generation Suite',
     description:;
@@ -106,6 +134,10 @@ import { SearchSuggestion } from '@/types/search';
     availability: 'Immediate',
     ai_score: 88,
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
@@ -113,6 +145,10 @@ import { SearchSuggestion } from '@/types/search';
     createdAt: '2024-02-02T11:30:00 && 00.000Z',
     rating: 4 && 4.5,
     reviewCount: 47,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai - analytics - 5',
     title: 'AI - Powered Business Intelligence Dashboard',
     description:;
@@ -136,6 +172,10 @@ import { SearchSuggestion } from '@/types/search';
     availability: '1 - 2 Weeks',
     ai_score: 90,
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
         'https://images && images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100',
@@ -146,6 +186,10 @@ import { SearchSuggestion } from '@/types/search';
     createdAt: '2023-12-10T16:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 36,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai - vision - 6',
     title: 'Computer Vision API Bundle',
     description:;
@@ -185,6 +229,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     'AI models'
     'GPT integration'
     'Machine learning'
@@ -202,6 +247,11 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   }));};  ];
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion } from "@/types/search",
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -321,8 +371,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 36,
     featured: true,
+<<<<<<< HEAD
     location: "Global",
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     location: 'Global',
     availability: 'Immediate',
     aiScore: 94,;
@@ -356,6 +409,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Enterprise AI solutions',;
   ];
 
+<<<<<<< HEAD
     type: 'product', // Use a valid type from the SearchSuggestion interface
   }));};  ];
 =======
@@ -494,6 +548,12 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return suggestions.map(text => ({
+    text,
+    type: 'product', // Use a valid type from the SearchSuggestion interface
+  }));};  ];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "AI models",
     "GPT integration",
     "Machine learning",
@@ -506,26 +566,35 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Enterprise AI solutions"
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+<<<<<<< HEAD
 =======
 
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ].sort();
   const locations = [
     ...new Set(
@@ -621,6 +690,7 @@ ratingOptions: [1, 2, 3, 4, 5]
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 =======
 
@@ -628,11 +698,17 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
   ].sort();
@@ -653,6 +729,7 @@ export const generateFilterOptions = () => {
   
   return {
     productTypes: productTypes.map(type => ({
+<<<<<<< HEAD
 =======
 
       avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
@@ -710,6 +787,8 @@ export const generateFilterOptions = () =>: any {
 ;
     product_types: product_types.map (type => ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       label: type,
       value: type,
     })),
@@ -721,6 +800,7 @@ export const generateFilterOptions = () =>: any {
       label: item,
       value: item,
     })),
+<<<<<<< HEAD
     ratingOptions: [1, 2, 3, 4, 5],
   };
 };
@@ -952,6 +1032,8 @@ export const generateFilterOptions = () => {;
   }
 },;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     rating_options: [1, 2, 3, 4, 5],
   }
 }
@@ -1015,6 +1097,7 @@ export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listi
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
@@ -1026,3 +1109,8 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

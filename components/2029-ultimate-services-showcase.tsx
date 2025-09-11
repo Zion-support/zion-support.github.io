@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,17 +9,23 @@ import Head from 'next/head';
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',
 import Head from 'next/head',
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
   Rocket
   Brain
@@ -63,6 +70,8 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 class ErrorBoundary extends React.Component {
@@ -93,6 +102,7 @@ import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
@@ -100,6 +110,12 @@ import {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Rocket,
   Brain,
   Atom,
@@ -139,21 +155,28 @@ import {
   Dna,
   Battery,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2, Eye;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon;
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -435,6 +458,8 @@ function UltimateServicesShowcase2029() {
       opacity: 1
       transition: {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -446,7 +471,10 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
 
 export default function UltimateServicesShowcase2029() {
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -458,7 +486,10 @@ export default function UltimateServicesShowcase2029() {
       transition: {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const allServices = [;
     ...cuttingEdge2028MicroSaas,;
     ...practicalBusinessSolutions2028,;
@@ -624,16 +655,22 @@ export default function UltimateServicesShowcase2029() {
       coordinate_y: 0,
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         duration: 0.5,
       },
     },  }        duration: 0.5;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         duration: 0.5,
       },
     },  }        duration: 0.5;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
   }
@@ -643,17 +680,25 @@ export default function UltimateServicesShowcase2029() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
 ;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <Head>;
         <title>;
@@ -661,15 +706,21 @@ export default function UltimateServicesShowcase2029() {
           Technology Solutions;
         </title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           href='https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase'
         />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           href='https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase'
         />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -682,17 +733,23 @@ export default function UltimateServicesShowcase2029() {
         <meta
           property='og:url'
 <<<<<<< HEAD
+<<<<<<< HEAD
           content='https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase'
         />;
         <meta property='og:type' content='website' />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           content='https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase'
         />;
         <meta property='og:type' content='website' />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
         <meta
@@ -704,6 +761,7 @@ export default function UltimateServicesShowcase2029() {
           content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
         />      </Head>        {/* Open Graph */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultimate-services-showcase" />
@@ -714,6 +772,8 @@ export default function UltimateServicesShowcase2029() {
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
       </Head>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
@@ -721,7 +781,10 @@ export default function UltimateServicesShowcase2029() {
         <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase" />;
         <meta property="og:type" content="website" />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Twitter */}
         <meta;
           name='description';
@@ -769,6 +832,7 @@ export default function UltimateServicesShowcase2029() {
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
       </Head>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='absolute inset-0'>;
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 animate-pulse' />;
@@ -897,10 +961,22 @@ export default function UltimateServicesShowcase2029() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Get Started Today
               </Link>
               <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
                 href='/pricing'
                 className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg'                href="/pricing"
@@ -908,18 +984,31 @@ export default function UltimateServicesShowcase2029() {
                 href="/pricing"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                href="/pricing"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
               >
                 View Pricing
               </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Stats */}
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -928,6 +1017,7 @@ export default function UltimateServicesShowcase2029() {
                 <div className="text-gray-400">Revolutionary Services</div>
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
 
@@ -956,6 +1046,8 @@ export default function UltimateServicesShowcase2029() {
                 <div className='text-gray-400'>Support Available</div>              </div>              </div>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">$500M+</div>
                 <div className="text-gray-400">Market Valuation</div>
@@ -972,6 +1064,7 @@ export default function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1048,10 +1141,13 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-16 bg-gray-900/50 border-b border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0">
             {/* Search */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Filters Section */}
       <section className='py-16 bg-gray-900/50 border-b border-cyan-500/20'>
@@ -1080,6 +1176,11 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+            <div className="relative w-full lg:w-96">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <input
                 type="text"
                 placeholder="Search services..."
@@ -1089,7 +1190,10 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             {/* Category Filter */}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
@@ -1098,6 +1202,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             {/* Category Filter */}
             <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <button
             {/* Category Filter */}
@@ -1122,6 +1227,9 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <button
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
@@ -1138,14 +1246,18 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
+<<<<<<< HEAD
 <<<<<<< HEAD
                   }`}
                 >
@@ -1173,19 +1285,33 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     selectedPriceRange === range.id
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}
 
 
               ))}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Price Filter */}
 
 
@@ -1196,9 +1322,12 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               ))}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                       : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700/50',
                   }`}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
               <Link;
@@ -1345,6 +1474,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               {price_ranges.map ((range) => (
                 <button;
                   key={range.id}
+<<<<<<< HEAD
                   on_click={() => setSelectedPriceRange (range.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 200 ${
                     selectedPriceRange === range.id;
@@ -1362,6 +1492,14 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
       </section>;
 <<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
+=======
+                  onClick={() => setSelectedPriceRange(range.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    selectedPriceRange === range.id
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
+                  }`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   {range.name}
                 </button>
@@ -1371,6 +1509,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Grid */}
       <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1382,6 +1521,12 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 =======
+=======
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1391,12 +1536,16 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
       {/* Services Grid */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             {filteredServices.map((service, index) => (
               <motion.div
@@ -1460,18 +1609,24 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   </div>;
                   {/* Categories */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   {/* Categories */}
 
 =======
                   <div className="mb-4">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='mb-4'>
                     <div className='flex flex-wrap gap-2'>
                       {service.category.slice(0, 3).map(cat => (
                         <span
                           key={cat}
+<<<<<<< HEAD
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >                  <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
                       {service.category.slice(0, 3).map((cat) => (
@@ -1491,21 +1646,30 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {service.category.length > 3 && (
                         <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
                           +{service.category.length - 3}
                         </span>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       )}
+=======
+                      )}
+                    </ul>
+                  </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </div>;
                   </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1516,6 +1680,12 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Features Preview */}
 
 
@@ -1526,13 +1696,18 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Market Info */}
 
                   <div className="mb-6 space-y-2">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {service.category.length > 3 && (
                         <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
@@ -1607,6 +1782,8 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   <div className='mt-auto'>                  <div className="mb-6 space-y-2">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Market Size: </span>
                       <span className="text-emerald-400 font-medium">{service.marketSize}</span>
@@ -1615,12 +1792,18 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                       <span className="text-gray-400">ROI:</span>
                       <span className="text-cyan-400 font-medium">{service.roi}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </div>
 =======
 
                     </div>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                    </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                     </ul>;
                   </div>;
@@ -1640,6 +1823,10 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   </div>;
                   {/* Action Button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="mt-auto">
                     <Link
                       href={`/services/${service.id}`}
@@ -1648,6 +1835,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                       Learn More
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>
                   </div>
+<<<<<<< HEAD
 
                       href={`/services/${service.id}`}
                   {/* Hover Effect */}
@@ -1660,6 +1848,11 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
                       href={`/services/${service.id}`}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  {/* Hover Effect */}
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </div>                    <Link
+                      href={`/services/${service.id}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200"
                     >
                       Learn More
@@ -1667,22 +1860,32 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     </Link>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                     </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+                    </Link>
+                  </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       href={`/services/${service && service.id}`}
                       className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'>;
                       Learn More;
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>;
                   </div>;
                   {/* Hover Effect */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   {/* Action Button */}
 
@@ -1697,6 +1900,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               </motion.div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
+<<<<<<< HEAD
 
           </motion && motion.div>;
 =======
@@ -1721,12 +1925,28 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 =======
 =======
+          </motion.div>
+
+          </motion && motion.div>;
+=======
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -1744,6 +1964,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
+<<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">;
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">;
                 <Search className="w-12 h-12 text-gray-400" />;
@@ -1773,47 +1994,63 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               </motion.div>
             ))}
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="w-12 h-12 text-gray-400" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
               <p className="text-gray-400 mb-8">Try adjusting your search criteria or browse all services</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <button
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >
 
               <button
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
                   setSelectedPriceRange('all')
                 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >
 
@@ -1828,16 +2065,23 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
                 Reset Filters
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )}
         </div>
       </section>
 
+<<<<<<< HEAD
 
 
 
@@ -1847,6 +2091,8 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </section>;
 
@@ -1855,18 +2101,26 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
@@ -1876,12 +2130,18 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             initial={{ opacity: 0, y: 30 }}
@@ -1890,6 +2150,8 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               Ready to Transform Your Business?
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
 Join the future of technology with our revolutionary services.
@@ -1917,7 +2179,10 @@ Join the future of technology with our revolutionary services.
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <UltraFuturisticFooter2029 />
     </>
 
@@ -2130,11 +2395,15 @@ Join the future of technology with our revolutionary services.
             </h2>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Join the future of technology with our revolutionary services.;
               Contact us today to discuss how we can help you achieve your;
               goals.;
             </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -2206,3 +2475,11 @@ Join the future of technology with our revolutionary services.
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  )
+}
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

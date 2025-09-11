@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react'
 import { AlertTriangle, RefreshCw } from 'lucide-react'
@@ -38,6 +39,11 @@ export class EquipmentErrorBoundary extends React.Component < Props, State> {
   error?: Error;
 }
 import {logErrorToProduction} from '@/utils / production_logger';
+=======
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Props {
   children: React.ReactNode
 }
@@ -57,6 +63,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logErrorToProduction('Equipment page error:', error, {
       componentStack: errorInfo.componentStack
+<<<<<<< HEAD
   has_error: boolean,
   error?: Error;
 }
@@ -109,6 +116,8 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }) }
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
   }
@@ -117,6 +126,7 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   }
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
+<<<<<<< HEAD
   }
   render() {
     if (this.state.hasError) {
@@ -125,11 +135,15 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   render() {;
     if (this && this.state.hasError) {;
       return (
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
+<<<<<<< HEAD
 interface Props {;
   children: React.ReactNode;
 }
@@ -137,10 +151,19 @@ interface Props {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+interface Props {;
+  children: React && React.ReactNode;
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface State {;
   hasError: boolean,;
   error?: Error;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export class EquipmentErrorBoundary extends React.Component<Props State> {;
@@ -156,6 +179,8 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
   constructor(props: Props) {;
@@ -167,6 +192,7 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   static getDerivedStateFromError(error: Error): State {;
     return { hasError: true, error }
   }
+<<<<<<< HEAD
 
 
 
@@ -240,11 +266,14 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
   static getDerivedStateFromError(error: Error): State {;
     return { hasError: true, error }
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack });
   }
 
+<<<<<<< HEAD
   render() {
     if (this.state.hasError) {
       return (
@@ -268,6 +297,13 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  render() {;
+    if (this && this.state.hasError) {;
+      return (
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button onClick={() => window.location.reload()} variant="default">
                   Refresh Page
                 </Button>
@@ -277,6 +313,7 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
         </div>
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     return this.props.children
   }      )
@@ -284,6 +321,8 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
     return this.props.children
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -297,7 +336,10 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
 
 
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
@@ -306,6 +348,7 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
               <div className="flex gap-2 justify-center">;
                 <Button
                   onClick={() => this && this.setState({ hasError: false, error: undefined })} ;
+<<<<<<< HEAD
 import React from 'react',;
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -347,24 +390,46 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
               <div className="flex gap-2 justify-center">;
                 <Button ;
                   onClick={() => this.setState({ hasError:false, error:undefined })} ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   variant="outline";
                 >;
                   <RefreshCw className="h-4 w-4 mr-2" />;
                   Try Again;
                 </Button>;
+<<<<<<< HEAD
                 <Button onClick={() => window.location.reload()} variant="default">;
+=======
+                <Button onClick={() => window && window.location.reload()} variant="default">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Refresh Page;
                 </Button>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
+<<<<<<< HEAD
 
 
     }
     return this && this.props.children;
   };
 } 
+=======
+      );
+    }
+
+    return this && this.props.children;
+  }      );
+
+
+    }
+
+    return this && this.props.children;
+  };
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
   }
@@ -422,6 +487,7 @@ if ( {) {
     return this.props.children;
   }      );
     }
+<<<<<<< HEAD
   }
 ursor/fix-website-loading-errors-and-merge-6662
 }
@@ -453,3 +519,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 } ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    return this.props.children;
+  }
+
+} ;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

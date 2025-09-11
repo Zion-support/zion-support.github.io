@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Star
   Clock
@@ -58,6 +59,8 @@ import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {;
   Star,;
@@ -82,19 +85,30 @@ import {;
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+<<<<<<< HEAD
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
+=======
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { ;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
 
 =======
 import { 
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 
 export default function ComprehensiveServicesShowcase() {
@@ -102,6 +116,7 @@ export default function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null),
   const [searchTerm, setSearchTerm] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
@@ -244,6 +259,8 @@ export default function ComprehensiveServicesShowcase() {
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
@@ -281,12 +298,16 @@ export default function ComprehensiveServicesShowcase() {
       return matchesCategory && matchesSearch
     })
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return b.popular ? 1 : -1;
         case 'price':
+<<<<<<< HEAD
 <<<<<<< HEAD
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
           return (
@@ -302,6 +323,8 @@ export default function ComprehensiveServicesShowcase() {
         default:
           return 0;      }          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<;
@@ -314,12 +337,16 @@ export default function ComprehensiveServicesShowcase() {
   ];
 =======
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -707,6 +734,11 @@ export default function ComprehensiveServicesShowcase() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             Revolutionary Micro SAAS Services 2025
@@ -793,9 +825,12 @@ export default function ComprehensiveServicesShowcase() {
 
           className='text-center mb-16'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 className='text-center mb-16'>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
             Revolutionary Micro SAAS Services 2025;
           </h2>;
@@ -879,6 +914,7 @@ className='text-center mb-16'>;
         </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
         {/* Search and Filters */}
@@ -889,20 +925,29 @@ className='text-center mb-16'>;
         {/* Search and Filters */}
         <motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Search and Filters */}
         <motion&& motion.div
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Search and Filters */}
+        <motion&& motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -921,11 +966,19 @@ className='text-center mb-16'>;
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 =======
+          className='mb-12'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
@@ -934,6 +987,7 @@ className='text-center mb-16'>;
                 placeholder='Search services...'
                 value={searchTerm}
 
+<<<<<<< HEAD
           className="mb-12"
         >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -948,6 +1002,17 @@ className='text-center mb-16'>;
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                onChange={e => setSearchTerm(e && e.target.value)}
+                className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'              />;
+            </div>;
+
+
+            {/* Sort and View Controls */}
+            <div className='flex items-center gap-4'>        >
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Search */}
             <div className="relative flex-1 max-w-md">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />;
@@ -956,17 +1021,23 @@ className='text-center mb-16'>;
                 placeholder="Search services..."
                 value={searchTerm}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 onChange={(e) => setSearchTerm(e && e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20";
               />;
             </div>;
             {/* Sort and View Controls */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             {/* Sort and View Controls */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onChange={e => setSortBy(e && e.target.value as any)}
                 className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400';
   Star,
@@ -1313,9 +1384,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                 on_change={e => setSortBy (e.target.value as any)}
                 className='bg - white / 10 border border - white / 20 rounded - xl px - 4 py - 3 text - white focus:outline - none focus:border - blue - 400';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >;
                 <option value='popularity'>Most Popular</option>;
                 <option value='price'>Price: Low to High</option>;
@@ -1323,9 +1398,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                 <option value='newest'>Newest First</option>;
               </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="flex items-center gap-4">
               <select
                 value={sortBy}
@@ -1338,10 +1417,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                 <option value="newest">Newest First</option>
               </select>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex bg-white/10 rounded-xl p-1'>;
                 <button
                   onClick={() => setViewMode('grid')}
@@ -1351,10 +1435,20 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       : 'text-white/60 hover:text-white';
                   }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                >
+                  <Grid className='w-5 h-5' />                </button>                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-all ${
+                    viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
+                  }`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <Grid className="w-5 h-5" />
             <div className='flex items-center gap-4'>
 
+<<<<<<< HEAD
               />
             </div>
 
@@ -1362,11 +1456,14 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
+<<<<<<< HEAD
 
 
                 </button>
@@ -1378,6 +1475,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                 >
                   <List className="w-5 h-5" />
                 </button>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     viewMode === 'list'
                       ? 'bg-blue-600 text-white'
                       : 'text-white/60 hover:text-white'
@@ -1390,10 +1489,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
                 </button>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </div>
@@ -1402,15 +1506,19 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <List className="w-5 h-5" />;
               </div>;
             </div>;
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1422,20 +1530,29 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         {/* Category Filter */}
         <motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Category Filter */}
         <motion&& motion.div
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Category Filter */}
+        <motion&& motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1490,6 +1607,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         >;
           <div className="flex flex - wrap justify - center gap - 3">;
             {categories.map ((category) => (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-3'>
@@ -1499,11 +1618,16 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             {categories.map((category) => (
             {categories.map(category => (              <button
 
+<<<<<<< HEAD
               <button
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1514,6 +1638,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               >;
                 <span>{category.icon}</span>;
                 {category.name}
+<<<<<<< HEAD
 
           </div>;
         </motion && motion.div>;
@@ -1540,6 +1665,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                   {category.count}
                 </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
@@ -1548,6 +1675,29 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+
+            ))}
+          </div>
+        </motion.div>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Services Display */}
+        {viewMode === 'grid' ? (;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            <AnimatePresence>;
+              {filteredServices && filteredServices.map((service, index) => (;
+                <motion&& motion.div
+                  key={service && service.id}
+=======
+                <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
+                  {category.count}
+                </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
+              </button>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </motion.div>
@@ -1566,6 +1716,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                   {/* Popular Badge */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {service && service.popular && (;
                     <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>;
                       <Star className='w-3 h-3' />                      Popular                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
@@ -1579,6 +1730,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1598,15 +1753,20 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               {filtered_services.map ((service, index) => (
                 <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: -30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+<<<<<<< HEAD
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
@@ -1632,10 +1792,18 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       <Star className="w-3 h-3" />
                     </div>
                   )}
+=======
+                  {service.popular && (
+                    <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
 
+<<<<<<< HEAD
                     </div>
                   )}
 
@@ -1646,6 +1814,16 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       <div className='text-right'>
                         <div className='text-2xl font-bold text-white'>
 =======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
                 >;
                   {/* Popular Badge */}
@@ -1659,6 +1837,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       <Star className="w - 3 h - 3" />;
                     </div>)}
                   {/* Service Content */}
+<<<<<<< HEAD
                   <div className='p - 6'>;
                     <div className='flex items - start justify - between mb - 4'>;
                       <div className='text - 4xl'>{service.icon}</div>;
@@ -1672,6 +1851,18 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           {service.period}
 <<<<<<< HEAD
 =======
+=======
+                  <div className='p-6'>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='text-4xl'>{service.icon}</div>
+                      <div className='text-right'>
+                        <div className='text-2xl font-bold text-white'>
+                          {service.price}
+                        </div>
+                        <div className='text-xs text-white/60'>
+                          {service.period}
+                        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1687,7 +1878,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     </div>;
                     <h3 className='text - xl font - bold text - white mb - 2'>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>
 
                       </div>
@@ -1698,9 +1892,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <p className='text - white / 70 text - sm mb - 4'>;
                       {service.tagline}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='p-6'>;
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='text-4xl'>{service && service.icon}</div>;
@@ -1720,15 +1918,21 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       {service && service.tagline}
                     </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Features */}
                     <div className='space-y-2 mb-6'>;
                       {service && service.features.slice(0, 3).map((feature, idx) => (;
                         <div
                           key={idx}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
@@ -1744,12 +1948,17 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           className='flex items-center gap-2 text-sm text-white/60'>;
                           <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>;
                     </div>;
                     <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
                     <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;
                     {/* Features */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, idx) => (
@@ -1760,11 +1969,14 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       ))}
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                           {feature}
                         </div>;
                       ))}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </p>;
@@ -1795,6 +2007,11 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className='grid grid - cols - 3 gap - 4 mb - 6 text - center'>;
                       <div>;
                         <div className='text - lg font - bold text - blue - 400'>;
+=======
+                    </div>
+                    {/* Stats */}
+                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     {/* Stats */}
@@ -1803,11 +2020,18 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
+<<<<<<< HEAD
                           {service.rating}
 
                     </div>
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          {service.rating}
+
+                    </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
@@ -1820,9 +2044,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="text-lg font-bold text-blue-400">{service.rating}</div>
                         <div className="text-xs text-white/60">Rating</div>
                       </div>
@@ -1836,6 +2064,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       </div>
                     </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {/* CTA */}
                     <a
@@ -1870,6 +2099,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>;
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
@@ -1902,6 +2133,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         <div className="text-xs text-white/60">Trial</div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1909,9 +2141,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 =======
 =======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -2013,6 +2251,20 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                             {service.price}
                       href={service.link}
                       target="_blank"
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                    {/* CTA */}
+                    <a
+                      href={service.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
+                    >
+                      Learn More
+                      <ExternalLink className='w-4 h-4' />                    </a>                      target="_blank"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       rel="noopener noreferrer"
                       className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                     >
@@ -2034,8 +2286,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                      )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 >
                   <div className='flex flex-col lg:flex-row gap-6'>
@@ -2043,10 +2302,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className='flex-shrink-0'>
                       <div className='text-6xl mb-4'>{service.icon}</div>
                       {service.popular && (
+<<<<<<< HEAD
 
                         <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular                >
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Left Side - Icon and Basic Info */}
@@ -2054,10 +2316,14 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       <div className="text-6xl mb-4">{service.icon}</div>
                       {service.popular && (
                         <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           Popular
 
+=======
+                          Popular
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>
                       )}
                     </div>
@@ -2069,15 +2335,33 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           Popular
 
                         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      )}
+                    </div>
+                    {/* Center - Service Details */}
+                    <div className='flex-1'>
+                      <div className='flex items-start justify-between mb-4'>
+=======
+                        <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
+
+                          Popular
+
+                        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       )}
                     </div>
 
                     {/* Center - Service Details */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
@@ -2085,7 +2369,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div>
                           <h3 className='text-2xl font-bold text-white mb-2'>
                             {service.name}
@@ -2146,6 +2433,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       </div>;
                       {/* Features Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -2161,6 +2449,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         </div>                        </div>
                       <div className="grid grid-cols-2 gap-2 mb-4">
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div
@@ -2169,8 +2459,34 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           >
                             <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
                             <span className='truncate'>{feature}</span>                          </div>                      <div className="grid grid-cols-2 gap-2 mb-4">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        {service.features.slice(0, 6).map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                            <span className="truncate">{feature}</span>
+                        ))}
+                      </div>
+
+                          </div>
+
+                        ))}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                      {/* Stats Row */}
+                      <div className='flex items-center gap-6 text-sm text-white/60'>
+                        <div className='flex items-center gap-2'>
+                          <Star className='w-4 h-4 text-yellow-400' />
+                          <span>
+                            {service.rating} ({service.reviews} reviews)
+                          </span>
+                        </div>                        </div>
+=======
+                      <div className="grid grid-cols-2 gap-2 mb-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
@@ -2178,6 +2494,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           </div>
                         ))}
                       </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           </div>
 
@@ -2195,18 +2515,25 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           <span>{service.customers}+ customers</span>
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <div className="flex items-center gap-2">
 =======
 
                         <div className="flex items-center gap-2">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                        <div className="flex items-center gap-2">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <Clock className="w-4 h-4 text-green-400" />
                           <span>{service.setupTime} setup</span>
                         </div>
                       </div>
                     </div>
                     {/* Right Side - CTA and Category */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className='flex-shrink-0 flex flex-col items-end gap-4'>
                       <div className='text-right'>
@@ -2221,11 +2548,17 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className="flex-shrink-0 flex flex-col items-end gap-4">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                    <div className="flex-shrink-0 flex flex-col items-end gap-4">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="text-right">
                         <div className="text-sm text-white/60 mb-1">Category</div>
                         <div className="flex items-center gap-2 text-white">
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className="text-sm">{service.category}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         </div>
 =======
@@ -2233,6 +2566,11 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         </div>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                        </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>
                       </div>;
                       {/* Stats Row */}
@@ -2275,10 +2613,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       </div>;
                       <a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2287,23 +2630,30 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         Learn More
                         <ArrowRight className="w-4 h-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     </div>
                   </div>
                 </motion.div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </a>
                     </div>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
 </AnimatePresence>;
           </div>;
         )}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2311,17 +2661,25 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center py-20'
           >
             <div className='text-6xl mb-4'>🔍</div>
@@ -2330,6 +2688,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </h3>
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2373,10 +2732,18 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
             </p>          </motion.div>
 
           </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -2390,10 +2757,20 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 =======
         <motion&& motion.div
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+        )}
+
+        {/* Contact CTA */}
+        <motion&& motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2403,6 +2780,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          className='mt-20 text-center'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -2414,9 +2798,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a
                 href='mailto:kleber@ziontechgroup.com'
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
@@ -2427,10 +2815,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               <a
                 href='tel:+13024640950'
 <<<<<<< HEAD
+<<<<<<< HEAD
           className="mt-20 text-center"
         >
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'              >        >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'>        >;
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">;
             <h3 className="text-3xl font-bold text-white mb-4">;
@@ -2444,7 +2835,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 =======
           className="mt-20 text-center"
         >
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -2453,6 +2847,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               Join thousands of companies already using our revolutionary micro SAAS services to drive innovation and growth.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <a
 
@@ -2620,10 +3015,31 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <a
+                className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Call +1 302 464 0950;
               </a>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
@@ -2631,6 +3047,17 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
+=======
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </motion.div>;
       </div>;
     </section>);
@@ -2644,6 +3071,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               <a
                 href=&quot;tel:+13024640950&quot;
                 className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
@@ -2661,6 +3092,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
   );
 }
@@ -2671,3 +3103,12 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

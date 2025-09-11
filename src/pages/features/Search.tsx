@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -31,6 +32,8 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -77,10 +80,18 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
+=======
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
   const schema = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const schema = {
@@ -100,13 +111,18 @@ export default function SearchFeature() {
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters.",
     "url": "https://app.ziontechgroup.com/features/search"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   return (
@@ -144,6 +160,7 @@ export default function SearchFeature() {
           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function SearchFeature() {
@@ -164,6 +181,8 @@ export default function SearchFeature() {
         canonical='https://app.ziontechgroup.com/features/search'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
@@ -177,12 +196,15 @@ export default function SearchFeature() {
         type="application/ld+json"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -216,6 +238,7 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -301,6 +324,12 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
+=======
+
+
+
+          <div className="text-center">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
             </Button>
@@ -310,6 +339,7 @@ export default function SearchFeature() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 =======
@@ -317,6 +347,11 @@ export default function SearchFeature() {
 ;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -353,6 +388,7 @@ export default function SearchFeature() {;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <img;
               src="https: //placehold.co/800x400";
               alt="Screenshot of search results";
@@ -379,18 +415,24 @@ export default function SearchFeature() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of search results"
               className="object-cover"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href="/search">Try Search</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -402,3 +444,5 @@ export default function SearchFeature() {;
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

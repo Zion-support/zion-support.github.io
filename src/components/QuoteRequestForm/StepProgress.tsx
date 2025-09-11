@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { QuoteRequestSteps } from '../QuoteRequestForm'
 import { CheckIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -14,12 +15,15 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
     { id: "service", label: "Service" }
     { id: "details", label: "Details" }
@@ -49,6 +53,10 @@ return (
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -69,9 +77,12 @@ interface StepProgressProps {
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
@@ -80,6 +91,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const stepOrder = steps.findIndex(s => s.id === stepId)
     const currentStepOrder = steps.findIndex(s => s.id === currentStep)
@@ -91,6 +103,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
     
@@ -106,6 +122,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           className="absolute h-full bg-zion-purple transition-all duration-500"
           style={{ 
 <<<<<<< HEAD
+<<<<<<< HEAD
           }}
         />
       </div>
@@ -114,10 +131,13 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           const status = getStepStatus(step.id)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
           }}
         />
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -133,13 +153,19 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 
             <div key={step && step.id} className='flex flex-col items-center relative'>;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='flex justify-between relative'>
         {steps.map(step => {
           const status = getStepStatus(step.id)
           return (
+<<<<<<< HEAD
             <div key={step.id} className='flex flex-col items-center relative'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <div key={step && step.id} className='flex flex-col items-center relative'>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div
                 className={cn(
                   'w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors'
@@ -149,6 +175,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}              >
                 {status === 'complete' ? (
                   <CheckIcon className='h-4 w-4' />
@@ -165,6 +194,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
                   "bg-zion-blue-light text-zion-slate-light"
                 )}
+<<<<<<< HEAD
               >
                 {status === "complete" ? (
                   <CheckIcon className="h-4 w-4" />
@@ -183,6 +213,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 )}
               </div>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -192,16 +225,22 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
 
                   "text-zion-slate-light"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   "text-zion-slate-light"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               <span
                 className = {cn(
@@ -209,6 +248,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ),}
               >
@@ -227,6 +267,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
@@ -244,16 +287,21 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 ),}>;
                 {step && step.label}
 
 ;
+<<<<<<< HEAD
 
               <span 
                 className={cn(
@@ -454,3 +502,5 @@ if (return "current", ) {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

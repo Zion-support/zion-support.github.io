@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
@@ -35,6 +36,8 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
   };
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   });
@@ -51,6 +54,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };    search;
     sort;
@@ -61,6 +65,8 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     search,
     sort,
@@ -70,15 +76,23 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters,
     format: (format as any) || undefined,
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     filters
     format: (format as any) |undefined}
 }
 function toCsv(rows: any[]): string {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!rows && rows.length) return '';
   const headers = Object && Object.keys(rows[0]);
   const escape = (v: any) => {
@@ -89,15 +103,22 @@ function toCsv(rows: any[]): string {
   const lines = [headers && headers.join(',')].concat(
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
+<<<<<<< HEAD
   return lines && lines.join('\n');
 <<<<<<< HEAD
 =======
 
+=======
+  return lines.join('\n');
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ) {
 
 
@@ -114,6 +135,7 @@ export default async function handler(
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -121,20 +143,28 @@ export default async function handler(
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return '"' + s.replace(/"/g, '""') + '"'
   };
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
     return res && res.status(400).json({ error: 'Invalid type' });  };
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -196,6 +226,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
 =======
+=======
+
+}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
@@ -226,7 +262,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 
       if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const from = params && params.page * params && params.pageSize;
       const to = from + params && params.pageSize - 1;
       const { data, error, count } = await query && query.range(from, to);
@@ -241,6 +280,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res && res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res && res.status(200).send(toCsv(data || []))
 <<<<<<< HEAD
+<<<<<<< HEAD
         res.setHeader('Content-Typetext/csv');
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res.status(200).send(toCsv(data || []))
@@ -252,6 +292,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     filters,
     format: (format as any) || undefined}
 }
+=======
+
+      }
+      return res && res.status(200).json({ items: data || [], total: count || 0 });
+=======
+    filters,
+    format: (format as any) || undefined}
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
     filters
@@ -275,8 +325,11 @@ function toCsv(rows: any[]): string {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
   const type = (req.query.type as AdminType) |'';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ) {;
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type))
@@ -284,8 +337,11 @@ export default async function handler(
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) |'';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const type = (req.query.type as AdminType) || '';
@@ -345,9 +401,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
 
@@ -357,6 +417,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         });
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (params.search) {
         const s = params.search.toLowerCase();
@@ -389,6 +450,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const total = filtered && filtered.length;
       const start = params && params.page * params && params.pageSize;
       const end = start + params && params.pageSize;
@@ -398,16 +461,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res && res.setHeader(
           'Content-Disposition',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           `attachment; filename="${type}.csv"`
         );
 
         return res.status(200).send(toCsv(pageItems));
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       }
+=======
+
+
+      }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       }
 
@@ -416,12 +490,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
+<<<<<<< HEAD
+=======
+      }
+
+      }
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           `attachment; filename="${type}.csv"`
@@ -437,6 +522,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
       }
+=======
+=======
+
+  if (req && req.method === 'PATCH') {
+    const { id, updates } = req && req.body as {
+=======
+        return res.status(200).send(toCsv(pageItems));
+
+      }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       }
       return res.status(200).json({ items: pageItems, total });
@@ -460,6 +557,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(200).json({ item: data });
     } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
         res.setHeader('Content-Typetext/csv');
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res.status(200).send(toCsv(pageItems))
@@ -482,6 +580,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const updated = {
         ...list[idx]
         ...updates
@@ -489,16 +591,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
       list[idx] = updated as any;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return res.status(200).json({ item: updated })
 
+=======
+      return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return res.status(200).json({ item: updated });    }
 
     }
@@ -517,19 +627,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       return res.status(200).json({ item: updated })
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || '';
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return res.status(200).json({ item: updated });    }
 
     }
@@ -554,6 +671,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }return res && res.status (200) .send (toCsv (pageItems) );      return res && res.status(200).json({ ok: true })
     }
   }
+<<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
@@ -570,6 +688,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
 =======
+=======
+
+
+  return res && res.status(405).json({ error: 'Method not allowed' });
+
+}return res && res.status (200) .send (toCsv (data || []) );
+}return res && res.status (200) .send (toCsv (pageItems) );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
       const start = params.page * params.page_size;
@@ -665,6 +791,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status(200).json({ items: pageItems, total })
     }
   }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -683,11 +810,25 @@ return res.status(405).json({ error: 'Method not allowed' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+  if (req.method === 'PATCH') {
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

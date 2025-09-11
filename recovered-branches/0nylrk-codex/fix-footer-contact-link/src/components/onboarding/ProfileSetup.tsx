@@ -15,6 +15,7 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters");
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
@@ -24,6 +25,10 @@ type ProfileFormValues = z.infer<typeof profileSchema>;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -40,11 +45,17 @@ import {
   FormLabel,
   FormMessage} from "@/components/ui/form",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
@@ -54,10 +65,13 @@ const profileSchema = z.object({
 type ProfileFormValues = z.infer<typeof profileSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
@@ -70,6 +84,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -144,6 +159,13 @@ function ProfileSetup() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    switch (userType) {;
+
+      case "serviceProvider": return "Service Provider";
+    switch (userType) {
+      case "serviceProvider": return "Service Provider",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "talent":
         return "Talent",
       case "client":
@@ -151,6 +173,7 @@ function ProfileSetup() {
       default:
         return "User"
     }
+<<<<<<< HEAD
 
   },
 
@@ -159,10 +182,13 @@ function ProfileSetup() {
   return (
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
 
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>
@@ -175,6 +201,10 @@ function ProfileSetup() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <FormField
             control={form.control}
             name="displayName"
@@ -193,7 +223,10 @@ function ProfileSetup() {
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -239,6 +272,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
   };
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 const profileSchema = z.object({;
   displayName:z.string().min(2, "Name must be at least 2 characters"),;
@@ -276,6 +310,9 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;
@@ -283,6 +320,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
           Help others get to know you better;
         </p>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       <Form {...form}>;
@@ -299,6 +337,8 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                 <FormControl>
                   <div className="relative">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
@@ -311,7 +351,10 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Input
                       placeholder="Your full name"
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
@@ -321,6 +364,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                   </div>;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
+<<<<<<< HEAD
           />;
           <FormField
             control={form && form.control}
@@ -435,6 +479,9 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 
 
 =======
+=======
+              </FormItem>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -541,6 +588,26 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                     }`}
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
                     {...field}
+<<<<<<< HEAD
+=======
+                  />
+                </FormControl>
+                <FormMessage className="text-red-400" />
+              </FormItem>
+            )}
+          />
+          <Button
+            type="submit"
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
+          >
+            Complete Profile
+          </Button>
+        </form>
+      </Form>
+    </div>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </FormControl>;
 
@@ -554,13 +621,17 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
           />;
           <Button;
             type="submit";
             className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Textarea;
                     placeholder={`Tell us about your ${;
@@ -585,6 +656,10 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
           >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Complete Profile;
           </Button>;
         </form>;
@@ -593,6 +668,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </div>);
@@ -638,3 +714,8 @@ getTypeLabel ()
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

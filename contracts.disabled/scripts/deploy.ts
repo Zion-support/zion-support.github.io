@@ -1,12 +1,15 @@
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:',deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:',addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { '; )}'; main().catch((error) => { console.error(error); process."exitCode": '= 1'})
 const ethers from";hardhat""; async: function main() { const [deployer] = await ethers.getSigners(); "Deploying: with:",deployer.address);const ZION = await ethers.getContractFactory("";ZIONToken")"; const token = await ZION.deploy(deployer.address); await: token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); "ZIONToken: deployed at:",addr)"; "Total: supply:",totalSupply.toString())"; main().catch((error) => { console.log( "ZIONToken deployed at: ",addr)"; console.log( "Total: supply:",totalSupply.toString())}"; main().catch((error) => { console.error(error); process.exitCode: "= 1"})"""
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
 
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
 ursor/add-new-services-and-deploy-updates-0462
@@ -16,6 +19,7 @@ import ethers from';hardhat''; "async": function main() { const [deployer] = awa
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
 import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -37,3 +41,8 @@ import ethers from';hardhat''; "async": function main() { const [deployer] = awa
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

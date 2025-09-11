@@ -1,16 +1,23 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {render, screen} from '@testing-library/react',;
 import {MemoryRouter} from 'react-router-dom',;
 import {CategoryCard} from '@/components/CategoryCard',;
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {render, screen} from '@testing-library/react',
 import {MemoryRouter} from 'react-router-dom',
 import {CategoryCard} from '@/components/CategoryCard',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { render, screen  } from '@testing-library/react';
 import { MemoryRouter  } from 'react-router-dom';
@@ -34,19 +41,25 @@ import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
       <CategoryCard title="Test Category" description="desc" icon="*" />
     </MemoryRouter>
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
   const link = screen && screen.getByRole('link', { name: /test category/i }),;
   expect(link).toHaveAttribute('href/category/test-category'),;
@@ -83,6 +96,18 @@ it('treats underscores as spaces in slug', () => {;
   const link = screen && screen.getByRole('link', { name: /ai_tools/i }),;
   expect(link).toHaveAttribute('href/category/ai-tools'),;
 }),;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+it('renders category card with link to slug', () => {;
+  render(;
+    <MemoryRouter>;
+      <CategoryCard title='Test Category' description='desc' icon='*' />;
+    </MemoryRouter>;
+  ),;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {render, screen} from '@testing - library / react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components / CategoryCard';
@@ -108,6 +133,7 @@ it ('treats underscores as spaces in slug', () => {
   expect (link).toHaveAttribute ('href / category / ai - tools');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const link = screen.getByRole('link', { name: /test category/i }),
   expect(link).toHaveAttribute('href/category/test-category')
 }),
@@ -115,6 +141,9 @@ it ('treats underscores as spaces in slug', () => {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 it('normalizes slug with special characters', () => {
   render(
     <MemoryRouter>
@@ -145,6 +174,7 @@ it('treats underscores as spaces in slug', () => {
   ),
 
   const link = screen.getByRole('link', { name: /ai_tools/i }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { render, screen } from '@testing-library/react',;
 import { MemoryRouter } from 'react-router-dom',;
@@ -199,11 +229,14 @@ it ('removes accents from slug', () => {
   render (<MemoryRouter> <CategoryCard title="Crème Brûlée" description="desc" icon="*" /> </MemoryRouter>);
 it ('treats underscores as spaces in slug', () => {
   render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> </MemoryRouter>);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   expect(link).toHaveAttribute('href/category/ai-tools'),
 }),;
 ;
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
+<<<<<<< HEAD
 =======
 
   expect(link).toHaveAttribute('href/category/ai-tools')
@@ -212,3 +245,7 @@ it ('treats underscores as spaces in slug', () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

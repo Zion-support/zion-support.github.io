@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +27,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -39,19 +45,31 @@ import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
   const navigate = useNavigate();
 <<<<<<< HEAD
+<<<<<<< HEAD
     filteredTalents;
     isLoading;
     searchTerm;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Use our custom hook to manage state;
   const {;
 
+<<<<<<< HEAD
+=======
+  const navigate = useNavigate();
+  // Use our custom hook to manage state
+  const {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     filteredTalents;
     isLoading;
     searchTerm;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -74,6 +92,10 @@ function TalentDirectory() {
     filtered_talents;
     is_loading;
     search_term;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setSearchTerm;
     selected_skills;
     selected_availability;
@@ -83,6 +105,7 @@ function TalentDirectory() {
     experience_range;
     setExperienceRange;
     sort_option;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
@@ -118,13 +141,19 @@ export default function TalentDirectory() {
     sortOption;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setSortOption;
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
 <<<<<<< HEAD
+<<<<<<< HEAD
     selectedTalent;
+=======
+    selected_talent;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setSelectedTalent;
     expandedSections;
     isAuthenticated;
@@ -135,6 +164,7 @@ export default function TalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave} = useTalentDirectory();
+<<<<<<< HEAD
 =======
     selected_talent;
     setSelectedTalent;
@@ -148,6 +178,8 @@ export default function TalentDirectory() {
   const {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     filteredTalents,
     isLoading,
     searchTerm,
@@ -178,6 +210,9 @@ export default function TalentDirectory() {
     handleToggleSave} = useTalentDirectory(),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
@@ -186,6 +221,7 @@ export default function TalentDirectory() {
     // Navigate to the talent profile page
     navigate(`/talent/${id}`)
   }
+<<<<<<< HEAD
 =======
 
   const handleRequestHire = (talent: TalentProfile) => {
@@ -193,6 +229,8 @@ export default function TalentDirectory() {
     setIsHireModalOpen(true)
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const viewProfile = (id: string) => {
@@ -201,10 +239,13 @@ export default function TalentDirectory() {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -216,17 +257,26 @@ export default function TalentDirectory() {
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">
               <FilterSidebar
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
                 selectedSkills={selectedSkills}
@@ -246,9 +296,12 @@ export default function TalentDirectory() {
                 clearFilters={clearFilters}
               />
             </div>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -292,6 +345,7 @@ export default function TalentDirectory() {;
     clearFilters,;
     toggleSection,;
     handleToggleSave} = useTalentDirectory(),;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleRequestHire = (talent: TalentProfile) => {;
     setSelectedTalent(talent),;
@@ -370,6 +424,8 @@ export default function TalentDirectory() {;
   },;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleRequestHire = (talent: TalentProfile) => {;
     setSelectedTalent(talent),;
@@ -382,7 +438,10 @@ export default function TalentDirectory() {;
   };
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col space-y-8">;
@@ -392,6 +451,7 @@ export default function TalentDirectory() {;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           {/* Main content */}
@@ -404,6 +464,10 @@ export default function TalentDirectory() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -440,6 +504,10 @@ export default function TalentDirectory() {;
             <div className="w - full lg:w - 64 shrink - 0 hidden lg:block">;
               <FilterSidebar;
                 search_term={search_term}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 setSearchTerm={setSearchTerm}
                 selected_skills={selected_skills}
                 toggle_skill={toggle_skill}
@@ -455,8 +523,20 @@ export default function TalentDirectory() {;
                 toggle_section={toggle_section}
                 sort_option={sort_option}
                 setSortOption={setSortOption}
+<<<<<<< HEAD
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
+=======
+
+              />;
+            </div>;
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Mobile filter button */}
+            <div className="lg:hidden mb-4">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 onClick={() => setIsMobileFilterOpen(true)}
                 variant="outline"
@@ -465,6 +545,7 @@ export default function TalentDirectory() {;
                 Filter & Sort
               </Button>
             </div>
+<<<<<<< HEAD
 
                 variant="outline";
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
@@ -525,6 +606,19 @@ export default function TalentDirectory() {;
               handleRequestHire={handleRequestHire}
               savedTalents={savedTalents}
               handleToggleSave={handleToggleSave}
+=======
+            
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Results */}
+            <TalentResults;
+              filtered_talents={filtered_talents}
+              is_loading={is_loading}
+              view_profile={view_profile}
+              handleRequestHire={handleRequestHire}
+              saved_talents={saved_talents}
+              handleToggleSave={handleToggleSave}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               isAuthenticated={isAuthenticated}
               activeFiltersProps={{
                 selectedSkills;
@@ -535,8 +629,11 @@ export default function TalentDirectory() {;
                 toggleRegion;
                 priceRange;
                 setPriceRange;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -547,17 +644,24 @@ export default function TalentDirectory() {;
                 priceRange,;
                 setPriceRange,;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 setPriceRange;
                 experience_range;
                 setExperienceRange;
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 experienceRange;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 setExperienceRange;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 selectedSkills
                 toggleSkill
                 selectedAvailability
@@ -570,6 +674,7 @@ export default function TalentDirectory() {;
                 setExperienceRange
                 clearFilters}}
             />;
+<<<<<<< HEAD
               isAuthenticated={isAuthenticated}
               activeFiltersProps={{;
                 selectedSkills,;
@@ -585,6 +690,10 @@ export default function TalentDirectory() {;
                 clearFilters}}
             />;
             ;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
@@ -592,9 +701,15 @@ export default function TalentDirectory() {;
                   <div className="flex justify-between items-center mb-4">;
                     <h3 className="font-bold text-white">Filter & Sort</h3>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Button;
                       variant="ghost";
                       size="sm";
+=======
+                    <Button
+                      variant="ghost"
+                      size="sm"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onClick={() => setIsMobileFilterOpen(false)}
                       className="text-zion-slate-light h-8 w-8 p-0";
                     >;
@@ -602,6 +717,7 @@ export default function TalentDirectory() {;
                       <span className="sr-only">Close</span>;
                     </Button>;
                   </div>;
+<<<<<<< HEAD
                 experienceRange;
                 setExperienceRange;
 
@@ -626,6 +742,8 @@ export default function TalentDirectory() {;
                       <span className="sr-only">Close</span>
                     </Button>
                   </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FilterSidebar
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
@@ -649,6 +767,7 @@ export default function TalentDirectory() {;
                 </div>
               </div>
             )}
+<<<<<<< HEAD
                   <FilterSidebar;
 =======
                       className="text-zion-slate-light h-8 w-8 p-0";
@@ -701,6 +820,8 @@ export default function TalentDirectory() {;
                 </div>;
               </div>;
             )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </div>
@@ -710,6 +831,7 @@ export default function TalentDirectory() {;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </AppLayout>;
   ),; export default function TalentDirectory () {
   const navigate = useNavigate ();
@@ -859,3 +981,10 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </AppLayout>);
+}
+
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

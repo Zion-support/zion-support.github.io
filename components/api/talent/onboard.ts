@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -14,10 +15,13 @@ async function summarizeAndTag(input: {
   skills: string,
   tools?: string
 }) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
 
@@ -29,11 +33,16 @@ import { randomUUID } from 'crypto';
 =======
 import fs from 'fs';
 import path from 'path';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import fse from 'fs - extra';
 import { randomUUID } from 'crypto';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   tools?: string
 }) {
 
@@ -50,9 +59,13 @@ import { randomUUID } from 'crypto';
     new Set(
       (input && input.skills + ',' + (input && input.tools || ''))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .split(/[,\n]/)
         .map(s => s && s.trim())
         .filter(Boolean)
@@ -61,24 +74,31 @@ import { randomUUID } from 'crypto';
   );
   if (!openaiApiKey) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) }
 
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) }
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: openaiApiKey });
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const response = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
@@ -122,13 +142,18 @@ if ( {) {
       model: 'gpt - 4o - mini',
       messages: [;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const response = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { role: 'system', content: 'You are an expert technical recruiter.' },
         { role: 'user', content: prompt },
       ],
@@ -137,10 +162,15 @@ if ( {) {
     const content = response && response.choices?.[0]?.message?.content || '';
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { role: 'system', content: 'You are an expert technical recruiter.' };
         { role: 'user', content: prompt }];
       temperature: 0.4
@@ -148,6 +178,7 @@ if ( {) {
     const content = response.choices?.[0]?.message?.content || '';
     try {
       const parsed = JSON.parse(content);
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (
         parsed &&
@@ -157,11 +188,16 @@ if ( {) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };      }      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }];
       temperature: 0.4});
@@ -179,15 +215,20 @@ if (
 }
         return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } catch (_) {
       // fall through to heuristic;
     }
   } catch (err) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // ignore and fallback;
   }
@@ -197,10 +238,15 @@ if (
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
@@ -223,6 +269,8 @@ full_name,
       professional_title,
       profile_picture,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
@@ -271,7 +319,10 @@ if ( {) {
     const {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       bio,
       projects,
       yearsOfExperience,
@@ -280,15 +331,21 @@ if ( {) {
       availability,
       timezone,
 <<<<<<< HEAD
+<<<<<<< HEAD
       fullName;
 fullName;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const ext = path.extname(profilePicture.name) |'.png';
 =======
 =======
       fullName;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       professionalTitle;
       profilePicture;
       bio;
@@ -302,14 +359,20 @@ fullName;
       portfolioLinks;
       cvFile} = req.body || {};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads');
     const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions');
     await fse && fse.ensureDir(uploadsDir);
     await fse && fse.ensureDir(dataDir);
+<<<<<<< HEAD
 <<<<<<< HEAD
       const ext = path && path.extname(cvFile && cvFile.name) || '.pdf';
       const filename = `${id}-cv${ext}`;
@@ -331,21 +394,31 @@ fullName;
       const filePath = path.join(uploadsDir, filename);
       const base64Data = profilePicture.base64.split()[1];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     let savedCvPath: string | null = null;    if (cvFile?.base64 && cvFile?.name) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (base64Data) {
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
         savedProfileImagePath = `/uploads/${filename}`
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let savedCvPath: string | null = null,
     if (cvFile?.base64 && cvFile?.name) {
       const ext = path.extname(cvFile.name) || '.pdf';
@@ -353,17 +426,24 @@ fullName;
       const filePath = path.join(uploadsDir, filename);
       const base64Data = cvFile.base64.split()[1];
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedCvPath = `/uploads/${filename}`
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedCvPath = `/uploads/${filename}`
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       hourly_rate,
       portfolio_links,
       cv_file,
@@ -440,6 +520,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
         profile_image: savedProfileImagePath,
         cv: savedCvPath,
       },
+<<<<<<< HEAD
 <<<<<<< HEAD
       ai: {
         summary,
@@ -521,6 +602,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     },
     ai: {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       ai: {
 
@@ -528,13 +611,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         tags,
       },
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         summary;
         tags}};
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -550,7 +639,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
     }
     const perRecordPath = path.join (data_dir, `${id}.json`);
@@ -574,18 +666,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   $2
 }      } catch (_) {    const aggregate_path = path.join (process.cwd (), 'datatalent - submissions.json');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let aggregate: any[] = [];
     if () {) {
   $2
 }
       try {
 <<<<<<< HEAD
+<<<<<<< HEAD
         const content = await fse.readJSON(aggregatePath);
         if (Array.isArray(content)) aggregate = content;        if (Array.isArray(content)) aggregate = content
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         const content = await fse.readJSON (aggregate_path);
         if () aggregate = content) {
@@ -594,15 +693,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   $2
 }
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (_) {
         // ignore;
       }
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return res && res.status(200).json({ ok: true, id, summary, tags });
 
@@ -621,6 +726,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status(500).json({ error: 'Internal server error' });
 
@@ -640,12 +746,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
     // For now, just return success with AI data;
     return res.status (200).json ({ ok: true, id, summary, tags });
+=======
+    return res.status(500).json({ error: 'Internal server error' });
+  }    return res.status(200).json({ ok: true, id, summary, tags })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
   }    return res.status (200).json ({ ok: true, id, summary, tags });
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
+<<<<<<< HEAD
   }
 
 }
@@ -668,3 +779,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

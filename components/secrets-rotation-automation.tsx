@@ -19,12 +19,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+<<<<<<< HEAD
 
 import React from "react";
 import SEO from "../components/SEO";
@@ -44,6 +49,8 @@ import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function SecretsRotationAutomationPage() {
 
   const features = [
@@ -57,6 +64,7 @@ export default function SecretsRotationAutomationPage() {
 
 export default function SecretsRotationAutomationPage() {
   const features = [
+<<<<<<< HEAD
 =======
 =======
 
@@ -75,6 +83,8 @@ export default /**
 function SecretsRotationAutomationPage() {
   const features = [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -136,6 +146,7 @@ function SecretsRotationAutomationPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -148,6 +159,10 @@ function SecretsRotationAutomationPage() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
+=======
+
+return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <SEO;
@@ -166,6 +181,10 @@ function SecretsRotationAutomationPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -224,6 +243,7 @@ function SecretsRotationAutomationPage() {
         </section>;
       </main>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -405,3 +425,7 @@ return (
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

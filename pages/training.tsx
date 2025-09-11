@@ -1,10 +1,14 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 export default function Training() {
@@ -30,22 +34,31 @@ import React from 'react';
 import Layout from '../components/Layout';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Training() {
 
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Training() {
 
 
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -63,6 +76,9 @@ export default function TrainingPage() {
   const [expandedProgram, setExpandedProgram] = useState<number | null>(null);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const trainingCategories = [
     { id: 'all', name: 'All Programs', count: 24 },
     { id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },
@@ -243,6 +259,7 @@ export default function TrainingPage() {
       title: 'Enterprise AI Integration',
       description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
       category: 'enterprise-it',
+<<<<<<< HEAD
 
 origin/automation-improvements-final
 
@@ -722,11 +739,60 @@ export default function TrainingPage() {
         <GraduationCap className='w-6 h-6' />
       )
     );  };
+=======
+      duration: '10 weeks',
+      level: 'Intermediate',
+      price: '$2,299',
+    rating: 4.7,
+      students: '823',
+      icon: <Building className="w-8 h-8" />
+    };
+    {
+      id: 14,
+      title: 'Cloud-Native AI Development',
+      description: 'Build and deploy AI applications using cloud-native technologies and practices.',
+      category: 'enterprise-it',
+      duration: '8 weeks',
+      level: 'Intermediate',
+      price: '$1,899',
+    rating: 4.6,
+      students: '1,134',
+    icon: <Server className="w-8 h-8" />
+    };
+    {
+      id: 15,
+      title: 'DevOps for AI Systems',
+      description: 'Implement DevOps practices specifically for AI and machine learning systems.',
+      category: 'enterprise-it',
+      duration: '6 weeks',
+      level: 'Intermediate',
+      price: '$1,599',
+    rating: 4.8,
+      students: '756',
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
+
+  const filteredPrograms = allPrograms.filter(program => 
+    selectedCategory === 'all' || program.category === selectedCategory
+  );
+
+  const getCategoryIcon = (category: string) => {
+    const icons = {
+      'ai-consciousness': <Brain className="w-6 h-6" />;
+      'quantum-computing': <Atom className="w-6 h-6" />;
+      'autonomous-ops': <Rocket className="w-6 h-6" />;
+      'enterprise-it': <Building className="w-6 h-6" />
+    };
+    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
+  };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const getCategoryColor = (category: string) => {
     const colors = {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       'ai-consciousness': 'cyan',
       'quantum-computing': 'purple',
@@ -762,10 +828,33 @@ export default function TrainingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+      'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
+    };
+    return colors[category as keyof typeof colors] || 'gray'
+  };
+
+  const toggleProgram = (id: number) => {
+    setExpandedProgram(expandedProgram === id ? null : id)
+
+  },
+  return (
+
+    <Layout>
+      <SEO 
+        title="Training & Certification - Zion Tech Group"
+        description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
+      />
+      
+      <div className="min-h-screen">
+        {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -781,6 +870,11 @@ export default function TrainingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Training & Certification
@@ -805,6 +899,9 @@ export default function TrainingPage() {
             </motion.div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="text-center">
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
@@ -817,6 +914,7 @@ export default function TrainingPage() {
   )
 };
 
+<<<<<<< HEAD
 export default Training;
 };export default Training;
         </section>
@@ -1580,6 +1678,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     </Layout>
 
@@ -1590,14 +1690,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
   opacity: 0, y: 20 
@@ -1607,6 +1712,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }transition= {
   {
   duration: 0.8 
+=======
+  {
+  opacity: 0, y: 20 
+
+}animate= {
+  {
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }> <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6" > Training & Certification </h1> </p> <div className="flex flex-wrap justify-center gap-4 text-gray-400" > <div className="flex items-center gap-2" > <GraduationCap className="w-5 h-5" /> <span>Expert-Led Training</span> </div> <div className="flex items-center gap-2" > <Award className="w-5 h-5" /> <span>Industry Certifications</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5" /> <span>Global Community</span> </div> </div> </motion.div> </div> </section> key= {
   category.id 
 }onClick= {
@@ -1631,6 +1749,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
+<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0 
@@ -1659,6 +1778,22 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export default Training;
 <<<<<<< HEAD
 
+=======
+
+}whileInView= {
+  {
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8 
+
+}viewport= {
+  {
+  once: true 
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 }
 origin/main
@@ -1670,20 +1805,28 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };export default Training;
 
 origin/main
   )
+<<<<<<< HEAD
   );
 };
 }export default Training;
 ;
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default Training;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1720,6 +1863,7 @@ export default Training,
               </div>;
             </motion.div>;
           </div>;
+<<<<<<< HEAD
         </section>;
       </div>;
     </Layout>;
@@ -1729,3 +1873,20 @@ export default Training;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <div className="text - center">;
+            <p className="text - gray - 600">Training page is under construction.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>);
+}
+}
+  );
+}
+;
+export default Training;
+}export default Training;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

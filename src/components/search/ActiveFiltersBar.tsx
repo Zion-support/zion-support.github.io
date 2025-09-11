@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default ActiveFiltersBar; import React from 'react'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,6 +33,7 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 interface ActiveFiltersBarProps {;
@@ -177,6 +181,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -236,12 +242,16 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ActiveFiltersBar; import React from 'react'
 
@@ -350,6 +360,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchFilters {;
   types: string[],;
   category: string,;
@@ -449,6 +461,10 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
   if (activeFilters && activeFilters.length === 0) {;
     return null;
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
   return (
@@ -457,11 +473,15 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         <Badge 
           key = {filter.key,}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           variant="secondary" 
@@ -482,12 +502,19 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
           variant="secondary" 
           variant="secondary" 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
           variant="secondary" 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="flex items-center gap-1 pl-2 pr-1"
+=======
+          className="flex items-center gap-1 pl-2 pr-1"
+        >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <span className="text-xs">
             {filter.label}: {filter.value}
           </span>
@@ -507,6 +534,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
 <<<<<<< HEAD
+<<<<<<< HEAD
             onClick = {(,) => removeFilter(filter.key),}
             onClick = {(,) => removeFilter(filter.key),}
             onClick={() => removeFilter(filter.key)}
@@ -517,6 +545,12 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            onClick = {(,) => removeFilter(filter.key),}
+            onClick={() => removeFilter(filter.key)}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -527,6 +561,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         variant="ghost"
         size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
         onClick = {onClearAll,}
 ursor/fix-website-loading-errors-and-merge-6662
         onClick = {onClearAll,}
@@ -534,14 +569,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        onClick = {onClearAll,}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         onClick={onClearAll}
 
 
         className="text-xs h-6 px-2"
+<<<<<<< HEAD
+=======
+      >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         Clear all
       </Button>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -558,6 +601,14 @@ interface SearchFilters {
   max_price: number,
   min_rating: number,
   sort: string;
+=======
+
+export default ActiveFiltersBar,
+interface Filter {
+  key: string
+  value: string
+  label: string
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
@@ -705,6 +756,10 @@ if ( {) {
 
 
 },
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default ActiveFiltersBar,
 
         className="text-xs h-6 px-2">;
@@ -720,6 +775,7 @@ interface Filter {;
   value: string;
   label: string;
 }
+<<<<<<< HEAD
 export default ActiveFiltersBar
 },
 
@@ -734,12 +790,18 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
   filters: Filter[]
   onRemoveFilter: key: string void
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 
   filters: Filter[];
   onRemoveFilter: key: string void;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onClearAll: : unknown void}
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
@@ -750,6 +812,7 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 '"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ActiveFiltersBar,
       </button>;
     </div>;
@@ -757,6 +820,8 @@ export default ActiveFiltersBar,
 '";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   filters: Filter[];
   onRemoveFilter: key: string void;
   onClearAll: : unknown void}
@@ -766,7 +831,11 @@ export default ActiveFiltersBar,
       </button>;
     </div>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 '";
 =======
 '";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+'";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

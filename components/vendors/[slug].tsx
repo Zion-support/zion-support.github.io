@@ -1,6 +1,7 @@
 import type { GetServerSideProps } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function VendorProfilePage({ vendor }: Props) {
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function VendorProfilePage(): any ({ vendor }: Props) {;
@@ -12,12 +13,18 @@ import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Props = { vendor: Vendor | null };
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function VendorProfilePage({ vendor }: Props) {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
@@ -39,6 +46,10 @@ export default function VendorProfilePage({ vendor }: Props) {
     try {
       const res = await fetch('/api/vendors/lead', {
 =======
+=======
+  const [message, setMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       });
@@ -61,7 +72,10 @@ export default function VendorProfilePage({ vendor }: Props) {
       setLoading(false);
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ vendorId: vendor.id, title })});
@@ -113,6 +127,7 @@ function submit_lead() {
       set_loading (false);    }
   }
   return (
+<<<<<<< HEAD
     <div className='space - y-8'>;
       <div className='flex items - center gap - 4'>      if (throw new Error ('Failed to submit')) {
   $2
@@ -198,6 +213,8 @@ function submit_lead() {
     }
   }
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space-y-8'>
       <div className='flex items-center gap-4'>
         {vendor.logoUrl ? (
@@ -256,6 +273,7 @@ function submit_lead() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {vendor.packages.map(p => (
               <div
+<<<<<<< HEAD
                 key={p.id}
                 className='border border-gray-200 dark:border-gray-800 rounded p-4'
               >
@@ -285,6 +303,8 @@ function submit_lead() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={p && p.id}
                 className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
                 <div className='font-medium'>{p && p.title}</div>;
@@ -300,19 +320,28 @@ function submit_lead() {
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {vendor && vendor.sampleProjects && vendor && vendor.sampleProjects.length > 0 && (;
         <div>;
           <h2 className='text-lg font-medium mb-2'>Sample Projects</h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
             {vendor && vendor.sampleProjects.map(sp => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div
                 key={sp && sp.id}
                 className='border border-gray-200 dark:border-gray-800 rounded overflow-hidden'>;
@@ -336,6 +365,7 @@ function submit_lead() {
                 ) : (;
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}
+<<<<<<< HEAD
                 <div className="p-3">;
                   <div className="font-medium">{sp && sp.title}</div>;
                   <div className="text-sm text-gray-500">{sp && sp.description}</div>;
@@ -405,16 +435,21 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
                 ) : (
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />
                 )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="p-3">
                   <div className="font-medium">{sp.title}</div>
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
 
+<<<<<<< HEAD
     }
   }
 
   return (
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </div>
 
@@ -427,22 +462,40 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
 
                 </div>
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+            ))}
+          </div>;
+        </div>;
+      )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             ))}
           </div>
         </div>
       )}
+<<<<<<< HEAD
             {loading ? 'Submitting...' : 'Send'}
           </button>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
         <form onSubmit={submitLead} className='space-y-3'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <input
             name='title'
             required
             placeholder='What do you need?'
             className='w-full border rounded px-3 py-2 bg-transparent'
+<<<<<<< HEAD
           />
           <button
             disabled={loading}
@@ -471,6 +524,15 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
           </button>
           {message && <div className="text-sm">{message}</div>}
 =======
+=======
+          />;
+          <button
+            disabled={loading}
+            className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
+            {loading ? 'Submitting...' : 'Send'}
+          </button>;
+          {message && <div className='text-sm'>{message}</div>}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div>
         <h2 className="text-lg font-medium mb-2">Request a Quote</h2>
@@ -480,16 +542,22 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
             {loading ? 'Submitting...' : 'Send'}
           </button>
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {message && <div className="text-sm">{message}</div>}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          {message && <div className="text-sm">{message}</div>}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </form>;
       </div>;
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug |'');
@@ -508,6 +576,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 };
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       set_loading (false);
     }
   }
@@ -645,6 +715,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
   const slug = String (ctx.params?.slug || '');
   const { getVendorBySlug } = await import ('../../utils / vendor - store');
@@ -655,12 +726,15 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </form>
       </div>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
 
+<<<<<<< HEAD
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
@@ -677,3 +751,8 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

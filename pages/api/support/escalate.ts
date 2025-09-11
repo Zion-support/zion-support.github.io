@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
@@ -19,7 +23,10 @@ export default async function handler(
     tag?: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_json, write_json  } from '../../../utils / fs_db';
 import { tagOperatorSession  } from '../../../utils / operator';
@@ -33,6 +40,7 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +57,8 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   const { sessionId, reason, tag } = req.body as {
     sessionId: string;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     reason?: string;
     tag?: string;
   }
@@ -58,9 +68,13 @@ export default async function handler(
   const requests = read_json < any[]>("support / requests.json", []);
   const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const record = {
     id
     sessionId
@@ -83,6 +97,7 @@ export default async function handler(
     tag: tag ?? "escalate",
     status: "open",
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';
@@ -99,12 +114,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ ok: true, id })
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
     created_at: Date.now (),
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch (error) {
     console.error("Error:", error);
@@ -115,6 +135,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   write_json ("support / requests.json", requests);
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
+<<<<<<< HEAD
 
 }
 
@@ -148,3 +169,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

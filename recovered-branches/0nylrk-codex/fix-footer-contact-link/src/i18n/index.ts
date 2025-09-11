@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslation from './locales/en/translation ;
@@ -6,6 +7,8 @@ import esTranslation from './locales/es/translation ;
 import ptTranslation from './locales/pt/translation ;
 import arTranslation from './locales/ar/translation ;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import i18n from 'i18next';
 import { initReactI18next  } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector',
@@ -13,9 +16,12 @@ import enTranslation from './locales/en/translation.json',
 import esTranslation from './locales/es/translation.json',
 import ptTranslation from './locales/pt/translation.json',
 import arTranslation from './locales/ar/translation.json',
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -37,6 +43,7 @@ i18n
     }
     fallbackLng: 'en', // Default language
 <<<<<<< HEAD
+<<<<<<< HEAD
     debug: process && process.env.NODE_ENV === 'development',
 
     debug: process.env.NODE_ENV === 'development'
@@ -45,6 +52,11 @@ i18n
     debug: process && process.env.NODE_ENV === 'development',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    debug: process && process.env.NODE_ENV === 'development',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -54,6 +66,7 @@ i18n
       caches: ['localStorage']
     }});
 // For RTL language support
+<<<<<<< HEAD
 <<<<<<< HEAD
 document && document.documentElement.dir = i18n && i18n.dir();
 // Listen for language changes to update RTL/LTR direction
@@ -68,6 +81,8 @@ i18n.on('languageChanged', (lng) => {
   // Save language preference to localStorage
   localStorage.setItem('zion_language', lng);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 document && document.documentElement.dir = i18n && i18n.dir();
 
@@ -79,12 +94,16 @@ i18n && i18n.on('languageChanged', (lng) => {
   localStorage && localStorage.setItem('zion_language', lng);
   
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 });
 export default i18n;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -99,6 +118,8 @@ import ar_translation from './locales / ar / translation.json';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import i18n from 'i18next',;
 import { initReactI18next } from 'react-i18next',;
 import LanguageDetector from 'i18next-browser-languagedetector',;
@@ -106,6 +127,7 @@ import enTranslation from './locales/en/translation.json',;
 import esTranslation from './locales/es/translation.json',;
 import ptTranslation from './locales/pt/translation.json',;
 import arTranslation from './locales/ar/translation.json',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import i18n from 'i18next',;
@@ -158,6 +180,8 @@ i18n.on('languageChanged', (lng) => {;
 }),;
 export default i18n;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Initialize i18next;
 i18n;
@@ -206,6 +230,9 @@ i18n.on ('language_changed', (lng) => {
 
 
 export default i18n;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

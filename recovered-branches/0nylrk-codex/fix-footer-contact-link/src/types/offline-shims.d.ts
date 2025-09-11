@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module 'react' {
   const React: any;
 
@@ -11,25 +12,37 @@ declare module 'react' {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
   export function useState<S>(
 <<<<<<< HEAD
+<<<<<<< HEAD
     initialState: S | (() => S);
 =======
     initialState: S | (() => S)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    initialState: S | (() => S)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ): [S, Dispatch<SetStateAction<S>>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
@@ -38,6 +51,7 @@ declare module 'react' {
   export function useId(): string
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   export type ReactElement = any,
@@ -55,6 +69,8 @@ declare module 'react' {
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     render: (props: P, ref: Ref<T>) => ReactElement | null
   ): any;
 =======
@@ -87,7 +103,10 @@ declare module 'react' {
   export type ComponentType<P = {}> = (props: P) => any,;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -127,10 +146,18 @@ declare module 'react' {
   export type LegacyRef < T = any> = any;
   export type ElementRef < T = any> = any,
   export type CSSProperties = Record < string, string | number | undefined>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 declare module 'react-dom' {
   export * from 'react-dom / index';
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 declare module 'react / jsx - runtime' {
   export const jsx: any;
   export const jsxs: any,
@@ -138,11 +165,17 @@ declare module 'react / jsx - runtime' {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 declare module 'react-dom' {
   export * from 'react-dom/index'
@@ -154,10 +187,15 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -187,6 +225,7 @@ declare module 'react' {;
   export type ReactElement = any,;
   export type ComponentType<P = {}> = (props: P) => any,;
   export type FC<P = {}> = (props: P) => any,;
+<<<<<<< HEAD
 }
 declare module 'react' {;
   const React:any,;
@@ -217,6 +256,8 @@ declare module 'react' {;
   export type ReactElement = any,;
   export type ComponentType<P = {}> = (props:P) => any,;
   export type FC<P = {}> = (props:P) => any,;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export type ComponentProps<T = any> = any,;
   export type ComponentPropsWithoutRef<T = any> = any,;
   export type PropsWithoutRef<T = any> = any,;
@@ -235,6 +276,7 @@ declare module 'react' {;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 declare module 'react-dom' {
   export * from 'react-dom/index'
@@ -248,20 +290,29 @@ declare module 'react/jsx-runtime' {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 declare module 'react/jsx-runtime' {;
   export const jsx: any,;
   export const jsxs: any;
   export const Fragment: any;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -285,3 +336,9 @@ declare module 'react/jsx-runtime' {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

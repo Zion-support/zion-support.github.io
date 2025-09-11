@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import {Button} from '@/components/ui/button'
 import Link from 'next/link'
@@ -45,6 +46,8 @@ interface ProjectActionsProps {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 onAddMilestone
 }: ProjectActionsProps) {
 
@@ -77,6 +80,7 @@ export function ProjectActions(): any ({;
         <Button onClick={onAddMilestone}>Add Milestone</Button>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function ProjectActions({
   projectId,
   isUnderDispute,
@@ -86,11 +90,14 @@ export function ProjectActions({
 }: ProjectActionsProps) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="flex gap-2">
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
@@ -101,10 +108,14 @@ export function ProjectActions({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             View Active Dispute
           </Link>
         </Button>
       ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
@@ -126,6 +137,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>;
   );
@@ -133,6 +148,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <RaiseDisputeButton projectId={projectId} variant='outline' />
       {isTalent && !isUnderDispute && (
@@ -159,12 +175,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
         </Button>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -218,3 +237,9 @@ function ProjectActions() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    </div>;
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

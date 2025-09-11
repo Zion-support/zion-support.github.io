@@ -1,12 +1,32 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {useState} from 'react';
+import {use_messaging} from '@/context / MessagingContext';
+import {MainNavigation} from './MainNavigation';
+import {Logo} from '@/components / header / Logo';
+import {ModeToggle} from '@/components / ModeToggle';
+import {Menu, X} from 'lucide-react';
+
+
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const isMobile = useIsMobile();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {MobileMenu} from '@/components / header / MobileMenu';
 import {useIsMobile} from '@/hooks / use - mobile';
@@ -23,10 +43,18 @@ function AppHeader() {
   try {
     const { unread_count: count } = use_messaging (),
     unread_count = count;
+<<<<<<< HEAD
+=======
+
+  } catch (error) {
+    console.warn ('Messaging context not available');
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.warn('Messaging context not available')
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState  } from 'react';
@@ -64,6 +92,9 @@ export function AppHeader() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -85,6 +116,7 @@ export function AppHeader() {;
     console.warn('Messaging context not available');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -101,6 +133,15 @@ export function AppHeader() {;
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+  
+  return (
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Try to access the messaging context, but provide a fallback value if it's not available;
   let unreadCount = 0;
   try {;
@@ -109,6 +150,7 @@ export function AppHeader() {;
   } catch (error) {;
     console && console.warn('Messaging context not available');
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 
@@ -140,6 +182,10 @@ export function AppHeader() {;
 
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">;
         <div className="container flex h-16 items-center px-4 sm:px-6">;
@@ -148,17 +194,23 @@ export function AppHeader() {;
             <MainNavigation unreadCount={unreadCount} />;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ;
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none";
               aria-expanded={mobileMenuOpen}
@@ -168,12 +220,15 @@ export function AppHeader() {;
               {mobileMenuOpen ? (;
                 <X className="block h-6 w-6" aria-hidden="true" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </button>;
           </div>;
           <ModeToggle />;
         </div>;
       </header>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ) : (;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;
               )}
@@ -185,12 +240,16 @@ export function AppHeader() {;
         </div>;
       </header>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (;
         <div className="md:hidden fixed inset-0 z-40 pt-16">;
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
               ) :(;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;              )}
@@ -208,10 +267,13 @@ export function AppHeader() {;
             className="absolute inset-0 bg-black/50 backdrop-blur-sm";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true";
           />;
           <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   
@@ -251,6 +313,8 @@ export function AppHeader() {;
             aria-hidden="true"
           />
           <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
@@ -258,6 +322,7 @@ export function AppHeader() {;
           </div>
         </div>
       )}
+<<<<<<< HEAD
 =======
             <MobileMenu
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -271,15 +336,25 @@ export function AppHeader() {;
       )}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 
+<<<<<<< HEAD
       )}
 ;
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>;
+=======
+    </>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
@@ -324,6 +399,7 @@ export function AppHeader() {;
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
 ) : (<Menu className="block h-6 w-6" aria-hidden="true" />) 
 }</button> </div> <ModeToggle /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {
@@ -350,3 +426,6 @@ export function AppHeader() {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

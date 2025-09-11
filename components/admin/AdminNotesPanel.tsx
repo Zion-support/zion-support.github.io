@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,8 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useMemo, useState } from 'react';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
@@ -29,6 +32,15 @@ export type AdminNotesPanelProps = {;
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
+<<<<<<< HEAD
+=======
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+export type AdminNotesPanelProps = {;
+  targetType: string; // e.g., 'user' | 'listing'
+  targetId: string; // unique identifier for the target
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 type Note = {
@@ -36,6 +48,7 @@ type Note = {
   target_type: string;
   target_id: string;
   text: string;
+<<<<<<< HEAD
 
 export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
@@ -55,10 +68,15 @@ type Note = {
   targetType: string;
   targetId: string;
   text: string;
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   authorId: string;
   createdAt: number;
 }
 export default function AdminNotesPanel({
+<<<<<<< HEAD
   targetType
   targetId
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
@@ -66,15 +84,24 @@ export default function AdminNotesPanel({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Note = {
   id: string
   targetType: string
@@ -87,15 +114,20 @@ type Note = {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -108,6 +140,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -115,10 +150,15 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function fetchNotes() {;
     try {;
       setLoading(true);
@@ -127,9 +167,13 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         {;
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       );
       if (!res && res.ok) {;
@@ -137,9 +181,13 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   author_id: string;
   created_at: number;
 }
@@ -191,16 +239,22 @@ if ( {) {
       const data = await res.json ();
       set_notes (data.notes || []);
 <<<<<<< HEAD
+<<<<<<< HEAD
     } finally {
       set_loading (false);    }
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     } finally {
       set_loading (false);    }
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const data = await res && res.json();
       setNotes(data && data.notes || []);
     } finally {;
@@ -208,6 +262,7 @@ if ( {) {
   }
   useEffect(() => {;
     if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);      if (!res && res.ok) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
         setNotes([]);
         return;
@@ -237,6 +292,8 @@ if ( {) {
     } finally {;
       setAdding(false);    }      if (!res && res.ok) {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       });
       if (!res && res.ok) {;
@@ -247,10 +304,17 @@ if ( {) {
       await fetchNotes();
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
+        body: JSON.stringify({ targetType, targetId, text })});
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
   }, [isAdmin, targetType, targetId]);
@@ -269,15 +333,21 @@ if ( {) {
       });
       if (!res.ok) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    } finally {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         alert('Failed to add note');
         return;
       }
       setText('');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -320,15 +390,28 @@ if ( {) {
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      setAdding(false);    }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+    }
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <input
             id='isAdminToggle'
             type='checkbox'
@@ -357,6 +440,7 @@ if ( {) {
             className='border rounded px-2 py-1'
             value={adminId}
 <<<<<<< HEAD
+<<<<<<< HEAD
             onChange={e => setAdminId(e.target.value)}
             placeholder='Admin ID'
           />
@@ -364,6 +448,8 @@ if ( {) {
       </div>
       <div className='space-y-2'>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             onChange={e => setAdminId(e && e.target.value)}
             placeholder='Admin ID';
@@ -373,12 +459,16 @@ if ( {) {
 
       <div className='space-y-2'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <textarea
           className='w-full border rounded-md px-3 py-2'
           rows={3}
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
+<<<<<<< HEAD
 <<<<<<< HEAD
           disabled={!text && text.trim() || adding}
           onClick={addNote}
@@ -473,14 +563,35 @@ return (
       </div>;
     </div>;
   );
+=======
+      </div>
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+      </div>;
+    </div>;
+  );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 
 }
+<<<<<<< HEAD
 
 }
   );
 }
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect (() => {
     if (fetch_notes ()) {
   $2
@@ -640,6 +751,10 @@ if ( {) {
               <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
                 <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
                 <div>{n.text}</div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onChange={e => setText(e.target.value)}
         />
         <button
@@ -675,6 +790,7 @@ if ( {) {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
   );
 }
@@ -688,3 +804,7 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

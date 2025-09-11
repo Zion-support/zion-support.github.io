@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -29,6 +30,8 @@ pricingAnalysis: {;
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -36,6 +39,7 @@ import { TrendingUp, TrendingDown, DollarSign, Target;
   Globe, Zap, Shield, Crown, Brain, Atom
  } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -56,6 +60,11 @@ pricingAnalysis: {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const marketData = {
     'ai-consciousness': {
       marketSize: '$45.2B'
@@ -168,7 +177,10 @@ pricingAnalysis: {
         lowEnd: '$300 per user/month'
         midRange: '$750 per user/month'
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const markets = [;
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },;
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },;
@@ -290,9 +302,13 @@ pricingAnalysis: {
         ourPosition: 'Competitive pricing with AI advantages';
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
     'enterprise-it': {;
       marketSize: '$1 && 1.2T',;
@@ -331,6 +347,7 @@ pricingAnalysis: {
         highEnd: '$100 per user/month',;
         ourPosition: 'Competitive pricing with AI advantages';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -348,6 +365,17 @@ pricingAnalysis: {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      }
+    }
+  }
+  };
+
+  const currentMarket = marketData[selectedMarket as keyof typeof marketData];
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getGrowthIcon = (trend: string) => {;
     return trend === 'up' ? ;
       <TrendingUp className="w-5 h-5 text-green-400" /> : ;
@@ -510,9 +538,13 @@ pricingAnalysis: {
           </div>;
           <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
@@ -525,6 +557,7 @@ pricingAnalysis: {
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -541,14 +574,30 @@ pricingAnalysis: {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+
+
+      {/* Competitive Analysis Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
             Competitive Analysis;
           </motion && motion.h2>;
@@ -557,17 +606,25 @@ pricingAnalysis: {
               <motion&& motion.div
                 key={competitor && competitor.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">;
                 <div className="flex flex-col lg:flex-row gap-6">;
                   <div className="flex-1">;
@@ -596,16 +653,22 @@ pricingAnalysis: {
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">;
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                               {strength}
                             </li>;
                           ))}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                               {strength}
                             </li>;
                           ))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </ul>;
                       </div>;
                       <div>;
@@ -615,24 +678,34 @@ pricingAnalysis: {
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">;
                               <div className="w-3 h-3 bg-red-400 rounded-full flex-shrink-0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                               {weakness}
                             </li>;
                           ))}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                               {weakness}
                             </li>;
                           ))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </ul>;
                       </div>;
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {competitor && competitor.name === 'Zion Tech Group' && (;
                     <div className="lg:w-48 flex-shrink-0">;
                       <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-center">;
@@ -642,17 +715,25 @@ pricingAnalysis: {
                       </div>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )}
                 </div>;
               </motion && motion.div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           <div className="space-y-6">;
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">;
@@ -885,6 +966,7 @@ pricingAnalysis: {
         </div>;
       </section>;
       {/* Pricing Analysis Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.h2 
@@ -900,10 +982,17 @@ pricingAnalysis: {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+          <motion.h2 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
               { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' },
@@ -911,14 +1000,32 @@ pricingAnalysis: {
               { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
 
 
+=======
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Pricing Analysis
+          </motion.h2>
+          <div className="grid lg:grid-cols-4 gap-6 mb-12">
+            {[
+              { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' }
+              { label: 'Mid Range', price: currentMarket.pricingAnalysis.midRange, color: 'from-yellow-500 to-orange-600' }
+              { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' }
+              { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' },
+              { label: 'Mid Range', price: currentMarket.pricingAnalysis.midRange, color: 'from-yellow-500 to-orange-600' },
+              { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               { label: 'Our Position', price: currentMarket.pricingAnalysis.ourPosition, color: 'from-cyan-500 to-blue-600' }
             ].map((tier, index) => (
               <motion.div
                 key={tier.label}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
             Pricing Analysis;
           </motion && motion.h2>;
@@ -944,22 +1051,32 @@ pricingAnalysis: {
               </motion && motion.div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
           <motion&& motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
           <motion&& motion.div
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.5 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center">;
             <h3 className="text-2xl font-bold mb-4">Strategic Advantages</h3>;
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">;
@@ -976,9 +1093,13 @@ pricingAnalysis: {
                   title: 'Enterprise Focus',;
                   description: 'Built specifically for enterprise needs with security, scalability, and compliance features.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }
               ].map((advantage, index) => (;
                 <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">;
@@ -991,6 +1112,7 @@ pricingAnalysis: {
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1007,23 +1129,43 @@ pricingAnalysis: {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+
+
+      {/* Market Trends Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
             Market Trends & Opportunities;
           </motion && motion.h2>;
           <div className="grid md:grid-cols-2 gap-8">;
             <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1040,16 +1182,22 @@ pricingAnalysis: {
                   </li>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </ul>;
             </motion && motion.div>;
             <motion&& motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </ul>;
             </motion && motion.div>;
             <motion&& motion.div
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1065,6 +1213,14 @@ pricingAnalysis: {
                     <span className="text-gray-300">{opportunity}</span>;
                   </li>;
                 ))}
+<<<<<<< HEAD
+=======
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </ul>;
             </motion && motion.div>;
@@ -1072,34 +1228,80 @@ pricingAnalysis: {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
 
-=======
 
-
-
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
+=======
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md: text-5xl font-bold mb-6">
+              Ready to Compete in the Market?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Our competitive pricing and unique AI consciousness features give you the edge
+              you need to succeed in today's rapidly evolving technology landscape.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/pricing"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                View Our Pricing
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                href="/contact"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
+              >
+                Get Custom Quote
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+}
+}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 };
 
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 'quantum-computing': {
   marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
   ];
@@ -1146,10 +1348,13 @@ pricingAnalysis: {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default MarketPricing;
 
 export default MarketPricing;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default MarketPricing;export default MarketPricing;
@@ -1159,7 +1364,10 @@ export default MarketPricing;export default MarketPricing;
 export default MarketPricing;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
   'ai - consciousness': {
   market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
@@ -2002,6 +2210,7 @@ pricing_analysis: {
 export default MarketPricing;export default MarketPricing;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
@@ -2009,16 +2218,23 @@ export default MarketPricing;export default MarketPricing;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const _marketData = {_'ai-consciousness': {
@@ -3050,3 +3266,6 @@ export default MarketPricing;export default MarketPricing;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

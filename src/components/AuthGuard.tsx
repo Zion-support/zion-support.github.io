@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       const redirectTo = options?.redirectTo || '/login'
       const returnUrl = options?.returnUrl || router.asPath
           if (!requireAuth({ showToast: false })) return false,
@@ -30,6 +31,8 @@ interface AuthGuardProps {;
       const redirectTo = options?.redirectTo |'/login'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const redirectTo = options?.redirectTo |'/login'
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
@@ -41,6 +44,7 @@ const redirectTo = options?.redirectTo |'/login'
     user
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     isLoading}
 }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -48,6 +52,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const redirectTo = options?.redirectTo || '/login';
+=======
+
+
+      const redirectTo = options?.redirectTo || '/login';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const returnUrl = options?.returnUrl || router && router.asPath;
           if (!requireAuth({ showToast: false })) return false,;
 
@@ -57,6 +66,10 @@ const redirectTo = options?.redirectTo || '/login';
 
     const userRoles = user?.role ? [user && user.role] : [];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     requireAuth;
     requireRole;
     checkPermission;
@@ -64,6 +77,7 @@ const redirectTo = options?.redirectTo || '/login';
     user;
     isLoading}
 }
+<<<<<<< HEAD
 
 
 
@@ -361,3 +375,5 @@ export function useAuthGuard() {;
 }
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

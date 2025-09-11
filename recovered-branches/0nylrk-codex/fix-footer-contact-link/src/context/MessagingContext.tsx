@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessagingContextType  } from '@/types/messaging';
@@ -9,6 +10,9 @@ import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging'
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -24,10 +28,15 @@ const defaultContext: MessagingContextType = {
   loadMessages: async () => {}
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -51,9 +60,13 @@ const defaultContext: MessagingContextType = {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -74,6 +87,7 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -158,12 +172,28 @@ export function useMessaging(): MessagingContextType {
   return context;
 }
 =======
+=======
+);
+),
+
+// Hook for using the messaging context
+export function useMessaging(): MessagingContextType {
+  // Cast to avoid type errors when React type definitions are missing;
+  const context = useContext(MessagingContext) as MessagingContextType;
+  // Cast to avoid type errors when React type definitions are missing
+  const context = useContext(MessagingContext) as MessagingContextType,
+  if (context === undefined) {
+    throw new Error('useMessaging must be used within a MessagingProvider')
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return context;
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {MessagingContextType} from '@/types / messaging';
@@ -210,10 +240,13 @@ function MessagingProvider() {
   const { user } = use_auth ();
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const {
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const {
 =======
@@ -221,22 +254,31 @@ export function MessagingProvider(): any ({ children }: { children: ReactNode })
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { user } = useAuth();
   const {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { user } = useAuth();
 
   const {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     messages;
     active_messages;
     setActiveMessages;
@@ -250,6 +292,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     send_message;
     create_conversation;
     markAsRead;
+<<<<<<< HEAD
 <<<<<<< HEAD
 );
 ),
@@ -367,14 +410,26 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       setConversations([]);
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
+<<<<<<< HEAD
   // Create context value with all the methods and states;
   const contextValue: MessagingContextType = {;
+=======
+
+
+  // Create context value with all the methods and states;
+  const contextValue: MessagingContextType = {;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -408,6 +463,10 @@ if ( {) {
 ;
   // Create context value with all the methods and states;
   const context_value: MessagingContextType = {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     messages;
     active_messages;
     conversations;
@@ -419,6 +478,7 @@ if ( {) {
     markAsRead;
     setActiveConversation;
 
+<<<<<<< HEAD
       {children}
 
     </MessagingContext && MessagingContext.Provider>;
@@ -434,10 +494,25 @@ if ( {) {
     </MessagingContext && MessagingContext.Provider>;
   );
 }
+=======
+    fetchConversations,;
+    loadMessages;
+  };
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {children}
+
+    </MessagingContext && MessagingContext.Provider>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     fetch_conversations,
     load_messages;
   }
 ;
+<<<<<<< HEAD
   return (
     <MessagingContext.Provider value={context_value}>;
       {children}
@@ -529,3 +604,5 @@ export function MessagingProvider({ children } { children:ReactNode }) {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

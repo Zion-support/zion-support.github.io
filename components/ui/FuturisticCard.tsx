@@ -19,20 +19,27 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 type Props = {;
 import React from './react';
 type Props = {
   title: string;
   description: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   cta?: React && React.ReactNode;
 };
@@ -42,6 +49,8 @@ export default function FuturisticCard(): any ({ title, description, cta }: Prop
     </div>;
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   cta?: React && React.ReactNode;
 };
@@ -49,6 +58,7 @@ export default function FuturisticCard(): any ({ title, description, cta }: Prop
 
 export default function FuturisticCard(): any ({ title, description, cta }: Props) {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="futuristic-card">;
       <div className="futuristic-card-glow" />;
@@ -78,6 +88,8 @@ function FuturisticCard() {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
 
     </div>
@@ -87,12 +99,17 @@ function FuturisticCard() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
       </div>
     </div>
   )
 }
 
+=======
+export default function FuturisticCard({ title, description, cta }: Props) {
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="futuristic-card">
       <div className="futuristic-card-glow" />
       <div className="relative z-10">
@@ -105,6 +122,9 @@ function FuturisticCard() {
   );
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

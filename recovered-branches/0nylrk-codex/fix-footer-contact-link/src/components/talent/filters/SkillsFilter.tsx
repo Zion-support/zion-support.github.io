@@ -4,6 +4,7 @@ import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {SkillsFilterProps} from "@/types/filters";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
@@ -12,10 +13,15 @@ import { Checkbox } from "@/components/ui/checkbox",
 import { SkillsFilterProps } from "@/types/filters",
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -66,16 +72,22 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </button>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
@@ -108,11 +120,15 @@ const POPULAR_SKILLS = [;
 
       </button>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className="flex items-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Checkbox
 
@@ -160,6 +176,8 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
             <div key={skill} className="flex items-center">;
               <Checkbox;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <Checkbox
                 id={`skill-${skill}`}
@@ -181,15 +199,22 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>;
   );
 }
 
+<<<<<<< HEAD
     </div>;
   );
 }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export /**
  * SkillsFilter - Function description
@@ -226,6 +251,7 @@ function SkillsFilter() {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 
 };
 ;
@@ -292,3 +318,12 @@ toggleSection
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

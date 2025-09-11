@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -73,6 +74,39 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   if (href) {;
     return (;
 
+=======
+'use client';
+import React, { forwardRef } from 'react';
+import Link from 'next/link';
+import LoadingSpinner from './LoadingSpinner';
+interface ButtonProps {children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  href?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  loading?: boolean;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
+  className?: string;
+  type?: 'button' | 'submit' | 'reset';
+  fullWidth?: boolean;
+  rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+}
+const Button = forwardRef<HTMLButtonElement ButtonProps>(({children;
+  variant = 'primary';
+  size = 'md';
+  href;
+  onClick;
+  disabled = false;
+  loading = false;
+  icon;
+  iconPosition = 'right';
+  className = '';
+  type = 'button';
+  fullWidth = false;
+  rounded = 'lg';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }, ref) => {const baseClasses = 'inline-flex items-center justify-center font-semibold transition-all duration-300 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
   const variantClasses = {;
     primary: 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl hover:shadow-purple-500/25';
@@ -157,8 +191,31 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
+<<<<<<< HEAD
   );
   if (href) {return (;
+=======
+
+'use client',
+import React, { forward_ref } from 'react',
+import Link from 'next / link',
+import LoadingSpinner from './LoadingSpinner',
+interface ButtonProps {
+  children: React.ReactNode,
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost',
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+  href?: string,
+  on_click?: () => void,
+  disabled?: boolean,
+  loading?: boolean,
+  icon?: React.ReactNode,
+  icon_position?: 'left' | 'right',
+  class_name?: string,
+  type?: 'button' | 'submit' | 'reset',
+  full_width?: boolean,
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ),;
   if (href) {;
     return (;
@@ -210,8 +267,7 @@ if ( {) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Link href={href} className={classes}>;
         {content}
-      </Link>;
-    );
+      </Link>);
   }
 <<<<<<< HEAD
 =======
@@ -229,19 +285,29 @@ if ( {) {
   return (
 ;
   return (;
+=======
+  return (
+=======
+;
+  return (;
     <button;
       ref={ref}
       type={type}
       className={classes}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       on_click={on_click}
       disabled={disabled || loading}
-      aria-label={typeof children === 'string' ? children : undefined}
+      aria - label={typeof children === 'string' ? children : undefined}
     >;
       {content}
+<<<<<<< HEAD
     </button>);
 }),
 Button.display_name = 'Button',
@@ -291,30 +357,46 @@ export function IconButton({icon;
   children;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {return (;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),;
 Button.displayName = 'Button',;
 export default Button,;
+
 // Specialized button variants;
-export function PrimaryButton(props: Omit<ButtonProps 'variant'>) {;
+export /**
+ * PrimaryButton - Function description
+ */
+function PrimaryButton() {
   return <Button {...props} variant="primary" />;
 }
-;
-export function SecondaryButton(props: Omit<ButtonProps 'variant'>) {;
+export /**
+ * SecondaryButton - Function description
+ */
+function SecondaryButton() {
   return <Button {...props} variant="secondary" />;
 }
-;
-export function OutlineButton(props: Omit<ButtonProps 'variant'>) {;
+export /**
+ * OutlineButton - Function description
+ */
+function OutlineButton() {
   return <Button {...props} variant="outline" />;
 }
-;
-export function GhostButton(props: Omit<ButtonProps 'variant'>) {;
+export /**
+ * GhostButton - Function description
+ */
+function GhostButton() {
   return <Button {...props} variant="ghost" />;
 }
-;
 // Icon button variant;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function IconButton({;
   icon,;
   children,;
@@ -340,9 +422,9 @@ function FloatingActionButton() {
 <<<<<<< HEAD
 
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
+
       {children}
-    </Button>;
-  );
+    </Button>);
 }
 // Floating action button;
 export function FloatingActionButton({icon;
@@ -350,10 +432,13 @@ export function FloatingActionButton({icon;
   className = '';
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {return (;
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Floating action button;
 export function FloatingActionButton({;
@@ -371,8 +456,8 @@ export function FloatingActionButton({;
     <Button;
       {...props}
       icon={icon}
-      onClick={onClick}
-      className={`fixed bottom-8 right-8 w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl z-50 ${className}`}
+      on_click={on_click}
+      className={`fixed bottom - 8 right - 8 w - 16 h - 16 rounded - full shadow - 2xl hover:shadow - 3xl z - 50 ${class_name}`}
       size="lg";
       rounded="full";
     />);

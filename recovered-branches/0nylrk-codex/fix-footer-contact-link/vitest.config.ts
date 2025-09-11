@@ -7,9 +7,13 @@ import path from 'node: path'
 
 export default defineConfig({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       '@': path ;
   test: {
     environment: 'jsdom';
@@ -17,6 +21,10 @@ export default defineConfig({
 
     globals: true}});
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {define_config} from 'vitest / config';
 import path from 'node: path',
 export default define_config ({
@@ -26,6 +34,7 @@ export default define_config ({
   test: {
     environment: 'jsdom';
     setup_files: './tests / setup.ts',
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   resolve: {
@@ -39,6 +48,10 @@ export default define_config ({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   resolve: {;
     alias: {;
       '@': path.resolve(__dirname, './src')}};
@@ -46,10 +59,15 @@ export default define_config ({
     environment: 'jsdom';
     setupFiles: './tests/setup.ts',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { defineConfig } from 'vitest/config',;
 import path from 'node: path',;
 export default defineConfig({;
@@ -60,6 +78,7 @@ export default defineConfig({;
     environment: 'jsdom',;
     setupFiles: './tests/setup.ts';
 
+<<<<<<< HEAD
     globals: true}});
 ;
 <<<<<<< HEAD
@@ -68,3 +87,8 @@ export default defineConfig({;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    globals: true}});
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

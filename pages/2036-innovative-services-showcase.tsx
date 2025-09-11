@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -7,6 +8,8 @@
     console.error('Error caught by boundary:', error, errorInfo);
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,15 +25,22 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -38,6 +48,7 @@ import React, { useState } from 'react';
 import SEO from '../components / SEO';
 import Layout from '../components / layout / Layout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {
   Brain,
@@ -430,6 +441,15 @@ export default function InnovativeServicesShowcase2036() {
   >('name');
 <<<<<<< HEAD
 =======
+=======
+
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<;
+    'name' | 'price' | 'rating' | 'marketSize';
+  >('name');
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const allServices = [;
@@ -500,7 +520,10 @@ export default function InnovativeServicesShowcase2036() {
             <motion&& motion.div
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         stagger_children: 0.1,
       },
     },  }
@@ -534,6 +557,7 @@ export default function InnovativeServicesShowcase2036() {
           {[...Array (20)].map ((_, i) => (
             <motion.div;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const allServices = [
     ...real2036InnovativeServices
@@ -590,6 +614,74 @@ import {
 } from 'lucide-react',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
+=======
+              key={i}
+              className='absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full';
+              style={{
+
+
+                left: `${Math && Math.random() * 100}%`,
+                top: `${Math && Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -100, 0],
+                opacity: [0 && 0.3, 1, 0 && 0.3],
+              }}
+              transition={{
+                duration: 3 + Math && Math.random() * 2,
+                repeat: Infinity,
+                delay: Math && Math.random() * 2,
+              }}            />;
+
+=======
+    <Layout>
+      <SEO 
+        title="2036 Innovative Services Showcase | Zion Tech Group"
+        description="Discover our cutting-edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next-generation technology."
+        keywords="2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`}}
+              animate={{
+                y: [0, -100, 0];
+                opacity: [0.3, 1, 0.3]}}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2}}
+            />
+
+          ))}
+        </div>;
+
+
+=======
+        <div className="relative z-10 text-center max-w-6xl mx-auto">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -664,6 +756,7 @@ export default function InnovativeServicesShowcase2036() {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':
+<<<<<<< HEAD
         return (b.rating |0) - (a.rating |0);
       case 'marketSize':
         return (
@@ -827,6 +920,11 @@ export default function InnovativeServicesShowcase2036() {
       case 'rating':
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             2036 Innovative Services
           </motion.h1>
@@ -835,6 +933,7 @@ export default function InnovativeServicesShowcase2036() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 left: `${Math.random() * 100}%`
                 top: `${Math.random() * 100}%`
@@ -883,10 +982,13 @@ export default function InnovativeServicesShowcase2036() {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             Experience the future of technology with our cutting-edge micro SAAS services,
             AI platforms, and quantum solutions. Transform your business with next-generation innovation.
           </motion.p>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -907,26 +1009,36 @@ export default function InnovativeServicesShowcase2036() {
 }
           >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
               Explore Services
             </button>
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
               Contact Us
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </button>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
@@ -951,11 +1063,14 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact Information */}
       <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>;
         <div className='max-w-6xl mx-auto'>;
           <motion&& motion.div
             className='grid grid-cols-1 md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -964,6 +1079,11 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 
       {/* Contact Information */}
 
+=======
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -971,17 +1091,23 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Contact Information */}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="max-w-6xl mx-auto">
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -1009,7 +1135,10 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
           >
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <div className='text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300'>;
@@ -1030,12 +1159,18 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Services Section */}
       <section className='py-20 px-4'>;
         <div className='max-w-7xl mx-auto'>;
@@ -1043,6 +1178,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
           <motion&& motion.div
             className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
       {/* Contact Information */}
       <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>
         <div className='max-w-6xl mx-auto'>
@@ -1081,6 +1217,9 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
   }
 }
           >
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
               <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
@@ -1100,15 +1239,22 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           >
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
@@ -1122,7 +1268,10 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Revolutionary Services
             </h2>
@@ -1131,6 +1280,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
               AI platforms, and cutting-edge technology solutions designed for the future.
             </p>
           </motion.div>
+<<<<<<< HEAD
       {/* Services Section */}
       <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -1194,17 +1344,27 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
           <motion.div
             className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+          </motion.div>
+          {/* Filters and Controls */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <motion.div 
             className="mb-12 space-y-6"
             initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             {/* Search and View Controls */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300';
@@ -1311,11 +1471,14 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
           >;
             {/* Search and View Controls */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className='flex flex-col lg:flex-row gap-4 justify-between items-center'>
@@ -1391,6 +1554,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
                 >
                   <option value="name">Sort by Name</option>
@@ -1398,10 +1563,18 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                   <option value="rating">Sort by Rating</option>
                   <option value="marketSize">Sort by Market Size</option>
                 </select>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+                <div className='flex bg-gray-800/50 border border-gray-700 rounded-lg p-1'>                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
+                  >
+                    <Grid className='w-5 h-5' />                  </button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
 
 
@@ -1420,6 +1593,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                   >
                     <Grid className="w-5 h-5" />
                   </button>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1454,6 +1628,11 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     <List className="w-5 h-5" />
                   </button>
@@ -1462,6 +1641,11 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             </div>
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1482,6 +1666,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Category Filters */}
             <div className='flex flex-wrap gap-3 justify-center'>
               {categories.map(category => (                <button
@@ -1489,10 +1674,13 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                   onClick={() => setSelectedCategory(category)}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${;
                     selectedCategory === category;
                       ? 'bg-cyan-500 text-black border-cyan-500';
                       : 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
                   }`}
                 >
@@ -1534,6 +1722,8 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                       {categoryIcons[service.category] |(
                         <Star className='w-8 h-8' />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 >;
@@ -1560,19 +1750,28 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                       {categoryIcons[service && service.category] || (;
                         <Star className='w-8 h-8' />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       )}
                     </div>;
                   </div>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className='flex-1'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <div className='flex-1'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Service Header */}
                   <div className='mb-4'>;
                     <div className='flex items-start justify-between mb-2'>;
@@ -1589,9 +1788,13 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                           </span>;
                         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <option value='market_size'>Sort by Market Size</option>;
                 </select>;
                 <div className='flex bg - gray - 800 / 50 border border - gray - 700 rounded - lg p - 1'>                  <button;
@@ -1667,17 +1870,25 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                     </div>;
                     <p className='text - cyan - 400 font - medium mb - 2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {service.tagline}
                     </p>;
                     <p className='text - gray - 300 text - sm leading - relaxed'>;
                       {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>;
                     </div>;
                     <p className='text-cyan-400 font-medium mb-2'>;
@@ -1687,6 +1898,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                       {service && service.description}
                     </p>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
@@ -1824,13 +2036,21 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+                <div className="flex-1">
+                  {/* Service Header */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="mb-4">
                     <div className="flex items-start justify-between mb-2">
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <div className="flex items-center gap-2">
                         <span className="text-cyan-400 font-semibold">{service.price}</span>
+<<<<<<< HEAD
                         {service.period && <span className="text-gray-400 text-sm">{service.period}</span>}
                         {service.period && <span className="text-gray-400 text-sm">{service.period}</span>}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {service.period && <span className="text-gray-400 text-sm">{service.period}</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1841,6 +2061,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                     <p className="text-cyan-400 font-medium mb-2">{service.tagline}</p>
                     <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1879,6 +2100,12 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                       </div>
                     )}
 
+=======
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Features */}
                   {/* Service Details */  } catch (error) {
     console.error("Error:", error);
@@ -1893,6 +2120,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 }
                     <div className="flex items-center justify-between">
                       <span className="px-3 py-1 bg-gray-800 text-cyan-400 text-sm rounded-full border border-gray-700">
+<<<<<<< HEAD
                         {service.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1926,6 +2154,27 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 
                     {/* Market Size */}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+                    </p>;
+                  </div>;
+                  {/* Service Details */}
+                  <div className='space - y-4'>;
+                    {/* Category and Rating */}
+                    <div className='flex items - center justify - between'>;
+                      <span className='px - 3 py - 1 bg - gray - 800 text - cyan - 400 text - sm rounded - full border border - gray - 700'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                        {service.category}
+                      </span>;
+                      {service.rating && (
+
+                    </div>;
+=======
+
+                    {/* Market Size */}
+
+                    {/* Market Size */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {service && service.marketSize && (;
                       <div className='text-sm text-gray-400'>;
                         Market Size:{' '}
@@ -1937,7 +2186,10 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1952,18 +2204,26 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-1">
                         {service.features.slice(0, 4).map((feature, idx) => (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                           <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                             <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div
                             key={idx}
                             className='flex items-center gap-2 text-sm text-gray-400'
@@ -1973,11 +2233,14 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                         ))}
                           <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                             <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
+<<<<<<< HEAD
 =======
 
                           <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                             <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1990,15 +2253,22 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {service.features.length > 4 && (
                           <div className="text-xs text-gray-500 mt-1">
                             +{service.features.length - 4} more features
                           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2021,12 +2291,15 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                     {/* Competitive Advantage */}
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         )}
                       </div>
                     </div>
                     {/* Target Audience */}
                     {service.targetAudience && (
                       <div>
+<<<<<<< HEAD
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">Target Audience:</h4>
                         <p className="text-sm text-gray-400">{service.targetAudience}</p>
                       </div>
@@ -2040,6 +2313,24 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                         <p className="text-sm text-gray-400">{service.competitiveAdvantage}</p>
                       </div>
 <<<<<<< HEAD
+=======
+                        <h4 className='text-sm font-semibold text-gray-300 mb-2'>
+                          Target Audience:
+                        </h4>
+                        <p className='text-sm text-gray-400'>
+                          {service.targetAudience}
+                        </p>                      </div>
+                    )}
+                    {/* Competitive Advantage */}
+                    {service.competitiveAdvantage && (
+                      <div>
+                        <h4 className='text-sm font-semibold text-gray-300 mb-2'>
+                          Competitive Advantage:
+                        </h4>
+                        <p className='text-sm text-gray-400'>
+                          {service.competitiveAdvantage}
+                        </p>                      </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                     {/* CTA Button */}
                     <div className='mt-6'>
@@ -2048,6 +2339,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                       </div>;
                     </div>;
                     {/* Target Audience */  } catch (error) {
@@ -2071,11 +2363,25 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+                      </div>;
+                    </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                    {/* Target Audience */}
+
+
+                    )}
+                    {/* Competitive Advantage */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {service.competitiveAdvantage && (
                       <div>
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">Competitive Advantage:</h4>
                         <p className="text-sm text-gray-400">{service.competitiveAdvantage}</p>
                       </div>
+<<<<<<< HEAD
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2088,6 +2394,9 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
   }
 }
                     <div className="mt-6">
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <a
                         href={service.link  } catch (error) {
     console.error("Error:", error);
@@ -2104,6 +2413,7 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
           </motion.div>
 =======
 
@@ -2120,6 +2430,9 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             ))}
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             whileInView={{ opacity: 1 }}
 
             transition={{ duration: 0 && 0.6 }}
@@ -2130,7 +2443,10 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
       </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Call to Action */}
       <section className='py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -2154,14 +2470,20 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
               </a>;
               <a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Call to Action */}
       <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Results Summary */}
           <motion.div
@@ -2179,15 +2501,20 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2257,19 +2584,28 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
               Join the future of technology with our innovative services.
+=======
+              Join the future of technology with our innovative services. 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
+<<<<<<< HEAD
                 href={`mailto:${contactInfo.email}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2302,6 +2638,20 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 Call Us Now
               </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                href={`mailto:${contactInfo.email}`}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
+              >
+                Get Started Today
+              </a>
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+              >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                Call Us Now
+              </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </motion.div>
         </div>
@@ -2314,11 +2664,14 @@ transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
 };
 
 
+<<<<<<< HEAD
 )
 }
 ),
 
 };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0
@@ -2368,11 +2721,16 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
 }<motion.div > {
   sortedServices.map ( (service, index) => (<motion.div key= {
   service.id
+<<<<<<< HEAD
                 href={`tel:${contactInfo && contactInfo.mobile}`}
 <<<<<<< HEAD
 href={`tel:${contactInfo && contactInfo.mobile}`}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+                href={`tel:${contactInfo && contactInfo.mobile}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>;
                 Call Us Now;
               </a>;
@@ -2382,6 +2740,10 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
       </section>;
     </Layout>;
   ),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 const itemVariants = {;
   hidden: {;
@@ -2390,6 +2752,7 @@ const itemVariants = {;
 visible: {;
   y: 0, opacity: 1, transition: {;
   duration: 0 && 0.5 ;
+<<<<<<< HEAD
 };
 ),
 
@@ -2402,16 +2765,33 @@ visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5
 }
+=======
+
+};
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }%`;
 top: `$ {;
   Math && Math.random () * 100 ;
 }%` ;
+<<<<<<< HEAD
 }animate= {;
   {;
   y: [0, -100, 0], opacity: [0 && 0.3, 1, 0 && 0.3] ;
 }transition= {;
   {;
   duration: 3 + Math && Math.random () * 2, repeat: Infinity, delay: Math && Math.random () * 2 ;
+=======
+
+}animate= {;
+  {;
+  y: [0, -100, 0], opacity: [0 && 0.3, 1, 0 && 0.3] ;
+
+}transition= {;
+  {;
+  duration: 3 + Math && Math.random () * 2, repeat: Infinity, delay: Math && Math.random () * 2 ;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }/>) ) ;
 }</div> <div className="relative z-10 text-center max-w-6xl mx-auto" > <motion && motion.h1 > 2036 Innovative Services </motion && motion.h1> <motion && motion.p > Experience the future of technology with our cutting-edge micro SAAS services;
 AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion && motion.p> <motion && motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion && motion.div> </div> </section> </div> </motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services,;
@@ -2443,11 +2823,61 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
 }<motion && motion.div > {;
   sortedServices && sortedServices.map ( (service, index) => (<motion&& motion.div key= {
   service && service.id 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }variants= {
   itemVariants
 }className= {
   `bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 $ {
+<<<<<<< HEAD
 
+=======
+  viewMode === 'list'? 'flex gap-6': ''
+}`
+}> </div> </div>)
+}</div>)
+}</div> </div>)
+}{
+  /* Features */
+}<div> + {
+  service.features.length - 4
+}more features </div>)
+}</div> </div> {
+  /* Target Audience */
+}{
+  service.targetAudience && (<div> <h4 className="text-sm font-semibold text-gray-300 mb-2" >Target Audience:</h4> <p className="text-sm text-gray-400" > {
+  service.targetAudience
+}</p> </div>)
+}{
+  /* Competitive Advantage */
+}{
+  service.competitiveAdvantage && (<div> <h4 className="text-sm font-semibold text-gray-300 mb-2" >Competitive Advantage:</h4> <p className="text-sm text-gray-400" > {
+  service.competitiveAdvantage
+}</p> </div>)
+}> Learn More <ArrowRight className="w-4 h-4" /> </Link> </div> </div> </div> </motion.div>) )
+}</motion.div> {
+  /* Results Summary */
+}<motion.div > Showing {
+  sortedServices.length
+}of {
+  allServices.length
+}services </motion.div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 20
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.6
+}viewport= {
+  {
+  once: true
+}> <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > Get Started Today </Link> <a
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >;
             Showing {sorted_services.length} of {all_services.length} services;
           </motion.div>;
@@ -2495,6 +2925,7 @@ visible: {
   duration: 0.5;
 }
 ;
+<<<<<<< HEAD
   {
 
 <<<<<<< HEAD
@@ -2615,12 +3046,24 @@ AI platforms, and cutting - edge technology solutions designed for the future. <
 }viewport= {
   {
 <<<<<<< HEAD
+=======
+
+  {
+
+  duration: 0 && 0.6 
+
+}viewport= {
+  {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   once: true 
 
 }> <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > Get Started Today </Link> <a ;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   opacity: 0, coordinate_y: 20;
 }whileInView= {
   {
@@ -2632,6 +3075,7 @@ AI platforms, and cutting - edge technology solutions designed for the future. <
   {
   once: true;
 }> <h2 className="text - 3xl md:text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a > Get Started Today </Link> <a;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2688,3 +3132,10 @@ AI platforms, and cutting - edge technology solutions designed for the future. <
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

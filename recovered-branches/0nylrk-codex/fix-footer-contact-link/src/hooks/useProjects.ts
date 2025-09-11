@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -32,10 +33,15 @@ export function useProjects() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
     if (!user) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       setIsLoading(true),
@@ -43,12 +49,16 @@ export function useProjects() {
 
 
       setIsLoading(false),
+=======
+      setIsLoading(false);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return
     }
     try {
       setIsLoading(true);
       setIsLoading(true),
       
+<<<<<<< HEAD
 =======
       setIsLoading(false);
       return
@@ -61,12 +71,15 @@ export function useProjects() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Build the query based on user type
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
         .select(`
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -86,6 +99,8 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           *;
           job:jobs(title, description);
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
@@ -93,6 +108,7 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
         `)
         .order("created_at", { ascending: false });
       if (user.userType === "jobSeeker" |user.userType === "creator") {
+<<<<<<< HEAD
 =======
       }
       const { data, error: fetchError } = await query;
@@ -100,6 +116,8 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
@@ -109,25 +127,36 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
       
       if (user.userType === "jobSeeker" || user.userType === "creator") {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" |user.userType === "buyer") {
         query = query.eq("client_id", user.id)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      const { data, error: fetchError } = await query;
+      if (fetchError) throw fetchError;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       const { data, error: fetchError } = await query,
       
       if (fetchError) throw fetchError,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Transform the data to match our project types
       const transformedData = data.map((project: any) => ({
         ...project,
@@ -135,6 +164,7 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
           ...project.talent_profile
           full_name: project.talent_profile.display_name
         } : undefined
+<<<<<<< HEAD
       
       const { data, error: fetchError } = await query,
       
@@ -207,10 +237,13 @@ if (throw fetch_error) {
           ...project && project.talent_profile,
           full_name: project && project.talent_profile.display_name
         } : undefined
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }));
       setProjects(transformedData as Project[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
 ;
   const getProjectById = async (project_id: string): Promise < Project | null> => {
     try {
@@ -225,6 +258,10 @@ if (throw fetch_error) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console.error("Error fetching projects:", err);
+      setError("Failed to fetch projects: " + err.message)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       })),
       
       setProjects(transformedData as Project[]),
@@ -233,13 +270,17 @@ if (throw fetch_error) {
       console.error("Error fetching projects:", err),
       setError("Failed to fetch projects: " + err.message),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast.error("Failed to fetch projects")
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 
   },
 
@@ -250,12 +291,20 @@ if (throw fetch_error) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
         .from("projects")
         .select(`
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           *;
           job:jobs(title, description);
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
@@ -264,9 +313,12 @@ if (throw fetch_error) {
         .eq("id", projectId)
         .single();
       if (error) throw error;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
@@ -278,6 +330,7 @@ if (throw fetch_error) {
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -285,6 +338,11 @@ if (throw fetch_error) {
       const transformedProject = {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      // Transform the data to match our project types
+      const transformedProject = {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           job:jobs (title, description);
           talent_profile:profiles ! talent_id (display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles ! client_id (display_name, avatar_url);
@@ -298,6 +356,7 @@ if (throw error) {
 }
       // Transform the data to match our project types;
       const transformed_project = {
+<<<<<<< HEAD
         ...data;
         talent_profile: data && data.talent_profile ? {
           ...data && data.talent_profile,
@@ -309,12 +368,26 @@ if (throw error) {
       },
       
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        ...data;
+
+        talent_profile: data && data.talent_profile ? {
+          ...data && data.talent_profile,
+          full_name: data && data.talent_profile.display_name
+
+        } : undefined
+      }
+      },
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return transformedProject as Project
     } catch (err: any) {
       console && console.error("Error fetching project:", err);
       toast && toast.error("Failed to fetch project details");
       return null
     }
+<<<<<<< HEAD
 
 
   },
@@ -343,11 +416,17 @@ if (throw error) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         .eq("id", projectId);
@@ -355,10 +434,15 @@ if (throw error) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .eq("id", projectId);
+      if (error) throw error;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .eq("id", projectId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
         .eq("id", projectId);
       if (error) throw error;
@@ -390,11 +474,22 @@ if (throw error) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      // Update the local state
+      setProjects(prev =>
+        prev.map(project => project.id === projectId ? { ...project, status } : project)
+      );
+      toast.success(`Project status updated to ${status}`);
+      ),
+      
+      toast.success(`Project status updated to ${status}`),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return true
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
       toast && toast.error("Failed to update project status");
       return false
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect } from "react",;
@@ -525,6 +620,8 @@ export function useProjects() {;
       console.error ("Error fetching project:", err);
       toast.error ("Failed to fetch project details");
       return null;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 ;
@@ -563,12 +660,16 @@ if ( {) {
   }, [user]);
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     projects;
     is_loading;
     error;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Update the local state
       setProjects(prev =>
@@ -607,6 +708,9 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    updateProjectStatus
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -724,6 +828,7 @@ export function useProjects() {;
     getProjectById;
     updateProjectStatus;
 <<<<<<< HEAD
+<<<<<<< HEAD
     refetch: fetch_projects;
     getProjectById,
     updateProjectStatus;
@@ -803,5 +908,9 @@ updateProjectStatus
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }

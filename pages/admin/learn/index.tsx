@@ -1,9 +1,12 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
 
@@ -19,6 +22,7 @@ export default function AdminLearn() {
       headers: { 'Content-Type': 'application/json' },
 
       body: JSON.stringify(form)
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
@@ -49,30 +53,43 @@ export default function AdminLearn() {
       body: JSON.stringify(form)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     })
     const data = await resp.json()
     if (data.ok) setMessage('Saved')
     else setMessage('Error: ' + (data.error |'unknown'))
 <<<<<<< HEAD
+<<<<<<< HEAD
       body: JSON.stringify(form)
 
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 =======
       body: JSON.stringify(form)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }),
     const data = await resp.json(),
     if (data.ok) setMessage('Saved'),
     else setMessage('Error: ' + (data.error || 'unknown'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from 'react';
 export default function AdminLearn(req, res) {
   try {
@@ -93,6 +110,7 @@ export default function AdminLearn(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
   }
@@ -105,6 +123,11 @@ export default function AdminLearn(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
@@ -128,6 +151,7 @@ export default function AdminLearn(req, res) {
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
       {message && <div className="text-sm">{message}</div>}
@@ -142,6 +166,8 @@ export default function AdminLearn(req, res) {
     </div>
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
@@ -197,26 +223,38 @@ function save_course() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {message && <div className="text-sm">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -229,3 +267,9 @@ function save_course() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

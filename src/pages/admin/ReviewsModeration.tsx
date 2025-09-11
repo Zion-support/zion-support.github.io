@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO'
 import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
@@ -70,6 +71,9 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function ReviewsModerationContent() {
+=======
+function ReviewsModerationContent() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -78,11 +82,14 @@ function ReviewsModerationContent() {
     setIsLoading(true),
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setReviews([]),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
       await new Promise (resolve => set_timeout (resolve, 1000));
@@ -103,7 +110,10 @@ function ReviewsModerationContent() {
   useEffect (() => {
     fetch_reviews ();        title: "Error",
         description: "Failed to load reviews. Please try again later.",
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         variant: "destructive"}),
       setIsLoading (false);
     }
@@ -159,6 +169,7 @@ function ReviewsModerationContent() {;
       setIsLoading(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   useEffect(() => {
     fetchReviews()
@@ -209,6 +220,9 @@ function ReviewsModerationContent() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Star className="h-5 w-5" />
               Review Management
             </CardTitle>
@@ -218,18 +232,27 @@ function ReviewsModerationContent() {;
           </CardHeader>
           <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
 =======
 
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TabsContent value='pending' className='mt-0'>
                 <ReviewsModerationTable                  reviews={reviews}            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
@@ -238,6 +261,7 @@ function ReviewsModerationContent() {;
               </TabsList>
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -283,6 +307,8 @@ function ReviewsModerationContent() {;
               <TabsContent value="pending" className="mt-0">;
 
                 <ReviewsModerationTable
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <ReviewsModerationTable 
                   reviews={reviews}
                   isLoading={isLoading}
@@ -296,21 +322,28 @@ function ReviewsModerationContent() {;
 
               
               <TabsContent value="pending" className="mt-0">
-                <ReviewsModerationTable reviews={reviews} isLoading={isLoading} onRefresh={handleRefresh}/>
+                <ReviewsModerationTable 
+                  reviews={reviews}
+                  isLoading={isLoading}
+                  onRefresh={handleRefresh}
+                />
               </TabsContent>
               
 
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
-                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2"/>
+                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -322,11 +355,15 @@ function ReviewsModerationContent() {;
       </main>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
+=======
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
@@ -343,6 +380,7 @@ export default function ReviewsModeration() {
               Manage, approve, or reject reviews;
             </p>;
   )
+<<<<<<< HEAD
 }
 export default function ReviewsModeration() {
   return (
@@ -489,3 +527,8 @@ function ReviewsModeration() {
 }
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"};
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

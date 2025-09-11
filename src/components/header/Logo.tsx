@@ -5,6 +5,7 @@ return (
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
@@ -75,6 +76,9 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -83,14 +87,20 @@ if ( {) {
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   
+=======
+  
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Link href="/" className="flex items-center">
       <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />
     </Link>
   )
   if (logoToUse) {
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -110,11 +120,18 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
   // Use the white-label color if available and no specific _customColor is provided;
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
   if (logoToUse) {;
+=======
+    return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Link href="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />;
       </Link>;
     );
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Link href="/" className="flex items-center">;
       <img src="/logos/zion-logo && logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
@@ -139,14 +156,23 @@ if ( {) {
           className='h - 8';
           width={32}
           height={32}
+<<<<<<< HEAD
         />;
       </Link>;
     );
+=======
+
+        />;
+      </Link>;
+    );
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return (
     <Link href='/' className='flex items-center'>;
       <img
         src='/logos/zion-logo && logo.png'
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (logoToUse) {
     return (
@@ -167,14 +193,20 @@ if ( {) {
         src='/logos/zion-logo.png'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         alt='Zion Logo'
         className='h-8'
         width={32}
         height={32}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
     </Link>;
   );
@@ -195,6 +227,7 @@ if ( {) {
     </Link>);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
@@ -243,3 +276,6 @@ export function Logo({ customLogo } LogoProps) {;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

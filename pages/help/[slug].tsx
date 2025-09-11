@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -8,12 +9,19 @@
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {GetStaticPaths, GetStaticProps} from 'next';
 import {useState} from 'react';
 
 
 
 import type { HelpArticle } from '../../utils/support';
+<<<<<<< HEAD
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
 ;
@@ -24,6 +32,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+import {read_json} from '../../utils / fs_db';
+import type { HelpArticle } from '../../utils / support';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export const getStaticPaths: GetStaticPaths = async () => {
+  const articles = read_json < HelpArticle[]>('help / articles.json', []);
+  return {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
@@ -31,40 +50,63 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false}
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return {;
     paths: articles && articles.map(a => ({ params: { slug: a && a.slug } })),;
     fallback: false,;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
 
   };
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getStaticProps: GetStaticProps = async ctx => {;
   const slug = ctx && ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   const article = articles && articles.find(a => a && a.slug === slug) || null;
   return { props: { article } };};
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function HelpArticlePage(): any ({ article }: { article: HelpArticle }) {;
   const [voted, setVoted] = useState<null | boolean>(null);
@@ -101,6 +143,12 @@ export default function HelpArticlePage(): any ({ article }: { article: HelpArti
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='enhanced-button enhanced-button-secondary';
+=======
+
+
+            className='enhanced-button enhanced-button-secondary';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     paths: articles.map (array => ({ params: { slug: a.slug } })),
     fallback: false,
   }
@@ -151,25 +199,36 @@ function vote() {
             disabled={voted !== null}
             className='enhanced - button enhanced - button - secondary';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >;
             No;
           </button>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { GetStaticPaths, GetStaticProps  } from 'next';
 import { useState  } from 'react';
@@ -179,6 +238,8 @@ import {useState} from 'react';
 import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
 
@@ -226,7 +287,10 @@ export default function HelpArticlePage(req, res) {
       body: JSON.stringify({ articleId: article.id, helpful })});
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
@@ -234,6 +298,7 @@ export default function HelpArticlePage(req, res) {
   }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const getStaticPaths: GetStaticPaths = async () => {;
@@ -314,6 +379,9 @@ export default function HelpArticlePage(req, res) {
 }
 
 }
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -324,6 +392,7 @@ export default function HelpArticlePage(req, res) {
         <div className="flex gap-2">
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
+<<<<<<< HEAD
 
 
 
@@ -364,3 +433,25 @@ export default function HelpArticlePage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        </div>
+      </div>
+    </article>
+
+
+
+}
+
+=======
+
+  )
+}
+
+    </article>);
+;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

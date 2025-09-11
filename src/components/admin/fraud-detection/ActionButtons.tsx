@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -59,10 +60,13 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       >
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >
         <Eye className="h-4 w-4" />
       </Button>
       <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Eye className="h-4 w-4" />
       </Button>
@@ -113,6 +117,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+};
+'"},;
+  );
+};
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 '"},;
@@ -166,6 +178,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -233,6 +246,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   );
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from 'react';
@@ -304,5 +319,9 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 }
 '"},
   );
+<<<<<<< HEAD
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

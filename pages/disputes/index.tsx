@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
 
 
+=======
+import useSWR from 'swr';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import Link from 'next/link';
+const fetcher = (url: string) => fetch(url).then(r => r.json())
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import useSWR from 'swr',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import Link from 'next/link',
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,6 +20,13 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher)
   const disputes = data?.disputes |[]
+=======
+export default function DisputesIndexPage() {
+  const { data } = useSWR('/api/disputes', fetcher)
+  const disputes = data?.disputes |[]
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import useSWR from 'swr',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 import Link from 'next / link',
@@ -24,12 +39,24 @@ function DisputesIndexPage() {
   const disputes = data?.disputes || [],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
 
 
+=======
+    <EnhancedLayout>
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-2xl font-semibold">My Disputes</h1>
+          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
+          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -44,11 +71,19 @@ function DisputesIndexPage() {
             <tbody>
               {disputes.map((d: any) => (
                 <tr key={d.id} className="border-t">
+<<<<<<< HEAD
 
 
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
 
 
+=======
+                  <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</a></Link></td>
+                  <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <td className="px-3 py-2">{d.projectId}</td>
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
@@ -56,10 +91,14 @@ function DisputesIndexPage() {
               ))}
               {disputes.length === 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <EnhancedLayout>;
       <div className="max - w-4xl mx - auto">;
         <div className="flex items - center justify - between mb - 4">;
@@ -86,16 +125,22 @@ function DisputesIndexPage() {
                 </tr>))}
               {disputes.length === 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
                 </tr>)}
@@ -104,6 +149,7 @@ function DisputesIndexPage() {
         </div>;
       </div>;
     </EnhancedLayout>);
+<<<<<<< HEAD
         </div>
         <div className=&quot;overflow-auto border rounded&quot;>
           <table className=&quot;min-w-full text-sm&quot;>
@@ -161,7 +207,14 @@ function DisputesIndexPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

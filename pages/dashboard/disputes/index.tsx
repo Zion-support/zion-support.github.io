@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../../components/layout/EnhancedLayout',
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie |'').split(';').reduce(
@@ -21,6 +25,8 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     role = user?.role |'guest';
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
@@ -33,11 +39,15 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest'
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {}
   if (role !== 'admin') {
     return { redirect: { destination: '/', permanent: false } }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return { props: {} };}
 =======
@@ -65,13 +75,19 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return { props: {} };}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -79,7 +95,10 @@ import type { GetServerSideProps } from 'next';
   try {;
     const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {}
   if (role !== 'admin') {;
     return { redirect: { destination: '/', permanent: false } };
@@ -88,6 +107,7 @@ import type { GetServerSideProps } from 'next';
   const disputes = useMemo(() => {;
     const list = data?.disputes || [];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return { props: {} };};
 export default function AdminDisputesDashboard() {;
@@ -101,6 +121,11 @@ export default function AdminDisputesDashboard() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
+=======
+    if (statusFilter === 'All') return list;
+    return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <EnhancedLayout>;
       <div className='max-w-6xl mx-auto'>;
@@ -159,6 +184,7 @@ export default function AdminDisputesDashboard() {;
                       </a>;
                     </Link>                  </td>;
                 </tr>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -233,6 +259,8 @@ export default function AdminDisputesDashboard() {
     const list = data?.disputes |[];
     if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const list = data?.disputes || [],
     if (statusFilter === 'All') return list,
@@ -244,11 +272,15 @@ export default function AdminDisputesDashboard() {
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Dispute Resolution Center</h1>
           <select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className="border rounded px-2 py-1 text-sm">
+<<<<<<< HEAD
             {(['OpenUnder ReviewResolvedAll'] as const).map(s => (<option key={s} value={s}>{s}</option>))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            {(['OpenUnder ReviewResolvedAll'] as const).map(s => (<option key={s} value={s}>{s}</option>))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </select>
         </div>
         <div className="overflow-auto border rounded">
@@ -274,6 +306,7 @@ export default function AdminDisputesDashboard() {
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
                   <td className="px-3 py-2 flex gap-2">
+<<<<<<< HEAD
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className="text-green-700 hover:underline">Resolve</Link></Link>
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className="text-blue-700 hover:underline">Message Parties</Link></Link>
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</Link></Link>
@@ -282,6 +315,13 @@ export default function AdminDisputesDashboard() {
 <<<<<<< HEAD
               ))}
 =======
+=======
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className="text-green-700 hover:underline">Resolve</a></Link>
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className="text-blue-700 hover:underline">Message Parties</a></Link>
+                    <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</a></Link>
+                  </td>
+                </tr>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 import useSWR from 'swr';
@@ -302,11 +342,18 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     {} as Record < string, string>);
   let role = 'guest';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },;
 export default function AdminDisputesDashboard(req, res) {
 
@@ -399,6 +446,7 @@ if (return list) {
                     </Link>                  </td>;
                 </tr>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </tbody>
           </table>
         </div>
@@ -466,25 +514,35 @@ export default function AdminDisputesDashboard(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </tbody>;
           </table>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </EnhancedLayout>);
 ;
     </EnhancedLayout>;
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
     </EnhancedLayout>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -492,8 +550,13 @@ export default function AdminDisputesDashboard(req, res) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

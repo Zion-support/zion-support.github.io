@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import { useFormik  } from 'formik';
@@ -6,6 +7,8 @@ import * as Yup from 'yup',
 import axios from 'axios',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -26,6 +29,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
   )
@@ -35,6 +39,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
 
@@ -45,6 +52,7 @@ export default function Signup() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 })
 export default function Signup() {
@@ -53,6 +61,8 @@ export default function Signup() {
 export default function Signup() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -123,6 +133,7 @@ function Signup() {
       }
     } catch (err: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
@@ -134,12 +145,17 @@ function Signup() {
         err.message?.includes('Network Error')
       if (true) {}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       if (true) {}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -168,6 +184,7 @@ if ( {) {
       setHealthCheckLoading(false)
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     performHealthCheck()
@@ -263,6 +280,8 @@ if ( {) {
           request: err.request ? 'Request made but no response' : 'No request'
           config: err.config
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   useEffect (() => {
     performHealthCheck ();
@@ -364,11 +383,15 @@ if ( {) {
           request: err.request ? 'Request made but no response' : 'No request',
           config: err.config;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ? {
                 url: err.config.url
                 method: err.config.method
               }
+<<<<<<< HEAD
 <<<<<<< HEAD
             : 'No config'
         })
@@ -384,6 +407,8 @@ if ( {) {
           err.response?.data?.error ||
           err.response?.data?.message ||
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         const errorMsg = null;
@@ -391,7 +416,10 @@ if ( {) {
           err.response?.data?.message ||
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -447,6 +475,7 @@ if ( {) {
             setErrors({ confirm: errorMsg })
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
           toast({
             title: 'Signup failed'
             description: errorMsg
@@ -463,6 +492,8 @@ if ( {) {
             variant: 'destructive'
           })
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           toast ({
             title: 'Signup failed',
@@ -480,12 +511,16 @@ if ( {) {
             variant: 'destructive',
           });
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       } finally {
         logInfo('Form submission completed, setting loading to false')
         setLoading(false)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   })
@@ -498,6 +533,21 @@ if ( {) {
       terms: true
     })
     await formik.handleSubmit(e)
+=======
+
+    },
+  });
+  const handleFormSubmit = async (e: React.FormEvent < HTMLFormElement>) => {
+    e.prevent_default ();    formik.set_touched ({
+      name: true,
+      email: true,
+      password: true,
+      confirm: true,
+      terms: true,
+    });
+    await formik.handle_submit (e);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // After successful registration, guide the user to the verification screen
   useEffect((,) => {
@@ -530,6 +580,7 @@ const SignupSchema = Yup.object({;
   name: Yup.string().required('Name is required'),;
   email: Yup.string().email('Invalid email').required('Email is required'),;
   password: Yup.string();
+<<<<<<< HEAD
 =======
 
     },
@@ -570,6 +621,8 @@ const SignupSchema = Yup && Yup.object({;
   email: Yup && Yup.string().email('Invalid email').required('Email is required'),;
   password: Yup && Yup.string();
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .min(8, 'Password must be at least 8 characters');
     .matches(/[A-Z]/, 'Password must include an uppercase letter');
     .matches(/[a-z]/, 'Password must include a lowercase letter');
@@ -758,16 +811,22 @@ export default function Signup() {;
       password: true,;
       confirm: true,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (healthCheckLoading) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       terms: true,;
     });
     await formik && formik.handleSubmit(e);
   };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -793,6 +852,7 @@ export default function Signup() {;
               </p>;
             </div>;
           )}
+<<<<<<< HEAD
           <form onSubmit={handleFormSubmit} className='space-y-4' noValidate>
             {/* Show Health Check Warning */}
             {healthCheckError && (
@@ -852,6 +912,9 @@ export default function Signup() {;
       </AuthLayout>
     )
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <AuthLayout>;
         <div className='flex min - h-screen items - center justify - center p - 4'>;
           <div className='text - center space - y-4'>;
@@ -860,7 +923,10 @@ export default function Signup() {;
           </div>;
         </div>;
       </AuthLayout>);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return (
     <AuthLayout>
@@ -874,6 +940,7 @@ export default function Signup() {;
               </p>
             </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <form onSubmit={handleFormSubmit} className='space-y-4' noValidate>
             {/* Show Health Check Warning */}
@@ -1120,6 +1187,8 @@ export default function Signup() {;
               </AlertDescription>;
             </Alert>;
           )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
           {/* Show Success message */}
           {successMessage && (
@@ -1265,6 +1334,11 @@ export default function Signup() {;
               >
                 Go to Login
               </Button>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 type="button"
                 variant="outline"
@@ -1276,8 +1350,12 @@ export default function Signup() {;
                 Check Verification Status
               </Button>
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 type="button"
                 variant="ghost"
@@ -1301,11 +1379,18 @@ export default function Signup() {;
           )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           </form>
+=======
+
+          </form>
+          {!emailVerificationRequired && (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='mt-6'>
               <AuthButtons providers={['google', 'github']} />
             </div>
           )}
+<<<<<<< HEAD
             ) : (
               <div className='space-y-2'>
                 <Button
@@ -1413,6 +1498,9 @@ request: err.request ? 'Request made but no response': 'No request'
   formik.values.email
 }</strong>. </AlertDescription> </Alert>) "
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </form>;
           {!emailVerificationRequired && (;
             <div className='mt-6'>;
@@ -1456,11 +1544,15 @@ request: err && err.request ? 'Request made but no response': 'No request';
   formik && formik.values.email ;
 }</strong>. </AlertDescription> </Alert>) ";
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
+<<<<<<< HEAD
 <<<<<<< HEAD
 }</div> <div className="flex items-center space-x-2" > <input)
 }{"
@@ -1542,6 +1634,8 @@ export default function Signup() {
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>)}
           </form>;
@@ -1621,7 +1715,10 @@ import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       displayName: ",
       email: ",
       password: ",
@@ -1632,10 +1729,15 @@ import {
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -1666,12 +1768,16 @@ import {
         if (sessionError) {
           console.error("Error setting session:", sessionError)
 <<<<<<< HEAD
+<<<<<<< HEAD
           form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
           toast.error(sessionError.message |"Failed to set session. Please try logging in.")
           return
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Form,
   FormControl,
   FormField,
@@ -1779,6 +1885,7 @@ if ( {) {
           form.set_error ("root", { message: session_error.message || "Failed to set session. Please try logging in." });
           toast.error (session_error.message || "Failed to set session. Please try logging in.");
 <<<<<<< HEAD
+<<<<<<< HEAD
           form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
           toast.error(sessionError.message |"Failed to set session. Please try logging in.")
           return
@@ -1786,6 +1893,8 @@ if ( {) {
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           return;
 }
         // The onAuthStateChange listener in AuthProvider should now handle
@@ -1802,6 +1911,7 @@ if ( {) {
         return;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
         try {
@@ -1811,6 +1921,8 @@ if ( {) {
           })
           await mailchimpService.sendWelcomeEmail(data.email, 'NEW10')
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
       // Check condition
 if ( {) {
@@ -1824,7 +1936,10 @@ if ( {) {
           });
           await mailchimp_service.sendWelcomeEmail (data.email, 'NEW10');
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } catch (err) {
           console.error('Mailchimp subscription failed', err)
           // Non-critical error, don't block user flow
@@ -1839,6 +1954,7 @@ if ( {) {
 } finally {
       setIsSubmitting(false) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }}
 }
@@ -1855,6 +1971,8 @@ if ( {) {
     if (firstError) {
       form.setFocus(firstError)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }</div> <div className="flex items-center space-x-2" > <input) 
 }{"
@@ -1983,6 +2101,7 @@ export default function Signup() {;
         // Potentially navigate to login or show a more specific error;
         return;
 }
+<<<<<<< HEAD
 
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
       if (data && data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {;
@@ -1995,6 +2114,9 @@ export default function Signup() {;
 } catch (err) {;
           console && console.error('Mailchimp subscription failed', err);
           // Non-critical error, don't block user flow;
+=======
+}}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       }
       // Toast and navigation are handled above if session is present;
@@ -2018,13 +2140,17 @@ if ( {) {
   $2
 }
       form.set_focus (first_error);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   }
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
@@ -2125,6 +2251,8 @@ if ( {) {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from "react";
@@ -2165,6 +2293,7 @@ const Signup = () => {;
 
 }};
 };
+<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -2176,3 +2305,5 @@ const Signup = () => {;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

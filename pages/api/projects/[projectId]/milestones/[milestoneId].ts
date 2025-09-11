@@ -1,11 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
   getProject
   updateMilestone
@@ -18,16 +23,24 @@ import {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
   isTalent,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -38,6 +51,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     milestoneId: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../../utils/api/auth';
 import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
@@ -46,7 +62,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
   const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const project = getProject(projectId);
   if (!project) {
     res && res.status(404).json({ error: "Project not found" });
@@ -56,6 +75,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(403).json({ error: "Forbidden" });
     return;
   }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   getProject
@@ -120,6 +140,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(403).json({ error: 'Forbidden' });
     return;
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method === "PATCH") {
 
   if (req.method === 'PATCH') {
@@ -129,10 +151,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     // Enforce status transition rules
+<<<<<<< HEAD
     if (body.status) {
       const isClientUser = isClient(project, user);
       const isTalentUser = isTalent(project, user);
       const status: string = body.status;
+=======
+    if (body && body.status) {
+      const isClientUser = isClient(project, user);
+      const isTalentUser = isTalent(project, user);
+      const status: string = body && body.status;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const allowed =
         (status === "In Progress" && isClientUser) |
         (status === "Submitted" && isTalentUser) |
@@ -157,6 +186,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if (status === 'Paid') {
         body.paidAt = new Date().toISOString()
+<<<<<<< HEAD
 
       }
     }
@@ -168,15 +198,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 <<<<<<< HEAD
 const updated = updateMilestone(project, milestoneId, body);
+=======
+      }
+    }
+    const updated = updateMilestone(project, milestoneId, body);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!updated) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return;
     }
     res && res.status(200).json({ milestone: updated });
     return;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -505,6 +544,8 @@ export default function handler(req, res) {
   res.status(405).end('Method Not Allowed')
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
 
@@ -516,15 +557,23 @@ export default function handler(req, res) {
   res.status(405).end('Method Not Allowed')
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

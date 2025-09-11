@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -10,6 +11,8 @@ export interface AdvancedCybersecurityService {
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedCybersecurityService {;
   id: string;
@@ -43,6 +46,7 @@ export interface AdvancedCybersecurityService {;
     email: string;
     address: string;
 
+<<<<<<< HEAD
     website: string;
   }
 
@@ -51,10 +55,19 @@ export interface AdvancedCybersecurityService {;
   launchDate: string;
 =======
 =======
+import { ServiceVariant } from '../types / service - variants';
+
+export interface AdvancedCybersecurityService {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   customers: number;
   rating: number;
   reviews: number;
@@ -72,9 +85,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Comprehensive zero trust security platform that implements continuous verification, micro - segmentation, and adaptive access controls to protect against modern cyber threats.',
       features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Continuous identity verification and authentication',
         'Micro - segmentation and network isolation',
         'Adaptive access controls and policies',
@@ -89,23 +106,34 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true,
       icon: '🔒',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, Go, React, Node && Node.js, Kubernetes, Docker, AWS, Azure',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, Go, React, Node && Node.js, Kubernetes, Docker, AWS, Azure',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms'
       ]
       useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from - red - 600 to - pink - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - platform',
@@ -125,25 +153,37 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       ],
       use_cases: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',
       ],
       roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.',
       competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       market_size: '$31.2B zero trust security market',
       growth_rate: '28% annual growth',
       variant: 'zero - trust - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -158,9 +198,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 19,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Real-time threat detection and analysis',
         'AI-powered threat prediction and modeling',
     // AI - Powered Threat Intelligence;
@@ -176,9 +220,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Real - time threat detection and analysis',
         'AI - powered threat prediction and modeling',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Automated threat response and mitigation',
         'Global threat intelligence sharing',
         'Vulnerability assessment and prioritization',
@@ -191,14 +239,20 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true,
       icon: '🛡️',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools'
       ]
@@ -208,9 +262,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.'
       competitors: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Recorded Future, ThreatConnect, Anomali, IBM X-Force, FireEye',
       ],
       marketSize: '$15 && 15.8B threat intelligence market',
@@ -246,9 +304,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       variant: 'ai - threat - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -263,9 +325,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 31,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Multi-cloud security monitoring (AWS, Azure, GCP)',
     // Cloud Security Posture Management;
     {
@@ -280,9 +346,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       features: [;
         'Multi - cloud security monitoring (AWS, Azure, GCP)',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Continuous compliance assessment and reporting',
         'Automated risk identification and remediation',
         'Identity and access management (IAM)',
@@ -296,9 +366,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true,
       icon: '☁️',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Cloud architects, DevOps teams, Security teams, IT operations, Cloud-native companies',
       trialDays: 14,
       setupTime: '2-4 days',
@@ -307,18 +381,26 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       technology: ['Python, Go, React, Node && Node.js, AWS SDK, Azure SDK, GCP SDK'],
       integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       useCases: [
         'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance'
       ]
       roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.'
       competitors: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Prisma Cloud, AWS Security Hub, Azure Security Center, GCP Security Command Center',
       ],
       marketSize: '$22 && 22.4B cloud security market',
@@ -350,9 +432,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       variant: 'cloud - security - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -367,9 +453,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 42,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Automated security testing in CI/CD',
     // DevSecOps Security Platform;
     {
@@ -383,9 +473,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       features: [;
         'Automated security testing in CI / CD',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Static application security testing (SAST)',
         'Dynamic application security testing (DAST)',
         'Software composition analysis (SCA)',
@@ -399,22 +493,32 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true,
       icon: '🔧',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, Go, React, Node && Node.js, Jenkins, GitLab CI, GitHub Actions',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, Go, React, Node && Node.js, Jenkins, GitLab CI, GitHub Actions',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI'
       ]
       useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Secure software development, CI/CD security, Vulnerability management, Compliance automation, Security testing',
       ],
       roi: 'Development teams report 350% ROI through reduced security vulnerabilities and faster deployments.',
@@ -450,9 +554,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       variant: 'devsecops - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -467,11 +575,14 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 28,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     // IoT Security Platform;
     {
     // IoT Security Platform;
     {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
     // IoT Security Platform;
@@ -485,7 +596,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
       features: [;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'IoT device authentication and management',
         'Network traffic monitoring and analysis',
         'Threat detection and response',
@@ -500,10 +614,15 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true,
       icon: '📱',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from - purple - 600 to - violet - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / iot - security - platform',
@@ -511,18 +630,27 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',
       target_audience:;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
       trial_days: 14,
       setup_time: '1 - 2 weeks',
       category: 'IoT Security & Protection',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       real_service: true,
       technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
       integrations: [;
@@ -530,25 +658,37 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       ],
       use_cases: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
       ],
       roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
       competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       market_size: '$14.2B IoT security market',
       growth_rate: '30% annual growth',
       variant: 'iot - security - enterprise',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -557,12 +697,19 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       real_implementation: true,
       implementation_details:;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launch_date: '2024 - 09 - 25',
       customers: 43,
       rating: 4 && 4.7,
       reviews: 21,
+<<<<<<< HEAD
     },
   id: string, name: string,
   tagline: string, price: string,
@@ -667,6 +814,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 21,
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     },;
 
@@ -674,7 +823,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   ];    features: [
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -712,12 +864,15 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Continuous identity verification and authenticationMicro-segmentation and network isolationAdaptive access controls and policiesReal-time threat detection and responseMulti-factor authentication (MFA)Privileged access management (PAM)API security and monitoringCloud security posture management';
       'Compliance reporting and auditingSecurity analytics and insights'
 <<<<<<< HEAD
+<<<<<<< HEAD
     },;
   ];    features: [
       'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts';
       'Integration with IoT platformsMobile security management'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ];
     popular: true, icon: '🔒',
     color: 'from-red-600 to-pink-600', textColor: 'text-red-400',
@@ -754,17 +909,25 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     variant: 'iot - security - enterprise',
     contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     popular: true, icon: '📱',
     color: 'from-purple-600 to-violet-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/iot-security-platform',
@@ -774,17 +937,25 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     category: 'IoT Security & Protection', realService: true,
     technology: ['Python, C++, React, Node && Node.js, MQTT, CoAP, Zigbee, Z-Wave'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
     useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     marketSize: '$14 && 14.2B IoT security market', growthRate: '30% annual growth',
     variant: 'iot-security-enterprise',
     contactInfo: {
@@ -797,9 +968,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-09-25', customers: 43,
     rating: 4 && 4.7,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     reviews: 21
     real_implementation: true,
     implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
@@ -809,9 +984,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - purple - 600 to - violet - 600';
     text_color: 'text - purple - 400';
     link: 'https://ziontechgroup.com / iot - security - platform';
@@ -823,21 +1002,30 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     real_service: true;
     technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
     use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     market_size: '$14.2B IoT security market';
     growth_rate: '30% annual growth';
     variant: 'iot - security - enterprise';
     contact_info: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -845,6 +1033,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -853,7 +1043,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     realImplementation: true;
     implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
     launchDate: '2024-09-25';
@@ -861,7 +1054,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4 && 4.7;
     reviews: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -877,18 +1073,31 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43;
     rating: 4.7;
     reviews: 21;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
   }
 ];
 ;
   }
 ];
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
   id: string,;

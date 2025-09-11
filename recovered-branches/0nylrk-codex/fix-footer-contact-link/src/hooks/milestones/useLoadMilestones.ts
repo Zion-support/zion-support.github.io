@@ -1,16 +1,23 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
@@ -52,29 +59,38 @@ export const useLoadMilestones = (projectId?: string) => {;
         if (activitiesError) throw activitiesError;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         
         activitiesMap[milestone && milestone.id] = activitiesData || []
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         activitiesMap[milestone && milestone.id] = activitiesData || []
         activitiesMap[milestone.id] = activitiesData |[]
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const useLoadMilestones = (project_id?: string) =>: any {
@@ -126,6 +142,12 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        
+        activitiesMap[milestone.id] = activitiesData || []
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -140,6 +162,7 @@ export const useLoadMilestones = (projectId?: string) => {;
   const fetchMilestones = async () => {;
     if (!projectId) {;
       setIsLoading(false),;
+<<<<<<< HEAD
 <<<<<<< HEAD
       return;
     }
@@ -163,6 +186,8 @@ export const useLoadMilestones = (projectId?: string) => {;
             created_by_profile:profiles!user_id(display_name, avatar_url);
           `);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return;
     }
@@ -192,11 +217,15 @@ if (throw milestones_error) {
             created_by_profile:profiles ! user_id (display_name, avatar_url);
           `);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           .eq('milestone_id', milestone.id);
           .order('created_at', { ascending: false }),;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
       
@@ -218,6 +247,8 @@ if (throw milestones_error) {
     }
   }, [projectId]);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -243,11 +274,15 @@ if ( {) {
     }
   }, [project_id]);
 ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return {
     milestones;
     activities;
+<<<<<<< HEAD
 <<<<<<< HEAD
     isLoading;
     error;
@@ -428,3 +463,15 @@ refetch: fetchMilestones
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    is_loading;
+    error;
+    refetch: fetch_milestones;
+=======
+      setIsLoading(false)
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

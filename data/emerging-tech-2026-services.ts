@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026Service {;
   id: string;
@@ -28,6 +31,7 @@ export interface EmergingTech2026Service {;
   growthRate: string;
   variant: ServiceVariant;
   contactInfo: {
+<<<<<<< HEAD
     mobile: string;
     email: string;
     address: string;
@@ -1351,6 +1355,8 @@ export interface EmergingTech2026Service {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
     mobile: string, email: string,
     address: string,
@@ -1387,6 +1393,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'], marketSize: '$8.7B market',
     growthRate: '400% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
@@ -1415,6 +1422,8 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026Service {;
   id: string,;
@@ -1493,6 +1502,15 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
+=======
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -1809,5 +1827,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     customers: 180,;
     rating: 4.8;
     reviews: 120;
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

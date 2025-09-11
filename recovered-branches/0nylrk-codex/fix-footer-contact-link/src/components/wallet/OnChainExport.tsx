@@ -8,6 +8,7 @@ import {useToast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 export function OnChainExport() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
@@ -28,11 +29,15 @@ export function OnChainExport() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast();
   const { user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -70,6 +75,8 @@ function OnChainExport() {
           title: "Wallet not detected",;
           description: "Please install MetaMask or another Ethereum wallet to use this feature",;
           variant: "destructive";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react",
@@ -89,6 +96,7 @@ export function OnChainExport() {
   
   const handleConnectWallet = async () => {
     try {
+<<<<<<< HEAD
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
@@ -99,12 +107,32 @@ export function OnChainExport() {
         }),
         return
       }
+=======
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+
+  const handleConnectWallet = async () => {;
+    try {;
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {;
+        toast({;
+          title: "Wallet not detected",;
+          description: "Please install MetaMask or another Ethereum wallet to use this feature",;
+          variant: "destructive";
+
+        });
+        return;
+      }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Request accounts
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
       const address = accounts[0];
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0],
       
+<<<<<<< HEAD
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0],
       
@@ -113,11 +141,14 @@ export function OnChainExport() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
         method: 'personal_sign'
         params: [address, message]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -129,13 +160,18 @@ export function OnChainExport() {
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       setIsConnected(true);
       }),
       
       setIsConnected(true),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Wallet connected"
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
@@ -146,8 +182,11 @@ export function OnChainExport() {
         variant: "destructive"
       })
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleExportTokens = async () => {
     setIsExporting(true);
@@ -156,9 +195,12 @@ export function OnChainExport() {
       // Simulate token export
       await new Promise(resolve => setTimeout(resolve, 2000));
       setExportStatus('success');
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const handleExportTokens = async () => {
@@ -171,10 +213,13 @@ export function OnChainExport() {
       
       setExportStatus('success'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Tokens exported"
         description: "Your ZION$ tokens have been exported to your wallet"})
@@ -185,6 +230,7 @@ export function OnChainExport() {
         description: error.message |"Could not export tokens"
         variant: "destructive"
       })
+<<<<<<< HEAD
 
         });
         return;
@@ -385,6 +431,8 @@ export function OnChainExport() {;
           ) :(;
             <Wallet className="h-5 w-5" />;
           )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsExporting(false)
     };
@@ -392,6 +440,7 @@ export function OnChainExport() {;
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   
@@ -439,6 +488,21 @@ export function OnChainExport() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  },
+  
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          {isConnected ? (;
+            <Wallet className="h-5 w-5 text-primary" />;
+          ) : (;
+            <Wallet className="h-5 w-5" />;
+          )}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {isExporting ? "Processing..." : "Export Tokens"}
                 {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
               </Button>
@@ -454,6 +518,7 @@ export function OnChainExport() {;
             </Button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 ;
 
@@ -465,12 +530,17 @@ export function OnChainExport() {;
 };
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 ;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -553,9 +623,13 @@ export function OnChainExport() {;
             <Wallet className="h-5 w-5" />;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           On-chain Export;
           <TooltipProvider>;
             <Tooltip>;
@@ -565,7 +639,10 @@ export function OnChainExport() {;
               <TooltipContent>;
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 ;
   return (
@@ -584,12 +661,16 @@ export function OnChainExport() {;
               <TooltipContent>;
                 <p className="max - w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
         </CardTitle>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -664,10 +745,13 @@ export function OnChainExport() {;
         )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 =======
@@ -679,3 +763,9 @@ export function OnChainExport() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

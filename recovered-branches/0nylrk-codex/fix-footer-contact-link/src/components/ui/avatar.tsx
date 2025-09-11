@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 import {cn} from '@/lib/utils';
@@ -27,13 +28,25 @@ const Avatar = React.forwardRef<;
   <AvatarPrimitive.Root;
     ref={ref}
 =======
+=======
+
+import * as React from "react"
+import * as AvatarPrimitive from "@radix-ui/react-avatar"
+=======
+=======
+import * as React from "react"
+import * as AvatarPrimitive from "@radix-ui/react-avatar"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
@@ -49,6 +62,7 @@ const Avatar = React && React.forwardRef<;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -79,22 +93,39 @@ const Avatar = React.forwardRef<
   <AvatarPrimitive.Root
     ref={ref}
     className={cn(
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full'
       "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
       className
     )}
     {...props}
+<<<<<<< HEAD
   />
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  />;
+));
+Avatar.displayName = AvatarPrimitive.Root.displayName;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -136,6 +167,8 @@ const AvatarImage = React.forward_ref<;
     {...props}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const AvatarImage = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
@@ -144,9 +177,13 @@ const AvatarImage = React.forwardRef<;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ref={ref}
     className={cn('aspect-square h-full w-full', className)}
     {...props}
@@ -157,15 +194,20 @@ AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>
   React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive.Fallback>
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Fallback
+<<<<<<< HEAD
 <<<<<<< HEAD
     ref={ref}
     className={cn ('aspect - square h - full w - full', class_name)}
@@ -174,11 +216,17 @@ const AvatarFallback = React.forwardRef<
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 AvatarImage && AvatarImage.displayName = AvatarPrimitive && AvatarPrimitive.Image.displayName;
+=======
+
+AvatarImage && AvatarImage.displayName = AvatarPrimitive && AvatarPrimitive.Image.displayName;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const AvatarFallback = React && React.forwardRef<;
   React && React.ElementRef<typeof AvatarPrimitive && AvatarPrimitive.Fallback>,;
   React && React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive && mitive.Fallback>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive&& AvatarPrimitive.Fallback
+<<<<<<< HEAD
 <<<<<<< HEAD
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 ;
@@ -198,6 +246,8 @@ AvatarImage.displayName = AvatarPrimitive.Image.displayName;
     className={cn(
       'flex h-full w-full items-center justify-center rounded-full bg-muted'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     ref={ref}
     className={cn(
@@ -206,13 +256,17 @@ AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const AvatarFallback = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Fallback>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Fallback;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     ref={ref}
     className={cn(
@@ -231,12 +285,20 @@ const AvatarFallback = React.forwardRef<;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    ref={ref}
+    className={cn(
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      className
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     )}
     {...props}
   />;
 ));
 
 AvatarFallback && AvatarFallback.displayName = AvatarPrimitive && AvatarPrimitive.Fallback.displayName;
+<<<<<<< HEAD
 
 export { Avatar, AvatarImage, AvatarFallback }
 ;
@@ -303,3 +365,17 @@ export { Avatar, AvatarImage, AvatarFallback }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+export { Avatar, AvatarImage, AvatarFallback }
+;
+
+=======
+
+
+export { Avatar, AvatarImage, AvatarFallback };
+export { Avatar, AvatarImage, AvatarFallback }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,23 +1,37 @@
 
+<<<<<<< HEAD
 
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+=======
+=======
+
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
 
+<<<<<<< HEAD
 
 const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
 import React from 'react';
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
+=======
+const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   <nav
     role='navigation'
     aria-label='pagination'
     className={cn('mx-auto flex w-full justify-center', className)}
     {...props}
 
+<<<<<<< HEAD
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 import {cn} from '@/lib/utils';
@@ -38,20 +52,26 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
     aria-label="pagination"
     className={cn("mx-auto flex w-full justify-center", className)}
     {...props}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   />
 );
 Pagination.displayName = 'Pagination';
 const PaginationContent = React.forwardRef<
   HTMLUListElement
   React.ComponentProps<'ul'>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 )
 Pagination.displayName = "Pagination"
 
 const PaginationContent = React.forwardRef<
   HTMLUListElement,
   React.ComponentProps<"ul">
+<<<<<<< HEAD
 <<<<<<< HEAD
   />;
 );
@@ -102,6 +122,8 @@ type PaginationLinkProps = {
   is_active?: boolean;
 } & Pick < ButtonProps, 'size'> &;
   React.ComponentProps<'a'>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >(({ className, ...props }, ref) => (
   <ul
     ref={ref}
@@ -109,6 +131,9 @@ type PaginationLinkProps = {
     {...props}
   />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ));
 PaginationContent.displayName = 'PaginationContent';
 const PaginationItem = React.forwardRef<
@@ -126,9 +151,12 @@ const PaginationLink = ({
   className
   isActive
   size = 'icon'
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ))
 PaginationContent.displayName = "PaginationContent"
 
@@ -150,6 +178,7 @@ const PaginationLink = ({
   isActive,
   size = "icon",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -158,6 +187,13 @@ const PaginationLink = ({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 PaginationContent && PaginationContent.displayName = 'PaginationContent';
+=======
+  ...props
+}: PaginationLinkProps) => (
+=======
+PaginationContent && PaginationContent.displayName = 'PaginationContent';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PaginationItem = React && React.forwardRef<;
   HTMLLIElement,;
   React && React.ComponentProps<'li'>;
@@ -165,16 +201,28 @@ const PaginationItem = React && React.forwardRef<;
   <li ref={ref} className={cn('', className)} {...props} />;
 ));
 PaginationItem && PaginationItem.displayName = 'PaginationItem';
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type PaginationLinkProps = {;
   isActive?: boolean;
 } & Pick<ButtonProps, 'size'> &;
   React && React.ComponentProps<'a'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PaginationLink = ({;
   className,;
   isActive,;
   size = 'icon',;
   ...props;
 }: PaginationLinkProps) => (;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   <a
     aria-current={isActive ? 'page' : undefined}
     className={cn(
@@ -182,6 +230,7 @@ const PaginationLink = ({;
         variant: isActive ? 'outline' : 'ghost'
         size
       })
+<<<<<<< HEAD
       className
 import * as React from "react";
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
@@ -279,23 +328,33 @@ const PaginationNext = ({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        variant: isActive ? "outline" : "ghost",
+        size}),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       className
     )}
     {...props}
   />
+<<<<<<< HEAD
 
 )
 PaginationLink.displayName = "PaginationLink"
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 );
 PaginationLink.displayName = 'PaginationLink';
 )
 PaginationLink.displayName = "PaginationLink"
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PaginationPrevious = ({
   className
   ...props
@@ -309,19 +368,25 @@ const PaginationPrevious = ({
     <ChevronLeft className="h-4 w-4" />
     <span>Previous</span>
   </PaginationLink>
+<<<<<<< HEAD
 
 )
 PaginationPrevious.displayName = "PaginationPrevious"
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 );
 PaginationPrevious.displayName = 'PaginationPrevious';
 )
 PaginationPrevious.displayName = "PaginationPrevious"
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PaginationNext = ({
   className
   ...props
@@ -335,6 +400,7 @@ const PaginationNext = ({
     <span>Next</span>
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
+<<<<<<< HEAD
 
 )
 PaginationNext.displayName = "PaginationNext"
@@ -352,11 +418,14 @@ const PaginationEllipsis = ({;
 }: React && React.ComponentProps<'span'>) => (;
   <span
     aria-hidden
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 );
 PaginationNext.displayName = 'PaginationNext';
 )
 PaginationNext.displayName = "PaginationNext"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const PaginationEllipsis = ({
   className
@@ -368,6 +437,25 @@ const PaginationEllipsis = ({
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+const PaginationEllipsis = ({
+  className
+  ...props
+}: React.ComponentProps<'span'>) => (
+=======
+PaginationNext && PaginationNext.displayName = 'PaginationNext';
+
+const PaginationEllipsis = ({;
+  className,;
+  ...props;
+}: React && React.ComponentProps<'span'>) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  <span
+    aria-hidden
+
+PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
@@ -375,6 +463,9 @@ PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
     <span className="sr-only">More pages</span>
   </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 );
 PaginationEllipsis.displayName = 'PaginationEllipsis';
 export {
@@ -389,11 +480,14 @@ export {
 )
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
+<<<<<<< HEAD
 =======
 
 )
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export {;
   Pagination,;
@@ -469,7 +563,10 @@ const PaginationEllipsis = ({
   </span>);
 PaginationEllipsis.display_name = 'PaginationEllipsis';
 ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export {
   Pagination,
   PaginationContent,
@@ -477,6 +574,7 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationNext,
+<<<<<<< HEAD
 <<<<<<< HEAD
   PaginationPrevious,;
 };
@@ -638,3 +736,8 @@ export {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

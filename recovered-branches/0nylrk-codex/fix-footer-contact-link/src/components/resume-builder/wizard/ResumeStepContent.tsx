@@ -1,9 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -24,9 +31,12 @@ interface ResumeStepContentProps {
           resumeId={resume?.id!}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {TabsContent} from "@/components/ui/tabs";
 import {Resume} from "@/types/resume";
 import {BasicInfoForm} from '../forms/basic-info';
@@ -35,6 +45,7 @@ import {EducationForm} from '../forms/EducationForm';
 import {SkillsForm} from '../forms/SkillsForm';
 import {CertificationsForm} from '../forms/CertificationsForm';
 import {PreviewResume} from '../PreviewResume';
+<<<<<<< HEAD
 <<<<<<< HEAD
           initialData={resume?.basic_info}
           onSave={(data) => {;
@@ -103,12 +114,15 @@ import { CertificationsForm } from '../forms/CertificationsForm',;
 import { PreviewResume } from '../PreviewResume',;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ResumeStepContentProps {;
   activeTab: string,;
   resume: Resume,;
   onNextStep: () => void,;
   onPrevStep: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export const ResumeStepContent = ({;
@@ -184,6 +198,8 @@ export const ResumeStepContent = ({;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export const ResumeStepContent = ({ ;
   activeTab;
@@ -226,17 +242,24 @@ export const ResumeStepContent = ({ ;
         <WorkExperienceForm 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
       </TabsContent>
       <TabsContent value="education">
         <EducationForm
         <EducationForm 
+<<<<<<< HEAD
 =======
 
         />;
@@ -251,33 +274,45 @@ export const ResumeStepContent = ({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
 <<<<<<< HEAD
+<<<<<<< HEAD
         />
       </TabsContent>
       <TabsContent value="skills">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
       </TabsContent>;
 
       <TabsContent value="skills">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
       </TabsContent>
       <TabsContent value="certifications">
         <CertificationsForm
         <CertificationsForm 
+<<<<<<< HEAD
 =======
 
         />;
@@ -292,10 +327,13 @@ export const ResumeStepContent = ({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />
       </TabsContent>
@@ -465,15 +503,32 @@ onPrevStep
 }/> </TabsContent> </>) 
 };
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <PreviewResume 
           resume={resume as Resume} 
           onBack={onPrevStep}
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
       </TabsContent>;
     </>;
   );
+<<<<<<< HEAD
 };
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

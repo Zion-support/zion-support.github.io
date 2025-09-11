@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
@@ -10,6 +11,9 @@ export function AIEnhancementPanel({;
 export function AIEnhancementPanel(): any ({;
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
 import { Textarea  } from '@/components/ui/textarea';
@@ -19,6 +23,7 @@ import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementPanelProps {
 
+<<<<<<< HEAD
   title: string
   defaultOptions: AIEnhancementOptions
   onApply: (content: string) => void
@@ -38,6 +43,8 @@ import {Input} from '@/components/ui/input';
 import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AIEnhancementPanelProps {;
   title: string,;
   defaultOptions: AIEnhancementOptions,;
@@ -58,11 +65,15 @@ export function AIEnhancementPanel(): any ({;
 export function AIEnhancementPanel({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title;
   defaultOptions;
   onApply;
   onClose;
+<<<<<<< HEAD
     content: initialContent || defaultOptions && defaultOptions.content}),;
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
@@ -80,6 +91,10 @@ export function AIEnhancementPanel({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const handleGenerate = async () => {
 =======
+=======
+
+  showInstructions = true;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   initialContent = '';
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -91,22 +106,31 @@ export function AIEnhancementPanel({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 
   }
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -138,17 +162,24 @@ export function AIEnhancementPanel({;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleGenerate = async () => {;
 =======
 
   const handleGenerate = async () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const handleGenerate = async () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -161,14 +192,20 @@ export function AIEnhancementPanel({;
   },
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -176,6 +213,7 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
+<<<<<<< HEAD
 
 
   },
@@ -191,10 +229,22 @@ export function AIEnhancementPanel({;
 
 
 
+=======
+  }
+  },
+
+  const handleApply = () => {
+    onApply(generatedContent);
+    if (onClose) onClose()
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
 
   };
 <<<<<<< HEAD
@@ -302,6 +352,12 @@ export function AIEnhancementPanel({;
 
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -314,9 +370,12 @@ export function AIEnhancementPanel({;
         <div className="space-y-2">;
           <label className="text-sm font-medium">Content to enhance</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           />;
         </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Textarea
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
@@ -327,7 +386,10 @@ export function AIEnhancementPanel({;
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Context input */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Context (optional)</label>;
@@ -336,6 +398,7 @@ export function AIEnhancementPanel({;
             className="min-h-[60px]"
             value={options && options.context}
             onChange={(e) => handleInputChange(e, 'context')}
+<<<<<<< HEAD
 <<<<<<< HEAD
           />;
         </div>;
@@ -357,16 +420,22 @@ export function AIEnhancementPanel({;
         </div>;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Instructions input (optional) */}
         {showInstructions && (;
           <div className="space-y-2">;
             <label className="text-sm font-medium">Special instructions (optional)</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Input;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'";
@@ -376,10 +445,16 @@ export function AIEnhancementPanel({;
               placeholder="E && E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options && options.instructions}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <Input
+              placeholder="E && E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              value={options && options.instructions}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
         )}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -440,13 +515,18 @@ export function AIEnhancementPanel({;
             />
           </div>
         )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Generate button */}
         <Button
           onClick={handleGenerate}
           className="w-full"
           disabled={isEnhancing |!options.content && !options.context}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Generate button */}
         <Button 
@@ -454,10 +534,13 @@ export function AIEnhancementPanel({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           {isEnhancing ? (
             <>
@@ -480,6 +563,7 @@ export function AIEnhancementPanel({;
                 variant="ghost"
                 size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
         {/* Generate button */}
         <Button ;
@@ -489,15 +573,21 @@ export function AIEnhancementPanel({;
         >;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options && options.content && !options && options.context}>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isEnhancing ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Enhancing...;
             </>;
+<<<<<<< HEAD
           ) :(;
             <>;
               <Sparkles className="mr-2 h-4 w-4" />;
@@ -505,11 +595,22 @@ export function AIEnhancementPanel({;
             </>;          )}
         </Button>;
 ;
+=======
+          ) : (;
+            <>;
+              <Sparkles className="mr-2 h-4 w-4" />;
+              Generate Enhanced Content;
+            </>;
+          )}
+        </Button>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Output area */}
         {generatedContent && (;
           <div className="space-y-2 mt-4">;
             <div className="flex justify-between items-center">;
               <label className="text-sm font-medium">Generated content</label>;
+<<<<<<< HEAD
               <Button ;
                 variant="ghost" ;
                 size="sm" ;
@@ -519,34 +620,72 @@ export function AIEnhancementPanel({;
                 {copied ? (;
                   <><Check className="h-4 w-4 mr-1" /> Copied</>;
                 ) :(;
+=======
+              <Button
+                variant="ghost" 
+                size="sm" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                onClick={handleCopy}
+                className="h-8">;
+                {copied ? (;
+                  <><Check className="h-4 w-4 mr-1" /> Copied</>;
+                ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>;
                 )}
               </Button>;
             </div>;
             <div className="relative">;
+<<<<<<< HEAD
               <Textarea;
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e.target.value)}
+=======
+              <Textarea
+                value={generatedContent}
+                onChange={(e) => setGeneratedContent(e && e.target.value)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="min-h-[200px]";
               />;
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
       </CardContent>;
       ;
+=======
+
+      </CardContent>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {generatedContent && (;
         <CardFooter className="flex justify-between">;
           {onClose && (;
             <Button variant="outline" onClick={onClose}>;
               Cancel;
+<<<<<<< HEAD
           )}
             </Button>;          )}
+=======
+            </Button>;
+
+          )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
       )}
+<<<<<<< HEAD
     </Card>;
+=======
+
+    </Card>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
 import {Textarea} from '@/components / ui / textarea';
 import {Button} from '@/components / ui / button';
@@ -696,6 +835,7 @@ if ( {) {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  value= {
   options.instructions 
@@ -757,3 +897,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

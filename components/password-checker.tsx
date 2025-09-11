@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -24,6 +25,10 @@ import {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function PasswordCheckerPage() {
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Lock,
   Shield,
   Eye,
@@ -32,6 +37,7 @@ export default function PasswordCheckerPage() {
   RefreshCw,
   CheckCircle,
   XCircle,
+<<<<<<< HEAD
 <<<<<<< HEAD
 }, [password]);
       length: pass.length >= 8,
@@ -71,6 +77,25 @@ function PasswordCheckerPage() {
       analyzePassword(password)
     } else {
       resetAnalysis()
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     return this.props.children;
@@ -83,7 +108,11 @@ import React, { useState, useEffect } from 'react';
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 
@@ -92,14 +121,18 @@ export default function PasswordCheckerPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function PasswordCheckerPage() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [checks, setChecks] = useState({
 
@@ -113,6 +146,10 @@ export default function PasswordCheckerPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       analyzePassword(password);
     } else {
       resetAnalysis();    }      analyzePassword(password)
@@ -121,6 +158,7 @@ export default function PasswordCheckerPage() {;
     }
   }, [password]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const analyzePassword = (pass: string) => {
     const newChecks = {
@@ -135,6 +173,8 @@ export default function PasswordCheckerPage() {;
       noSequential: !hasSequentialChars(pass)
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       length: pass.length >= 8,
       uppercase: /[A-Z]/.test(pass),
@@ -146,7 +186,10 @@ export default function PasswordCheckerPage() {;
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setChecks(newChecks);
     // Calculate strength score
     let score = 0;
@@ -163,6 +206,7 @@ export default function PasswordCheckerPage() {;
     setStrength(score);
     // Set strength text and color
     if (score >= 90) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setStrengthColor('text-green-400')
     } else if (score >= 70) {
@@ -518,6 +562,11 @@ setSuggestions([]);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       no_common: false,
       no_sequential: false,
+=======
+      no_common: false,
+      no_sequential: false,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       length: false
       uppercase: false
       lowercase: false
@@ -542,6 +591,7 @@ setSuggestions([]);
       'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
     let result = '';
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)]; // Uppercase
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)]; // Lowercase
@@ -562,12 +612,17 @@ setSuggestions([]);
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);  };    let result = '';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
     let result = '';
     
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase
@@ -586,7 +641,10 @@ setSuggestions([]);
     navigator.clipboard.writeText(text)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     // Ensure at least one of each required character type;
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math && Math.floor(Math && Math.random() * 26)]; // Uppercase;
@@ -606,7 +664,10 @@ setSuggestions([]);
     setPassword(result);
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   const copyToClipboard = (text: string) => {;
     navigator && navigator.clipboard.writeText(text);  };    let result = '';
@@ -628,12 +689,17 @@ setSuggestions([]);
     navigator && navigator.clipboard.writeText(text);
   };
   const getStrengthBarColor = () => {;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const getStrengthBarColor = () => {
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
     if (strength >= 30) return 'bg-orange-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
     return 'bg-red-400';  };
   const getCheckIcon = (passed: boolean) => {;
@@ -701,6 +767,8 @@ setSuggestions([]);
       </Head>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   };
@@ -715,13 +783,35 @@ setSuggestions([]);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
+=======
+    <>
+      <Head>
+        <title>Password Strength Checker - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.'
+        />
+        <meta
+          property='og:title'
+          content='Password Strength Checker - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Advanced password strength analyzer with security recommendations.'
+        />
+      </Head>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -759,7 +849,10 @@ setSuggestions([]);
       </section>
       {/* Password Checker Tool */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
       </Head>;
@@ -781,7 +874,10 @@ setSuggestions([]);
             Get detailed feedback, suggestions, and generate strong passwords to;
             protect your accounts and data.          </p>      </Head>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -801,9 +897,13 @@ setSuggestions([]);
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Password Checker Tool */}
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -817,9 +917,13 @@ setSuggestions([]);
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {/* Input Form */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>;
@@ -827,6 +931,7 @@ setSuggestions([]);
                 <Lock className='w-6 h-6 mr-3 text-indigo-400' />;
                 Password Analysis;
               </h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='space-y-6'>;
                 {/* Password Input */}
@@ -874,6 +979,11 @@ setSuggestions([]);
               <div className='space-y-6'>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <div className='space-y-6'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Password Input */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -891,6 +1001,7 @@ setSuggestions([]);
                       type='button'
                       onClick={() => setShowPassword(!showPassword)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className='absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white'
                     >
                       {showPassword ? (
@@ -899,6 +1010,8 @@ setSuggestions([]);
                         <Eye className='w-5 h-5' />
                       )}                    </button>              Check Your Password Strength
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -906,7 +1019,10 @@ setSuggestions([]);
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Check Your Password Strength
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced security analyzer evaluates multiple factors to determine password strength and security.
@@ -921,7 +1037,10 @@ setSuggestions([]);
               </h3>
               <div className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
                       className='absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white';
                     >;
@@ -944,13 +1063,19 @@ setSuggestions([]);
               </h3>;
               <div className="space-y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Password Input */}
                 <div>;
                   <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                     Enter Password
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 ;
     // Ensure at least one of each required character type;
@@ -1103,7 +1228,10 @@ if (return 'bg - orange - 400') {
                     <input;
                       type={show_password ? 'text' : 'password'}
                       value={password}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       on_change={e => set_password (e.target.value)}
                       placeholder='Type your password here...';
                       className='w - full px - 4 py - 3 pr - 12 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - indigo - 500 focus:border - transparent';
@@ -1140,6 +1268,7 @@ if (return 'bg - orange - 400') {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     </button>
                   </div>
@@ -1170,18 +1299,27 @@ if (return 'bg - orange - 400') {
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Generate Password */}
                 <div>;
                   <Button
                     onClick={generateStrongPassword}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'
                   >
                     <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
@@ -1190,6 +1328,7 @@ if (return 'bg - orange - 400') {
                     Generate Strong Password
                   </Button>
                 </div>
+<<<<<<< HEAD
 =======
 
 
@@ -1209,6 +1348,18 @@ if (return 'bg - orange - 400') {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Generated Password Display */}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {/* Generated Password Display */}
                 {generatedPassword && (
@@ -1225,6 +1376,7 @@ if (return 'bg - orange - 400') {
                         Copy
                       </Button>
                     </div>
+<<<<<<< HEAD
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}                      <Button
                         onClick={() => copyToClipboard(generatedPassword)}
                         variant="outline"
@@ -1261,11 +1413,18 @@ if (return 'bg - orange - 400') {
 
                     </div>
                   </div>
+=======
+
+                    </div>
+                  </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
 
 
                 <div className="text-sm text-gray-400">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {generatedPassword}
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
@@ -1278,6 +1437,8 @@ if (return 'bg - orange - 400') {
                 <div className='text-sm text-gray-400'>                  <p>• Real-time strength analysis</p>                <div className="text-sm text-gray-400">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p>• Real-time strength analysis</p>
                   <p>• Multiple security criteria</p>
                   <p>• Detailed feedback and suggestions</p>
@@ -1286,6 +1447,7 @@ if (return 'bg - orange - 400') {
               </div>
             </Card>
             {/* Strength Analysis */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
@@ -1297,12 +1459,20 @@ if (return 'bg - orange - 400') {
             <Card className="p-8 bg-gray-800 border border-gray-700">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            <Card className="p-8 bg-gray-800 border border-gray-700">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-6 h-6 mr-3 text-purple-400" />
                 Security Analysis
               </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {password ? (
 
 
@@ -1328,8 +1498,13 @@ if (return 'bg - orange - 400') {
                 <div className='space-y-6'>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="space-y-6">
+=======
+                <div className="space-y-6">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {password ? (
                 <div className='space-y-6'>
                   {/* Strength Score */}
@@ -1345,18 +1520,27 @@ if (return 'bg - orange - 400') {
                       <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">;
                   {/* Strength Score */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <span className={`text-lg font-bold ${strengthColor}`}>
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     <div className="w-full bg-gray-700 rounded-full h-3">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='space-y-6'>
                   {/* Strength Score */}
                   <div>
@@ -1368,6 +1552,7 @@ if (return 'bg - orange - 400') {
                       </span>
                     </div>
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1391,6 +1576,16 @@ if (return 'bg - orange - 400') {
 
                       <div 
 
+=======
+=======
+
+
+
+=======
+
+                      <div 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={{ width: `${strength}%` }}
                       />
@@ -1414,15 +1609,19 @@ if (return 'bg - orange - 400') {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   {/* Security Checks */}
 
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Security Checks */}
@@ -1443,6 +1642,15 @@ if (return 'bg - orange - 400') {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Security Criteria</h4>
                     <div className="space-y-3">
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {/* Security Checks */}
+                  <div>
+                    <h4 className='text-lg font-semibold text-white mb-3'>
+                      Security Criteria
+                    </h4>
+                    <div className='space-y-3'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className='flex items-center space-x-3'>
                           {getCheckIcon(passed)}
@@ -1454,25 +1662,47 @@ if (return 'bg - orange - 400') {
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
                           >                            {key === 'length' && 'At least 8 characters'}
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
                             {key === 'numbers' && 'Contains number'}
                             {key === 'symbols' && 'Contains special character'}
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {key === 'noCommon' && 'Not a common password'}
                             {key === 'noSequential' &&
                               'No sequential characters'}                          </span>                            {key === 'noSequential' && 'No sequential characters'}
                           </span>
                         </div>
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ))}
                     </div>
                   </div>
 
+<<<<<<< HEAD
+=======
+                    </div>;
+                  </div>;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -1498,6 +1728,7 @@ if (return 'bg - orange - 400') {
 
                           </div>
 
+<<<<<<< HEAD
                         ))}
                       </div>
                     </div>
@@ -1531,6 +1762,10 @@ if (return 'bg - orange - 400') {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         ))}
                       </div>;
                     </div>;
@@ -1543,6 +1778,7 @@ if (return 'bg - orange - 400') {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Features */}
 
@@ -1632,6 +1868,8 @@ if (return 'bg - orange - 400') {
                 Your passwords are never stored or transmitted - analysis
                 happens locally in your browser.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
@@ -1689,22 +1927,32 @@ if (return 'bg - orange - 400') {
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-white mb-4">Privacy First</h3>
               <p className="text-gray-400">
                 Your passwords are never stored or transmitted - analysis happens locally in your browser.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
               </p>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              </p>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>
           </div>
         </div>
       </section>
       {/* Security Tips */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1741,6 +1989,8 @@ if (return 'bg - orange - 400') {
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />                  Update passwords regularly                <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1777,11 +2027,15 @@ if (return 'bg - orange - 400') {
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Update passwords regularly
                 </li>
               </ul>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='text-4xl mb-4'>❌</div>
@@ -1792,6 +2046,8 @@ if (return 'bg - orange - 400') {
                   Don't use personal information (names, birthdays)
                 </li>                  Don't use personal information (names, birthdays)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -1801,7 +2057,10 @@ if (return 'bg - orange - 400') {
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
                   Don't use personal information (names, birthdays)
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -1815,6 +2074,7 @@ if (return 'bg - orange - 400') {
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
                   Don't reuse passwords across accounts
                 </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <li className='flex items-start'>
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
@@ -1836,6 +2096,11 @@ if (return 'bg - orange - 400') {
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <li className="flex items-start">
+                  <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Avoid writing passwords down
                 </li>
               </ul>
@@ -1844,7 +2109,10 @@ if (return 'bg - orange - 400') {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </Card>;
           </div>;
@@ -2068,15 +2336,22 @@ if (return 'bg - orange - 400') {
             </h2>;
             <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Follow these guidelines to create and maintain strong, secure;
               passwords for all your accounts.;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
               <div className='text - 4xl mb - 4'>✅</div>;
@@ -2101,17 +2376,25 @@ if (return 'bg - orange - 400') {
                   <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 mt - 0.5 flex - shrink - 0' />                  Update passwords regularly                <li className="flex items - start">;
                   <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 mt - 0.5 flex - shrink - 0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Update passwords regularly;
                 </li>;
               </ul>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
               <div className='text - 4xl mb - 4'>❌</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>Don'ts</h3>;
@@ -2149,9 +2432,13 @@ if (return 'bg - orange - 400') {
                   <XCircle className='w - 5 h - 5 text - red - 400 mr - 3 mt - 0.5 flex - shrink - 0' />                  Avoid writing passwords down                <li className="flex items - start">;
                   <XCircle className="w - 5 h - 5 text - red - 400 mr - 3 mt - 0.5 flex - shrink - 0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Avoid writing passwords down;
                 </li>;
               </ul>;
@@ -2159,6 +2446,7 @@ if (return 'bg - orange - 400') {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -2186,11 +2474,15 @@ href="/pricing"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
+<<<<<<< HEAD
 
             Ready to Secure Your Passwords?
 
@@ -2202,12 +2494,18 @@ href="/pricing"
             Ready to Secure Your Passwords?
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            Ready to Secure Your Passwords?
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
             improve their account security.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button
               href='/contact'
@@ -2218,6 +2516,8 @@ href="/pricing"
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
@@ -2226,11 +2526,15 @@ href="/pricing"
               Get Started Today;
               <ArrowRight className='w-5 h-5 ml-2' />;
             </Button>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='/pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-indigo-600'            >              href="/pricing"
               variant="outline"
@@ -2262,6 +2566,10 @@ href="/pricing"
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               View Pricing;
             </Button>;
           </div>;
@@ -2277,4 +2585,7 @@ href="/pricing"
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

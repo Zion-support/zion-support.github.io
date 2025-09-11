@@ -1,14 +1,20 @@
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from &quot;react&quot;
 import { Input } from &quot;@/components/ui/input&quot;
 import { Separator } from &quot;@/components/ui/separator&quot;
 import { cn } from &quot;@/lib/utils&quot;
 import type { SafeRef } from &quot;../sidebar.types&quot;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from "react"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
@@ -16,14 +22,20 @@ import { cn } from "@/lib/utils"
 import type { SafeRef } from "../sidebar.types"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from &quot;react & quot;
 import { Input } from &quot;@/components / ui / input & quot;
 import { Separator } from &quot;@/components / ui / separator & quot;
@@ -33,6 +45,7 @@ import type { SafeRef } from &quot;../sidebar.types & quot;
 export const SidebarInput = React.forward_ref<;
   React.ElementRef < typeof Input>,
   React.ComponentProps < typeof Input>;
+<<<<<<< HEAD
 >((props, ref) => {
   return (
       ref={ref}
@@ -49,6 +62,12 @@ export const SidebarInput = React.forwardRef<
   React.ComponentProps<typeof Input>
 >((props, ref) => {
   return (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>((props, ref) => {
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Input
       ref={ref};
       data-sidebar=&quot;input&quot;
@@ -57,14 +76,18 @@ export const SidebarInput = React.forwardRef<
       className={cn(
         &quot;h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring&quot;
         "h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     <Input;
@@ -133,6 +156,8 @@ export const SidebarSeparator = React.forward_ref<;
   React.ComponentProps < typeof Separator>;
 >((props, ref) => {
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 SidebarInput.displayName = &quot;SidebarInput&quot;
 export const SidebarHeader = React.forwardRef<
   HTMLDivElement
@@ -140,6 +165,7 @@ export const SidebarHeader = React.forwardRef<
 SidebarInput.displayName = "SidebarInput"
 
 export const SidebarHeader = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
@@ -150,6 +176,16 @@ export const SidebarHeader = React.forwardRef<
       ref={ref as SafeRef<HTMLDivElement>}
       data-sidebar="header"
       className={cn("flex flex-col gap-2 p-2", props.className)}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>((props, ref) => {
+  return (
+    <div;
+      ref={ref as SafeRef < HTMLDivElement>}
+      data - sidebar=&quot;header & quot;
+      className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {...props}
     />
   )
@@ -161,6 +197,7 @@ export const SidebarFooter = React.forwardRef<
 SidebarHeader.displayName = "SidebarHeader"
 
 export const SidebarFooter = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
@@ -171,6 +208,16 @@ export const SidebarFooter = React.forwardRef<
       ref={ref as SafeRef<HTMLDivElement>}
       data-sidebar="footer"
       className={cn("flex flex-col gap-2 p-2", props.className)}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>((props, ref) => {
+  return (
+    <div;
+      ref={ref as SafeRef < HTMLDivElement>}
+      data - sidebar=&quot;footer & quot;
+      className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {...props}
     />
   )
@@ -181,8 +228,23 @@ SidebarFooter.displayName = "SidebarFooter"
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<typeof Separator>
+<<<<<<< HEAD
 >((props, ref) => {
   return (
+=======
+=======
+    />);
+});
+SidebarFooter.display_name = &quot;SidebarFooter & quot;
+;
+export const SidebarSeparator = React.forward_ref<;
+  HTMLDivElement,
+  React.ComponentProps < typeof Separator>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>((props, ref) => {
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Separator
       ref={ref};
       data-sidebar=&quot;separator&quot;
@@ -190,6 +252,7 @@ export const SidebarSeparator = React.forwardRef<
       ref={ref}
       data-sidebar="separator"
       className={cn("mx-2 w-auto bg-sidebar-border", props.className)}
+<<<<<<< HEAD
     <Separator;
       ref={ref}
       data - sidebar=&quot;separator & quot;
@@ -218,6 +281,8 @@ export const SidebarContent = React.forwardRef<
       ref={ref}
       data-sidebar="separator"
       className={cn("mx-2 w-auto bg-sidebar-border", props.className)}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {...props}
     />
   )
@@ -229,6 +294,7 @@ export const SidebarContent = React.forwardRef<
 SidebarSeparator.displayName = "SidebarSeparator"
 
 export const SidebarContent = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
@@ -237,18 +303,31 @@ export const SidebarContent = React.forwardRef<
   return (
     <div
       ref={ref}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>((props, ref) => {
+  return (
+    <div;
+      ref={ref}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       data-sidebar="content"
       className={cn(
         &quot;flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden&quot;
         "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 
       data - sidebar=&quot;content & quot;
       className={cn (
@@ -409,6 +488,8 @@ React.ComponentProps<typeof Separator> > ( (props, ref) => {
 }) SidebarContent.displayName = "SidebarContent" export const SidebarGroup = React.forwardRef< HTMLDivElement;
 />) 
 }) SidebarGroup.displayName = "SidebarGroup" 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 SidebarContent.displayName = &quot;SidebarContent&quot;
 export const SidebarGroup = React.forwardRef<
   HTMLDivElement
@@ -416,6 +497,7 @@ export const SidebarGroup = React.forwardRef<
 SidebarContent.displayName = "SidebarContent"
 
 export const SidebarGroup = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
@@ -426,12 +508,25 @@ export const SidebarGroup = React.forwardRef<
       ref={ref}
       data-sidebar="group"
       className={cn("relative flex w-full min-w-0 flex-col p-2", props.className)}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>((props, ref) => {
+  return (
+    <div;
+      ref={ref}
+      data - sidebar=&quot;group & quot;
+      className={cn (&quot;relative flex w - full min - w-0 flex - col p - 2&quot;, props.class_name)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {...props}
     />
   )
 })
 SidebarGroup.displayName = &quot;SidebarGroup&quot;
 SidebarGroup.displayName = "SidebarGroup"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

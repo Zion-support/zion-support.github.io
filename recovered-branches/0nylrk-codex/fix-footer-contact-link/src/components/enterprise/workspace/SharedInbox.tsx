@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -14,12 +15,17 @@ import { Badge } from "@/components/ui/badge",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function SharedInbox() {
   // Mock messages
 
   const messages = [
     {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: "msg-1"
       from: "John Smith"
@@ -29,11 +35,15 @@ export function SharedInbox() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: "msg-1",
       from: "John Smith",
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
+<<<<<<< HEAD
 <<<<<<< HEAD
       unread: true;
     };
@@ -45,6 +55,11 @@ export function SharedInbox() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "msg-2"
       from: "Talent Support"
@@ -52,6 +67,7 @@ export function SharedInbox() {
       preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer."
       timestamp: "Yesterday"
       unread: false
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -65,6 +81,10 @@ export function SharedInbox() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "msg-3"
       from: "Sarah Wilson"
@@ -73,10 +93,14 @@ export function SharedInbox() {
       timestamp: "2d ago"
       unread: false
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   ],
 
   return (
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -138,6 +162,13 @@ export function SharedInbox() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -171,6 +202,7 @@ export function SharedInbox() {;
   ];
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
       id:"msg-1",;
       from:"John Smith",;
       subject:"Interview Scheduled",;
@@ -200,6 +232,9 @@ export function SharedInbox() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -208,15 +243,20 @@ export function SharedInbox() {;
             <CardDescription>Team messages and notifications</CardDescription>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Badge className="bg-blue-500">{messages.filter(m => m.unread).length} New</Badge>;
           <Badge className="bg-blue-500">{messages.filter(m => m.unread).length} New</Badge>;
 =======
           <Badge className="bg-blue-500">{messages && messages.filter(m => m && m.unread).length} New</Badge>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <Badge className="bg-blue-500">{messages && messages.filter(m => m && m.unread).length} New</Badge>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {messages.map((message) => (;
             <div ;
@@ -241,6 +281,8 @@ export function SharedInbox() {;
         </div>;
         {messages.length === 0 && (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {messages && messages.map((message) => (;
             <div
               key={message && message.id} 
@@ -256,11 +298,15 @@ export function SharedInbox() {;
         </div>;
 
         {messages && messages.length === 0 && (;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="p-4 text-center text-muted-foreground">;
             No new messages;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <div className="p-3 text-center border-t border-border">;
@@ -269,6 +315,8 @@ export function SharedInbox() {;
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
@@ -305,7 +353,10 @@ export function SharedInbox() {;
         <div className="p - 3 text - center border - t border - border">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             View All Messages;
           </button>;
         </div>;
@@ -314,6 +365,7 @@ export function SharedInbox() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </Card>);
@@ -370,3 +422,8 @@ flex items-center justify-between" > <div> <CardTitle>Shared Inbox</CardTitle> <
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

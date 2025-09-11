@@ -1,27 +1,49 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
       description:;
         'Revolutionary AI consciousness and machine learning solutions',
@@ -255,6 +277,16 @@ color: 'from - emerald - 500 to - green - 500',
       default: return 0
     }
   });
+=======
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const featuredServices = [;
     {;
       id: 'ai-consciousness-evolution',;
@@ -295,6 +327,10 @@ color: 'from - emerald - 500 to - green - 500',
       icon: Rocket,;
       color: 'from-indigo-500 to-purple-500',;
     },  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter categories based on search;
   const filteredCategories = categories && categories.filter(category => {;
     const matchesSearch =;
@@ -303,6 +339,10 @@ color: 'from - emerald - 500 to - green - 500',
     const matchesFilter =;
       selectedCategory === 'all' || category && category.id === selectedCategory;
     return matchesSearch && matchesFilter;  });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Sort categories;
   const sortedCategories = [...filteredCategories].sort((a, b) => {;
     switch (sortBy) {;
@@ -313,6 +353,7 @@ color: 'from - emerald - 500 to - green - 500',
       case 'featured':;
         return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
       default:;
+<<<<<<< HEAD
         return 0;    }
   });
   return (
@@ -771,6 +812,12 @@ import React, { useState } from 'react';
 
   return (
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        return 0;    }
+  });
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Explore Technology Categories | Zion Tech Group</title>
@@ -794,17 +841,21 @@ import React, { useState } from 'react';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 =======
 
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/explore' />      </Head>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name="description" content="Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business." />
         <meta property="og:title" content="Explore Technology Categories | Zion Tech Group" />
         <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/explore" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <SmartHeader />
       {/* Hero Section */  } catch (error) {
@@ -817,6 +868,8 @@ import React, { useState } from 'react';
           <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <SmartHeader />
 
@@ -829,7 +882,10 @@ import React, { useState } from 'react';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -846,14 +902,20 @@ import React, { useState } from 'react';
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
           >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Explore Technology Categories
             </h1>
@@ -869,18 +931,25 @@ import React, { useState } from 'react';
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 View All Services
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.8 }}>;
 
       {/* Search and Filters */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Search and Filters */}
       <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -890,6 +959,7 @@ import React, { useState } from 'react';
               <div className='flex-1 max-w-md'>
                 <div className='relative'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
+<<<<<<< HEAD
 =======
 
             transition={{ duration: 0 && 0.8 }}>;
@@ -919,19 +989,26 @@ import React, { useState } from 'react';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Search and Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+<<<<<<< HEAD
               {/* Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -973,6 +1050,28 @@ import React, { useState } from 'react';
               {/* Sort Options */}
 
 
+=======
+              {/* Search */}
+              <div className="flex-1 max-w-md">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <input
+                    type="text"
+                    placeholder="Search categories..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                  />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                </div>
+              </div>
+              {/* Sort Options */}
+              <div className='flex items-center gap-4'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Sort Options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -985,11 +1084,15 @@ import React, { useState } from 'react';
                 <select
                   value={sortBy}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex items-center gap-4">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
+<<<<<<< HEAD
               {/* Sort Options */}
               <div className='flex items-center gap-4'>
               {/* Sort Options */  } catch (error) {
@@ -1009,6 +1112,8 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
                   <option value="popularity">Sort by Popularity</option>
@@ -1016,14 +1121,19 @@ import React, { useState } from 'react';
                   <option value="featured">Sort by Featured</option>
                 </select>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1159,6 +1269,8 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
 className="mb-12"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Featured Services */}
       <section className='px-6 pb-16'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -1171,6 +1283,7 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
       <section className="px-6 pb-16">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -1192,11 +1305,24 @@ className="mb-12"
             className="mb-12"
 <<<<<<< HEAD
 =======
+=======
+
+      <section className="px-6 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -1205,6 +1331,7 @@ className="mb-12"
               Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
 <<<<<<< HEAD
@@ -1218,6 +1345,20 @@ className="mb-12"
               <motion.div
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              <motion.div
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
             <h2 className='text-3xl font-bold text-white mb-4'>;
@@ -1226,6 +1367,7 @@ className="mb-12"
             <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
@@ -1233,10 +1375,17 @@ className="mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 =======
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.id}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 mb-4 flex items-center justify-center`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
@@ -1246,6 +1395,14 @@ className="mb-12"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 mb-4 flex items-center justify-center`}>;
+                    <service && service.icon className='w-8 h-8 text-white' />;
+                  </div>;
+
+                  <div className='flex items-center justify-between mb-3'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
                         service && service.status === 'active'
@@ -1254,9 +1411,13 @@ className="mb-12"
                             ? 'bg-yellow-500/20 text-yellow-300'
                             : 'bg-blue-500/20 text-blue-300'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Featured Services */}
       <section className='px - 6 pb - 16'>;
         <div className='max - w-7xl mx - auto'>          <motion.div;
@@ -1278,8 +1439,11 @@ className="mb-12"
                 animate={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='group relative p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
               >;
                 <div className='absolute inset - 0 bg - gradient - to - br from - white / 0 via - cyan - 400 / 5 to - white / 0 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 2xl' />;
@@ -1298,7 +1462,10 @@ className="mb-12"
                             ? 'bg - yellow - 500 / 20 text - yellow - 300';
                             : 'bg - blue - 500 / 20 text - blue - 300';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       }`}
                     >;
                       {service.status}
@@ -1306,24 +1473,34 @@ className="mb-12"
                     <span className='text - xs text - white / 40'>;
                       {service.category}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </span>;
                   </div>;
                   <h3 className='text - lg font - bold mb - 2 text - white'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </span>;
                   </div>;
                   <h3 className='text - lg font - bold mb - 2 text - white'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {service.title}
                   </h3>;
                   <p className='text - sm text - white / 70 mb - 4 leading - relaxed'>;
                     {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       }`}>;
                       {service && service.status}
                     </span>;
@@ -1331,22 +1508,35 @@ className="mb-12"
                       {service && service.category}
                     </span>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <h3 className='text-lg font-bold mb-2 text-white'>;
                     {service && service.title}
                   </h3>;
                   <p className='text-sm text-white/70 mb-4 leading-relaxed'>;
                     {service && service.description}
                   </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='mb-4'>;
                     <span className='text-xl font-bold text-cyan-400'>;
                       {service && service.price}
                     </span>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a
                     href={`/services#${service && service.id}`}
                     className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
@@ -1354,6 +1544,7 @@ className="mb-12"
                     <ChevronRight className='w-4 h-4 ml-1' />                  </a>;
                 </div>;
               </motion && motion.div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -1364,12 +1555,17 @@ className="mb-12"
             {featuredServices.map((service, index) => (
               <motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1392,20 +1588,29 @@ className="mb-12"
 }
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='flex items-center justify-between mb-3'>
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -1420,9 +1625,12 @@ className="mb-12"
                     </span>
                     <span className='text-xs text-white/40'>
                       {service.category}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                       service.status === 'active' ? 'bg-green-500/20 text-green-300' :
@@ -1430,15 +1638,24 @@ className="mb-12"
                       'bg-blue-500/20 text-blue-300'
                     }`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {service.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </span>
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
@@ -1452,6 +1669,7 @@ className="mb-12"
                     <span className='text-xl font-bold text-cyan-400'>
                       {service.price}
                     </span>
+<<<<<<< HEAD
 =======
 
 
@@ -1467,11 +1685,19 @@ className="mb-12"
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
 <<<<<<< HEAD
 =======
+=======
+                  <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
+                  <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <span className="text-xl font-bold text-cyan-400">{service.price}</span>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
+<<<<<<< HEAD
                   <a
                     href={`/services#${service.id}`}
 =======
@@ -1488,10 +1714,16 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                  
+                  <a
+                    href={`/services#${service.id}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
                     <ChevronRight className="w-4 h-4 ml-1" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1533,6 +1765,12 @@ className="mb-12"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
 className="mb-12"
+=======
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </section>
@@ -1548,6 +1786,7 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -1579,6 +1818,30 @@ className="mb-12"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Categories Grid */}
+      <section className='px-6 pb-20'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+
+
+      {/* Categories Grid */}
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
@@ -1587,15 +1850,25 @@ className="mb-12"
               {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
+<<<<<<< HEAD
+=======
+          <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <motion.div
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <motion.div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
             <h2 className='text-3xl font-bold text-white mb-4'>;
@@ -1604,13 +1877,23 @@ className="mb-12"
             <p className='text-white/60'>              {sortedCategories && sortedCategories.length} categories available for exploration;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
           <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
               <motion&& motion.div
+=======
+
+          <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
+              <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </p>;
                   <div className='mb - 4'>;
                     <span className='text - xl font - bold text - cyan - 400'>;
@@ -1689,9 +1972,13 @@ className="mb-12"
                         <category.icon className='w - 10 h - 10 text - white' />;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Category Info */}
                       <h3 className='text - 2xl font - bold mb - 3 text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
                         {category.name}
@@ -1699,12 +1986,18 @@ className="mb-12"
                       <p className='text - white / 70 leading - relaxed mb - 6'>;
                         {category.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </p>;
 =======
 
                       </p>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                      </p>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Stats */}
                       <div className='flex items - center justify - between mb - 6'>;
                         <div className='text - center'>;
@@ -1717,12 +2010,20 @@ className="mb-12"
                           <div className='text - 2xl font - bold text - purple - 400'>;
                             {category.featured ? '⭐' : '🚀'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category && category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>;
                         <category && category.icon className='w-10 h-10 text-white' />;
                       </div>;
+=======
+
+                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category && category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>;
+                        <category && category.icon className='w-10 h-10 text-white' />;
+                      </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Category Info */}
                       <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300'>;
                         {category && category.name}
@@ -1730,6 +2031,10 @@ className="mb-12"
                       <p className='text-white/70 leading-relaxed mb-6'>;
                         {category && category.description}
                       </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Stats */}
                       <div className='flex items-center justify-between mb-6'>;
                         <div className='text-center'>;
@@ -1747,10 +2052,15 @@ className="mb-12"
                         </div>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* CTA */}
                       <div className='flex items-center justify-between'>;
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
@@ -1760,6 +2070,7 @@ className="mb-12"
                     </div>;
                   </motion && motion.div>;
 
+<<<<<<< HEAD
           <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
@@ -1779,6 +2090,9 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="text-center py-20"
               >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -1789,11 +2103,15 @@ className="mb-12"
                   Try adjusting your search terms
                 </p>
                 <button
+<<<<<<< HEAD
                   onClick={() => setSearchTerm('')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                  onClick={() => setSearchTerm('')}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
                 >
                   Clear Search
@@ -1804,16 +2122,20 @@ className="mb-12"
                 {sortedCategories.map((category, index) => (
                   <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       {/* Featured Badge */}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
@@ -1854,12 +2176,15 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {category.featured && (
                         <div className="absolute top-4 right-4">
                           <span className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
                             ⭐ Featured
                           </span>
                         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1893,6 +2218,8 @@ className="mb-12"
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       )}
                       {/* Category Icon */}
                       <div
@@ -1925,6 +2252,7 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                       <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                         <category.icon className="w-10 h-10 text-white" />
                       </div>
@@ -1952,10 +2280,27 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+                      <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        <category.icon className="w-10 h-10 text-white" />
+                      </div>
+                      
+                      {/* Category Info */}
+                      <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
+                        {category.name}
+                      </h3>
+                      <p className="text-white/70 leading-relaxed mb-6">
+                        {category.description}
+                      </p>
+                      
+                      {/* Stats */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
                           <div className="text-xs text-white/60">Services</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                           <div className="text-xs text-white/60">
@@ -1984,6 +2329,8 @@ className="mb-12"
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>
                           <div className="text-xs text-white/60">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1993,10 +2340,21 @@ className="mb-12"
                           <div className="text-2xl font-bold text-purple-400">
                             {category.featured ? '⭐' : '🚀'}
                           </div>
+<<<<<<< HEAD
 
 
                           <div className="text-xs text-white/60">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          <div className='text-xs text-white/60'>                            {category.featured ? 'Featured' : 'Active'}
+                          </div>
+                        </div>
+                      </div>
+                      {/* CTA */}
+                      <div className='flex items-center justify-between'>
+                        <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>
+                          <div className="text-xs text-white/60">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             {category.featured ? 'Featured' : 'Active'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2013,17 +2371,24 @@ className="mb-12"
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2063,12 +2428,18 @@ className="mb-12"
         <div className="max-w-7xl mx-auto">
           <motion.div
 <<<<<<< HEAD
+=======
+                ))}
+              </div>
+            )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </AnimatePresence>
         </div>
       </section>
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -2099,6 +2470,10 @@ className="mb-12"
         <div className='max - w-7xl mx - auto'>          <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
@@ -2113,6 +2488,7 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           </AnimatePresence>;
         </div>;
       </section>;
@@ -2166,6 +2542,32 @@ className="mb-12"
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          </AnimatePresence>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Technology Trends */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+=======
+
+      {/* Technology Trends */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -2174,6 +2576,7 @@ className="mb-12"
               Stay ahead of the curve with our insights into the latest technology developments
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -2211,11 +2614,14 @@ className="mb-12"
               {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             ].map((trend, index) => (
 
               <motion.div
                 key={trend.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 icon: TrendingUp
                 title: 'Autonomous Systems'
@@ -2231,6 +2637,9 @@ className="mb-12"
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Emerging Technology Trends;
@@ -2240,6 +2649,10 @@ className="mb-12"
               technology developments;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[;
               {;
                 icon: Brain,;
@@ -2292,15 +2705,21 @@ className="mb-12"
               <motion&& motion.div
                 key={trend && trend.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend && trend.color} p-4 mb-4 flex items-center justify-center`}>;
                   <trend && trend.icon className='w-8 h-8 text-white' />;
@@ -2489,6 +2908,8 @@ className="mb-12"
                   {trend.description}
                 </p>              </motion.div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <div className="flex items-center justify-between mb-3">
@@ -2499,6 +2920,7 @@ className="mb-12"
                     trend.trend === 'Critical' ? 'bg-red-500/20 text-red-300' :
                     trend.trend === 'Emerging' ? 'bg-yellow-500/20 text-yellow-300' :
                     trend.trend === 'Experimental' ? 'bg-purple-500/20 text-purple-300' :
+<<<<<<< HEAD
 'bg-cyan-500/20 text-cyan-300'
                   }`}>
                     {trend.trend}
@@ -2580,6 +3002,21 @@ className="mb-12"
   }
 }
 =======
+=======
+                    'bg-cyan-500/20 text-cyan-300'
+                  }`}>
+                    {trend.trend}
+                  </span>
+                </div>
+                
+                <p className="text-white/70 leading-relaxed">{trend.description}</p>
+              </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     }`}>;
                     {trend && trend.trend}
@@ -2594,6 +3031,11 @@ className="mb-12"
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -2619,7 +3061,10 @@ className="mb-12"
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
@@ -2635,14 +3080,19 @@ className="mb-12"
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               </Link>
 =======
               </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Get Expert Guidance
               </Link>
@@ -2651,12 +3101,20 @@ className="mb-12"
                 Get Expert Guidance
               </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                Get Expert Guidance
+              </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SmartFooter />
     </div>
 
@@ -2668,16 +3126,24 @@ className="mb-12"
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SmartFooter />;
     </div>;
   );
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2685,6 +3151,14 @@ className="mb-12"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>;
                 </div>;
                 <p className='text - white / 70 leading - relaxed'>;
@@ -2719,6 +3193,7 @@ className="mb-12"
               <a;
                 href='mailto:kleber@ziontechgroup.com';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >;
+<<<<<<< HEAD
       <SmartFooter />
     </div>
 );
@@ -2744,6 +3219,8 @@ className="mb-12"
                 href="mailto:kleber@ziontechgroup.com";
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
               >;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Get Expert Guidance;
               </a>;
             </div>;
@@ -2752,9 +3229,13 @@ className="mb-12"
       </section>;
       <SmartFooter />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
   } catch (error) {
@@ -2765,7 +3246,12 @@ className="mb-12"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -107,6 +107,7 @@ export default function AIIoTPlatformPage() {;
                 <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>;
                   <MapPin />;
                   <span>{service && service.contactInfo.address}</span>;
+<<<<<<< HEAD
 import Head from 'next / head';
 import {
 
@@ -132,21 +133,41 @@ import {
   Cpu;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+import Head from 'next / head';
+import {
+=======
+
+import React from 'react';
+
+import Head from 'next/head';
+
+import {
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Phone,
   Mail,
   MapPin,
   Check,
   ArrowRight,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Star,;
   Cpu,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Star,;
   Cpu,;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 ;
@@ -232,14 +253,22 @@ if (return null) {
                 <div className='flex items - center space - x-2 w - 4 h - 4 text - green - 400 text - xs'>;
                   <MapPin />;
                   <span>{service.contact_info.address}</span>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>              </div>;
             </div>;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="bg - violet - 50 rounded - lg p - 8 text - center">;
           <h2 className="text - 2xl font - bold mb - 4">Connect Your World</h2>;
           <p className="text - lg text - gray - 700 mb - 6">;
@@ -251,26 +280,37 @@ if (return null) {
             </a>;
             <a href="/about" className="border border - violet - 600 text - violet - 600 px - 6 py - 3 rounded - lg hover:bg - violet - 50">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Learn More;
             </a>;
           </div>;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -288,19 +328,33 @@ export default function AIIoTPlatformPage() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default function AIIoTPlatformPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'));
+  if (!service) return null;
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'))
   if (!service) return null,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function AIIoTPlatformPage() {
@@ -312,6 +366,8 @@ export default function AIIoTPlatformPage() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout>
       <Head>
@@ -332,6 +388,7 @@ export default function AIIoTPlatformPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0.5"><Check /><span>{feat}</span></li>
+<<<<<<< HEAD
 
 
 
@@ -355,6 +412,9 @@ export default function AIIoTPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit">
@@ -365,7 +425,11 @@ export default function AIIoTPlatformPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+<<<<<<< HEAD
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Modernize IoT Ops<ArrowRight /></Link>
+=======
+              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Modernize IoT Ops<ArrowRight /></a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-violet-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -374,6 +438,7 @@ export default function AIIoTPlatformPage() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div className="bg-violet-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Connect Your World</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -402,10 +467,24 @@ export default function AIIoTPlatformPage() {
   }
 }
 =======
+=======
+
+
+
+}
+
+=======
+
+      </div>
+    </Layout>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </Layout>);
 ;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -413,3 +492,9 @@ export default function AIIoTPlatformPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

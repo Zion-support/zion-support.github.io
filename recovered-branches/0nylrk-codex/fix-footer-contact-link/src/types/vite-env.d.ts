@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ;
 
@@ -7,6 +8,12 @@ interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   readonly VITE_SUPABASE_URL: string,
   readonly VITE_SUPABASE_ANON_KEY: string,
+=======
+;
+interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
+  readonly VITE_SUPABASE_URL: string;
+  readonly VITE_SUPABASE_ANON_KEY: string;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // add more env variables as needed;
 }
 interface ImportMeta {
@@ -26,6 +33,7 @@ declare module 'path' {
   export function join (...paths: string[]): string,
   export function dirname (path: string): string;
 }
+<<<<<<< HEAD
 declare module 'lovable - tagger' {
   import { Plugin } from 'vite',
   export function component_tagger (): Plugin;
@@ -57,6 +65,9 @@ declare module 'path' {export function resolve(...paths: string[]): string;
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+declare module 'lovable-tagger' {import { Plugin } from 'vite';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   readonly VITE_SUPABASE_URL: string,;
@@ -87,6 +98,7 @@ declare module 'path' {;
 ;
 declare module 'lovable-tagger' {;
   import { Plugin } from 'vite',;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -97,6 +109,8 @@ declare module 'lovable-tagger' {;
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
@@ -104,7 +118,10 @@ declare module 'lovable-tagger' {;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 declare let __dirname: string,
 declare let process: {
   env: {
@@ -120,6 +137,7 @@ declare let process: {;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
 
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 }
@@ -130,3 +148,9 @@ declare let process: {;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

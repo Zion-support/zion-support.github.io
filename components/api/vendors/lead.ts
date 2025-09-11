@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -22,10 +23,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const vendor = getVendorById(vendorId);
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
 =======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req && req.method !== 'POST')
@@ -77,6 +81,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {addPipelineItem, getVendorById} from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -118,6 +124,7 @@ function handler() {
   }  } catch (e: any) {
     res.status (500).json ({ error: e.message });
 
+<<<<<<< HEAD
     res.status(500).json({ error: e.message })
   }
 }
@@ -125,3 +132,10 @@ function handler() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+    res.status(500).json({ error: e.message })
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

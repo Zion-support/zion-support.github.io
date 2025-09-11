@@ -38,7 +38,6 @@ export interface PracticalBusinessSolution2029 {
   rating: number;
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
-<<<<<<< HEAD:data-disabled/2029-practical-business-solutions-v2.ts
   {
     id: "ai-business-intelligence-suite",;
     name: "AI Business Intelligence Suite",;

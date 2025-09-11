@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react',
 import Image from 'next/image';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -13,12 +14,17 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
 import { logWarn } from '@/utils/productionLogger';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface OptimizedImageProps {;
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next / image';
@@ -27,12 +33,16 @@ import { ImageIcon, AlertTriangle } from 'lucide-react';
 import { cn } from '@/lib / utils';
 import { image_optimization } from '@/utils / performance';
 import { log_warn } from '@/utils / production_logger';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface OptimizedImageProps {
   src: string;
   alt: string;
   width?: number;
   height?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   className?: string;
   placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
@@ -54,6 +64,53 @@ interface OptimizedImageProps {
   style?: React.CSSProperties;
   objectPosition?: string
 }
+=======
+
+  class_name?: string;
+  placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
+  placeholder_color?: string;
+  priority?: boolean;
+  quality?: number;
+  sizes?: string;
+  on_load?: () => void;
+  on_error?: () => void;
+  fallback_src?: string;
+  aspect_ratio?: string;
+  object_fit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale - down';
+  lazy?: boolean;
+  retry_count?: number;
+  showLoadingProgress?: boolean;
+  fill?: boolean;
+  blurDataURL?: string;
+  loading?: 'lazy' | 'eager';
+  style?: React.CSSProperties;
+  object_position?: string;
+export const OptimizedImage: React.FC < OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  class_name,
+  placeholder = 'shimmer',
+  placeholder_color = '#f3f4f6',
+  priority = false,
+  quality = 75,
+  sizes,
+  on_load,
+  on_error,
+  fallback_src,
+  aspect_ratio,
+  object_fit = 'cover',
+  lazy = true,
+  retry_count = 3,
+  showLoadingProgress = false,
+  fill = false,
+  blurDataURL,
+  loading = 'lazy',
+  style,
+  object_position = 'center',
+  ...props;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }) => {
   const [is_loading, setIsLoading] = useState (true);
   const [has_error, setHasError] = useState (false);
@@ -81,6 +138,7 @@ if ( {) {
           setIsInView (true);
           observer_ref.current?.disconnect ();
 
+<<<<<<< HEAD
 interface ImageMetrics {
   loadTime: number;
   fileSize: number;
@@ -150,14 +208,20 @@ if ( {) {
           observer_ref.current?.disconnect ();
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     if (!lazy || priority || isInView) return;
     observerRef.current = new IntersectionObserver(;
       entries => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const [entry] = entries;        if (entry && entry.isIntersecting) {
           setIsInView(true)
           observerRef.current?.disconnect()
@@ -165,14 +229,20 @@ if ( {) {
       }
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
         rootMargin: '50px', // Start loading 50px before image comes into view
         threshold: 0.1
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         root_margin: '50px', // Start loading 50px before image comes into view;
         threshold: 0.1,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     )
     if (imgRef.current) {
@@ -181,6 +251,7 @@ if ( {) {
     return () => {
       observerRef.current?.disconnect()
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [lazy, priority, isInView])
   // Start load time tracking
@@ -204,6 +275,8 @@ if ( {) {
               resourceEntry.transferSize || resourceEntry.encodedBodySize || 0
             const loadTime = null;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             const fileSize = null;
@@ -211,7 +284,10 @@ if ( {) {
             const loadTime = null;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               resourceEntry.responseEnd - resourceEntry.requestStart
             setMetrics({
               loadTime
@@ -297,6 +373,7 @@ if ( {) {
       return () => observer.disconnect()
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     return () => {}; // Return empty cleanup function for the else case
   }, [src])
   // Generate optimized URLs
@@ -312,6 +389,8 @@ if ( {) {
     setLoadProgress(100)
     onLoad?.()
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return () => {} // Return empty cleanup function for the else case;
   }, [src]);
@@ -328,7 +407,10 @@ if ( {) {
     setLoadProgress (100);
     on_load?.();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Handle image error with retry logic
   const handleError = () => {
@@ -338,6 +420,7 @@ if ( {) {
       setTimeout(
         () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
           setCurrentSrc(src + `?retry=${retries + 1}`)
         }
         1000 * (retries + 1)
@@ -345,6 +428,8 @@ if ( {) {
       setCurrentSrc(fallbackSrc)
       setRetries(0)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           setCurrentSrc (src + `?retry=${retries + 1}`);
         },
@@ -355,7 +440,10 @@ if ( {) {
       setCurrentSrc (fallback_src);
       set_retries (0);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } else {
       setIsLoading(false)
       setHasError(true)
@@ -363,18 +451,24 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Simulate loading progress for demo purposes
   useEffect(() => {
     if (!isLoading |!showLoadingProgress) return
     if (!isLoading |!showLoadingProgress) return
     if (!isLoading || !showLoadingProgress) return;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     if (!isLoading || !showLoadingProgress) return;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
@@ -400,11 +494,14 @@ if ( {) {
               />
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     }
     }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   loading?: 'lazy' | 'eager';
   style?: React && React.CSSProperties;
@@ -441,9 +538,13 @@ interface OptimizedImageProps {;
   loading?: 'lazy' | 'eager',;
   style?: React.CSSProperties,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   objectPosition?: string;
 }
 ;
@@ -610,6 +711,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
       placeholder === 'color' && 'bg-gray-200';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className={placeholderClassName}>
         <ImageIcon className="h-8 w-8 text-gray-400" />
       </div>
@@ -648,6 +750,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ),;
     if (placeholder === 'color') {;
       return (;
@@ -657,7 +761,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         />;
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -670,6 +777,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           style={{ backgroundColor: placeholderColor }}
         />;
       );
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return (
@@ -716,6 +824,14 @@ if ( {) {
       <div className={placeholderClassName}>;
         <ImageIcon className='h - 8 w - 8 text - gray - 400' />;
       </div>);
+=======
+    }
+    return (
+      <div className={placeholderClassName}>
+        <ImageIcon className="h-8 w-8 text-gray-400" />
+      </div>
+    )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Container styles;
   const container_style: React.CSSProperties = {
@@ -768,6 +884,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
     }
 
     return (
@@ -816,25 +933,37 @@ if ( {) {
           >
             {generatePlaceholder()}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="absolute inset-0"
           >
             {generatePlaceholder()}
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='h-full bg-blue-500'
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  className='h-full bg-blue-500'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="h-full bg-blue-500"
 
                   initial={{ width: 0 }}
@@ -851,6 +980,7 @@ if ( {) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
 =======
@@ -860,11 +990,18 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
+            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
               <span className='text-xs mt-1'>Retried {retries} times</span>
               <span className="text-xs mt-1">Retried {retries} times</span>
 =======
@@ -872,10 +1009,16 @@ if ( {) {
               <span className="text-xs mt-1">Retried {retries} times</span>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <span className='text-xs mt-1'>Retried {retries} times</span>
+              <span className="text-xs mt-1">Retried {retries} times</span>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
           </motion.div>
         )}
         {/* Actual image */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
             <AlertTriangle className="h-8 w-8 mb-2" />
@@ -885,6 +1028,8 @@ if ( {) {
           </motion.div>
         )}
         {/* Actual image */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {isInView && !hasError && (
           <motion.img
             src = {optimizedSrc,}
@@ -897,6 +1042,7 @@ if ( {) {
               'w-full h-full transition-opacity duration-300'
               `object-${objectFit}`
               isLoading ? 'opacity-0' : 'opacity-100'
+<<<<<<< HEAD
 =======
 
 
@@ -924,6 +1070,8 @@ if ( {) {
         {/* Actual image */}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {isInView && !hasError && (;
           <motion.img;
             src={optimizedSrc}
@@ -939,10 +1087,15 @@ if ( {) {
 
 
             )}
+<<<<<<< HEAD
+=======
+            initial={{ opacity: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             animate={{ opacity: isLoading ? 0 : 1 }}
             transition={{ duration: 0.3 }}
           />
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </AnimatePresence>
     </div>
@@ -998,12 +1151,17 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   opacity: 0 
   opacity: 0 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   opacity: 0 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </AnimatePresence>;
     </div>;
   );
@@ -1026,14 +1184,20 @@ interface ImageGalleryProps {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 xport const ImageGallery: React.FC<ImageGalleryProps> = ({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
+<<<<<<< HEAD
 <<<<<<< HEAD
   onImageClick,
 }) => {
@@ -1051,6 +1215,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className={cn('space-y-4', className)}>
@@ -1061,6 +1230,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         </span>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div
         className={`grid gap-4`}
         style={{
@@ -1075,9 +1247,12 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             className='group cursor-pointer'
             onClick={() => onImageClick?.(index)}          >
             <div className='relative'>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       <div 
         className={`grid gap-4`}
@@ -1097,11 +1272,23 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             <div className="relative">
 
               <OptimizedImage
+<<<<<<< HEAD
                 src={image && image.src}
                 alt={image && image.alt}
                 aspectRatio={aspectRatio}
 
 
+=======
+                src={image.src}
+                alt={image.alt}
+                aspectRatio={aspectRatio}
+                className='rounded-lg group-hover:scale-105 transition-transform duration-300'
+                onLoad={handleImageLoad}                priority={index < 3} // Prioritize first 3 images
+              />
+              {image.caption && (
+                <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>
+                  <p className='text-sm'>{image.caption}</p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
@@ -1111,10 +1298,15 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
                   <p className="text-sm">{image.caption}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               />;
 
@@ -1123,13 +1315,17 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                   <p className='text-sm'>{image && image.caption}</p>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </div>
           </motion.div>
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
     </div>
@@ -1159,12 +1355,15 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   const initials = null;
     fallback ||
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const initials = null;
     fallback ||
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     alt
 
@@ -1172,6 +1371,9 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     fallback ||
 
 
+=======
+    alt
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .split(' ')
       .map(n => n[0])
       .join('')
@@ -1225,6 +1427,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
           placeholder='color'
           placeholderColor='#f3f4f6'
           priority={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className='rounded-full'        />
       ) : (
@@ -1284,11 +1487,14 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 }
 }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           className="rounded-full"
         />
       ) : (
         <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -1304,6 +1510,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       )}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+          {initials}
+        </div>;
+      )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 },;
@@ -1499,6 +1713,7 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
 }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -1506,3 +1721,6 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
 =======
 },
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

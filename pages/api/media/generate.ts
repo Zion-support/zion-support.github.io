@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
@@ -10,7 +14,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { buildPressRelease  } from '../../../utils / media_kit';
@@ -19,9 +26,15 @@ export default async /**
  * handler - Function description
  */
 function handler() {
+<<<<<<< HEAD
   try {
     const {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  try {
+    const {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       type = "launch",
@@ -38,18 +51,25 @@ function handler() {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       type = "launch",
       company_name = "Zion",
       date = new Date ().toISOString ().substring (0, 10),
       raise_amount,
       description = "Innovative technology company",
 <<<<<<< HEAD
+<<<<<<< HEAD
     console && console.error("Press release generation error:", error);
     return res && res.status(500).json({
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     return res && res.status(200).json({
@@ -61,7 +81,10 @@ function handler() {
     console && console.error("Press release generation error:", error);
     return res && res.status(500).json({
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       contact_email = "press@zion.com",
     } = req.body || {}
 ;
@@ -72,6 +95,7 @@ if ( {) {
       res.set_header ("Allow", "POST");
       return res.status (405).json ({ error: "Method not allowed" });
     }
+<<<<<<< HEAD
     const press_release = await buildPressRelease ({
       type,
       company_name,
@@ -240,11 +264,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // fall through to template
       }
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
     res.status(200).json({ ok: true, text, fallback: true });
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
+<<<<<<< HEAD
 =======
 =======
 
@@ -252,15 +279,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
+=======
+  }
+
+
+  }
+
+}
+
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   } catch (error) {
     console.error("Error:", error);
@@ -274,6 +315,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
@@ -283,3 +325,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

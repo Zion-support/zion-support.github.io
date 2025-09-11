@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns"
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -88,6 +89,8 @@ export const ReplyCard = ({
               <Badge variant="outline" className="ml-2 text-xs">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
@@ -95,6 +98,9 @@ className
           <AvatarImage src={reply && reply.authorAvatar} alt={reply && reply.authorName} />;
           <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
@@ -117,6 +123,7 @@ className
             )}
           </div>;
           <div className="text-xs text-muted-foreground">;
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -177,12 +184,16 @@ export const ReplyCard = ({;
             {canMarkAnswer && onMarkAnswer && (<button onClick={onMarkAnswer} className="hover:text-zion-cyan text-green-500">
                 Mark as Answer
               </button>)}
+=======
+            {timeAgo}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </CardHeader>
       <CardContent>
         <div>{reply.content}</div>
       </CardContent>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       <CardFooter className="flex justify-between">
 =======
@@ -208,6 +219,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
 
 
@@ -272,12 +285,20 @@ export default ReplyCard
 
       </CardFooter>;
       </CardFooter>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     </Card>;
   );
 };
 export default ReplyCard;
 export default ReplyCard;
+=======
+    </Card>;
+  );
+};
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
@@ -354,7 +375,11 @@ export const ReplyCard = ({
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ReplyCard;
 =======
 export default ReplyCard;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default ReplyCard;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

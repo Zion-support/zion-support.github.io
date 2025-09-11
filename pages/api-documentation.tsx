@@ -5,16 +5,29 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -159,7 +172,18 @@ export default function APIDocumentationPage(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+    
+    return this.props.children;
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

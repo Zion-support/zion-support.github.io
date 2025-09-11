@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,14 +10,20 @@ import {
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from 'react',;
 import Head from 'next/head',;
@@ -29,12 +36,18 @@ import {
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
 
+<<<<<<< HEAD
 export default function ComprehensiveServicesOverviewPage() {
 
 <<<<<<< HEAD
   // Combine all services
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
 =======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function ComprehensiveServicesOverviewPage() {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -43,7 +56,10 @@ export default function ComprehensiveServicesOverviewPage() {
   // Combine all services
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
@@ -63,11 +79,16 @@ export default function ComprehensiveServicesOverviewPage() {
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
   ];
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
@@ -75,6 +96,7 @@ export default function ComprehensiveServicesOverviewPage() {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react',;
 import Head from 'next/head',;
@@ -122,10 +144,14 @@ export default function ComprehensiveServicesOverviewPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return matchesCategory && matchesSearch
     })
     .sort((a, b) => {
       switch (sortBy) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -208,6 +234,8 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
   const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         case 'popularity':
           return b.popular ? 1 : -1
         case 'price':
@@ -217,15 +245,21 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
       }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
 
   }, 0),
 
+=======
+    return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
+  }, 0)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const averageROI = allServices.reduce((sum, service) => {
     const roi = service.roi.match(/(\d+)%/)
     return sum + (roi ? parseInt(roi[1]) : 0)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, 0) / allServices.length,
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0),
@@ -270,6 +304,8 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
     return categoryData?.icon |'🚀'
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, 0) / allServices.length;
 
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0);
@@ -278,7 +314,10 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -346,25 +385,36 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }),
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Calculate market statistics
   const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/)
     return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, 0)
   }, 0),
   const averageROI = allServices.reduce((sum, service) => {
@@ -375,6 +425,7 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
 
   }, 0) / allServices.length,
   const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0),
+<<<<<<< HEAD
 =======
 
   }, 0),
@@ -388,6 +439,8 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <Head>
@@ -397,6 +450,7 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-overview-2025" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -805,12 +859,20 @@ function ComprehensiveServicesOverviewPage() {
                     selected_category === category.id;
                       ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';
                       : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
@@ -842,6 +904,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                   <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
@@ -866,6 +934,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-6 border border-blue-500/30">
                   <div className="text-4xl mb-4">🚀</div>
@@ -887,6 +961,7 @@ function ComprehensiveServicesOverviewPage() {
           </div>
         </section>
         {/* Search and Filters */}
+<<<<<<< HEAD
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -926,6 +1001,20 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+        <section className="px - 6 mb - 16">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex flex - col lg:flex - row gap - 6 items - center justify - between";
+            >;
+              {/* Search */}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
                 <input
@@ -971,6 +1060,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400"
                 >
                   <option value="popularity">Most Popular</option>
@@ -1046,20 +1141,35 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="flex flex-wrap justify-center gap-3"
             >
               {categories.map((category) => (
                 <button
                   key={category.id}
+<<<<<<< HEAD
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+=======
+                  on_click={() => setSelectedCategory (category.id)}
+                  className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
+                    selected_category === category.id;
+                      ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';
+                      : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }`}
                 >;
                   <span>{category.icon}</span>;
                   {category.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
                 </button>
@@ -1075,6 +1185,11 @@ function ComprehensiveServicesOverviewPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+        {/* Services Display */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1117,11 +1232,17 @@ function ComprehensiveServicesOverviewPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             {viewMode === 'grid' ? (
@@ -1129,6 +1250,7 @@ function ComprehensiveServicesOverviewPage() {
                 <AnimatePresence mode="wait">
                   {filteredServices.map((service, index) => (
                     <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1141,15 +1263,20 @@ function ComprehensiveServicesOverviewPage() {
                     <motion.div;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={service.id}
                       initial={{ opacity: 0, coordinate_y: 30 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: -30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1182,6 +1309,7 @@ function ComprehensiveServicesOverviewPage() {
                     >
                       {/* Popular Badge */}
                       {service.popular && (
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
@@ -1363,6 +1491,8 @@ function ComprehensiveServicesOverviewPage() {
   }
 }
                       {service.popular && (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                           <Star className="w-3 h-3" />
                           Popular
@@ -1380,6 +1510,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="p-6">
                         <div className="flex items-start justify-between mb-4">
                           <div className="text-4xl">{service.icon}</div>
@@ -1396,6 +1532,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
@@ -1422,6 +1564,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
                             <div className="text-lg font-bold text-blue-400">{service.rating}</div>
@@ -1439,6 +1587,7 @@ function ComprehensiveServicesOverviewPage() {
                         {/* CTA */}
                         <a;
                           href={service.link}
+<<<<<<< HEAD
 =======
                         {/* CTA */}
                         <a;
@@ -1446,6 +1595,8 @@ function ComprehensiveServicesOverviewPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {/* CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1457,12 +1608,19 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                         >
                           Learn More
                           <ExternalLink className="w-4 h-4" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                         </a>
                         </Link>
@@ -1477,13 +1635,20 @@ function ComprehensiveServicesOverviewPage() {
 
 
                         </Link>
+=======
+                        </a>
+                        </Link>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </motion.div>
                   ))}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </AnimatePresence>
               </div>
             ) : (
@@ -1491,6 +1656,7 @@ function ComprehensiveServicesOverviewPage() {
                 <AnimatePresence mode="wait">
                   {filteredServices.map((service, index) => (
                     <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1511,11 +1677,14 @@ function ComprehensiveServicesOverviewPage() {
                     <motion.div;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={service.id}
                       initial={{ opacity: 0, coordinate_x: -30 }}
                       animate={{ opacity: 1, coordinate_x: 0 }}
                       exit={{ opacity: 0, coordinate_x: 30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1740,6 +1909,8 @@ function ComprehensiveServicesOverviewPage() {
                 </AnimatePresence>;
               </div>)}
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
                     >
                       <div className="flex flex-col lg:flex-row gap-6">
@@ -1777,6 +1948,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="flex-shrink-0">
                           <div className="text-6xl mb-4">{service.icon}</div>
                           {service.popular && (
@@ -1797,6 +1974,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-4">
                             <div>
@@ -1815,6 +1998,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div className="grid grid-cols-2 gap-2 mb-4">
                             {service.features.slice(0, 6).map((feature, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
@@ -1835,6 +2024,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div className="flex items-center gap-6 text-sm text-white/60">
                             <div className="flex items-center gap-2">
                               <Star className="w-4 h-4 text-yellow-400" />
@@ -1856,6 +2051,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="flex-shrink-0 flex flex-col items-end gap-4">
                           <div className="text-right">
                             <div className="text-sm text-white/60 mb-1">Category</div>
@@ -1871,6 +2072,12 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
@@ -1885,16 +2092,22 @@ function ComprehensiveServicesOverviewPage() {
                 </AnimatePresence>
               </div>
             )}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1904,6 +2117,7 @@ function ComprehensiveServicesOverviewPage() {
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-white/60">Try adjusting your search or filter criteria</p>
               </motion.div>
+<<<<<<< HEAD
 
 =======
                 className="text - center py - 20";
@@ -1916,6 +2130,11 @@ function ComprehensiveServicesOverviewPage() {
         </section>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            )}
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Contact CTA */}
         <section className="px - 6 pb - 20">;
           <div className="max - w-4xl mx - auto">;
@@ -1925,9 +2144,12 @@ function ComprehensiveServicesOverviewPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1982,12 +2204,20 @@ function ComprehensiveServicesOverviewPage() {
                   >
                     Contact Sales Team
                     <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   </Link>
 
 
+=======
+                  </a>
+                  </Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a
                     href="tel:+13024640950"
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
@@ -2002,6 +2232,7 @@ function ComprehensiveServicesOverviewPage() {
       </div>
     </>
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -2009,6 +2240,12 @@ function ComprehensiveServicesOverviewPage() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text - center";
             >;
               <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
@@ -2039,6 +2276,7 @@ function ComprehensiveServicesOverviewPage() {
         </section>;
       </div>;
     </>);
+<<<<<<< HEAD
                   <a
                     href=&quot;mailto:kleber@ziontechgroup.com&quot;
                     className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
@@ -2216,7 +2454,14 @@ function ComprehensiveServicesOverviewPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProfileData } from '@/types/profile';
 =======
 
@@ -1360,6 +1361,17 @@ export const MOCK_TALENTS: ProfileData[] = [;
 =======
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
 =======
+
+import { ProfileData } from "@/types/profile";
+// Mock talent profiles for development and testing
+export const MOCK_TALENTS: ProfileData[] = [
+  {
+
+      {
+
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
         id: 'p2',
         title: 'Sentiment Analysis API',
         description:;
@@ -1375,7 +1387,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p3',
         title: 'Predictive Maintenance System',
         description:;
@@ -1389,9 +1404,13 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     experience: [;
       {
         id: 'e1',
@@ -1440,6 +1459,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
     contact_email: 'alexandra.chen@example.com',
 
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
       'https://images && images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200',
@@ -1471,6 +1494,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         imageUrl:
 
           'https://images && images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&h=400',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'talent - 2',
     name: 'Michael Reynolds',
     title: 'DevOps Specialist & Cloud Architect',
@@ -1506,6 +1533,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         tags: ['AWS', 'Kubernetes', 'Microservices'],
         date: 'Nov 2023',
       },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {
 
           'https://images && images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&h=400',
@@ -1542,9 +1573,13 @@ export const MOCK_TALENTS: ProfileData[] = [;
       availableHours: [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p2',
         title: 'DevOps Automation Pipeline',
         description:;
@@ -1592,6 +1627,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
     contact_email: 'michael.reynolds@example.com',
 
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
       'https://images && images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200',
@@ -1623,6 +1662,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         imageUrl:
 
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'talent - 3',
     name: 'Priya Sharma',
     title: 'Data Scientist & Statistical Analyst',
@@ -1658,9 +1701,17 @@ export const MOCK_TALENTS: ProfileData[] = [;
         tags: ['Data Science', 'Market Analysis', 'R'],
         date: 'Oct 2023',
       },
+<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+
+          'https://images && images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p2',
         title: 'Sales Forecasting Model',
         description:;
@@ -1671,9 +1722,17 @@ export const MOCK_TALENTS: ProfileData[] = [;
         tags: ['Time Series', 'Forecasting', 'Python'],
         date: 'Apr 2023',
       },
+<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+
+          'https://images && images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p3',
         title: 'Executive Dashboard System',
         description:;
@@ -1691,6 +1750,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
     },
     hourlyRate: 145,
     contactEmail: 'priya && priya.sharma@example && example.com',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     experience: [;
       {
         id: 'e1',
@@ -1723,6 +1786,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
     contact_email: 'priya.sharma@example.com',
 
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
       'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
@@ -1754,6 +1821,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         imageUrl:
 
           'https://images && images.unsplash.com/photo-1562813733-b31f1c218a51?auto=format&fit=crop&w=600&h=400',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'talent - 4',
     name: 'James Wilson',
     title: 'Cybersecurity Expert & Ethical Hacker',
@@ -1789,9 +1860,17 @@ export const MOCK_TALENTS: ProfileData[] = [;
         tags: ['Security', 'Finance', 'Assessment'],
         date: 'Dec 2023',
       },
+<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+
+          'https://images && images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p2',
         title: 'Security Operations Center Design',
         description:;
@@ -1805,9 +1884,13 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     experience: [;
       {
         id: 'e1',
@@ -1847,6 +1930,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
     contact_email: 'james.wilson@example.com',
 
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
       'https://images && images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200',
@@ -1859,6 +1946,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
     aiScore: 89,
     profileType: 'talent',
     skills: [
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'talent - 5',
     name: 'David Martinez',
     title: 'Full - Stack Developer & React Expert',
@@ -1888,6 +1979,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         imageUrl:
           'https://images && images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&h=400',
         tags: ['React', 'Node && Node.js', 'E-Commerce'],
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     projects: [;
       {
         id: 'p1',
@@ -1900,12 +1995,20 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
         date: 'Nov 2023',
       },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
         imageUrl:
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
         tags: ['React', 'Analytics', 'D3 && D3.js'],
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p2',
         title: 'Real - Time Analytics Dashboard',
         description:;
@@ -1916,9 +2019,17 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
         date: 'Jul 2023',
       },
+<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+
+          'https://images && images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p3',
         title: 'SaaS Application',
         description:;
@@ -1934,6 +2045,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'Developed full-stack web applications using React, Node && Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.',
         startDate: 'Jun 2018',
         endDate: 'Apr 2021',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     experience: [;
       {
         id: 'e1',
@@ -1956,12 +2071,19 @@ export const MOCK_TALENTS: ProfileData[] = [;
 
       },
     ],
+<<<<<<< HEAD
     availability: {
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    availability: {
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       status: 'limited',
       message:;
         'Available for part - time projects only (up to 20 hours per week).',
@@ -1977,6 +2099,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
 contact_email: 'david.martinez@example.com',
 
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 }
 
@@ -2012,9 +2138,13 @@ current: true
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -2044,6 +2174,10 @@ contact_email: "james.wilson@example.com";
 }
 current: true;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 {
   id: "e2";
 role: "Full - Stack Developer";
@@ -2407,12 +2541,18 @@ contact_email: "david.martinez@example.com";
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

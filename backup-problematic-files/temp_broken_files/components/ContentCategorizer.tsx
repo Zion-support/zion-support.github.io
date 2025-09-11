@@ -1,19 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 :components/ContentCategorizer.tsx
 import React, { useState, useEffect, useMemo } from 'react';
 import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect, useMemo } from 'react',;
 import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;
@@ -47,6 +56,7 @@ interface ContentItem {
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
 <<<<<<< HEAD
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 =======
@@ -54,6 +64,10 @@ interface ContentItem {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 interface ContentCategory {id: string;
   name: string;
@@ -64,6 +78,9 @@ interface ContentCategory {id: string;
   subcategories?: string[];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 :components/ContentCategorizer.tsx
 const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -73,9 +90,12 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
   const [selectedRelevance, setSelectedRelevance] = useState('all');
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const ContentCategorizer: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState(''),;
@@ -87,9 +107,12 @@ const ContentCategorizer: React.FC = () => {;
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -105,9 +128,12 @@ const ContentCategorizer: React.FC = () => {;
       source: 'autonomous-auditor';
       type: 'report';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },;
     {;
       id: '2',;
@@ -173,6 +199,7 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['analyticsuser-behaviorengagementoptimization'],;
       source: 'behavior-analyzer',;
       type: 'insight';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -803,6 +830,10 @@ key={category.id}
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {item.type}
                 </div>;
               </div>;
@@ -846,6 +877,7 @@ key={category.id}
               </div>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 =======
@@ -853,6 +885,10 @@ key={category.id}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -861,17 +897,23 @@ key={category.id}
                 {item.desc}
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 :components/ContentCategorizer.tsx
 ;
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+<<<<<<< HEAD
 =======
 
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -880,6 +922,9 @@ key={category.id}
                   </span>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 :components/ContentCategorizer.tsx
 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
@@ -887,9 +932,12 @@ key={category.id}
                   </span>;
                 )}
               </div>;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>                    +{item.tags.length - 3}
                   </span>
@@ -897,12 +945,17 @@ key={category.id}
               </div>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -920,12 +973,16 @@ key={category.id}
                   Source: {item.source}
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 :components/ContentCategorizer.tsx
                 <a
                   href={item.href}
                 <a 
                   href={item.href} 
 
+<<<<<<< HEAD
 =======
 
                 <a 
@@ -933,6 +990,8 @@ key={category.id}
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         })}
       </div>;
                 <a,
@@ -954,6 +1013,7 @@ href={item.href}
       </div>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 =======
@@ -961,6 +1021,10 @@ href={item.href}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* No Results */}
 {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>

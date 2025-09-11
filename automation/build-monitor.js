@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
@@ -13,6 +14,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -21,6 +25,9 @@ const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/fix-syntax-push-and-merge-to-main-40de
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
@@ -159,6 +166,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
       }
+<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -166,6 +174,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -185,6 +197,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ursor/fix-syntax-push-and-merge-to-main-40de
     const report = {
@@ -239,6 +254,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
   async run() {
     this.log('Starting build health check...');
+<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -246,6 +262,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -266,6 +286,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         await this.triggerBuild();
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
 ursor/fix-syntax-push-and-merge-to-main-40de
       if (report.healthScore < 70) {
@@ -274,6 +297,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
+<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -281,6 +305,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -486,6 +514,7 @@ if (require.main === module) {
   monitor.run().catch(console.error);
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
+<<<<<<< HEAD
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
 ursor/add-new-services-and-deploy-updates-0462
@@ -493,6 +522,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -520,12 +553,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const fs = require('fs);
 const path = require('path'),
@@ -712,6 +751,7 @@ if (require.main === module) {
   monitor.run().catch(console.error)}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -719,4 +759,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 module.exports = BuildMonitor;

@@ -1,13 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   {
@@ -37,6 +46,7 @@
     highlights: ['Unlimited seats_custom SLADedicated CSM'],
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Link from 'next/link';
 import Link from 'next/link',;
@@ -80,6 +90,8 @@ const tiers = [
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -130,6 +142,7 @@ export default function EnterprisePlans() {
                   ))}
                 </tr>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Link from 'next/link';
 import Link from 'next/link';
@@ -240,19 +253,29 @@ export default function EnterprisePlans(req, res) {
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </tbody>
           </table>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
@@ -261,6 +284,7 @@ export default function EnterprisePlans(req, res) {
         </div>
         <div style={{ marginLeft: 'auto' }}>
           <Link href="/enterprise/admin">Admin Dashboard</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -285,6 +309,15 @@ export default function EnterprisePlans(req, res) {
 }
 }
 =======
+=======
+        </div>
+      </section>
+    </main>
+
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 export default /**
  * EnterprisePlans - Function description
@@ -351,9 +384,15 @@ function EnterprisePlans() {
     </main>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

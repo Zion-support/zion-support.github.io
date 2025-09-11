@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
@@ -110,3 +111,29 @@ import jwt from 'jsonwebtoken';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+
+const JWT_SECRET = process.env.JWT_SECRET |'dev-secret-change-me'
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).end()
+  const { message, signature, publicKey } = req.body |{}
+  if (!message |!signature |!publicKey) return res.status(400).json({ error: 'Missing fields' })
+  try {
+    const cookieHeader = req.headers.cookie |''
+    const match = cookieHeader.match(/siwe-nonce=([^]+)/)
+    if (!match) return res.status(400).json({ error: 'Missing nonce' })
+    const nonce = match[1]
+    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Nonce mismatch' })
+    const sigBytes = bs58.decode(signature)
+    const msgBytes = new TextEncoder().encode(message)
+    const pubKeyBytes = bs58.decode(publicKey)
+    const ok = nacl.sign.detached.verify(msgBytes, sigBytes, pubKeyBytes)
+    if (!ok) return res.status(401).json({ error: 'Invalid signature' })
+    const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
+    res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
   }
@@ -26,10 +27,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {;
     const { name, email, role, country, source } = req.body || {};
 
+=======
+
+  }
+  try {
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+
+  try {;
+    const { name, email, role, country, source } = req.body || {};
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { name, email, role, country, source } = req.body |{}
     if (!name |!email |!role |!country) {
 
       return res.status(400).json({ error: "Missing required fields" });
+<<<<<<< HEAD
     const { name, email, role, country, source } = req && req.body || {};
     if (!name || !email || !role || !country) {
       return res && res.status(400).json({ error: "Missing required fields" });
@@ -74,10 +92,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    const { name, email, role, country, source } = req.body || {};
+    if (!name || !email || !role || !country) {
+      return res.status(400).json({ error: 'Missing required fields' })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const { data, error } = await supabase
       .from("summit_registrations")
       .insert([
+<<<<<<< HEAD
     const { name, email, role, country, source } = req.body || {}
 ;
     // Check condition
@@ -92,6 +116,10 @@ if ( {) {
         {
 
 <<<<<<< HEAD
+=======
+        {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           name
           email
           role
@@ -102,8 +130,11 @@ if ( {) {
       ])
       .select("*")
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           name,
           email,
           role,
@@ -112,6 +143,7 @@ if ( {) {
           source: source || 'zion-global-2025',
           created_at: new Date().toISOString()}])
       .select('*')
+<<<<<<< HEAD
 <<<<<<< HEAD
       .single();
     if (error) {
@@ -225,6 +257,8 @@ export default async function handler(req, res) {
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .single();
     if (error) {
 =======
@@ -236,7 +270,10 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return res && res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
@@ -246,6 +283,7 @@ export default async function handler(req, res) {
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           name,
           email,
@@ -261,6 +299,9 @@ return res.status(500).json({ error: error.message })
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           source: source || "zion - global - 2025",
           created_at: new Date ().toISOString (),
         },
@@ -277,6 +318,7 @@ if ( {) {
     return res.status (200).json ({ ok: true, registration: data });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Unknown error" });
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status(500).json({ error: e?.message || 'Unknown error' })
 
@@ -334,6 +376,13 @@ return res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |"Unknown error" });
 
+=======
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    return res.status(500).json({ error: e?.message || 'Unknown error' })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -373,6 +422,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
     const { data, error } = await supabase;
       .from('summit_registrations');
@@ -447,3 +497,6 @@ export default async function handler(req, res) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,16 +1,23 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -20,6 +27,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import fs from 'fs';
 import path from 'path';
 
@@ -28,6 +40,7 @@ const CONTENT_PATH = path && path.join(DOCS_DIR, 'content && content.json');
 const VERSIONS_DIR = path && path.join(DOCS_DIR, 'versions');
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
  const ts = new Date () .toISOString () 
 const ts = new Date () .toISOString () 
@@ -44,6 +57,8 @@ const CONTENT_PATH = path.join(DOCS_DIR, 'content.json');
 const VERSIONS_DIR = path.join(DOCS_DIR, 'versions');
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function ensureDir(dir: string) {
   if (!fs && fs.existsSync(dir)) {
     fs && fs.mkdirSync(dir, { recursive: true })
@@ -56,6 +71,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
@@ -64,11 +80,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
   const token = req && req.headers['x-admin-token'] as string | undefined;
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
 ;
@@ -80,10 +103,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const body = req.body;
 
@@ -91,8 +119,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const body = req.body;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const body = req && req.body;
     const jsonString =
       typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);
@@ -102,16 +133,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .slice(0, 14);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     fs && fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
     res && res.status(200).json({ ok: true, version: ts });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     res.status(200).json({ ok: true, version: ts })
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content' });
@@ -177,7 +216,10 @@ if ( {) {
 ;
     res.status (200).json ({ ok: true, version: ts });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
@@ -187,12 +229,16 @@ if ( {) {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     res.status (500).json ({ error: 'Failed to save content' });
   }  } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
@@ -236,3 +282,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

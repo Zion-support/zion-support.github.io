@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
@@ -12,15 +13,24 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
@@ -28,14 +38,19 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 
 }) ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics.loadTime > 3000) {
   const formatTime = (ms: number) : string => {
   if (ms === 0) return 'N/A';
+<<<<<<< HEAD
 <<<<<<< HEAD
 if (ms < 1000) return `$ {
   Math.round (ms)
@@ -54,6 +69,14 @@ if (ms < 1000) return `$ {
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+if (ms < 1000) return `$ {
+  Math.round (ms)
+}ms`;
+}
+
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -66,6 +89,9 @@ let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics.fcp !== null) {
   totalMetrics++;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
@@ -87,6 +113,7 @@ else score += 25
 if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -97,13 +124,18 @@ else score += 25
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 else score += 25
 }
 else score += 25 
 
 };
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -126,6 +158,10 @@ else score += 25
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -147,6 +183,7 @@ interface PerformanceMetrics {
 }
 export default PerformanceMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
@@ -156,6 +193,11 @@ export default PerformanceMonitor;
 
 <<<<<<< HEAD
 =======
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -302,4 +344,7 @@ if (return 'Needs Improvement') {
 export default PerformanceMonitor;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

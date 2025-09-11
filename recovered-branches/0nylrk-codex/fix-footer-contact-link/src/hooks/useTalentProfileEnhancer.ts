@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 export interface TalentProfileData {
@@ -35,10 +36,21 @@ export interface TalentProfileData {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export interface TalentProfileData {
+=======
+
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export interface TalentProfileData {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name: string;
   title: string;
   bio: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   skills: string[]
 
@@ -48,12 +60,15 @@ export interface CategorizedSkills {
 
 export interface CategorizedSkills {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   skills: string[],
   location?: string;
 
 }
 export interface CategorizedSkills {
 =======
+<<<<<<< HEAD
 }
 
 
@@ -61,10 +76,15 @@ export interface CategorizedSkills {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   programming: string[];
   devops: string[];
   platforms: string[];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   softSkills: string[]
 
@@ -86,6 +106,9 @@ export function useTalentProfileEnhancer() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface EnhancedProfile {
   summary: string,
@@ -103,6 +126,7 @@ export function useTalentProfileEnhancer() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       if (error) {
         throw new Error(error.message)
@@ -114,6 +138,8 @@ export function useTalentProfileEnhancer() {;
       });
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
@@ -123,7 +149,10 @@ export function useTalentProfileEnhancer() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (error) {
         throw new Error(error.message)
 import { useState } from 'react',;
@@ -164,12 +193,18 @@ export function useTalentProfileEnhancer() {;
         throw new Error(error.message);
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       return data as EnhancedProfile
     } catch (err: any) {
 
       setError(err && err.message || 'Failed to enhance profile'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       setError(err && err.message || 'Failed to enhance profile'),
       }
@@ -178,19 +213,26 @@ export function useTalentProfileEnhancer() {;
       setError(err.message |'Failed to enhance profile')
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return null
     } finally {
       setIsGenerating(false)
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return {
     enhanceProfile;
@@ -201,17 +243,23 @@ export function useTalentProfileEnhancer() {;
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     enhanceProfile;
     isGenerating;
 
     error
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   return {;
     enhanceProfile;
     isGenerating;
     error;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -259,11 +307,14 @@ if ( {) {
     error;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
@@ -327,3 +378,7 @@ export function useTalentProfileEnhancer() {;
 }
   }
 }
+=======
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -24,6 +25,11 @@ import React from 'react';
 export default function CommunityPage() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from 'react';
+import Head from 'next/head';
+export default function CommunityPage() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -53,6 +59,7 @@ export default function CommunityPage() {;
               Visit the{' '}
               <a className='text-cyan-400 underline' href='/support'>;
                 Support Center;
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 export default function CommunityPage() {
@@ -85,15 +92,23 @@ export default function CommunityPage() {
               Visit the{' '}
               <a className='text-cyan-400 underline' href='/support'>
                 Support Center
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </a>{' '}
               or email{' '}
               <a
                 className='text-purple-400'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
+=======
+                href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
+                kleber@ziontechgroup && ziontechgroup.com;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 export default /**
  * CommunityPage - Function description
@@ -135,12 +150,19 @@ function CommunityPage() {
                 href='mailto: kleber@ziontechgroup.com';
               >;
                 kleber@ziontechgroup.com;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </a>;
               .;
             </p>;
           </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
             <h2 className='text - white text - xl font - semibold mb - 2'>Follow Us</h2>;
             <ul className='text - slate - 300 space - y-1'>;
@@ -152,17 +174,25 @@ function CommunityPage() {
                   rel='noopener noreferrer';
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   LinkedIn;
                 </a>;
               </li>;
               <li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <a;
                   className='text - cyan - 400';
                   href='https://github.com / Zion - Holdings';
@@ -170,17 +200,25 @@ function CommunityPage() {
                   rel='noopener noreferrer';
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   GitHub;
                 </a>;
               </li>;
               <li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <a;
                   className='text - cyan - 400';
                   href='https://instagram.com / ziontechgroup';
@@ -188,13 +226,18 @@ function CommunityPage() {
                   rel='noopener noreferrer';
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Instagram;
                 </a>;
               </li>;
               <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   rel='noopener noreferrer'>;
 =======
@@ -202,6 +245,11 @@ function CommunityPage() {
                   rel='noopener noreferrer'>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  rel='noopener noreferrer'>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <a;
                   className='text - cyan - 400';
                   href='https://youtube.com/@ziontechgroup';
@@ -209,9 +257,13 @@ function CommunityPage() {
                   rel='noopener noreferrer';
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   YouTube;
                 </a>;
               </li>;
@@ -220,6 +272,7 @@ function CommunityPage() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -282,6 +335,8 @@ function CommunityPage() {
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
@@ -289,6 +344,7 @@ function CommunityPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -296,6 +352,8 @@ function CommunityPage() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',
 import Head from 'next/head',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -316,16 +374,24 @@ export default function CommunityPage() {
 					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
 						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
 						<ul className="text-slate-300 space-y-1">
+<<<<<<< HEAD
 							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</Link></li>
 							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</Link></li>
 							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</Link></li>
 							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</Link></li>
+=======
+							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -374,16 +440,25 @@ export default function CommunityPage(req, res) {
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
     </div>);
 ;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

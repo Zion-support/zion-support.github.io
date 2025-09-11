@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 
@@ -16,33 +17,46 @@ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   service.name 
 }- Zion Tech Group</title>) ) 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 
 =======
 import React from 'react';
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function ApiObservabilityPage() {;
@@ -53,6 +67,13 @@ export default function ApiObservabilityPage() {;
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function ApiObservabilityPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
+=======
+=======
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+export default function ApiObservabilityPage() {;
+  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!service) return null;
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -148,15 +169,22 @@ if (return null) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </UltraAdvancedFuturisticBackground>);
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -224,3 +252,8 @@ export default function ApiObservabilityPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

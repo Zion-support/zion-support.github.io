@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -32,9 +36,13 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
   /* General Application */
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -80,11 +88,15 @@ class ErrorBoundary extends React.Component {
   /* General Application */ ;
 }<motion && motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion && motion.div> </div> </Layout>) ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 };export default CareersPage;import React, { useState } from 'react';
 
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -93,11 +105,17 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 =======
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -123,24 +141,38 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 }</motion.div> {
   /* General Application */
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 };export default CareersPage;import React, { useState } from 'react';
 import React, { useState } from 'react';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+};export default CareersPage;import React, { useState } from 'react';
+import React, { useState } from 'react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Careers() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 export default function Careers() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -165,9 +197,13 @@ export default function Careers() {;
         'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
       ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const filtered_jobs = selected_department === 'all' ? job_openings : job_openings.filter (job => job.department === selected_department);
 > <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - blue - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */;
@@ -215,6 +251,7 @@ function Careers() {
     { id: 'sales', name: 'Sales & Business Development' },
     { id: 'marketing', name: 'Marketing' },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -228,6 +265,8 @@ export default function Careers() {;
     { id: 'marketing', name: 'Marketing' }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { id: 'operations', name: 'Operations' }
   ];
 ;
@@ -250,9 +289,13 @@ export default function Careers() {;
       department: 'quantum'
       location: 'Remote / Middletown, DE';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       type: 'Full - time',
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
@@ -272,9 +315,13 @@ export default function Careers() {;
         'Degree in Aerospace Engineering, Physics, or related field_experience with satellite design and space systems_knowledge of orbital mechanics and space environment_familiarity with space industry standards and regulations';
       ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     {
       id: 4
@@ -282,9 +329,13 @@ export default function Careers() {;
       department: 'engineering'
       location: 'Remote / Middletown, DE';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       type: 'Full - time',
       experience: '3+ years',
       description: 'Build scalable web applications and cloud - based solutions.',
@@ -292,19 +343,34 @@ export default function Careers() {;
         'Experience with React, Node.js, and cloud platforms_knowledge of modern web technologies and APIsUnderstanding of software architecture and design patterns_experience with DevOps and CI / CD practices';
       ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     {
       id: 5
       title: 'Business Development Manager'
       department: 'sales'
       location: 'Remote / Middletown, DE';
+<<<<<<< HEAD
 
 
 
 
+=======
+      type: 'Full-time'
+      experience: '5+ years'
+      description: 'Drive business growth through strategic partnerships and client relationships.'
+      requirements: [
+        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
+      ]
+    }
+  ];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const companyValues = [
     {
@@ -344,6 +410,10 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -365,6 +435,12 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -509,6 +585,7 @@ export default function Careers() {;
 
           </div>;
         </motion && motion.div>;
+<<<<<<< HEAD
 
 
 
@@ -520,6 +597,14 @@ export default function Careers() {;
         </motion && motion.div>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Benefits */}
         <motion&& motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -538,6 +623,10 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* Job Openings */}
@@ -554,11 +643,14 @@ export default function Careers() {;
         </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>;
           </div>;
         </motion && motion.div>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Job Openings */}
         <motion&& motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -567,10 +659,15 @@ export default function Careers() {;
           className="mb-16">;
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">;
             {departments && departments.map((dept) => (;
@@ -587,13 +684,19 @@ export default function Careers() {;
               </button>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {departments.map((dept) => (
@@ -614,11 +717,15 @@ export default function Careers() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Job Listings */}
           <div className="space-y-6">;
             {filteredJobs && filteredJobs.map((job) => (;
@@ -649,6 +756,10 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* General Application */}
@@ -686,9 +797,13 @@ export default function Careers() {;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     href={`/contact?position=${encodeURIComponent(job && job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                     Apply Now;
@@ -953,12 +1068,16 @@ export default function Careers() {;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default CareersPage;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default CareersPage;
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </motion.div>;
@@ -1263,3 +1382,6 @@ export default CareersPage;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default CareersPage;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

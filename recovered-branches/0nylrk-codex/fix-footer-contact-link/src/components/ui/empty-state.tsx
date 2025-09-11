@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
@@ -16,6 +17,10 @@ import { Link } from "react-router-dom",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -23,7 +28,11 @@ interface EmptyStateProps {
   description: string
   action?: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    text: string
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react";
 import {cn} from "@/lib/utils";
@@ -48,13 +57,17 @@ interface EmptyStateProps {;
 
 export function EmptyState(): any ({;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   icon;
   title;
   description;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     text: string
@@ -73,6 +86,10 @@ export function EmptyState(): any ({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     text: string,
     href?: string,
     onClick?: () => void
@@ -82,6 +99,7 @@ export function EmptyState(): any ({;
     href?: string,
     onClick?: () => void
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   className?: string
 }
@@ -101,6 +119,8 @@ export function EmptyState({
   className}: EmptyStateProps) {
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className?: string
 }
 
@@ -108,16 +128,23 @@ export function EmptyState({
 
   className}: EmptyStateProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div
 
       className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
         className
+<<<<<<< HEAD
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
@@ -202,10 +229,13 @@ export function EmptyState({;
 
 
         className
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}>;
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
 
+<<<<<<< HEAD
   secondaryAction,;
   className} EmptyStateProps) {;
   return (;
@@ -222,6 +252,22 @@ export function EmptyState({;
       <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
             <Button
               size="lg" 
+=======
+      </div>;
+      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
+      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
+
+      <div className="flex flex-col sm:flex-row gap-4">;
+        {action && (;
+          action && action.href ? (;
+            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">;
+              <Link to={action && action.href}>{action && action.text}</Link>;
+            </Button>;
+          ) : (;
+            <Button
+              size="lg" 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action && action.onClick}>;
               {action && action.text}
@@ -230,9 +276,16 @@ export function EmptyState({;
         )}
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+            <Button 
+              size="lg" 
+              className="bg-zion-purple hover:bg-zion-purple-light"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={action.onClick}
             >
               {action.text}
@@ -240,16 +293,20 @@ export function EmptyState({;
           )
         )}
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
               <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
             </Button>
           ) : (
+<<<<<<< HEAD
 
 
         {secondaryAction && (;
@@ -264,10 +321,17 @@ export function EmptyState({;
             <Button 
               variant="outline" 
 
+=======
+            <Button
+              variant="outline"
+            <Button 
+              variant="outline" 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
               {secondaryAction && secondaryAction.text}
+<<<<<<< HEAD
 ;
         {icon}
       </div>;
@@ -281,6 +345,18 @@ export function EmptyState({;
             </Button>;
       </div>;
     </div>;
+=======
+            </Button>;
+          );
+        )}
+
+      </div>;
+    </div>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
@@ -345,6 +421,7 @@ function EmptyState() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),;}
  interface EmptyStateProps {
@@ -411,3 +488,6 @@ className?: string
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

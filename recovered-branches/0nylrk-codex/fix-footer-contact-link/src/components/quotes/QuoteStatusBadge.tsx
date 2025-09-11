@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -10,14 +11,20 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Badge} from "@/components/ui/badge";
 import {QuoteStatus} from "@/types/quotes";
 const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {
 import { Badge } from "@/components/ui/badge",
 import { QuoteStatus } from "@/types/quotes",
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
@@ -26,16 +33,20 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" }
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" }
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" }
   responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" }
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" }
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface QuoteStatusBadgeProps {
   status: QuoteStatus
@@ -65,21 +76,34 @@ interface QuoteStatusBadgeProps {
 
   status: QuoteStatus
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+interface QuoteStatusBadgeProps {
+  status: QuoteStatus
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
 
   const config = statusConfig[status];
+<<<<<<< HEAD
   status: QuoteStatus;
 }
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
   const config = status_config[status];
 ;
+=======
+=======
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
+  const config = status_config[status];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Badge className={config.class_name}>;
       {config.label}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -99,6 +123,17 @@ import { QuoteStatus } from "@/types/quotes",;
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {;
+=======
+
+
+=======
+import { Badge } from "@/components/ui/badge",;
+import { QuoteStatus } from "@/types/quotes",;
+const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },;
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },;
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },;
@@ -106,13 +141,18 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },;
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -149,6 +189,8 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   );
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
 
@@ -163,6 +205,7 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </Badge>);
@@ -170,3 +213,5 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

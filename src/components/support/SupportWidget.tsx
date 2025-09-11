@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { Button } from '@/components/ui/button'
@@ -11,6 +12,8 @@ export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -44,6 +47,7 @@ const [isOpen, setIsOpen] = useState(false)
                 className={cn(
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 )}>;
                 Zion Support;
@@ -150,6 +154,10 @@ function SupportWidget() {
                 )}
               >
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                )}
+              >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from "react",
 import { useRouter } from "next/router",
@@ -205,10 +213,15 @@ export function SupportWidget() {;
             <div className="flex items-center">
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Zion Support
               </h3>
             </div>
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button
           <ChatBotPanel />
@@ -217,6 +230,9 @@ export function SupportWidget() {;
     </>
   )
 }
+=======
+              <Button
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 variant="ghost"
@@ -240,13 +256,17 @@ export function SupportWidget() {;
           </div>
           
           <ChatBotPanel />
+<<<<<<< HEAD
           
           
           <ChatBotPanel />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       )}
     </>;
   );
+<<<<<<< HEAD
 };
 };
 }
@@ -254,3 +274,8 @@ export function SupportWidget() {;
 =======
               <Button
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

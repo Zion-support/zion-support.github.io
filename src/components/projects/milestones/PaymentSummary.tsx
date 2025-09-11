@@ -2,6 +2,7 @@ import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 <<<<<<< HEAD
+<<<<<<< HEAD
 }; import React from 'react'
 import { Milestone } from '@/hooks/useMilestones'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -32,6 +33,10 @@ import { CreditCard } from 'lucide-react';
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
@@ -55,9 +60,33 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+import { CreditCard } from 'lucide-react';
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
+}
+
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {;
+  const totalPayment = milestones && milestones.reduce(;
+    (sum, m) => sum + parseFloat(m && m.amount.toString());    0;
+  ).toFixed(2);
+
+  const paidAmount = milestones;
+    .filter(m => m && m.status === 'paid');
+    .reduce(;
+      (sum, m) => sum + parseFloat(m && m.amount.toString());      0;
+    ).toFixed(2);
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="mb-8 bg-muted/30">;
       <CardHeader className="pb-3">;
@@ -71,6 +100,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>;
             <p className="text-2xl font-semibold">;
               ${totalPayment}
+<<<<<<< HEAD
 
 
           
@@ -136,10 +166,20 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div>
+=======
+            </p>
+          </div>
+          
+
+
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <p className="font-medium capitalize">
               {paymentTerms |"Not specified"}
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
@@ -151,6 +191,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
 
 
@@ -158,6 +200,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
               ${paidAmount}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </p>
           </div>
@@ -168,6 +211,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 '"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </p>;
           </div>;
@@ -183,10 +228,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
             <p className="font-medium">;
               ${paidAmount}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
+=======
+
+
+
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </p>;
           </div>;
         </div>;
@@ -195,10 +249,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 '"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+'"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 } import React from 'react';
@@ -250,7 +309,11 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({ milestones, pa
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 '";
 =======
 '";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+'";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

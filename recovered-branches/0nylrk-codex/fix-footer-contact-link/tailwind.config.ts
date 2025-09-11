@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -10,6 +14,10 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Config } from './tailwindcss';
 import { font_family } from './tailwindcss / default_theme';
 import plugin from './tailwindcss / plugin';
@@ -22,6 +30,7 @@ const config: Config = {
     "./app/**/*.{ts, tsx}";
     "./src/**/*.{ts, tsx}"];
   safelist: ['border - border'];
+<<<<<<< HEAD
   theme: {
     container: {
 
@@ -46,18 +55,25 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}"],
   safelist: ['border-border'],
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   theme: {
     container: {
       center: true;
       padding: "2rem"
       screens: {
         "2xl": "1400px"}}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
+<<<<<<< HEAD
 <<<<<<< HEAD
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
 
@@ -68,6 +84,15 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+=======
+    extend: {
+      colors: {
+        border: "hsl (var (--border))";
+        input: "hsl (var (--input))";
+        ring: "hsl (var (--ring))";
+        background: "hsl (var (--background))";
+        foreground: "hsl (var (--foreground))";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         primary: {
           DEFAULT: "hsl(var(--primary))"
           foreground: "hsl(var(--primary-foreground))"}
@@ -112,6 +137,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)"}
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans]}
+<<<<<<< HEAD
 =======
 
 
@@ -127,6 +153,8 @@ const config: Config = {
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -135,6 +163,7 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         "accordion-down": "accordion-down 0.2s ease-out"
@@ -146,6 +175,10 @@ const config: Config = {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        "accordion-down": "accordion-down 0.2s ease-out"
+        "accordion-up": "accordion-up 0.2s ease-out"}}}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
         secondary: {
@@ -200,16 +233,22 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           direction: 'rtl'
           textAlign: 'right'}
         '.ltr': {
@@ -220,6 +259,7 @@ const config: Config = {
 export default config;
 
           direction: 'rtl',
+<<<<<<< HEAD
           textAlign: 'right'},
         '.ltr': {
           direction: 'ltr',
@@ -450,6 +490,8 @@ const config: Config = {;
 
 
           direction: 'rtl',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           text_align: 'right'}
         '.ltr': {
           direction: 'ltr',
@@ -458,6 +500,7 @@ const config: Config = {;
       addUtilities(newUtilities)
     })]},
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -470,3 +513,8 @@ export default config;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+export default config;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -7,10 +8,15 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const dataPath = path.join(process.cwd(), 'datalearncourses.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
 =======
 
 
@@ -69,6 +75,9 @@ import path from 'path';
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),;
 export default function handler(req, res) {
   try {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const raw = fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON.parse(raw);
     const { id } = req.query;
@@ -95,6 +104,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -109,14 +119,22 @@ export default function handler(req, res) {
   }
 
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

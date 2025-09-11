@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -14,11 +15,17 @@ import {
   DialogTitle
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from "react";
+import {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
 DialogTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react";
 import {
@@ -32,6 +39,9 @@ Dialog
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
@@ -53,6 +63,7 @@ export function ApplyToJobModal({
           </DialogDescription>
         </DialogHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <ApplyForm
           job={job}
           onClose={onClose}
@@ -65,14 +76,40 @@ export function ApplyToJobModal({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react',;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogHeader,;
+<<<<<<< HEAD
 
 
 
+=======
+  DialogTitle,;
+} from "@/components/ui/dialog";
+import { ApplyForm } from "./ApplyForm";
+import { ApplyToJobModalProps } from "./types";
+export function ApplyToJobModal(): any ({;
+  job,;
+  isOpen,;
+  onClose,;
+  onApplySuccess,;
+}: ApplyToJobModalProps) {;
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-[600px]">;
+        <DialogHeader>;
+          <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import {
   Dialog,
@@ -92,6 +129,7 @@ function ApplyToJobModal() {
       <DialogContent className="sm:max - w-[600px]">;
         <DialogHeader>;
           <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
+<<<<<<< HEAD
   DialogTitle} from '@/components/ui/dialog',;
 import { ApplyForm } from './ApplyForm',;
 import { ApplyToJobModalProps } from './types',;
@@ -102,17 +140,27 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
       <DialogContent className="sm:max-w-[600px]">;
         <DialogHeader>;
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
+<<<<<<< HEAD
         ;
         <ApplyForm ;
+=======
+
+        <ApplyForm;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           job={job}
           on_close={on_close}
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
+<<<<<<< HEAD
 
     </Dialog>;
 
@@ -149,3 +197,14 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </Dialog>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+=======
+    </Dialog>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

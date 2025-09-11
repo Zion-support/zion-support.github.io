@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -39,6 +40,8 @@ export default function GuestCheckoutModal({
     try {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 try {
       on_submit ({ email, address });
     } finally {
@@ -48,17 +51,21 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
       onSubmit({ email, address })
     } finally {
       setIsSubmitting(false)
     }
   }
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Label } from '@/components/ui/label',;
 import { Textarea } from '@/components/ui/textarea',;
+<<<<<<< HEAD
 =======
 }
 import React from 'react';
@@ -68,12 +75,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogTitle} from '@/components/ui/dialog',;
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
@@ -99,6 +109,8 @@ export default function GuestCheckoutModal({;
     }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DialogTitle,;
 } from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
@@ -124,12 +136,16 @@ export default function GuestCheckoutModal(): any ({;
       return;
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setIsSubmitting(true);
     try {;
       onSubmit({ email, address });
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   },
@@ -157,6 +173,11 @@ export default function GuestCheckoutModal(): any ({;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+    }
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
   },
@@ -183,10 +204,16 @@ export default function GuestCheckoutModal(): any ({;
             date.;
           </div>;
         )}
+<<<<<<< HEAD
 
         <form onSubmit={handleSubmit} className='space-y-4'>;
           <div className='space-y-2'>;
 
+=======
+        <form onSubmit={handleSubmit} className='space-y-4'>
+          <div className='space-y-2'>
+            <Label
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               htmlFor='guest-email'
               className='text-white flex items-center gap-2'>;
               <Mail className='h-4 w-4 text-zion-cyan' />;
@@ -211,6 +238,7 @@ export default function GuestCheckoutModal(): any ({;
               <MapPin className='h-4 w-4 text-zion-cyan' />;
               Shipping Address;
             </Label>;
+<<<<<<< HEAD
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div className='space-y-2'>
             <Label
@@ -237,6 +265,8 @@ export default function GuestCheckoutModal(): any ({;
               <MapPin className='h-4 w-4 text-zion-cyan' />
               Shipping Address
             </Label>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Textarea
               id='guest-address'
 
@@ -316,6 +346,7 @@ export default function GuestCheckoutModal(): any ({;
               Email Address
             </Label>
             <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
               id='guest-email'
               type='email'
@@ -412,10 +443,15 @@ export default function GuestCheckoutModal(): any ({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {isSubmitting ? (
                 'Processing...'
               ) : (
                 <>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <CreditCard className="h-4 w-4 mr-2" />
                   Continue to Payment
@@ -434,11 +470,16 @@ export default function GuestCheckoutModal(): any ({;
 };
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <CreditCard className='h-4 w-4 mr-2' />
                   Continue to Payment
                 </>
               )}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
@@ -453,6 +494,7 @@ export default function GuestCheckoutModal(): any ({;
 
 };
 };
+<<<<<<< HEAD
 
 
           <DialogFooter className='space - x-2'>;
@@ -499,3 +541,5 @@ export default function GuestCheckoutModal(): any ({;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

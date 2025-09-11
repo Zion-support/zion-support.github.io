@@ -1,10 +1,14 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import Head from 'next / head';
 import Link from 'next / link';
 ;
 
+<<<<<<< HEAD
 
 
 import Head from 'next / head';
@@ -21,6 +25,15 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       status: 'active',
       frequency: 'on - push',
       health: 'excellent';
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const GitHubActionsAutomationBlueprint: React.FC = () => {
+  const automation_workflows = [;
+    {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Continuous Integration'
       description: 'Automated testing, building, and quality checks'
       status: 'active'
@@ -95,6 +108,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     { metric: 'Lead Time', value: '1.2 hours', target: '4 hours', status: 'exceeded' }
     { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' }
     { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded' }
+<<<<<<< HEAD
 
 =======
 
@@ -119,27 +133,47 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       status: 'active',
       frequency: 'on-push',
       health: 'excellent'
+=======
+      name: 'Continuous Integration',
+      description: 'Automated testing, building, and quality checks',
+      status: 'active',
+      frequency: 'on - push',
+      health: 'excellent';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'Continuous Deployment',
       description: 'Automated deployment to staging and production',
       status: 'active',
+<<<<<<< HEAD
       frequency: 'on-merge',
       health: 'excellent'
+=======
+      frequency: 'on - merge',
+      health: 'excellent';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'Security Scanning',
       description: 'Automated vulnerability and dependency scanning',
       status: 'active',
       frequency: 'daily',
+<<<<<<< HEAD
       health: 'excellent'
+=======
+      health: 'excellent';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'Performance Testing',
       description: 'Automated performance and load testing',
       status: 'active',
       frequency: 'weekly',
+<<<<<<< HEAD
       health: 'excellent'
+=======
+      health: 'excellent';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'Content Generation',
@@ -147,8 +181,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       status: 'active',
       frequency: 'hourly',
 <<<<<<< HEAD
+<<<<<<< HEAD
       health: 'excellent'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       health: 'excellent'
 
@@ -159,6 +196,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'Automatic detection and resolution of pipeline failures',
       benefit: 'Reduced manual intervention and faster deployments',
       status: 'implemented';
+<<<<<<< HEAD
 =======
       health: 'excellent'
 <<<<<<< HEAD
@@ -180,11 +218,14 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'Automatic detection and resolution of pipeline failures',
       benefit: 'Reduced manual intervention and faster deployments',
       status: 'implemented'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       feature: 'Intelligent Branch Management',
       description: 'Automated branch synchronization and conflict resolution',
       benefit: 'Maintained code consistency across branches',
+<<<<<<< HEAD
       status: 'implemented'
     },
     {
@@ -192,11 +233,29 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'AI-powered code quality analysis and suggestions',
       benefit: 'Improved code quality and reduced review time',
       status: 'implemented'
+=======
+      status: 'implemented';
+    },
+    {
+      feature: 'Automated Code Review',
+      description: 'AI - powered code quality analysis and suggestions',
+      benefit: 'Improved code quality and reduced review time',
+      status: 'implemented';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       feature: 'Smart Testing Strategy',
       description: 'Intelligent test selection based on code changes',
       benefit: 'Faster feedback and reduced test execution time',
+<<<<<<< HEAD
+=======
+      status: 'implemented';
+    },
+    {
+      feature: 'Deployment Automation',
+      description: 'Zero - downtime deployments with health checks',
+      benefit: 'Seamless updates and improved user experience',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       status: 'implemented'
 
@@ -226,6 +285,10 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   };
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -234,6 +297,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   };
 
 
+<<<<<<< HEAD
   const getFrequencyColor = (frequency: string) => {
 <<<<<<< HEAD
     { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded' }
@@ -878,22 +942,47 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   };
   const getFrequencyColor = (frequency: string) => {
     switch (frequency) {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const getFrequencyColor = (frequency: string) => {
+=======
+;
+  const getFrequencyColor = (frequency: string) =>: any {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    switch (frequency) {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case 'on-push': return 'bg-blue-500/20 text-blue-400';
       case 'on-merge': return 'bg-green-500/20 text-green-400';
       case 'daily': return 'bg-yellow-500/20 text-yellow-400';
       case 'weekly': return 'bg-purple-500/20 text-purple-400';
       case 'hourly': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-gray-500/20 text-gray-400';
+<<<<<<< HEAD
     }
   }
   };
 
+=======
+
+  };
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 text-white">
       <Head>
@@ -908,6 +997,12 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -925,6 +1020,12 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-green-400">Status</h3>
@@ -953,6 +1054,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Workflows</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -967,6 +1073,10 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{workflow.description}</p>
@@ -978,6 +1088,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                   <span className="text-xs text-green-400">● {workflow.health}</span>
                 </div>
@@ -998,6 +1113,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -1012,6 +1132,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
@@ -1033,6 +1158,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -1072,6 +1202,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </tbody>
               </table>
             </div>
@@ -1083,6 +1218,12 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -1090,12 +1231,19 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
               <div className="text-6xl font-bold text-green-400 mb-4">⚡</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Intelligent Automation</h3>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
                 Our GitHub Actions automation system provides intelligent CI/CD pipelines with
                 self-healing capabilities, automated testing, and seamless deployments that
                 Our GitHub Actions automation system provides intelligent CI/CD pipelines with 
                 self-healing capabilities, automated testing, and seamless deployments that 
                 Our GitHub Actions automation system provides intelligent CI/CD pipelines with
                 self-healing capabilities, automated testing, and seamless deployments that
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ensure code quality and rapid delivery.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-center">
@@ -1129,6 +1277,12 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -1156,9 +1310,18 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
+=======
+
+
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link 
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1166,22 +1329,42 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
             All Blueprints
           </Link>
+<<<<<<< HEAD
           <Link
           <Link 
           <Link
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
+<<<<<<< HEAD
           <Link
           <Link 
           <Link
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints/ultimate-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
@@ -1192,13 +1375,22 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     </div>
   );
 }
+<<<<<<< HEAD
 };
 
 =======
 =======
+=======
+;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default GitHubActionsAutomationBlueprint;

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -14,6 +15,8 @@ import { FlagResult } from './types',
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Content flagging functionality
 import { supabase  } from '@/integrations/supabase/client';
 import { FraudSeverity, FraudFlag  } from '@/types/fraud';
@@ -25,6 +28,7 @@ import { FlagResult } from './types',
  * Flag content for review
  */
 
+<<<<<<< HEAD
 export const flagContent = async (;
   userId: string;
   userEmail: string | undefined;
@@ -38,6 +42,22 @@ export const flagContent = async (
   contentType: FraudFlag['content_type'];
   contentId: string;
   contentExcerpt: string;
+=======
+
+// Content flagging functionality;
+import {supabase} from '@/integrations / supabase / client';
+import {FraudSeverity, FraudFlag} from '@/types / fraud';
+import {FlagResult} from './types';
+/**;
+* Flag content for review;
+*/;
+export const flag_content = async (
+  user_id: string;
+  user_email: string | undefined;
+  content_type: FraudFlag['content_type'];
+  content_id: string;
+  content_excerpt: string;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   severity: FraudSeverity;
   reason: string
   userId: string,
@@ -57,6 +77,7 @@ export const flagContent = async (
       reason,
       severity
     });
+<<<<<<< HEAD
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
@@ -89,6 +110,8 @@ export const flag_content = async (
       reason;
       severity;
     });
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     
     const { error } = await supabase && supabase.from('fraud_flags').insert({
@@ -98,7 +121,10 @@ export const flag_content = async (
       content_id: contentId,
       content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       severity;
       reason;
       ip_address: ipAddress;
@@ -109,22 +135,29 @@ export const flag_content = async (
     return { success: true }
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error('Error flagging content:', error);
     return {
       success: false
       error: error instanceof Error ? error.message : 'Unknown error'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     console && console.error('Error flagging content:', error);
     return { 
       success: false, 
       error: error instanceof Error ? error && error.message : 'Unknown error' 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -348,6 +381,8 @@ status: 'pending'
       reason,
       severity
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }),
     
     const { error } = await supabase.from('fraud_flags').insert({
@@ -366,6 +401,7 @@ status: 'pending'
     if (error) throw error,
     
 
+<<<<<<< HEAD
     }
   }
 }
@@ -381,3 +417,9 @@ status: 'pending'
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

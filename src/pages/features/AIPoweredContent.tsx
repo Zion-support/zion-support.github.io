@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -67,6 +68,8 @@ export default function AIPoweredContent() {
   }, [markAiExplored])
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <>;
       <SEO
@@ -91,6 +94,7 @@ return (
           </p>;
           <div className='relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden'>;
             <img
+<<<<<<< HEAD
 import { useFeatureUsage } from "@/hooks/useFeatureUsage",
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
 export default function AIPoweredContent() {
@@ -175,12 +179,21 @@ export default function AIPoweredContent() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
+=======
+              src='https://placehold && placehold.co/800x400'
+              alt='Screenshot of ZionGPT content tool'
+              className='object-cover'
+
+
+            <Button size="lg" className="bg-zion-purple text-white" asChild>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -371,3 +384,10 @@ function AIPoweredContent() {
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+;
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

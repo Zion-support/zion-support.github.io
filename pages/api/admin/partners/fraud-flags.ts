@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -23,12 +24,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const supabase = getServerSupabase()
     const { data, error } = await supabase
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
+<<<<<<< HEAD
 <<<<<<< HEAD
 .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
     if (error) return res.status(500).json({ error: error.message })
@@ -40,12 +44,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         flags.push({
@@ -83,6 +92,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (req.method === 'GET') {
       const code = (req.query.code as string)?.toLowerCase();
       if (!code) return res.status(400).json({ error: 'Code required' });
@@ -102,7 +116,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

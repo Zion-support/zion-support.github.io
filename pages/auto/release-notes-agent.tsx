@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const ReleaseNotesAgent: NextPage = () => {
   return (
@@ -18,6 +22,7 @@ const ReleaseNotesAgent: NextPage = () => {
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
@@ -33,12 +38,20 @@ const ReleaseNotesAgent: NextPage = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
+        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </main>
     </div>
   )
 },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
       </main>
@@ -91,3 +104,6 @@ export default ReleaseNotesAgent,
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

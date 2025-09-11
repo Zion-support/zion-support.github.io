@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -11,12 +12,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'GET') {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 
     const users = readUsers(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -34,6 +38,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         lessonId,
         percent,
       } = req && req.body || {};
+=======
+    if (req && req.method === 'GET') {
+      const { userId = 'demo-user' } = req && req.query;
+
+      const user = users[userId as string];
+      return res.status(200).json({ progress: user?.progress ?? {} });
+    }
+    if (req.method === 'POST') {
+      const {
+        userId = 'demo-user'
+        courseId
+        lessonId
+        percent
+      } = req.body |{}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (!courseId)
         return res.status(400).json({ error: 'courseId required' });
       const user = users[userId] |{
@@ -60,6 +79,7 @@ function readUsers() {
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 }
 
+<<<<<<< HEAD
 function writeUsers(data: any) {
   fs.writeFileSync(usersPath, JSON.stringify(data, null, 2))
 }
@@ -259,6 +279,10 @@ export default function handler(req, res) {
 
   }
 =======
+=======
+
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -273,4 +297,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

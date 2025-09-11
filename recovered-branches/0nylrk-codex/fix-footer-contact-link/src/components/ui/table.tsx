@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -7,21 +8,32 @@ import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import * as React from &quot;react&quot;
+import { cn } from &quot;@/lib/utils&quot;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Table = React.forwardRef<
   HTMLTableElement
   React.HTMLAttributes<HTMLTableElement>
 >(({ className, ...props }, ref) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div className="relative w-full overflow-auto">
+=======
+  <div className=&quot;relative w-full overflow-auto&quot;>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <table
       ref={ref}
       className={cn("w-full caption-bottom text-sm", className)}
@@ -29,6 +41,7 @@ const Table = React.forwardRef<
 />
   </div>
 ))
+<<<<<<< HEAD
 =======
   <div className=&quot;relative w-full overflow-auto&quot;>
     <table
@@ -55,10 +68,16 @@ Table.displayName = "Table"
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+Table.displayName = &quot;Table&quot;
+Table.displayName = "Table"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TableHeader = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -67,10 +86,14 @@ TableHeader.displayName = "TableHeader"
 
 
   <thead ref={ref} className={cn("[&_tr]:border-b", className)} {...props} />
+=======
+  <thead ref={ref} className={cn(&quot;[&_tr]:border-b&quot;, className)} {...props} />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ))
 TableHeader.displayName = &quot;TableHeader&quot;
 TableHeader.displayName = "TableHeader"
 
+<<<<<<< HEAD
 =======
   <thead ref={ref} className={cn(&quot;[&_tr]:border-b&quot;, className)} {...props} />
 ))
@@ -81,17 +104,23 @@ TableHeader.displayName = "TableHeader"
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TableBody = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <tbody
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}
 />
 ))
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -122,6 +151,11 @@ TableBody.displayName = "TableBody"
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+TableBody.displayName = &quot;TableBody&quot;
+TableBody.displayName = "TableBody"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TableFooter = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -129,6 +163,7 @@ const TableFooter = React.forwardRef<
   <tfoot
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
@@ -142,11 +177,16 @@ const TableFooter = React.forwardRef<
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      &quot;border-t bg-muted/50 font-medium [&>tr]:last:border-b-0&quot;
+      "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       className
     )}
     {...props}
   />
 ))
+<<<<<<< HEAD
 
 
 TableFooter.displayName = "TableFooter"
@@ -159,6 +199,11 @@ TableFooter.displayName = "TableFooter"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+TableFooter.displayName = &quot;TableFooter&quot;
+TableFooter.displayName = "TableFooter"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TableRow = React.forwardRef<
   HTMLTableRowElement
   React.HTMLAttributes<HTMLTableRowElement>
@@ -166,6 +211,7 @@ const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
@@ -179,11 +225,16 @@ const TableRow = React.forwardRef<
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      &quot;border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted&quot;
+      "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       className
     )}
     {...props}
   />
 ))
+<<<<<<< HEAD
 
 
 TableRow.displayName = "TableRow"
@@ -196,6 +247,11 @@ TableRow.displayName = "TableRow"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+TableRow.displayName = &quot;TableRow&quot;
+TableRow.displayName = "TableRow"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TableHead = React.forwardRef<
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
@@ -203,6 +259,7 @@ const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
@@ -216,11 +273,16 @@ const TableHead = React.forwardRef<
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      &quot;h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0&quot;
+      "h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       className
     )}
     {...props}
   />
 ))
+<<<<<<< HEAD
 
 
 TableHead.displayName = "TableHead"
@@ -233,17 +295,26 @@ TableHead.displayName = "TableHead"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+TableHead.displayName = &quot;TableHead&quot;
+TableHead.displayName = "TableHead"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TableCell = React.forwardRef<
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <td
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ref={ref}
     className={cn("p-4 align-middle [&:has([role=checkbox])]:pr-0", className)}
     {...props}
 />
 ))
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -305,17 +376,26 @@ TableCell.displayName = "TableCell"
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+TableCell.displayName = &quot;TableCell&quot;
+TableCell.displayName = "TableCell"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TableCaption = React.forwardRef<
   HTMLTableCaptionElement
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
   <caption
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ref={ref}
     className={cn("mt-4 text-sm text-muted-foreground", className)}
     {...props}
 />
 ))
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -350,6 +430,8 @@ TableCaption.displayName = "TableCaption"
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 TableCaption.displayName = &quot;TableCaption&quot;
 export {
   Table
@@ -362,8 +444,12 @@ export {
   TableCaption}
 TableCaption.displayName = "TableCaption"
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export {
   Table,
   TableHeader,
@@ -372,6 +458,7 @@ export {
   TableHead,
   TableRow,
   TableCell,
+<<<<<<< HEAD
 <<<<<<< HEAD
   TableCaption}
 import * as React from "react";
@@ -526,9 +613,14 @@ React.HTMLAttributes<HTMLTableCaptionElement> > ( ({
 ;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

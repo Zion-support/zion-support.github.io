@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -42,6 +43,10 @@ import { useToast } from "@/hooks/use-toast",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -63,10 +68,13 @@ const mockPost: ForumPost = {
 },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -98,8 +106,11 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
     downvotes: 0
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   {
     id: "reply2"
@@ -126,9 +137,12 @@ const mockReplies: ForumReply[] = [
     downvotes: 0
     isAnswer: true
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   {
     id: "reply2",
@@ -156,10 +170,13 @@ const mockReplies: ForumReply[] = [
     isAnswer: true
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "reply4"
     postId: "1"
@@ -171,6 +188,7 @@ const mockReplies: ForumReply[] = [
     upvotes: 4
     downvotes: 0
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -384,6 +402,8 @@ export default function ForumPostPage() {;
   // can't determine the generic type for the helper from React Router.;
   // Cast the result instead to provide the expected shape.;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 ],
 
@@ -442,6 +462,7 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You upvoted this post"})
+<<<<<<< HEAD
 =======
   const { postId } = useParams() as { postId?: string };
 
@@ -503,6 +524,11 @@ export default function ForumPostPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -514,6 +540,7 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You downvoted this post"})
+<<<<<<< HEAD
 
 
   },
@@ -526,6 +553,11 @@ export default function ForumPostPage() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
@@ -535,8 +567,11 @@ export default function ForumPostPage() {
     }
     // Create a new reply
     const newReply: ForumReply = {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: `reply${Date.now()}`
       postId: post.id
       content;
@@ -550,9 +585,12 @@ export default function ForumPostPage() {
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: `reply${Date.now()}`,
       postId: post.id,
       content,
@@ -569,12 +607,16 @@ export default function ForumPostPage() {
     setPost({ ...post, replyCount: post.replyCount + 1 }),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({
       title: "Reply posted"
       description: "Your reply has been added to the discussion"})
   }
   },
 
+<<<<<<< HEAD
 =======
 
     toast({
@@ -586,6 +628,8 @@ export default function ForumPostPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -594,9 +638,13 @@ export default function ForumPostPage() {
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleUpvote = () => {;
     if (!user) {;
@@ -605,11 +653,19 @@ export default function ForumPostPage() {
         description: "Please sign in to vote on posts"}),;
       return;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setPost({ ...post, upvotes: post && post.upvotes + 1 }),;
     toast({;
       title: "Vote recorded",;
       description: "You upvoted this post"});
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleDownvote = () => {;
     if (!user) {;
       toast({;
@@ -617,11 +673,19 @@ export default function ForumPostPage() {
         description: "Please sign in to vote on posts"}),;
       return;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setPost({ ...post, downvotes: post && post.downvotes + 1 }),;
     toast({;
       title: "Vote recorded",;
       description: "You downvoted this post"});
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmitReply = async (content: string) => {;
     if (!user) {;
       toast({;
@@ -629,6 +693,10 @@ export default function ForumPostPage() {
         description: "Please sign in to reply"}),;
       return;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Create a new reply;
     const newReply: ForumReply = {;
       id: `reply${Date && Date.now()}`,;
@@ -642,12 +710,23 @@ export default function ForumPostPage() {
       upvotes: 0,;
       downvotes: 0;
     };
+<<<<<<< HEAD
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post && post.replyCount + 1 }),;
+=======
+
+    setReplies([...replies, newReply]);
+    setPost({ ...post, replyCount: post && post.replyCount + 1 }),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({;
       title: "Reply posted",;
       description: "Your reply has been added to the discussion"});
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleMarkAsAnswer = (replyId: string) => {;
     // Only post author or admin can mark an answer;
     if (!isAuthor && !isAdminOrMod) {;
@@ -655,6 +734,7 @@ export default function ForumPostPage() {
         title: "Permission denied",;
         description: "Only the original poster or moderators can mark answers",;
         variant: "destructive";
+<<<<<<< HEAD
       });
       return;
     }
@@ -672,18 +752,42 @@ export default function ForumPostPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+      return;
+    }
+
+
+    // Update the replies;
+    const updatedReplies = replies && replies.map(reply => ({;
+
+      ...reply;
+      isAnswer: reply && reply.id === replyId;
+    }));
+
+      ...reply,
+      isAnswer: reply.id === replyId
+    }));
+    setReplies(updatedReplies);
+    setPost({ ...post, isAnswered: true })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     })),
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
   }
   },
 
+<<<<<<< HEAD
 =======
 
     toast({
@@ -695,6 +799,8 @@ export default function ForumPostPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -705,15 +811,21 @@ export default function ForumPostPage() {
     toast({
       title: "Report submitted"
       description: "A moderator will review this content"})
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handlePinPost = () => {
     if (!isAdminOrMod) return;
     setPost({ ...post, isPinned: !post.isPinned })
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const handlePinPost = () => {
@@ -722,6 +834,9 @@ export default function ForumPostPage() {
     setPost({ ...post, isPinned: !post.isPinned }),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
@@ -729,6 +844,7 @@ export default function ForumPostPage() {
   const handleLockPost = () => {
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post.isLocked })
+<<<<<<< HEAD
 =======
 
     toast({
@@ -736,6 +852,8 @@ export default function ForumPostPage() {
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const handleLockPost = () => {
@@ -744,18 +862,24 @@ export default function ForumPostPage() {
     setPost({ ...post, isLocked: !post.isLocked }),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
+<<<<<<< HEAD
 =======
 
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },
   
@@ -763,10 +887,13 @@ export default function ForumPostPage() {
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>
       <SEO
@@ -798,11 +925,14 @@ export default function ForumPostPage() {
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -1052,11 +1182,17 @@ export default function ForumPostPage() {;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {post.authorRole}
                     </Badge>
                   )}
@@ -1074,6 +1210,7 @@ export default function ForumPostPage() {;
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // Update the replies;
     const updatedReplies = replies && replies.map(reply => ({;
@@ -1084,19 +1221,28 @@ export default function ForumPostPage() {;
     setPost({ ...post, isAnswered: true }),;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({;
       title: "Answer marked",;
       description: "The reply has been marked as the accepted answer"});
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleReportPost = () => {;
     if (!user) {;
       toast({;
@@ -1105,54 +1251,76 @@ export default function ForumPostPage() {;
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({;
       title: "Report submitted",;
       description: "A moderator will review this content"});
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handlePinPost = () => {;
     if (!isAdminOrMod) return;
     setPost({ ...post, isPinned: !post && post.isPinned }),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handlePinPost = () => {;
     if (!isAdminOrMod) return;
 
     setPost({ ...post, isPinned: !post && post.isPinned }),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({;
       title: post && post.isPinned ? "Post unpinned" : "Post pinned",;
       description: post && post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleLockPost = () => {;
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post && post.isLocked }),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleLockPost = () => {;
     if (!isAdminOrMod) return;
 
     setPost({ ...post, isLocked: !post && post.isLocked }),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({;
       title: post && post.isLocked ? "Post unlocked" : "Post locked",;
       description: post && post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
   const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
   const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>;
       <SEO
@@ -1160,6 +1328,7 @@ export default function ForumPostPage() {;
         description={post && post.content.substring(0, 160)}
         keywords={`community, forum, discussion, ${post && post.tags.join()}`}
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     ),;
   }
@@ -1294,12 +1463,16 @@ export default function ForumPostPage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
             Forum;
           </Link>;
           <span className="text-muted-foreground">/</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;
             {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
@@ -1309,6 +1482,8 @@ export default function ForumPostPage() {;
         </div>;
         ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Link to={`/community/category/${post && post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;
             {post && post.categoryId.split('-').map(word => word && word.charAt(0).toUpperCase() + word && word.slice(1)).join(' ')}
           </Link>;
@@ -1316,12 +1491,16 @@ export default function ForumPostPage() {;
           <span className="text-sm font-medium truncate max-w-[200px]">{post && post.title}</span>;
         </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card>;
           <CardContent className="p-6">;
             <div className="flex justify-between items-start mb-6">;
               <div className="flex items-center gap-4">;
                 <Avatar className="h-12 w-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <AvatarImage src={post.authorAvatar} />;
                   <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>;
@@ -1332,6 +1511,8 @@ export default function ForumPostPage() {;
                     <Badge variant="outline" className="mt-1">;
                       {post.authorRole}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <AvatarImage src={post && post.authorAvatar} />;
                   <AvatarFallback>{post && post.authorName.charAt(0)}</AvatarFallback>;
                 </Avatar>;
@@ -1340,26 +1521,36 @@ export default function ForumPostPage() {;
                   {post && post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
                       {post && post.authorRole}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Badge>;
                   )}
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               ;
               <div className="flex items-center text-sm text-muted-foreground">;
                 <Calendar className="h-4 w-4 mr-1" />;
                 <time dateTime={post.createdAt} title={formattedDate}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="flex items-center text-sm text-muted-foreground">;
                 <Calendar className="h-4 w-4 mr-1" />;
                 <time dateTime={post && post.createdAt} title={formattedDate}>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {timeAgo}
                 </time>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ;
             <h1 className="text-2xl font-bold mb-2">{post.title}</h1>;
@@ -1383,6 +1574,8 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-4">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <h1 className="text-2xl font-bold mb-2">{post && post.title}</h1>;
 
@@ -1405,11 +1598,15 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
               <div className="flex items-center gap-4">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="flex items-center gap-2"
                 >
@@ -1417,32 +1614,46 @@ export default function ForumPostPage() {;
                   <span>{post.upvotes}</span>
                 </Button>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="flex items-center gap-2">;
                   <ThumbsUp className="h-4 w-4" />;
                   <span>{post && post.upvotes}</span>;
                 </Button>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleDownvote}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="flex items-center gap-2">;
                   <ThumbsDown className="h-4 w-4" />;
                   <span>{post && post.downvotes}</span>;
                 </Button>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex items-center gap-2">;
                 {(isAuthor || isAdminOrMod) && (;
                   <Button variant="ghost" size="sm" asChild>;
                     <Link to={`/community/edit/${post && post.id}`}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ;
             <div className="prose dark:prose-invert max-w-none mb-6">;
@@ -1479,18 +1690,26 @@ export default function ForumPostPage() {;
                     <Link to={`/community/edit/${post.id}`}>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Edit className="h-4 w-4 mr-1" />;
                       Edit;
                     </Link>;
                   </Button>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {isAdminOrMod && (;
                   <>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       variant="ghost"
                       size="sm"
@@ -1507,6 +1726,7 @@ export default function ForumPostPage() {;
                     </Button>;
                   </>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="flex items-center gap-2"
                 >
@@ -1543,6 +1763,10 @@ export default function ForumPostPage() {;
                     </Button>
                   </>
                 )}
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant="ghost"
                   size="sm"
@@ -1568,6 +1792,7 @@ export default function ForumPostPage() {;
               ))}
             </div>
           )}
+<<<<<<< HEAD
 =======
 
 
@@ -1976,6 +2201,9 @@ if (return) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -1987,6 +2215,7 @@ if (return) {
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
                 </Alert>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2019,15 +2248,20 @@ if (return) {
                   <AlertDescription>;
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.;
                   </AlertDescription>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </div>
           )}
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -2041,10 +2275,14 @@ if (return) {
               .filter(reply => !reply.isAnswer)
               .map(reply => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <ReplyCard
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
+<<<<<<< HEAD
 
           {post && post.isLocked && (;
                 </Alert>;              )}
@@ -2090,6 +2328,8 @@ if (return) {
                 />
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
               ))}
@@ -2101,8 +2341,12 @@ if (return) {
 }
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
           </div>;
         </div>;
@@ -2111,9 +2355,13 @@ if (return) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (
@@ -2157,6 +2405,7 @@ if (return) {
         </div>;
       </div>;
     </AppLayout>);
+<<<<<<< HEAD
           ;
           <div className="space-y-6">;
             {replies;
@@ -2278,3 +2527,9 @@ downvotes: 0
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

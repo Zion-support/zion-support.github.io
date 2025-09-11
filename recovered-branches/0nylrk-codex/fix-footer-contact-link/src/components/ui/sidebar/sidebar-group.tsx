@@ -4,18 +4,34 @@ import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title?: string;
   icon?: React && React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean;
 }
+<<<<<<< HEAD
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
+=======
+
+
+const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
+  ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
+    const [expanded, setExpanded] = React && React.useState(defaultExpanded);
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { forward_ref } from './react';
 import { ChevronDown  } from './lucide-react';
 import { cn  } from '@/lib / utils';
@@ -41,10 +57,15 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
   ) => {
     const [expanded, set_expanded] = React.useState (default_expanded);
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div;
         ref={ref as SafeRef < HTMLDivElement>}
         className={cn ("px - 3 py - 2", class_name)}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -57,12 +78,20 @@ import { SafeRef } from "@/types/ref-types",
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   icon?: React.ReactNode,
   defaultExpanded?: boolean,
   showChevron?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
@@ -81,9 +110,12 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
     const [expanded, setExpanded] = React.useState(defaultExpanded);
     return (
       <div
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -101,6 +133,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     return (;
       <div;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />;
@@ -210,6 +243,8 @@ SidebarGroup.displayName = "SidebarGroup",
 export { SidebarGroup },
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -222,17 +257,27 @@ export { SidebarGroup },
             )}
           </button>;
         )}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
+      </div>
+    );
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ),;
 SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 );
 
 SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
@@ -245,6 +290,7 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 
 
 export { SidebarGroup };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
         {title && (
@@ -275,3 +321,5 @@ export { SidebarGroup }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

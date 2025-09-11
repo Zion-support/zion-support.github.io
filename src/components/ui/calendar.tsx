@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }/>)
 }"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class_name, class_names,  showOutsideDays = true, ...props;
 }: CalendarProps) {
 }/>);
@@ -10,6 +13,7 @@ class_name, class_names,  showOutsideDays = true, ...props;
 
 }/>) ;
 }";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import * as React from 'react'
@@ -51,3 +55,5 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 =======
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

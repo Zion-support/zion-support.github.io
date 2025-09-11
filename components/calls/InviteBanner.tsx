@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 export default function InviteBanner(): any ({;
   message,;
@@ -57,6 +58,10 @@ function InviteBanner() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onJoin?: () => void;
   canJoin?: boolean
 }
@@ -67,6 +72,7 @@ function InviteBanner() {
 };
 export default function InviteBanner(): any ({ message, onJoin, canJoin = true }: Props) {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -112,6 +118,8 @@ function InviteBanner() {
   )
 
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="w-full bg-gray-900 text-white p-3 rounded border border-gray-700 flex items-center justify-between">
       <span className="text-sm">{message}</span>
       {onJoin && (
@@ -127,6 +135,7 @@ function InviteBanner() {
 }
     </div>
   );
+<<<<<<< HEAD
 }
 }
 =======
@@ -138,3 +147,7 @@ function InviteBanner() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

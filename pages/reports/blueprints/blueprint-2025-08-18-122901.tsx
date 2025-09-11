@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 =======
@@ -23,6 +24,11 @@ const Blueprint20250818122901: React.FC = () => {
     id: 'blueprint-2025-08-18-122901',
 
 <<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const Blueprint20250818122901: React.FC = () => {
   const blueprintDetails = {
@@ -87,6 +93,7 @@ const Blueprint20250818122901: React.FC = () => {
       status: 'implemented'
     }
     id: 'blueprint-2025-08-18-122901',
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'AI Content Factory Blueprint',
@@ -112,29 +119,62 @@ const Blueprint20250818122901: React.FC = () => {
       description: 'AI-powered content creation engine',
       status: 'active',
       health: 'excellent'
+=======
+
+    name: 'AI Content Factory Blueprint',
+    description: 'Automated content generation system with AI - powered optimization',
+    category: 'Content Automation',
+    status: 'deployed',
+    complexity: 'high',
+
+    lastUpdated: '2025-08-18 12:29:01',
+    version: '2.1.0'
+  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  const systemComponents = [
+
+    {
+      name: 'Content Generator',
+      description: 'AI - powered content creation engine',
+      status: 'active',
+      health: 'excellent';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'SEO Optimizer',
       description: 'Automated search engine optimization',
       status: 'active',
+<<<<<<< HEAD
       health: 'excellent'
+=======
+      health: 'excellent';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'Quality Controller',
       description: 'Content quality assessment and improvement',
       status: 'active',
+<<<<<<< HEAD
       health: 'excellent'
+=======
+      health: 'excellent';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'Distribution Engine',
       description: 'Automated content publishing and distribution',
       status: 'active',
 <<<<<<< HEAD
+<<<<<<< HEAD
       health: 'excellent';
     }
   ];
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       health: 'excellent'
 
@@ -146,6 +186,7 @@ const Blueprint20250818122901: React.FC = () => {
       description: 'Advanced NLP for human - like content creation',
       benefit: 'High - quality, engaging content',
       status: 'implemented';
+<<<<<<< HEAD
       health: 'excellent'
     }
   ];
@@ -162,11 +203,14 @@ const Blueprint20250818122901: React.FC = () => {
       description: 'Advanced NLP for human-like content creation',
       benefit: 'High-quality, engaging content',
       status: 'implemented'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       feature: 'SEO Automation',
       description: 'Intelligent keyword optimization and meta tag generation',
       benefit: 'Improved search rankings',
+<<<<<<< HEAD
 
 
   ];
@@ -711,39 +755,97 @@ const Blueprint20250818122901: React.FC = () => {
   }
 }
   ];
+=======
+      status: 'implemented';
+    },
+    {
+      feature: 'Content Personalization',
+      description: 'AI - driven content adaptation for different audiences',
+      benefit: 'Better user engagement',
+      status: 'implemented';
+    },
+    {
+      feature: 'Multi - format Support',
+      description: 'Automatic conversion between content formats',
+      benefit: 'Versatile content delivery',
+
+      status: 'implemented'
+
+
+  ];
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
       case 'implemented': return 'text-green-400';
       case 'deployed': return 'text-blue-400';
       default: return 'text-gray-400';
+<<<<<<< HEAD
     }
   }
   };
 
+=======
+
+  };
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+<<<<<<< HEAD
   const getHealthColor = (health: string) => {
     switch (health) {
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const getHealthColor = (health: string) => {
+=======
+;
+  const getHealthColor = (health: string) =>: any {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    switch (health) {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case 'excellent': return 'bg-green-500/20 text-green-400';
       case 'good': return 'bg-yellow-500/20 text-yellow-400';
       case 'warning': return 'bg-orange-500/20 text-orange-400';
       case 'critical': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400';
+<<<<<<< HEAD
     }
   }
   };
 
+=======
+
+  };
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -758,6 +860,12 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -789,6 +897,12 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>
@@ -817,6 +931,11 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">System Components</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -831,6 +950,10 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
@@ -864,6 +987,10 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -878,6 +1005,11 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
@@ -899,6 +1031,12 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -906,12 +1044,19 @@ const Blueprint20250818122901: React.FC = () => {
               <div className="text-6xl font-bold text-blue-400 mb-4">📝</div>
               <h3 className="text-xl font-semibold mb-2 text-white">AI-Powered Content Creation</h3>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
                 Our AI Content Factory automates the entire content creation process, from
                 initial concept to final publication, ensuring high-quality, SEO-optimized
                 Our AI Content Factory automates the entire content creation process, from 
                 initial concept to final publication, ensuring high-quality, SEO-optimized 
                 Our AI Content Factory automates the entire content creation process, from
                 initial concept to final publication, ensuring high-quality, SEO-optimized
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 content that engages your audience.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
@@ -941,6 +1086,12 @@ const Blueprint20250818122901: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -968,9 +1119,18 @@ const Blueprint20250818122901: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
+=======
+
+
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link 
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -978,22 +1138,42 @@ const Blueprint20250818122901: React.FC = () => {
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
             All Blueprints
           </Link>
+<<<<<<< HEAD
           <Link
           <Link 
           <Link
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
+<<<<<<< HEAD
           <Link
           <Link 
           <Link
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href="/reports/blueprints/ultimate-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
@@ -1004,13 +1184,22 @@ const Blueprint20250818122901: React.FC = () => {
     </div>
   );
 }
+<<<<<<< HEAD
 };
 
 =======
 =======
+=======
+;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default Blueprint20250818122901;

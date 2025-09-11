@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export default function CoachWidget() {;
   const [input, setInput] = useState('');
@@ -13,6 +14,8 @@ export default function CoachWidget() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function CoachWidget() {;
@@ -24,12 +27,16 @@ export default function CoachWidget() {;
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
       setReply(data.text |'');
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -50,11 +57,17 @@ export default function CoachWidget() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
 
 
 
+<<<<<<< HEAD
   return (      });
 
 <<<<<<< HEAD
@@ -70,11 +83,21 @@ export default function CoachWidget() {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (      });
+      const data = await resp.json();
+      setReply(data.text |'')
+
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   return (
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -91,6 +114,12 @@ export default function CoachWidget() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 export default /**
  * CoachWidget - Function description
@@ -160,14 +189,25 @@ function ask() {
       }),
       const data = await resp.json()
       setReply(data.text || '')
+<<<<<<< HEAD
       setLoading(false);    }
   }
+=======
+=======
+      setLoading(false);    }
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
 
   return (      });
       const data = await resp.json();
       setReply(data.text |'')
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
 
@@ -182,6 +222,7 @@ function ask() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -226,3 +267,7 @@ function ask() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

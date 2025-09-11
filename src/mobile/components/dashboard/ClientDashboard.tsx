@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -26,6 +27,8 @@ import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 import Link from "next/link",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -35,6 +38,9 @@ export function ClientDashboard() {
         </Button>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -49,6 +55,10 @@ export function ClientDashboard() {
             </Button>
           </Link>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
 
         <Card>
@@ -61,8 +71,12 @@ export function ClientDashboard() {
                 </div>
                 <Badge>3 Milestones</Badge>
               </div>
+<<<<<<< HEAD
               <div className='space-y-1'>
                 <div className='flex justify-between text-sm'>
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
@@ -74,6 +88,7 @@ export function ClientDashboard() {
                   <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className='flex justify-between items-center'>
                 <div className='flex -space-x-2'>
                   <div className='w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center'>
@@ -180,6 +195,8 @@ xport function ClientDashboard() {
                   <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
                 </div>
               </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               
               <div className="flex justify-between items-center">
@@ -193,21 +210,30 @@ xport function ClientDashboard() {
                   </div>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button size="sm" variant="outline">View Details</Button>
+=======
+                <Button size="sm" variant="outline">View Details</Button>
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       
@@ -215,12 +241,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
 
       
 
 
       <section>
+<<<<<<< HEAD
+=======
+        <div className="flex items-center justify-between mb-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <h2 className="text-lg font-medium">Suggested Talents</h2>
           <Link href="/mobile/marketplace">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
@@ -229,6 +261,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Link>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='space-y-3'>
 ursor/fix-website-loading-errors-and-merge-6662
         <div className='space-y-3'>
@@ -236,11 +269,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <div className='space-y-3'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         <div className="space-y-3">
 
 
           <Card>
+<<<<<<< HEAD
+=======
+            <CardContent className="p-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -267,16 +307,23 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardContent>
           </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
 
 
           <Card>
+<<<<<<< HEAD
+=======
+            <CardContent className="p-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -292,6 +339,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='mt-3 flex gap-1 flex-wrap'>
                 <Badge variant='outline' className='text-xs'>
                   React
@@ -303,6 +353,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   AWS
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
               <div className="mt-3 flex gap-1 flex-wrap">
+<<<<<<< HEAD
 =======
 
 
@@ -311,6 +362,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                 <Badge variant="outline" className="text-xs">React</Badge>
+=======
+
+
+                <Badge variant="outline" className="text-xs">React</Badge>
+                <Badge variant="outline" className="text-xs">Node.js</Badge>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Badge variant="outline" className="text-xs">AWS</Badge>
               </div>
               <div className="flex gap-2 mt-3">
@@ -322,10 +379,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
 
 
@@ -333,12 +393,19 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         <Card>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
+=======
+        
+
+
+        <Card>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <CardContent className="p-4 space-y-4">
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
@@ -354,6 +421,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className='flex gap-3 items-start'>
               <div className='bg-primary/10 p-2 rounded-full'>
                 <FileText className='h-5 w-5 text-primary' />
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       
       
@@ -390,10 +458,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
                 <FileText className="h-5 w-5 text-primary" />
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
                 <p className='text-sm'>
@@ -403,6 +474,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
               <div>
                 <p className="text-sm">
@@ -411,6 +486,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button variant='outline' className='w-full'>
               View All Notifications
@@ -421,6 +497,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       <section>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <Button variant='outline' className='w-full'>
+              View All Notifications
+            </Button>          </CardContent>      <section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
@@ -449,10 +530,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             
 
@@ -460,6 +544,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -473,12 +558,17 @@ import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
     </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
 export function ClientDashboard() {;
@@ -647,6 +737,7 @@ function ClientDashboard() {
         </Card>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Suggested Talents</h2>;
@@ -710,6 +801,8 @@ function ClientDashboard() {
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <section>;
         <div className='flex items - center justify - between mb - 4'>;
@@ -805,11 +898,15 @@ function ClientDashboard() {
                 <Button size='sm' variant='outline'>;
                   Message;
                 </Button>              </div>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </CardContent>;
           </Card>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       <section>;
@@ -850,6 +947,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
@@ -919,5 +1018,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>;
       </section>;
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

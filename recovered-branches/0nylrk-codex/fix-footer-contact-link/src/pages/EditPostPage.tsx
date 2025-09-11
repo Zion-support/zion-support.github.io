@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -23,11 +24,16 @@ import { useAuth } from "@/hooks/useAuth";
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PostFormValues {
 
   title: string
@@ -37,6 +43,7 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -90,6 +97,8 @@ export default function EditPostPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -109,6 +118,7 @@ const mockPost: ForumPost = {
   isFeatured: true
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const mockPost: ForumPost = {
   id: "1"
@@ -150,15 +160,21 @@ export default function EditPostPage() {
   const [isLoading, setIsLoading] = useState(true),
   
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -173,12 +189,20 @@ export default function EditPostPage() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }, [postId]);
+  }, [postId]),
+  
+  if (isLoading) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   useEffect(() => {;
     // In a real app, we would fetch the post data here;
     // For now, we'll just use the mock data;
     setIsLoading(false);
   }, [postId]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isLoading) {;
     return (
@@ -237,11 +261,16 @@ export default function EditPostPage() {;
   if (isLoading) {;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <AppLayout>;
         <div className="container py-8">;
           <div className="flex justify-center items-center h-64">;
@@ -249,6 +278,7 @@ export default function EditPostPage() {;
           </div>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!post) {;
     return (
@@ -258,6 +288,8 @@ export default function EditPostPage() {;
   if (!post) {;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
   }
 
@@ -265,7 +297,10 @@ export default function EditPostPage() {;
   if (!post) {;
 
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <AppLayout>;
         <div className="container py-8">;
           <h1>Post not found</h1>;
@@ -274,6 +309,7 @@ export default function EditPostPage() {;
           </Button>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [postId]);
   }, [postId]),
@@ -294,6 +330,11 @@ export default function EditPostPage() {;
   }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    );
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!post) {
     return (
       <AppLayout>
@@ -308,6 +349,9 @@ export default function EditPostPage() {;
   }
   // Check if the user is the author or an admin
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const isAuthor = user?.id === post.authorId;
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
   const isAuthor = user?.id === post.authorId,
@@ -331,6 +375,7 @@ export default function EditPostPage() {;
     content: post.content
     categoryId: post.categoryId as ForumCategory
     tags: post.tags.join(", ")
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -372,6 +417,11 @@ export default function EditPostPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database
@@ -379,6 +429,7 @@ export default function EditPostPage() {;
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -394,6 +445,11 @@ export default function EditPostPage() {;
       
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      });
+      }),
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -403,24 +459,41 @@ export default function EditPostPage() {;
         variant: "destructive"
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const initialValues: Partial<PostFormValues> = {;
     title: post && post.title,;
     content: post && post.content,;
     categoryId: post && post.categoryId as ForumCategory,;
     tags: post && post.tags.join(", ");
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = async (values: PostFormValues) => {;
     try {;
       // Here we would normally update the post in the database;
       // For now, we'll just simulate a successful update;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({;
         title: "Post updated",;
         description: "Your post has been updated successfully";
       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Redirect back to the post;
       navigate(`/community/post/${postId}`);
     } catch (error) {;
@@ -429,6 +502,7 @@ export default function EditPostPage() {;
         description: "There was a problem updating your post",;
         variant: "destructive";
       });
+<<<<<<< HEAD
     }
   }
     }
@@ -443,18 +517,28 @@ export default function EditPostPage() {;
 <<<<<<< HEAD
   return (
     <AppLayout>;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   },
 
   return (
+<<<<<<< HEAD
     <AppLayout>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    <AppLayout>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <div className="container py-8">
@@ -480,29 +564,44 @@ export default function EditPostPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <PostForm 
           initialValues={initialValues} 
           onSubmit={handleSubmit} 
           isEditing={true} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
       </div>
     </AppLayout>
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -623,6 +722,7 @@ export default function EditPostPage() {;
         description="Edit your discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, edit post";
 <<<<<<< HEAD
+<<<<<<< HEAD
       />;
     ),;
   }
@@ -669,6 +769,11 @@ export default function EditPostPage() {;
       />;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -682,7 +787,10 @@ export default function EditPostPage() {;
           <span className="text-sm font-medium">Edit</span>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
 
@@ -695,7 +803,10 @@ export default function EditPostPage() {;
     </AppLayout>;
   );
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from './react';
 import { Link, use_navigate, use_params } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -729,6 +840,7 @@ const mock_post: ForumPost = {
   reply_count: 12,
   is_answered: true,
   is_featured: true;
+<<<<<<< HEAD
 
 
 
@@ -879,3 +991,12 @@ return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplac
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

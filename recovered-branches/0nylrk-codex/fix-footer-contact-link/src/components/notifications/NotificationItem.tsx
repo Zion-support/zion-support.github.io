@@ -1,10 +1,15 @@
 
+<<<<<<< HEAD
 // Use the centralized icon wrapper to avoid missing icons;
 <<<<<<< HEAD
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from 'react';
+// Use the centralized icon wrapper to avoid missing icons
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -15,20 +20,31 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/compon
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -40,6 +56,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { useNavigate } from 'react-router-dom',
 import { Notification, NotificationType } from '@/context/notifications',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -65,10 +82,23 @@ export const getTypeIcon = (type: NotificationType) => {
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
+=======
+
+
+
+export const getTypeIcon = (type: NotificationType) => {
+  switch (type) {
+    case 'message':
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
@@ -85,6 +115,10 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-gray-500">📣</span>;
   }
 };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 };
@@ -106,10 +140,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (!notification.read) {
       onMarkAsRead(notification.id)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
@@ -137,6 +176,9 @@ export const getTypeIcon = (type: NotificationType) => {;
     default:;
       return <span className="text-gray-500">📣</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 interface NotificationItemProps {
@@ -153,12 +195,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
+<<<<<<< HEAD
 =======
 
   }
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -170,16 +215,21 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 =======
@@ -238,6 +288,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
       navigate(notification && notification.action_url);
     }
   }
+=======
+  },
+=======
+  };
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div
       className={cn(
@@ -262,11 +319,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 
             {notification && notification.action_url && notification && notification.action_text && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick={handleClick}
               >
@@ -325,6 +386,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={handleClick}>;
                 {notification && notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />;
@@ -336,11 +399,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
       </div>;
 
       {/* Action buttons that appear on hover */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button;
                 variant="ghost";
@@ -377,12 +444,17 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
             <TooltipContent>;
               <p>Dismiss</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="ghost" 
                 size="icon" 
                 className="h-6 w-6"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
@@ -391,6 +463,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
     </div>);
@@ -409,3 +482,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

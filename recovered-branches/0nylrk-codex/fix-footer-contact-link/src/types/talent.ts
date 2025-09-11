@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TalentProfile {
 export interface TalentProfile {;
   id: string;
@@ -94,6 +95,8 @@ export interface TalentProfile {;
     title: string,;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: string,
     description: string;
   }[];
@@ -118,6 +121,7 @@ export interface HireRequest {
 
     max: number,
     currency: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: string;
   }[];
@@ -152,6 +156,8 @@ export interface HireRequest {;
   createdAt: string;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   timeline: {
     start_date: string;
@@ -161,6 +167,7 @@ export interface HireRequest {;
   status: 'pending' | 'accepted' | 'rejected' | 'completed',
   created_at: string;
 
+<<<<<<< HEAD
 
 export interface TalentProfile {;
 
@@ -229,3 +236,13 @@ export interface HireRequest {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+=======
+
+
+export interface TalentProfile {;
+
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

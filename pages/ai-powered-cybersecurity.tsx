@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -7,6 +8,8 @@ export default function AIPoweredCybersecurityPage() {
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 class ErrorBoundary extends React.Component {
@@ -14,16 +17,32 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -71,19 +90,30 @@ import React from 'react';
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredCybersecurityPage() {
 	return (
 		<>
 			<Head>
 				<title>AI-Powered Cybersecurity Platform | Zion Tech Group</title>
+<<<<<<< HEAD
 <meta name="description" content="Autonomous threat detection, real-time response, and zero-trust enforcement with AI." />
+=======
+				<meta name="description" content="Autonomous threat detection, real-time response, and zero-trust enforcement with AI." />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-cybersecurity" />
 			</Head>
 			<ServiceLanding
 				title="AI-Powered Cybersecurity Platform"
+<<<<<<< HEAD
 description="Detect, prioritize, and remediate threats automatically. LLM-powered analytics, behavioral baselines, deception canaries, and autonomous response integrated with your SIEM and EDR."
+=======
+				description="Detect, prioritize, and remediate threats automatically. LLM-powered analytics, behavioral baselines, deception canaries, and autonomous response integrated with your SIEM and EDR."
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 				subtitle="Fewer alerts, faster response"
 				pricePerMonthUSD={3999}
 				implementationWeeks="2-6 weeks"
@@ -103,16 +133,22 @@ description="Detect, prioritize, and remediate threats automatically. LLM-powere
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 export default /**
  * AIPoweredCybersecurityPage - Function description
  */
 function AIPoweredCybersecurityPage() {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -181,6 +217,8 @@ export default function AIPoweredCybersecurityPage() {
 }
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <Head>;
@@ -221,9 +259,15 @@ export default function AIPoweredCybersecurityPage() {
     </>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

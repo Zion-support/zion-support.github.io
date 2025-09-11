@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -133,15 +134,43 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
+<<<<<<< HEAD
 
 
 
 
+=======
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  }
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }
+  const isActive = (path: string) => router.pathname === path;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const serviceCategories = [
     {
@@ -434,10 +463,13 @@ import React, { useState, useEffect } from 'react';
     }
   ];
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
@@ -451,10 +483,13 @@ import React, { useState, useEffect } from 'react';
     { name: 'AI Market Research', href: '/ai-market-research' }
   ];
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Newly added real services quick links
   const newServiceLinks = [
     {
@@ -480,6 +515,10 @@ import React, { useState, useEffect } from 'react';
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
   ];
     >
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -841,6 +880,10 @@ import React, { useState, useEffect } from 'react';
 
 
     >;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Scroll Progress Bar */}
       <div className='absolute top-0 left-0 h-1 w-full bg-transparent'>;
         <div
@@ -867,6 +910,10 @@ import React, { useState, useEffect } from 'react';
                 Zion Tech Group;
               </div>;
               <div className='text-xs text-gray-400'>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import {
@@ -917,6 +964,7 @@ import {
   Bot,
   ChevronRight as ChevronRightIcon,
   Eye,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2165,10 +2213,18 @@ export default function NeoFuturisticNavigation() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  FlaskConical,;
+  Link as LinkIcon,;
+import Button from '../ui/Button';
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Mobile Menu Button */}
           <button
             className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
             onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </button>;
         </div>;
@@ -2199,10 +2255,13 @@ export default function NeoFuturisticNavigation() {
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -2210,6 +2269,13 @@ export default function NeoFuturisticNavigation() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {activeDropdown === 'mobile-services' && (
+                  <div className='ml-4 space-y-3'>
+                    {serviceCategories.map((category, index) => (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </button>;
                 {activeDropdown === 'mobile-services' && (;
@@ -2238,6 +2304,10 @@ export default function NeoFuturisticNavigation() {
                       </div>;
                     ))}
                     <div className='pt-3'>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
@@ -2293,6 +2363,7 @@ export default function NeoFuturisticNavigation() {
                         variant='quantum'
                         size='sm'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                         className='w-full'>;
@@ -2316,6 +2387,16 @@ export default function NeoFuturisticNavigation() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </div>;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Company Section */}
               <div>;
                 <button
@@ -2326,18 +2407,26 @@ export default function NeoFuturisticNavigation() {
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </button>;
                 {activeDropdown === 'mobile-company' && (;
                   <div className='ml-4 space-y-3'>;
                     {companyInfo && companyInfo.map((item, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Link
                         key={index}
                         href={item && item.link}
@@ -2349,13 +2438,19 @@ export default function NeoFuturisticNavigation() {
                   </div>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Resources Section */}
               <div>;
                 <button
@@ -2366,18 +2461,26 @@ export default function NeoFuturisticNavigation() {
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </button>;
                 {activeDropdown === 'mobile-resources' && (;
                   <div className='ml-4 space-y-3'>;
                     {resources && resources.map((item, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Link
                         key={index}
                         href={item && item.link}
@@ -2389,12 +2492,18 @@ export default function NeoFuturisticNavigation() {
                   </div>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
 =======
 
               </div>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Contact Info */}
               <div className='pt-6 border-t border-gray-700/50'>;
                 <div className='text-white font-semibold mb-4'>;
@@ -2420,6 +2529,7 @@ export default function NeoFuturisticNavigation() {
                     <span className='text-gray-300'>{contactInfo && contactInfo.website}</span>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className='mt-6 space-y-3'>;
                         className='w-full'
@@ -2515,6 +2625,11 @@ export default function NeoFuturisticNavigation() {
                 <div className='mt-6 space-y-3'>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                <div className='mt-6 space-y-3'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     href='/services'
                     variant='quantum'
@@ -2528,6 +2643,7 @@ export default function NeoFuturisticNavigation() {
                     href='/contact'
                     variant='secondary'
                     size='lg'
+<<<<<<< HEAD
                     className='w-full'>;
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
@@ -2885,6 +3001,8 @@ export default function NeoFuturisticNavigation() {
 }</nav>) 								<div className="mt-6 space-y-3">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { 
 	Menu;
 	X, 
@@ -3365,6 +3483,7 @@ icon: <Atom className="w-5 h-5" />,
 								</div>
 								<div className="mt-6 space-y-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className='w-full'
                   >
                     Contact Us
@@ -3420,6 +3539,9 @@ icon: <Atom className="w-5 h-5" />,
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
 										Explore Services
 										<ArrowRight className="w-5 h-5 ml-2" />
@@ -3434,6 +3556,7 @@ icon: <Atom className="w-5 h-5" />,
 				</div>
 			)}
 		</nav>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -3564,10 +3687,15 @@ icon: <Atom className="w-5 h-5" />,
 }
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 );
 }
 	);
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

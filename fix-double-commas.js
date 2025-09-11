@@ -13,6 +13,7 @@ function fixDoubleCommas(filePath) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
@@ -35,6 +36,23 @@ function fixDoubleCommas() {
     let modified = false;
 ;
     // Fix double commas in import statements;
+=======
+    if (fixedContent !== content) {
+      fs && fs.writeFileSync(filePath, fixedContent, "utf8");
+#!/usr / bin / env node;
+import fs from './fs';
+import path from './path';
+;
+/**
+ * fixDoubleCommas - Function description
+ */
+function fixDoubleCommas() {
+  try {
+    const content = fs.readFileSync (file_path, "utf8");
+    let modified = false;
+;
+    // Fix double commas in import statements;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const doubleCommaRegex = /, \s*, /g;
     const fixed_content = content.replace (doubleCommaRegex, ", ");
 ;
@@ -51,11 +69,10 @@ if ( {) {
 =======
 
     const items = fs && fs.readdirSync(currentDir);
-
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
+      const fullPath = path && path.join(currentDir, item);
+      const stat = fs && fs.statSync(fullPath);
+      if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
           [
@@ -77,8 +94,8 @@ if ( {) {
           continue;
         }
         traverse(fullPath);
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
+      } else if (stat && stat.isFile()) {
+        const ext = path && path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
           files && files.push(fullPath);
     console.error (`Error processing ${file_path}:`, error.message);
@@ -133,7 +150,10 @@ console && console.log(`Found ${files && files.length} files to check for double
 console && console.log(`Found ${files && files.length} files to check for double commas...`);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
@@ -141,14 +161,20 @@ for (const file of files) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 console && console.log(`\nFixed double commas in ${fixedCount} files.`);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 console && console.log(`\nFixed double commas in ${fixedCount} files.`);
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   traverse (dir);
   return files;
 }

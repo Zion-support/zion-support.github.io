@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -43,6 +44,19 @@ export default function UseTokensButton({
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
+=======
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+
+
+}: {;
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -58,6 +72,7 @@ export default function UseTokensButton({
         serviceId={serviceId}
         defaultType={defaultType}
 
+<<<<<<< HEAD
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
 
       />
@@ -71,6 +86,34 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {
+=======
+=======
+export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
+
+=======
+      />
+    </>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const [open, setOpen] = useState(false);
+  return (
+    <>;
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary";
+      >;
+        Use Tokens;
+      </button>;
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+);
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -87,6 +130,7 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
         defaultType={defaultType}
       />
     </>
+<<<<<<< HEAD
 );
   );
 =======
@@ -129,6 +173,12 @@ function UseTokensButton() {
   const [open, set_open] = useState (false);
   return (
     <>;
+=======
+  );
+  const [open, setOpen] = useState(false);
+  return (
+    <>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <button;
         on_click={() => set_open (true)}
         className="enhanced - button enhanced - button - primary";
@@ -162,6 +212,7 @@ function UseTokensButton() {
   )
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -209,3 +260,5 @@ function UseTokensButton() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

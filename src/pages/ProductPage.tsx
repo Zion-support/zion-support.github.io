@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter } from 'next/router', // Changed from useParams
 import { useEffect, useState  } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
@@ -75,6 +76,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 if (!id) return;
       try {;
         const res = await fetch(`/api/products/${id}`);
@@ -82,6 +85,7 @@ if (!id) return;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
         // Fail silently and fall back to local data
@@ -118,6 +122,13 @@ if (!id) return;
     setTimeout(() => setAdding(false), 500)
   }
 =======
+=======
+        }
+      } catch (err) {
+        // Fail silently and fall back to local data
+        logErrorToProduction('Error fetching product', { data: err })
+      }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     };
@@ -129,7 +140,10 @@ if (!id) return;
       fetchProduct();
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     }
@@ -154,10 +168,16 @@ if (!id) return;
     // Only fetch if id is available (from router);
     if (id) {;
       fetchProduct();
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, [id]), // id is now from router && router.query;
 
 
+<<<<<<< HEAD
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
 
@@ -166,6 +186,17 @@ if (!id) return;
   }, [id]), // id is now from router.query;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+    <>
+      <SEO
+        title = {product.title,}
+        description = {product.description,}
+        ogImage = {product.images?.[0],}
+    return <div className="p-6 text-white">Product not found</div>
+  }, [id]), // id is now from router.query;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!product && !id) { // If no id from router yet, it might still be loading;
     return <div className="p-6 text-white">Loading product details...</div>;
   }
@@ -195,6 +226,7 @@ if (!id) return;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (;
     <>;
       <SEO;
@@ -204,10 +236,15 @@ if (!id) return;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />
+=======
+      />
+      <div className="min-h-screen bg-zion-blue p-6 text-white">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
+<<<<<<< HEAD
 <<<<<<< HEAD
               src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
@@ -220,6 +257,10 @@ if (!id) return;
               src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              src = {product.images[0] |'/placeholder.svg',}
+              alt = {product.title,}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               src={product.images[0] || '/placeholder.svg'}
@@ -230,6 +271,7 @@ if (!id) return;
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
@@ -284,11 +326,22 @@ product.title ;
 
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <Button onClick={handleAdd} disabled={adding |inCart}>
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Button>;
       </div>;
     </>;
   );
 
+<<<<<<< HEAD
+=======
+}
+//Only fetch if id is available (from router) ;
+
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
@@ -315,6 +368,13 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
+      set_product (found_product || null);
+    }
+  }, [id]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   useEffect (() => {
     const fetch_product = async () => {
@@ -392,6 +452,7 @@ if (return) {
         <p className="mb - 6">{product.description}</p>;
         <Button on_click={handle_add} disabled={adding || in_cart}>;
           {in_cart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+<<<<<<< HEAD
 =======
       const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
       set_product (found_product || null);
@@ -402,6 +463,13 @@ if (return) {
         </Button>;
       </div>;
     </>);
+=======
+        </Button>;
+      </div>;
+    </>;
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 }
 //Only fetch if id is available (from router) ;
@@ -431,7 +499,11 @@ product.title ;
 }/> </Button> </div> </>) ;
 }';
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

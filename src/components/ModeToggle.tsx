@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
 
+<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -33,17 +37,23 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ModeToggle() {
 
@@ -69,16 +79,25 @@ import { useEffect, useState } from "react"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+export function ModeToggle() {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -86,8 +105,11 @@ import { useEffect, useState } from "react"
         : 'light'
 import { Moon, Sun } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from '@/components / ui / button';
 import {
   Tooltip,
@@ -156,7 +178,10 @@ if ( {) {
 
     
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function ModeToggle() {
 
@@ -233,12 +258,17 @@ export function ModeToggle() {
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
 <<<<<<< HEAD
+<<<<<<< HEAD
       >
 
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>
@@ -250,6 +280,7 @@ export function ModeToggle() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
             variant='ghost'
             size='icon'
@@ -278,6 +309,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            variant='ghost'
+            size='icon'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             variant="ghost"
             size="icon"
 import { Moon, Sun } from 'lucide-react';
@@ -298,6 +333,7 @@ import { useTheme } from '@/components/ThemeProvider';
 import { logIssue } from '@/utils/logIssue';
 import { useEffect, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
             variant='ghost'
             size='icon'
             variant="ghost"
@@ -306,20 +342,28 @@ import { Moon, Sun } from 'lucide-react';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 =======
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
     }
   }
 
@@ -433,6 +477,9 @@ export function ModeToggle() {;
         <span className="sr-only">Loading theme toggle</span>;
       </Button>;
 =======
+=======
+export function ModeToggle() {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { theme, toggleTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
 
@@ -518,7 +565,10 @@ export function ModeToggle() {;
       </Button>;
     );
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return (
     <TooltipProvider>;
@@ -534,6 +584,7 @@ export function ModeToggle() {;
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='focus-visible:ring-ring relative group text-foreground' // Added text-foreground
             data-testid='theme-toggle'
@@ -553,11 +604,14 @@ export function ModeToggle() {;
             variant="ghost";
             size="icon";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
 
             <span className='sr-only'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
               {isDarkMode ? 'light' : 'dark'}.;
@@ -569,10 +623,15 @@ export function ModeToggle() {;
             ;
             <span className="sr-only">;
               Toggle theme. Current:{resolvedTheme}. Click to switch to {isDarkMode ? 'light' :'dark'}.;
+=======
+              Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
+              {isDarkMode ? 'light' : 'dark'}.;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </span>;
           </Button>;
         </TooltipTrigger>;
         <TooltipContent>;
+<<<<<<< HEAD
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
@@ -585,11 +644,30 @@ export function ModeToggle() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <div className='text-center'>;
+            <p className='text-sm font-medium'>Theme: {resolvedTheme}</p>;
+            <p className='text-xs opacity-80'>;
+              Click to switch to {isDarkMode ? 'light' : 'dark'} mode;
+            </p>;
+            {theme === 'system' && (;
+              <p className='text-xs opacity-60 mt-1'>;
+                Following system preference;
+              </p>;
+            )}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
@@ -606,6 +684,7 @@ export function ModeToggle() {;
             <span className='sr-only'>
               Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
               {isDarkMode ? 'light' : 'dark'}.
+<<<<<<< HEAD
 =======
 
 
@@ -614,6 +693,8 @@ export function ModeToggle() {;
             ) : (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
             )}
 ;
@@ -627,9 +708,13 @@ export function ModeToggle() {;
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </span>
           </Button>
         </TooltipTrigger>
@@ -639,6 +724,9 @@ export function ModeToggle() {;
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' : 'dark'} mode</p>
             {theme === 'system' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <p className='text-xs opacity-60 mt-1'>
                 Following system preference
               </p>
@@ -663,6 +751,7 @@ if (!isClient) {"
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>)
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>)
 }'"}
+<<<<<<< HEAD
           <div className="text-center">;
             <p className="text-sm font-medium">Theme:{resolvedTheme}</p>;
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' :'dark'} mode</p>;
@@ -672,12 +761,15 @@ if (!isClient) {"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <p className="text-xs opacity-60 mt-1">Following system preference</p>
             )}
           </div>;
         </TooltipContent>;
       </Tooltip>;
     </TooltipProvider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 if (!isClient) {";
@@ -702,6 +794,17 @@ if (!isClient) {";
 
       const newTheme = isDarkMode ? "light" : "dark";
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+=======
+  );
+
+
+
+      const newTheme = isDarkMode ? "light" : "dark";
+
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`);
@@ -815,6 +918,7 @@ if ( {") {
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>);
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>);
 }'"}
+<<<<<<< HEAD
   ),; //Use the ThemeProvider hook directly to ensure no conflicts import { ;
   {;
   {;
@@ -872,3 +976,7 @@ if (!isClient) {";
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

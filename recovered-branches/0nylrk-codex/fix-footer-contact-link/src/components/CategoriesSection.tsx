@@ -11,6 +11,7 @@ const categories = [;
     color: "from - purple - 500 to - indigo - 600"},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
@@ -37,6 +38,8 @@ import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "Talents"
     description: "Connect with AI experts, developers, and tech specialists";
@@ -51,17 +54,26 @@ import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const categories = [
   {
     title: "Services",
@@ -82,10 +94,13 @@ const categories = [
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -94,6 +109,7 @@ const categories = [
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: "IT Onsite Services"
     link: "/it-onsite-services"
@@ -119,10 +135,15 @@ interface CategoriesSectionProps {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const categories = [;
   {;
     title: "Services",;
     description: "On-demand IT support, consulting, development, and more";
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     title: "IT Onsite Services",
@@ -136,26 +157,36 @@ const categories = [;
     description: "On-demand IT support, consulting, development, and more",;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     icon: <Briefcase className="w-10 h-10" />,;
     link: "/services",;
     color: "from-purple-500 to-indigo-600"},;
   {;
     title: "Talents",;
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: "Connect with AI experts, developers, and tech specialists",;
 =======
     description: "Connect with AI experts, developers, and tech specialists";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    description: "Connect with AI experts, developers, and tech specialists";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     icon: <Users className="w-10 h-10" />,;
     link: "/talent",;
     color: "from-cyan-500 to-blue-600"},;
   {;
     title: "Equipment",;
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: "Rent or buy specialized hardware, servers, and devices",;
 =======
     description: "Rent or buy specialized hardware, servers, and devices";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    description: "Rent or buy specialized hardware, servers, and devices";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     icon: <HardDrive className="w-10 h-10" />,;
     link: "/equipment",;
     color: "from-amber-500 to-orange-600"},;
@@ -166,13 +197,18 @@ const categories = [;
     link: "/category/innovation",;
     color: "from-emerald-500 to-green-600"}],;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const specialServices = [;
   {;
     title: "IT Onsite Services",;
     link: "/it-onsite-services";
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 ];
@@ -230,6 +266,8 @@ interface CategoriesSectionProps {;
 export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 ];
@@ -242,11 +280,16 @@ interface CategoriesSectionProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
+<<<<<<< HEAD
 
 export function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
 
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         {showTitle && (;
@@ -258,7 +301,10 @@ export function CategoriesSection(): any ({ showTitle = true }: CategoriesSectio
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     icon: <HardDrive className="w - 10 h - 10" />,
     link: "/equipment",
@@ -317,17 +363,25 @@ function CategoriesSection() {
             {special_services.map ((service) => (
               <Link;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={service.title}
                 to={service.link}
                 className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300";
               >;
                 {service.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
           {categories && categories.map((category) => (;
             <Link
@@ -347,9 +401,13 @@ function CategoriesSection() {
           ))}
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mt-8">;
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>;
           <div className="flex flex-wrap justify-center gap-4">;
@@ -359,6 +417,7 @@ function CategoriesSection() {
                 to={service && service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">;
                 {service && service.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
@@ -472,14 +531,19 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors";
           >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Link>;
             ))}
 =======
 
 };
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
 
@@ -497,12 +561,16 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors";
           >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             View All Categories →;
           </Link>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -552,6 +620,8 @@ interface CategoriesSectionProps {
 ;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </section>);
 }
 
@@ -559,6 +629,10 @@ interface CategoriesSectionProps {
 
 
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

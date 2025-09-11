@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (
     <Card className="bg - muted / 40">;
       <CardContent className="pt - 6">;
@@ -159,6 +160,9 @@ education
   onDelete
 }: EducationItemProps) {
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { format  } from './date - fns';
 import { Edit, Trash2  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -203,7 +207,10 @@ function EducationItem() {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
@@ -212,17 +219,24 @@ import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
   return (
@@ -260,12 +274,17 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
           </div>
           <div className="flex gap-2">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="bg-muted/40">;
       <CardContent className="pt-6">;
@@ -291,11 +310,15 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             )}
           </div>;
           <div className="flex gap-2">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               variant="ghost"
               size="icon"
               onClick={() => onEdit(education)}
+<<<<<<< HEAD
 <<<<<<< HEAD
             >
               <Edit className="h-4 w-4" />
@@ -320,6 +343,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <Edit className="h-4 w-4" />;
             </Button>;
@@ -374,4 +399,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

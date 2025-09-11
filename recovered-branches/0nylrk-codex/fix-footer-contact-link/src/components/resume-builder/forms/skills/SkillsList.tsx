@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { useState, useEffect  } from './react';
 import { Skill  } from '@/types / resume';
@@ -8,13 +11,17 @@ interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise < void>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
     Record < string, Skill[]>;
   >({});
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Skill  } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
@@ -28,6 +35,14 @@ import {SkillCategory} from './SkillCategory';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+import {useState, useEffect} from 'react';
+import {Skill} from '@/types/resume';
+import {SkillCategory} from './SkillCategory';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
@@ -39,6 +54,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   
 
 
+<<<<<<< HEAD
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>
@@ -46,16 +62,24 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         const category = skill.category |"Other";
         if (!acc[category]) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        const category = skill.category |"Other";
+        if (!acc[category]) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   useEffect (() => {
     // Group skills by category;
@@ -67,13 +91,18 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           acc[category] = [];
         }
         acc[category].push (skill);
         return acc;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const category = skill.category |"Other";
         if (!acc[category]) {
@@ -96,6 +125,13 @@ const category = skill.category |"Other";
     return null;
   }
     return null
+=======
+
+
+    return null
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -122,13 +158,18 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
     return null;
 
 
+<<<<<<< HEAD
   }
   
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 return null;
   }
@@ -155,6 +196,8 @@ return null;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory
@@ -172,8 +215,15 @@ interface SkillsListProps {;
   skills: Skill[],;
   onDeleteSkill: (id: string, category: string) => Promise<void>;
 }
+<<<<<<< HEAD
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
+=======
+
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
+  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     // Group skills by category;
     const grouped = skills && skills.reduce((acc, skill) => {;
@@ -184,6 +234,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       acc[category].push(skill);
       return acc;
     }, {} as Record<string, Skill[]>);
+<<<<<<< HEAD
     setSkillsByCategory(grouped);
   }, [skills]);
   if (Object && Object.keys(skillsByCategory).length === 0) {;
@@ -192,6 +243,20 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   return (
     <div className="space-y-6">;
       <h3 className="text-md font-medium">Your Skills</h3>;
+=======
+
+    setSkillsByCategory(grouped);
+  }, [skills]);
+
+  if (Object && Object.keys(skillsByCategory).length === 0) {;
+    return null;
+  }
+
+  return (
+    <div className="space-y-6">;
+      <h3 className="text-md font-medium">Your Skills</h3>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-4">;
         {Object && Object.entries(skillsByCategory).map(([category, categorySkills]) => (;
           <SkillCategory
@@ -199,6 +264,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             category={category} 
             skills={categorySkills} 
             onDelete={onDeleteSkill} 
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
@@ -241,10 +307,13 @@ export const SkillsList = ({ skills, onDeleteSkill } SkillsListProps) => {;
             category={category} ;
             skills={categorySkills} ;
             onDelete={onDeleteSkill} ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
 
   )
 
@@ -321,3 +390,19 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+=======
+
+  )
+
+=======
+      </div>;
+    </div>;
+  );
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

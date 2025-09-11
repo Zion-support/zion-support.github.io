@@ -23,14 +23,34 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
   Rocket,;
   Settings,;
+=======
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+  Rocket,;
+  Settings,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 
 export default function AISeosuitePage() {
   const features = [
+<<<<<<< HEAD
 
+=======
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+    {
+      icon: <Search className='w-8 h-8 text-white' />,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function AISeosuitePage() {
   const features = [
@@ -80,6 +100,10 @@ export default function AISeosuitePage() {
       description:
 
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
@@ -94,8 +118,11 @@ export default function AISeosuitePage() {
   const features = [
     {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const pricingPlans = [
     {
@@ -112,10 +139,15 @@ export default function AISeosuitePage() {
       buttonColor: 'bg-gray-600 hover:bg-gray-700'
     };
     {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
@@ -153,6 +185,8 @@ export default function AISeosuitePage() {
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Search,
   TrendingUp,
   Target,
@@ -171,6 +205,7 @@ export default function AISeosuitePage() {
   Sparkles,
   ChartBar,
   Lightbulb,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function AISeosuitePage() {_const _features = [
@@ -432,6 +467,8 @@ features: [;
     {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: [;
         'Up to 25 websites',
         'Advanced keyword research',
@@ -452,13 +489,18 @@ features: [;
       button_color: 'bg - blue - 600 hover:bg - blue - 700';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Enterprise',
       price: '$399',
       period: '/month',
       description: 'For large organizations and enterprises',
+<<<<<<< HEAD
 <<<<<<< HEAD
       features: [;
 features: [;
@@ -467,6 +509,11 @@ features: [;
 =======
       features: [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+      features: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Unlimited websites',
         'Full SEO suite',
         'Daily site audits',
@@ -500,9 +547,13 @@ features: [;
 ;
   const integrations = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
     { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
     { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
@@ -512,12 +563,18 @@ features: [;
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
     { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const use_cases = [;
     {
@@ -570,6 +627,7 @@ features: [;
   ];
 ;
   const success_metrics = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Rocket,;
   Settings,;
@@ -888,6 +946,9 @@ export default function AISeosuitePage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       metric: 'Organic Traffic'
       value: '+150%'
@@ -910,6 +971,7 @@ export default function AISeosuitePage() {
     },  ];    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' }
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' }
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1049,19 +1111,28 @@ export default function AISeosuitePage() {;
       tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords'];
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'E-commerce Websites',
       description: 'Optimize product pages, category pages, and search functionality for better conversions.',
     icon: '🛍️',
       benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
     {;
       category: 'On-Page SEO',;
@@ -1080,16 +1151,22 @@ export default function AISeosuitePage() {;
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const successMetrics = [
     { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   ];
 
@@ -1105,6 +1182,12 @@ export default function AISeosuitePage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
         />;
@@ -1136,6 +1219,7 @@ export default function AISeosuitePage() {;
 
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ];
@@ -1184,6 +1268,8 @@ export default function AISeosuitePage() {;
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='#pricing'
               size='lg'
@@ -1196,6 +1282,7 @@ export default function AISeosuitePage() {;
               href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
@@ -1221,6 +1308,8 @@ export default function AISeosuitePage() {;
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
@@ -1250,7 +1339,10 @@ export default function AISeosuitePage() {;
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href="#pricing"
               size="lg"
@@ -1263,6 +1355,7 @@ export default function AISeosuitePage() {;
               href="#demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="border-white/20 hover:border-white/40 hover:bg-white/5"
             >
@@ -1322,14 +1415,22 @@ export default function AISeosuitePage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Everything you need to dominate search rankings and drive organic;
               traffic;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
             {features.map ((feature, index) => (
               <Card;
@@ -1342,14 +1443,19 @@ export default function AISeosuitePage() {;
                     className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover:scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color} shadow - xl`}
                   >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {feature.icon}
                   </div>;
                 </div>;
                 <h3 className='text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
                   {feature.title}
+<<<<<<< HEAD
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1362,6 +1468,10 @@ export default function AISeosuitePage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                </h3>
+                <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Everything you need to dominate search rankings and drive organic traffic
@@ -1388,6 +1498,9 @@ export default function AISeosuitePage() {;
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
               >
                 <div className="relative">
@@ -1402,14 +1515,24 @@ export default function AISeosuitePage() {;
                   {feature.description}
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}
 
+<<<<<<< HEAD
                   {feature.description}
 
                 </p>
               </Card>
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                </p>
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 =======
 
 
@@ -1419,19 +1542,26 @@ export default function AISeosuitePage() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* SEO Tools Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* SEO Tools Section */}
@@ -1447,6 +1577,8 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1479,6 +1611,7 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {seoTools && seoTools.map((tool, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -1486,6 +1619,9 @@ export default function AISeosuitePage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1515,10 +1651,15 @@ export default function AISeosuitePage() {;
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Professional-grade tools used by top SEO agencies and marketers
             </p>
           </div>
@@ -1539,6 +1680,7 @@ export default function AISeosuitePage() {;
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                           {toolName}
 
                           {toolName}
@@ -1552,14 +1694,24 @@ export default function AISeosuitePage() {;
                         </div>;
 =======
 
+=======
+
+                          {toolName}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           {toolName}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ))}
                     </div>;
                   </div>;
@@ -1567,24 +1719,35 @@ export default function AISeosuitePage() {;
               </Card>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </div>
       </section>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Success Metrics Section */}
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Success Metrics Section */}
@@ -1600,6 +1763,8 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1632,6 +1797,7 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
             {successMetrics && successMetrics.map((metric, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -1639,6 +1805,9 @@ export default function AISeosuitePage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>;
@@ -1659,10 +1828,15 @@ export default function AISeosuitePage() {;
                 <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
               </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               See the impact our AI-powered SEO suite has on businesses
             </p>
           </div>
@@ -1680,20 +1854,27 @@ export default function AISeosuitePage() {;
               </Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Card>
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
 
 
@@ -1701,13 +1882,18 @@ export default function AISeosuitePage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Use Cases Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </Card>
@@ -1730,6 +1916,8 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1762,6 +1950,7 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases && useCases.map((useCase, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -1769,6 +1958,9 @@ export default function AISeosuitePage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1804,10 +1996,15 @@ export default function AISeosuitePage() {;
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Trusted by businesses across industries for SEO success
             </p>
           </div>
@@ -1831,6 +2028,7 @@ export default function AISeosuitePage() {;
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                           {benefit}
 
                           {benefit}
@@ -1844,14 +2042,24 @@ export default function AISeosuitePage() {;
                         </div>;
 =======
 
+=======
+
+                          {benefit}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           {benefit}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ))}
                     </div>;
                   </div>;
@@ -1859,24 +2067,35 @@ export default function AISeosuitePage() {;
               </Card>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </div>
       </section>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Pricing Section */}
@@ -1895,6 +2114,8 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1902,17 +2123,25 @@ export default function AISeosuitePage() {;
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Choose the plan that fits your SEO needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {pricingPlans.map((plan, index) => (
           </div>;
         </div>;
@@ -1943,9 +2172,13 @@ export default function AISeosuitePage() {;
               <Card
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>;
               </Card>))}
           </div>;
@@ -2164,25 +2397,37 @@ export default function AISeosuitePage() {;
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className={`relative group ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan.color} hover:border-blue-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className={`relative group ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan.color} hover:border-blue-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
@@ -2200,6 +2445,7 @@ export default function AISeosuitePage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -2213,6 +2459,22 @@ export default function AISeosuitePage() {;
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
+=======
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -2225,6 +2487,7 @@ export default function AISeosuitePage() {;
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
+<<<<<<< HEAD
                     </li>;
                   ))}
                 </ul>;
@@ -2279,6 +2542,9 @@ export default function AISeosuitePage() {;
                       {feature}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2286,9 +2552,13 @@ export default function AISeosuitePage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </li>
                   ))}
                 </ul>
@@ -2296,6 +2566,7 @@ export default function AISeosuitePage() {;
                 <Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {feature}
 
@@ -2315,6 +2586,8 @@ export default function AISeosuitePage() {;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   size="lg"
                 >
                   Get Started
@@ -2322,28 +2595,40 @@ export default function AISeosuitePage() {;
                 </Button>
               </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Integrations Section */}
@@ -2359,6 +2644,8 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -2391,6 +2678,7 @@ export default function AISeosuitePage() {;
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
@@ -2398,6 +2686,9 @@ export default function AISeosuitePage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -2420,10 +2711,15 @@ export default function AISeosuitePage() {;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Connect with your favorite tools and platforms
             </p>
           </div>
@@ -2440,6 +2736,7 @@ export default function AISeosuitePage() {;
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2467,6 +2764,8 @@ export default function AISeosuitePage() {;
 
 
       {/* CTA Section */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Card>
 
@@ -2475,14 +2774,31 @@ export default function AISeosuitePage() {;
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
 
 
       {/* CTA Section */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
@@ -2491,10 +2807,13 @@ export default function AISeosuitePage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -2503,9 +2822,13 @@ export default function AISeosuitePage() {;
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='/contact'
               variant='secondary'
@@ -2520,7 +2843,10 @@ export default function AISeosuitePage() {;
               variant='outline'
               size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Dominate Search Rankings?;
           </h2>;
@@ -2530,28 +2856,38 @@ export default function AISeosuitePage() {;
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Dominate Search Rankings?
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Dominate Search Rankings?
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of businesses who are already ranking higher and driving more organic traffic.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href="/contact"
               variant="secondary"
@@ -2566,6 +2902,7 @@ export default function AISeosuitePage() {;
               size="lg"
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl">;
               <Play className="w-5 h-5 mr-2" />;
@@ -2703,11 +3040,14 @@ export default function AISeosuitePage() {;
               <Play className="w - 5 h - 5 mr - 2" />;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Watch Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
@@ -2716,6 +3056,9 @@ export default function AISeosuitePage() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
     </>);
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -2725,11 +3068,36 @@ export default function AISeosuitePage() {;
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
   );
 }
 <<<<<<< HEAD
 
+=======
+  );
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+              className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Watch Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
@@ -2739,4 +3107,7 @@ export default function AISeosuitePage() {;
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

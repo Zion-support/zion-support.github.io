@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 ;
 import { useFavorites } from '@/hooks/useFavorites',;
@@ -32,12 +33,18 @@ export default function WishlistPage() {;
 }
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
 export default /**
@@ -55,6 +62,7 @@ if ( {}) {
 } return talent ? ( <TalentCard; key={fav.item_id} talent={talent} onViewProfile={() => {}} onRequestHire={() => {}} is_authenticated={true} />) : null}" ";" return item ? (""";" <div key={fav.item_id} className="relative">";" <ProductListingCard listing={item} />""";" <Button size="sm" className="absolute bottom - 2 right - 2" on_click={() => addToCart (item)}>; Add to Cart </Button> </div>) : null})} </div>)} </div>;" )}";" '""";";
 }
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   const { items, dispatch } = useCart(),;
   const addToCart = (item: { id: string, title?: string, price?: number }) => {;
@@ -135,3 +143,6 @@ if ( {}) {
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

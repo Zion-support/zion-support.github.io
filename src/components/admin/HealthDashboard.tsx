@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -7,6 +8,8 @@ import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -48,6 +51,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+<<<<<<< HEAD
 import {
 <<<<<<< HEAD
   AlertTriangle
@@ -59,6 +63,16 @@ import {
 } from 'lucide-react'
 
 =======
+=======
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   AlertTriangle,
   CheckCircle,
   XCircle,
@@ -66,7 +80,10 @@ import {
   TrendingUp,
   Activity,
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
@@ -74,12 +91,15 @@ interface HealthData {
   version: string;
   environment: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   metrics: {
     errorRate: number;
     criticalErrors: number;
     responseTime: number;
     memoryUsage: number
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   metrics: {
     error_rate: number;
@@ -87,15 +107,21 @@ interface HealthData {
     response_time: number;
     memory_usage: number;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   health: {
     status: string;
     score: number;
     issues: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
     recommendations: string[]
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     memoryUsage: number;
   };
@@ -109,7 +135,10 @@ interface HealthData {
     summary: {;
 
     recommendations: string[];
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   errors: {
     summary: {
@@ -118,16 +147,22 @@ interface HealthData {
       high: number;
       medium: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
       low: number
     }
     topErrors: Array<{
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       low: number;
     };
     topErrors: Array<{;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       patternId: string;
       description: string;
       occurrences: number;
@@ -147,6 +182,7 @@ interface HealthData {
     by_category: { [category: string]: number }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const HealthDashboard: React.FC = () => {
   const [healthData, setHealthData] = useState<HealthData | null>(null)
@@ -213,6 +249,9 @@ const HealthDashboard: React.FC = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -320,13 +359,17 @@ const HealthDashboard: React.FC = () => {;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
   if (loading) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='flex items-center justify-center p-8'>
         <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
@@ -339,11 +382,17 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className='flex items-center justify-center p-8'>
         <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    return (
+      <div className='flex items-center justify-center p-8'>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     )
   }
   if (error) {
     return (
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Card className="border-red-200 bg-red-50">
         <CardContent className="p-6">
@@ -353,6 +402,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
           <Button onClick={fetchHealthData} className="mt-4">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card className='border-red-200 bg-red-50'>
         <CardContent className='p-6'>
           <div className='flex items-center text-red-600'>
@@ -360,25 +411,34 @@ ursor/fix-website-loading-errors-and-merge-6662
             <span>Failed to load health data: {error}</span>
           </div>
           <Button onClick={fetchHealthData} className='mt-4'>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Retry
           </Button>
         </CardContent>
       </Card>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!healthData) return null
   if (!healthData) return null
   }
   if (!healthData) return null
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const HealthDashboard: React.FC = () => {;
   const [healthData, setHealthData] = useState<HealthData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
 
@@ -407,10 +467,21 @@ const HealthDashboard: React.FC = () => {;
 
   if (!healthData) return null,
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!healthData) return null
   if (!healthData) return null,
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -422,6 +493,7 @@ const HealthDashboard: React.FC = () => {;
         <div className="flex items-center space-x-2">
           <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
             variant='outline'
             size='sm'
             onClick={() => setAutoRefresh(!autoRefresh)}          >
@@ -432,6 +504,11 @@ const HealthDashboard: React.FC = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            variant='outline'
+            size='sm'
+            onClick={() => setAutoRefresh(!autoRefresh)}          >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
@@ -500,6 +577,7 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <TabsContent value='overview' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <Card>
@@ -508,6 +586,10 @@ const HealthDashboard: React.FC = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <TabsContent value='overview' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -547,11 +629,22 @@ const HealthDashboard: React.FC = () => {;
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <ul className='space-y-2'>
 =======
 
                   <ul className="space-y-2">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <ul className='space-y-2'>
+                    {healthData.health.issues.map((issue, index) => (
+                      <li
+                        key={index}
+                        className='text-sm text-red-600 flex items-start'
+                      >
+                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0'></span>                        {issue}
+                  <ul className="space-y-2">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {healthData.health.issues.map((issue, index) => (
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
@@ -612,6 +705,7 @@ const HealthDashboard: React.FC = () => {;
           </div>;
           <Button onClick={fetchHealthData} className='mt-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
                       <li key={index} className="text-sm text-red-600 flex items-start">
@@ -667,6 +761,8 @@ const HealthDashboard: React.FC = () => {;
           <Button onClick={fetchHealthData} className="mt-4">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Retry;
           </Button>;
         </CardContent>;
@@ -692,6 +788,7 @@ const HealthDashboard: React.FC = () => {;
           </Button>;
           <Button onClick={fetchHealthData} size='sm'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ;
   if (!healthData) return null,;
@@ -714,10 +811,13 @@ const HealthDashboard: React.FC = () => {;
           <Button onClick={fetchHealthData} size="sm">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Refresh;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Overview Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
@@ -729,6 +829,8 @@ const HealthDashboard: React.FC = () => {;
                 <p className="text-sm font-medium text-gray-600">Overall Health</p>;
                 <p className="text-2xl font-bold">{healthData.health.score}/100</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Overview Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>;
@@ -743,11 +845,15 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text-2xl font-bold'>;
                   {healthData && healthData.health.score}/100;
                 </p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Card>;
           <CardContent className="p-6">;
@@ -757,6 +863,8 @@ const HealthDashboard: React.FC = () => {;
                 <p className="text-sm font-medium text-gray-600">Uptime</p>;
                 <p className="text-2xl font-bold">{formatUptime(healthData.uptime)}</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Card>;
           <CardContent className='p-6'>;
@@ -767,11 +875,15 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text-2xl font-bold'>;
                   {formatUptime(healthData && healthData.uptime)}
                 </p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Card>;
           <CardContent className="p-6">;
@@ -781,6 +893,8 @@ const HealthDashboard: React.FC = () => {;
                 <p className="text-sm font-medium text-gray-600">Error Rate</p>;
                 <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(1)}%</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Card>;
           <CardContent className='p-6'>;
@@ -791,11 +905,15 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text-2xl font-bold'>;
                   {healthData && healthData.metrics.errorRate && errorRate.toFixed(1)}%;
                 </p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Card>;
           <CardContent className="p-6">;
@@ -805,6 +923,8 @@ const HealthDashboard: React.FC = () => {;
                 <p className="text-sm font-medium text-gray-600">Response Time</p>;
                 <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Card>;
           <CardContent className='p-6'>;
@@ -817,12 +937,16 @@ const HealthDashboard: React.FC = () => {;
                 <p className='text-2xl font-bold'>;
                   {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}ms;
                 </p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Detailed Information */}
       <Tabs defaultValue="overview" className="space-y-4">;
@@ -835,6 +959,8 @@ const HealthDashboard: React.FC = () => {;
         <TabsContent value="overview" className="space-y-4">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Detailed Information */}
       <Tabs defaultValue='overview' className='space-y-4'>;
@@ -847,12 +973,16 @@ const HealthDashboard: React.FC = () => {;
 
         <TabsContent value='overview' className='space-y-4'>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card>;
               <CardHeader>;
                 <CardTitle>System Information</CardTitle>;
               </CardHeader>;
               <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="space-y-2">;
                   <div className="flex justify-between">;
@@ -871,6 +1001,8 @@ const HealthDashboard: React.FC = () => {;
                     <span className="text-sm text-gray-600">Last Updated:</span>;
                     <span className="text-sm">{new Date(healthData.timestamp).toLocaleTimeString()}</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='space-y-2'>;
                   <div className='flex justify-between'>;
                     <span className='text-sm text-gray-600'>Environment:</span>;
@@ -893,13 +1025,19 @@ const HealthDashboard: React.FC = () => {;
                     <span className='text-sm'>;
                       {new Date(healthData && healthData.timestamp).toLocaleTimeString()}
                     </span>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <Card>;
               <CardHeader>;
@@ -911,11 +1049,15 @@ const HealthDashboard: React.FC = () => {;
               <CardContent>;
 
                       </li>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </ul>;
                 ) : (;
                   <p className='text-green-600 text-sm'>No issues detected</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Card>;
               <CardHeader>;
@@ -936,6 +1078,8 @@ const HealthDashboard: React.FC = () => {;
                   </ul>
                 ) : (
                   <p className="text-green-600 text-sm">No issues detected</p>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </CardContent>
             </Card>
@@ -943,18 +1087,25 @@ const HealthDashboard: React.FC = () => {;
         </TabsContent>
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
                 )}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
 
             <Card>
+<<<<<<< HEAD
+=======
+              <CardHeader>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <CardTitle>Error Summary</CardTitle>
               </CardHeader>
               <CardContent>
@@ -982,6 +1133,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {healthData.errors.summary.low}
                     </p>
                     <p className='text-sm text-gray-600'>Low</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
@@ -1011,6 +1163,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className="text-sm text-gray-600">Low</p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 </div>
               </CardContent>
@@ -1022,10 +1176,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='space-y-2'>
                     {healthData.errors.topErrors
                       .slice(0, 5)
                       .map((error, index) => (
+<<<<<<< HEAD
 =======
 
               </CardContent>;
@@ -1081,6 +1239,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       .map((error, index) => (;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
@@ -1110,12 +1270,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </CardContent>
             </Card>
           </div>
         </TabsContent>
         <TabsContent value='metrics' className='space-y-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+<<<<<<< HEAD
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Error Rate</CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1123,6 +1287,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1131,6 +1297,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Error Rate</CardTitle>
+<<<<<<< HEAD
+=======
+              </CardHeader>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <CardContent>
                 <p className='text-2xl font-bold'>
                   {healthData.metrics.errorRate.toFixed(2)}%
@@ -1169,6 +1339,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <TabsContent value='metrics' className='space-y-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
@@ -1211,10 +1382,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs text-gray-600">JavaScript heap</p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </CardContent>
             </Card>
           </div>
         </TabsContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <TabsContent value='recommendations' className='space-y-4'>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1224,6 +1398,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <TabsContent value='recommendations' className='space-y-4'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <TabsContent value="recommendations" className="space-y-4">
 
@@ -1235,15 +1412,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default HealthDashboard
 export default HealthDashboard
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <ul className='space-y-3'>
                   {healthData.health.recommendations.map((rec, index) => (
                     <li key={index} className='flex items-start'>
                       <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0' />
                       <span className='text-sm'>{rec}</span>                    </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               ) : (
                 <p className='text-gray-600'>
@@ -1333,6 +1514,8 @@ export default HealthDashboard
                       <span className='text-sm'>{rec}</span>                    </li>;
 
                   ))}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </ul>;
               ) : (;
                 <p className='text-gray-600'>;
@@ -1340,11 +1523,15 @@ export default HealthDashboard
                 </p>;
               )}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default HealthDashboard, ;
 export default HealthDashboard;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <ul className="space-y-3">
                   {healthData.health.recommendations.map((rec, index) => (
@@ -1360,12 +1547,24 @@ export default HealthDashboard;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}
+export default HealthDashboard
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const response = await fetch ('/api / admin / health');
       // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
         throw new Error (`HTTP ${response.status}`);
       }
       const data = await response.json ();
@@ -1737,3 +1936,5 @@ export default HealthDashboard,
 =======
 export default HealthDashboard,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

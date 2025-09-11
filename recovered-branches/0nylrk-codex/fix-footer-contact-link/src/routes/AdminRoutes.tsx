@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -11,15 +12,23 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -28,6 +37,7 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -44,12 +54,15 @@ import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 const AdminRoutes = () => {
+<<<<<<< HEAD
   return (
     <Routes>
       <Route
@@ -150,6 +163,8 @@ const AdminRoutes = () => {;
         element={;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 // Admin Pages;
 import QuoteManager from "@/pages/admin/QuoteManager";
 import ReviewsModeration from "@/pages/admin/ReviewsModeration";
@@ -167,11 +182,15 @@ const AdminRoutes = () => {;
       <Route
         path="/admin/quotes"
         element={
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute adminOnly={true}>;
             <QuoteManager />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
       />;
       <Route;
         path="/admin/reviews";
@@ -239,6 +258,12 @@ const AdminRoutes = () => {;
       />;
     </Routes>;
       />;
+=======
+
+      />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/admin/reviews"
         element={
@@ -246,7 +271,14 @@ const AdminRoutes = () => {;
             <ReviewsModeration />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
       />;
+=======
+
+      />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/admin/whitelabel"
         element={
@@ -254,7 +286,14 @@ const AdminRoutes = () => {;
             <WhitelabelManager />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
       />;
+=======
+
+      />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/admin/partners"
         element={
@@ -262,7 +301,14 @@ const AdminRoutes = () => {;
             <PartnerManager />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
       />;
+=======
+
+      />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/admin/app-metadata"
         element={
@@ -270,7 +316,14 @@ const AdminRoutes = () => {;
             <AppMetadataManager />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
       />;
+=======
+
+      />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/admin/support-requests"
         element={
@@ -278,7 +331,14 @@ const AdminRoutes = () => {;
             <SupportRequests />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
       />;
+=======
+
+      />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/admin/fraud-detection"
         element={
@@ -286,7 +346,14 @@ const AdminRoutes = () => {;
             <FraudDetection />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
       />;
+=======
+
+      />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/admin/tokens"
         element={
@@ -296,6 +363,7 @@ const AdminRoutes = () => {;
         }
 
       />;
+<<<<<<< HEAD
       <Route
         path="/admin/integrations"
         element={
@@ -314,10 +382,30 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
+=======
+
+
+      <Route
+        path="/admin/integrations"
+        element={
+          <ProtectedRoute adminOnly={true}>
+            <IntegrationsPage />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+export default AdminRoutes;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -410,6 +498,7 @@ const AdminRoutes = () =>: any {
 
 
 export default AdminRoutes;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <Routes> <Route path="/admin/quotes" element= {
@@ -433,3 +522,5 @@ export default AdminRoutes;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

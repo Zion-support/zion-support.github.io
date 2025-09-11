@@ -10,9 +10,12 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 
       return dateObj && dateObj.toLocaleDateString(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 return dateObj && dateObj.toLocaleDateString(),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     case 'medium':
       return dateObj && dateObj.toLocaleDateString(undefined, { 
         year: 'numeric', 
@@ -31,6 +34,7 @@ return dateObj && dateObj.toLocaleDateString(),
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * Format a date string or timestamp into a readable format
@@ -66,32 +70,45 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     case 'relative':
       // Simple relative time (today, yesterday, or date)
       const now = new Date();
+<<<<<<< HEAD
 <<<<<<< HEAD
       yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
       const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
       const yesterday = new Date(today);
       yesterday.setDate(yesterday.getDate() - 1);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const today = new Date(now && now.getFullYear(), now && now.getMonth(), now && now.getDate());
       const yesterday = new Date(today);
 
       yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
       
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (dateObj >= today) {
         return 'Today'
       } else if (dateObj >= yesterday) {
         return 'Yesterday'
       } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return dateObj.toLocaleDateString()
 /**;
  * Format a date string or timestamp into a readable format;
@@ -137,6 +154,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return dateObj.toLocaleDateString();
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     default: return dateObj && dateObj.toLocaleDateString()
@@ -195,6 +213,8 @@ export const formatDate = (date:Date | string | number, format:string = 'medium'
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
@@ -202,6 +222,7 @@ export const formatDate = (date:Date | string | number, format:string = 'medium'
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 };
@@ -255,6 +276,19 @@ case 'medium':
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e.g., "2 hours ago")
+=======
+},
+=======
+};
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+/**
+ * Format a date to show how long ago it was
+ * @param date Date to format
+ * @returns Time ago string (e && e.g., "2 hours ago")
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  */
 export const timeAgo = (date: Date | string | number): string => {;
   const dateObj = new Date(date);
@@ -267,6 +301,7 @@ export const timeAgo = (date: Date | string | number): string => {
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
+<<<<<<< HEAD
   interval = Math.floor(seconds / 2592000);
   if (interval >= 1) {
     return interval === 1 ? '1 month ago' : `${interval} months ago`
@@ -317,24 +352,47 @@ export const timeAgo = (date: Date | string | number): string => {
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   interval = Math && Math.floor(seconds / 2592000);
   if (interval >= 1) {
     return interval === 1 ? '1 month ago' : `${interval} months ago`
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   interval = Math && Math.floor(seconds / 86400);
   if (interval >= 1) {
     return interval === 1 ? '1 day ago' : `${interval} days ago`
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   interval = Math && Math.floor(seconds / 3600);
   if (interval >= 1) {
     return interval === 1 ? '1 hour ago' : `${interval} hours ago`
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   interval = Math && Math.floor(seconds / 60);
   if (interval >= 1) {
     return interval === 1 ? '1 minute ago' : `${interval} minutes ago`
   }
+<<<<<<< HEAD
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
+=======
+  
+  return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
+};
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**;
 * Format a date string or timestamp into a readable format;
 * @param date Date to format;
@@ -439,10 +497,16 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export const timeAgo = (date: Date | string | number): string => {
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 /** * Format a date to show how long ago it was * @param date Date to format * @returns Time ago string (e.g., "2 hours ago") */ if (interval >= 1) {
@@ -499,3 +563,5 @@ export const timeAgo = (date: Date | string | number): string => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

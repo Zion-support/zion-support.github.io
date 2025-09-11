@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { NextRequest, NextResponse  } from './next / server';,
 import bcrypt from './bcryptjs';,
 import { prisma  } from '@/lib / prisma';,
@@ -17,6 +21,7 @@ function POST() {
   try {
     const body = await request.json (),
     const { name, email, password } = register_schema.parse (body),
+<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
@@ -148,3 +153,6 @@ export async function POST(request: NextRequest) {;
     );
   }
 }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -6,14 +6,19 @@ import crypto from "crypto";
 import {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   getProposal
   updateProposalMeta
@@ -23,6 +28,8 @@ import {
   updateArtifacts,;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -31,39 +38,55 @@ async function submitByEmail(
   attachments: any[] = []
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 <<<<<<< HEAD
+<<<<<<< HEAD
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const from = process.env.EMAIL_FROM |user;
   if (!host |!user |!pass) throw new Error("Email not configured");
@@ -127,6 +150,8 @@ export default async function handler(
       .status(500)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const host = process && process.env.EMAIL_HOST;
   const port = Number(process && process.env.EMAIL_PORT || 587);
@@ -135,6 +160,10 @@ export default async function handler(
   const from = process && process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error("Email not configured");
   const transporter = nodemailer && nodemailer.createTransport({
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import nodemailer from './nodemailer';
 import crypto from './crypto';
@@ -157,13 +186,18 @@ function submitByEmail() {
 }
   const transporter = nodemailer.create_transport ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     host,
     port,
     secure: port === 465,
     auth: { user, pass },
+<<<<<<< HEAD
   });
     const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
@@ -187,6 +221,9 @@ function submitByEmail() {
     port
     secure: port === 465
     auth: { user, pass }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
 
   try {
@@ -196,6 +233,10 @@ function submitByEmail() {
     if (!id) return res.status(400).json({ error: 'id is required' });
     const meta = getProposal(id);
     if (!meta) return res.status(404).json({ error: 'Proposal not found' });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Email submission
 
     if (channels.includes('email')) {
@@ -204,12 +245,16 @@ function submitByEmail() {
       const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
       await submitByEmail(to, subject, text)
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
   await transporter.send_mail ({ from, to, subject, text, attachments });
 }
@@ -253,6 +298,8 @@ function handler() {
     return res
       .status(500)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       ensRecordHash = `0x${hash}`;
@@ -265,6 +312,7 @@ function handler() {
     return res
       .status(500)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .json({ error: error?.message |"Submission failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -303,6 +351,12 @@ export default async function handler(req, res) {
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
+=======
+      .json({ error: error?.message |"Submission failed" });
+  }
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash })
@@ -312,6 +366,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -341,6 +396,14 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const from = process.env.EMAIL_FROM || user;
 
@@ -373,6 +436,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
   }
@@ -384,3 +448,8 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

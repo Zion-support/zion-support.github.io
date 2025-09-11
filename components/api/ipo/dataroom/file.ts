@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -41,11 +46,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
+<<<<<<< HEAD
 
 
   const section = String(req && req.query.section || "General");
 <<<<<<< HEAD
 =======
+=======
+=======
+
+
+  const section = String(req && req.query.section || "General");
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const file = String(req && req.query.file || "");
   if (!file) return res && res.status(400).json({ error: "Missing file" });
   const fullPath = path && path.join(
@@ -53,12 +65,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     file,
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   if (!fs && fs.existsSync(fullPath))
     return res && res.status(404).json({ error: "Not found" });
   const contentType =
+<<<<<<< HEAD
 <<<<<<< HEAD
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
@@ -71,10 +87,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   if (!fs && fs.existsSync(fullPath))
     return res && res.status(404).json({ error: "Not found" });
   const contentType =
+<<<<<<< HEAD
 <<<<<<< HEAD
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
@@ -94,6 +115,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -107,8 +132,12 @@ export default /**
 function handler() {
   if () return) {
   $2
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -143,6 +172,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   appendAuditLog({ type: "file_open", section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -152,6 +185,7 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
+<<<<<<< HEAD
   const section = String(req.query.section |"General");
   const file = String(req.query.file |"");
   if (!file) return res.status(400).json({ error: "Missing file" });
@@ -218,10 +252,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
@@ -233,3 +270,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import {cva, type, VariantProps} from 'class-variance-authority';
 import {cn} from '@/lib/utils';
@@ -30,6 +31,17 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
+=======
+=======
+import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { cn } from "@/lib/utils"
 
@@ -46,6 +58,9 @@ const alertVariants = cva(
 )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
@@ -56,6 +71,7 @@ const Alert = React.forwardRef<
     className={cn(alertVariants({ variant }), className)}
     {...props}
   />
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -66,11 +82,14 @@ const Alert = React.forwardRef<
 ></typeof>(({ className, variant, ...props }, ref) => (
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ));
 Alert.displayName = 'Alert';
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement
   React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>
+<<<<<<< HEAD
 =======
 =======
 
@@ -131,12 +150,15 @@ const Alert = React.forward_ref<;
   />
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ))
 Alert.displayName = "Alert"
 
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -161,6 +183,8 @@ const AlertTitle = React.forward_ref<;
     ref={ref}
     className={cn ('mb - 1 font - medium leading - none tracking - tight', class_name)}
     {...props}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >(({ className, ...props }, ref) => (
   <h5
     ref={ref}
@@ -168,20 +192,27 @@ const AlertTitle = React.forward_ref<;
     {...props}
   />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ));
 AlertTitle.displayName = 'AlertTitle';
 const AlertDescription = React.forwardRef<
   HTMLParagraphElement
   React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ))
 AlertTitle.displayName = "AlertTitle"
 
 const AlertDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -286,6 +317,8 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
 }, ref) => (<div />) ) AlertDescription.displayName = "AlertDescription" export {
   Alert, AlertTitle, AlertDescription 
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -298,6 +331,7 @@ export { Alert, AlertTitle, AlertDescription }
 ))
 AlertDescription.displayName = "AlertDescription"
 
+<<<<<<< HEAD
 export { Alert, AlertTitle, AlertDescription }
 ;
 export { Alert, AlertTitle, AlertDescription };
@@ -306,3 +340,7 @@ export { Alert, AlertTitle, AlertDescription }
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

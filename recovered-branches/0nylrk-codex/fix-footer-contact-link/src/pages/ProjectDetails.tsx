@@ -25,6 +25,7 @@ import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewS
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -33,6 +34,8 @@ function ProjectDetailsContent() {
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
@@ -43,13 +46,17 @@ function ProjectDetailsContent() {;
   const { getProjectById, updateProjectStatus } = useProjects();
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [notes, setNotes] = useState<any[]>([]);
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Load project data
   useEffect(() => {
@@ -60,11 +67,16 @@ function ProjectDetailsContent() {;
       if (projectData) {
         setProject(projectData);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -116,11 +128,17 @@ import {
   User,
   XCircle} from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -149,11 +167,14 @@ function ProjectDetailsContent() {
         setProject(projectData),
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -162,6 +183,7 @@ function ProjectDetailsContent() {
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -194,6 +216,8 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 function ProjectDetailsContent() {
   // use_params may be untyped in this environment, so avoid passing a;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",;
 import { useParams, useNavigate, Link } from "react-router-dom",;
 import { format } from "date-fns",;
@@ -247,7 +271,10 @@ import {;
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { project_id } = use_params () as { project_id?: string }
@@ -303,7 +330,10 @@ if ( {) {
         .select (`;
           *;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           created_by_profile:profiles ! user_id (display_name, avatar_url);
         `);
         .eq ("project_id", project_id);
@@ -313,10 +343,18 @@ if (throw error) {
   $2
 }
       set_notes (data || []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (err) {
       console.error ("Error fetching project notes:", err);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const handleSubmitNote = async () => {
     if (|| !project || !user) return) {
@@ -350,10 +388,18 @@ if (throw error) {
         title: "Failed to add note",
         description: err.message || "An error occurred while adding your note.",
         variant: "destructive"});
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsSubmittingNote (false);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const handleStatusChange = async (new_status: ProjectStatus) => {
     // Check condition
@@ -382,11 +428,19 @@ if ( {) {
   }
 ;
   const getStatusBadge = (status: ProjectStatus) =>: any {
+<<<<<<< HEAD
     switch (status) {
+=======
+
+    switch (status) {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Load project data;
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return;
+<<<<<<< HEAD
       setIsLoading(true);
       const projectData = await getProjectById(projectId);
       if (projectData) {;
@@ -414,6 +468,15 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
+
+      if (projectData) {;
+        setProject(projectData);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Now fetch notes;
         fetchProjectNotes(projectId);
       } else {;
@@ -424,12 +487,15 @@ if ( {) {
         navigate("/dashboard");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
       setIsLoading(false)
     }
     loadProject()
   }, [projectId]);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -437,17 +503,25 @@ if ( {) {
 
       setIsLoading(false);
     }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    loadProject()
+  }, [projectId]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     
     loadProject()
   }, [projectId]),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
@@ -458,6 +532,9 @@ if ( {) {
         `)
         .eq("project_id", projectId)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .order("created_at", { ascending: false })
       if (error) throw error;
       setNotes(data |[])
@@ -468,9 +545,12 @@ if ( {) {
   const handleSubmitNote = async () => {
     if (!newNote.trim() |!project |!user) return;
     setIsSubmittingNote(true);
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .order("created_at", { ascending: false }),
       
       if (error) throw error,
@@ -487,9 +567,12 @@ if ( {) {
     setIsSubmittingNote(true),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -498,14 +581,20 @@ if ( {) {
           user_id: user.id
           content: newNote})
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .select();
       if (error) throw error;
       // Refresh notes
       fetchProjectNotes(project.id);
       setNewNote("");
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .select(),
       
       if (error) throw error,
@@ -515,9 +604,12 @@ if ( {) {
       setNewNote(""),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Note added"
         description: "Your note has been added to the project."})
@@ -531,6 +623,9 @@ if ( {) {
       setIsSubmittingNote(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return
@@ -539,9 +634,12 @@ if ( {) {
       setProject({
         ...project;
         status: newStatus})
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const handleStatusChange = async (newStatus: ProjectStatus) => {
@@ -555,9 +653,12 @@ if ( {) {
         status: newStatus}),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
@@ -565,6 +666,7 @@ if ( {) {
           description: "The project is now in progress. Congratulations!"})
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   
@@ -578,6 +680,11 @@ if ( {) {
   
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
@@ -590,14 +697,19 @@ if ( {) {
       case "completed":
         return <Badge variant="default">Completed</Badge>,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "canceled":
         return <Badge variant="destructive">Canceled</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -736,6 +848,12 @@ function ProjectDetailsContent() {;
   if (!project) {;
 =======
 =======
+  }
+  },
+  
+  if (isLoading) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
       case "canceled":;
         return <Badge variant="destructive">Canceled</Badge>,;
       default:;
@@ -760,7 +878,10 @@ function ProjectDetailsContent() {;
 
   if (!project) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="container mx-auto py-8">;
         <Card>;
@@ -772,9 +893,13 @@ function ProjectDetailsContent() {;
             </p>;
             <Button onClick={() => navigate("/dashboard")}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;
       case "changes_requested":;
         return <Badge variant="secondary">Changes Requested</Badge>;
@@ -786,6 +911,7 @@ function ProjectDetailsContent() {;
         return <Badge variant="destructive">Canceled</Badge>,
       default:;
         return <Badge variant="outline">{status}</Badge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           project_id:project.id,;
           user_id:user.id,;
@@ -877,6 +1003,8 @@ function ProjectDetailsContent() {;
     )
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 ;
@@ -914,7 +1042,10 @@ if ( {) {
           </CardContent>;
         </Card>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!project) {
     return (
       <div className="container mx-auto py-8">
@@ -934,6 +1065,7 @@ if ( {) {
     )
   }
   // Check if user is either the client or the talent
+<<<<<<< HEAD
 <<<<<<< HEAD
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
@@ -956,6 +1088,8 @@ if ( {) {
     navigate("/unauthorized");
     return null;
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const isClient = user?.id === project.client_id;
   const isTalent = user?.id === project.talent_id;
   const isClient = user?.id === project.client_id,
@@ -970,19 +1104,25 @@ if ( {) {
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <SEO
@@ -1180,10 +1320,14 @@ if ( {) {
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
                             View
 <<<<<<< HEAD
+<<<<<<< HEAD
                           </Link>
 =======
                           </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </Button>
                       </div>
                     ) : (
@@ -1210,9 +1354,13 @@ if ( {) {
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>);
   }
   // Check if user is either the client or the talent;
@@ -1444,15 +1592,28 @@ if ( {) {
                   <CardContent>;
                     <div className="space - y-4">;
                       <div className="space - y-4 max - h-[400px] overflow - y-auto mb - 4">;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {notes.length > 0 ? (
                           notes.map ((note) => (
                             <div key={note.id} className="bg - muted / 30 p - 3 rounded - md">;
                               <div className="flex items - center gap - 2 mb - 2">;
                                 <Avatar className="h - 6 w - 6">;
                                   {note.created_by_profile?.avatar_url ? (
+<<<<<<< HEAD
   const isOfferPending = project && project.status === "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project && project.status);
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project && project.status);
+=======
+
+
+  const isOfferPending = project && project.status === "offer_sent";
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project && project.status);
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project && project.status);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <SEO
@@ -1472,6 +1633,7 @@ if ( {) {
                 </span>;
               </div>;
             </div>;
+<<<<<<< HEAD
             {/* Action Buttons Based on Role and Status */}
   ;
   if (!project) {;
@@ -1526,6 +1688,9 @@ if ( {) {
               </div>;
             </div>;
             ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
@@ -1552,14 +1717,23 @@ if ( {) {
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
                   </AlertDialog>;
+<<<<<<< HEAD
                   ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
                   </Button>;
                 </>;
               )}
+<<<<<<< HEAD
               ;
               {(isClient || isTalent) && project.status === "in_progress" && (;
+=======
+
+              {(isClient || isTalent) && project && project.status === "in_progress" && (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <AlertDialog>;
                   <AlertDialogTrigger asChild>;
                     <Button variant="default">;
@@ -1583,27 +1757,49 @@ if ( {) {
                   </AlertDialogContent>;
                 </AlertDialog>;
               )}
+<<<<<<< HEAD
               ;
               {isActiveProject && (;
                 <Button variant="default" asChild>;
                   <Link to={`/project/${project.id}/milestones`}>;
+=======
+
+              {isActiveProject && (;
+                <Button variant="default" asChild>;
+                  <Link to={`/project/${project && project.id}/milestones`}>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Layers className="mr-2 h-4 w-4" /> Milestones;
                   </Link>;
                 </Button>;
               )}
+<<<<<<< HEAD
 ;
               {isActiveProject && (;
                 <Button variant="outline" asChild>;
                   <Link to={`/project/${project.id}/room`}>;
+=======
+
+              {isActiveProject && (;
+                <Button variant="outline" asChild>;
+                  <Link to={`/project/${project && project.id}/room`}>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Video className="mr-2 h-4 w-4" /> Project Room;
                   </Link>;
                 </Button>;
               )}
+<<<<<<< HEAD
               ;
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (;
                 <Button ;
                   variant="outline" ;
                   onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
+=======
+
+              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project && project.status) && (;
+                <Button
+                  variant="outline" 
+                  onClick={() => navigate(`/messages?talentId=${project && project.talent_id}&clientId=${project && project.client_id}`)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   <MessageSquare className="mr-2 h-4 w-4" /> Message;
                 </Button>;
@@ -1611,7 +1807,11 @@ if ( {) {
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
         ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="order-2 lg:order-1 lg:col-span-2">;
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>;
@@ -1620,11 +1820,19 @@ if ( {) {
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>;
                 <TabsTrigger value="documents">Documents</TabsTrigger>;
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>;
+<<<<<<< HEAD
                 {project.status === "completed" && (;
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>;
                 )}
               </TabsList>;
               ;
+=======
+                {project && project.status === "completed" && (;
+                  <TabsTrigger value="reviews">Reviews</TabsTrigger>;
+                )}
+              </TabsList>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TabsContent value="details">;
                 <Card>;
                   <CardHeader>;
@@ -1638,6 +1846,7 @@ if ( {) {
                       <div>;
                         <h3 className="font-semibold mb-2">Project Description</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
+<<<<<<< HEAD
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>;
                         </div>;
                       </div>;
@@ -1653,13 +1862,34 @@ if ( {) {
                         <h3 className="font-semibold mb-2">Job Details</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>;
+=======
+                          <p className="whitespace-pre-wrap">{project && project.scope_summary}</p>;
+                        </div>;
+                      </div>;
+
+                      <div>;
+                        <h3 className="font-semibold mb-2">Payment Terms</h3>;
+                        <Badge variant="outline" className="capitalize">;
+                          {project && project.payment_terms} Payment;
+                        </Badge>;
+                      </div>;
+
+                      <div>;
+                        <h3 className="font-semibold mb-2">Job Details</h3>;
+                        <div className="bg-muted/30 p-4 rounded-md">;
+                          <p className="whitespace-pre-wrap">{project && project.job?.description}</p>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>;
                       </div>;
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
+<<<<<<< HEAD
               ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TabsContent value="timeline">;
                 <Card>;
                   <CardHeader>;
@@ -1671,6 +1901,7 @@ if ( {) {
                   <CardContent>;
                     <div className="space-y-4">;
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">;
+<<<<<<< HEAD
                         <Calendar className="h-5 w-5 text-primary mt-0.5" />;
                         <div>;
                           <h3 className="font-semibold">Start Date</h3>;
@@ -1684,6 +1915,21 @@ if ( {) {
                           <h3 className="font-semibold">Project Status</h3>;
                           <div className="mt-1">;
                             {getStatusBadge(project.status)}
+=======
+                        <Calendar className="h-5 w-5 text-primary mt-0 && 0.5" />;
+                        <div>;
+                          <h3 className="font-semibold">Start Date</h3>;
+                          <p>{format(new Date(project && project.start_date), "PPP")}</p>;
+                        </div>;
+                      </div>;
+
+                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">;
+                        <Clock className="h-5 w-5 text-primary mt-0 && 0.5" />;
+                        <div>;
+                          <h3 className="font-semibold">Project Status</h3>;
+                          <div className="mt-1">;
+                            {getStatusBadge(project && project.status)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </div>;
                         </div>;
                       </div>;
@@ -1691,7 +1937,11 @@ if ( {) {
                   </CardContent>;
                 </Card>;
               </TabsContent>;
+<<<<<<< HEAD
               ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TabsContent value="documents">;
                 <Card>;
                   <CardHeader>;
@@ -1701,7 +1951,11 @@ if ( {) {
                     </CardDescription>;
                   </CardHeader>;
                   <CardContent>;
+<<<<<<< HEAD
                     {project.agreement_url ? (;
+=======
+                    {project && project.agreement_url ? (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">;
                         <div className="flex items-center gap-3">;
                           <FileText className="h-5 w-5 text-primary" />;
@@ -1713,12 +1967,20 @@ if ( {) {
                           </div>;
                         </div>;
                         <Button variant="outline" size="sm" asChild>;
+<<<<<<< HEAD
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">;
+=======
+                          <a href={project && project.agreement_url} target="_blank" rel="noopener noreferrer">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             View;
                           </a>;
                         </Button>;
                       </div>;
+<<<<<<< HEAD
                     ) :(;
+=======
+                    ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="text-center py-8">;
                         <FileText className="h-10 w-10 text-muted-foreground mx-auto mb-2" />;
                         <h3 className="font-semibold">No Documents Yet</h3>;
@@ -1730,7 +1992,11 @@ if ( {) {
                   </CardContent>;
                 </Card>;
               </TabsContent>;
+<<<<<<< HEAD
               ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TabsContent value="notes">;
                 <Card>;
                   <CardHeader>;
@@ -1742,11 +2008,22 @@ if ( {) {
                   <CardContent>;
                     <div className="space-y-4">;
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">;
+<<<<<<< HEAD
+=======
+                        {notes && notes.length > 0 ? (;
+                          notes && notes.map((note) => (;
+                            <div key={note && note.id} className="bg-muted/30 p-3 rounded-md">;
+                              <div className="flex items-center gap-2 mb-2">;
+                                <Avatar className="h-6 w-6">;
+                                  {note && note.created_by_profile?.avatar_url ? (;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                     <img
                                       src={note && note.created_by_profile.avatar_url}
                                       alt={note && note.created_by_profile.display_name}
                                     />;
                                   ) : (;
+<<<<<<< HEAD
                         {notes.length > 0 ? (;
                           notes.map((note) => (;
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">;
@@ -1772,6 +2049,23 @@ if ( {) {
                             </div>;
                           ));
                         ) :(;
+=======
+                                    <User className="h-4 w-4" />;
+                                  )}
+
+                                </Avatar>;
+                                <span className="font-medium text-sm">;
+                                  {note && note.created_by_profile?.display_name || "User"}
+                                </span>;
+                                <span className="text-xs text-muted-foreground">;
+                                  {format(new Date(note && note.created_at), "PPp")}
+                                </span>;
+                              </div>;
+                              <p className="text-sm whitespace-pre-wrap">{note && note.content}</p>;
+                            </div>;
+                          ));
+                        ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div className="text-center py-8">;
                             <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />;
                             <p className="text-muted-foreground">;
@@ -1780,6 +2074,13 @@ if ( {) {
                           </div>;
                         )}
                       </div>;
+<<<<<<< HEAD
+=======
+
+                      {isOfferAccepted && (;
+                        <div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <Textarea
                             placeholder="Add a note or update to the project..."
                             value={newNote}
@@ -1788,6 +2089,7 @@ if ( {) {
                           />;
                           <Button
                             onClick={handleSubmitNote}
+<<<<<<< HEAD
                             disabled={!newNote && newNote.trim() || isSubmittingNote}>;
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                       ;
@@ -1807,10 +2109,21 @@ if ( {) {
                           </Button>;
                         </div>;
                       )}
+=======
+
+                            disabled={!newNote && newNote.trim() || isSubmittingNote}>;
+
+                            {isSubmittingNote ? "Posting..." : "Post Note"}
+                          </Button>;
+                        </div>;
+                      )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         {notes.length > 0 ? (
                           notes.map((note) => (
@@ -1883,6 +2196,9 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
@@ -1935,16 +2251,22 @@ if ( {) {
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
                         </Button>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       )}
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     loadProject();
   }, [projectId]),;
@@ -2152,6 +2474,7 @@ if ( {) {
               )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               ;
               {isActiveProject && (
                 <Button variant="outline" asChild>
@@ -2351,16 +2674,23 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TabsContent value="reviews">;
                 <ProjectReviewSection project={project} />;
               </TabsContent>;
             </Tabs>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="order-1 lg:order-2 lg:col-span-1">;
             <Card>;
               <CardHeader>;
@@ -2371,16 +2701,20 @@ if ( {) {
                   <div className="flex items-start gap-4">;
                     <Avatar className="h-10 w-10">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {project.talent_profile?.profile_picture_url ? (;
                         <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {project && project.talent_profile?.profile_picture_url ? (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         <img
                           src={project && project.talent_profile.profile_picture_url}
                           alt={project && project.talent_profile.full_name}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         />;
                     </Avatar>;
@@ -2400,6 +2734,12 @@ if ( {) {
                       </p>
                       {isClient && (
 =======
+=======
+                        />;
+                      ) : (;
+                        <User className="h-6 w-6" />;
+                      )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </Avatar>;
                     <div>;
@@ -2411,11 +2751,15 @@ if ( {) {
                       </p>;
                       {isClient && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Button
                           variant="outline"
                           size="sm"
                           className="mt-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         {project.talent_profile?.full_name || "Talent"}
                       </h3>;
@@ -2460,10 +2804,14 @@ if ( {) {
 =======
                           onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         >;
                           <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>;
                       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>;
                   </div>;
@@ -2471,11 +2819,16 @@ if ( {) {
               </CardContent>;
             </Card>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </div>;
                   </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -2508,6 +2861,7 @@ if ( {) {
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </div>;
                   </div>;
                   ;
@@ -2539,16 +2893,23 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>;
                   </div>;
                 </div>;
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Project Status Card */}
             <Card className="mt-6">;
               <CardHeader>;
@@ -2558,6 +2919,7 @@ if ( {) {
                 <div className="space-y-2">;
                   <div className="flex justify-between items-center">;
                     <span className="text-sm font-medium">Current Status:</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div>{getStatusBadge(project.status)}</div>;
                   </div>;
@@ -2574,6 +2936,8 @@ if ( {) {
                     <span className="text-sm">;
                       {format(new Date(project.start_date), "PPP")}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>{getStatusBadge(project && project.status)}</div>;
                   </div>;
 
@@ -2588,11 +2952,15 @@ if ( {) {
                     <span className="text-sm font-medium">Start Date:</span>;
                     <span className="text-sm">;
                       {format(new Date(project && project.start_date), "PPP")}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </span>;
                   </div>;
                 </div>;
               </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               ;
               {/* Conditional Footer Based on Status */}
@@ -2602,26 +2970,38 @@ if ( {) {
               {/* Conditional Footer Based on Status */}
               {project && project.status === "changes_requested" && isClient && (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              {/* Conditional Footer Based on Status */}
+              {project && project.status === "changes_requested" && isClient && (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
                   <p className="text-sm text-amber-600 flex items-center gap-1">;
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.;
                   </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Button ;
                     variant="outline";
                     onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant="outline"
                     onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="w-full";
                   >;
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes;
                   </Button>;
                 </CardFooter>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
               ;
               {project.status === "offer_sent" && isClient && (;
@@ -2630,12 +3010,18 @@ if ( {) {
 
               {project && project.status === "offer_sent" && isClient && (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+              {project && project.status === "offer_sent" && isClient && (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
                   <p className="text-sm text-muted-foreground">;
                     Waiting for the talent to accept your offer.;
                   </p>;
                 </CardFooter>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button
                     variant="outline"
@@ -2653,6 +3039,8 @@ if ( {) {
                   </p>
                 </CardFooter>
               )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {project.status === "completed" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-green-600 flex items-center gap-1">
@@ -2667,6 +3055,7 @@ if ( {) {
                   </p>
                 </CardFooter>
               )}
+<<<<<<< HEAD
 
 
               {project && project.status === "completed" && (;
@@ -2686,6 +3075,8 @@ if ( {) {
                   </p>;
                 </CardFooter>;
               )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>
           </div>
         </div>
@@ -2702,24 +3093,31 @@ export default function ProjectDetails() {
   )
 };
 ;
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </>;
   );
 
 }
+<<<<<<< HEAD
 =======
 
 export default function ProjectDetails() {;
@@ -2750,6 +3148,8 @@ function ProjectDetails() {
     </>;
   );
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>;
           </div>;
         </div>;
@@ -2760,14 +3160,23 @@ function ProjectDetails() {
 }
 ;
 export default function ProjectDetails() {;
+<<<<<<< HEAD
   return (;
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>;
   );
 }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

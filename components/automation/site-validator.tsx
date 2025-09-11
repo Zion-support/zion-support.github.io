@@ -1,11 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
  
 
+<<<<<<< HEAD
 <<<<<<< HEAD
  
 
@@ -15,6 +19,8 @@ type Props = { report: Report | null }
 =======
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
@@ -25,16 +31,23 @@ type Broken = { url: string, page: string, status: number },
 interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
 type Props = { report: Report | null },
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {;
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 type Props = { report: Report | null },;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
@@ -45,7 +58,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 }
 type Props = { report: Report | null },
@@ -55,14 +71,19 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return { props: { report: data }, revalidate: 21600 }
   } catch {;
     return { props: { report: null }, revalidate: 21600 }
   }
+<<<<<<< HEAD
 
 };
 export default function SiteValidator(): any ({ report }: Props) {;
@@ -71,14 +92,29 @@ export default function SiteValidator(): any ({ report }: Props) {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+};
+
+export default function SiteValidator(): any ({ report }: Props) {;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function SiteValidator({ report }: Props) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!report) return <div>No validation report yet.</div>;
   return (
     <div className="space-y-6">;
@@ -117,12 +153,16 @@ export default function SiteValidator(): any ({ report }: Props) {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 }
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export default /**
@@ -183,6 +223,7 @@ export default function SiteValidator({ report }: Props) {
           <ul className=&quot;text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800&quot;>
             {report.brokenLinks.slice(0, 500).map((b, i) => (
               <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page} → {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>
+<<<<<<< HEAD
     </div>
 
   );
@@ -227,11 +268,15 @@ export default function SiteValidator({ report }: Props) {;
           </ul>
         </section>
       )}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
 );
 }
   );
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -242,3 +287,5 @@ export default function SiteValidator({ report }: Props) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

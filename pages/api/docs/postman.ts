@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 function toPostman() {
@@ -21,6 +22,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       section.endpoints.map((ep) => ({
         name: `${section.title} - ${ep.title}`
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     info: {
@@ -30,7 +33,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     item: v1 && v1.sections.flatMap((section) =>
       section && section.endpoints.map((ep) => ({
         name: `${section && section.title} - ${ep && ep.title}`,
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         request: {
           method: ep && ep.method,
           header: [
@@ -52,6 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       })),
     ),
     variable: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   res.status(200).json(postmanCollection);
@@ -140,12 +147,15 @@ export default function handler(req, res) {
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       { key: "baseUrl", value: "https://api && api.zion.os" },
       { key: "token", value: "" },
     ],
   };
 
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -172,6 +182,15 @@ item: v1.sections.flat_map ((section) =>;
               disabled: !(ep.auth || []).includes ("jwt"),
             },
           ],
+=======
+    },
+    item: [
+      {
+        name: 'Health Check',
+        request: {
+          method: 'GET',
+          header: [],
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           url: {
             raw: `{{base_url}}${ep.path}`,
             host: ["{{base_url}}"],
@@ -187,6 +206,7 @@ item: v1.sections.flat_map ((section) =>;
       { key: "base_url", value: "https://api.zion.os" },
       { key: "token", value: "" },
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -318,3 +338,6 @@ export default function handler(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

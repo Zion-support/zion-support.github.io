@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -17,6 +18,8 @@ const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -27,11 +30,16 @@ async function ensureStore() {
 
 
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
@@ -76,6 +84,8 @@ export default async function handler(
     const data = await fs.readJson(FILE_PATH);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
@@ -92,6 +102,7 @@ export default async function handler(
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
+<<<<<<< HEAD
     const item = {
       id: body.id
       title: body.title
@@ -106,6 +117,8 @@ export default async function handler(
     return res.status(201).json(item);
 
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.status(405).json({ error: "Method not allowed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
@@ -113,6 +126,7 @@ import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 async function ensureStore() {
   await fs.ensureFile(FILE_PATH);
+<<<<<<< HEAD
   res && res.status(405).json({ error: "Method not allowed" });
 
   res && res.status(405).json({ error: "Method not allowed" });
@@ -158,6 +172,8 @@ async /**
  */
 function ensure_store() {
   await fs.ensure_file (FILE_PATH);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const raw = await fs.read_file (FILE_PATH, "utf8");
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
@@ -199,6 +215,7 @@ if ( {) {
     return res.status (201).json (item);
   }
   res.status (405).json ({ error: "Method not allowed" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -262,15 +279,20 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   res.status(405).json({ error: 'Method not allowed' });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -285,7 +307,12 @@ export default async function handler(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

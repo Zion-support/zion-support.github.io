@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 export default function Page() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import Head from 'next/head';
+export default function Page() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Guide — Cloud Improving Implementation</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Head from 'next/head';
 export default function Page() {
@@ -17,6 +23,8 @@ export default function Page() {
         <title>Guide — Cloud Improving Implementation</title>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta
           name='description'
           content='Step-by-step guidance derived from live research signals.'
@@ -40,10 +48,13 @@ export default function Page() {
           dangerouslySetInnerHTML={{
             __html:
 <<<<<<< HEAD
+<<<<<<< HEAD
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
 
@@ -57,6 +68,7 @@ export default function Page() {
   );export default function Page() {;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Page() {
 
@@ -66,6 +78,11 @@ export default function Page() {
   return (
 }
 =======
+=======
+export default function Page() {
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Guide — Cloud Improving Implementation</title>;
@@ -85,7 +102,10 @@ export default function Page() {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -145,10 +165,15 @@ function Page() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
@@ -162,6 +187,7 @@ function Page() {
     </div>
   );export default function Page() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function Page() {
@@ -234,12 +260,17 @@ export default function Page(req, res) {
 
 =======
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function Page() {
   return (
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Guide — Cloud Improving Implementation</title>
@@ -257,4 +288,7 @@ export default function Page() {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

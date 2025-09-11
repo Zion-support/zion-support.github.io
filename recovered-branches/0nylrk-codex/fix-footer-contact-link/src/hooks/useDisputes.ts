@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -32,16 +33,24 @@ export function useDisputes() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
     if (!user) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setIsLoading(false);
       return
     }
     try {
+<<<<<<< HEAD
 
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -90,6 +99,11 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      setIsLoading(true);
+      setIsLoading(true),
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const { data, error: fetchError } = await supabase
         .from("disputes")
         .select(`
@@ -101,15 +115,21 @@ if ( {) {
             talent_id,
             job:jobs(title)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
         .order("created_at", { ascending: false });
       if (fetchError) throw fetchError;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ),
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -118,6 +138,7 @@ if ( {) {
       
       if (fetchError) throw fetchError,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -145,6 +166,8 @@ if (throw fetch_error) {
           ...dispute && dispute.project,
           title: dispute && dispute.project?.job?.title || 'Untitled Project'
         }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Transform data if needed
       const transformedData = data.map((dispute: any) => ({
         ...dispute,
@@ -158,6 +181,7 @@ if (throw fetch_error) {
       setDisputes(transformedData as Dispute[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
 ;
   const getDisputeById = async (dispute_id: string): Promise < Dispute | null> => {
     try {
@@ -189,6 +213,10 @@ if (throw error) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console.error("Error fetching disputes:", err);
+      setError("Failed to fetch disputes: " + err.message)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       })),
       
       setDisputes(transformedData as Dispute[]),
@@ -197,13 +225,17 @@ if (throw error) {
       console.error("Error fetching disputes:", err),
       setError("Failed to fetch disputes: " + err.message),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast.error("Failed to fetch disputes")
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 
   },
 
@@ -214,6 +246,11 @@ if (throw error) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {
     try {
       const { data, error } = await supabase
@@ -227,6 +264,9 @@ if (throw error) {
             talent_id,
             job:jobs(title)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -234,9 +274,12 @@ if (throw error) {
         .eq("id", disputeId)
         .single();
       if (error) throw error;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ),
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
@@ -247,21 +290,27 @@ if (throw error) {
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return {
         ...data;
         client_profile: data && data.client_profile?.client_profile;
         talent_profile: data && data.talent_profile?.talent_profile;
         project: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       return {
         ...data,
         client_profile: data.client_profile?.client_profile,
         talent_profile: data.talent_profile?.talent_profile,
         project: {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ...data.project
           title: data.project?.job?.title |'Untitled Project'
         }
@@ -271,6 +320,7 @@ if (throw error) {
       toast.error("Failed to fetch dispute details"),
       return null
     }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -285,11 +335,14 @@ if (throw error) {
         }
       } as Dispute;
     } catch (err: any) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const createDispute = async (disputeData: {
     project_id: string;
     milestone_id?: string;
     reason_code: string
+<<<<<<< HEAD
 =======
 =======
           ...data.project,
@@ -301,12 +354,15 @@ if (throw error) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const createDispute = async (disputeData: { 
     project_id: string,
     milestone_id?: string,
     reason_code: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: string
   }): Promise<Dispute | null> => {
@@ -315,11 +371,16 @@ if (throw error) {
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     description: string
   }): Promise<Dispute | null> => {
     if (!user) {
       toast && toast.error("You must be logged in to create a dispute");
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return null
     }
     try {
@@ -327,11 +388,15 @@ if (throw error) {
         .from("disputes")
         .insert({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ...disputeData;
           raised_by: user && user.id
         })
         .select()
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
@@ -348,17 +413,25 @@ if (throw error) {
       toast.success("Dispute submitted successfully");
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .single();
+      if (error) throw error;
+      toast.success("Dispute submitted successfully");
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .single(),
 
       if (error) throw error,
       
       toast.success("Dispute submitted successfully"),
 <<<<<<< HEAD
+<<<<<<< HEAD
       toast && toast.success("Dispute submitted successfully");
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -366,6 +439,7 @@ if (throw error) {
       toast && toast.error("Failed to submit dispute");
       return null
     }
+<<<<<<< HEAD
 
 
   },
@@ -385,11 +459,17 @@ if (throw error) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const updateDisputeStatus = async (disputeId: string, status: DisputeStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("disputes")
         .update({ status })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         .eq("id", disputeId);
@@ -397,11 +477,16 @@ if (throw error) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .eq("id", disputeId);
+      if (error) throw error;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .eq("id", disputeId),
       
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
         .eq("id", disputeId);
       if (error) throw error;
       // Update local state
@@ -411,11 +496,16 @@ if (throw error) {
       // Update local state
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      // Update local state
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setDisputes(prevDisputes => 
         prevDisputes && prevDisputes.map(dispute => 
           dispute && dispute.id === disputeId ? { ...dispute, status } : dispute
         )
       );
+<<<<<<< HEAD
       toast && toast.success(`Dispute status updated to ${status}`);
 
       ),
@@ -443,12 +533,15 @@ if (throw error) {
           dispute.id === disputeId ? { ...dispute, status } : dispute
         )
       );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast.success(`Dispute status updated to ${status}`);
       ),
       
       toast.success(`Dispute status updated to ${status}`),
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error updating dispute status:", err),
       toast.error("Failed to update dispute status"),
       return false
@@ -460,6 +553,19 @@ if (throw error) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console && console.error("Error updating dispute status:", err);
+      toast && toast.error("Failed to update dispute status");
+      return false
+
+      console.error ("Error fetching dispute:", err);
+      toast.error ("Failed to fetch dispute details");
+=======
+
+    disputeId: string, 
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -546,6 +652,7 @@ export function useDisputes() {;
       console.error("Error fetching dispute:", err),;
       toast.error("Failed to fetch dispute details"),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     resolution: { summary: string, resolution_type: string }
@@ -635,6 +742,8 @@ export function useDisputes() {;
           resolution_summary: resolution.summary
           resolution_type: resolution.resolution_type
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return null;
     }
   }
@@ -710,16 +819,29 @@ if (throw error) {
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
+<<<<<<< HEAD
 
           resolution_summary: resolution && resolution.summary,
           resolution_type: resolution && resolution.resolution_type
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      const { error } = await supabase
+        .from("disputes")
+        .update({
+          status: 'resolved';
+          resolved_at: new Date().toISOString();
+          resolution_summary: resolution.summary
+          resolution_type: resolution.resolution_type
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         })
         .eq("id", disputeId);
       if (error) throw error;
       // Update local state
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
           dispute.id === disputeId
@@ -728,6 +850,7 @@ if (throw error) {
                 status: 'resolved'
                 resolved_at: new Date().toISOString();
                 resolution_summary: resolution.summary
+<<<<<<< HEAD
 =======
 
       const { error } = await supabase
@@ -735,6 +858,8 @@ if (throw error) {
         .update({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           status: 'resolved',
           resolved_at: new Date().toISOString(),
           resolution_summary: resolution.summary,
@@ -754,14 +879,18 @@ if (throw error) {
                 resolved_at: new Date().toISOString(),
                 resolution_summary: resolution.summary,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 resolution_type: resolution.resolution_type as any
               }
             : dispute
         )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -791,6 +920,8 @@ if (throw error) {
       toast && toast.error("Failed to resolve dispute");
       return false
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       );
       toast.success("Dispute resolved successfully");
       ),
@@ -798,8 +929,13 @@ if (throw error) {
       toast.success("Dispute resolved successfully"),
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error resolving dispute:", err),
       toast.error("Failed to resolve dispute"),
+=======
+      console && console.error("Error resolving dispute:", err);
+      toast && toast.error("Failed to resolve dispute");
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return false
     }
   }
@@ -814,6 +950,7 @@ if (throw error) {
           user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url)
         `)
         .eq("dispute_id", disputeId)
+<<<<<<< HEAD
 
 
   },
@@ -866,20 +1003,28 @@ if (throw error) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .order("created_at", { ascending: true });
+      if (error) throw error;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .order("created_at", { ascending: true }),
       
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return data as DisputeMessage[]
     } catch (err: any) {
       console && console.error("Error fetching dispute messages:", err);
       toast && toast.error("Failed to fetch messages");
       return []
     }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -897,20 +1042,27 @@ if (throw error) {
       toast.error("Failed to fetch messages"),
       return []
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
 
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if (!user) {
+<<<<<<< HEAD
       toast.error("You must be logged in to send a message"),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      toast && toast.error("You must be logged in to send a message");
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return false
     }
     try {
       const { error } = await supabase
         .from("dispute_messages")
         .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -951,6 +1103,8 @@ if ( {) {
           message,
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           dispute_id: disputeId;
           user_id: user.id;
           message
@@ -958,6 +1112,7 @@ if ( {) {
         });
       if (error) throw error;
       toast.success("Message sent successfully");
+<<<<<<< HEAD
 =======
       
       toast && toast.success("Message sent successfully");
@@ -965,6 +1120,8 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           dispute_id: disputeId,
           user_id: user.id,
           message,
@@ -975,16 +1132,20 @@ if ( {) {
       
       toast.success("Message sent successfully"),
 <<<<<<< HEAD
+<<<<<<< HEAD
       toast && toast.success("Message sent successfully");
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return true
     } catch (err: any) {
       console && console.error("Error sending message:", err);
       toast && toast.error("Failed to send message");
       return false
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1157,6 +1318,8 @@ if (throw error) {
       console.error ("Error sending message:", err);
       toast.error ("Failed to send message");
       return false;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 ;
@@ -1171,7 +1334,10 @@ if ( {) {
   }, [user]);
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     disputes;
     is_loading;
@@ -1181,6 +1347,7 @@ if ( {) {
     create_dispute;
     updateDisputeStatus;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       return true
@@ -1211,6 +1378,8 @@ if ( {) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     resolve_dispute;
     getDisputeMessages,
     addDisputeMessage;
@@ -1219,7 +1388,10 @@ if ( {) {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -1314,6 +1486,7 @@ if ( {) {
     getDisputeMessages;
     addDisputeMessage;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -1553,3 +1726,10 @@ addDisputeMessage
   }
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

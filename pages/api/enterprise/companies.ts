@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -113,11 +114,19 @@ export default function handler(req, res) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
+=======
+
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -214,9 +223,14 @@ export default function handler(req, res) {
 }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

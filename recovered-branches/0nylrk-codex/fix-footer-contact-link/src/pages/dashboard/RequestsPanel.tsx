@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +27,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -38,6 +44,7 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function RequestsPanel() {;
   const { user } = useAuth();
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -99,6 +106,11 @@ export default function RequestsPanel() {
   const isTalent = user?.userType === 'creator' |user?.userType === 'jobSeeker';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
+=======
+
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function RequestsPanel() {
@@ -109,9 +121,12 @@ export default function RequestsPanel() {
   const [showDetails, setShowDetails] = useState(false),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const {
     quotes,
     unreadCount,
@@ -123,14 +138,20 @@ export default function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } = useTalentQuotes();
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
     setShowDetails(true)
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
@@ -138,26 +159,35 @@ export default function RequestsPanel() {
     setShowDetails(true),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Filter quotes by archive status
   const activeQuotes = quotes.filter(q => !q.is_archived);
   const archivedQuotes = quotes.filter(q => q.is_archived);
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   // Filter quotes by archive status
@@ -165,9 +195,12 @@ export default function RequestsPanel() {
   const archivedQuotes = quotes.filter(q => q.is_archived),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <ProtectedRoute>
       <div>
@@ -176,9 +209,12 @@ export default function RequestsPanel() {
           <div className="container mx-auto">
             <RequestsHeader
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -210,21 +246,28 @@ export default function RequestsPanel() {;
     toggleArchive;
   } = useTalentQuotes(),;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleViewDetails = (quote: QuoteRequest) => {;
     setSelectedQuote(quote);
     setShowDetails(true),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleViewDetails = (quote: QuoteRequest) => {;
     setSelectedQuote(quote);
     setShowDetails(true),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // If status is new, mark as viewed;
     if (quote && quote.status === 'new') {;
       markAsViewed(quote && quote.id);
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Filter quotes by archive status;
   const activeQuotes = quotes && quotes.filter(q => !q && q.is_archived);
@@ -293,6 +336,8 @@ export default function RequestsPanel() {;
   const archivedQuotes = quotes.filter(q => q.is_archived);
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Filter quotes by archive status;
   const activeQuotes = quotes && quotes.filter(q => !q && q.is_archived);
@@ -300,12 +345,16 @@ export default function RequestsPanel() {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <ProtectedRoute>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <RequestsHeader;
               unreadCount={unreadCount}              statusFilter={statusFilter}
@@ -329,17 +378,23 @@ export default function RequestsPanel() {;
                   quotes={activeQuotes}                  isLoading={isLoading}
             <RequestsHeader;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <RequestsHeader;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />
             {/* Main Content */}
@@ -350,6 +405,8 @@ export default function RequestsPanel() {;
               </TabsList>
               <TabsContent value="active">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
 
@@ -362,7 +419,10 @@ export default function RequestsPanel() {;
 
               <TabsContent value="active">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -370,6 +430,7 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />;
               </TabsContent>;
@@ -384,13 +445,18 @@ export default function RequestsPanel() {;
               </TabsContent>
               <TabsContent value="archived">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 />;
               </TabsContent>;
 
               <TabsContent value="archived">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -399,14 +465,19 @@ export default function RequestsPanel() {;
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 />;
               </TabsContent>;
             </Tabs>;
           </div>;
         </div>;
+<<<<<<< HEAD
         ;
         {/* Quote Details Modal */}
         <QuoteDetails;
@@ -423,11 +494,18 @@ export default function RequestsPanel() {;
         </div>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClose={() => {
             setShowDetails(false);
 
@@ -435,6 +513,7 @@ export default function RequestsPanel() {;
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+<<<<<<< HEAD
 =======
 
 
@@ -445,12 +524,18 @@ export default function RequestsPanel() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
             setShowDetails(false),;
             setSelectedQuote(null),;
@@ -516,6 +601,32 @@ const [showDetails, setShowDetails] = useState (false);
 }
 <<<<<<< HEAD
 =======
+=======
+}
+=======
+            setSelectedQuote(null);
+          }}
+        />;
+
+        <Footer />;
+      </div>;
+    </ProtectedRoute>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    toggle_archive;
+  } = useTalentQuotes ();
+;
+  const handleViewDetails = (quote: QuoteRequest) =>: any {
+    setSelectedQuote (quote);
+    setShowDetails (true),
+    // If status is new, mark as viewed;
+    // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       markAsViewed (quote.id);
     }
   }
@@ -580,4 +691,7 @@ const [showDetails, setShowDetails] = useState (false);
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

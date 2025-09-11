@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -18,6 +22,7 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -57,6 +62,8 @@ import { Sparkles } from "lucide-react";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Define the form schema with zod;
 const productSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
@@ -81,15 +88,21 @@ export function ProductSubmissionForm() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Define the form schema with zod
 
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     message: "Price must be a valid number"})
   category: z.string().min(1, "Please select a category");
   image: z.instanceof(File).optional()
@@ -103,8 +116,11 @@ export function ProductSubmissionForm() {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [imagePreview, setImagePreview] = React.useState(null as string | null);
   const [activeTab, setActiveTab] = React.useState("manual");
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     message: "Price must be a valid number"}),
   category: z.string().min(1, "Please select a category"),
   image: z.instanceof(File).optional(),
@@ -114,6 +130,9 @@ export function ProductSubmissionForm() {
 type ProductFormValues = z.infer<typeof productSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ProductSubmissionForm() {;
   const { user } = useAuth();
   const { toast } = useToast();
@@ -129,9 +148,12 @@ export function ProductSubmissionForm() {
   const [imagePreview, setImagePreview] = React.useState(null as string | null),
   const [activeTab, setActiveTab] = React.useState("manual"),
   
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
@@ -150,6 +172,9 @@ export function ProductSubmissionForm() {
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       reader.readAsDataURL(file)
     }
@@ -164,13 +189,17 @@ export function ProductSubmissionForm() {
     // Switch to the manual tab to show applied content
     setActiveTab("manual")
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       },
       reader.readAsDataURL(file)
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Apply AI-generated content to the form
@@ -299,6 +328,10 @@ export function ProductSubmissionForm() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -308,6 +341,7 @@ export function ProductSubmissionForm() {;
       price: "",;
       category: "",;
       tags: ""}}),;
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Handle image upload preview;
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -410,6 +444,8 @@ export function ProductSubmissionForm() {;
         if (updateError) {;
           throw new Error(updateError.message);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -422,7 +458,10 @@ export function ProductSubmissionForm() {;
         variant: "destructive"})
       return
     }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     setIsSubmitting(true),
@@ -452,6 +491,7 @@ export function ProductSubmissionForm() {;
         }
       }
       
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         }
@@ -463,6 +503,8 @@ export function ProductSubmissionForm() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Show success message
       toast({
         title: "Product Published!"
@@ -477,11 +519,16 @@ export function ProductSubmissionForm() {;
     } finally {
       setIsSubmitting(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
     setIsSubmitting(true);
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       // Create the product listing;
       const productData = {;
@@ -496,25 +543,35 @@ export function ProductSubmissionForm() {;
           id: user && user.id},;
         createdAt: new Date().toISOString()},;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const { data: productRecord, error: productError } = await supabase;
         .from('product_listings');
         .insert([productData]);
         .select('id');
         .single();
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (productError) {;
         throw new Error(productError && productError.message);
       }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       if (productError) {;
         throw new Error(productError && productError.message);
       }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // If we have an image, upload it;
       if (values && values.image) {;
         const imagePath = `product_images/${productRecord && productRecord.id}/${values && values.image.name}`;
@@ -522,24 +579,34 @@ export function ProductSubmissionForm() {;
           .from('products');
           .upload(imagePath, values && values.image);
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (uploadError) {;
           throw new Error(uploadError && uploadError.message);
         }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         if (uploadError) {;
           throw new Error(uploadError && uploadError.message);
         }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Get the public URL for the image;
         const { data: publicUrlData } = supabase && supabase.storage;
           .from('products');
           .getPublicUrl(imagePath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Update the product with the image URL;
         const { error: updateError } = await supabase;
           .from('product_listings');
@@ -548,25 +615,37 @@ export function ProductSubmissionForm() {;
           });
           .eq('id', productRecord && productRecord.id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (updateError) {;
           throw new Error(updateError && updateError.message);
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Show success message;
       toast({;
         title: "Product Published!",;
         description: "Your product has been successfully published on Zion."}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Redirect to product page;
       navigate(`/marketplace/listing/${productRecord && productRecord.id}`);
     } catch (error) {;
@@ -577,6 +656,7 @@ export function ProductSubmissionForm() {;
     } finally {;
       setIsSubmitting(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
 
@@ -591,12 +671,15 @@ export function ProductSubmissionForm() {;
 
 <<<<<<< HEAD
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
   }
   },
 
   return (
+<<<<<<< HEAD
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
@@ -616,6 +699,10 @@ export function ProductSubmissionForm() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <FormField
               control={form.control}
               name="title"
@@ -631,9 +718,12 @@ export function ProductSubmissionForm() {;
                   <FormMessage />
                 </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       // Show success message;
       toast({;
@@ -651,6 +741,7 @@ export function ProductSubmissionForm() {;
     }
   };
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -823,6 +914,9 @@ export function ProductSubmissionForm() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
@@ -833,6 +927,7 @@ export function ProductSubmissionForm() {;
           AI-Powered Creation;
         </TabsTrigger>;
       </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
             <FormField
@@ -849,6 +944,8 @@ export function ProductSubmissionForm() {;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <TabsContent value="manual">;
         <Form {...form}>;
@@ -1050,7 +1147,10 @@ if ( {) {
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FormControl>;
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
@@ -1059,11 +1159,14 @@ if ( {) {
                   </FormDescription>;
                   <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Textarea ;
                       placeholder="Describe your product in detail..." ;
                       className="min-h-32" ;
                       {...field} ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </FormItem>;
 
@@ -1101,13 +1204,17 @@ if ( {) {
                       className="min - h-32";
                       {...field}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     />;
                   </FormControl>;
                   <FormDescription>;
                     Provide a detailed description of what you're offering;
                   </FormDescription>;
                   <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </FormItem>;
               )}
@@ -1123,6 +1230,8 @@ if ( {) {
                     <FormControl>;
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </FormItem>)}
             />;
@@ -1136,12 +1245,16 @@ if ( {) {
                     <FormControl>;
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </FormControl>;
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
                     <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </FormItem>;                )}
               />;
@@ -1150,6 +1263,8 @@ if ( {) {
                 control={form.control}
                 name="category";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               />;
 
@@ -1157,17 +1272,23 @@ if ( {) {
               <FormField
                 control={form && form.control}
                 name="category"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Category</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <select;
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
                         {...field}
                       >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <select
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                         {...field}>;
@@ -1186,7 +1307,10 @@ if ( {) {
                         {...field}
                       >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <option value="">Select a category</option>;
                         <option value="digital_product">Digital Product</option>;
                         <option value="service">Service</option>;
@@ -1197,6 +1321,7 @@ if ( {) {
                       </select>;
                     </FormControl>;
                     <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
             <FormField
@@ -1213,6 +1338,8 @@ if ( {) {
                 <FormItem>;
                   <FormLabel>Tags</FormLabel>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               />;
             </div>;
@@ -1235,11 +1362,15 @@ if ( {) {
                 <FormItem>;
                   <FormLabel > Tags</FormLabel>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FormControl>;
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
                   </FormDescription>;
@@ -1251,6 +1382,8 @@ if ( {) {
               control={form.control}
               name="image";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
 
@@ -1259,13 +1392,19 @@ if ( {) {
               control={form && form.control}
               name="image"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               render={() => (;
                 <FormItem>;
                   <FormLabel>Product Image</FormLabel>;
                   <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Input
                       type="file" 
                       accept="image/*" 
@@ -1285,7 +1424,10 @@ if ( {) {
                           src={imagePreview} 
                           alt="Preview" 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
@@ -1293,6 +1435,7 @@ if ( {) {
                   )}
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
             <div className="flex justify-end">;
@@ -1335,6 +1478,8 @@ if ( {) {
               >;
                 {isSubmitting ? "Publishing..." :"Publish Product"}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
 
@@ -1352,12 +1497,16 @@ if ( {) {
 
             category: form.getValues("category")
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>;
             </div>;
           </form>;
         </Form>;
       </TabsContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </FormItem>;
               )}
@@ -1570,16 +1719,29 @@ return (<Tabs value= {
 }className=" cursor-pointer"/> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> /> </AspectRatio> </div>) 
 }</FormItem>) 
 }/> <div className=" flex justify-end"> <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value=" ai" > <AIListingGenerator /> </TabsContent> </Tabs>) 
+=======
+
+      <TabsContent value="ai">;
+        <AIListingGenerator
+          onApplyGenerated={handleApplyGenerated}
+          initialValues={{
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             title: form.getValues("title")
 
             title: form.getValues("title"),
             category: form.getValues("category")
           }}
+<<<<<<< HEAD
         />
       </TabsContent>
     </Tabs>
   )
 =======
+=======
+        />;
+      </TabsContent>;
+    </Tabs>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 =======
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
@@ -1640,5 +1802,8 @@ return (<Tabs value= {
       </TabsContent>;
     </Tabs>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import NotFound from "@/pages/NotFound";
@@ -49,6 +50,8 @@ const ErrorRoutes = () => {;
       <Route path="*" element={<NotFound />} />;
     </Routes>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -65,6 +68,7 @@ const ErrorRoutes = () => {;
       <Route path="*" element={<NotFound />} />;
     </Routes>;
   );
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
@@ -114,3 +118,15 @@ export default ErrorRoutes;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+};
+
+
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default ErrorRoutes;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

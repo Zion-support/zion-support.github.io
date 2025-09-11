@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Resume } from "@/types/resume";
 import {
   PreviewHeader
@@ -17,6 +18,8 @@ interface PreviewResumeProps {
   onBack: () => void
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
@@ -27,10 +30,14 @@ import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationS
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Resume } from '@/types/resume',;
 import {;
   PreviewHeader,;
@@ -45,6 +52,7 @@ interface PreviewResumeProps {;
   onBack: () => void;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -75,14 +83,22 @@ interface PreviewResumeProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Resume Preview */}
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
@@ -92,6 +108,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -187,12 +204,19 @@ export function PreviewResume({ resume, onBack } PreviewResumeProps) {;
 }
 ;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
   )
 }
+<<<<<<< HEAD
 ;
 ;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

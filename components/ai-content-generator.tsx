@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {;
   Brain,;
   Zap,;
@@ -139,6 +140,8 @@ icon: <Clock className="w-8 h-8 text-white" />,
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -278,6 +281,7 @@ import {
       period: '/month'
       description: 'For large organizations and enterprises'
       features: [
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -312,6 +316,28 @@ import {
       description: 'For large organizations and enterprises',
 
 
+=======
+        'Unlimited words'
+        'All templates + custom'
+        'Full SEO suite'
+        'Dedicated support'
+        'Unlimited API access'
+        'Advanced analytics'
+        'White-label solution'
+        'Custom integrations'
+        'SLA guarantee'
+      ]
+      popular: false
+      color: 'border-purple-600'
+      buttonColor: 'bg-purple-600 hover:bg-purple-700'
+    },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
+        'SLA guarantee'
+      ];
+      popular: false
+      color: 'border-purple-600'
+      buttonColor: 'bg-purple-600 hover:bg-purple-700'
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Unlimited words',
         'All templates + custom',
         'Full SEO suite',
@@ -329,8 +355,11 @@ import {
 
   ];
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const useCases = [
     {
       title: 'Blog Writing'
@@ -459,6 +488,7 @@ import {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },;
 
+<<<<<<< HEAD
       features: [;
 <<<<<<< HEAD
         'Unlimited words'
@@ -483,6 +513,10 @@ import {
     }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+      features: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Unlimited words',
         'All templates + custom',
         'Full SEO suite',
@@ -494,6 +528,7 @@ import {
         'SLA guarantee',
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -577,29 +612,42 @@ import {
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <Head>;
         <title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
         <div className='absolute inset-0'>;
@@ -607,9 +655,13 @@ import {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0 && 0.08),transparent_50%)]' />;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='mb-8'>;
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6'>;
@@ -618,9 +670,13 @@ import {
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight'>;
             AI Content Generator;
           </h1>;
@@ -628,6 +684,7 @@ import {
             Create engaging, SEO-optimized content in seconds with the world's;
             most advanced AI writing assistant;
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
             <Button
@@ -812,6 +869,11 @@ icon: '📝',
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='#pricing'
               size='lg'
@@ -824,6 +886,7 @@ icon: '📝',
               href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
@@ -852,6 +915,10 @@ icon: '📝',
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
       {/* Hero Section */}
@@ -886,11 +953,45 @@ icon: '📝',
               variant="outline"
               size="lg"
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400">50+</div>
               <div className="text-gray-400">Languages</div>
             </div>
+=======
+              className="border-white/20 hover:border-white/40 hover:bg-white/5"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Watch Demo
+            </Button>
+          </div>
+          {/* Stats */}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400'>
+                50+
+              </div>
+              <div className='text-gray-400'>Languages</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400'>
+                10M+
+              </div>
+              <div className='text-gray-400'>Words Generated</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400'>
+                99.9%
+              </div>
+              <div className='text-gray-400'>Uptime</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>
+                24/7
+              </div>
+              <div className='text-gray-400'>Support</div>            </div>            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">10M+</div>
               <div className="text-gray-400">Words Generated</div>
@@ -923,16 +1024,22 @@ icon: '📝',
               Powerful Features
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
@@ -951,7 +1058,10 @@ icon: '📝',
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -967,7 +1077,10 @@ icon: '📝',
               </Card>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Everything you need to create exceptional content at scale
             </p>
           </div>
@@ -1144,9 +1257,13 @@ icon: '📝',
                 <p className='text - gray - 400 leading - relaxed'>                  {feature.description}            {features.map ((feature, index) => (
               <Card;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={index}
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
@@ -1161,6 +1278,7 @@ icon: '📝',
                 </h3>;
                 <p className="text - gray - 400 leading - relaxed">;
                   {feature.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-24 bg-black relative overflow-hidden">
                 style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
@@ -1197,6 +1315,8 @@ icon: '📝',
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1208,7 +1328,10 @@ icon: '📝',
                 </p>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
 
 
@@ -1220,7 +1343,10 @@ icon: '📝',
 
       <section className="py-24 bg-black relative overflow-hidden">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1253,6 +1379,7 @@ icon: '📝',
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases && useCases.map((useCase, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -1260,6 +1387,9 @@ icon: '📝',
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1295,10 +1425,15 @@ icon: '📝',
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Versatile content creation for every industry and purpose
             </p>
           </div>
@@ -1322,6 +1457,7 @@ icon: '📝',
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                           {example}
 
                           {example}
@@ -1335,14 +1471,24 @@ icon: '📝',
                         </div>;
 =======
 
+=======
+
+                          {example}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           {example}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ))}
                     </div>;
                   </div>;
@@ -1350,24 +1496,35 @@ icon: '📝',
               </Card>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </div>
       </section>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Pricing Section */}
@@ -1386,6 +1543,8 @@ icon: '📝',
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1393,17 +1552,25 @@ icon: '📝',
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Choose the plan that fits your content creation needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {pricingPlans.map((plan, index) => (
           </div>;
         </div>;
@@ -1434,9 +1601,13 @@ icon: '📝',
               <Card
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>;
               </Card>))}
           </div>;
@@ -1549,25 +1720,37 @@ icon: '📝',
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan.color} hover:border-purple-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan.color} hover:border-purple-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
@@ -1585,6 +1768,7 @@ icon: '📝',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -1598,6 +1782,22 @@ icon: '📝',
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
+=======
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -1610,6 +1810,7 @@ icon: '📝',
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
+<<<<<<< HEAD
                     </li>;
                   ))}
                 </ul>;
@@ -1664,6 +1865,9 @@ icon: '📝',
                       {feature}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1671,9 +1875,13 @@ icon: '📝',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </li>
                   ))}
                 </ul>
@@ -1681,6 +1889,7 @@ icon: '📝',
                 <Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {feature}
 
@@ -1700,6 +1909,8 @@ icon: '📝',
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   size="lg"
                 >
                   Get Started
@@ -1707,28 +1918,40 @@ icon: '📝',
                 </Button>
               </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Integrations Section */}
@@ -1744,6 +1967,8 @@ icon: '📝',
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -1776,6 +2001,7 @@ icon: '📝',
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
@@ -1783,6 +2009,9 @@ icon: '📝',
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1805,10 +2034,15 @@ icon: '📝',
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Connect with your favorite tools and platforms
             </p>
           </div>
@@ -1825,6 +2059,7 @@ icon: '📝',
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1852,6 +2087,8 @@ icon: '📝',
 
 
       {/* CTA Section */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Card>
 
@@ -1860,14 +2097,31 @@ icon: '📝',
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
 
 
       {/* CTA Section */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
@@ -1876,10 +2130,13 @@ icon: '📝',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1888,9 +2145,13 @@ icon: '📝',
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='/contact'
               variant='secondary'
@@ -1905,7 +2166,10 @@ icon: '📝',
               variant='outline'
               size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Transform Your Content Creation?;
           </h2>;
@@ -1915,28 +2179,38 @@ icon: '📝',
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Content Creation?
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Transform Your Content Creation?
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </h2>
           <p className="text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of content creators who are already saving hours every day with AI-powered content generation.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href="/contact"
               variant="secondary"
@@ -1949,6 +2223,7 @@ icon: '📝',
               href="#demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <span className='text - lg text - gray - 400'>{plan.period}</span>;
                   </div>;
@@ -2086,18 +2361,28 @@ icon: '📝',
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Watch Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -2107,6 +2392,7 @@ icon: '📝',
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 }
@@ -2119,6 +2405,8 @@ icon: '📝',
 ;
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 
@@ -2129,4 +2417,7 @@ icon: '📝',
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

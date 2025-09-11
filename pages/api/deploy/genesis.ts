@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -8,22 +9,32 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import type { NextApiRequest, NextApiResponse } from "next";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
 ) {
   const active = [
+<<<<<<< HEAD
     ...Object.entries(modules)
       .filter(([, v]) => v)
 <<<<<<< HEAD
       .map(([k]) => `/${k}`)
     ...Object.entries(bonus)
 =======
+=======
+    ...Object && Object.entries(modules)
+      .filter(([, v]) => v)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
@@ -45,7 +56,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
 
@@ -57,11 +71,15 @@ function summarizeModules(modules: Record<string, boolean>, bonus: Record<string
   return active.length ? active.sort().join() : 'None'
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length;
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -74,12 +92,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   try {
 
     const body = req && req.body || {};
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const {
 
       instanceName
@@ -91,11 +119,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       modules = {}
       bonusModules = {}
 <<<<<<< HEAD
+<<<<<<< HEAD
     } = body;
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     } = body;
 
@@ -104,19 +135,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion",
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     }
     // Simulated provisioning operations
     const now = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
     const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const outputActions = {
       zionGPT: {
         initialized: true
@@ -129,6 +169,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         governanceMode
         votingDashboard: "/dao"
       }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 /**
@@ -201,23 +245,35 @@ if ( {) {
         governance_mode,
         voting_dashboard: "/dao",
       },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       assets: {
         whitepaper: "/whitepaper"
         roadmap: "/roadmap"
         book: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           pdf: "/book/manifesto && manifesto.pdf",
           trailerScript: "/trailer/script",
         },
         summit: "/summit",
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       publicPages: [
         "/about"
         "/manifesto"
@@ -238,6 +294,10 @@ if ( {) {
         bonusModules
       )
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           pdf: "/book / manifesto.pdf",
           trailer_script: "/trailer / script",
         },
@@ -265,6 +325,7 @@ if ( {) {
       ),
     }
 ;
+<<<<<<< HEAD
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
@@ -272,10 +333,18 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    const access = {
+      roles: ["Founder", "Superadmin", "DAO Multisig"]
+      export: {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         type: "application/json",
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res && res.status(200).json({
       success: true,
@@ -361,21 +430,42 @@ if ( {) {
   } catch (err: any) {
 <<<<<<< HEAD
 =======
+=======
+
+
+      operator,
+      access,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    });
+
+  } catch (err: any) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return res && res.status(500).json({ error: err && err.message || "Internal error" });
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
+<<<<<<< HEAD
       version: 'Zion OS v1.0.0'};
     const operator = {
       activeModulesSummary: summarizeModules(modules, bonusModules),
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+=======
+=======
+      version: 'Zion OS v1.0.0'};
+
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const access = {
       roles: ['FounderSuperadminDAO Multisig'],
       export: {
         type: 'application/json',
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+<<<<<<< HEAD
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
@@ -405,6 +495,12 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
   try {
@@ -611,6 +707,7 @@ export default async function handler(req, res) {
       export: {;
         type: 'application/json';
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+<<<<<<< HEAD
     return res.status(200).json({ outputActions, deployLog, access, operator });
   } catch (error) {
     return res.status(500).json({ error: err.message || 'Internal error' });
@@ -620,6 +717,12 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
   } catch (error) {
@@ -627,6 +730,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -640,3 +744,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

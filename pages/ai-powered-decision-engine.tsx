@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -47,12 +48,15 @@ return (
 	)
 
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AiPoweredDecisionEngine() {
 	return (
 		<ServiceLanding
 
+<<<<<<< HEAD
 			title="AI-Powered Decision Engine"
 			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
 			subtitle="Make better decisions, continuously"
@@ -86,6 +90,12 @@ export default function AiPoweredDecisionEngine() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
 			features={[
@@ -97,6 +107,7 @@ export default function AiPoweredDecisionEngine() {
 				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
 				"Drift monitoring and alerts",
 				"Versioned strategies with canary rollouts"
+<<<<<<< HEAD
 <<<<<<< HEAD
 			]}
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
@@ -130,3 +141,8 @@ export default function AiPoweredDecisionEngine() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

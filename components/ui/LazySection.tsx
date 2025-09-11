@@ -18,6 +18,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
   delay = 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  const getInitialPosition = () => {
   switch (direction) {
   case 'up': 
@@ -35,11 +36,16 @@ export const LazySection: React.FC<LazySectionProps> = ({
   direction = 'up'
 }) => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   direction = 'up'
 }) => {
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children,
   className = '',
   threshold = 0.1,
@@ -47,10 +53,15 @@ export const LazySection: React.FC<LazySectionProps> = ({
   direction = 'up',
 }) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -64,16 +75,23 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 0, x: -50 }
       default:
 <<<<<<< HEAD
+<<<<<<< HEAD
         return { opacity: 0, y: 50 }
 =======
 
         return { opacity: 0, y: 50 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        return { opacity: 0, y: 50 }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const _getInitialPosition = () => {_switch (direction) {
@@ -83,6 +101,10 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'up':
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      case 'up':
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return { opacity: 1, y: 0 },
       case 'down':
         return { opacity: 1, y: 0 },
@@ -95,10 +117,14 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 1, y: 0 }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
   }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -145,9 +171,13 @@ export const LazySection: React.FC<LazySectionProps> = ({;
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getAnimatePosition = () => {;
     switch (direction) {;
       case 'up':;
@@ -167,9 +197,13 @@ export const LazySection: React.FC<LazySectionProps> = ({;
     </motion && motion.div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default LazySection;      case 'down':;
         return { opacity: 1, y: 0 },;
@@ -179,16 +213,20 @@ export default LazySection;      case 'down':;
         return { opacity: 1, x: 0 },;
       default:;
 <<<<<<< HEAD
+<<<<<<< HEAD
         return { opacity: 1, y: 0 }
     }
   }
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         return { opacity: 1, y: 0 }
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <motion&& motion.div
@@ -309,3 +347,5 @@ export default LazySection;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function OnboardingWizard() {;
 import React, { useMemo, useState } from 'react';
 import { useUser } from '../../providers/UserProvider';
@@ -8,13 +9,19 @@ import Link from 'next/link';
 
 export default function OnboardingWizard() {
 =======
+export default function OnboardingWizard() {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 export default function OnboardingWizard() {
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function OnboardingWizard() {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser();
@@ -22,14 +29,26 @@ export default function OnboardingWizard() {
   const [step, setStep] = useState(0);
   const isClient = user?.role === 'client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const steps = useMemo(() => {
     if (isClient) {
       return [
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default function OnboardingWizard() {
+  const { user, completeOnboarding, setUser } = useUser()
+  const { addToast } = useToast()
+  const [step, setStep] = useState(0)
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -41,6 +60,10 @@ export default function OnboardingWizard() {
           content: <p>Send invites or start a conversation to move fast.</p>,;
         },;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ];
     }
     return [
@@ -49,7 +72,10 @@ export default function OnboardingWizard() {
         content: (
           <div className='space-y-3'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
   const isClient = user?.role === 'client';
   const steps = useMemo(() => {;
@@ -99,7 +125,10 @@ export default function OnboardingWizard() {
               className='w-full rounded-md border px-3 py-2 bg-transparent'
               placeholder='Short bio'
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
           </div>;
         ),;
@@ -112,9 +141,13 @@ export default function OnboardingWizard() {
               {['AI', 'LLM', 'Next && Next.js', 'Python', 'DevOps', 'Security'].map(;
                 s => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <button
                     key={s}
                     className='px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5'>;
@@ -132,9 +165,13 @@ export default function OnboardingWizard() {
                 </button>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         ),;
@@ -157,6 +194,7 @@ export default function OnboardingWizard() {
     ];
   }, [isClient, setUser]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -172,6 +210,10 @@ export default function OnboardingWizard() {
   if (!user || user && user.onboardingCompleted) return null;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'>;
       <div className='flex items-center justify-between'>;
@@ -206,17 +248,25 @@ export default function OnboardingWizard() {
             onClick={() => {;
               completeOnboarding();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               addToast({;
                 title: 'Onboarding completed',;
                 description: 'You can revisit anytime from Settings.',;
                 variant: 'success',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               });
             }}
             className='px-3 py-2 rounded-md border';
@@ -227,6 +277,7 @@ export default function OnboardingWizard() {
     </div>;
   );
 }    }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useMemo, useState } from 'react'
 import { useUser } from '../../providers/UserProvider'
@@ -408,6 +459,10 @@ export default function OnboardingWizard() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return [;
       { title: 'Complete your profile', content: (;
         <div className="space-y-3">;
@@ -422,14 +477,20 @@ export default function OnboardingWizard() {
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           <div className="flex gap-3">;
             {['full-timepart-timecontract'].map(a => (;
               <button key={a} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5 capitalize">{a}</button>;
             ))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       ) };
@@ -444,6 +505,7 @@ export default function OnboardingWizard() {
       ) }];
   }, [isClient, setUser]);
   if (!user || user && user.onboardingCompleted) return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
           <div className="flex gap-3">
@@ -465,6 +527,10 @@ export default function OnboardingWizard() {
       ) }]
   }, [isClient, setUser])
   if (!user |user.onboardingCompleted) return null
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
       <div className="flex items-center justify-between">
@@ -482,12 +548,19 @@ export default function OnboardingWizard() {
         ) : (
           <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>
         )}
+<<<<<<< HEAD
 =======
 
 
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+      </div>
+    </div>
+);
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         )}
 
@@ -495,6 +568,7 @@ export default function OnboardingWizard() {
     </div>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -508,6 +582,8 @@ export default function OnboardingWizard() {
     </div>
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { use_user } from '../../providers / UserProvider';
 import { use_toast } from '../ui / ToastProvider';
@@ -728,6 +804,10 @@ if (return null) {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

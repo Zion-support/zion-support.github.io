@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) )
 }</select> </>)
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
@@ -31,6 +32,8 @@ export default function ResumePreviewPage({
   );  const targetRef = useRef<HTMLDivElement>(null);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }, [selectedVersionId, initialData, versions]);
   return (
@@ -46,6 +49,7 @@ export default function ResumePreviewPage({
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
@@ -60,6 +64,14 @@ import { createServerClient } from '../../utils/supabase/server';
 
 =======
 =======
+=======
+=======
+            onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
+            className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
+          >;
+            <option value='light'>Light</option>;
+            <option value='dark'>Dark</option>          </select>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {versions && versions.length > 0 && (;
             <>;
@@ -79,6 +91,7 @@ import { createServerClient } from '../../utils/supabase/server';
             </>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GetServerSideProps } from 'next',
 import React, { useMemo, useRef, useState } from 'react',
@@ -103,6 +116,24 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
     return found?.data || initialData
   }, [selectedVersionId, initialData, versions]);
 
+=======
+import { GetServerSideProps } from 'next';
+import React, { useMemo, useRef, useState } from 'react';
+import PdfExportButton from '../../components/ui/PdfExportButton';
+import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
+import { createServerClient } from '../../utils/supabase/server';
+export type ResumePreviewPageProps = {
+  initialData: ResumeData,
+  versions?: Array<{ id: string, label: string, data: ResumeData }>
+};
+
+export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
+
+  const activeData = useMemo(() => {
+    if (selectedVersionId === 'current') return initialData;
+    const found = versions.find(v => v.id === selectedVersionId);
+    return found?.data || initialData
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [selectedVersionId, initialData, versions]),
   return (
     <div className="relative">
@@ -110,6 +141,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
         <div className="flex items-center gap-3">
           <label className="text-sm">Theme</label>
           <select
+<<<<<<< HEAD
 
 
             <option value="light">Light</option>
@@ -126,6 +158,10 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            value={theme}
+            onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
             <option value='light'>Light</option>
@@ -133,16 +169,23 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
               <select
+<<<<<<< HEAD
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
@@ -154,18 +197,29 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
           )}
 <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 =======
+=======
+                value={selectedVersionId}
+                onChange={(e) => setSelectedVersionId(e.target.value)}
+                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+              >
+                <option value="current">Current</option>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {versions.map(v => (
 
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto">
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Simple auth guard for talent users, adjust with real roles when available
   const supabase = createServerClient();
@@ -173,10 +227,18 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  // Simple auth guard for talent users, adjust with real roles when available
+  const supabase = createServerClient();
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const user = await (supabase as any).auth.getUser?.();
   if (!user) {
     return {
       redirect: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -185,6 +247,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         permanent: false}}
   }
 // Placeholder: fetch resume data for the logged-in user and versions if any
+=======
+
+        destination: '/auth',
+        permanent: false}}
+  }
+
+  // Placeholder: fetch resume data for the logged-in user and versions if any
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const initialData: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },
@@ -193,16 +263,23 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     technologies: ['OpenAISupabasePostgresVercelDocker'],
     experience: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
 title: 'Senior AI Engineer'
+=======
+
+      {
+        title: 'Senior AI Engineer'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         company: 'Zion AI'
         start: '2023'
         end: 'Present'
         location: 'Remote'
         bullets: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -217,6 +294,8 @@ title: 'Senior AI Engineer'
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
       </div>;
     </div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
@@ -231,6 +310,10 @@ title: 'Senior AI Engineer'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>
       </div>
@@ -245,11 +328,18 @@ title: 'Senior AI Engineer'
 
 
   );
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
   const user = await (supabase as any).auth && auth.getUser?.();
 <<<<<<< HEAD
 =======
+=======
+
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+  // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
+  const user = await (supabase as any).auth && auth.getUser?.();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (!user) {
@@ -323,8 +413,11 @@ return { props: { initialData, versions } };
 };
 
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -365,6 +458,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
         permanent: false,;
       },;
     };  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Placeholder: fetch resume data for the logged-in user and versions if any;
   const initialData: ResumeData = {;
     name: 'Your Name',;
@@ -421,6 +518,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
       },;
     ],;
   };
+<<<<<<< HEAD
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
@@ -436,6 +534,16 @@ return { props: { initialData, versions } }
   return { props: { initialData, versions } }
 
 };
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
+return { props: { initialData, versions } }
+}
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) );
 }</select> </>);
 }</div> </div> <PdfExportButton target_ref= {
@@ -511,6 +619,7 @@ if (return initial_data) {
       </div>;
     </div>);
 ;
+<<<<<<< HEAD
                 value={selectedVersionId  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -542,6 +651,8 @@ if (return initial_data) {
       </div>
     </div>
   );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getServerSideProps: GetServerSideProps = async ctx => {
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient ();
   const user = await (supabase as any).auth.get_user?.();
@@ -582,10 +693,14 @@ if ( {) {
         end: 'Present',
         location: 'Remote',
 <<<<<<< HEAD
+<<<<<<< HEAD
 bullets: [;
 =======
         bullets: [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        bullets: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'Built multi - agent automation systems improving throughput by 40%.',
           'Designed AI - driven dashboards and PDF export workflows.',
         ],
@@ -621,6 +736,7 @@ bullets: [;
 ;
 return { props: { initial_data, versions } }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -803,12 +919,18 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 };
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 };
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

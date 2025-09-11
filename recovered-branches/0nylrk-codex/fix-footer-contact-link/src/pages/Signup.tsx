@@ -1,15 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {Link, Navigate} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {User, Mail, Lock, Eye, EyeOff, Facebook, Twitter} from "lucide-react";
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { Link, Navigate } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -17,6 +23,23 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -34,6 +57,7 @@ import { Footer } from "@/components/Footer",
 // Form validation schema
 const signupSchema = z
   .object({
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -61,16 +85,22 @@ import {Footer} from "@/components/Footer";
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     displayName: z.string().min(2, "Name must be at least 2 characters");
     email: z.string().email("Please enter a valid email")
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+<<<<<<< HEAD
 
 // Form validation schema;
 const signupSchema = z;
@@ -90,6 +120,8 @@ const signupSchema = z;
     path: ["confirmPassword"]}),;
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .regex(/[0-9]/, "Password must contain at least one number");
     confirmPassword: z.string()
     termsAccepted: z.boolean().refine(val => val === true, {
@@ -103,8 +135,11 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
@@ -114,7 +149,10 @@ export default function Signup() {
     path: ["confirmPassword"]}),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type SignupFormValues = z.infer<typeof signupSchema>,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
@@ -127,6 +165,7 @@ export default function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   
+<<<<<<< HEAD
 =======
 
 type SignupFormValues = z && z.infer<typeof signupSchema>;
@@ -135,6 +174,8 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(signupSchema)
@@ -147,6 +188,7 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -163,11 +205,17 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
     setIsSubmitting(true),
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    setIsSubmitting(true);
+    
+    setIsSubmitting(true),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       await signup(data.email, data.password, data.displayName)
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
 
   },
 
@@ -176,6 +224,10 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
@@ -225,7 +277,10 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
                         </FormControl>
                         <FormMessage className="text-red-400" />
                       </FormItem>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { Link, Navigate } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -268,6 +323,7 @@ export default function Signup() {;
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 type SignupFormValues = z && z.infer<typeof signupSchema>;
 export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
@@ -277,6 +333,9 @@ export default function Signup() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize react-hook-form;
   const form = useForm({;
     resolver: zodResolver(signupSchema),;
@@ -286,6 +345,7 @@ export default function Signup() {;
       password: "",;
       confirmPassword: "",;
       termsAccepted: false}}) as UseFormReturn<SignupFormValues>,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
@@ -371,6 +431,8 @@ export default function Signup() {;
     }
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
@@ -385,16 +447,22 @@ export default function Signup() {;
     }
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Redirect if user is already logged in and has completed profile;
   if (isAuthenticated && user?.profileComplete) {;
     return <Navigate to="/" />;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
@@ -402,7 +470,10 @@ export default function Signup() {;
     return <Navigate to="/onboarding" />;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { Link, Navigate } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
@@ -480,11 +551,21 @@ if ( {) {
   $2
 }
     return <Navigate to="/onboarding" />;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return (
     <>;
       <Header />;
+<<<<<<< HEAD
                 <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
+=======
+
+                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex min - h-screen bg - zion - blue">;
         <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:flex - none lg:px - 20 xl:px - 24">;
           <div className="mx - auto w - full max - w-sm lg:w - 96">;
@@ -495,6 +576,7 @@ if ( {) {
               <p className="mt - 2 text - sm text - zion - slate - light">;
                 Already have an account?{" "}
                 <Link to="/login" className="font - medium text - zion - cyan hover:text - zion - cyan - light">;
+<<<<<<< HEAD
   ;
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
   if (isAuthenticated && !user?.profileComplete) {;
@@ -536,10 +618,14 @@ if ( {) {
                 <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Sign in;
                 </Link>;
               </p>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
             <div className="bg-zion-blue-dark rounded-lg p-6">;
@@ -578,6 +664,8 @@ if ( {) {
                             <Input
                               placeholder="you@example.com"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -597,12 +685,16 @@ if ( {) {
                           <div className="relative">;
                             <Input
                               placeholder="you@example && example.com"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               {...field}
                               autoComplete="off"
                               aria-autocomplete="none"
                               type="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
                             <Input;
                               placeholder="you@example.com";
@@ -613,11 +705,14 @@ if ( {) {
                               type="email";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             />;
                             <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                           </div>;
                         </FormControl>;
                         <FormMessage className="text-red-400" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />;
                   <FormField
@@ -630,6 +725,8 @@ if ( {) {
                     control={form.control}
                     name="password";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </FormItem>;
                     )}
 
@@ -639,12 +736,16 @@ if ( {) {
                   <FormField
                     control={form && form.control}
                     name="password"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     render={({ field }) => (;
                       <FormItem>;
                         <FormLabel className="text-zion-slate-light">Password</FormLabel>;
                         <FormControl>;
                           <div className="relative">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                             />
                             <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -664,6 +765,8 @@ if ( {) {
                           <div className="relative">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <Input
                               type={showPassword ? "text" : "password"}
                               placeholder="••••••••"
@@ -671,17 +774,23 @@ if ( {) {
                               {...field}
                               autoComplete="new-password"
 <<<<<<< HEAD
+<<<<<<< HEAD
                             />
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 =======
                             />;
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                            />;
+                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <Button
                               type="button"
                               variant="ghost"
                               size="sm"
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+<<<<<<< HEAD
                             <Input;
                               type={showPassword ? "text" :"password"}
                               placeholder="••••••••";
@@ -695,10 +804,13 @@ if ( {) {
                               variant="ghost";
                               size="sm";
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               onClick={() => setShowPassword(!showPassword)}
                             >;
                               {showPassword ? (;
                                 <EyeOff className="h-4 w-4" />;
+<<<<<<< HEAD
                   />;
                   <FormField
                     control={form && form.control}
@@ -961,6 +1073,8 @@ if ( {) {
                             >;
                               {showPassword ? (;
                                 <EyeOff className="h-4 w-4" />;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               ) : (;
                                 <Eye className="h-4 w-4" />;
                               )}
@@ -1153,11 +1267,15 @@ if ( {) {
 
                 <div className="mt-6 grid grid-cols-3 gap-3">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+<<<<<<< HEAD
 ;
                 <div className="mt-6 grid grid-cols-3 gap-3">;
                   <Button;
@@ -1182,6 +1300,9 @@ if ( {) {
                     </svg>
                   </Button>
 =======
+=======
+                    onClick={() => loginWithGoogle()}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     disabled={isLoading || isSubmitting}
                   >;
@@ -1194,11 +1315,15 @@ if ( {) {
                     </svg>;
                   </Button>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+<<<<<<< HEAD
                       <path d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z" fill="#EA4335" />;
                       <path d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z" fill="#4285F4" />;
                       <path d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z" fill="#FBBC05" />;
@@ -1214,11 +1339,16 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    onClick={() => loginWithFacebook()}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     disabled={isLoading || isSubmitting}
                   >;
                     <span className="sr-only">Sign in with Facebook</span>;
                     <Facebook className="h-5 w-5" />;
                   </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     onClick={() => loginWithFacebook()}
                     disabled={isLoading |isSubmitting}
@@ -1229,12 +1359,18 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithTwitter()}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     disabled={isLoading |isSubmitting}
                   >
                     <span className="sr-only">Sign in with Twitter</span>
@@ -1261,6 +1397,7 @@ if ( {) {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -1325,3 +1462,8 @@ FormLabel;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

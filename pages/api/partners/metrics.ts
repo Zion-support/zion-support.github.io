@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -19,13 +22,17 @@ export default async function handler(
 
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
 <<<<<<< HEAD
+<<<<<<< HEAD
 (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
       "placeholder-key";
   try {
     if (usingPlaceholder) {
+<<<<<<< HEAD
       return res && res.status(200).json({
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
@@ -101,6 +108,9 @@ export default async function handler(req, res) {
       if (error) return res && res.status($1).json({ $2 });
     }
     const supabase = getServerSupabase ();
+=======
+      return res.status(200).json({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         total_signups: 12
         total_visits: 180
         total_profile_completions: 7
@@ -116,8 +126,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!code) return res.status($1).json({$2});
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
   try {
+<<<<<<< HEAD
     if (req.method === 'GET') {
       return res.status(200).json({
+=======
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (200).json ({
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         total_signups: 12,
         total_visits: 180,
         total_profile_completions: 7,
@@ -126,6 +145,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         payout_amount: 210,
         currency: 'USD'})
     }
+<<<<<<< HEAD
     const supabase = getServerSupabase();
     const events = ["visitsignupprofile_completedjob_createdhire"] as const;
     const counts: Record < string, number> = {}
@@ -142,6 +162,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 =======
 =======
+=======
+
+=======
+
+=======
+        : 0,
+      payout_amount: total_profile_completions * 50,
+      currency: "USD",
+    });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -195,9 +227,15 @@ export default async function handler(req, res) {
     const supabase = getServerSupabase();
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
+=======
+    const events = ['visitsignupprofile_completedjob_createdhire'] as const;
+    const counts: Record<string, number> = {};
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     for (const ev of events) {
       const { count, error } = await supabase
         .from('referral_events')
@@ -207,16 +245,28 @@ export default async function handler(req, res) {
       if (error) return res.status(500).json({ error: error.message });
       counts[ev] = count || 0
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const total_signups = counts['signup'] || 0;
     const total_visits = counts['visit'] || 0;
     const total_profile_completions = counts['profile_completed'] || 0;
     const total_job_creations = counts['job_created'] || 0;
+<<<<<<< HEAD
     const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
+=======
+
+    const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status(200).json({
       total_signups
       total_visits
       total_profile_completions
       total_job_creations
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -224,6 +274,11 @@ export default async function handler(req, res) {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+    return res && res.status(200).json({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const total_signups = counts["signup"] || 0;
     const total_visits = counts["visit"] || 0;
     const total_profile_completions = counts["profile_completed"] || 0;
@@ -232,6 +287,7 @@ export default async function handler(req, res) {
     const payout_amount =;
       total_profile_completions * 30 + total_job_creations * 50;
     return res.status (200).json ({
+<<<<<<< HEAD
 <<<<<<< HEAD
       total_job_creations,
 
@@ -352,11 +408,18 @@ export default async function handler(req, res) {
       total_signups,
     total_visits,
       total_profile_completions,
+=======
+
+      total_signups,
+      total_visits,
+      total_profile_completions,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     total_job_creations,
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
       payout_amount,
       currency: 'USD'
     });
+<<<<<<< HEAD
   } catch (e: any) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -364,6 +427,12 @@ export default async function handler(req, res) {
 
   } catch (e: any) {
 
+=======
+
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+    return res.status(500).json({ error: e?.message })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 =======
@@ -373,7 +442,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: e?.message })
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return res.status(500).json({ error: e?.message })
 
@@ -383,6 +455,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
     return res.status (500).json ({ error: e?.message });
@@ -412,6 +485,16 @@ export default async function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    return res.status (500).json ({ error: e?.message });
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch (error) {
     console.error("Error:", error);
@@ -421,4 +504,7 @@ export default async function handler(req, res) {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -25,21 +25,27 @@ export function QuoteRequestForm() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function QuoteRequestForm() {;
 export function QuoteRequestForm() {
 
 export function QuoteRequestForm() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -62,19 +68,25 @@ export function QuoteRequestForm() {
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   
   
   
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -87,6 +99,7 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0
       type: "fixed"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -100,12 +113,17 @@ export function QuoteRequestForm() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -121,12 +139,20 @@ export function QuoteRequestForm() {
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  });
+  }),
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
   
@@ -165,6 +191,7 @@ export function QuoteRequestForm() {
       default:
         break
     }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -236,6 +263,8 @@ export function QuoteRequestForm() {
         break;
     }
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleSubmit = async () => {
     setIsSubmitting(true);
@@ -244,10 +273,13 @@ export function QuoteRequestForm() {
       console.log("Submitting form data:", formData);
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const handleSubmit = async () => {
@@ -261,10 +293,13 @@ export function QuoteRequestForm() {
       await new Promise(resolve => setTimeout(resolve, 1500)),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -276,9 +311,13 @@ export function QuoteRequestForm() {
         description: "There was an error submitting your request. Please try again."
         variant: "destructive"})
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { use_navigate } from './react-router-dom';
@@ -388,10 +427,18 @@ function QuoteRequestForm() {
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
         variant: "destructive"});
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsSubmitting(false)
     }
@@ -416,6 +463,7 @@ function QuoteRequestForm() {
 
   },
   
+<<<<<<< HEAD
   };
   const handleSubmit = async () => {;
     setIsSubmitting(true);
@@ -461,6 +509,8 @@ function QuoteRequestForm() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -483,10 +533,15 @@ function QuoteRequestForm() {
             <div className="flex justify-between mt-8">
               {currentStep !== "service" && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -512,6 +567,7 @@ function QuoteRequestForm() {
                 </Button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               )}
             </div>
           </CardContent>
@@ -524,6 +580,10 @@ function QuoteRequestForm() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -647,6 +707,7 @@ export function QuoteRequestForm() {;
         return <SummaryStep formData={formData} updateFormData={updateFormData} />;
       default: return null;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   return (
@@ -784,11 +845,16 @@ export function QuoteRequestForm() {;
   };
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="container mx-auto px-4 py-12">;
       <div className="max-w-3xl mx-auto">;
         <div className="text-center mb-8">;
@@ -802,6 +868,7 @@ export function QuoteRequestForm() {;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
           <CardContent className="px-6 py-8">;
             <StepProgress currentStep={currentStep} />;
@@ -811,6 +878,8 @@ export function QuoteRequestForm() {;
             <div className="flex justify-between mt-8">;
               {currentStep !== "service" && (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
           <CardContent className="px-6 py-8">;
@@ -832,7 +901,10 @@ export function QuoteRequestForm() {;
               )}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {currentStep !== "summary" ? (;
                 <Button
                   onClick={handleNext}
@@ -840,6 +912,10 @@ export function QuoteRequestForm() {;
                   Continue;
                 </Button>;
               ) : (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
@@ -847,6 +923,11 @@ export function QuoteRequestForm() {;
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const renderStepContent = () =>: any {
     switch (current_step) {
@@ -906,6 +987,7 @@ export function QuoteRequestForm() {;
                 >;
                   {is_submitting ? "Submitting..." : "Submit Request"}
                 </Button>)}
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
@@ -971,6 +1053,9 @@ export function QuoteRequestForm() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </CardContent>;
         </Card>;
@@ -979,6 +1064,7 @@ export function QuoteRequestForm() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </div>);
@@ -1032,3 +1118,8 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

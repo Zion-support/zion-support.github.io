@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,7 +25,10 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import { 
@@ -54,9 +60,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
       prev.includes(title)
         ? prev.filter(item => item !== title)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ;
   X, ;
   Building2, ;
@@ -87,10 +97,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
         : [...prev, title];
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navigation = {;
     'Services': [;
       { name: 'Web Development', href: '/services/web-development', icon: Code },;
@@ -122,10 +137,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     { name: 'Contact', href: '/contact' },;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   return (
     <AnimatePresence>;
@@ -139,27 +159,39 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
 <<<<<<< HEAD
+<<<<<<< HEAD
           />;
           <motion&& motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
           <motion&& motion.div
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="p-6">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <div className="p-6">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-2">;
@@ -172,17 +204,23 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   onClick={onClose}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <X className="w-6 h-6" />;
                 </button>;
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <X className="w-6 h-6" />;
                 </button>;
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Navigation */}
               <nav className="space-y-4">;
                 {Object && Object.entries(navigation).map(([title, links]) => (;
@@ -190,18 +228,26 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                     <button
                       onClick={() => handleDropdownToggle(title)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors";
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>;
                 <div className="space-y-2">;
                   {quickLinks && quickLinks.map((link) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Link
                       key={link && link.name}
                       href={link && link.href}
@@ -211,15 +257,21 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                     </Link>;
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>;
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </div>;
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>;
@@ -248,6 +300,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       )}
     </AnimatePresence>;
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -350,6 +403,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
 
   ];
 =======
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
 ;
@@ -392,7 +448,10 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
     { name: 'Contact', href: '/contact' },
   ];
 ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AnimatePresence>;
       {is_open && (
@@ -402,6 +461,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
@@ -440,6 +500,8 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
                   {quickLinks.map((link) => (
                     <Link
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";
             on_click={on_close}
           />;
@@ -476,7 +538,10 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
                 <div className="space - y-2">;
                   {quick_links.map ((link) => (
                     <Link;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={link.name}
                       href={link.href}
                       className="block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
@@ -488,7 +553,10 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
               </div>;
               {/* Contact Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="mt - 8 pt - 8 border - t border - gray - 200">;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Contact Us</h3>;
                 <div className="space - y-3">;
@@ -516,7 +584,10 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
         </>)}
     </AnimatePresence>);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
                 <div className="space-y-3">
@@ -545,6 +616,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
 ;
 export default Sidebar;
@@ -555,11 +627,14 @@ export default Sidebar;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 export default Sidebar;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -569,3 +644,6 @@ export default Sidebar;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
@@ -24,6 +25,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const url = `data: text/html,base64,${base64}`
 
   res.status(200).json({ url })
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function escapeHtml(str: string) {
   return String(str)
@@ -33,6 +38,7 @@ function escapeHtml(str: string) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next',
+<<<<<<< HEAD
 export default async function handler(req, res) {
   try {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
@@ -45,6 +51,8 @@ export default async function handler(req, res) {
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export default async /**
  * handler - Function description
@@ -74,16 +82,23 @@ function escape_html() {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -143,3 +158,8 @@ function escapeHtml(str: string) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

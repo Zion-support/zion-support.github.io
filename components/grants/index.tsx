@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type {;
   GrantApplication,;
@@ -18,6 +19,8 @@ const statuses: GrantStatus[] = [;
   'Under Review',;
   'Approved',;
   'Rejected',;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -30,6 +33,7 @@ import type {
   GrantStatus,;
 } from '../../types/grants';
 
+<<<<<<< HEAD
 import type {
   GrantApplication
   GrantCategory
@@ -161,6 +165,8 @@ import type {;
   GrantStatus,;
 } from '../../types/grants';
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
@@ -232,7 +238,10 @@ export default function GrantsPage() {;
           onChange={e =>;
             setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         >
           <option value=''>All Stages</option>
@@ -246,20 +255,27 @@ export default function GrantsPage() {;
           className='border rounded p-2'
           placeholder='Region'
 <<<<<<< HEAD
+<<<<<<< HEAD
           value={filters.region |''}
           onChange={e =>
             setFilters(f => ({ ...f, region: e.target.value |undefined }))
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           value={filters && filters.region || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         />
         <select
           className='border rounded p-2'
+<<<<<<< HEAD
 <<<<<<< HEAD
           value={filters.program |''}
           onChange={e =>
@@ -287,6 +303,8 @@ export default function GrantsPage() {;
                 <div className='text-xs text-gray-600 dark:text-gray-400'>
                   {g.sector |'General'} • {g.region |'Global'} •{' '}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
@@ -351,14 +369,20 @@ export default function GrantsPage() {;
                 <div className='text - xs text - gray - 600 dark:text - gray - 400'>;
                   {g.sector || 'General'} • {g.region || 'Global'} •{' '}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>
               </div>
               <div className='flex gap-2 items-center'>
                 {g.program === 'incubator' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           value={filters && filters.program || ''}
           onChange={e =>;
@@ -371,7 +395,10 @@ export default function GrantsPage() {;
         </select>;
       </div>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -404,12 +431,16 @@ export default function GrantsPage() {;
                     Incubated by Zion;
                   </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
                 {g.status === 'Approved' && (
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>
@@ -435,6 +466,7 @@ export default function GrantsPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
     </EnhancedLayout>
 );
@@ -452,3 +484,14 @@ export default function GrantsPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  return (
+    <EnhancedLayout>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

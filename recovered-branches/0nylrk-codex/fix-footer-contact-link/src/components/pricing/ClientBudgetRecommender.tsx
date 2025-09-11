@@ -1,16 +1,21 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -20,13 +25,18 @@ import { Button } from "@/components/ui/button",
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { 
   getClientBudgetSuggestion;
   PricingSuggestion;
@@ -35,20 +45,26 @@ import {
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 <<<<<<< HEAD
+<<<<<<< HEAD
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
   onSuggestionApplied: (minValue: number, maxValue: number) => void;
 }
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
 
+<<<<<<< HEAD
   jobTitle: string
   category: string
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
@@ -57,28 +73,38 @@ import {Sparkles} from "lucide-react";
 interface ClientBudgetRecommenderProps {;
   jobTitle: string,;
   category: string,;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 }
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onSuggestionApplied: (minValue: number, maxValue: number) => void;
 }
 
 
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   jobTitle;
   category;
   timeline;
   scope;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   experienceLevel
 
@@ -88,10 +114,16 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   onSuggestionApplied}) => {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  experienceLevel,;
+  onSuggestionApplied}) => {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   experienceLevel,;
   onSuggestionApplied}) => {;
@@ -104,6 +136,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     }
     setIsLoading(true);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const generateSuggestion = async () => {;
     if (!jobTitle || !category) {;
@@ -112,22 +146,29 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     }
     setIsLoading(true);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       const params: ClientBudgetParams = {;
         jobTitle,;
         category};
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (timeline) params && params.timeline = timeline;
       if (scope) params && params.scope = scope;
       if (experienceLevel) params && params.experienceLevel = experienceLevel;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       if (timeline) params && params.timeline = timeline;
       if (scope) params && params.scope = scope;
       if (experienceLevel) params && params.experienceLevel = experienceLevel;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const result = await getClientBudgetSuggestion(params);
       setSuggestion(result);
@@ -165,6 +206,12 @@ import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      const result = await getClientBudgetSuggestion(params);
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -172,6 +219,7 @@ interface ClientBudgetRecommenderProps {
   scope?: string,
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -227,6 +275,10 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
     setIsLoading(true),
@@ -241,14 +293,18 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
       const result = await getClientBudgetSuggestion(params),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating budget suggestion:", error)
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 
@@ -271,11 +327,16 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   }
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     setIsLoading(true),;
     try {;
@@ -294,17 +355,23 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     }
   },;
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Track this suggestion application;
       if (user) {;
         trackPricingSuggestion({;
@@ -312,6 +379,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: 'client',;
           suggestedMin: suggestion && suggestion.minRate,;
           suggestedMax: suggestion && suggestion.maxRate,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleApplySuggestion = () => {;
     if (suggestion) {;
@@ -328,6 +396,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       }
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           accepted: true;
         });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -335,15 +405,23 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     }
 
   },
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">;
       <div>;
         {!suggestion && !isLoading ? (;
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 
@@ -353,19 +431,26 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         {!suggestion && !isLoading ? (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             type="button"
             variant="outline"
             onClick={generateSuggestion}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             disabled={!jobTitle || !category}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
           </Button>;
         ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
             disabled={!jobTitle |!category}
             className="w-full"
@@ -384,6 +469,11 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <PricingSuggestionBox
+=======
+
+          <PricingSuggestionBox
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
@@ -480,17 +570,27 @@ if ( {) {
             <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
+<<<<<<< HEAD
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            suggestion={suggestion}
+            is_loading={is_loading}
+            onApplySuggestion={handleApplySuggestion}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
@@ -498,6 +598,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 =======
@@ -676,3 +777,7 @@ return (<div className="space-y-4" > <div> {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

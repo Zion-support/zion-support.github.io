@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from 'react';
 
 
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState, useEffect } from 'react';
@@ -18,12 +24,17 @@ export function useIsMobile() {
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   useEffect(() => {
 
     const handleResize = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       setIsMobile(window && window.innerWidth < 768)
     };
@@ -38,7 +49,10 @@ export function useIsMobile() {
 
   return isMobile
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -61,6 +75,7 @@ if ( {) {
     }
     return undefined;
   }, []);
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -78,6 +93,12 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -94,6 +115,7 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -138,3 +160,11 @@ return isMobile
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -9,6 +10,8 @@ export interface EmergingTech2026ServiceV4 {
   {
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV4 {;
   id: string;
@@ -38,6 +41,7 @@ export interface EmergingTech2026ServiceV4 {;
   growthRate: string;
   variant: ServiceVariant;
   contactInfo: {
+<<<<<<< HEAD
     mobile: string;
     email: string;
     address: string;
@@ -708,6 +712,8 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     mobile: string, email: string,
     address: string,
     website: string
@@ -977,6 +983,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -1402,17 +1409,30 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
+=======
+    
+    },
+    realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
+    launchDate: '2026-05-15', customers: 30,
+    rating: 4.8,
+    reviews: 25;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     realImplementation: true;
     implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.';
     launchDate: '2026-05-15';
     customers: 30;
 
+<<<<<<< HEAD
     rating: 4.8
 
     reviews: 25
   }
 ];
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -1807,7 +1827,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     customers: 30,;
     rating: 4.8;
     reviews: 25;
+<<<<<<< HEAD
   }
 ];
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

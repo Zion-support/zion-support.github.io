@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +27,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -36,6 +42,7 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {;
   const { user } = useAuth();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (!hasBillingAccess) {
@@ -56,6 +63,14 @@ export default function EnterpriseBilling() {
 
   const hasBillingAccess = user?.role === "enterprise_admin" |
                           (user?.permissions && user.permissions.includes('billing_access'));
+=======
+  // Check if user has billing permissions;
+  const hasBillingAccess = user?.role === "enterprise_admin" || ;
+                          (user?.permissions && user && user.permissions.includes('billing_access'));
+
+  if (!hasBillingAccess) {;
+    return <Navigate to="/unauthorized" />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -68,6 +83,7 @@ export default function EnterpriseBilling() {
   
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
+<<<<<<< HEAD
   }
   return (
     <ProtectedRoute>
@@ -99,6 +115,8 @@ export default function EnterpriseBilling() {
 
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
@@ -107,7 +125,10 @@ export default function EnterpriseBilling() {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -127,15 +148,20 @@ export default function EnterpriseBilling() {;
 ;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   return (
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <ProtectedRoute>;
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -169,6 +195,8 @@ export default function EnterpriseBilling() {;
         description="Manage your subscription, view invoice history, and download billing statements.";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -177,11 +205,14 @@ export default function EnterpriseBilling() {;
       <Footer />;
     </ProtectedRoute>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
 
@@ -191,7 +222,10 @@ export default function EnterpriseBilling() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -206,6 +240,7 @@ export default /**
 function EnterpriseBilling() {
   const { user } = use_auth ();
 ;
+<<<<<<< HEAD
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" ||;
                           (user?.permissions && user.permissions.includes ('billing_access'));
@@ -244,3 +279,5 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,13 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</div> </div>) import fs from 'fs';
+=======
+
+}</div> </div>) import fs from 'fs';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import fs from 'fs';
 import path from 'path';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
  </div> </div>) ) ;
@@ -22,18 +29,33 @@ export async function getServerSideProps() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 </div> </div>) )
+=======
+ </div> </div>) ) ;
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
 export async function getServerSideProps() {
+<<<<<<< HEAD
 </div> </div>) ) 
+=======
+=======
+</div> </div>) ) 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datanews-digest.json');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   let items: NewsItem[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -41,6 +63,7 @@ export async function getServerSideProps() {;
     items = json && json.items || [];
     generatedAt = json && json.generatedAt || '';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
+<<<<<<< HEAD
 export async /**
  * getServerSideProps - Function description
  */
@@ -86,22 +109,37 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
           </div>
         ))}
       </div>
+=======
+export async function getServerSideProps() {;
+  const file = path.join(process.cwd(), 'datanews-digest.json');
+  let items: NewsItem[] = [];  let generatedAt = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
 
 
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       </div>;
     </div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * NewsDigestPage - Function description
  */
@@ -124,11 +162,17 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     items = json.items || [];
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { items, generatedAt } }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
@@ -159,3 +203,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

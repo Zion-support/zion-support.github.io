@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
@@ -16,11 +17,16 @@ import { ApplicationScoreCard } from "../ApplicationScoreCard";
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ScoreDialogProps {
 
   open: boolean
@@ -30,6 +36,7 @@ interface ScoreDialogProps {
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ScoreDialog({;
   open;
@@ -63,6 +70,11 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {JobApplication} from "@/types/jobs";
+import {ApplicationScoreCard} from "../ApplicationScoreCard";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ScoreDialogProps {;
   open: boolean,;
   onOpenChange: (open: boolean) => void,;
@@ -70,20 +82,27 @@ interface ScoreDialogProps {;
   onScoreUpdated: (updatedApplication: JobApplication) => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   open;
 ;
 export function ScoreDialog({;
   open,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function ScoreDialog(): any ({;
 
   open;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onOpenChange;
   application;
   onScoreUpdated;
 }: ScoreDialogProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {;
@@ -111,6 +130,8 @@ export function ScoreDialog({;
   return (;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
 
@@ -127,7 +148,10 @@ export function ScoreDialog({;
         </DialogHeader>
         {application && (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="sm:max-w-md">;
         <DialogHeader>;
@@ -136,17 +160,35 @@ export function ScoreDialog({;
         {application && (;
 
           <ApplicationScoreCard
+<<<<<<< HEAD
 
           <ApplicationScoreCard 
 
           <ApplicationScoreCard
           <ApplicationScoreCard ;
+=======
+=======
+
+          <ApplicationScoreCard 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
         )}
+<<<<<<< HEAD
       </DialogContent>;
     </Dialog>;
+=======
+
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { JobApplication } from '@/types / jobs';
 import { ApplicationScoreCard } from '../ApplicationScoreCard';
@@ -174,6 +216,7 @@ function ScoreDialog() {
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),;}
  interface ScoreDialogProps {
@@ -210,3 +253,6 @@ onScoreUpdated
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

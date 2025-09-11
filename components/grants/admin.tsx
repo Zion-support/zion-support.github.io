@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export default function GrantsAdminPage() {;
@@ -13,6 +14,8 @@ import type { GrantApplication, Milestone } from '../../types/grants';
 
 <<<<<<< HEAD
 export default function GrantsAdminPage() {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
@@ -20,25 +23,35 @@ import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 
+<<<<<<< HEAD
 export default function GrantsAdminPage() {;
 
 export default function GrantsAdminPage() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const load = () => {
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
   }
@@ -49,10 +62,15 @@ export default function GrantsAdminPage() {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
     load()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const headers = useMemo(;
     () =>;
       token;
@@ -68,9 +86,13 @@ export default function GrantsAdminPage() {
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   const saveMilestones = async () => {
     if (!selected) return;
@@ -83,9 +105,13 @@ export default function GrantsAdminPage() {
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   useEffect(() => {;
     load();
@@ -241,6 +267,7 @@ if (return) {
             <input;
               className='border rounded p - 2';
               placeholder='Admin Token';
+<<<<<<< HEAD
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
       <div className='grid md:grid-cols-3 gap-6'>
@@ -327,6 +354,10 @@ if (return) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+    <EnhancedLayout>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>))}                  <div className="flex gap - 2">;
                     <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
                     <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
@@ -364,9 +395,13 @@ if (return) {
                       }
                     />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       value={m && m.description || ''}
                       onChange={e =>;
                         setMilestones(ms => {;
@@ -378,10 +413,15 @@ if (return) {
                             description: e && e.target.value,;
                           };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <textarea;
                       className='w - full border rounded p - 2 mb - 2';
                       placeholder='Description';
@@ -400,9 +440,13 @@ if (return) {
                       }
                     />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         value={m && m.dueDate || ''}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -414,10 +458,15 @@ if (return) {
                               dueDate: e && e.target.value,;
                             };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='grid grid - cols - 2 gap - 2'>;
                       <input;
                         className='border rounded p - 2';
@@ -437,9 +486,13 @@ if (return) {
                         }
                       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         value={m && m.trancheAmount || 0}
                         onChange={e =>;
                           setMilestones(ms => {;
@@ -451,10 +504,15 @@ if (return) {
                               trancheAmount: Number(e && e.target.value),;
                             };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <input;
                         className='border rounded p - 2';
                         placeholder='Tranche (amount)';
@@ -475,26 +533,38 @@ if (return) {
                       />;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='mt - 2 flex items - center gap - 2'>;
                       <button;
                         className='px - 2 py - 1 border rounded';
                         on_click={() => mark_complete (m.id!)}
                         disabled={!m.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >;
                         Mark Complete;
                       </button>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onClick={() =>;
                       setMilestones(ms => [;
                         ...(ms && ms.length ? ms : selected && selected.milestones || []),;
@@ -506,10 +576,15 @@ if (return) {
                         } as any,;
                       ]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>))}
                 <div className='flex gap - 2 mt - 2'>;
                   <button;
@@ -529,9 +604,13 @@ if (return) {
                     Add Milestone;
                   </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
       <div className="grid md:grid-cols-3 gap-6">
@@ -560,9 +639,13 @@ if (return) {
 {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         <div>
           <div className="border rounded p-3">
@@ -591,15 +674,19 @@ if (return) {
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     <EnhancedLayout>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             )}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             )}
 
@@ -607,13 +694,19 @@ if (return) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     onClick={saveMilestones}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     onClick={saveMilestones}>;
                     Save Milestones;
@@ -655,17 +748,34 @@ if (return) {
         </div>;
       </div>;
     </EnhancedLayout>;
+<<<<<<< HEAD
   );
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 
 }
+<<<<<<< HEAD
 
 }
   );
 }
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -707,6 +817,7 @@ if (return) {
     </EnhancedLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
   );
 }
@@ -716,3 +827,6 @@ if (return) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

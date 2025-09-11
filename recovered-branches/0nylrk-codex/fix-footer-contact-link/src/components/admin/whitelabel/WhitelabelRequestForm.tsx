@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { useForm  } from 'react-hook-form';
 import { z  } from 'zod';
@@ -15,6 +18,7 @@ import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Form schema
 
+<<<<<<< HEAD
 const formSchema = z.object({
   brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
   subdomain: z.string()
@@ -57,16 +61,24 @@ export function WhitelabelRequestForm() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
       };
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -84,6 +96,7 @@ export function WhitelabelRequestForm() {
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -100,10 +113,13 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -111,6 +127,9 @@ import {supabase} from '@/integrations/supabase/client';
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -123,6 +142,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import { toast } from '@/hooks/use-toast',;
 import { supabase } from '@/integrations/supabase/client',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Form schema;
 const formSchema = z.object({;
@@ -139,6 +159,8 @@ const formSchema = z.object({;
   cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })}),;
 type FormValues = z.infer<typeof formSchema>,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Form schema;
 const formSchema = z && z.object({;
@@ -156,7 +178,10 @@ const formSchema = z && z.object({;
 
 type FormValues = z && z.infer<typeof formSchema>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function WhitelabelRequestForm() {;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
@@ -170,13 +195,18 @@ export function WhitelabelRequestForm() {;
       subtitle: 'Find the best AI talent',;
       cta: 'Get Started'}}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const onSubmit = async (values: FormValues) => {;
     try {;
       // Prepare the data;
       const tenantData = {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react',;
@@ -247,6 +277,8 @@ export function WhitelabelRequestForm() {;
           cta: values.cta}
       },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         brand_name: values && values.brand_name,;
         subdomain: values && values.subdomain,;
         custom_domain: values && values.custom_domain || null,;
@@ -258,12 +290,16 @@ export function WhitelabelRequestForm() {;
           cta: values && values.cta}
       };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
         .insert(tenantData);
         .select();
+<<<<<<< HEAD
 <<<<<<< HEAD
         .single(),;
       if (error) throw error,;
@@ -280,6 +316,32 @@ export function WhitelabelRequestForm() {;
     }
   },
 
+=======
+        .single();
+
+      if (error) throw error;
+
+      toast({;
+        title: 'White-label tenant created!',;
+        description: `${values && values.brand_name} has been set up with subdomain ${values && values.subdomain}`}),;
+
+      // Reset form;
+      form && form.reset();
+    } catch (error: any) {;
+      toast({;
+        variant: 'destructive',;
+        title: 'Error creating tenant',;
+        description: error && error.message || 'Something went wrong'});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader>
@@ -431,6 +493,7 @@ export function WhitelabelRequestForm() {;
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
 =======
         .single();
 
@@ -883,3 +946,8 @@ return (<Card className="w-full max-w-2xl" > <CardHeader> <CardTitle>Create Whit
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

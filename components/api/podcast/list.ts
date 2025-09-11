@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -91,14 +92,22 @@ function handler() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }));
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
     id: e.id;
     title: e.title;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ensureStorage(),
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes && episodes.map(e => ({
@@ -118,8 +127,11 @@ function handler() {
     audio: e && e.audio || {}}));
   return res && res.status(200).json({ episodes: simplified })
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
@@ -130,6 +142,7 @@ function ensureStorage() {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   ensureStorage();
 =======
 <<<<<<< HEAD
@@ -137,6 +150,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage()
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ensureStorage(),;
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map((e) => ({
@@ -147,10 +162,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ episodes: simplified })
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     invitee_name: e.invitee?.name || 'Guest';
     created_at: e.created_at;
     summary: e.best_quote || '',
@@ -158,6 +178,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status (200).json ({ episodes: simplified });
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
@@ -169,3 +190,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

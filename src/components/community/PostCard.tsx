@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import {formatDistanceToNow} from "date-fns"
 import Link from "next/link"
@@ -14,6 +15,8 @@ import { ForumPost } from "@/types/community"
 import { logInfo } from '@/utils/productionLogger'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -24,6 +27,7 @@ import { logInfo } from '@/utils/productionLogger';
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean
+<<<<<<< HEAD
 }
 
 import React from 'react',
@@ -131,6 +135,33 @@ export default PostCard;
       "transition-shadow hover: shadow-md",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+import React from 'react',
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link",
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { ForumPost } from "@/types/community",
+import { logInfo } from '@/utils/productionLogger',
+
+
+interface PostCardProps {
+  post: ForumPost
+  compact?: boolean
+}
+
+
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       "transition-shadow hover: shadow-md",
 import React from 'react';
@@ -157,6 +188,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
 export const PostCard = React.memo (PostCardComponent);
 PostCard.display_name = 'PostCard';
 export default PostCard;
+<<<<<<< HEAD
 
 import React from 'react',;
 import { formatDistanceToNow } from "date-fns",;
@@ -314,12 +346,18 @@ export default PostCard;
 '"
 export default PostCard;
 export default PostCard;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default PostCard;
 =======
 export default PostCard;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default PostCard;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

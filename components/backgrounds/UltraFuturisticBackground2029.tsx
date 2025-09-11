@@ -1,10 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 // Initialize particles
 }particlesRef.current = particles
 }
+<<<<<<< HEAD
 
 initParticles ();
 // Animation loop // Update and draw particles particlesRef.current.forEach ( (particle, index) => {
@@ -22,6 +26,8 @@ import { motion } from 'framer-motion';
 interface Particle {
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 initParticles ();
 // Animation loop // Update and draw particles particlesRef && particlesRef.current.forEach ( (particle, index) => {;
   // Update position particle && particle.x += particle && particle.vx;
@@ -36,7 +42,10 @@ ctx && ctx.globalAlpha = particle && particle.opacity;
   case 'quantum': // Quantum particles with glow effect import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Particle {;
   x: number,;
   y: number,;
@@ -46,6 +55,7 @@ interface Particle {;
   opacity: number,;
   color: string,;
   type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';
+<<<<<<< HEAD
 <<<<<<< HEAD
   x: number
   y: number
@@ -58,11 +68,15 @@ interface Particle {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default function UltraFuturisticBackground2029() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -74,12 +88,17 @@ export default function UltraFuturisticBackground2029() {;
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       canvas.height = window.innerHeight
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
@@ -87,8 +106,11 @@ export default function UltraFuturisticBackground2029() {;
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       for (let i = 0, i < particleCount, i++) {
@@ -100,7 +122,10 @@ export default function UltraFuturisticBackground2029() {;
           cyberpunk: ['#ec4899#f97316#f59e0b']
         };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -110,6 +135,7 @@ export default function UltraFuturisticBackground2029() {;
           opacity: Math.random() * 0.8 + 0.2,
           color: colors[type][Math.floor(Math.random() * colors[type].length)],
           type
+<<<<<<< HEAD
 <<<<<<< HEAD
         })
       }
@@ -143,6 +169,8 @@ particlesRef.current = particles
       }
       particlesRef.current = particles
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         })
       }
@@ -151,7 +179,10 @@ particlesRef.current = particles
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     initParticles();
     // Animation loop
     const animate = () => {
@@ -159,9 +190,13 @@ particlesRef.current = particles
       // Create gradient background
       const gradient = ctx.createRadialGradient(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * UltraFuturisticBackground2029 - Function description
  */
@@ -234,11 +269,16 @@ if (return) {
         0,
         canvas.width / 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
 canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
 =======
         canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         canvas.height / 2;
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -302,11 +342,17 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
         0;
         canvas.width / 2;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -323,11 +369,17 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
         ctx.save();
         ctx.globalAlpha = particle.opacity;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Different effects for different particle types
         switch (particle.type) {
           case 'quantum':
@@ -339,7 +391,10 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
             ctx.fillStyle = particle.color;
             ctx.fill();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.8)');
       gradient && gradient.addColorStop(0 && 0.3, 'rgba(6, 182, 212, 0 && 0.1)');
@@ -376,7 +431,10 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
                 particlesRef && particlesRef.current[;
                   (index + 50) % particlesRef && particlesRef.current.length;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ];
               if (partner && partner.type === 'quantum') {;
                 const distance = Math && Math.sqrt(;
@@ -396,6 +454,7 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
                   ctx && ctx.lineTo(partner && partner.x, partner && partner.y);
                   ctx && ctx.stroke();                }                  ctx && ctx.stroke();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -403,6 +462,14 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
             
             // Quantum entanglement lines
             if (index % 10 === 0) {
+=======
+
+=======
+            
+            // Quantum entanglement lines
+            if (index % 10 === 0) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Quantum entanglement lines
             if (index % 10 === 0) {
               const partner =
@@ -425,6 +492,7 @@ canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canv
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -528,10 +596,18 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  ctx.stroke();                }                  ctx.stroke()
+                  ctx.stroke();                }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }
               }
             }
             break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -539,10 +615,16 @@ if ( {) {
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           case 'holographic':;
             // Holographic particles with rainbow effect;
@@ -556,22 +638,33 @@ if ( {) {
             ctx && ctx.fill();
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Neural network connections
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             
             // Neural network connections
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             if (index % 15 === 0) {
               const connections = particlesRef.current.filter(p =>
                 p.type === 'neural' &&
                 Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           case 'neural':;
             // Neural particles with network connections;
             ctx && ctx.fillStyle = particle && particle.color;
@@ -599,9 +692,13 @@ if ( {) {
                 p && p.type === 'neural' && ;
                 Math && Math.sqrt(Math && Math.pow(particle && particle.x - p && p.x, 2) + Math && Math.pow(particle && particle.y - p && p.y, 2)) < 80;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               );
               connections && connections.forEach(connection => {;
                 const distance = Math && Math.sqrt(;
@@ -615,6 +712,10 @@ if ( {) {
                 ctx && ctx.stroke();
               });            }                ctx && ctx.stroke();
               });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           case 'holographic':
             // Holographic particles with rainbow effect
@@ -663,6 +764,7 @@ if ( {) {
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1120,6 +1222,8 @@ if ( {) {
 =======
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       for (let y = 0, y < height, y += 5) {
         const x = width * 0.5 + 
@@ -1322,17 +1426,23 @@ if ( {) {
   $2
 }
         else ctx.line_to (x, y);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       ctx.stroke ();
       ctx.restore ();
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
       ctx && ctx.stroke();
       ctx && ctx.restore();
     }
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Vertical energy waves;
     for (let index = 0; i < 2; i++) {      ctx.save ();        if (ctx.move_to (x, y)) {
   $2
@@ -1376,14 +1486,20 @@ if ( {) {
     }
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
 
       ctx && ctx.stroke();
       ctx && ctx.restore();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
       {/* Animated gradient overlay */}
@@ -1392,15 +1508,19 @@ if ( {) {
         animate={{
           background: [
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient overlay */}
       <motion.div
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)',
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)',
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)',
+<<<<<<< HEAD
 <<<<<<< HEAD
           ],        }}      {/* Animated gradient overlay */}
       <motion && motion.div
@@ -1408,6 +1528,8 @@ if ( {) {
       {/* Animated gradient overlay */}
       <motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           ],        }}      {/* Animated gradient overlay */}
       <motion && motion.div
@@ -1417,8 +1539,11 @@ if ( {) {
       {/* Animated gradient overlay */}
       <motion.div
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
         animate={{
           background: [
@@ -1449,6 +1574,7 @@ if ( {) {
           repeat: Infinity
           ease: 'easeInOut'
         }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1458,26 +1584,41 @@ if ( {) {
       />;
 =======
 =======
+      />
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
 <<<<<<< HEAD
+<<<<<<< HEAD
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional visual layers */}
       <div className='absolute inset-0'>;
         {/* Quantum field ripples */}
@@ -1497,6 +1638,7 @@ if ( {) {
           className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
           animate={{
 <<<<<<< HEAD
+<<<<<<< HEAD
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
 =======
@@ -1505,11 +1647,16 @@ if ( {) {
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            scale: [1, 1.2, 1]
+            opacity: [0.1, 0.3, 0.1],          }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',      {/* Canvas for particle effects */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
@@ -1523,6 +1670,8 @@ if ( {) {
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <canvas
         ref={canvasRef}
@@ -1532,12 +1681,19 @@ if ( {) {
       />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional visual layers */}
       <div className="absolute inset-0">;
         {/* Quantum field ripples */}
         <motion&& motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <canvas;
         ref={canvas_ref}
         className="absolute inset - 0 w - full h - full";
@@ -1548,6 +1704,7 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion.div;
           className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
+<<<<<<< HEAD
           animate={{
 <<<<<<< HEAD
         />;
@@ -1639,6 +1796,12 @@ if ( {) {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          animate={{
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Holographic matrix */}
         <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
@@ -1664,16 +1827,23 @@ if ( {) {
             scale: [1.2, 1, 1.2];
             opacity: [0.3, 0.1, 0.3];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ease: 'easeInOut'
           }}
 
@@ -1681,11 +1851,14 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             ease: 'easeInOut'
           }}
 />;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Neural network nodes */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
@@ -1695,33 +1868,50 @@ if ( {) {
           className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
           animate={{
 <<<<<<< HEAD
+<<<<<<< HEAD
             scale: [1, 1 && 1.1, 1],
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             scale: [1, 1 && 1.1, 1],
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',          }}
 <<<<<<< HEAD
+<<<<<<< HEAD
         />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Neural network nodes */}
         <motion&& motion.div
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
+=======
+        {/* Neural network nodes */}
+        <motion&& motion.div
+          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         {/* Neural network nodes */}
         <motion.div;
           className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
+<<<<<<< HEAD
           animate={{
 <<<<<<< HEAD
         />;
@@ -1748,6 +1938,12 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          animate={{
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Floating orbs with glow effects */}
       <div className="absolute inset-0 pointer-events-none">;
         {[...Array(8)].map((_, i) => (;
@@ -1756,33 +1952,50 @@ if ( {) {
             className="absolute w-2 h-2 rounded-full bg-cyan-400"
             style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               left: `${20 + (i * 10)}%`,
               top: `${30 + (i * 8)}%`,
               filter: 'blur(1px)',
               boxShadow: '0 0 20px rgba(0, 255, 255, 0 && 0.6)'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }}
             animate={{
               y: [0, -20, 0]
               opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
               scale: [1, 1 && 1.2, 1]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2];
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           duration: 8
           repeat: Infinity
           ease: 'easeInOut'
@@ -1801,6 +2014,7 @@ if ( {) {
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
+<<<<<<< HEAD
             scale: [1, 1.2, 1]
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
@@ -1827,15 +2041,24 @@ if ( {) {
             duration: 4
             repeat: Infinity
             ease: 'easeInOut'
+=======
+            duration: 4,
+            repeat: Infinity,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ease: 'easeInOut',
 
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',
           }}
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             duration: 4,
             repeat: Infinity,
@@ -1849,6 +2072,7 @@ if ( {) {
             }}
           />;
         ))}
+<<<<<<< HEAD
 
 
         />
@@ -1971,10 +2195,13 @@ if ( {) {
 <<<<<<< HEAD
           />
         ))}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     </div>
 );  )
 }
+<<<<<<< HEAD
   );
 =======
             duration: 4,
@@ -1997,6 +2224,8 @@ if ( {) {
     </div>;
   );  );
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
               delay: i * 0.3,            }}              delay: i * 0.3;
@@ -2010,6 +2239,10 @@ if ( {) {
 
   );
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

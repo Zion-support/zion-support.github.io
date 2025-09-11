@@ -1,12 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const now = Date && Date.now();
   const updated = writeState((state) => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
@@ -23,6 +28,11 @@ if (req && req.method !== "POST")
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const existingIdx = state && state.connections.findIndex(
       (c) => c && c.providerId === providerId,
+=======
+    const existingIdx = state && state.connections.findIndex(
+      (c) => c && c.providerId === providerId,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state  } from '../../../lib / integrations / file_store';
 import { getProviderById  } from '../../../lib / integrations / registry';
@@ -49,9 +59,13 @@ function handler() {
     const existing_idx = state.connections.find_index (
       (c) => c.provider_id === provider_id,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     const connection: ProviderConnection = {
       provider_id: provider_id as any,
@@ -63,9 +77,13 @@ function handler() {
       sync_rules: sync_rules || {},
       lastSyncAt: undefined,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       last_error: null,
     }
     // Check condition
@@ -76,9 +94,13 @@ if (state.connections[existing_idx] = connection) {
     state.logs.push ({
       id: `${now}-${provider_id}-connect`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       timestamp: now,
       provider_id: provider_id as any,
       level: "info",
@@ -87,16 +109,23 @@ if (state.connections[existing_idx] = connection) {
     });
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: 'Invalid providerId' })
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
@@ -119,6 +148,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!providerId |!getProviderById(providerId)) {
     return res.status(400).json({ error: "Invalid providerId" });
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const now = Date.now();
   const updated = writeState(state => {
@@ -129,13 +160,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       expiresAt: now + 1000 * 60 * 60, connectedAt: now,
       syncRules: syncRules || {},
       lastSyncAt: undefined,
+<<<<<<< HEAD
 lastError: null};
+=======
+      lastError: null};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 
 }
+<<<<<<< HEAD
   res.status (200).json ({
 res.status (200).json ({
     ok: true,
@@ -177,11 +213,14 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   const now = Date.now();
   const updated = writeState(state => {;
     const existingIdx = state.connections.findIndex(c => c.providerId === providerId);
@@ -213,9 +252,14 @@ export default function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

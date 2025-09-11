@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type Json =;
   | string;
   | number;
@@ -13,6 +14,9 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type Json =;
   | string;
   | number;
@@ -21,12 +25,16 @@ export type Json =;
   | { [key: string]: Json | undefined }
   | Json[];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type Database = {
   public: {
     Tables: {
       ai_chats: {
         Row: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       api_logs: {;
@@ -183,6 +191,8 @@ export type Database = {
       api_logs: {;
         Row: {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           created_at: string;
           id: string;
           message: string;
@@ -295,12 +305,54 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
+<<<<<<< HEAD
 
 
       api_logs: {;
         Row: {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      api_logs: {
+        Row: {
+          api_key_id: string | null
+          created_at: string
+          endpoint: string
+          id: string
+          ip_address: string | null
+          method: string
+          response_time_ms: number | null
+          status_code: number
+          user_agent: string | null
+          user_id: string | null
+        }
+        Insert: {
+          api_key_id?: string | null
+          created_at?: string
+          endpoint: string
+          id?: string
+          ip_address?: string | null
+          method: string
+          response_time_ms?: number | null
+          status_code: number
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          api_key_id?: string | null
+          created_at?: string
+          endpoint?: string
+          id?: string
+          ip_address?: string | null
+          method?: string
+          response_time_ms?: number | null
+          status_code?: number
+          user_agent?: string | null
+          user_id?: string | null
+      api_logs: {;
+        Row: {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           api_key_id: string | null;
           created_at: string;
           endpoint: string;
@@ -313,10 +365,14 @@ export type Database = {
           user_id: string | null;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         Insert: {;
 =======
         Insert: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        Insert: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -329,10 +385,14 @@ export type Database = {
           user_id?: string | null;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         Update: {;
 =======
         Update: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        Update: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           api_key_id?: string | null;
           created_at?: string;
           endpoint?: string;
@@ -344,6 +404,7 @@ export type Database = {
           user_agent?: string | null;
           user_id?: string | null;
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
         Relationships: [
           {
@@ -352,6 +413,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "api_keys"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -359,7 +422,10 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             foreignKeyName: "api_logs_api_key_id_fkey";
             columns: ["api_key_id"];
@@ -367,20 +433,27 @@ export type Database = {
             referenced_relation: "api_keys";
             referenced_columns: ["id"];
 <<<<<<< HEAD
+<<<<<<< HEAD
           }
 
             referencedColumns: ["id"]
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           }
 =======
 
             referencedColumns: ["id"]
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -672,6 +745,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
             referencedColumns: ["id"];
           };
@@ -969,11 +1043,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "fraud_flags_reviewed_by_fkey"
             columns: ["reviewed_by"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -996,6 +1073,10 @@ export type Database = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "fraud_flags_user_id_fkey";
             columns: ["user_id"];
@@ -1169,6 +1250,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -1345,11 +1427,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "job_applications_job_id_fkey"
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -1362,12 +1447,17 @@ export type Database = {
           },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1386,6 +1476,10 @@ export type Database = {
           },
 
 
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "job_applications_resume_id_fkey";
             columns: ["resume_id"];
@@ -1393,9 +1487,13 @@ export type Database = {
             referenced_relation: "talent_resumes";
             referenced_columns: ["id"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
           {
             foreignKeyName: "job_applications_talent_id_fkey";
@@ -1487,6 +1585,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -1580,11 +1679,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "milestone_activities_milestone_id_fkey"
             columns: ["milestone_id"]
             isOneToOne: false
             referencedRelation: "project_milestones"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -1607,6 +1709,10 @@ export type Database = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "milestone_activities_user_id_fkey";
             columns: ["user_id"];
@@ -1945,6 +2051,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -2286,11 +2393,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "profiles_id_fkey"
             columns: ["id"]
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -2313,6 +2423,10 @@ export type Database = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "profiles_tenant_id_fkey";
             columns: ["tenant_id"];
@@ -2363,6 +2477,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -2416,11 +2531,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "project_milestones_created_by_fkey"
             columns: ["created_by"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -2443,6 +2561,10 @@ export type Database = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "project_milestones_project_id_fkey";
             columns: ["project_id"];
@@ -2475,6 +2597,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -2510,11 +2633,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "project_notes_project_id_fkey"
             columns: ["project_id"]
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -2537,6 +2663,10 @@ export type Database = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "project_notes_user_id_fkey";
             columns: ["user_id"];
@@ -2587,6 +2717,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -2640,11 +2771,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "projects_client_id_fkey"
             columns: ["client_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -2657,12 +2791,17 @@ export type Database = {
           },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "projects_job_id_fkey"
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2681,6 +2820,10 @@ export type Database = {
           },
 
 
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "projects_job_id_fkey";
             columns: ["job_id"];
@@ -2688,9 +2831,13 @@ export type Database = {
             referenced_relation: "jobs";
             referenced_columns: ["id"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
           {
             foreignKeyName: "projects_talent_id_fkey";
@@ -2766,6 +2913,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -2843,11 +2991,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "quote_requests_requester_id_fkey"
             columns: ["requester_id"]
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -2870,6 +3021,10 @@ export type Database = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
             columns: ["talent_id"];
@@ -2878,6 +3033,7 @@ export type Database = {
             referenced_columns: ["id"];
           }];
       }
+<<<<<<< HEAD
 
 
       referral_codes: {;
@@ -2894,6 +3050,8 @@ export type Database = {
             referencedColumns: ["id"]
           }]
       }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       referral_codes: {
         Row: {
           code: string
@@ -2917,8 +3075,12 @@ export type Database = {
           user_id?: string
       referral_codes: {;
         Row: {;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           code: string;
           created_at: string;
           id: string;
@@ -2926,10 +3088,14 @@ export type Database = {
           user_id: string;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         Insert: {;
 =======
         Insert: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        Insert: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           code: string;
           created_at?: string;
           id?: string;
@@ -2937,15 +3103,20 @@ export type Database = {
           user_id: string;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         Update: {;
 =======
         Update: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        Update: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           code?: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
         Relationships: [
@@ -2996,6 +3167,8 @@ export type Database = {
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -3043,6 +3216,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -3054,12 +3228,22 @@ export type Database = {
           },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            foreignKeyName: "referral_rewards_partner_id_fkey"
+            columns: ["partner_id"]
+            isOneToOne: false
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -3078,6 +3262,10 @@ export type Database = {
           },
 
 
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "referral_rewards_referral_id_fkey";
             columns: ["referral_id"];
@@ -3085,9 +3273,13 @@ export type Database = {
             referenced_relation: "referrals";
             referenced_columns: ["id"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
           {
             foreignKeyName: "referral_rewards_user_id_fkey";
@@ -3148,6 +3340,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -3210,11 +3403,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "referrals_partner_id_fkey"
             columns: ["partner_id"]
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -3227,12 +3423,17 @@ export type Database = {
           },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "referrals_referral_code_fkey"
             columns: ["referral_code"]
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           },
@@ -3246,12 +3447,17 @@ export type Database = {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -3270,6 +3476,10 @@ export type Database = {
           },
 
 
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "referrals_referral_code_fkey";
             columns: ["referral_code"];
@@ -3284,9 +3494,13 @@ export type Database = {
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
           {
             foreignKeyName: "referrals_referrer_id_fkey";
@@ -3296,6 +3510,7 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
+<<<<<<< HEAD
 
 
       reminder_logs: {;
@@ -3312,6 +3527,8 @@ export type Database = {
             referencedColumns: ["user_id"]
           }]
       }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       reminder_logs: {
         Row: {
           clicked_at: string | null
@@ -3344,8 +3561,12 @@ export type Database = {
           user_id?: string
       reminder_logs: {;
         Row: {;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           clicked_at: string | null;
           email_body: string;
           email_subject: string;
@@ -3356,10 +3577,14 @@ export type Database = {
           user_id: string;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         Insert: {;
 =======
         Insert: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        Insert: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           clicked_at?: string | null;
           email_body: string;
           email_subject: string;
@@ -3370,10 +3595,14 @@ export type Database = {
           user_id: string;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         Update: {;
 =======
         Update: {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        Update: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           clicked_at?: string | null;
           email_body?: string;
           email_subject?: string;
@@ -3382,6 +3611,7 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
         Relationships: [
@@ -3459,12 +3689,95 @@ export type Database = {
           status?: string
         }
         Relationships: [
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "reminder_logs_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      resume_skills: {
+        Row: {
+          category: string | null;
+          created_at: string;
+          id: string;
+          name: string;
+          proficiency: number | null;
+          resume_id: string;
+          years_experience: number | null;
+        }
+        Insert: {
+          category?: string | null;
+          created_at?: string;
+          id?: string;
+          name: string;
+          proficiency?: number | null;
+          resume_id: string;
+          years_experience?: number | null;
+        }
+        Update: {
+          category?: string | null;
+          created_at?: string;
+          id?: string;
+          name?: string;
+          proficiency?: number | null;
+          resume_id?: string;
+          years_experience?: number | null;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "resume_skills_resume_id_fkey";
+            columns: ["resume_id"];
+            isOneToOne: false;
+            referenced_relation: "talent_resumes";
+            referenced_columns: ["id"];
+          }];
+      }
+      review_reports: {
+        Row: {
+          created_at: string;
+          id: string;
+          reason: string;
+          reporter_id: string;
+          resolved_at: string | null;
+          review_id: string;
+          status: string;
+        }
+        Insert: {
+          created_at?: string;
+          id?: string;
+          reason: string;
+          reporter_id: string;
+          resolved_at?: string | null;
+          review_id: string;
+          status?: string;
+        }
+        Update: {
+          created_at?: string;
+          id?: string;
+          reason?: string;
+          reporter_id?: string;
+          resolved_at?: string | null;
+          review_id?: string;
+          status?: string;
+        }
+        Relationships: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "review_reports_reporter_id_fkey"
             columns: ["reporter_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
 
             foreignKeyName: "review_reports_reporter_id_fkey";
             columns: ["reporter_id"];
@@ -3475,6 +3788,10 @@ export type Database = {
 
           },
 
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "review_reports_review_id_fkey";
             columns: ["review_id"];
@@ -3540,6 +3857,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
           }
           },
           {
@@ -3607,11 +3925,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "reviews_project_id_fkey"
             columns: ["project_id"]
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 
 
           },
@@ -3696,12 +4017,17 @@ export type Database = {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -3720,6 +4046,10 @@ export type Database = {
           },
 
 
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "reviews_reviewee_id_fkey";
             columns: ["reviewee_id"];
@@ -3727,9 +4057,13 @@ export type Database = {
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
           {
             foreignKeyName: "reviews_reviewer_id_fkey";
@@ -3879,6 +4213,7 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -4030,11 +4365,14 @@ export type Database = {
         }
         Relationships: [
           {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             foreignKeyName: "tenant_administrators_tenant_id_fkey"
             columns: ["tenant_id"]
             isOneToOne: false
             referencedRelation: "whitelabel_tenants"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -4047,6 +4385,10 @@ export type Database = {
 
           },
 
+=======
+          }
+          },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             foreignKeyName: "tenant_administrators_user_id_fkey";
             columns: ["user_id"];
@@ -4332,6 +4674,7 @@ export type Database = {
             referenced_relation: "talent_resumes";
             referenced_columns: ["id"];
           }];
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
           },
@@ -4622,11 +4965,14 @@ export type Database = {
           }]
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
     Views: {
       conversion_rates: {
         Row: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           conversion_count: number | null
@@ -4684,6 +5030,8 @@ export type Database = {
           onboarding_status: Json
         }[]
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           conversion_count: number | null;
           conversion_rate: number | null;
           conversion_type: string | null;
@@ -4725,17 +5073,37 @@ export type Database = {
         Relationships: [];
       }
     }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    Functions: {
+      check_users_needing_reminders: {
+        Args: Record<PropertyKey, never>
+        Returns: {
+          user_id: string
+          email: string
+          display_name: string
+          user_type: string
+          last_login: string
+          reminder_type: string
+          days_since_login: number
+          onboarding_status: Json
+        }[]
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     Functions: {;
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           user_id: string;
           email: string;
           display_name: string;
@@ -4746,7 +5114,10 @@ export type Database = {
           onboarding_status: Json;
         }[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -4766,14 +5137,24 @@ export type Database = {
         }
         Returns: string;
       }
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+      create_scheduled_reminders: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: undefined;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       flag_suspicious_content: {
         Args: {
@@ -4805,6 +5186,7 @@ export type Database = {
 
         Returns: string
       }
+<<<<<<< HEAD
 
       }
       complete_referral: {
@@ -4857,12 +5239,15 @@ export type Database = {
         Args: { key_prefix: string, provided_key: string }
         Returns: string
       }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       get_current_tenant_id: {
         Args: Record<PropertyKey, never>
         Returns: string
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
         Returns: string;
+<<<<<<< HEAD
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
         Returns: string;
@@ -4872,12 +5257,20 @@ export type Database = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       get_event_distribution: {
         Args: { days_back?: number }
         Returns: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           date: string;
           event_type: string;
           count: number;
@@ -4887,18 +5280,28 @@ export type Database = {
         Args: { api_key: string }
         Returns: string;
       }
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+      schedule_email_reminders: {
+        Args: Record<PropertyKey, never>
+        Returns: number
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: number;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -4914,6 +5317,7 @@ export type Database = {
       }
     }
     Enums: {
+<<<<<<< HEAD
 <<<<<<< HEAD
   | { [key:string]:Json | undefined }
   | Json[];
@@ -7185,6 +7589,8 @@ export type Database = {;
     Enums:{;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       api_key_scope:;
         | "jobs:read";
         | "jobs:write";
@@ -7192,10 +7598,14 @@ export type Database = {;
         | "quotes:write";
         | "webhooks:manage";
 <<<<<<< HEAD
+<<<<<<< HEAD
       fraud_severity:"safe" | "suspicious" | "dangerous";
 =======
       fraud_severity: "safe" | "suspicious" | "dangerous";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      fraud_severity: "safe" | "suspicious" | "dangerous";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       quote_request_status:;
         | "new";
         | "in_review";
@@ -7204,7 +7614,10 @@ export type Database = {;
         | "closed";
         | "archived";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       referral_status: "pending" | "completed" | "expired";
     }
     CompositeTypes: {
@@ -7213,6 +7626,7 @@ export type Database = {;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type DefaultSchema = Database[Extract < keyof Database, "public">];
 export type Tables<;
@@ -7318,6 +7732,16 @@ export type Tables<
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+type DefaultSchema = Database[Extract<keyof Database, "public">]
+export type Tables<
+  DefaultSchemaTableNameOrOptions extends
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database };
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -7337,14 +7761,19 @@ export type Tables<
         Row: infer R
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ? R
       : never
     : never
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -7355,6 +7784,10 @@ export type TablesInsert<
 export type TablesInsert<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
+=======
+    | keyof DefaultSchema["Tables"];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -7371,6 +7804,7 @@ export type TablesInsert<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I;
       }
+<<<<<<< HEAD
     | keyof DefaultSchema["Tables"];
     | { schema: keyof Database };
     | keyof DefaultSchema["Tables"]
@@ -7381,6 +7815,13 @@ export type TablesInsert<;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+    | keyof DefaultSchema["Tables"]
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -7396,14 +7837,19 @@ export type TablesInsert<;
         Insert: infer I
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ? I
       : never
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -7414,6 +7860,10 @@ export type TablesUpdate<
 export type TablesUpdate<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
+=======
+    | keyof DefaultSchema["Tables"];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -7430,6 +7880,7 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U;
       }
+<<<<<<< HEAD
     | keyof DefaultSchema["Tables"];
     | { schema: keyof Database };
     | keyof DefaultSchema["Tables"]
@@ -7440,6 +7891,13 @@ export type TablesUpdate<;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+    | keyof DefaultSchema["Tables"]
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -7455,14 +7913,19 @@ export type TablesUpdate<;
         Update: infer U
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ? U
       : never
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
+<<<<<<< HEAD
 <<<<<<< HEAD
     | keyof DefaultSchema["Enums"];
     | { schema: keyof Database };
@@ -7611,6 +8074,9 @@ export type TablesUpdate<;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ? U;
       : never;
     : never;
@@ -7618,9 +8084,13 @@ export type Enums<;
   DefaultSchemaEnumNameOrOptions extends;
     | keyof DefaultSchema["Enums"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database;
@@ -7628,6 +8098,7 @@ export type Enums<;
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never;
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+<<<<<<< HEAD
     | { schema: keyof Database },;
   EnumName extends DefaultSchemaEnumNameOrOptions extends {;
     schema: keyof Database;
@@ -7636,6 +8107,18 @@ export type Enums<;
     : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
 <<<<<<< HEAD
 =======
+=======
+
+
+    | keyof DefaultSchema["Enums"]
+
+
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
@@ -7644,7 +8127,10 @@ export type Enums<;
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
@@ -7653,9 +8139,13 @@ export type CompositeTypes<;
   PublicCompositeTypeNameOrOptions extends;
     | keyof DefaultSchema["CompositeTypes"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     | { schema: keyof Database }
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database;
@@ -7663,6 +8153,7 @@ export type CompositeTypes<;
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+<<<<<<< HEAD
     | { schema: keyof Database },;
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {;
     schema: keyof Database;
@@ -7671,21 +8162,40 @@ export type CompositeTypes<;
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 <<<<<<< HEAD
 =======
+=======
+
+
+    | keyof DefaultSchema["CompositeTypes"]
+
+
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
     : never;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const Constants = {
   public: {
     Enums: {
@@ -7703,21 +8213,28 @@ export const Constants = {
         "responded";
         "closed";
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 
 ;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const Constants = {
   public: {
     Enums: {
 
       api_key_scope: [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
@@ -7855,3 +8372,6 @@ export const Constants = {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -11,6 +11,7 @@ export type JobCategory =;
   | 'other';
 ;
 export interface JobBudget {
+<<<<<<< HEAD
   min: number;
   max: number,
   currency: string;
@@ -33,6 +34,9 @@ export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export type JobCategory = 
   | 'development' 
@@ -45,9 +49,13 @@ export type JobCategory =
 
 export interface JobBudget {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   min: number;
   max: number
   currency: string
@@ -57,12 +65,16 @@ export interface JobBudget {;
 export interface Job {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Job {
 
 export interface Job {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   client_id: string;
   title: string;
@@ -72,6 +84,7 @@ export interface Job {;
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+<<<<<<< HEAD
 
   created_at: string,
   updated_at: string;
@@ -93,10 +106,20 @@ export interface JobFormData {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export interface JobFormData {
+=======
+  created_at: string
+  updated_at: string
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title: string;
   description: string;
   category: JobCategory;
   skills: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   budgetMin: number;
   budgetMax: number
@@ -105,6 +128,8 @@ export interface JobFormData {;
 // Add JobMatch interface to be shared across components
 export interface JobMatch {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   budget_min: number;
   budget_max: number,
@@ -113,7 +138,10 @@ export interface JobMatch {;
 // Add JobMatch interface to be shared across components;
 
 export interface JobMatch {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   job_id: string;
   talent_id: string;
@@ -137,6 +165,7 @@ export interface JobMatch {
     location?: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export interface ResumeAttachment {;
@@ -150,6 +179,8 @@ export interface ResumeAttachment {
 
 export interface ResumeAttachment {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     category?: string,
     company_name?: string;
 
@@ -161,17 +192,23 @@ export interface ResumeAttachment {;
 export interface ResumeAttachment {;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 
 export interface JobApplication {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   summary?: string,
   skills?: string[];
@@ -181,11 +218,15 @@ export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' |
 
 export interface JobApplication {
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export interface JobApplication {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   summary?: string
   skills?: string[]
@@ -197,6 +238,9 @@ export interface JobApplication {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   job_id: string;
   talent_id: string;
@@ -214,12 +258,15 @@ export interface JobApplication {;
     professional_title: string;
     profile_picture_url?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     bio: string
     skills: string[]
   }
   resume?: ResumeAttachment;
   // New fields for resume scoring
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     bio: string,
     skills: string[];
@@ -227,12 +274,16 @@ export interface JobApplication {;
   }
   resume?: ResumeAttachment;
   // New fields for resume scoring;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   match_score?: number;
   match_summary?: string;
   match_breakdown?: {
     skills_match?: {
       score: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
       matching: string[],
 
@@ -255,13 +306,18 @@ export interface JobApplication {;
   notes?: string,  // New field for client notes
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       matching: string[],
 =======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -370,6 +426,7 @@ export interface JobApplication {;
       matching: string[],;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }
@@ -391,6 +448,8 @@ export interface JobApplication {;
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       missing: string[];
     }
     experience_match?: {
@@ -411,6 +470,9 @@ export interface JobApplication {;
 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

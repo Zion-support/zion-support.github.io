@@ -1,13 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Education  } from '@/types/resume';
@@ -18,15 +24,20 @@ import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
@@ -36,10 +47,15 @@ interface EducationListProps {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export function EducationList({
   educationEntries
@@ -48,7 +64,10 @@ export function EducationList({
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
@@ -64,6 +83,7 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
     return null;
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -72,6 +92,10 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
   return (
 
   return (
+=======
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Education</h3>;
       {educationEntries && educationEntries.map((edu) => (;
@@ -85,6 +109,11 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Education  } from '@/types / resume';
 import { EducationItem  } from './EducationItem';
 interface EducationListProps {
@@ -109,6 +138,7 @@ if ( {) {
         <EducationItem;
           key={edu.id}
           education={edu}
+<<<<<<< HEAD
 
 import { Education } from "@/types/resume";
 import { EducationItem } from "./EducationItem";
@@ -141,11 +171,14 @@ export function EducationList({
         />
       ))}
     </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           on_edit={on_edit}
           on_delete={on_delete}
         />))}
     </div>);
 }
+<<<<<<< HEAD
 
   )
 }
@@ -204,3 +237,13 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

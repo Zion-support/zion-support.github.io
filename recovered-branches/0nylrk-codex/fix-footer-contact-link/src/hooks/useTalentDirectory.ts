@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useAuthStatus} from "./talent/useAuthStatus";
 import {useTalentData} from "./talent/useTalentData";
 import {useFilterTalents} from "./talent/useFilterTalents";
@@ -43,6 +44,8 @@ export function useTalentDirectory() {
   } = useTalentData(),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
@@ -62,6 +65,7 @@ function useTalentDirectory() {
 ;
   // Fetch talent data;
   const {
+<<<<<<< HEAD
     talents,
     is_loading;
   } = useTalentData ();
@@ -135,6 +139,26 @@ function useTalentDirectory() {
 
 
 
+=======
+    talents
+    isLoading
+import { useFilterTalents } from "./talent/useFilterTalents",
+import { useUIState } from "./talent/useUIState",
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { 
+    isAuthenticated,
+    userDetails, 
+    savedTalents, 
+    handleToggleSave 
+  } = useAuthStatus(),
+
+  // Fetch talent data
+  const { 
+    talents, 
+    isLoading 
+  } = useTalentData(),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } = useTalentData();
   // Apply filters and sorting
@@ -155,6 +179,7 @@ function useTalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters
+<<<<<<< HEAD
 
   } = useFilterTalents(talents),
 
@@ -165,6 +190,11 @@ function useTalentDirectory() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  } = useFilterTalents(talents);
+  } = useFilterTalents(talents),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Manage UI state
   const {
     isMobileFilterOpen,
@@ -175,8 +205,11 @@ function useTalentDirectory() {
     setSelectedTalent,
     expandedSections,
     toggleSection
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } = useUIState();
   return {
     // Talents and loading state
@@ -207,8 +240,11 @@ function useTalentDirectory() {
     isAuthenticated;
     userDetails;
     savedTalents;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } = useUIState(),
 
   return {
@@ -245,6 +281,7 @@ function useTalentDirectory() {
     savedTalents,
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     expanded_sections;
 
 
@@ -260,6 +297,8 @@ function useTalentDirectory() {
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Actions
     toggleSkill;
     toggleAvailability;
@@ -273,7 +312,10 @@ function useTalentDirectory() {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -358,13 +400,18 @@ export function useTalentDirectory() {;
     toggleSection;
     handleToggleSave;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
 }
+<<<<<<< HEAD
 ;
     // Auth and user state;
     is_authenticated;
@@ -390,3 +437,7 @@ export function useTalentDirectory() {;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

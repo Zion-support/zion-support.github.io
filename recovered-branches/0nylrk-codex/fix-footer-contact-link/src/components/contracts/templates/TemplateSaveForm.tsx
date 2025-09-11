@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -18,6 +19,8 @@ import {Switch} from "@/components/ui/switch";
 }
 export function TemplateSaveForm(): any ({;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const formSchema = z && z.object({;
   title: z && z.string().min(1, "Title is required");
   isDefault: z && z.boolean().default(false)}),;
@@ -35,7 +38,10 @@ interface TemplateSaveFormProps {;
 
 export function TemplateSaveForm(): any ({;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onCancel;
   onComplete;
   editTemplate;
@@ -45,6 +51,7 @@ export function TemplateSaveForm(): any ({;
   const { createTemplate, updateTemplate } = useContractTemplates();
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
@@ -88,11 +95,16 @@ export function TemplateSaveForm({
           isDefault: values.isDefault})
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -107,10 +119,14 @@ import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -122,6 +138,7 @@ interface TemplateSaveFormProps {
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -218,6 +235,10 @@ export function TemplateSaveForm({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       onComplete()
     } finally {
@@ -230,11 +251,21 @@ export function TemplateSaveForm({;
     defaultValues: {;
       title: editTemplate?.title || "",;
       isDefault: editTemplate?.is_default || false}}),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const onSubmit = async (values: FormValues) => {;
     if (!currentValues && !editTemplate) {;
       return;
     }
+<<<<<<< HEAD
     setSaving(true);
+=======
+
+    setSaving(true);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       if (editTemplate) {;
         await updateTemplate && updateTemplate.mutateAsync({;
@@ -248,11 +279,16 @@ export function TemplateSaveForm({;
           templateData: currentValues,;
           isDefault: values && values.isDefault});
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       onComplete();
     } finally {;
       setSaving(false);
     }
   };
+<<<<<<< HEAD
 
   }
 
@@ -266,6 +302,15 @@ export function TemplateSaveForm({;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  },
+=======
+  };
+=======
+  },
+
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -281,7 +326,14 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
         />;
+=======
+
+        />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <FormField
           control={form && form.control}
           name="isDefault"
@@ -297,7 +349,13 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
         />;
+=======
+
+        />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="flex gap-2 justify-end">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
@@ -317,6 +375,11 @@ export function TemplateSaveForm({;
     </Form>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -395,6 +458,7 @@ if ( {) {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Template Name</FormLabel>;
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -473,10 +537,13 @@ export function TemplateSaveForm({;
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Template Name</FormLabel>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <FormControl>;
                 <Input {...field} placeholder="Enter template name" />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
             </FormItem>;          )}
         />;
         ;
@@ -590,3 +657,39 @@ try {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name="is_default";
+          render={({ field }) => (
+            <FormItem className="flex items - center justify - between">;
+              <FormLabel className="cursor - pointer">Set as default template</FormLabel>;
+              <FormControl>;
+                <Switch;
+                  checked={field.value}
+                  onCheckedChange={field.on_change}
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <div className="flex gap - 2 justify - end">;
+          <Button type="button" variant="outline" on_click={on_cancel}>;
+            Cancel;
+          </Button>;
+          <Button type="submit" disabled={saving}>;
+            {saving ? (
+              <>;
+                <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                Saving...;
+              </>) : (
+              `${edit_template ? "Update" : "Save"} Template`)}
+          </Button>;
+        </div>;
+      </form>;
+    </Form>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

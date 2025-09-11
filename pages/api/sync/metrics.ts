@@ -1,9 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
@@ -17,9 +22,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -36,6 +45,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const events = filterEventsByScope(state.events, state.config.scope),
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -81,6 +91,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const totalsByToken: Record<string, number> = {},
+  const contributionsBySubject: Record<string, number> = {},
+  let globalVotes = 0,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -89,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
+<<<<<<< HEAD
 <<<<<<< HEAD
       const p = e.payload as any
       const p = e.payload as any,
@@ -194,3 +210,12 @@ export default function handler(req, res) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+
+      const p = e.payload as any,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

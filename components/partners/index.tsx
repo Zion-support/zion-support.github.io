@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import Head from "next/head";
 import { useState } from 'react';
@@ -28,6 +29,11 @@ export default function Partners() {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: ''
     entityType: ''
     pocName: ''
@@ -44,11 +50,17 @@ export default function Partners() {
     setLoading(true);
     setResult(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -105,9 +117,13 @@ export default function Partners() {;
         pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },;
       }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     });
     const data = await res && res.json();
     setLoading(false);
@@ -167,15 +183,19 @@ export default function Partners() {;
             >              <option>Education Partnership</option>    const data = await res && res.json();
     setLoading(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
     setResult(data);
   }
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setResult(data);
 
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-50 text-gray-900">;
       <Head>;
@@ -502,12 +522,15 @@ function submit() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="mt-8 bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
 
@@ -518,10 +541,15 @@ function submit() {
         )}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -529,6 +557,8 @@ function submit() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
       <Head>;
         <title > Zion Partners</title>;
@@ -629,14 +659,20 @@ function submit() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
       </div>
@@ -656,3 +692,7 @@ function submit() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter } from 'next/router'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -34,6 +35,8 @@ interface PartnerProfile {
   onViewDetails, }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 onViewDetails, }
 
   )
@@ -41,6 +44,7 @@ onViewDetails, }
 
 
 
+<<<<<<< HEAD
   social_media?: Record<string, string>
   website?: string
   bio?: string
@@ -51,6 +55,8 @@ onViewDetails, }
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { use_router } from 'next / router';
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -64,6 +70,14 @@ import { toast  } from '@/hooks / use - toast';
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';
 import { logErrorToProduction } from '@/utils / production_logger';
 import { EmptyState  } from '@/components / ui / empty - state';
+<<<<<<< HEAD
+=======
+import { supabase } from "@/integrations/supabase/client",
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { EmptyState } from "@/components/ui/empty-state",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -72,6 +86,7 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
   social_media?: Record<string, string>
   website?: string
@@ -321,6 +336,8 @@ export default function PartnerManager() {;
     } finally {
       setIsLoading(false)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   social_media?: Record < string, string>;
   website?: string;
   bio?: string;
@@ -350,7 +367,10 @@ if ( {) {
 }
       router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners'));
       return;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   },
 
@@ -889,10 +909,15 @@ if ( {) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 interface PartnerTableProps {;
   partners: PartnerProfile[],;
@@ -1014,7 +1039,11 @@ function PartnerTable({;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

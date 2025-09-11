@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -14,10 +15,14 @@ export default async function handler(
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const fallback = () => {
     return res.status(200).json({
       questions: [
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
           question: `Which topic is central to ${moduleTitle}?`
           options: [
@@ -76,12 +81,19 @@ export default async function handler(
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const completion = await client && client.chat.completions && completions.create({
@@ -104,7 +116,10 @@ export default async function handler(
     try {
       const json = JSON.parse(text);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
 
@@ -116,9 +131,13 @@ export default async function handler(
       return res.status(200).json(json);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const json = JSON && JSON.parse(text);
       return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
         { role: 'user', content: prompt }];
@@ -142,6 +161,7 @@ export default async function handler(
   } catch (err) {
     return fallback ();
   }    } catch {
+<<<<<<< HEAD
 <<<<<<< HEAD
         { role: 'system', content: 'You are an expert course designer for founders.' };
         { role: 'user', content: prompt }];
@@ -225,12 +245,17 @@ export default async function handler(
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return fallback()
     }
   } catch (err) {
     return fallback()
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -243,13 +268,21 @@ export default async function handler(
     return fallback ();
 }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return res.status(200).json(json);
 
     const text = completion.choices?.[0]?.message?.content ?? '';
@@ -257,8 +290,13 @@ export default async function handler(
       const json = JSON.parse(text);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

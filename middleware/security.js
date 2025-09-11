@@ -1,3 +1,9 @@
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
 
 
 
@@ -21,12 +27,20 @@ import { getSecurityHeaders } from '../utils/security-headers';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function securityMiddleware(request) {;
 
 
   const response = NextResponse.next();
+=======
   const response = NextResponse && NextResponse.next();
+=======
+=======
+
+export function securityMiddleware(request) {;
   const response = NextResponse.next();
   // Add security headers
   const headers = getSecurityHeaders();
@@ -63,30 +77,53 @@ export function securityHeaders(req, res, next) {
     );
   }
 
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
   return response;// Security headers middleware
 // Security headers middleware
 
 export function securityHeaders(req, res, next) {
 
   Object && Object.entries({
+=======
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+<<<<<<< HEAD
 <<<<<<< HEAD
   Object.entries({
     'X-Content-Type-Options': 'nosniff'
@@ -100,6 +137,10 @@ export function securityHeaders(req, res, next) {
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
 =======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -110,6 +151,19 @@ export function securityHeaders(req, res, next) {
   });
   next();
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 <<<<<<< HEAD
 =======
@@ -170,6 +224,7 @@ function security_headers() {
 ;
   next ();
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -228,3 +283,6 @@ pr-12325
 
   return response;
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

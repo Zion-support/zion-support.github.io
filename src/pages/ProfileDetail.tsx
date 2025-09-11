@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -11,6 +14,7 @@ export default function ProfileDetail() {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type;
@@ -56,6 +60,10 @@ export default function ProfileDetail() {
 
   useEffect(() => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  useEffect(() => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const fetchProfile = async () => {
   useEffect((,) => {;
     const fetchProfile = async () => {;
@@ -77,12 +85,17 @@ export default function ProfileDetail() {
           return;
           setError("Profile ID is missing."),
           return
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
           .single();
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         }
 
@@ -103,10 +116,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          .single(),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (error) {
           throw new Error(error.message)
         }
         if (!data) {
+<<<<<<< HEAD
 <<<<<<< HEAD
           setError("Profile not found.");
           return;
@@ -129,14 +147,23 @@ ursor/fix-website-loading-errors-and-merge-6662
           return;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          setError("Profile not found.");
+          return;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setError("Profile not found."),
           return
 
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setProfileData(data)
       } catch (err: any) {
         setError(err.message |"Failed to fetch profile.")
@@ -144,6 +171,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           title: "Error"
           description: err.message |"Failed to fetch profile."
           variant: "destructive"})
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     fetchProfile()
@@ -157,6 +185,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   }, [profileId]);
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       } finally {
       } catch (err: any) {;
@@ -168,13 +198,19 @@ ursor/fix-website-loading-errors-and-merge-6662
       } finally {;
         setIsLoading(false);
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     fetchProfile()
 
   }, [profileId]);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
 
     fetchProfile()
@@ -201,6 +237,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p>Profile not found.</p>
       </div>
 
+<<<<<<< HEAD
   }, [profileId]);
 
     )
@@ -319,19 +356,30 @@ export default function ProfileDetail() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
         description = {profileData && profileData.bio || "Check out this talent's profile on Zion!",}
       />;
       <Header />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -351,6 +399,7 @@ export default function ProfileDetail() {;
                       {profileData.is_verified && (
                         <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </CardTitle>
                     <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
@@ -387,6 +436,8 @@ export default function ProfileDetail() {;
         title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
         description = {profileData && profileData.bio || "Check out this talent's profile on Zion!",}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </CardTitle>;
                     <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
 export default /**
@@ -479,6 +530,7 @@ if ( {) {
       <SEO;
         title={`${profile_data.full_name} | Zion AI Marketplace`}
         description = {profile_data.bio || "Check out this talent's profile on Zion!", }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <Header />;
@@ -539,16 +591,50 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      />;
+      <Header />;
+      <div className="container mx - auto px - 4 py - 8">;
+        <div className="grid grid - cols - 12 gap - 6">;
+          {/* Main Content */}
+          <div className="col - span - 12 lg:col - span - 8">;
+            {/* Profile Header */}
+            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
+              <CardHeader>;
+                <div className="flex items - center space - x-4">;
+                  <Avatar className="w - 20 h - 20">;
+                    {profile_data.profile_picture_url ? (
+                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name} />) : (
+                      <AvatarFallback>{profile_data.full_name?.char_at (0)}</AvatarFallback>)}
+                  </Avatar>;
+                  <div>;
+                    <CardTitle className="text - 2xl font - bold text - white flex items - center gap - 2">;
+                      {profile_data.full_name}
+                      {profile_data.is_verified && (
+                        <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />)}
+                    </CardTitle>;
+                    <CardDescription className="text - zion - cyan">{profile_data.professional_title}</CardDescription>;
+                  </div>;
+                </div>;
+              </CardHeader>;
+              <CardContent>;
+
+
+                </div>;
+              </CardContent>;
+            </Card>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
+                <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
               </CardContent>
             </Card>
-
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -556,26 +642,32 @@ if ( {) {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {profileData.skills?.map((skill, index) => (<Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>)) || <p className="text-zion-slate-light">No skills provided.</p>}
+                  {profileData.skills?.map((skill: string, index: number) => (
+                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>
+                  )) |<p className="text-zion-slate-light">No skills provided.</p>}
                 </div>
               </CardContent>
             </Card>
-
             {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>
               </CardHeader>
               <CardContent>
-                {profileData.experience ? (profileData.experience.map((exp, index) => (<div key={index} className="mb-4">
+                {profileData.experience ? (
+                  profileData.experience.map((exp: any, index: number) => (
+                    <div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
                       <p className="text-zion-cyan">{exp.company}</p>
-                      <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date || "Present"}</p>
+                      <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date |"Present"}</p>
                       <p className="text-zion-slate-light">{exp.description}</p>
-                    </div>))) : (<p className="text-zion-slate-light">No experience provided.</p>)}
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-zion-slate-light">No experience provided.</p>
+                )}
               </CardContent>
             </Card>
-
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -594,11 +686,15 @@ if ( {) {
                       >
                         <LinkIcon className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                         {link.title |link.url}
                       </a>
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </CardContent>;
             </Card>;
@@ -647,7 +743,10 @@ if ( {) {
 
                         {link.title || link.url}
                       </Link>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </div>
                 ) : (
@@ -676,22 +775,33 @@ if ( {) {
                         {link && link.title || link && link.url}
                       </a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         {link.title |link.url}
                       </a>
                         {link.title || link.url}
                       </Link>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </div>
                 ) : (
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </CardContent>
             </Card>
           </div>
 =======
+=======
+
+              </CardContent>;
+            </Card>;
+          </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </CardContent>;
             </Card>;
@@ -704,17 +814,24 @@ if ( {) {
             <HireNowCTA
               talentProfile={{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
 <<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
                 hourly_rate: profileData?.hourly_rate || 0,
@@ -723,22 +840,31 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
             />
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Contact</h3>
               <div className="flex flex-col space-y-3">
-                {profileData.email && (<div className="flex items-center gap-2 text-zion-slate-light">
-                    <Mail className="h-4 w-4"/>
-                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</a>
-                  </div>)}
-                {profileData.phone && (<div className="flex items-center gap-2 text-zion-slate-light">
-                    <Phone className="h-4 w-4"/>
+                {profileData.email && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Mail className="h-4 w-4" />
+                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</Link>
+                  </div>
+                )}
+                {profileData.phone && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Phone className="h-4 w-4" />
                     <span>{profileData.phone}</span>
-                  </div>)}
-                {profileData.website && (<div className="flex items-center gap-2 text-zion-slate-light">
-                    <Globe className="h-4 w-4"/>
+                  </div>
+                )}
+                {profileData.website && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Globe className="h-4 w-4" />
                     <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
                       Website
                     </Link>
@@ -746,8 +872,11 @@ if ( {) {
                 )}
               </div>
             </div>
+<<<<<<< HEAD
               </div>
             </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
 
@@ -758,6 +887,7 @@ if ( {) {
               <h3 className="text-xl font-bold mb-4">Social</h3>;
               <div className="flex flex-col space-y-3">;
                 {profileData && profileData.github_url && (;
+<<<<<<< HEAD
 
                     href = {profileData && profileData.github_url,}
 
@@ -766,29 +896,47 @@ if ( {) {
                     href={profileData.github_url}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <a
+
+                    href = {profileData && profileData.github_url,}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
                     href = {profileData && profileData.twitter_url,}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                    href = {profileData && profileData.twitter_url,}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     title="GitHub"
                   >
                     <Github className="h-4 w-4" />
                     GitHub
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>
                 )}
                 {profileData.twitter_url && (
                   <a
                     href = {profileData.twitter_url,}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Link>
                 )}
                 {profileData.twitter_url && (;
@@ -796,6 +944,7 @@ if ( {) {
                     href={profileData.twitter_url}
 
                     target="_blank"
+<<<<<<< HEAD
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
 <<<<<<< HEAD
@@ -804,19 +953,33 @@ if ( {) {
                     href = {profileData && profileData.linkedin_url,}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="Twitter"
+
+                    href = {profileData && profileData.linkedin_url,}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     title="Twitter"
                   >
                     <Twitter className="h-4 w-4" />
                     Twitter
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>
                 )}
                 {profileData.linkedin_url && (
                   <a
                     href = {profileData.linkedin_url,}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Link>
                 )}
                 {profileData.linkedin_url && (;
@@ -824,10 +987,16 @@ if ( {) {
                     href={profileData.linkedin_url}
 
                     target="_blank"
+<<<<<<< HEAD
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
 <<<<<<< HEAD
 =======
+=======
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="LinkedIn"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <div className="flex flex - wrap gap - 4 text - sm">;
                   {profile_data.location && (
@@ -984,11 +1153,15 @@ if ( {) {
                     LinkedIn;
                   </a>)}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     title="LinkedIn"
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </a>
 =======
@@ -1002,11 +1175,22 @@ if ( {) {
         </div>;
       </div>;
 
+=======
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 );
 }
 }, [profileId]);
 <p>Error: {error ;
 }</p> </div>) ;
+<<<<<<< HEAD
 
     </>);
 ;
@@ -1018,6 +1202,9 @@ if ( {) {
 }</p> </div>) ;
 }return (<> <SEO) : (<AvatarFallback> {
   profile_data.full name?.char_at (0) ;
+=======
+}return (<> <SEO) : (<AvatarFallback> {profileData.full name?.charAt (0) ;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</AvatarFallback>) ;
 }</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {profileData.hourly rate ";
 }<span className="text-zion-slate-light font-normal" >/hr</span> </div>) ";
@@ -1044,6 +1231,7 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
 }
@@ -1053,6 +1241,17 @@ if ( {) {
 }
 ;
 =======
+=======
+
+);
+}
+}, [profileId]);
+<p>Error: {error ;
+}</p> </div>) ;
+
+    </>);
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 }/> Website </Link> </div>) ;
@@ -1072,5 +1271,9 @@ if ( {) {
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,12 +1,24 @@
+<<<<<<< HEAD
+
+export default function SiteHealth() {
+
+=======
+import Head from 'next/head';
+
+export default function SiteHealth() {
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+
 
 export default function SiteHealth() {
 
 
-
-
-export default function SiteHealth() {
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -32,6 +44,7 @@ export default function SiteHealth() {
             <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -100,6 +113,8 @@ export default function SiteHealth() {
       </header>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="hidden gap-6 md:flex text-white/80">
             <Link href="/"><a>Home</a></Link>
             <Link href="/automation"><a>Automations</a></Link>
@@ -167,6 +182,7 @@ export default function SiteHealth() {
           </p>;
           <div className='mt-8 flex flex-wrap justify-center gap-3'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         </nav>
       </header>
       <main className='relative z-10'>
@@ -185,10 +201,14 @@ export default function SiteHealth() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <a
               href='/site-health'
               target='_blank'
               rel='noopener'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
             >
@@ -233,6 +253,8 @@ export default function SiteHealth() {
                     Open →
                   </div>                </a>                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>
         </nav>
@@ -266,23 +288,35 @@ export default function SiteHealth() {
               <Link key={card.title} href={card.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <h3 className="text-lg font-semibold">{card.title}</h3>
                   <p className="mt-1 text-sm text-white/75">{card.desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open →</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
                 </a>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                </a>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Link>
             ))}
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>;
               Live Pipelines;
@@ -338,7 +372,10 @@ export default function SiteHealth() {
           </h2>;
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <a
               href='/reports/seo/latest && latest.json'
               className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'>;
@@ -346,9 +383,13 @@ export default function SiteHealth() {
             </a>;
             <a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               href='/reports/seo/index && index.html'
               className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'>;
 import Head from 'next / head';
@@ -481,21 +522,31 @@ import Head from 'next / head';
               className='rounded - 2xl border border - white / 10 bg - white / 5 p - 5 backdrop - blur - xl hover:border - cyan - 400 / 30';
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               SEO Audit Dashboard →;
             </a>;
           </div>;
         </section>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Artifacts</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm: grid-cols-2">
@@ -504,6 +555,10 @@ import Head from 'next / head';
           </div>
         </section>
 <section className="mx-auto max-w-7xl px-6 pb-24">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Artifacts
@@ -553,15 +608,22 @@ import Head from 'next / head';
               <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <a href="/site-health" target="_blank" rel="noopener" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Pipelines</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </section>
       </main>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
@@ -601,11 +663,15 @@ import Head from 'next / head';
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </nav>
       </header>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -615,3 +681,6 @@ import Head from 'next / head';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

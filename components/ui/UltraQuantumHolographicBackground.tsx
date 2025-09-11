@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+useEffect ( () => {
+  const updateDimensions = () => {
+  setDimensions ({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   updateDimensions ();
 window && window.addEventListener ('resize', updateDimensions);
 setIsVisible (true);
@@ -25,10 +31,13 @@ canvas.height = dimensions.height;
 coordinate_y: number;
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
@@ -46,6 +55,7 @@ vy: number;
 size: number;
 color: string;
 life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -82,6 +92,8 @@ ctx.line_width = 0.5;
 ctx.global_alpha = alpha * 0.5;
 ctx.stroke_rect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
 break;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 constructor () {;
   // Bounce off edges if (this && this.x <= 0 || this && this.x >= dimensions && dimensions.width) this && this.vx *= -1;
@@ -103,6 +115,7 @@ break;
 case 'energy': // Energy field ;
 }ctx && ctx.restore () ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface UltraQuantumHolographicBackgroundProps {
@@ -117,6 +130,10 @@ interface UltraQuantumHolographicBackgroundProps {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function UltraQuantumHolographicBackground(): any ({;
   children,;
   intensity = 'high',;
@@ -126,12 +143,18 @@ export default function UltraQuantumHolographicBackground(): any ({;
   className = '',;
 }: UltraQuantumHolographicBackgroundProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   children,
   intensity = 'high',
@@ -142,12 +165,20 @@ export default function UltraQuantumHolographicBackground(): any ({;
 }: UltraQuantumHolographicBackgroundProps) {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
+export default function UltraQuantumHolographicBackground(): any ({;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 maxLife: number;
 type: 'quantum' | 'holographic' | 'energy' | 'matrix';
 constructor () {
@@ -170,6 +201,7 @@ break;
 case 'energy': // Energy field
 }ctx.restore ()
 export default function UltraQuantumHolographicBackground({
+<<<<<<< HEAD
   children
   intensity = 'high'
   colorScheme = 'quantum'
@@ -177,6 +209,8 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -191,6 +225,7 @@ export default function UltraQuantumHolographicBackground({;
   intensity = 'high';
   colorScheme = 'quantum';
   particleCount = 300;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),
   const [isVisible, setIsVisible] = useState(false);
@@ -430,6 +465,8 @@ const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       x: number;
       y: number;
       vx: number;
@@ -437,6 +474,7 @@ const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),;
       size: number;
       color: string;
       life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect__(() => {_const _updateDimensions = () => {
       setDimensions({
@@ -467,6 +505,8 @@ const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),;
       x: number,
       y: number,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       x: number,
       y: number,
@@ -474,13 +514,17 @@ const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),;
       max_life: number;
       type: 'quantum' | 'holographic' | 'energy' | 'matrix';      coordinate_x: number,
       coordinate_y: number,
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       vx: number,
       vy: number,
       size: number,
       color: string,
       life: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 max_life: number,
       type: 'quantum' | 'holographic' | 'energy' | 'matrix',
@@ -489,11 +533,17 @@ max_life: number,
       type: 'quantum' | 'holographic' | 'energy' | 'matrix',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      max_life: number,
+      type: 'quantum' | 'holographic' | 'energy' | 'matrix',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         this.color = [colors.primary, colors.secondary, colors.tertiary, colors.accent][Math.floor(Math.random() * 4)];
         this.life = Math.random() * 100;
         this.maxLife = 100;
         this.type = ['quantumholographicenergymatrix'][Math.floor(Math.random() * 4)] as any
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       maxLife: number;
       type: 'quantum' | 'holographic' | 'energy' | 'matrix';      x: number
@@ -528,6 +578,10 @@ max_life: number,
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -538,6 +592,7 @@ max_life: number,
         // Quantum tunneling effect
         if (Math.random() < 0.001 * intensityMultiplier) {
           this.x = Math.random() * dimensions.width;
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
 // Matrix rain effect
@@ -557,6 +612,8 @@ max_life: number,
         if (this.type === 'energy') {
           this.size = Math.sin(Date.now() * 0.01) * 2 + 3;          this.size = Math.sin(Date.now() * 0.01) * 2 + 3
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           this.y = Math.random() * dimensions.height
         }
@@ -570,7 +627,10 @@ max_life: number,
         if (this.type === 'energy') {
           this.size = Math.sin(Date.now() * 0.01) * 2 + 3
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         // Matrix rain effect
         if (this.type === 'matrix') {
@@ -578,11 +638,16 @@ max_life: number,
           if (this.y > dimensions.height) {
             this.y = -10;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             this.vy = Math.random() * 2 + 1
 
           }
         }
       }
+<<<<<<< HEAD
 
             this.vy = Math.random() * 2 + 1;          }
 
@@ -605,22 +670,30 @@ draw() {
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
             this.vy = Math.random() * 2 + 1;          }
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       draw() {
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
@@ -634,6 +707,7 @@ draw() {
             ctx.fillStyle = this.color;
             ctx.fill();
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Wave function rings
             for (let i = 1; i <= 3; i++) {              ctx.beginPath();
 =======
@@ -641,6 +715,11 @@ draw() {
             
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Wave function rings
             for (let i = 1, i <= 3, i++) {
               ctx.beginPath();
@@ -649,12 +728,18 @@ draw() {
               ctx.lineWidth = 0.5;
               ctx.globalAlpha = alpha * (0.3 / i);
 <<<<<<< HEAD
+<<<<<<< HEAD
               ctx.stroke();            }              ctx.stroke()
 =======
 
               ctx.stroke()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              ctx.stroke()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
             break;
           case 'holographic':
@@ -667,15 +752,22 @@ draw() {
             ctx.fillStyle = this.color;
             ctx.fill();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Holographic grid
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 0.5;
             ctx.globalAlpha = alpha * 0.5;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ctx.strokeRect(
               this.x - this.size
@@ -697,6 +789,8 @@ draw() {
               this.size
             );            gradient.addColorStop(0, this.color);            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             ctx.strokeRect(this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
 
@@ -706,7 +800,10 @@ draw() {
 
             const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
@@ -719,6 +816,7 @@ draw() {
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;
             ctx.fillText('01', this.x, this.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
             break
             break;
@@ -769,6 +867,8 @@ draw() {
         if (particle.life <= 0) {
           particles[index] = new Particle();        }          particles[index] = new Particle()
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       type: 'quantum' | 'holographic' | 'energy' | 'matrix';      x: number,;
       y: number,;
@@ -912,6 +1012,7 @@ draw() {
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Create particles;
     const particles: Particle[] = [];
 
@@ -921,6 +1022,8 @@ draw() {
         dimensions && dimensions.height / 2;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         dimensions.width / 2;
         dimensions.height / 2;
         0;
@@ -930,13 +1033,17 @@ draw() {
 
           particles[index] = new Particle()
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       });
       // Draw quantum entanglement lines
       ctx.strokeStyle = colors.primary;
       ctx.lineWidth = 0.5;
       ctx.globalAlpha = 0.3;
+<<<<<<< HEAD
 <<<<<<< HEAD
       for (let i = 0; i < particles.length; i += 10) {
         for (let j = i + 10; j < particles.length; j += 10) {
@@ -948,11 +1055,17 @@ draw() {
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       for (let i = 0, i < particles.length, i += 10) {
         for (let j = i + 10, j < particles.length, j += 10) {
           const p1 = particles[i];
           const p2 = particles[j];
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+<<<<<<< HEAD
 <<<<<<< HEAD
             ctx.stroke()
 
@@ -977,6 +1090,8 @@ draw() {
       }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           
           if (distance < 100 && p1.life > 0 && p2.life > 0) {
@@ -992,22 +1107,31 @@ draw() {
 
             ctx.stroke();          }
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       }
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
       ctx.globalAlpha = 0.2;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       gradient && gradient.addColorStop(0, colors && colors.background);
       gradient && gradient.addColorStop(1, colors && colors.overlay);
@@ -1049,7 +1173,10 @@ draw() {
       ctx && ctx.globalAlpha = 0 && 0.2;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const gridSize = 50;
       for (let x = 0; x < dimensions && dimensions.width; x += gridSize) {;
         ctx && ctx.beginPath();
@@ -1077,7 +1204,10 @@ draw() {
         ctx && ctx.stroke();
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       animationId = requestAnimationFrame(animate);
@@ -1087,11 +1217,15 @@ draw() {
     };  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);        cancelAnimationFrame(animationId);
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return () => {
       if (animationId) {
         cancelAnimationFrame(animationId)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       animationId = requestAnimationFrame(animate);
       const gridSize = 50;
@@ -1132,6 +1266,8 @@ draw() {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
@@ -1140,6 +1276,7 @@ draw() {
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
@@ -1193,15 +1330,23 @@ draw() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ],          }}
           transition={{
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',          }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="fixed inset-0 z-10 pointer-events-none">
         {/* Quantum Field Lines */}
         <motion.div
@@ -1210,27 +1355,40 @@ draw() {
             background: [
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
             ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
 ease: "easeInOut"
 =======
             ease: "easeInOut"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            ease: "easeInOut"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
         />
         />;
@@ -1246,6 +1404,7 @@ ease: "easeInOut"
           }}
         />;
         {/* Holographic Scan Lines */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
         {/* Holographic Scan Lines */}              `radial - gradient (circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`;
@@ -1276,6 +1435,8 @@ ease: "easeInOut"
                 }}
                 transition={{
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 key={i}
@@ -1294,7 +1455,10 @@ ease: "easeInOut"
                 }}
                 transition={{
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   duration: 2,
                   delay: i * 0 && 0.1,
                   repeat: Infinity,
@@ -1304,23 +1468,34 @@ ease: "easeInOut"
             );
           )}        </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Quantum Fluctuations */}
         <motion && motion.div        <div className="absolute inset-0 opacity-20">;
           {Array && Array.from({ length: Math && Math.ceil(dimensions && dimensions.height / 4) }).map((_, i) => (;
             <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="absolute inset-0 opacity-20">
           {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (
             <motion.div
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="absolute inset-0 opacity-20">
           {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (
@@ -1328,11 +1503,15 @@ ease: "easeInOut"
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />))}        </div>;
         {/* Quantum Fluctuations */}
         <motion.div        <div className="absolute inset - 0 opacity - 20">;
           {Array.from ({ length: Math.ceil (dimensions.height / 4) }).map ((_, i) => (
             <motion.div;
+<<<<<<< HEAD
 <<<<<<< HEAD
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
@@ -1342,6 +1521,9 @@ ease: "easeInOut"
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
@@ -1349,7 +1531,10 @@ ease: "easeInOut"
                 top: i * 4,
                 color: colors && colors.primary
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               animate={{
                 opacity: [0, 1, 0]
@@ -1360,6 +1545,7 @@ ease: "easeInOut"
               animate={{
                 opacity: [0, 1, 0];
                 scale_x: [0, 1, 0];
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
       </div>;
@@ -1422,6 +1608,8 @@ ease: "easeInOut"
               `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
               `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
@@ -1430,7 +1618,10 @@ ease: "easeInOut"
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
 
 
@@ -1447,12 +1638,16 @@ ease: "easeInOut"
       {/* Content Layer */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ],          }}
           transition={{
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
       </div>;
@@ -1474,6 +1669,8 @@ ease: "easeInOut"
           }}
           transition={{
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -1485,7 +1682,10 @@ ease: "easeInOut"
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
       </div>
     </div>
@@ -1499,6 +1699,7 @@ ease: "easeInOut"
             ease: 'easeInOut',            ease: "easeInOut"
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -1523,3 +1724,7 @@ ease: "easeInOut"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EnterpriseItService2029 {
 export interface EnterpriseItService2029 {;
   id: string;
@@ -17,11 +18,15 @@ export interface EnterpriseItService2029 {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -57,6 +62,9 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -67,6 +75,7 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [;
     address: string
   }
 }
+<<<<<<< HEAD
 export const enterpriseITServices2029: EnterpriseItService2029[] = [
   {
     id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
@@ -99,6 +108,12 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [
   }
 ];
 ;
+=======
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [
+  {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "2029-enterprise-it",
     name: "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029",
@@ -117,6 +132,7 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -126,6 +142,10 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

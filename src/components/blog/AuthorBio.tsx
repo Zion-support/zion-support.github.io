@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
@@ -43,11 +44,14 @@ export function AuthorBio({ author }: AuthorBioProps) {
       <img
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <img
         src={author.avatarUrl}
         alt={author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
           const target = e.currentTarget as HTMLImageElement
           target.src = '/images/blog-placeholder.svg'
@@ -76,31 +80,43 @@ export function AuthorBio({ author }: AuthorBioProps) {
         onError={(e) => {
           const target = e.currentTarget as HTMLImageElement,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           const target = e.currentTarget as HTMLImageElement,
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         <p className="font-medium text-lg">{author.name}</p>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
         <p>{author.bio}</p>
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }/> <div> <p className="font-medium text-lg" > {
   author.name
@@ -115,6 +131,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 interface AuthorBioProps {;
@@ -161,6 +180,7 @@ export function AuthorBio({ author }: AuthorBioProps) {;
           const target = e.currentTarget as HTMLImageElement;
           target.src = '/images/blog-placeholder.svg';
         }}
+<<<<<<< HEAD
 import React from 'react';
 import type { BlogAuthor } from '@/types / blog';
 interface AuthorBioProps {
@@ -214,6 +234,8 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
         onError={e => {;
           const target = e && e.currentTarget as HTMLImageElement;
           target && target.src = '/images/blog-placeholder && placeholder.svg';        }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <div>;
         <p className='font-medium text-lg'>{author && author.name}</p>;
@@ -241,6 +263,11 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   return (
     <div className='mt - 12 flex flex - col md:flex - row bg - zion - blue - light dark:bg - zion - blue - dark border border - zion - blue rounded - lg p - 6'>;
@@ -285,6 +312,7 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
   author.bio;
 }</p>;
 }'"}
+<<<<<<< HEAD
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 ;
@@ -320,3 +348,7 @@ export function AuthorBio({ author } AuthorBioProps) {;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -47,6 +48,10 @@ export default function CloudflareWorkersEdgeConfigPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-700 text-white">Start from $99/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </div>
@@ -61,6 +66,7 @@ export default function CloudflareWorkersEdgeConfigPage(req, res) {
   return (;
     <Layout>;
       <Head>;
+<<<<<<< HEAD
         <title>Cloudflare Workers Edge Config Manager | Zion Tech Group</title>;
         <meta name="description" content="Safe, versioned edge configuration for Cloudflare Workers/KV with previews, rollbacks, and audit logs." />;
         <link rel="canonical" href="https://ziontechgroup.com/cloudflare-workers-edge-config" />;
@@ -68,12 +74,17 @@ export default function CloudflareWorkersEdgeConfigPage(req, res) {
 =======
     <Layout>;
       <Head>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <title > Cloudflare Workers Edge Config Manager | Zion Tech Group</title>;
         <meta name="description" content="Safe, versioned edge configuration for Cloudflare Workers / KV with previews, rollbacks, and audit logs." />;
         <link rel="canonical" href="https://ziontechgroup.com / cloudflare - workers - edge - config" />;
       </Head>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">Cloudflare Workers Edge Config</h1>;
@@ -87,6 +98,7 @@ export default function CloudflareWorkersEdgeConfigPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
           <div className="flex gap-3">;
@@ -109,3 +121,8 @@ export default function CloudflareWorkersEdgeConfigPage(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

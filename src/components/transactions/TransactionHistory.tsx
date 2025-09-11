@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useCurrency } from '@/hooks/useCurrency'
 import {logErrorToProduction} from '@/utils/productionLogger'
 import { useCurrency } from '@/hooks/useCurrency'
@@ -40,6 +41,8 @@ interface Transaction {
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * TransactionHistory - Function description
  */
@@ -58,6 +61,7 @@ function TransactionHistory() {
 if (return []) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function TransactionHistory() {
   const { user } = useAuth();
@@ -577,6 +581,8 @@ export function TransactionHistory() {;
               const canRefund = isClient && transaction.status === 'released';
               const counterpartyName = isClient;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           provider:profiles ! provider_id (display_name);
       query = query.order ('created_at', { ascending: false }),
     },
@@ -587,6 +593,7 @@ export function TransactionHistory() {;
               const can_cancel = is_client && is_pending;
               const can_refund = is_client && transaction.status === 'released';
               const counterparty_name = is_client;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
@@ -701,3 +708,10 @@ export function TransactionHistory() {;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                ? transaction.provider?.display_name || 'Service Provider';
+                : 'Client';
+}
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

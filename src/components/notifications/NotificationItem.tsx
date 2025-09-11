@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -21,6 +22,8 @@ import { Notification, NotificationType } from '@/context/notifications'
       className={cn(;
                   onMarkAsRead(notification.id); import React from 'react'
 import React from 'react',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -106,6 +109,7 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-orange-500">📦</span>,
     default:
       return <span className="text-gray-500">📣</span>
+<<<<<<< HEAD
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
@@ -169,6 +173,8 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-orange-500">📦</span>,
     default:
       return <span className="text-gray-500">📣</span>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
@@ -196,6 +202,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 
 
+<<<<<<< HEAD
 }
 interface NotificationItemProps {
   notification: Notification
@@ -218,16 +225,28 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   }
   },
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   return (;
     <div;
       className={cn(;
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -290,13 +309,27 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
               >
                 onClick={handleClick}
               >;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
             )}
+<<<<<<< HEAD
           </div>
         </div>
       </div>
+=======
+
+          </div>;
+        </div>;
+      </div>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Action buttons that appear on hover */}
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
         <TooltipProvider>
@@ -306,12 +339,21 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
+<<<<<<< HEAD
                 onClick={(e,) => {
                   e.stopPropagation()
                 onClick={(e) => {
                 onClick={(e) => {
                 onClick={(e) => {
                   e.stopPropagation(),
+=======
+
+
+                onClick={(e) => {
+                onClick={(e) => {
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
@@ -350,12 +392,21 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
+<<<<<<< HEAD
                 onClick={(e,) => {
                   e.stopPropagation()
                 onClick={(e) => {
                 onClick={(e) => {
                 onClick={(e) => {
                   e.stopPropagation(),
+=======
+
+
+                onClick={(e) => {
+                onClick={(e) => {
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   e.stopPropagation(),
                   onDismiss(notification.id)
                 }}
@@ -580,7 +631,21 @@ if ( {) {
           </Tooltip>;
         </TooltipProvider>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
 };
   )
+=======
+
+
+
+
+    </div>);
+},
+;
+
+      </div>
+    </div>
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

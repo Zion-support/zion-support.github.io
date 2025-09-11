@@ -1,14 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
 
@@ -18,6 +25,7 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -29,6 +37,8 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export async function createNotification({;
   userId;
   title;
@@ -37,8 +47,11 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export async function createNotification({
   userId,
   title,
@@ -48,6 +61,9 @@ export async function createNotification({
   sendEmail = false,
   actionUrl = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   actionText = null
 }: {
   userId: string;
@@ -57,12 +73,15 @@ export async function createNotification({
   relatedId?: string | null;
   sendEmail?: boolean;
   actionUrl?: string | null
+<<<<<<< HEAD
 =======
 
   actionText = null
 }: {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   userId: string,
   title: string,
   message: string,
@@ -70,6 +89,7 @@ export async function createNotification({
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
+<<<<<<< HEAD
 <<<<<<< HEAD
   actionText?: string | null
 }) {
@@ -88,6 +108,8 @@ export async function createNotification({
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   actionText?: string | null
 }) {
   void actionUrl;
@@ -96,8 +118,18 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      _user_id: userId;
+      _title: title;
+      _message: message;
+      _type: type
+      _related_id: relatedId
+    });
+    if (error) throw error;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       _user_id: userId,
       _title: title,
       _message: message,
@@ -108,17 +140,23 @@ export async function createNotification({
     if (error) throw error,
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
@@ -160,15 +198,22 @@ export async function createNotification({;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -197,6 +242,22 @@ success: talentNotification && talentNotification.success && adminNotification &
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+      talentNotification,
+
+      adminNotification
+=======
+
+  } catch (error) {;
+    console.error('Error creating notification:', error),;
+=======
+=======
+  } catch (error) {;
+    console.error('Error creating notification:', error),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return { success: false, error }
   }
 }
@@ -205,11 +266,15 @@ success: talentNotification && talentNotification.success && adminNotification &
  * Creates a hire request notification for admin and talent
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export async function createHireRequestNotifications({;
   talentId;
   adminId;
   requesterName;
 export async function createHireRequestNotifications({
+<<<<<<< HEAD
   talentId;
   adminId;
   requesterName;
@@ -375,6 +440,16 @@ export async function createHireRequestNotifications({
   }
   return {
     success: talentNotification && talentNotification.success,
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+  return {
+
+    success: talentNotification && talentNotification.success,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     talentNotification
   }
 }
@@ -387,6 +462,7 @@ export async function createHireRequestNotifications({
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -402,6 +478,8 @@ export async function createOnboardingNotification({
 export async function createOnboardingNotification({;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   userId;
   missingMilestone;
   userRole
@@ -418,7 +496,10 @@ export async function createOnboardingNotification({;
     switch (missingMilestone) {
       case 'profile_completed':
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { supabase } from '@/integrations / supabase / client';
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
@@ -576,7 +657,10 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return create_notification ({
     user_id;
     title;
@@ -609,6 +693,7 @@ function createSystemNotification() {
 */;
 export async /**
  * createTestNotification - Function description
+<<<<<<< HEAD
 <<<<<<< HEAD
  */
 function createTestNotification() {
@@ -699,6 +784,8 @@ export async function createTestNotification(userId: string) {;
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
   const randomType = types[Math.floor(Math.random() * types.length)]
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
  */
 function createTestNotification() {
@@ -707,17 +794,29 @@ function createTestNotification() {
   const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
   
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
   };
+=======
+
+    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
+  };
+  
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const random_type = types[Math.floor (Math.random () * types.length)],
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
@@ -728,11 +827,15 @@ function createTestNotification() {
   }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
   }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -745,10 +848,15 @@ function createTestNotification() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   return create_notification ({
     user_id;
@@ -759,6 +867,7 @@ function createTestNotification() {
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -966,6 +1075,9 @@ export async function createOnboardingNotification({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 /**;
@@ -985,6 +1097,7 @@ export async function createSystemNotification({;
   actionUrl?: string | null,;
   actionText?: string | null,;
   sendEmail?: boolean;
+<<<<<<< HEAD
 } {;
   userId:string,;
   title:string,;
@@ -992,6 +1105,8 @@ export async function createSystemNotification({;
   actionUrl?:string | null,;
   actionText?:string | null,;
   sendEmail?:boolean;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }) {;
   return createNotification({;
     userId,;
@@ -1002,11 +1117,14 @@ export async function createSystemNotification({;
     actionUrl,;
     actionText;
   });
+<<<<<<< HEAD
     type:'system',;
     sendEmail,;
     actionUrl,;
     actionText;
   }),;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 /**;
@@ -1039,13 +1157,18 @@ export async function createTestNotification(userId: string) {;
     actionText: actions[randomType].text;
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export async function createTestNotification(userId:string) {;
   const types:NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;
@@ -1152,3 +1275,5 @@ case 'talent invited':
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

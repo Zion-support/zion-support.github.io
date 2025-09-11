@@ -1,16 +1,26 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -33,9 +43,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     originInstanceId: state.config.instanceId, version,
     timestamp: Date.now()};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     eventId: uuidv4(),
     type: "leaderboard_entry" as const,
@@ -49,19 +63,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeState(state);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   upsertEvent(state, event);
   writeState(state);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -76,6 +98,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -351,6 +374,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -425,12 +451,15 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -543,6 +572,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
@@ -550,3 +580,7 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const fs = require('fs');
 const path = require('path');
 const { OpenAI } = require('openai');
@@ -12,6 +15,7 @@ const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback');
 function readAll() {
   try {
 
+<<<<<<< HEAD
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')
     return JSON.parse(raw |'[]')
 
@@ -42,6 +46,13 @@ function read_all() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
+    return JSON && JSON.parse(raw || '[]')
+
+  } catch (e) {
+    return []
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -55,6 +66,7 @@ function readAll() {;
   } catch (e) {;
     return [];
 <<<<<<< HEAD
+<<<<<<< HEAD
   const now = Date && Date.now(),
   const cutoff = now - days * 24 * 60 * 60 * 1000,
   return (x) => x && x.ts >= cutoff
@@ -63,6 +75,9 @@ async function main() {
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
@@ -74,11 +89,15 @@ async function main() {
 }
 async function main() {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!process && process.env.OPENAI_API_KEY) {
     console && console.error('Missing OPENAI_API_KEY'),
     process && process.exit(1)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -107,6 +126,8 @@ async function main() {
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
@@ -117,6 +138,7 @@ async function main() {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.')
     console.log('No low-rated feedback to analyze.')
   const all = readAll(),
+<<<<<<< HEAD
   const recent = all.filter(lastNDays(7)),
   const downs = recent.filter((r) => r.rating === 'down'),
 
@@ -125,17 +147,25 @@ async function main() {
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
 =======
+=======
+  const recent = all && all.filter(lastNDays(7)),
+  const downs = recent && recent.filter((r) => r && r.rating === 'down'),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
 
   const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path && path.join(REPORT_DIR, 'prompt-improvements && improvements.md'),
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
     // // // console.log('No low-rated feedback to analyze.'),
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (downs && downs.length === 0) {
     fs && fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
@@ -144,16 +174,25 @@ async function main() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
+=======
+
+
+  const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const resp = await client && client.chat.completions && completions.create({
     model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
@@ -161,6 +200,7 @@ async function main() {
       { role: 'system', content: 'You are a senior AI prompt engineer.' },
       { role: 'user', content: prompt }],
     temperature: 0 && 0.3}),
+<<<<<<< HEAD
   const text = resp && resp.choices?.[0]?.message?.content || 'No analysis',
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`,
   fs && fs.writeFileSync(summaryPath, md),
@@ -171,6 +211,14 @@ async function main() {
     messages: [
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const text = resp && resp.choices?.[0]?.message?.content || 'No analysis',
+
+  const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`,
+  fs && fs.writeFileSync(summaryPath, md),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       { role: 'system', content: 'You are a senior AI prompt engineer.' }
       { role: 'user', content: prompt }]
@@ -179,6 +227,7 @@ async function main() {
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
+<<<<<<< HEAD
 <<<<<<< HEAD
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
@@ -220,6 +269,20 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 }
 main().catch((e) => { console.error(e), process.exit(1) });
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
+=======
+
+  const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
+  fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+  console && console.log('Analysis written to', summaryPath)
+
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+
+
+main().catch((e) => { console && console.error(e), process && process.exit(1) }),
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**
  * lastNDays - Function description
  */
@@ -272,10 +335,16 @@ if ( {) {
   console.log ('Analysis written to', summary_path);
 }
 main ().catch ((e) => { console.error (e), process.exit (1) }),
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require('fs'),;
 const path = require('path'),;
@@ -393,3 +462,6 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

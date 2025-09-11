@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { GrantApplication } from '../../../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function grantPath(id: string) {
@@ -14,6 +15,11 @@ function grantPath(id: string) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -22,9 +28,13 @@ function grantPath(id: string) {
 }
 function readGrant(id: string): GrantApplication | null {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id);
   if (!fs && fs.existsSync(p)) return null;
@@ -40,9 +50,13 @@ function isAuthorized(req: NextApiRequest) {
   const header = req && req.headers.authorization || '';
   const token = header && header.replace('Bearer ', '');  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -50,20 +64,27 @@ function writeGrant(record: GrantApplication) {
 }
 function isAuthorized(req: NextApiRequest) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const header = req && req.headers.authorization || '',
   const token = header && header.replace('Bearer ', '');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const header = req && req.headers.authorization || '',
   const token = header && header.replace('Bearer ', '');
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -191,6 +212,9 @@ writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
   const ms = existing && existing.milestones || [];
   const idx = ms && ms.findIndex(m => m && m.id === milestoneId);  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });  const idx = ms && ms.findIndex((m) => m && m.id === milestoneId);
@@ -203,12 +227,18 @@ writeGrant(existing);
   existing && existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.status(200).json({ record: existing })
 }
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
@@ -302,6 +332,7 @@ write_grant (existing);
   existing.updatedAt = new Date().toISOString(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -323,3 +354,23 @@ write_grant (existing);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+writeGrant(existing);
+  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+}
+
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+=======
+}
+}
+}
+=======
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

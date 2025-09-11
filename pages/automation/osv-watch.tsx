@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function OsvWatchPage() {
 
   const results: any[] = (data?.results |[]).slice(0, 50)
@@ -12,11 +18,16 @@ export default function OsvWatchPage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">OSV Vulnerability Watch</h1>
+<<<<<<< HEAD
 
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
 
 
+=======
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {results.length === 0 ? (
           <p className="mt-6 text-sm">No known vulnerabilities found.</p>
         ) : (
@@ -40,10 +51,16 @@ export default function OsvWatchPage() {
       </div>
     </EnhancedLayout>
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
 =======
+=======
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
@@ -72,6 +89,7 @@ function OsvWatchPage() {
           </ul>)}
       </div>;
     </EnhancedLayout>);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,10 +142,16 @@ export default function OsvWatchPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -136,6 +160,9 @@ export default function OsvWatchPage() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -163,6 +190,7 @@ export default function OsvWatchPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
@@ -174,3 +202,9 @@ export default function OsvWatchPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

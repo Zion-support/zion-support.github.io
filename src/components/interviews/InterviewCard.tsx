@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -13,6 +14,8 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'impor
 import { InterviewResponseForm } from "./InterviewResponseForm"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -27,6 +30,7 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'impor
 import { InterviewResponseForm  } from './InterviewResponseForm';
 interface InterviewCardProps {
   interview: Interview,
+<<<<<<< HEAD
 <<<<<<< HEAD
   onRefresh: () => Promise<void>
 }
@@ -421,6 +425,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
   );
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   on_refresh: () => Promise < void>;
 }
 export /**
@@ -442,5 +448,9 @@ function InterviewCard() {
         return <Badge>{interview.status}</Badge>;
 }
   );
+<<<<<<< HEAD
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

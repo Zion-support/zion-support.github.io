@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { ProfileProject } from "@/types/profile",
@@ -30,6 +31,11 @@ import { FileText } from "lucide-react",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 }
@@ -38,7 +44,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
           <Card
@@ -71,7 +80,10 @@ function ProfileProjects() {
                   src={project.image_url}
                   alt={project.title}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ProfileProject} from "@/types/profile";
@@ -81,17 +93,25 @@ interface ProfileProjectsProps {;
   projects: ProfileProject[];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
         {projects && projects.map((project) => (;
           <Card key={project && project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">;
@@ -101,13 +121,18 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
                   src={project && project.imageUrl} 
                   alt={project && project.title} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full h-full object-cover"
                 />;
               </AspectRatio>;
             ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Card, CardContent } from "@/components/ui/card",;
@@ -139,12 +164,17 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
             ) :(;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">;
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />;
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   className="w - full h - full object - cover";
                 />;
@@ -158,29 +188,39 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
                 {project.description}
               </p>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex - wrap gap - 1 mb - 2">;
                   {project.tags.map ((tag, i) => (
                     <Badge;
                       key={i}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <CardContent className="p-4">;
               <h4 className="text-white font-medium mb-2">{project && project.title}</h4>;
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project && project.description}</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <CardContent className="p-4">;
               <h4 className="text-white font-medium mb-2">{project && project.title}</h4>;
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project && project.description}</p>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {project && project.tags && project && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project && project.tags.map((tag, i) => (;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
@@ -196,6 +236,9 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full h-full object-cover"
                 />
               </AspectRatio>
@@ -205,6 +248,7 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
 
 <CardContent className="p-4">
@@ -213,11 +257,14 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
                 {project.description}
               </p>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
 
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1 mb-2">
@@ -228,6 +275,8 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
                 {project.description}
               </p>
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
@@ -237,6 +286,7 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
                       className="text-xs border-zion-slate-dark text-zion-slate-light"
                     >
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ProfileProject } from "@/types/profile",;
@@ -278,11 +328,16 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {tag}
                     </Badge>;
                   ))}
                 </div>;
               )}
+<<<<<<< HEAD
 
               
 
@@ -296,6 +351,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>
@@ -305,6 +363,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
       </div>
     </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -327,12 +386,24 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               ;
               <div className="text-xs text-zion-slate-light mt-2">;
                 {project.date}
+=======
+
+              <div className="text-xs text-zion-slate-light mt-2">;
+                {project && project.date}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </CardContent>;
           </Card>;
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       variant="outline";
                       className="text - xs border - zion - slate - dark text - zion - slate - light";
                     >;
@@ -347,6 +418,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
   )
 }
@@ -379,3 +451,13 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

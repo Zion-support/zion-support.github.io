@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 '),
@@ -11,6 +14,7 @@
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
 
+<<<<<<< HEAD
 
 
 
@@ -18,6 +22,13 @@
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
     // Clean up the content
@@ -29,18 +40,25 @@
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -53,6 +71,7 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -81,12 +100,15 @@ if ( {) {
     // Restore the page;
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     // Create a backup of the current corrupted file;
-    const timestamp = Date.now();
-    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
-    fs.writeFileSync(corruptedBackupPath, currentContent),;
+    const timestamp = Date.now (),
+    const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
+    fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fs.writeFileSync(pagePath, backupContent),;
@@ -101,6 +123,18 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    fs.writeFileSync(pagePath, backupContent),;
+    return {;
+      restored: true,;
+      backupUsed: backupPath,;
+      corruptedBackup: corruptedBackupPath;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -112,9 +146,12 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Function to scan and restore all corrupted pages
 function restoreAllCorruptedPages() {
   const pagesDir = path.join(process.cwd(), 'pages')
@@ -141,10 +178,15 @@ function restoreAllCorruptedPages() {
         
         console.log(`\n🔍 Checking: ${fullPath}`),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -167,19 +209,25 @@ function restoreAllCorruptedPages() {;
         results.total++,
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
         const result = restorePage(fullPath),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
@@ -187,12 +235,17 @@ function restoreAllCorruptedPages() {;
           console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
           results.failed++
           console.log(`❌ Failed: ${fullPath}`)
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           console.log(`   Reason: ${result.reason}`)
           results.failed++,
           results.failed++,
+<<<<<<< HEAD
           console.log(`❌ Failed: ${fullPath}`),
           console.log(`   Reason: ${result.reason}`)
           // // // console.log(`❌ Failed: ${fullPath}`),
@@ -216,6 +269,8 @@ function restoreAllCorruptedPages() {;
 
           results.failed++,
           results.failed++,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         }
@@ -228,6 +283,7 @@ function restoreAllCorruptedPages() {;
   }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   console.log('🚀 Starting page restoration process...')
   scanDirectory(pagesDir)
@@ -268,11 +324,24 @@ function restoreAllCorruptedPages() {;
   return results
 =======
 
+=======
+  return results
+  // // // console.log('🚀 Starting page restoration process...'),
+  scanDirectory(pagesDir),
+  // Generate summary
+=======
+  
+  console.log('🚀 Starting page restoration process...'),
+  // // // console.log('🚀 Starting page restoration process...'),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   scanDirectory(pagesDir),
   // Generate summary
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -300,19 +369,28 @@ function restoreAllCorruptedPages() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Function to scan and restore all corrupted pages;
 /**
  * restoreAllCorruptedPages - Function description
@@ -388,6 +466,7 @@ if ( {) {
 }
   restoreAllCorruptedPages ();
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 module.exports = {
@@ -408,17 +487,23 @@ module.exports = {;
 <<<<<<< HEAD
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 =======
 
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 module.exports = {
   restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
+<<<<<<< HEAD
 
 
 };
@@ -439,3 +524,12 @@ main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+},;
+
+};
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

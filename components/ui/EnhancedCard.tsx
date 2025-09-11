@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from "react";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -35,10 +39,14 @@ export default function EnhancedCard(): any ({;
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
@@ -46,6 +54,7 @@ export default function EnhancedCard({ children, className = '' }: { children: R
       {children}
 </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -58,6 +67,8 @@ export default /**
  * EnhancedCard - Function description
  */
 function EnhancedCard() {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
   return (
@@ -66,6 +77,7 @@ function EnhancedCard() {
   )
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -100,3 +112,6 @@ export default function EnhancedCard({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: 'Senior Full-Stack Engineer (Next.js + AI)',
     description: 'Build modern AI-enabled web apps at Zion Tech Solutions.',
 datePosted: new Date().toISOString().slice(0, 10);
@@ -95,6 +96,8 @@ import type { NextPage } from 'next';
 import Seo from '../components/seo/Seo';
 import { JobPostingJsonLd } from 'next-seo';
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Jobs: NextPage = () => {
   const job = {
     title: 'Senior Full-Stack Engineer (Next.js + AI)'
@@ -112,14 +115,20 @@ const Jobs: NextPage = () => {
       logo: 'https://ziontechgroup.netlify.app/logo.png'}
     jobLocationType: 'TELECOMMUTE'} as const
       name: 'Zion Tech Solutions',
+<<<<<<< HEAD
       sameAs: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app/logo.png'},
+=======
+      same_as: 'https://ziontechgroup.netlify.app',
+      logo: 'https://ziontechgroup.netlify.app / logo.png'},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     jobLocationType: 'TELECOMMUTE'} as const,
   return (
     <div>
       <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
       <JobPostingJsonLd
         datePosted={job.datePosted}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         description={job.description}
@@ -185,11 +194,19 @@ export default Jobs,;
   }
 }
 =======
+=======
+        description={job.description}
+        employment_type={job.employment_type}
+        hiring_organization={job.hiring_organization}
+        jobLocationType={job.jobLocationType}
+        title={job.title}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
         valid_through={job.valid_through}
         base_salary={job.base_salary}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <main>;
@@ -201,6 +218,15 @@ export default Jobs,;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      />;
+      <main>;
+        <h1 > Jobs</h1>;
+        <p>{job.title}</p>;
+        <p>{job.description}</p>;
+      </main>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 },;
@@ -208,7 +234,12 @@ export default Jobs;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

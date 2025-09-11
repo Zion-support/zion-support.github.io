@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -13,6 +14,9 @@ export function useResume() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
 import {useFetchResume} from './useFetchResume';
@@ -24,10 +28,15 @@ import {useCertifications} from './useCertifications';
 import {useResumeList} from './useResumeList';
 export function useResume() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [resume, setResume] = useState<Resume | null>(null);
 
   const fetchResumeOperations = useFetchResume();
@@ -38,6 +47,7 @@ export function useResume() {;
   const certOperations = useCertifications();
   const resumeListOperations = useResumeList();
   // Determine overall loading state
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Override the fetch resume function to update local state
   const fetchResume = async (resumeId?: string) => {
@@ -63,6 +73,8 @@ export function useResume() {;
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations.fetchResume(resumeId);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const isLoading = 
     fetchResumeOperations && fetchResumeOperations.isLoading || 
@@ -87,16 +99,22 @@ export function useResume() {;
   // Override the fetch resume function to update local state
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (result) {
       setResume(result)
     }
     return result
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
     resume: resume || fetchResumeOperations && fetchResumeOperations.resume;
     resumes: resumeListOperations && resumeListOperations.resumes;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import {useState} from 'react';
 import {Resume} from '@/types / resume';
@@ -162,54 +180,77 @@ if ( {) {
     resume: resume || fetchResumeOperations && fetchResumeOperations.resume;
     resumes: resumeListOperations && resumeListOperations.resumes;
     
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Basic resume operations
     fetchResume;
     createResume: resumeActions && resumeActions.createResume;
     updateBasicInfo: resumeActions && resumeActions.updateBasicInfo;
     setActiveResume: resumeActions && resumeActions.setActiveResume;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Work experience operations
     addWorkExperience: workOperations && workOperations.addWorkExperience;
     updateWorkExperience: workOperations && workOperations.updateWorkExperience;
     deleteWorkExperience: workOperations && workOperations.deleteWorkExperience;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Education operations
     addEducation: educationOperations && educationOperations.addEducation;
     updateEducation: educationOperations && educationOperations.updateEducation;
     deleteEducation: educationOperations && educationOperations.deleteEducation;
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Skills operations
     addSkill: skillsOperations && skillsOperations.addSkill;
     deleteSkill: skillsOperations && skillsOperations.deleteSkill;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     
     // Skills operations
     addSkill: skillsOperations && skillsOperations.addSkill;
     deleteSkill: skillsOperations && skillsOperations.deleteSkill;
     
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Certifications operations
     addCertification: certOperations && certOperations.addCertification;
     updateCertification: certOperations && certOperations.updateCertification,
     deleteCertification: certOperations && certOperations.deleteCertification
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 // Export all hooks
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 }
 // Export all hooks
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     // Basic resume operations;
     fetch_resume;
@@ -238,6 +279,7 @@ if ( {) {
   }
 }
 // Export all hooks;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export * from './useFetchResume';
 
@@ -341,6 +383,10 @@ export * from './useResumeUtils',; // Determine overall loading state const isLo
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export * from './useFetchResume';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export * from './useFetchResume';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export * from './useResumeActions';
 export * from './useWorkExperience';
 export * from './use_education';
@@ -352,6 +398,7 @@ export * from './useResumeUtils';
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return {
@@ -397,6 +444,11 @@ export * from './useResumeUtils';
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -481,9 +533,14 @@ export * from './useResumeList';
 export * from './useResumeUtils';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

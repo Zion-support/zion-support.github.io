@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, {
   Suspense
@@ -48,6 +49,8 @@ const EnhancedLoading: React.FC<{
 'use client';
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 'use client';
 
 import React, {;
@@ -57,22 +60,30 @@ import React, {;
   useEffect,;
   ComponentType,;
 } from 'react';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger',;
 =======
 import { logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LoadingState {;
   isLoading: boolean;
   error: Error | null;
   retryCount: number;
   isOnline: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -82,17 +93,23 @@ interface DynamicLoaderProps {;
   errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>;
   loadingComponent?: React.ComponentType;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface DynamicLoaderProps {;
   importFn: () => Promise<{ default: ComponentType<any> }>;
   fallback?: React && React.ReactNode;
   errorFallback?: React && React.ComponentType<{ error: Error; retry: () => void }>;
   loadingComponent?: React && React.ComponentType;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   enableRetry?: boolean;
   maxRetries?: number;
   prefetch?: boolean;
   className?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   children?: React.ReactNode;
   [key: string]: any;
@@ -101,6 +118,10 @@ interface DynamicLoaderProps {;
   children?: React && React.ReactNode;
   [key: string]: any;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  children?: React && React.ReactNode;
+  [key: string]: any;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Enhanced Loading Component;
 const EnhancedLoading: React.FC<{;
@@ -126,6 +147,7 @@ const EnhancedLoading: React.FC<{;
   show_progress?: boolean;
 }> = ({
   progress = 0,
+<<<<<<< HEAD
   message = 'Loading component...', 
   showProgress = true 
 }) => (
@@ -133,12 +155,19 @@ const EnhancedLoading: React.FC<{;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  message = 'Loading component...',
+  show_progress = true,
+}) => (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   <Card className="w-full max-w-md mx-auto">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
@@ -150,6 +179,8 @@ const EnhancedLoading: React.FC<{;
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
@@ -158,12 +189,18 @@ const EnhancedLoading: React.FC<{;
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />
           )}
         </div>
@@ -179,6 +216,7 @@ const EnhancedLoading: React.FC<{;
     </CardContent>
   </Card>
 )
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
               }}
@@ -188,6 +226,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -202,21 +242,28 @@ const EnhancedError: React.FC<{
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
     <CardContent className='p-6'>
       <div className='flex flex-col items-center space-y-4'>
         <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (
             <AlertTriangle className='h-6 w-6 text-red-600' />
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
+<<<<<<< HEAD
 <<<<<<< HEAD
           ) : (
             <WifiOff className="h-6 w-6 text-red-600" />
@@ -236,6 +283,9 @@ const EnhancedError: React.FC<{
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
@@ -261,9 +311,15 @@ const EnhancedError: React.FC<{;
           ) : (;
             <WifiOff className='h-6 w-6 text-red-600' />;
           )}
+<<<<<<< HEAD
         </div>;
         <div className='text-center'>;
           <h3 className='font-semibold text-red-900 dark:text-red-100'>;
+=======
+        </div>
+        <div className="text-center">
+          <h3 className="font-semibold text-red-900 dark:text-red-100">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {isOnline ? 'Loading Failed' : 'Offline'}
 
           </h3>;
@@ -276,7 +332,17 @@ const EnhancedError: React.FC<{;
           {retryCount > 0 && (;
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
           </h3>
+<<<<<<< HEAD
 
+=======
+          <p className='text-sm text-red-700 dark:text-red-200 mt-1'>
+            {isOnline
+              ? error.message |'Failed to load component'
+              : 'Please check your internet connection'}
+          </p>
+          {retryCount > 0 && (
+            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <p className="text-sm text-red-700 dark:text-red-200 mt-1">
             {isOnline 
               ? error.message || 'Failed to load component'
@@ -284,6 +350,7 @@ const EnhancedError: React.FC<{;
             }
           </p>
           {retryCount > 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
               Retry {retryCount}/{maxRetries}
             </p>;
@@ -296,6 +363,13 @@ const EnhancedError: React.FC<{;
               Retry {retryCount}/{maxRetries}
             </p>
           )}
+=======
+
+              Retry {retryCount}/{maxRetries}
+            </p>;
+          )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         {retryCount < maxRetries && (
           <Button
@@ -304,6 +378,7 @@ const EnhancedError: React.FC<{;
             size='sm'
             className='border-red-300 text-red-700 hover:bg-red-100'          >
             <RefreshCw className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
 =======
 
               Retry {retryCount}/{maxRetries}
@@ -314,6 +389,8 @@ const EnhancedError: React.FC<{;
         {retryCount < maxRetries && (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button 
             onClick={retry} 
             variant="outline" 
@@ -322,13 +399,21 @@ const EnhancedError: React.FC<{;
           >
             <RefreshCw className="h-4 w-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Try Again
           </Button>
         )}
       </div>
     </CardContent>
   </Card>
+<<<<<<< HEAD
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 )
 // Network Status Hook
 const useNetworkStatus = () => {
@@ -338,6 +423,7 @@ const useNetworkStatus = () => {
     window.addEventListener('online', updateOnlineStatus)
     window.addEventListener('offline', updateOnlineStatus)
     return () => {
+<<<<<<< HEAD
       window.removeEventListener('online', updateOnlineStatus)
       window.removeEventListener('offline', updateOnlineStatus)
     }
@@ -449,6 +535,8 @@ const useNetworkStatus = () =>: any {
     window.addEventListener ('offline', updateOnlineStatus);
 
     return () => {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       window.removeEventListener ('online', updateOnlineStatus);
       window.removeEventListener ('offline', updateOnlineStatus);
     }
@@ -461,7 +549,10 @@ const useNetworkStatus = () =>: any {
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -560,6 +651,7 @@ const useNetworkStatus = () => {;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 // Network Status Hook;
 const useNetworkStatus = () => {;
@@ -578,6 +670,8 @@ const useNetworkStatus = () => {;
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   importFn,;
@@ -591,14 +685,19 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   children,;
   ...props;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }) => {;
 =======
 },) => {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+},) => {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [loadingState, setLoadingState] = useState<LoadingState>({;
     isLoading: true,;
     error: null,;
     retryCount: 0,;
+<<<<<<< HEAD
 <<<<<<< HEAD
     isOnline: true;
   });
@@ -634,6 +733,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
     } catch (error) {;
       logErrorToProduction('Dynamic component loading failed:', { data: error });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     isOnline: true,;
   });
   const [progress, setProgress] = useState(0);
@@ -678,11 +779,15 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       logErrorToProduction('Dynamic component loading failed:', {;
         data: error,;
       });
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setLoadingState(prev => ({;
         ...prev,;
         isLoading: false,;
         error: error as Error,;
+<<<<<<< HEAD
 <<<<<<< HEAD
         retryCount: prev.retryCount + 1,;
         isOnline;
@@ -690,10 +795,15 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         retryCount: prev && prev.retryCount + 1,;
         isOnline,;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        retryCount: prev && prev.retryCount + 1,;
+        isOnline,;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }));
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Retry functionality
   const retry = () => {
@@ -705,6 +815,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   // Prefetch on hover/focus;
   useEffect(() => {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Retry functionality;
   const retry = () => {;
     if (loadingState && loadingState.retryCount < maxRetries) {;
@@ -714,12 +826,16 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
 
   // Prefetch on hover/focus;
   useEffect((,) => {;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (prefetch) {;
       const prefetchTimer = setTimeout(() => {;
         loadComponent();
       }, 100);
       return () => clearTimeout(prefetchTimer);
+<<<<<<< HEAD
 <<<<<<< HEAD
     } else {
       loadComponent();
@@ -727,18 +843,24 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
     }
   }, []);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } else {;
       loadComponent();
       return () => {}; // Return empty cleanup function;
     }
   }, []);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Update online status;
   useEffect(() => {;
     setLoadingState(prev => ({ ...prev, isOnline }));
   }, [isOnline]);
   // Loading state;
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (loadingState.isLoading) {;
     if (loadingComponent) {;
@@ -777,6 +899,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       >
         <EnhancedError
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (loadingState && loadingState.isLoading) {;
     if (loadingComponent) {;
       return React && React.createElement(loadingComponent);
@@ -804,7 +928,10 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
           >;
         <EnhancedError
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -813,6 +940,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         />;
       </motion.div>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   }
@@ -823,6 +951,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Success state
   if (DynamicComponent) {
@@ -835,6 +968,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className = {className,}
           >
             <DynamicComponent {...props}>{children}</DynamicComponent>
@@ -843,6 +979,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Suspense>
     )
   }
+<<<<<<< HEAD
   return null
 }
 // HOC for creating dynamic components easily
@@ -866,6 +1003,9 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
   }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Success state;
   if (DynamicComponent) {;
     return (
@@ -887,15 +1027,20 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
             </DynamicComponent>;
           </motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </AnimatePresence>;
       </Suspense>;
     );
   }
 
   return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -904,13 +1049,18 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   importFn: () => Promise<{ default: T }>,;
   options?: Omit<DynamicLoaderProps 'importFn' | 'children'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 // HOC for creating dynamic components easily;
 export const createDynamicComponent = <T extends ComponentType<any>>(;
   importFn: (,) => Promise<{ default: T }>,;
   options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ) => {;
   return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
     <DynamicComponentLoader
@@ -918,18 +1068,28 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
       {...(options |{})}
       {...(props as any)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     />
   );
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
 //   (,) => import('recharts').then(module => ({ default: module.LineChart }))
+<<<<<<< HEAD
 =======
 
 
@@ -938,6 +1098,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // export const DynamicChartComponent = createDynamicComponent(
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 
 //   {
@@ -951,11 +1113,14 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
 <<<<<<< HEAD
+<<<<<<< HEAD
 //   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
 
 //   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
@@ -1146,6 +1311,7 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
+<<<<<<< HEAD
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
@@ -1156,6 +1322,8 @@ export default DynamicComponentLoader; export default DynamicComponentLoader ;
 }
 export default DynamicComponentLoader;
 export default DynamicComponentLoader;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // export const DynamicThreeComponent = createDynamicComponent (
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
 //   {
@@ -1205,7 +1373,11 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
 // );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default DynamicComponentLoader;
 =======
 export default DynamicComponentLoader;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default DynamicComponentLoader;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

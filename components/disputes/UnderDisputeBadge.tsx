@@ -1,14 +1,20 @@
 import useSWR from 'swr';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
   const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const hasActiveDispute = !!data?.disputes?.some(;
     (d: any) =>;
       d && d.projectId === projectId &&;
@@ -19,18 +25,29 @@ export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+  return { hasActiveDispute, isLoading: !data && !error }
+export default function UnderDisputeBadge({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   projectId,
 }: {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectId: string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
@@ -40,6 +57,7 @@ export default function UnderDisputeBadge(): any ({;
       Under Dispute;
     </span>;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+<<<<<<< HEAD
 
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d && d.projectId === projectId && (d && d.status === 'Open' || d && d.status === 'Under Review')),;
 
@@ -64,6 +82,18 @@ export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: 
 export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' |d.status === 'Under Review'))
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
   return (
@@ -73,6 +103,7 @@ export default function UnderDisputeBadge(): any ({ projectId }: { projectId: st
     </span>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -87,6 +118,17 @@ export default function UnderDisputeBadge(): any ({ projectId }: { projectId: st
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+}
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;
@@ -137,6 +179,7 @@ if (return null) {
   )
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
@@ -194,3 +237,8 @@ export default function UnderDisputeBadge({ projectId }: { projectId: string }) 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -7,6 +7,10 @@ export interface MilestoneInput {
   start_date: string;
   end_date: string | null,
   project_type: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
@@ -14,6 +18,7 @@ export interface GeneratedMilestone {;
 
   title: string;
   description: string;
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
@@ -57,15 +62,28 @@ export function useMilestoneGenerator() {;
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      setIsGenerating(true),
+
+      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         body: input
       });
       if (error) throw error;
       // Mark each milestone as AI generated
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
+=======
+
+      const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   due_date: string;
   estimated_hours: number,
   isAiGenerated: boolean;
@@ -90,8 +108,16 @@ if (throw error) {
 }
       // Mark each milestone as AI generated;
       const milestonesWithFlag = data.milestones.map ((milestone: any) => ({
+<<<<<<< HEAD
         ...milestone,
         isAiGenerated: true}));
+=======
+
+        ...milestone,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        isAiGenerated: true}));
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       setGeneratedMilestones (milestonesWithFlag);
       return milestonesWithFlag;
@@ -99,10 +125,15 @@ if (throw error) {
       console.error ('Error generating milestones:', error);
       toast.error ('Failed to generate milestones');
       return [];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsGenerating (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({
         ...milestone
@@ -117,14 +148,19 @@ if (throw error) {
       setIsGenerating(false)
     }
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const clearGeneratedMilestones = () => {
     setGeneratedMilestones([])
   }
   return {
     generateMilestones;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from 'sonner',;
@@ -173,14 +209,22 @@ export function useMilestoneGenerator() {;
   return {;
     generateMilestones,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     generatedMilestones;
     isGenerating;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const clearGeneratedMilestones = () =>: any {
     setGeneratedMilestones ([]);
@@ -190,6 +234,7 @@ export function useMilestoneGenerator() {;
     generate_milestones;
     generated_milestones;
     is_generating;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -265,3 +310,8 @@ if (error) throw error;
 
     clearGeneratedMilestones}
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    clearGeneratedMilestones}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

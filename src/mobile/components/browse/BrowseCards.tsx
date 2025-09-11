@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
   Bookmark
   BookmarkCheck
@@ -22,6 +26,8 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Bookmark,
   BookmarkCheck,
   ChevronRight,
@@ -30,7 +36,10 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
   DollarSign,
 } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface BrowseItem {
   id: string;
   title: string;
@@ -42,6 +51,7 @@ interface BrowseItem {
   image?: string;
   match?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   timePosted?: string
 interface BrowseCardsProps {
   items: BrowseItem[];
@@ -52,6 +62,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   
   const toggleSaved = null;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   timePosted?: string;
 
@@ -70,6 +82,7 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
   };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className='space-y-4 pb-24'>;
@@ -97,6 +110,18 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className='text-primary font-semibold'>JOB</span>;
                     </div>;
                   )}
+=======
+  return (
+    <div className='space-y-4 pb-24'>
+      {items.map(item => (
+        <Card key={item.id} className='overflow-hidden'>
+          <CardContent className='p-0'>
+            <div className='p-4'>
+              <div className='flex justify-between'>
+                <div className='flex items-center gap-3'>
+                  {type === 'talents' ? (
+                    <Avatar className='h-12 w-12'>        <Card key={item.id} className="overflow-hidden">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <div>;
                     <h3 className='font-medium'>{item && item.title}</h3>;
@@ -134,11 +159,18 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     </div>;
 
 
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+=======
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
@@ -181,6 +213,11 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
@@ -196,6 +233,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     </div>
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
@@ -204,6 +244,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item.id)}                >
+<<<<<<< HEAD
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item.id)}                >
@@ -340,6 +381,18 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
 =======
+=======
+                
+                <button 
+                  className="h-8 w-8 flex items-center justify-center"
+                  onClick={() => toggleSaved(item && item.id)}
+                >;
+                  {savedItems && savedItems.includes(item && item.id) ? (;
+                    <BookmarkCheck className="h-5 w-5 text-primary" />;
+                  ) : (;
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
+                  )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </button>;
               </div>;
@@ -347,15 +400,27 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               <div className="mt-3 flex flex-wrap gap-1">;
                 {item && item.badges.map((badge, index) => (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Badge
                     key = {index,}
                     variant="outline"
                     className="text-xs font-normal"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+
+
+                  onClick={() => toggleSaved(item.id)}
+                >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
                   ) : (
@@ -406,6 +471,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   ) : (
                     <Bookmark className="h-5 w-5 text-muted-foreground" />
                   )}
+<<<<<<< HEAD
 
                 </button>;
               </div>;
@@ -418,11 +484,24 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   >;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                </button>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-1">
+                {item.badges.map((badge, index) => (
+                  <Badge
+                    key = {index,}
+                    variant="outline"
+                    className="text-xs font-normal"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {badge}
                   </Badge>
                 ))}
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
                 </button>;
@@ -434,6 +513,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+<<<<<<< HEAD
                     {badge}
                   </Badge>;
                 ))}
@@ -444,6 +524,15 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
               
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
+=======
+
+                    {badge}
+                  </Badge>
+                ))}
+              </div>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -451,7 +540,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   </div>
                 )}
                 
+<<<<<<< HEAD
                 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {item.price && (
                   <div className="flex items-center gap-1">
                     <DollarSign className="h-3 w-3" />
@@ -459,13 +551,17 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   </div>
                 )}
                 
+<<<<<<< HEAD
                 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {item.timePosted && (
                   <div className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
+<<<<<<< HEAD
                 {item.match && (
                 {item.match && (
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match                {item.location && (
@@ -498,11 +594,16 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 
                 {item.match && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
@@ -510,10 +611,14 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='border-t border-border p-3 flex justify-end'>
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>;
 
@@ -575,13 +680,17 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               <Button
                 size='sm'
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() => onViewDetails(item.id)}
                 className='gap-1'              >
                 View Details <ChevronRight className='h-4 w-4' />              </Button>
                 View Details <ChevronRight className="h-4 w-4" />
+<<<<<<< HEAD
 =======
                 onClick={() => onViewDetails(item && item.id)}
                 className='gap-1'              >;
@@ -599,6 +708,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
       ))}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
@@ -607,11 +718,15 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 
 
                 onClick={() => onViewDetails(item.id)}
+<<<<<<< HEAD
                 className='gap-1'              >
                 View Details <ChevronRight className='h-4 w-4' />              </Button>
                 View Details <ChevronRight className="h-4 w-4" />
 ursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => onViewDetails(item.id)}
+=======
+                className="gap-1"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 View Details <ChevronRight className="h-4 w-4" />
               </Button>
@@ -761,6 +876,10 @@ function BrowseCards() {
           </CardContent>;
         </Card>))}
     </div>);
+<<<<<<< HEAD
+=======
+      ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
@@ -771,6 +890,7 @@ function BrowseCards() {
 };
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       ))};
     </div>
@@ -799,3 +919,6 @@ function BrowseCards() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

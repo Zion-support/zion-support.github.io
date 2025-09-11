@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client',
 
 import Image from 'next/image';
@@ -6,16 +7,24 @@ import { useState } from 'react';
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
+=======
+interface SafeImageProps {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
+<<<<<<< HEAD
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SafeImageProps {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 
@@ -26,6 +35,9 @@ interface SafeImageProps {
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
@@ -36,6 +48,7 @@ interface SafeImageProps {
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
+<<<<<<< HEAD
     />
   );        aria-label={alt}
 'use client',;
@@ -136,16 +149,22 @@ export function SafeImage({
 ;
     />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
     />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );        aria-label={alt}
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
 import { ImageIcon } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface SafeImageProps {;
   src: string,;
@@ -183,6 +202,8 @@ export function SafeImage({;
     } else if (!hasError) {;
       setHasError(true);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface SafeImageProps {;
   src: string;
@@ -251,7 +272,10 @@ export function SafeImage({
       setHasError(true)
     } else if (!hasError) {
       setHasError(true)
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   };
   // If we have an error and no fallback, show a placeholder;
@@ -263,6 +287,7 @@ export function SafeImage({
         role="img"
         aria-label={alt}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -273,12 +298,23 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 <<<<<<< HEAD
 =======
+=======
+
+      >
+        <ImageIcon className="w-6 h-6" />
+      </div>
+    )
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     />
   ); return (
         aria-label = {alt,}>;
@@ -301,11 +337,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     />
   ); return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -316,6 +355,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
+<<<<<<< HEAD
 <<<<<<< HEAD
     />
   )
@@ -333,17 +373,23 @@ ursor/fix-website-loading-errors-and-merge-6662
       // Add unoptimized as fallback for problematic images;
       unoptimized={hasError}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 } 
 
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
     />;
   );
+<<<<<<< HEAD
 } ;
 } ;
 
@@ -439,3 +485,5 @@ if ( {) {
 =======
 } ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

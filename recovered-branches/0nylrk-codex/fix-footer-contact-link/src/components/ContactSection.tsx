@@ -26,6 +26,7 @@ function ContactSection() {
                   href="mailto:commercial@ziontechgroup.com";
                   className="text - zion - cyan hover:text - zion - purple transition - colors";
                 >;
+<<<<<<< HEAD
 
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -48,15 +49,23 @@ export function ContactSection() {;
               <div>;
                 <p className="text-white font-semibold">Email Us</p>;
                 <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   commercial@ziontechgroup.com;
                 </a>;
               </div>;
             </div>;
+<<<<<<< HEAD
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+=======
+            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Request Commercial Proposal;
             </Button>;
           </div>;
           <div className="relative">;
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
@@ -72,6 +81,12 @@ import { Mail } from "lucide-react",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -108,17 +123,25 @@ export function ContactSection() {
                       Name
                     </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <input
                       type="text"
                       id="name"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     />
                   </div>
                   <div>
@@ -126,13 +149,18 @@ export function ContactSection() {
                       Email
                     </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <input
                       type="email"
                       id="email"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>;
             <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">;
@@ -140,6 +168,8 @@ export function ContactSection() {
               <form className="space-y-6">;
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="absolute inset - 0 bg - gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 rounded - lg filter blur - 3xl opacity - 30"></div>;
             <div className="relative bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 8">;
@@ -148,33 +178,61 @@ export function ContactSection() {
               </h3>;
               <form className="space - y-6">;
                 <div className="grid grid - cols - 1 gap - 6 sm:grid - cols - 2">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div>;
                     <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
+=======
+                  <div>;
+                    <label;
+                      html_for="name";
+                      className="block text - sm font - medium text - zion - slate - light mb - 1";
+                    >;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Name;
                     </label>;
                     <input;
                       type="text";
                       id="name";
+<<<<<<< HEAD
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
                     />;
                   </div>;
                   <div>;
                     <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">;
+=======
+                      className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
+                    />;
+                  </div>;
+                  <div>;
+                    <label;
+                      html_for="email";
+                      className="block text - sm font - medium text - zion - slate - light mb - 1";
+                    >;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Email;
                     </label>;
                     <input;
                       type="email";
                       id="email";
+<<<<<<< HEAD
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
+=======
+                      className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     />;
                   </div>;
                 </div>;
                 <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     />
                   </div>
                 </div>
@@ -183,42 +241,72 @@ export function ContactSection() {
                     Subject
                   </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     type="text"
                     id="subject"
                     className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <label;
                     html_for="subject";
                     className="block text - sm font - medium text - zion - slate - light mb - 1";
                   >;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Subject;
                   </label>;
                   <input;
                     type="text";
                     id="subject";
+<<<<<<< HEAD
                     className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
                   />;
                 </div>;
                 <div>;
                   <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">;
+=======
+                    className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
+                  />;
+                </div>;
+                <div>;
+                  <label;
+                    html_for="message";
+                    className="block text - sm font - medium text - zion - slate - light mb - 1";
+                  >;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Message;
                   </label>;
                   <textarea;
                     id="message";
                     rows={4}
+<<<<<<< HEAD
                     className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
                   ></textarea>;
                 </div>;
                 <div>;
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+=======
+                    className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus: border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
+                  ></textarea>;
+                </div>;
+                <div>;
+                  <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Send Message;
                   </Button>;
                 </div>;
@@ -250,6 +338,7 @@ export function ContactSection() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </section>
   );
@@ -340,10 +429,16 @@ export function ContactSection() {;
           </div>;
         </div>;
       </div>;
+=======
+    </section>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </section>;
   );
 }
 ;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -368,3 +463,5 @@ export function ContactSection() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

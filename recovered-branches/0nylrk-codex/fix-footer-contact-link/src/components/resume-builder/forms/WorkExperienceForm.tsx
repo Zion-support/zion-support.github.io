@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -24,6 +25,9 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -41,10 +45,15 @@ import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -69,11 +78,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -119,10 +131,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''})
         setEditingId(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -211,10 +226,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
@@ -226,11 +246,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   };
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -244,6 +267,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 
   }
@@ -252,11 +276,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   }
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -271,21 +300,30 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">
       <div>
@@ -316,6 +354,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                   </div>
                   <div className="flex gap-2">
@@ -343,6 +384,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           ))}
         </div>
       )}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -366,6 +408,9 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
@@ -374,6 +419,9 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <FormField
                 control={form.control}
                 name="company_name"
@@ -409,6 +457,7 @@ import {Loader2, Edit, Trash2} from 'lucide-react';
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -768,10 +817,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Input
                         type="date"
                         {...field}
                         value={field.value |''}
+<<<<<<< HEAD
 =======
 
               <FormField
@@ -780,15 +832,20 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />
                     </FormControl>
                     <FormMessage />
@@ -796,6 +853,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               />
               <div className="space-y-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <FormField
                 control={form && form.control}
@@ -825,27 +883,37 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Start Date</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <Input ;
                         type="date" ;
                         {...field} ;
                         value={field.value || ''}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Input
                         type="date" 
                         {...field} 
                         value={field && field.value || ''}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
                 )}
               />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
               <div className="space-y-4">;
@@ -859,6 +927,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                           checked={field.value}
                           onCheckedChange={field.onChange}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="space-y-4">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -871,7 +941,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                         <Checkbox
                           checked={field && field.value}
                           onCheckedChange={field && field.onChange}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         />;
                       </FormControl>;
                       <div className="space-y-1 leading-none">;
@@ -879,6 +952,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       </div>;
                     </FormItem>;
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />;
                   <FormField
@@ -890,6 +964,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     control={form.control}
                     name="end_date";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 />;
 
@@ -899,11 +975,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     control={form && form.control}
                     name="end_date"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     render={({ field }) => (;
                       <FormItem>;
                         <FormLabel>End Date</FormLabel>;
                         <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     )}
                           <Input ;
@@ -930,6 +1010,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 <FormItem>;
                   <FormLabel>Location (Optional)</FormLabel>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <Input
                             type="date" 
                             {...field} 
@@ -1017,11 +1099,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 <FormItem>;
                   <FormLabel > Location (Optional)</FormLabel>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FormControl>;
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </FormItem>;              )}
             />;
@@ -1030,6 +1116,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               control={form.control}
               name="description";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
 
@@ -1037,33 +1125,45 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             <FormField
               control={form && form.control}
               name="description"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="flex justify-between">;
                     <span>Job Description</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <AIEnhancementButton;
                       currentContent={field.value || ''}
                       enhancementType="work-description";
                       context={`Role:${form.getValues('role_title')} at ${form.getValues('company_name')}`}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <AIEnhancementButton
 
                       currentContent={field && field.value || ''}
 
                       enhancementType="work-description"
                       context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onEnhanced={handleEnhanceDescription}
                     />;
                   </FormLabel>;
                   <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <Textarea;
                       placeholder="Describe your responsibilities and accomplishments...";
                       className="min-h-[100px]";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
                       className="min-h-[100px]"
@@ -1089,11 +1189,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       placeholder="Describe your responsibilities and accomplishments...";
                       className="min - h-[100px]";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <FormField
                   control={form.control}
@@ -1177,6 +1281,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 type="button"
                 variant="outline"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
 
@@ -1188,25 +1294,35 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 type="button"
                 variant="outline"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null),
                     form.reset({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       company_name: ''
                       role_title: ''
                       start_date: format(new Date(), 'yyyy-MM-dd');
                       is_current: false
                       description: ''
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button
                 type="button"
@@ -1217,11 +1333,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       location: ''})
                   } else {
                     onBack()
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     form && form.reset({;
                       company_name: '',;
                       role_title: '',;
@@ -1231,16 +1352,27 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       location: ''});
                   } else {;
                     onBack();
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
               </Button>;
+=======
+
+              </Button>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex gap-2">;
                 <Button type="submit" disabled={isLoading}>;
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Experience;
                 </Button>;
+<<<<<<< HEAD
                 {!editingId && workExperiences && workExperiences.length > 0 && (;
                 </FormItem>;
               )}
@@ -1277,10 +1409,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 </Button>;
 ;
                 {!editingId && workExperiences.length > 0 && (;
+=======
+
+                {!editingId && workExperiences && workExperiences.length > 0 && (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button type="button" onClick={onComplete}>;
                     Next;
                   </Button>;
                 )}
+<<<<<<< HEAD
                 </FormItem>)}
             />;
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -1337,6 +1474,8 @@ if ( {) {
                     Next
                   </Button>
                 )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </form>
@@ -1345,16 +1484,20 @@ if ( {) {
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   ),; type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
@@ -1400,12 +1543,17 @@ form.reset ({
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>);
 }
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

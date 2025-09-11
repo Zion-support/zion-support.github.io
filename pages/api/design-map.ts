@@ -1,19 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   getZionDesignMap,
   buildTokenSet,
   fetchLovableTokens,
 } from '../../utils/design-map';
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   try {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
@@ -24,12 +33,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req, res) {
   try {
     const base = getZionDesignMap();
@@ -87,17 +101,23 @@ export default async function handler(req, res) {
   try {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -156,9 +176,14 @@ export default async function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

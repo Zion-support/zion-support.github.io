@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
@@ -79,6 +80,8 @@ function PageErrorFallback(): any ({;
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
   },
@@ -89,6 +92,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
+<<<<<<< HEAD
+=======
+        {/* Main Error Card */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
           <div className='text-center mb-6'>;
             <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;
@@ -101,6 +108,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               {isAuthConfigError;
                 ? 'This page cannot load due to missing authentication configuration';
                 : 'An unexpected error occurred while loading this page'}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Link from 'next / link';
 import { ErrorBoundary, FallbackProps } from 'react - error - boundary';
@@ -165,6 +176,7 @@ if ( {) {
                 </div>;
               </div>;
             </div>)}
+<<<<<<< HEAD
           {error?.message && (
             <details className='bg - gray - 50 rounded - lg p - 4 mb - 6'>;
               <summary className='cursor - pointer text - gray - 700 font - medium'>;
@@ -174,6 +186,14 @@ if ( {) {
                 {error.message}
             </p>;
           </div>;
+=======
+
+          {error?.message && (
+
+            </p>;
+          </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isAuthConfigError && (;
             <div className='bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6'>;
               <div className='flex'>;
@@ -186,6 +206,7 @@ if ( {) {
                     This application requires Auth0 authentication to be;
                     properly configured. Please contact your system;
                     administrator.;
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
@@ -239,11 +260,14 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
                   <p className="text-yellow-700 text-sm">;
                     This application requires Auth0 authentication to be properly configured. ;
                     Please contact your system administrator.;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </p>;
                 </div>;
               </div>;
             </div>;
           )}
+<<<<<<< HEAD
 ;
           {error?.message && (;
             <details className="bg-gray-50 rounded-lg p-4 mb-6">;
@@ -297,11 +321,33 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
           {error?.message && (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          {error?.message && (;
+            <details className='bg-gray-50 rounded-lg p-4 mb-6'>;
+              <summary className='cursor-pointer text-gray-700 font-medium'>;
+                Technical Details;
+              </summary>;
+              <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>;
+                {error && error.message}
+              </pre>;
+            </details>;
+
+          )}
+          {/* Action Buttons */}
+          <div className='flex flex-col sm:flex-row gap-3 mb-6'>;
+            <button
+              onClick={handleRefresh}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <details className="bg-gray-50 rounded-lg p-4 mb-6">
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
                 {error.message}
               </pre>
@@ -318,9 +364,12 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
             <Link
               href='/'
               className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
               </pre>;
@@ -340,6 +389,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD
 <<<<<<< HEAD
             >
               <Home className="w-4 h-4 mr-2" />
@@ -383,11 +433,16 @@ export default function PageErrorBoundary({
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             >
               <Home className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Go Home
             </Link>
           </div>
@@ -395,6 +450,10 @@ export default function PageErrorBoundary({
               <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
             </button>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Link
               href='/'
               className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'>;
@@ -411,6 +470,10 @@ export default function PageErrorBoundary({
             <div className='grid grid-cols-2 md:grid-cols-4 gap-3 text-sm'>;
               <Link
                 href='/marketplace'
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='text-blue-600 hover:underline'>;
                 Marketplace;
               </Link>;
@@ -458,6 +521,7 @@ export default function PageErrorBoundary({
                 Services;
               </Link>;
               <Link href='/about' className='text - blue - 600 hover:underline'>;
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button ;
         logInfo(`Resetting error boundary for ${pageName |'page'}`)
@@ -496,11 +560,15 @@ export default function PageErrorBoundary({
                 Services;
               </Link>;
               <Link href="/about" className="text-blue-600 hover:underline">;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 About;
               </Link>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
         {/* Support Information */}
         <div className="bg-gray-800 text-white rounded-lg p-6 text-center">;
           <p className="mb-3">Need help? Contact our support team</p>;
@@ -544,6 +612,51 @@ function PageErrorBoundary() {
 
       }
     );
+=======
+
+        {/* Support Information */}
+        <div className="bg-gray-800 text-white rounded-lg p-6 text-center">
+          <p className="mb-3">Need help? Contact our support team</p>
+          <div className="flex flex-col sm: flex-row gap-3 justify-center">
+            <a 
+              href="mailto:support@zion.tech" 
+              className="text-blue-400 hover:underline"
+            >
+              support@zion.tech
+            </Link>
+            <Link href="/status" className="text-blue-400 hover:underline">
+              Service Status
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+interface PageErrorBoundaryProps {
+  children: React.ReactNode
+  pageName?: string
+  fallback?: React.ComponentType<FallbackProps>
+export default function PageErrorBoundary({
+  children
+  pageName
+  fallback
+}: PageErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+    prodLogError(
+      `PageErrorBoundary caught error on ${pageName |'unknown page'}:`
+      error
+    )
+    logErrorToProduction(
+      error instanceof Error ? error.message : String(error)
+      error instanceof Error ? error : undefined
+      {
+        page: pageName |'unknown'
+        componentStack: errorInfo.componentStack |undefined
+        errorBoundary: 'PageErrorBoundary'
+        timestamp: new Date().toISOString()
+      }
+    )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
 
@@ -559,6 +672,7 @@ function PageErrorBoundary() {
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
@@ -678,6 +792,11 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -688,6 +807,7 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 } ;
 };
@@ -695,6 +815,17 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+} ;
+};
+}
+
+
+    </ErrorBoundary>;
+  );
+} ;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -708,6 +839,7 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
     >;
       {children}
     </ErrorBoundary>);
+<<<<<<< HEAD
   );}
 ;
 interface PageErrorBoundaryProps {;
@@ -763,3 +895,8 @@ export default function PageErrorBoundary({ ;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

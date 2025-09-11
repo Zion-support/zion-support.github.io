@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next / link';
 
@@ -309,10 +310,16 @@ import { motion, AnimatePresence } from 'framer-motion';
     return icons[category as keyof typeof icons] |<Zap className='w-5 h-5' />;
   }
 =======
+=======
+import React, { useState } from 'react',
+import React, { useState } from 'react';
+import Link from 'next/link';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
   ArrowRight,
@@ -338,6 +345,12 @@ import { emergingTech2027Services } from '../../data/2027-emerging-tech-services
 
 
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ArrowRight,
   Star,
   TrendingUp,
@@ -358,7 +371,33 @@ import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovat
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Target,
+  CheckCircle,
+  ExternalLink,
+  Search,
+  Filter,
+  Grid,
+  List,;
+  ChevronDown,;} from 'lucide-react';
+import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
+  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
@@ -396,7 +435,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -443,6 +485,7 @@ import { motion, AnimatePresence } from 'framer-motion';
       }
     });
 
+<<<<<<< HEAD
 
   // Get unique categories;
   const categories = ['all', ...Array && Array.from(new Set(all2027Services && all2027Services.map(service => service && service.category)))];
@@ -488,6 +531,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getCategoryColor = (category: string) => {
     const colors = {
 
@@ -535,7 +580,10 @@ import { motion, AnimatePresence } from 'framer-motion';
   };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section className='py-20 bg-gray-900'>
       <div className='container mx-auto px-4'>
@@ -543,6 +591,7 @@ import { motion, AnimatePresence } from 'framer-motion';
         <motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           transition={{ duration: 0.6 }}
         >        <motion.div
@@ -552,6 +601,8 @@ import { motion, AnimatePresence } from 'framer-motion';
           transition={{ duration: 0.6 }}
         >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           initial={{ opacity: 0, y: 20 }}
@@ -571,12 +622,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Search and Filters */}
         <motion&& motion.div
           className='mb-12'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>;
@@ -592,6 +647,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -602,6 +661,10 @@ import { motion, AnimatePresence } from 'framer-motion';
               <div className='flex-1 max-w-md'>;
                 <div className='relative'>;
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <h2 className='text-5xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               2027 Revolutionary Services
@@ -649,10 +712,15 @@ import { motion, AnimatePresence } from 'framer-motion';
                 <div className="relative">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
               {/* Search */}
@@ -660,14 +728,19 @@ import { motion, AnimatePresence } from 'framer-motion';
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     type="text"
                     placeholder="Search services, features, or use cases..."
                     value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     onChange={(e) => setSearchTerm(e && e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50";
@@ -678,12 +751,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Category Filter */}
               <div className='flex items-center space-x-4'>;
                 <div className='relative'>;
                   <select
                     value={selectedCategory}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     onChange={e => setSelectedCategory(e && e.target.value)}
@@ -700,10 +778,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Category Filter */}
               <div className="flex items-center space-x-4">
                 <div className="relative">
                   <select
+<<<<<<< HEAD
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
                   >
@@ -719,10 +802,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
                   >
 
+<<<<<<< HEAD
                     {categories.map(category => (                      <option key={category} value={category}>
 
                       <option key={category} value={category}>
@@ -734,13 +821,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {category === 'all' ? 'All Categories' : category}
                       </option>;
                     ))}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </select>;
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />;
                 </div>;
@@ -749,9 +841,13 @@ import { motion, AnimatePresence } from 'framer-motion';
                   <select
                     value={sortBy}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={e => setSortBy(e && e.target.value)}
                     className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10';
   ArrowRight,
@@ -974,26 +1070,38 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     on_change={e => setSortBy (e.target.value)}
                     className='appearance - none bg - gray - 700 / 50 border border - gray - 600 / 50 rounded - xl px - 4 py - 3 text - white focus:outline - none focus:border - cyan - 500 / 50 focus:ring - 1 focus:ring - cyan - 500 / 50 pr - 10';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     <option value='name'>Sort by Name</option>;
                     <option value='price'>Sort by Price</option>;
                     <option value='roi'>Sort by ROI</option>;
                   </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className={`p-2 rounded-lg transition-all duration-200 ${;
                       viewMode === 'grid' ;
                         ? 'bg-cyan-500/20 text-cyan-400' ;
                         : 'text-gray-400 hover:text-white';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }`}
                   >;
                     <Grid className="w-5 h-5" />;
@@ -1006,9 +1114,13 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         : 'text-gray-400 hover:text-white';
                     }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
@@ -1041,6 +1153,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       viewMode === 'list'
                         ? 'bg-cyan-500/20 text-cyan-400'
                         : 'text-gray-400 hover:text-white'
@@ -1053,6 +1168,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   >
                     <List className="w-5 h-5" />
 
+<<<<<<< HEAD
                   </button>
 
 
@@ -1062,13 +1178,19 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   >;
                     <List className='w-5 h-5' />                  </button>                      viewMode === 'list' ;
@@ -1114,11 +1236,15 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   >;
                     <List className="w - 5 h - 5" />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1131,12 +1257,23 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}>        <motion&& motion.div 
 =======
+=======
+
+        </motion.div>;
+=======
+        {/* Results Count */}
+        <motion.div;
+          className='mb - 8'          initial={{ opacity: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           whileInView={{ opacity: 1 }}
 
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}>        <motion&& motion.div 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -1151,24 +1288,34 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               {all2027Services && all2027Services.length}
             </span>{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
             services          </p>;
         </motion && motion.div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             services          </p>;
         </motion && motion.div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Grid/List */}
         <AnimatePresence mode='wait'>;
           {viewMode === 'grid' ? (;
             <motion&& motion.div
               key='grid'              initial={{ opacity: 0, scale: 0 && 0.95 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Results Count */}
         <motion.div 
@@ -1178,7 +1325,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p className="text-gray-400">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <p className='text-gray-400'>
             Showing{' '}
             <span className='text-cyan-400 font-semibold'>
@@ -1191,7 +1341,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             services          </p>
         </motion.div>
         {/* Services Grid/List */}
+<<<<<<< HEAD
           <p className="text-gray-400">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <AnimatePresence mode='wait'>
           {viewMode === 'grid' ? (
             <motion.div
@@ -1200,14 +1353,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >          <p className="text-gray-400">
+<<<<<<< HEAD
 =======
           <p className="text-gray-400">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
           </p>
         </motion.div>
         {/* Services Grid/List */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <AnimatePresence mode="wait">
           {viewMode === 'grid' ? (
@@ -1217,6 +1374,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >        <motion.div;
           className="mb - 8";
           initial={{ opacity: 0 }}
@@ -1242,6 +1402,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               animate={{ opacity: 1, scale: 1 }}
 =======
@@ -1349,6 +1510,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -1356,11 +1520,17 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               transition={{ duration: 0.3 }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1374,6 +1544,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >
 className="group"
@@ -1409,6 +1580,11 @@ className="group"
                 >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -1421,6 +1597,7 @@ className="group"
                       </div>
                     </div>
                     {/* Content */}
+<<<<<<< HEAD
 
                     </h3>;
                     <p className='text - gray - 300 mb - 4 leading - relaxed'>                      {service.description}
@@ -1444,23 +1621,34 @@ className="group"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {service.name}
                     </h3>;
                     <p className='text - gray - 300 mb - 4 leading - relaxed'>                    <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors">;
                       {service.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
                       {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>
                         className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service && service.category)} shadow-lg`}>;
                         {getCategoryIcon(service && service.category)}
@@ -1502,10 +1690,15 @@ className="group"
                     </p>;
                     {/* Features */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
@@ -1513,10 +1706,13 @@ className="group"
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                             {feature}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                       {service.description}
@@ -1529,13 +1725,23 @@ className="group"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                           </li>
                         ))}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                        ))}
+                      </ul>
+                    </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       </ul>;
                     </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1561,6 +1767,13 @@ className="group"
                       </ul>
                     </div>
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-6'>
                       {service.tags.slice(0, 3).map((tag, idx) => (
@@ -1575,6 +1788,7 @@ className="group"
 
                         >
 
+<<<<<<< HEAD
                           {tag}
                         </span>;
                       ))}
@@ -1607,10 +1821,14 @@ className="group"
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {tag}
                         </span>;
                       ))}
+<<<<<<< HEAD
 
                     </div>;
 =======
@@ -1732,6 +1950,29 @@ className="group"
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">;
                       href={service.link}
                       className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+=======
+                    </div>
+
+                    </div>;
+=======
+                    </div>
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                    {/* CTA */}
+                    <Link
+                      href={service.link}
+                      className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                    </Link>                      className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -1745,6 +1986,7 @@ className="group"
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 
                     </div>;
 =======
@@ -1762,10 +2004,19 @@ className="group"
               className='space-y-4'            >              key="list"
               className='space-y-4'            >
 
+=======
+              className='space-y-4'            >              key="list"
+              className='space-y-4'            >
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 
 
 
@@ -1775,6 +2026,15 @@ className="group"
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className='space-y-4'              className="space-y-4"
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1789,19 +2049,28 @@ className="group"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 className="group"
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
                       {/* Icon and Category */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="flex items-center space-x-4">;
                         <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service && service.category)} shadow-lg`}>;
                           {getCategoryIcon(service && service.category)}
@@ -1811,6 +2080,7 @@ className="group"
                           <div className="text-2xl font-bold text-cyan-400">{service && service.price}</div>;
                         </div>;
                       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -1869,6 +2139,8 @@ className="group"
                               key={idx}
                               className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                            >                          {service.name}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1878,7 +2150,10 @@ className="group"
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                           {service.name}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </h3>
                         <p className="text-gray-300 mb-3 leading-relaxed">
                           </div>                        </div>;
@@ -1910,6 +2185,7 @@ className="group"
                           {service.tags.slice (0, 4).map ((tag, idx) => (
                             <span;
                               key={idx}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1960,6 +2236,10 @@ className="group"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Stats and CTA */}
                       <div className='flex flex-col items-end space-y-3'>
                         <div className='text-right'>
@@ -1969,7 +2249,13 @@ className="group"
                           </div>
 
 
+<<<<<<< HEAD
                         </div>
+=======
+
+                        </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Link
                           href={service && service.link}
                           className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'>;
@@ -1987,9 +2273,13 @@ className="group"
                 </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         </div>
                         <Link
@@ -2010,6 +2300,7 @@ className="group"
                   </div>
                 </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2017,10 +2308,18 @@ className="group"
               ))}
 </motion && motion.div>;
           )}
+=======
+
+              ))}
+</motion && motion.div>;
+          )}
+        </AnimatePresence>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </AnimatePresence>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -2030,11 +2329,19 @@ className="group"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
             className='text-center py-20'            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0 && 0.6 }}>          <motion&& motion.div 
 =======
@@ -2042,6 +2349,11 @@ className="group"
             transition={{ duration: 0 && 0.6 }}>          <motion&& motion.div 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            transition={{ duration: 0 && 0.6 }}>          <motion&& motion.div 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center py-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -2053,6 +2365,7 @@ className="group"
             <p className='text-gray-400 mb-8'>;
               Try adjusting your search terms or category filter to find what;
               you're looking for.            </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </AnimatePresence>
 
@@ -2122,6 +2435,11 @@ className="group"
         )}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+        </AnimatePresence>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2140,22 +2458,30 @@ className="group"
 
           className="mt-20 text-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
 
           className="mt-20 text-center"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
 
@@ -2181,6 +2507,9 @@ className="group"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
@@ -2268,6 +2597,7 @@ className="group"
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -2298,6 +2628,8 @@ className="group"
                 <span>View Pricing</span>
                 <TrendingUp className='w-5 h-5' />              </Link>              Ready to Transform Your Business?
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >;
           <div className='bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;
             <h3 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>        <motion.div;
@@ -2320,7 +2652,10 @@ className="group"
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these revolutionary services
@@ -2351,6 +2686,7 @@ className="group"
               </Link>;
               <Link
                 href="/pricing"
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
   /* Search and Filters */ ;
@@ -2404,6 +2740,8 @@ className="group"
 }<motion && motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion && motion.div> </div> </section>) ;
 };
 export default Enhanced2027ServicesShowcase;  );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50"
               >
                 <span>View Pricing</span>
@@ -2414,11 +2752,66 @@ export default Enhanced2027ServicesShowcase;  );
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 =======
 
 
 };
 
+=======
+  );
+}
+/* Search and Filters */
+};
+
+  /* Search and Filters */ 
+}<motion.div /> </div> </div> > {
+  categories.map ( (category) => (<option key= {
+  category
+}value= {
+  category
+}> {
+  category === 'all' ? 'All Categories' : category
+}</option>) )
+}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
+  () => setViewMode ('grid')
+}className= {
+  `p-2 rounded-lg transition-all duration-200 $ {
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'
+}`
+}> <Grid className="w-5 h-5" /> </button> <button onClick= {
+  () => setViewMode ('list')
+}className= {
+  `p-2 rounded-lg transition-all duration-200 $ {
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'
+}`
+}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
+  /* Results Count */
+}<motion.div > {
+  filteredServices.map ( (service, index) => (<motion.div key= {
+  service.id
+}</li>) )
+}</ul> </div> <span key= {
+  idx
+}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
+  tag
+}</span>) )
+}</div> {
+  /* CTA */
+}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </motion.div>) )
+}</motion.div> > {
+  filteredServices.map ( (service, index) => (<motion.div key= {
+  service.id
+}<span key= {
+  idx
+}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
+  tag
+}</span>) )
+}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )
+}</motion.div>)
+}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
+}{
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Enhanced2027ServicesShowcase;
 
@@ -2469,6 +2862,7 @@ export default Enhanced2027ServicesShowcase;
 =======
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 /* Search and Filters */
@@ -2477,6 +2871,11 @@ export default Enhanced2027ServicesShowcase;
   /* Search and Filters */ 
 /* Search and Filters */ 
   /* Search and Filters */ 
+=======
+};
+
+  /* Search and Filters */ 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
   category
@@ -2524,6 +2923,7 @@ export default Enhanced2027ServicesShowcase;
 }</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
 }{
 
+<<<<<<< HEAD
 
 };
 
@@ -2612,3 +3012,6 @@ export default Enhanced2027ServicesShowcase;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

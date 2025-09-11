@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 interface FilterSidebarProps {
   className?: string;
@@ -10,6 +11,13 @@ interface FilterSidebarProps {
 
 import React from 'react';
 interface FilterSidebarProps {
+=======
+}
+
+
+import React from 'react';
+interface FilterSidebarProps {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   class_name?: string;
   children?: React.ReactNode;
 }
@@ -19,6 +27,7 @@ export const FilterSidebar: React.FC < FilterSidebarProps> = ({
 }, ) => {  return (
     <div className={`filter - sidebar ${class_name || ''}`}>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import React from 'react'
@@ -34,6 +43,8 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
     <div className={`filter-sidebar ${className |''}`}>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {children}
     </div>
   )
@@ -50,6 +61,7 @@ interface FilterGroup {
   options: FilterOption[]
   type: 'checkbox' | 'radio' | 'range'}
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD
 <<<<<<< HEAD
   filters: FilterGroup[]
   selectedFilters: Record<string, any>
@@ -70,6 +82,8 @@ export function FilterSidebar({
       {/* Mobile overlay */}
       {isOpen && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
   className,;
@@ -83,13 +97,17 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
 
 export default FilterSidebar;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
       {/* Sidebar */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className={`
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'
@@ -108,6 +126,8 @@ export default FilterSidebar;
                       </span>
                     </label>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <divclassName={`
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'
@@ -126,16 +146,23 @@ export default FilterSidebar;
                       </span>;
                     </label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )})}
               </div>
             </div>
           ))}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   filters: FilterGroup[];
   selected_filters: Record < string, any>;
@@ -176,6 +203,7 @@ function FilterSidebar() {
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
     </>)}
 '"`;
@@ -190,10 +218,13 @@ import React from 'react',;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </>;
   )};
 '"`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -221,3 +252,5 @@ export default FilterSidebar;
 =======
 export default FilterSidebar;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
 
@@ -13,6 +14,8 @@ import React from "react",
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
@@ -25,7 +28,10 @@ import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -33,11 +39,14 @@ interface AutocompleteSuggestionsProps {
   onSelectSuggestion: (suggestion: string) => void
 
   visible: boolean
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 interface AutocompleteSuggestionsProps {;
@@ -46,11 +55,17 @@ interface AutocompleteSuggestionsProps {;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Helper function to highlight matching text
 
@@ -59,22 +74,30 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     return { before: '', match: text, after: '' }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -94,6 +117,8 @@ export function AutocompleteSuggestions({
 }: AutocompleteSuggestionsProps) {
   if (!visible |suggestions.length === 0) return null;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from './react';
 import { SearchSuggestion, SearchHighlight } from '@/types / search';
@@ -129,7 +154,10 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 export function AutocompleteSuggestions({ 
@@ -137,10 +165,15 @@ export function AutocompleteSuggestions({
   searchTerm, ;
   onSelectSuggestion;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
@@ -161,24 +194,33 @@ export function AutocompleteSuggestions({
   searchTerm, 
   onSelectSuggestion,
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   visible 
 }: AutocompleteSuggestionsProps) {
   if (!visible || suggestions.length === 0) return null,
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const highlight = highlightMatch(suggestion.text, searchTerm);
 
           const highlight = highlightMatch(suggestion.text, searchTerm),
@@ -200,6 +242,7 @@ export function AutocompleteSuggestions({
             </li>
           )
         })}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -264,17 +307,23 @@ export function AutocompleteSuggestions(): any ({ ;
           );
         })}
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </ul>
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </ul>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export /**
  * AutocompleteSuggestions - Function description
@@ -498,3 +547,9 @@ return (<li key= {
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -29,6 +30,12 @@ export function MilestoneCard({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -38,6 +45,7 @@ import {Check, ArrowDown, X} from "lucide-react";
 import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {DisputeStatusBadge} from '@/components/disputes/DisputeStatusBadge';
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -117,10 +125,13 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface MilestoneCardProps {;
   id: string,;
   projectId: string,;
   title: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react',;
@@ -149,6 +160,8 @@ export function MilestoneCard({ ;
   id,;
   projectId,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   description?: string;
   amount: number,;
   status: string,;
@@ -160,11 +173,15 @@ export function MilestoneCard({ ;
 export function MilestoneCard(): any ({ ;
   id;
   projectId;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title, ;
   description, ;
   amount, ;
   status, ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   function getStatusBadgeColor() {;
     switch (status) {;
@@ -216,6 +233,8 @@ export function MilestoneCard({;
       case 'in_progress':;
         return 'bg-blue-500',;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   dueDate;
   onApprove;
@@ -231,6 +250,7 @@ export function MilestoneCard({;
         return 'bg-green-500';
       case 'in_progress':;
         return 'bg-blue-500';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case 'pending':;
                 Due:{format(new Date(dueDate), 'MMM d, yyyy')}
@@ -258,10 +278,14 @@ export function MilestoneCard({;
               size="sm"
             />;
           )}
+=======
+      case 'pending':;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return 'bg-yellow-500';
       case 'rejected':;
         return 'bg-red-500';
       default: return 'bg-gray-500';
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -333,12 +357,18 @@ export function MilestoneCard({;
 }
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
+<<<<<<< HEAD
 
 
 
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card>;
       <CardHeader className="pb-2">;
@@ -389,7 +419,10 @@ export function MilestoneCard({;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
@@ -420,6 +453,7 @@ export function MilestoneCard({;
             />;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>;
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>;
         </div>;
@@ -443,6 +477,11 @@ export function MilestoneCard({;
         </div>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="flex gap-2">;
           {status === 'pending' && onReject && !isUnderDispute && (;
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
@@ -450,22 +489,30 @@ export function MilestoneCard({;
             </Button>;
           )}
 <<<<<<< HEAD
-          ;
-;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          {status === 'pending' && onApprove && !isUnderDispute && (;
-            <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
-              <Check className="h-4 w-4 mr-1" /> Approve;
-            </Button>;
-          )}
 <<<<<<< HEAD
           ;
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+          {status === 'pending' && onApprove && !isUnderDispute && (;
+            <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
+              <Check className="h-4 w-4 mr-1" /> Approve;
+            </Button>;
+          )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          ;
+;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isUnderDispute && (;
             <Button variant="outline" size="sm" disabled>;
               Actions frozen due to dispute;
@@ -475,11 +522,14 @@ export function MilestoneCard({;
       </CardFooter>;
     </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
 
@@ -489,7 +539,10 @@ export function MilestoneCard({;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -516,6 +569,7 @@ export /**
 function MilestoneCard() {
   const { isUnderDispute, dispute_status } = useDisputeCheck (project_id, id);
 ;
+<<<<<<< HEAD
   /**
  * getStatusBadgeColor - Function description
  */
@@ -634,3 +688,5 @@ case 'rejected':
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

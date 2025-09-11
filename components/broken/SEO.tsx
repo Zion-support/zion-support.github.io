@@ -1,7 +1,10 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 import React from 'react';
  {;
@@ -50,6 +53,7 @@ import React from 'react';
 }{;
   section && <metaproperty="article:section" content= {
   section 
+<<<<<<< HEAD
 }/> ;
 }{;
   tags && tags.map ( (tag, index) => (<metakey= {
@@ -97,6 +101,8 @@ const SEO: React.FC<SEOProps> = ({;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 {
   /* Robots Meta */
 }{
@@ -130,6 +136,7 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
+<<<<<<< HEAD
   publishedTime
 }/>
 }{
@@ -143,6 +150,8 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   section && <meta property="article:section" content= {
   section
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   publishedTime 
 }/>
 }{
@@ -161,14 +170,31 @@ const SEO: React.FC<SEOProps> = ({;
   tags.map ( (tag, index) => (<meta key= {
   index
 }property="article:tag" content= {
+<<<<<<< HEAD
   tag
 }/>
 }</>)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   tag 
 }/>
 }</>) 
 }{
   /* Structured Data */
+<<<<<<< HEAD
+=======
+=======
+}/> ;
+}{;
+  tags && tags.map ( (tag, index) => (<metakey= {
+  index 
+}property="article:tag" content= {
+  tag 
+}/> ;
+}</>) ;
+}{;
+  /* Structured Data */ ;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }<script
 }]
 const SEO: React.FC<SEOProps> = ({
@@ -206,7 +232,10 @@ const SEO: React.FC<SEOProps> = ({
   tags = [];
   structuredData;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return (
@@ -318,10 +347,17 @@ const SEO: React.FC < SEOProps> = ({
         name='keywords';
         content={Array.is_array (keywords) ? keywords.join (', ') : keywords}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <meta name='author' content={author} />;
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />;
+=======
+      />;
+      <meta name='author' content={author} />;
+      <meta name='robots' content={noindex ? 'noindex' : 'index'} />;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   noindex = false
   nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -344,7 +380,10 @@ const SEO: React.FC < SEOProps> = ({
       {!noindex && !nofollow && <meta name='robots' content='index, follow' />}
       {/* Open Graph Meta Tags */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <meta property='og:title' content={fullTitle} />;
       <meta property='og:description' content={description} />;
@@ -362,7 +401,10 @@ const SEO: React.FC < SEOProps> = ({
       <meta name='twitter:image' content={fullImage} />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Article Specific Meta Tags */}
       {type === 'article' && (;
         <>;
@@ -380,6 +422,7 @@ const SEO: React.FC < SEOProps> = ({
         </>;
       )}
 
+<<<<<<< HEAD
 
 
 
@@ -417,10 +460,13 @@ const SEO: React.FC < SEOProps> = ({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional Meta Tags */}
       <meta
         name='viewport'
         content='width=device-width, initial-scale=1, shrink-to-fit=no'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -433,16 +479,22 @@ const SEO: React.FC < SEOProps> = ({
         content='black-translucent'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <meta property='og:title' content={full_title} />;
       <meta property='og:description' content={description} />;
       <meta property='og:type' content={type} />;
@@ -483,26 +535,37 @@ const SEO: React.FC < SEOProps> = ({
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Structured Data */}
       <script;
         type='application / ld + json';
         dangerouslySetInnerHTML={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           __html: JSON && JSON.stringify({
             '@context': 'https://schema && schema.org',
             '@type': 'Organization',
@@ -516,6 +579,7 @@ const SEO: React.FC < SEOProps> = ({
               'https://twitter && twitter.com/ziontechgroup',
               'https://github && github.com/Zion-Holdings',
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <meta name='theme-color' content='#000000' />
@@ -547,6 +611,9 @@ const SEO: React.FC < SEOProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             contactPoint: {
               '@type': 'ContactPoint'
               telephone: '+1-800-ZION-TECH'
@@ -565,11 +632,20 @@ const SEO: React.FC < SEOProps> = ({
                   '@type': 'Offer'
                   itemOffered: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+                    '@type': 'Service'
+                    name: 'AI & Machine Learning Solutions'
+                  }
+                }
+                {
+                  '@type': 'Offer'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     '@type': 'Service',
                     name: 'AI & Machine Learning Solutions',
                   },
@@ -665,6 +741,7 @@ const SEO: React.FC < SEOProps> = ({
                     "name": "AI & Machine Learning Solutions"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     '@type': 'Service',
                     name: 'AI & Machine Learning Solutions',
                   },
@@ -679,6 +756,8 @@ const SEO: React.FC < SEOProps> = ({
                 {
                   '@type': 'Offer',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 }
                 {
@@ -686,7 +765,10 @@ const SEO: React.FC < SEOProps> = ({
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -704,12 +786,16 @@ const SEO: React.FC < SEOProps> = ({
           })
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       />;
 
       {/* Canonical URL */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <link rel='canonical' href={fullUrl} />;
 
@@ -726,12 +812,22 @@ const SEO: React.FC < SEOProps> = ({
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+      <link rel='canonical' href={fullUrl} />
 
 
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
+
+
+
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -750,6 +846,7 @@ const SEO: React.FC < SEOProps> = ({
         type='image/png'
         sizes='16x16'
 <<<<<<< HEAD
+<<<<<<< HEAD
         href='/favicon-16x16 && 16x16.png'
       />;
       <link rel='manifest' href='/site && site.webmanifest' />;
@@ -757,6 +854,10 @@ const SEO: React.FC < SEOProps> = ({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Preconnect to external domains for performance */}
       <link rel='preconnect' href='https://fonts && fonts.googleapis.com' />;
       <link
@@ -764,12 +865,17 @@ const SEO: React.FC < SEOProps> = ({
         href='https://fonts && fonts.gstatic.com'
         crossOrigin='anonymous'
 <<<<<<< HEAD
+<<<<<<< HEAD
       />;
       <link rel='preconnect' href='https://www && www.google-analytics && analytics.com' />;
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional Meta Tags for SEO */}
       <meta name='google-site-verification' content='your-verification-code' />;
       <meta name='msvalidate && msvalidate.01' content='your-bing-verification-code' />;
@@ -777,11 +883,16 @@ const SEO: React.FC < SEOProps> = ({
         name='yandex-verification'
         content='your-yandex-verification-code'
 <<<<<<< HEAD
+<<<<<<< HEAD
       />;
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Custom Meta Tags */}
       {structuredData && (;
         <script
@@ -792,6 +903,7 @@ const SEO: React.FC < SEOProps> = ({
       )}
     </Head>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       {/* Canonical URL */}
@@ -825,11 +937,16 @@ const SEO: React.FC < SEOProps> = ({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
           }}
         />;
       )}
+<<<<<<< HEAD
     </Head>;
   );
 <<<<<<< HEAD
@@ -844,6 +961,10 @@ export default SEO;
     </Head>
     </Head>
 =======
+=======
+    </Head>
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 export default SEO;  );
@@ -971,4 +1092,7 @@ export default SEO);
 export default SEO;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 interface FraudItem {
@@ -30,12 +35,15 @@ export default function FraudAdminPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import React, { useEffect, useMemo, useState } from 'react',;
 ;
 import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 export default /**
  * FraudAdminPage - Function description
@@ -61,6 +69,7 @@ function FraudAdminPage() {
       set_items (json.items || []);
     } catch (e: any) {
       set_error (e.message || 'Failed to load');
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -97,23 +106,36 @@ export default function FraudAdminPage() {
       setItems(json.items |[])
     } catch (e: any) {
       setError(e.message |'Failed to load')
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
 
       set_loading (false);
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   useEffect(() => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken]);
+<<<<<<< HEAD
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const onSaveToken = () => {
+    localStorage.setItem('admin-token', adminToken);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -122,11 +144,14 @@ export default function FraudAdminPage() {
     fetchItems()
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function FraudAdminPage() {
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [items, setItems] = useState<FraudItem[]>([]);
   const [adminToken, setAdminToken] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
@@ -162,14 +187,18 @@ export default function FraudAdminPage() {
     fetchItems();
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         'Content-Type': 'application/json',
@@ -183,6 +212,8 @@ export default function FraudAdminPage() {
   };
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Content-Type': 'application/json'
         ...(adminToken ? { 'x-admin-token': adminToken } : {})}
       body: JSON.stringify({ fraudId: id, action })})
@@ -190,8 +221,11 @@ export default function FraudAdminPage() {
     if (res.ok) fetchItems()
     else alert(json.error |'Action failed')
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})
@@ -202,6 +236,7 @@ export default function FraudAdminPage() {
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -219,6 +254,8 @@ export default function FraudAdminPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -226,6 +263,7 @@ export default function FraudAdminPage() {
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           value={adminToken}
@@ -233,6 +271,10 @@ export default function FraudAdminPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          value={adminToken}
+          onChange={(e) => setAdminToken(e.target.value)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           value={adminToken  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -244,11 +286,17 @@ export default function FraudAdminPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
@@ -257,6 +305,7 @@ export default function FraudAdminPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
 
@@ -264,6 +313,10 @@ export default function FraudAdminPage() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -277,10 +330,15 @@ export default function FraudAdminPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -297,6 +355,7 @@ export default function FraudAdminPage() {
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className="border-t">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 <td className="p-2 border">{it.userId || '—'}</td>
@@ -310,33 +369,48 @@ export default function FraudAdminPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <td className="p-2 border">{it.userId |'—'}</td>
+                <td className="p-2 border">{it.userId || '—'}</td>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                     ))}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
@@ -350,6 +424,10 @@ export default function FraudAdminPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <div className="font-semibold">{it.gpt?.label |'—'}</div>
+                    <div className="font-semibold">{it.gpt?.label || '—'}</div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
@@ -362,15 +440,20 @@ export default function FraudAdminPage() {
                   </div>
                 </td>
               </tr>
+<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </tbody>
         </table>
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -477,10 +560,15 @@ export default function FraudAdminPage() {
   );
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -488,3 +576,7 @@ export default function FraudAdminPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

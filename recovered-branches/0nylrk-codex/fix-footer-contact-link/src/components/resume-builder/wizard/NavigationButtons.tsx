@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 {onNext && (;
 
 import { Button } from "@/components/ui/button",;
@@ -12,10 +13,16 @@ import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -26,16 +33,23 @@ export const NavigationButtons = ({;
   backLabel = "Back";
   nextLabel = "Next";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -45,6 +59,8 @@ import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const NavigationButtons = ({
   onBack,
   onNext,
@@ -52,18 +68,24 @@ export const NavigationButtons = ({
   backLabel = "Back",
   nextLabel = "Next",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
         <Button variant="outline" onClick={onBack}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { NavigationButtonsProps } from "./types",;
@@ -73,6 +95,7 @@ export const NavigationButtons = ({;
   isNextDisabled = false,;
   backLabel = "Back",;
   nextLabel = "Next";
+<<<<<<< HEAD
 <<<<<<< HEAD
   isLoading = false}: NavigationButtonsProps) => {;
   return (;
@@ -105,14 +128,39 @@ export const NavigationButtons = ({;
       )}
       {onNext && (;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  isLoading = false}: NavigationButtonsProps) => {;
+  return (
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {backLabel}
+        </Button>;
+      )}
+
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {onNext && (
 
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
       )}
+<<<<<<< HEAD
     </div>;
 <<<<<<< HEAD
   ),;
@@ -153,6 +201,13 @@ isLoading = false
 };
 =======
   );
+=======
+
+
+
+    </div>;
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 =======
@@ -162,6 +217,7 @@ isLoading = false
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import { Button } from '@/components / ui / button';
@@ -190,3 +246,5 @@ export const NavigationButtons = ({
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

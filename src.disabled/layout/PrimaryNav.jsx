@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export\": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(\') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {\''\'";\";
 export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(") const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {"""";";'"'"
 :src.disabled/layout/PrimaryNav.jsx
@@ -13,6 +14,8 @@ export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useSt
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {'''";";""}
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
@@ -23,13 +26,19 @@ export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useSt
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {'''";";""}
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "export\": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(\') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {\''\'";\";
 export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(") const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {"""";";'"'"
 
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {'''";";""}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {'''";";""}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

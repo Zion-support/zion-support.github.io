@@ -1,10 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import {
 
 
+=======
+import {
+
+import { motion } from 'framer-motion';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   ArrowRight
   Star
@@ -14,12 +20,15 @@ import {
   Brain
   Globe
   Rocket;
+<<<<<<< HEAD
 =======
 
 
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ArrowRight,
   Star,
   TrendingUp,
@@ -29,10 +38,28 @@ import {
   Globe,;
   Rocket,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,;
+  Rocket,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -40,15 +67,30 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
+<<<<<<< HEAD
 
 
+=======
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.2
+        delayChildren: 0.1
+      }
+    },  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         staggerChildren: 0.2,
         delayChildren: 0.1,
       },
     },  };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const itemVariants = {
     hidden: {
       opacity: 0
@@ -78,9 +120,13 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -107,6 +153,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
     visible: {
       opacity: 1,
       transition: {
+<<<<<<< HEAD
 
         stagger_children: 0.2,
 <<<<<<< HEAD
@@ -164,6 +211,18 @@ stagger_children: 0.2,
         staggerChildren: 0 && 0.2,;
         delayChildren: 0 && 0.1,;
       },;
+=======
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },  };        ease: "easeOut" as const
+      }
+    }
+  }
+        duration: 0.3,
+        ease: 'easeOut' as const,
+      },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },  };
   const itemVariants = {;
     hidden: {;
@@ -193,6 +252,10 @@ stagger_children: 0.2,
       }
     }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const cardVariants = {;
     hover: {;
       y: -10,;
@@ -208,6 +271,7 @@ stagger_children: 0.2,
   const renderServiceCard = (service: any, index: number) => (;
     <motion&& motion.div
       key={service && service.id}
+<<<<<<< HEAD
 <<<<<<< HEAD
       variants={itemVariants}
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
@@ -235,6 +299,12 @@ stagger_children: 0.2,
 =======
 
       variants={itemVariants}
+=======
+
+      variants={itemVariants}
+      whileHover='hover'
+      className='group relative'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     >
@@ -252,7 +322,10 @@ stagger_children: 0.2,
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />;
         <div className="relative p-6">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Service header */}
           <div className="flex items-start justify-between mb-4">;
             <div className="flex items-center space-x-3">;
@@ -271,11 +344,19 @@ stagger_children: 0.2,
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       whileHover="hover"
       className="group relative"
+=======
+
+      whileHover="hover"
+      className="group relative"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >
       <motion.div
         variants={cardVariants}
@@ -334,9 +415,13 @@ stagger_children: 0.2,
         className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - slate - 900 / 80 via - slate - 800 / 80 to - slate - 900 / 80 backdrop - blur - xl border border - slate - 700 / 50 hover:border - slate - 600 / 50 transition - all duration - 300";
       >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Glowing border effect */}
         <div className="absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
         <div className="relative p - 6">;
@@ -359,9 +444,13 @@ stagger_children: 0.2,
           </div>;
           {/* Description */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           {/* Description */}
           <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service && service.description}
@@ -370,13 +459,23 @@ stagger_children: 0.2,
             {service && service.description}
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Features */}
           <div className="mb-4">
+=======
+
+
+          {/* Features */}
+
+          <div className="mb-4">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
             <div className="grid grid-cols-1 gap-1">
               {service.features.slice(0, 3).map((feature: string, idx: number) => (
                 <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">
                   <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" />
+<<<<<<< HEAD
     }
   },
 
@@ -514,6 +613,17 @@ stagger_children: 0.2,
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
         <div className='relative p-6'>
           {/* Service header */}
+=======
+                  <span>{feature}</span>
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+          {/* Price and CTA */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='flex items-start justify-between mb-4'>
             <div className='flex items-center space-x-3'>
               <div className='text-3xl'>{service.icon}</div>
@@ -577,6 +687,7 @@ stagger_children: 0.2,
                 ))}            </div>
           </div>
           {/* Price and CTA */}          <div className="mb-4">
+<<<<<<< HEAD
 =======
 
 
@@ -585,6 +696,8 @@ stagger_children: 0.2,
           <div className="mb-4">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
             <div className="grid grid-cols-1 gap-1">
               {service.features.slice(0, 3).map((feature: string, idx: number) => (
@@ -593,8 +706,11 @@ stagger_children: 0.2,
                   <span>{feature}</span>
                 </div>
               ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           {/* Price and CTA */}
           <div className='flex items-center justify-between'>
@@ -610,6 +726,7 @@ stagger_children: 0.2,
             >
               <span>Learn More</span>
               <ArrowRight className='w-4 h-4' />            </motion.button>
+<<<<<<< HEAD
 =======
             </div>
 
@@ -630,6 +747,8 @@ stagger_children: 0.2,
               <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
                 <span>Popular</span>
@@ -651,11 +770,17 @@ stagger_children: 0.2,
 
             </motion.button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -675,18 +800,25 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </div>
           {/* Market info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="mt-4 pt-4 border-t border-slate-700/50">
 =======
 
           <div className="mt-4 pt-4 border-t border-slate-700/50">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          <div className="mt-4 pt-4 border-t border-slate-700/50">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="flex items-center justify-between text-xs text-slate-500">
               <span>Market: {service.marketSize}</span>
               <span>Growth: {service.growthRate}</span>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <section className=&quot;py-20 relative overflow-hidden&quot;>
       {/* Background effects */}
@@ -710,6 +842,8 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
       <div className="container mx-auto px-4 relative z-10">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hover glow effect */}
 
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
@@ -796,11 +930,15 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
         {/* Section header */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
 
 
@@ -814,6 +952,15 @@ className="text-center mb-16"
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          className='text-center mb-16'
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -855,28 +1002,42 @@ className="text-center mb-16"
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">;
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />;
       <div className="container mx-auto px-4 relative z-10">;
         <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
         {/* AI Services Section */}
         <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -922,6 +1083,7 @@ className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-20"
         >
@@ -936,6 +1098,12 @@ className="text-center mb-16"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -976,6 +1144,10 @@ className="text-center mb-16"
             </h3>;
           </div>;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* IT Infrastructure Section */}
         <motion.div
@@ -1015,20 +1187,37 @@ className="text-center mb-16"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* IT Infrastructure Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='mb-20'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         >
           <div className='flex items-center space-x-3 mb-8'>
@@ -1047,9 +1236,13 @@ className="text-center mb-16"
               renderServiceCard(service, index)
             )}          </motion.div>        >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-20"
         >
@@ -1069,7 +1262,10 @@ className="text-center mb-16"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
@@ -1078,6 +1274,7 @@ className="text-center mb-16"
               IT Infrastructure & Security;
             </h3>;
           </div>;
+<<<<<<< HEAD
           <motion&& motion.div
 =======
 <<<<<<< HEAD
@@ -1089,6 +1286,9 @@ className="text-center mb-16"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Micro SAAS Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1102,6 +1302,12 @@ className="text-center mb-16"
             </h3>
           </div>
           <motion.div
+<<<<<<< HEAD
+=======
+=======
+
+          <motion&& motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
@@ -1117,6 +1323,7 @@ className="text-center mb-16"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
+<<<<<<< HEAD
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
           </motion && motion.div>;
@@ -1147,6 +1354,8 @@ className="text-center mb-16"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
@@ -1155,10 +1364,19 @@ className="text-center mb-16"
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Micro SAAS Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 
@@ -1198,6 +1416,23 @@ className="text-center mb-16"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className='text-center mt-16'
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* CTA Section */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
@@ -1233,12 +1468,18 @@ className="text-center mb-16"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'              >                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
 =======
 
                 className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Schedule Demo
               </motion.button>
@@ -1248,9 +1489,12 @@ className="text-center mb-16"
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
@@ -1501,12 +1745,23 @@ className="text-center mb-16"
             </p>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 
 }
 
 }
+=======
+  );
+
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
               <motion.button;
                 while_hover={{ scale: 1.05 }}
@@ -1541,6 +1796,7 @@ className="text-center mb-16"
     </section>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
   );
 }
@@ -1550,3 +1806,6 @@ className="text-center mb-16"
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

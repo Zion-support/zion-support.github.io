@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import {useEffect} from 'react';
@@ -9,6 +12,7 @@ import {useEffect} from 'react';
 
 export default function IntegrationsRedirect() {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function IntegrationsRedirect() {;
 =======
@@ -23,25 +27,41 @@ export default function IntegrationsRedirect() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+export default function IntegrationsRedirect() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/admin/integrations');
   }, [router]);
   return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function IntegrationsRedirect() {
@@ -50,9 +70,13 @@ export default function IntegrationsRedirect() {
   return null
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {use_router} from 'next / router';
 ;
 export default /**
@@ -66,6 +90,7 @@ function IntegrationsRedirect() {
   return null;
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -91,3 +116,9 @@ export default function IntegrationsRedirect(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

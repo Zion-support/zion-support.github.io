@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 import {;
@@ -43,6 +44,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -63,7 +66,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
@@ -77,8 +83,11 @@ import { innovative2030Services } from '../data/2030-innovative-services';import
 =======
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -87,6 +96,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 
@@ -103,13 +113,18 @@ import {
   Mail
   MapPin;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ArrowRight,
   Star,
   Zap,
@@ -118,14 +133,20 @@ import {
   Award,
   Phone,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Mail,;
   MapPin,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Mail,;
   MapPin,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -139,6 +160,7 @@ export default function Revolutionary2030ServicesPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -146,15 +168,20 @@ export default function Revolutionary2030ServicesPage() {
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
 <<<<<<< HEAD
+<<<<<<< HEAD
         />;
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
         <link rel='icon' href='/favicon && favicon.ico' />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
@@ -173,7 +200,10 @@ export default function Revolutionary2030ServicesPage() {
         <link rel='icon' href='/favicon && favicon.ico' />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta
           property='og:title'
           content='2030 Revolutionary Technology Services | Zion Tech Group'
@@ -190,15 +220,21 @@ export default function Revolutionary2030ServicesPage() {
         <meta
           property='og:image'
 <<<<<<< HEAD
+<<<<<<< HEAD
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
         <meta
@@ -212,30 +248,42 @@ export default function Revolutionary2030ServicesPage() {
         <meta
           name='twitter:image'
 <<<<<<< HEAD
+<<<<<<< HEAD
           content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
         />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
         />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Additional Meta Tags */}
         <meta name='theme-color' content='#8b5cf6' />;
         <link
           rel='canonical'
 <<<<<<< HEAD
+<<<<<<< HEAD
           href='https://ziontechgroup && ziontechgroup.com/2030-revolutionary-services'
         />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           href='https://ziontechgroup && ziontechgroup.com/2030-revolutionary-services'
         />;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta;
           name='description';
           content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we're building tomorrow's solutions today.";
@@ -288,25 +336,37 @@ export default function Revolutionary2030ServicesPage() {
           type='application / ld + json';
           dangerouslySetInnerHTML={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             __html: JSON && JSON.stringify({
               '@context': 'https://schema && schema.org',
             __html: JSON.stringify ({
               '@context': 'https://schema.org',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               '@type': 'Organization',
               name: 'Zion Tech Group',
               description:;
                 'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               url: 'https://ziontechgroup.com',
               logo: 'https://ziontechgroup.com / logo.png',
               contact_point: {
@@ -315,9 +375,13 @@ export default function Revolutionary2030ServicesPage() {
                 contact_type: 'customer service',
                 email: 'kleber@ziontechgroup.com',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               },
               address: {
                 '@type': 'PostalAddress',
@@ -329,11 +393,15 @@ export default function Revolutionary2030ServicesPage() {
               },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <UltraFuturisticBackground2030>
       <Head>
         <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title>
@@ -355,6 +423,10 @@ export default function Revolutionary2030ServicesPage() {
 {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com/2030-revolutionary-services" />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   return (
@@ -427,10 +499,14 @@ export default function Revolutionary2030ServicesPage() {
                 "email": "kleber@ziontechgroup.com"
               };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               "address": {
                 "@type": "PostalAddress"
                 "streetAddress": "364 E Main St STE 1008"
@@ -441,13 +517,18 @@ export default function Revolutionary2030ServicesPage() {
               }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               "sameAs": [
                 "https://github && github.com/Zion-Holdings"
               ]
             })
+<<<<<<< HEAD
 
 
 
@@ -477,12 +558,27 @@ export default function Revolutionary2030ServicesPage() {
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
 =======
+=======
+        />
+      </Head>
+      {/* Navigation */}
+      <UltraFuturisticNavigation2030 />
+
+      {/* Navigation */}
+      <UltraFuturisticNavigation2030 />;
+=======
+        />
+      </Head>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -494,10 +590,15 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
@@ -505,6 +606,7 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='mb-8'
           >
@@ -555,10 +657,13 @@ export default function Revolutionary2030ServicesPage() {
               Technology Services
             </span>
           </motion.h1>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
@@ -566,6 +671,8 @@ export default function Revolutionary2030ServicesPage() {
             and quantum computing to space mining and DNA computing, we're building the future today.
           </motion.p>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
 
@@ -576,11 +683,15 @@ export default function Revolutionary2030ServicesPage() {
           </motion.p>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
@@ -590,11 +701,16 @@ export default function Revolutionary2030ServicesPage() {
             </button>
             <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>              View Pricing          >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
               Schedule Consultation
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
@@ -606,7 +722,10 @@ export default function Revolutionary2030ServicesPage() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
@@ -671,13 +790,17 @@ export default function Revolutionary2030ServicesPage() {
       </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Services Showcase */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -709,17 +832,26 @@ export default function Revolutionary2030ServicesPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -728,6 +860,7 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -735,10 +868,14 @@ export default function Revolutionary2030ServicesPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='text-center mb-20'
             <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
@@ -784,11 +921,16 @@ export default function Revolutionary2030ServicesPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               same_as: ['https://github.com / Zion - Holdings'],
             }),          }}              "contact_point": {
@@ -970,6 +1112,8 @@ export default function Revolutionary2030ServicesPage() {
                     {service.description}
                   </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -979,16 +1123,24 @@ export default function Revolutionary2030ServicesPage() {
 
                   </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Description */}
                   <p className='text-gray-300 leading-relaxed mb-6'>;
                     {service && service.description}
                   </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-3 mb-6'>;
                     {service && service.features;
@@ -1002,9 +1154,13 @@ export default function Revolutionary2030ServicesPage() {
                         </div>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="group cursor-pointer"
               >
                 <div className="p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm">
@@ -1023,6 +1179,7 @@ export default function Revolutionary2030ServicesPage() {
                       <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black">
                         Popular
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1078,11 +1235,23 @@ export default function Revolutionary2030ServicesPage() {
                   {/* Price and CTA */}
                   <div className='flex items-center justify-between'>
 =======
+=======
+
+                    )}
+                  </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                  {/* Description */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.slice(0, 6).map((feature, featureIndex) => (
@@ -1094,9 +1263,13 @@ export default function Revolutionary2030ServicesPage() {
                   </div>
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Service Details */}
                   <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;
                     <div className='flex items-center space-x-2'>;
@@ -1134,9 +1307,13 @@ export default function Revolutionary2030ServicesPage() {
                       </div>;
                     ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                   {/* Price and CTA */}
                   <div className="flex items-center justify-between">
@@ -1154,6 +1331,7 @@ export default function Revolutionary2030ServicesPage() {
             ))}
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 {/* Service Details */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">;
@@ -1176,6 +1354,8 @@ export default function Revolutionary2030ServicesPage() {
                   </div>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Price and CTA */}
                   <div className='flex items-center justify-between'>;
                     <div>;
@@ -1201,6 +1381,7 @@ export default function Revolutionary2030ServicesPage() {
               </motion && motion.div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
 
 
@@ -1213,21 +1394,33 @@ export default function Revolutionary2030ServicesPage() {
 =======
 <<<<<<< HEAD
 =======
+=======
+
+          </div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="text-center"
           >
@@ -1266,6 +1459,8 @@ export default function Revolutionary2030ServicesPage() {
         </div>
       </section>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   Contact Us;
@@ -1278,10 +1473,18 @@ export default function Revolutionary2030ServicesPage() {
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1292,16 +1495,23 @@ export default function Revolutionary2030ServicesPage() {
                 {' '}
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1310,6 +1520,7 @@ export default function Revolutionary2030ServicesPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with
 <<<<<<< HEAD
+<<<<<<< HEAD
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 {' '}2030 Technology?
 =======
@@ -1317,6 +1528,11 @@ export default function Revolutionary2030ServicesPage() {
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {' '}2030 Technology?
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                {' '}2030 Technology?
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -1332,11 +1548,14 @@ export default function Revolutionary2030ServicesPage() {
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
               <div className='flex items-center justify-center space-x-2'>
                 <Phone className='w-5 h-5 text-cyan-400' />
                 <span>{contactInfo.mobile}</span>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
@@ -1344,7 +1563,10 @@ export default function Revolutionary2030ServicesPage() {
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span>{contactInfo.mobile}</span>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5 text-purple-400" />
@@ -1359,6 +1581,7 @@ export default function Revolutionary2030ServicesPage() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 }
@@ -1366,6 +1589,15 @@ export default function Revolutionary2030ServicesPage() {
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
+=======
+      {/* Footer */}
+      <UltraFuturisticFooter2030 />
+    </UltraFuturisticBackground2030>
+  );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 2030 Technology?;
               </span>;
@@ -1432,9 +1664,16 @@ export default function Revolutionary2030ServicesPage() {
   );  );
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </motion.div>;
         </div>;
       </section>;
@@ -1516,6 +1755,7 @@ export default function Revolutionary2030ServicesPage() {
     </UltraFuturisticBackground2030>));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
@@ -1528,3 +1768,6 @@ export default function Revolutionary2030ServicesPage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

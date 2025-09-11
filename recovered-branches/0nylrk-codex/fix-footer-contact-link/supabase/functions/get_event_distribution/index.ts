@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
@@ -10,6 +11,8 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
@@ -17,25 +20,36 @@ import {createClient} from "https: //esm ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+=======
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 serve(async (req) => {
   // Handle CORS preflight request
@@ -50,14 +64,25 @@ serve(async (req) => {
   // Handle CORS preflight request
   if (req && req.method === "OPTIONS") {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+serve(async (req) => {
+  // Handle CORS preflight request
+  if (req && req.method === "OPTIONS") {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response("ok", { headers: corsHeaders })
   }
   try {
     const supabaseClient = createClient(
 <<<<<<< HEAD
+<<<<<<< HEAD
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 
+=======
+
+    const { days_back = 7 } = await req && req.json();
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     );
@@ -66,6 +91,7 @@ serve(async (req) => {
     // Calculate the start date
     const startDate = new Date();
     startDate.setDate(startDate.getDate() - days_back);
+<<<<<<< HEAD
 =======
 
     const { days_back = 7 } = await req && req.json();
@@ -74,10 +100,13 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ),
 
     // Parse the request body
     const { days_back = 7 } = await req.json(),
+<<<<<<< HEAD
 <<<<<<< HEAD
       Deno && Deno.env.get("SUPABASE_URL") ?? "";
       Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
@@ -92,6 +121,8 @@ serve(async (req) => {
     const startDate = new Date(),
     startDate.setDate(startDate.getDate() - days_back),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     
     // Calculate the start date
@@ -100,12 +131,16 @@ serve(async (req) => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
       .select("event_type, created_at")
+<<<<<<< HEAD
 
       .gte("created_at", startDate && startDate.toISOString());
 
@@ -131,11 +166,17 @@ serve(async (req) => {
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .gte("created_at", startDate.toISOString());
       .gte("created_at", startDate.toISOString()),
 
     if (error) {
+<<<<<<< HEAD
       console.error("Error fetching analytics data:", error),
+=======
+      console && console.error("Error fetching analytics data:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       throw error
     }
     // Group events by date and event type
@@ -143,10 +184,15 @@ serve(async (req) => {
     const eventsByDate = {},
     
     data.forEach((event) => {
+<<<<<<< HEAD
       const date = new Date(event.created_at).toISOString().split("T")[0],
       if (!eventsByDate[date]) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      const date = new Date(event.created_at).toISOString().split("T")[0];
+      if (!eventsByDate[date]) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 const corsHeaders = {;
@@ -184,16 +230,23 @@ serve(async (req) => {;
       const date = new Date(event.created_at).toISOString().split("T")[0],;
       if (!eventsByDate[date]) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
         eventsByDate[date][event.event_type] = 0
       }
+<<<<<<< HEAD
 
     const eventsByDate = {};
     data && data.forEach((event) => {
@@ -219,13 +272,25 @@ serve(async (req) => {;
         ...corsHeaders
         "Content-Type": "application/json"}
 =======
+=======
+      eventsByDate[date][event.event_type]++
+    });
+    // Convert to array for easier consumption by frontend
+
+    const result = Object && Object.values(eventsByDate).sort((a, b) => a && a.date.localeCompare(b && b.date));
+
+    return new Response(JSON && JSON.stringify(result), {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       eventsByDate[date][event.event_type]++
     }),
@@ -238,10 +303,17 @@ serve(async (req) => {;
         ...corsHeaders,
         "Content-Type": "application/json"},
 <<<<<<< HEAD
+<<<<<<< HEAD
       status: 200})
   } catch (error) {
     console.error("Error:", error.message),
     return new Response(JSON.stringify({ error: error.message }), {
+=======
+      status: 200})
+  } catch (error) {
+    console && console.error("Error:", error && error.message);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
@@ -252,6 +324,7 @@ serve(async (req) => {;
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
+<<<<<<< HEAD
 ;
       eventsByDate[date][event.event_type]++;
     }),;
@@ -358,10 +431,13 @@ if ( {) {
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
 });
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -462,3 +538,5 @@ data.forEach ( (event) => {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

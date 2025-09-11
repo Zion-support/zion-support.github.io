@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react",
 import Link from "next/link",
@@ -48,17 +49,24 @@ import { Project } from "@/types/projects",
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ActiveProjectsCard() {
 xport function ActiveProjectsCard() {
+=======
+export function ActiveProjectsCard() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
   useEffect(() => {
     if (projects && !isLoading) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const active = null;
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      const active = null;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
       ).slice(0, 3), // Limit to 3 most recent projects
@@ -66,6 +74,7 @@ xport function ActiveProjectsCard() {
     }
   }, [projects, isLoading]),
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isLoading) {
     return (
@@ -81,6 +90,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (isLoading) {
@@ -116,12 +127,15 @@ export function ActiveProjectsCard() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <BriefcaseIcon className="h-5 w-5 text-primary" />
           <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -131,6 +145,7 @@ export function ActiveProjectsCard() {;
           <div className="space-y-2">
 
 
+<<<<<<< HEAD
                 className='h-16 animate-pulse bg-muted rounded'></div>            ))}
           </div>;
         </CardContent>;
@@ -206,11 +221,16 @@ export function ActiveProjectsCard() {;
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
     );
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -220,6 +240,7 @@ export function ActiveProjectsCard() {;
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD
 
   }
   
@@ -227,12 +248,15 @@ export function ActiveProjectsCard() {;
     return (
       <Card>
         <CardHeader>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -244,6 +268,16 @@ export function ActiveProjectsCard() {;
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
 <<<<<<< HEAD
+=======
+
+
+
+            <BriefcaseIcon className="h-5 w-5 text-primary" />
+            <span>Active Projects</span>
+          </CardTitle>
+          <CardDescription>Your ongoing work</CardDescription>
+        </CardHeader>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <CardContent className='text-center py-6'>
           <p className='text-muted-foreground mb-2'>
             You don't have any active projects at the moment.
@@ -253,6 +287,7 @@ export function ActiveProjectsCard() {;
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
             <Link href="/jobs">Find Opportunities</Link>
+<<<<<<< HEAD
 =======
 
 
@@ -285,6 +320,8 @@ export function ActiveProjectsCard() {;
     );
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <CardContent className="text-center py-6">
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
@@ -297,13 +334,17 @@ export function ActiveProjectsCard() {;
     )
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return (
   }
   return (
 
+<<<<<<< HEAD
 
     <Card>;
       <CardHeader>;
@@ -422,6 +463,8 @@ export function ActiveProjectsCard() {;
 
 
                   : 'In Progress'}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Badge>;
             </div>;
             <div className='flex items-center text-xs text-muted-foreground gap-2'>;
@@ -446,11 +489,15 @@ export function ActiveProjectsCard() {;
 
       )}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </Button>
           </div>
@@ -480,6 +527,11 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from 'react';
 import Link from 'next / link';
 import { BriefcaseIcon, Clock } from 'lucide-react';
@@ -638,9 +690,14 @@ if ( {) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 ;
 =======
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

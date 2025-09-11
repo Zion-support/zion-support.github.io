@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -8,6 +9,14 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 
 
+=======
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
@@ -216,10 +225,13 @@ export default function PricingComparisonPage() {
     }
   ];
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const marketInsights = [
     {
       insight: 'Zion services are 30-60% more affordable than market leaders'
@@ -254,6 +266,7 @@ export default function PricingComparisonPage() {
       insight: 'Enterprise-grade reliability without enterprise pricing'
       icon: <Star className="w-6 h-6" />
       color: 'text-yellow-400'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function PricingComparisonPage() {
@@ -659,6 +672,10 @@ export default function PricingComparisonPage() {
 ;
   return (
 =======
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -684,7 +701,10 @@ import Button from '../components / ui / Button';
 import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <Head>;
         <title>;
@@ -692,16 +712,22 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
           Competition;
         </title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       <div className='min-h-screen bg-black'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       <div className='min-h-screen bg-black'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -739,6 +765,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
               </Button>;
               <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href='/pricing'
                 variant='outline'
                 size='lg'
@@ -748,6 +775,8 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
                 href="/pricing"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
     <>
@@ -785,12 +814,16 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 View Comparison
               </Button>
               <Button
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 href="/pricing"
                 variant="outline"
                 size="lg"
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 View Our Pricing
 =======
@@ -800,6 +833,12 @@ href="/pricing"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                View Our Pricing
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta;
           name='description';
           content="See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value.";
@@ -859,25 +898,35 @@ href="/pricing"
                 className="border - indigo - 500 text - indigo - 400 hover:bg - indigo - 500 hover:text - white";
                 View Our Pricing;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>;
             </div>;
           </div>;
         </section>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Market Insights */}
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Why Choose Zion?
+<<<<<<< HEAD
 <<<<<<< HEAD
               </h2>
                 View Our Pricing
@@ -907,6 +956,8 @@ href="/pricing"
                   >                    {insight.icon}                Why Choose Zion?
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Key insights that make Zion the smart choice for your business.
@@ -944,14 +995,19 @@ href="/pricing"
               {market_insights.map ((insight, index) => (
                 <Card;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   className="text - center group hover:scale - 105 transition - transform duration - 300";
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
                     {insight.icon}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -959,11 +1015,14 @@ href="/pricing"
                   <p className={`text - lg font - semibold ${insight.color}`}>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     {insight.icon}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
@@ -974,6 +1033,11 @@ href="/pricing"
 
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
+=======
+                  </div>
+                  <p className={`text-lg font-semibold ${insight.color}`}>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {insight.insight}
                   </p>
                 </Card>
@@ -981,6 +1045,7 @@ href="/pricing"
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
@@ -997,10 +1062,19 @@ href="/pricing"
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Detailed Comparison */}
 
         <section id="comparison" className="py-24 bg-gray-800">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Detailed Comparison */}
@@ -1017,6 +1091,8 @@ href="/pricing"
             {serviceComparisons.map((service, serviceIndex) => (        <section id="comparison" className="py-24 bg-gray-800">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
@@ -1025,17 +1101,23 @@ href="/pricing"
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See exactly how each service compares in features, pricing, and value.
 <<<<<<< HEAD
+<<<<<<< HEAD
               </p>
             </div>
             {serviceComparisons.map((service, serviceIndex) => (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </p>
 
             </div>
             {serviceComparisons.map((service, serviceIndex) => (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </section>;
@@ -1063,9 +1145,13 @@ href="/pricing"
               <div key={serviceIndex} className='mb-24'>;
                 <div className='text-center mb-16'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div
                     className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>;
                     {service && service.icon}
@@ -1124,46 +1210,68 @@ href="/pricing"
                     <span>;
                       Professional:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <span className='text - blue - 400 font - semibold'>;
                         {service.zion_pricing.professional}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       <span className='text - blue - 400 font - semibold'>;
                         {service.zion_pricing.professional}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </span>;
                     </span>;
                     <span>;
                       Enterprise:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <span className='text-purple-400 font-semibold'>;
                         {service && service.zionPricing.enterprise}
                       <span className='text - purple - 400 font - semibold'>;
                         {service.zion_pricing.enterprise}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </span>;
                     </span>;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div key={serviceIndex} className="mb-24">
                 <div className="text-center mb-16">
                   <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>
                     {service.icon}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-4">{service.service}</h3>
                   <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-300">
@@ -1206,6 +1314,7 @@ href="/pricing"
                             </div>;
                           ))}
 
+<<<<<<< HEAD
                   {/* Competitors */}
                   {service.competitors.map((competitor, compIndex) => (
 
@@ -1224,6 +1333,9 @@ href="/pricing"
                   {/* Competitors */}
                   {service.competitors.map((competitor, compIndex) => (
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>;
                       </div>;
                     </Card>;
@@ -1235,13 +1347,17 @@ href="/pricing"
                   {service.competitors.map((competitor, compIndex) => (
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div key={compIndex} className='lg:col-span-1'>
                       <Card className='h-full border border-gray-700'>
                         <div className='text-center p-6'>
                           <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>
                             {competitor.name}
                           </div>
+<<<<<<< HEAD
 
                           <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (
 
@@ -1249,6 +1365,8 @@ href="/pricing"
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (                    <div key={compIndex} className="lg:col-span-1">
                       <Card className="h-full border border-gray-700">
                         <div className="text-center p-6">
@@ -1260,10 +1378,15 @@ href="/pricing"
 
                             {[...Array(5)].map((_, i) => (
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -1274,10 +1397,19 @@ href="/pricing"
                               />;
                             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+                            <span className='text-sm text-gray-400 ml-2'>
+                              {competitor.rating}
+                            </span>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           </div>
                           <div className='mb-4'>
@@ -1292,6 +1424,10 @@ href="/pricing"
                               </p>
                               <ul className='text-gray-300 space-y-1'>
                                 {competitor.pros.map((pro, proIndex) => (
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                   <li
                                     key={proIndex}
                                     className='flex items-center'>;
@@ -1308,10 +1444,16 @@ href="/pricing"
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             <span className="text-sm text-gray-400 ml-2">{competitor.rating}</span>
+=======
+=======
+                            <span className="text-sm text-gray-400 ml-2">{competitor.rating}</span>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
@@ -1328,18 +1470,25 @@ href="/pricing"
                                   <li key={proIndex} className="flex items-center">
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                                     {pro}
                                   </li>;
                                 ))}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               </ul>
                             </div>
                             <div>
                               <p className="text-red-400 font-medium mb-1">Cons:</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
                                     {pro}
                                   </li>;
@@ -1359,19 +1508,26 @@ href="/pricing"
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />                                    {con}                              <p className="text-red-400 font-medium mb-1">Cons:</p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <ul className="text-gray-300 space-y-1">
                                 {competitor.cons.map((con, conIndex) => (
                                   <li key={conIndex} className="flex items-center">
                                     <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                     {con}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                                    {con}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                   </li>
                                 ))}
                               </ul>
                             </div>
                           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <div className='text-center'>
                             <p className='text-green-400 font-semibold text-sm'>
@@ -1380,6 +1536,9 @@ href="/pricing"
 =======
                           <div className="text-center">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          <div className="text-center">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <p className="text-green-400 font-semibold text-sm">{competitor.savings}</p>
                           </div>
                         </div>
@@ -1387,16 +1546,27 @@ href="/pricing"
                     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
 </div>;
               </div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+          </div>
+        </section>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </section>;
 
@@ -1408,8 +1578,11 @@ href="/pricing"
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               Ready to Save Money and Get Better Features?
 
@@ -1419,6 +1592,10 @@ href="/pricing"
               choose Zion.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 href='/ai-content-generator'
                 variant='secondary'
@@ -1439,8 +1616,11 @@ href="/pricing"
                 size='lg'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Try DevOps Automation
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
         <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -1474,11 +1654,17 @@ href="/devops-automation"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
               >
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Try DevOps Automation
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                Try DevOps Automation
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Competitors */}
                   {service.competitors.map ((competitor, comp_index) => (
                     <div key={comp_index} className='lg:col - span - 1'>;
@@ -1623,14 +1809,19 @@ href="/devops-automation"
                 className="bg - white text - indigo - 600 hover:bg - gray - 100";
                 Try DevOps Automation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>;
             </div>;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 }
@@ -1672,6 +1863,8 @@ href="/devops-automation"
                 variant='secondary'
                 size='lg'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
@@ -1681,13 +1874,17 @@ href="/devops-automation"
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button
 
@@ -1726,3 +1923,8 @@ href="/devops-automation"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Button
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

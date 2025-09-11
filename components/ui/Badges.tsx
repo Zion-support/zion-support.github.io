@@ -1,7 +1,10 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   quote: string;
   author: string;
@@ -12,6 +15,7 @@ import React from 'react';
       <figcaption className='mt-2 font-medium opacity-80'>;
         — {author}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = {
@@ -43,6 +47,8 @@ export /**
  * MicroTestimonial - Function description
  */
 function MicroTestimonial() {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <figure className='border rounded - md p - 3 text - sm'>;
       <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
@@ -58,9 +64,13 @@ function MicroTestimonial() {
     </span>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </figcaption>;
     </figure>;
   );  const colorMap = {;
@@ -73,10 +83,15 @@ function MicroTestimonial() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * MicroTestimonial - Function description
  */
@@ -89,6 +104,7 @@ function MicroTestimonial() {
     </span>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -103,10 +119,13 @@ function MicroTestimonial() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </figure>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
@@ -191,3 +210,6 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

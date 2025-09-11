@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,18 +23,25 @@ class ErrorBoundary extends React.Component {
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "./components/Layout";
 import { motion } from "framer-motion";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import Head from './next / head';
 import Layout from "./components / Layout";
 import { motion  } from './framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {
 =======
@@ -41,16 +49,24 @@ import {
 import {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/automation-improvements-final
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ArrowRight,
   Users,
   Calendar,
@@ -66,7 +82,10 @@ origin/automation-improvements-final
   TrendingUp,
   Award,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {;
   ArrowRight,;
@@ -86,6 +105,7 @@ import {;
   Clock,;
 
 } from "lucide-react";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +130,11 @@ origin/automation-improvements-final
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  Clock
+} from 'lucide-react';
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   ArrowRight
   Users
@@ -128,10 +153,13 @@ origin/automation-improvements-final
   Clock
 } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const benefits = [
   {
     title: "Exclusive Content"
@@ -140,13 +168,18 @@ const benefits = [
     icon: FileText
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from './lucide-react';
 ;
 const benefits = [;
   {
+<<<<<<< HEAD
     title: "Exclusive Content",
     description:;
       "Get access to exclusive white papers, case studies, and industry insights.",
@@ -172,6 +205,11 @@ const benefits = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    title: "Webinar Invitations"
+    title: "Webinar Invitations",
+    title: "Webinar Invitations"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -185,6 +223,7 @@ const benefits = [;
   {
     title: "Industry Insights"
     description:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -203,6 +242,8 @@ const benefits = [;
     description:;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
@@ -221,6 +262,7 @@ const benefits = [;
     icon: TrendingUp
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       "Stay updated with the latest trends and developments in technology."
@@ -238,6 +280,9 @@ origin/automation-improvements-final
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
@@ -247,6 +292,7 @@ origin/automation-improvements-final
 const testimonials = [;
 
   {
+<<<<<<< HEAD
 
 
     name: "Sarah Johnson"
@@ -262,12 +308,17 @@ const testimonials = [;
   {
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: "Sarah Johnson",
     role: "CTO, TechCorp",
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -315,6 +366,7 @@ export default function NewsletterPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
 origin/automation-improvements-final
@@ -322,10 +374,13 @@ export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
 const benefits = [;
   {;
     title: "Exclusive Content",;
@@ -390,11 +445,16 @@ export default function NewsletterPage() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    setIsLoading(true);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -408,12 +468,16 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsSubscribed(true);
     setIsLoading(false);
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Layout>
       <Head>
@@ -433,6 +497,11 @@ origin/automation-improvements-final
       <Head>;
         <title>Newsletter - Zion Tech Group</title>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    <Layout>
+      <Head>
+        <title>Newsletter - Zion Tech Group</title>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta
           name="description"
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
@@ -441,6 +510,7 @@ origin/automation-improvements-final
 origin/automation-improvements-final
       </Head>
       <div className="min-h-screen bg-gray-50">
+<<<<<<< HEAD
 
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
 
@@ -451,6 +521,8 @@ origin/automation-improvements-final
     <Layout>;
       <Head>;
         <title>Newsletter - Zion Tech Group</title>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -458,6 +530,7 @@ origin/automation-improvements-final
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
             >
@@ -473,11 +546,14 @@ origin/automation-improvements-final
               </p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -500,6 +576,18 @@ origin/automation-improvements-final
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
+=======
+=======
+=======
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {!isSubscribed ? (
+                <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                  <div className="flex flex-col sm:flex-row gap-4">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Stay Ahead with Our Newsletter;
@@ -508,9 +596,17 @@ origin/automation-improvements-final
                 Get exclusive insights, industry trends, and early access to new;
                 features delivered directly to your inbox.;
               </p>;
+<<<<<<< HEAD
               {!isSubscribed ? (;
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">;
                   <div className="flex flex-col sm:flex-row gap-4">;
+=======
+
+              {!isSubscribed ? (;
+                <form onSubmit={handleSubmit} className="max-w-md mx-auto">;
+                  <div className="flex flex-col sm:flex-row gap-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <input
                       type="email"
                       placeholder="Enter your email address"
@@ -548,17 +644,23 @@ origin/automation-improvements-final
                 </motion && motion.div>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </motion && motion.div>;
           </div>;
         </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </motion && motion.div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -567,22 +669,29 @@ origin/automation-improvements-final
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 What You'll Get
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
 
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
 
 
 
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Join thousands of professionals who rely on our newsletter for
                 the latest insights and updates.
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
@@ -592,15 +701,21 @@ origin/automation-improvements-final
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     content:;
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
     rating: 5,
@@ -727,9 +842,13 @@ function NewsletterPage() {
               {benefits.map ((benefit, index) => (
                 <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={benefit.title}
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -742,14 +861,20 @@ function NewsletterPage() {
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     {benefit.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={benefit.title}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -762,24 +887,34 @@ function NewsletterPage() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {benefit.title}
                   </h3>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   </h3>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p className="text-gray-600">{benefit.description}</p>
                   <p className="text-gray-600">{benefit.description}</p>
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What You'll Get;
@@ -789,6 +924,10 @@ origin/automation-improvements-final
                 the latest insights and updates.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
@@ -809,6 +948,11 @@ origin/automation-improvements-final
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Stats Section */}
         <section className="py-16 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -818,10 +962,15 @@ origin/automation-improvements-final
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0 }}
               >
 
 
+=======
+                transition={{ duration: 0.8, delay: 0 }}
+              >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   10K+
                 </div>
@@ -830,6 +979,7 @@ origin/automation-improvements-final
                 </div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
@@ -842,6 +992,12 @@ origin/automation-improvements-final
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
+=======
+                <div className="text-gray-600">Subscribers</div>
+              </motion.div>
+              <motion.div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.8, delay: 0 }}>;
                 <div className="text-4xl font-bold text-blue-600 mb-2">;
                   10K+;
@@ -849,6 +1005,10 @@ origin/automation-improvements-final
                 <div className="text-gray-600">Subscribers</div>;
               </motion && motion.div>;
               <motion&& motion.div
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -861,10 +1021,15 @@ origin/automation-improvements-final
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
 
 
+=======
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   Weekly
                 </div>
@@ -873,6 +1038,7 @@ origin/automation-improvements-final
                 </div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
@@ -882,6 +1048,8 @@ origin/automation-improvements-final
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -896,6 +1064,10 @@ origin/automation-improvements-final
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 <div className="text-4xl font-bold text-blue-600 mb-2">;
                   Weekly;
@@ -913,6 +1085,11 @@ origin/automation-improvements-final
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Testimonials Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -921,22 +1098,29 @@ origin/automation-improvements-final
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 What Our Subscribers Say
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
 
                 Don't just take our word for it. Here's what our community has to say.
 
 
 
                 Don't just take our word for it. Here's what our community has to say.
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Don't just take our word for it. Here's what our community has
                 to say.
                 Don't just take our word for it. Here's what our community has to say.
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 
                 Don't just take our word for it. Here's what our community has to say.
@@ -946,11 +1130,17 @@ origin/automation-improvements-final
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </h3>;
                   <p className="text - gray - 600">{benefit.description}</p>;
                 </motion.div>))}
@@ -1024,19 +1214,29 @@ origin/automation-improvements-final
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
               {testimonials.map ((testimonial, index) => (
                 <motion.div;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={testimonial.name}
                   className="bg - gray - 50 rounded - lg p - 6";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What Our Subscribers Say;
@@ -1046,6 +1246,10 @@ origin/automation-improvements-final
                 to say.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {testimonials && testimonials.map((testimonial, index) => (;
                 <motion&& motion.div
@@ -1053,6 +1257,7 @@ origin/automation-improvements-final
                   className="bg-gray-50 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="flex items-center mb-4">;
                     {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
@@ -1063,6 +1268,8 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
                   <div className="flex items-center mb-4">
@@ -1073,6 +1280,7 @@ origin/automation-improvements-final
                       />
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -1080,6 +1288,8 @@ origin/automation-improvements-final
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -1096,17 +1306,23 @@ origin/automation-improvements-final
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -1114,6 +1330,7 @@ origin/automation-improvements-final
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
             >
@@ -1129,11 +1346,14 @@ origin/automation-improvements-final
               </p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1156,6 +1376,18 @@ origin/automation-improvements-final
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
+=======
+=======
+=======
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {!isSubscribed && (
+                <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                  <div className="flex flex-col sm:flex-row gap-4">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-4xl font-bold mb-6">;
                 Ready to Join Our Community?;
@@ -1164,9 +1396,17 @@ origin/automation-improvements-final
                 Subscribe now and start receiving valuable insights delivered to;
                 your inbox every week.;
               </p>;
+<<<<<<< HEAD
               {!isSubscribed && (;
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">;
                   <div className="flex flex-col sm:flex-row gap-4">;
+=======
+
+              {!isSubscribed && (;
+                <form onSubmit={handleSubmit} className="max-w-md mx-auto">;
+                  <div className="flex flex-col sm:flex-row gap-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <input
                       type="email"
                       placeholder="Enter your email address"
@@ -1194,6 +1434,7 @@ origin/automation-improvements-final
                   </div>;
                 </form>;
               )}
+<<<<<<< HEAD
 
 
               <div className="mt-8 text-green-100 text-sm">;
@@ -1288,6 +1529,19 @@ origin/automation-improvements-final
       </div>;
     </Layout>);
 }
+=======
+              <div className="mt-8 text-green-100 text-sm">
+                <p>✓ No spam, ever</p>
+                <p>✓ Unsubscribe anytime</p>
+                <p>✓ Free forever</p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 origin/automation-improvements-final

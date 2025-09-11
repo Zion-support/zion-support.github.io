@@ -1,11 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useCallback } from 'react';
 import { checkMessage, monitorContent  } from '@/services/fraud';
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
 interface FraudDetectionMiddlewareProps {
+<<<<<<< HEAD
   children: React.ReactNode
 }
 // Interface for the context
@@ -18,6 +22,8 @@ import {supabase} from '@/integrations / supabase / client';
 // Props for the middleware component;
 
 interface FraudDetectionMiddlewareProps {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children: React.ReactNode;
 }
 
@@ -25,7 +31,10 @@ interface FraudDetectionMiddlewareProps {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -36,9 +45,13 @@ interface FraudDetectionMiddlewareProps {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 // Interface for the context;
@@ -54,10 +67,13 @@ interface FraudDetectionContextType {;
   }>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     userId: string
     messageId: string
@@ -74,23 +90,29 @@ interface FraudDetectionContextType {;
 // TS2347, so we cast the default value instead of using a type parameter.
 
 export const FraudDetectionContext = React.createContext(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   undefined as FraudDetectionContextType | undefined
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   undefined as FraudDetectionContextType | undefined;
 );
   undefined as FraudDetectionContextType | undefined
 );
 ),
 
+<<<<<<< HEAD
 =======
 
   undefined as FraudDetectionContextType | undefined
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
@@ -100,27 +122,34 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       // First do a quick local check using the fraud detection service
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // First do a quick local check using the fraud detection service;
       const quickCheck = checkMessage(content);
       // First do a quick local check using the fraud detection service
       const quickCheck = checkMessage(content);
       const quickCheck = checkMessage(content),
       
+<<<<<<< HEAD
 =======
 
       // First do a quick local check using the fraud detection service
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
         await monitorContent(
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface FraudDetectionMiddlewareProps {
   children: React.ReactNode;
@@ -128,6 +157,9 @@ interface FraudDetectionMiddlewareProps {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {checkMessage, monitorContent} from '@/services/fraud';
 import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
@@ -135,6 +167,10 @@ import {supabase} from '@/integrations/supabase/client';
 interface FraudDetectionMiddlewareProps {;
   children: React && React.ReactNode;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Interface for the context;
 interface FraudDetectionContextType {;
   scanMessageContent: (;
@@ -147,12 +183,20 @@ interface FraudDetectionContextType {;
     explanation?: string;
   }>;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Create the context. "createContext" can be untyped if React type definitions;
 // aren't available. Passing a generic argument to an untyped function causes;
 // TS2347, so we cast the default value instead of using a type parameter.;
 export const FraudDetectionContext = React && React.createContext(;
   undefined as FraudDetectionContextType | undefined;
 );
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {;
   // Function to scan message content for fraud;
   const scanMessageContent = useCallback(async (;
@@ -164,10 +208,18 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     try {;
       // First do a quick local check using the fraud detection service;
       const quickCheck = checkMessage(content);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // If the quick check finds suspicious content, flag it;
       if (quickCheck && quickCheck.isSuspicious) {;
         // Flag the content for review;
         await monitorContent(;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           userId;
           userEmail;
           'message';
@@ -175,14 +227,19 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           content;
         );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           userId,
           userEmail,
           'message',
           messageId,
           content
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -197,6 +254,11 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        );
+        ),
+        
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
@@ -204,6 +266,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             description: "Your message contains content that may violate our terms of service."
             variant: "destructive"
             duration: 5000
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           });
@@ -212,10 +275,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          });
+          return {
+            isSafe: false
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }),
           
           return { 
             isSafe: false,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       
@@ -229,6 +298,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
         }
@@ -238,7 +309,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -254,14 +328,20 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return { isSafe: true }, // Default to safe on error
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       
@@ -269,24 +349,33 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
           variant: "destructive"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         });
         return {
           isSafe: false
           explanation: data.explanation
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }),
         return { 
           isSafe: false,
           explanation: data.explanation
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       if (data.classification === 'dangerous') {;
@@ -305,6 +394,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           explanation: data.explanation
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         }
@@ -312,9 +403,13 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       */
       // Message is considered safe
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
@@ -325,9 +420,13 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             duration: 5000;
           });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           return { ;
             isSafe: false,;
             explanation: "Message contains prohibited content. Please review our communication guidelines.";
@@ -335,17 +434,25 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // For suspicious but not dangerous content, log but let it pass through;
       if (quickCheck && quickCheck.severity === 'suspicious') {;
         console && console.log('Suspicious content detected but allowed:', content);
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // For more complex analysis (in a real app), we would call the edge function;
       // This is disabled in this example to avoid unnecessary API calls;
       /*;
@@ -353,17 +460,25 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         body: { content, contentType: 'message' }
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (error) {;
         console && console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (data && data.classification === 'dangerous') {;
         toast({;
           title: "Message Blocked",;
@@ -376,6 +491,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         }
       }
       */;
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Message is considered safe;
       return { isSafe: true }
@@ -407,6 +523,8 @@ export const useFraudDetection = () => {;
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       // Message is considered safe;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -427,7 +545,10 @@ export const useFraudDetection = () => {;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -441,6 +562,7 @@ export const useFraudDetection = () => {;
     <FraudDetectionContext.Provider value={contextValue}>;
       {children}
     </FraudDetectionContext.Provider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {;
       console && console.error('Error in fraud detection:', error);
@@ -466,6 +588,8 @@ export const useFraudDetection = () => {;
 export const useFraudDetection = () => {;
   const context = React.useContext(FraudDetectionContext);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
@@ -473,7 +597,10 @@ export const useFraudDetection = () => {;
 // Hook to use the fraud detection context;
 export const useFraudDetection = () => {;
   const context = React && React.useContext(FraudDetectionContext);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (context === undefined) {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
@@ -481,6 +608,7 @@ export const useFraudDetection = () => {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 =======
@@ -769,3 +897,8 @@ explanation: data.explanation
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

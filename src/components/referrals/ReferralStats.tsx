@@ -9,6 +9,7 @@ import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -41,11 +42,15 @@ import { Award, Share, Star, TrendingUp } from 'lucide-react'
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface ReferralStatsProps {
 
   stats: ReferralStatsType
   isLoading: boolean
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
@@ -85,6 +90,8 @@ interface ReferralStatsProps {
   isLoading: boolean
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
@@ -97,6 +104,13 @@ export /**
 function ReferralStats() {
   const stat_cards = [;
     {
+<<<<<<< HEAD
+=======
+      title: 'Total Referrals'
+      icon: <Share className='h-5 w-5 text-muted-foreground' />
+      description: "People you've invited"
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'Total Referrals',
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType  } from '@/types / referrals';
@@ -159,6 +173,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 
   return (
+<<<<<<< HEAD
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>;
       {statCards && statCards.map((card, i) => (        <Card key={i}>;
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
@@ -197,6 +212,8 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 <<<<<<< HEAD
 
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
       {statCards.map((card, i) => (        <Card key={i}>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
@@ -226,10 +243,20 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
       icon: <Award className="h-5 w-5 text-muted-foreground" />,
       description: "Credits earned from referrals"}],
 
+<<<<<<< HEAD
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+=======
+            )}
+          </CardContent>;
+        </Card>;
+      ))}
+
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      {statCards.map((card, i) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card key={i}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
@@ -238,6 +265,9 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
           <CardContent>
             {isLoading ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='h-6 w-20 bg-muted animate-pulse rounded' />
             ) : (
               <>
@@ -246,11 +276,14 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                   {card.description}
                 </p>              </>              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             ) : (
@@ -258,9 +291,13 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'Total Referrals',
       icon: <Share className='h - 5 w - 5 text - muted - foreground' />,
       description: "People you've invited",
@@ -296,6 +333,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
+<<<<<<< HEAD
             )}
           </CardContent>
         </Card>
@@ -309,6 +347,11 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 }
 }
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
@@ -349,9 +392,13 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card key={i}>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>;
@@ -373,6 +420,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
@@ -380,3 +428,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

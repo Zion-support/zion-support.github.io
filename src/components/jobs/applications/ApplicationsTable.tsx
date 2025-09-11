@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -119,6 +120,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -164,6 +167,7 @@ interface ApplicationsTableProps {
   onViewScore: (application: JobApplication) => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({
   application
@@ -182,6 +186,8 @@ interface ApplicationsTableProps {
 }
 // Sub-component for avatar to handle its own error state
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { format } from 'date - fns';
 import { JobApplication } from '@/types / jobs';
@@ -234,7 +240,10 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   const [avatarError, setAvatarError] = useState(false),;
   const talentName = application && application.talent_profile?.full_name || "Candidate",;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
@@ -248,6 +257,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           width={32} // for h-8 w-8
           height={32} // for h-8 w-8
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='rounded-full object-cover'
           onError={() => setAvatarError(true)}
           priority={false}        />
@@ -259,10 +269,16 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          className='rounded-full object-cover'
+          onError={() => setAvatarError(true)}
+          priority={false}        />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="rounded-full object-cover"
           onError={() => setAvatarError(true)}
           priority={false}
         />
+<<<<<<< HEAD
 <<<<<<< HEAD
       ) : (
         <User className="h-4 w-4" />
@@ -277,10 +293,13 @@ export function ApplicationsTable({
   onViewScore
 }: ApplicationsTableProps) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       ) : (
         <User className="h-4 w-4" />
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
 
@@ -294,6 +313,11 @@ interface ApplicationsTableProps {
   onViewApplication: (application_id: string, ) => Promise < void>,
   onStatusChange: (application_id: string, new_status: string, ) => Promise < void>,
   onViewScore: (application: JobApplication, ) => void;
+=======
+      )}
+    </AvatarPrimitive>
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Sub - component for avatar to handle its own error state;
 const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =>: any {
@@ -360,7 +384,10 @@ export function ApplicationsTable(): any ({;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ApplicationsTable({ 
   applications, 
   processingId, 
@@ -383,7 +410,10 @@ export function ApplicationsTable({
     })
   },
   
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
 
@@ -437,9 +467,15 @@ export function ApplicationsTable({
         onConfirm = {handleHireConfirmed,}
 
 
+<<<<<<< HEAD
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
+=======
+export function ApplicationsTable({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   applications,
   processingId,
   onViewApplication,
@@ -449,7 +485,10 @@ export function ApplicationsTable({
   applications, 
   processingId, 
   onViewApplication, 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
@@ -463,6 +502,7 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+<<<<<<< HEAD
   }
 
 },
@@ -474,6 +514,11 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -489,8 +534,15 @@ export function ApplicationsTable({
     })
   },
   
+<<<<<<< HEAD
   return (
   
+=======
+
+
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <div className="rounded-md border">
         <Table>
@@ -504,6 +556,7 @@ export function ApplicationsTable({
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
             {applications.map((application) => (
               <TableRow key={application.id}>
 
@@ -519,6 +572,12 @@ export function ApplicationsTable({
             {applications.map(application => (              <TableRow key={application.id}>
             {applications.map((application) => (
               <TableRow key={application.id}>
+=======
+            {applications.map(application => (              <TableRow key={application.id}>
+            {applications.map((application) => (
+              <TableRow key={application.id}>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
@@ -565,6 +624,7 @@ export function ApplicationsTable({
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
+<<<<<<< HEAD
 }h-4 w-4"/>)
 }</AvatarPrimitive>)
 ursor/fix-website-loading-errors-and-merge-6662
@@ -613,6 +673,9 @@ ursor/fix-website-loading-errors-and-merge-6662
   false "
 }h-4 w-4"/>)
 }</AvatarPrimitive>)
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
 
@@ -644,6 +707,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <TableCell className="text-right">
                   <div className="flex items-center justify-end gap-2">
@@ -754,6 +818,8 @@ export function ApplicationsTable({;
                     </div>;
                   </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
     </>;
   );
@@ -764,7 +830,10 @@ export function ApplicationsTable({;
   application && application.talent profile && profile.profile picture url 
                 <TableCell className='hidden md:table - cell'>;
                   {format (new Date (application.created_at), 'PP')}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </TableCell>;
                 <TableCell className="hidden md:table-cell">;
                   {format(new Date(application.created_at), "PP")}
@@ -814,7 +883,10 @@ export function ApplicationsTable({;
         onConfirm={handleHireConfirmed}
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   32;
 }//for h - 8 w - 8 height= {
@@ -844,7 +916,10 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
 }onStatusChange= {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   onStatusChange;
 }/> </div> </TableCell> </TableRow>) );
@@ -862,7 +937,11 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

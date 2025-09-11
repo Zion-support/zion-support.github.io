@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo  } from '@/types/resume';
@@ -9,6 +10,9 @@ export function useResumeActions() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
@@ -16,10 +20,15 @@ import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -31,6 +40,7 @@ export function useResumeActions() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
@@ -38,6 +48,10 @@ export function useResumeActions() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -54,24 +68,32 @@ export function useResumeActions() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     setIsLoading(true),
     setError(null),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -82,17 +104,23 @@ export function useResumeActions() {;
           summary: basicInfo && basicInfo.summary
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           user_id: user.id;
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         })
         .select('id')
         .single();
       if (error) throw error;
       showSuccessToast("Resume created", "Your resume has been created successfully");
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -153,6 +181,8 @@ if (throw error) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           user_id: user.id,
           title: basicInfo.title,
           headline: basicInfo.headline,
@@ -166,15 +196,19 @@ if (throw error) {
       showSuccessToast("Resume created", "Your resume has been created successfully"),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return data.id
     } catch (e: any) {
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -189,6 +223,10 @@ if (throw error) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -219,25 +257,35 @@ if (throw error) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     setIsLoading(true),
     setError(null),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
@@ -248,10 +296,19 @@ if (throw error) {
           title: basicInfo.title,
           headline: basicInfo.headline,
           summary: basicInfo.summary
+<<<<<<< HEAD
         })
         .eq('id', resumeId)
         .eq('user_id', user.id),
       
+=======
+
+        })
+        .eq('id', resumeId)
+        .eq('user_id', user && user.id);
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (error) throw error,
       
       return showSuccessToast("Resume updated", "Your resume information has been updated")
@@ -259,6 +316,7 @@ if (throw error) {
       return handleResumeError(e, 'Could not update resume')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -323,6 +381,11 @@ if (throw error) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -351,25 +414,33 @@ if (throw error) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     setIsLoading(true),
     setError(null),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
         .from('talent_resumes')
         .update({ is_active: false })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -386,20 +457,28 @@ if (throw error) {
       if (resetError) throw resetError;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .eq('user_id', user.id);
+      if (resetError) throw resetError;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .eq('user_id', user.id),
       
       if (resetError) throw resetError,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
         .update({ is_active: true })
         .eq('id', resumeId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -415,19 +494,27 @@ if (throw error) {
       if (error) throw error;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .eq('user_id', user.id);
+      if (error) throw error;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .eq('user_id', user.id),
       
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {
       return handleResumeError(e, 'Could not set active resume')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
         .eq('user_id', user && user.id);
       if (error) throw error;
@@ -436,6 +523,13 @@ if (throw error) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+  }
+  return {
+    isLoading;
+    error;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const setActiveResume = async (resume_id: string): Promise < boolean> => {
     // Check condition
@@ -471,18 +565,29 @@ if (throw error) {
   $2
 }
       return showSuccessToast ("Active resume set", "Your selected resume is now marked as active");
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (e: any) {
       return handleResumeError (e, 'Could not set active resume');
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
   }
 ;
+=======
+
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     is_loading;
     error;
     create_resume;
     updateBasicInfo;
+<<<<<<< HEAD
     setActiveResume}
 <<<<<<< HEAD
     }
@@ -517,19 +622,30 @@ if (throw error) {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    setActiveResume}
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   return {;
     isLoading,;
     error,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     createResume;
     updateBasicInfo;
 
     setActiveResume}
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -711,3 +827,8 @@ setActiveResume
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

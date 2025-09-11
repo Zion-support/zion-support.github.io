@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { logWarn } from '@/utils/productionLogger'
 import { logWarn } from '@/utils/productionLogger'
 import { SEO } from "@/components/SEO",
@@ -16,6 +17,10 @@ import { logWarn } from '@/utils/productionLogger',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ServiceStatus {
+=======
+interface ServiceStatus {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name: string
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
   description: string
@@ -32,6 +37,17 @@ class ErrorBoundary extends React.Component {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
@@ -77,6 +93,7 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     return this.props.children;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
@@ -85,6 +102,8 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
   )
@@ -385,6 +404,10 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { log_warn } from '@/utils / production_logger';
 interface ServiceStatus {
@@ -402,6 +425,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
 }
+<<<<<<< HEAD
                   </CardContent>;
                 </Card>;
               </div>;
@@ -476,3 +500,7 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

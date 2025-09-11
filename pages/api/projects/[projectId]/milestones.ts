@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../utils/api/auth";
 import {
@@ -38,6 +39,8 @@ import { Milestone } from '../../../../utils/types/milestones';
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -48,6 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!project) {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
@@ -167,6 +171,8 @@ if (req && req.method === "GET") {
   if (req.method === 'GET') {
     res.status(200).json({ milestones: project.milestones });
     return;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
   if (req.method === 'POST') {
@@ -175,6 +181,7 @@ if (req && req.method === "GET") {
       return;
     }
     const body = req.body as Partial<Milestone>;
+<<<<<<< HEAD
 
   if (req && req.method === "POST") {
   if (req.method === 'POST') {
@@ -208,12 +215,17 @@ if (req && req.method === "POST") {
     }
     const body = req.body as Partial<Milestone>;
 if (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (
       !body |
       !body.title |
       !body.dueDate |
       typeof body.amountUsd !== "number"
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ) {
       res
         .status(400)
@@ -236,6 +248,7 @@ if (
       dueDate: body.dueDate,
       amountUsd: body.amountUsd,
       attachments: body.attachments || []
+<<<<<<< HEAD
 =======
   }
 
@@ -249,11 +262,14 @@ if (
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -308,10 +324,18 @@ if (return) {
   // Check condition
 if ( {) {
   $2
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
     res.status (404).json ({ error: "Project not found" });
     return;
@@ -365,6 +389,7 @@ if ( {) {
   res.status (405).end ("Method Not Allowed");
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
@@ -373,3 +398,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

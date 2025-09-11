@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,24 +42,34 @@ import React, { useState } from 'react';
   CheckCircle,;
   AlertTriangle,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 =======
+<<<<<<< HEAD
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import {
+import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function APIRateLimiterPage() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
@@ -83,6 +105,8 @@ export default function APIRateLimiterPage() {
 export default function APIRateLimiterPage() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
   const [timeWindow, setTimeWindow] = useState('1m');
@@ -91,12 +115,16 @@ export default function APIRateLimiterPage() {;
   const [apiKey, setApiKey] = useState('');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const timeWindows = [
     { value: '1s', label: '1 Second', description: 'Per second rate limiting' }
     { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' }
     { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' }
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
   ];
+<<<<<<< HEAD
   const rateLimits = [
     { value: '10', label: '10 requests', description: 'Very strict' }
     { value: '100', label: '100 requests', description: 'Standard' }
@@ -127,6 +155,8 @@ export default function APIRateLimiterPage() {;
 
 
   ];
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     { value: '10', label: '10 requests', description: 'Very strict' },
     { value: '100', label: '100 requests', description: 'Standard' },
@@ -134,12 +164,27 @@ export default function APIRateLimiterPage() {;
 
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
+<<<<<<< HEAD
 
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
+=======
+=======
+
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const generateApiKey = () => {
+    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
+    setApiKey(key)
+  }
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const timeWindows = [;
@@ -148,6 +193,7 @@ export default function APIRateLimiterPage() {;
     { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },;
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 =======
@@ -158,6 +204,11 @@ export default function APIRateLimiterPage() {;
   const testRateLimiting = async () => {;
     if (!endpoint && endpoint.trim() || !rateLimit || !timeWindow) return;
 
+=======
+
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const testRateLimiting = async () => {
     if (!endpoint.trim() |!rateLimit |!timeWindow) return;
     setIsTesting(true);
@@ -165,19 +216,26 @@ export default function APIRateLimiterPage() {;
     const limit = parseInt(rateLimit);
     const results = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Simulate API calls to test rate limiting
     for (let i = 1; i <= limit + 5; i++) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     // Simulate API calls to test rate limiting;
     for (let i = 1; i <= limit + 5; i++) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       await new Promise(resolve => setTimeout(resolve, 100));
       const isAllowed = i <= limit;
       const status = isAllowed ? 'success' : 'rate_limited';
       const statusCode = isAllowed ? 200 : 429;
+<<<<<<< HEAD
 <<<<<<< HEAD
       results.push({
         request: i
@@ -191,6 +249,8 @@ export default function APIRateLimiterPage() {;
           'X-RateLimit-Reset': new Date(Date.now() + 60000).toISOString()
         }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       results && results.push({;
@@ -205,12 +265,16 @@ export default function APIRateLimiterPage() {;
           'X-RateLimit-Reset': new Date(Date && Date.now() + 60000).toISOString(),;
         },;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       if (!isAllowed) break;
     }
     setTestResults(results);
     setIsTesting(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   const copyToClipboard = (text: string) => {
@@ -225,6 +289,8 @@ export default function APIRateLimiterPage() {;
       const status = isAllowed ? 'success' : 'rate_limited';
       const statusCode = isAllowed ? 200 : 429;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
@@ -251,17 +317,25 @@ export default function APIRateLimiterPage() {;
         responseTime: Math && Math.random() * 100 + 50,;
         headers: {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'X-RateLimit-Limit': limit;
           'X-RateLimit-Remaining': Math && Math.max(0, limit - i);
           'X-RateLimit-Reset': new Date(Date && Date.now() + 60000).toISOString();
         }
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (!isAllowed) break;
     }
     setTestResults(results);
@@ -278,6 +352,7 @@ export default function APIRateLimiterPage() {;
       case 'rate_limited':;
         return <AlertTriangle className='w-5 h-5 text-red-400' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
       default:;
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }      case 'rate_limited':;
         return <AlertTriangle className="w-5 h-5 text-red-400" />;
@@ -287,6 +362,10 @@ export default function APIRateLimiterPage() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   const testRateLimiting = async () => {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
@@ -367,9 +446,13 @@ if (break) {
 ;
     const limit = parse_int (rate_limit);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const results = [];
 ;
     // Simulate API calls to test rate limiting;
@@ -409,13 +492,19 @@ if (break) {
   const getStatusIcon = (status: string) =>: any {
     switch (status) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       default:
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
     }
@@ -433,6 +522,7 @@ if (break) {
         return 'text-red-400'
       default:
 
+<<<<<<< HEAD
         return 'text-yellow-400'
     }
 
@@ -441,6 +531,12 @@ if (break) {
     }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+        return 'text-yellow-400'
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   const getStatusColor = (status: string) => {;
     switch (status) {;
@@ -450,6 +546,7 @@ if (break) {
         return 'text-red-400',;
       default:;
         return 'text-yellow-400';    }        return 'text-yellow-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -518,6 +615,13 @@ if (break) {
       case 'rate_limited':
         return 'text-red-400'
       default:
+=======
+
+
+    }
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return 'text-yellow-400';    }        return 'text-yellow-400'
     }
   }
@@ -525,6 +629,7 @@ if (break) {
   };
 
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>API Rate Limiter - Zion Tech Group</title>
@@ -627,6 +732,8 @@ if (break) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 {/* API Endpoint */}
@@ -644,9 +751,18 @@ if (break) {
                 {/* Rate Limit */}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
+=======
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Rate Limit
+                  </label>
+                  <div className='grid grid-cols-2 gap-3'>
+                    {rateLimits.map(limit => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Rate Limit
                   ">
                     Rate Limit
@@ -800,10 +916,15 @@ if (break) {
                   <div className="grid grid - cols - 2 gap - 3">;
                     {rate_limits.map ((limit) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Rate Limit
@@ -816,10 +937,14 @@ if (break) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         key={limit.value}
                         on_click={() => setRateLimit (limit.value)}
                         className={`p - 3 rounded - lg border text - left transition - all ${
@@ -827,6 +952,19 @@ if (break) {
                             ? 'border - green - 500 bg - green - 500 / 10 text - green - 300';
                             : 'border - gray - 600 hover:border - gray - 500 text - gray - 300 hover:text - white';
                         }`}
+<<<<<<< HEAD
+=======
+                      >
+                        <div className='font-medium'>{limit.label}</div>
+                        <div className='text-xs text-gray-400 mt-1'>
+                          {limit.description}
+                        </div>                      </button>                        <div className="font-medium">{limit.label}</div>
+                        <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   </div>;
                 </div>;
@@ -835,12 +973,18 @@ if (break) {
                 {/* Time Window */}
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Time Window */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
+<<<<<<< HEAD
 
                     {timeWindows.map(window => (                      <button
 
@@ -853,12 +997,16 @@ if (break) {
                 {/* Time Window */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
+=======
+                    {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Time Window
                   ">
                     Time Window
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {timeWindows.map((window) => (
+<<<<<<< HEAD
                       <button
                       >;
                         <div className='font - medium'>{limit.label}</div>;
@@ -886,6 +1034,14 @@ if (break) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    {timeWindows.map(window => (                      <button
+
+                      <button
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         key={window.value}
                         on_click={() => setTimeWindow (window.value)}
                         className={`p - 3 rounded - lg border text - left transition - all ${
@@ -896,6 +1052,20 @@ if (break) {
 
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+                    ))}
+                  </div>
+                </div>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* API Key Generation */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
@@ -1061,6 +1231,10 @@ if (break) {
                       >
                         <div className=&quot;font-medium&quot;>{limit.label}</div>
                         <div className=&quot;text-xs text-gray-400 mt-1&quot;>{limit.description}</div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* API Endpoint */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
@@ -1082,6 +1256,7 @@ if (break) {
                     Rate Limit
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
+<<<<<<< HEAD
                     {rateLimits.map(limit => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
                     Rate Limit
                   ">
@@ -1089,6 +1264,8 @@ if (break) {
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {rateLimits.map((limit) => (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {rateLimits.map(limit => (                      <button
 
                       <button
@@ -1107,6 +1284,7 @@ if (break) {
                         </div>                      </button>                        <div className="font-medium">{limit.label}</div>
                         <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
                       </button>
+<<<<<<< HEAD
                     ))}
                   </div>
                 </div>
@@ -1114,6 +1292,9 @@ if (break) {
                     ))}
                   </div>
                 </div>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {/* Time Window */}
                 <div>
@@ -1121,6 +1302,7 @@ if (break) {
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
+<<<<<<< HEAD
                     {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
                     Time Window
                   ">
@@ -1128,6 +1310,8 @@ if (break) {
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {timeWindows.map((window) => (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {timeWindows.map(window => (                      <button
 
                       <button
@@ -1146,6 +1330,7 @@ if (break) {
                         </div>                      </button>                        <div className="font-medium">{window.label}</div>
                         <div className="text-xs text-gray-400 mt-1">{window.description}</div>
                       </button>
+<<<<<<< HEAD
                     ))}
                   </div>
                 </div>
@@ -1275,6 +1460,8 @@ if (break) {
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1287,12 +1474,19 @@ if (break) {
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Test Results
 
 
                 </h3>
                 {testResults.length > 0 && (
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     onClick={() => setTestResults([])}
                     variant='outline';
@@ -1305,16 +1499,22 @@ if (break) {
                   </Button>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
               {testResults && testResults.length > 0 ? (;
                 <div className='space-y-3 max-h-96 overflow-y-auto'>                  {testResults && testResults.map((result, index) => (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>;
               {testResults && testResults.length > 0 ? (;
                 <div className='space-y-3 max-h-96 overflow-y-auto'>                  {testResults && testResults.map((result, index) => (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
@@ -1325,6 +1525,7 @@ if (break) {
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
+<<<<<<< HEAD
 <<<<<<< HEAD
                         result && result.status === 'success'
                           ? 'border-green-500/30 bg-green-500/10'
@@ -1337,6 +1538,9 @@ if (break) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >;
                         <div className='font - medium'>{window.label}</div>;
                         <div className='text - xs text - gray - 400 mt - 1'>;
@@ -1406,6 +1610,10 @@ if (break) {
                 </Button>;
               </div>;
             </Card>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             {/* Test Results */}
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
@@ -1452,18 +1660,26 @@ if (break) {
                             className={`font - medium ${getStatusColor (result.status)}`}
                           >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             Request #{result.request}
                           </span>;
                         </div>;
                         <span className='text - sm text - gray - 400'>;
                           {result.timestamp}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             className={`font-medium ${getStatusColor(result && result.status)}`}>;
                             Request #{result && result.request}
                           </span>;
@@ -1476,9 +1692,13 @@ if (break) {
                         <div>;
                           <span className='text-gray-400'>Status:</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <span
                             className={`ml-2 font-medium ${getStatusColor(result && result.status)}`}>;
                             {result && result.statusCode}{' '}
@@ -1486,10 +1706,15 @@ if (break) {
                               ? 'OK';
                               : 'Too Many Requests'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Test Results */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="flex items-center justify-between mb-6">
@@ -1498,9 +1723,13 @@ if (break) {
 
                   Test Results
 
+<<<<<<< HEAD
 
                   Test Results
 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </h3>
                 {testResults.length > 0 && (
                   <Button
@@ -1515,6 +1744,7 @@ if (break) {
               </div>
               {testResults.length > 0 ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className='space-y-3 max-h-96 overflow-y-auto'>                  {testResults.map((result, index) => (
                     <div
                       key={index}
@@ -1525,10 +1755,14 @@ if (break) {
 =======
                 <div className="space-y-3 max-h-96 overflow-y-auto">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <div className="space-y-3 max-h-96 overflow-y-auto">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {testResults.map((result, index) => (
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
+<<<<<<< HEAD
                         result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10';
                         result.status === 'success'
                           ? 'border-green-500/30 bg-green-500/10'
@@ -1572,10 +1806,13 @@ if (break) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         </div>
@@ -1675,6 +1912,8 @@ if (break) {
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </span>;
                         </div>;
                         <div>;
@@ -1722,6 +1961,7 @@ if (break) {
                           <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
                         </div>
 
+<<<<<<< HEAD
 =======
 
 
@@ -1736,6 +1976,11 @@ if (break) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                        </div>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </div>;
@@ -1751,14 +1996,23 @@ if (break) {
                   </p>
                 </div>
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               )}
+=======
+              )}
+            </Card>
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
       {/* Features */}
 
 
@@ -1774,6 +2028,19 @@ if (break) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Features */}
+      <section className='py-20 bg-gray-800'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+
+              Advanced Rate Limiting Features
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Enterprise-grade rate limiting with intelligent algorithms and
@@ -1844,15 +2111,22 @@ if (break) {
               <p className="text-gray-400">
                 Edge locations worldwide ensure consistent performance and low latency for all users.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               </p>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              </p>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </h2>
       {/* Code Examples */}
@@ -1877,6 +2151,8 @@ if (break) {
                 <pre className='text-sm text-gray-300'>
                   {`const axios = require('axios');              Quick Integration Examples
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Code Examples */}
 
       <section className="py-20 bg-gray-900">
@@ -1885,7 +2161,10 @@ if (break) {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Quick Integration Examples
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get started with our rate limiting service in just a few lines of code.
@@ -1901,7 +2180,10 @@ if (break) {
                 <pre className="text-sm text-gray-300">
 {`const axios = require('axios');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </Card>;
           </div>;
@@ -2147,15 +2429,21 @@ if (break) {
             </h2>;
             <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Get started with our rate limiting service in just a few lines of;
               code.;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2167,7 +2455,10 @@ const endpoint = '${endpoint || '/api/users'}';
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
@@ -2176,19 +2467,28 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 console && console.log('Response:', response && response.data);
 console && console.log('Rate Limit Info:', {;
   limit: response && response.headers['x-ratelimit-limit'],;
   remaining: response && response.headers['x-ratelimit-remaining'],;
   reset: response && response.headers['x-ratelimit-reset'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 });`}
                 </pre>;
               </div>;
@@ -2200,20 +2500,33 @@ console && console.log('Rate Limit Info:', {;
               <Button
                 onClick={() => copyToClipboard(`const axios = require('axios');
 <<<<<<< HEAD
+<<<<<<< HEAD
 const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Make API request with rate limiting;
 const response = await axios && axios.get(\`https://api && api.zion.tech\${endpoint}\`, {;
   headers: {;
     'Authorization': \`Bearer \${apiKey}\`,;
     'X-RateLimit-Limit': '${rateLimit}',;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),`}
                 </pre>
               </div>
@@ -2233,6 +2546,7 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'X-RateLimit-Window': '${timeWindow}'  }
 
 
+<<<<<<< HEAD
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
 
@@ -2321,6 +2635,13 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
 
+=======
+=======
+    'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}',
+    'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'X-RateLimit-Window': '${timeWindow}'  }
 
 
@@ -2330,7 +2651,10 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
 });
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 console && console.log('Response:', response && response.data);
 console && console.log('Rate Limit Info:', {;
   limit: response && response.headers['x-ratelimit-limit'],;
@@ -2338,9 +2662,13 @@ console && console.log('Rate Limit Info:', {;
   reset: response && response.headers['x-ratelimit-reset'];
 });`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }
                 variant='outline';
                 size='sm';
@@ -2349,6 +2677,7 @@ console && console.log('Rate Limit Info:', {;
                 <Copy className='w-4 h-4 mr-2' />                Copy Code;
               </Button>;
             </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }),`)}
                 Copy Code
@@ -2433,6 +2762,8 @@ console.log('Rate Limit Info:', {
                   {`import requests
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }),`)}
 
@@ -2441,7 +2772,10 @@ console.log('Rate Limit Info:', {
             </Card>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className="p-6 bg-gray-800 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                 <Code className="w-5 h-5 mr-2 text-blue-400" />
@@ -2451,7 +2785,10 @@ console.log('Rate Limit Info:', {
                 <pre className="text-sm text-gray-300">
 {`import requests
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 api_key = '${apiKey || 'your_api_key_here'}'
@@ -2459,6 +2796,7 @@ endpoint = '${endpoint || '/api/users'}'
 
 # Make API request with rate limiting
 headers = {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 
@@ -2468,6 +2806,12 @@ response = requests.get(
     'Authorization': f'Bearer {api_key}',
     'X-RateLimit-Limit': '${rateLimit}',
 
+=======
+    'Authorization': f'Bearer {api_key}'
+    'X-RateLimit-Limit': '${rateLimit}'
+    'Authorization': f'Bearer {api_key}',
+    'X-RateLimit-Limit': '${rateLimit}',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
@@ -2476,6 +2820,10 @@ response = requests.get(
 
 response = requests.get(;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     f'https://api.zion.tech{endpoint}';
 
     headers=headers
@@ -2486,6 +2834,7 @@ print('Rate Limit Info:', {
 
     'limit': response.headers.get('x-ratelimit-limit');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset')
@@ -2516,6 +2865,11 @@ print('Rate Limit Info:', {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset')
+=======
+    'remaining': response.headers.get('x-ratelimit-remaining');
+    'reset': response.headers.get('x-ratelimit-reset')
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 variant="outline";
                 size="sm";
                 className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700";
@@ -2559,6 +2913,7 @@ print('Rate Limit Info:', {;
     'remaining': response && response.headers.get('x-ratelimit-remaining');
     'reset': response && response.headers.get('x-ratelimit-reset');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -2584,6 +2939,28 @@ response = requests.get(
 print('Response:', response.json())
 print('Rate Limit Info:', {
 =======
+=======
+
+
+})`}
+                </pre>
+              </div>
+              <Button
+                onClick={() =>
+                  copyToClipboard(`import requests                onClick={() => copyToClipboard(`import requests
+api_key = '${apiKey |'your_api_key_here'}'
+endpoint = '${endpoint |'/api/users'}'
+# Make API request with rate limiting
+headers = {
+    'Authorization': f'Bearer {api_key}'
+    'X-RateLimit-Limit': '${rateLimit}'
+    'X-RateLimit-Window': '${timeWindow}'
+response = requests.get(
+    f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+}
+response = requests.get(
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     f'https://api.zion.tech{endpoint}';
 
@@ -2594,7 +2971,10 @@ print('Response:', response.json())
 print('Rate Limit Info:', {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() =>;
                   copyToClipboard(`import requests                onClick={() => copyToClipboard(`import requests;
 api_key = '${apiKey || 'your_api_key_here'}';
@@ -2627,9 +3007,13 @@ print('Rate Limit Info:', {;
     'reset': response.headers.get('x-ratelimit-reset')
 })`)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 variant="outline";
                 size="sm";
                 className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700";
@@ -2707,6 +3091,7 @@ console.log ('Rate Limit Info:', {
   reset: response.headers['x - ratelimit - reset'];
 });`);
                 }
+<<<<<<< HEAD
                 variant='outline';
                 size='sm';
                 className='mt - 4 border - gray - 600 text - gray - 300 hover:bg - gray - 700';
@@ -2806,6 +3191,25 @@ print ('Rate Limit Info:', {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                variant='outline'
+                size='sm'
+                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700'
+              >
+                <Copy className='w-4 h-4 mr-2' />                Copy Code    'reset': response.headers.get('x-ratelimit-reset')
+})`)}
+                variant="outline"
+                size="sm"
+                className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"
+              >
+                <Copy className="w-4 h-4 mr-2" />
+                Copy Code
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
       <section className='py - 20 bg - gradient - to - r from - green - 600 to - blue - 600'>;
         <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
@@ -2833,14 +3237,19 @@ print ('Rate Limit Info:', {
               size="lg";
               className="border - white text - white hover:bg - white hover:text - green - 600";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               View Pricing;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);    </>);
 }
@@ -2979,11 +3388,14 @@ print('Rate Limit Info:', {
 }
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );    </>;
   );
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);    </>);
@@ -2996,3 +3408,8 @@ print('Rate Limit Info:', {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ComprehensiveITService {
 export interface ComprehensiveITService {;
   id: string;
@@ -825,12 +826,17 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   },
   {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   {
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next - generation quantum - powered cloud infrastructure',
@@ -840,9 +846,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Quantum computing resources',
       'Quantum - secured networking',
       'Quantum encryption at rest and in transit',
@@ -857,10 +867,15 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     popular: true,
     icon: '☁️',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -874,9 +889,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     real_service: true,
     technology: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Quantum computing',
       'Quantum networking',
       'React',
@@ -887,10 +906,15 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Custom quantum hardware',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'Enterprise systems',
       'Legacy applications',
@@ -918,9 +942,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     variant: 'quantum - advanced',
     contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -936,9 +964,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'AI-powered deployment optimization',
     id: 'ai - powered - devops - automation',
     name: 'AI - Powered DevOps Automation',
@@ -950,9 +982,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [;
       'AI - powered deployment optimization',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Intelligent infrastructure scaling',
       'Predictive failure detection',
       'Automated performance tuning',
@@ -966,10 +1002,15 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     popular: true,
     icon: '🤖',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - automation',
@@ -983,9 +1024,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     real_service: true,
     technology: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'AI algorithms',
       'Machine learning',
       'React',
@@ -997,10 +1042,15 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Kubernetes',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'GitHub',
       'GitLab',
@@ -1027,9 +1077,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     variant: 'ai - futuristic',
     contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1045,10 +1099,15 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'quantum - cybersecurity - suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Unhackable quantum - secured cybersecurity platform',
@@ -1058,9 +1117,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Quantum encryption algorithms',
       'AI - powered threat detection',
       'Quantum key distribution',
@@ -1075,10 +1138,15 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     popular: true,
     icon: '🔒',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / quantum - cybersecurity - suite',
@@ -1092,9 +1160,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     real_service: true,
     technology: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Quantum encryption',
       'AI algorithms',
       'React',
@@ -1105,10 +1177,15 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Custom quantum hardware',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: [;
       'SIEM systems',
       'Firewalls',
@@ -1137,9 +1214,13 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     variant: 'quantum - cyberpunk',
     contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1168,6 +1249,10 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
+<<<<<<< HEAD
+=======
+export interface ComprehensiveITService {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   contactInfo: {
     mobile: string, email: string,
     address: string,
@@ -1181,6 +1266,10 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'enterprise-it-infrastructure', name: 'Enterprise IT Infrastructure Management',
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
     price: '$25,999',
@@ -1204,6 +1293,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$1.2T IT services market, 8% annual growth',
     growthRate: '8% annual growth', variant: 'enterprise-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 <<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1228,12 +1318,20 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface ComprehensiveITService {;
 
   }
 
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1243,6 +1341,12 @@ export interface ComprehensiveITService {;
   }
 ];
 ;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     realImplementation: true
     implementationDetails:
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
@@ -1907,12 +2011,15 @@ export interface ComprehensiveITService {;
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launchDate: '2024-09-15'
     customers: 180
     rating: 4.9
     reviews: 156
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15',
     customers: 180,
@@ -1931,9 +2038,15 @@ export interface ComprehensiveITService {;
     rating: 4.9
 
     reviews: 156
+<<<<<<< HEAD
   }
 ];
 export interface ComprehensiveITService {;
+=======
+export interface ComprehensiveITService {;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string,;
   name: string,;
   tagline: string,;
@@ -2010,6 +2123,10 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -2411,5 +2528,10 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     customers: 180,;
     rating: 4.9,;
     reviews: 156;
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

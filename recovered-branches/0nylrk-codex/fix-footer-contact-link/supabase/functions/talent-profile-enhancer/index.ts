@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 =======
@@ -7,12 +8,17 @@ import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
@@ -20,6 +26,7 @@ const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface TalentProfileData {
 
@@ -182,11 +189,17 @@ const corsHeaders = {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TalentProfileData {
   name: string;
   title: string;
   bio: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   skills: string[]
   location?: string
 }
@@ -205,6 +218,7 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
+<<<<<<< HEAD
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
@@ -250,6 +264,9 @@ interface EnhancedProfile {;
 
   skills: string[],
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  skills: string[],
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   location?: string;
 
 }
@@ -260,22 +277,32 @@ interface EnhancedProfile {
     devops: string[];
     platforms: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 serve(async (req) => {
   // Handle CORS preflight requests
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -336,10 +363,24 @@ serve(_async (req) => {_// Handle CORS preflight requests
       return new Response(
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
+=======
+  try {
+
+    const { talentData } = await req && req.json() as { talentData: TalentProfileData };
+    
+    if (!talentData && talentData.bio || talentData && talentData.bio.length < 20) {
+
+      return new Response(
+        JSON.stringify({ error: "Bio must be at least 20 characters long" });
+        JSON.stringify({ error: "Bio must be at least 20 characters long" }),
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 
+<<<<<<< HEAD
     // Create a request to OpenAI API
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -353,6 +394,20 @@ serve(_async (req) => {_// Handle CORS preflight requests
       body: JSON && JSON.stringify({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    // Create a request to OpenAI API
+
+    const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENAI_API_KEY}`;
+        'Content-Type': 'application/json'};
+      body: JSON && JSON.stringify({
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -363,10 +418,13 @@ serve(_async (req) => {_// Handle CORS preflight requests
             role: 'user'
             content: `Create a professional profile summary and categorize skills based on this information:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
@@ -387,14 +445,20 @@ serve(_async (req) => {_// Handle CORS preflight requests
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
             Skills: ${talentData.skills.join()}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -407,11 +471,20 @@ serve(_async (req) => {_// Handle CORS preflight requests
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
 
+=======
+            Location: ${talentData.location |'Not specified'}
+            Return the result as a JSON object with these keys: {
+              "summary": "The professional summary text (100-150 words)"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Location: ${talentData.location || 'Not specified'}
             
 
               "summary": "The professional summary text (100-150 words)",
               "categorizedSkills": {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     soft_skills: string[],
     other: string[];
   }
@@ -460,6 +533,10 @@ if ( {) {
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100 - 150 words)",
               "categorized_skills": {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 "programming": ["skill1", "skill2"];
                 "devops": ["skill1", "skill2"];
                 "platforms": ["skill1", "skill2"];
@@ -468,6 +545,7 @@ if ( {) {
               }
             }
 
+<<<<<<< HEAD
 
             Location: ${talentData.location |'Not specified'}
             Return the result as a JSON object with these keys: {
@@ -499,10 +577,20 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
+
+          }
+        ];
+        temperature: 0.7
+        response_format: { type: "json_object" }
+      })});
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         temperature: 0.7,
         response_format: { type: "json_object" }
       })}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -511,6 +599,11 @@ if ( {) {
     if (!openAIData.choices |openAIData.choices.length === 0) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    const openAIData = await openAIResponse.json();
+    if (!openAIData.choices |openAIData.choices.length === 0) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         temperature: 0 && 0.7,
         response_format: { type: "json_object" }
       })});
@@ -525,6 +618,7 @@ if ( {) {
     } catch (e) {
       console && console.error("Error parsing OpenAI response:", e);
       throw new Error("Failed to parse the generated content")
+<<<<<<< HEAD
 
     console && console.error("Error in talent-profile-enhancer function:", error);
 
@@ -547,6 +641,11 @@ if ( {) {
       JSON.stringify(enhancedProfile);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    return new Response(
+      JSON.stringify(enhancedProfile);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ],;
         temperature: 0.7,;
         response_format: { type: "json_object" }
@@ -570,6 +669,11 @@ if ( {) {
     return new Response(;
       JSON.stringify(enhancedProfile),;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -577,6 +681,7 @@ if ( {) {
     return new Response(
       JSON.stringify({ error: error.message });
     console.error("Error in talent-profile-enhancer function:", error),
+<<<<<<< HEAD
     
     return new Response(
       JSON.stringify({ error: error.message });
@@ -740,3 +845,17 @@ try {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return new Response(
+
+
+
+      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+});
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

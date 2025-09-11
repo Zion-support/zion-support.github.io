@@ -13,6 +13,7 @@ import {AppLayout} from "@/layout/AppLayout";
 import {ProfileContact} from "@/components/profile/ProfileContact";
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
 =======
@@ -20,12 +21,18 @@ export default function ListingDetail() {
 export default function ListingDetail() {;
   // useParams may be untyped in this environment, so avoid passing a;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export default function ListingDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { id } = useParams() as { id?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from "react",
@@ -50,6 +57,9 @@ export default function ListingDetail() {
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   // Find the listing from our shared data source - now also checking equipment listings
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -61,11 +71,14 @@ export default function ListingDetail() {
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
+<<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -87,6 +100,7 @@ export default function ListingDetail() {
   }
   const handleContact = () => {
     setIsContactDialogOpen(true)
+<<<<<<< HEAD
 
   },
 
@@ -97,6 +111,11 @@ export default function ListingDetail() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -139,11 +158,16 @@ export default function ListingDetail() {
                           className="w-full h-full object-cover"
                           onError={(e) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
                             const target = e.target as HTMLImageElement;
                             target.src = "/placeholder.svg"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                            const target = e.target as HTMLImageElement;
+                            target.src = "/placeholder.svg"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             const target = e.target as HTMLImageElement,
                             target.src = "/placeholder.svg"
 import { useState } from "react",;
@@ -166,6 +190,7 @@ export default function ListingDetail() {;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
   const [isLoading, setIsLoading] = useState(false),;
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),;
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
@@ -204,6 +229,8 @@ export default function ListingDetail() {;
   if (!listing) {;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
@@ -211,7 +238,10 @@ export default function ListingDetail() {;
   if (!listing) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
           <div className="container mx-auto">;
@@ -225,6 +255,7 @@ export default function ListingDetail() {;
           </div>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
   const handleContact = () => {;
     setIsContactDialogOpen(true);
   };
@@ -246,6 +277,10 @@ export default function ListingDetail() {;
   },;
   return (;
 =======
+=======
+    );
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const handleContact = () => {;
@@ -254,17 +289,23 @@ export default function ListingDetail() {;
 
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
                 <div className="aspect-[16/9] w-full relative">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
@@ -274,11 +315,15 @@ export default function ListingDetail() {;
                       src={listing && listing.images[selectedImageIndex]} 
                       alt={listing && listing.title} 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="w-full h-full object-cover"
                       onError={(e) => {;
                         const target = e && e.target as HTMLImageElement;
                         target && target.src = "/placeholder && placeholder.svg";
+<<<<<<< HEAD
 <<<<<<< HEAD
                       }}
                     />;
@@ -298,6 +343,8 @@ export default function ListingDetail() {;
                         target.src = "/placeholder.svg";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       }}
                     />;
                   ) : (;
@@ -306,8 +353,11 @@ export default function ListingDetail() {;
                     </div>;
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </div>;
 
@@ -315,7 +365,10 @@ export default function ListingDetail() {;
                   <div className="flex p-4 gap-2 overflow-x-auto">;
                     {listing && listing.images.map((image, index) => (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -324,21 +377,30 @@ export default function ListingDetail() {;
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >;
                         <img
                           src={image} 
                           alt={`${listing && listing.title} - image ${index + 1}`} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           className="w-full h-full object-cover"
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>;
                 {listing.images && listing.images.length > 1 && (;
@@ -354,6 +416,9 @@ export default function ListingDetail() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >;
                         <img;
                           src={image} ;
@@ -362,6 +427,7 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
+<<<<<<< HEAD
 <<<<<<< HEAD
                           }}
                         />
@@ -377,6 +443,9 @@ export default function ListingDetail() {;
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           }}
                         />;
@@ -384,6 +453,7 @@ export default function ListingDetail() {;
                     ))}
                   </div>;
                 )}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -396,6 +466,17 @@ export default function ListingDetail() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </div>
+              {/* Description Section */}
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
+                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+                
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -421,16 +502,23 @@ export default function ListingDetail() {;
                   </div>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
 =======
 =======
               </div>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+              </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ;
                 {listing.images && listing.images.length > 1 && (;
@@ -466,6 +554,9 @@ export default function ListingDetail() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Features */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
@@ -491,32 +582,44 @@ export default function ListingDetail() {;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ;
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
                   <div className="flex flex-wrap gap-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {listing.tags.map((tag, i) => (;
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
                         {tag}
                       </Badge>;                    ))}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {listing && listing.tags.map((tag, i) => (;
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
                         {tag}
                       </Badge>;
                     ))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ;
             {/* Right Column - Details */}
@@ -655,6 +758,8 @@ export default function ListingDetail() {;
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             {/* Right Column - Details */}
@@ -682,8 +787,12 @@ export default function ListingDetail() {;
                         <Star
                           key={i}
                           className={cn(
+<<<<<<< HEAD
 
 
+=======
+                            "h-5 w-5";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             "h-5 w-5",
 
 
@@ -725,9 +834,17 @@ export default function ListingDetail() {;
                       providerId={listing && listing.author.id}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      onPaymentInitiated={() => {
+                        toast({
+                          title: "Payment Processing"
+                          description: "Redirecting to secure checkout..."
+                        })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="space-y-3 mb-8">;
                   {listing.price !== null ? (;
                     <PaymentButton;
@@ -742,7 +859,10 @@ export default function ListingDetail() {;
                           description: "Redirecting to secure checkout...";
                         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -750,7 +870,10 @@ export default function ListingDetail() {;
                     />
                   ) : (
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onPaymentInitiated={() => {;
                         toast({;
                           title: "Payment Processing",;
@@ -760,9 +883,13 @@ export default function ListingDetail() {;
                     />;
                   ) : (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
@@ -772,7 +899,10 @@ export default function ListingDetail() {;
                   )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           const target = e.target as HTMLImageElement,
 
@@ -780,12 +910,16 @@ export default function ListingDetail() {;
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     variant="outline" 
                     onClick={handleContact}
                     disabled={isLoading}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews);
                     </span>;
@@ -837,19 +971,26 @@ export default function ListingDetail() {;
                   >;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <MessageSquare className="h-4 w-4 mr-2" />;
                     Contact Publisher;
                   </Button>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">;
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>;
                   <div className="flex items-center gap-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       }}
                     />
@@ -931,11 +1072,14 @@ export default function ListingDetail() {;
     </AppLayout>
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {listing && listing.author.avatarUrl ? (;
                       <img
                         src={listing && listing.author.avatarUrl} 
                         alt={listing && listing.author.name} 
                         className="h-12 w-12 rounded-full"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         onError={(e) => {;
                           const target = e && e.target as HTMLImageElement;
@@ -958,6 +1102,15 @@ export default function ListingDetail() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -994,6 +1147,7 @@ export default function ListingDetail() {;
                       </div>;
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div>;
                       <p className="font-medium text-white">{listing && listing.author.name}</p>;
                     {listing.author.avatarUrl ? (;
@@ -1019,19 +1173,29 @@ export default function ListingDetail() {;
                     <div>;
                       <p className="font-medium text-white">{listing && listing.author.name}</p>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                    <div>;
+                      <p className="font-medium text-white">{listing && listing.author.name}</p>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>;
                     </div>;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">;
                   <div className="flex justify-between mb-2">;
                     <span className="text-zion-slate-light">Listed on</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>;
                   </div>;
@@ -1039,6 +1203,8 @@ export default function ListingDetail() {;
                     <span className="text-zion-slate-light">ID</span>;
                     <span className="text-white">{listing.id}</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <span className="text-white">{new Date(listing && listing.createdAt).toLocaleDateString()}</span>;
                   </div>;
                   <div className="flex justify-between mb-2">;
@@ -1284,7 +1450,10 @@ if ( {) {
                     <span className="text - zion - slate - light">ID</span>;
                     <span className="text - white">{listing.id}</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 </div>;
               </div>;
@@ -1292,6 +1461,7 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </AppLayout>);
 ;
@@ -1336,6 +1506,8 @@ if ( {) {
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1359,5 +1531,9 @@ if ( {) {
       </Dialog>;
     </AppLayout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

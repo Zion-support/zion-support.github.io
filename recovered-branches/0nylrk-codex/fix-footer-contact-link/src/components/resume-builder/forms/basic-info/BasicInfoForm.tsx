@@ -11,10 +11,13 @@ import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   resumeId?: string;
   initialData?: Partial<BasicInfoFormData>;
   onSave: (data: BasicInfoFormData) => void,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   resumeId?: string;
 
@@ -22,6 +25,7 @@ export interface BasicInfoFormProps {;
 
   onSave: (data: BasicInfoFormData) => void,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   skills?: string[];
   yearsExperience?: number;
@@ -48,6 +52,8 @@ export interface BasicInfoFormProps {
   initialData?: Partial<BasicInfoFormData>;
   onSave: (data: BasicInfoFormData) => void
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   skills?: string[];
   yearsExperience?: number;
 import { PersonalInfoFields } from "./PersonalInfoFields",
@@ -61,6 +67,7 @@ export interface BasicInfoFormProps {
   onComplete?: () => void
 }
 
+<<<<<<< HEAD
 export function BasicInfoForm({;
   resumeId;
   initialData = {};
@@ -74,6 +81,11 @@ export function BasicInfoForm({
 export function BasicInfoForm(): any ({;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export function BasicInfoForm(): any ({;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   resumeId;
 
   initialData = {}
@@ -81,12 +93,15 @@ export function BasicInfoForm(): any ({;
   skills = [];
   yearsExperience = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
   resumeId,
   initialData = {},
   onSave,
   skills = [],
   yearsExperience = 0,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -97,15 +112,21 @@ export function BasicInfoForm(): any ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       fullName: ""
       title: ""
       email: ""
@@ -116,8 +137,11 @@ export function BasicInfoForm(): any ({;
       github: ""
       hourlyRate: 0
       ...initialData}});
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       fullName: "",
       title: "",
       email: "",
@@ -130,21 +154,27 @@ export function BasicInfoForm(): any ({;
       ...initialData}}),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -171,9 +201,13 @@ export function BasicInfoForm({;
   skills = [],;
   yearsExperience = 0,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onComplete;
 }: BasicInfoFormProps) {;
   const form = useForm<BasicInfoFormData>({;
@@ -188,6 +222,7 @@ export function BasicInfoForm({;
       linkedin: "",;
       github: "",;
       hourlyRate: 0,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -257,6 +292,8 @@ export function BasicInfoForm({;
   return (
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ...initialData}});
 
   useEffect(() => {;
@@ -304,11 +341,15 @@ export function BasicInfoForm({;
           <div className="pt-4 border-t border-gray-200">;
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <RateOptimizationSection
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               yearsExperience={yearsExperience || 0}
@@ -354,6 +395,10 @@ export function BasicInfoForm({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              yearsExperience={yearsExperience |0}
+              yearsExperience={yearsExperience || 0}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               location={form.getValues("location")}
               rateType="hourly"
             />
@@ -365,6 +410,7 @@ export function BasicInfoForm({;
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -405,6 +451,12 @@ export function BasicInfoForm({;
 
 
 }
+=======
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -441,6 +493,7 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect (() => {
     // Check condition
@@ -539,3 +592,5 @@ if (initialData) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

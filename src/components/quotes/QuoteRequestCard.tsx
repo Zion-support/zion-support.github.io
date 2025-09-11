@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { format } from "date-fns",
@@ -22,6 +23,8 @@ type QuoteRequestCardProps = {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react"
 import {format} from "date-fns"
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"
@@ -36,6 +39,7 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
   onMarkAsResponded
 }) => {
@@ -70,6 +74,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   quote,
@@ -99,6 +105,7 @@ type QuoteRequestCardProps = {
 export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
   quote;
   onViewDetails;
+<<<<<<< HEAD
   quote
   onViewDetails
   onMarkAsResponded
@@ -106,6 +113,8 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
   onViewDetails,
   quote,
   onViewDetails,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onMarkAsResponded,
   onToggleArchive;
 }, ) => {
@@ -115,6 +124,7 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
       return format(new Date(dateString), 'PP')
     } catch (e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 
 
@@ -123,11 +133,18 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
         
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return dateString
     }
   }
   },
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -150,6 +167,7 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
         
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
+<<<<<<< HEAD
 =======
 
 import React from "react";
@@ -194,21 +212,33 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
 
         
 
 
         <div className="flex justify-between items-center mt-4">
+<<<<<<< HEAD
+=======
+          <Button
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             variant="outline"
             size="sm"
             onClick={() => onViewDetails(quote)}
@@ -220,6 +250,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           
 
           <div className="flex items-center">
+<<<<<<< HEAD
+=======
+            {quote.status !== 'responded' && onMarkAsResponded && (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="ghost"
                 size="sm"
@@ -230,6 +264,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 Mark Responded
               </Button>
             )}
+<<<<<<< HEAD
+=======
+            
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               variant="ghost"
               size="sm"
@@ -240,10 +278,18 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
+<<<<<<< HEAD
   )
 }
 "}
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  );
+};
+"};
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
@@ -325,6 +371,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             {quote && quote.status !== 'responded' && onMarkAsResponded && (;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         <div className="flex justify-between items-center mt-4">
           <Button
@@ -341,6 +388,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             {quote.status !== 'responded' && onMarkAsResponded && (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="ghost"
                 size="sm"
@@ -351,6 +400,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 Mark Responded
               </Button>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             <Button
@@ -465,6 +515,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             >;
               {quote.is_archived ? (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -475,15 +527,22 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               className="flex items-center gap-1";
             >;
               {quote && quote.is_archived ? (;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <RefreshCw className="h-4 w-4" />;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </div>;
@@ -556,7 +615,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 }
 "},
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

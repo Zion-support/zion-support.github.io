@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar',
@@ -42,13 +43,20 @@ export default function CourseView() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
     load();
   }, [courseId]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold |0;
@@ -66,12 +74,19 @@ export default function CourseView() {;
     }
     load()
   }, [courseId]);
+<<<<<<< HEAD
   const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
+=======
+
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function markLessonComplete(lessonId: string) {
     const completedCount = (progress.completedLessons || []).includes(lessonId)
       ? (progress.completedLessons || []).length
       : (progress.completedLessons || []).length + 1;
     const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+<<<<<<< HEAD
     async function load() {
       const [courseResp, _progResp] = await Promise.all([
         fetch(`/api/learn/courses/${courseId}`),
@@ -95,26 +110,44 @@ export default function CourseView() {;
       : (progress.completedLessons || []).length + 1,
     const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100)
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const resp = await fetch('/api/learn/progress', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
+<<<<<<< HEAD
 });
     const data = await resp.json();
     setProgress(data.progress)
   }
+=======
+    });
+    const data = await resp.json();
+    setProgress(data.progress)
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   function onModuleQuizComplete(score: number) {
     // For demo, simply mark as completed when quiz attempted
     if (currentLessonId) markLessonComplete(currentLessonId)
   }
+<<<<<<< HEAD
 async function onFinalQuizComplete(score: number) {
+=======
+
+  async function onFinalQuizComplete(score: number) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
     setFinalPassed(passed)
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const currentLesson = useMemo(;
     () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
     [course, currentLessonId];
@@ -138,6 +171,7 @@ async function onFinalQuizComplete(score: number) {
     });
     const data = await resp && resp.json();
     setProgress(data && data.progress);  }
+<<<<<<< HEAD
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
@@ -148,10 +182,21 @@ async function onFinalQuizComplete(score: number) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
+=======
+
+  function onModuleQuizComplete(): any (score: number) {;
+    // For demo, simply mark as completed when quiz attempted;
+    if (currentLessonId) markLessonComplete(currentLessonId);  }
+
+  async function onFinalQuizComplete(): any (score: number) {;
+    const needed = course?.finalQuiz?.passThreshold || 0;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const passed = score >= needed;
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className='grid lg:grid-cols-3 gap-6'>;
@@ -177,12 +222,18 @@ async function onFinalQuizComplete(score: number) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l && l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l && l.id)}
                   >                    {l && l.title}
                   </button>;
                 </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -194,6 +245,18 @@ async function onFinalQuizComplete(score: number) {
 
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
+=======
+
+=======
+    <div className="grid lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2 space-y-4">
+        <div>
+=======
+
+import {useEffect, useMemo, useState} from 'react';
+import {useRouter} from 'next/router';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -207,6 +270,7 @@ import CoachWidget from '../../components/learn/CoachWidget';
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
+<<<<<<< HEAD
 
 
           <h1 className="text-2xl font-semibold">{course.title}</h1>
@@ -611,6 +675,8 @@ export default function CourseView(req, res) {
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <h1 className='text-2xl font-semibold'>{course.title}</h1>
           <div className='text-gray-500 text-sm'>
             {course.category} • {course.level}
@@ -645,6 +711,7 @@ export default function CourseView(req, res) {
             <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
           </div>
         </div>
+<<<<<<< HEAD
         <div className='grid lg:grid-cols-5 gap-4'>
           <aside className='lg:col-span-2 border rounded p-3 h-max'>
             <div className='font-medium mb-2'>Lessons</div>
@@ -673,6 +740,34 @@ export default function CourseView(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+            </ul>;
+          </aside>;
+
+          <section className='lg:col-span-3 space-y-4'>;
+            {currentLesson ? (;
+              <div className='border rounded p-4'>;
+                <div className='font-medium'>{currentLesson && currentLesson.title}</div>;
+                <div className='mt-2 text-sm whitespace-pre-line'>;
+                  {currentLesson && currentLesson.content}
+                </div>;
+                {currentLesson && currentLesson.quiz?.questions?.length ? (;
+                  <div className='mt-4'>;
+
+                    <Quiz
+                      questions={currentLesson && currentLesson.quiz.questions}
+                      onComplete={onModuleQuizComplete}
+                    />;
+                  </div>;
+                ) : (;
+                  <button
+                    className='mt-3 px-4 py-2 bg-green-600 text-white rounded'
+                    onClick={() => markLessonComplete(currentLesson && currentLesson.id)}
+                  >;
+                    Mark Complete;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </button>;
                 </li>;
               ))  } catch (error) {
@@ -684,6 +779,7 @@ export default function CourseView(req, res) {
           </aside>
           <section className="lg:col-span-3 space-y-4">
 =======
+<<<<<<< HEAD
 
 =======
 
@@ -691,6 +787,9 @@ export default function CourseView(req, res) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -701,6 +800,7 @@ export default function CourseView(req, res) {
                   </div>
                 ) : (
                   <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+<<<<<<< HEAD
 
               <div className="text-sm text-gray-500">Select a lesson</div>
             )  } catch (error) {
@@ -799,6 +899,10 @@ export default function CourseView(req, res) {
   }
 }
               </div>
+=======
+                )}
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ) : (
               <div className='text-sm text-gray-500'>Select a lesson</div>
             )}
@@ -842,10 +946,23 @@ export default function CourseView(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           </section>
         </div>
       </div>
       <div className="space-y-4">
+=======
+
+          </section>
+        </div>
+      </div>
+
+      <div className="space-y-4">
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -854,6 +971,7 @@ export default function CourseView(req, res) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 
 }
@@ -875,3 +993,22 @@ export default function CourseView(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+}
+
+=======
+
+  )
+}
+
+    </div>);
+;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

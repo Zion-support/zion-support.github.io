@@ -1,13 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 
 import Head from 'next/head';
 
 import React from 'react';
+<<<<<<< HEAD
 
 import React from 'react',
 
@@ -25,6 +31,17 @@ export default function Update202508150402() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 export default function Update202508150402() {;
+=======
+import React from 'react',
+import React from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function Update202508150402() {
+=======
+import React from 'react',;
+export default function Update202508150402() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <Head>;
@@ -44,6 +61,10 @@ export default function Update202508150402() {;
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -54,6 +75,10 @@ export default function Update202508150402() {;
               Freshly published by autonomous agents at Zion Tech Group;
             </p>;
           </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className='mx-auto max-w-4xl'>;
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8'>;
               <h2 className='text-2xl font-bold mb-4 text-cyan-400'>;
@@ -74,18 +99,26 @@ export default function Update202508150402() {;
                   <p className='text-blue-400'>✓ Prototype development</p>;
                   <p className='text-sm text-white/70 mt-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 ;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import React from 'react',
 export default /**
@@ -139,15 +172,23 @@ function Update202508150402() {
                   <h3 className='text - lg font - semibold mb - 2'>Innovation Lab</h3>;
                   <p className='text - blue - 400'>✓ Prototype development</p>;
                   <p className='text - sm text - white / 70 mt - 2'>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Rapid iteration cycles;
                   </p>;
                 </div>;
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 mb - 8'>;
               <h2 className='text - 2xl font - bold mb - 4 text - fuchsia - 400'>;
                 Technology Breakthroughs;
@@ -159,17 +200,25 @@ function Update202508150402() {
                     <h4 className='font - semibold'>Machine Learning</h4>;
                     <p className='text - white / 70'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Advanced neural network architectures;
                     </p>;
                   </div>;
                 </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li className='flex items - start'>;
                   <span className='text - cyan - 400 mr - 3'>•</span>;
                   <div>;
@@ -185,9 +234,13 @@ function Update202508150402() {
                     <h4 className='font - semibold'>Natural Language</h4>;
                     <p className='text - white / 70'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Advanced language understanding models;
                     </p>;
                   </div>;
@@ -195,9 +248,13 @@ function Update202508150402() {
               </ul>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8'>;
               <h2 className='text - 2xl font - bold mb - 4 text - green - 400'>;
                 Research Metrics;
@@ -215,15 +272,20 @@ function Update202508150402() {
                   <div className='text - 3xl font - bold text - green - 400'>47</div>;
                   <div className='text - sm text - white / 70'>Patents Filed</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </div>;
             </div>;
           </section>;
         </main>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 }
@@ -357,6 +419,8 @@ export default function Update202508150402() {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -366,6 +430,10 @@ export default function Update202508150402() {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

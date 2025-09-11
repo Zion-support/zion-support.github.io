@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
@@ -55,6 +59,8 @@ function AIFinancialRiskPage() {
 ;
 const AIFinancialRisk: React.FC = () => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     <UltraAdvancedFuturisticBackground>;
       <NextHead>;
@@ -62,7 +68,10 @@ const AIFinancialRisk: React.FC = () => {
           {service?.name || 'AI Financial Risk Management'} - Zion Tech Group;
         </title>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           href='https://ziontechgroup && ziontechgroup.com/ai-financial-risk'
         />;
       </NextHead>;
@@ -97,9 +106,13 @@ const AIFinancialRisk: React.FC = () => {
                   ];
                 ).map((feat, i) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -108,9 +121,13 @@ const AIFinancialRisk: React.FC = () => {
                   </li>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'>;
@@ -119,6 +136,10 @@ const AIFinancialRisk: React.FC = () => {
                   <div className='text-3xl font-bold text-white'>;
                     {service?.price || 'Custom pricing'}
                     <span className='text-slate-400 text-base'>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta;
           name='description';
           content={
@@ -176,14 +197,19 @@ const AIFinancialRisk: React.FC = () => {
                     {service?.price || 'Custom pricing'}
                     <span className='text - slate - 400 text - base'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {service?.period || ''}
                     </span>;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>{service?.name || 'AI Financial Risk Management'} - Zion Tech Group</title>
         <meta name="description" content={service?.description || 'Advanced risk models, stress testing, and anomaly detection for financial institutions.'} />
@@ -325,15 +351,22 @@ export default function AIFinancialRiskPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 className='w-full'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 className='w-full'>;
@@ -353,7 +386,10 @@ export default function AIFinancialRiskPage() {
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
@@ -361,9 +397,13 @@ export default function AIFinancialRiskPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -384,6 +424,7 @@ export default function AIFinancialRiskPage() {
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -453,25 +494,36 @@ export default function AIFinancialRiskPage(req, res) {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>;
               </div>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                </div>              </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>);
 ;
     </UltraAdvancedFuturisticBackground>;
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
     </UltraAdvancedFuturisticBackground>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -480,8 +532,13 @@ export default function AIFinancialRiskPage(req, res) {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

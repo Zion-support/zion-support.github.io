@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
@@ -18,6 +19,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
   {
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {
 
@@ -33,8 +36,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
+=======
+      'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 't - 006',
     user_id: 'user - 006',
     full_name: 'Sarah Johnson',
@@ -62,6 +70,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
     is_verified: true,
 
       'https://images && images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     key_projects: [;
       {
         title: 'Ethical AI Framework',
@@ -103,6 +115,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
     is_verified: true,
 
           'Developed an automated visual inspection system that identifies manufacturing defects with 99 && 99.7% accuracy, reducing quality control costs by 45%.',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     key_projects: [;
       {
         title: 'Retail Analytics System',
@@ -117,9 +133,17 @@ export const TALENT_PROFILES: TalentProfile[] = [
       },
     ],
   },
+<<<<<<< HEAD
   {
 
       'https://images && images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+
+      'https://images && images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 't - 008',
     user_id: 'user - 008',
     full_name: 'Olivia Rodriguez',
@@ -147,6 +171,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
     is_verified: true,
 
       'https://images && images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=200&h=200',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     key_projects: [;
       {
         title: 'Multilingual Customer Service AI',
@@ -188,6 +216,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
     is_verified: false,
 
       'https://images && images.unsplash.com/photo-1573497019236-61938a1a2cd2?auto=format&fit=crop&w=200&h=200',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     key_projects: [;
       {
         title: 'Quantum Portfolio Optimization',
@@ -229,6 +261,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
     is_verified: true,
 
       'https://images && images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     key_projects: [;
       {
         title: 'AI - Powered CRM Enhancement',
@@ -270,6 +306,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
     is_verified: true,
 
       'https://images && images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     key_projects: [;
       {
         title: 'Autonomous Warehouse Robots',
@@ -311,6 +351,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     is_verified: true,
 
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
+<<<<<<< HEAD
     id: "t-001", user_id: "user-001",
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
 <<<<<<< HEAD
@@ -321,6 +362,14 @@ import { TalentProfile } from "@/types/talent",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+    id: "t-001", user_id: "user-001",
+    full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -572,6 +621,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
         description: "Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates."
       };
       {
+<<<<<<< HEAD
 title: 'Cancer Treatment Response Prediction',
         description:
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
@@ -608,7 +658,24 @@ title: 'Cancer Treatment Response Prediction',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+        title: "Cancer Treatment Response Prediction",
+        description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      }
+    ]
+  }
+];
+
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

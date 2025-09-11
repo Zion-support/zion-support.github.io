@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
 interface Listing {
@@ -7,12 +8,20 @@ interface Listing {
 import React from 'react';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+// Example listing type
+interface Listing {
+import React from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ListingScoreCard } from '@/components/ListingScoreCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Select,;
   SelectTrigger,;
@@ -22,6 +31,10 @@ import {;
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Example listing type;
 interface Listing {;
 import { useState, useEffect } from 'react';
@@ -29,13 +42,17 @@ import { GradientHeading } from '@/components / GradientHeading';
 import { ListingScoreCard } from '@/components / ListingScoreCard';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   Select,
   SelectTrigger,
   SelectContent,
   SelectItem,
+<<<<<<< HEAD
 } from '@/components/ui/select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 <<<<<<< HEAD
@@ -73,17 +90,29 @@ import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+} from '@/components / ui / select';
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
+import ListingGridSkeleton from '@/components / skeletons / ListingGridSkeleton';
+import { safe_storage } from '@/utils / safe_storage';
+// Example listing type;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Listing {
   id: string;
   title: string;
   description: string;
+<<<<<<< HEAD
   price: number;
   category: string;
 <<<<<<< HEAD
+=======
+  category: string;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   subcategory?: string;
   image?: string;
   tags?: string[];
   author?: string;
+<<<<<<< HEAD
   authorImage?: string;
   aiScore?: number;
   rating?: number;
@@ -127,6 +156,9 @@ export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
     setIsLoading(true)
     const timeout = setTimeout(() => {;
       if (mounted) setIsLoading(false);
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   author_image?: string;
   ai_score?: number;
   rating?: number;
@@ -168,6 +200,7 @@ function CategoryListingPage() {
       if (setIsLoading (false)) {
   $2
 }
+<<<<<<< HEAD
     }, 300); return () => {
       mounted = false
       clearTimeout(timeout)
@@ -206,6 +239,14 @@ function CategoryListingPage() {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':
+=======
+
+    }, 300); return () => {
+      mounted = false;
+      clear_timeout (timeout);
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [search_query, selected_sort, selected_filter]);
   // Process listings based on filters and search;
   const processed_listings = initial_listings;
@@ -236,10 +277,15 @@ if (return matches_search) {
       // Apply sorting;
       switch (selected_sort) {
         case 'newest':;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           return (
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
         case 'oldest':;
           return (
+<<<<<<< HEAD
           return (
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
           )
@@ -316,12 +362,18 @@ interface Listing {;
   reviewCount?: number,;
   price?: number | null,;
   createdAt: string;
+=======
+
+  createdAt: string;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CategoryListingPageProps {;
   title: string;
   description: string;
   listings: Listing[];
   sortOptions?: { label: string; value: string }[];
   filterOptions?: { label: string; value: string }[];
+<<<<<<< HEAD
 export function CategoryListingPage(): any ({;
   createdAt: string;
 }
@@ -335,6 +387,10 @@ interface CategoryListingPageProps {;
 }
 ;
 export function CategoryListingPage({;
+=======
+
+export function CategoryListingPage(): any ({;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title,;
   description,;
   listings: initialListings,;
@@ -344,6 +400,7 @@ export function CategoryListingPage({;
     { label: 'Highest Rating', value: 'rating-high' },;
     { label: 'Highest AI Match', value: 'ai-match' },;
     { label: 'A-Z', value: 'a-z' },;
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { ListingScoreCard } from "@/components/ListingScoreCard",;
@@ -427,10 +484,96 @@ export function CategoryListingPage({ ;
       clearTimeout(timeout);
     }
   }, [searchQuery, selectedSort, selectedFilter]),;
+=======
+    { label: 'Z-A', value: 'z-a' },;
+  ],;
+  filterOptions = [;
+    { label: 'All', value: 'all' },;
+    { label: 'Highly Rated', value: 'high-rating' },;
+    { label: 'Best AI Match', value: 'best-match' },;
+  ],;
+}: CategoryListingPageProps) {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedSort, setSelectedSort] = useState(;
+    () =>;
+      safeStorage && safeStorage.getItem('category_selected_sort') ||;
+      sortOptions[0]?.value ||;
+      'newest';
+  );
+  const [selectedFilter, setSelectedFilter] = useState(;
+    () =>;
+      safeStorage && safeStorage.getItem('category_selected_filter') ||;
+      filterOptions[0]?.value ||;
+      'all';
+  );
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {;
+    safeStorage && safeStorage.setItem('category_selected_sort', selectedSort);
+  }, [selectedSort]);
+
+  useEffect(() => {;
+    safeStorage && safeStorage.setItem('category_selected_filter', selectedFilter);
+  }, [selectedFilter]);
+
+  useEffect(() => {;
+    let mounted = true;
+    setIsLoading(true);
+    const timeout = setTimeout(() => {;
+      if (mounted) setIsLoading(false);
+    }, 300);    return () => {;
+      mounted = false;
+      clearTimeout(timeout);
+    };
+  }, [searchQuery, selectedSort, selectedFilter]);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Process listings based on filters and search;
   const processedListings = initialListings;
     .filter(listing => {;
       // Apply search filter;
+<<<<<<< HEAD
+=======
+      const matchesSearch =;
+        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        (listing && listing.tags &&;
+          listing && listing.tags.some(tag =>;
+            tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+          ));
+
+      // Apply category filters;
+      if (selectedFilter === 'all') return matchesSearch;
+      if (selectedFilter === 'high-rating');
+        return matchesSearch && (listing && listing.rating || 0) >= 4;
+      if (selectedFilter === 'best-match');
+        return matchesSearch && (listing && listing.aiScore || 0) >= 85;
+
+      return matchesSearch;
+    });
+    .sort((a, b,) => {;
+      // Apply sorting;
+      switch (selectedSort) {;
+        case 'newest':;
+          return (
+            new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime();
+          );
+        case 'oldest':;
+          return (
+            new Date(a && a.createdAt).getTime() - new Date(b && b.createdAt).getTime();
+          );
+        case 'rating-high':;
+          return (b && b.rating || 0) - (a && a.rating || 0);
+        case 'ai-match':;
+          return (b && b.aiScore || 0) - (a && a.aiScore || 0);
+        case 'a-z':;
+          return a && a.title.localeCompare(b && b.title);
+        case 'z-a':;
+          return b && b.title.localeCompare(a && a.title);
+        default:;
+          return 0;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             new Date (a.created_at).get_time () - new Date (b.created_at).get_time ());
         case 'rating - high':;
           return (b.rating || 0) - (a.rating || 0);
@@ -446,6 +589,7 @@ export function CategoryListingPage({ ;
     });
   return (
     <>;
+<<<<<<< HEAD
       const matchesSearch =;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -522,6 +666,52 @@ export function CategoryListingPage({ ;
             </p>
           </div>
           {/* Filters and Search */}
+=======
+
+
+
+
+      <div className="min-h-screen bg-zion-blue py-12 px-4">;
+        <div className="container mx-auto">;
+          <div className="text-center mb-12">;
+            <GradientHeading>{title}</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+              {description}
+
+            </p>;
+          </div>;
+
+
+          {/* Filters and Search */}
+
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
+              </div>;
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
+                  <div className='flex items-center'>;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className='mr-2 h-4 w-4' />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className='mr-2 h-4 w-4' />;
+                    ) : null}
+                    <span>;
+                      {sortOptions && sortOptions.find(option => option && option.value === selectedSort);
+      <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
+        <div className='container mx - auto'>;
+          <div className='text - center mb - 12'>;
+            <GradientHeading>{title}</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              {description}
+
+            </p>;
+          </div>;
+
+
+          {/* Filters and Search */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
               <div className='relative'>
@@ -533,6 +723,7 @@ export function CategoryListingPage({ ;
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setSearchQuery(e.target.value)
                   }
+<<<<<<< HEAD
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
               </div>
               <Select value={selectedSort} onValueChange={setSelectedSort}>
@@ -579,28 +770,57 @@ export function CategoryListingPage({ ;
                       className='text-white'
                     >                      {option.label}
                     </SelectItem>
+=======
+                  className='pl - 10 bg - zion - blue border border - zion - blue - light text - white'                />;
+              </div>;
+              <Select value={selected_sort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className='bg - zion - blue border border - zion - blue - light text - white'>;
+                  <div className='flex items - center'>;
+                    {selected_sort === 'a - z' ? (
+                      <ArrowDownAZ className='mr - 2 h - 4 w - 4' />) : selected_sort === 'z - a' ? (
+                      <ArrowUpZA className='mr - 2 h - 4 w - 4' />) : null}
+                    <span>;
+                      {sort_options.find (option => option.value === selected_sort);
+
+                        ?.label || 'Sort By'}
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate"/>
-                <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
-              </div>
-              
-              <Select value={selectedSort} onValueChange={setSelectedSort}>
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                  <div className="flex items-center">
-                    {selectedSort === 'a-z' ? (<ArrowDownAZ className="mr-2 h-4 w-4"/>) : selectedSort === 'z-a' ? (<ArrowUpZA className="mr-2 h-4 w-4"/>) : null}
-                    <span>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
+                <Input
+                  type="text"
+                  placeholder="Search listings..."
+                  value={searchQuery}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
+                />;
+              </div>;
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                  <div className="flex items-center">;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className="mr-2 h-4 w-4" />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className="mr-2 h-4 w-4" />;
+                    ) : null}
+                    <span>;
                       {sortOptions.find(option => option.value === selectedSort)?.label || 'Sort By'}
-                    </span>
-                  </div>
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {sortOptions.map((option) => (<SelectItem key={option.value} value={option.value} className="text-white">
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+                  {sortOptions.map((option) => (;
+                    <SelectItem key={option.value} value={option.value} className="text-white">;
                       {option.label}
                     </SelectItem>;
                   ))}
+<<<<<<< HEAD
                 </SelectContent>;
               </Select>;
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>;
@@ -625,10 +845,77 @@ export function CategoryListingPage({ ;
           {/* Results Count */}
           <div className='mb-6'>
             <p className='text-zion-slate-light'>
+=======
+
+                </SelectContent>;
+              </Select>;
+
+              <Select value={selectedFilter} onValueChange={setSelectedFilter}>;
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
+                  <div className='flex items-center'>;
+                    <Filter className='mr-2 h-4 w-4' />;
+                    <span>;
+                      {filterOptions && filterOptions.find(;
+                        option => option && option.value === selectedFilter;
+                      )?.label || 'Filter'}
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
+                  {filterOptions && filterOptions.map(option => (;
+                    <SelectItem
+                      key={option && option.value}
+                      value={option && option.value}
+                      className='text-white'>                      {option && option.label}
+                    </SelectItem>;
+
+
+
+                  ))}
+
+                <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
+                  {sort_options.map (option => (
+                    <SelectItem;
+                      key={option.value}
+                      value={option.value}
+                      className='text - white';
+                    >                      {option.label}
+                    </SelectItem>))}
+                </SelectContent>;
+              </Select>;
+              <Select value={selected_filter} onValueChange={setSelectedFilter}>;
+                <SelectTrigger className='bg - zion - blue border border - zion - blue - light text - white'>;
+                  <div className='flex items - center'>;
+                    <Filter className='mr - 2 h - 4 w - 4' />;
+                    <span>;
+                      {filter_options.find (
+                        option => option.value === selected_filter)?.label || 'Filter'}
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+                <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
+                  {filter_options.map (option => (
+                    <SelectItem;
+                      key={option.value}
+                      value={option.value}
+                      className='text - white';
+                    >                      {option.label}
+                    </SelectItem>))}
+
+                </SelectContent>;
+              </Select>;
+            </div>;
+          </div>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="mb-6">
             <p className="text-zion-slate-light">
+
+
               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
+<<<<<<< HEAD
             </p>
           </div>
           <div className='mb-6'>
@@ -655,11 +942,19 @@ export function CategoryListingPage({ ;
                     rating = {listing.rating,}
                     reviewCount = {listing.reviewCount,}
                   />
+=======
+
+            </p>;
+          </div>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {/* Listings Grid */}
           <div aria-busy={isLoading}>;
             {isLoading ? (;
               <ListingGridSkeleton />;
+<<<<<<< HEAD
             ) : processedListings.length > 0 ? (;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
                 {processedListings.map((listing) => (;
@@ -902,6 +1197,26 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div aria-busy={isLoading}>;
             {isLoading ? (;
               <ListingGridSkeleton />;
+=======
+            ) : processedListings && processedListings.length > 0 ? (;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+                {processedListings && processedListings.map(listing => (                  <ListingScoreCard
+                    key = {listing && listing.id,}
+                    title = {listing && listing.title,}
+                    description = {listing && listing.description,}
+                    category = {listing && listing.subcategory || listing && listing.category,}
+                    image = {listing && listing.image,}
+                    tags = {listing && listing.tags,}
+                    author = {listing && listing.author,}
+                    authorImage = {listing && listing.authorImage,}
+                    aiScore = {listing && listing.aiScore,}
+                    rating = {listing && listing.rating,}
+                    reviewCount = {listing && listing.reviewCount,}
+                  />;
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))}
               </div>;
             ) : (;
@@ -913,11 +1228,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Try adjusting your filters or search query;
                 </p>;
                 <Button
+<<<<<<< HEAD
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('')
                     setSelectedFilter(filterOptions[0]?.value |'all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   variant="outline"
                   onClick={() => {
@@ -925,6 +1245,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
                 >
                   Clear all filters
                 </Button>
@@ -1020,11 +1341,16 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 }</div> </div> </div> </>)
 }'"}
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 >
                   Clear all filters
                 </Button>
               </div>
+<<<<<<< HEAD
 =======
     let filtered = listings;
 
@@ -1142,6 +1468,10 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
       </div>
 
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -1149,11 +1479,16 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
                 <Button;
                   variant="outline";
+<<<<<<< HEAD
                   variant='outline'
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onClick={() => {;
                     setSearchQuery('');
                     setSelectedFilter(filterOptions[0]?.value || 'all');                  }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
+<<<<<<< HEAD
             ) :processedListings.length > 0 ? (;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
                 {processedListings.map((listing) => (;
@@ -1182,10 +1517,13 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
                     setSelectedFilter(filterOptions[0]?.value || 'all'),;
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   Clear all filters;
                 </Button>;
               </div>;
+<<<<<<< HEAD
                   onClick={() => {;
                     setSearchQuery("");
                     setSelectedFilter(filterOptions[0]?.value || 'all');
@@ -1195,11 +1533,14 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
                   Clear all filters
                 </Button>
               </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
           </div>;
         </div>;
       </div>;
     </>;
+<<<<<<< HEAD
   //Apply search filter const matchesSearch = listing && listing.title.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || listing && listing.description.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || (listing && listing.tags && listing && listing.tags.some (tag => tag && tag.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) ) );
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;';
 if (selectedFilter === 'high-rating') return matchesSearch && (listing && listing.rating || 0) >= 4;';
@@ -1472,3 +1813,6 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
   );
 };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

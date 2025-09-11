@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,16 +9,22 @@ import Head from 'next/head';
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',
 import Head from 'next/head',
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
   Search
   Star
@@ -59,6 +66,8 @@ import {
 import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 class ErrorBoundary extends React.Component {
@@ -106,7 +115,10 @@ import {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Search,
   Star,
   Users,
@@ -134,6 +146,7 @@ import {
   Download,
   Phone,
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cuttingEdge2027Innovations } from '../data / 2027 - cutting - edge - innovations';
 import { practicalMicroSaas2027 } from '../data / 2027 - practical - micro - saas';
 import UltraFuturisticNavigation2027 from '../components / layout / UltraFuturisticNavigation2027';
@@ -156,6 +169,8 @@ function ServicesShowcase2027() {
   ];
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Mail,
   MapPin,} from 'lucide-react';import {
   Search, Star, Users, TrendingUp, DollarSign, Clock,
@@ -184,11 +199,15 @@ export default function ServicesShowcase2027() {;
 
   ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+<<<<<<< HEAD
 <<<<<<< HEAD
   Mail,;
   MapPin,;} from 'lucide-react';import {
@@ -241,6 +260,9 @@ export default function ServicesShowcase2027() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory);
     const matchesPrice = selectedPriceRange === 'all' |
@@ -249,12 +271,18 @@ export default function ServicesShowcase2027() {;
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
     return matchesSearch && matchesCategory && matchesPrice
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   });
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -262,7 +290,10 @@ export default function ServicesShowcase2027() {;
         return a.name.localeCompare(b.name);
       case 'price':
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   // Sort options;
@@ -311,7 +342,10 @@ export default function ServicesShowcase2027() {;
         return a && a.name.localeCompare(b && b.name);
       case 'price':;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return (
           parseInt(a && a.price.replace(/[^0-9]/g, '')) -;
           parseInt(b && b.price.replace(/[^0-9]/g, ''));
@@ -328,10 +362,15 @@ export default function ServicesShowcase2027() {;
       default: return 0;
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
     {;
@@ -451,6 +490,7 @@ export default function ServicesShowcase2027() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
+<<<<<<< HEAD
 <<<<<<< HEAD
         return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
       case 'roi':
@@ -843,10 +883,14 @@ export default function ServicesShowcase2027() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Open Graph */}
         <meta
           property='og:title'
           content='2027 Services Showcase - Zion Tech Group'
+<<<<<<< HEAD
 <<<<<<< HEAD
           content='https://ziontechgroup && ziontechgroup.com/2027-services-showcase'
         />;
@@ -869,6 +913,8 @@ export default function ServicesShowcase2027() {;
           name='twitter:title'
           content='2027 Services Showcase - Zion Tech Group'
         />;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />
         <meta
           property='og:description'
@@ -889,6 +935,7 @@ export default function ServicesShowcase2027() {;
           name='twitter:description'
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
         />      </Head>        {/* Open Graph */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta property="og:title" content="2027 Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
@@ -956,6 +1003,8 @@ export default function ServicesShowcase2027() {;
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>                2027 Services Showcase
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         <meta name="twitter:card" content="summary_large_image" />;
@@ -976,7 +1025,10 @@ export default function ServicesShowcase2027() {;
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 2027 Services Showcase
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
@@ -1009,6 +1061,7 @@ export default function ServicesShowcase2027() {;
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1072,6 +1125,11 @@ transition={{ duration: 0 && 0.8 }}>;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <span>View Pricing</span>
               </Link>
             </div>
@@ -1080,7 +1138,10 @@ transition={{ duration: 0 && 0.8 }}>;
       </section>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
                 <DollarSign className="w-5 h-5" />;
                 <span>View Pricing</span>;
@@ -1089,6 +1150,7 @@ transition={{ duration: 0 && 0.8 }}>;
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1105,10 +1167,23 @@ transition={{ duration: 0 && 0.8 }}>;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Search and Filters */}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
           <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20">
             {/* Search Bar */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -1164,11 +1239,16 @@ transition={{ duration: 0 && 0.8 }}>;
                   type="text"
                   placeholder="Search services..."
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-6">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <input
                   type="text"
                   placeholder="Search services..."
@@ -1178,7 +1258,10 @@ transition={{ duration: 0 && 0.8 }}>;
             {/* Filters */}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20"
@@ -1201,36 +1284,56 @@ transition={{ duration: 0 && 0.8 }}>;
                     </option>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  ))}
+                </select>
+              </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </select>;
               </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Price Range Filter */}
 
 
                   ))}
+<<<<<<< HEAD
+=======
+                </select>
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </select>;
               </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ))}
                 </select>
@@ -1256,6 +1359,8 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Sort By */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
@@ -1265,15 +1370,23 @@ transition={{ duration: 0 && 0.8 }}>;
                 </select>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 =======
 
-=======
 
 
-
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
@@ -1287,7 +1400,10 @@ transition={{ duration: 0 && 0.8 }}>;
                   <option value='roi'>ROI</option>                </select>                <select
                   value={sortBy}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   onChange={(e) => setSortBy(e && e.target.value)}
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
@@ -1492,7 +1608,10 @@ transition={{ duration: 0 && 0.8 }}>;
                   on_change={(e) => setSortBy (e.target.value)}
                   className="w - full px - 4 py - 3 bg - black / 60 border border - cyan - 500 / 30 rounded - xl text - white focus:outline - none focus:border - cyan - 400";
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   <option value="name">Name</option>;
                   <option value="price">Price</option>;
@@ -1504,9 +1623,13 @@ transition={{ duration: 0 && 0.8 }}>;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='text-4xl'>🚀</div>;
                     </div>;
@@ -1517,17 +1640,23 @@ transition={{ duration: 0 && 0.8 }}>;
                     <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>                      {service && service.description}
                     </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {/* Price */}
                     <div className='mb-4'>;
                       <div className='text-2xl font-bold text-white'>                        {service && service.price}                >;
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     {/* Price */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -1535,6 +1664,10 @@ transition={{ duration: 0 && 0.8 }}>;
             <AnimatePresence>
 {sortedServices.map((service, index) => (
                 <motion.div
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onChange={(e) => setSortBy(e.target.value)}
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"
                 >
@@ -1557,17 +1690,25 @@ transition={{ duration: 0 && 0.8 }}>;
               {sorted_services.map ((service, index) => (
                 <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   exit={{ opacity: 0, coordinate_y: -30, scale: 0.9 }}
                   className='group';
                 >;
@@ -1583,6 +1724,7 @@ transition={{ duration: 0 && 0.8 }}>;
                     <p className='text - cyan - 300 text - sm mb - 4 line - clamp - 3'>                      {service.description}
                     </p>;
                     {/* Price */}
+<<<<<<< HEAD
                     <div className='mb - 4'>;
                       <div className='text - 2xl font - bold text - white'>                        {service.price}                >;
                   <div className="bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 h - full hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20">;
@@ -1634,6 +1776,11 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <div className='mb-4'>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>
                     </div>
                     <div className="flex items-start justify-between mb-4">;
@@ -1655,10 +1802,15 @@ transition={{ duration: 0 && 0.8 }}>;
                     </div>;
                     {/* Features */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="mb-6">
                       <h4 className="text-cyan-400 font-semibold mb-3">Key Features:</h4>
                       <div className="space-y-2">
@@ -1674,11 +1826,17 @@ transition={{ duration: 0 && 0.8 }}>;
                           </div>
 
                         )}
+<<<<<<< HEAD
+=======
+                      </div>
+                    </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
                     {/* ROI */}
 
                       </div>;
@@ -1686,11 +1844,20 @@ transition={{ duration: 0 && 0.8 }}>;
                         )}
                       </div>
 =======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {/* ROI */}
+
+                      </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>;
                     <div className="mb-6 text-center">
                       <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
                       <div className="text-gray-400 text-xs">Return on Investment</div>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
 
 
@@ -1707,13 +1874,19 @@ transition={{ duration: 0 && 0.8 }}>;
                     <div className='flex space-x-3'>;
                       <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'>                    </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'>                    </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Actions */}
                     <div className="flex space-x-3">;
                       <Link
@@ -1723,6 +1896,7 @@ transition={{ duration: 0 && 0.8 }}>;
                       </Link>;
                       <Link
                         href='/contact'
+<<<<<<< HEAD
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
 
                         href={service.link}
@@ -1738,6 +1912,8 @@ transition={{ duration: 0 && 0.8 }}>;
 
 <<<<<<< HEAD
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >                    </div>
                     {/* Actions */}
                     <div className="flex space-x-3">
@@ -1746,9 +1922,15 @@ transition={{ duration: 0 && 0.8 }}>;
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >
                         Learn More
                       </Link>
@@ -1765,6 +1947,7 @@ transition={{ duration: 0 && 0.8 }}>;
                       </Link>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1774,15 +1957,23 @@ transition={{ duration: 0 && 0.8 }}>;
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Category Badge */}
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
@@ -1794,10 +1985,15 @@ transition={{ duration: 0 && 0.8 }}>;
                 </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Category Badge */}
                     <div className="mt-4">
                       <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">
@@ -1807,6 +2003,7 @@ transition={{ duration: 0 && 0.8 }}>;
                   </div>
                 </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </AnimatePresence>
           </div>
@@ -1815,11 +2012,18 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              ))}
+            </AnimatePresence>
+          </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </AnimatePresence>;
           </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1830,11 +2034,19 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   setSelectedPriceRange('all')
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all');
@@ -1855,13 +2067,18 @@ transition={{ duration: 0 && 0.8 }}>;
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
                   setSelectedPriceRange('all')
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -1869,25 +2086,41 @@ transition={{ duration: 0 && 0.8 }}>;
               </button>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )}
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact Section */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
       {/* Contact Section */}
 
 
@@ -1900,6 +2133,9 @@ transition={{ duration: 0 && 0.8 }}>;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -1929,6 +2165,7 @@ transition={{ duration: 0 && 0.8 }}>;
               <Link
                 href='/pricing'
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'              >              Ready to Transform Your Business?
             </h2>
             <p className="text-cyan-300 mb-8 text-lg">
@@ -1953,6 +2190,10 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>              Ready to Transform Your Business?;
             </h2>;
             <p className="text-cyan-300 mb-8 text-lg">;
@@ -1975,6 +2216,7 @@ transition={{ duration: 0 && 0.8 }}>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25"
               >
@@ -2084,3 +2326,15 @@ transition={{ duration: 0 && 0.8 }}>;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </UltraFuturisticMatrixBackground2027>));
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

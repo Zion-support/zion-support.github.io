@@ -1,11 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
-import { _Button } from "@/components/ui/button";
-import { _GradientHeading } from "@/components/GradientHeading";
-=======
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> origin/clean-error-fixing-automation
 export function EnterpriseHero() {
     return (<section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto max-w-6xl">

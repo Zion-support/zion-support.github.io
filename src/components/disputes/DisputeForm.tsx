@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -245,12 +246,15 @@ export function DisputeForm({
         if (onDisputeCreated) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
@@ -267,6 +271,14 @@ if (onDisputeCreated) {
       toast.error("Failed to submit dispute. Please try again.")
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
+=======
+
+      logErrorToProduction('Error submitting dispute:', { data: error }),
+      toast.error("Failed to submit dispute. Please try again.")
+
+      logErrorToProduction('Error submitting dispute:', { data: error }),
+      toast.error("Failed to submit dispute. Please try again.")
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     } finally {
       setIsSubmitting(false)
@@ -279,6 +291,7 @@ if (onDisputeCreated) {
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       
 =======
@@ -286,14 +299,21 @@ if (onDisputeCreated) {
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             name='reason_code'
             render={({
               field
@@ -303,6 +323,7 @@ if (onDisputeCreated) {
                 'reason_code'
               >
             }) => (              <FormItem>
+<<<<<<< HEAD
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -311,16 +332,21 @@ if (onDisputeCreated) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -330,6 +356,9 @@ if (onDisputeCreated) {
                   </FormControl>
                   <SelectContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {Object.entries(disputeReasonLabels).map(
                       ([value, label]) => (
                         <SelectItem key={value} value={value}>
@@ -358,6 +387,7 @@ if (onDisputeCreated) {
                   <Textarea
                     placeholder='Please provide specific details about the issue...'
                     className='min-h-[150px]'
+<<<<<<< HEAD
   SelectValue,
 } from '@/components / ui / select';
 import { Input } from '@/components / ui / input';
@@ -419,6 +449,8 @@ function on_submit() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
 import React, { useState } from "react",;
@@ -434,6 +466,7 @@ import {;
   FormItem,;
   FormLabel,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;
 import {;
@@ -445,10 +478,16 @@ import {;
 } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';import {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  FormMessage,;
+} from '@/components/ui/form';
+import { Textarea } from '@/components/ui/textarea';import {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Select,;
   SelectContent,;
   SelectItem,;
   SelectTrigger,;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className='space-y-6'>;
       <div className='flex items-center space-x-2'>;
@@ -633,6 +672,8 @@ export function DisputeForm({;
 ;
         toast.success("Your dispute has been submitted");
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   SelectValue,;
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
@@ -709,7 +750,10 @@ export function DisputeForm(): any ({;
 
         toast && toast.success('Your dispute has been submitted');
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (onDisputeCreated) {;
           onDisputeCreated(dispute.id);
         }
@@ -717,14 +761,19 @@ export function DisputeForm(): any ({;
     } catch (error) {;
       logErrorToProduction('Error submitting dispute:', { data: error });
 <<<<<<< HEAD
+<<<<<<< HEAD
       toast.error("Failed to submit dispute. Please try again.");
 =======
       toast && toast.error('Failed to submit dispute. Please try again.');
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      toast && toast.error('Failed to submit dispute. Please try again.');
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {;
       setIsSubmitting(false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   return (;
@@ -758,6 +807,8 @@ export function DisputeForm(): any ({;
             )}
           />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <div className='space-y-6'>;
@@ -889,21 +940,45 @@ if ( {) {
                   <Textarea;
                     placeholder='Please provide specific details about the issue...';
                     className='min - h-[150px]';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
+=======
+
+          />;
+
+          <FormItem>;
+            <FormLabel>Attachments (optional)</FormLabel>;
+            <FormControl>;
+              <div className='space-y-4'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Input
                   type='file'
                   multiple
                   onChange={handleFileChange}
+<<<<<<< HEAD
                   className='cursor-pointer'                />;
+=======
+
+                  className='cursor-pointer'                />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {files && files.length > 0 && (;
                   <div className='space-y-2'>;
                     <p className='text-sm font-medium'>Selected files:</p>;
                     <ul className='space-y-1'>;
                       {files && files.map((file, index) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <li
                           key={index}
                           className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'>;
@@ -923,6 +998,7 @@ if ( {) {
                     className="min-h-[150px]"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           <FormField;
             control={form.control}
             name="description"
@@ -935,6 +1011,8 @@ if ( {) {
                     className="min-h-[150px]"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {...field}
                   />
                 </FormControl>
@@ -942,6 +1020,7 @@ if ( {) {
               </FormItem>
             )}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
           <FormItem>
             <FormLabel>Attachments (optional)</FormLabel>
@@ -1006,12 +1085,20 @@ if ( {) {
                       ))}
                     </ul>
                   </div>
+=======
+
+
+                      ))}
+                    </ul>;
+                  </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </div>
             </FormControl>
             <FormMessage />
           </FormItem>
           <div className='flex justify-end space-x-2'>
+<<<<<<< HEAD
           <div className='flex justify-end space-x-2'>
           
           <div className="flex justify-end space-x-2">
@@ -1069,6 +1156,12 @@ description: values.description
                     </ul>;
                   </div>;
                 )}
+=======
+          
+          <div className="flex justify-end space-x-2">
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
@@ -1106,6 +1199,7 @@ description: values.description
                         </li>))}
                     </ul>;
                   </div>)}
+<<<<<<< HEAD
               </FormItem>;
             )}
           />;
@@ -1140,10 +1234,13 @@ description: values.description
                     </ul>;
                   </div>;
                 )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </FormControl>;
             <FormMessage />;
           </FormItem>;
+<<<<<<< HEAD
           ;
           <div className="flex justify-end space-x-2">;
             {onCancel && (;
@@ -1153,10 +1250,21 @@ description: values.description
             )}
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." :"Submit Dispute"}
+=======
+
+          <div className='flex justify - end space - x-2'>;
+            {on_cancel && (
+              <Button type='button' variant='outline' on_click={on_cancel}>;
+                Cancel;
+              </Button>)}
+            <Button type='submit' disabled={is_submitting}>;
+              {is_submitting ? 'Submitting...' : 'Submit Dispute'}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </form>;
       </Form>;
+<<<<<<< HEAD
 }
 const remove_file = (index: number) =>: any {
   async /**
@@ -1224,6 +1332,34 @@ description: values.description ;
   value ;
 }value= {;
   value ;
+=======
+    </div>);
+
+}
+const removeFile = (index: number) => {
+  async function onSubmit (values: z.infer<typeof formSchema>) {
+  try {
+  setIsSubmitting (true)
+const dispute = await createDispute ({
+  project id: projectId
+milestone id: milestoneId
+reason code: values.reason code
+description: values.description
+})
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {
+}finally {
+  setIsSubmitting (false)
+}"
+}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
+  field.onChange
+}defaultValue= {
+  field && field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {;
+  Object && Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItemkey= {
+  value 
+}value= {
+  value 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }> {;
   label ;
 }</SelectItem>) ) ;
@@ -1236,6 +1372,10 @@ description: values.description ;
 
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
+<<<<<<< HEAD
+=======
+}'"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1263,6 +1403,7 @@ if ( {) {
 }value= {
   value;
 }> {
+<<<<<<< HEAD
   label;
 }</SelectItem>) );
 }</SelectContent> </Select> <FormMessage /> </FormItem>);
@@ -1280,3 +1421,5 @@ if ( {) {
 =======
 }'"}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

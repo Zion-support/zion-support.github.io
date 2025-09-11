@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { 
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
@@ -12,6 +13,9 @@ import {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -36,29 +40,41 @@ export default function Revolutionary2026Pricing() {
     ...innovative2026MicroSaasServicesV2,
     ...emergingTech2026ServicesV2
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles
   Target, Satellite, Globe, Cpu, Lock, Palette, Layers
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
 } from 'lucide-react'
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users,;
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles,;
@@ -66,25 +82,32 @@ import {;
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List;
 } from 'lucide-react',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   // Filter services based on category and price
   const filteredServices = useMemo(() => {
     let filtered = all2026Services
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Revolutionary2026Pricing() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')
   const [sortBy, setSortBy] = useState<string>('price-low')
   // Combine all 2026 services
   const all2026Services = [
+<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV2;
     ...emergingTech2026ServicesV2
   ];
@@ -97,12 +120,23 @@ export default function Revolutionary2026Pricing() {
   const filteredServices = useMemo(() => {
     let filtered = all2026Services
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    ...innovative2026MicroSaasServicesV2
+    ...emergingTech2026ServicesV2
+  ]
+  // Filter services based on category and price
+  const filteredServices = useMemo(() => {
+    let filtered = all2026Services
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         if (selectedCategory === 'ai') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -161,6 +195,7 @@ if ( {) {
   $2
 }
           return service.category.includes ('Enterprise') || service.category.includes ('Business');
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           return service.category.includes('AI') |service.category.includes('Machine Learning')
@@ -170,6 +205,9 @@ if ( {) {
           return service.category.includes('Emerging') |service.category.includes('Technology')
         } else if (selectedCategory === 'enterprise') {
           return service.category.includes('Enterprise') |service.category.includes('Business')
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
 
         return true;
@@ -177,29 +215,42 @@ if ( {) {
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
         if (selectedPriceRange === 'low') return price < 1000;
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium') return price >= 20000;
 <<<<<<< HEAD
+<<<<<<< HEAD
         return true
       })
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         return true
       })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Sort services
     filtered.sort((a, b) => {
       if (sortBy === 'price-low') {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
         const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
         return priceA - priceB
@@ -212,6 +263,7 @@ if ( {) {
       if (sortBy === 'rating') return b.rating - a.rating;
       if (sortBy === 'popularity') return b.customers - a.customers;
       if (sortBy === 'name') return a.name.localeCompare(b.name);
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Price filter
     if (selectedPriceRange !== 'all') {
@@ -242,10 +294,14 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return 0
     })
     return filtered
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services])
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const categories = [
@@ -575,6 +631,8 @@ if (return b.customers - a.customers, ) {
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / revolutionary - 2026 - pricing" />;
         </Head>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length }
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length }
@@ -708,6 +766,10 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ],
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -719,6 +781,95 @@ export default function Revolutionary2026Pricing(req, res) {
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: all2026Services.length
+<<<<<<< HEAD
+=======
+=======
+    { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
+    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },
+    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
+  ];
+
+  const priceRanges = [
+
+=======
+    // Price filter;
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (service => {
+        const price = parse_float (service.price.replace (/[^0 - 9.]/g, '')),
+        // Check condition
+if (return price < 1000, ) {
+  $2
+}
+        // Check condition
+if (return price >= 1000 && price < 5000, ) {
+  $2
+}
+        // Check condition
+if (return price >= 5000 && price < 20000, ) {
+  $2
+}
+        // Check condition
+if (return price >= 20000, ) {
+  $2
+}
+        return true;
+      });
+    }
+    // Sort services;
+    filtered.sort ((a, b) => {
+      // Check condition
+if ( {) {
+  $2
+}
+        const price_a = parse_float (a.price.replace (/[^0 - 9.]/g, '')) || 0,
+        const price_b = parse_float (b.price.replace (/[^0 - 9.]/g, '')) || 0,
+        return price_a - price_b;
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        const price_a = parse_float (a.price.replace (/[^0 - 9.]/g, '')) || 0,
+        const price_b = parse_float (b.price.replace (/[^0 - 9.]/g, '')) || 0,
+        return price_b - price_a;
+      }
+      // Check condition
+if (return b.rating - a.rating, ) {
+  $2
+}
+      // Check condition
+if (return b.customers - a.customers, ) {
+  $2
+}
+      if (return a.name.locale_compare (b.name), ) {
+  $2
+}
+      return 0;
+    }),
+    return filtered;
+  }, [selected_category, selectedPriceRange, sort_by, all2026Services]),
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter (string => s.category.includes ('AI')).length },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter (string => s.category.includes ('Quantum') || s.category.includes ('Space')).length },
+    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter (string => s.category.includes ('Emerging') || s.category.includes ('Technology')).length },
+    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter (string => s.category.includes ('Enterprise') || s.category.includes ('Business')).length }
+  ],
+  const price_ranges = [;
+
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K / month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K / month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K / month', range: '$5K - $20K' },
+    { id: 'premium', name: '$20K+/month', range: '$20K+' }
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     averagePrice: all2026Services.reduce((acc, service) => {
       const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) |0
       return acc + price
@@ -729,6 +880,7 @@ export default function Revolutionary2026Pricing(req, res) {
   }
   },
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground
       intensity="extreme"
     <UltraAdvancedFuturisticBackground 
@@ -767,6 +919,11 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >
       <div className="min-h-screen">
         <Head>
@@ -781,6 +938,7 @@ export default function Revolutionary2026Pricing(req, res) {
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
         </Head>
         {/* Enhanced Navigation */}
+<<<<<<< HEAD
         <EnhancedNavigation2026 />;
 <<<<<<< HEAD
         {/* Hero Section */}
@@ -983,6 +1141,10 @@ export default function Revolutionary2026Pricing(req, res) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <EnhancedNavigation2026 />
+        {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -994,6 +1156,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
@@ -1022,6 +1190,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -1030,6 +1204,7 @@ export default function Revolutionary2026Pricing(req, res) {
                 </span>
               </h1>
               <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+<<<<<<< HEAD
                 Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions. 
                 Get maximum ROI with our revolutionary services.
               </p>
@@ -1043,6 +1218,13 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
                   <div className="text-2xl font-bold text-purple-400">{pricingStats.totalServices}+</div>
@@ -1063,6 +1245,7 @@ export default function Revolutionary2026Pricing(req, res) {
               </div>
             </motion.div>
             {/* Contact Information */}
+<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1094,6 +1277,16 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
             >
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
@@ -1120,6 +1313,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
@@ -1135,6 +1334,7 @@ export default function Revolutionary2026Pricing(req, res) {
                           ? 'bg-purple-600 text-white'
                           : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white'
                       }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                     >;
@@ -1161,12 +1361,15 @@ export default function Revolutionary2026Pricing(req, res) {
                     >;
                       {range.name}
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     >
                       {category.icon} {category.name} ({category.count})
                     </button>
                   ))}
                 </div>
                 {/* Price Range Filter */}
+<<<<<<< HEAD
 =======
 
 
@@ -1212,6 +1415,8 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="flex flex-wrap gap-2">
                   {priceRanges.map((range) => (
                     <button
@@ -1229,6 +1434,9 @@ export default function Revolutionary2026Pricing(req, res) {
                 </div>
                 {/* Sort Options */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="flex items-center space-x-4">
                   <select
                     value={sortBy}
@@ -1326,6 +1534,7 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                     </button>))}
                 </div>;
 
@@ -1431,6 +1640,11 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="px-3 py-2 bg-black/60 border border-purple-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500/60"
                   >
                     {sortOptions.map((option) => (
@@ -1445,6 +1659,7 @@ export default function Revolutionary2026Pricing(req, res) {
           </div>
         </section>
         {/* Services Pricing Grid */}
+<<<<<<< HEAD
 =======
                 <div className="flex items - center space - x-4">;
                   <select;
@@ -1459,6 +1674,8 @@ export default function Revolutionary2026Pricing(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {option.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1477,7 +1694,10 @@ export default function Revolutionary2026Pricing(req, res) {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Pricing Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1499,6 +1719,7 @@ export default function Revolutionary2026Pricing(req, res) {
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
+<<<<<<< HEAD
 
                       </option>))}
                   </select>;
@@ -1592,6 +1813,8 @@ export default function Revolutionary2026Pricing(req, res) {
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -1610,6 +1833,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="text-center py-20"
                 >
                   <div className="text-gray-400 text-xl">
@@ -1638,23 +1867,35 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 >
                   {filteredServices.map((service, index) => (
                     <motion.div
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={service.id}
                       initial={{ opacity: 0, coordinate_y: 20 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           </h3>;
                           <p className="text - purple - 300 text - sm mb - 4">{service.tagline}</p>;
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1682,11 +1923,14 @@ export default function Revolutionary2026Pricing(req, res) {
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                       <div className="relative bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-all duration-300">
+<<<<<<< HEAD
 
                       className="group relative";
                     >;
                       <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 rounded - 2xl blur - xl group - hover:blur - 2xl transition - all duration - 500"></div>;
                       <div className="relative bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 40 transition - all duration - 300">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {/* Service Header */}
                         <div className="text - center mb - 6">;
                           <div className="w - 16 h - 16 bg - gradient - to - br from - purple - 600 to - pink - 600 rounded - 2xl flex items - center justify - center text - 3xl mx - auto mb - 4">;
@@ -1695,11 +1939,15 @@ export default function Revolutionary2026Pricing(req, res) {
                           <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
                             {service.name}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {/* Pricing */}
                           <div className="mb - 6">;
                             <div className="text - 4xl font - bold text - white mb - 2">;
                               {service.price}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2094,6 +2342,8 @@ export default function Revolutionary2026Pricing(req, res) {
                           <div className="mb-6">
                             <div className="text-4xl font-bold text-white mb-2">
                               {service.price}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <span className="text-lg text-gray-400">{service.period}</span>
                             </div>
                             <div className="text-gray-400 text-sm">
@@ -2151,6 +2401,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="mb-6">
                           <h4 className="text-white font-semibold mb-3 flex items-center">
                             <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
@@ -2178,6 +2434,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="grid grid-cols-2 gap-4 text-sm mb-6">
                           <div>
                             <span className="text-gray-400">Category:</span>
@@ -2245,6 +2507,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center group-hover:scale-105"
                           >
                             Learn More
@@ -2257,6 +2525,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             className="bg-black/40 hover:bg-black/60 text-white font-semibold py-3 px-6 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                           >
                             <Phone className="w-4 h-4 mr-2" />
@@ -2269,6 +2543,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
@@ -2306,6 +2586,7 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                         </div>;
                       </div>;
                     </motion.div>;
@@ -2323,6 +2604,17 @@ export default function Revolutionary2026Pricing(req, res) {
             </AnimatePresence>;
           </div>;
         </section>;
+=======
+
+                        </div>;
+                      </div>;
+                    </motion.div>))}
+                </motion.div>)}
+            </AnimatePresence>;
+          </div>;
+        </section>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Pricing Comparison */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2351,6 +2643,12 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -2361,10 +2659,13 @@ export default function Revolutionary2026Pricing(req, res) {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Value Proposition */}
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
@@ -2372,7 +2673,10 @@ export default function Revolutionary2026Pricing(req, res) {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2384,7 +2688,10 @@ export default function Revolutionary2026Pricing(req, res) {
                 <h3 className="text-xl font-bold text-white mb-4">Unmatched Value</h3>
                 <p className="text-gray-300">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   Get enterprise-grade technology at competitive prices. Our services deliver 1000%+ ROI, 
 
@@ -2393,7 +2700,10 @@ export default function Revolutionary2026Pricing(req, res) {
                 </p>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
                 className="text - center";
               >;
@@ -2406,14 +2716,24 @@ export default function Revolutionary2026Pricing(req, res) {
                   making them the smartest investment for your business.;
                 </p>;
               </motion.div>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Technology */}
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -2434,9 +2754,13 @@ export default function Revolutionary2026Pricing(req, res) {
                 </p>;
               </motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Support */}
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
@@ -2444,9 +2768,13 @@ export default function Revolutionary2026Pricing(req, res) {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 className="text-center"
               >
@@ -2465,6 +2793,7 @@ export default function Revolutionary2026Pricing(req, res) {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2488,6 +2817,8 @@ export default function Revolutionary2026Pricing(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Call to Action */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -2497,9 +2828,12 @@ export default function Revolutionary2026Pricing(req, res) {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Call to Action */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2538,7 +2872,10 @@ export default function Revolutionary2026Pricing(req, res) {
               </h2>
               <p className="text-gray-300 text-xl mb-8 leading-relaxed">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2546,8 +2883,19 @@ export default function Revolutionary2026Pricing(req, res) {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
+<<<<<<< HEAD
 
 
+=======
+                  href={`tel:${contactInfo.mobile}`}
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call {contactInfo.mobile}
+                </a>
+                <a
+                  href={`mailto:${contactInfo.email}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2570,6 +2918,10 @@ export default function Revolutionary2026Pricing(req, res) {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg-black/40 hover:bg-black/60 text-white font-semibold py-4 px-8 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -2577,11 +2929,19 @@ export default function Revolutionary2026Pricing(req, res) {
                 </a>
               </div>
               <div className="mt-8 text-gray-400 text-sm">
+<<<<<<< HEAD
 
 
                 <p>Visit us at: <a href={contactInfo.website} className="text-purple-400 hover:text-purple-300">{contactInfo.website}</Link></p>
 
 
+=======
+                <p>Visit us at: <a href={contactInfo.website} className="text-purple-400 hover:text-purple-300">{contactInfo.website}</a></p>
+                <p>Visit us at: <a href={contactInfo.website} className="text-purple-400 hover:text-purple-300">{contactInfo.website}</Link></p>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -2590,6 +2950,7 @@ export default function Revolutionary2026Pricing(req, res) {
       </div>
     </UltraAdvancedFuturisticBackground>
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -2597,6 +2958,12 @@ export default function Revolutionary2026Pricing(req, res) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="bg - gradient - to - r from - purple - 900 / 40 to - cyan - 900 / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl p - 12";
             >;
               <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -2632,6 +2999,7 @@ export default function Revolutionary2026Pricing(req, res) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2883,7 +3251,13 @@ export default function Revolutionary2026Pricing(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

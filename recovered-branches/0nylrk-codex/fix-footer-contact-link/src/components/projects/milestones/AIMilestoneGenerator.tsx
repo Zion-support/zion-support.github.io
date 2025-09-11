@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export function AIMilestoneGenerator({;
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -26,6 +29,7 @@ interface AIMilestoneGeneratorProps {
 
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
+<<<<<<< HEAD
 export function AIMilestoneGenerator({
 
 export function AIMilestoneGenerator({;
@@ -45,6 +49,8 @@ interface AIMilestoneGeneratorProps {;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function AIMilestoneGenerator(): any ({;
 
@@ -55,15 +61,23 @@ export function AIMilestoneGenerator(): any ({;
 export function AIMilestoneGenerator({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   scope;
   startDate;
   endDate;
   projectType;
   onAddMilestones;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onAddMilestone
 }: AIMilestoneGeneratorProps) {
+=======
+  onAddMilestone;
+}: AIMilestoneGeneratorProps) {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
@@ -71,6 +85,7 @@ export function AIMilestoneGenerator({;
     if (!scope |!startDate |!projectType) {
       return
     }
+<<<<<<< HEAD
     const input: MilestoneInput = {
       scope;
       startDate;
@@ -124,6 +139,12 @@ export function AIMilestoneGenerator({;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  };
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -156,13 +177,18 @@ export function AIMilestoneGenerator({;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string boolean>>({}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
     const input: MilestoneInput = {;
@@ -188,6 +214,8 @@ export function AIMilestoneGenerator({;
     setSelectedMilestones({});
   },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const input: MilestoneInput = {;
       scope;
@@ -215,30 +243,40 @@ export function AIMilestoneGenerator({;
     setSelectedMilestones({});
   };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const toggleMilestoneSelection = (index: number) => {;
     setSelectedMilestones(prev => ({;
       ...prev,;
       [index]: !prev[index];
     }));
 <<<<<<< HEAD
+<<<<<<< HEAD
   },;
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {;
     onAddMilestone(milestone);
   },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {;
     onAddMilestone(milestone);
   };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const formatDate = (dateString: string) => {;
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 
@@ -332,6 +370,8 @@ export function AIMilestoneGenerator({;
 ;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
@@ -340,16 +380,22 @@ export function AIMilestoneGenerator({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <h3 className="text-lg font-medium flex items-center">;
           <Sparkles className="w-5 h-5 mr-2 text-primary" />;
           AI Milestone Generator;
         </h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           disabled={isGenerating || !scope || !startDate || !projectType}>;
         <Button;
@@ -358,22 +404,31 @@ export function AIMilestoneGenerator({;
           disabled={isGenerating || !scope || !startDate || !projectType}
         >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
 
           disabled={isGenerating || !scope || !startDate || !projectType}>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isGenerating ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Generating...;
             </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ) :(;
 =======
           ) : (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <>;
               <Sparkles className="mr-2 h-4 w-4" />;
               Generate Milestones;
@@ -382,16 +437,22 @@ export function AIMilestoneGenerator({;
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
       {generatedMilestones.length > 0 && (;
 =======
 
       {generatedMilestones && generatedMilestones.length > 0 && (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      {generatedMilestones && generatedMilestones.length > 0 && (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card>;
           <CardContent className="pt-6">;
             <div className="flex justify-between items-center mb-4">;
               <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <input
                         type="checkbox"
@@ -562,6 +623,8 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
                   <div className="flex items-center justify-between">
                     <div className="flex items-center flex-1">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {generatedMilestones && generatedMilestones.length} milestones generated based on your project scope;
               </p>;
               <Button
@@ -577,12 +640,16 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
                   <div className="flex items-center justify-between">;
                     <div className="flex items-center flex-1">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <input
                         type="checkbox"
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
                         onChange={() => toggleMilestoneSelection(index)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         className="mr-2 w-4 h-4 rounded text-primary"
                       />
@@ -632,6 +699,8 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         className="mr-2 w-4 h-4 rounded text-primary";
                       />;
                       <AccordionTrigger className="hover:no-underline flex-1 text-left">;
@@ -775,6 +844,7 @@ if ( {) {
                     </div>;
 
                       onClick={(e) => {
+<<<<<<< HEAD
 
                         e.stopPropagation(),
 
@@ -821,6 +891,12 @@ if ( {) {
                       on_click={(e) => {
                         e.stop_propagation ();
                         handleAddSingleMilestone (milestone);
+=======
+                        e.stopPropagation();
+
+                        e.stopPropagation(),
+                        handleAddSingleMilestone(milestone)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       }}
                       className="mr - 2";
                     >;
@@ -846,4 +922,7 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: 'ai-automation-manufacturing',
 =======
 
@@ -232,6 +233,8 @@ function CaseStudyPage() {
                   <div key={index} className=&quot;bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center&quot;>
                     <span className=&quot;text-blue-400 font-semibold&quot;>{tech}</span>
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from 'react';
 import Head from 'next/head';
@@ -270,6 +273,12 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Case Studies
@@ -293,6 +302,12 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -308,6 +323,12 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
@@ -320,6 +341,12 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
@@ -327,19 +354,28 @@ export default function CaseStudyPage() {
               </div>
             </section>
             {/* Technologies */}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -347,17 +383,23 @@ export default function CaseStudyPage() {
                   <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
                     <span className="text-blue-400 font-semibold">{tech}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 ))}
               </div>
             </section>
             {/* Results */}
+<<<<<<< HEAD
 =======
                   </div>
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -371,11 +413,17 @@ export default function CaseStudyPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -388,15 +436,21 @@ export default function CaseStudyPage() {
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
                   </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))}
               </div>
             </section>
             {/* Call to Action */}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -410,15 +464,22 @@ export default function CaseStudyPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   This case study demonstrates the real impact of AI automation in manufacturing. 
                   Let's discuss how we can help you achieve similar results.
@@ -434,25 +495,35 @@ export default function CaseStudyPage() {
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Link
                   <Link 
@@ -461,6 +532,8 @@ export default function CaseStudyPage() {
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     View More Case Studies
                   </Link>
@@ -472,12 +545,15 @@ export default function CaseStudyPage() {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
   );
 };
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
@@ -572,6 +648,7 @@ export default function CaseStudyPage() {
                   <Link;
                     href="/contact";
                     className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <section className="text-center">;
@@ -585,12 +662,19 @@ export default function CaseStudyPage() {
                   <Link;
                     href="/contact";
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     Get Started;
                   </Link>;
                   <Link;
+<<<<<<< HEAD
                     href="/case-studies";
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300";
+=======
+                    href="/case - studies";
+                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - cyan - 400 / 50 transition - all duration - 300";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     View More Case Studies;
                   </Link>;
@@ -602,6 +686,7 @@ export default function CaseStudyPage() {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -619,7 +704,13 @@ export default function CaseStudyPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

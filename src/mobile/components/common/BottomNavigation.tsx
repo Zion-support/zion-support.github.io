@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link";
@@ -79,6 +80,8 @@ import { useRouter } from "next/router",;
 import Link from "next/link",;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Home, ShoppingBag, Users, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -112,6 +115,7 @@ export function BottomNavigation() {;
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
+<<<<<<< HEAD
       })}
     </div>
   )
@@ -213,3 +217,5 @@ export function BottomNavigation() {;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

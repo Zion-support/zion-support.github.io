@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import React from "react",
@@ -36,6 +37,8 @@ xport default function AITalentMatchingPage() {
       description: "Advanced algorithms match the right talent with the right opportunities"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -53,6 +56,7 @@ export default function AITalentMatchingPage() {;
       title: "Success Tracking",;
       description: "Monitor performance and success rates of placements";
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
       icon: Users
@@ -85,6 +89,11 @@ export default function AITalentMatchingPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
@@ -93,10 +102,15 @@ export default function AITalentMatchingPage() {
   const benefits = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
@@ -173,10 +187,13 @@ function AITalentMatchingPage() {
     { label: "Time to Hire", value: "50% faster" }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
       avatar: "/placeholder.svg"}],
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -227,6 +244,7 @@ export default function AITalentMatchingPage() {;
       features={features}
       stats={stats}
 <<<<<<< HEAD
+<<<<<<< HEAD
       ctaText="Start Matching Talent"
       ctaLink="/contact"
     />;
@@ -238,11 +256,16 @@ export default function AITalentMatchingPage() {;
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     />;
   );
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);
@@ -250,7 +273,11 @@ export default function AITalentMatchingPage() {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -60,6 +61,8 @@ import { format  } from 'date-fns';
       location: ''
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   })
   const handleSubmit = async (data: EducationFormValues) => {
@@ -129,6 +132,7 @@ function EducationFormFields() {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -276,6 +280,12 @@ export function EducationFormFields({;
 
             name='institution'
             render={({ field }: { field: any }) => (              <FormItem>
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return (
@@ -305,6 +315,7 @@ export function EducationFormFields({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <FormLabel>Institution</FormLabel>
             control={form.control}
             name='institution'
@@ -314,6 +325,8 @@ export function EducationFormFields({;
               <FormItem>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
                   <Input placeholder="University of California, MIT, etc." {...field} />
@@ -321,6 +334,7 @@ export function EducationFormFields({;
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           />
 ursor/fix-website-loading-errors-and-merge-6662
@@ -343,13 +357,18 @@ ursor/fix-website-loading-errors-and-merge-6662
             control={form && form.control}
             name='degree'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
 
           <FormField
             control={form.control}
             name='degree'
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
@@ -364,10 +383,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             render={({ field }: { field: any }) => (
               <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
@@ -375,6 +399,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           />
         </div>
@@ -389,6 +414,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           control={form && form.control}
           name='field_of_study'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
         </div>;
@@ -396,7 +423,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <FormField
           control={form.control}
           name='field_of_study'
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
               <FormControl>;
@@ -408,17 +438,23 @@ ursor/fix-website-loading-errors-and-merge-6662
         <FormField;
           control={form.control}
 <<<<<<< HEAD
+<<<<<<< HEAD
           name="field_of_study"
           render={({ field }: { field: any }) => (
             <FormItem>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           name="field_of_study"
           render={({ field }: { field: any }) => (
             <FormItem>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
@@ -427,6 +463,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </FormItem>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         />
           )}
         />
@@ -434,12 +471,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
 
 
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <FormField
+<<<<<<< HEAD
             control={form.control}
             name='start_date'
 
@@ -453,10 +494,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            control={form.control}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
@@ -487,6 +535,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             render={({ field }: { field: any }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -499,6 +550,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />
               </FormItem>
 
+<<<<<<< HEAD
                   <Input 
                     type="date" 
                     {...field}
@@ -532,6 +584,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormControl>
 =======
 
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
           />
 
@@ -542,7 +598,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
@@ -553,6 +612,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </FormItem>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />
             {!form.watch('is_current') && (
@@ -571,6 +631,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            />
+            {!form.watch('is_current') && (
+              <FormField
+                control={form && form.control}
+                name='end_date'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
             {!form.watch('is_current') && (;
               <FormField;
@@ -587,15 +654,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''} 
                       />
                     </FormControl>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <FormMessage />
                   </FormItem>
@@ -612,6 +683,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     <FormMessage />
                   </FormItem>
@@ -622,6 +697,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
                     <FormMessage />;
                   </FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <FormMessage />
                   </FormItem>
@@ -636,6 +712,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               />
             )}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                )}
+              />
+            )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -646,8 +727,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           control={form.control}
           name='location'
 <<<<<<< HEAD
+<<<<<<< HEAD
           render={({ field }: { field: any }) => (            <FormItem>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
             </FormItem>)}
@@ -692,11 +776,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormMessage />;
                   </FormItem>)}
               />)}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
         <FormField;
           control={form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
           name="location"
           render={({ field }: { field: any }) => (
@@ -710,11 +798,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
         />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <FormField
           control={form.control}
           name='description'
@@ -742,6 +835,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
                 <Input placeholder="Cambridge, MA" {...field} />
+<<<<<<< HEAD
         />;
         <FormField;
           control={form.control}
@@ -756,6 +850,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
                   {...field}
                 />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -770,6 +866,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder='Notable achievements, courses, activities...'
                   className='min-h-[100px]'
+<<<<<<< HEAD
                 />
               </FormControl>
               <FormMessage />
@@ -792,6 +889,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        />;
+        <FormField;
+          control={form.control}
+          name="description"
+          render={({ field }: { field: any }) => (
+            <FormItem>
+              <FormLabel>Description (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Notable achievements, courses, activities..."
+                  className="min-h-[100px]"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {...field}
                 />;
               </FormControl>;
@@ -802,6 +913,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
@@ -819,12 +931,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -859,6 +975,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
 ;
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </FormItem>)}
         />;
         {error && (
@@ -878,7 +998,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

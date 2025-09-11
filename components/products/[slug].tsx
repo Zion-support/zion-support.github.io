@@ -1,29 +1,45 @@
 import type { NextPage } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
 
+<<<<<<< HEAD
 
 
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
 <<<<<<< HEAD
+<<<<<<< HEAD
   const item = items.find((e) => e.slug === slug);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const item = items.find((e) => e.slug === slug);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!item) {
     return (
       <EnhancedLayout>
@@ -31,6 +47,7 @@ const EquipmentDetail: NextPage = () => {
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
 
+<<<<<<< HEAD
 export default EquipmentDetail;
 
 <<<<<<< HEAD
@@ -45,11 +62,16 @@ export default EquipmentDetail;
     );  }        <div className="space-y-4">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <div className="space-y-4">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
       </EnhancedLayout>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <EnhancedLayout>
@@ -83,6 +105,8 @@ export default EquipmentDetail;
 };
 export default EquipmentDetail;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import equipment from '@/data/equipment ;
@@ -171,6 +195,7 @@ const EquipmentDetail: NextPage = () => {;
       </div>;
     </EnhancedLayout>;
   );
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default EquipmentDetail;
@@ -179,6 +204,19 @@ export default EquipmentDetail;
 export default EquipmentDetail;
 =======
 
+=======
+
+
+};
+
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default EquipmentDetail;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import Head from 'next / head';
 import {use_router} from 'next / router';
@@ -276,4 +314,7 @@ if ( {) {
 export default EquipmentDetail;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

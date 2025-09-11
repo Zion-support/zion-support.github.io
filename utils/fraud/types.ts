@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Fraud detection types;
 export type AdminActionType =;
@@ -6,15 +7,32 @@ export type AdminActionType =;
   | 'flag_content';
   | 'remove_content';
   | 'investigate';
+=======
+// Fraud detection types
+export type AdminActionType =
+  | 'ban_user'
+  | 'suspend_user'
+  | 'flag_content'
+  | 'remove_content'
+  | 'investigate'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   | 'dismiss';
   | 'escalate';
 ;
 
 export interface AdminAction {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export interface AdminAction {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   case_id: string;
   type: AdminActionType;
@@ -30,15 +48,20 @@ export interface AdminAction {;
 export interface FraudDetectionResult {
   is_fraud: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
 export interface FraudDetectionResult {;
 
   isFraud: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Fraud detection types
 export type AdminActionType =
@@ -152,10 +175,51 @@ export interface FraudDetectionConfig {;
 
 =======
 =======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  confidence: number;
+  reasons: string[];
+export interface FraudDetectionConfig {
+=======
+}
+
+
+export interface FraudDetectionConfig {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  enabled: boolean;
+  rules: {
+    suspiciousActivity: {
+      enabled: boolean;
+
+      threshold: number,
+    }
+    fake_profile: {
+      enabled: boolean;
+      threshold: number,
+    }
+    payment_fraud: {
+      enabled: boolean;
+      threshold: number,
+    }
+    spam: {
+      enabled: boolean;
+      threshold: number,
+    }
+  }
+  auto_actions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+    confidence_threshold: number,
+  }
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     confidenceThreshold: number,
   };
@@ -169,3 +233,11 @@ export interface FraudDetectionConfig {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    confidenceThreshold: number,
+  };
+=======
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

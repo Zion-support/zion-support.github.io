@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function CookieConsent() {;
 import React, { useState, useEffect } from "react";
 import { X, Cookie, Settings } from "lucide-react";
 export default function CookieConsent() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function CookieConsent() {;
@@ -30,17 +33,23 @@ export default function CookieConsent() {;
       functional: true,;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Initialize analytics if accepted;
     if (allAccepted && allAccepted.analytics) {;
       // Add your analytics initialization code here;
@@ -64,6 +73,7 @@ export default function CookieConsent() {;
       functional: false,;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
     setPreferences(onlyNecessary);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
     setIsVisible(false);
@@ -73,6 +83,8 @@ export default function CookieConsent() {;
   }
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setPreferences(onlyNecessary);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
@@ -85,7 +97,10 @@ export default function CookieConsent() {;
   }
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">;
       <div className="max-w-7xl mx-auto p-4">;
         {!showSettings ? (;
@@ -189,9 +204,13 @@ if ( {) {
                 </h3>;
                 <p className="text - sm text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
@@ -199,9 +218,13 @@ if ( {) {
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="text-gray-400 hover:text-gray-600 transition-colors";
               >;
                 <X className="w-5 h-5" />;
@@ -218,18 +241,26 @@ if ( {) {
                   </p>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 />;
               </div>;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
@@ -299,9 +330,13 @@ if ( {) {
             </div>;
             <div className="flex flex-col sm:flex-row gap-2 justify-end">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;

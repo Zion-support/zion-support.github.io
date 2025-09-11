@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
+import { Label } from '../components/ui/label';
 import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText } from 'lucide-react';
-import { SERVICE_CATEGORIES } from '@/data/enhancedServices';
+import { SERVICE_CATEGORIES } from '../data/enhancedServices';
 export default function ComprehensiveContact() {
     const [formData, setFormData] = useState({
         name: '',

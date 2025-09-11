@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect } from 'react',
@@ -270,11 +271,13 @@ let sourceText = '';    ;
                             editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange = {
   (e) => handleChange(lang.code, key,
   e.target.value)
+=======
+let sourceText = '';    ;
+    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-} dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min-h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange = {
-  (e) => handleChange(lang.code, key,
-  e.target.value)
 
+<<<<<<< HEAD
 } dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>)}
                                 </div>))}
                             </div>
@@ -334,6 +337,8 @@ let sourceText = '';    ;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 }
@@ -345,7 +350,11 @@ let sourceText = '';    ;
     let source_text = '';
     for (const lang of supported_languages.map (l => l.code)) {
 }
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

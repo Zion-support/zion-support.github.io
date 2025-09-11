@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
+<<<<<<< HEAD
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
@@ -86,13 +87,75 @@ import { Badge } from '@/components/ui/badge',
 import Skeleton from '@/components/ui/skeleton',
 import { EmptyState } from '@/components/ui/empty-state',
 export default function OrdersPage() {
+=======
 
-    const { user } = useAuth();
-    const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-    const formatDate = (date) => new Date(date).toLocaleDateString();
-    return (<div className="container max-w-4xl py-10">
+import Link from 'next / link'; // Changed from react-router-dom;
+import { use_auth } from '@/hooks / use_auth';
+import { useGetOrdersQuery } from '@/hooks / use_orders';
 
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+
+<<<<<<< HEAD
   const getStatusBadge = (status: string) => {
+=======
+
+
+=======
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth',
+import { useGetOrdersQuery } from '@/hooks/useOrders',
+import {
+  Table,
+  TableBody,
+  TableCell,
+
+export default function OrdersPage() {;
+
+  const { user } = useAuth();
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
+
+  const formatDate = (date: string) => new Date(date).toLocaleDateString();
+
+  const getStatusBadge = (status: string,) => {;
+    switch (status) {;
+      case 'in_escrow':;
+
+        return (
+          <Badge variant='warning' className='flex items-center gap-1'>;
+            <Clock className='h-3 w-3' /> In Escrow;
+          </Badge>;
+        );
+      case 'released':;
+      case 'completed':;
+        return (
+          <Badge variant='success' className='flex items-center gap-1'>;
+            <CheckCircle2 className='h-3 w-3' /> Released;
+          </Badge>;
+        );
+      case 'disputed':;
+        return (
+
+        )
+
+      default:
+          <Badge variant='destructive' className='flex items-center gap-1'>;
+            <ShieldAlert className='h-3 w-3' /> Disputed;
+          </Badge>;
+        ),;
+      default:;
+        return status;
+    }
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     switch (status) {
       case 'in_escrow':
         return (
@@ -117,7 +180,10 @@ export default function OrdersPage() {
         return status
     }
   }
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
 
@@ -157,17 +223,25 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TableRow>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   },
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </TableBody>
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+          icon={<FileText className='h-10 w-10' />}
+          title='No Orders'          description="You haven't purchased anything yet."
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
@@ -186,6 +260,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
 <<<<<<< HEAD
             {Array.from({ length: 3 }).map((_, i) => (
               <TableRow key={i}>
@@ -229,6 +304,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            {orders.map(order => (              <TableRow key={order.orderId}>
+                <TableCell className='font-medium'>{order.orderId}</TableCell>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
@@ -240,12 +319,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <TableCell>
                   <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                     href={`/orders/${order.orderId}`} // Changed to href
                     className="text-zion-purple underline"
 =======
                     href={`/orders/${order.orderId}`}
                     className='text-zion-purple underline'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    href={`/orders/${order.orderId}`}
+                    className='text-zion-purple underline'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     View
                   </Link>
@@ -279,7 +363,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </TableCell>;
               </TableRow>;
             ))}
+<<<<<<< HEAD
             ))}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </TableBody>
         </Table>
       )}
@@ -289,14 +376,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </TableBody>;
         </Table>;
       )}
     </div>;
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 ;
@@ -411,6 +503,8 @@ function OrdersPage() {
           </TableBody>;
         </Table>)}
     </div>);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 <<<<<<< HEAD
 ;

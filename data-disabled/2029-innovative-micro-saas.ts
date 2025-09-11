@@ -33,7 +33,6 @@ export interface InnovativeMicroSaas2029 {
   rating: number;
 export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] = [;
   // AI & Machine Learning Services;
-<<<<<<< HEAD:data-disabled/2029-innovative-micro-saas.ts
   {
     id: "ai-emotional-intelligence-platform",;
     name: "AI Emotional Intelligence Platform",;

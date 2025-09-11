@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState, useMemo} from "react";
 import {ProductListing} from "@/types/listings";
 import {SearchSuggestion, FilterOptions} from "@/types/search";
@@ -24,6 +25,9 @@ export function useMarketplaceSearch() {
     () => generateSearchSuggestions();
     [];
   );
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
@@ -49,6 +53,7 @@ export function useMarketplaceSearch() {
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions(),
     []),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -65,6 +70,12 @@ export function useMarketplaceSearch() {
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS.filter(listing => {
+=======
+  
+  // Filter listings based on current search query and filters
+  const filteredListings = useMemo(() => {
+    return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Search query filter
       const matchesSearch = !searchQuery |
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -79,8 +90,11 @@ export function useMarketplaceSearch() {
       // Availability filter
       const matchesAvailability = selectedAvailability.length === 0 |
         (listing.availability && selectedAvailability.includes(listing.availability));
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -99,10 +113,13 @@ export function useMarketplaceSearch() {
         (listing.availability && selectedAvailability.includes(listing.availability)),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -110,6 +127,7 @@ export function useMarketplaceSearch() {
         matchesProductType &&
         matchesLocation &&
         matchesAvailability &&
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -131,10 +149,35 @@ const matchesSearch = !searchQuery ||
       // Rating filter
       const matchesRating = selectedRating === null || 
         (listing && listing.rating !== undefined && listing && listing.rating >= selectedRating),
+=======
+=======
+      const matchesSearch = !searchQuery || 
+        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
+        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
+        listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
+      
+      // Product type filter
+      const matchesProductType = selectedProductTypes && selectedProductTypes.length === 0 || 
+        selectedProductTypes && selectedProductTypes.includes(listing && listing.category);
+      
+      // Location filter
+      const matchesLocation = selectedLocations && selectedLocations.length === 0 || 
+        (listing && listing.location && selectedLocations && selectedLocations.includes(listing && listing.location));
+      
+      // Availability filter
+      const matchesAvailability = selectedAvailability && selectedAvailability.length === 0 || 
+        (listing && listing.availability && selectedAvailability && selectedAvailability.includes(listing && listing.availability));
+      
+      // Rating filter
+      const matchesRating = selectedRating === null || 
+        (listing && listing.rating !== undefined && listing && listing.rating >= selectedRating),
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return matchesSearch && 
         matchesProductType && 
         matchesLocation && 
         matchesAvailability && 
+<<<<<<< HEAD
         matchesRating
     })
 
@@ -144,24 +187,44 @@ const matchesSearch = !searchQuery ||
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         matchesRating
     })
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes((prev: string[]) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
           prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
 =======
           prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         );
+=======
+          prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
+        );
+        break;
+      case 'locations':
+        setSelectedLocations((prev: string[]) =>
+          prev && prev.includes(value) ? prev && prev.filter(l => l !== value) : [...prev, value]
+        );
+        break;
+      case 'availability':
+        setSelectedAvailability((prev: string[]) =>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
@@ -233,10 +296,18 @@ function useMarketplaceSearch() {
       case 'availability':;
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         break;
       default: break;
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   // Clear all filters;
   const clearAllFilters = () =>: any {
@@ -247,6 +318,10 @@ function useMarketplaceSearch() {
     setSelectedRating (null);
   }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     search_query;
     setSearchQuery;
@@ -260,6 +335,7 @@ function useMarketplaceSearch() {
     handleFilterChange;
     clearAllFilters;
 <<<<<<< HEAD
+<<<<<<< HEAD
           prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]
         ),
         break,
@@ -271,16 +347,22 @@ function useMarketplaceSearch() {
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     filter_options;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
       default: break
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   
@@ -294,6 +376,11 @@ function useMarketplaceSearch() {
   
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -302,6 +389,9 @@ function useMarketplaceSearch() {
     setSelectedAvailability([]),
     setSelectedRating(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return {
     searchQuery;
@@ -319,9 +409,12 @@ function useMarketplaceSearch() {
     filterOptions
   }
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   return {
@@ -337,6 +430,7 @@ function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
@@ -581,8 +675,14 @@ filterOptions
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

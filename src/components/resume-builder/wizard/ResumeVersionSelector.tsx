@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react'
 import {import { useState } from 'react'
 import {
@@ -21,12 +22,15 @@ import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
 import { Resume  } from '@/types/resume';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -104,6 +108,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ResumeVersionSelector(): any ({;
   currentResume,;
   onResumeChange,;
@@ -174,6 +180,7 @@ if ( {) {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 
 
 
@@ -193,10 +200,58 @@ if ( {) {
 
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { useState } from 'react',;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuSeparator,;
+  DropdownMenuTrigger;
+} from '@/components/ui/dropdown-menu',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
+import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
+import { Resume } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+interface ResumeVersionSelectorProps {;
+  currentResume: Resume,;
+  onResumeChange: (resumeId: string) => void;
+}
+;
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+  const { createResume, fetchResume } = useResume(),;
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle.trim()) {;
+      setIsLoading(true),;
+      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
+      if (resumeId) {;
+        await fetchResume(resumeId),;
+        onResumeChange(resumeId),;
+        setSaveDialogOpen(false);
+        setNewResumeTitle('');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+      }
+      setIsLoading(false)
+    }
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button variant='outline' size='sm' className='gap-2'>
             {currentResume?.basic_info?.title |'My Resume'}
@@ -216,15 +271,21 @@ if ( {) {
               onClick={() => onResumeChange(resume.id!)}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
             <DropdownMenuItem
@@ -252,6 +313,17 @@ if ( {) {
             >;
 
 
+<<<<<<< HEAD
+=======
+=======
+        <DropdownMenuContent align="end">
+          {existingResumes.map((resume) => (
+            <DropdownMenuItem 
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="cursor-pointer"
             >
               {resume.basic_info.title}
@@ -282,6 +354,7 @@ if ( {) {
             </DropdownMenuItem>;
 
           ))}
+<<<<<<< HEAD
               className="cursor-pointer"
             >
               {resume.basic_info.title}
@@ -300,17 +373,27 @@ if ( {) {
           <DropdownMenuItem;
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
+=======
+          <DropdownMenuSeparator />
+          <DropdownMenuItem 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
 
             onClick={() => setSaveDialogOpen(true)}
+<<<<<<< HEAD
+=======
+            className="cursor-pointer"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <Plus className="h-4 w-4 mr-2" />
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className='sm:max-w-md'>
@@ -353,6 +436,8 @@ if ( {) {
               <Save className='h-4 w-4' />              Save              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             className='cursor-pointer'          >;
             <Plus className='h-4 w-4 mr-2' />            Save as new version;
@@ -390,9 +475,12 @@ if ( {) {
 
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -402,6 +490,7 @@ if ( {) {
             <Input
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -414,15 +503,21 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button 
               variant="outline" 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               placeholder="Enter resume title (e.g. DevOps Resume)"
             />
           </div>
           <DialogFooter>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button 
               variant="outline" 
@@ -448,13 +543,18 @@ ursor/fix-website-loading-errors-and-merge-6662
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <Button 
               variant="outline" 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Save className="h-4 w-4" />
               Save
             </Button>
@@ -532,6 +632,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 }
+<<<<<<< HEAD
 > {
   resume.basic info.title
 }</DropdownMenuItem>) )
@@ -558,6 +659,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
@@ -572,7 +675,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h - 4 w - 4 mr - 2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py - 4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>);
 }";
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -20,6 +21,9 @@ export function useJobMatches(jobId: string) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export function useJobMatches(jobId: string) {
@@ -29,6 +33,10 @@ export function useJobMatches(jobId: string) {
 
   const fetchMatches = async () => {
     setIsLoading(true);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
@@ -43,11 +51,16 @@ function useJobMatches() {
 ;
   const fetch_matches = async () => {
     setIsLoading (true);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
 
       const { data, error } = await supabase
         .from("job_talent_matches")
         .select(`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -57,6 +70,8 @@ function useJobMatches() {
       const { data, error } = await supabase
         .from("job_talent_matches")
         .select(`
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           *;
           talent_profile: talent_id(
             id;
@@ -68,8 +83,11 @@ function useJobMatches() {
             bio;
             years_experience;
             key_projects
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           *,
           talent_profile:talent_id(
             id,
@@ -82,14 +100,18 @@ function useJobMatches() {
             years_experience,
             key_projects,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             skills
           )
         `)
         .eq("job_id", jobId)
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -101,10 +123,16 @@ function useJobMatches() {
       setMatches(data |[])
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .order("match_score", { ascending: false });
+      if (error) throw error;
+      setMatches(data |[])
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .order("match_score", { ascending: false }),
 
       if (error) throw error,
       setMatches(data || [])
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -151,16 +179,25 @@ if (throw error) {
     } catch (error) {
       console.error("Error fetching job matches:", error),
       toast({
+=======
+    } catch (error) {
+      console && console.error("Error fetching job matches:", error);
+      toast({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Error";
         description: "Failed to load matched talents. Please try again later."
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         variant: "destructive"})
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 
   },
 
@@ -171,14 +208,27 @@ if (throw error) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const triggerAIMatching = async () => {
     setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        body: { jobId }});
+      if (response.error) throw new Error(response.error.message);
+      toast({
+        title: "AI Matching Complete"
+        description: `Found ${response.data.matches |0} potential talent matches for this job.`});
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         body: { jobId }}),
 
       
@@ -188,14 +238,18 @@ if (throw error) {
         title: "AI Matching Complete",
         description: `Found ${response && response.data.matches || 0} potential talent matches for this job.`});
       
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
       console && console.error("Error triggering AI matching:", error);
       toast({
+<<<<<<< HEAD
 
         body: { jobId }});
       if (response.error) throw new Error(response.error.message);
@@ -215,6 +269,8 @@ if (throw error) {
     } catch (error) {
       console.error("Error triggering AI matching:", error),
       toast({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later."
         variant: "destructive"})
@@ -231,16 +287,23 @@ if (throw error) {
     isProcessing;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     triggerAIMatching
   }
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    triggerAIMatching
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   };
@@ -335,11 +398,14 @@ export function useJobMatches(jobId: string) {;
       setIsProcessing(false)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 }
 
 ;
+<<<<<<< HEAD
       if (throw new Error (response.error.message)) {
   $2
 }
@@ -383,3 +449,5 @@ export function useJobMatches(jobId: string) {;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

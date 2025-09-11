@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return res.status(200).json({
 
 
 
     instanceId: state.config.instanceId,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     lastSyncedAt: state.lastSyncedAt,
     events,
     scope: requestedScope
@@ -14,7 +22,10 @@
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
 ;
@@ -37,6 +48,7 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt,
     events,
     scope: requested_scope});
+<<<<<<< HEAD
 
   const scoped = filterEventsByScope(state.events, state.config.scope),
   const events = scoped.filter((e) => (e.timestamp || 0) > since)
@@ -128,9 +140,16 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
     instanceId: state.config.instanceId,
     lastSyncedAt: state.lastSyncedAt,
     events,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

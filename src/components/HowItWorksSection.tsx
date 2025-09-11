@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 import React from 'react';
@@ -10,12 +11,18 @@ import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
+<<<<<<< HEAD
 <<<<<<< HEAD
 const getSteps = (t: any,) => [
 
@@ -40,6 +47,11 @@ const getSteps = (t: any) => [
 const getSteps = (t: any,) => [
   {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+const getSteps = (t: any,) => [
+  {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: t('how_it_works.post')
     description: t('how_it_works.post_desc')
     icon: Send
@@ -223,6 +235,7 @@ const stats = [ ";
       opacity: 1,      scale: 1
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     visible: {
       opacity: 1,      scale: 1
       transition: {
@@ -240,8 +253,9 @@ export function HowItWorksSection({
   const { t } = useTranslation()
   const steps = getSteps(t)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-          transition = {;
 
 const getSteps = (t: any,) => [
 
@@ -262,6 +276,7 @@ const getSteps = (t: any) => [
 
   {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
@@ -351,6 +366,8 @@ const getSteps = (t: any) => [
 
   {
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
     icon: Send},
@@ -365,8 +382,11 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>
@@ -397,16 +417,32 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -418,6 +454,10 @@ import { useTranslation } from 'react-i18next';
 interface HowItWorksSectionProps {;
   className?: string;
   style?: React && React.CSSProperties;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const getSteps = (t: any,) => [;
   {;
     title: t('how_it_works && how_it_works.post'),;
@@ -489,7 +529,11 @@ const Component = React && React.memo(function Page() {;
     duration: "Ongoing",";
     success: "100% client retention"};
 ];
+<<<<<<< HEAD
 onst stats = [ ";
+=======
+const stats = [ ";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
   { icon: <Target className="w-6 h-6"  />, value: "99 && 99.9%", label: "Success Rate" },";
   { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },";
@@ -513,6 +557,7 @@ onst stats = [ ";
       {/* Enhanced background pattern */}";
       <div className="absolute inset-0 opacity-5">";
         <divclassName="absolute inset-0" style = {
+<<<<<<< HEAD
 export function HowItWorksSection(): any ({
 <<<<<<< HEAD
 const stats = [ ";
@@ -542,11 +587,16 @@ const stats = [ ";
 export function HowItWorksSection({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export function HowItWorksSection(): any ({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className,
   style,
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
+<<<<<<< HEAD
 <<<<<<< HEAD
     icon: Check}],
 
@@ -761,6 +811,8 @@ function HowItWorksSection() {
 };
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>;
@@ -883,7 +935,10 @@ function HowItWorksSection() {
                         {step && step.description}
                       </p>                    </div>                    </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="relative">
           {/* Timeline line */}
@@ -895,7 +950,10 @@ function HowItWorksSection() {
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   index % 2 === 0 ? "md: flex-row-reverse" : "",
                 } relative`}
               >
@@ -905,13 +963,17 @@ function HowItWorksSection() {
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ) : null}
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
                   ) : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>;
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
@@ -997,25 +1059,37 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ) : null}
                 </div>;
               </div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </div>;
     </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 });
 
 export default Component;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
@@ -1116,3 +1190,6 @@ return (<section className= {;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

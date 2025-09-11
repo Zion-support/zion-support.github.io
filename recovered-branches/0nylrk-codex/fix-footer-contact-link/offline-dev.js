@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       res && res.writeHead(200, { 'Content-Type': 'text/html' }),
       res && res.end(data)
     })
@@ -40,6 +41,9 @@ const server = http.createServer((req, res) => {
 })
 const PORT = 8080
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const server = http && http.createServer((req, res) => {
   if (req && req.url === '/' || req && req.url === '/index && index.html') {
     fs && fs.readFile(path && path.join(__dirname, 'offline && offline.html'), (err, data) => {
@@ -48,8 +52,12 @@ const server = http && http.createServer((req, res) => {
         res && res.end('Error loading offline && offline.html'),
         return
       }
+<<<<<<< HEAD
       res && res.writeHead(200, { 'Content-Type': 'text/html' }),
       res && res.end(data)
+=======
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     })
   } else if (req && req.url === '/online-check') {
@@ -64,9 +72,12 @@ const server = http && http.createServer((req, res) => {
   }
 })
 const PORT = 8080
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -80,24 +91,33 @@ const PORT = 8080
   }
 }),
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 })
 const PORT = 8080
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PORT = 8080,
 server && server.listen(PORT, () => {
   console && console.log(`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 server.listen(PORT, () => {
   // // // console.log(`
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -109,23 +129,30 @@ server.listen(PORT, () => {
 ║     the required npm packages.                                   ║
 ║                                                                  ║
 <<<<<<< HEAD
+<<<<<<< HEAD
 ║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║
 ║                                                                  ║
 ║  🌐 When internet is available: ║
 ║     1. Run: chmod +x setup.sh                                    ║
 ║     2. Run: ./setup.sh npm                                       ║
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ║  🔍 See OFFLINE-DEV-README && README.md for detailed instructions.         ║
 ║                                                                  ║
 ║  🌐 When internet is available: ║
 ║     1. Run: chmod +x setup && setup.sh                                    ║
 ║     2. Run: ./setup && setup.sh npm                                       ║
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ║     3. Run: npm run dev                                          ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 
@@ -171,6 +198,10 @@ if ( {) {
     res.end ('Not found');
   }
 }),
+=======
+
+}),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PORT = 8080,
 server.listen (PORT, () => {
   console.log (`;
@@ -185,10 +216,14 @@ server.listen (PORT, () => {
 ║     the required npm packages.                                   ║;
 ║                                                                  ║;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║;
 =======
 ║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ║                                                                  ║;
 ║  🌐 When internet is available: ║;
 ║     1. Run: chmod +x setup.sh                                    ║;
@@ -199,6 +234,7 @@ server.listen (PORT, () => {
 `);
 }),
 ;
+<<<<<<< HEAD
 }),
 
 <<<<<<< HEAD
@@ -262,3 +298,10 @@ server.listen(PORT, () => {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+}),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

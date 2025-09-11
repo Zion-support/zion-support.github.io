@@ -12,6 +12,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export default function Onboarding() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
@@ -38,11 +39,15 @@ export default function Onboarding() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -51,6 +56,8 @@ export default function Onboarding() {
   const [currentStep, setCurrentStep] = useState(0),
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
   const navigate = useNavigate(),
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
@@ -66,6 +73,7 @@ export default function Onboarding() {
   }
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
+<<<<<<< HEAD
 =======
 
 
@@ -88,27 +96,36 @@ export default function Onboarding() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
       return
     } else if (type === "talent") {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       navigate('/talent-onboarding'),
       return
     }
     // Continue with the onboarding flow for clients
     setCurrentStep(1)
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -183,6 +200,8 @@ export default function Onboarding() {;
         description: "Your session may have expired. Please log in again.",;
         variant: "destructive"}),;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
 
@@ -196,6 +215,7 @@ export default function Onboarding() {;
       return
     }
     const dbUserType = mapUserTypeToDatabase(userType);
+<<<<<<< HEAD
 =======
 
       navigate('/login');
@@ -211,6 +231,8 @@ export default function Onboarding() {;
       toast({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Authentication Error",
         description: "Your session may have expired. Please log in again.",
         variant: "destructive"}),
@@ -221,10 +243,13 @@ export default function Onboarding() {;
     const dbUserType = mapUserTypeToDatabase(userType),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       await updateProfile({
         id: user.id
@@ -233,6 +258,7 @@ export default function Onboarding() {;
         userType: dbUserType
         headline: data.headline
         profileComplete: true
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -248,11 +274,17 @@ export default function Onboarding() {;
       
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      });
+      }),
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Update onboarding milestone
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id
         _milestone: 'profile_completed'
         _status: true
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -268,10 +300,16 @@ export default function Onboarding() {;
       
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      });
+      }),
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: 'Profile completed!'
         description: 'Your profile has been set up successfully.'})
       // Get the appropriate dashboard route based on user type
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       const dashboardRoute = userType === "client"
@@ -280,10 +318,16 @@ export default function Onboarding() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      const dashboardRoute = userType === "client"
+        ? "/client-dashboard"
+        : "/talent-dashboard";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const dashboardRoute = userType === "client" 
         ? "/client-dashboard" 
         : "/talent-dashboard",
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Redirect to dashboard
       navigate(dashboardRoute)
@@ -292,16 +336,22 @@ export default function Onboarding() {;
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Redirect to dashboard
       navigate(dashboardRoute)
     } catch (error) {
       console.error('Error updating profile:', error);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: 'Error'
         description: 'There was a problem updating your profile. Please try again.'
         variant: 'destructive'})
     }
+<<<<<<< HEAD
 
 
   },
@@ -314,10 +364,16 @@ export default function Onboarding() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
   if (!user) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -337,10 +393,19 @@ export default function Onboarding() {;
     const dbUserType = mapUserTypeToDatabase(userType);
 =======
 =======
+    navigate('/login');
+
+    navigate('/login'),
+    return null
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
     const dbUserType = mapUserTypeToDatabase(userType);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       await updateProfile({ ;
         id: user && user.id,;
@@ -351,9 +416,13 @@ export default function Onboarding() {;
         profileComplete: true;
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Update onboarding milestone;
       await supabase && supabase.rpc('update_onboarding_milestone', {;
         _user_id: user && user.id,;
@@ -361,29 +430,41 @@ export default function Onboarding() {;
         _status: true;
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
       toast({;
         title: 'Profile completed!',;
         description: 'Your profile has been set up successfully.'}),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       toast({;
         title: 'Profile completed!',;
         description: 'Your profile has been set up successfully.'}),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Get the appropriate dashboard route based on user type;
       const dashboardRoute = userType === "client" ;
         ? "/client-dashboard" ;
         : "/talent-dashboard";
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Redirect to dashboard;
       navigate(dashboardRoute);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       // Redirect to dashboard;
       navigate(dashboardRoute);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {;
       console && console.error('Error updating profile:', error);
       toast({;
@@ -392,6 +473,7 @@ export default function Onboarding() {;
         variant: 'destructive'});
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   const steps = [;
     { label: "Select Role", description: "Choose how you'll use the platform" },;
@@ -423,6 +505,8 @@ export default function Onboarding() {;
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">
               {steps.map((step, index) => (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const steps = [;
     { label: "Select Role", description: "Choose how you'll use the platform" },;
@@ -436,7 +520,10 @@ export default function Onboarding() {;
   return (
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Step
                   key={index}
                   status={
@@ -446,9 +533,12 @@ export default function Onboarding() {;
                       ? "current"
                       : "incomplete"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -544,6 +634,7 @@ export default function Onboarding() {;
 ;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
       navigate('/talent-onboarding'),;
       return,;
     }
@@ -615,6 +706,9 @@ export default function Onboarding() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -628,6 +722,7 @@ export default function Onboarding() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
           <div className="mb-12">;
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">;
@@ -637,6 +732,8 @@ export default function Onboarding() {;
                   status={;
                     currentStep > index;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div className="mb-12">;
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">;
@@ -646,6 +743,7 @@ export default function Onboarding() {;
                   key={index}
                   status={
                     currentStep> index;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       ? "complete";
             </Steps>;
@@ -670,6 +768,12 @@ export default function Onboarding() {;
             {currentStep === 1 && (
               <div className="mt-6">
 =======
+=======
+                      ? "complete";
+                      : currentStep === index;
+                      ? "current";
+                      : "incomplete";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -693,12 +797,16 @@ export default function Onboarding() {;
             {currentStep === 1 && (;
               <div className="mt-6">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -733,6 +841,8 @@ export default function Onboarding() {;
               </div>;
             )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
@@ -897,7 +1007,10 @@ if ( {) {
                 </Button>;
               </div>)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </div>;
@@ -906,6 +1019,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </>);
@@ -956,3 +1070,8 @@ return null;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

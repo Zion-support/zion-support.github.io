@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -106,10 +107,13 @@ export function WorkExperienceItemForm({
   // Set up form
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -129,6 +133,9 @@ export function WorkExperienceItemForm({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from 'react - hook - form';
@@ -154,12 +161,19 @@ import { cn } from '@/lib / utils';
 import { Switch } from '@/components / ui / switch';
 import { format } from 'date - fns';
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       description: initialData?.description || '',
       location: initialData?.location || '',
     },
@@ -179,6 +193,17 @@ import { format } from 'date - fns';
       is_current: values.is_current, // Required
       description: values.description, // Optional
       location: values.location, // Optional
+<<<<<<< HEAD
+=======
+    }
+    await onSubmit(workExperience)
+  }
+  const handleAIEnhancement = (content: string) => {
+    form.setValue('description', content, { shouldDirty: true })
+    setIsEnhancementDialogOpen(false)
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -212,9 +237,17 @@ import { format } from 'date - fns';
     form.setValue("description", content, { shouldDirty: true }),
     setIsEnhancementDialogOpen(false)
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
@@ -223,6 +256,15 @@ import { format } from 'date - fns';
               control={form.control}
               name='company_name'
               render={({ field }: { field: any }) => (                <FormItem>
+<<<<<<< HEAD
+=======
+              name="company_name"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+
+
+                  <FormLabel>Company Name</FormLabel>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
                   </FormControl>
@@ -234,8 +276,11 @@ import { format } from 'date - fns';
               control={form.control}
               name='role_title'
               render={({ field }: { field: any }) => (                <FormItem>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -315,6 +360,7 @@ function WorkExperienceItemForm() {
     setIsEnhancementDialogOpen(false)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -388,6 +434,8 @@ import { cn } from "@/lib/utils",;
 import { Switch } from "@/components/ui/switch",;
 import { format } from "date-fns",;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import { useState } from 'react';
@@ -415,7 +463,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { CalendarIcon, Loader2 } from 'lucide-react';
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
@@ -492,6 +543,7 @@ export function WorkExperienceItemForm({;
                 </FormItem>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             />;
             <FormField;
               control={form.control}
@@ -499,6 +551,8 @@ export function WorkExperienceItemForm({;
               render={({ field }: { field: any }) => (
                 <FormItem>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
 
@@ -556,7 +610,10 @@ export function WorkExperienceItemForm({;
                 <FormItem>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -566,6 +623,7 @@ export function WorkExperienceItemForm({;
               )}
             />
           </div>
+<<<<<<< HEAD
 
 
             <FormField
@@ -575,6 +633,16 @@ export function WorkExperienceItemForm({;
               render={({ field }: { field: any }) => (                <FormItem>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <FormField
+              control={form.control}
+              name='location'
+              render={({ field }: { field: any }) => (                <FormItem>
+
+
+            <FormField
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </FormItem>)}
               control={form.control}
@@ -582,10 +650,15 @@ export function WorkExperienceItemForm({;
               render={({ field }: { field: any }) => (
                 <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -593,6 +666,7 @@ export function WorkExperienceItemForm({;
                   <FormMessage />
                 </FormItem>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -637,6 +711,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
             <FormField;
               control={form.control}
@@ -649,18 +726,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                       aria-label="Current position"
                       checked={field.value}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onCheckedChange={field.onChange}
                       id="current-position"
                     />
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       I currently work here
                     </label>
                   </div>
@@ -687,9 +773,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+                          variant={'outline'}
+                          className={cn(
+                            'w-full pl-3 text-left font-normal'
+                            !field.value && 'text-muted-foreground'
+                          )}                        >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           variant={"outline"}
                           className={cn(
                             "w-full pl-3 text-left font-normal",
@@ -697,6 +791,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           )}
                         >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {field.value ? (
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -708,6 +803,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                           {field.value ? (
                             format(field.value, 'MMM yyyy')
+=======
+                          {field.value ? (
+                            format(field.value, "MMM yyyy")
+                          ) : (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <span>Select date</span>
                             'w-full pl-3 text-left font-normal',
                             !field && field.value && 'text-muted-foreground'
@@ -748,6 +848,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </PopoverTrigger>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                           variant={"outline"}
                           className={cn(
                             "w-full pl-3 text-left font-normal",
@@ -761,6 +862,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                           )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                         </Button>
                       </FormControl>
@@ -768,6 +871,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         mode='single'
                         selected={field.value}
                         onSelect={field.onChange}
@@ -787,9 +893,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 name='end_date'
                 render={({ field }: { field: any }) => (
                   <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         mode="single"
                         selected={field.value}
                         onSelect={field.onChange}
@@ -799,14 +908,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                         toYear={new Date().getFullYear()}
                       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
             {!watchIsCurrent && (;
@@ -820,6 +934,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <PopoverTrigger asChild>
                         <FormControl>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
             {!watchIsCurrent && (;
@@ -832,6 +948,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <Button
                             variant={'outline'}
@@ -847,23 +964,41 @@ ursor/fix-website-loading-errors-and-merge-6662
                 render={({ field }: { field: any }) => (
                   <FormItem className="flex flex-col">
                     <FormLabel>End Date</FormLabel>
+=======
+                          <Button
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
+<<<<<<< HEAD
 
                             variant={"outline"}
                             className={cn(
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                            variant={'outline'}
+                            className={cn(
+                              'w-full pl-3 text-left font-normal'
+                              !field.value && 'text-muted-foreground'
+                            )}                          >
+                            variant={"outline"}
+                            className={cn(
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               "w-full pl-3 text-left font-normal",
                               !field.value && "text-muted-foreground"
                             )}
                           >
 
                             {field.value ? (
+<<<<<<< HEAD
                               format(field.value, 'MMM yyyy')
+=======
+                              format(field.value, "MMM yyyy")
+                            ) : (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <span>Select date</span>
                               'w-full pl-3 text-left font-normal',
                               !field && field.value && 'text-muted-foreground'
@@ -918,6 +1053,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           onSelect={field && field.onChange}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                             variant={"outline"}
                             className={cn(
                               "w-full pl-3 text-left font-normal",
@@ -931,6 +1067,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                             )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           initialFocus
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
@@ -943,6 +1081,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
 <<<<<<< HEAD
+<<<<<<< HEAD
                           mode='single'
                           selected={field.value |undefined}
                           onSelect={field.onChange}
@@ -950,6 +1089,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           mode='single'
                           selected={field.value |undefined}
                           onSelect={field.onChange}
@@ -962,9 +1103,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Popover>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           mode="single"
                           selected={field.value || undefined}
                           onSelect={field.onChange}
@@ -979,20 +1123,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormMessage />;
                   </FormItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 )}
               />
             )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
                 )}
               />
             )}
+<<<<<<< HEAD
 
           </div>;
 
 
+=======
+          </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <FormField
             control={form && form.control}
             name='description'
@@ -1002,7 +1153,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className='flex gap-2'>;
                     <AIEnhancementButton
                       options={{
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         enhancementType: 'work-description',
                         content: field && field.value || '',
@@ -1014,8 +1168,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                         });
 
                       }
+<<<<<<< HEAD
                       buttonText='Enhance with AI';
                     />;
+=======
+                      buttonText='Enhance with AI'
+                    />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       type='button'
                       variant='outline'
@@ -1038,6 +1197,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </FormItem>)}
               />)}
           </div>;
+<<<<<<< HEAD
 
 
             control={form && form.control}
@@ -1056,6 +1216,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             name='description'
             render={({ field }: { field: any }) => (              <FormItem>
                 <div className='flex justify-between items-center'>
+=======
+          <FormField;
+            control={form.control}
+            name='description';
+            render={({ field }: { field: any }) => (              <FormItem>;
+                <div className='flex justify - between items - center'>;
+                  <FormLabel > Description</FormLabel>;
+                  <div className='flex gap - 2'>;
+                    <AIEnhancementButton;
+                      options={{
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         enhancement_type: 'work - description',
                         content: field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
@@ -1096,10 +1267,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             render={({ field }: { field: any }) => (
               <FormItem>
                 <div className="flex justify-between items-center">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
+<<<<<<< HEAD
                         enhancementType: 'work-description'
                         content: field.value |''
                         context: `${watchRoleTitle} at ${watchCompanyName}`
@@ -1131,6 +1308,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs"
                     >
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       AI Writer
                     </Button>
                   </div>
@@ -1139,9 +1320,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Textarea
                     placeholder='Describe your responsibilities, achievements, and skills used in this role...'
                     className='min-h-[150px]'
+<<<<<<< HEAD
                     {...field}
                     placeholder='Describe your responsibilities, achievements, and skills used in this role...'
                     className='min-h-[150px]'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className="min-h-[150px]"
 
@@ -1153,6 +1337,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className='flex justify-end gap-2'>
             <Button type='button' variant='outline' onClick={onCancel}>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1161,6 +1346,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <div className='flex justify-end gap-2'>
+            <Button type='button' variant='outline' onClick={onCancel}>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
           <div className="flex justify-end gap-2">
             <Button type="button" variant="outline" onClick={onCancel}>
@@ -1181,6 +1370,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </form>
       </Form>
 <<<<<<< HEAD
+<<<<<<< HEAD
         title='Enhance Work Experience Description'
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
@@ -1195,6 +1385,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           context: `${watchRoleTitle} at ${watchCompanyName}`
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
 
           <div className='flex justify-end gap-2'>;
@@ -1243,11 +1435,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           enhancementType: 'work-description',
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }}
         initialContent={form.getValues('description') |''}      />
 
@@ -1283,7 +1478,10 @@ type FormValues = z.infer < typeof form_schema>;
 setIsEnhancementDialogOpen (false)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         defaultOptions={{;
           enhancementType: 'work-description',;
@@ -1326,7 +1524,10 @@ setIsEnhancementDialogOpen (false);
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }/> <FormField </FormControl> <FormMessage /> </FormItem>);
 }/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
@@ -1348,18 +1549,22 @@ setIsEnhancementDialogOpen (false);
 }
 }
 
+<<<<<<< HEAD
           enhancementType: "work-description",
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
 }"
 }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
 }";
 };
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }/> <FormField </FormControl> <FormMessage /> </FormItem>)
 }/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) "
@@ -1387,6 +1592,8 @@ setIsEnhancementDialogOpen (false);
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           enhancementType: "work-description",
           content: form.getValues("description") || "",
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
@@ -1396,7 +1603,11 @@ setIsEnhancementDialogOpen (false);
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

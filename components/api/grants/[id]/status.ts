@@ -4,6 +4,7 @@ import path from 'path';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
@@ -19,6 +20,8 @@ import type {
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -27,9 +30,13 @@ function grantPath(id: string) {
 }
 function readGrant(id: string): GrantApplication | null {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id);
   if (!fs && fs.existsSync(p)) return null;
@@ -45,9 +52,13 @@ function isAuthorized(req: NextApiRequest) {
   const header = req && req.headers.authorization || '';
   const token = header && header.replace('Bearer ', '');  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -55,14 +66,20 @@ function writeGrant(record: GrantApplication) {
 }
 function isAuthorized(req: NextApiRequest) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const header = req && req.headers.authorization || '',
   const token = header && header.replace('Bearer ', '');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const header = req && req.headers.authorization || '',
   const token = header && header.replace('Bearer ', '');
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
@@ -78,6 +95,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Unauthorized' });
     return;    return
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
   GrantApplication,
@@ -184,6 +202,8 @@ if ( {) {
     return
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const { id } = req && req.query as { id: string };
@@ -194,16 +214,23 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     res && res.status(405).end('Method Not Allowed');
     return;  }  }
 <<<<<<< HEAD
+<<<<<<< HEAD
     return
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
@@ -212,6 +239,7 @@ if ( {) {
   }
   const existing = readGrant(id);
   if (!existing) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     res.status(404).json({ error: 'Not found' });
     return
@@ -223,6 +251,8 @@ if ( {) {
   res && res.status(200).json({ record: existing });  res && res.status(200).json({ record: existing })
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
@@ -237,11 +267,19 @@ if ( {) {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   writeGrant(existing);
 
   res.status(200).json({ record: existing });
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   writeGrant(existing);
   res.status(200).json({ record: existing })
 }
@@ -263,6 +301,7 @@ if ( {) {
   }
 const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
+<<<<<<< HEAD
   existing.updated_at = new Date ().toISOString ();
   write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
@@ -280,3 +319,7 @@ const payload = req.body as StatusUpdatePayload;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

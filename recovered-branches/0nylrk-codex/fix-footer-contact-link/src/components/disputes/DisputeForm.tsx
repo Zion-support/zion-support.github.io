@@ -16,10 +16,13 @@ import {useDisputes} from "@/hooks/useDisputes";
 import {toast} from "sonner";
 import {FileText} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -47,10 +50,15 @@ import { FileText } from "lucide-react",
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
@@ -58,9 +66,12 @@ const formSchema = z.object({
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectId: string
   milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void
@@ -75,8 +86,11 @@ export function DisputeForm({
   const { createDispute } = useDisputes();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
@@ -89,6 +103,9 @@ export function DisputeForm({
   onDisputeCreated, 
   onCancel 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: DisputeFormProps) {;
   const { createDispute } = useDisputes();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -97,9 +114,12 @@ export function DisputeForm({
   const { createDispute } = useDisputes(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [files, setFiles] = useState<File[]>([]),
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
@@ -109,6 +129,7 @@ export function DisputeForm({
       attachments: []}})
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react",;
@@ -176,6 +197,11 @@ export function DisputeForm(): any ({ ;
       const newFiles = Array.from(e.target.files)
       setFiles(prev => [...prev, ...newFiles]);
       form.setValue("attachments", [...files, ...newFiles])
+=======
+      const newFiles = Array.from(e.target.files)
+      setFiles(prev => [...prev, ...newFiles]);
+      form && form.setValue("attachments", [...files, ...newFiles]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   const removeFile = (index: number) => {
@@ -184,6 +210,7 @@ export function DisputeForm(): any ({ ;
     setFiles(newFiles);
     form.setValue("attachments", newFiles)
   }
+<<<<<<< HEAD
 =======
 }: DisputeFormProps) {;
   const { createDispute } = useDisputes();
@@ -207,6 +234,8 @@ export function DisputeForm(): any ({ ;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev, ...newFiles]),
       form.setValue("attachments", [...files, ...newFiles])
@@ -221,10 +250,13 @@ export function DisputeForm(): any ({ ;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
@@ -238,6 +270,7 @@ export function DisputeForm(): any ({ ;
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         
         toast.success("Your dispute has been submitted"),
@@ -245,11 +278,15 @@ export function DisputeForm(): any ({ ;
 
 
           // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
+=======
+          console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         toast.success("Your dispute has been submitted");
         
         toast.success("Your dispute has been submitted"),
         
+<<<<<<< HEAD
 =======
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
@@ -261,11 +298,14 @@ export function DisputeForm(): any ({ ;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -287,6 +327,17 @@ export function DisputeForm(): any ({ ;
   };
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console.error("Error submitting dispute:", error);
+
+      console.error("Error submitting dispute:", error),
+      toast.error("Failed to submit dispute. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+=======
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const removeFile = (index: number) => {;
     const newFiles = [...files],;
     newFiles && newFiles.splice(index, 1);
@@ -294,25 +345,35 @@ export function DisputeForm(): any ({ ;
     form && form.setValue("attachments", newFiles);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     try {;
       setIsSubmitting(true),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     try {;
       setIsSubmitting(true),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const dispute = await createDispute({;
         project_id: projectId,;
         milestone_id: milestoneId,;
         reason_code: values && values.reason_code,;
         description: values && values.description}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (dispute && dispute.id) {;
         // Future enhancement: Upload attachments;
         // For now we just log the files that would be uploaded;
@@ -320,12 +381,18 @@ export function DisputeForm(): any ({ ;
           console && console.log(`Would upload ${files && files.length} files for dispute ${dispute.id}`);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         toast && toast.success("Your dispute has been submitted");
 =======
 
         toast && toast.success("Your dispute has been submitted");
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        toast && toast.success("Your dispute has been submitted");
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (onDisputeCreated) {;
           onDisputeCreated(dispute.id);
         }
@@ -335,6 +402,7 @@ export function DisputeForm(): any ({ ;
       toast && toast.error("Failed to submit dispute. Please try again.");
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -356,13 +424,18 @@ export function DisputeForm(): any ({ ;
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <FormField
             control={form.control}
             name="reason_code"
@@ -379,9 +452,12 @@ export function DisputeForm(): any ({ ;
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -476,6 +552,7 @@ export function DisputeForm({;
 ;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 } DisputeFormProps) {;
   const { createDispute } = useDisputes(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -540,11 +617,15 @@ export function DisputeForm({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       <div className="flex items-center space-x-2">;
         <FileText className="h-5 w-5 text-primary" />;
         <h2 className="text-xl font-semibold">Report an Issue</h2>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           />;
           <FormField
@@ -561,6 +642,8 @@ export function DisputeForm({;
                 <FormLabel>Reason for dispute</FormLabel>;
                 <Select onValueChange={field.onChange} defaultValue={field.value}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
@@ -686,13 +769,17 @@ if ( {) {
                 <FormLabel > Reason for dispute</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select a reason" />;
                     </SelectTrigger>;
                   </FormControl>;
                   <SelectContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
           />;
@@ -701,6 +788,8 @@ if ( {) {
             control={form.control}
             name="description";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
@@ -720,16 +809,22 @@ if ( {) {
           <FormField
             control={form && form.control}
             name="description"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Describe the issue in detail</FormLabel>;
                 <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Textarea;
                     placeholder="Please provide specific details about the issue...";
                     className="min-h-[150px]";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
@@ -752,11 +847,15 @@ if ( {) {
                     placeholder="Please provide specific details about the issue...";
                     className="min - h-[150px]";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
               </FormItem>;
             )}
@@ -767,10 +866,16 @@ if ( {) {
           />;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <FormItem>;
             <FormLabel>Attachments (optional)</FormLabel>;
             <FormControl>;
               <div className="space-y-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
                     ))}
@@ -804,6 +909,11 @@ if ( {) {
                 <Input
                   type="file"
                   multiple
+=======
+                <Input
+                  type="file" 
+                  multiple 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onChange={handleFileChange}
                   className="cursor-pointer"
                 />
@@ -814,6 +924,7 @@ if ( {) {
                       {files.map((file, index) => (
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
+<<<<<<< HEAD
 =======
                 <Input
                   type="file" 
@@ -835,18 +946,24 @@ if ( {) {
                             size="sm" 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <Button
                             type="button"
                             variant="ghost"
                             size="sm"
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <Button 
                             type="button" 
                             variant="ghost" 
                             size="sm" 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Input ;
                   type="file" ;
@@ -870,10 +987,22 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             onClick={() => removeFile(index)}
                           >;
                             Remove;
                           </Button>;
+<<<<<<< HEAD
+=======
+                        </li>;
+                      ))}
+                    </ul>;
+                  </div>;
+                )}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </FormItem>)}
           />;
           <FormItem>;
@@ -904,14 +1033,19 @@ if ( {) {
                         </li>))}
                     </ul>;
                   </div>)}
+<<<<<<< HEAD
                         </li>;                      ))}
                     </ul>;
                   </div>;
                 )}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </FormControl>;
             <FormMessage />;
           </FormItem>;
+<<<<<<< HEAD
           ;
           <div className="flex justify-end space-x-2">;
             {onCancel && (;
@@ -921,10 +1055,22 @@ if ( {) {
             )}
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." :"Submit Dispute"}
+=======
+
+          <div className="flex justify - end space - x-2">;
+            {on_cancel && (
+              <Button type="button" variant="outline" on_click={on_cancel}>;
+                Cancel;
+              </Button>)}
+            <Button type="submit" disabled={is_submitting}>;
+              {is_submitting ? "Submitting..." : "Submit Dispute"}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </form>;
       </Form>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                             onClick={() => removeFile(index)}
                           >
@@ -948,12 +1094,17 @@ if ( {) {
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Submitting..." : "Submit Dispute"}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>);
 
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>
           </div>
         </form>
@@ -961,6 +1112,7 @@ if ( {) {
     </div>
   )
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   ),; import {
@@ -1021,3 +1173,7 @@ description: values.description
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

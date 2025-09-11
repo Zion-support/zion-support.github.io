@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
@@ -116,10 +117,28 @@ declare module "react" {;
 ;
   // Default export so `import React from 'react'` keeps working even without;
   // the real react package being installed.;
+=======
+/*
+  Minimal React type declarations.
+  ---------------------------------------------------------------------------
+  These definitions are **not** a replacement for `@types/react` – they only
+  exist so that isolated compilation of individual files (e.g., in CI or code
+  review bots) will not fail when full React type declarations are not
+  present.  They purposefully model just enough surface-area used throughout
+  the code-base.  If you have `@types/react` available in `node_modules`,
+  TypeScript will prefer those and ignore this file, because paths declared in
+  `typeRoots` are merged with normal type resolution.
+*/
+
+declare module "react" {
+  // Basic ReactElement stub (JSX trees ultimately compile into this).
+  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     type: T;
     props: P;
     key: React.Key | null;
   }
+<<<<<<< HEAD
 ;
   // Function Component (very trimmed-down).;
   export interface FC<P = Record<string, unknown>> {;
@@ -245,3 +264,19 @@ declare namespace React {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  // Function Component (very trimmed-down).
+  export interface FC<P = Record<string, unknown>> {
+    (props: P): ReactElement | null;
+  }
+  // Common hooks we rely on.
+  export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
+  export type Key = string | number;
+  // Default export so `import React from 'react'` keeps working even without
+  // the real react package being installed.
+  const React: {
+    useMemo: typeof useMemo;
+  } & Record<string, unknown>;
+  export default React;
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

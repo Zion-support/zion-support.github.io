@@ -1,11 +1,15 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {List, RefreshCw} from "lucide-react";
 import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
 
+<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
@@ -30,15 +34,23 @@ export function ApiLogs() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from "lucide-react",
@@ -53,10 +65,13 @@ export function ApiLogs() {
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   // Load logs on mount and when pagination changes
   useEffect(() => {
@@ -73,11 +88,14 @@ export function ApiLogs() {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -90,11 +108,15 @@ export function ApiLogs() {
       return <Badge className="bg-blue-700">Other</Badge>
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize);
   const hasNextPage = currentPage < totalPages - 1;
   const hasPrevPage = currentPage > 0;
+<<<<<<< HEAD
 =======
 
 export function ApiLogs() {;
@@ -137,6 +159,8 @@ export function ApiLogs() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   // Calculate pagination info
@@ -145,6 +169,9 @@ export function ApiLogs() {;
   const hasPrevPage = currentPage > 0,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -160,6 +187,7 @@ export function ApiLogs() {;
           <div className="flex items-center space-x-2">
             <span className="text-sm text-zinc-400">Show</span>
             <Select
+<<<<<<< HEAD
 
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
@@ -207,11 +235,14 @@ export function ApiLogs() {;
   const hasPrevPage = currentPage > 0;
   return (
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               value={pageSize.toString()}
               onValueChange={(value) => {
                 setPageSize(Number(value));
 
                 setCurrentPage(0), // Reset to first page when changing page size
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -221,16 +252,24 @@ export function ApiLogs() {;
             <Select
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
 import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { Badge } from "@/components/ui/badge",;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),;
   const [pageSize, setPageSize] = useState(25),;
@@ -263,6 +302,7 @@ export function ApiLogs() {;
   const hasNextPage = currentPage < totalPages - 1,;
   const hasPrevPage = currentPage > 0;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
   ;
   // Load logs on mount and when pagination changes;
@@ -301,6 +341,9 @@ export function ApiLogs() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -311,14 +354,19 @@ export function ApiLogs() {;
         </CardDescription>;
       </CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;
           <div className="flex items-center space-x-2">;
             <span className="text-sm text-zinc-400">Show</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Select;
               value={pageSize.toString()}
@@ -326,6 +374,8 @@ export function ApiLogs() {;
                 setPageSize(Number(value));
                 setCurrentPage(0), // Reset to first page when changing page size;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Select
               value={pageSize && pageSize.toString()}
@@ -336,7 +386,10 @@ export function ApiLogs() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -401,6 +454,7 @@ export function ApiLogs() {;
                             ? "border-green-500 text-green-400"
                             : log.method === 'POST'
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Select;
               value={pageSize.toString()}
               onValueChange={(value) => {;
@@ -408,6 +462,9 @@ export function ApiLogs() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 setCurrentPage(0), // Reset to first page when changing page size;
               }}
             >;
@@ -424,19 +481,27 @@ export function ApiLogs() {;
             <span className="text-sm text-zinc-400">per page</span>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button variant="outline" size="sm" onClick={handleRefresh}>;
             <RefreshCw size={14} className="mr-1" /> Refresh;
           </Button>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="overflow-x-auto">;
           <table className="w-full border-collapse">;
             <thead>;
@@ -460,10 +525,14 @@ export function ApiLogs() {;
                   </td>;
                 </tr>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               ) :logs.length === 0 ? (;
 =======
               ) : logs && logs.length === 0 ? (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ) : logs && logs.length === 0 ? (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <tr>;
                   <td colSpan={6} className="text-center py-12">;
                     <div className="flex flex-col items-center">;
@@ -476,7 +545,10 @@ export function ApiLogs() {;
                   </td>;
                 </tr>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ) : (;
                 logs && logs.map((log) => (;
                   <tr key={log && log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">;
@@ -494,7 +566,10 @@ export function ApiLogs() {;
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         }>;
                         {log && log.method}
                       </Badge>;
@@ -510,6 +585,7 @@ export function ApiLogs() {;
                       {log && log.response_time_ms ? `${log && log.response_time_ms}ms` : '-'}
                     </td>;
                     <td className="px-4 py-3 text-sm">{log && log.ip_address || '-'}</td>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               ) :(;
                 logs.map((log) => (;
@@ -544,12 +620,15 @@ export function ApiLogs() {;
                     <td className="px-4 py-3 text-sm">{log.ip_address || '-'}</td>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </tr>;
                 ));
               )}
             </tbody>;
           </table>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button
                 variant="outline"
@@ -850,6 +929,8 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
             </div>
             <div className="flex space-x-2">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {logs && logs.length > 0 && (;
           <div className="mt-4 flex justify-between items-center">;
@@ -858,12 +939,16 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
             </div>;
             <div className="flex space-x-2">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="outline"
                 size="sm"
                 disabled={!hasPrevPage}
                 onClick={() => setCurrentPage(currentPage - 1)}
+<<<<<<< HEAD
 <<<<<<< HEAD
               >
                 Previous
@@ -873,11 +958,17 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
                 Previous;
               </Button>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              >;
+                Previous;
+              </Button>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="outline"
                 size="sm"
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
+<<<<<<< HEAD
 <<<<<<< HEAD
               >
                 Next
@@ -890,21 +981,33 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >;
                 Next;
               </Button>;
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      </CardContent>
+    </Card>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardContent>;
     </Card>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import { useState, useEffect } from './react';
@@ -912,7 +1015,10 @@ import { format } from './date - fns';
 import { List, RefreshCw } from './lucide-react';
 import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

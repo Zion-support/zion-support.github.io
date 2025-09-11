@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -30,12 +31,19 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
   if ('redirect' in result) return result;
   return result;
 
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function PitchGenerator() {;
   const [builder, setBuilder] = useState<BuilderState>({;
     mission: '',;
@@ -45,6 +53,7 @@ export default function PitchGenerator() {;
     targetRaise: '',;
     assets: [],;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   chart?: {
     type: string;
@@ -88,6 +97,10 @@ export default function PitchGenerator() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     mission: '',
     fundingStage: '',
     vision: '',
@@ -95,14 +108,20 @@ export default function PitchGenerator() {
     targetRaise: '',
     assets: [],;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
+<<<<<<< HEAD
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -163,6 +182,10 @@ export default function PitchGenerator() {
 <<<<<<< HEAD
   const [history, setHistory] = useState<
     { id: string; createdAt: string, version: string }[]
+=======
+  const [history, setHistory] = useState<;
+    { id: string; createdAt: string, version: string }[];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   >([]);
   const activeSlide = slides[activeIndex];
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
@@ -179,15 +202,19 @@ export default function PitchGenerator() {
     []
   );
   const autoFetchMetrics = useCallback(async () => {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 export type Slide = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   id: string;
   title: string;
@@ -217,6 +244,8 @@ function uid() {;
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string,
   title: string,
   content: string,
@@ -239,7 +268,10 @@ function uid() {
   return Math.random().toString(36).slice(2)
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {
   return (
     <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
@@ -247,6 +279,7 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
       <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
     </button>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
@@ -263,6 +296,8 @@ export default function PitchGenerator(req, res) {
   try {
   const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -274,13 +309,19 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
 
 
@@ -292,26 +333,45 @@ export default function PitchGenerator() {
     e && e.preventDefault();
     const files = Array && Array.from(e && e.dataTransfer.files || []);
     setBuilder(b => ({ ...b, assets: [...b && b.assets, ...files] }));  }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const prevent = (e: React && React.DragEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const operatorPrompt = useMemo(;
     () =>;
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,;
     [];
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   const autoFetchMetrics = useCallback(async () => {;
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
   }, []);
+=======
+  );
+  const autoFetchMetrics = useCallback(async () => {;
+=======
+    const files = Array.from(e.dataTransfer.files || []);
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
+  }, []);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const prevent = (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation()
   };
+<<<<<<< HEAD
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
   const autoFetchMetrics = useCallback(async () => {
     setLoading(true);
@@ -321,6 +381,17 @@ export default function PitchGenerator() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
+
+  const autoFetchMetrics = useCallback(async () => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    setLoading(true);
+    try {;
+      const res = await fetch('/api/admin/pitch/metrics');
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >;
       <div className='font - semibold text - sm line - clamp - 2'>;
         {slide.title || 'Untitled'}
@@ -344,15 +415,22 @@ if (return result) {
     try {
       const res = await fetch ('/api / admin / pitch / metrics');
       const data = await res.json ();
+<<<<<<< HEAD
       return data;
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      return data;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (e) {;
       return {};
     } finally {;
       setLoading(false);    }
+<<<<<<< HEAD
 <<<<<<< HEAD
       const data = await res.json();
     </button>
@@ -446,6 +524,18 @@ operatorPrompt;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  }, []);
+
+  const buildDeck = useCallback(async () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setLoading(true);
+    try {;
+      const metrics = await autoFetchMetrics();
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ]);
     } catch (e) {;
       // noop;
@@ -454,9 +544,13 @@ operatorPrompt;
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const build_deck = useCallback (async () => {
     set_loading (true);
@@ -500,14 +594,19 @@ if (return) {
           headers: { 'Content - Type': 'application / json' },
           body: JSON.stringify ({ slide: slides[idx] }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         });
         const json = await res.json ();
         set_slides (arr =>;
           arr.map ((s, i) =>;
             index === idx;
+<<<<<<< HEAD
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),;
   const activeSlide = slides[activeIndex];
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {;
@@ -573,10 +672,13 @@ if (return) {
         setSlides(arr =>
           arr.map((s, i) =>
             i === idx
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ? {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
+<<<<<<< HEAD
 <<<<<<< HEAD
     },;
     [slides];
@@ -733,6 +835,8 @@ const json = await res.json();
     try {
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
       const blob = await res.blob();
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }
               : s
           )
@@ -807,8 +911,15 @@ const json = await res.json();
 }
   }, [slides]),;
   const addSlide = useCallback(async () => {;
+<<<<<<< HEAD
     setLoading(true);
     try {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    setLoading(true);
+    try {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
       const json = await res.json();
       setSlides(arr => [
@@ -848,15 +959,19 @@ const json = await res.json();
     try {
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),;
       const blob = await res.blob();
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
+<<<<<<< HEAD
 
       URL.revokeObjectURL(url)
     } catch (e) {
@@ -950,6 +1065,14 @@ const json = await res.json();
     } catch (e) {
     } finally {
       setLoading(false);    }
+=======
+      URL.revokeObjectURL(url);
+    } catch (e) {
+    } finally {
+      setLoading(false)
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [slides, versionTag]);
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
@@ -984,6 +1107,7 @@ const json = await res.json();
     } finally {
       setLoading(false);    }
   }, [slides, versionTag]);
+<<<<<<< HEAD
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides(arr =>
       arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
@@ -1014,6 +1138,37 @@ const json = await res.json();
     const { type, data } = slide.chart,
     return (
 =======
+=======
+
+  const exportGoogleSlides = useCallback(async () => {;
+    setLoading(true);
+    try {;
+      const res = await fetch('/api/admin/pitch/export', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          slides,;
+          format: 'gslides',;
+          version: versionTag,;
+        }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+      const json = await res && res.json();
+      if (json && json.url) {;
+        window && window.open(json.url, '_blank');
+      }
+    } catch (e) {;
+    } finally {;
+      setLoading(false);    }
+  }, [slides, versionTag]);
+
+
+
+  const updateActiveSlide = (updates: Partial<Slide>) => {;
+    setSlides(arr =>;
+      arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
+    );  };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const renderChartPreview = (slide: Slide) => {;
     if (!slide && slide.chart) return null,;
@@ -1024,24 +1179,34 @@ const json = await res.json();
 
     return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+<<<<<<< HEAD
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+          ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div
                     key={d.label}
                     className='bg-purple-500 text-white text-xs px-2 py-1'
@@ -1053,10 +1218,13 @@ const json = await res.json();
             </div>
           )}
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+<<<<<<< HEAD
 =======
 
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1070,11 +1238,17 @@ const json = await res.json();
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -1084,10 +1258,13 @@ const json = await res.json();
                 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </div>;
           )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               disabled={loading || slides && slides.length === 0}
               className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'>;
               Download PDF;
@@ -1096,6 +1273,10 @@ const json = await res.json();
               onClick={exportGoogleSlides}
               disabled={loading || slides && slides.length === 0}
               className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               : s));
       } catch (e) {
       } finally {
@@ -1243,27 +1424,39 @@ if (return null, ) {
               className='px - 3 py - 2 rounded bg - green - 600 text - white disabled:opacity - 50';
             >;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Export to Google Slides;
             </button>;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='w-full border rounded px-2 py-1 bg-transparent';
               />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 className='w-full border rounded px-2 py-1 bg-transparent';
               />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div
                 onDrop={onAssetDrop}
                 onDragOver={prevent}
                 onDragEnter={prevent}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'
               >
@@ -1271,11 +1464,15 @@ if (return null, ) {
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </div>
     )
   };
+<<<<<<< HEAD
         </div>
       </div>
     );
@@ -1299,6 +1496,14 @@ if (return null, ) {
   return (
 
 
+=======
+
+  return (
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1317,15 +1522,23 @@ if (return null, ) {
       </div>
     )
   },
+<<<<<<< HEAD
 
   return (
+=======
+  return (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <EnhancedLayout>
       <Head>
         <title>Pitch Generator - Admin</title>
       </Head>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Pitch Generator</h1>
@@ -1412,9 +1625,12 @@ if (return null, ) {
                 onDragEnter={prevent}
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
               >
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Pitch Generator</h1>
@@ -1425,6 +1641,9 @@ if (return null, ) {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-1 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -1485,11 +1704,14 @@ if (return null, ) {
               <label className="block text-sm mt-3 mb-1">Target raise amount</label>
               <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
               <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Drag & drop logos, photos here
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
@@ -1509,12 +1731,18 @@ if (return null, ) {
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -1523,9 +1751,13 @@ if (return null, ) {
               </ul>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 Version: {versionTag || '—'}
 
@@ -1533,20 +1765,32 @@ if (return null, ) {
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
+<<<<<<< HEAD
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
 <<<<<<< HEAD
 =======
+=======
+=======
+                className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Drag & drop logos, photos here;
                 <div className='text-xs mt-1'>;
                   {builder && builder.assets.length} file(s) added;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='font-medium mb-2'>Auto Data</div>;
               <button
                 onClick={autoFetchMetrics}
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'>;
                 Refresh;
               </button>;
@@ -1558,6 +1802,10 @@ if (return null, ) {
                 <li>Notable clients or case studies</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='font-medium mb-2'>History</div>;
               <div className='text-xs text-gray-500 dark:text-gray-400'>;
@@ -1567,8 +1815,11 @@ if (return null, ) {
                 {history && history.map(h => (;
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <li
                     key={h && h.id}
                     className='flex justify-between border rounded px-2 py-1'>;
@@ -1578,10 +1829,15 @@ if (return null, ) {
                     </span>                  </li>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -1591,6 +1847,7 @@ if (return null, ) {
                     <span>{h.version}</span>
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ))}
 =======
@@ -1602,6 +1859,15 @@ if (return null, ) {
               </ul>;
             </div>;
           </div>;
+=======
+
+                ))}
+
+              </ul>;
+            </div>;
+          </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='lg:col-span-2 space-y-4'>;
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='flex items-center justify-between'>;
@@ -1613,9 +1879,13 @@ if (return null, ) {
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>;
                 {slides && slides.map((s, i) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <SlidePreview
                     key={s && s.id}
                     slide={s}
@@ -1626,10 +1896,16 @@ if (return null, ) {
                 <button
                   onClick={addSlide}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
+=======
+
+                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>;
           <div className='lg:col - span - 1 space - y-4'>;
             <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -1750,17 +2026,25 @@ if (return null, ) {
                   className='w - 56 shrink - 0 border rounded - md p - 3 text - left bg - gray - 50 dark:bg - gray - 800 border - dashed border - 2 text - gray - 500';
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   + Add Slide;
                 </button>;
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Active Slide Editor */}
             {active_slide && (
               <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -1776,19 +2060,29 @@ if (return null, ) {
                       disabled={loading}
                       className='px - 2 py - 1 rounded bg - blue - 600 text - white text - sm disabled:opacity - 50';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     >;
                       Rephrase;
                     </button>;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />;
+=======
+
+                />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>;
                   <button
                     onClick={() =>;
@@ -1804,9 +2098,13 @@ if (return null, ) {
                         },;
                       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                     className='border rounded px-2 py-1';
                   >;
@@ -1814,9 +2112,13 @@ if (return null, ) {
                   </button>;
                   <button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onClick={() =>;
                       updateActiveSlide({;
                         chart: {;
@@ -1829,9 +2131,13 @@ if (return null, ) {
                         },;
                       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                     className='border rounded px-2 py-1';
                   >;
@@ -1839,9 +2145,13 @@ if (return null, ) {
                   </button>;
                   <button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onClick={() =>;
                       updateActiveSlide({;
                         chart: {;
@@ -1854,9 +2164,13 @@ if (return null, ) {
                         },;
                       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                     className='border rounded px-2 py-1';
                   >;
@@ -1865,15 +2179,24 @@ if (return null, ) {
                 </div>              </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="flex items-center justify-between">
                 <div className="font-medium">Slides</div>
+<<<<<<< HEAD
 <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
+=======
+                <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
               <div className="mt-3 flex gap-3 overflow-x-auto py-2">
                 {slides.map((s, i) => (
@@ -1882,6 +2205,10 @@ if (return null, ) {
                 <button onClick={addSlide} className="w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500">+ Add Slide</button>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {activeSlide && (
               <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
                 <div className="flex items-center justify-between">
@@ -1891,11 +2218,16 @@ if (return null, ) {
                   </div>
                 </div>
                 <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
                   <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
                   <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
                   <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
                 </div>
+<<<<<<< HEAD
                 {renderChartPreview(activeSlide)}
               </div>
 <<<<<<< HEAD
@@ -1905,12 +2237,36 @@ if (return null, ) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+                {renderChartPreview(activeSlide)}
+              </div>
+
+            )}
+          </div>
+        </div>
+</main>
+    </>
+  );
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 }
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+}
+}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -1971,29 +2327,45 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
             )}
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </main>;
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     </EnhancedLayout>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <textarea;
                   value={active_slide.content}
                   on_change={e => updateActiveSlide ({ content: e.target.value })}
                   className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
+<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
@@ -2062,6 +2434,8 @@ if (return null, ) {
                   value={activeSlide.content}
                   onChange={e => updateActiveSlide({ content: e.target.value })}
                   className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   rows={10}
                 />;
                 <div className='mt - 4 grid grid - cols - 3 gap - 2 text - sm'>;
@@ -2114,18 +2488,25 @@ if (return null, ) {
                       });
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='border rounded px - 2 py - 1';
                   >;
                     Timeline;
                   </button>;
                 </div>              </div>)}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
 </main>;
     </>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='border rounded px-2 py-1'
                   >
@@ -2211,6 +2592,10 @@ if (return null, ) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2218,8 +2603,13 @@ if (return null, ) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

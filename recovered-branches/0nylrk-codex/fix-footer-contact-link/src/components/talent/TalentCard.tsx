@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
@@ -22,11 +23,18 @@ export function TalentCard({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
@@ -96,6 +104,8 @@ import { TalentProfile } from "@/types/talent",;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -105,17 +115,24 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function TalentCard(): any ({;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export function TalentCard(): any ({;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
 <<<<<<< HEAD
+<<<<<<< HEAD
   isAuthenticated;
 }: TalentCardProps) {;
   const navigate = useNavigate();
@@ -123,6 +140,8 @@ export function TalentCard(): any ({;
     // Navigate directly to the talent profile;
     navigate(`/talent/${talent && talent.id}`);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   isAuthenticated;
 }: TalentCardProps) {;
@@ -132,16 +151,23 @@ export function TalentCard(): any ({;
     // Navigate directly to the talent profile;
     navigate(`/talent/${talent && talent.id}`);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(talent && talent.id);
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -150,9 +176,13 @@ export function TalentCard(): any ({;
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -160,6 +190,7 @@ export function TalentCard(): any ({;
       onToggleSave(talent && talent.id, !isSaved);
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -217,6 +248,11 @@ export function TalentCard({;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
@@ -236,7 +272,10 @@ export function TalentCard({;
                   {talent && talent.full_name?.charAt(0) || "T"}
                 </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </div>;
             {talent && talent.is_verified && (;
@@ -245,17 +284,24 @@ export function TalentCard({;
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleToggleSave = (e: React.MouseEvent) => {;
     e.preventDefault(),;
@@ -299,11 +345,16 @@ export function TalentCard({;
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={handleToggleSave}
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
@@ -311,6 +362,7 @@ export function TalentCard({;
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -333,6 +385,11 @@ export function TalentCard({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -345,6 +402,7 @@ export function TalentCard({;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {talent.profile_picture_url ? (;
                 <img ;
@@ -445,6 +503,10 @@ export function TalentCard({;
                   <span>{talent.availability_type}</span>
                 </div>
               )}
+=======
+                </div>;
+              )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
@@ -481,6 +543,7 @@ export function TalentCard({;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
         {/* Skills */}
         {skills.length > 0 && (;
           <div className="mt-4">;
@@ -504,10 +567,32 @@ export function TalentCard({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        {/* Skills */}
+        {skills && skills.length > 0 && (;
+          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills && skills.map((skill, index) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                <span
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
+                  {skill}
+                </span>;
+              ))}
+
+              {(talent && talent.skills?.length || 0) > 5 && (;
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                  +{(talent && talent.skills?.length || 0) - 5} more;
+                </span>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
         {/* Hourly Rate & Actions */}
@@ -517,6 +602,8 @@ export function TalentCard({;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -526,11 +613,15 @@ export function TalentCard({;
             {talent && talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent && talent.hourly_rate}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
           <div className="flex items-center gap-2">;
@@ -540,6 +631,8 @@ export function TalentCard({;
           <div className="flex items-center gap-2">
             {isAuthenticated && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -551,11 +644,15 @@ export function TalentCard({;
           <div className="flex items-center gap-2">;
             {isAuthenticated && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
@@ -566,10 +663,16 @@ export function TalentCard({;
                 Hire;
               </Button>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+                Hire;
+              </Button>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
             <Button
               size="sm"
               variant="ghost"
+<<<<<<< HEAD
 
               onClick={(e) => {
 
@@ -577,12 +680,17 @@ export function TalentCard({;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={(e) => {
                 e.stopPropagation();
 
                 e.stopPropagation(),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
@@ -595,10 +703,15 @@ export function TalentCard({;
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={(e) => {;
                 e && e.stopPropagation();
                 handleViewProfile();
@@ -606,6 +719,10 @@ export function TalentCard({;
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from '@/components / ui / button';
 import { Card } from '@/components / ui / card';
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from './lucide-react';
@@ -762,6 +879,7 @@ if ( {) {
               className="text - zion - cyan hover: text - white hover:bg - zion - blue - light";
             >;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;
+<<<<<<< HEAD
             {talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
@@ -793,10 +911,14 @@ if ( {) {
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </Card>;
   );}
  export interface TalentCardProps {
@@ -861,3 +983,9 @@ isAuthenticated
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    </Card>);
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Brain;
 import React from 'react';
@@ -20,6 +21,8 @@ import {
   TrendingUp
   Shield;} from 'lucide-react';import {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -66,10 +69,25 @@ import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  Brain
+  MessageSquare
+  Image
+  Video
+  Code
+  FileText
+  Zap
+  Star
+  ExternalLink
+  CheckCircle
+  TrendingUp
+  Shield;} from 'lucide-react';import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain,
   MessageSquare,
   Image,
@@ -80,6 +98,7 @@ import {
   Star,
   ExternalLink,
   CheckCircle,
+<<<<<<< HEAD
 <<<<<<< HEAD
   TrendingUp,
   Shield,;} from 'lucide-react';import { 
@@ -94,6 +113,8 @@ import {
   Zap
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -105,15 +126,22 @@ import {
   FileText,
   Zap,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -135,8 +163,11 @@ import {
       gradient: 'from-green-400 to-emerald-500'
       popular: true
 <<<<<<< HEAD
+<<<<<<< HEAD
   Shield
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
       icon: <Brain className="w-8 h-8 text-white" />,
       title: 'ChatGPT Plus',
@@ -175,7 +206,10 @@ function AiToolsPage() {
     }
     {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       pricing: '$10-30/month',
       marketPrice: '$10-30/month',
       icon: <Image className='w - 8 h - 8 text - white' />,
@@ -198,25 +232,35 @@ function AiToolsPage() {
       pricing: '$10 - 30 / month',
       market_price: '$10 - 30 / month',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       website: 'https://midjourney.com',
       color: 'bg - gradient - to - br from - purple - 500 to - pink - 600',
       text_color: 'text - purple - 400',
       gradient: 'from - purple - 400 to - pink - 500',
       popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
       category: 'Image Generation'
     }
     {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       category: 'Image Generation'
     }
     {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AiToolsPage() {;
   const aiTools = [;
     {;
@@ -285,6 +329,7 @@ export default function AiToolsPage() {;
       features: [;
         'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection';
       ];
+<<<<<<< HEAD
       pricing: '$10/month',;
       marketPrice: '$10-20/month',;
       website: 'https://github && github.com/features/copilot',;
@@ -525,6 +570,8 @@ export default function AiToolsPage() {
       features: [
         'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance'
       ];
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       pricing: '$20/month'
       marketPrice: '$20/month'
       website: 'https://claude.ai'
@@ -556,14 +603,18 @@ export default function AiToolsPage() {
       category: 'Content Creation'
     },  ];      category: 'Content Creation'
     }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Advanced reasoning abilities',
         'Document analysis',
         'Code generation',
         'Creative writing',
         'Research assistance',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -595,6 +646,10 @@ export default function AiToolsPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    },  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
 
 ;
@@ -602,6 +657,7 @@ export default function AiToolsPage() {
 
     {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       category: 'Conversational AI',
     },
@@ -636,36 +692,50 @@ export default function AiToolsPage() {
         'Enterprise integrations',
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'AI Market Size',
       value: '$136.6B',
       growth: '+37% YoY',
       description: 'Global AI market value in 2024'
     };
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: 'AI Adoption Rate',
       value: '35%',
       growth: '+12% YoY',
       description: 'Businesses actively using AI tools'
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
     };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: 'AI Investment',
       value: '$93.5B',
       growth: '+28% YoY',
       description: 'Global AI investment in 2024'
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
     };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: 'AI Productivity Gain',
       value: '40%',
       growth: '+15% YoY',
+<<<<<<< HEAD
 <<<<<<< HEAD
 description: 'Average productivity improvement',
     },  ];      description: 'Global AI market value in 2024';
@@ -755,6 +825,9 @@ description: 'Average productivity improvement',
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   ];
 ;
@@ -765,9 +838,13 @@ description: 'Average productivity improvement',
           AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing;
         </title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Conversational AI',
       description: 'Chatbots, virtual assistants, and language models',
     tools: 3,
@@ -785,25 +862,34 @@ description: 'Average productivity improvement',
       tools: 1,
       avgPrice: '$10/month'
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
     };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: 'Video Generation',
       description: 'AI video creation and editing tools',
       tools: 1,
       avgPrice: '$44/month'
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
     };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: 'Content Creation',
       description: 'AI-powered writing and content generation',
       tools: 1,
       avgPrice: '$82/month'
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 ];
@@ -813,6 +899,8 @@ description: 'Average productivity improvement',
         <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
 <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
   ];
@@ -823,11 +911,15 @@ description: 'Average productivity improvement',
       <Head>
         <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
         <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta property="og:title" content="AI Tools & Services | Zion Tech Group" />
         <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
       ],      pricing: '$39-125/month',
 
@@ -991,6 +1083,10 @@ description: 'Average productivity improvement',
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
@@ -1011,7 +1107,10 @@ description: 'Average productivity improvement',
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* AI Market Statistics */}
 
 
@@ -1124,7 +1223,10 @@ description: 'Average productivity improvement',
           </div>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -1143,6 +1245,10 @@ description: 'Average productivity improvement',
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* AI Market Statistics */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -1177,18 +1283,32 @@ description: 'Average productivity improvement',
                   <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
                   <p className="text-sm text-gray-400">{stat.description}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
               </Card>
+=======
+                </div>
+              </Card>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
 =======
                 </div>
               </Card>
@@ -1196,11 +1316,14 @@ description: 'Average productivity improvement',
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
       {/* AI Tools Grid */}
 
 
@@ -1213,6 +1336,9 @@ description: 'Average productivity improvement',
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1252,16 +1378,22 @@ description: 'Average productivity improvement',
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {aiTools && aiTools.map((tool, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
@@ -1424,6 +1556,8 @@ description: 'Average productivity improvement',
                     </ul>;
                     <div className='flex items-center justify-between'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                         {tool.title}
@@ -1507,7 +1641,10 @@ description: 'Average productivity improvement',
                     </ul>;
                     <div className='flex items-center justify-between'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Button
                         href={tool && tool.website}
                         variant='primary'
@@ -1538,6 +1675,7 @@ description: 'Average productivity improvement',
               </Card>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </p>
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
@@ -1556,10 +1694,14 @@ description: 'Average productivity improvement',
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {feature}
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className='flex items-center justify-between'>
                       <Button
@@ -1581,6 +1723,11 @@ description: 'Average productivity improvement',
                     <div className="flex items-center justify-between">
                       <Button
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                    <div className="flex items-center justify-between">
+                      <Button
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         href={tool.website}
                         variant="primary"
                         size="sm"
@@ -1599,18 +1746,37 @@ description: 'Average productivity improvement',
               </Card>
 
             ))}
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
       {/* AI Categories Overview */}
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* AI Categories Overview */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               AI Tool Categories
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -1619,10 +1785,15 @@ description: 'Average productivity improvement',
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
+<<<<<<< HEAD
           </div>;
 <<<<<<< HEAD
             ))}
 =======
+=======
+=======
+          </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </section>;
       {/* AI Categories Overview */}
@@ -1701,7 +1872,10 @@ description: 'Average productivity improvement',
           </div>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -1720,6 +1894,10 @@ description: 'Average productivity improvement',
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </section>
@@ -1763,19 +1941,34 @@ description: 'Average productivity improvement',
                     <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
                     <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
               </Card>
+=======
+                  </div>
+                </div>
+              </Card>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
 =======
                   </div>
                 </div>
@@ -1784,11 +1977,14 @@ description: 'Average productivity improvement',
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
       {/* AI Implementation Guide */}
 
 
@@ -1801,6 +1997,9 @@ description: 'Average productivity improvement',
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1845,6 +2044,7 @@ description: 'Average productivity improvement',
               </div>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
                 <div className='w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -1859,6 +2059,8 @@ description: 'Average productivity improvement',
                 </p>
                 <ul className='space-y-2 text-sm text-gray-300'>                  <li>• Always review and edit AI-generated content</li>                </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Card className="card-hover border-gradient-blue">
@@ -1867,7 +2069,10 @@ description: 'Average productivity improvement',
                   <Shield className="w-8 h-8 text-cursor-blue" />
                 </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <h3 className="text-xl font-semibold text-white mb-3">Best Practices</h3>
                 <p className="text-gray-400 mb-4">
                   Follow proven strategies to get the most out of your AI tools and ensure quality output.
@@ -1882,6 +2087,7 @@ description: 'Average productivity improvement',
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2020,6 +2226,8 @@ description: 'Average productivity improvement',
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor text-center">
           <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -2051,6 +2259,7 @@ href="/contact"
               className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               Get AI Consultation
 =======
 
@@ -2059,6 +2268,12 @@ href="/contact"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              Get AI Consultation
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor text - center'>;
@@ -2097,13 +2312,18 @@ href="/contact"
               className="border - cursor - blue text - cursor - blue hover:bg - cursor - blue hover:text - white";
               Get AI Consultation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 }
@@ -2134,6 +2354,8 @@ href="/contact"
               variant='outline'
               size='lg'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
@@ -2143,13 +2365,17 @@ href="/contact"
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
               variant="primary"
               size="lg"
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button
 
@@ -2177,3 +2403,8 @@ href="/contact"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <Button
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

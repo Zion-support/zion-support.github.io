@@ -3,14 +3,19 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
@@ -26,6 +31,11 @@ interface ProfileHeroProps {;
   name: string,;
   title: string,;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+interface ProfileHeroProps {;
+  name: string,;
+  title: string,;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   avatarUrl?: string;
   coverImageUrl?: string;
@@ -34,13 +44,21 @@ interface ProfileHeroProps {;
   reviewCount?: number;
   aiScore?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   profileType: 'service' | 'talent';
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ProfileHero(): any ({;
+=======
+export function ProfileHero(): any ({;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name;
   title;
   avatarUrl;
@@ -52,6 +70,7 @@ export function ProfileHero(): any ({;
   profileType;
 }: ProfileHeroProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Star } from "lucide-react",
 import { cn } from "@/lib/utils",
 import { Star } from "lucide-react",
@@ -59,6 +78,9 @@ import { cn } from "@/lib/utils",
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -70,6 +92,7 @@ interface ProfileHeroProps {
   aiScore?: number,
   profileType: 'service' | 'talent'
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function ProfileHero({;
@@ -90,14 +113,21 @@ export function ProfileHero({
   rating,
   reviewCount,
   aiScore,
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   profileType
 }: ProfileHeroProps) {
+<<<<<<< HEAD
   return (
 
   profileType
 }: ProfileHeroProps) {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <div className="w-full overflow-hidden">
@@ -120,6 +150,7 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
+<<<<<<< HEAD
 
 =======
 
@@ -132,6 +163,8 @@ export function ProfileHero({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
@@ -182,11 +215,17 @@ export function ProfileHero({;
               ) : (;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -197,6 +236,7 @@ export function ProfileHero({;
                 <Badge
                   variant="outline"
                   className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -233,10 +273,14 @@ export function ProfileHero({;
   profileType;
 } ProfileHeroProps) {;
   return (;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="w-full overflow-hidden">;
       <div className="relative">;
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
           {coverImageUrl ? (;
+<<<<<<< HEAD
             <img ;
               src={coverImageUrl} ;
               alt={`${name} cover`} ;
@@ -247,11 +291,24 @@ export function ProfileHero({;
           )}
         </AspectRatio>;
         ;
+=======
+            <img
+              src={coverImageUrl} 
+              alt={`${name} cover`} 
+              className="w-full h-full object-cover" 
+            />;
+          ) : (;
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
+          )}
+        </AspectRatio>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="container px-4 md:px-6">;
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">;
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">;
               {avatarUrl ? (;
                 <AvatarImage src={avatarUrl} alt={name} />;
+<<<<<<< HEAD
 
                     "ml-2 border-zion-purple/50 text-zion-cyan",
 
@@ -324,12 +381,35 @@ export function ProfileHero({;
                   </div>
                 )}
 =======
+=======
+              ) : (;
+                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
+                  {name && name.substring(0, 2).toUpperCase()}
+                </AvatarFallback>;
+              )}
+            </Avatar>;
+
+            <div className="mt-4 md:mt-0 md:ml-6 md:mb-1">;
+              <div className="flex flex-wrap items-center gap-2 mb-1">;
+                <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>;
+                <Badge
+                  variant="outline" 
+                  className={cn(
+                    "ml-2 border-zion-purple/50 text-zion-cyan"
+
+=======
+
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 =======
                     "ml-2 border-zion-purple/50 text-zion-cyan",
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
@@ -355,16 +435,30 @@ export function ProfileHero({;
                     )}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>;
                   </div>;
 <<<<<<< HEAD
+=======
+                  </div>;
+=======
+=======
+                  </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                )}
+                  </div>;
+                  </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
                 
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
                     AI Match: {aiScore}%
                   </div>
+<<<<<<< HEAD
 
                   </div>;
                   </div>;
@@ -380,6 +474,10 @@ export function ProfileHero({;
                     AI Match: {aiScore}%;
                   </div>;
                 )}
+=======
+                )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { AspectRatio } from '@/components / ui / aspect - ratio';
 import { Badge } from '@/components / ui / badge';
@@ -448,17 +546,22 @@ function ProfileHero() {
                   <div className="px - 2 py - 0.5 rounded bg - zion - purple / 20 text - xs font - medium text - zion - cyan">;
                     AI Match: {ai_score}%;
                   </div>)}
+<<<<<<< HEAD
                 ;
                 {aiScore && (;
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
                     AI Match:{aiScore}%;
                   </div>;
                 )}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   ),;}
  interface ProfileHeroProps {
@@ -516,3 +619,9 @@ profileType
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    </div>);
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react',
@@ -225,6 +226,8 @@ const SpaceTechnologyPage: React.FC = () => {
     }
   ]
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -240,12 +243,19 @@ import {
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
@@ -259,17 +269,23 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { motion } from 'framer-motion',
 import {
   Rocket, Brain, Shield, Zap, Target, Atom, Cpu,
@@ -280,12 +296,18 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react',
 const SpaceTechnologyPage: React.FC = () => {
@@ -350,7 +372,10 @@ const SpaceTechnologyPage: React.FC = () => {
       popular: false,
       icon: <Building className="w-8 h-8" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   ],
@@ -387,7 +412,10 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout>
 
@@ -398,6 +426,7 @@ const SpaceTechnologyPage: React.FC = () => {
         keywords="space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications"
       />
       <main className="relative z-10">
+<<<<<<< HEAD
 
       id: 'space - resource - mining',
       name: 'Space Resource Mining',
@@ -521,6 +550,9 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 
 
+=======
+        {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -556,7 +588,10 @@ icon: <Atom className="w - 6 h - 6" />;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <a
@@ -564,6 +599,10 @@ icon: <Atom className="w - 6 h - 6" />;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -573,6 +612,7 @@ icon: <Atom className="w - 6 h - 6" />;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
             >;
               <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 via - pink - 500 to - orange - 600 bg - clip - text text - transparent">;
@@ -603,6 +643,8 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Space Capabilities */}
         <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900">;
           <div className="max - w-6xl mx - auto">;
@@ -612,9 +654,12 @@ icon: <Atom className="w - 6 h - 6" />;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Space Capabilities */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -658,6 +703,7 @@ icon: <Atom className="w - 6 h - 6" />;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceCapabilities.map((capability, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -811,11 +857,14 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={capability.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   className="bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border border - gray - 700 hover:border - purple - 500 transition - all duration - 300";
@@ -825,6 +874,8 @@ icon: <Atom className="w - 6 h - 6" />;
                       {capability.icon}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={capability.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -856,14 +907,19 @@ icon: <Atom className="w - 6 h - 6" />;
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-purple-500/20 rounded-lg mr-3">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      {capability.icon}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {capability.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -1001,6 +1057,9 @@ icon: <Atom className="w - 6 h - 6" />;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -1011,11 +1070,19 @@ icon: <Atom className="w - 6 h - 6" />;
           </div>
         </section>
         {/* Space Services */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+        <section className="py - 20 px - 4">;
+          <div className="max - w-6xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               ))  } catch (error) {
@@ -1054,6 +1121,12 @@ icon: <Atom className="w - 6 h - 6" />;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -1067,6 +1140,7 @@ icon: <Atom className="w - 6 h - 6" />;
               {spaceServices.map((service, index) => (
                 <motion.div
                   key={service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -1075,10 +1149,18 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className={`relative bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
                     service.popular;
                       ? 'border - purple - 500 shadow - lg shadow - purple - 500 / 25';
                       : 'border - gray - 700 hover:border - purple - 500';
+<<<<<<< HEAD
 <<<<<<< HEAD
                   }`}
 =======
@@ -1089,6 +1171,10 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+                  }`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1123,6 +1209,7 @@ icon: <Atom className="w - 6 h - 6" />;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
                 >
                   {service.popular && (
@@ -1148,6 +1235,20 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 
 
+=======
+                >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <div className="inline-flex p-3 bg-purple-500/20 rounded-full mb-4">
+                      {service.icon}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1166,14 +1267,22 @@ icon: <Atom className="w - 6 h - 6" />;
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <div className="text-3xl font-bold text-purple-400 mb-2">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      {service.price}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
@@ -1187,6 +1296,10 @@ icon: <Atom className="w - 6 h - 6" />;
                   <a 
                     href="/contact" 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1198,17 +1311,25 @@ icon: <Atom className="w - 6 h - 6" />;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </ul>
                   <a
                     href="/contact"
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                   >
                     Get Started
                   </a>
                 </motion.div>
+<<<<<<< HEAD
 
                       <span className="text - lg text - gray - 400">/{service.period}</span>;
                     </div>;
@@ -1246,6 +1367,13 @@ icon: <Atom className="w - 6 h - 6" />;
 =======
 
 
+=======
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1294,7 +1422,10 @@ icon: <Atom className="w - 6 h - 6" />;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <a
@@ -1302,6 +1433,10 @@ icon: <Atom className="w - 6 h - 6" />;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -1313,11 +1448,18 @@ icon: <Atom className="w - 6 h - 6" />;
       </main>
     </Layout>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+export default SpaceTechnologyPage;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
                 Ready to Explore Space?;
@@ -1348,6 +1490,7 @@ icon: <Atom className="w - 6 h - 6" />;
 export default SpaceTechnologyPage,
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 },
 
@@ -1587,8 +1730,13 @@ export default SpaceTechnologyPage;
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

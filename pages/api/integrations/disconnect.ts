@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
@@ -28,12 +29,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     });
   });
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
@@ -81,6 +86,9 @@ function handler() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -98,6 +106,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true })
 
 }
+<<<<<<< HEAD
   res.status (200).json ({ ok: true });
 }
 
@@ -123,11 +132,14 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   const now = Date.now();
   const updated = writeState(state => {;
     const idx = state.connections.findIndex(c => c.providerId === providerId);
@@ -149,9 +161,14 @@ export default function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

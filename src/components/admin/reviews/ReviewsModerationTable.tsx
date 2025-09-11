@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -125,11 +126,14 @@ import {
   Dialog,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogTitle,
 } from '@/components/ui/dialog'
@@ -265,12 +269,18 @@ export function ReviewsModerationTable({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setViewDetailsOpen(false)
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
+<<<<<<< HEAD
 <<<<<<< HEAD
         variant: 'destructive',
       })
@@ -285,6 +295,8 @@ export function ReviewsModerationTable({
   }
         variant: "destructive"})
     }}),
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const getInitials = (name: string) => {
@@ -294,11 +306,16 @@ export function ReviewsModerationTable({
       .join("")
       .toUpperCase()
   },
+<<<<<<< HEAD
 =======
 
 
   if (isLoading) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  if (isLoading) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return (
       <div className='space - y-4'>;
@@ -309,17 +326,25 @@ export function ReviewsModerationTable({
       </div>);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Check condition
 if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className='py - 10 text - center'>;
         <h3 className='text - lg font - medium mb - 2'>No reviews to moderate</h3>;
@@ -329,14 +354,20 @@ if ( {) {
       </div>);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handle_approve = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: 'approved' });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handle_approve = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: 'approved' });
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handle_reject = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: 'rejected' });
@@ -345,6 +376,7 @@ if ( {) {
     setSelectedReview (review);
     setViewDetailsOpen (true);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
@@ -357,12 +389,16 @@ import { Review, ReviewStatus } from "@/types/reviews",;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   TableRow} from "@/components/ui/table",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -372,23 +408,36 @@ import {;
 } from '@/components/ui/table';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  TableRow,;
+} from '@/components/ui/table';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   DialogTitle} from "@/components/ui/dialog",;
 =======
   DialogTitle,;
 } from '@/components/ui/dialog';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  DialogTitle,;
+} from '@/components/ui/dialog';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import { Badge } from '@/components/ui/badge';
@@ -504,7 +553,10 @@ export function ReviewsModerationTable(): any ({;
   };
   const renderStars = (rating: number,) => {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
@@ -513,9 +565,13 @@ export function ReviewsModerationTable(): any ({;
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const render_stars = (rating: number, ) =>: any {
     return (
       <div className='flex'>;
@@ -525,15 +581,20 @@ export function ReviewsModerationTable(): any ({;
             className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}          />))}
       </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
       </div>;
     );
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 import { Badge } from "@/components/ui/badge",;
@@ -639,11 +700,14 @@ export function ReviewsModerationTable({;
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isLoading) {
     return (
@@ -658,6 +722,8 @@ export function ReviewsModerationTable({;
   if (reviews.length === 0) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
@@ -666,6 +732,7 @@ export function ReviewsModerationTable({;
         </p>
       </div>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   const handleApprove = (reviewId: string) => {
@@ -716,12 +783,16 @@ export function ReviewsModerationTable({;
                         alt={review.reviewer_profile.display_name |''}                      />
                         alt={review.reviewer_profile.display_name |''}                      />
   }
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleApprove = (reviewId: string) => {
                         alt={review.reviewer_profile.display_name || ''}                      />
     updateReviewStatus({ reviewId, status: "approved" })
   },
 
+<<<<<<< HEAD
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   },
@@ -868,6 +939,8 @@ export function ReviewsModerationTable({;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name ? (
@@ -883,6 +956,7 @@ export function ReviewsModerationTable({;
                         ) : (;
                           <User className='h-4 w-4' />;
                         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <TableHead>Reviewer</TableHead>;
             <TableHead>Rating</TableHead>;
@@ -907,6 +981,15 @@ export function ReviewsModerationTable({;
                     )}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+                      </AvatarFallback>;
+                    )}
+
+  const handleViewDetails = (review: Review) => {
+    setSelectedReview(review),
+    setViewDetailsOpen(true)
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       <span className="text-sm font-medium">
                         {review.reviewer_profile?.display_name || "User"}
@@ -916,23 +999,30 @@ export function ReviewsModerationTable({;
                   </Avatar>;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {review.is_anonymous ? (;
                       <span className="text-sm font-medium">Anonymous</span>;
                     ) :(;
                       <span className="text-sm font-medium">;
                         {review.reviewer_profile?.display_name || "User"}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {review && review.is_anonymous ? (;
                       <span className='text-sm font-medium'>Anonymous</span>;
                     ) : (;
                       <span className='text-sm font-medium'>;
                         {review && review.reviewer_profile?.display_name || 'User'}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </span>;
                     )}
                   </div>;
                 </div>;
               </TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <TableCell>{renderStars(review.rating)}</TableCell>;
               <TableCell>;
@@ -1016,6 +1106,8 @@ export function ReviewsModerationTable({;
               <TableCell>
                 {review.report_count > 0 ? (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>;
                 {format(new Date(review && review.created_at), 'MMM d, yyyy')}
@@ -1032,6 +1124,13 @@ export function ReviewsModerationTable({;
                 ) : (;
                   'None';
                 )}
+<<<<<<< HEAD
+=======
+    updateReviewStatus({ reviewId, status: "approved" })
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           onClick={() =>;
                             updateReviewStatus({;
@@ -1082,6 +1181,7 @@ export function ReviewsModerationTable({;
                   </Avatar>;
                   <div>;
                     {review.is_anonymous ? (
+<<<<<<< HEAD
                       <span className='text - sm font - medium'>Anonymous</span>) : (
                       <span className='text - sm font - medium'>;
                         {review.reviewer_profile?.display_name || 'User'}
@@ -1100,6 +1200,31 @@ export function ReviewsModerationTable({;
                 </Badge>;
               </TableCell>;
               <TableCell>;
+=======
+                      <span className="text-sm font-medium">Anonymous</span>
+                    ) : (
+                      <span className='text-sm font-medium'>
+                        {review.reviewer_profile?.display_name |'User'}
+                      <span className="text-sm font-medium">
+                        {review.reviewer_profile?.display_name || "User"}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </TableCell>
+              <TableCell>{renderStars(review.rating)}</TableCell>
+              <TableCell>
+                {format(new Date(review.created_at), "MMM d, yyyy")}
+              </TableCell>
+              <TableCell>
+                <Badge
+                  variant="outline"
+                >
+                  {review.status.charAt(0).toUpperCase() + review.status.slice(1)}
+                </Badge>
+              </TableCell>
+              <TableCell>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {review.report_count > 0 ? (
                   <Badge variant='destructive'>{review.report_count}</Badge>) : (
                   'None')}
@@ -1108,6 +1233,7 @@ export function ReviewsModerationTable({;
                 <div className='flex justify - end gap - 2'>;
                   {review.status === 'pending' && (
                     <>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Button;
                         variant="ghost";
@@ -1130,11 +1256,64 @@ export function ReviewsModerationTable({;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"approved" })}>;
                           Mark as approved;
                         </DropdownMenuItem>;                      )}
+=======
+                      <Button;
+                        size='sm';
+                        variant='outline';
+                        className='h - 8 w - 8 p - 0';
+                        on_click={() => handle_approve (review.id)}
+                        disabled={is_pending}                      >;
+                        <Check className='h - 4 w - 4 text - green - 500' />;
+                      </Button>;
+                      <Button;
+                        size='sm';
+                        variant='outline';
+                        className='h - 8 w - 8 p - 0';
+                        on_click={() => handle_reject (review.id)}
+                        disabled={is_pending}                      >;
+                        <X className='h - 4 w - 4 text - red - 500' />;
+                      </Button>;
+                    </>)}
+                  <DropdownMenu>;
+                    <DropdownMenuTrigger as_child>;
+                      <Button variant='ghost' size='sm' className='h - 8 w - 8 p - 0'>;
+                        <MoreHorizontal className='h - 4 w - 4' />;
+                      </Button>;
+                    </DropdownMenuTrigger>;
+                    <DropdownMenuContent align='end'>;
+                      <DropdownMenuItem;
+                        on_click={() => handleViewDetails (review)}
+                      >;
+                        View details;
+                      </DropdownMenuItem>;
+                      {review.status === 'approved' && (
+                        <DropdownMenuItem;
+                          on_click={() =>;
+                            updateReviewStatus ({
+                              review_id: review.id,
+                              status: 'rejected',
+                            });
+                          }
+                        >;
+                          Mark as rejected;
+                        </DropdownMenuItem>)}
+                      {review.status === 'rejected' && (
+                        <DropdownMenuItem;
+                          on_click={() =>;
+                            updateReviewStatus ({
+                              review_id: review.id,
+                              status: 'approved',
+                            });
+                          }
+                        >                          Mark as approved;
+                        </DropdownMenuItem>)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Badge variant="destructive">{review.report_count}</Badge>
                 ) : (
@@ -1142,6 +1321,8 @@ export function ReviewsModerationTable({;
                 )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </TableCell>
               <TableCell className="text-right">
                 <div className="flex justify-end gap-2">
@@ -1149,6 +1330,9 @@ export function ReviewsModerationTable({;
                     <>
                       <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         size='sm'
                         variant='outline'
                         className='h-8 w-8 p-0'
@@ -1163,9 +1347,12 @@ export function ReviewsModerationTable({;
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}                      >
                         <X className='h-4 w-4 text-red-500' />
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
@@ -1183,10 +1370,15 @@ export function ReviewsModerationTable({;
                       >
                         <X className="h-4 w-4 text-red-500" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </Button>
                     </>
                   )}
@@ -1205,6 +1397,9 @@ export function ReviewsModerationTable({;
                         View details
                       </DropdownMenuItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {review.status === 'approved' && (
                         <DropdownMenuItem
                           onClick={() =>
@@ -1227,9 +1422,12 @@ export function ReviewsModerationTable({;
                           }
                         >                          Mark as approved
                         </DropdownMenuItem>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {review.status === "approved" && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
@@ -1248,6 +1446,9 @@ export function ReviewsModerationTable({;
             </TableRow>
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </TableBody>
       </Table>
       {selectedReview && (
@@ -1263,6 +1464,7 @@ export function ReviewsModerationTable({;
             <div className='space-y-4'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-2'>
+<<<<<<< HEAD
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
@@ -1275,6 +1477,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -1287,17 +1491,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                         src={selectedReview.reviewer_profile.avatar_url}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 
 
                         alt={selectedReview.reviewer_profile.display_name |''}                      />
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
@@ -1307,12 +1517,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                         ) : (
                           <User className='h-4 w-4' />
 <<<<<<< HEAD
+<<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name || ""}
                       />;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </TableBody>;
       </Table>;
+=======
+        </TableBody>;
+      </Table>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {selectedReview && (;
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
           <DialogContent className='max-w-lg'>;
@@ -1323,6 +1539,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {format(new Date(selectedReview && selectedReview.created_at), 'MMMM d, yyyy')}
               </DialogDescription>;
             </DialogHeader>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='space-y-4'>;
               <div className='flex items-center justify-between'>;
                 <div className='flex items-center gap-2'>;
@@ -1340,6 +1560,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         ) : (;
                           <User className='h-4 w-4' />;
                         )}
+<<<<<<< HEAD
             </TableRow>;
           ))}
         </TableBody>;
@@ -1379,6 +1600,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                           ? getInitials(selectedReview.reviewer_profile.display_name);
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
+=======
+                      </AvatarFallback>;
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                   </Avatar>
                   <div>
@@ -1390,6 +1618,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         ? "Anonymous"
                         : selectedReview.reviewer_profile?.display_name || "User"}
                     </div>
+<<<<<<< HEAD
                     <Badge variant="outline">
                       {selectedReview.status}
                     </Badge>
@@ -1406,12 +1635,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                         : selectedReview.reviewer_profile?.display_name || "User"}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Badge variant='outline'>{selectedReview.status}</Badge>
                   </div>
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='border rounded-md p-3 bg-muted/20'>
                 <p className='whitespace-pre-wrap'>
                   {selectedReview.review_text}
@@ -1420,10 +1654,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='space-y-2'>
                 <h4 className='text-sm font-medium'>Additional Ratings</h4>
                 <div className='flex flex-wrap gap-2'>
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
@@ -1432,6 +1669,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
                       variant={
                         selectedReview.would_work_again
@@ -1443,12 +1681,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         : 'Would not work again'}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     )}
                   </Avatar>;
@@ -1514,6 +1755,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-sm text-red-700">;
                     This review has been reported by users and may need investigation.;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Avatar>;
                   <div>;
                     <div className='font-medium'>;
@@ -1542,6 +1785,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Communication: {selectedReview && selectedReview.communication_rating}/5;
                     </Badge>;
                   )}
+<<<<<<< HEAD
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant='outline'>;
                       Quality: {selectedReview && selectedReview.quality_rating}/5;
@@ -1556,6 +1800,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Badge
 
 
+=======
+                  {selectedReview.quality_rating && (
+                    <Badge variant="outline">
+                      Quality: {selectedReview.quality_rating}/5
+                    </Badge>
+                  )}
+                  {selectedReview.timeliness_rating && (
+                    <Badge variant="outline">
+                      Timeliness: {selectedReview.timeliness_rating}/5
+                    </Badge>
+                  )}
+                  {selectedReview.would_work_again !== undefined && (
+                    <Badge
+                      variant={
+                        selectedReview.would_work_again
+                          ? 'default'
+                          : 'secondary'
+                      }                    >
+                      {selectedReview.would_work_again
+                        ? 'Would work again'
+                        : 'Would not work again'}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
                     >
                       {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
@@ -1575,11 +1841,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-sm text-red-700'>;
                     This review has been reported by users and may need;
                     investigation.;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </p>;
                 </div>;
               )}
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
@@ -1602,17 +1872,23 @@ ursor/fix-website-loading-errors-and-merge-6662
               {selectedReview.status === "pending" && (
                 <>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <DialogFooter>;
               {selectedReview && selectedReview.status === 'pending' && (;
                 <>;
 
                   <Button
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant='destructive'
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
                     disabled={isPending}                  >;
                   <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
                     variant='destructive'
                     onClick={() => handleReject(selectedReview.id)}
@@ -1620,6 +1896,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     Reject
                   </Button>
                   <Button
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onClick = {() => handleApprove(selectedReview.id),}
                     disabled = {isPending,}
                   >
@@ -1651,15 +1929,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   disabled={isPending}                >
                   Mark as Approved
                 </Button>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant="destructive"
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}
                   >;
                     Reject;
                   </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button;
                     onClick={() => handleApprove(selectedReview.id)}
@@ -1669,11 +1951,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                     onClick = {() => handleApprove(selectedReview && selectedReview.id),}
                     disabled = {isPending,}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <Button
+                    onClick = {() => handleApprove(selectedReview && selectedReview.id),}
+                    disabled = {isPending,}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     Approve;
                   </Button>;
                 </>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
               {selectedReview.status === "approved" && (
                 <Button
@@ -1709,6 +1997,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }/>) )
 }</div>)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {selectedReview && selectedReview.status === 'approved' && (;
                 <Button
                   variant='destructive'
@@ -1747,11 +2037,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;
 }/>) ) ;
 }</div>) ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
@@ -1859,6 +2153,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </DialogContent>;
         </Dialog>;
       )}
+=======
+
+
+};"
+return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -2002,6 +2302,7 @@ if ( {") {
 }";
 return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   reviews.map ( (review) => (<TableRow key= {
+<<<<<<< HEAD
   review.id ";
 }> <TableCell> <div className="flex items - center gap - 2"> <Avatar className="h - 8 w - 8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
@@ -2021,6 +2322,28 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  review.id "
+}> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {
+  review.reviewer profile?.avatar url ? (<AvatarImage src= {
+  review.reviewer profile.avatar url
+}alt= {"
+  review.reviewer profile.display name |""
+}/>) : (<AvatarFallback> {"
+  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/>
+}</AvatarFallback>) "
+}</Avatar> <div>) : (<span className=" text-sm font-medium"> {"
+  review.reviewer profile?.display name |" User"
+}</span>)
+}</div> </div> </TableCell> <TableCell> {
+  renderStars (review.rating) "
+}</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {
+
+
+}</AvatarFallback>) 
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</Avatar> <div> </Badge> </div> </div> <div> {
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
@@ -2050,6 +2373,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -2251,3 +2575,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </>;
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

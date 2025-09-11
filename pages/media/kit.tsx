@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
@@ -10,6 +14,7 @@ import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
@@ -37,6 +42,8 @@ import {
 } from '../../utils/mediaKit';
 const KitPage = () => {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   MediaAsset,;
   PressReleaseType,;
 } from '../../utils/mediaKit';
@@ -51,6 +58,7 @@ import {;
 const KitPage = () => {;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
@@ -72,12 +80,24 @@ const KitPage = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+
+const KitPage = () => {
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]);
@@ -177,10 +197,15 @@ const res = await fetch(asset.path);
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     const drawText = (text: string, x: number, y: number, size = 12) => {
@@ -202,6 +227,12 @@ const res = await fetch(asset.path);
         const blob = await res && res.blob();
         zip && zip.file(asset && asset.filename, blob);      }
     }
+=======
+    const drawText = (text: string, x: number, y: number, size = 12) => {
+      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Add press releases;
     const nowStr = new Date().toISOString().substring(0, 10);
     const prSeed = buildPressRelease('seed-round', {;
@@ -217,19 +248,32 @@ const res = await fetch(asset.path);
     });    zip && zip.file('press-releases/seed-round && round.md', prSeed);
     zip && zip.file('press-releases/launch && launch.md', prLaunch);
     if (bundle === 'web3') zip && zip.file('press-releases/token-sale && sale.md', prToken);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Add timeline if generated;
     if (timeline && timeline.length > 0) {;
       const tl = timeline && timeline.map(t => `${t && t.label}: ${t && t.date}`).join('\n');
       zip && zip.file('rollout-timeline && timeline.txt', tl);
     }
+<<<<<<< HEAD
     const blob = await zip && zip.generateAsync({ type: 'blob' });
     const { saveAs } = await import('file-saver');
     saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
+=======
+
+    const blob = await zip && zip.generateAsync({ type: 'blob' });
+    const { saveAs } = await import('file-saver');
+    saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const onGeneratePdf = useCallback(async () => {;
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument && PDFDocument.create();
     const page = pdfDoc && pdfDoc.addPage([612, 792]);
     const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
+<<<<<<< HEAD
     const drawText = (text: string, x: number, y: number, size = 12) => {;
       page && page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     };
@@ -240,6 +284,17 @@ const res = await fetch(asset.path);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     let y = 760;
     drawText('Zion Media Kit', 50, y, 18);
+=======
+
+    const drawText = (text: string, x: number, y: number, size = 12) => {;
+      page && page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
+    };
+
+
+    let y = 760;
+    drawText('Zion Media Kit', 50, y, 18);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
 import DatePicker from 'react - datepicker';
@@ -323,15 +378,23 @@ if ( {) {
 ;
     let coordinate_y = 760;
     draw_text ('Zion Media Kit', 50, y, 18);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     y -= 24;
     draw_text (`Bundle: ${bundle}`, 50, y);
     y -= 16;
     draw_text ('Assets:', 50, y);
     y -= 16;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     assets.slice (0, 8).for_each (array => {
       draw_text (`- ${a.filename}`, 60, y);
       y -= 14;
@@ -347,11 +410,14 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
       y -= 6;
       draw_text ('Timeline:', 50, y);
       y -= 16;
     const pdfBytes = await pdfDoc && pdfDoc.save();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       y -= 6;
       draw_text ('Timeline:', 50, y);
@@ -360,7 +426,10 @@ if ( {) {
 
     const pdfBytes = await pdfDoc && pdfDoc.save();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const url = URL && URL.createObjectURL(blob);
     const link = document && document.createElement('a');
@@ -370,9 +439,13 @@ if ( {) {
     URL && URL.revokeObjectURL(url);
   }, [assets, bundle, timeline]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       timeline.for_each (t => {
         draw_text (`- ${t.label}: ${t.date}`, 60, y);
         y -= 14;
@@ -389,28 +462,45 @@ if ( {) {
   }, [assets, bundle, timeline]);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const PressReleaseCard = ({
     type
     title
   }: {
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const PressReleaseCard = ({;
     type,;
     title,;
   }: {;
+<<<<<<< HEAD
     type: PressReleaseType;
     title: string;
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    type: PressReleaseType;
+    title: string;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const text = buildPressRelease(type, {;
       companyName,;
       date: nowStr,;
       raiseAmount,;
       tokenName,;
+<<<<<<< HEAD
 <<<<<<< HEAD
     });
         </pre>;
@@ -439,10 +529,16 @@ if ( {) {
     const nowStr = new Date().toISOString().substring(0, 10);
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName });
     const onCopy = () => navigator.clipboard.writeText(text);
+=======
+
+    });
+    const onCopy = () => navigator && navigator.clipboard.writeText(text);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">{title}</h4>
+<<<<<<< HEAD
           <button className="text-sm px-3 py-1 rounded bg-gray-100 hover: bg-gray-200" onClick={onCopy}>Copy</button>
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
@@ -479,6 +575,25 @@ if ( {) {
     );  };
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
+        </div>
+        <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
+      </div>
+    );  }
+    )
+  },
+  return (
+    <div>
+      <Head>
+        <title>Media Kit - Zion</title>
+        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+      </Head>
+      <div className='space-y-8'>
+        <header className='flex items-center justify-between'>
+          <h1 className='text-2xl font-bold'>Media Kit</h1>
+          <div className='flex gap-2'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button
               onClick={onDownloadZip}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700'>;
@@ -486,6 +601,7 @@ if ( {) {
             </button>;
             <button
               onClick={onGeneratePdf}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='px-4 py-2 rounded bg-gray-900 text-white hover:bg-black'>;
   }) =>: any {
@@ -540,12 +656,19 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Generate PDF;
             </button>;
           </div>;
         </header>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   <button
@@ -583,7 +706,10 @@ if ( {) {
                 onChange={e => setTokenName(e && e.target.value)}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className='grid md:grid - cols - 3 gap - 6'>;
           <div className='p - 4 border rounded - lg'>;
             <h3 className='font - semibold mb - 2'>Bundle</h3>;
@@ -622,14 +748,19 @@ if ( {) {
                 value={token_name}
                 on_change={e => setTokenName (e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 placeholder='Token name';
               />;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div>
       <Head>
@@ -754,6 +885,10 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -773,6 +908,7 @@ if ( {) {
             </div>
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
             )}
 
@@ -922,6 +1058,10 @@ if ( {) {
   }
 }
               </ul>
+=======
+                {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
+              </ul>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -935,6 +1075,7 @@ if ( {) {
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
           <ul className="grid md:grid-cols-2 gap-3">
+<<<<<<< HEAD
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
@@ -971,6 +1112,25 @@ export default KitPage;
 
 }
 export default KitPage;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {assets.map(a => (
+              <li key={a.filename} className="flex items-center justify-between border rounded p-2">
+                <span className="text-sm">{a.filename}</span>
+                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
+              </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            ))}
+
+          </ul>;
+        </section>;
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
         <section className="p-4 border rounded-lg space-y-4">
@@ -978,16 +1138,21 @@ export default KitPage;
           <div className="grid md:grid-cols-3 gap-4">
             <PressReleaseCard type="seed-round" title="Seed round" />
             <PressReleaseCard type="launch" title="Launch" />
+<<<<<<< HEAD
             {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </section>
       </div>
     </div>
   )
+<<<<<<< HEAD
 },
 export default KitPage,
 ;
@@ -1106,12 +1271,33 @@ export default KitPage,
 },;
 export default KitPage;
 =======
+=======
+
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+        <section className='p-4 border rounded-lg space-y-4'>;
+          <h3 className='font-semibold'>Prewritten Press Releases</h3>;
+          <div className='grid md:grid-cols-3 gap-4'>;
+            <PressReleaseCard type='seed-round' title='Seed round' />;
+            <PressReleaseCard type='launch' title='Launch' />;
+            {bundle === 'web3' && (;
+              <PressReleaseCard type='token-sale' title='Token sale' />;
+            )}          </div>;
+        </section>;
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },;
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default KitPage;
+<<<<<<< HEAD
 
 
 =======
@@ -1170,3 +1356,5 @@ export default KitPage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

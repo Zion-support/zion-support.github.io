@@ -1,7 +1,10 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +24,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 export type EmptyStateProps = {;
@@ -38,10 +42,19 @@ import React from "react";
 
 export type EmptyStateProps = {
 
+=======
+import React from "react";
+export type EmptyStateProps = {;
+import React from './react';
+=======
+import React from "react";
+export type EmptyStateProps = {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   emoji?: string;
   title: string;
   message: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type EmptyStateProps = {
   emoji?: string;
@@ -49,6 +62,8 @@ export type EmptyStateProps = {
   message: string;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   action?: React && React.ReactNode;
 };
 export default function EmptyState(): any ({;
@@ -58,8 +73,11 @@ export default function EmptyState(): any ({;
   action,;
 }: EmptyStateProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className="text-center py-12">;
@@ -69,6 +87,7 @@ export default function EmptyState(): any ({;
       <h2 className="mt-4 text-lg font-semibold">{title}</h2>;
       <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{message}</p>;
       {action && <div className="mt-3">{action}</div>}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
@@ -110,11 +129,16 @@ function EmptyState() {
       <h2 className="mt-4 text-lg font-semibold">{title}</h2>
       <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{message}</p>
       {action && <div className="mt-3">{action}</div>}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
     </div>
   );
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

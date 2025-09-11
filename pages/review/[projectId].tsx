@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 type Props = {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from "react";
@@ -12,17 +15,35 @@ import { findProjectById } from "../../utils/dataStore";
 
 type Props = {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
   valid: boolean;
   reason?: string;
+<<<<<<< HEAD
 
 import React from 'react';
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewForm from '../../components/reviews/ReviewForm';
 import { findProjectById } from '../../utils/dataStore';
+=======
+}
+const ReviewSubmitPage: NextPage<Props> = ({
+  projectId
+  fromRole
+  fromId
+  valid
+  reason
+}) => {
+import React from 'react',
+import type { NextPage, GetServerSideProps } from 'next',
+import ReviewForm from '../../components/reviews/ReviewForm',
+import { findProjectById } from '../../utils/dataStore',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Props = {
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -30,12 +51,19 @@ type Props = {
   valid: boolean,
   reason?: string
 };
+<<<<<<< HEAD
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
@@ -44,6 +72,7 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 };
@@ -167,6 +196,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project not found' } } as any
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   if (project && project.status !== "Completed") {;
     return {;
@@ -179,9 +210,17 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       },;
     } as any;
   }
+<<<<<<< HEAD
   const expectedFromId =;
     role === "client" ? project && project.clientId : project && project.talentSlug;
   const valid = expectedFromId === fromId;
+=======
+
+  const expectedFromId =;
+    role === "client" ? project && project.clientId : project && project.talentSlug;
+  const valid = expectedFromId === fromId;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {;
     props: {;
       projectId,;
@@ -190,11 +229,16 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       valid,;
       reason: valid ? null : "Invalid reviewer for this project",;
     },;
+<<<<<<< HEAD
   } as any;
 <<<<<<< HEAD
 }
 export default ReviewSubmitPage;
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  } as any;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
@@ -202,7 +246,10 @@ export default ReviewSubmitPage;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         project_id,
         from_role: role,
         from_id,
@@ -268,6 +315,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 
 
+<<<<<<< HEAD
 export default ReviewSubmitPage;
 ;
 <<<<<<< HEAD
@@ -528,3 +576,7 @@ export default ReviewSubmitPage;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default ReviewSubmitPage;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

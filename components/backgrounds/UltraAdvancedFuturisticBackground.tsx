@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 canvas.width = window.inner_width;
@@ -59,6 +60,15 @@ export default function UltraAdvancedFuturisticBackground(): any ({;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const particles: Array< {
+  //Initialize particles with enhanced properties const initParticles = () => {
+  const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
+for (let i = 0, i < count, i++) {
+  particles.push ({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function UltraAdvancedFuturisticBackground({
 
   children,
@@ -70,9 +80,13 @@ export default function UltraAdvancedFuturisticBackground({
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({ ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children;
   intensity = 'medium';
   theme = 'quantum';
@@ -80,18 +94,24 @@ export default function UltraAdvancedFuturisticBackground({
   animationSpeed = 1 && 1.0;
   enableHolographic = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
   enableQuantumEffects = true
 }: UltraAdvancedFuturisticBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
@@ -101,9 +121,13 @@ export default function UltraAdvancedFuturisticBackground({
     canvas && canvas.height = window && window.innerHeight;
     const particles: Array<{;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       x: number;
       y: number;
 export default /**
@@ -150,6 +174,7 @@ if (return) {
     }> = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     canvas.width = window.innerWidth,
     canvas.height = window.innerHeight,
 
@@ -157,6 +182,8 @@ if (return) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       x: number,
       y: number,
       vx: number,
@@ -184,9 +211,13 @@ if (return) {
                    intensity === 'high' ? particleCount : 
                    intensity === 'medium' ? Math.floor(particleCount * 0.7) : 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                    Math.floor(particleCount * 0.5);
 
     // Initialize particles with enhanced properties
@@ -197,9 +228,13 @@ if (return) {
 
       for (let i = 0, i < count, i++) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -216,21 +251,31 @@ if (return) {
         })
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
     };
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Enhanced animation loop with quantum effects
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     const colors = {
       quantum: [;
@@ -346,18 +391,26 @@ if (return) {
         gradient.addColorStop (0.6, 'rgba (255, 0, 255, 0.05)');
         gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } else {
         gradient.addColorStop (0, 'rgba (0, 0, 0, 0.9)');
         gradient.addColorStop (0.5, 'rgba (0, 0, 0, 0.95)');
         gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)');
       }      } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         canvas.width / 2, canvas.height / 2, 0;
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
@@ -368,19 +421,29 @@ if (return) {
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)')
       } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0.9)');
         gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.95)');
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)')
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles with enhanced effects
@@ -391,12 +454,18 @@ if (return) {
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
 <<<<<<< HEAD
+<<<<<<< HEAD
           particle.y = Math.random() * canvas.height
 =======
 
           particle.y = Math.random() * canvas.height
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          particle.y = Math.random() * canvas.height
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         // Update position with quantum effects
         particle.x += particle.vx;
@@ -405,18 +474,25 @@ if (return) {
         // Quantum entanglement effect
         if (enableQuantumEffects && Math.random() < 0.01) {
 <<<<<<< HEAD
+<<<<<<< HEAD
           const partner = particles[Math.floor(Math.random() * particles.length)];
 =======
 
           const partner = particles[Math.floor(Math.random() * particles.length)];
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          const partner = particles[Math.floor(Math.random() * particles.length)];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           if (partner && partner !== particle) {
             ctx.beginPath();
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * particle.opacity})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
             ctx.stroke()
 
@@ -437,10 +513,25 @@ if (return) {
 
 
 
+=======
+
+            ctx.stroke()
+
+          }
+        }
+=======
+
+            ctx.stroke();          }
+
+          }
+        }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Bounce off edges with quantum tunneling
         if (particle.x <= 0 |particle.x >= canvas.width) {
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
+<<<<<<< HEAD
 
             particle.x = particle.x <= 0 ? canvas.width : 0
 
@@ -516,23 +607,38 @@ if (< 0.1) {) {
 =======
 
 
+=======
+            particle.x = particle.x <= 0 ? canvas.width : 0;
+          } else {
+            particle.vx *= -1;          }            particle.coordinate_x = particle.x <= 0 ? canvas.width : 0;
+          } else {
+            particle.vx *= -1
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             particle.vx *= -1;          }
 
 
 
           }
         }
+<<<<<<< HEAD
 
         if (particle.y <= 0 || particle.y >= canvas.height) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        if (particle.y <= 0 |particle.y >= canvas.height) {
+        if (particle.y <= 0 || particle.y >= canvas.height) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
 
             particle.y = particle.y <= 0 ? canvas.height : 0
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Check condition
 if ( {) {
   $2
@@ -550,11 +656,15 @@ if (< 0.1) {) {
           }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             particle.vy *= -1;          }
 
+<<<<<<< HEAD
 
 
           }
@@ -563,6 +673,11 @@ if (< 0.1) {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          }
+        }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
@@ -573,16 +688,27 @@ if (< 0.1) {) {
         ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
         ctx.translate(particle.x, particle.y);
         ctx.rotate(particle.rotation);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1; i <= 3; i++) {
@@ -592,6 +718,10 @@ if (< 0.1) {) {
               ctx.beginPath();
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
               ctx.stroke();            }          ctx.fillStyle = gradient;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         if (particle.type === 'quantum') {
           // Quantum particle with wave effect
@@ -610,6 +740,10 @@ if (< 0.1) {) {
               ctx.beginPath();
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
               ctx.stroke()
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
           }
         } else if (particle.type === 'holographic' && enableHolographic) {
@@ -617,22 +751,33 @@ if (< 0.1) {) {
           const hue = (Date.now() * 0.1 + index * 10) % 360;
           ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
           
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           // Holographic glitch effect
           if (Math.random() < 0.05) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
             ctx.fillRect(-particle.size * 1.5, -particle.size * 1.5, particle.size * 3, particle.size * 3)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         } else if (particle.type === 'cyberpunk') {
           // Cyberpunk particle with neon glow
@@ -656,10 +801,15 @@ if (< 0.1) {) {
         ctx.restore()
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const colors = {;
       quantum: [;
         '#00ffff',;
@@ -948,9 +1098,13 @@ if (< 0.1) {) {
           ctx && ctx.shadowBlur = 0;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         for (let i = 0, i < 5, i++) {
           const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
           const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5;
@@ -958,6 +1112,7 @@ if (< 0.1) {) {
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
+<<<<<<< HEAD
           ctx.stroke()
 <<<<<<< HEAD
 =======
@@ -967,6 +1122,15 @@ if (< 0.1) {) {
       }
 
 
+=======
+          ctx.stroke();        }          ctx.stroke()
+        }
+      }
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ctx.stroke();        }
 
         }
@@ -981,17 +1145,23 @@ if (< 0.1) {) {
         ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
         ctx.lineWidth = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
         for (let i = 0, i < 20, i++) {
           const x = (i * canvas.width / 20 + time * 50) % canvas.width;
           ctx.beginPath();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         
         for (let i = 0, i < 20, i++) {
           const x = (i * canvas.width / 20 + time * 50) % canvas.width;
           ctx.beginPath();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ctx.moveTo(x, 0);
           ctx.lineTo(x, canvas.height);
           ctx.stroke()
@@ -1006,9 +1176,13 @@ if (< 0.1) {) {
       }
       animationRef.current = requestAnimationFrame(animate)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
     // Handle window resize
     const handleResize = () => {
@@ -1016,10 +1190,15 @@ if (< 0.1) {) {
       canvas.height = window.innerHeight
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     window.addEventListener('resize', handleResize);
     initParticles();
     animate();
@@ -1105,6 +1284,7 @@ if (< 0.1) {) {
     enableHolographic,;
     enableQuantumEffects,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1112,6 +1292,12 @@ if (< 0.1) {) {
   ]);
 
 
+=======
+
+  ]);
+=======
+  ]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className='relative min-h-screen'>;
@@ -1119,10 +1305,15 @@ if (< 0.1) {) {
         ref={canvasRef}
         className='fixed inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
+=======
+      />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1132,6 +1323,13 @@ if (< 0.1) {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (;
         <div
@@ -1143,13 +1341,19 @@ if (< 0.1) {) {
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       {enableQuantumEffects && (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {enableQuantumEffects && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div
           className='fixed inset-0 pointer-events-none'
           style={{ zIndex: -1 }}>;
@@ -1160,24 +1364,31 @@ if (< 0.1) {) {
     </div>;
   );      }
 <<<<<<< HEAD
+<<<<<<< HEAD
         cancelAnimationFrame(animationRef.current)
       }
 
         cancelAnimationFrame(animationRef.current)
       }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
         cancelAnimationFrame(animationRef.current)
       }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Wrap around edges;
         // Check condition
 if (particle.coordinate_x = canvas.width) {
   $2
 }
+<<<<<<< HEAD
         // Check condition
 if (particle.coordinate_x = 0) {
   $2
@@ -1482,15 +1693,23 @@ if ( {) {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]" />;
         </div>;
       )}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {children}
     </div>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="relative min - h-screen">;
       <canvas;
         ref={canvas_ref}
@@ -1609,6 +1828,7 @@ if ( {) {
   )
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2112,9 +2332,18 @@ export default function UltraAdvancedFuturisticBackground({
   );
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

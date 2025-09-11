@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function NeoFuturisticFooter() {
 
@@ -15,6 +16,8 @@ export default function NeoFuturisticFooter() {
   return (  website: 'https://ziontechgroup.com'
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,6 +38,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 
 export default function NeoFuturisticFooter() {
@@ -81,6 +85,8 @@ export default function NeoFuturisticFooter() {;
 import React from 'react';
 
 import { motion } from 'framer-motion';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   Phone
   Mail
@@ -95,7 +101,26 @@ import {
   MapPin,
   Globe,
   Github,
+<<<<<<< HEAD
 =======
+=======
+  Linkedin,;
+  ExternalLink,;
+} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+export default function NeoFuturisticFooter() {;
+  return (  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+export default function NeoFuturisticFooter() {;
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               Productized AI, IT and micro SaaS solutions with transparent;
@@ -104,7 +129,10 @@ import {
             </p>;
           </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='hover:underline'>;
                 {contactInfo && contactInfo.address}
               </a>;
@@ -119,9 +147,13 @@ import {
           <div className='space-y-2 text-sm'>;
             <div className='font-semibold text-slate-100 mb-2'>Resources</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <a
               className='flex items-center gap-2 text-slate-300 hover:text-cyan-300'
               href='/market-pricing'>;
@@ -147,9 +179,13 @@ import {
               <a
                 aria-label='LinkedIn'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <footer className="relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
@@ -165,9 +201,13 @@ import {
               Productized AI, IT and micro SaaS solutions with transparent pricing and fast onboarding. Built for outcomes, delivered with reliability.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
           <div className="space-y-2 text-sm">
@@ -178,6 +218,7 @@ import {
             <div className="flex items-center gap-3 pt-2">
               <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
           </div>
@@ -216,11 +257,15 @@ import {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="text-xs text-slate-500">© {_new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
 
@@ -229,6 +274,8 @@ import {
             <a href="/terms" className="hover:text-slate-300">Terms</a>
           </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div className="text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
           <div className="text-xs text-slate-500 flex gap-4">
@@ -237,12 +284,19 @@ import {
 
           </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </div>
     </footer>
 );
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
@@ -260,6 +314,11 @@ import {
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
@@ -267,7 +326,10 @@ import {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
             <div className='flex items - center gap - 2 text - cyan - 300'>;
@@ -373,6 +435,7 @@ import {
     </footer>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -534,7 +597,13 @@ export default function NeoFuturisticFooter() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

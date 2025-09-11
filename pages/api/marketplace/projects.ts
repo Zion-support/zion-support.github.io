@@ -2,12 +2,19 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
+=======
+import { v4 as uuidv4 } from "uuid";
+import { getDemoUser } from "../../../utils/marketplace/auth";
+import { getProjectById, saveProject } from "../../../utils/marketplace/store";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   Project
   ProjectDocument
@@ -16,7 +23,13 @@ import {
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res && res.status(code).json({ ok: false, error: message });
 }
+<<<<<<< HEAD
 
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -46,17 +59,29 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true;
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const user = getDemoUser(req);
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch (error) {
     console.error("Error:", error);
@@ -68,6 +93,7 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true;
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
   return false
+<<<<<<< HEAD
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -77,10 +103,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (req && req.method === "PATCH") {
       const { action } = req && req.body as { action: string };
@@ -749,3 +796,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

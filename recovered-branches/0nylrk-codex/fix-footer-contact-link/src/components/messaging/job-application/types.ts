@@ -1,16 +1,22 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Job {;
 
 
 export interface Job {
 export interface Job {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface Job {;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   title: string;
   description: string;
@@ -21,12 +27,15 @@ export interface Job {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface ApplyToJobModalProps {
   job: Job;
   isOpen: boolean;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface ApplyToJobModalProps {;
   job: Job;
@@ -35,10 +44,15 @@ export interface ApplyToJobModalProps {;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface Job {;
   id: string,;
@@ -53,15 +67,19 @@ export interface ApplyToJobModalProps {;
   job: Job,;
   isOpen: boolean,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -80,3 +98,8 @@ export interface ApplyToJobModalProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

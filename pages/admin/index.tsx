@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
 import Link from 'next/link';
 import Link from 'next/link',;
 import Link from 'next/link';
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AdminIndex() {
   return (
     <div className="space-y-2">
@@ -15,6 +20,7 @@ export default function AdminIndex() {
     </div>
   )
 };
+<<<<<<< HEAD
 =======
 
 
@@ -49,6 +55,8 @@ function AdminIndex() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   } catch (error) {
     console.error("Error:", error);
@@ -56,7 +64,10 @@ function AdminIndex() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

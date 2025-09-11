@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard'
@@ -62,6 +63,8 @@ function HiringTrackerContent() {
             </h1>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <>;
       <SEO
@@ -75,11 +78,15 @@ return (
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Tabs
           defaultValue='kanban'
           onValueChange={setActiveTab}
           className='mb-8'
         >
+<<<<<<< HEAD
 =======
 
 
@@ -93,25 +100,41 @@ return (
             <TabsTrigger value='analytics'>Analytics</TabsTrigger>
           </TabsList>
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+
+
           <TabsList>
 
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
+          <TabsContent value='kanban' className='mt-6'>
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+          <TabsContent value='analytics' className='mt-6'>            <HiringAnalytics jobId={jobId} />          <TabsList>
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>
+          </TabsList>
+          <TabsContent value="kanban" className="mt-6">
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+
           
           <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId}/>
+            <KanbanBoard jobId={jobId} />
           </TabsContent>
           
 
           <TabsContent value="analytics" className="mt-6">
-            <HiringAnalytics jobId={jobId}/>
+            <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -122,6 +145,12 @@ return (
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  )
+}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
@@ -142,10 +171,14 @@ export default function HiringTracker() {
   return (
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
@@ -205,6 +238,7 @@ export default function HiringTracker() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
 
   );
 }
@@ -296,3 +330,5 @@ function HiringTracker() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

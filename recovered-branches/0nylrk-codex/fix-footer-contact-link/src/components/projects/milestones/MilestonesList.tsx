@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
@@ -15,6 +16,8 @@ import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -49,10 +52,15 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onUploadDeliverable;
   isSubmitting;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -78,10 +86,13 @@ interface MilestonesListProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean
@@ -96,6 +107,7 @@ interface MilestonesListProps {;
   onReject?: (id: string) => Promise<void>
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
+<<<<<<< HEAD
 
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
 import {use_auth} from '@/hooks / use_auth';
@@ -120,10 +132,13 @@ interface MilestonesListProps {
   on_reject?: (id: string) => Promise < void>;
 }
 export const MilestonesList: React.FC < MilestonesListProps> = ({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   milestones;
   activities;
   is_loading;
   is_client;
+<<<<<<< HEAD
 <<<<<<< HEAD
   milestones;
   activities;
@@ -131,21 +146,29 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   isClient;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onCreateMilestone;
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
 <<<<<<< HEAD
+<<<<<<< HEAD
   isSubmitting;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   onApprove
   onReject
 }) => {
   const [showAddForm, setShowAddForm] = useState(false);
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   milestones,
   activities,
   isLoading,
@@ -156,17 +179,23 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
   onUploadDeliverable,
   isSubmitting,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onApprove,
   onReject
 }) => {
   const [showAddForm, setShowAddForm] = useState(false),
   
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data)
     setShowAddForm(false)
@@ -188,6 +217,7 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
       </div>
     )
   }
+<<<<<<< HEAD
 =======
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data)
@@ -274,6 +304,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -288,10 +321,15 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             onClick: () => setShowAddForm(true)
           } : undefined
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (milestones && milestones.length === 0 && !showAddForm) {;
     return (
       <EmptyState
@@ -305,19 +343,28 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             text: "Create First Milestone",;
             onClick: () => setShowAddForm(true);
           } : undefined;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       />;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       />
     )
   }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   return (
@@ -348,6 +395,9 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -357,6 +407,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </Button>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -369,10 +420,13 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </Button>
         </div>
       )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -386,6 +440,10 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             <AddMilestoneForm 
 
             <AddMilestoneForm ;
+=======
+            <AddMilestoneForm
+            <AddMilestoneForm 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -393,6 +451,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
 
 
       
@@ -403,6 +462,16 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
+=======
+      
+      <div className="space-y-4">
+        {milestones.map((milestone) => (
+=======
+
+      <div className="space-y-4">;
+        {milestones && milestones.map((milestone) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <MilestoneCard
             key={milestone && milestone.id}
             id={milestone && milestone.id}
@@ -412,6 +481,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             amount={parseFloat(milestone && milestone.amount.toString())}
             status={milestone && milestone.status}
             dueDate={milestone && milestone.due_date}
+<<<<<<< HEAD
       ;
       <div className="space-y-4">;
         {milestones.map((milestone) => (;
@@ -449,6 +519,15 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 };
 =======
+=======
+            onApprove={onApprove}
+            onReject={onReject}
+          />;
+        ))}
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
       </div>;
@@ -460,6 +539,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -605,3 +685,5 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

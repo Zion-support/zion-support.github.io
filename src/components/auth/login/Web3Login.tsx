@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -18,6 +19,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -26,6 +29,7 @@ import { Wallet } from 'lucide-react'import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -40,40 +44,56 @@ export function Web3Login() {
   const { isWalletSystemAvailable } = useAppWallet(),
   const [isLoading, setIsLoading] = useState(false),
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
       return
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
 <<<<<<< HEAD
-    try {
-      setIsLoading(true)
-      // Check if Ethereum provider (e.g., MetaMask) is available
-      const ethereum = (window as any).ethereum
-    }
+<<<<<<< HEAD
     try {
       setIsLoading(true)
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum
 =======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    }
+    try {
+      setIsLoading(true)
+      // Check if Ethereum provider (e.g., MetaMask) is available
+      const ethereum = (window as any).ethereum
+<<<<<<< HEAD
+=======
+
     }
     try {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setIsLoading(true),
       
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum,
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (!ethereum) {
         toast("Web3 wallet not found", {
@@ -82,11 +102,15 @@ export function Web3Login() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
         return;
 <<<<<<< HEAD
+<<<<<<< HEAD
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -97,17 +121,24 @@ export function Web3Login() {
       
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error: any) {
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})
       logErrorToProduction('Web3 login error:', { data: error })
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   const buttonDisabled = isLoading |!isWalletSystemAvailable
@@ -120,6 +151,8 @@ export function Web3Login() {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState  } from './react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -160,8 +193,19 @@ if ( {) {
         description: error.message || "Failed to connect wallet. Please try again."}),
       logErrorToProduction ('Web3 login error:', { data: error });
     } finally {
+<<<<<<< HEAD
       setIsLoading (false);
     }
+=======
+      setIsLoading(false)
+    }
+  }
+  const buttonDisabled = isLoading |!isWalletSystemAvailable
+  const buttonTitle = !isWalletSystemAvailable
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
+    : ""
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const { loginWithWeb3 } = useAuth();
   const { isWalletSystemAvailable } = useAppWallet();
@@ -174,6 +218,7 @@ if ( {) {
 
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const buttonDisabled = isLoading || !isWalletSystemAvailable,
   const buttonTitle = !isWalletSystemAvailable
@@ -225,6 +270,9 @@ export function Web3Login() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleWeb3Login = async () => {;
     if (!isWalletSystemAvailable) {;
       toast("Web3 login unavailable", {;
@@ -232,24 +280,31 @@ export function Web3Login() {;
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
     try {;
       setIsLoading(true),;
       // Check if Ethereum provider (e.g., MetaMask) is available;
       const ethereum = (window as any).ethereum,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     try {;
       setIsLoading(true);
 
       // Check if Ethereum provider (e && e.g., MetaMask) is available;
       const ethereum = (window as any).ethereum;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (!ethereum) {;
         toast("Web3 wallet not found", {;
           description: "Please install MetaMask or another compatible wallet."}),;
         return;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;
@@ -257,17 +312,23 @@ export function Web3Login() {;
       toast("Login failed", {;
         description: error.message || "Failed to connect wallet. Please try again."}),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;
 
     } catch (error: any) {;
       toast("Login failed", {;
         description: error && error.message || "Failed to connect wallet. Please try again."}),;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       logErrorToProduction('Web3 login error:', { data: error });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   const buttonDisabled = isLoading || !isWalletSystemAvailable,;
@@ -298,13 +359,18 @@ export function Web3Login() {;
         <span className="sr-only">Sign in with Web3</span>;
       </>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable;
   const buttonTitle = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
     : "";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   )
 }
@@ -315,6 +381,7 @@ export function Web3Login() {;
 }
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -343,3 +410,5 @@ export function Web3Login() {;
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

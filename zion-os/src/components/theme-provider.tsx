@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 type Theme = "dark" | "light" | "system",
@@ -30,6 +34,7 @@ function ThemeProvider() {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 type Theme = "dark" | "light" | "system";
@@ -192,3 +197,6 @@ export const useTheme = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

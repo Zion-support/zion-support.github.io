@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Download, Settings } from 'lucide-react'
@@ -16,6 +17,8 @@ export function AdminHeader() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
@@ -24,15 +27,28 @@ export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {
+  // const { user } = useAuth(), // Unused but available
+  const { company } = useCompanyWorkspace(),
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function AdminHeader() { // const { user  } = useAuth(), // Unused but available
   const { company  } = useCompanyWorkspace(),
 
@@ -40,6 +56,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className="space-y-4">
@@ -50,6 +67,8 @@ export function AdminHeader() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -59,13 +78,17 @@ export function AdminHeader() {
             Manage your company's account, team members, and subscription
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
         <div className="flex items-center gap-2">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>
         <div className="flex items-center gap-2">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button variant="outline" size="sm" className="gap-2">
             <Settings className="h-4 w-4" />
@@ -80,6 +103,8 @@ export function AdminHeader() {
           </Button>
         </div>
       </div>        <div className="flex items-center gap-2">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button variant="outline" size="sm" className="gap-2">
             <Settings className="h-4 w-4" />
             Settings
@@ -87,18 +112,23 @@ export function AdminHeader() {
 
 
 
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -110,6 +140,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>Subscription Plan</div>
@@ -146,9 +178,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h2 className="font-medium">{company?.name |"Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl |"loading..."}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
@@ -165,9 +200,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
               className="max-h-10 max-w-10"
@@ -176,9 +215,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
@@ -196,13 +239,17 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
+<<<<<<< HEAD
 <<<<<<< HEAD
       
         <div className="flex items-center gap-4">
@@ -216,6 +263,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              src={company?.logoUrl |"/placeholder.svg"}
+              alt={company?.name |"Company"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
 
@@ -228,6 +279,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
 <<<<<<< HEAD
             <h2 className="font-medium">{company?.name |"Company Name"}</h2>
@@ -241,6 +293,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+            <h2 className="font-medium">{company?.name || "Company Name"}</h2>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
             </p>
@@ -250,16 +308,21 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
 
 ;
+<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -484,3 +547,5 @@ function AdminHeader() {
 }
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

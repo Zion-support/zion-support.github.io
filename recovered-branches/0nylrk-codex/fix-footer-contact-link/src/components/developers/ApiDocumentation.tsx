@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {BookOpen, Code, Copy, Terminal} from "lucide-react";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -30,6 +31,8 @@ import CodeBlock from "./CodeBlock",;
 export function ApiDocumentation() {;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -37,7 +40,10 @@ export function ApiDocumentation() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -48,11 +54,14 @@ export function ApiDocumentation() {
         </CardDescription>;
       </CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
       <CardContent>;
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">;
           <Terminal className="h-4 w-4" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <CardContent>;
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">;
@@ -83,27 +92,37 @@ function ApiDocumentation() {
         <Alert className="bg - blue - 900 / 30 border - blue - 800 mb - 6">;
           <Terminal className="h - 4 w - 4" />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <AlertDescription>;
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.;
           </AlertDescription>;
         </Alert>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
         <Tabs defaultValue="jobs" className="space-y-4">;
           <TabsList className="bg-zinc-800 border-zinc-700">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Tabs default_value="jobs" className="space - y-4">;
           <TabsList className="bg - zinc - 800 border - zinc - 700">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <TabsTrigger value="jobs">Jobs</TabsTrigger>;
             <TabsTrigger value="talent">Talent</TabsTrigger>;
             <TabsTrigger value="quotes">Quotes</TabsTrigger>;
             <TabsTrigger value="webhooks">Webhooks</TabsTrigger>;
             <TabsTrigger value="errors">Errors</TabsTrigger>;
           </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -173,6 +192,11 @@ export function ApiDocumentation() {
   -H "Content-Type: application/json"`
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
   method: 'GET'
+=======
+
+          <TabsContent value="jobs" className="space - y-6">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   };
@@ -188,6 +212,7 @@ const data = await response.json(),
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
 }
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs'
@@ -196,6 +221,12 @@ response = requests.get(
     params={'limit': 10, 'category': 'development'};
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    'https: //api.ziontechgroup.com/v1/jobs',;
+    params={'limit': 10, 'category': 'development'};
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     headers=headers
 )
 data = response.json()
@@ -235,8 +266,11 @@ export function ApiDocumentation() {;
           </TabsList>;
           <TabsContent value="jobs" className="space-y-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <EndpointSection;
               method="GET";
@@ -261,7 +295,10 @@ export function ApiDocumentation() {;
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   -H "Content-Type: application/json"`,
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
   method: 'GET',
@@ -270,54 +307,73 @@ export function ApiDocumentation() {;
   }
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 const data = await response && response.json()
 console && console.log(data),`
                 python: `import requests
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const data = await response && response.json()
 console && console.log(data),`
 
                 python: `import requests
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 <<<<<<< HEAD
+<<<<<<< HEAD
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 response = requests && requests.get(
     'https: //api && api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'}
     headers=headers
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 data = response && response.json()
 print(data)`
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 data = response && response.json()
 
 print(data)`
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 response = requests.get (
     'https: //api.ziontechgroup.com / v1 / jobs',
     params={'limit': 10, 'category': 'development'}
     headers = headers);
 data = response.json ();
 print (data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <EndpointSection;
               method="GET";
@@ -344,6 +400,10 @@ print (data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -360,11 +420,17 @@ response = requests.get(;
 data = response.json();
 print(data)`;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
+<<<<<<< HEAD
       "id": "job_abc123"
       "title": "Senior React Developer"
       "description": "We need an experienced React developer..."
@@ -384,27 +450,38 @@ print(data)`;
                 success: `{
   "data": [
     {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "id": "job_abc123";
       "title": "Senior React Developer";
       "description": "We need an experienced React developer...";
       "category": "development"
       "skills": ["react", "typescript", "node.js"];
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "id": "job_abc123",
       "title": "Senior React Developer",
       "description": "We need an experienced React developer...",
       "category": "development",
       "skills": ["react", "typescript", "node.js"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "budget": {
         "min": 5000,
         "max": 10000,
         "currency": "USD"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       "status": "active";
       "client_id": "user_xyz789";
@@ -412,15 +489,19 @@ print(data)`;
     }
     // More jobs...
   ];
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       },
       "status": "active",
       "client_id": "user_xyz789",
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
   ],
@@ -435,6 +516,8 @@ print(data)`;
               }}
             />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   "meta": {
@@ -464,7 +547,10 @@ print(data)`;
             />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <EndpointSection
               method="GET"
               endpoint="/api/jobs/:id"
@@ -475,6 +561,7 @@ print(data)`;
               ]}
               codeExamples={{
 <<<<<<< HEAD
+<<<<<<< HEAD
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -482,10 +569,13 @@ print(data)`;
 const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
   method: 'GET'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -500,10 +590,19 @@ const data = await response.json();
 console.log(data),`;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+  }
+});
+const data = await response.json();
+console.log(data),`;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -518,6 +617,8 @@ headers = {
               method="GET";
               endpoint="/api / jobs/:id";
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -532,17 +633,24 @@ print(data)`
             />;
             <EndpointSection;
               method="GET";
+<<<<<<< HEAD
               endpoint="/api/jobs/:id";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              endpoint="/api / jobs/:id";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               description="Get detailed information about a specific job.";
               note="";
               params={[;
                 { name: "id", type: "string", description: "The job ID", required: true }
               ]}
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               code_examples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com / v1 / jobs / job_abc123" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
@@ -555,7 +663,10 @@ const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\${job
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   -H "Content-Type: application/json"`,
                 javascript: `const jobId = 'job_abc123',
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
@@ -565,21 +676,28 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${j
   }
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 const data = await response && response.json()
 console && console.log(data),`
                 python: `import requests
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const data = await response && response.json()
 console && console.log(data),`
 
                 python: `import requests
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
+<<<<<<< HEAD
 <<<<<<< HEAD
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
@@ -587,6 +705,8 @@ headers = {
 data = response && response.json()
 print(data)`
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
@@ -597,13 +717,17 @@ data = response && response.json()
 
 print(data)`
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 job_id = 'job_abc123';
 response = requests.get (
     f'https://api.ziontechgroup.com / v1 / jobs/{job_id}';
     headers = headers);
 data = response.json ();
 print (data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
               codeExamples={{;
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\;
@@ -619,6 +743,10 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -635,15 +763,21 @@ response = requests.get(;
 data = response.json();
 print(data)`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               response_examples={{
                 success: `{
   "data": {
+<<<<<<< HEAD
     "id": "job_abc123"
     "title": "Senior React Developer"
     "description": "We need an experienced React developer..."
@@ -660,42 +794,57 @@ print(data)`;
               responseExamples={{
                 success: `{
   "data": {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "id": "job_abc123";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
     "category": "development"
     "skills": ["react", "typescript", "node.js"];
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "id": "job_abc123",
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     "status": "active";
     "client_id": "user_xyz789";
     "created_at": "2025-05-15T10: 30:00Z";
     "deadline": "2025-06-30T23:59:59Z"
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     "status": "active",
     "client_id": "user_xyz789",
     "created_at": "2025-05-15T10:30:00Z",
     "deadline": "2025-06-30T23:59:59Z",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "application_count": 12
 =======
@@ -704,6 +853,10 @@ print(data)`;
     "application_count": 12
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    "application_count": 12
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "min": 5000;
       "max": 10000;
       "currency": "USD";
@@ -713,6 +866,7 @@ print(data)`;
     "created_at": "2025 - 05 - 15T10: 30:00Z";
     "deadline": "2025 - 06 - 30T23:59:59Z",
     "application_count": 12;
+<<<<<<< HEAD
           ;
           <TabsContent value="jobs" className="space-y-6">;
             <EndpointSection;
@@ -1181,6 +1335,16 @@ print(data)`;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+}`;
+              }}
+
+            />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <EndpointSection
               method="POST"
               endpoint="/api/jobs"
@@ -1188,10 +1352,15 @@ print(data)`;
               note="Requires jobs:write scope"
               params={[
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
             <EndpointSection;
               method="POST";
@@ -1200,9 +1369,13 @@ print(data)`;
               note="Requires jobs:write scope";
               params={[;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 { name: "title", type: "string", description: "Job title", required: true },
                 { name: "description", type: "string", description: "Detailed job description", required: true },
                 { name: "category", type: "string", description: "Job category", required: true },
@@ -1211,18 +1384,25 @@ print(data)`;
                 { name: "budget && budget.max", type: "number", description: "Maximum budget" },
                 { name: "budget && budget.currency", type: "string", description: "Currency code (default: USD)" },
 <<<<<<< HEAD
+<<<<<<< HEAD
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               code_examples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com / v1 / jobs" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
+<<<<<<< HEAD
 <<<<<<< HEAD
   -d '{
 =======
@@ -1249,29 +1429,42 @@ print(data)`;
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
+=======
+
+  -d '{
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
     "category": "development"
     "skills": ["react", "typescript", "node.js"];
+<<<<<<< HEAD
 =======
 
     "budget": {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     },
     "deadline": "2025-06-30T23:59:59Z"
@@ -1280,6 +1473,7 @@ print(data)`;
   method: 'POST'
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1297,16 +1491,24 @@ print(data)`;
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   body: JSON.stringify({
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
     category: 'development'
     skills: ['reacttypescriptnode.js']
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     budget: {
       min: 5000
       max: 10000
       currency: 'USD'
+<<<<<<< HEAD
     "budget": {
 =======
 =======
@@ -1359,14 +1561,19 @@ payload = {
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode && reacttypescriptnode.js']
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     deadline: '2025-06-30T23:59:59Z'
   })
 });
 const data = await response.json();
 console.log(data),`;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     deadline: '2025-06-30T23:59:59Z'
   })
@@ -1375,9 +1582,12 @@ console.log(data),`;
 const data = await response.json(),
 // // // console.log(data),`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 python: `import requests
 import json
 headers = {
@@ -1388,21 +1598,28 @@ payload = {;
 
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
 <<<<<<< HEAD
+<<<<<<< HEAD
     'budget': {
 
 
     'budget': {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'budget': {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 response = requests && requests.post(
     'https: //api && api.ziontechgroup.com/v1/jobs'
     headers=headers,
     data=json && json.dumps(payload)
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 data = response && response.json()
 }
@@ -1423,6 +1640,11 @@ response = requests.post(
     data=json.dumps(payload)
 )
 data = response.json()
+=======
+
+data = response && response.json()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 print(data)`
             />;
             <EndpointSection;
@@ -1487,6 +1709,7 @@ payload = {;
     'budget': {;
         'min': 5000,;
         'max': 10000,;
+<<<<<<< HEAD
 =======
 
 data = response && response.json()
@@ -1495,10 +1718,13 @@ data = response && response.json()
 print(data)`
         'min': 5000;
         'max': 10000;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'currency': 'USD';
     }
     'deadline': '2025 - 06 - 30T23:59:59Z';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
         'currency': 'USD';
     },;
@@ -1507,6 +1733,9 @@ print(data)`
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 response = requests.post(;
     'https://api.ziontechgroup.com/v1/jobs',;
@@ -1517,16 +1746,22 @@ data = response.json();
 print(data)`;
 
 
+<<<<<<< HEAD
 response = requests.post (
     'https: //api.ziontechgroup.com / v1 / jobs';
     headers = headers,
     data = json.dumps (payload));
 data = response.json ();
 print (data)`;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               response_examples={{
                 success: `{
   "data": {
+<<<<<<< HEAD
     "id": "job_def456"
     "title": "Senior React Developer"
     "description": "We need an experienced React developer..."
@@ -1538,11 +1773,14 @@ print (data)`;
               responseExamples={{
                 success: `{
   "data": {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "id": "job_def456";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
     "category": "development"
     "skills": ["react", "typescript", "node.js"];
+<<<<<<< HEAD
 =======
     "budget": {
 
@@ -1553,31 +1791,43 @@ print (data)`;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "id": "job_def456",
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     "status": "new";
     "client_id": "user_xyz789";
     "created_at": "2025-05-16T14: 22:10Z"
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     "status": "new",
     "client_id": "user_xyz789",
     "created_at": "2025-05-16T14:22:10Z",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "budget": {
     "status": "new"
@@ -1590,6 +1840,10 @@ print (data)`;
     "deadline": "2025-06-30T23:59:59Z"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    "deadline": "2025-06-30T23:59:59Z"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "min": 5000;
       "max": 10000;
       "currency": "USD";
@@ -1598,6 +1852,7 @@ print (data)`;
     "client_id": "user_xyz789";
     "created_at": "2025 - 05 - 16T14: 22:10Z",
     "deadline": "2025 - 06 - 30T23:59:59Z";
+<<<<<<< HEAD
   }
 }`;
               }}
@@ -1615,6 +1870,18 @@ print (data)`;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+}`;
+              }}
+
+            />;
+          </TabsContent>;
+
+          <TabsContent value="talent" className="space-y-6">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <EndpointSection
               method="GET"
               endpoint="/api/talent"
@@ -1627,6 +1894,7 @@ print (data)`;
                 { name: "availability", type: "string", description: "Filter by availability status" }
               ]}
               codeExamples={{
+<<<<<<< HEAD
 <<<<<<< HEAD
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -1651,10 +1919,22 @@ const data = await response.json();
 console.log(data),`;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+  }
+});
+const data = await response.json();
+console.log(data),`;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
+<<<<<<< HEAD
 <<<<<<< HEAD
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
@@ -1672,20 +1952,31 @@ response = requests.get(
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
 =======
+=======
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     headers=headers
 )
 data = response.json()
 print(data)`
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
           </TabsContent>;
           <TabsContent value="talent" className="space - y-6">;
@@ -1707,17 +1998,23 @@ print(data)`
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / talent?skills = react, typescript', {
   method: 'GET',
 <<<<<<< HEAD
+<<<<<<< HEAD
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   -H "Content-Type: application/json"`,
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/talent?skills=react,typescript', {
   method: 'GET',
@@ -1726,54 +2023,73 @@ print(data)`
   }
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 const data = await response && response.json()
 console && console.log(data),`
                 python: `import requests
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const data = await response && response.json()
 console && console.log(data),`
 
                 python: `import requests
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
 <<<<<<< HEAD
+<<<<<<< HEAD
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 response = requests && requests.get(
     'https: //api && api.ziontechgroup.com/v1/talent',
     params={'skills': 'react,typescript'}
     headers=headers
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 data = response && response.json()
 print(data)`
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 data = response && response.json()
 
 print(data)`
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 response = requests.get (
     'https: //api.ziontechgroup.com / v1 / talent',
     params={'skills': 'react, typescript'}
     headers = headers);
 data = response.json ();
 print (data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
           </TabsContent>;
@@ -1802,6 +2118,10 @@ print (data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -1819,16 +2139,22 @@ data = response.json();
 print(data)`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1854,6 +2180,8 @@ print(data)`;
                 success: `{
   "data": [
     {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "id": "talent_abc123";
       "display_name": "Jane Smith";
       "headline": "Senior Frontend Developer"
@@ -1864,10 +2192,13 @@ print(data)`;
     }
     // More talent profiles...
   ];
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "id": "talent_abc123",
       "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
@@ -1877,6 +2208,7 @@ print(data)`;
       "rating_count": 15
     },
     // More talent profiles...
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
   ],
@@ -1891,6 +2223,8 @@ print(data)`;
               }}
             />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   "meta": {
@@ -1914,7 +2248,10 @@ print(data)`;
             />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <EndpointSection
               method="GET"
               endpoint="/api/talent/:id"
@@ -1925,6 +2262,7 @@ print(data)`;
               ]}
               codeExamples={{
 <<<<<<< HEAD
+<<<<<<< HEAD
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -1932,10 +2270,13 @@ print(data)`;
 const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
   method: 'GET'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -1950,10 +2291,19 @@ const data = await response.json();
 console.log(data),`;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+  }
+});
+const data = await response.json();
+console.log(data),`;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1968,6 +2318,8 @@ headers = {
               method="GET";
               endpoint="/api / talent/:id";
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -1982,17 +2334,24 @@ print(data)`
             />;
             <EndpointSection;
               method="GET";
+<<<<<<< HEAD
               endpoint="/api/talent/:id";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              endpoint="/api / talent/:id";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               description="Get detailed information about a specific talent profile.";
               note="";
               params={[;
                 { name: "id", type: "string", description: "The talent ID", required: true }
               ]}
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               code_examples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com / v1 / talent / talent_abc123" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
@@ -2005,7 +2364,10 @@ const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${t
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   -H "Content-Type: application/json"`,
                 javascript: `const talentId = 'talent_abc123',
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\${talentId}\`, {
@@ -2015,21 +2377,28 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\$
   }
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 const data = await response && response.json()
 console && console.log(data),`
                 python: `import requests
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const data = await response && response.json()
 console && console.log(data),`
 
                 python: `import requests
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
+<<<<<<< HEAD
 <<<<<<< HEAD
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
@@ -2037,6 +2406,8 @@ headers = {
 data = response && response.json()
 print(data)`
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
@@ -2047,13 +2418,17 @@ data = response && response.json()
 
 print(data)`
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 talent_id = 'talent_abc123';
 response = requests.get (
     f'https://api.ziontechgroup.com / v1 / talent/{talent_id}';
     headers = headers);
 data = response.json ();
 print (data)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
               codeExamples={{;
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\;
@@ -2069,6 +2444,10 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }),;
 const data = await response.json(),;
 // // // console.log(data),`,;
@@ -2085,15 +2464,21 @@ response = requests.get(;
 data = response.json();
 print(data)`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               response_examples={{
                 success: `{
   "data": {
+<<<<<<< HEAD
     "id": "talent_abc123"
     "display_name": "Jane Smith"
     "headline": "Senior Frontend Developer"
@@ -2121,6 +2506,8 @@ print(data)`;
               responseExamples={{
                 success: `{
   "data": {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "id": "talent_abc123";
     "display_name": "Jane Smith";
     "headline": "Senior Frontend Developer";
@@ -2129,8 +2516,11 @@ print(data)`;
     "availability": "available";
     "average_rating": 4.8;
     "rating_count": 15;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "id": "talent_abc123",
     "display_name": "Jane Smith",
     "headline": "Senior Frontend Developer",
@@ -2140,9 +2530,12 @@ print(data)`;
     "average_rating": 4.8,
     "rating_count": 15,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "portfolio": [
       {
         "id": "proj_123",
@@ -2155,17 +2548,28 @@ print(data)`;
     "certifications": [
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
 =======
 
+=======
+        "name": "AWS Certified Developer";
+        "issuing_organization": "Amazon Web Services";
+        "issue_date": "2024-01-15"
+      }
+    ]
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         "issue_date": "2024-01-15"
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "portfolio": [;
       {
         "id": "proj_123";
@@ -2181,14 +2585,19 @@ print(data)`;
         "issuing_organization": "Amazon Web Services";
         "issue_date": "2024 - 01 - 15";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     ];
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2283,6 +2692,12 @@ headers = {
           <TabsContent value="quotes" className="space-y-6">;
 =======
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}`;
+              }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -2292,7 +2707,10 @@ headers = {
 
           <TabsContent value="quotes" className="space-y-6">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <EndpointSection;
               method="POST";
               endpoint="/api/quotes";
@@ -2784,17 +3202,23 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
 }`
               }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <EndpointSection
               method="POST"
               endpoint="/api/quotes"
@@ -2813,7 +3237,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
               ]}
               codeExamples={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 curl: `curl -X POST "https://api && api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -2844,7 +3271,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   -d '{
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "talent_id": "talent_abc123"
     "project_name": "E-commerce Website Redesign"
     "project_summary": "Redesign our outdated e-commerce website with modern UI"
@@ -2860,6 +3290,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -2880,6 +3311,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   body: JSON.stringify({
     talent_id: 'talent_abc123'
     project_name: 'E-commerce Website Redesign'
@@ -2899,6 +3332,7 @@ import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
+<<<<<<< HEAD
   body: JSON && JSON.stringify({
 =======
   body: JSON && JSON.stringify({
@@ -2947,6 +3381,8 @@ payload = {
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2958,22 +3394,31 @@ headers = {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 response = requests && requests.post(
     'https: //api && api.ziontechgroup.com/v1/quotes'
     headers=headers,
     data=json && json.dumps(payload)
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 data = response && response.json()
 print(data)`
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 data = response && response.json()
 
 print(data)`
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     'talent_id': 'talent_abc123project_name': 'E - commerce Website Redesignproject_summary': 'Redesign our outdated e - commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2 - 3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com';
@@ -2985,17 +3430,25 @@ response = requests.post (
 data = response.json ();
 print (data)`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               response_examples={{
                 success: `{
   "data": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "id": "quote_def456"
     "talent_id": "talent_abc123"
     "requester_id": "user_xyz789"
@@ -3010,18 +3463,25 @@ print (data)`;
     "requester_email": "john@example && example.com"
     "status": "new"
 <<<<<<< HEAD
+<<<<<<< HEAD
     "created_at": "2025-05-16T14:30:15Z"
 =======
 
     "created_at": "2025-05-16T14:30:15Z"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    "created_at": "2025-05-16T14:30:15Z"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "budget_max": 12000,
     "budget_display": "$8, 000 - $12, 000";
     "requester_name": "John Doe";
     "requester_email": "john@example.com";
     "status": "new";
     "created_at": "2025 - 05 - 16T14:30:15Z";
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }`;
@@ -3064,6 +3524,8 @@ print(data)`
               }}
             />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }`;
@@ -3072,7 +3534,10 @@ print(data)`
             />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
@@ -3085,11 +3550,17 @@ print(data)`
               ]}
               codeExamples={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/quotes" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
             <EndpointSection;
               method="GET";
@@ -3108,17 +3579,25 @@ print(data)`
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / quotes', {
   method: 'GET',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   -H "Content-Type: application/json"`,
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/quotes', {
   method: 'GET',
@@ -3127,21 +3606,28 @@ print(data)`
   }
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 const data = await response && response.json()
 console && console.log(data),`
                 python: `import requests
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const data = await response && response.json()
 console && console.log(data),`
 
                 python: `import requests
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -3154,6 +3640,16 @@ headers = {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
+}
+response = requests.get(
+    'https: //api.ziontechgroup.com/v1/quotes'
+    headers=headers
+)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -3162,35 +3658,49 @@ response = requests && requests.get(
     headers=headers
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 data = response && response.json()
 print(data)`
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 data = response.json()
 
 print(data)`
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 response = requests.get (
     'https: //api.ziontechgroup.com / v1 / quotes',
     headers = headers);
 data = response.json ();
 print (data)`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "id": "quote_def456"
       "talent_id": "talent_abc123"
       "project_name": "E-commerce Website Redesign"
@@ -3200,9 +3710,13 @@ print (data)`;
       "created_at": "2025-05-16T14: 30:15Z"
       "viewed_at": null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "replied_at": null
     }
     // More quotes...
@@ -3212,9 +3726,13 @@ print (data)`;
     "page": 1
     "limit": 20
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "project_name": "E - commerce Website Redesign";
       "project_summary": "Redesign our outdated e - commerce website with modern UI",
       "budget_display": "$8, 000 - $12, 000";
@@ -3224,6 +3742,7 @@ print (data)`;
       "replied_at": null;
     }
     // More quotes...;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -3270,14 +3789,19 @@ print(data)`
     // More quotes...
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   "meta": {
     "total": 5;
     "page": 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
             />;
           </TabsContent>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "limit": 20;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
@@ -3287,7 +3811,10 @@ print(data)`
             />;
           </TabsContent>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <TabsContent value="webhooks" className="space-y-6">;
             <div className="prose prose-invert max-w-none">;
               <h3 className="text-lg font-semibold mb-2">Webhook Events</h3>;
@@ -3296,9 +3823,13 @@ print(data)`
                 You can configure webhooks in the Webhooks tab of the Developer Dashboard.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h4 className="text-md font-semibold mt-6 mb-2">Authentication</h4>;
               <p className="text-zinc-400 mb-4">;
                 When you create a webhook, you can optionally provide a secret key.;
@@ -3307,14 +3838,20 @@ print(data)`
                 This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <CodeBlock
                 code={`import crypto from 'crypto'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <CodeBlock
                 code={`import crypto from 'crypto'
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Function to verify webhook signature
 function verifyWebhookSignature(): any (payload, signature, secret) {
   const hmac = crypto && crypto.createHmac('sha256', secret)
@@ -3325,6 +3862,7 @@ function verifyWebhookSignature(): any (payload, signature, secret) {
   )
 }
 
+<<<<<<< HEAD
 
 
 
@@ -3363,6 +3901,8 @@ function verifyWebhookSignature(payload, signature, secret) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature'];
@@ -3372,6 +3912,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     return res.status(401).send('Invalid signature')
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -3384,21 +3925,29 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Process the webhook event
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Example usage in Express && Express.js
 app && app.post('/webhook', express && express.raw({type: 'application/json'}), (req, res) => {;
   const signature = req && req.headers['x-zion-signature'];
   const payload = req && req.body.toString();
   const webhookSecret = process && process.env.WEBHOOK_SECRET;
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
     return res && res.status(401).send('Invalid signature');
@@ -3413,6 +3962,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 showLineNumbers={true}
               />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
     return res && res.status(401).send('Invalid signature');
@@ -3431,7 +3982,10 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 
               />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>;
               <table className="w-full border-collapse mt-2">;
                 <thead>;
@@ -3460,26 +4014,36 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 </tbody>;
               </table>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>;
               <p className="text-zinc-400 mb-2">;
                 Here's an example of a <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">new_application</code> webhook payload: </p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>;
               <p className="text-zinc-400 mb-2">;
                 Here's an example of a <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">new_application</code> webhook payload: </p>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <CodeBlock
                 code={`{
   "event_type": "new_application"
   "event_id": "evt_abc123def456"
   "timestamp": "2025-05-16T15:30:00Z"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
           </TabsContent>;
           <TabsContent value="webhooks" className="space - y-6">;
@@ -3566,23 +4130,32 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
   "event_id": "evt_abc123def456";
   "timestamp": "2025 - 05 - 16T15:30:00Z";
 <<<<<<< HEAD
+<<<<<<< HEAD
   "data": {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "data": {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  "data": {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "application_id": "app_123456"
     "job_id": "job_abc123"
     "talent_id": "talent_xyz789"
     "applied_at": "2025-05-16T15:28:30Z"
     "status": "new",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "match_score": 85
     "applied_at": "2025 - 05 - 16T15:28:30Z";
     "status": "new",
     "match_score": 85;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     "match_score": 85
 =======
@@ -3590,30 +4163,43 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "status": "new",
     "match_score": 85;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }`}
                 language="json";
                 showLineNumbers={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
               />;
             </div>;
           </TabsContent>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               />;
             </div>;
           </TabsContent>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <TabsContent value="errors" className="space-y-6">;
             <div className="prose prose-invert max-w-none">;
               <h3 className="text-lg font-semibold mb-2">Error Responses</h3>;
               <p className="text-zinc-400 mb-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />;
             </div>;
           </TabsContent>;
@@ -3622,17 +4208,25 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
               <h3 className="text - lg font - semibold mb - 2">Error Responses</h3>;
               <p className="text - zinc - 400 mb - 4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 The Zion API uses conventional HTTP status codes to indicate the success or failure of an API request.;
                 In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the;
                 provided information, and codes in the 5xx range indicate an error with our servers.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <table className="w - full border - collapse mt - 4">;
                 <thead>;
                   <tr className="border - b border - zinc - 800">;
@@ -3683,6 +4277,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
               <p className="text - zinc - 400 mb - 2">;
                 Error responses include a consistent JSON object with the following format: </p>;
               <CodeBlock;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }),`}
                 language="javascript"
@@ -3797,10 +4392,13 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
               <CodeBlock
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 code={`{
   "error": {
     "code": "invalid_request";
     "message": "The request was invalid";
+<<<<<<< HEAD
 <<<<<<< HEAD
         "field": "project_name",
         "message": "Project name is required";
@@ -3816,11 +4414,19 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
 <<<<<<< HEAD
     "details": [
       {
+=======
+    "details": [;
+      {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "field": "project_name"
         "field": "project_name",
         "message": "Project name is required"
       }
+<<<<<<< HEAD
     ]
+=======
+    ];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }`}
                 language="json"
@@ -3846,8 +4452,11 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
   )
 }
 // Helper component for API endpoint documentation
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function EndpointSection({
   method
   endpoint
@@ -3858,10 +4467,13 @@ function EndpointSection({
   responseExamples
 }) {
   const [activeTab, setActiveTab] = useState("curl");
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function EndpointSection({ 
   method, 
@@ -3875,9 +4487,12 @@ function EndpointSection({
   const [activeTab, setActiveTab] = useState("curl"),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="border border-zinc-800 rounded-md">
       <div className="p-4">
@@ -3892,6 +4507,7 @@ function EndpointSection({
                 : method === 'PUT'
                 ? "border-yellow-500 text-yellow-400 font-mono"
                 : "border-red-500 text-red-400 font-mono"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 language="json";
 
@@ -4142,15 +4758,21 @@ app.post('/webhook', express.raw({type:'application/json'}), (req, res) => {;
               ;
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 language="json";
 
               />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
               <p className="text-zinc-400 mb-4">;
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive ;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 language="json";
               />;
@@ -4177,6 +4799,8 @@ app.post('/webhook', express.raw({type:'application/json'}), (req, res) => {;
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>;
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 a <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">429 Too Many Requests</code> response.;
               </p>;
 
@@ -4187,7 +4811,10 @@ app.post('/webhook', express.raw({type:'application/json'}), (req, res) => {;
                 <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>;
                 <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>;
                 <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </ul>;
             </div>;
           </TabsContent>;
@@ -4196,6 +4823,7 @@ app.post('/webhook', express.raw({type:'application/json'}), (req, res) => {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 // Helper component for API endpoint documentation;
@@ -4206,6 +4834,8 @@ function EndpointSection({;
   note,;
   params = [],;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Helper component for API endpoint documentation;
 function EndpointSection(): any ({ ;
@@ -4215,11 +4845,15 @@ function EndpointSection(): any ({ ;
   description;
   note;
   params = [];
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   codeExamples;
   responseExamples;
 }) {;
   const [activeTab, setActiveTab] = useState("curl");
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;
@@ -4253,6 +4887,8 @@ function EndpointSection({ ;
       <div className="p-4">;
         <div className="flex items-center">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
 
@@ -4272,7 +4908,10 @@ function EndpointSection({ ;
             </Badge>;
           )}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 language="json";
               />;
               <h4 className="text - md font - semibold mt - 6 mb - 2">Rate Limiting</h4>;
@@ -4327,6 +4966,10 @@ function EndpointSection() {
         </div>;
         <p className="mt - 2 text - zinc - 400">{description}</p>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {params.length > 0 && (
         <div className="border - t border - zinc - 800 p - 4">;
           <h4 className="font - medium mb - 2">Parameters</h4>;
@@ -4343,9 +4986,18 @@ function EndpointSection() {
                 <tr key={index} className={index < params.length - 1 ? "border - b border - zinc - 800" : ""}>;
                   <td className="py - 2 font - mono text - sm">;
                     {param.name}
+<<<<<<< HEAD
         </div>;
         <p className="mt-2 text-zinc-400">{description}</p>;
       </div>;
+=======
+
+        </div>;
+
+        <p className="mt-2 text-zinc-400">{description}</p>;
+      </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {params && params.length > 0 && (;
         <div className="border-t border-zinc-800 p-4">;
           <h4 className="font-medium mb-2">Parameters</h4>;
@@ -4367,6 +5019,7 @@ function EndpointSection() {
                   <td className="py-2 text-sm text-zinc-400">{param && param.type}</td>;
                   <td className="py-2 text-sm text-zinc-400">{param && param.description}</td>;
                 </tr>;
+<<<<<<< HEAD
               ))}
             <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">;              {note}
             </Badge>;
@@ -4397,10 +5050,15 @@ function EndpointSection() {
                   <td className="py-2 text-sm text-zinc-400">{param.type}</td>;
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>;
                 </tr>;              ))}
+=======
+
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </tbody>;
           </table>;
         </div>;
       )}
+<<<<<<< HEAD
 
 
       
@@ -4459,6 +5117,9 @@ function EndpointSection() {
       
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {codeExamples && (
         <div className="border-t border-zinc-800 p-4">
           <div className="flex items-center mb-2">
@@ -4466,16 +5127,22 @@ function EndpointSection() {
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
               {Object.keys(codeExamples).map((lang) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {codeExamples && (;
         <div className="border-t border-zinc-800 p-4">;
           <div className="flex items-center mb-2">;
             <h4 className="font-medium">Request Example</h4>;
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {Object.keys(codeExamples).map((lang) => (;
                 <button;
@@ -4499,6 +5166,10 @@ function EndpointSection() {
               {Object && Object.keys(codeExamples).map((lang) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              {Object && Object.keys(codeExamples).map((lang) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <button
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
@@ -4507,6 +5178,7 @@ function EndpointSection() {
                       : "text-zinc-400 hover:bg-zinc-800"
                   }`}
                   onClick={() => setActiveTab(lang)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
@@ -4529,6 +5201,8 @@ function EndpointSection() {
           />
         </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>;
@@ -4542,6 +5216,7 @@ function EndpointSection() {
             language={activeTab === "curl" ? "bash" : activeTab}
           />;
         </div>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
 
@@ -4573,6 +5248,11 @@ function EndpointSection() {
         </div>;
       )}
     </div>;
+=======
+      )}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {param.required && <span className="text - red - 500">*</span>}
                   </td>;
                   <td className="py - 2 text - sm text - zinc - 400">{param.type}</td>;
@@ -4616,20 +5296,30 @@ function EndpointSection() {
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
 ;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),;}
 ;
@@ -4800,3 +5490,6 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -6,6 +7,10 @@
 import type { GetServerSideProps, NextPage } from 'next';
 
 
+=======
+import type { GetServerSideProps, NextPage } from 'next',
+import type { GetServerSideProps, NextPage } from 'next';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -17,7 +22,10 @@ import BlogCard from '@/components/blog/BlogCard';
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next / head';
 import Link from 'next / link';
@@ -30,7 +38,10 @@ type Props = { topic: string; posts: BlogPost[] }type Props = { topic: string, p
 const TopicPage: NextPage < Props> = ({ topic, posts }) => {
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div>;
       <Head>;
         <title>{topic} - Zion Blog</title>;
@@ -38,20 +49,30 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
         <meta property='og:title' content={`${topic} - Zion Blog`} />;
         <meta property='og:description' content={`Articles about ${topic}`} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta property='og:image' content='/images / og / topic - default.jpg' />;
 =======
 
         <meta property='og:image' content='/images / og / topic - default.jpg' />;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        <meta property='og:image' content='/images / og / topic - default.jpg' />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
         <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
         <meta name='twitter:description' content={`Articles about ${topic}`} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onShare={network =>;
               fetch('/api/analytics/share', {;
                 method: 'POST',;
@@ -67,9 +88,13 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
                 }),;
               }).catch(() => {});
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
           />;
         </div>;
@@ -120,6 +145,7 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
@@ -133,10 +159,21 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
         <meta name="twitter:description" content={`Articles about ${topic}`} />
         <meta name="twitter:image" content="/images/og/topic-default.jpg" />
       </Head>
+=======
+
+
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+  const topic = String(ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+  return { props: { topic, posts } }
+}
+export default TopicPage;      </Head>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
 =======
+<<<<<<< HEAD
 
 
       <div className="mx-auto max-w-6xl">
@@ -145,6 +182,8 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
@@ -156,11 +195,16 @@ export default TopicPage;      </Head>;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
         <div className="mb-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <PageShareButtons
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion && zion.app/categories/${encodeURIComponent(topic)}` : window && window.location.href}
@@ -173,19 +217,28 @@ export default TopicPage;      </Head>;
             <BlogCard key={p && p.id} post={p} />;
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
 
+<<<<<<< HEAD
 };
 
 
@@ -385,3 +438,18 @@ export default TopicPage;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+=======
+};
+
+
+  const topic = String(ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return { props: { topic, posts } }
+}
+export default TopicPage;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

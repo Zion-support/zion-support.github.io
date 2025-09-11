@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
@@ -56,15 +57,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 function readAllGrants(): GrantApplication[] {
   ensureDir();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   })
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json'));
   return files && files.map((file) => {
@@ -77,12 +85,16 @@ function readAllGrants(): GrantApplication[] {
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter((g) => {
       return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -100,12 +112,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
         (program ? g.program === program : true)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )
 
     });
@@ -119,16 +136,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const payload = req && req.body as CreateGrantPayload;
       if (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   if (req.method === 'POST') {
     try {
       const payload = req.body as CreateGrantPayload;
       if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         res.status(400).json({ error: 'Missing required fields' });
         !payload ||
         !payload && payload.projectName ||
@@ -140,11 +164,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
         res && res.status(400).json({ error: 'Missing required fields' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return
   CreateGrantPayload,
   GrantApplication,
@@ -241,6 +270,7 @@ if ( {) {
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
 <<<<<<< HEAD
+<<<<<<< HEAD
         id,
         program: payload.program || 'grant',
         project_name: payload.project_name,
@@ -287,6 +317,8 @@ created_at: now,
       const id = uuidv4();
       const now = new Date().toISOString();
       const record: GrantApplication = {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id
         program: payload.program |'grant'
         projectName: payload.projectName
@@ -314,12 +346,16 @@ created_at: now,
       );
       res.status(201).json({ id, record });
     } catch (e: any) {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       res.status(500).json({ error: e?.message |'Failed to create grant' });
     }
     return;
   }
+<<<<<<< HEAD
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res && res.status(500).json({ error: e?.message || 'Failed to create grant' })
@@ -381,6 +417,13 @@ created_at: now,
   }
 
 <<<<<<< HEAD
+=======
+  res.set_header ('AllowGET, POST');
+  res.status (405).end ('Method Not Allowed');
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
@@ -389,6 +432,7 @@ created_at: now,
     return
   }
 
+<<<<<<< HEAD
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
@@ -409,3 +453,6 @@ created_at: now,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

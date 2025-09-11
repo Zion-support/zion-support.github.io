@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -12,6 +16,7 @@ interface CTAButtonProps {
   children: ReactNode,
   class_name?: string,
   on_click?: () => void;
+<<<<<<< HEAD
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -96,3 +101,6 @@ export function CTAButton({;
       {children}
     </Link>);
 }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

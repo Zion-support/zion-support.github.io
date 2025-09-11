@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 import {useEffect} from 'react';
@@ -17,6 +20,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {use_navigate} from 'react-router-dom';
@@ -63,10 +67,15 @@ export default function ReferralsPage() {
 <<<<<<< HEAD
     shareOnSocialMedia} = useReferrals();
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
@@ -86,10 +95,15 @@ export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -109,9 +123,12 @@ export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const {
     isLoading,
     referralCode,
@@ -123,10 +140,13 @@ export default function ReferralsPage() {
     shareOnSocialMedia} = useReferrals(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -135,6 +155,9 @@ export default function ReferralsPage() {
         variant: "destructive"})
       navigate("/login")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, [isAuthenticated, navigate]);
   const referralLink = getReferralLink();
@@ -143,6 +166,7 @@ export default function ReferralsPage() {
   const referralLink = getReferralLink(),
 
   return (
+<<<<<<< HEAD
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
         <div>
@@ -231,6 +255,13 @@ export default function ReferralsPage() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -246,7 +277,10 @@ import { Button } from '@/components/ui/button',;
 import { toast } from '@/hooks/use-toast',;
 import { Share, Users } from 'lucide-react',;
 import { useNavigate } from 'react-router-dom',;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ReferralsPage() {;
   const navigate = useNavigate(),;
   const { isAuthenticated } = useAuth(),;
@@ -271,6 +305,7 @@ export default function ReferralsPage() {;
   const referralLink = getReferralLink();
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
   useEffect(() => {;
     if (!isAuthenticated) {;
@@ -288,6 +323,9 @@ export default function ReferralsPage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="container max-w-7xl py-10">;
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;
         <div>;
@@ -301,6 +339,7 @@ export default function ReferralsPage() {;
           Share Referral Link;
         </Button>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       <ReferralStats stats={stats} isLoading={isLoading} />;
@@ -317,6 +356,8 @@ export default function ReferralsPage() {;
             onShare={shareOnSocialMedia}
           />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <ReferralStats stats={stats} isLoading={isLoading} />;
 
@@ -328,7 +369,10 @@ export default function ReferralsPage() {;
             onShare={shareOnSocialMedia}
           />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;
@@ -349,10 +393,13 @@ export default function ReferralsPage() {;
           </Tabs>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
         <div className="space-y-6">;
         <div className="space-y-6">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="space-y-6">;
 =======
@@ -416,7 +463,10 @@ if ( {) {
         </div>;
         <div className="space - y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ReferralGuide />;
           <ReferralLeaderboard />;
         </div>;
@@ -425,6 +475,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </div>);
@@ -474,3 +525,8 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

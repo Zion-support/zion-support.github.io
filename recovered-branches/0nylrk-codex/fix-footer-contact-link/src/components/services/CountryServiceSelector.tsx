@@ -1,11 +1,19 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
 import {ServiceDetails} from "./ServiceDetails";
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
@@ -13,6 +21,7 @@ import { ServiceDetails } from "./ServiceDetails",
 
 
 
+<<<<<<< HEAD
 
 import {
   onsiteServicePricing
@@ -40,6 +49,9 @@ import { ServiceDetails } from "./ServiceDetails",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null
@@ -47,6 +59,7 @@ interface CountryServiceSelectorProps {
 export function CountryServiceSelector({
   onCountryChange
   selectedCountry: initialCountry
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {
@@ -67,11 +80,14 @@ export function CountryServiceSelector({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: CountryServiceSelectorProps) {
   return (
     <div className="space-y-6">
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
         <CountrySelector
+<<<<<<< HEAD
 <<<<<<< HEAD
 onCountryChange={onCountryChange |(() => {})}
           selectedCountry={initialCountry |null}
@@ -102,6 +118,11 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+          onCountryChange={onCountryChange |(() => {})}
+          selectedCountry={initialCountry |null}
+        />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
 
 
@@ -110,9 +131,13 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
@@ -121,6 +146,10 @@ interface CountryServiceSelectorProps {;
   onCountryChange?: (country: CountryPricing | null) => void,;
   selectedCountry?: CountryPricing | null;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function CountryServiceSelector(): any ({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {;
   return (
     <div className="space-y-6">;
@@ -129,12 +158,24 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
           onCountryChange={onCountryChange || (() => {})} ;
           selectedCountry={initialCountry || null} ;
         />;
+<<<<<<< HEAD
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>;
+=======
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {initialCountry && <ServiceDetails country={initialCountry && initialCountry.country} />}
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onsiteServicePricing,
   CountryPricing,
 } from '@/data / onsiteServicePricing';
@@ -161,6 +202,7 @@ function CountryServiceSelector() {
       {initial_country && <ServiceDetails country={initial_country.country} />}
     </div>);
 }
+<<<<<<< HEAD
 
   )
 }
@@ -227,3 +269,13 @@ selectedCountry?: CountryPricing | null
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

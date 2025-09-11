@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import React from 'react'
@@ -41,11 +42,14 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareToTwitter = () => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -69,6 +73,8 @@ function SocialShareButtons() {
     window.open (
       `https://twitter.com / intent / tweet?url=${share_url}&text=${share_text}`,
       '_blank');
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const shareToFacebook = () =>: any {
     window.open (
@@ -217,6 +223,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   const copyLink = () => {
     if (typeof window === 'undefined') return
@@ -238,6 +245,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     if (typeof window === 'undefined') return
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const shareToFacebook = () => {
@@ -252,6 +261,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     if (typeof window === 'undefined') return,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (typeof window === 'undefined') return,
   const copyLink = () => {
     if (typeof window === 'undefined') return,
@@ -260,11 +270,17 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const buttons = [
     {
@@ -289,6 +305,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     }
   ]
 
+<<<<<<< HEAD
   return (
     <div className='mt-12 flex flex-wrap gap-2'>
       {buttons.map(btn => (
@@ -309,6 +326,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 };
@@ -367,7 +386,11 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

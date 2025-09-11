@@ -1,9 +1,11 @@
 [build]
-  command = "npm ci --no-audit --no-fund --omit=optional && npm run build"
+  # Use Yarn with frozen lockfile to ensure reproducible installs, then build
+  command = "corepack enable && yarn install --frozen-lockfile && yarn build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
+<<<<<<< HEAD
 <<<<<<< HEAD
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
@@ -11,6 +13,32 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  NODE_VERSION = "22.12.0"
+  NODE_OPTIONS = "--max-old-space-size=6144"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  # Skip Sharp postinstall to avoid NAPI issues
+  SHARP_IGNORE_GLOBAL_LIBVIPS = "1"
+  SHARP_DIST_BASE_URL = "https://github.com/lovell/sharp-libvips/releases/download/v1.2.0/"
+  # Force Vite build
+  VITE_BUILD = "true"
+  # Ensure proper build environment
+  NODE_ENV = "production"
+  CI = "true"
+  # Disable linting during build to prevent failures
+  ESLINT_NO_DEV_ERRORS = "true"
+  # Optimize build performance
+  VITE_LEGACY_BUILD = "false"
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
+  NETLIFY_SKIP_INSTALL = "true"
+
+[[plugins]]
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 # API functions (disabled for Vite SPA)
 # [functions]

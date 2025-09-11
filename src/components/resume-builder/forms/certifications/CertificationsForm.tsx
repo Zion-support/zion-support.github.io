@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -214,6 +215,8 @@ return (
           onEdit={handleEdit}
           onDelete={handleDelete}        />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
 
     <div className='space-y-6'>;
@@ -233,7 +236,10 @@ return (
           certifications={certifications}
           onEdit={handleEdit}
           onDelete={handleDelete}        />;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
 
 
@@ -244,15 +250,22 @@ return (
           onDelete={handleDelete} 
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className="bg-muted/40 p-6 rounded-lg">
@@ -271,6 +284,12 @@ return (
             onSubmit={form.handleSubmit(handleAddOrUpdate)}
             className='space-y-4'
           >
+=======
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <CertificationFormFields form={form} />
 
 
@@ -279,6 +298,7 @@ return (
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
+<<<<<<< HEAD
 
               <Button
             <div className='flex justify-between pt-2'>
@@ -316,6 +336,11 @@ return (
               <Button
                 type='button'
                 variant='outline'
+=======
+              <Button
+                type="button"
+                variant="outline"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() => {
                   if (editingId) {
 
@@ -325,17 +350,21 @@ return (
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     form.reset({
                     setEditingId(null),
                     setEditingId(null),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
                       credential_url: ''})
                       credential_url: '',
@@ -356,6 +385,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       credential_id: '',
                       credential_url: ''})
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   } else {
                     onBack()
 
@@ -394,6 +427,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   } else {;
                     onBack();
 <<<<<<< HEAD
+<<<<<<< HEAD
                       credential_url: ''})
                       credential_url: '',
                     })
@@ -402,11 +436,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                     onBack()
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
@@ -416,11 +456,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
                 <Button type='button' onClick={onComplete}>
+<<<<<<< HEAD
 =======
 
               </Button>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
@@ -432,6 +475,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                   Next
+<<<<<<< HEAD
+=======
+                </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </form>
@@ -440,7 +487,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Button>;
 
@@ -468,7 +518,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
 }'"}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Check condition
 if ( {) {
   $2
@@ -579,6 +632,7 @@ if ( {) {
   editingId ? 'Cancel' : 'Back'
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
 }'"}
+<<<<<<< HEAD
 }
 ;
 }
@@ -590,3 +644,8 @@ if ( {) {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

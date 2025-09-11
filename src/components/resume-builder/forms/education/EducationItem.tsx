@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { format  } from 'date-fns';
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react'
@@ -12,6 +13,9 @@ import { format  } from 'date-fns';
 =======
 import { Edit, Trash2 } from 'lucide-react'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { Edit, Trash2 } from 'lucide-react'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Button } from '@/components/ui/button'
 import { EducationItemProps } from './types'
@@ -22,7 +26,10 @@ export function EducationItem({
 }: EducationItemProps) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react';
@@ -33,6 +40,7 @@ import { Education } from '@/types/resume';
 import { EducationItemProps } from './types';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className='bg-muted/40'>
@@ -177,6 +185,9 @@ import { EducationItemProps } from './types';
   );
 };
 =======
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               onClick={() => onDelete(education && education.id!)}
@@ -199,6 +210,7 @@ import { EducationItemProps } from './types';
     </Card>;
   );
 };
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
@@ -298,3 +310,5 @@ function EducationItem() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

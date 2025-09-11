@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
@@ -31,6 +34,7 @@ export default function EquipmentRecommendations() {
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 import { ProductListingCard } from '@/components/ProductListingCard',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -40,6 +44,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Button } from '@/components/ui/button',;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components/ProductListingCard';
 import {useAuth} from '@/hooks/useAuth';
@@ -95,6 +101,7 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
 
 
       fetchRecommendations(user && user.id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         .then(setListings);
@@ -170,6 +177,13 @@ export default function EquipmentRecommendations() {;
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
 =======
+=======
+        .then(setListings);
+        .catch(() => setError(true));
+        .finally(() => setLoading(false));
+
+        .finally(() => setLoading(false))
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
   }, [isAuthenticated, user]),
@@ -178,12 +192,18 @@ export default function EquipmentRecommendations() {;
     return (
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             asChild
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'
@@ -192,6 +212,7 @@ export default function EquipmentRecommendations() {;
               Sign In
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+<<<<<<< HEAD
 =======
 
 
@@ -200,6 +221,12 @@ export default function EquipmentRecommendations() {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
+=======
+
+
+            <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
+          </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </DialogContent>
       </Dialog>
     )
@@ -214,6 +241,7 @@ export default function EquipmentRecommendations() {;
     );
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   return (
@@ -267,14 +295,22 @@ export default function EquipmentRecommendations() {;
 
         ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+        ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
 }
 }
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components / ProductListingCard';
@@ -370,7 +406,11 @@ if ( {) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

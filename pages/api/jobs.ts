@@ -6,14 +6,20 @@ import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 const FILE = "jobs && jobs.json";
 
 
 export default async function handler(
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -22,6 +28,7 @@ export default async function handler(
   if (!rateLimit(req, res)) return;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const FILE = "jobs.json";
 export default async function handler(
@@ -50,11 +57,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === "GET") {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -135,6 +145,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4, as, uuidv4  } from './uuid';
 import { readJsonFile, writeJsonFile  } from '../../utils / db';
@@ -163,9 +177,13 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const {
       title
       description
@@ -190,18 +208,25 @@ if ( {) {
       budgetMaxUsd,
       deliveryDeadlineIso,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       return;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       clientEmail} = req.body || {};
 
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     const nowIso = new Date().toISOString();
@@ -218,12 +243,18 @@ category: String(category || ""),
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const nowIso = new Date().toISOString();
     const job: Job = {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -234,6 +265,7 @@ category: String(category || ""),
     }
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!job && job.category) {
       const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
       if (
@@ -243,6 +275,8 @@ category: String(category || ""),
             s && s.includes("langchain") ||
             s && s.includes("rag"),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (!job && job.category) {
       const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
@@ -255,7 +289,10 @@ category: String(category || ""),
             s && s.includes("langchain") ||
             s && s.includes("rag"),
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )
       )
         job && job.category = "LLM App";
@@ -263,16 +300,22 @@ category: String(category || ""),
         skills && skills.some(
           (s) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
             s && s.includes("aws") ||
             s && s.includes("kubernetes") ||
             s && s.includes("terraform"),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             s && s.includes("aws") ||
             s && s.includes("kubernetes") ||
             s && s.includes("terraform"),
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )
       )
         job && job.category = "Cloud";
@@ -285,6 +328,7 @@ category: String(category || ""),
     res && res.status(201).json({ job });
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: uuidv4(), title: String(title),
       description: String(description), category: String(category || ''),
@@ -302,11 +346,15 @@ else job.category = 'General'
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -314,6 +362,13 @@ else job.category = 'General'
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res.status(201).json({ job });
     return
+=======
+
+
+    res.status(201).json({ job });
+    return
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   } catch (error) {
     console.error("Error:", error);
@@ -332,21 +387,32 @@ else job.category = 'General'
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       client_email,
     } = req.body || {}
     // Check condition
@@ -408,6 +474,7 @@ if (=>) {
     return;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -437,17 +504,23 @@ export default async function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -555,3 +628,7 @@ export default async function handler(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

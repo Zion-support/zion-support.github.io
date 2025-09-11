@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -11,6 +12,8 @@
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function FintechSolutions() {
@@ -21,6 +24,7 @@ export default function FintechSolutions() {
 			slug="fintech-solutions"
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."
 			subtitle="Smarter finance with lower risk and faster time to yes."
+<<<<<<< HEAD
 			pricePerMonthUSD={2799}
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
@@ -35,6 +39,12 @@ export default function FintechSolutions() {
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
 =======
+=======
+
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
@@ -62,6 +72,7 @@ return (
     industries={["Fintech", "Banking", "Lending", "Payments"]}
     canonical="https: //ziontechgroup.com / fintech - solutions";
   />);
+<<<<<<< HEAD
 		/>
 	)
 
@@ -69,10 +80,17 @@ return (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 			pricePerMonthUSD={2799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -80,10 +98,14 @@ return (
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
 			features={[
@@ -93,6 +115,7 @@ return (
 				"Collections optimization and next-best-action",
 				"Realtime rules with feature store integration",
 				"Integrations: Core banking, KYC, payments, CRMs"
+<<<<<<< HEAD
 <<<<<<< HEAD
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
@@ -127,3 +150,8 @@ return (
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 class ErrorBoundary extends React.Component {
@@ -21,12 +24,18 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function HolographicAICommunicationPage() {
@@ -39,6 +48,10 @@ export default function HolographicAICommunicationPage() {
   };
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const features = [
     'AI-powered 3D holographic projection'
     'Real-time holographic rendering'
@@ -69,6 +82,10 @@ export default function HolographicAICommunicationPage() {;
 
   const features = [;
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -151,12 +168,19 @@ export default function HolographicAICommunicationPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   return (
     <UltraAdvancedFuturisticBackground>
@@ -190,6 +214,7 @@ export default function HolographicAICommunicationPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (_<UltraAdvancedFuturisticBackground>
@@ -334,11 +359,15 @@ export default function HolographicAICommunicationPage() {
 =======
               </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -349,6 +378,8 @@ export default function HolographicAICommunicationPage() {
 ;
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
 import Head from 'next / head';
@@ -365,6 +396,7 @@ function HolographicAICommunicationPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
   }
 ;
+<<<<<<< HEAD
   const features = [;
     'AI - powered 3D holographic projection',
     'Real - time holographic rendering',
@@ -461,7 +493,15 @@ function HolographicAICommunicationPage() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

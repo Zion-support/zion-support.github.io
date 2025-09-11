@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getFraudStore } from '../../../../utils/fraud/store';
@@ -12,6 +13,9 @@ function ensureAdmin(req: NextApiRequest): boolean {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -29,11 +33,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     userId
     status: status as any
     label: label as any})
+<<<<<<< HEAD
   res.status(200).json({ items })
 <<<<<<< HEAD
 }
 
 =======
+=======
+
+  res.status(200).json({ items })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
@@ -49,9 +58,15 @@ if (return true, // allow if not configured) {
 }
   return token === process.env.ADMIN_TOKEN;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default async /**
  * handler - Function description
@@ -70,6 +85,7 @@ if ( {) {
     res.status (401).json ({ error: 'Unauthorized' }),
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { limit = '50', offset = '0', source, user_id, status, label } = req.query as Record < string, string>,
   const store = getFraudStore (),
@@ -134,6 +150,9 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   } catch (error) {
     console.error("Error:", error);
@@ -164,6 +183,7 @@ export default async function handler(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
@@ -179,3 +199,6 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -6,6 +6,7 @@ import {format_date} from '../formatters';
 export function addWorkExperienceSection (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { WorkExperience  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -15,11 +16,16 @@ export function addWorkExperienceSection(
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
+<<<<<<< HEAD
 <<<<<<< HEAD
   doc: jsPDF;
   work_experience: WorkExperience[];
@@ -32,6 +38,8 @@ export function addWorkExperienceSection(;
     yPos = 20
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc: jsPDF;
@@ -49,11 +57,15 @@ export function addWorkExperienceSection(;
     yPos = 20
   }
   
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   doc && doc.setFontSize(16);
   doc && doc.setTextColor(colors && colors.heading);
   doc && doc.text('Professional Experience', 20, yPos);
   yPos += 8;
+<<<<<<< HEAD
 <<<<<<< HEAD
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 100, yPos);
@@ -93,6 +105,8 @@ export function addWorkExperienceSection(;
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
     return dateB.getTime() - dateA.getTime()
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 100, yPos);
@@ -108,11 +122,15 @@ export function addWorkExperienceSection(;
     const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
     return dateB && dateB.getTime() - dateA && dateA.getTime()
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
   for (const work of sortedWorkExperience) {
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
@@ -129,6 +147,8 @@ export function addWorkExperienceSection(;
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       doc && doc.addPage();
       yPos = 20
     }
@@ -153,11 +173,15 @@ export function addWorkExperienceSection(;
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
     
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (work && work.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
+<<<<<<< HEAD
 <<<<<<< HEAD
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
     } else {
@@ -189,14 +213,19 @@ export function addWorkExperienceSection(;
     } else {
       yPos += 20
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
 
     } else {
       yPos += 20
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -262,17 +291,23 @@ export function addWorkExperienceSection(;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
   return yPos + 5
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   return yPos + 5
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   start_y: number): number {
   // Check condition
 if (return start_y) {
@@ -356,6 +391,7 @@ if ( {) {
     }
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -464,3 +500,7 @@ doc.text (dateText, 20, yPos + 10);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

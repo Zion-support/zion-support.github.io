@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next / link';
 import type { GetServerSideProps } from 'next';
 
@@ -30,6 +33,7 @@ function VendorsPage() {
         </Link>;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>;
                   <div className='text-xs text-gray-500'>;
@@ -42,6 +46,9 @@ export default function VendorsPage({ vendors }: Props) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default function VendorsPage({ vendors }: Props) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -63,6 +70,7 @@ export default function VendorsPage({ vendors }: Props) {
                   <div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>
                 </div>
               </div>
@@ -82,6 +90,10 @@ export default function VendorsPage({ vendors }: Props) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ))}
       </div>;
       <div className='text-center text-xs text-gray-500'>;
@@ -89,6 +101,7 @@ export default function VendorsPage({ vendors }: Props) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
         ))}
       </div>
@@ -108,6 +121,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   return { props: { vendors } }
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   );
@@ -120,7 +135,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 };  return { props: { vendors } }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {vendors.length === 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
@@ -197,14 +215,20 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
       {vendors.length === 0 && (
@@ -353,3 +377,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

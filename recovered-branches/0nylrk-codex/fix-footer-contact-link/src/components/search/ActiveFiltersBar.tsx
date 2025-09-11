@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
@@ -14,6 +15,10 @@ import { X } from "lucide-react",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ActiveFiltersBarProps {
 
   selectedProductTypes: string[]
@@ -27,6 +32,7 @@ interface ActiveFiltersBarProps {
   onClearSearch: () => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ActiveFiltersBar({;
   selectedProductTypes;
@@ -133,6 +139,11 @@ import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ActiveFiltersBarProps {;
   selectedProductTypes: string[],;
   selectedLocations: string[],;
@@ -143,6 +154,7 @@ interface ActiveFiltersBarProps {;
   onRemoveRating: () => void,;
   onClearSearch: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export function ActiveFiltersBar({;
@@ -176,6 +188,8 @@ export function ActiveFiltersBar({;
       )}
       {selectedProductTypes.map(type => (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function ActiveFiltersBar(): any ({;
 
@@ -245,11 +259,15 @@ export function ActiveFiltersBar(): any ({;
 
       {selectedProductTypes && selectedProductTypes.map(type => (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <ClickableBadge
           key={`type-${type}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('productTypes', type)}
+<<<<<<< HEAD
 <<<<<<< HEAD
         >
           {type}
@@ -258,6 +276,8 @@ export function ActiveFiltersBar(): any ({;
       ))}
       {selectedLocations.map(location => (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >;
           {type}
           <X className="h-3 w-3" />;
@@ -267,11 +287,15 @@ export function ActiveFiltersBar(): any ({;
 
       {selectedLocations && selectedLocations.map(location => (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <ClickableBadge
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('locations', location)}
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       {selectedLocations.map(location => (;
@@ -280,11 +304,14 @@ export function ActiveFiltersBar(): any ({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('locations', location)}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >;
           {location}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
         >
           {location}
@@ -293,15 +320,21 @@ export function ActiveFiltersBar(): any ({;
       ))}
       {selectedAvailability.map(availability => (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {selectedAvailability && selectedAvailability.map(availability => (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <ClickableBadge
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('availability', availability)}
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       {selectedAvailability.map(availability => (;
@@ -310,22 +343,43 @@ export function ActiveFiltersBar(): any ({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('availability', availability)}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >;
           {availability}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+<<<<<<< HEAD
       ;
       {selectedRating !== null && (;
         <ClickableBadge ;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={onRemoveRating}
         >;
+=======
+
+
+      {selectedRating !== null && (;
+
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onRemoveRating}>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {selectedRating}+ Stars;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
+<<<<<<< HEAD
     </div>;
+=======
+
+    </div>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { X } from './lucide-react';
@@ -403,6 +457,7 @@ if (return null) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  interface ActiveFiltersBarProps {
   selectedProductTypes: string[];
@@ -465,3 +520,6 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

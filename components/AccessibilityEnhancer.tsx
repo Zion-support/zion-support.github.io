@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
     // Add skip link for keyboard navigation;
@@ -15,6 +19,7 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -406,11 +411,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             ))}
 <<<<<<< HEAD
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
           </div>;
         </div>;
       </div>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -424,6 +432,15 @@ export default AccessibilityEnhancer;
       </div>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+export default AccessibilityEnhancer;
+=======
+};
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -444,6 +461,7 @@ export default AccessibilityEnhancer;
   );
 }
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default AccessibilityEnhancer;
 };
@@ -524,3 +542,9 @@ export default AccessibilityEnhancer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+export default AccessibilityEnhancer;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

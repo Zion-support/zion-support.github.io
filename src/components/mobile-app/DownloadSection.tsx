@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 import React from "react"
 import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
@@ -40,6 +41,8 @@ export const DownloadSection: React.FC = () => {
               />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 appStoreUrl = {appStoreUrl,}
                 googlePlayUrl = {googlePlayUrl,}
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
@@ -49,9 +52,12 @@ appStoreUrl = {appStoreUrl,}
 
               
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
@@ -61,15 +67,19 @@ appStoreUrl = {appStoreUrl,}
               />
               
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="text-sm text-gray-400">
               
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
             <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
@@ -116,6 +126,8 @@ export const DownloadSection: React.FC = () => {;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
               <p className="text-lg text-gray-300 mb-8">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
@@ -128,7 +140,10 @@ export const DownloadSection: React.FC = () => {;
             <div className="flex - 1">;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Get The App Today</h2>;
               <p className="text - lg text - gray - 300 mb - 8">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
@@ -139,7 +154,10 @@ export const DownloadSection: React.FC = () => {;
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
                 <p > Free download, in - app purchases available</p>;
@@ -161,7 +179,10 @@ export const DownloadSection: React.FC = () => {;
 
               />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-sm text-gray-400">;
                 <p>Compatible with iOS 14+ and Android 8.0+</p>;
                 <p>Free download, in-app purchases available</p>;
@@ -181,10 +202,13 @@ export const DownloadSection: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ";
 
@@ -203,7 +227,11 @@ export const DownloadSection: React.FC = () => {;
     </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 =======
   )
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

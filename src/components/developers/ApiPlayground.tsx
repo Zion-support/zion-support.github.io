@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -21,6 +22,9 @@ export function ApiPlayground(_{ method, _path, _params = [] }) {
       headers: {
 
     const options: RequestInit = {
+=======
+const options: RequestInit = {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       method
       headers: {
         Authorization: `Bearer ${apiKey}`
@@ -28,6 +32,7 @@ export function ApiPlayground(_{ method, _path, _params = [] }) {
       }
       // Add timeout to prevent hanging
       signal: AbortSignal.timeout(15000)
+<<<<<<< HEAD
       params.for_each (p => {
         const val = param_values[p.name];
         if (search_params.append (p.name, val)) {
@@ -59,17 +64,28 @@ if (url += `?${query}` }
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
         options.body = body
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     if (method !== 'GET' && method !== 'DELETE') {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
+<<<<<<< HEAD
       signal: AbortSignal.timeout(15000)},
 
+=======
+
+      try {
+        options.body = JSON.stringify (JSON.parse (body));
+      } catch {
+        options.body = body
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
     setLoading(true)
     setResponse(null)
+<<<<<<< HEAD
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
@@ -91,6 +107,8 @@ if (url += `?${query}` }
     set_response (null);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const res = await fetch (url, options);
       const content_type = res.headers.get ('content - type');
@@ -107,6 +125,7 @@ if (url += `?${query}` }
       } else {
         response_text = await res.text ();
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Format the response with status information;
       const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
@@ -282,6 +301,120 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       }
 
       // Format the response with status information;
+=======
+
+      // Format the response with status information;
+      const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
+      set_response (status_info + response_text);
+
+    } catch (err: any) {
+      let error_message = 'Request failed';
+      // Check condition
+if ( {) {
+  $2
+}
+        error_message = 'Request timed out (15s)';
+      } else if () {) {
+  $2
+}
+        error_message =;
+          'Network error - check CORS configuration or API endpoint';
+      } else {
+
+
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import CodeBlock from './CodeBlock';
+
+interface Param {;
+  name: string;
+type: string;
+required?: boolean ;
+}interface ApiPlaygroundProps {;
+  method: string;
+  path: string;
+  params?: Param[];
+
+export function ApiPlayground(): any ({;
+  method,;
+  path,;
+  params = [],;
+}: ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState('demo_key_123');
+  const [paramValues, setParamValues] = useState<Record<string, string>>({});
+  const [body, setBody] = useState('{}');
+  const [response, setResponse] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+        options.body = body
+
+;
+export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState("demo_key_123"),;
+  const [paramValues, setParamValues] = useState<Record<string string>>({}),;
+  const [body, setBody] = useState("{}"),;
+  const [response, setResponse] = useState<string | null>(null),;
+  const [loading, setLoading] = useState(false),;
+  const handleParamChange = (name: string, value: string) => {;
+    setParamValues(prev => ({ ...prev, [name]: value }));
+  };
+  const sendRequest = async () => {;
+    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set;
+    const baseUrl =;
+      process && process.env.NEXT_PUBLIC_API_URL ||;
+      (typeof window !== 'undefined' ? window && window.location.origin : '');
+    let url = `${baseUrl}${path}`;
+
+    const searchParams = new URLSearchParams();
+    if (method === 'GET' || method === 'DELETE') {;
+      params && params.forEach(p => {;
+        const val = paramValues[p && p.name];
+        if (val) searchParams && searchParams.append(p && p.name, val);
+      });
+      const query = searchParams && searchParams.toString();
+      if (query) url += `?${query}`;    }
+
+    const options: RequestInit = {;
+      method,;
+      headers: {;
+        Authorization: `Bearer ${apiKey}`,;
+        'Content-Type': 'application/json',;
+      },;
+      // Add timeout to prevent hanging;
+      signal: AbortSignal && AbortSignal.timeout(15000),;
+    };
+
+    if (method !== 'GET' && method !== 'DELETE') {;
+      try {;
+        options && options.body = JSON && JSON.stringify(JSON && JSON.parse(body));
+      } catch {;
+        options && options.body = body;
+      }
+    }
+
+    setLoading(true);
+    setResponse(null);
+
+    try {;
+      const res = await fetch(url, options);
+      const contentType = res && res.headers.get('content-type');
+
+      let responseText: string;
+      if (contentType?.includes('application/json')) {;
+        try {;
+          const jsonData = await res && res.json();
+          responseText = JSON && JSON.stringify(jsonData, null, 2);
+        } catch {;
+          responseText = await res && res.text();
+        }
+      } else {;
+        responseText = await res && res.text();
+      }
+
+      // Format the response with status information;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const statusInfo = `HTTP ${res && res.status} ${res && res.statusText}\n\n`;
       setResponse(statusInfo + responseText);
     } catch (err: any) {;
@@ -307,12 +440,20 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='space-y-4'>;
       <Input
         value={apiKey}
+<<<<<<< HEAD
 
+=======
+        onChange={e => setApiKey(e.target.value)}
+        placeholder='API Key'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
 
@@ -320,6 +461,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       />
       {params.map(p => (
         <Input
+<<<<<<< HEAD
           key={p.name}
           value={paramValues[p.name] |''}
           onChange={e => handleParamChange(p.name, e.target.value)}        />
@@ -328,6 +470,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       />;
       {params && params.map(p => (;
         <Input
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           value={paramValues[p.name] || ''}
 
@@ -347,6 +492,10 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         {loading ? 'Sending...' : 'Send Request'}
       </Button>;
       {response && <CodeBlock code={response} language='json' />}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         error_message = err.message || 'Unknown error occurred';
       }
       set_response (
@@ -404,6 +553,7 @@ set_response (null);
 let response_text: string;
 if () {) {
   $2
+<<<<<<< HEAD
 }
   try {
   /> {
@@ -511,6 +661,13 @@ if (contentType?.includes ('application/json') ) {
 }</div>)
 }export default ApiPlayground
 '"
+=======
+
+}
+  try {
+  /> {
+  params.map ( (p) => (<Input key= {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     </div>;
@@ -554,9 +711,13 @@ if (contentType?.includes ('application/json') ) {;
 '";
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
@@ -574,6 +735,7 @@ if (contentType?.includes ('application/json') ) {;
       {response && <CodeBlock code={response} language="json" />}
     </div>
   )
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -586,3 +748,8 @@ if (contentType?.includes ('application/json') ) {;
 >>>>>>> origin/clean-error-fixing-automation
 export default ApiPlayground;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+;
+export default ApiPlayground;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

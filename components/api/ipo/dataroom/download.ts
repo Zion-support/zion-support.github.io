@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -41,12 +46,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 
+<<<<<<< HEAD
 
   const section = String(req && req.query.section || "General");
 <<<<<<< HEAD
     file,
   );
 =======
+=======
+=======
+
+  const section = String(req && req.query.section || "General");
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const file = String(req && req.query.file || "");
   if (!file) return res && res.status(400).json({ error: "Missing file" });
   const fullPath = path && path.join(
@@ -75,7 +86,10 @@ function handler() {
     file,
   );
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
   res && res.setHeader(
@@ -89,9 +103,13 @@ function handler() {
     "Content-Disposition",
     `attachment, filename="${path && path.basename(fullPath)}"`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   appendAuditLog({ type: "file_download", section, name: file });
   fs && fs.createReadStream(fullPath).pipe(res);
@@ -111,8 +129,12 @@ function handler() {
 }
   if ()) {
   $2
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -147,12 +169,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   appendAuditLog({ type: "file_download", section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
@@ -207,6 +234,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -215,8 +244,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

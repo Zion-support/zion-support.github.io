@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 interface NotificationHeaderProps {
@@ -12,6 +13,11 @@ interface NotificationHeaderProps {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
@@ -20,13 +26,17 @@ interface NotificationHeaderProps {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 interface NotificationHeaderProps {
@@ -55,6 +65,8 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onMarkAllAsRead
 }) => {
   return (
@@ -64,6 +76,7 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
           onClick={onMarkAllAsRead}
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark"
@@ -149,3 +162,37 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+import {Button} from '@/components/ui/button';
+interface NotificationHeaderProps {;
+  unreadCount: number,;
+  onMarkAllAsRead: () => Promise<void>;
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({;
+  unreadCount,;
+  onMarkAllAsRead;
+}) => {;
+  return (
+    <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">;
+      <h3 className="font-medium text-white">Notifications</h3>;
+      {unreadCount > 0 && (;
+        <Button
+          variant="ghost" 
+          size="sm" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
+          Mark all as read;
+        </Button>;
+      )}
+
+
+
+
+=======
+    </div>;
+  );
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

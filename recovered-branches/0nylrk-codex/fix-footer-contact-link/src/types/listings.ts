@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   description: string,
   icon: string;
 
@@ -22,16 +23,23 @@ export interface ProductListing {
 
 export interface ProductListing {;
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   description: string,
   icon: string;
 
 }
 export interface ProductListing {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   title: string;
   description: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   category: string
 
@@ -41,12 +49,18 @@ export interface ProductListing {
   subcategory?: string, // Adding optional subcategory field;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  category: string,
+  subcategory?: string, // Adding optional subcategory field;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   price: number | null;
   currency: string;
   tags: string[];
   author: {
     name: string;
     id: string;
+<<<<<<< HEAD
     avatar_url?: string,
     email?: string, // Added optional email property;
   }
@@ -84,6 +98,9 @@ export interface ListingItem {
 
 export interface ListingItem {;
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     avatar_url?: string,
     email?: string, // Added optional email property;
   }
@@ -100,11 +117,15 @@ export interface ListingItem {;
 
 }
 export interface ListingItem {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   title: string;
   category: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   image?: string
   description?: string
@@ -211,3 +232,15 @@ export type ListingView = 'grid' | 'list';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  image?: string,
+  description?: string;
+}
+=======
+
+
+export interface ListingCategory {;
+
+
+export type ListingView = 'grid' | 'list';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

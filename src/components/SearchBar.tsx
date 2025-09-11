@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter  } from 'next/router';
@@ -6,12 +7,17 @@ import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
@@ -34,6 +40,7 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 interface SearchBarProps {
   /**
 <<<<<<< HEAD
+<<<<<<< HEAD
    * The current value of the search input
    */
 
@@ -48,11 +55,17 @@ interface SearchBarProps {
   value: string,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  value: string,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
    * The current value of the search input;
    */;
   value: string;  value: string,
 
+<<<<<<< HEAD
   /**
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
@@ -105,10 +118,13 @@ export function SearchBar({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   value,
   onChange,
   onSelectSuggestion,;
   placeholder = 'Search...';
+<<<<<<< HEAD
 <<<<<<< HEAD
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
@@ -116,6 +132,8 @@ export function SearchBar({
   const [focused, setFocused] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
@@ -123,7 +141,10 @@ export function SearchBar({
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
   const [focused, setFocused] = useState(false)
   const [highlightedIndex, setHighlightedIndex] = useState(-1)
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const listId = 'searchbar-autocomplete-list';  const debounced = useDebounce(value, 150)
   const inputRef = useRef<HTMLInputElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -132,10 +153,14 @@ export function SearchBar({
       setSuggestions([])
       setHighlightedIndex(-1)
 <<<<<<< HEAD
+<<<<<<< HEAD
       return;
 =======
       return
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      return
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
@@ -213,12 +238,39 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
       aria-expanded={focused && suggestions.length > 0}
       aria-haspopup='listbox'
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (
               !relatedTarget |
               !containerRef.current?.contains(relatedTarget)
             if (
               !relatedTarget |
               !containerRef.current?.contains(relatedTarget)
+=======
+import { useRouter } from 'next/router';
+import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+      aria-controls={listId}
+      data-testid='search-bar'    >
+      <div className='relative'>
+        <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate' />
+        <Input
+          ref={inputRef}
+          type='text'
+          id='main-search-input'
+          name='search'
+          value={value}
+          onChange={e => onChange(e.target.value)}
+          onFocus={e => {
+            setFocused(true);            // Ensure the input receives focus properly
+            e.target.setSelectionRange(
+              e.target.value.length
+              e.target.value.length
+            )
+          }}
+          onBlur={e => {
+            // Only blur if not clicking on suggestions
+            const relatedTarget = e.relatedTarget as HTMLElement
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             if (true) {}
             ) {
               setFocused(false)
@@ -234,6 +286,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           autoComplete='search'
           onKeyDown={e => {            if (!focused |suggestions.length === 0) {
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
 =======
@@ -241,6 +294,13 @@ import { useRouter } from 'next/router',;
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+=======
+=======
+import React, { useState, useEffect, useRef } from 'react',;
+import { useRouter } from 'next/router',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -249,6 +309,7 @@ import { SearchSuggestion } from '@/types/search';
 import { slugify } from '@/lib/slugify';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
@@ -262,6 +323,8 @@ import { useDebounce } from '@/hooks/useDebounce',;
 import { useOnClickOutside } from '@/hooks/useOnClickOutside',;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**;
  * SearchBar component props;
  */;
@@ -270,29 +333,42 @@ interface SearchBarProps {;
    * The current value of the search input;
    */;
 <<<<<<< HEAD
+<<<<<<< HEAD
   value: string,;
 =======
   value: string;  value: string,;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  value: string;  value: string,;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   /**;
    * Function to call when the search input changes;
    * @param {string} val - The new value of the search input;
    */;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onChange: (val: string) => void;  /**;
    * Function to call when a suggestion is selected;
    * @param {SearchSuggestion} suggestion - The selected suggestion;
    */  onChange: (val: string,) => void,;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onChange: (val: string) => void,;
   /**;
    * Function to call when a suggestion is selected;
    * @param {SearchSuggestion} suggestion - The selected suggestion;
    */;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   /**;
    * The placeholder text for the search input;
@@ -301,12 +377,16 @@ interface SearchBarProps {;
 /**;
  * SearchBar component that allows users to search for content.;
  */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   /**;
    * The placeholder text for the search input;
    */;
   placeholder?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 /**;
@@ -386,6 +466,8 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             // Ensure the input receives focus properly;
             e.target.setSelectionRange(e.target.value.length, e.target.value.length);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**;
  * SearchBar component that allows users to search for content.;
  */;
@@ -472,6 +554,7 @@ export function SearchBar(): any ({;
           type='text'
           id='main-search-input'
           name='search'
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           value={value}
 
@@ -519,6 +602,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           onKeyDown={(e) => {
 
 
+=======
+          value={value}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           autoComplete='search';
           onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {;
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";
@@ -553,6 +641,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               return;
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 e.preventDefault()
                 setFocused(false)
@@ -635,6 +724,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 inputRef.current?.blur()
               }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 e.preventDefault();
                 setFocused(false);
                 setHighlightedIndex(-1);
@@ -643,7 +734,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               // If Enter is pressed and there's a value, navigate with query parameter
               if (e.key = == 'Enter' && value.trim()) {
                 e.preventDefault(); // Prevent form submission if SearchBar is in a form
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 fireEvent('search', { search_term: value });
                 router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
@@ -696,11 +790,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                   setFocused(false);
                   inputRef && inputRef.current?.blur();
                 break;
+<<<<<<< HEAD
               default: break;
+=======
+              case 'Escape':;
+                e && e.preventDefault();
+                setFocused(false);
+                setHighlightedIndex(-1);
+                inputRef && inputRef.current?.blur();
+                break;
+              default:;
+                break;            }              default: break;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
             }
+<<<<<<< HEAD
         />;
         {value && (;
           <button
@@ -763,11 +869,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          }}
+        />;
+        {value && (;
+          <button
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
       <AutocompleteSuggestions
@@ -803,6 +918,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 }
 }
@@ -818,12 +939,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         highlightedIndex={highlightedIndex}
         listId={listId}
 <<<<<<< HEAD
+<<<<<<< HEAD
       />;
     </div>;
   );
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
     </div>;
@@ -847,6 +971,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }/> </div>) ;
 }'"  );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
@@ -1175,3 +1300,5 @@ if ( {) {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

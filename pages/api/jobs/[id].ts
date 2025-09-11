@@ -1,15 +1,21 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
+<<<<<<< HEAD
 <<<<<<< HEAD
 const FILE = "jobs.json";
 =======
@@ -20,16 +26,23 @@ const FILE = "jobs && jobs.json";
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const FILE = "jobs.json";
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -158,6 +171,12 @@ if ( {) {
     }
     const {
 =======
+=======
+  if (idx === -1) {
+    res && res.status(404).json({ error: "Job not found" });
+    return;
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (req && req.method === "GET") {
@@ -178,7 +197,10 @@ if ( {) {
     }
     const {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title,
       description,
       category,
@@ -188,9 +210,13 @@ if ( {) {
       deliveryDeadlineIso,
       status,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       res.status(403).json({ error: 'Forbidden' });
       return
     }
@@ -206,6 +232,7 @@ if ( {) {
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job;
     writeJsonFile<Job[]>(FILE, jobs);
@@ -218,6 +245,9 @@ job.updatedAtIso = new Date().toISOString();
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } = req.body || {}
     // Check condition
 if (job.title = title) {
@@ -261,6 +291,7 @@ if (job.status = status as Job["status"]) {
     res.status (200).json ({ job });
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
@@ -365,12 +396,17 @@ export default function handler(req, res) {
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.set_header ("Allow", "GET, PATCH");
   res.status (405).end ("Method Not Allowed");
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -400,10 +436,14 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
   } catch (error) {
@@ -411,6 +451,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -462,3 +503,7 @@ export default function handler(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

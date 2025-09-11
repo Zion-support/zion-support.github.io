@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react';
 import { useState } from 'react'; import { useState } from 'react'
@@ -58,6 +59,8 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
@@ -65,6 +68,7 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
         src={src}
         title={title}
@@ -100,6 +104,8 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         onLoad={() => setLoaded(true)}
@@ -108,10 +114,16 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
 
 
         allowFullScreen
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />
     </div>
   )
+=======
+      />
+    </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 
@@ -119,17 +131,21 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         onLoad={() => setLoaded(true)}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
         loading="lazy";
         onLoad={() => setLoaded(true)}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -191,3 +207,7 @@ function YoutubeEmbed() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

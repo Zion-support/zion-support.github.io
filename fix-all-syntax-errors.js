@@ -3,64 +3,80 @@
 
 
 console && console.log('🔧 Fixing all syntax errors...');
-
 // Fix accessibility && accessibility.tsx
 const fixAccessibility = () => {
   try {
     let content = fs && fs.readFileSync('pages/accessibility && accessibility.tsx', 'utf8');
-    
     // Fix the malformed JSX structure
     content = content && content.replace(
       /<h2 className="text-3xl font-bold text-gray-900 mb-6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py-20 bg-white">/g,
       '<h2 className="text-3xl font-bold text-gray-900 mb-6">\n                  Accessibility Standards\n                </h2>\n                <p className="text-lg text-gray-600 max-w-3xl mx-auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py-20 bg-white">'
     );
-    
     fs && fs.writeFileSync('pages/accessibility && accessibility.tsx', content);
     console && console.log('✅ Fixed accessibility && accessibility.tsx');
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {
-    console && console.error('❌ Error fixing accessibility && accessibility.tsx:, error && error.message);
+    console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 // Fix api && api.tsx
 const fixApi = () => {
   try {
     let content = fs && fs.readFileSync('pages/api && api.tsx', 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Ensure proper closing structure
     if (!content.includes('export default')) {;
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     fs && fs.writeFileSync('pages/api && api.tsx', content);
     console && console.log('✅ Fixed api && api.tsx');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     
     fs && fs.writeFileSync('pages/api && api.tsx', content);
     console && console.log('✅ Fixed api && api.tsx');
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing api && api.tsx:', error && error.message);
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 // Fix careers && careers.tsx
 const fixCareers = () => {
@@ -74,18 +90,26 @@ const fixCareers = () => {
     fs && fs.writeFileSync('pages/careers && careers.tsx', content);
     console && console.log('✅ Fixed careers && careers.tsx');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing careers && careers.tsx:', error && error.message);
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 // Fix support && support.tsx
 const fixSupport = () => {
@@ -99,18 +123,26 @@ const fixSupport = () => {
     fs && fs.writeFileSync('pages/support && support.tsx', content);
     console && console.log('✅ Fixed support && support.tsx');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing support && support.tsx:', error && error.message);
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 // Fix webinars && webinars.tsx
 const fixWebinars = () => {
@@ -124,9 +156,13 @@ const fixWebinars = () => {
     fs && fs.writeFileSync('pages/webinars && webinars.tsx', content);
     console && console.log('✅ Fixed webinars && webinars.tsx');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing webinars && webinars.tsx:', error && error.message);
@@ -135,15 +171,21 @@ const fixWebinars = () => {
 }
 // Main execution
 <<<<<<< HEAD
+<<<<<<< HEAD
 const main = () => {
   console && console.log('Starting comprehensive syntax fixes...');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const main = () => {
   console && console.log('Starting comprehensive syntax fixes...');
   
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const fixes = [
     fixAccessibility
     fixApi
@@ -279,14 +321,20 @@ const main = () =>: any {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   
   console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
   
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (successCount > 0) {
     console && console.log('\n📝 Adding fixed files...');
     try {
@@ -301,19 +349,18 @@ const main = () =>: any {
 main();
   console.log (`\n✅ Fixed ${success_count}/${fixes.length} files`);
 ;
-  // Check condition;
-if ( {) {}
-  $2;
-}'
+  // Check condition
+if ( {) {
+  $2
+}
     console.log ('\n📝 Adding fixed files...');
-    try {'
-      const { exec_sync } = await import ('child_process');'
-      exec_sync ('git add .', { stdio: 'inherit' });'
+    try {
+      const { exec_sync } = await import ('child_process');
+      exec_sync ('git add .', { stdio: 'inherit' });
       console.log ('✅ Files added to staging area');
-    } catch (error) {'
+    } catch (error) {
       console.error ('❌ Error adding files:', error.message);
     }
-
   }
 }
 ;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
@@ -37,6 +38,8 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -56,6 +59,7 @@ import {Sparkles, Loader2} from 'lucide-react'
 import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
+<<<<<<< HEAD
 <<<<<<< HEAD
   serviceType: z.string().min(1)
   specificItem: z.object({ id: z.string() })})
@@ -85,13 +89,18 @@ export function QuoteRequestForm() {
   
   
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -105,6 +114,7 @@ export function QuoteRequestForm() {
       amount: 0
       type: "fixed"
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
     contactInfo: {
@@ -113,6 +123,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
 
 
@@ -123,14 +136,18 @@ ursor/fix-website-loading-errors-and-merge-6662
       company: ""
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   })
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
       ...prev;
 };
   );
+<<<<<<< HEAD
 }
 
   )
@@ -621,3 +638,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+};
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -16,6 +17,8 @@ import { ;
 } from '@/components/ui/table',;
 import { Button } from '@/components/ui/button',;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Table,;
   TableBody,;
@@ -25,23 +28,116 @@ import {;
   TableRow,;
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   DropdownMenuTrigger,;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  DropdownMenuTrigger,;
+
+export function TenantsList() {
+  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    loadTenants();
+  }, []);
+
+  const loadTenants = async () => {
+    try {
+      setIsLoading(true);
+      const { data, error } = await supabase
+        .from("whitelabel_tenants")
+        .select("*")
+        .order("created_at", { ascending: false });
+      if (error) throw error;
+      setTenants(data as WhitelabelTenant[]);
+    } catch (error: any) {
+      console.error("Error loading tenants:", error);
+      toast({
+        variant: "destructive"
+        title: "Failed to load tenants"
+        description: error.message
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  }
+  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
+    try {
+      const { error } = await supabase
+        .from("whitelabel_tenants")
+        .update({ is_active: !tenant.is_active })
+        .eq("id", tenant.id);
+      if (error) throw error;
+      // Update local state
+      setTenants(
+        tenants.map((t) =>
+          t.id === tenant.id ? { ...t, is_active: !t.is_active } : t
+        )
+      );
+      toast({
+        title: `Tenant ${tenant.is_active ? "deactivated" : "activated"}`
+        description: `${tenant.brand_name} has been ${tenant.is_active ? "deactivated" : "activated"} successfully.`
+      });
+    } catch (error: any) {
+      console.error("Error toggling tenant status:", error);
+      toast({
+        variant: "destructive"
+        title: "Failed to update tenant"
+        description: error.message
+      });
+    }
+  }
+  const verifyDns = async (tenant: WhitelabelTenant) => {
+    try {
+      // In a real implementation, this would verify DNS records
+      // For now, we'll just mark it as verified
+      const { error } = await supabase
+        .from("whitelabel_tenants")
+        .update({ dns_verified: true })
+        .eq("id", tenant.id);
+      if (error) throw error;
+      // Update local state
+      setTenants(
+        tenants.map((t) =>
+          t.id === tenant.id ? { ...t, dns_verified: true } : t
+        )
+      );
+      toast({
+        title: "DNS verified"
+        description: `Custom domain for ${tenant.brand_name} has been verified.`
+      });
+    } catch (error: any) {
+      console.error("Error verifying DNS:", error);
+      toast({
+        variant: "destructive"
+        title: "Failed to verify DNS"
+        description: error.message
+      });
+    }
+  }
+import React, { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -62,6 +158,9 @@ import {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
@@ -80,9 +179,18 @@ import { format } from "date-fns";
 export function TenantsList() {;
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
   useEffect(() => {;
     loadTenants();
   }, []);
+=======
+
+  useEffect(() => {;
+
+    loadTenants();
+  }, []);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const loadTenants = async () => {;
     try {;
       setIsLoading(true);
@@ -92,16 +200,25 @@ export function TenantsList() {;
         .order("created_at", { ascending: false });
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error: any) {;
       console && console.error("Error loading tenants:", error);
       toast({;
         variant: "destructive",;
         title: "Failed to load tenants",;
         description: error && error.message,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 import {
   Edit,
   MoreHorizontal,
@@ -286,6 +403,12 @@ DropdownMenuTrigger,;
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
+=======
+
+  };
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   Edit,
   MoreHorizontal,
@@ -300,6 +423,11 @@ export function TenantsList() {;
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     loadTenants();
   }, []);
@@ -320,20 +448,29 @@ export function TenantsList() {;
         variant: "destructive",
         title: "Failed to load tenants",
         description: error.message,
+<<<<<<< HEAD
         variant: "destructive"
         title: "Failed to load tenants"
         description: error.message
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } finally {
       setIsLoading(false);
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase
         .from("whitelabel_tenants")
         .update({ is_active: !tenant.is_active })
         .eq("id", tenant.id);
+<<<<<<< HEAD
       if (error) throw error;
       // Update local state
       setTenants(
@@ -344,16 +481,41 @@ export function TenantsList() {;
       toast({
         title: `Tenant ${tenant.is_active ? "deactivated" : "activated"}`
         description: `${tenant.brand_name} has been ${tenant.is_active ? "deactivated" : "activated"} successfully.`
+=======
+
+      if (error) throw error;
+
+      // Update local state
+      setTenants(
+        tenants.map((t) =>
+          t.id === tenant.id ? { ...t, is_active: !t.is_active } : t,
+        ),
+      );
+
+      toast({
+        title: `Tenant ${tenant.is_active ? "deactivated" : "activated"}`,
+        description: `${tenant.brand_name} has been ${tenant.is_active ? "deactivated" : "activated"} successfully.`,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } catch (error: any) {
       console.error("Error toggling tenant status:", error);
       toast({
+<<<<<<< HEAD
         variant: "destructive"
         title: "Failed to update tenant"
         description: error.message
       });
     }
   }
+=======
+        variant: "destructive",
+        title: "Failed to update tenant",
+        description: error.message,
+      });
+    }
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const verifyDns = async (tenant: WhitelabelTenant) => {
     try {
       // In a real implementation, this would verify DNS records
@@ -362,6 +524,7 @@ export function TenantsList() {;
         .from("whitelabel_tenants")
         .update({ dns_verified: true })
         .eq("id", tenant.id);
+<<<<<<< HEAD
       if (error) throw error;
       // Update local state
       setTenants(
@@ -372,10 +535,26 @@ export function TenantsList() {;
       toast({
         title: "DNS verified"
         description: `Custom domain for ${tenant.brand_name} has been verified.`
+=======
+
+      if (error) throw error;
+
+      // Update local state
+      setTenants(
+        tenants.map((t) =>
+          t.id === tenant.id ? { ...t, dns_verified: true } : t,
+        ),
+      );
+
+      toast({
+        title: "DNS verified",
+        description: `Custom domain for ${tenant.brand_name} has been verified.`,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } catch (error: any) {
       console.error("Error verifying DNS:", error);
       toast({
+<<<<<<< HEAD
         variant: "destructive"
         title: "Failed to verify DNS"
         description: error.message
@@ -409,13 +588,18 @@ export function TenantsList() {;
   const [isLoading, setIsLoading] = useState(true);
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         variant: "destructive",
         title: "Failed to verify DNS",
         description: error.message,
       });
     }
   };
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   RefreshCcw,
 } from "@/components/icons";
 import { format } from "date-fns";
@@ -424,7 +608,10 @@ export function TenantsList() {
   const [isLoading, setIsLoading] = useState(true);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {;
@@ -472,10 +659,14 @@ export function TenantsList() {;
     }
   },;
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
     try {;
       const { error } = await supabase;
@@ -483,12 +674,18 @@ export function TenantsList() {;
         .update({ is_active: !tenant && tenant.is_active });
         .eq("id", tenant && tenant.id);
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (error) throw error;
 =======
 
       if (error) throw error;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      if (error) throw error;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Update local state;
       setTenants(;
         tenants && tenants.map((t) =>;
@@ -496,9 +693,13 @@ export function TenantsList() {;
         ),;
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({;
         title: `Tenant ${tenant && tenant.is_active ? "deactivated" : "activated"}`,;
         description: `${tenant && tenant.brand_name} has been ${tenant && tenant.is_active ? "deactivated" : "activated"} successfully.`,;
@@ -512,6 +713,7 @@ export function TenantsList() {;
       });
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
     try {;
@@ -538,11 +740,15 @@ export function TenantsList() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const verifyDns = async (tenant: WhitelabelTenant) => {;
     try {;
       // In a real implementation, this would verify DNS records;
       // For now, we'll just mark it as verified;
       const { error } = await supabase;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -644,6 +850,8 @@ export function TenantsList() {;
 ;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .from("whitelabel_tenants");
         .update({ dns_verified: true });
         .eq("id", tenant && tenant.id);
@@ -679,7 +887,10 @@ export function TenantsList() {;
 
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-4">;
       <div className="flex justify-between items-center">;
         <h2 className="text-xl font-semibold">White-Label Tenants</h2>;
@@ -689,19 +900,27 @@ export function TenantsList() {;
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {isLoading ? (;
         <div className="flex justify-center p-8">;
           <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ) :(;
 =======
       ) : (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="rounded-md border">;
           <Table>;
             <TableHeader>;
@@ -716,11 +935,17 @@ export function TenantsList() {;
             </TableHeader>;
             <TableBody>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               {tenants && tenants.length === 0 ? (;
                 <TableRow>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              {tenants && tenants.length === 0 ? (;
+                <TableRow>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <TableCell
                     colSpan={6}
                     className="text-center py-8 text-muted-foreground">;
@@ -742,6 +967,7 @@ export function TenantsList() {;
                         className="flex items-center hover:underline">;
                         {tenant && tenant.subdomain}
 <<<<<<< HEAD
+<<<<<<< HEAD
               {tenants.length === 0 ? (;
                 <TableRow>;
                   <TableCell colSpan={6} className="text-center py-8 text-muted-foreground">;
@@ -762,10 +988,13 @@ export function TenantsList() {;
                         {tenant.subdomain}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <ExternalLink className="ml-1 h-3 w-3" />;
                       </a>;
                     </TableCell>;
                     <TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {tenant.custom_domain ? (;
                         <div className="flex items-center">;
@@ -789,6 +1018,8 @@ export function TenantsList() {;
                               variant="ghost" ;
                               size="sm" ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {tenant && tenant.custom_domain ? (;
                         <div className="flex items-center">;
                           <a
@@ -810,7 +1041,10 @@ export function TenantsList() {;
                             <Button
                               variant="ghost"
                               size="sm"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               onClick={() => verifyDns(tenant)}
                               className="ml-1 h-6 w-6 p-0";
                             >;
@@ -819,6 +1053,7 @@ export function TenantsList() {;
                             </Button>;
                           )}
                         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </TableCell>;
                     <TableCell>;
@@ -847,6 +1082,8 @@ export function TenantsList() {;
                             <MoreHorizontal className="h-4 w-4" />;
                             <span className="sr-only">Actions</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ) : (;
                         <span className="text-muted-foreground text-sm">;
                           None;
@@ -1089,11 +1326,15 @@ if (throw error) {
                             <MoreHorizontal className="h - 4 w - 4" />;
                             <span className="sr - only">Actions</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </Button>;
                         </DropdownMenuTrigger>;
                         <DropdownMenuContent align="end">;
                           <DropdownMenuItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                             <Edit className="mr-2 h-4 w-4" />;
                             Edit Tenant;
@@ -1114,6 +1355,8 @@ if (throw error) {
                                 Enable Tenant;
                               </>;                            )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                             <Edit className="mr - 2 h - 4 w - 4" />;
                             Edit Tenant;
@@ -1135,11 +1378,15 @@ if (throw error) {
                                 Enable Tenant;
                               </>)}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
                     </TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         .from('whitelabel_tenants');
         .update({ dns_verified: true });
@@ -1243,6 +1490,8 @@ if (throw error) {
                         <span className="text-muted-foreground text-sm">None</span>
                       )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   </TableRow>)))}
             </TableBody>;
@@ -1252,7 +1501,10 @@ if (throw error) {
 
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </TableCell>
                     <TableCell>
                       <Badge variant={tenant.is_active ? "default" : "destructive"}>
@@ -1301,16 +1553,23 @@ if (throw error) {
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   );
 }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </div>
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
                   </TableRow>;
                 ));
               )}
@@ -1364,3 +1623,7 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

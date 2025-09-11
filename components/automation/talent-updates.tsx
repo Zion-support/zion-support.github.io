@@ -1,15 +1,22 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -27,11 +34,17 @@ export async function getServerSideProps() {;
   return { props: { generatedAt, summaries } }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
 
+=======
+
+    generatedAt = json.generatedAt || '';
+    summaries = json.summaries || []
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {}
   return { props: { generatedAt, summaries } }
 }
@@ -55,6 +68,7 @@ export async function getServerSideProps() {;
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -86,6 +100,14 @@ export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+);
+}
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**
@@ -120,15 +142,25 @@ function TalentUpdatesPage() {
           </div>))}
       </div>;
     </div>);
+<<<<<<< HEAD
 
 </div>) )
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string }
 export async function getServerSideProps() {
+<<<<<<< HEAD
 </div>) ) 
+=======
+=======
+</div>) ) 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -140,22 +172,31 @@ export async function getServerSideProps() {;
   let summaries: TalentSummary[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
+<<<<<<< HEAD
     generatedAt = json.generatedAt |'';
     summaries = json.summaries |[]
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
   } catch {}
   return { props: { generatedAt, summaries } }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
@@ -183,3 +224,6 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

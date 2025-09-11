@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { SkeletonCard  } from '@/components/ui';
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
@@ -17,6 +18,11 @@ import ErrorBoundary from "@/components/GlobalErrorBoundary",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { GradientHeading } from "@/components/GradientHeading",
+import { SkeletonCard } from '@/components/ui',
+import ErrorBoundary from "@/components/GlobalErrorBoundary",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -67,6 +73,7 @@ import React from './react';
 import { Brain, Cloud, Shield, Code, Database, Network  } from './lucide-react';"});"});
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       logErrorToProduction('Categories API error:', { data: response.statusText })
@@ -321,6 +328,8 @@ export default function Categories({ categories: initialCategories = [] }: Categ
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Categories: React.FC: = () => {,";
   const categories = [];
   return (";
@@ -444,7 +453,10 @@ export: default Categories,;
 export default Categories," ];
 export default Categories"")))))))));
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const Categories: React.FC: = () => {, ";
   const categories = [];
@@ -563,7 +575,11 @@ export: default Categories,
 export default Categories, " ];
 export default Categories"")))))))));
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

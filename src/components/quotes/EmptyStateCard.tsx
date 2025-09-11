@@ -5,6 +5,7 @@ import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import React from "react"
@@ -21,6 +22,8 @@ import { MessageSquare, ArchiveIcon } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
@@ -29,6 +32,7 @@ import { Card, CardContent  } from '@/components / ui / card';
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 type EmptyStateCardProps = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   type: 'active' | 'archived'
 type EmptyStateCardProps = {
@@ -47,6 +51,8 @@ type EmptyStateCardProps = {
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
   
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -64,9 +70,12 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+<<<<<<< HEAD
           {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           }
@@ -76,6 +85,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   )
 }
 
+<<<<<<< HEAD
           {isActive 
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
@@ -144,6 +154,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </h3>;
         <p className="text-zion-slate-light max-w-md mx-auto">;
           {isActive;
@@ -155,6 +167,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
     </Card>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 };
 =======
@@ -163,6 +176,10 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 
 };
 };
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
   const is_active = type === 'active';
   return (
@@ -187,7 +204,11 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

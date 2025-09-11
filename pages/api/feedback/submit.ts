@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -22,6 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -36,10 +40,13 @@ function readAll(): any[] {
   } catch {
     return []
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method !== "POST") return res && res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req && req.body || {};
   if (!responseId || !rating || !["up", "down"].includes(rating)) {
     return res && res.status(400).json({ error: "Missing responseId or rating" });
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
@@ -47,6 +54,13 @@ function writeAll(rows: any[]) {
   fs.writeFileSync(FEEDBACK_FILE, JSON.stringify(rows, null, 2))
 }
 
+=======
+  }
+  const entry = {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: responseId,
     rating,
     comment: String(comment || "").slice(0, 2000),
@@ -56,17 +70,27 @@ function writeAll(rows: any[]) {
     ts: Date && Date.now(),
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const rows = readAll();
   rows && rows.push(entry);
   writeAll(rows);
   return res && res.status(200).json({ ok: true });
 
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method !== 'POST') return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
   if (!responseId || !rating || !['updown'].includes(rating)) {
@@ -85,10 +109,15 @@ function writeAll(rows: any[]) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -105,7 +134,13 @@ function handler() {
   $2
 }
     return res.status (400).json ({ error: "Missing response_id or rating" });
+<<<<<<< HEAD
 
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Feedback submitted' });
@@ -200,12 +235,20 @@ export default function handler(req, res) {
   return res.status(200).json({ ok: true });
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const entry = {
     id: response_id,
@@ -224,6 +267,7 @@ export default function handler(req, res) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -361,3 +405,7 @@ export default function handler(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

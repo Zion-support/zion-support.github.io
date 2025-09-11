@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import React, { useState } from 'react'
 import React, { useState } from "react",
@@ -43,6 +44,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   body: string
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 body: string
 import React, { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
@@ -67,6 +70,7 @@ const initial_posts: DiscussionPost[] = [;
 }
 const initial_posts: DiscussionPost[] = [;
   {
+<<<<<<< HEAD
     author: 'Anna Zhou',
     time: '2h ago',
     title: 'What AI trends are you most excited for in 2025?',
@@ -77,13 +81,19 @@ const initial_posts: DiscussionPost[] = [;
 }
 const initialPosts: DiscussionPost[] = [
   {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 1,
     author: 'Anna Zhou',
     time: '2h ago',
     title: 'What AI trends are you most excited for in 2025?',
+<<<<<<< HEAD
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
     id: 2,
     author: 'David Kim',
@@ -92,7 +102,10 @@ const initialPosts: DiscussionPost[] = [
     body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 export const CommunityDiscussion: React.FC = () => {
   const [posts, set_posts] = useState (initial_posts);
@@ -119,7 +132,10 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew (false);
 
   }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useMemo } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -159,13 +175,17 @@ const initialPosts: DiscussionPost[] = [;
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
     author: "Anna Zhou",
     time: "2h ago",
@@ -198,6 +218,16 @@ export const CommunityDiscussion: React.FC = () => {;
     setNewBody('');
     setShowNew(false);
   };
+=======
+  const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts),
+  const [showNew, setShowNew] = useState(false),
+  const [newTitle, setNewTitle] = useState(""),
+  const [newBody, setNewBody] = useState(""),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
 
@@ -207,6 +237,10 @@ export const CommunityDiscussion: React.FC = () => {;
       ...posts])
     setNewTitle("")
     setNewBody("")
+<<<<<<< HEAD
+=======
+  const handleAddPost = () => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setShowNew(false)
     <div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
       <div className='flex items - center gap - 3 mb - 4'>;
@@ -247,6 +281,7 @@ export const CommunityDiscussion: React.FC = () => {;
     setNewBody ("");
     setShowNew (false);
   }
+<<<<<<< HEAD
 
 
 
@@ -271,6 +306,8 @@ export const CommunityDiscussion: React.FC = () => {
     title: 'What AI trends are you most excited for in 2025?'
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 2
     author: 'David Kim'
     time: '50m ago'
@@ -286,7 +323,10 @@ export const CommunityDiscussion: React.FC = () => {
   const [newBody, setNewBody] = useState("")
   const handleAddPost = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleAddPost = () => {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!newTitle.trim() |!newBody.trim()) return
     setPosts([
       {
@@ -302,14 +342,20 @@ export const CommunityDiscussion: React.FC = () => {
     setNewBody('')
     setShowNew(false)
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
       {
         id: Date.now(),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         author: 'You',
         time: 'Now',
         title: newTitle,
@@ -331,16 +377,19 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew(false)
   },
 
+<<<<<<< HEAD
           className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
           size='sm'
           onClick={() => setShowNew(v => !v)}        >
           {showNew ? 'Cancel' : 'New Post'}
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
-        <MessageCircle aria-hidden="true" size={28} className="text-zion-cyan"/>
+        <MessageCircle size={28} className="text-zion-cyan" />
         <span className="font-bold text-2xl text-white tracking-tight">
           Community Discussion
         </span>
@@ -348,15 +397,23 @@ export const CommunityDiscussion: React.FC = () => {
           {posts.length} posts
         </span>
       </div>
-      <Separator className="mb-6"/>
+      <Separator className="mb-6" />
       <div className="mb-4 flex justify-end">
         <Button
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
+          size='sm'
+          onClick={() => setShowNew(v => !v)}        >
+          {showNew ? 'Cancel' : 'New Post'}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
           onClick={() => setShowNew((v) => !v)}
         >
+<<<<<<< HEAD
           {showNew ? "Cancel" : "New Post"}
 <<<<<<< HEAD
 =======
@@ -520,12 +577,51 @@ export const CommunityDiscussion: React.FC = () => {;
           size="sm";
           onClick={() => setShowNew((v) => !v)}
         >
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {showNew ? "Cancel" : "New Post"}
+
         </Button>
       </div>
-      {showNew && (<Card className="mb-6 animate-scale-in">
+      {showNew && (
+        <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
+<<<<<<< HEAD
+=======
+              placeholder='Title (e.g., Share an AI tool, Ask for help...)'
+              className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate'
+              value={newTitle}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setNewTitle(e.target.value)
+              }              maxLength={80}
+            />
+            <Textarea
+              placeholder="What's on your mind?"
+              className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'        title: newTitle
+        body: newBody}
+      ...posts])
+    setNewTitle("")
+    setNewBody("")
+    setShowNew(false)
+  }
+  return (
+    <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
+      <div className="flex items-center gap-3 mb-4">
+        <MessageCircle size={28} className="text-zion-cyan" />
+        <span className="font-bold text-2xl text-white tracking-tight">
+          Community Discussion
+        </span>
+        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">
+          {posts.length} posts
+        </span>
+      </div>
+      <Separator className="mb-6" />
+      <div className="mb-4 flex justify-end">
+        <Button
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
+          size="sm"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
@@ -534,6 +630,7 @@ export const CommunityDiscussion: React.FC = () => {;
             />
             <Textarea
               placeholder="What's on your mind?"
+<<<<<<< HEAD
               className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
@@ -601,15 +698,106 @@ export const CommunityDiscussion: React.FC = () => {;
                 onClick={() => setShowNew(false)}
 =======
             />;
+=======
+              className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]"
+import React, { useState } from "react",;
+import { MessageCircle } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Avatar, AvatarFallback } from "@/components/ui/avatar",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Separator } from "@/components/ui/separator",;
+interface DiscussionPost {;
+  id: number,;
+  author: string,;
+  avatar?: string,;
+  time: string,;
+  title: string,;
+  body: string;
+}
+;
+const initialPosts: DiscussionPost[] = [;
+  {;
+    id: 1,;
+    author: "Anna Zhou",;
+    time: "2h ago",;
+    title: "What AI trends are you most excited for in 2025?",;
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},;
+  {;
+    id: 2,;
+    author: "David Kim",;
+    time: "50m ago",;
+    title: "Quick tip: How to rank your Zion listing higher",;
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],;
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts),;
+  const [showNew, setShowNew] = useState(false),;
+  const [newTitle, setNewTitle] = useState(""),;
+  const [newBody, setNewBody] = useState(""),;
+  const handleAddPost = () => {;
+    if (!newTitle.trim() || !newBody.trim()) return,;
+    setPosts([;
+      {;
+        id: Date.now(),;
+        author: "You",;
+        time: "Now",;
+        title: newTitle,;
+        body: newBody},;
+      ...posts]),;
+    setNewTitle(""),;
+    setNewBody(""),;
+    setShowNew(false);
+  };
+  return (;
+    <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
+      <div className="flex items-center gap-3 mb-4">;
+        <MessageCircle size={28} className="text-zion-cyan" />;
+        <span className="font-bold text-2xl text-white tracking-tight">;
+          Community Discussion;
+        </span>;
+        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0 && 0.5">;
+          {posts && posts.length} posts;
+        </span>;
+      </div>;
+      <Separator className="mb-6" />;
+      <div className="mb-4 flex justify-end">;
+
+        <Button;
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
+          size="sm";
+
+
+          onClick={() => setShowNew((v) => !v)}
+        >;
+          {showNew ? "Cancel" : "New Post"}
+        </Button>;
+      </div>;
+      {showNew && (;
+        <Card className="mb-6 animate-scale-in">;
+          <CardContent className="py-5">;
+            <Input
+              placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
+              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
+              value={newTitle}
+
+
+              maxLength={80}
+            />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Textarea
               placeholder="What's on your mind?"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Cancel
               </Button>
               <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
                 size='sm'
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'                onClick={handleAddPost}                size="sm"
@@ -679,6 +867,11 @@ export const CommunityDiscussion: React.FC = () => {;
 
 
                 size="sm"
+=======
+                size='sm'
+                className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'                onClick={handleAddPost}                size="sm"
+                size="sm"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
@@ -754,11 +947,15 @@ export const CommunityDiscussion: React.FC = () => {;
           </CardContent>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -790,6 +987,8 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       </div>;
       <div className='mt-8 text-xs text-zion-slate-dark text-center'>;
@@ -818,16 +1017,23 @@ export const CommunityDiscussion: React.FC = () => {;
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;
 };
 '"      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
     </div>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Card>)}
       <div className='flex flex - col gap - 6'>;
         {posts.map (post => (
@@ -906,7 +1112,11 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -40,6 +40,7 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
 
 
 }
+<<<<<<< HEAD
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
@@ -55,12 +56,21 @@ export const support = {
   getArticles: () => [],
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  // Add support functionality here;
+  log_event: (event: any) => null,
+  get_articles: () => [],
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   getArticleById: (id: string) => null;
 };
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -72,3 +82,10 @@ export const logSupportEventToOperator = (event: any) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

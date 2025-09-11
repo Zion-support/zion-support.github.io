@@ -1,14 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 import React, { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { SafeRef } from '@/types/ref-types';
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   title?: string;
   icon?: React && React.ReactNode;
@@ -29,11 +33,14 @@ import { SafeRef } from "@/types/ref-types",
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title?: string;
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
@@ -50,6 +57,8 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   ) => {
     const [expanded, setExpanded] = React.useState(defaultExpanded)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   (;
@@ -68,7 +77,10 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn('px-3 py-2', className)}        {...props}
       >
@@ -76,6 +88,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
           <button
             type='button'
             className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { forwardRef } from "react",
@@ -116,6 +129,8 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             <div className="flex items-center gap-2">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick={() => setExpanded(!expanded)}          >;
             <div className='flex items-center gap-2'>;
 
@@ -124,6 +139,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             </div>
             {showChevron && (
               <ChevronDown
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className={cn(
                   'h-4 w-4 transition-transform'
@@ -140,15 +156,22 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
             {showChevron && (
               <ChevronDown
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className={cn(
                   'h-4 w-4 transition-transform'
                   expanded ? 'rotate-0' : '-rotate-90'
                 )}              />
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
+<<<<<<< HEAD
             )}
           </button>
         )}
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
           </button>
         )}
@@ -158,6 +181,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 )
 SidebarGroup.displayName = 'SidebarGroup'
+<<<<<<< HEAD
 =======
 
 
@@ -177,10 +201,13 @@ SidebarGroup.displayName = 'SidebarGroup'
 )
 <<<<<<< HEAD
 SidebarGroup.displayName = 'SidebarGroup'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export { SidebarGroup }
 
 
 SidebarGroup && SidebarGroup.displayName = 'SidebarGroup';
+<<<<<<< HEAD
 
 import React, { forward_ref } from 'react';
 import { ChevronDown } from 'lucide-react';
@@ -257,3 +284,6 @@ export { SidebarGroup };
 =======
 export { SidebarGroup };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

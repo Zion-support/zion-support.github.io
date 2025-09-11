@@ -1,5 +1,11 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
@@ -425,6 +431,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
+<<<<<<< HEAD
 
 
 
@@ -1189,6 +1196,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -1196,6 +1205,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards'
     ]
   }
+<<<<<<< HEAD
       'Basel III',
       'Solvency II',
       'Dodd-Frank',
@@ -1216,6 +1226,9 @@ export const cuttingEdgeMicroSaasServices2025 = [
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const cuttingEdgeMicroSaasServices2025 = [
   {
 
@@ -1234,7 +1247,10 @@ export const cuttingEdgeMicroSaasServices2025 = [
 =======
 ];      'Portfolio risk assessment_investment strategy optimization_regulatory compliance reporting_risk model development_performance analysis and attribution';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
 
@@ -1247,7 +1263,10 @@ export const cuttingEdgeMicroSaasServices2025 = [
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -1455,6 +1474,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
   }
@@ -1467,3 +1487,8 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  }
+];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

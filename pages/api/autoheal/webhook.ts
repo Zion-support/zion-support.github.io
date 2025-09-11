@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Octokit } from '@octokit/rest',;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '',
@@ -145,21 +146,30 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (e) {
       // ignore if missing;
     }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
       // ignore if missing;
       } catch (error) {
@@ -188,8 +198,13 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

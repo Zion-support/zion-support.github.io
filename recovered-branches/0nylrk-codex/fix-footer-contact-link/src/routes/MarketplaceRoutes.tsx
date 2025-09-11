@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
@@ -84,12 +85,27 @@ const MarketplaceRoutes = () => {;
   return (;
     <Routes>;
       {/* Marketplace Routes */}
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const MarketplaceRoutes = () => {
+=======
+const MarketplaceRoutes = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <Routes>;
+      {/* Marketplace Routes */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route path="/marketplace" element={<Marketplace />} />;
       <Route path="/categories" element={<Categories />} />;
       <Route path="/category/:slug" element={<CategoryDetail />} />;
       <Route path="/featured" element={<Featured />} />;
       <Route path="/marketplace/listing/:id" element={<ListingDetail />} />;
       <Route path="/listing/:id" element={<ListingDetail />} />;
+<<<<<<< HEAD
       {/* Job Routes */}
       <Route
         path="/post-job"
@@ -207,6 +223,8 @@ const MarketplaceRoutes = () => {;
         path="/post-job";
         element={;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Equipment Routes */}
       <Route path="/equipment" element={<EquipmentPage />} />;
@@ -218,13 +236,17 @@ const MarketplaceRoutes = () => {;
         path="/post-job"
         element={
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <PostJob />;
           </ProtectedRoute>;
         } ;
       />;
       <Route path="/jobs/:id" element={<JobDetails />} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* AI Matcher Routes */}
       <Route path="/ai-matcher" element={<AIMatcher />} />;
@@ -243,6 +265,8 @@ const MarketplaceRoutes = () => {;
         path="/publish";
         element={;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* AI Matcher Routes */}
       <Route path="/ai-matcher" element={<AIMatcher />} />;
@@ -252,22 +276,30 @@ const MarketplaceRoutes = () => {;
       <Route
         path="/publish" 
         element={
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <PublishProduct />;
           </ProtectedRoute>;
         } ;
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />;
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />;
       <Route path="/request-quote" element={<RequestQuote />} />;
       <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       {/* Search Route */}
@@ -284,6 +316,8 @@ const MarketplaceRoutes = () => {;
         path="/project/:projectId";
         element={;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Search Route */}
       <Route path="/search" element={<SearchPage />} />;
@@ -292,12 +326,16 @@ const MarketplaceRoutes = () => {;
       <Route
         path="/project/:projectId" 
         element={
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <ProjectRoom />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       {/* Video Call Routes */}
@@ -309,18 +347,24 @@ const MarketplaceRoutes = () => {;
         path="/call/:roomId";
         element={;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Video Call Routes */}
       <Route
         path="/call/:roomId" 
         element={
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <VideoCall />;
           </ProtectedRoute>;
         } ;
       />;
     </Routes>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -461,3 +505,16 @@ export default MarketplaceRoutes;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+};
+
+
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default MarketplaceRoutes;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

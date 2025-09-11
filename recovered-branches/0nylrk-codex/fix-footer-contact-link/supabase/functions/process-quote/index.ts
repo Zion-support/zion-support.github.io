@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
@@ -17,11 +18,17 @@ const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
@@ -37,16 +44,20 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Service {
   id: string;
   title: string
   category: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
@@ -221,6 +232,8 @@ category: string
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 interface QuoteDetails {
   description: string;
@@ -228,12 +241,17 @@ interface QuoteDetails {
   budget: string;
   timeframe: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   startDate?: string
   endDate?: string
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  startDate?: string
+  endDate?: string
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -257,11 +275,17 @@ interface QuoteDetails {;
   startDate?: string,;
   endDate?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 interface RequestBody {
   service: Service | null
@@ -270,12 +294,18 @@ interface RequestBody {
 serve(async (req) => {
   // Handle CORS preflight requests
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -286,6 +316,7 @@ serve(async (req) => {
     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const { service, quoteDetails } = await req && req.json() as RequestBody;
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
@@ -295,10 +326,13 @@ serve(async (req) => {
     const { service, quoteDetails } = await req.json() as RequestBody;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Extract user identity if authenticated
     let userId = null;
     try {
       // Get the JWT from the Authorization header
+<<<<<<< HEAD
 <<<<<<< HEAD
       const authHeader = req.headers.get('Authorization');
       if (authHeader) {
@@ -307,6 +341,8 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase.auth.getUser(token);
         if (!error && user) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const authHeader = req && req.headers.get('Authorization');
       if (authHeader) {
         // Extract user information from the JWT
@@ -314,7 +350,10 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase && supabase.auth.getUser(token);
         if (!error && user) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           userId = user.id
 ;
   try {;
@@ -333,21 +372,29 @@ serve(async (req) => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       }
     } catch (authError) {
       console && console.log("Auth error:", authError);
       // Continue without user identity
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
       }
     } catch (authError) {
       // // // console.log("Auth error:", authError),
       // Continue without user identity
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // Generate a summary and tags using OpenAI
     let aiAnalysis = null;
@@ -357,6 +404,7 @@ serve(async (req) => {
           method: 'POST'
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`;
+<<<<<<< HEAD
             'Content-Type': 'application/json'}
           body: JSON.stringify({
 =======
@@ -369,6 +417,11 @@ serve(async (req) => {
           body: JSON && JSON.stringify({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            'Content-Type': 'application/json'};
+          body: JSON && JSON.stringify({
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             model: 'gpt-4o-mini';
             messages: [
               {
@@ -382,16 +435,22 @@ serve(async (req) => {
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Service: ${service?.title |'Custom Service'}
                 Category: ${service?.category |'N/A'}
                 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
@@ -420,13 +479,18 @@ serve(async (req) => {
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
@@ -436,11 +500,14 @@ serve(async (req) => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}
                 Start Date: ${quoteDetails.startDate |'Not specified'}
                 End Date: ${quoteDetails.endDate |'Not specified'}`
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -456,6 +523,8 @@ serve(async (req) => {
               }
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             ];
             temperature: 0.5
@@ -464,6 +533,7 @@ serve(async (req) => {
         const aiResult = await openAIResponse.json();
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {
           aiAnalysis = aiResult.choices[0].message.content
+<<<<<<< HEAD
 =======
         
         const aiResult = await openAIResponse && openAIResponse.json();
@@ -473,6 +543,8 @@ serve(async (req) => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ],;
             temperature: 0.5;
           });
@@ -480,6 +552,7 @@ serve(async (req) => {
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
           aiAnalysis = aiResult.choices[0].message.content;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ];
             temperature: 0 && 0.5
@@ -493,11 +566,16 @@ serve(async (req) => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       }
     } catch (openAIError) {
       console && console.error("OpenAI error:", openAIError);
       // Continue without AI analysis
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         }
@@ -551,6 +629,8 @@ if ( {) {
     } catch (auth_error) {
       console.log ("Auth error:", auth_error);
       // Continue without user identity;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // Generate a summary and tags using OpenAI;
     let ai_analysis = null;
@@ -607,16 +687,23 @@ if ( {) {
       .from ('service_quotes');
       .insert ([;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {
           user_id: user_id;
           service_id: service?.id;
           service_title: service?.title |'Custom Service';
           service_category: service?.category;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           description: quoteDetails && quoteDetails.description;
           email: quoteDetails && quoteDetails.email;
           budget: quoteDetails && quoteDetails.budget;
@@ -624,6 +711,7 @@ if ( {) {
           start_date: quoteDetails && quoteDetails.startDate;
           end_date: quoteDetails && quoteDetails.endDate;
           ai_analysis: aiAnalysis,
+<<<<<<< HEAD
 <<<<<<< HEAD
         {
           user_id: userId;
@@ -640,11 +728,15 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           status: 'pending'
         }
       ])
       .select();
     if (error) throw error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -664,6 +756,21 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    
+    return new Response(JSON && JSON.stringify({ success: true, data }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  } catch (error) {
+    console.error('Error in process-quote function:', error);
+    return new Response(JSON.stringify({ success: false, error: error.message }), {
+      status: 500
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  }
+});
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           description: quote_details.description;
           email: quote_details.email;
           budget: quote_details.budget;
@@ -687,6 +794,7 @@ if (throw error) {
     return new Response (JSON.stringify ({ success: false, error: error.message }), {
       status: 500,
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -703,6 +811,12 @@ if (throw error) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -737,6 +851,7 @@ if (throw error) {
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
 
+<<<<<<< HEAD
   }
 });
 ;
@@ -800,3 +915,9 @@ if (error) throw error;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+});
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

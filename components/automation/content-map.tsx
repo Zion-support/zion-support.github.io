@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -11,16 +12,28 @@ export default function ContentMap({ report }: Props) {
 ) )
 }</ul> </section> <section>) )
 }</ul> </section> </div>)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>)
 export default function ContentMap({ report }: Props) {;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
@@ -41,10 +54,14 @@ export default function ContentMap({ report }: Props) {
           {sections.map(([sec, n]) => (
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -68,6 +85,7 @@ export default function ContentMap(): any ({ report }: Props) {;
           {sections && sections.map(([sec, n]) => (;
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
           ))}
+<<<<<<< HEAD
         </ul>;
       </section>;
       <section>;
@@ -90,6 +108,25 @@ export default function ContentMap(): any ({ report }: Props) {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        </ul>
+      </section>
+      <section>
+        <h2 className="font-semibold mb-2">All Pages</h2>
+        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
+          {report.pages.map((p, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
+          ))}
+        </ul>
+      </section>
+    </div>
+);
+}
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ) );
 }</ul> </section> <section>) );
@@ -149,6 +186,10 @@ export default function ContentMap({ report }: Props) {
         <ul className=&quot;text-sm space-y-1&quot;>
           {sections.map(([sec, n]) => (
             <li key={sec} className=&quot;flex justify-between&quot;><span>{sec || 'root'}</span><span className=&quot;text-gray-500&quot;>{n}</span></li>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ))}
         </ul>
       </section>
@@ -165,6 +206,7 @@ export default function ContentMap({ report }: Props) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 );
 }
@@ -179,3 +221,7 @@ export default function ContentMap({ report }: Props) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

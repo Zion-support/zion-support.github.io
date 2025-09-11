@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
@@ -17,6 +18,12 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 <<<<<<< HEAD
+=======
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
@@ -26,6 +33,7 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
@@ -34,6 +42,8 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -41,18 +51,22 @@ serve(async (req) => {
   }
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { bio, skills, title, name } = await req.json();
     if (!bio |bio.length < 20) {
       return new Response(
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
     const { bio, skills, title, name } = await req.json(),
 
+<<<<<<< HEAD
     if (!bio || bio.length < 20) {
       return new Response(
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
@@ -84,6 +98,11 @@ serve(async (req) => {;
 
     const { bio, skills, title, name } = await req && req.json();
     if (!bio || bio && bio.length < 20) {
+=======
+
+    if (!bio || bio && bio.length < 20) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return new Response(
 
 
@@ -93,15 +112,22 @@ serve(async (req) => {;
 
 
 
+<<<<<<< HEAD
     // Create a request to OpenAI API
 
     // Create a request to OpenAI API
+=======
+
+    // Create a request to OpenAI API
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`;
         'Content-Type': 'application/json'};
       body: JSON && JSON.stringify({
+<<<<<<< HEAD
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
@@ -116,6 +142,9 @@ serve(async (req) => {;
       body: JSON.stringify({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -127,6 +156,7 @@ serve(async (req) => {;
           {
             role: 'user'
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -206,6 +236,8 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
@@ -228,15 +260,22 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
             Skills: ${skills.join()}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text"
@@ -247,8 +286,11 @@ if ( {) {
         temperature: 0.7})});
     const openAIData = await openAIResponse.json();
     if (!openAIData.choices |openAIData.choices.length === 0) {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: 
@@ -260,7 +302,10 @@ if ( {) {
         ],
         temperature: 0.7})}),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     const openAIData = await openAIResponse && openAIResponse.json();
@@ -270,6 +315,7 @@ if ( {) {
     
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
@@ -291,10 +337,20 @@ if ( {) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    if (!openAIData.choices || openAIData.choices.length === 0) {
+      throw new Error("Failed to generate profile content")
+    }
+    // Extract the generated content from the response
+    const responseContent = openAIData.choices[0].message.content;
+    const responseContent = openAIData.choices[0].message.content,
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Parse the JSON response
     let parsedResponse;
     try {
       // Find the JSON object in the response
+<<<<<<< HEAD
 <<<<<<< HEAD
       const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
       
@@ -320,6 +376,14 @@ if ( {) {
         parsedResponse = JSON && JSON.parse(jsonMatch[0])
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      const jsonMatch = responseContent.match(/\{[\s\S]*\}/);
+      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),
+      
+      if (jsonMatch) {
+        parsedResponse = JSON && JSON.parse(jsonMatch[0])
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     const openAIData = await openAIResponse.json ();
 ;
@@ -344,13 +408,18 @@ if ( {) {
 }
         parsed_response = JSON.parse (json_match[0]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } else {
         throw new Error ("Could not extract JSON from response");
       }
     } catch (e) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     const openAIData = await openAIResponse.json(),
@@ -375,6 +444,8 @@ if ( {) {
         throw new Error("Could not extract JSON from response")
       }
     } catch (e) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       console.error("Error parsing OpenAI response:", e);
       // Fallback parsing approach if the standard parsing fails
       const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/);
@@ -393,10 +464,18 @@ if ( {) {
     return new Response(
       JSON.stringify(parsedResponse);
       console.error("Error parsing OpenAI response:", e),
+<<<<<<< HEAD
       
       // Fallback parsing approach if the standard parsing fails
       const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),
       const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),
+=======
+
+      
+      // Fallback parsing approach if the standard parsing fails
+      const summaryMatch = responseContent && responseContent.match(/"summary"\s*:\s*"([^"]*)"/);
+      const skillsMatch = responseContent && responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       if (summaryMatch && skillsMatch) {
         const summary = summaryMatch[1];
@@ -410,6 +489,7 @@ if ( {) {
         
         parsedResponse = { summary, suggestedSkills }
       } else {
+<<<<<<< HEAD
         throw new Error("Failed to parse the generated content")
       }
     }
@@ -497,13 +577,20 @@ if ( {) {
 ;
         parsed_response = { summary, suggested_skills }
       } else {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         throw new Error ("Failed to parse the generated content");
       }
     }
 
+<<<<<<< HEAD
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
+=======
+    console && console.error("Error in profile-summary-generator function:", error);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
@@ -512,6 +599,7 @@ if ( {) {
     return new Response(
       JSON.stringify({ error: error.message });
     console.error("Error in profile-summary-generator function:", error),
+<<<<<<< HEAD
     
     return new Response(
       JSON.stringify({ error: error.message });
@@ -525,6 +613,11 @@ if ( {) {
 
     
     console && console.error("Error in profile-summary-generator function:", error);
+=======
+
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response(
 
 
@@ -534,6 +627,7 @@ if ( {) {
   }
 });
 
+<<<<<<< HEAD
 
     return new Response (
       JSON.stringify (parsed_response);
@@ -713,3 +807,5 @@ return new Response (JSON.stringify ({
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

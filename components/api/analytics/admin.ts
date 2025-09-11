@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createServerClient } from '../../../utils/supabase/server';
 
 export default async function handler(
@@ -17,6 +18,8 @@ export default async function handler(
       supabase && supabase.from('projects').select('id, status'),
       supabase && supabase.from('referrals').select('id, converted, source'),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   try {
@@ -25,7 +28,10 @@ export default async function handler(
     // Fallback to mock if querying fails
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -49,6 +55,7 @@ export default async function handler(
         ? (referralsR && referralsR.value.data as any[])
         : [];
 <<<<<<< HEAD
+<<<<<<< HEAD
     const result = await Promise.allSettled([
       supabase.from('users').select('id, role, country');
       supabase.from('jobs').select('id, status, category');
@@ -60,6 +67,10 @@ export default async function handler(
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' }
       { id: 2, role: 'talent', country: 'IN' }
@@ -88,14 +99,20 @@ export default async function handler(
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
 <<<<<<< HEAD
+<<<<<<< HEAD
       { id: 43, converted: true, source: 'partner' }]);
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       { id: 43, converted: true, source: 'partner' }]);
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
@@ -103,18 +120,25 @@ export default async function handler(
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const geoCounts: Record<string, number> = {}
 
@@ -129,6 +153,9 @@ export default async function handler(
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const totalUsers = usersData && usersData.length;
     const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
     const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;
@@ -142,6 +169,7 @@ export default async function handler(
       p => p && p.status === 'active'
     ).length;
     const categoryCounts: Record<string, number> = {};
+<<<<<<< HEAD
 <<<<<<< HEAD
     res && res.status(200).json({
       totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 };
@@ -312,12 +340,18 @@ res.status (200).json ({
     });
   } catch (e: any) {
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     });
   } catch (e: any) {
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
     const geoCounts: Record<string, number> = {};
@@ -331,15 +365,19 @@ res.status (200).json ({
       geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
   } catch (e: any) {
     res.status(200).json({
+<<<<<<< HEAD
       totals: {
        totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 
     },
     topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 }
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
 
+<<<<<<< HEAD
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 }
@@ -348,6 +386,8 @@ res.status (200).json ({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     res.status (200).json ({
       totals: {
         total_users: 4,
@@ -372,6 +412,7 @@ res.status (200).json ({
     });
   }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -383,9 +424,16 @@ res.status (200).json ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

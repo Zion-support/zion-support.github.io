@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 import {;
@@ -18,6 +19,8 @@ import {;
   Target as TargetIcon,;
   Award,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -38,15 +41,25 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 import Head from 'next/head';
 
 =======
+=======
+import Head from 'next/head';
+
+import { motion } from 'framer-motion';
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
 
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -57,6 +70,7 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
 export default function MarketPricing2026() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -73,6 +87,9 @@ export default function MarketPricing2026() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   TrendingUp,
   Star,
   Users,
@@ -86,6 +103,7 @@ export default function MarketPricing2026() {
   DollarSign,
   BarChart3,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   Target as TargetIcon,
   Award,
@@ -111,6 +129,8 @@ function MarketPricing2026() {
     ...comprehensiveIT2026Services;
   ];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Target as TargetIcon,;
   Award,;
 
@@ -132,7 +152,10 @@ export default function MarketPricing2026() {;
     ...emergingTech2026Services
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Combine all 2026 services;
   const allServices = [;
     ...revolutionary2026Services,;
@@ -142,9 +165,13 @@ export default function MarketPricing2026() {;
     ...comprehensiveIT2026Services;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
     const matchesPrice = priceRange === 'all' || 
       (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||
@@ -161,21 +188,30 @@ export default function MarketPricing2026() {;
     { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
     { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
   ];
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All price ranges' },
     { id: 'budget', name: 'Budget ($0 - $5K)', range: 'Affordable solutions for startups and small businesses' },
     { id: 'mid', name: 'Mid-Range ($5K - $15K)', range: 'Professional solutions for growing companies' },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
   ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -186,6 +222,42 @@ export default function MarketPricing2026() {;
 
       allServices.length,
 
+=======
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+  // Calculate pricing statistics
+  const pricingStats = {
+    totalServices: allServices.length
+    averagePrice:
+      allServices.reduce(
+        (sum, service) =>
+          sum + parseFloat(service.price.replace(/[^0-9.]/g, ''))
+        0
+      ) / allServices.length
+    lowestPrice: Math.min(
+      ...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))
+    )
+    highestPrice: Math.max(
+      ...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))
+    )
+    totalCustomers: allServices.reduce(
+      (sum, service) => sum + service.customers
+      0
+    )
+    averageRating:
+      allServices.reduce((sum, service) => sum + service.rating, 0) /
+      allServices.length
+      allServices.length,
+
+  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     >
@@ -195,6 +267,7 @@ export default function MarketPricing2026() {;
             Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+
             Solutions
           </title>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
@@ -202,6 +275,51 @@ export default function MarketPricing2026() {;
   const contactInfo = {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <meta
+            name='description'
+            content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950"
+          />
+          <meta
+            name='keywords'
+            content='2026 pricing, AI services pricing, quantum computing pricing, emerging technology pricing, IT solutions pricing, competitive analysis, market positioning, ROI analysis'
+          />
+          <meta name='author' content='Zion Tech Group' />
+          <meta name='robots' content='index, follow' />
+          <meta
+            property='og:title'
+            content='Zion Tech Group - 2026 Market Pricing & Competitive Analysis'
+          />
+          <meta
+            property='og:description'
+            content='1500+ cutting-edge services with competitive pricing and 1000% ROI guarantee. Contact: +1 302 464 0950'
+          />
+          <meta
+            property='og:url'
+            content='https://ziontechgroup.com/market-pricing-2026'
+          />
+          <meta property='og:type' content='website' />
+          <link
+            rel='canonical'
+            href='https://ziontechgroup.com/market-pricing-2026'
+          />        </Head>          <title>Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions</title>
+          <meta name="description" content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technology pricing, IT solutions pricing, competitive analysis, market positioning, ROI analysis" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="robots" content="index, follow" />
+          <meta property="og:title" content="Zion Tech Group - 2026 Market Pricing & Competitive Analysis" />
+          <meta property="og:description" content="1500+ cutting-edge services with competitive pricing and 1000% ROI guarantee. Contact: +1 302 464 0950" />
+          <meta property="og:url" content="https://ziontechgroup.com/market-pricing-2026" />
+          <meta property="og:type" content="website" />
+          <link rel="canonical" href="https://ziontechgroup.com/market-pricing-2026" />
+        {/* Navigation */}
+        <UltraAdvancedNavigation />
+        {/* Hero Section */}
+        <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter services based on selection;
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesCategory =;
@@ -447,6 +565,7 @@ export default function MarketPricing2026() {;
             Solutions;
           </title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -515,11 +634,16 @@ particleCount={600}
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <meta name="description" content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950" />;
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technology pricing, IT solutions pricing, competitive analysis, market positioning, ROI analysis" />;
           <meta name="author" content="Zion Tech Group" />;
           <meta name="robots" content="index, follow" />;
           <meta property="og:title" content="Zion Tech Group - 2026 Market Pricing & Competitive Analysis" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <meta property="og:description" content="1500+ cutting - edge services with competitive pricing and 1000% ROI guarantee. Contact: +1 302 464 0950" />;
           <meta property="og:url" content="https://ziontechgroup.com / market - pricing - 2026" />;
@@ -853,6 +977,8 @@ export default function MarketPricing2026() {;
         </Head>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -870,11 +996,15 @@ export default function MarketPricing2026() {;
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / market - pricing - 2026" />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Navigation */}
         <UltraAdvancedNavigation />
 
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
@@ -926,6 +1056,8 @@ export default function MarketPricing2026() {;
                   </div>
                   <div className='text-gray-400 text-sm'>Total Customers</div>                </div>                  2026 Market Pricing
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
@@ -941,7 +1073,10 @@ export default function MarketPricing2026() {;
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   2026 Market Pricing
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -976,9 +1111,20 @@ export default function MarketPricing2026() {;
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
         {/* Filters Section */}
+=======
+        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Category Filter */}
+                <div>
+                  <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>
@@ -989,6 +1135,7 @@ export default function MarketPricing2026() {;
                     Service Category
                   </label>
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 transition={{ duration: 0 && 0.8 }}>;
@@ -1070,6 +1217,8 @@ transition={{ duration: 0 && 0.8 }}>;
 =======
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1077,6 +1226,7 @@ transition={{ duration: 0 && 0.8 }}>;
                 <div>
                   <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1095,16 +1245,23 @@ transition={{ duration: 0 && 0.8 }}>;
                     Service Category
                   </label>
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (
 
                     {categories.map(category => (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <button
                         key={category && category.id}
                         onClick={() => setSelectedCategory(category && category.id)}
@@ -1113,6 +1270,7 @@ transition={{ duration: 0 && 0.8 }}>;
                             ? 'bg-cyan-500 text-black';
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
                         }`}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1131,6 +1289,8 @@ transition={{ duration: 0 && 0.8 }}>;
                 {/* Price Range Filter */}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >
                         <div className='flex items-center justify-center space-x-2'>
                           <category.icon className='w-4 h-4' />
@@ -1143,12 +1303,16 @@ transition={{ duration: 0 && 0.8 }}>;
                           <span>{category.name}</span>
                         </div>
                         <div className="text-xs mt-1 opacity-75">({category.count})</div>
+<<<<<<< HEAD
                       </button>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </div>
                 </div>
                         </div>                      </button>
 
+<<<<<<< HEAD
                       </button>
 
                     ))}
@@ -1165,11 +1329,20 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Price Range Filter */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <button
                         key={range && range.id}
                         onClick={() => setPriceRange(range && range.id)}
@@ -1179,11 +1352,15 @@ transition={{ duration: 0 && 0.8 }}>;
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
                         }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >
                         <div className='font-medium'>{range.name}</div>
                         <div className='text-xs opacity-75'>{range.range}</div>                      </button>                        <div className="font-medium">{range.name}</div>
                         <div className="text-xs opacity-75">{range.range}</div>
                       </button>
+<<<<<<< HEAD
 =======
 
 
@@ -1200,6 +1377,25 @@ transition={{ duration: 0 && 0.8 }}>;
 
                     ))}
 =======
+=======
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
         <section className='relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
@@ -1344,7 +1540,10 @@ transition={{ duration: 0 && 0.8 }}>;
                         <div className="text - xs opacity - 75">{range.range}</div>;
                       </button>))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 </div>;
               </div>;
@@ -1353,12 +1552,30 @@ transition={{ duration: 0 && 0.8 }}>;
         </section>;
 
 
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+        {/* Market Analysis Section */}
+        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Market Analysis Section */}
         <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8">;
@@ -1367,6 +1584,7 @@ transition={{ duration: 0 && 0.8 }}>;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
                 </div>
@@ -1383,6 +1601,8 @@ transition={{ duration: 0 && 0.8 }}>;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
               className='text-center mb-12'
             >
@@ -1400,24 +1620,39 @@ transition={{ duration: 0 && 0.8 }}>;
                 Our services are strategically positioned to provide maximum value while maintaining competitive pricing
                 in the rapidly evolving technology landscape
             </motion.div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+            {/* Market Insights Grid */}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <motion.div
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Market Insights Grid */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
               <motion&& motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-12'>;
@@ -1441,6 +1676,8 @@ transition={{ duration: 0 && 0.8 }}>;
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
               className='text - center mb - 12';
             >;
@@ -1470,7 +1707,10 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className='text-4xl mb-4'>📊</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -1499,6 +1739,7 @@ transition={{ duration: 0 && 0.8 }}>;
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 
 
 
@@ -1512,6 +1753,15 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className='text-4xl mb-4'>🎯</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -1539,6 +1789,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
+<<<<<<< HEAD
 
 
 
@@ -1552,6 +1803,15 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className='text-4xl mb-4'>🚀</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -1578,7 +1838,10 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
@@ -1668,7 +1931,10 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Pricing Grid */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
@@ -1677,11 +1943,16 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                 className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm';
@@ -1767,6 +2038,10 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Pricing Grid */}
         <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8">;
@@ -1776,10 +2051,16 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Pricing Grid */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
 
 
 =======
@@ -1790,10 +2071,15 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
           <div className="max-w-7xl mx-auto">
             <motion.div
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-12'
             >
@@ -1807,12 +2093,16 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 =======
               className="text-center mb-12"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className="text-center mb-12"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>
               <p className="text-xl text-gray-300">
                 {filteredServices.length} services found matching your criteria
               </p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
@@ -1845,6 +2135,10 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                   animate={{ opacity: 1, y: 0 }}
 
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -1855,6 +2149,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                     <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
                       <div className='text-center'>
                         <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+<<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -1863,6 +2158,13 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                 >
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group"
+                >
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className='group'
 
                 >
@@ -1871,6 +2173,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && (
+<<<<<<< HEAD
                         <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
               className='text - center mb - 12';
@@ -2010,6 +2313,8 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 
                     {/* Pricing Section */}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>
                     </div>
                     {/* Market Position */}
@@ -2018,6 +2323,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                         Market Position
                       </h4>
                       <p className='text-gray-400 text-xs leading-relaxed'>                        {service.marketPosition}                    <div className="mb-4">
+<<<<<<< HEAD
 =======
 
                           <span className="text-gray-400 text-lg font-normal">{service.period}</span>
@@ -2030,20 +2336,55 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                     <div className="mb-4">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <h4 className="text-white font-semibold mb-2 text-sm">Market Position</h4>
                       <p className="text-gray-400 text-xs leading-relaxed">
                         {service.marketPosition}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+                      {service.name}
+                    </h3>
+
+                    {/* Tagline */}
+
+                      {service.tagline}
+                    </p>
+
+                    {/* Pricing Section */}
+
+
+                      </div>
+                    </div>
+                    {/* Market Position */}
+
+
+                        {service.marketPosition}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </p>
                     </div>
                     {/* ROI & Customers */}
                     <div className='grid grid-cols-2 gap-4 mb-4'>
                       <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
                         <div className='text-lg font-bold text-green-400 mb-1'>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {service.roi.split(' ')[0]}
                         </div>
                         <div className='text-gray-400 text-xs'>ROI</div>
@@ -2056,6 +2397,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                     </div>
                     {/* Key Features */}                          {service.roi.split(' ')[0]}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         {service.marketPosition}
 
                       </p>
@@ -2063,11 +2405,16 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                     {/* ROI & Customers */}
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div className="text-center p-3 bg-gray-700/30 rounded-lg">
                         <div className="text-lg font-bold text-green-400 mb-1">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='grid grid-cols-2 gap-4 mb-4'>
                       <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
                         <div className='text-lg font-bold text-green-400 mb-1'>
@@ -2084,10 +2431,14 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>;
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service && service.name}
@@ -2161,10 +2512,13 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                       </div>;
                     </div>;
                     {/* Key Features */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                     <div className="mb-4">
                     <div className="mb-4">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
                         Key Features
@@ -2176,20 +2530,26 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                             className='text-gray-400 text-xs flex items-center'
                           >
                             <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                            {feature}                    <div className="mb-4">
+<<<<<<< HEAD
 =======
 =======
                     <div className="mb-4">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>
                       <ul className="space-y-1">
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                             {feature}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                             {feature}
@@ -2197,16 +2557,34 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                           </li>
                         ))}
 
                             {feature}
 
                           </li>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         ))}
                       </ul>
                     </div>
 
+<<<<<<< HEAD
+=======
+                      </ul>;
+                    </div>;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Technology Stack */}
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
@@ -2218,6 +2596,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                             key={idx}
                             className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'
                           >                            {tech}
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2263,6 +2642,8 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </span>
                         ))}
                         {service.technology.length > 3 && (
@@ -2271,7 +2652,10 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                       <div className="flex flex-wrap gap-1">
                         {service.technology.slice(0, 3).map((tech, idx) => (
                           <span key={idx} className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
+<<<<<<< HEAD
                             {tech}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </span>
                         ))}
                         {service.technology.length > 3 && (
@@ -2279,6 +2663,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                             +{service.technology.length - 3} more
                           <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                            +{service.technology.length - 3} more
 
+<<<<<<< HEAD
                             {tech}
                           </span>
                         ))}
@@ -2287,6 +2672,11 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                             +{service.technology.length - 3} more
 
                           </span>
+=======
+
+                          </span>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         )}
                       </div>
                     </div>
@@ -2297,26 +2687,38 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 
                     {/* CTA Button */}
                     <a
+<<<<<<< HEAD
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     >
                       View Details
                     </a>
                   </div>
                 </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              ))}
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -2328,17 +2730,27 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
             )}
 
                 className="text-center py-16"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='text-center py-16'
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -2352,15 +2764,19 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your category or price range filters</p>
+<<<<<<< HEAD
               </motion.div>
             )}
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
 
           </div>;
         </section>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
         </section>
@@ -2386,6 +2802,13 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+          </div>
+        </section>
+=======
+                </p>              </motion.div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
@@ -2395,11 +2818,16 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                           </span>;
@@ -2534,6 +2962,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'>;
               <h2 className='text-3xl font-bold text-white mb-6'>;
@@ -2572,6 +3001,16 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              transition={{ duration: 0.8 }}
+              className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -2599,9 +3038,13 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
               </div>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'>;
               <h2 className='text-3xl font-bold text-white mb-6'>;
@@ -2609,9 +3052,13 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
               </h2>;
               <p className='text-xl text-gray-300 mb-8'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
             >;
               <h2 className='text - 3xl font - bold text - white mb - 6'>;
@@ -2619,15 +3066,20 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
               </h2>;
               <p className='text - xl text - gray - 300 mb - 8'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Contact our team to discuss pricing, implementation, and how our;
                 revolutionary 2026 services can transform your business with;
                 exceptional ROI;
               </p>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <a
                   href='/contact'
@@ -2659,6 +3111,8 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            >;
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>;
               <p className="text-xl text-gray-300 mb-8">;
@@ -2680,6 +3134,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
                 </div>;
               </div>;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <a
                   href="/contact"
@@ -2708,6 +3163,8 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
   );
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <a
                   href="/contact"
@@ -2789,6 +3246,7 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
     </UltraAdvancedFuturisticBackground>);
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 );
   );
@@ -2804,3 +3262,9 @@ className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blu
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

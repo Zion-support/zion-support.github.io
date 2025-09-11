@@ -1,4 +1,7 @@
+const { withSentry } = require('./withSentry.cjs');
+const fs = require('fs');
 
+<<<<<<< HEAD
 
   try {
     const { name, email, phone, details } = req.body || {};
@@ -37,13 +40,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 async function handler(req, res) {
+=======
+const handler = async (req, res) => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method !== 'POST') {
-    res.statusCode = 405;
     res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.status(405).end('Method Not Allowed');
     return;
   }
   try {
+<<<<<<< HEAD
     const { name, email, phone, details } = req.body || {};
     if (!name || !email || !phone || !details) {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -108,3 +114,31 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    const { name, email, service, description, budget } = req.body;
+
+    if (!name || !email || !service) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
+    }
+
+    const logEntry = {
+      timestamp: new Date().toISOString(),
+      name,
+      email,
+      service,
+      description,
+      budget,
+    };
+
+    fs.appendFileSync('quote_requests.log', JSON.stringify(logEntry) + '\n');
+
+    res.status(200).json({ success: true, message: 'Quote request submitted successfully' });
+  } catch (err) {
+    console.error('Quote API error:', err);
+    res.status(500).json({ error: 'Quote submission failed' });
+  }
+};
+
+export default withSentry(handler);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

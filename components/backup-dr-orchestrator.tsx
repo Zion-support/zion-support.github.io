@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 class ErrorBoundary extends React.Component {
@@ -21,13 +24,19 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function BackupDROrchestratorPage() {
@@ -36,12 +45,20 @@ export default function BackupDROrchestratorPage() {
     s.link.endsWith('/backup-dr-orchestrator')
   );  if (!service) return null;export default function BackupDROrchestratorPage() {
   const service = extraServices.find(s => s.link.endsWith('/backup-dr-orchestrator'));
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function BackupDROrchestratorPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/backup-dr-orchestrator');
   );  if (!service) return null;export default function BackupDROrchestratorPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/backup-dr-orchestrator'));
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!service) return null;
 
   return (
@@ -122,9 +139,13 @@ export default function BackupDROrchestratorPage() {;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Shield} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
@@ -230,18 +251,26 @@ if (return null) {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function BackupDROrchestratorPage() {
 import React from 'react',
+=======
+export default function BackupDROrchestratorPage() {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
@@ -262,7 +291,10 @@ export default function BackupDROrchestratorPage() {
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/backup-dr-orchestrator" />
       </Head>
@@ -291,7 +323,10 @@ export default function BackupDROrchestratorPage() {
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -368,14 +403,19 @@ export default function BackupDROrchestratorPage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -390,12 +430,19 @@ export default function BackupDROrchestratorPage() {
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 }
 
+<<<<<<< HEAD
 ;
 }
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

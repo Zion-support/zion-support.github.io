@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +27,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -35,12 +41,16 @@ import {toast} from "sonner";
 export default function Profile() {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user, isLoading, logout } = useAuth();
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -179,6 +189,12 @@ export default function Profile() {
   const { user, isLoading, logout } = useAuth(),
   const navigate = useNavigate(),
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLoading && !user) {
@@ -189,6 +205,7 @@ export default function Profile() {
   }, [user, isLoading, navigate]),
 
   if (isLoading) {
+<<<<<<< HEAD
     return (
       <>
         <Header />
@@ -241,6 +258,62 @@ export default function Profile() {
 
                     logout(),
 =======
+=======
+=======
+  useEffect(() => {;
+    if (!isLoading && !user) {;
+      toast && toast.error("Please log in to view your profile");
+      navigate("/login?redirect=/profile");
+    }
+  }, [user, isLoading, navigate]);
+
+  if (isLoading) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+      <>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
+          <div className="animate-pulse text-white">Loading profile...</div>;
+        </div>;
+        <Footer />;
+      </>;
+    );
+  }
+
+
+  if (!user) {;
+    return (
+      <>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">;
+            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>;
+            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>;
+
+            <Button
+              onClick={() => navigate("/login?redirect=/profile")}
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
+            >;
+              Go to Login;
+            </Button>;
+          </div>;
+        </div>;
+        <Footer />;
+      </>;
+    );
+  }
+  return (
+
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue">;
+        <div className="container mx-auto px-4 py-8">;
+          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>;
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+            <div className="flex flex-col md:flex-row gap-6">;
+              <div className="md:w-1/3">;
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {user && user.displayName ? user && user.displayName.split(' ').map(name => name[0]).join('') : user && user.email?.charAt(0)}
                 </div>;
               </div>;
@@ -249,6 +322,7 @@ export default function Profile() {
                 <p className="text-zion-slate-light mb-4">{user && user.email}</p>;
 
                 <Button
+<<<<<<< HEAD
                   onClick={() => {;
                     logout();
 
@@ -259,6 +333,12 @@ export default function Profile() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  onClick={() => {
+                    logout();
+
+                    logout(),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     navigate("/")
                   }}
                   variant="outline"
@@ -274,6 +354,7 @@ export default function Profile() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -308,6 +389,9 @@ if ( {) {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -322,6 +406,7 @@ export default function Profile() {;
     if (!isLoading && !user) {;
       toast.error("Please log in to view your profile"),;
       navigate("/login?redirect=/profile");
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }, [user, isLoading, navigate]);
@@ -349,6 +434,8 @@ export default function Profile() {;
               onClick={() => navigate("/login?redirect=/profile")}
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
   }, [user, is_loading, navigate]);
@@ -380,13 +467,17 @@ if ( {) {
             <Button;
               on_click={() => navigate ("/login?redirect=/profile")}
               className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               Go to Login;
             </Button>;
           </div>;
         </div>;
         <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') :user.email?.charAt(0)}
       </>;
@@ -417,6 +508,8 @@ if ( {) {
                   variant="outline";
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </>);
   }
   return (
@@ -443,7 +536,10 @@ if ( {) {
                   variant="outline";
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   Logout;
                 </Button>;
@@ -453,6 +549,7 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   ); export default function Profile () {
@@ -486,3 +583,11 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    </>);
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

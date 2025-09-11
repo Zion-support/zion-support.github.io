@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ function UltimateRedundancyRedirect() {
 
       </Head>
       <main style={{ padding: 24}}>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 export default function UltimateRedundancyRedirect() {
   return (
@@ -45,6 +48,7 @@ export default function UltimateRedundancyRedirect(req, res) {
   return (;
     <>;
       <Head>;
+<<<<<<< HEAD
         <meta httpEquiv="refresh" content="0, url=/ULTIMATE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" />;
       </Head>;
       <main style={{ padding: 24 }}>;
@@ -66,3 +70,15 @@ export default function UltimateRedundancyRedirect(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <meta http_equiv="refresh" content="0, url=/ULTIMATE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" />;
+      </Head>;
+      <main style={{ padding: 24 }}>;
+        <p > Redirecting to Ultimate Redundancy docs…</p>;
+      </main>;
+    </>);
+}
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

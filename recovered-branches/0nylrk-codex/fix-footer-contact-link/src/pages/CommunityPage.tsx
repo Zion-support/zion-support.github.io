@@ -10,6 +10,7 @@ import PostCard from "@/components/community/PostCard";
 import {useAuth} from "@/hooks/useAuth";
 import {ForumPost} from "@/types/community";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -114,6 +115,8 @@ export default function CommunityPage() {
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Mock data for featured posts;
 const featuredPosts: ForumPost[] = [;
   {;
@@ -153,7 +156,10 @@ const featuredPosts: ForumPost[] = [;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -190,6 +196,7 @@ const featuredPosts: ForumPost[] = [
     replyCount: 8,
     isPinned: true,
     isFeatured: true
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 ],
@@ -259,6 +266,8 @@ export default function CommunityPage() {
   return (
     <AppLayout>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 ];
@@ -312,6 +321,7 @@ const recentPosts: ForumPost[] = [;
 
 
 
+<<<<<<< HEAD
 export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
@@ -319,15 +329,28 @@ export default function CommunityPage() {
   
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default function CommunityPage() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("categories");
+export default function CommunityPage() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("categories"),
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <AppLayout>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SEO
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <div className="container py-8">
@@ -376,12 +399,17 @@ export default function CommunityPage() {
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -485,6 +513,7 @@ export default function CommunityPage() {;
         title="Community Forum | Zion AI Marketplace";
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals.";
         keywords="community, forum, discussion, AI marketplace, questions, answers";
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
 
@@ -603,6 +632,11 @@ export default function CommunityPage() {;
       />;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="container py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div>;
@@ -612,12 +646,15 @@ export default function CommunityPage() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ;
           <Button asChild>;
             <Link to={user ? "/community/create" :"/login?next=/community/create"}>;
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
@@ -743,11 +780,15 @@ function CommunityPage() {
           <Button as_child>;
             <Link to={user ? "/community / create" : "/login?next=/community / create"}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Create New Post;
             </Link>;
           </Button>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">;
@@ -755,23 +796,33 @@ function CommunityPage() {
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">;
           <TabsList className="mb-6">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Tabs default_value="categories" value={active_tab} onValueChange={setActiveTab} className="mb - 8">;
           <TabsList className="mb - 6">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <TabsTrigger value="categories">Categories</TabsTrigger>;
             <TabsTrigger value="featured">Featured</TabsTrigger>;
             <TabsTrigger value="recent">Recent</TabsTrigger>;
           </TabsList>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <TabsContent value="categories">;
             <ForumCategories />;
           </TabsContent>;
           <TabsContent value="featured">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           <TabsContent value="categories">;
@@ -791,6 +842,8 @@ function CommunityPage() {
                 <PostCard key={post.id} post={post} />;
               ))}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="space - y-4">;
               {featured_posts.map ((post) => (
                 <PostCard key={post.id} post={post} />))}
@@ -801,7 +854,10 @@ function CommunityPage() {
               {recent_posts.map ((post) => (
                 <PostCard key={post.id} post={post} />))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </TabsContent>;
         </Tabs>;
@@ -810,6 +866,7 @@ function CommunityPage() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </AppLayout>);
@@ -834,3 +891,8 @@ function CommunityPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

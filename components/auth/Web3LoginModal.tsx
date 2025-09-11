@@ -18,6 +18,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useCallback, useEffect, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 const isClient = typeof window !== 'undefined';
 
@@ -30,29 +31,41 @@ type Web3LoginModalProps = {
     displayName?: string;
   }) => void;};const isClient = typeof window !== 'undefined';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 const isClient = typeof window !== 'undefined';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Web3LoginModalProps = {
   isOpen: boolean
   onClose: () => void
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!isOpen) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setError(null);
       setLoading(false)
@@ -71,6 +84,8 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   }, [isOpen]);
   const handleEvmConnect = useCallback(async () => {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 type Web3LoginModalProps = {;
   isOpen: boolean,;
@@ -90,18 +105,25 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       setError(null);
       setLoading(false)
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, [isOpen]);
 
 
   const handleEvmConnect = useCallback(async () => {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setError(null);
     setLoading(true);
     try {;
       const Web3ModalCtor = (await import('web3modal')).default;
+<<<<<<< HEAD
 <<<<<<< HEAD
       const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
       const web3Modal = new Web3ModalCtor({
@@ -181,6 +203,8 @@ if ( {) {
         }
       });              rpc: { 1: 'https://cloudflare-eth.com' }}}}})
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           walletconnect: {
@@ -190,7 +214,10 @@ if ( {) {
               rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
@@ -204,10 +231,13 @@ if ( {) {
       const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
       onLoggedIn?.({ address, chain: 'evm' });
       on_close ();
     } catch (e: any) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,
 
@@ -255,11 +285,15 @@ if ( {) {
       on_close ();
     } catch (e: any) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: siweMessage, signature, address, chainId: network.chainId })}),
       if (!verifyRes.ok) throw new Error('Failed to verify signature');
+<<<<<<< HEAD
 <<<<<<< HEAD
       onLoggedIn?.({ address, chain: 'evm' }),
       const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`
@@ -288,6 +322,11 @@ if ( {) {
       onLoggedIn?.({ address, chain: 'evm' }),
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      onLoggedIn?.({ address, chain: 'evm' }),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       onClose()
     } catch (e: any) {
       console.error(e);
@@ -295,7 +334,10 @@ if ( {) {
     } finally {
       setLoading(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       const web3Modal = new Web3ModalCtor({;
@@ -349,7 +391,10 @@ if ( {) {
     } finally {;
       setLoading(false);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, [onClose, onLoggedIn]);
   const handlePhantomConnect = useCallback(async () => {;
@@ -358,16 +403,22 @@ if ( {) {
     try {;
       const provider = (window as any)?.solana;
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (!provider || !provider && provider.isPhantom) {;
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         throw new Error('Phantom not found. Install the Phantom extension');
       }
       const resp = await provider && provider.connect();
       const publicKey: string = resp && resp.publicKey.toString();
       const nonceRes = await fetch('/api/auth/nonce');
+<<<<<<< HEAD
 <<<<<<< HEAD
       const { nonce } = await nonceRes && nonceRes.json();
       if (!provider || !provider.isPhantom) {
@@ -380,14 +431,23 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const statement =;
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const resp = await provider && provider.connect();
       const publicKey: string = resp && resp.publicKey.toString(),;
       const nonceRes = await fetch('/api/auth/nonce');
@@ -397,6 +457,7 @@ if ( {) {
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`,;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       setLoading(false);    }
 
@@ -458,6 +519,8 @@ if ( {) {
       setLoading(false);    }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const encodedMessage = new TextEncoder().encode(message);
       const { signature } = await provider && provider.signMessage(encodedMessage, 'utf8');
       const bs58 = (await import('bs58')).default;
@@ -479,16 +542,25 @@ if ( {) {
 =======
       setLoading(false);    }
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+=======
+      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       onClose()
     } catch (e: any) {
       console.error(e);
       setError(e?.message |'Phantom connection failed')
     } finally {
       setLoading(false)
+<<<<<<< HEAD
+=======
+      setLoading(false);    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       const verifyRes = await fetch('/api/auth/verify-sol', {;
@@ -516,6 +588,7 @@ if ( {) {
     } finally {;
       setLoading(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
       setLoading(false);    }
 
       setLoading(false);    }
@@ -524,12 +597,16 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.error (e);
       set_error (e?.message || 'Wallet connection failed');
@@ -651,10 +728,13 @@ if (return null) {
           >;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Cancel;
           </button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
       <div className="w-full max-w-md rounded-xl bg-white dark: bg-neutral-900 p-6 shadow-2xl">
@@ -698,6 +778,11 @@ export default function Web3LoginModal(): any (props: Web3LoginModalProps) {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * Web3LoginModal - Function description
  */
@@ -707,6 +792,7 @@ if (return null) {
   $2
 }
   return <ModalInner {...props} />;
+<<<<<<< HEAD
 
   useEffect__(() => {
     if (!isOpen) {
@@ -815,6 +901,8 @@ if (return null) {
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>
           <button onClick={handlePhantomConnect} disabled={loading} className=&quot;w-full rounded-lg bg-purple-600 text-white py-2.5&quot;>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
       <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
         <div className='mb-4'>
@@ -855,6 +943,7 @@ if (return null) {
       </div>
     </div>
   );
+<<<<<<< HEAD
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
 
@@ -873,22 +962,35 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
           </button>
         </div>
         <div className="mt-4 flex justify-end">
+=======
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
+  if (!isClient) return null;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
@@ -905,3 +1007,6 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

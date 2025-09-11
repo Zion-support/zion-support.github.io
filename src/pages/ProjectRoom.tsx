@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,13 @@
 }
 }
 ;
+=======
+}
+}
+
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { Header } from '@/components/Header',;
@@ -95,6 +103,7 @@ export default function ProjectRoom() {;
   },
   
 
+<<<<<<< HEAD
 =======
 }
 }
@@ -191,6 +200,8 @@ export default function ProjectRoom() {;
   
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <SEO
@@ -209,17 +220,24 @@ export default function ProjectRoom() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -232,11 +250,14 @@ export default function ProjectRoom() {;
 }
 }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 }
 }
   )
 }
+<<<<<<< HEAD
 ;
 =======
 ;
@@ -246,3 +267,6 @@ export default function ProjectRoom() {;
 }
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

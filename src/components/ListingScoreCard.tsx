@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,8 @@ import { Star } from 'lucide-react';
 interface ListingScoreCardProps {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -38,6 +41,7 @@ interface ListingScoreCardProps {
   category: string;
   tags?: string[];
   author?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   authorImage?: string;
   aiScore?: number;
@@ -97,11 +101,16 @@ export function ListingScoreCard({
   image, 
   category, 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function ListingScoreCard(): any ({;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   tags,
   author,
   authorImage,
@@ -110,6 +119,7 @@ export function ListingScoreCard(): any ({;
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [mainImageError, setMainImageError] = useState(false)
   const [authorImageError, setAuthorImageError] = useState(false)
@@ -157,6 +167,8 @@ export function ListingScoreCard(): any ({;
             </div>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {image && !mainImageError && (
@@ -164,7 +176,10 @@ export function ListingScoreCard(): any ({;
           <Image
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             src={image} 
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -173,11 +188,17 @@ export function ListingScoreCard(): any ({;
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -194,9 +215,12 @@ export function ListingScoreCard(): any ({;
           {aiScore === undefined || aiScore === null ? (
             <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           ) : (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ) : (
             aiScore > 0 && (
               <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">
@@ -206,6 +230,7 @@ export function ListingScoreCard(): any ({;
             )
           )}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
           {title}
@@ -228,6 +253,9 @@ export function ListingScoreCard(): any ({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
@@ -264,11 +292,15 @@ interface ListingScoreCardProps {;
 }
 ;
 export function ListingScoreCard({;
+<<<<<<< HEAD
 export function ListingScoreCard(): any ({;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title,;
   description,;
   image,;
   category,;
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -295,6 +327,8 @@ export function ListingScoreCard({ ;
   description, ;
   image, ;
   category, ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   tags,;
   author,;
   authorImage,;
@@ -302,7 +336,10 @@ export function ListingScoreCard({ ;
   rating = 0,;
   reviewCount = 0,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className,;
 }: ListingScoreCardProps) {;
   const [mainImageError, setMainImageError] = useState(false);
@@ -312,7 +349,10 @@ export function ListingScoreCard({ ;
     >;
       {image && !mainImageError && (;
         <div className='h-48 w-full overflow-hidden relative'>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   author_image?: string;
   ai_score?: number;
   rating?: number;
@@ -336,31 +376,45 @@ function ListingScoreCard() {
             on_error={() => setMainImageError (true)}
             priority={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {(!image || mainImageError) && ( // Fallback if no image or error;
         <div className='h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center'>;
           <span className='text-zion-slate-light text-sm'>No Image</span>;
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className='flex flex-col p-4 flex-grow'>;
         <div className='mb-2 flex items-center justify-between'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className='flex flex-col p-4 flex-grow'>;
         <div className='mb-2 flex items-center justify-between'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Badge
             variant='secondary'
             className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'>;
             {category}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Badge>;
           {aiScore === undefined || aiScore === null ? (;
             <div className='text-xs italic text-zion-slate-light'>;
@@ -370,6 +424,7 @@ function ListingScoreCard() {
             aiScore > 0 && (;
               <div className='flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs'>;
                 <span className='font-medium mr-1'>AI Match:</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   className;
 } ListingScoreCardProps) {;
@@ -416,6 +471,8 @@ function ListingScoreCard() {
           )}
         </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <span>{aiScore}%</span>;
               </div>;
             );
@@ -428,7 +485,10 @@ function ListingScoreCard() {
         <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>;
           {description}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             sizes='(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw' // General sizes          />;
         </div>)}
       {(!image || mainImageError) && ( // Fallback if no image or error;
@@ -459,13 +519,23 @@ function ListingScoreCard() {
         <p className='text - zion - slate mb - 4 flex - grow line - clamp - 2'>;
           {description}
         </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {rating > 0 && (
           <div className='flex items - center gap - 1 mb - 4'>;
             <div className='flex'>;
               {[1, 2, 3, 4, 5].map (star => (
                 <StarIcon;
                   key={star}
+<<<<<<< HEAD
         </p>;
+=======
+
+        </p>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {rating > 0 && (;
           <div className='flex items-center gap-1 mb-4'>;
             <div className='flex'>;
@@ -478,6 +548,7 @@ function ListingScoreCard() {
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
                   )}                />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ) : (;
             aiScore > 0 && (;
@@ -499,6 +570,9 @@ function ListingScoreCard() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className={cn(;
                     "h-4 w-4";
                     star <= Math.round(rating);
@@ -506,6 +580,7 @@ function ListingScoreCard() {
                       : "text-zion-slate-light";
                   )}
                 />;
+<<<<<<< HEAD
 <<<<<<< HEAD
               ))}
             </div>
@@ -541,10 +616,14 @@ function ListingScoreCard() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               ))}
             </div>;
             <span className='text-sm text-zion-slate-light ml-1'>;
+<<<<<<< HEAD
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
         ;
@@ -564,12 +643,17 @@ function ListingScoreCard() {
               ))}
             </div>;
             <span className="text-sm text-zion-slate-light ml-1">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ({reviewCount});
             </span>;
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {tags && tags.length > 0 && (;
@@ -580,11 +664,15 @@ function ListingScoreCard() {
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'>                {tag}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Badge>;
             ))}
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -600,16 +688,22 @@ function ListingScoreCard() {
                   src={authorImage}
                   alt={author}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
         {author && (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
               <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {author.charAt(0)}
               </div>
@@ -654,6 +748,12 @@ function ListingScoreCard() {
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
           Request Quote;
         </Button>;
+=======
+        <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
+          Request Quote;
+        </Button>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {author && (;
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>;
             {authorImage && !authorImageError ? (;
@@ -690,6 +790,10 @@ function ListingScoreCard() {
                 <Image;
                   src={author_image}
                   alt={author}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
@@ -707,6 +811,7 @@ function ListingScoreCard() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
         ;
         {tags && tags.length > 0 && (;
           <div className="flex flex-wrap gap-2 mb-4">;
@@ -739,6 +844,8 @@ function ListingScoreCard() {
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   className="object-cover rounded-full"
                   onError={() => setAuthorImageError(true)}
@@ -758,6 +865,7 @@ function ListingScoreCard() {
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),;}
  import { ;
@@ -840,3 +948,9 @@ className) ;
 }
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+};
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

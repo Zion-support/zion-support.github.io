@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 export default function Page() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import Head from 'next/head';
+export default function Page() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Pattern — Cloud Improving Continuously</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Head from 'next/head';
 export default function Page() {
@@ -17,6 +23,8 @@ export default function Page() {
         <title>Pattern — Cloud Improving Continuously</title>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta
           name='description'
           content='Actionable architectural pattern synthesized from live site signals.'
@@ -40,10 +48,13 @@ export default function Page() {
           dangerouslySetInnerHTML={{
             __html:
 <<<<<<< HEAD
+<<<<<<< HEAD
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>'
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',;
 
@@ -57,6 +68,7 @@ export default function Page() {
   );export default function Page() {;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Page() {
 
@@ -66,6 +78,11 @@ export default function Page() {
   return (
 }
 =======
+=======
+export default function Page() {
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Pattern — Cloud Improving Continuously</title>;
@@ -124,7 +141,10 @@ function Page() {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Pattern — Cloud Improving Continuously</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / explore" target="_blank" rel="noopener">https://ziontechgroup.com / explore</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;
@@ -133,10 +153,15 @@ function Page() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
@@ -150,6 +175,7 @@ function Page() {
     </div>
   );export default function Page() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function Page() {
@@ -222,12 +248,17 @@ export default function Page(req, res) {
 
 =======
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function Page() {
   return (
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Pattern — Cloud Improving Continuously</title>
@@ -245,4 +276,7 @@ export default function Page() {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

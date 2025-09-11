@@ -24,6 +24,7 @@ if (return) {
       set_timeout (() => {
         setIsSuccess (false);
       }, 5000);
+<<<<<<< HEAD
     } catch (error) {
       console.error ("Error subscribing:", error);
     } finally {
@@ -31,12 +32,30 @@ if (return) {
     e && e.preventDefault();
     if (!email || isSubmitting) return;
     setIsSubmitting(true),;
+=======
+
+    } catch (error) {
+      console.error ("Error subscribing:", error);
+    } finally {
+
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    if (!email || isSubmitting) return;
+
+    setIsSubmitting(true),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       // In a real implementation, this would connect to a backend service;
       // For now, we'll simulate a successful submission;
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setTimeout(() => {;
         setIsSuccess(false);
       }, 5000);
@@ -45,6 +64,7 @@ if (return) {
     } finally {;
       setIsSubmitting(false);
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -74,6 +94,13 @@ export const MobileEmailCapture: React.FC = () => {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+  }
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -103,6 +130,7 @@ export const MobileEmailCapture: React.FC = () => {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -223,6 +251,13 @@ export const MobileEmailCapture: React.FC = () => {;
   },
 
 
+=======
+  }
+  },
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
@@ -235,7 +270,10 @@ export const MobileEmailCapture: React.FC = () => {;
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
 
@@ -244,7 +282,10 @@ export const MobileEmailCapture: React.FC = () => {;
               placeholder="Enter your email address"
               value={email}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onChange={(e) => setEmail(e && e.target.value)}
               className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder:text-gray-400";
               required;
@@ -256,10 +297,20 @@ export const MobileEmailCapture: React.FC = () => {;
               {isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe"}
             </Button>;
           </form>;
+<<<<<<< HEAD
           <p className="text-sm text-gray-400 mt-4">;
 
 
 
+=======
+
+          <p className="text-sm text-gray-400 mt-4">;
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setIsSubmitting (false);
     }
   }
@@ -293,6 +344,7 @@ export const MobileEmailCapture: React.FC = () => {;
           </form>;
           <p className="text - sm text - gray - 400 mt - 4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ;
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
             <Input;
@@ -315,6 +367,9 @@ export const MobileEmailCapture: React.FC = () => {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             We respect your privacy and will never share your information.;
           </p>;
         </div>;
@@ -323,6 +378,7 @@ export const MobileEmailCapture: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
     </section>);
@@ -358,3 +414,7 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

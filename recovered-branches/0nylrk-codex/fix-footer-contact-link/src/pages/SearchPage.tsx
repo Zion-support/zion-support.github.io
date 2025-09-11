@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +28,10 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -34,6 +40,7 @@ import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
 export default function SearchPage() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [params] = useSearchParams();
   const navigate = useNavigate();
@@ -68,6 +75,8 @@ export default function SearchPage() {
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [params] = useSearchParams();
 
@@ -77,13 +86,17 @@ export default function SearchPage() {
 
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     if (initial) {
       search(initial)
     }
+<<<<<<< HEAD
 
   const initial = params && params.get("q") || "";
   const [query, setQuery] = useState(initial);
@@ -125,6 +138,15 @@ export default function SearchPage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }, [initial]);
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+    navigate(`/search?q=${encodeURIComponent(query)}`);
+    search(query)
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [initial]),
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -133,15 +155,20 @@ export default function SearchPage() {;
     search(query)
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -150,11 +177,14 @@ export default function SearchPage() {;
         <form onSubmit={handleSubmit} className="mb-6">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
+<<<<<<< HEAD
 
           />;
         </form>;
@@ -168,6 +198,12 @@ export default function SearchPage() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          />
+        </form>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -204,6 +240,7 @@ export default function SearchPage() {;
           />;
         </form>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           />;
         </form>;
 =======
@@ -211,6 +248,10 @@ export default function SearchPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -228,6 +269,7 @@ export default function SearchPage() {;
                 <p className="text-zion-slate-light">{r && r.description}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
   }, [initial]),;
 ;
   const handleSubmit = (e:React.FormEvent) => {;
@@ -269,6 +311,17 @@ export default function SearchPage() {;
         )}
       </main>;
     </AppLayout>;
+=======
+          </div>;
+        )}
+
+      </main>;
+    </AppLayout>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
@@ -333,6 +386,7 @@ if ( {) {
     </AppLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
   loading && <p className="text-zion-slate-light">Searching...</p> 
@@ -383,3 +437,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

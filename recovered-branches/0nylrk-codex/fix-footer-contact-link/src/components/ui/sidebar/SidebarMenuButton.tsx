@@ -1,22 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
 interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTMLButtonElement> {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className?: string;
   children?: React && React.ReactNode;
   asChild?: boolean;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(;
   ({ className, children, asChild = false, ...props }, ref) => {;
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(
+<<<<<<< HEAD
           "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"
           "text-muted-foreground hover: text-foreground hover:bg-accent"
 
@@ -34,12 +45,22 @@ import { Slot } from "@radix-ui/react-slot",
 import { cn } from "@/lib/utils",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"
+          "text-muted-foreground hover: text-foreground hover:bg-accent"
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   children?: React.ReactNode,
   asChild?: boolean
 }
 
+<<<<<<< HEAD
 
 export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(
   ({ className, children, asChild = false, ...props }, ref) => {
@@ -50,6 +71,8 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
         className={cn(
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(
   ({ className, children, asChild = false, ...props }, ref) => {;
     const Comp = asChild ? Slot : "button";
@@ -65,6 +88,7 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
           className
           "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
           "text-muted-foreground hover:text-foreground hover:bg-accent",
+<<<<<<< HEAD
           "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
           className
 import React, { forwardRef } from "react",;
@@ -91,6 +115,11 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
           "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
           "text-muted-foreground hover:text-foreground hover:bg-accent",
           "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className
 
 
@@ -102,6 +131,7 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
       </Comp>;
     );
   }
+<<<<<<< HEAD
 
 SidebarMenuButton && SidebarMenuButton.displayName = "SidebarMenuButton";
 
@@ -150,11 +180,17 @@ SidebarMenuButton.displayName = "SidebarMenuButton";
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+);
+SidebarMenuButton.displayName = "SidebarMenuButton";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ),
 
 SidebarMenuButton.displayName = "SidebarMenuButton",
 );
 
+<<<<<<< HEAD
 import React, { forwardRef } from "react",;
 import { Slot } from "@radix-ui/react-slot",;
 import { cn } from "@/lib/utils",;
@@ -212,3 +248,6 @@ SidebarMenuButton.displayName = "SidebarMenuButton";
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+SidebarMenuButton.displayName = "SidebarMenuButton";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

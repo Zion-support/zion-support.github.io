@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // All services combined const allServices = [ ...advancedAIMLServices;
 
  // All services combined const allServices = [ ...advancedAIMLServices;
@@ -14,6 +15,8 @@
  // All services combined const allServices = [ ...advancedAIMLServices;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
  // All services combined const allServices = [ ...advancedAIMLServices;
 
@@ -21,14 +24,19 @@
 // All services combined const allServices = [ ...advancedAIMLServices;
 =======
  // All services combined const allServices = [ ...advancedAIMLServices;
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
 ...emergingTechnologyServices ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 const filteredServices = activeTab === 'all' ? allServices return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"> <SEO title="2025 Comprehensive Services Showcase - Zion Tech Group" description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions." keywords= {
   ["micro SAAS", "IT services", "AI services", "business intelligence", "automation", "cloud infrastructure"]
@@ -36,6 +44,8 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   /* Hero Section */
 }<section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white"> <div className="absolute inset-0 bg-black/20"></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"> <motion.div initial= {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const filteredServices = activeTab === 'all' ? allServices return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"> <SEOtitle="2025 Comprehensive Services Showcase - Zion Tech Group" description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions." keywords= {
   ["micro SAAS", "IT services", "AI services", "business intelligence", "automation", "cloud infrastructure"] 
@@ -43,7 +53,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   /* Hero Section */ ;
 }<section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white"> <div className="absolute inset-0 bg-black/20"></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"> <motion&& motion.div initial= {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 20
 }animate= {
@@ -51,6 +64,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
   duration: 0.8
 }className="text-center" > <h1 className="text-4xl md:text-6xl font-bold mb-6"> 2025 Comprehensive Services Showcase </h1> <p className="text-xl md:text-2xl mb-8 text-blue-100"> Transform your business with our innovative portfolio of micro SAAS, IT infrastructure, and AI services </p> <div className="flex flex-wrap justify-center gap-4 text-sm"> <span className="bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30"> {
@@ -79,6 +93,8 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   filteredServices.map ( (service, index) => (<motion.div key= {
   service.id
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   duration: 0 && 0.8 
 
@@ -108,7 +124,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   filteredServices && filteredServices.map ( (service, index) => (<motion&& motion.div key= {
   service && service.id 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }initial= {
   {
   opacity: 0, y: 20
@@ -117,6 +136,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
   duration: 0.5, delay: index * 0.1
 }className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" > {
@@ -179,6 +199,8 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 }<AnimatePresence mode="wait"> {
   viewMode === 'grid' ? (<motion.div key="grid" initial= {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   duration: 0 && 0.5, delay: index * 0 && 0.1 
 
@@ -242,7 +264,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 }<AnimatePresence mode="wait"> {;
   viewMode === 'grid' ? (<motion&& motion.div key="grid" initial= {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0
 }animate= {
@@ -251,11 +276,14 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 }exit= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   opacity: 0
 }className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" > {
   filteredServices.map ( (service, index) => (<motion.div key= {
   service.id
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   opacity: 0 
 
@@ -263,7 +291,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   filteredServices && filteredServices.map ( (service, index) => (<motion&& motion.div key= {
   service && service.id 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }initial= {
   {
   opacity: 0, y: 20
@@ -273,7 +304,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   duration: 0 && 0.5, delay: index * 0 && 0.1 
 =======
@@ -287,7 +321,10 @@ import {
 } from 'lucide-react';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {;
   /* Service Header */ ;
 }<divclassName= {
@@ -383,6 +420,7 @@ import {
 }</div> </section> {;
   /* Why Choose Us */ ;
 }<section className="py-20 bg-white"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <motion&& motion.div initial= {
+<<<<<<< HEAD
 <<<<<<< HEAD
   duration: 0.5, delay: index * 0.1
 }className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" > {
@@ -483,6 +521,9 @@ import {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -491,15 +532,21 @@ import {
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   duration: 0.5
 }className="text-center p-6" > <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-blue-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Innovation</h3> <p className="text-gray-600"> Cutting-edge AI and machine learning solutions that deliver real business value </p> </motion.div> <motion.div initial= {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   duration: 0 && 0.5 
 
 }className="text-center p-6"> <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-blue-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Innovation</h3> <p className="text-gray-600"> Cutting-edge AI and machine learning solutions that deliver real business value </p> </motion && motion.div> <motion&& motion.div initial= {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -508,15 +555,21 @@ import {
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   duration: 0.5, delay: 0.1
 }className="text-center p-6" > <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-green-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3> <p className="text-gray-600"> Bank-grade security and compliance for mission-critical business applications </p> </motion.div> <motion.div initial= {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   duration: 0 && 0.5, delay: 0 && 0.1 
 
 }className="text-center p-6"> <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-green-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3> <p className="text-gray-600"> Bank-grade security and compliance for mission-critical business applications </p> </motion && motion.div> <motion&& motion.div initial= {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -525,18 +578,25 @@ import {
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   duration: 0 && 0.5, delay: 0 && 0.2 
 }className="text-center p-6"> <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Globe className="w-8 h-8 text-purple-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3> <p className="text-gray-600"> Cloud-native solutions that scale globally with enterprise-grade reliability </p> </motion && motion.div> </div> </div> </section> {;
   /* Contact Section */ ;
 }<section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl md:text-4xl font-bold mb-6"> Ready to Transform Your Business? </h2> <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"> Let's discuss how our innovative services can help you achieve your business goals </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"> <div className="text-center"> <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Call Us</h3> <p className="text-blue-100">+1 302 464 0950</p> </div> <div className="text-center"> <Mail className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Email Us</h3> <p className="text-blue-100">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className="text-center"> <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Visit Us</h3> <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Business Transformation Consultation" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2" > <Mail className="w-5 h-5" /> Start Consultation </a> <a href="https://ziontechgroup && ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2" > <Globe className="w-5 h-5" /> Visit Website </a> </div> </div> </section> </div>) ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };export default ComprehensiveServicesShowcase;
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;
                     <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -545,17 +605,26 @@ import {
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
 
 
+=======
+                      href={`mailto:${(service as any).contact |'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
+                      href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
                       Get Started
                     </a>
                     <a
+<<<<<<< HEAD
 
 
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
 
 
+=======
+                      href={`tel:${(service as any).mobile |'+1 302 464 0950'}`}
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -584,11 +653,18 @@ import {
             ))}
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           {/* Services Display */}
@@ -616,6 +692,7 @@ import {
                             POPULAR;
                           </span>;
                         )}
+<<<<<<< HEAD
 
                       </div>;
                       <h3 className="text-xl font-bold mb-2">{service && service.name}</h3>;
@@ -633,10 +710,19 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{service.name}</h3>
+                      <p className="text-blue-100 text-sm">{service.tagline}</p>
+                      
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Price */}
                       <div className="mt-4">;
                         <span className="text-2xl font-bold">;
                           {getServicePricing(service)}
+<<<<<<< HEAD
 
 const filtered_services = active_tab === 'all' ? all_services return (<div className="min - h-screen bg - gradient - to - br from - slate - 50 via - blue - 50 to - indigo - 100"> <SEO title="2025 Comprehensive Services Showcase - Zion Tech Group" description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting - edge solutions." keywords= {
   ["micro SAAS", "IT services", "AI services", "business intelligence", "automation", "cloud infrastructure"];
@@ -938,6 +1024,14 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                       </div>;
                       <h3 className="text - xl font - bold mb - 2">{service.name}</h3>;
                       <p className="text - blue - 100 text - sm">{service.tagline}</p>;
+=======
+                        </span>
+                      </div>
+                    </div>
+                    {/* Service Content */}
+                    <div className="p-6">
+                      <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     {/* Service Content */}
@@ -946,6 +1040,10 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                       
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Price */}
                       <div className="mt - 4">;
                         <span className="text - 2xl font - bold">;
@@ -977,21 +1075,31 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                         </span>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                         </span>
                       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Features */}
                       <div className="mb-6">;
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
@@ -1002,11 +1110,20 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                               {feature}
                             </li>;
                           ))}
+<<<<<<< HEAD
+=======
+                        </ul>
+                      </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -1025,23 +1142,40 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                         </span>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
 
-=======
 
-
-
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
                         <div>;
                           <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
+<<<<<<< HEAD
+=======
+                        </div>
+                        <div>
+                          <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days
+                        </div>
+                      </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         </span>;
                         <span className="text - gray - 500">;
@@ -1076,6 +1210,7 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                         </div>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1088,6 +1223,14 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* ROI and Popularity */}
                       <div className="flex items - center justify - between mb - 4">;
                         <div className="text - sm">;
@@ -1097,12 +1240,21 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                           </span>;
                         </div>;
                         {service.popular && (
+<<<<<<< HEAD
+=======
+                          <div className="flex items-center gap-1 text-yellow-600">
+                            <Star className="w-4 h-4 fill-current" />
+                            <span className="text-sm font-medium">Popular</span>
+                          </div>
+                        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           <div className="flex items - center gap - 1 text - yellow - 600">;
                             <Star className="w - 4 h - 4 fill - current" />;
                             <span className="text - sm font - medium">Popular</span>;
                           </div>;
                         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1116,18 +1268,38 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {/* Price and Features */}
                         <div className="lg:w - 1/3">;
                           <div className="text - right mb - 4">;
                             <span className="text - 3xl font - bold text - gray - 900">;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
+<<<<<<< HEAD
 
 
+=======
+                            </span>
+                            <span className="text-gray-500">
+                              {typeof service.price === 'string' ? (service as any).period |'/month' : '/month'}
+                            </span>
+                          </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>
                           </div>
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -1135,14 +1307,22 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                                 <li key={idx} className="flex items-center">
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>;
                         <div>;
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
                         </div>;
                       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* ROI and Popularity */}
                       <div className="flex items-center justify-between mb-4">;
                         <div className="text-sm">;
@@ -1174,10 +1354,17 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                                 <li key={idx} className="flex items-center">;
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
                                   {feature}
+<<<<<<< HEAD
                                 </li>;
                               ))}
 <<<<<<< HEAD
 =======
+=======
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1191,7 +1378,10 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                               <span className="ml-1">{service.category}</span>
                             </span>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             </ul>;
                           </div>;
                           {/* Category and Action */}
@@ -1201,19 +1391,26 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                               <span className="ml-1">{service && service.category}</span>;
                             </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                             
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
                             
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <a
                               href={service && service.link}
                               target="_blank"
@@ -1256,11 +1453,14 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
                       </div>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
           </AnimatePresence>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </AnimatePresence>;
 
@@ -1269,9 +1469,13 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className="text-center py-12">;
@@ -1282,11 +1486,20 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
               <p className="text-gray-600">Try adjusting your search terms or category filters.</p>;
             </div>;
           )}
+<<<<<<< HEAD
+=======
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1303,6 +1516,10 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1323,6 +1540,10 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1342,6 +1563,10 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1364,6 +1589,10 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -1392,11 +1621,18 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </section>;
+=======
+=======
+        </div>;
+      </section>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Why Choose Us */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1479,6 +1715,7 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
           </div>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
             <a
+<<<<<<< HEAD
               href="mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">;
               <Mail className="w-5 h-5" />;
@@ -1489,6 +1726,16 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
+              className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+            >
+              <Mail className="w-5 h-5" />
+              Start Consultation
+            </a>
+            <a
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               href="https://ziontechgroup && ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2">;
               <Globe className="w-5 h-5" />;
@@ -1603,20 +1850,28 @@ const filtered_services = active_tab === 'all' ? all_services return (<div class
             >;
               <Globe className="w - 5 h - 5" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Visit Website;
             </a>;
           </div>;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ComprehensiveServicesShowcase;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default ComprehensiveServicesShowcase;
 =======
+<<<<<<< HEAD
 
 
 export default ComprehensiveServicesShowcase;
@@ -2167,3 +2422,10 @@ export default ComprehensiveServicesShowcase;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </div>);
+}
+export default ComprehensiveServicesShowcase;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

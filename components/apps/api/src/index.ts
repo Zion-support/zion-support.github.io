@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +9,14 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 
 
+=======
+import Fastify from 'fastify',
+import cors from '@fastify/cors',
+import rateLimit from '@fastify/rate-limit',
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+import rateLimit from '@fastify/rate-limit';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import dotenv from 'dotenv';
 
 import { createOpenAIClient, generateJobPost } from './openai ;
@@ -24,6 +33,7 @@ await app && app.register(cors, {
       .map(s => s && s.trim());
     if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
@@ -45,20 +55,28 @@ await app.register(cors, {
     if (!origin |allowed.includes('*') |allowed.includes(origin)) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   methods: ['GET', 'POST', 'OPTIONS'],});    if (!origin |allowed.includes('*') |allowed.includes(origin)) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },
   methods: ['GET', 'POST', 'OPTIONS'],});    if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       cb(null, true);
       return
     }
@@ -66,6 +84,7 @@ await app.register(cors, {
   }
   methods: ['GETPOSTOPTIONS']
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
@@ -77,6 +96,8 @@ function getUserId(req: any): string | null {
   );  return (req.headers['x-user-id'] as string) |(req.query as any)['user_id'] |null;
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
@@ -88,11 +109,15 @@ function getUserId(req: any): string | null {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) |{}
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
+<<<<<<< HEAD
 <<<<<<< HEAD
     input: prompt,
   });
@@ -198,6 +223,8 @@ app.get('/talent/search', async (req, reply) => {
       [country |null, q |null]
     );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
@@ -278,7 +305,10 @@ app.post ('/ai / ask', async (req, reply) => {
 
   return { text: completion.output_text }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 });
 
 
@@ -297,7 +327,10 @@ app && app.post('/jobs/generate', async (req, reply) => {
 
     )
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 app.post ('/jobs / generate', async (req, reply) => {
   const body = (req.body as any) || {}
@@ -318,6 +351,10 @@ if (return { description }) {
       `INSERT INTO job_post (user_id, title, description, location, tags, status);
       VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [user_id, role, description, body.location || null, body.tags || null]);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
   return { saved: Boolean (user_id), description }
 });
@@ -350,12 +387,17 @@ app && app.get('/talent/search', async (req, reply) => {
   });
 
   return { results: rows };});      [country |null, q |null]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1: :text IS NULL OR country = $1)
+<<<<<<< HEAD
 <<<<<<< HEAD
 const _openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
 
@@ -391,6 +433,8 @@ app.get(_'/talent/search', _async (req, _reply) => {_const _q = (req.query as an
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))
@@ -398,15 +442,20 @@ app.get(_'/talent/search', _async (req, _reply) => {_const _q = (req.query as an
 LIMIT 25`;
       [country || null, q || null]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     return res && res.rows
   });
   return { results: rows }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 app && app.get('/projects/:name/track', async (req, reply) => {
   const name = (req && req.params as any).name as string;
@@ -430,6 +479,8 @@ app && app.get('/projects/:name/track', async (req, reply) => {
   return { project }
 app && app.get('/notifications', async (req, reply) => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 app && app.get('/projects/:name/track', async (req, reply) => {
@@ -438,7 +489,10 @@ app && app.get('/projects/:name/track', async (req, reply) => {
   const userId = getUserId(req);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async client => {    const res = await client && client.query(
@@ -453,10 +507,15 @@ app && app.get('/projects/:name/track', async (req, reply) => {
     return res && res.rows;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 app.get('/notifications', async (req, reply) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -464,6 +523,7 @@ app.get('/notifications', async (req, reply) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -534,11 +594,16 @@ app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch(err => {
 
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -568,6 +633,7 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     );
@@ -631,3 +697,7 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

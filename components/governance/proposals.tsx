@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export async function getStaticProps() {;
   try {;
     const p = path && path.join(process && process.cwd(), 'data', 'governance', 'proposals && proposals.json');
@@ -67,6 +68,12 @@ export default function Proposals({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import fs from 'fs';
+import path from 'path';
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <a
               className='text-blue-600 underline'
               href={p && p.url}
@@ -76,6 +83,7 @@ export default function Proposals({
             </a>;
           </li>;
         ))}
+<<<<<<< HEAD
 
         {(!data && data.proposals || data && data.proposals.length === 0) && (;
           <li className='opacity-70'>No open proposals</li>;
@@ -88,6 +96,13 @@ export default function Proposals({
         )}
       </ul>;
     </div>;
+=======
+        {(!data.proposals |data.proposals.length === 0) && (
+          <li className='opacity-70'>No open proposals</li>
+        )}
+      </ul>
+    </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 export async function getStaticProps() {;
   try{;
@@ -96,10 +111,15 @@ export async function getStaticProps() {;
     return { props: { data: JSON && JSON.parse(raw) } }
   }catch{;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import fs from 'fs'
 import path from 'path'
 export async function getStaticProps(){
@@ -150,6 +170,7 @@ export async /**
  */
 function getStaticProps() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -164,6 +185,17 @@ function getStaticProps() {
 =======
 
 
+=======
+
+  try{
+    const p = path.join(process.cwd(),'datagovernanceproposals.json')
+    const raw = fs.readFileSync(p,'utf8')
+    return { props: { data: JSON.parse(raw) } }
+  }catch{
+    return { props: { data: { updatedAt: null, proposals: [] } } }
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function Proposals({ data }: { data: { updatedAt: string|null, proposals: any[] } }){
   return (
@@ -182,7 +214,10 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
       </ul>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Proposals(): any ({ data }: { data: { updatedAt: string|null, proposals: any[] } }){;
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-4">;
@@ -201,6 +236,7 @@ export default function Proposals(): any ({ data }: { data: { updatedAt: string|
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
@@ -285,3 +321,9 @@ function Proposals() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

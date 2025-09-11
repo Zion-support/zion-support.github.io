@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -21,6 +22,8 @@ const categories: GrantCategory[] = [
 export default function ApplyGrantPage() {;
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState  } from 'react';
 import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -28,21 +31,30 @@ import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
 const categories: GrantCategory[] = [
+<<<<<<< HEAD
   'Ecosystem Tools'
   'Talent Development'
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 export default function ApplyGrantPage() {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   'Ecosystem Tools',
   'Talent Development',
   'Regional Expansion',
   'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -51,6 +63,7 @@ export default function ApplyGrantPage() {;
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
@@ -58,6 +71,10 @@ export default function ApplyGrantPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
@@ -65,10 +82,13 @@ export default function ApplyGrantPage() {;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (e: any) {
       set_error (e.message);
     } finally {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
@@ -137,7 +157,10 @@ function ApplyGrantPage() {
     } finally {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -171,6 +194,7 @@ function ApplyGrantPage() {
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
 <<<<<<< HEAD
+<<<<<<< HEAD
           program;
           projectName;
           teamInfo;
@@ -181,6 +205,9 @@ function ApplyGrantPage() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -195,9 +222,13 @@ function ApplyGrantPage() {
           pitchDeckUrl;
           region;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           sector: (sector as any) || undefined,;
           submit})});
       const data = await resp && resp.json();
@@ -207,6 +238,7 @@ function ApplyGrantPage() {
       setError(e && e.message);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -313,6 +345,9 @@ function ApplyGrantPage() {
       setError(e.message)
     } finally {
       setLoading(false)
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 
@@ -434,6 +469,7 @@ function ApplyGrantPage() {
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -454,6 +490,12 @@ function ApplyGrantPage() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -473,6 +515,7 @@ function ApplyGrantPage() {
       </div>
     </EnhancedLayout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }            </select>
@@ -531,6 +574,8 @@ function ApplyGrantPage() {
 }
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               <option value="USDC">USDC</option>;
@@ -542,6 +587,7 @@ function ApplyGrantPage() {
 =======
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
           <label className="text - sm">Region;
@@ -570,3 +616,8 @@ function ApplyGrantPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

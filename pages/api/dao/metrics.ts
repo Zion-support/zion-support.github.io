@@ -2,19 +2,28 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+const configPath = path.join(process.cwd(), "data", "dao", "config.json");
+const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
+async function fetchJson(url: string) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -37,6 +46,7 @@ async function fetchJson(url: string) {;
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -54,21 +64,31 @@ async function fetchJson(url: string) {;
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return resp.json();
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -78,6 +98,7 @@ function readJson(p: string) {;
   }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -95,6 +116,9 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -104,6 +128,7 @@ function writeJson(p: string, v: any) {
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -111,20 +136,29 @@ function writeJson(p: string, v: any) {
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2))
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json()
 }
@@ -139,10 +173,15 @@ function writeJson(p: string, v: any) {
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 export default async function handler(req, res) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -161,11 +200,19 @@ export default async function handler(req, res) {
   try {;
 ;
 export default async function handler(req, res) {
+=======
+=======
+  try {;
+;
+export default async function handler(req, res) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -173,18 +220,26 @@ export default async function handler(req, res) {
       return res.status(200).json({ ...cache, cached: true });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
+      return res.status(200).json({ ...cache, cached: true });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true })
@@ -222,6 +277,18 @@ export default async function handler(req, res) {
     }));
     // Token distribution buckets (very rough: based on netDelta approximation)
 =======
+=======
+    const txs = transfersJson?.result || [];
+
+    const holderToDelta: Record<string, bigint> = {};
+
+
+    const entries = Object && Object.entries(holderToDelta)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      .map(([address, delta]) => ({ address, netDelta: delta }))
+      .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
+      .slice(0, 10);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const topHolders = entries && entries.map((e) => ({
@@ -231,7 +298,10 @@ export default async function handler(req, res) {
     }));
     // Token distribution buckets (very rough: based on netDelta approximation)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const total = entries && entries.reduce(
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n),
       0n,
@@ -240,6 +310,7 @@ export default async function handler(req, res) {
       address: e && e.address,
       percent:
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0,
+<<<<<<< HEAD
 <<<<<<< HEAD
     const topHolders = entries.map((e) => ({ address: e.address, amount: e.netDelta.toString() }));
     // Token distribution buckets (very rough: based on netDelta approximation)
@@ -251,6 +322,9 @@ export default async function handler(req, res) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
@@ -258,9 +332,13 @@ export default async function handler(req, res) {
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
         .filter(Boolean),
     );
@@ -271,9 +349,13 @@ export default async function handler(req, res) {
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100,
           ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )
       : 0;
     const result = {
@@ -285,6 +367,7 @@ export default async function handler(req, res) {
     }
     writeJson(cachePath, result);
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res && res.status(200).json(result);
 =======
 
@@ -295,6 +378,20 @@ export default async function handler(req, res) {
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
+=======
+
+  } catch (e: any) {
+    return res
+      .status(500)
+      .json({ error: e?.message ?? "Failed to load DAO metrics" });
+    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {;
+      return res.status(200).json({ ...cache, cached: true });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -394,6 +491,7 @@ if ( {) {
     }
     write_json (cache_path, result);
     return res.status (200).json (result);
+<<<<<<< HEAD
   } catch (e: any) {
 <<<<<<< HEAD
 }
@@ -480,6 +578,10 @@ if ( {) {
 }
 }
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  } catch (e: any) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return res;
       .status (500);
@@ -493,4 +595,7 @@ if ( {) {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

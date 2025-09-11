@@ -1,22 +1,38 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -24,10 +40,21 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 
 
+=======
+    
+    return this.props.children;
+  }
+}
+import React, { useMemo, useState } from 'react';
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
 
+<<<<<<< HEAD
 export default function ServiceDescriptionGeneratorPage() {
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
@@ -36,19 +63,33 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
+=======
+=======
+
+export default function ServiceDescriptionGeneratorPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
   >('professional');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
@@ -62,20 +103,29 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const keyFeatures = useMemo(() => {
 
@@ -121,10 +171,13 @@ function handleAccept() {
     setAccepted(false),;
     try {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
   }
+<<<<<<< HEAD
 =======
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
   const [loading, setLoading] = useState(false);
@@ -198,11 +251,15 @@ function handleAccept() {
 
   return (
 <<<<<<< HEAD
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
       <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
         Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
       </p>
+<<<<<<< HEAD
 
 
 
@@ -222,6 +279,8 @@ function handleAccept() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <form
         onSubmit={handleSubmit}
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
@@ -234,6 +293,7 @@ function handleAccept() {
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e && e.g., On-Demand Web Performance Audit'
             value={title}
+<<<<<<< HEAD
 <<<<<<< HEAD
     setAccepted(true)
   }
@@ -249,12 +309,17 @@ function handleAccept() {
       </p>
       <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setAccepted(true)
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -265,6 +330,7 @@ function handleAccept() {
             onChange={(e) => setTitle(e.target.value)}
             required
 <<<<<<< HEAD
+<<<<<<< HEAD
           />
         </div>
 <div>
@@ -272,6 +338,8 @@ function handleAccept() {
           />;
         </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
         </div>
@@ -282,22 +350,31 @@ function handleAccept() {
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div>;
           <label className='block text-sm font-medium mb-1'>;
             Target Audience;
           </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e && e.g., CTOs and product teams at growth-stage SaaS'
             value={targetAudience}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <label className="block text-sm font-medium mb-1">Target Audience</label>
           <input
@@ -321,12 +398,17 @@ function handleAccept() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <textarea
             className='w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder={
               'e && e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <label className="block text-sm font-medium mb-1">Key Features (one per line)</label>
           <textarea
@@ -419,6 +501,8 @@ function handleAccept() {
         </div>
         <div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           >;
@@ -430,12 +514,16 @@ function handleAccept() {
 
 
           <textarea
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.'
             value={additionalNotes}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             onChange={e => setAdditionalNotes(e && e.target.value)}
           />;
@@ -443,11 +531,14 @@ function handleAccept() {
         <div className='flex items-center gap-3'>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button
             type='submit'
             disabled={loading}
             className='inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60'>;
             {loading ? 'Generating…' : 'Generate Description'}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </button>;
           {error && <span className='text-red-600 text-sm'>{error}</span>}        </div>;
@@ -461,6 +552,10 @@ function handleAccept() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <button
                 onClick={handleCopy}
                 className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'>;
@@ -468,6 +563,7 @@ function handleAccept() {
               </button>;
               <button
                 onClick={handleAccept}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <label className="block text-sm font-medium mb-1">Additional Notes (optional)</label>
           <textarea
@@ -546,22 +642,42 @@ function handleAccept() {
 }
         </div>
       </form>
+=======
+
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
+          >
+            {loading ? 'Generating…' : 'Generate Description'}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>}
+        </div>
+      </form>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {generated && (
         <div className="mt-8 space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold">Generated Description</h2>
             <div className="flex items-center gap-2">
               <button
+<<<<<<< HEAD
                 onClick={handleCopy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                onClick={handleCopy}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
               >
                 Copy
               </button>
               <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
                 onClick={handleAccept  } catch (error) {
@@ -579,10 +695,17 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                onClick={handleAccept}
+                className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
+              >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Accept
               </button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <textarea
@@ -691,6 +814,8 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
         </div>)}
     </div>);
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <textarea
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated  } catch (error) {
@@ -708,6 +833,7 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
             <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
               Accepted. You can copy and paste this into your CMS.
             </div>          )}
+<<<<<<< HEAD
         </div>
       )}
     </div>
@@ -724,6 +850,48 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        </div>;
+      )}
+
+    </div>;
+  );
+
+=======
+            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={generated}
+            onChange={(e) => setGenerated(e.target.value)}
+          />
+
+          {accepted && (
+            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <div>;
+          <label className='block text - sm font - medium mb - 1'>;
+            Additional Notes (optional);
+          </label>;
+          <textarea;
+            className='w - full min - h-[80px] rounded - md border border - gray - 300 dark:border - gray - 700 bg - transparent px - 3 py - 2 focus:outline - none focus:ring - 2 focus:ring - blue - 500';
+            placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.';
+            value={additional_notes}
+            on_change={e => setAdditionalNotes (e.target.value)}
+          />;
+        </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -739,7 +907,12 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

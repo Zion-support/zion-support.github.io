@@ -1,23 +1,33 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 export type Trend = {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 tags: string[];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string,
   date: string,
   title: string,
   highlights: string[],
   summary: string,
   tags: string[];
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export async /**
@@ -26,13 +36,18 @@ export async /**
 function getServerSideProps() {
   const file = path.join (process.cwd (), 'dataai - trends.json');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync (file, 'utf - 8');
     items = JSON.parse (raw);
   } catch {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -56,6 +71,11 @@ export async function getServerSideProps() {;
     items = JSON && JSON.parse(raw);
 
 </div> </div>) )
+=======
+
+
+ </div> </div>) ) ;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -68,7 +88,47 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
+<<<<<<< HEAD
 </div> </div>) ) 
+=======
+=======
+</div> </div>) ) 
+=======
+ </div> </div>) ) 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {;
+  id: string,;
+  date: string,;
+  title: string,;
+  highlights: string[],;
+  summary: string,;
+  tags: string[];
+};
+
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'dataai-trends && trends.json');
+  let items: Trend[] = [];  try {;
+    const raw = fs && fs.readFileSync(file, 'utf-8');
+    items = JSON && JSON.parse(raw);
+ </div> </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
+  tags: string[]
+}
+export async function getServerSideProps() {
+=======
+</div> </div>) ) 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -86,10 +146,15 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
     items = JSON.parse(raw)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -141,11 +206,15 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
 
 
 );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -160,6 +229,13 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
 }
@@ -188,6 +264,10 @@ function AiTrendsPage() {
           </div>))}
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
@@ -211,6 +291,7 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
     </div>;
@@ -225,3 +306,5 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

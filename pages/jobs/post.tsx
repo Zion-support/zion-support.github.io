@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <Head>;
         <title>Post a Job - Zion</title>;
@@ -14,9 +18,13 @@
           <div>;
             <label className='block text-sm font-medium mb-1'>Title</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <input
               value={title}
               onChange={e => setTitle(e && e.target.value)}
@@ -96,9 +104,13 @@
 export default PostJob;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const PostJob: NextPage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -135,6 +147,7 @@ const PostJob: NextPage = () => {
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>
         </form>
+<<<<<<< HEAD
 
         <aside className="border rounded-md p-4">
           <h2 className="font-semibold mb-2">Preview</h2>
@@ -211,10 +224,18 @@ const PostJob: NextPage = () => {
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>
         </form>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <aside className='border rounded-md p-4'>
           <h2 className='font-semibold mb-2'>Preview</h2>
         <aside className="border rounded-md p-4">
           <h2 className="font-semibold mb-2">Preview</h2>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {preview ? (
             <div className="space-y-2">
               <div>
@@ -228,7 +249,11 @@ const PostJob: NextPage = () => {
                 <div className="font-medium">{budget ? `$${budget}` : 'Not specified'}</div>
               </div>
               <div>
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import {useState} from 'react';
 import EnhancedButton from '../../components / ui / EnhancedButton';
@@ -312,11 +337,15 @@ import EnhancedButton from '../../components / ui / EnhancedButton';
 }
 ;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 export default PostJob;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
                 <div className='text-sm opacity-70'>Description</div>
@@ -356,3 +385,5 @@ export default PostJob;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

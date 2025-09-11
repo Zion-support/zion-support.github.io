@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 
@@ -16,19 +17,26 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 =======
 
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 =======
 
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+<<<<<<< HEAD
 <<<<<<< HEAD
   | 'Other',;
 export type DisputeAttachment = {;
@@ -78,20 +86,14 @@ export type DisputeCase = {;
   resolvedAt?: string;
   resolutionSummary?: string;
 };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-export type DisputeListItem = Pick<
-  DisputeCase,
-  'id' | 'projectId' | 'createdAt' | 'status'
-> & {
-  talentName: string;
-  clientName: string;
-  projectName?: string;
-};
+  | 'Other',;
 
-export type UserSummary = {
-  id: string;
-  name: string;
+
   role: 'admin' | 'client' | 'talent';
+}
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36

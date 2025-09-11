@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -173,6 +174,9 @@ export function JobMatchCard({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -261,6 +265,7 @@ import React from 'react';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Generate a formatted date for display
   const postedDate = new Date(),
@@ -340,6 +345,9 @@ import React from 'react';
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </CardContent>;
@@ -349,15 +357,21 @@ import React from 'react';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 import React from 'react';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -393,6 +407,7 @@ if ( {) {
     }
   }
 ;
+<<<<<<< HEAD
   const handleViewDetails = () =>: any {
     // Check condition
 if ( {) {
@@ -640,3 +655,5 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

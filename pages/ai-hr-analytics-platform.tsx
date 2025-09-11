@@ -1,7 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 
+=======
+
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
 
@@ -26,6 +35,7 @@ export default function AiHrAnalyticsPlatform() {
 				"Engagement drivers and action suggestions"
 
 
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AiHrAnalyticsPlatform() {
 	return (
@@ -125,3 +135,6 @@ export default function AiHrAnalyticsPlatform() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

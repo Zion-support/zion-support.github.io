@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from "react";
 import { ResumeSelector, ResumeOption } from "../resume-selector";
@@ -33,6 +34,8 @@ export function ResumeTab({
       <ResumeSelector onResumeSelected={handleResumeSelected} />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
@@ -50,6 +53,7 @@ export function ResumeTab(): any ({;
   onApply,;
   isSubmitting = false,;
 }: ResumeTabProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {onApply && (
         <div className="mt-6">
@@ -80,10 +84,13 @@ export interface ResumeTabProps {;
 export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleResumeSelected = (resume: ResumeOption) => {;
     if (onResumeSelected) {;
       onResumeSelected(resume);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -101,6 +108,8 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
       <ResumeSelector onResumeSelected={handleResumeSelected} />
       
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (onSelectResume) {;
       onSelectResume(resume && resume.id);
@@ -109,23 +118,33 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
   }
 
   return (
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    <div className="space-y-4">
+      <ResumeSelector onResumeSelected={handleResumeSelected} />
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {onApply && (
         <div className="mt-6">
           <Button 
             onClick={onApply} 
             disabled={!selectedResumeId || isSubmitting}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="w-full"
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>
+<<<<<<< HEAD
 
 
           
@@ -140,16 +159,29 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-4">;
       <ResumeSelector onResumeSelected={handleResumeSelected} />;
+=======
+=======
+    <div className="space-y-4">;
+      <ResumeSelector onResumeSelected={handleResumeSelected} />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {onApply && (;
         <div className="mt-6">;
           <Button
@@ -158,10 +190,15 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
             className="w-full">;
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {!selectedResumeId && (;
             <p className="text-sm text-muted-foreground mt-2">;
               Please select a resume to continue;
             </p>;
+<<<<<<< HEAD
           )}
         </div>;
       )}
@@ -171,6 +208,19 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
 
 
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          )}
+        </div>;
+      )}
+    </div>
+    </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;
 }
@@ -211,6 +261,7 @@ if ( {) {
             </p>)}
         </div>)}
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -286,3 +337,7 @@ isSubmitting?: boolean
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

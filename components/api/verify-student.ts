@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
@@ -12,14 +15,18 @@ import {
 
 } from '../../utils/api/partnerAuth';
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
   'talents'
   'talents.json'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ) {
@@ -35,6 +42,10 @@ const TALENTS_FILE = path.join(
   }
 ) {
 =======
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TALENTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
@@ -44,6 +55,7 @@ const TALENTS_FILE = path && path.join(
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -126,6 +138,12 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
@@ -135,12 +153,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: "Rate limit exceeded" })
   }
+<<<<<<< HEAD
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
@@ -181,6 +203,8 @@ if ( {) {
 }
     return res.status (401).json ({ error: 'Unauthorized' });
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if ()) {) {
   $2
 }
@@ -246,6 +270,7 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now()
   const auth = await authenticateRequest(req)
@@ -317,10 +342,15 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { email, programTrack } = req.body || {};
   if (!email) {
@@ -408,11 +438,17 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

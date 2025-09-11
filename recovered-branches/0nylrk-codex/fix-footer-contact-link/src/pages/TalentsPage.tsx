@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
@@ -27,6 +28,20 @@ import { ProductListing } from "@/types/listings",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+=======
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+=======
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -38,10 +53,13 @@ const TALENT_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "Alexandra Chen"
       id: "alexandra-chen"
@@ -52,8 +70,11 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 43}
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "talent-2"
     title: "DevOps Specialist"
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.";
@@ -61,9 +82,12 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 135
     currency: "$"
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"];
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "talent-2",
     title: "DevOps Specialist",
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",
@@ -72,10 +96,13 @@ const TALENT_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "Michael Reynolds"
       id: "michael-reynolds"
@@ -86,6 +113,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 37}
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -137,16 +165,23 @@ const TALENT_LISTINGS: ProductListing[] = [;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    id: "talent-3"
+    title: "Data Scientist"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
     category: "Data Science"
     price: 145
     currency: "$"
     tags: ["Statistical Analysis", "Python", "R", "Tableau"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "talent-3",
     title: "Data Scientist",
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",
@@ -155,6 +190,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
 <<<<<<< HEAD
+<<<<<<< HEAD
     author: {
 =======
 
@@ -162,6 +198,10 @@ const TALENT_LISTINGS: ProductListing[] = [;
     author: {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    author: {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: "Priya Sharma",
       id: "priya - sharma"},
     images: ["https://images.unsplash.com / photo - 1573497491765 - dccce02b29df?auto = format & fit = crop & w=800 & h=500"],
@@ -170,6 +210,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.9,
     review_count: 29},
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     author: {
       name: "Priya Sharma"
@@ -187,16 +228,23 @@ const TALENT_LISTINGS: ProductListing[] = [;
     title: "Cybersecurity Expert",
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    id: "talent-4"
+    title: "Cybersecurity Expert"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
     category: "Security"
     price: 165
     currency: "$"
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "talent-4",
     title: "Cybersecurity Expert",
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",
@@ -205,6 +253,9 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "James Wilson"
       id: "james-wilson"
@@ -215,6 +266,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.7
     reviewCount: 31}
   {
+<<<<<<< HEAD
     id: "talent - 4",
     title: "Cybersecurity Expert",
 
@@ -237,6 +289,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     author: {
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "talent-5"
     title: "Full-Stack Developer"
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications."
@@ -244,6 +298,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 125
     currency: "$"
     tags: ["React", "Node.js", "TypeScript", "MongoDB"];
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -251,6 +306,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "talent-5",
     title: "Full-Stack Developer",
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",
@@ -259,10 +316,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["React", "Node.js", "TypeScript", "MongoDB"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "David Martinez"
       id: "david-martinez"}
@@ -273,6 +333,9 @@ const TALENT_LISTINGS: ProductListing[] = [;
     reviewCount: 42}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "talent-6"
     title: "AI Ethics Consultant"
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
@@ -304,6 +367,7 @@ const TALENT_FILTERS = [
   { label: 'Security', value: 'security' }
   { label: 'Development', value: 'development' }
   { label: 'Consulting', value: 'consulting' }]
+<<<<<<< HEAD
     author: {
 =======
 
@@ -361,10 +425,15 @@ const TALENT_FILTERS = [
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function TalentsPage() {
   return (
@@ -392,6 +461,9 @@ import React from 'react';
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function TalentsPage() {
   return (
     <DynamicListingPage
@@ -404,16 +476,20 @@ export default function TalentsPage() {
     />
   )
 }
+<<<<<<< HEAD
 =======
 =======
 export default function TalentsPage() {
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <DynamicListingPage 
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
+<<<<<<< HEAD
 <<<<<<< HEAD
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
@@ -732,3 +808,7 @@ reviewCount: 21
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

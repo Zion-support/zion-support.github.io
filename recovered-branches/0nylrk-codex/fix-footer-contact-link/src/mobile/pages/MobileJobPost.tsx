@@ -17,6 +17,7 @@ import {Card, CardContent} from "@/components/ui/card";
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type JobPostStep = "details" | "requirements" | "budget" | "preview";
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
@@ -24,6 +25,10 @@ export function MobileJobPost() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -47,6 +52,7 @@ import { Card, CardContent } from "@/components/ui/card",
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
+<<<<<<< HEAD
 
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
@@ -56,15 +62,20 @@ export function MobileJobPost() {
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
   
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -73,6 +84,7 @@ export function MobileJobPost() {
     } else if (currentStep === "budget") {
       setCurrentStep("preview")
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -88,6 +100,11 @@ export function MobileJobPost() {
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -97,11 +114,15 @@ export function MobileJobPost() {
       setCurrentStep("budget")
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
   
   const renderStepContent = () => {
     switch (currentStep) {
+<<<<<<< HEAD
       case "details": return <DetailsStep />,
       case "requirements":
         return <RequirementsStep />,
@@ -114,6 +135,13 @@ export function MobileJobPost() {
     }
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+=======
+=======
+
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const goToNextStep = () => {;
     if (currentStep === "details") {;
       setCurrentStep("requirements");
@@ -123,6 +151,10 @@ export function MobileJobPost() {;
       setCurrentStep("preview");
     }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const goToPrevStep = () => {;
     if (currentStep === "requirements") {;
       setCurrentStep("details");
@@ -132,6 +164,7 @@ export function MobileJobPost() {;
       setCurrentStep("budget");
     }
   };
+<<<<<<< HEAD
   const renderStepContent = () => {;
     switch (currentStep) {;
       case "details": return <DetailsStep />;
@@ -400,6 +433,8 @@ export function MobileJobPost() {;
 <<<<<<< HEAD
 =======
   };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const renderStepContent = () => {;
     switch (currentStep) {;
@@ -419,15 +454,22 @@ export function MobileJobPost() {;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },
   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen flex flex-col">;
       <MobileHeader
@@ -436,6 +478,7 @@ export function MobileJobPost() {;
 
       />;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   const renderStepContent = () => {;
@@ -459,6 +502,8 @@ export function MobileJobPost() {;
       />;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <main className="flex-1 py-4 pb-24 px-4">;
         <div className="mb-6 flex justify-between">;
           <div className="flex space-x-1">;
@@ -468,13 +513,18 @@ export function MobileJobPost() {;
             <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button variant="outline" className="flex gap-1">;
             <Zap className="h-4 w-4" /> AI Assist;
           </Button>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         {renderStepContent()}
@@ -522,6 +572,8 @@ export function MobileJobPost() {;
         </div>;
       </main>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {renderStepContent()}
 
@@ -546,11 +598,15 @@ export function MobileJobPost() {;
         </div>;
       </main>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <BottomNavigation />;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       <BottomNavigation />;
@@ -567,6 +623,8 @@ function DetailsStep() {;
         <Input id="title" placeholder="e.g. Senior React Developer" />;
       </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function DetailsStep() {;
   return (
@@ -578,16 +636,23 @@ function DetailsStep() {;
         <Input id="title" placeholder="e && e.g. Senior React Developer" />;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-2">;
         <Label htmlFor="company">Company Name</Label>;
         <Input id="company" placeholder="Your company name" />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-2">;
         <Label htmlFor="location">Location</Label>;
         <Select defaultValue="remote">;
@@ -602,10 +667,14 @@ function DetailsStep() {;
         </Select>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-2">;
         <Label htmlFor="jobType">Job Type</Label>;
         <Select>;
@@ -621,6 +690,7 @@ function DetailsStep() {;
         </Select>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
       <div className="space-y-2">;
         <Label htmlFor="description">Job Description</Label>;
@@ -628,6 +698,8 @@ function DetailsStep() {;
           id="description" ;
           placeholder="Describe the job role and responsibilities" ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className="space-y-2">;
         <Label htmlFor="description">Job Description</Label>;
@@ -635,11 +707,15 @@ function DetailsStep() {;
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           rows={5}
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -682,6 +758,23 @@ if ( {) {
   $2
 }
       setCurrentStep ("preview");
+=======
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]),
+  const [newSkill, setNewSkill] = useState(""),
+  
+  const addSkill = () => {
+    if (newSkill && !skills.includes(newSkill)) {
+      setSkills([...skills, newSkill]),
+      setNewSkill("")
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 ;
@@ -802,14 +895,18 @@ function DetailsStep() {
       </div>;
       <div className="space - y-2">;
         <Label html_for="description">Job Description</Label>;
+<<<<<<< HEAD
       <div className="space-y-2">;
         <Label htmlFor="description">Job Description</Label>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Textarea;
           id="description";
           placeholder="Describe the job role and responsibilities";
           rows={5}
         />;
       </div>;
+<<<<<<< HEAD
 
         <Textarea 
           id="description" 
@@ -851,6 +948,14 @@ function RequirementsStep() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </div>);
+}
+/**
+ * RequirementsStep - Function description
+ */
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const removeSkill = (skill: string) => {
@@ -858,10 +963,13 @@ function RequirementsStep() {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -901,6 +1009,7 @@ function RequirementsStep() {
           {skills.map((skill) => (
             <Badge
               key={skill}
+<<<<<<< HEAD
 <<<<<<< HEAD
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
@@ -964,6 +1073,8 @@ function RequirementsStep() {;
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Job Requirements</h2>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
@@ -975,7 +1086,10 @@ function RequirementsStep() {;
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Job Requirements</h2>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
         <Select>;
@@ -991,10 +1105,14 @@ function RequirementsStep() {;
         </Select>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-2">;
         <Label htmlFor="education">Education</Label>;
         <Select>;
@@ -1012,6 +1130,7 @@ function RequirementsStep() {;
         </Select>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
       ;
@@ -1027,6 +1146,8 @@ function RequirementsStep() {;
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className="space-y-2">;
         <Label>Required Skills</Label>;
@@ -1041,7 +1162,10 @@ function RequirementsStep() {;
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
@@ -1051,17 +1175,22 @@ function RequirementsStep() {;
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <button ;
                 className="ml-1 rounded-full hover:bg-background/20 p-1";
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
               </button>;
             </Badge>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
         <div className="flex gap-2">;
@@ -1071,6 +1200,8 @@ function RequirementsStep() {;
             placeholder="Add a skill";
             onKeyDown={(e) => e.key === 'Enter' && addSkill()}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>;
         <div className="flex gap-2">;
@@ -1079,11 +1210,15 @@ function RequirementsStep() {;
             onChange={(e) => setNewSkill(e && e.target.value)}
             placeholder="Add a skill";
             onKeyDown={(e) => e && e.key === 'Enter' && addSkill()}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
           <Button onClick={addSkill}>Add</Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {skill}
               <button;
@@ -1124,6 +1259,8 @@ function RequirementsStep() {;
     </div>
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className="space-y-2">;
         <Label htmlFor="requirements">Specific Requirements</Label>;
@@ -1131,6 +1268,7 @@ function RequirementsStep() {;
           id="requirements" 
           placeholder="List any specific requirements or qualifications" 
           rows={4}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </div>;
@@ -1163,11 +1301,33 @@ function RequirementsStep() {;
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
           rows={4}
+=======
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="responsibilities">Key Responsibilities</Label>
+        <Textarea
+          id="responsibilities" 
+          placeholder="List the key responsibilities for this role" 
+
+          rows={4}
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
       </div>;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 function BudgetStep() {
@@ -1243,6 +1403,7 @@ function BudgetStep() {
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1449,6 +1610,9 @@ function BudgetStep() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function PreviewStep() {
   return (
     <div className="space-y-4">
@@ -1483,6 +1647,7 @@ function PreviewStep() {
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
   )
+<<<<<<< HEAD
 
       <div className="space - y-2">;
         <Label html_for="additional_info">Additional Budget Information</Label>;
@@ -1493,6 +1658,9 @@ function PreviewStep() {
         />;
       </div>;
     </div>);
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 /**
  * PreviewStep - Function description
@@ -1506,6 +1674,7 @@ function PreviewStep() {
           <h3 className="font - bold text - lg">Senior React Developer</h3>;
           <p className="text - muted - foreground">TechCorp Inc. • Remote • Full - time</p>;
           <div className="flex gap - 2 my - 3">;
+<<<<<<< HEAD
       ;
       <div className="space-y-2">;
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>;
@@ -1530,10 +1699,13 @@ function PreviewStep() {;
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>;
           ;
           <div className="flex gap-2 my-3">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Badge variant="outline">React</Badge>;
             <Badge variant="outline">TypeScript</Badge>;
             <Badge variant="outline">Node.js</Badge>;
           </div>;
+<<<<<<< HEAD
 
 }
 
@@ -1617,3 +1789,32 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <div className="space - y-1 text - sm mt - 4">;
+            <p className="font - medium">Salary Range:</p>;
+            <p>$80, 000 - $120, 000 USD / year</p>;
+          </div>;
+          <div className="space - y-1 text - sm mt - 3">;
+            <p className="font - medium">Experience Level:</p>;
+            <p > Senior</p>;
+          </div>;
+          <div className="space - y-1 text - sm mt - 3">;
+            <p className="font - medium">Application Deadline:</p>;
+            <p > December 15, 2023</p>;
+          </div>;
+          <div className="mt - 4 pt - 3 border - t border - border">;
+            <h4 className="font - medium mb - 2">Description</h4>;
+            <p className="text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
+          </div>;
+        </CardContent>;
+      </Card>;
+      <Button variant="outline" className="w - full">Edit Job Post</Button>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -8,15 +8,20 @@ interface PricingSuggestionAnalytics {
   suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
   recent_suggestions: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: string;
     user_id: string;
     suggested_min: number;
     suggested_max: number;
     actual_value?: number;
     accepted: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from "@/integrations/supabase/client";
@@ -54,6 +59,20 @@ import { supabase } from "@/integrations/supabase/client",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
+=======
+import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+=======
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -74,9 +93,12 @@ interface PricingSuggestionAnalytics {
 }
 export function usePricingSuggestionAnalytics(days = 30) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
     totalSuggestions: 0;
     acceptanceRate: 0;
@@ -101,6 +123,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     error: null
   }),
 
+<<<<<<< HEAD
 
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
 
@@ -110,15 +133,26 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
+<<<<<<< HEAD
 
           acceptanceRate: 0 && 0.72;
           averagePriceGap: 12 && 12.5,
+=======
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Mock data for demonstration
+        const mockData = {
+          totalSuggestions: 256;
+          acceptanceRate: 0.72;
+          averagePriceGap: 12.5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           suggestionsByCategory: [
             { category: 'development', count: 120, acceptanceRate: 0 && 0.75 };
             { category: 'design', count: 65, acceptanceRate: 0 && 0.82 };
@@ -135,6 +169,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
             createdAt: new Date(Date && Date.now() - Math && Math.floor(Math && Math.random() * 1000000000)).toISOString(),
             type: Math && Math.random() > 0 && 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         };
+<<<<<<< HEAD
 <<<<<<< HEAD
         await new Promise(resolve => setTimeout(resolve, 1000));
         // Mock data for demonstration
@@ -162,16 +197,23 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setAnalytics({
           ...mockData;
           isLoading: false
           error: null
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
@@ -203,16 +245,22 @@ export function usePricingSuggestionAnalytics(days = 30) {
         }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
 <<<<<<< HEAD
+<<<<<<< HEAD
         console && console.error("Error fetching pricing suggestion analytics:", error);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         //   .gte('created_at', `now() - interval '${days} days'`);
         // if (error) throw error;
         //   .gte('created_at', `now() - interval '${days} days'`),
@@ -230,6 +278,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     }
     fetchAnalytics()
   }, [days]);
+<<<<<<< HEAD
 =======
 
     created_at: string,
@@ -252,6 +301,12 @@ export function usePricingSuggestionAnalytics(days = 30) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+};
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -274,6 +329,7 @@ interface PricingSuggestionAnalytics {;
     accepted: boolean,;
     createdAt: string,;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -369,6 +425,8 @@ export function usePricingSuggestionAnalytics(days = 30) {;
 }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     type: 'client' | 'talent';
   }[];
   is_loading: boolean,
@@ -455,4 +513,7 @@ if (throw error) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

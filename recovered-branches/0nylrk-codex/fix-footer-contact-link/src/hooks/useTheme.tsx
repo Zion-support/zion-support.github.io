@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 
 
@@ -14,10 +15,18 @@ import React from 'react',
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from 'react';
+import React from 'react',
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // This is a simplified version of the theme hook for offline development
 
 export const useTheme = () => {
   return {
+<<<<<<< HEAD
 
   }
 }
@@ -46,6 +55,8 @@ export const useTheme = () => {;
 },; import React from 'react';
 //This is a simplified version of the theme hook for offline development 
 };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     theme: "dark"
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
   }
@@ -59,6 +70,7 @@ export const useTheme = () => {;
 },
 import React from 'react',;
 // This is a simplified version of the theme hook for offline development;
+<<<<<<< HEAD
 export const useTheme = () => {;
   return {;
     theme: "dark";
@@ -74,6 +86,8 @@ export const useTheme = () => {;
 
 =======
 // This is a simplified version of the theme hook for offline development;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const use_theme = () =>: any {
   return {
     theme: "dark",
@@ -87,6 +101,9 @@ export const use_theme = () =>: any {
     theme: "dark",
 
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

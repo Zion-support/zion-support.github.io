@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 import { Checkbox } from '@/components/ui/checkbox'
@@ -17,25 +18,39 @@ export function AvailabilityFilter({
 }: AvailabilityFilterProps) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
 
 
+=======
+        className='flex w-full items-center justify-between text-white font-medium'      >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className="flex w-full items-center justify-between text-white font-medium"
       >
 
 
         <span>Availability</span>
+<<<<<<< HEAD
+=======
+        {expanded ? (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
+<<<<<<< HEAD
       </button>
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className="flex items-center">
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from '@/components / ui / checkbox';
 import { AvailabilityFilterProps } from '@/types / filters';
@@ -91,6 +106,7 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
 <<<<<<< HEAD
+<<<<<<< HEAD
   { id: "project", label: "Project-based" }
 ]
 
@@ -102,6 +118,8 @@ const AVAILABILITY_OPTIONS = [
   { id: "part_time", label: "Part-time" },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   { id: "project", label: "Project-based" }
 ],
 
@@ -110,6 +128,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
@@ -127,6 +146,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className="flex items-center">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className="flex w-full items-center justify-between text-white font-medium">;
         <span>Availability</span>;
         {expanded ? (;
@@ -150,11 +171,15 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               </label>;
             </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Checkbox
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
+<<<<<<< HEAD
 <<<<<<< HEAD
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -168,11 +193,14 @@ const AVAILABILITY_OPTIONS = [
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+<<<<<<< HEAD
 <<<<<<< HEAD
               >
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -220,6 +248,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         </div>
       )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           ))}
         </div>
@@ -296,7 +326,10 @@ function AvailabilityFilter() {
 }</div>);
 }</div>);
 }"}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -306,12 +339,18 @@ const AVAILABILITY_OPTIONS = [;
   { id: "part_time", label: "Part-time" },;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   { id: "project", label: "Project-based" }
 =======
 
   { id: "project", label: "Project-based" }
 ]
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  { id: "project", label: "Project-based" }
+]
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
@@ -338,6 +377,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`availability-${option.id}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
   option.label
 }</label> </div>) )
@@ -371,15 +411,22 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   option.label 
 }</label> </div>) ) 
 }</div>) ;
 }</div>) ;
 }"};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {option.label}
@@ -392,8 +439,12 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

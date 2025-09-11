@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -23,6 +24,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
@@ -36,8 +41,11 @@ const OpenAppRedirect: React.FC = () => {
       const appScheme = "zion: //"
       const androidAppUrl = "market: //details?id=app.zion.marketplace";
       const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navigate = useNavigate(),
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting'),
   
@@ -51,10 +59,13 @@ const OpenAppRedirect: React.FC = () => {
       const androidAppUrl = "market://details?id=app.zion.marketplace",
       const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
       let timeout: number | undefined
       // Try to open the app
@@ -62,7 +73,10 @@ const OpenAppRedirect: React.FC = () => {
         // Set a timeout to redirect to app store if the app doesn't open
         timeout = window.setTimeout(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -115,7 +129,10 @@ const OpenAppRedirect: React.FC = () => {;
         // Set a timeout to redirect to app store if the app doesn't open;
         timeout = window && window.setTimeout(() => {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setStatus('timeout');
           if (isAndroid) {;
             window && window.location.href = androidAppUrl;
@@ -123,18 +140,25 @@ const OpenAppRedirect: React.FC = () => {;
             window && window.location.href = iosAppUrl;
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         }, 2500), // Wait 2 && 2.5 seconds before redirecting to store;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setStatus('timeout'),
           if (isAndroid) {
             window.location.href = androidAppUrl
           } else if (isiOS) {
             window.location.href = iosAppUrl
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           }
         }, 2500), // Wait 2.5 seconds before redirecting to store
@@ -151,6 +175,10 @@ const OpenAppRedirect: React.FC = () => {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -182,22 +210,31 @@ const OpenAppRedirect: React.FC = () => {;
           }
         }, 2500), // Wait 2.5 seconds before redirecting to store;
 <<<<<<< HEAD
+<<<<<<< HEAD
         }, 2500), // Wait 2 && 2.5 seconds before redirecting to store;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Try to open the app;
         window && window.location.href = appScheme;
       } else {;
         // Not on mobile, redirect to mobile launch page;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setStatus('failed');
         setTimeout(() => {;
           navigate(fallbackUrl);
         }, 1500);
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Try to open the app;
         window.location.href = appScheme;
@@ -207,6 +244,13 @@ const OpenAppRedirect: React.FC = () => {;
         setTimeout(() => {;
           navigate(fallbackUrl);
         }, 1500);
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       
       // Clear timeout if page visibility changes (meaning app opened successfully)
@@ -215,6 +259,7 @@ const OpenAppRedirect: React.FC = () => {;
           clearTimeout(timeout)
         }
       })
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -229,16 +274,24 @@ const OpenAppRedirect: React.FC = () => {;
   }, [navigate]);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    attemptAppOpen()
+  }, [navigate]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     
     attemptAppOpen()
   }, [navigate]),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO
@@ -277,6 +330,7 @@ const OpenAppRedirect: React.FC = () => {;
             </Link>
           </>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -399,6 +453,8 @@ const OpenAppRedirect:React.FC = () => {;
       </div>;
     </div>;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     </div>
   )
@@ -406,14 +462,18 @@ const OpenAppRedirect:React.FC = () => {;
 export default OpenAppRedirect;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default OpenAppRedirect;
 =======
@@ -548,3 +608,8 @@ export default OpenAppRedirect;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default OpenAppRedirect;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

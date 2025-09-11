@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className=&quot;space-y-6&quot;>
       <div className=&quot;flex items-end justify-between&quot;>
         <div>
@@ -85,6 +86,11 @@ export default function DaoMetrics(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -107,6 +113,7 @@ export default function DaoMetrics(req, res) {
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
               </div>
+<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -119,6 +126,13 @@ export default function DaoMetrics(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            ))}
+          </div>
+        </div>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -134,20 +148,29 @@ export default function DaoMetrics(req, res) {
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
+<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </tbody>
           </table>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -155,6 +178,7 @@ export default function DaoMetrics(req, res) {
             <ul className="list-disc pl-5 text-sm">
               {data.activeProposals.map((p, i) => (
                 <li key={i}>{JSON.stringify(p)}</li>
+<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -171,17 +195,30 @@ export default function DaoMetrics(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ))}
+            </ul>
+          ) : (
+            <div className="text-sm text-gray-600">No active proposals.</div>
+          )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -193,6 +230,7 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -211,6 +249,12 @@ export default function DaoMetrics(req, res) {
 }
 }
 =======
+=======
+
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { useEffect, useState } from 'react',
 ;
@@ -315,9 +359,15 @@ if (return <div > Error loading data</div>, ) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

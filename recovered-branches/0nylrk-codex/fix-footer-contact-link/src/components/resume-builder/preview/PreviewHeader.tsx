@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Button  } from '@/components/ui/button';
@@ -10,10 +11,15 @@ import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
@@ -22,6 +28,7 @@ import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
@@ -31,21 +38,35 @@ import { useIsMobile } from '@/hooks/use-mobile';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+=======
+
+
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isPrinting, setIsPrinting] = useState(false);
 
   const isMobile = useIsMobile();
   const handleBrowserPrint = () => {
     setIsPrinting(true);
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Inject print-specific CSS only for the duration of printing
     const style = document.createElement("style");
     style.innerHTML = `
@@ -66,6 +87,7 @@ interface PreviewHeaderProps {;
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false),;
   const isMobile = useIsMobile(),;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -84,12 +106,18 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false);
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
+=======
+  const handleBrowserPrint = () => {;
+    setIsPrinting(true);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Inject print-specific CSS only for the duration of printing;
     const style = document && document.createElement('style');
     style && style.innerHTML = `;
       @media print {;
         body * {;
           visibility: hidden;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleBrowserPrint = () => {;
     setIsPrinting(true),;
@@ -106,11 +134,15 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .print-section {
           position: absolute
           left: 0
           top: 0
           width: 100%
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
         .print-section, .print-section * {;
@@ -119,13 +151,23 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .print-section {;
           position: absolute,;
           left: 0,;
           top: 0,;
           width: 100%;
+<<<<<<< HEAD
         }
         .no-print {;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        }
+        .no-print {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button  } from '@/components / ui / button';
 import { ArrowLeft, FileText, Link  } from './lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
@@ -163,10 +205,15 @@ function PreviewHeader() {
           width: 100%;
         }
         .no - print {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           display: none !important;
         }
       }
 
+<<<<<<< HEAD
     `,
     document.head.appendChild(style),
     `,
@@ -197,6 +244,18 @@ function PreviewHeader() {
     
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    `,
+    document.head.appendChild(style),
+=======
+=======
+    `,
+    document.head.appendChild(style),
+
+
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Trigger print dialog
     window.print(),
     
@@ -207,10 +266,13 @@ function PreviewHeader() {
     }, 1000)
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div
@@ -221,9 +283,13 @@ function PreviewHeader() {
         Back
       </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
@@ -232,6 +298,7 @@ function PreviewHeader() {
           onClick={handleBrowserPrint} 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div
       <div
@@ -248,6 +315,8 @@ function PreviewHeader() {
           onClick={handleBrowserPrint} 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           disabled={isPrinting}
           className="gap-2"
         >
@@ -255,15 +324,19 @@ function PreviewHeader() {
           Print
         </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     `;
 =======
@@ -458,3 +531,14 @@ document.head.appendChild (style);
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    document.head.append_child (style);
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

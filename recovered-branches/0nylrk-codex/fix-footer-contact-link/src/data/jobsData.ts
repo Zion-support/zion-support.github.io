@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 ];
@@ -11,6 +14,7 @@ export const JOB_POSTS: Job[] = [
 updated at: "2024-05-05"
 }];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -34,16 +38,24 @@ export const JOB_POSTS: Job[] = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
 =======
 import { Job } from '@/types/jobs';
+<<<<<<< HEAD
 =======
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { Job } from "@/types/jobs",
+export const JOB_POSTS: Job[] = [
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "job-1",
     client_id: "client-1",
@@ -57,6 +69,7 @@ export const JOB_POSTS: Job[] = [
     created_at: "2024-05-10",
     updated_at: "2024-05-10"},
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 id: 'job-2',
     client_id: 'client-2',
@@ -120,3 +133,8 @@ export const JOB_POSTS: Job[] = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ServicesIndexPage () {
 
  export default function ServicesIndexPage () {
@@ -15,6 +16,9 @@ function ServicesIndexPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
@@ -22,9 +26,13 @@ function ServicesIndexPage() {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   'Content-Type': 'application/json' ;
 };
@@ -48,9 +56,13 @@ budgetRange: values.budgetRange;
 }/> </div>)
 };export default ServicesPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -73,6 +85,7 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 import { Star } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 rating: Math.round ((3.8 + Math.random () * 1.2) * 10) / 10}),
 =======
 =======
@@ -84,11 +97,18 @@ export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+=======
+ export default function ServicesIndexPage () {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 export default function ServicesIndexPage () {
 =======
  export default function ServicesIndexPage () {
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
@@ -96,12 +116,17 @@ export default function ServicesIndexPage () {
   const res = await fetch ('/api/quote-request', {
   method: 'POST', headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
   'Content-Type': 'application/json'
 }
 =======
   'Content-Type': 'application/json' ;
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  'Content-Type': 'application/json' ;
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -119,7 +144,10 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
   title: item.name
@@ -136,6 +164,7 @@ const ServicesPage: NextPage = () => {
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
+<<<<<<< HEAD
 <<<<<<< HEAD
     .concat(
 class ErrorBoundary extends React.Component {
@@ -351,6 +380,8 @@ function ServicesIndexPage() {
       </div>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <UltraFuturisticBackground variant="quantum" intensity={1 && 1.5}>;
       <Head>;
         <title>Zion AI Marketplace - Services</title>;
@@ -456,44 +487,63 @@ if ( {) {
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </div>;
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
     </div>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ServicesPage;
 
 
 export default ServicesPage;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default ServicesPage;
 =======
 export default ServicesPage;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 =======
@@ -505,10 +555,13 @@ export default ServicesPage;
         on_submit={handle_submit}
       />;
     </div>);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export default ServicesPage;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaasServices as unknown[])
@@ -683,3 +736,6 @@ export default ServicesPage;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

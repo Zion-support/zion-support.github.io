@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -14,12 +15,17 @@ import { Badge } from "@/components/ui/badge",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: "act-1"
       user: "Michael Chen"
@@ -29,11 +35,15 @@ export function RecentActivity() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
+<<<<<<< HEAD
 <<<<<<< HEAD
       type: "job";
     };
@@ -45,6 +55,11 @@ export function RecentActivity() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -52,6 +67,7 @@ export function RecentActivity() {
       target: "5 candidates for UI/UX Designer"
       timestamp: "3h ago"
       type: "candidate"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -65,6 +81,10 @@ export function RecentActivity() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "act-3"
       user: "David Johnson"
@@ -72,6 +92,7 @@ export function RecentActivity() {
       target: "Alex Morgan"
       timestamp: "Yesterday"
       type: "interview"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     },
@@ -85,6 +106,10 @@ export function RecentActivity() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: "act-4"
       user: "Emily Davis"
@@ -93,6 +118,7 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -109,6 +135,11 @@ import {Badge} from "@/components/ui/badge";
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+  ],
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getBadgeForType = (type: string) => {
     switch (type) {
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
@@ -121,6 +152,7 @@ import {Badge} from "@/components/ui/badge";
       default:
         return <Badge variant="outline">Activity</Badge>
     }
+<<<<<<< HEAD
 
   },
 
@@ -129,6 +161,10 @@ import {Badge} from "@/components/ui/badge";
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <Card>
@@ -169,14 +205,20 @@ import {Badge} from "@/components/ui/badge";
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -188,6 +230,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge",;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function RecentActivity() {;
   // Mock activity data;
   const activities = [;
@@ -199,10 +243,14 @@ export function RecentActivity() {;
       timestamp: "1h ago",;
       type: "job";
 <<<<<<< HEAD
+<<<<<<< HEAD
     },;
 =======
     };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {;
       id: "act-2",;
       user: "Sarah Wilson",;
@@ -211,10 +259,14 @@ export function RecentActivity() {;
       timestamp: "3h ago",;
       type: "candidate";
 <<<<<<< HEAD
+<<<<<<< HEAD
     },;
 =======
     };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {;
       id: "act-3",;
       user: "David Johnson",;
@@ -223,10 +275,14 @@ export function RecentActivity() {;
       timestamp: "Yesterday",;
       type: "interview";
 <<<<<<< HEAD
+<<<<<<< HEAD
     },;
 =======
     };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {;
       id: "act-4",;
       user: "Emily Davis",;
@@ -235,6 +291,7 @@ export function RecentActivity() {;
       timestamp: "2d ago",;
       type: "comment";
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
       id:"act-1",;
       user:"Michael Chen",;
@@ -292,6 +349,8 @@ export function RecentActivity() {;
   };
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
 
   const getBadgeForType = (type: string) => {;
@@ -312,7 +371,10 @@ export function RecentActivity() {;
   }
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardHeader>;
         <CardTitle>Recent Activity</CardTitle>;
@@ -320,6 +382,7 @@ export function RecentActivity() {;
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {activities.map((activity) => (;
             <div key={activity.id} className="p-4 flex items-start gap-3">;
@@ -333,6 +396,8 @@ export function RecentActivity() {;
                     {getBadgeForType(activity.type)}
                     <span className="text-xs text-muted-foreground">{activity.timestamp}</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {activities && activities.map((activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
@@ -348,12 +413,16 @@ export function RecentActivity() {;
                   <div className="flex items-center gap-2 mt-1 sm:mt-0">;
                     {getBadgeForType(activity && activity.type)}
                     <span className="text-xs text-muted-foreground">{activity && activity.timestamp}</span>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 </div>;
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
         ;
@@ -379,6 +448,8 @@ export function RecentActivity() {;
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>;
 
@@ -473,7 +544,10 @@ function RecentActivity() {
         <div className="p - 3 text - center border - t border - border">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             View All Activity;
           </button>;
         </div>;
@@ -482,6 +556,7 @@ function RecentActivity() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </Card>);
@@ -542,3 +617,8 @@ default:
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

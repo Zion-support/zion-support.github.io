@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
@@ -12,6 +13,11 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -33,6 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         model: 'gpt-4o-mini'
         messages: [
 <<<<<<< HEAD
+<<<<<<< HEAD
           { role: 'system', content: system },
           { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }
         ],
@@ -43,11 +50,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       results[lng] = translated
     }
     return res.status(200).json(results)
   } catch (err: any) {
     console.error('Translation error', err)
+<<<<<<< HEAD
     return res.status(500).json({ error: 'Translation failed' })
   }
 
@@ -59,6 +71,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    return res.status(500).json({ error: 'Translation failed' })
+  }
+
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -93,6 +115,7 @@ if (|| targets.length === 0) {) {
         temperature: 0.2}),
       const translated = completion.choices?.[0]?.message?.content?.trim () || '',
       results[lng] = translated;
+<<<<<<< HEAD
     }
     return res.status (200).json (results);
   } catch (err: any) {
@@ -148,6 +171,8 @@ export default async function handler(req, res) {
         temperature: 0.2});
       const translated = completion.choices?.[0]?.message?.content?.trim() || '';
       results[lng] = translated;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -156,6 +181,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -198,7 +224,13 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

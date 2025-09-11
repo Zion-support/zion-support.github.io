@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import Link from "next/link",
 
@@ -36,6 +37,8 @@ export const MobileLaunchHero: React.FC = () => {
               The Power of <span className="text-zion-cyan">Zion</span><br />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <section className='relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24'>
       <div className='container mx-auto px-4 lg:px-8'>
@@ -46,6 +49,7 @@ return (
               <br />
               In Your Pocket
             </h1>
+<<<<<<< HEAD
               Find top AI talent or global IT jobs on the go. Track projects
 
 
@@ -66,6 +70,13 @@ return (
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+              Find top AI talent or global IT jobs on the go. Track projects,
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               message candidates, and get AI-powered matches instantly with our
               mobile app.
             </p>
@@ -76,16 +87,22 @@ return (
             </div>
             <div className="mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <AppStoreButtons
               <AppStoreButtons
               <AppStoreButtons 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               <AppStoreButtons 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
@@ -111,12 +128,16 @@ return (
                   size='lg'
                   className='text-white hover:bg-white/10'
 <<<<<<< HEAD
+<<<<<<< HEAD
                 >                  See Features
                 >                  See Features
                 >                  See Features              
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react";
 import Link from "next/link";
@@ -143,6 +164,7 @@ export const MobileLaunchHero: React.FC = () => {
                 >                  See Features              
 
 
+<<<<<<< HEAD
             
             <p className="text-lg md:text-xl opacity-90 mb-8">
               Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.
@@ -168,6 +190,12 @@ export const MobileLaunchHero: React.FC = () => {
 
 
               <Link href="#features">
+=======
+
+
+              <Link href="#features">
+                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   See Features
                 </Button>
               </Link>
@@ -194,9 +222,12 @@ export const MobileLaunchHero: React.FC = () => {
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
+<<<<<<< HEAD
 
                     {/* In production, replace with actual app screenshot */}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 </CardContent>
               </Card>
@@ -207,10 +238,16 @@ export const MobileLaunchHero: React.FC = () => {
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 "  )
 }
 
+<<<<<<< HEAD
 import React from "react",;
 import Link from "next/link",;
 
@@ -288,6 +325,8 @@ export const MobileLaunchHero: React.FC = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 };
@@ -379,7 +418,11 @@ export const MobileLaunchHero: React.FC = () => {
 }
 "  );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

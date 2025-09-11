@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
@@ -25,11 +26,16 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge";
 import { ForumPost } from "@/types/community",
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PostCardProps {
 
   post: ForumPost
@@ -38,11 +44,14 @@ interface PostCardProps {
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     <Card className={cn(
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className={cn(;
       "transition-shadow hover: shadow-md";
     <Card className={cn(
@@ -50,12 +59,15 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
       post.isPinned && "border-zion-purple/50"
       "transition-shadow hover:shadow-md",
       post.isPinned && "border-zion-purple/50",
+<<<<<<< HEAD
 =======
 
     <Card className={cn(
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -70,6 +82,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             </Link>
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { formatDistanceToNow } from "date-fns",;
@@ -116,6 +129,8 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
             {post.isLocked && (;
               <Lock className="h-4 w-4 text-red-500 ml-2" />;
             )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
             {post.isPinned && (
               <Pin className="h-4 w-4 text-amber-500 ml-2" />
@@ -130,6 +145,7 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
           <div className="flex flex-wrap gap-2 mt-2">
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
+<<<<<<< HEAD
 =======
 =======
 import {formatDistanceToNow} from "date-fns";
@@ -179,6 +195,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
@@ -229,11 +247,17 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {tag}
               </Badge>
             ))}
@@ -267,6 +291,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             <Badge className="bg-zion-purple">Featured</Badge>
           </div>
         )}
+<<<<<<< HEAD
 
           </div>;
           <div className="text-sm text-muted-foreground">;
@@ -460,6 +485,8 @@ post.isFeatured && "bg-zion-purple/5")
 }</CardFooter> </Card>) 
 };
 export default PostCard;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardFooter>
     </Card>
   )
@@ -470,7 +497,14 @@ export default PostCard;
     </Card>;
   );
 };
+<<<<<<< HEAD
 export default PostCard;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+export default PostCard;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

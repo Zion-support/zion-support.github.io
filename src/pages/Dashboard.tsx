@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react'
 import dynamic from 'next/dynamic'
@@ -39,6 +40,8 @@ import { EmptyState } from "@/components/ui/empty-state",
 import Link from 'next/link',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(
   () =>
@@ -167,6 +170,7 @@ const GuidedTour = dynamic (
   {
     ssr: false
   }
+<<<<<<< HEAD
 )
 // Lazy load notification functions
 const loadNotificationFunctions = () => import('@/utils/notifications')
@@ -183,6 +187,15 @@ export default function Dashboard() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+const loadNotificationFunctions = () => import('@/utils/notifications');
+export default function Dashboard() {;
+  const { logout } = useAuth();
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
   const { toast } = useToast()
   // Add safe checks for user ID to prevent premature API calls
@@ -192,6 +205,7 @@ export default function Dashboard() {;
   const { favorites } = useFavorites()
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any
+<<<<<<< HEAD
 <<<<<<< HEAD
   const userType =
     userWithExtendedProps?.userType |
@@ -243,6 +257,9 @@ if ( {) {
 if ( {) {
   $2
 }
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const userType = null;
     userWithExtendedProps?.userType ||
@@ -285,9 +302,13 @@ const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").th
 
 // Lazy load notification functions
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const loadNotificationFunctions = () => import("@/utils/notifications"),
 
 export default function Dashboard() {
@@ -337,6 +358,7 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
@@ -349,6 +371,15 @@ if ( {) {
   // useRequireAuth will handle redirect if user is not authenticated
   if (!user) {
 =======
+=======
+      <div className='min - h-screen flex items - center justify - center'>;
+        <div className='text - center'>;
+          <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto mb - 4'></div>;
+          <p className='text - gray - 600'>Loading dashboard...</p>;
+        </div>;
+      </div>);
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // useRequireAuth will handle redirect if user is not authenticated;
   // Check condition
@@ -356,7 +387,10 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -369,6 +403,9 @@ if ( {) {
   const handleTestNotification = async () => {
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const { createTestNotification } = await loadNotificationFunctions()
       const result = await createTestNotification(user?.id ?? '')
       if (result.success) {
@@ -391,6 +428,7 @@ if ( {) {
       })
     }
   }
+<<<<<<< HEAD
   return (
     <>
       <Header />
@@ -447,6 +485,8 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 import React from 'react';
 import dynamic from 'next/dynamic';
@@ -633,9 +673,13 @@ export default function Dashboard() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   // useRequireAuth will handle redirect if user is not authenticated;
   if (!user) {;
@@ -645,15 +689,22 @@ export default function Dashboard() {;
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>;
           <p className="text-gray-600">Redirecting to login...</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </div>;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const { createTestNotification } = await loadNotificationFunctions ();
       const result = await createTestNotification (user?.id ?? '');
@@ -685,7 +736,10 @@ if ( {) {
     <>;
       <Header />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const handleTestNotification = async () => {;
     try {;
@@ -736,11 +790,18 @@ if ( {) {
                     onClick={() => window.location.href = "/profile"}
                   >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <UserCheck size={16} />
+=======
+
+
+                    <UserCheck size={16} />
+                    Edit Profile
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Button>
                 </div>
               </div>
@@ -809,10 +870,13 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Stats & Metrics */}
               
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Stats & Metrics */}
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
@@ -825,16 +889,22 @@ if ( {) {
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className='flex justify-between items-center'>
                     <span className='text-zion-slate-light'>Points</span>
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <div className='flex justify-between items-center'>
+                    <span className='text-zion-slate-light'>Points</span>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Points</span>
 
                     <PointsBadge />
+<<<<<<< HEAD
                   <div className='flex justify-between items-center'>
                     <span className='text-zion-slate-light'>ZION$ Balance</span>
                     <span className='text-zion-cyan font-medium'>
@@ -848,6 +918,15 @@ if ( {) {
                     <span className='text-zion-slate-light'>Points</span>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">ZION$ Balance</span>
+                    <span className="text-zion-cyan font-medium">
+                      <Link href="/wallet" className="hover:underline">View Wallet</Link>
+                    </span>
+                  </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       style={{ width: '65%' }}></div>;
                   </div>;
@@ -895,6 +974,7 @@ if ( {) {
 
                   
                   <div className="flex justify-between items-center">
+<<<<<<< HEAD
                     <span className="text-zion-slate-light">Points</span>
                     <PointsBadge />
                   </div>
@@ -958,6 +1038,8 @@ if ( {) {
                           })
                   
                   <div className="flex justify-between items-center">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <span className="text-zion-slate-light">Badges Earned</span>
                     <span className="text-zion-cyan font-medium">3/12</span>
                   </div>
@@ -979,6 +1061,7 @@ if ( {) {
                       onClick={async () => {
                         try {
                           const { createOnboardingNotification } = await loadNotificationFunctions(),
+<<<<<<< HEAD
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
@@ -1003,6 +1086,15 @@ if ( {) {
                             description: 'Please try again',
                             variant: 'destructive',
                           })
+=======
+
+
+                          await createOnboardingNotification({
+                            userId: user?.id ?? "",
+                            missingMilestone: 'profile_completed',
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             userRole: roleForTour
                           }),
                           toast({
@@ -1014,6 +1106,7 @@ if ( {) {
                             title: "Error sending notification",
                             description: "Please try again",
                             variant: "destructive"})
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -1026,14 +1119,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         }
+=======
+
+
+
+                        }
+                      }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     >
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onClick={handleTestNotification}>;
                       <Send size={16} className='text-zion-cyan' />;
                       Send Test Notification;
@@ -1076,6 +1180,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='bg-zion-blue-dark rounded-xl p-6'>
                 <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
                   <Bell size={18} className='mr-2 text-zion-cyan' />
+<<<<<<< HEAD
                     <Button
                       className='w-full flex items-center justify-center gap-2'
                       variant='outline'
@@ -1102,6 +1207,34 @@ ursor/fix-website-loading-errors-and-merge-6662
                             variant: 'destructive'
                           })
 
+=======
+
+                    <Button
+                      className='w-full flex items-center justify-center gap-2'
+                      variant='outline'
+                      onClick={async () => {;
+                        try {;
+                          const { createSystemNotification } =;
+                            await loadNotificationFunctions();
+                          await createSystemNotification({;
+                            userId: user?.id ?? '',;
+                            title: 'New Feature Available!',;
+                            message:;
+                              "We've added a new notification center to help you stay updated with important information.",;
+                            actionUrl: '/notifications',;
+                            actionText: 'Explore Now',;
+                          });
+                          toast({;
+                            title: 'System notification sent',;
+                            description: 'Check your notification center',;
+                          });
+                        } catch (error) {;
+                          toast({;
+                            title: 'Error sending notification',;
+                            description: 'Please try again',;
+                            variant: 'destructive',;
+                          });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         }
                       }}
                     >;
@@ -1178,18 +1311,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Notifications */}
               <div className="bg-zion-blue-dark rounded-xl p-6">
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">
                   <Bell size={18} className="mr-2 text-zion-cyan" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
@@ -1235,10 +1377,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Main Content - Dashboard */}
             
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -1247,6 +1392,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex items-center gap-2">
                     <NotificationBell />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       variant='outline'
                       className='text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white'
@@ -1285,9 +1433,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <div className='flex flex-col items-center'>
                       <div className='w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2'>
                         <UserCheck size={24} className='text-white' />
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button 
                       variant="outline" 
                       className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
@@ -1298,6 +1449,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {/* Community Section */}
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
@@ -1340,6 +1492,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <h3 className="text-lg font-medium text-white">Welcome, {userWithExtendedProps?.displayName?.split(' ')[0] || 'User'}</h3>;
                     <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6'>;
                   <div className='p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light'>;
@@ -1351,6 +1505,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className='text-zion-slate-light mt-1'>;
                       Your journey on Zion has just begun!;
                     </p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>;
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light">;
@@ -1359,12 +1514,138 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>;
                 </div>;
                 {/* Badges Preview */}
+=======
+                  </div>;
+                  <div className='p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light'>;
+                    <h3 className='text-lg font-medium text-white'>;
+                      Getting Started;
+                    </h3>;
+                    <p className='text-zion-slate-light mt-1'>;
+                      Complete your profile to unlock all features.;
+                    </p>;
+                  </div>;
+                </div>;
+
+                {/* Badges Preview */}
+                <div className='mb-8'>;
+                  <h3 className='text-lg font-bold text-white mb-4'>;
+                    Your Badges;
+                  </h3>;
+                  <div className='grid grid-cols-3 sm:grid-cols-4 gap-4'>;
+                    <div className='flex flex-col items-center'>;
+                      <div className='w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2'>;
+                        <UserCheck size={24} className='text-white' />;
+                      </div>;
+                      <span className='text-xs text-center text-zion-slate-light'>;
+                        Newcomer;
+                      </span>;
+                    </div>;
+                    <div className='flex flex-col items-center'>;
+                      <div className='w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2'>;
+                        <MessageSquare size={24} className='text-white' />;
+                      </div>;
+                      <span className='text-xs text-center text-zion-slate-light'>;
+                        First Post;
+                      </span>;
+                    </div>;
+                    <div className='flex flex-col items-center opacity-40'>;
+                      <div className='w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2'>;
+                        <Bell size={24} className='text-zion-slate-light' />;
+                      </div>;
+                      <span className='text-xs text-center text-zion-slate-light'>;
+                        Locked;
+                      </span>;
+                    </div>;
+                    <div className='flex flex-col items-center opacity-40'>;
+                      <div className='w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2'>;
+                        <span className='text-zion-slate-light text-xl'>?</span>;
+                      </div>;
+                      <span className='text-xs text-center text-zion-slate-light'>;
+                        Locked;
+                      </span>;
+                    </div>;
+                  </div>;
+                </div>;
+
+                {/* Community Section */}
+                <div id='community-section'>;
+                  <h3 className='text-lg font-bold text-white mb-4'>;
+            {/* Main Content - Dashboard */}
+            <div className='lg:col - span - 2'>;
+              <div className='bg - zion - blue - dark rounded - xl p - 6 mb - 6'>;
+                <div className='flex items - center justify - between mb - 6'>;
+                  <h2;
+                    className='text - 2xl font - bold text - white';
+                    data - testid='dashboard - header';
+                  >;
+                    Dashboard;
+                  </h2>;
+                  <div className='flex items - center gap - 2'>;
+                    <NotificationBell />;
+                    <Button;
+                      variant='outline';
+                      className='text - zion - slate - light border - zion - blue - light hover:bg - zion - blue hover:text - white';
+                      on_click={logout}                    >;
+                      <LogOut size={16} className='mr - 2' />;
+                      Logout;
+                    </Button>;
+                  </div>;
+                </div>;
+                <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 2 gap - 4 mb - 6'>;
+                  <div className='p - 4 rounded - lg bg - gradient - to - br from - zion - blue to - zion - purple / 30 border border - zion - blue - light'>;
+                    <h3 className='text - lg font - medium text - white'>;
+                      Welcome, {' '}
+                      {userWithExtendedProps?.display_name?.split (' ')[0] ||;
+                        'User'}
+                    </h3>;
+                    <p className='text - zion - slate - light mt - 1'>;
+                      Your journey on Zion has just begun!;
+                    </p>;
+                  </div>;
+                  <div className='p - 4 rounded - lg bg - gradient - to - br from - zion - blue to - zion - cyan / 30 border border - zion - blue - light'>;
+                    <h3 className='text - lg font - medium text - white'>;
+                      Getting Started;
+                    </h3>;
+                    <p className='text - zion - slate - light mt - 1'>;
+                      Complete your profile to unlock all features.;
+                    </p>;
+                  </div>;
+                </div>;
+                {/* Badges Preview */}
+
+                {/* User Overview */}
+                <div className='mt - 8 space - y-8'>;
+                  <div className='bg - zion - blue - dark rounded - xl p - 6'>;
+                    <h3 className='text - lg font - bold text - white mb - 4 flex items - center'>;
+                      <FileText className='mr - 2' size={18} /> Recent Orders;
+                    </h3>;
+                    {orders_loading ? (
+                      <p className='text - zion - slate - light'>Loading...</p>) : orders.length === 0 ? (
+                      <EmptyState;
+                        icon={<ShoppingBag className='h - 8 w - 8' />}
+                        title='No Orders'                        description="You haven't purchased anything yet.";
+
+                        action={{
+                          text: 'Visit Marketplace'
+                          href: '/marketplace'
+                        title='No Orders'                        description="You haven't purchased anything yet.";
+                        action={{;
+                          text: 'Visit Marketplace',;
+                          href: '/marketplace',;
+                        }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="mb-8">
                   <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>
                   <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
                     <div className="flex flex-col items-center">
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">
                         <UserCheck size={24} className="text-white" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
                     </div>
@@ -1406,6 +1687,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     ) : orders.length === 0 ? (
                       <EmptyState
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         icon={<ShoppingBag className='h-8 w-8' />}
                         title='No Orders'                        description="You haven't purchased anything yet."
                         action={{
@@ -1426,14 +1710,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                               View
                             </Link>
                           </li>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         icon={<ShoppingBag className="h-8 w-8" />}
                         title="No Orders"
                         description="You haven't purchased anything yet."
                         action={{ text: 'Visit Marketplace', href: '/marketplace' }}
                         className="border-none bg-transparent text-center";
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className='mt-2 text-right'>
                       <Link
@@ -1466,6 +1754,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                               View;
                             </Link>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />;
                     ) : (;
                       <ul className="space-y-1">;
@@ -1473,17 +1763,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <li key={o.orderId} className="flex justify-between">;
                             <span>#{o.orderId}</span>;
                             <Link href={`/orders/${o.orderId}`} className="text-zion-purple underline">View</Link>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </li>;
 
 
 
                         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </ul>;
 =======
                       </ul>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      </ul>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
 
                         className='text-zion-purple underline'>;
@@ -1513,16 +1810,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Link href="/orders" className="text-zion-purple underline">View all</Link>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="mt-2 text-right">;
                       <Link href="/orders" className="text-zion-purple underline">View all</Link>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>;
                   </div>;
                   <div className="bg-zion-blue-dark rounded-xl p-6">;
                     <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
                       <Heart className="mr-2" size={18} /> Wishlist;
                     </h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {favorites.length === 0 ? (;
                       <p className="text-zion-slate-light">No items saved.</p>;
@@ -1534,6 +1835,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </ul>
                     )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {favorites.length === 0 ? (
                       <p className='text - zion - slate - light'>No items saved.</p>) : (
                       <ul className='space - y-1'>;
@@ -1558,6 +1861,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         ))}
                       </ul>
                     )}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className='bg - zion - blue - dark rounded - xl p - 6'>;
@@ -1597,6 +1901,8 @@ return (<> <Header /> <div className="min - h-screen bg - zion - blue"> <div cla
                         ))}
                       </ul>
                     )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='mt-2 text-right'>
                       <Link
                         href='/wishlist'
@@ -1633,6 +1939,7 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }</p> <Badge className="bg-zion-purple text-white mb-4" > > <UserCheck size= {
   16
 }/> Edit Profile </Button> </div> </div> {
+<<<<<<< HEAD
   /* Stats & Metrics */ "
 }<div className="bg-zion-blue-dark rounded-xl p-6 mb-6"> <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3> <div className="space-y-4"> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Profile Completion</span> <span className="text-zion-cyan font-medium">65%</span> </div> <div className="w-full bg-zion-blue rounded-full h-2"> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Points</span> <PointsBadge /> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">ZION$ Balance</span> <span className="text-zion-cyan font-medium"> <Link href="/wallet" className="hover:underline">View Wallet</Link> </span> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Badges Earned</span> <span className="text-zion-cyan font-medium">3/12</span> </div> {
   /* Test notification buttons */ "
@@ -1641,6 +1948,15 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }className="text-zion-cyan" /> Send Test Notification </Button> <Button
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  /* Stats & Metrics */ ";
+}<div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6"> <h3 className="text - lg font - bold text - white mb - 4">Your Activity</h3> <div className="space - y-4"> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Profile Completion</span> <span className="text - zion - cyan font - medium">65%</span> </div> <div className="w - full bg - zion - blue rounded - full h - 2"> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Points</span> <PointsBadge /> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">ZION$ Balance</span> <span className="text - zion - cyan font - medium"> <Link href="/wallet" className="hover:underline">View Wallet</Link> </span> </div> <div className="flex justify - between items - center"> <span className="text - zion - slate - light">Badges Earned</span> <span className="text - zion - cyan font - medium">3 / 12</span> </div> {
+  /* Test notification buttons */ ";
+}<div className="flex flex - col gap - 2 mt - 4"> <Button > <Send size= {
+  16 ";
+}className="text - zion - cyan" /> Send Test Notification </Button> <Button;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }> <Settings size= {
   16 "
 }className="text-zion-purple" /> async () => {
@@ -1648,11 +1964,15 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
   const {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         className='text-zion-purple underline'>;
                         View all;
                       </Link>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 
@@ -1842,3 +2162,6 @@ function Dashboard() { const stats = [{ name: 'Active Services', value: '12', ic
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -31,6 +32,8 @@ import {;
 import Link from 'next/link';import { ;
 import { 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -50,11 +53,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {
@@ -89,10 +96,15 @@ import {
 import Link from 'next/link';import {
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Menu,
   X,
   ChevronDown,
@@ -118,6 +130,7 @@ import Link from 'next/link';import {
   Atom,
   Database,
   Cloud,
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Link from 'next / link';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
@@ -147,6 +160,8 @@ const UltraAdvancedNavigation: React.FC = () => {
 import Link from 'next/link';import { ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Lock,
   Code,
 } from 'lucide-react';
@@ -154,11 +169,15 @@ import Link from 'next/link';import { ;
 import Link from 'next/link';import { ;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
   Bot, Car, Building2, DollarSign, Monitor, Users;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Cpu, Zap, Atom, Database, Cloud, Lock, Code
  } from 'lucide-react';
@@ -184,6 +203,8 @@ import Link from 'next/link';
     },    {      icon: null
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Cpu, Zap, Atom, Database, Cloud, Lock, Code;
 } from 'lucide-react';
@@ -209,13 +230,17 @@ import Link from 'next/link';
       icon: null
     };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: 'AI Services'
       href: '#'
       icon: Brain
       description: 'Cutting-edge AI solutions'
       dropdown: [
+<<<<<<< HEAD
 <<<<<<< HEAD
           name: 'AI Agent Orchestrator',
           href: '/ai - agents',
@@ -1091,6 +1116,11 @@ import Link from 'next / link';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -1142,10 +1172,15 @@ import Link from 'next / link';
           </motion && motion.div>;
           {/* Desktop Navigation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">
@@ -1201,6 +1236,7 @@ import Link from 'next / link';
               <div key={item.name} className='relative group'>;
                 {item.dropdown ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                   <button;
@@ -1239,6 +1275,14 @@ import Link from 'next / link';
                   <Link;
                     href={item.href}
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1252,6 +1296,7 @@ import Link from 'next / link';
                       <motion&& motion.div
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1260,6 +1305,15 @@ import Link from 'next / link';
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >
                         <div className="p-4">
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>
@@ -1280,6 +1334,10 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                   <div className="text-sm text-gray-400">{dropdownItem.description}</div>
                                 </div>
                                 <div className="text-sm font-semibold text-cyan-400">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
@@ -1299,9 +1357,15 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
+<<<<<<< HEAD
                   </Link>
                 )}
 
+=======
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   </Link>
                 )}
@@ -1344,10 +1408,14 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                 </div>
                               </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             ))}
                           </div>;
                         </div>;
@@ -1357,10 +1425,15 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 )}
               </div>;
             ))}
+<<<<<<< HEAD
+=======
+          </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1370,11 +1443,19 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
               <a
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1403,12 +1484,15 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
           <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
               <a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 href={`tel:${contactInfo.mobile}`}
                 className='flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200'
               >
                 <Phone className='w-4 h-4' />
                 <span className='hidden xl:inline'>{contactInfo.mobile}</span>
 
+<<<<<<< HEAD
               </a>
               <a
                 href={`mailto:${contactInfo.email}`}
@@ -1428,6 +1512,12 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
               whileTap={{ scale: 0.95 }}
               className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'            >              </a>
 =======
+=======
+
+
+
+              </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
 
@@ -1441,7 +1531,10 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <span className="hidden xl:inline">{contactInfo.mobile}</span>
               </a>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
                 <Mail className="w-4 h-4" />
                 <span className="hidden xl:inline">{contactInfo.email}</span>
@@ -1457,7 +1550,10 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
             </motion.a>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200'>;
@@ -1485,6 +1581,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
@@ -1494,6 +1591,15 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          {/* Mobile Menu Button */}
+          <div className='lg:hidden'>;
+=======
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white transition-colors duration-200';
@@ -1502,6 +1608,10 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <X className='w-6 h-6' />;
               ) : (;
                 <Menu className='w-6 h-6' />;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>
             <button
@@ -1514,20 +1624,29 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <Menu className='w-6 h-6' />
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
               className="text-gray-300 hover:text-white transition-colors duration-200";
             >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 <<<<<<< HEAD
+=======
+              className="text-gray-300 hover:text-white transition-colors duration-200"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </button>
           </div>
         </div>
       </div>
 
 
+<<<<<<< HEAD
 
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </button>;
           </div>;
         </div>;
@@ -1538,9 +1657,13 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1550,6 +1673,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
             exit={{ opacity: 0, height: 0 }}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                         />;
                       </button>;
@@ -1586,6 +1710,8 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                     </Link>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )}
                 </div>;
               ))}
@@ -1605,9 +1731,13 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                   </a>;
                   <a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
           >
@@ -1630,6 +1760,10 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                       </button>
                       {activeDropdown === item.name && (
                         <div className="ml-8 mt-2 space-y-2">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -1693,12 +1827,15 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
 
                       className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
                     >
                       {item.icon && <item.icon className="w-5 h-5" />}
                       <span>{item.name}</span>
 className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'
                     >
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
@@ -1709,11 +1846,16 @@ className="flex items-center space-x-3 text-gray-300 hover:text-white transition
 
                       <span>{item.name}</span>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Link>
 
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
               
 
@@ -1724,6 +1866,9 @@ className="flex items-center space-x-3 text-gray-300 hover:text-white transition
               
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Mobile Contact Info */}
               <div className="pt-6 border-t border-gray-800/50">
                 <div className="space-y-3 text-sm text-gray-400">
@@ -1742,9 +1887,13 @@ className="flex items-center space-x-3 text-gray-300 hover:text-white transition
                 </div>
                 <motion.a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     href={`mailto:${contactInfo && contactInfo.email}`}
                     className='flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200'>;
                     <Mail className='w-4 h-4' />;
@@ -1777,9 +1926,13 @@ className="flex items-center space-x-3 text-gray-300 hover:text-white transition
                 </div>;
                 <motion&& motion.a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   href="/contact"
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}
@@ -1795,6 +1948,7 @@ className="flex items-center space-x-3 text-gray-300 hover:text-white transition
   );
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   href="/contact"
                   whileHover={{ scale: 1.05 }}
@@ -1950,11 +2104,25 @@ export default UltraAdvancedNavigation;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+};
+export default UltraAdvancedNavigation;  );
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default UltraAdvancedNavigation;
+
+export default UltraAdvancedNavigation;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -1970,3 +2138,6 @@ export default UltraAdvancedNavigation;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

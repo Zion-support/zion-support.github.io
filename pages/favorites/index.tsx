@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect, useState } from 'react';
 import EmptyState from '../../components / ui / EmptyState';
@@ -16,6 +17,8 @@ if ( {) {
 }
     return <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Save profiles to revisit them easily.&quot; cta_label=&quot;Browse Talent & quot; cta_href=&quot;/talent & quot; />;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from 'react'
 import EmptyState from '../../components/ui/EmptyState'
 export default function FavoritesPage() {
@@ -32,6 +35,7 @@ export default function FavoritesPage() {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -92,9 +96,14 @@ export default function FavoritesPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

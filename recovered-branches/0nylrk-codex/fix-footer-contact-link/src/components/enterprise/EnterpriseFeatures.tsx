@@ -1,17 +1,26 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 
+=======
+
+
+import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 
 
 
+<<<<<<< HEAD
 const features = [
     title: "Dedicated Talent Pool",
     description: "Access to a curated pool of pre - vetted talent matched to your industry and needs.",
@@ -24,6 +33,9 @@ import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const features = [
   {
     title: "Private Hiring Portal"
@@ -33,11 +45,19 @@ const features = [
     description: "Create a secure, private hiring portal accessible only to your team members.",
     icon: Shield},
   {
+<<<<<<< HEAD
     title: "Dedicated Talent Pool"
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs."
     icon: Users}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    title: "Dedicated Talent Pool",
+    description: "Access to a curated pool of pre - vetted talent matched to your industry and needs.",
+    icon: Users},
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "Custom SLA"
     description: "Get guaranteed response times and dedicated support with our custom SLAs."
@@ -52,6 +72,7 @@ const features = [
     icon: Settings}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Global Access"
     description: "Connect with talent across multiple regions with localized interfaces."
     icon: Globe}]
@@ -59,6 +80,10 @@ const features = [
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function EnterpriseFeatures() {
   return (
@@ -85,11 +110,18 @@ export function EnterpriseFeatures() {
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
+=======
+
+};
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 
@@ -97,6 +129,7 @@ const features = [;
   {;
     title: "Private Hiring Portal",;
     description: "Create a secure, private hiring portal accessible only to your team members.";
+<<<<<<< HEAD
 <<<<<<< HEAD
           ))}
         </div>
@@ -113,6 +146,8 @@ const features = [;
     description: "Create a secure, private hiring portal accessible only to your team members.",;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     icon: Shield},;
   {;
     title: "Dedicated Talent Pool",;
@@ -133,6 +168,7 @@ const features = [;
   {;
     title: "Global Access",;
     description: "Connect with talent across multiple regions with localized interfaces.",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -170,13 +206,18 @@ export function EnterpriseFeatures() {;
 export function EnterpriseFeatures() {;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     icon: Globe}],;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function EnterpriseFeatures() {;
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 px-4 md:px-6 bg-muted/50">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-16">;
@@ -187,6 +228,7 @@ export function EnterpriseFeatures() {;
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {features.map((feature) => (;
           {features && features.map((feature) => (;
@@ -258,6 +300,8 @@ icon: Settings
 ;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
 
@@ -268,6 +312,10 @@ icon: Settings
 
 
 ;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

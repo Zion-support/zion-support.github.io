@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
 
@@ -34,6 +35,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -47,17 +50,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   };
   const data = readOrgData();
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
     roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;
@@ -78,9 +90,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -148,11 +164,17 @@ const filters: OrgFilters = {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function SelectResumeSection({
 import { FileText } from 'lucide-react'
 import { ResumeOption } from '../resume-selector/types'
@@ -50,6 +51,13 @@ export function SelectResumeSection({
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
+=======
+export function SelectResumeSection({
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -69,10 +77,17 @@ export function SelectResumeSection({
           {resumeOptions.map((option) => (
             <button
               key={option.id}
+<<<<<<< HEAD
               className={`w-full text-left p-3 rounded-md transition ${;
                 selectedResume?.id === option.id;
                   ? 'bg-zion-purple/20 border border-zion-purple';
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50';
+=======
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }`}
               onClick={() => handleResumeSelect(option.id)}
 
@@ -85,6 +100,12 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
 
           
@@ -105,6 +126,10 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
               resume = {selectedResume.resume as Resume,}
@@ -117,6 +142,7 @@ export function SelectResumeSection({
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
+<<<<<<< HEAD
             />;
         </>
       )}
@@ -243,6 +269,9 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
   );
 }
 ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }};
 };
@@ -250,7 +279,11 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 =======
 };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

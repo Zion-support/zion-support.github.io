@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Please try again in a few moments.
             </p>
           </div>
@@ -47,6 +53,7 @@
       </div>
     </>
   )
+<<<<<<< HEAD
 
 }
 
@@ -64,12 +71,19 @@ function Custom500() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Custom500(req, res) {
   try {
   return (;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -123,6 +137,7 @@ export default function Custom500(req, res) {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -272,3 +287,5 @@ export default function Custom500(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

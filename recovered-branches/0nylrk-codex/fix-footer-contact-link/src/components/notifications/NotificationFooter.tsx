@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -44,10 +45,14 @@ interface NotificationFooterProps {;
   onClose: () => void;
 }
 <<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
+<<<<<<< HEAD
   onClose: () => void;
 }
 
@@ -59,14 +64,33 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
     onClose();
     navigate("/notifications");
   }
+=======
+  on_close: () => void;
+}
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onClose: () => void
 }
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
+<<<<<<< HEAD
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
+=======
+
+=======
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { useNavigate } from 'react-router-dom',;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface NotificationFooterProps {;
   onClose: () => void;
 }
@@ -78,6 +102,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
     onClose(),
     navigate('/notifications')
   },
+<<<<<<< HEAD
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
 =======
@@ -119,16 +144,29 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+  return (
+    <div className="p-3 text-center border-t border-zion-blue-light">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Button
         variant="link"
         size="sm"
         className="text-zion-slate-light text-xs"
+<<<<<<< HEAD
 
         onClick={handleViewAll}>;
         onClick={handleViewAll}
 
   )
 
+=======
+        onClick={handleViewAll}
+
+        onClick={handleViewAll}>;
+=======
+        onClick={handleViewAll}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       >
         View all notifications
       </Button>
@@ -137,6 +175,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 }
 
   )
+<<<<<<< HEAD
       >;
 
         View all notifications;
@@ -219,3 +258,19 @@ export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+      >;
+
+        View all notifications;
+      </Button>;
+    </div>;
+  );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

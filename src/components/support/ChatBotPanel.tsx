@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from "react";
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import React, { useState, useRef, useEffect } from "react",
@@ -22,6 +23,10 @@ import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from "@/components/ui/button",
+=======
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { Separator } from "@/components/ui/separator",
 import { toast } from "@/components/ui/use-toast",
@@ -29,10 +34,78 @@ import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Send, Loader2 } from 'lucide-react'
 import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 import { useTheme } from "@/hooks/useTheme",
+=======
+
+import React, { useState, useRef, useEffect } from './react';
+import { log_debug, logErrorToProduction } from '@/utils / production_logger';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { ScrollArea  } from '@/components / ui / scroll - area';
+import { Separator  } from '@/components / ui / separator';
+import { toast  } from '@/components / ui / use - toast';
+import { cn  } from '@/lib / utils';
+import { ChatMessage  } from './ChatMessage';
+import { QuickReplyButton  } from './QuickReplyButton';
+import { Send, Loader2 } from 'lucide-react'import { use_theme  } from '@/hooks / use_theme';
+// Define suggested quick replies;
+const QUICK_REPLIES = [;
+  { id: "hire", text: "How do I hire?" },
+  { id: "match", text: "How do I get matched?" },
+  { id: "billing", text: "Billing help" }],
+type Message = {
+  id: string,
+  content: string,
+  sender: "user" | "bot",
+  timestamp: Date;
+
+}
+export /**
+ * ChatBotPanel - Function description
+ */
+function ChatBotPanel() {
+  const [messages, set_messages] = useState < Message[]>([;
+    {
+
+      id: "welcome",
+      content: "Hi! How can I help you?",
+      sender: "bot",
+      timestamp: new Date ()}]),
+  const [input_value, setInputValue] = useState ("");
+  const [is_loading, setIsLoading] = useState (false);
+  const [failed_attempts, setFailedAttempts] = useState (0);
+  const scrollAreaRef = useRef < HTMLDivElement>(null);
+  const input_ref = useRef < HTMLInputElement>(null);
+  const { theme } = use_theme ();
+  // Auto - scroll to bottom when messages change;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      scrollAreaRef.current.scroll_top = scrollAreaRef.current.scroll_height;
+
+    }
+  }, [messages]);
+  // Focus input when component mounts;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      input_ref.current.focus ();
+    }
+
+import { Send, Loader2 } from 'lucide-react'import { useTheme } from "@/hooks/useTheme";
+import { Send, Loader2 } from 'lucide-react'
+
+import { useTheme } from "@/hooks/useTheme",
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
@@ -40,6 +113,7 @@ const QUICK_REPLIES = [
   { id: "billing", text: "Billing help" }],
 
 
+<<<<<<< HEAD
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }
   { id: "match", text: "How do I get matched?" }
@@ -123,10 +197,13 @@ export function ChatBotPanel() {
   const inputRef = useRef<HTMLInputElement>(null),
   const { theme } = useTheme(),
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+<<<<<<< HEAD
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
@@ -155,10 +232,14 @@ export function ChatBotPanel() {
 }
   )
 }
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!text.trim()) return;
       timestamp: new Date()},
     
         timestamp: new Date()},
+<<<<<<< HEAD
       
         description: "We're having trouble connecting to our support service."}),
             
@@ -488,51 +569,105 @@ type Message = {
             </div>)}
         </div>
       </ScrollArea>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
-      {messages.length === 1 && (<div className="px-4 py-3">
-          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
-            Suggested questions:
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {QUICK_REPLIES.map((reply) => (<QuickReplyButton key={reply.id} text={reply.text} onClick={() => handleQuickReply(reply.text)}/>))}
-          </div>
-        </div>)}
-      
-      {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
-            Need more help?
-          </p>
-          <div className="flex gap-2">
-            <Button onClick={handleEscalateToLiveAgent} size="sm" className="bg-zion-purple hover:bg-zion-purple-light text-white">
-              Chat with Live Agent
-            </Button>
-            <Button onClick={handleEmailSupport} size="sm" variant="outline">
-              Email Support
-            </Button>
-          </div>
-        </div>)}
-      
-      <div className={cn("p-4 border-t", theme === "dark" ? "border-zion-blue-light" : "border-gray-200")}>
-        <form onSubmit={(e) => {
-            e.preventDefault();
-            handleSendMessage();
-        }} className="flex items-center gap-2">
-          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={cn("flex-1", theme === "dark"
-            ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
-            : "bg-white border-gray-200")}/>
-          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">
-            <Send className="h-4 w-4"/>
-          </Button>
-        </form>
-      </div>
-    </div>);
+        description: "We're having trouble connecting to our support service."}),
+            
+
+import React, { useState, useRef, useEffect } from "react",;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { ScrollArea } from "@/components/ui/scroll-area",;
+import { Separator } from "@/components/ui/separator",;
+import { toast } from "@/components/ui/use-toast",;
+import { cn } from "@/lib/utils",;
+import { ChatMessage } from "./ChatMessage",;
+import { QuickReplyButton } from "./QuickReplyButton",;
+import { Send, Loader2 } from 'lucide-react';
+import { useTheme } from "@/hooks/useTheme",;
+
+// Define suggested quick replies;
+const QUICK_REPLIES = [;
+  { id: "hire", text: "How do I hire?" },;
+  { id: "match", text: "How do I get matched?" },;
+  { id: "billing", text: "Billing help" }],;
+type Message = {;
+  id: string,;
+  content: string,;
+  sender: "user" | "bot",;
+  timestamp: Date;
+};
+
+export function ChatBotPanel() {;
+  const [messages, setMessages] = useState<Message[]>([;
+    {;
+      id: "welcome",;
+      content: "Hi! How can I help you?",;
+      sender: "bot",;
+      timestamp: new Date()}]),;
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [failedAttempts, setFailedAttempts] = useState(0);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const { theme } = useTheme();
+
+  // Auto-scroll to bottom when messages change;
+  useEffect((,) => {;
+    if (scrollAreaRef && scrollAreaRef.current) {;
+      scrollAreaRef && scrollAreaRef.current.scrollTop = scrollAreaRef && scrollAreaRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  // Focus input when component mounts;
+  useEffect((,) => {;
+    if (inputRef && inputRef.current) {;
+      inputRef && inputRef.current.focus();
+    }
+  }, []);
+
+  const handleSendMessage = async (text: string = inputValue) => {;
+    if (!text && text.trim()) return;
+      timestamp: new Date()},;
+
+        timestamp: new Date()},;
+
+        description: "We're having trouble connecting to our support service."}),;
+
+
+  );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 ursor/fix-website-loading-errors-and-merge-6662
 ;
     handleSendMessage(text)
 =======
+=======
+
+  }, []);
+  const handleSendMessage = async (text: string = input_value) => {
+    if () return) {
+  $2
+}
+      timestamp: new Date ()},
+        timestamp: new Date ()},
+        description: "We're having trouble connecting to our support service."}),
+      id: `bot - escalation-${Date.now ()}`,
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      sender: "bot",
+      timestamp: new Date ()},
+  const handleQuickReply = (text: string, ) =>: any {
+    handleSendMessage (text);
+  }
+  );
+}
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -605,5 +740,9 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
 
   const handleQuickReply = (text: string) => {
+<<<<<<< HEAD
     handleSendMessage(text)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    handleSendMessage(text)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

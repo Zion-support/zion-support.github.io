@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -31,6 +32,8 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -77,10 +80,18 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
+=======
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
   const schema = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const schema = {
@@ -100,13 +111,18 @@ export default function Ecommerce() {
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   return (
@@ -133,6 +149,7 @@ export default function Ecommerce() {
             <div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Ecommerce() {
@@ -153,6 +170,8 @@ export default function Ecommerce() {
         canonical='https://app.ziontechgroup.com/features/e-commerce'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
@@ -166,12 +185,15 @@ export default function Ecommerce() {
         type="application/ld+json"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -205,6 +227,7 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -290,6 +313,12 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
+=======
+
+
+
+          <div className="text-center">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
             </Button>
@@ -299,6 +328,7 @@ export default function Ecommerce() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 =======
@@ -306,6 +336,11 @@ export default function Ecommerce() {
 ;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -342,6 +377,7 @@ export default function Ecommerce() {;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <img;
               src="https://placehold.co/800x400";
               alt="Screenshot of marketplace interface";
@@ -368,18 +404,24 @@ export default function Ecommerce() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of marketplace interface"
               className="object-cover"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href="/marketplace">Start Shopping</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -391,3 +433,5 @@ export default function Ecommerce() {;
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

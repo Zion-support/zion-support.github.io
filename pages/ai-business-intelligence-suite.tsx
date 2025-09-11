@@ -1,15 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -18,6 +24,10 @@ import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -28,7 +38,10 @@ import {
 
   DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Target, BarChart, PieChart, Activity, Eye, Lock
 
 } from 'lucide-react',;
@@ -36,6 +49,10 @@ import Button from '../components/ui/Button',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
 
@@ -44,6 +61,7 @@ export default function AIBusinessIntelligenceSuite() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -82,6 +100,8 @@ export default function AIBusinessIntelligenceSuite() {
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
   const features = [
@@ -99,6 +119,9 @@ export default function AIBusinessIntelligenceSuite() {
   ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ],
   const useCases = [
     'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimizationOperational efficiency tracking'
@@ -109,6 +132,7 @@ export default function AIBusinessIntelligenceSuite() {
   const technology = [
     'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'
   ],
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
@@ -116,11 +140,17 @@ export default function AIBusinessIntelligenceSuite() {
       intensity="high"
     <UltraAdvancedFuturisticBackground 
       intensity="high" 
+=======
+  return (
+    <UltraAdvancedFuturisticBackground
+      intensity="high"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       colorScheme="quantum-fusion"
       particleCount={500}
       animationSpeed={2.0}
       enableHolographic={true}
       enableQuantumEffects={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
     <UltraAdvancedFuturisticBackground
       intensity="high"
@@ -147,6 +177,8 @@ export default function AIBusinessIntelligenceSuite() {
 }
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
     website: 'https://ziontechgroup.com'
 
   },
@@ -170,7 +202,10 @@ export default function AIBusinessIntelligenceSuite() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >
       <div className="min-h-screen">
         <Head>
@@ -186,6 +221,7 @@ export default function AIBusinessIntelligenceSuite() {
           <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence-suite" />
         </Head>
         <UltraAdvancedNavigation />
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Hero Section */}
 =======
@@ -253,6 +289,10 @@ function AIBusinessIntelligenceSuite() {
         {/* Hero Section */}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        {/* Hero Section */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
@@ -265,6 +305,7 @@ function AIBusinessIntelligenceSuite() {
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
     >
       <div className=&quot;min-h-screen&quot;>
@@ -344,6 +385,10 @@ function AIBusinessIntelligenceSuite() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -352,6 +397,7 @@ function AIBusinessIntelligenceSuite() {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <motion.h1
               <motion.h1 
@@ -378,15 +424,21 @@ function AIBusinessIntelligenceSuite() {
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-6"
               >
                 AI Business Intelligence Suite
               </motion.h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <motion.p
               <motion.p 
@@ -416,6 +468,8 @@ function AIBusinessIntelligenceSuite() {
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 initial={{ opacity: 0, y: 20 }}
@@ -425,11 +479,15 @@ function AIBusinessIntelligenceSuite() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
               >
                 Transform data into actionable insights with <span className="text-blue-400 font-bold">AI-powered analytics</span>
               </motion.p>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <motion.p
               <motion.p 
@@ -456,20 +514,29 @@ function AIBusinessIntelligenceSuite() {
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
               >
                 Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.
               </motion.p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Pricing and CTA */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -513,6 +580,9 @@ function AIBusinessIntelligenceSuite() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                   <Button 
                     href="/contact" 
+=======
+                transition={{ duration: 0.8, delay: 0.6 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
               >
                 <motion.div
@@ -525,6 +595,7 @@ function AIBusinessIntelligenceSuite() {
   }
 }
               <motion.div;
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -559,6 +630,10 @@ function AIBusinessIntelligenceSuite() {
   }
 }
 =======
+=======
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                animate={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 transition={{ duration: 0.8, delay: 0.6 }}
 
@@ -570,7 +645,10 @@ function AIBusinessIntelligenceSuite() {
                   transition={{ duration: 0.2 }}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -582,6 +660,7 @@ function AIBusinessIntelligenceSuite() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <Button
                         href="/contact"
                       <Button 
@@ -591,6 +670,9 @@ function AIBusinessIntelligenceSuite() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         variant="primary"
                         className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-xl"
                       >
@@ -600,6 +682,7 @@ function AIBusinessIntelligenceSuite() {
                   </div>
                 </motion.div>
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
                   whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
     console.error("Error:", error);
@@ -626,6 +709,8 @@ function AIBusinessIntelligenceSuite() {
                   <Button
                     href="/contact"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
@@ -636,7 +721,10 @@ function AIBusinessIntelligenceSuite() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -647,6 +735,7 @@ function AIBusinessIntelligenceSuite() {
                   </Button>
                 </motion.div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="bg - gradient - to - r from - blue - 500 to - indigo - 600 p - 1 rounded - 2xl shadow - 2xl";
 =======
@@ -687,13 +776,18 @@ function AIBusinessIntelligenceSuite() {
               </motion.div>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Key Benefits */}
               <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -715,6 +809,7 @@ function AIBusinessIntelligenceSuite() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-4xl mx - auto";
@@ -742,6 +837,10 @@ function AIBusinessIntelligenceSuite() {
         {/* Features Section */}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        {/* Features Section */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
@@ -750,7 +849,10 @@ function AIBusinessIntelligenceSuite() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
@@ -767,6 +869,7 @@ function AIBusinessIntelligenceSuite() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -881,11 +984,14 @@ function AIBusinessIntelligenceSuite() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {feature}
 =======
@@ -999,6 +1105,8 @@ function AIBusinessIntelligenceSuite() {
               {use_cases.map ((use_case, index) => (
                 <motion.div;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   whileHover={{ scale: 1.02, y: -5 }}
                   key={index  } catch (error) {
     console.error("Error:", error);
@@ -1030,6 +1138,7 @@ function AIBusinessIntelligenceSuite() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                   className="group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
 =======
 
@@ -1043,12 +1152,21 @@ function AIBusinessIntelligenceSuite() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className="group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
                       <CheckCircle className="w-5 h-5 text-white" />
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
                       {feature}
                     </h3>
@@ -1073,6 +1191,7 @@ function AIBusinessIntelligenceSuite() {
 }
                     </h3>;
                   </div>;
+<<<<<<< HEAD
                 </motion.div>;
               ))  } catch (error) {
     console.error("Error:", error);
@@ -1110,6 +1229,24 @@ function AIBusinessIntelligenceSuite() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Use Cases Section */}
+
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1129,6 +1266,7 @@ function AIBusinessIntelligenceSuite() {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 =======
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
 
@@ -1258,6 +1396,11 @@ function AIBusinessIntelligenceSuite() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -1288,6 +1431,7 @@ function AIBusinessIntelligenceSuite() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                     </h3>;
                   </div>;
                 </motion.div>;
@@ -1307,6 +1451,29 @@ function AIBusinessIntelligenceSuite() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+=======
+
+                    </h3>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        {/* Technology & Integrations */}
+
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
+          <div className="max - w-7xl mx - auto">;
+            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16">;
+
+              {/* Technology Stack */}
+              <motion.div;
+                initial={{ opacity: 0, coordinate_x: -20 }}
+                whileInView={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Technology Stack */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1333,6 +1500,12 @@ function AIBusinessIntelligenceSuite() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -1342,16 +1515,22 @@ function AIBusinessIntelligenceSuite() {
                 <div className="grid grid-cols-2 gap-4">
                   {technology.map((tech, index) => (
                     <motion.div
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1360,6 +1539,7 @@ function AIBusinessIntelligenceSuite() {
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-gray-200">{tech}</span>
                     </motion.div>
+<<<<<<< HEAD
 
                       className="flex items - center space - x-3 p - 3 bg - gray - 800 / 40 rounded - lg border border - gray - 700 / 50";
                     >;
@@ -1408,13 +1588,21 @@ function AIBusinessIntelligenceSuite() {
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-gray-200">{tech}</span>
                     </motion.div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
                 </div>
               </motion.div>
               {/* Integrations */}
+<<<<<<< HEAD
               <motion.div;
                 initial={{ opacity: 0, coordinate_x: 20 }}
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
+=======
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                   ))  } catch (error) {
@@ -1422,6 +1610,7 @@ function AIBusinessIntelligenceSuite() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                 </div>;
               </motion.div>;
               {/* Integrations */  } catch (error) {
@@ -1431,11 +1620,19 @@ function AIBusinessIntelligenceSuite() {
 }
               <motion.div;
 =======
+=======
+
+                </div>;
+              </motion.div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Integrations */}
               <motion.div;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, x: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1457,11 +1654,17 @@ function AIBusinessIntelligenceSuite() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1471,6 +1674,7 @@ function AIBusinessIntelligenceSuite() {
                 <div className="grid grid-cols-2 gap-4">
                   {integrations.map((integration, index) => (
                     <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1485,13 +1689,18 @@ function AIBusinessIntelligenceSuite() {
                     <motion.div;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1500,6 +1709,7 @@ function AIBusinessIntelligenceSuite() {
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-200">{integration}</span>
                     </motion.div>
+<<<<<<< HEAD
 
 =======
                       className="flex items - center space - x-3 p - 3 bg - gray - 800 / 40 rounded - lg border border - gray - 700 / 50";
@@ -1560,6 +1770,8 @@ function AIBusinessIntelligenceSuite() {
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-200">{integration}</span>
                     </motion.div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
                 </div>
               </motion.div>
@@ -1579,14 +1791,22 @@ function AIBusinessIntelligenceSuite() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </motion.div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Market Position & ROI */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1616,11 +1836,17 @@ function AIBusinessIntelligenceSuite() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1631,12 +1857,17 @@ function AIBusinessIntelligenceSuite() {
             </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 =======
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1644,6 +1875,8 @@ function AIBusinessIntelligenceSuite() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1665,11 +1898,17 @@ function AIBusinessIntelligenceSuite() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
@@ -1678,12 +1917,16 @@ function AIBusinessIntelligenceSuite() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Competitive with Tableau ($70-75/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month).
                   Competitive with Tableau ($70-75/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). 
                   Competitive with Tableau ($70-75/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month).
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Our advantage: AI-powered insights, automated reporting, and predictive analytics.
                 </p>
                 <div className="space-y-4">
@@ -1702,15 +1945,21 @@ function AIBusinessIntelligenceSuite() {
                 </div>
               </motion.div>
               <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1732,11 +1981,17 @@ function AIBusinessIntelligenceSuite() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
@@ -1763,10 +2018,14 @@ function AIBusinessIntelligenceSuite() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+        {/* CTA Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1774,6 +2033,10 @@ function AIBusinessIntelligenceSuite() {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1781,6 +2044,7 @@ function AIBusinessIntelligenceSuite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className="text - center mb - 16";
 <<<<<<< HEAD
 
@@ -1848,6 +2112,11 @@ function AIBusinessIntelligenceSuite() {
                   <Button
                     href="/contact"
 =======
+=======
+=======
+=======
+              className="text - center mb - 16";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 <span className="bg - gradient - to - r from - yellow - 400 to - orange - 500 bg - clip - text text - transparent">;
@@ -1913,6 +2182,10 @@ function AIBusinessIntelligenceSuite() {
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -1927,7 +2200,10 @@ function AIBusinessIntelligenceSuite() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant="primary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25"
                   >
@@ -1939,6 +2215,7 @@ function AIBusinessIntelligenceSuite() {
                   </Button>
                 </motion.div>
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
                   whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
     console.error("Error:", error);
@@ -1965,6 +2242,8 @@ function AIBusinessIntelligenceSuite() {
                   <Button
                     href="/contact"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
@@ -1975,7 +2254,10 @@ function AIBusinessIntelligenceSuite() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -1989,6 +2271,7 @@ function AIBusinessIntelligenceSuite() {
 
 
               <div className="mt-8 text-gray-400">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               <div className="mt-8 text-gray-400">
@@ -2001,6 +2284,13 @@ function AIBusinessIntelligenceSuite() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</a></p>
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</Link></p>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -2008,6 +2298,7 @@ function AIBusinessIntelligenceSuite() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -2026,6 +2317,12 @@ function AIBusinessIntelligenceSuite() {
 }
 }
 =======
+=======
+
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -2080,9 +2377,15 @@ function AIBusinessIntelligenceSuite() {
     </UltraAdvancedFuturisticBackground>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

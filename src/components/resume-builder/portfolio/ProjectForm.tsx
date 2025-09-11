@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -86,6 +87,8 @@ export function ProjectForm({
         success = await updateProject(project.id, projectData)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       let success = false;
       // Check condition
@@ -98,10 +101,13 @@ if ( {) {
         success = !!projectId
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (success) {
         onSuccess()
         form.reset()
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       // Check condition
 if ( {) {
@@ -110,13 +116,19 @@ if ( {) {
         on_success ();
         form.reset ();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } catch (error) {
       logErrorToProduction('Error saving project:', { data: error })
     } finally {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from 'react';
@@ -128,7 +140,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger';import {;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setIsLoading(false)
     }
   }
@@ -220,15 +235,21 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       setIsLoading(false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
 
 
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
@@ -237,10 +258,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <FormField
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   
@@ -266,6 +293,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <FormField
           control={form.control}
           name='description'
@@ -282,6 +311,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     <Form {...form}>;
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
         <FormField;
+<<<<<<< HEAD
 <<<<<<< HEAD
           control={form.control}
                   {...field}
@@ -325,6 +355,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
                   {...field}
+=======
+          control={form.control}
+          name='title';
+          render={({ field }: { field: any }) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <FormItem>;
               <FormLabel > Project Title</FormLabel>;
               <FormControl>;
@@ -353,7 +388,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
         <FormField
+<<<<<<< HEAD
           control={form && form.control}
+=======
+          control={form.control}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           name='technologies'
           render={({ field }: { field: any }) => (;
             <FormItem>;
@@ -374,14 +413,34 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
+<<<<<<< HEAD
 
+=======
+                <Input
+                  placeholder='E.g., AI Chatbot, E-commerce Website'
+                  {...field}                />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
 
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 
+=======
+        />
+        <FormField
+          control={form.control}
+          name='description'
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Project Description</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder='Describe what the project does and your role in it...'
+                  className='min-h-[100px]'
+                  {...field}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <FormField;
           control={form.control}
@@ -401,6 +460,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             </FormItem>
           )}
         />
+<<<<<<< HEAD
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
@@ -414,6 +474,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
+=======
+        <FormField
+          control={form.control}
+          name='technologies'
+        />;
+        <FormField;
+          control={form.control}
+          name="technologies"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
@@ -495,6 +565,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
+<<<<<<< HEAD
         />
         <FormField
           control={form.control}
@@ -524,15 +595,26 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
+=======
+            )}
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
+<<<<<<< HEAD
             )}
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -556,6 +638,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Link className="h-4 w-4" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -565,6 +652,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               </FormItem>
             )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           />
           <FormField
@@ -595,13 +683,18 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           control={form && form.control}
           name='image_url'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
         </div>;
 
         <FormField
           control={form.control}
           name='image_url'
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
                 <FileImage className='h-4 w-4' />;
@@ -616,19 +709,28 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <FormField;
           control={form.control}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           name="image_url"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -640,12 +742,18 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         />
         {/* Future file upload field would go here */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='flex justify-end space-x-2 pt-4'>
           <Button type='button' variant='outline' onClick={onCancel}>
         />;
         {/* Future file upload field would go here */}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
@@ -659,11 +767,18 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         </div>
       </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+    </Form>;
+  );
+};
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </Form>
   )
         />;
@@ -688,11 +803,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 }
@@ -714,7 +832,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

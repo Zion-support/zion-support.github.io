@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -29,37 +30,52 @@ export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
       if (!talentId) return;
       try {
         setIsLoading(true);
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (!talentId) return,
       
       try {
         setIsLoading(true),
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             *,
+=======
+            *;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
           .order("created_at", { ascending: false });
         if (error) throw error;
         setJobMatches(data |[])
+<<<<<<< HEAD
 =======
             *;
             job:job_id (*)
@@ -68,14 +84,21 @@ export function useJobSuggestions(talentId?: string) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           .order("created_at", { ascending: false }),
           
         if (error) throw error,
         
         setJobMatches(data || [])
 <<<<<<< HEAD
+<<<<<<< HEAD
       } catch (error) {
         console.error("Error fetching job matches:", error),
+=======
+      } catch (error) {
+        console && console.error("Error fetching job matches:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         toast({
           title: "Error";
           description: "Failed to load job suggestions"
@@ -85,6 +108,7 @@ export function useJobSuggestions(talentId?: string) {
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 =======
 
 
@@ -153,32 +177,46 @@ if (throw error) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    fetchSuggestedJobs()
+  }, [talentId]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     
     fetchSuggestedJobs()
   }, [talentId]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       const { error } = await supabase
         .from("job_talent_matches")
         .update(updates)
         .eq("id", matchId);
       if (error) throw error;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       },
       
       const { error } = await supabase
@@ -188,6 +226,7 @@ if (throw error) {
         
       if (error) throw error,
       
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
       setJobMatches(matches => 
@@ -206,12 +245,21 @@ if (throw error) {
       setJobMatches(matches =>
         matches.map(match =>
           match.id === matchId
+=======
+      // Update local state
+
+      setJobMatches(matches => 
+        matches && matches.map(match => 
+          match && match.id === matchId 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
       );
       ),
       
+<<<<<<< HEAD
 =======
 
 
@@ -231,6 +279,8 @@ if (throw error) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -244,6 +294,7 @@ if (throw error) {
         })
       }
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Error updating job match status:", error),
       toast({
@@ -262,15 +313,25 @@ if (throw error) {
       toast({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console && console.error("Error updating job match status:", error);
+      toast({
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
   const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
   const appliedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'applied');
   const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     jobMatches;
     isLoading;
@@ -281,6 +342,7 @@ if (throw error) {
       appliedMatches
 
       declinedMatches
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Error",
         description: "Failed to update job status",
@@ -323,6 +385,11 @@ export function useJobSuggestions(talentId?: string) {;
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     fetchSuggestedJobs ();
   }, [talent_id]);
@@ -378,6 +445,7 @@ if ( {) {
   }
 ;
   // Filter matches by status;
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     },;
@@ -438,6 +506,8 @@ if ( {) {
       declinedMatches;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const new_matches = job_matches.filter (match => match.status === 'new');
   const viewed_matches = job_matches.filter (match => match.status === 'viewed');
   const applied_matches = job_matches.filter (match => match.status === 'applied');
@@ -452,6 +522,7 @@ if ( {) {
       viewed_matches;
       applied_matches,
       declined_matches;
+<<<<<<< HEAD
 
 
     }
@@ -596,3 +667,13 @@ job:job id (*) `)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

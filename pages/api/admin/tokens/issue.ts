@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +19,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { issueTokens } from "../../../../utils/token/service";
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, amount, reason } = req.body |{}
@@ -26,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tx = issueTokens(userId, Math.floor(amount), reason |"admin_issue")
     return res.status(200).json({ tx })
 
+<<<<<<< HEAD
   } catch (err: any) {
     return res.status(400).json({ error: err.message });
   try {
@@ -46,7 +50,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

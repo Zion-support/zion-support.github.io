@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -33,6 +34,8 @@ export function ProfileContact({
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
@@ -52,6 +55,10 @@ import { Textarea } from "@/components/ui/textarea",
 import { Mail, Send } from 'lucide-react'
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProfileContactProps {
   email?: string;
   profile_name: string;
@@ -77,6 +84,7 @@ function ProfileContact() {
     }, 1000);
   }
 
+<<<<<<< HEAD
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
@@ -124,6 +132,19 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
               className='bg-zion-blue border-zion-blue-light text-white'              required              className="bg-zion-blue border-zion-blue-light text-white"
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Mail, Send } from 'lucide-react'
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+interface ProfileContactProps {
+  email?: string,
+  profileName: string,
+  profileType: 'service' | 'talent'
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
@@ -149,7 +170,10 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
@@ -209,20 +233,27 @@ export function ProfileContact(): any ({;
           <a
             href={`mailto:${email}`} 
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="text-zion-cyan hover:underline truncate block"
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-zion-cyan hover:underline truncate block"
 
 
 
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {email}
           </a>;
         </div>;
@@ -242,6 +273,7 @@ export function ProfileContact(): any ({;
       
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="space-y-4">
           <div>
             <Input
@@ -251,10 +283,13 @@ export function ProfileContact(): any ({;
         </div>
       )}
       
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
             <Input
+<<<<<<< HEAD
               placeholder='Subject'
               value={subject}
               onChange={e => setSubject(e.target.value)}
@@ -299,6 +334,10 @@ export function ProfileContact(): any ({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
@@ -323,6 +362,7 @@ export function ProfileContact(): any ({;
             {isSending ? "Sending..." : "Send Message"}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled = {isSending,}
@@ -428,17 +468,25 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             {isSending ? "Sending..." : "Send Message"}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Button>;
         </div>;
       </form>;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               on_change={e => set_message (e.target.value)}
               className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';
               required;
@@ -471,9 +519,13 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 }'"}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 }
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

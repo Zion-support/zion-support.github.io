@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -20,13 +21,18 @@ export default function TryItConsole({
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   method,
   path,
@@ -34,10 +40,15 @@ interface TryItProps {
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   path: string, // full URL or relative
   requiresAuth: boolean
 }
@@ -45,10 +56,13 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface TryItProps {;
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -68,12 +82,18 @@ export default function TryItConsole(): any ({;
 export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -83,6 +103,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
   }, [baseUrl, path]);
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
   const [body, setBody] = useState('');
@@ -94,6 +115,8 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
   }, [baseUrl, path]);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function onSend() {;
     setLoading(true);
     setResponse('');
@@ -109,6 +132,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
           method === 'GET' || method === 'DELETE';
             ? undefined;
             : body || undefined,;
+<<<<<<< HEAD
 <<<<<<< HEAD
       });
       const text = await res && res.text();
@@ -224,6 +248,8 @@ if (headers['Authorization'] = `Bearer ${token}`) {
             value={token}
             on_change={e => set_token (e.target.value)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       });
       const text = await res && res.text();
@@ -252,6 +278,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
     } finally {;
       setLoading(false);
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
@@ -277,12 +304,15 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       setLoading(false)
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   return (
     <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
+<<<<<<< HEAD
           <label className='block text-sm mb-1'>Base URL</label>
           <input
             className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
@@ -316,6 +346,9 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         <div>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -330,10 +363,15 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <div>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />        </div>;
       </div>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
@@ -354,15 +392,20 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         <div>;
           <label className='block text-sm mb-1'>Request Body (JSON)</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
             onChange={e => setBody(e && e.target.value)}
             placeholder='{ }';
           />;
+<<<<<<< HEAD
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>
           <label className='block text-sm mb-1'>Request Body (JSON)</label>
@@ -411,6 +454,12 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
+=======
+=======
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -475,10 +524,15 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space-y-2'>
 
 
@@ -490,6 +544,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         disabled={loading}
       >
@@ -518,3 +573,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

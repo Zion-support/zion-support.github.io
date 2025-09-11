@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
@@ -52,6 +53,8 @@ interface VideoCallRoomProps {
   onToggleMute?: (isMuted: boolean) => void,
   onToggleVideo?: (isEnabled: boolean) => void,
   onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -60,6 +63,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   roomId: string
   participants?: Participant[]
@@ -114,12 +118,17 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleScreenShare
   className
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   participants = [], ;
     const secs = seconds % 60;
 };  onLeave,
@@ -186,6 +195,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       onLeave()
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   return (
     <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
@@ -196,15 +206,23 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  return (
+    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
@@ -321,6 +339,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
           <Badge variant="secondary" className="bg-zion-blue-light text-white">
             {formatDuration(callDuration)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Badge>
           <Badge variant="outline" className="text-white">
             {participants.length} participant{participants.length !== 1 ? 's' : ''}
@@ -330,6 +351,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
+<<<<<<< HEAD
             participants.map((participant,) => (
 =======
 
@@ -467,6 +489,8 @@ if ( {) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {participants.length > 0 ? (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             participants.map ((participant, ) => (
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
 
@@ -495,6 +519,7 @@ if ( {) {
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -505,6 +530,8 @@ if ( {) {
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Placeholder for actual video stream */}
                     <Video className="h-12 w-12 opacity-50" />
                   </div>
@@ -524,6 +551,7 @@ if ( {) {
                   </div>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
                 
 =======
@@ -533,6 +561,9 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -551,12 +582,15 @@ if ( {) {
           )}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
 
 
@@ -582,14 +616,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
 <<<<<<< HEAD
             onClick = {handleToggleMute,}
             aria-label = {isMuted ? 'Unmute microphone' : 'Mute microphone',}
@@ -597,6 +635,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </Button>;
 
@@ -608,6 +648,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
           
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button
             variant="outline"
@@ -690,6 +731,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
           
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             variant="outline"
             size="icon"
@@ -736,19 +779,28 @@ ursor/fix-website-loading-errors-and-merge-6662
             variant="destructive"
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick={handleLeaveCall}
             aria-label="Leave call"
           >
 
 
             <Phone className="rotate-135" />
+<<<<<<< HEAD
+=======
+          </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -756,6 +808,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             aria-label="Leave call">;
             <Phone className="rotate-135" />;
@@ -765,11 +819,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>;
   );
 },;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 },
 };
 },
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
@@ -852,7 +910,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>);
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

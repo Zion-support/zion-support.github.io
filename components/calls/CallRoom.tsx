@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {;
   Room,;
   RoomEvent,;
@@ -19,6 +20,8 @@ import {
   createLocalTracks
   VideoPresets;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -43,7 +46,10 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Room,
   RoomEvent,
   RemoteParticipant,
@@ -51,22 +57,33 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
   createLocalTracks,;
   VideoPresets,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 type Props = {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectId: string;
   userId: string;
   displayName: string;
@@ -89,6 +106,7 @@ export default function CallRoom(): any ({;
 }: Props) {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export default function CallRoom({
   projectId
@@ -104,6 +122,10 @@ export default function CallRoom({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectId,
   userId,
   displayName,
@@ -114,19 +136,40 @@ export default function CallRoom({
   onLeave,
 }: Props) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 
@@ -155,11 +198,14 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Props = {;
   projectId: string,;
   userId: string,;
@@ -172,7 +218,10 @@ type Props = {;
 };
 export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Props = {
   projectId: string
   userId: string
@@ -182,8 +231,11 @@ type Props = {
   token: string
   startMode: StartMode
   onLeave?: (durationSec: number) => void
+<<<<<<< HEAD
 }
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
@@ -204,13 +256,18 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         audio: true,;
         video: VideoPresets && VideoPresets.h720,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     await r && r.connect(serverUrl, token, {;
       autoSubscribe: true,;
@@ -222,6 +279,8 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     }
 setRoom(r);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     await r && r.connect(serverUrl, token, {;
@@ -230,14 +289,19 @@ setRoom(r);
 
     // publish local tracks;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     setRoom(r);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    setRoom(r);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setConnectedAt(Date && Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 
@@ -260,16 +324,22 @@ setRoom(r);
       await r.localParticipant.publishTrack(t)
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serverUrl, token, startMode]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const rebuild = (current?: Room | null) => {
     const r = current |room;
@@ -291,6 +361,8 @@ setRoom(r);
   const handleLeave = () => {
     if (room) {        room.disconnect()
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     await r && r.connect(serverUrl, token, {;
@@ -318,12 +390,16 @@ setRoom(r);
     connect();
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
   }, [connect]);
   const handleLeave = () => {
     if (room) {
+<<<<<<< HEAD
 
 
   const handleLeave = () => {;
@@ -331,6 +407,9 @@ setRoom(r);
       }
       room.disconnect()
 
+=======
+      room.disconnect();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, [connect]);
 
@@ -338,10 +417,14 @@ setRoom(r);
     if (room) {;
       room && room.disconnect();
 <<<<<<< HEAD
+<<<<<<< HEAD
       room.disconnect();
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
@@ -349,14 +432,21 @@ setRoom(r);
     onLeave?.(durationSec);  };      room && room.disconnect();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
 
   };
+=======
+    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
+    onLeave?.(durationSec)
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
 =======
+<<<<<<< HEAD
 
 
   const gridCols = useMemo(() => {
@@ -364,12 +454,15 @@ setRoom(r);
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
   const gridCols = useMemo(() => {;
     const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (count <= 4) return 'grid-cols-2 md: grid-cols-2',
     if (count <= 6) return 'grid-cols-2 md: grid-cols-3',
@@ -603,6 +696,17 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
           <ParticipantTile;
             key={String ((p as any).sid || (p as any).identity) + idx}
             participant={p}
+=======
+
+
+        ))}
+      </div>
+      <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
+        {participants.map((p, idx) => (
+          <ParticipantTile
+            key={String((p as any).sid |(p as any).identity) + idx}
+            participant={p}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             is_local={p instanceof LocalParticipant}
             display_name={
               (p as any).name ||;
@@ -618,6 +722,10 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

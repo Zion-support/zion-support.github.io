@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
@@ -66,6 +67,10 @@ import {
   BookOpen;} from 'lucide-react';import {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Rocket,
   DollarSign,
   Users,
@@ -82,12 +87,17 @@ import {
   Zap,
   Target,
 <<<<<<< HEAD
+<<<<<<< HEAD
 BookOpen,} from 'lucide-react';import {
 =======
 <<<<<<< HEAD
   Lightbulb,
   BookOpen,} from 'lucide-react';import {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  Lightbulb,
+  BookOpen,} from 'lucide-react';import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Rocket;
   DollarSign,
   Users,
@@ -95,6 +105,7 @@ BookOpen,} from 'lucide-react';import {
   Mail,
   Calendar,
   Shield,
+<<<<<<< HEAD
 <<<<<<< HEAD
   Lightbulb,;
   BookOpen,;} from 'lucide-react';import { ;
@@ -109,6 +120,9 @@ BookOpen,} from 'lucide-react';import {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Globe;
   ArrowRight;
   Star;
@@ -118,6 +132,7 @@ BookOpen,} from 'lucide-react';import {
   Zap;
   Target;
   Lightbulb;
+<<<<<<< HEAD
 <<<<<<< HEAD
   BookOpen
 
@@ -155,6 +170,8 @@ export default function StartupToolsPage() {
         'Limited customization'
       ]
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -175,7 +192,10 @@ export default function StartupToolsPage() {
       pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],
       cons: ['Can get expensiveComplex for small teamsLimited customization'],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       bestFor: 'B2B startups, SaaS companies, marketing teams'
     }
     {
@@ -205,9 +225,13 @@ export default function StartupToolsPage() {
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Calendly',
       description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
   BookOpen;
@@ -283,22 +307,32 @@ function StartupToolsPage() {
       users: '10M+',
       icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,      description: 'Scheduling automation platform that eliminates the back - and - forth of scheduling meetings and calls.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       category: 'Productivity',
       pricing: 'Free - $12 / month',
       rating: 4.8,
       users: '10M+',
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: 'Canva',
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       name: 'Canva',
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,
       features: [;
         'Automated scheduling',
@@ -333,17 +367,25 @@ function StartupToolsPage() {
       users: '100M+',
       icon: <Lightbulb className='w - 8 h - 8 text - blue - 400' />,      description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       category: 'Design',
       pricing: 'Free - $12.99 / month',
       rating: 4.6,
       users: '100M+',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Buffer',
       description: 'Social media management platform that helps businesses schedule posts, analyze performance, and manage multiple accounts.',
     category: 'Social Media',
@@ -352,6 +394,7 @@ function StartupToolsPage() {
       users: '140K+',
       icon: <Globe className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+<<<<<<< HEAD
 <<<<<<< HEAD
       features: [
         'Global payment methods'
@@ -421,6 +464,8 @@ function StartupToolsPage() {
       icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       features: [
         'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem';
       ];
@@ -549,10 +594,14 @@ function StartupToolsPage() {
       rating: 4.9,
       users: '1M+',
 <<<<<<< HEAD
+<<<<<<< HEAD
 icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 =======
       icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'bg - gradient - to - br from - blue - 500 to - indigo - 600',
       features: [;
         'Global payment methods',
@@ -587,17 +636,25 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
       users: '25K+',
       icon: <Users className='w - 8 h - 8 text - green - 400' />,      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       category: 'Customer Support',
       pricing: '$39 - $999 / month',
       rating: 4.6,
       users: '25K+',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: <Users className='w - 8 h - 8 text - green - 400' />,
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
       features: [;
@@ -636,6 +693,7 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
       pros: ['Great UXPowerful features_good integrations_mobile apps'],
       cons: ['ExpensiveComplex pricing_can be overwhelming'],
       best_for: 'SaaS companies, online businesses, customer support teams';
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     {
@@ -776,6 +834,8 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
     {
@@ -792,12 +852,16 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 
                 style={{ animationDelay: '0.4s' }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Get Startup Advice
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
           {/* Stats */}
@@ -829,6 +893,8 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {startupTools.length}+
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Stats */}
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
@@ -836,7 +902,10 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
                 {startupTools.length}+
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
               <div className="text-gray-400 text-sm">Essential Tools</div>
             </div>
@@ -862,7 +931,10 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
                 Get Startup Advice;
@@ -1102,11 +1174,15 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
               </div>;
               <div className="text - gray - 400 text - sm">Total Users</div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
@@ -1116,20 +1192,29 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (              <button      <section className="py-16 bg-gray-900">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1139,6 +1224,7 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </button>
             ))}
@@ -1257,6 +1343,8 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
             </h2>;
             <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </button>;
             ))}
 
@@ -1268,24 +1356,35 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
       {/* Tools Grid */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Beyond tools, here are additional resources to help your startup;
               succeed.;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Additional Startup Resources
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Beyond tools, here are additional resources to help your startup succeed.
@@ -1305,9 +1404,13 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
               </Button>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 size='sm'>                Explore Communities;
               </Button>;
             </Card>;
@@ -1344,25 +1447,35 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
                 startup-specific learning resources.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Button
                 href='https://www && www.coursera.org'
                 variant='outline'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <Button
                 href='https://www && www.coursera.org'
                 variant='outline'
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-xl font-bold mb-4 text-white">Educational Resources</h3>
               <p className="text-gray-400 mb-4">
                 Access free courses from platforms like Coursera, edX, and startup-specific learning resources.
@@ -1372,18 +1485,27 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
               </Button>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-xl font-bold mb-4 text-white">Growth Strategies</h3>
               <p className="text-gray-400 mb-4">
                 Learn proven growth strategies from successful entrepreneurs and growth hackers.
@@ -1395,10 +1517,18 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
           </div>
         </div>
       </section>
+<<<<<<< HEAD
                 size='sm'>                Start Learning;
 size='sm'>                Start Learning;
               </Button>;
             </Card>;
+=======
+=======
+                size='sm'>                Start Learning;
+              </Button>;
+            </Card>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />              </div>;
@@ -1500,14 +1630,20 @@ size='sm'>                Start Learning;
               </p>;
               <Button href='/resources' variant='outline' size='sm'>                View Resources              </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h3 className="text - xl font - bold mb - 4 text - white">Growth Strategies</h3>;
               <p className="text - gray - 400 mb - 4">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <h3 className="text - xl font - bold mb - 4 text - white">Growth Strategies</h3>;
               <p className="text - gray - 400 mb - 4">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Learn proven growth strategies from successful entrepreneurs and growth hackers.;
               </p>;
               <Button href="/resources" variant="outline" size="sm">;
@@ -1517,6 +1653,7 @@ size='sm'>                Start Learning;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -1597,6 +1734,8 @@ size='sm'>                Start Learning;
   );
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               Explore More Tools;
@@ -1608,6 +1747,7 @@ size='sm'>                Start Learning;
 
 =======
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -1647,6 +1787,19 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
 }
 }
 =======
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </>);
+=======
+);
+import React from 'react';
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -1654,4 +1807,7 @@ import React from 'react';
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

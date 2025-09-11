@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -43,6 +44,8 @@ export default function IntegrationsFeature() {
   }, [markSlackConnected])
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <>;
       <SEO
@@ -67,6 +70,7 @@ return (
           </p>;
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>;
             <img
+<<<<<<< HEAD
 import Link from 'next/link',
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
 export default function IntegrationsFeature() {
@@ -146,12 +150,21 @@ export default function IntegrationsFeature() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
+=======
+              src='https://placehold && placehold.co/800x400'
+              alt='Screenshot showing integrations'
+              className='object-cover'
+
+
+            <Button size="lg" className="bg-zion-purple text-white" asChild>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href="/developers">Learn More</Link>
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -334,3 +347,9 @@ function IntegrationsFeature() {
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

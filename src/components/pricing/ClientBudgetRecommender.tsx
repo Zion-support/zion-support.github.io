@@ -23,6 +23,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -199,6 +200,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestedMax: suggestion.maxRate,
       
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -211,7 +214,10 @@ interface ClientBudgetRecommenderProps {
   scope?: string,
   experienceLevel?: string,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -220,15 +226,19 @@ interface ClientBudgetRecommenderProps {
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
 <<<<<<< HEAD
+<<<<<<< HEAD
           accepted: true,
         })
       }
     }
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           accepted: true
         })
       }
     }
+<<<<<<< HEAD
   }
   }
   },
@@ -236,6 +246,14 @@ interface ClientBudgetRecommenderProps {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className="space-y-4">
@@ -243,15 +261,21 @@ interface ClientBudgetRecommenderProps {
         {!suggestion && !isLoading ? (
           <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             type='button'
             variant='outline'
             onClick={generateSuggestion}
             disabled={!jobTitle |!category}
             className='w-full'          >
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             type="button"
             variant="outline"
             onClick={generateSuggestion}
@@ -281,6 +305,7 @@ interface ClientBudgetRecommenderProps {
           </Button>) : (
           <PricingSuggestionBox;
 <<<<<<< HEAD
+<<<<<<< HEAD
             type="button"
             variant="outline"
             onClick={generateSuggestion}
@@ -291,6 +316,8 @@ interface ClientBudgetRecommenderProps {
           </Button>
         ) : (
           <PricingSuggestionBox
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -299,6 +326,7 @@ interface ClientBudgetRecommenderProps {
       </div>
     </div>
   )
+<<<<<<< HEAD
 =======
             suggestion={suggestion}
             isLoading={isLoading}
@@ -321,21 +349,28 @@ if ( {) {
   $2
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 if (scope) params.scope = scope
 if (experienceLevel) params.experienceLevel = experienceLevel
 //Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 }
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 },
 
+<<<<<<< HEAD
             rateType="hourly"
           />
         )}
@@ -355,6 +390,8 @@ if (experienceLevel) params.experienceLevel = experienceLevel
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -367,7 +404,11 @@ return (<div className="space - y-4" > <div> {";
 }
 '"  );
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 =======
 },
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

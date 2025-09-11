@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
@@ -88,24 +89,32 @@ export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const solutions = [
     { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout>
       <Head>
@@ -123,6 +132,7 @@ export default function CybersecurityPage() {
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>
             <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -133,13 +143,21 @@ export default function CybersecurityPage() {
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a href="/contact" className="px-8 py-4">Security Assessment</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Security Assessment</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </header>
           <section>
@@ -150,11 +168,15 @@ export default function CybersecurityPage() {
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
+<<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </section>
           <section>
@@ -164,6 +186,7 @@ export default function CybersecurityPage() {
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 </a>
@@ -171,6 +194,10 @@ export default function CybersecurityPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                </a>
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -178,11 +205,17 @@ export default function CybersecurityPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
@@ -197,12 +230,15 @@ export default function CybersecurityPage() {
       </div>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
   );
 };
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
@@ -270,6 +306,7 @@ function CybersecurityPage() {
               <a href="/mobile - device - management" className="p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 hover:border - cyan - 500 / 40 transition - colors">;
                 <div className="text - gray - 200 font - semibold mb - 2">Mobile Device Management (MDM)</div>;
                 <p className="text - gray - 300 text - sm">Learn more</p>;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
@@ -341,6 +378,8 @@ export default function CybersecurityPage(req, res) {
               <a href="/mobile-device-management" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">;
                 <div className="text-gray-200 font-semibold mb-2">Mobile Device Management (MDM)</div>;
                 <p className="text-gray-300 text-sm">Learn more</p>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </a>;
             </div>;
           </section>;
@@ -348,6 +387,7 @@ export default function CybersecurityPage(req, res) {
       </div>;
     </Layout>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -365,7 +405,13 @@ export default function CybersecurityPage(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

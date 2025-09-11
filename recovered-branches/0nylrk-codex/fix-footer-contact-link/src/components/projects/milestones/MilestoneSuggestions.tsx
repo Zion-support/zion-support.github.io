@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
@@ -12,6 +13,8 @@ import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -27,10 +30,15 @@ export function MilestoneSuggestions({;
   endDate;
   projectType;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -48,10 +56,13 @@ interface MilestoneSuggestionsProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectName: string
   scopeSummary: string
   startDate: Date
@@ -62,6 +73,9 @@ interface MilestoneSuggestionsProps {;
 }
 export function MilestoneSuggestions({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectName,
   scopeSummary,
   startDate,
@@ -74,13 +88,17 @@ export function MilestoneSuggestions({
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       scope: `${projectName}: ${scopeSummary}`
       startDate: startDate.toISOString()
       endDate: endDate ? endDate.toISOString() : null
       projectType: projectType |"Other"
     }
     const milestones = await generateMilestones(input);
+<<<<<<< HEAD
 =======
 =======
 import {Button} from '@/components/ui/button';
@@ -115,6 +133,8 @@ export function MilestoneSuggestions(): any ({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -124,13 +144,17 @@ export function MilestoneSuggestions(): any ({;
     const milestones = await generateMilestones(input),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 
@@ -146,11 +170,16 @@ export function MilestoneSuggestions(): any ({;
   }
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -163,9 +192,13 @@ export function MilestoneSuggestions({;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
       scope: `${projectName}: ${scopeSummary}`,;
@@ -173,6 +206,7 @@ export function MilestoneSuggestions({;
       endDate: endDate ? endDate && endDate.toISOString() : null,;
       projectType: projectType || "Other";
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
     const milestones = await generateMilestones(input);
     if (milestones && milestones.length > 0) {;
@@ -188,21 +222,30 @@ export function MilestoneSuggestions({;
     if (milestones.length > 0) {;
       setShowSuggestions(true),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const milestones = await generateMilestones(input);
 
     if (milestones && milestones.length > 0) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setShowSuggestions(true);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from '@/components / ui / button';
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -249,6 +292,7 @@ if ( {) {
   }
 ;
   const format_date = (date_string: string) =>: any {
+<<<<<<< HEAD
     try {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
@@ -257,6 +301,15 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    try {
+      return format (parseISO (date_string), 'MMM dd, yyyy');
+    } catch (error) {
+
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const formatDate = (dateString: string) => {;
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
@@ -264,12 +317,15 @@ if ( {) {
       return dateString;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
     }
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
   },
@@ -278,13 +334,17 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">;
       {!showSuggestions && (;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   },
@@ -295,6 +355,8 @@ if ( {) {
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           disabled={isGenerating |!scopeSummary |!startDate}
           className="w-full"
         >
@@ -311,6 +373,7 @@ if ( {) {
           )}
         </Button>
       )}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -393,6 +456,9 @@ export function MilestoneSuggestions({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -430,6 +496,7 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -493,10 +560,16 @@ export function MilestoneSuggestions({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </div>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </Card>;
       )}
@@ -525,3 +598,5 @@ endDate: endDate ? endDate.toISOString () : null;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

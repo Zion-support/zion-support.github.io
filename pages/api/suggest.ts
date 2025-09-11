@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -110,6 +111,9 @@ const SKILLS = [
   'PostgreSQL',
   'Rust'
 ];
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -128,8 +132,11 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     
     return this.props.children;
   }
@@ -140,11 +147,14 @@ const SAMPLE_QUERIES = [
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -155,6 +165,7 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -178,12 +189,15 @@ const SAMPLE_QUERIES = [;
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
   "DevOps engineers with Kubernetes",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 
 
   if (req.method !== "GET") {;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -200,12 +214,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { q = "" } = req.query;
 <<<<<<< HEAD
 =======
+=======
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method not allowed" });
+
+  }
+  const { q = "" } = req.query;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method not allowed" });
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
 
@@ -213,9 +237,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return res && res.status(200).json({ suggestions });
+=======
+
+  return res && res.status(200).json({ suggestions });
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
 
   } catch (error) {
@@ -226,6 +256,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const query = String(q).toLowerCase();
@@ -239,6 +270,13 @@ return res && res.status(200).json({ suggestions });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export default /**
  * handler - Function description
@@ -248,6 +286,7 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     res.set_header ("Allow", "GET");
     return res.status (405).json ({ error: "Method not allowed" });
@@ -307,8 +346,13 @@ export default function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

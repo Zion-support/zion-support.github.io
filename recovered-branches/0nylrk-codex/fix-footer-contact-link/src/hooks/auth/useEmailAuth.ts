@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -20,17 +21,23 @@ import { cleanupAuthState } from "@/utils/authUtils",
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
 ) => {
   const login = async ({ email, password }: { email: string, password: string }) => {
+<<<<<<< HEAD
 
       
       const { data, error } = await supabase && supabase.auth.signInWithPassword({
 
 <<<<<<< HEAD
 const { data, error } = await supabase && supabase.auth.signInWithPassword({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       setIsLoading(true);
     try {
@@ -38,14 +45,20 @@ const { data, error } = await supabase && supabase.auth.signInWithPassword({
       // Clean up any stale auth state before login
       cleanupAuthState();
       const { data, error } = await supabase.auth.signInWithPassword({
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         email;
         password});
       if (error) {
         toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { useState } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -73,6 +86,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           title: "Login failed";
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           description: error && error.message,
           variant: "destructive"});
@@ -88,6 +102,11 @@ if ( {) {
           variant: "destructive"});
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          description: error && error.message,
+
+          variant: "destructive"});
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       cleanupAuthState(),
       
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -99,13 +118,17 @@ if ( {) {
           title: "Login failed",
           description: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         return { error }
       }
       return { data }
     } catch (error: any) {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       console.error ("Login error:", error);
@@ -127,10 +150,23 @@ if ( {) {
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
 
+=======
+      console.error("Login error:", error),
+      toast({
+        title: "Login failed";
+
+        description: error && error.message || "An unexpected error occurred",
+
+        variant: "destructive"});
+        title: "Login failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive"}),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return { error }
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
 
 
   },
@@ -176,22 +212,35 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
 
   const signup = async (email: string, password: string, userData?: any) => {
     try {
+<<<<<<< HEAD
       setIsLoading(true),
+=======
+      setIsLoading(true);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Clean up any stale auth state before signup
       cleanupAuthState();
       cleanupAuthState(),
       
       // Attempt to sign out any existing session first to prevent conflicts
       try {
+<<<<<<< HEAD
         await supabase.auth.signOut({ scope: 'global' })
       } catch (err) {
         // Continue even if signout fails
         // // // console.log("Sign out before signup failed:", err)
+=======
+        await supabase && supabase.auth.signOut({ scope: 'global' })
+      } catch (err) {
+        // Continue even if signout fails
+        console && console.log("Sign out before signup failed:", err)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       // Create a proper options object
       const { data, error } = await supabase.auth.signUp({
@@ -212,6 +261,7 @@ if ( {) {
         toast({
           title: "Signup failed",
           description: error.message,
+<<<<<<< HEAD
           variant: "destructive"}),
         return { error }
       }
@@ -274,6 +324,8 @@ if ( {) {
         toast({
           title: "Signup failed",
           description: error.message,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           variant: "destructive"});
         return { error };
@@ -286,6 +338,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast ({
@@ -300,17 +353,23 @@ if ( {) {
         description: error && error.message || "An unexpected error occurred",
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Signup failed";
 
         description: error && error.message || "An unexpected error occurred",
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
           variant: "destructive"});
         return { error };
@@ -339,17 +398,25 @@ if ( {) {
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsLoading(false)
     }
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const resetPassword = async (email: string) => {
     try {
       setIsLoading(true)
@@ -359,6 +426,7 @@ if ( {) {
         toast({
           title: "Password reset failed";
           description: error.message
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -394,12 +462,15 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         redirectTo: `${window.location.origin}/update-password`}),
 
       if (error) {
         toast({
           title: "Password reset failed",
           description: error.message,
+<<<<<<< HEAD
 <<<<<<< HEAD
           variant: "destructive"}),
         return { error }
@@ -444,6 +515,8 @@ if ( {) {
       }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           variant: "destructive"});
         return { error };
@@ -456,6 +529,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Password reset error:", error);
       toast({
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast ({
@@ -470,11 +544,16 @@ if ( {) {
         description: error && error.message || "An unexpected error occurred",
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Password reset failed";
 
         description: error && error.message || "An unexpected error occurred",
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         variant: "destructive"});
       return { error }
     } finally {
@@ -482,19 +561,27 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   return { login, signup, reset_password }
 }
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
 
+<<<<<<< HEAD
           variant: "destructive"});
         return { error };
       }
@@ -529,10 +616,13 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsLoading(false)
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return { login, signup, resetPassword }
@@ -719,10 +809,15 @@ return {
   return { login, signup, resetPassword }
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return { login, signup, resetPassword }
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

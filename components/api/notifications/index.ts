@@ -7,18 +7,27 @@ function getUserId(req: NextApiRequest): string {
   const cookie = req && req.headers.cookie || '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const cookie = req && req.headers.cookie || '';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const match = cookie
     .split(';')
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
+<<<<<<< HEAD
 import { supabase } from '../../../utils/supabase/client';
 import {
   NotificationItem
   NotificationType;
+=======
+=======
+import { supabase } from '../../../utils/supabase/client';
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   NotificationItem,;
   NotificationType,;
 } from '../../../utils/notifications';
@@ -35,6 +44,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -370,3 +380,7 @@ return res.status(500).json({ error: 'Unexpected error' });
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+return res.status(500).json({ error: 'Unexpected error' });
+  }    return res.status(500).json({ error: 'Unexpected error' })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

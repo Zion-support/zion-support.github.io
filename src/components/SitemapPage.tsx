@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
 import Link from 'next/link';
@@ -45,6 +46,28 @@ xport const SitemapPage: React.FC = () => {
 const resolvePath = (path: string): string => pathMap[path] ?? path
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+// Map sitemap paths to their actual routes in the application
+// Note: This pathMap might need to be updated based on Next.js page structure
+const pathMap: Record<string, string> = {
+
+
+const resolve_path = (path: string): string => path_map[path] ?? path, import React from 'react';
+import { complete_sitemap, dynamic_paths } from '@/config / sitemap';
+import Link from 'next / link';
+import { ChevronRight } from 'lucide-react';
+import React from 'react';
+import { SEO } from './SEO';
+// Map sitemap paths to their actual routes in the application;
+// Note: This path_map might need to be updated based on Next.js page structure;
+const path_map: Record < string, string> = {
+  '/about': '/content / about / blog': '/blog / careers': '/careers / green - it': '/content / green - it / sitemap - page': '/content / sitemap - page / talent - onboarding': '/talent - onboarding / forgot - password': '/forgot - password / signup / talent': '/auth / signup / talent / signup / client': '/auth / signup / client / talent - dashboard': '/talent - dashboard / client - dashboard': '/client - dashboard / hiring - tracker': '/dashboard / hiring - tracker / messages': '/dashboard / messages / notifications': '/dashboard / notifications / project/:project_id / room': '/dashboard / project/:project_id / room / post - job': '/marketplace / post - job'}
+const resolve_path = (path: string): string => path_map[path] ?? path,
+
+
+  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
+const resolvePath = (path: string): string => pathMap[path] ?? path
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import Link from 'next/link',
@@ -56,11 +79,51 @@ const pathMap: Record<string string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
 export const SitemapPage: React.FC = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+const resolvePath = (path: string): string => pathMap[path] ?? path,
+
+export const SitemapPage: React.FC = () => {
+import { ChevronRight } from 'lucide-react';
+import React from 'react';
+import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
+import { SEO } from './SEO';
+// Map sitemap paths to their actual routes in the application;
+// Note: This pathMap might need to be updated based on Next && Next.js page structure;
+const pathMap: Record<string, string> = {;
+  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'};
+
+const resolvePath = (path: string): string => pathMap[path] ?? path,;
+export const SitemapPage: React.FC = () => {;
+  return (
+    <>
+      <SEO
+        title="Sitemap | Zion AI Marketplace"
+        description="Complete sitemap of the Zion AI Marketplace"
+        keywords="sitemap, zion, ai marketplace, navigation"
+        canonical="https://app.ziontechgroup.com/content/sitemap-page"
+      />
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
+        
+
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        canonical="https://app && app.ziontechgroup.com/content/sitemap-page"
+      />;
+      <div className="container mx-auto px-4 py-12">;
+        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>
@@ -81,6 +144,7 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>
           </div>
+<<<<<<< HEAD
 =======
 
 const resolvePath = (path: string): string => pathMap[path] ?? path,
@@ -153,10 +217,13 @@ export const SitemapPage: React.FC = () => {;
               }
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </ul>;
           </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             </ul>
           </div>
@@ -164,6 +231,8 @@ export const SitemapPage: React.FC = () => {;
           </div>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -178,10 +247,14 @@ export const SitemapPage: React.FC = () => {;
                   <li key={route.path}>
                     <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
 =======
                       href = {resolvePath(route.path),}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -210,10 +283,13 @@ export const SitemapPage: React.FC = () => {;
               }
             </ul>
           </div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           {/* Client Routes */}
             </ul>
           </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </ul>;
           </div>;
 
@@ -232,10 +308,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <li key={route.path}>
                     <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
 =======
                       href = {resolvePath(route.path),}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -264,10 +344,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
             </ul>
           </div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           {/* Shared Routes */}
             </ul>
           </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </ul>;
           </div>;
 
@@ -286,10 +369,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <li key={route.path}>
                     <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
 =======
                       href = {resolvePath(route.path),}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -318,10 +405,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
             </ul>
           </div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           {/* Admin Routes */}
             </ul>
           </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </ul>;
           </div>;
 
@@ -339,10 +429,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <li key={route.path}>
                     <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
 =======
                       href = {resolvePath(route.path),}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -364,12 +458,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
+<<<<<<< HEAD
                     </Link>
                   </li>
                 ))
               }
             </ul>
           </div>
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       href = {resolvePath(route && route.path),}
                       className="flex items-center hover:text-zion-purple">;
                       <ChevronRight className="h-4 w-4 mr-2" />;
@@ -382,6 +480,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
             </ul>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -418,16 +517,39 @@ ursor/fix-website-loading-errors-and-merge-6662
         { name: 'Blog', url: '/blog' },
         { name: 'Careers', url: '/careers' },
       ]
+=======
+
+
+            </ul>;
+          </div>;
+          {/* Dynamic Routes */}
+          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
+            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Dynamic Pages</h2>;
+            <p className="text - sm text - zion - slate mb - 4">Pages with dynamic parameters</p>;
+            <ul className="space - y-2">;
+              {Object.entries (dynamic_paths).map (([key, path], ) => (
+                <li key={key}>;
+                  <div className="flex items - center text - zion - slate">;
+                    <ChevronRight className="h - 4 w - 4 mr - 2" />;
+                    {path} <span className="ml - 2 text - xs italic">({key})</span>;
+                  </div>;
+                </li>))}
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
+    </>);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
     {
-      title: 'Services',
-      links: [{ name: 'AI Services', url: '/services / ai' },
-        { name: 'IT Services', url: '/services / it' },
-        { name: 'Cloud Solutions', url: '/services / cloud' },
-        { name: 'Cybersecurity', url: '/services / cybersecurity' },
-        { name: 'Digital Transformation', url: '/services / digital - transformation' },
+      title: 'Services'
+      links: [{ name: 'AI Services', url: '/services / ai' }
+        { name: 'IT Services', url: '/services / it' }
+        { name: 'Cloud Solutions', url: '/services / cloud' }
+        { name: 'Cybersecurity', url: '/services / cybersecurity' }
+        { name: 'Digital Transformation', url: '/services / digital - transformation' }
       ]
-    },
+}
     {
       title: 'Solutions'
       links: [{ name: 'Enterprise', url: '/solutions / enterprise' }
@@ -436,6 +558,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         { name: 'Manufacturing', url: '/solutions / manufacturing' }
       ]
 }
+<<<<<<< HEAD
 =======
 
 
@@ -490,6 +613,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: 'Resources'
       links: [{ name: 'Case Studies', url: '/case - studies' }
@@ -497,6 +622,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
       ]}
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Case Studies', url: '/case-studies' },'
         { name: 'White Papers', url: '/white-papers' },'
@@ -549,6 +675,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 '"
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         { name: 'Case Studies', url: '/case - studies' }, ';
         { name: 'White Papers', url: '/white - papers' }, ';
@@ -557,29 +685,42 @@ ursor/fix-website-loading-errors-and-merge-6662
 
       ]}
   ];
-;
-  return (<div className="min - h-screen bg-slate - 900 text-white py-16">;
-      <SEO title="Sitemap - Zion Tech Group";
+  return (<div className="min - h - screen bg - slate - 900 text - white py - 16">;
+      <SEO;
+        title="Sitemap - Zion Tech Group";
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category.";
-       />;
-      <div className="container mx - auto px-4 max - w-6xl">;
-        <div className="text-center mb-16">;
-          <h1 className="text-5xl font - bold mb-6 bg-gradient - to - r from - cyan - 400 to - blue - 500 bg-clip - text text-transparent">            Sitemap;
+      />;
+      <div className="container mx - auto px - 4 max - w - 6xl">;
+        <div className="text - center mb - 16">;
+          <h1 className="text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">            Sitemap;
           </h1>";
-          <p className="text-xl text-zinc-300 max-w-3xl mx-auto">;
+          <p className="text - xl text - zinc - 300 max - w-3xl mx - auto">;
             Navigate through our comprehensive website structure to find the information and services you need.</p>;
         </div>;
 ";
-        <div className="grid grid-cols-1 "md": "anygri d-cols-2 "lg": gri d-cols-4 gap-8">;
-          {sitemapData.map((section", sectionIndex)  => (";
-            <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">";
-              <h2 className="text-xl font-semibold mb-4 text-cyan-400">;
+        <div className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 4 gap - 8">;
+          {sitemap_data.map ((section, section_index)  => (";
+            <div key={section_index} className="bg - slate - 800 / 50 rounded - lg p - 6 border border - slate - 700">";
+              <h2 className="text - xl font - semibold mb - 4 text - cyan - 400">;
+                {section.title}
+              </h2>;
+              <ul className="space - y - 2">;
+                {section.links.map ((link, link_index) => (<li key={link_index}>;
+                    <a;
+                      href={link.url}
+                      className="text - zinc - 300 hover:text - cyan - 400 transition - colors duration - 200 block py - 1">;
+                      {link.name}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
+<<<<<<< HEAD
 
               {Object.entries(dynamicPaths).map(([key, path]) => (
 
@@ -590,19 +731,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </li>
               ))}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-          {/* Talent Routes */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Talent & Job Seeker Pages</h2>
-            <ul className="space-y-2">
-              {talentRoutes.map((route) => (<li key={route.path}>
-                  <Link to={route.path} className="text-zion-slate-light hover:text-zion-cyan transition-colors block">
-                    {route.label || route.title}
-                  </Link>
-                </li>))}
-            </ul>
-          </div>
+              {Object.entries(dynamicPaths).map(([key, path]) => (
 
+<<<<<<< HEAD
             </ul>;
           </div>;
         </div>;
@@ -612,20 +746,30 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 <<<<<<< HEAD
 =======
+=======
+                <li key={key}>
+                  <div className="flex items-center text-zion-slate">
+                    <ChevronRight className="h-4 w-4 mr-2" />
+                    {path} <span className="ml-2 text-xs italic">({key})</span>
+                  </div>
+                </li>
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-          {/* Admin Routes */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Administrative Pages</h2>
-            <ul className="space-y-2">
-              {adminRoutes.map((route) => (<li key={route.path}>
-                  <Link to={route.path} className="text-zion-slate-light hover:text-zion-cyan transition-colors block">
-                    {route.label || route.title}
-                  </Link>
-                </li>))}
-            </ul>
-          </div>
-        </div>
 
+<<<<<<< HEAD
+=======
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+};
+
+                    </a>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </li>) ) }
               </ul>;
             </div>) ) }
@@ -640,7 +784,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             for assistance.;
           </p>;
@@ -650,7 +797,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 '";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

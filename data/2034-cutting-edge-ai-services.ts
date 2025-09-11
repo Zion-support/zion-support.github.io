@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type CuttingEdgeAIService = {
 export type CuttingEdgeAIService = {;
   id: string;
@@ -24,10 +25,13 @@ export type CuttingEdgeAIService = {;
   realService?: boolean;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -102,6 +106,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 
   },
   {
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
     id: 'ai - creative - studio',
@@ -112,7 +119,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
     pricing: { starter: '$149 / mo' },
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Brand kit',
       'Image & video gen',
       'Review & approvals',
@@ -120,7 +130,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
     ],
     integrations: ['Canva', 'Figma'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     use_cases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com / services / ai - creative - studio',
@@ -131,7 +144,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 ];	id: string;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
@@ -140,10 +156,14 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 	id: string, name: string,
 	description: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -173,12 +193,18 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		realService: true
 	}
 	{
@@ -191,12 +217,18 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		realService: true
 	}
 	{
@@ -208,6 +240,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['Brand kitImage & video genReview & approvalsRights management'];
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 	}
 ];
@@ -294,6 +327,27 @@ export type CuttingEdgeAIService = {;
 ;
 
 export type CuttingEdgeAIService = {;
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
+
+		realService: true
+	}
+];
+
+export type CuttingEdgeAIService = {;
+
+	}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+];
+;
+=======
+
+=======
+export type CuttingEdgeAIService = {;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 	id: string,;
 	name: string,;
 	description: string,;

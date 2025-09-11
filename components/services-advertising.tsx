@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ServicesAdvertisingPage() {;
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
@@ -506,6 +507,8 @@ function ServicesAdvertisingPage() {
                   >;
                     impact.com / pricing;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -528,15 +531,22 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </li>;
                 <li>;
                   PartnerStack:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a;
                     className='text - cyan - 400 underline';
                     href={`https://partnerstack.com / pricing`}
@@ -545,17 +555,25 @@ import React from 'react';
                   >;
                     partnerstack.com / pricing;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </li>;
                 <li>;
                   Refersion:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a;
                     className='text - cyan - 400 underline';
                     href={`https://www.refersion.com / pricing`}
@@ -585,17 +603,25 @@ import React from 'react';
                   >;
                     plausible.io / pricing;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </li>;
                 <li>;
                   Fathom:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a;
                     className='text - cyan - 400 underline';
                     href={`https://usefathom.com / pricing`}
@@ -604,17 +630,25 @@ import React from 'react';
                   >;
                     usefathom.com / pricing;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </li>;
                 <li>;
                   Simple Analytics:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a;
                     className='text - cyan - 400 underline';
                     href={`https://simpleanalytics.com / pricing`}
@@ -644,17 +678,25 @@ import React from 'react';
                   >;
                     zendesk.com / pricing;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </li>;
                 <li>;
                   Freshdesk:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a;
                     className='text - cyan - 400 underline';
                     href={`https://freshdesk.com / pricing`}
@@ -663,17 +705,25 @@ import React from 'react';
                   >;
                     freshdesk.com / pricing;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </li>;
                 <li>;
                   Help Scout:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     rel='noopener noreferrer'>;
                     helpscout && helpscout.com/pricing;
                   </a>;
@@ -682,9 +732,13 @@ import React from 'react';
               <div className='text-sm text-slate-400 mt-3'>;
                 Typical: $15–$99/agent/month.;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a;
                     className='text - cyan - 400 underline';
                     href={`https://www.helpscout.com / pricing/`}
@@ -698,22 +752,32 @@ import React from 'react';
               <div className='text - sm text - slate - 400 mt - 3'>;
                 Typical: $15–$99 / agent / month.;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
         </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </section>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Podcast Transcription & Insights;
@@ -734,9 +798,13 @@ import React from 'react';
                 className='text-cyan-400 underline'>;
                 ziontechgroup && ziontechgroup.com/services/podcast-transcription-insights;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section>;
           <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center'>;
             Explore by Category;
@@ -773,25 +841,37 @@ import React from 'react';
               >;
                 ziontechgroup.com / services / podcast - transcription - insights;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </a>;
             </li>;
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               , {ext('https://github && github.com/guardrails-ai/guardrails')}
             </li>;
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Identity & SSO/SCIM;
@@ -808,6 +888,7 @@ import React from 'react';
             </li>;
           </ul>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* New sections with average market prices and references */}
         <section className='space-y-6'>;
@@ -1716,6 +1797,10 @@ export default function ServicesAdvertisingPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* New sections with average market prices and references */}
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
@@ -1729,6 +1814,7 @@ export default function ServicesAdvertisingPage() {
             <li>Typical SMB budget: $20–$200/mo</li>
             <li>
               References:{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
               {ext('https://www.atlassian.com/software/statuspage/pricing')},{' '}
               {ext('https://www.checklyhq.com/pricing/')}
@@ -2110,6 +2196,8 @@ export default function ServicesAdvertisingPage() {
         </section>
         <div className='pt-4 text-slate-400 text-sm'>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               {ext('https://www && www.atlassian.com/software/statuspage/pricing')},{' '}
               {ext('https://www && www.checklyhq.com/pricing/')}
@@ -2503,21 +2591,30 @@ export default function ServicesAdvertisingPage() {
 
         <div className='pt-4 text-slate-400 text-sm'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           See also:{' '}
           <a className='text-cyan-400 underline' href='/market-pricing'>
             Market Pricing
           </a>{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
           for a broader list of benchmarks and links.
         </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           for a broader list of benchmarks and links.;
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Latest Real Additions (concise) */}
         <section id='latest-real-additions' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
@@ -2687,6 +2784,7 @@ export default function ServicesAdvertisingPage() {
               — $99/mo. Right-size warehouses. Learn:{' '}
               <a
                 className='text-cyan-400 underline'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4777,6 +4875,8 @@ export default function ServicesAdvertisingPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='serverless-lakehouse-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Serverless Lakehouse Starter;
@@ -4795,9 +4895,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='customer-journey-orchestration' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Customer Journey Orchestration;
@@ -4815,9 +4919,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='kubernetes-runbooks-as-code' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Kubernetes Runbooks as Code;
@@ -4834,9 +4942,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='security-posture-copilot' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Security Posture Copilot;
@@ -4853,9 +4965,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='itsm-ai-agent' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>ITSM AI Agent</h2>;
           <p className='text-slate-300'>;
@@ -4872,9 +4988,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='warehouse-native-reverse-etl' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Warehouse-native Reverse ETL;
@@ -4891,9 +5011,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='data-contracts-hub' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Data Contracts Hub;
@@ -4910,9 +5034,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='ai-sales-playbook-generator' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Sales Playbook Generator;
@@ -4929,9 +5057,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='customer-data-platform-lite' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Customer Data Platform (CDP) Lite;
@@ -4948,9 +5080,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='data-quality-observability' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Data Quality & Observability;
@@ -4967,9 +5103,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='feature-store-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Feature Store Starter;
@@ -4986,9 +5126,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='edge-ab-testing' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Edge A/B & Personalization;
@@ -5005,9 +5149,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='reverse-etl-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Reverse ETL Starter;
@@ -5024,9 +5172,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='consent-preference-center' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Consent & Preference Center;
@@ -5043,9 +5195,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='vendor-risk-dashboard' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Vendor Risk Dashboard;
@@ -5062,9 +5218,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='soc2-evidence-vault' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             SOC 2 Evidence Vault;
@@ -5081,9 +5241,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='ai-knowledge-base-search' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Knowledge Base Search;
@@ -5101,9 +5265,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='engineering-productivity-insights' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Engineering Productivity Insights;
@@ -5120,9 +5288,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='it-asset-discovery-agent' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             IT Asset Discovery Agent;
@@ -5140,9 +5312,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='incident-autocomplete-copilot' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Incident Autocomplete Copilot;
@@ -5159,9 +5335,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='voice-ivr-studio' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Voice IVR Studio;
@@ -5178,9 +5358,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='ai-sales-enablement-engine' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Sales Enablement Content Engine;
@@ -5198,9 +5382,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='iot-device-fleet-manager' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             IoT Device Fleet Manager;
@@ -5218,9 +5406,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='security-awareness-training' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Security Awareness Training Platform;
@@ -5238,9 +5430,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='vulnerability-patch-orchestrator' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Vulnerability & Patch Orchestrator;
@@ -5259,9 +5455,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='hr-onboarding-automation' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             HR Onboarding Automation Hub;
@@ -5280,9 +5480,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='shopify-speed-optimizer' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Shopify Speed & Core Web Vitals Optimizer;
@@ -5300,9 +5504,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='llm-observability-tracing' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             LLM Observability & Tracing;
@@ -5320,9 +5528,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='dpia-privacy-toolkit' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             DPIA & Privacy Impact Toolkit;
@@ -5341,9 +5553,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='b2b-customer-portal-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             B2B Customer Portal Starter;
@@ -5361,9 +5577,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='policy-as-code-governance' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Policy‑as‑Code Governance;
@@ -5381,9 +5601,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='apple-mdm-suite' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Apple MDM Suite (ABM/DEP);
@@ -5401,9 +5625,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='soc2-continuous-controls' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             SOC 2 Continuous Controls Monitoring;
@@ -5421,9 +5649,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='ai-red-team-testing' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Red Team & Prompt Injection Testing;
@@ -5441,9 +5673,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='api-monetization-dev-portal' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             API Monetization & Developer Portal;
@@ -5462,9 +5698,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='consent-compliance-kit' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Consent & Cookie Compliance Kit;
@@ -5484,9 +5724,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='api-backfill-reconciliation' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             API Backfill & Reconciliation;
@@ -5504,9 +5748,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='data-quality-sla-monitor' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Data Quality & Freshness SLAs;
@@ -5524,9 +5772,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='postgres-index-advisor' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Postgres Index Advisor & Tuner;
@@ -5543,9 +5795,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='gitops-drift-monitor' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             GitOps Policy & Drift Monitor;
@@ -5562,9 +5818,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='soc2-readiness-scanner' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             SOC 2 Readiness Scanner;
@@ -5582,9 +5842,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='cloud-asset-attack-surface' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Cloud Asset Inventory & Attack Surface;
@@ -5603,9 +5867,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='llm-red-team-simulator' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             LLM Red Team & Jailbreak Simulator;
@@ -5625,9 +5893,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='affiliate-fraud-detector' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Affiliate Fraud Detector;
@@ -5645,9 +5917,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='personalization-api' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Content Personalization API;
@@ -5665,9 +5941,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='lead-enrichment-routing' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Lead Enrichment & Routing Engine;
@@ -5684,9 +5964,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='k8s-quota-cost-guard' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Kubernetes Quota & Cost Guard;
@@ -5703,9 +5987,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='ai-contract-risk-analyzer' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Contract Risk Analyzer;
@@ -5726,9 +6014,13 @@ export default function ServicesAdvertisingPage() {
               className='text-cyan-400 underline'
               href='/services/ai-contract-risk-analyzer'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='accessibility - scanner' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             Accessibility Compliance Scanner;
@@ -6693,17 +6985,25 @@ export default function ServicesAdvertisingPage() {
               href='/services / ai - contract - risk - analyzer';
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Learn more;
             </a>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='finops - ri - sp - optimizer' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             FinOps RI / SP Optimizer;
@@ -6726,17 +7026,25 @@ export default function ServicesAdvertisingPage() {
               href='/services / finops - ri - sp - optimizer';
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Learn more;
             </a>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='k8s - slo - auto - tuner' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             Kubernetes SLO Auto‑Tuner;
@@ -6758,17 +7066,25 @@ export default function ServicesAdvertisingPage() {
               href='/services / k8s - slo - auto - tuner';
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Learn more;
             </a>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='vendor - security - questionnaire - ai' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             Vendor Security Questionnaire AI;
@@ -6790,17 +7106,25 @@ export default function ServicesAdvertisingPage() {
               href='/services / vendor - security - questionnaire - ai';
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Learn more;
             </a>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='invoice - reconciliation - copilot' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             Invoice Reconciliation Copilot;
@@ -6822,17 +7146,25 @@ export default function ServicesAdvertisingPage() {
               href='/services / invoice - reconciliation - copilot';
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Learn more;
             </a>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='policy - drift - compliance - monitor' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             Policy Drift & Compliance Monitor;
@@ -6854,17 +7186,25 @@ export default function ServicesAdvertisingPage() {
               href='/services / policy - drift - compliance - monitor';
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Learn more;
             </a>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section id='diversified - expansions - 2026' className='space - y-8'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             New Diversified Additions;
@@ -6889,6 +7229,7 @@ export default function ServicesAdvertisingPage() {
                 className='text - cyan - 400 underline';
                 href='/services / license - key - usage - metering';
               >;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Learn more;
               </a>;
@@ -9245,6 +9586,8 @@ export default function ServicesAdvertisingPage() {
           </section>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 Learn more;
               </a>;
@@ -9256,7 +9599,10 @@ export default function ServicesAdvertisingPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -9270,7 +9616,10 @@ export default function ServicesAdvertisingPage() {
               <li>
                 References:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {ext ('https://docs.konghq.com / hub / kong - inc / rate - limiting/')}, {' '}
                 {ext ('https://developers.cloudflare.com / waf / rate - limits/')}
               </li>;
@@ -9288,7 +9637,10 @@ export default function ServicesAdvertisingPage() {
 
                 href='/services/data-residency-geo-router'>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section id='data - residency - geo - router' className='space - y-2'>;
             <h3 className='text - xl font - semibold text - white'>;
               Data Residency & Geo Routing Proxy;
@@ -9318,9 +9670,13 @@ export default function ServicesAdvertisingPage() {
 
                 href='/services/api-contract-mock-sandbox'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section id='api - contract - mock - sandbox' className='space - y-2'>;
             <h3 className='text - xl font - semibold text - white'>;
               API Mock Server & Contract Sandbox;
@@ -9856,6 +10212,7 @@ export default function ServicesAdvertisingPage() {
 
 				<section className="space-y-6">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {ext('https://www.cloudflare.com/data-localization/')},{' '}
                 {ext('https://developers.cloudflare.com/workers/')}
@@ -10694,6 +11051,8 @@ export default function ServicesAdvertisingPage() {
 }</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a> 				<section className="space-y-6">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 					<h2 className="text-2xl font-semibold text-white">Employee Scheduling Suite</h2>
 					<p className="text-slate-300">Shift planning with availability, time-off, swap requests, and notifications.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -11775,7 +12134,10 @@ export default function ServicesAdvertisingPage() {
 			</div>
 		</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   /* Quick contact */ ;
@@ -13440,7 +13802,10 @@ export default function ServicesAdvertisingPage() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>);
 ;
   /* Quick contact */;
@@ -15101,6 +15466,7 @@ export default function ServicesAdvertisingPage() {
   </div>),
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	),
 
@@ -15111,11 +15477,17 @@ export default function ServicesAdvertisingPage() {
 ;
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 	),
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

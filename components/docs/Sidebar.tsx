@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -15,7 +18,10 @@ export default function Sidebar(): any ({;
   onChangeVisibility,;
 }: SidebarProps) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>;
       <div>;
@@ -23,6 +29,10 @@ export default function Sidebar(): any ({;
         <div className='text-xs text-high-contrast-muted'>Version</div>;
         <div className='flex gap-2 mt-2 flex-wrap'>;
           {spec && spec.versions.map(v => (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
 interface SidebarProps {
@@ -55,6 +65,7 @@ export default function Sidebar({
               key={v}
               onClick={() => onChangeVersion(v)}
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -219,10 +230,13 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <button
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() => onSelectEndpoint(e.id)}
                     >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -248,6 +262,8 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onSelectEndpoint: (endpoint_id: string) => void;
   selected_version: string;
   onChangeVersion: (v: string) => void;
@@ -360,6 +376,10 @@ function Sidebar() {
                     >
                       <span className=&quot;mr-2 inline-block w-10 text-center text-[10px] opacity-80&quot;>{e.method}</span>
                       <span className=&quot;font-mono&quot;>{e.path}</span>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>
                         {e.method}
                       </span>
@@ -373,11 +393,14 @@ function Sidebar() {
         ))}
       </nav>
       </nav>
+<<<<<<< HEAD
 
     </aside>
   );
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </aside>;
   );
 }
@@ -388,6 +411,7 @@ function Sidebar() {
 }
     </aside>
   );
+<<<<<<< HEAD
 }
 }
 =======
@@ -402,3 +426,7 @@ function Sidebar() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

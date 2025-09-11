@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
  
 
@@ -13,7 +16,10 @@ import type { GetStaticProps } from 'next';
 type Item = { source: string, name: string, url: string, description?: string, downloads?: number };
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const getStaticProps: GetStaticProps<Props> = async () => {
 ;
 }
@@ -23,6 +29,7 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
+<<<<<<< HEAD
 <<<<<<< HEAD
  
 
@@ -36,11 +43,14 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationtech-radar.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return {
       props: {
         pypi: data.ecosystems.pypi |[]
         crates: data.ecosystems.crates |[]
         github: data.ecosystems.github |{}}
+<<<<<<< HEAD
 =======
     return {
       props: {
@@ -75,10 +85,16 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        pypi: data.ecosystems.pypi || [],
+        crates: data.ecosystems.crates || [],
+        github: data.ecosystems.github || {}},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       revalidate: 7200}
   } catch {;
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
+<<<<<<< HEAD
 
 
 };
@@ -90,6 +106,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
 
 export default function TechRadar({ pypi, crates, github }: Props) {
 export default function TechRadar({ pypi, crates, github }: Props) {;
+=======
+}
+};
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const langs = Object.keys(github);
 
   return (
@@ -107,9 +130,13 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
   const langs = Object && Object.keys(github);
@@ -128,6 +155,7 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
               {typeof it && it.downloads === 'number' && (;
                 <div className="text-xs text-gray-500">Downloads: {it && it.downloads.toLocaleString()}</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               )}
             </li>;
           ))}
@@ -138,6 +166,13 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
           ))}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              )}
+            </li>
+          ))}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </ul>;
       </section>;
       <section>;
@@ -161,6 +196,7 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
                 {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
               </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -173,13 +209,23 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
   );
 }
 =======
+=======
+
+            ))}
+          </ul>
+        </section>
+      ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>;
   );
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export default /**
@@ -246,6 +292,7 @@ export default function TechRadar({ pypi, crates, github }: Props) {
               <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;font-medium text-blue-600 dark:text-cyan-400&quot;>{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className=&quot;text-xs text-gray-500&quot;>Downloads: {it.downloads.toLocaleString()}</div>
+<<<<<<< HEAD
     </div>
 
   );
@@ -300,11 +347,15 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
           </ul>
         </section>
       ))}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
 );
 }
   );
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -315,3 +366,5 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

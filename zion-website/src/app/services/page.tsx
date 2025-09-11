@@ -1,121 +1,140 @@
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   UserGroupIcon,
-  LightBulbIcon, 
-  CogIcon, 
+  LightBulbIcon,
+  CogIcon,
   ShieldCheckIcon,
   ChartBarIcon,
   RocketLaunchIcon,
   AcademicCapIcon,
-  GlobeAltIcon
-} from '@heroicons/react/24/outline'
-
-const services = [
+  GlobeAltIcon;
+} from '@heroicons / react / 24 / outline';
+const professional_services = [;
   {
     name: 'AI Strategy & Consulting',
     description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.',
     icon: LightBulbIcon,
-    features: [
-      'Technology AssessmentROI AnalysisImplementation RoadmapChange Management Planning'
+    features: [;
+      'Technology AssessmentROI AnalysisImplementation RoadmapChange Management Planning';
     ],
-    duration: '4-8 weeks'},
+    duration: '4 - 8 weeks'},
   {
     name: 'Custom AI Development',
     description: 'Tailored AI solutions built specifically for your business needs and objectives.',
     icon: CogIcon,
-    features: [
-      'Custom Algorithm DevelopmentIntegration ServicesTesting & ValidationDocumentation & Training'
+    features: [;
+      'Custom Algorithm DevelopmentIntegration ServicesTesting & ValidationDocumentation & Training';
     ],
-    duration: '8-24 weeks'},
+    duration: '8 - 24 weeks'},
   {
     name: 'AI Integration & Deployment',
     description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.',
     icon: RocketLaunchIcon,
-    features: [
-      'System IntegrationAPI DevelopmentPerformance OptimizationGo-live Support'
+    features: [;
+      'System IntegrationAPI DevelopmentPerformance OptimizationGo - live Support';
     ],
-    duration: '4-12 weeks'},
+    duration: '4 - 12 weeks'},
   {
     name: 'AI Training & Education',
     description: 'Comprehensive training programs to ensure your team maximizes AI solution value.',
     icon: AcademicCapIcon,
-    features: [
-      'Technical TrainingBest PracticesOngoing SupportCertification Programs'
+    features: [;
+      'Technical TrainingBest PracticesOngoing SupportCertification Programs';
     ],
-    duration: '2-4 weeks'},
+    duration: '2 - 4 weeks'},
   {
     name: 'AI Maintenance & Support',
     description: 'Continuous monitoring, optimization, and support for your AI solutions.',
     icon: ShieldCheckIcon,
-    features: [
-      '24/7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support'
+    features: [;
+      '24 / 7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support';
     ],
     duration: 'Ongoing'},
   {
     name: 'AI Audit & Compliance',
     description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.',
     icon: ChartBarIcon,
-    features: [
-      'Compliance AssessmentEthical AI ReviewSecurity AuditsRisk Mitigation'
+    features: [;
+      'Compliance AssessmentEthical AI ReviewSecurity AuditsRisk Mitigation';
     ],
-    duration: '2-6 weeks'}]
+    duration: '2 - 6 weeks'}];
+const service_process = [;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
-    step: '01',
-    title: 'Discovery & Assessment',
-    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.',
-    icon: LightBulbIcon},
+    step: '01'
+    title: 'Discovery & Assessment'
+    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.'
+    icon: LightBulbIcon}
   {
-    step: '02',
-    title: 'Solution Design',
-    description: 'Our experts design a comprehensive solution that addresses your specific needs and goals.',
-    icon: CogIcon},
+    step: '02'
+    title: 'Solution Design'
+    description: 'Our experts design a comprehensive solution that addresses your specific needs and goals.'
+    icon: CogIcon}
   {
-    step: '03',
-    title: 'Development & Testing',
-    description: 'We develop and rigorously test your solution to ensure optimal performance and reliability.',
-    icon: RocketLaunchIcon},
+    step: '03'
+    title: 'Development & Testing'
+    description: 'We develop and rigorously test your solution to ensure optimal performance and reliability.'
+    icon: RocketLaunchIcon}
   {
-    step: '04',
-    title: 'Deployment & Training',
-    description: 'Seamless deployment with comprehensive training to maximize adoption and value.',
-    icon: AcademicCapIcon},
+    step: '04'
+    title: 'Deployment & Training'
+    description: 'Seamless deployment with comprehensive training to maximize adoption and value.'
+    icon: AcademicCapIcon}
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     step: '05',
     title: 'Ongoing Support',
     description: 'Continuous monitoring, optimization, and support to ensure lasting success.',
-    icon: ShieldCheckIcon}]
-
-const reasonsToChoose = [
+    icon: ShieldCheckIcon}];
+const reasonsToChoose = [;
   {
     name: 'Expert Team',
-    description: 'World-class AI researchers and engineers with decades of combined experience.',
+    description: 'World - class AI researchers and engineers with decades of combined experience.',
     icon: UserGroupIcon},
 <<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  {
-    name: 'Proven Track Record',
-    description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.',
-    icon: ChartBarIcon},
-  {
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  {
+    name: 'Proven Track Record'
+    description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.'
+    icon: ChartBarIcon}
+  {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: 'Cutting - Edge Technology',
     description: 'Access to the latest AI research and technology innovations.',
     icon: LightBulbIcon},
   {
+<<<<<<< HEAD
     name: 'Global Support',
     description: '24 / 7 support and maintenance services across multiple time zones.',
     icon: GlobeAltIcon}];
@@ -254,6 +273,62 @@ export default function ServicesPage() {
 export default function ServicesPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
+=======
+              <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
+                AI Services;
+              </span>;
+            </h1>;
+            <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
+              From strategy to implementation, our comprehensive AI services help you navigate;
+              the complexities of artificial intelligence and achieve transformative results.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Professional Services */}
+      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
+          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Services</h2>;
+          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
+            Comprehensive AI Solutions;
+          </p>;
+          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
+            We offer end - to - end AI services designed to accelerate your digital transformation;
+            and drive measurable business outcomes.;
+          </p>;
+        </div>;
+        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
+          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
+            {professional_services.map ((service) => (
+              <div key={service.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
+                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
+                  <service.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
+                  <h3 className=&quot;text - xl font - semibold text - white & quot;>{service.name}</h3>;
+                </div>;
+                <p className=&quot;text - gray - 300 mb - 6&quot;>{service.description}</p>;
+                <div className=&quot;space - y-3 mb - 6&quot;>;
+                  {service.features.map ((feature) => (
+                    <div key={feature} className=&quot;flex items - center gap - 2&quot;>;
+                      <div className=&quot;h - 2 w - 2 bg - blue - 400 rounded - full & quot;></div>;
+                      <span className=&quot;text - sm text - gray - 300 & quot;>{feature}</span>;
+                    </div>))}
+                </div>;
+                <div className=&quot;flex items - center justify - between & quot;>;
+                  <span className=&quot;text - sm text - blue - 400 font - medium & quot;>Duration: {service.duration}</span>;
+                  <a;
+                    href=&quot;/contact & quot;
+                    className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
+                  >;
+                    Learn more <span aria - hidden=&quot;true & quot;>→</span>;
+                  </Link>;
+                </div>;
+              </div>))}
+=======
+    name: 'Global Support'
+    description: '24/7 support and maintenance services across multiple time zones.'
+    icon: GlobeAltIcon}]
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Page: React.FC<PageProps> = ({ className }) => {
   return (
     <div className="bg-black">
@@ -276,7 +351,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </div>
         </div>
       </div>
-
       {/* Professional Services */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -325,6 +399,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
       {/* Service Process */}
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
@@ -357,9 +436,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Process</h2>;
@@ -386,6 +469,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
                 </div>;
               </div>))}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Process</h2>
@@ -394,6 +478,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             Our proven methodology ensures successful project delivery and maximum value
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
@@ -427,10 +515,17 @@ const Page: React.FC<PageProps> = ({ className }) => {
       </div>;
       {/* Why Choose Us */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
@@ -450,7 +545,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {reason.name}
                 </dt>;
@@ -460,11 +558,14 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </div>))}
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
@@ -492,16 +593,23 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
@@ -511,6 +619,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -535,6 +645,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
 
 export default Page;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

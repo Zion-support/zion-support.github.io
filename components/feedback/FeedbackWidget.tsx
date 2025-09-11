@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type FeedbackWidgetProps = {;
   responseId?: string;
@@ -50,6 +51,8 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const submit = async () => {;
     if (!rating) {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   );
@@ -61,7 +64,10 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const submit = async () => {;
     if (!rating) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setError('Please choose 👍 or 👎');
       return;      return;
       return
@@ -69,9 +75,13 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     setError(null);
     setSubmitting(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       const res = await fetch('/api/feedback/submit', {;
         method: 'POST',;
@@ -91,6 +101,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       if (!res && res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (e: any) {;
       setError(e?.message || 'Something went wrong');
     } finally {;
@@ -98,12 +109,15 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   }
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     } catch (e: any) {;
       setError(e?.message || 'Something went wrong');
     } finally {;
 
       setSubmitting(false);    }
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           responseId: effectiveResponseId,
@@ -147,14 +161,19 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message |'Something went wrong');
     } finally {
       setSubmitting(false);    }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment.trim()
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           aiModel})});
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true)
@@ -163,7 +182,10 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     } finally {
       setSubmitting(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>;
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment && comment.trim(),;
@@ -178,6 +200,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
@@ -196,6 +219,22 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       {submitted ? (
     }
   }
+=======
+    }
+  }
+  };
+
+  return (
+
+=======
+    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
+      <div className="text-sm font-medium mb-2">Was this answer useful?</div>
+      {submitted ? (
+=======
+    }
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   return (
@@ -215,18 +254,25 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         <div className="space-y-3">
           <div className="flex items-center gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button
               type="button"
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
 <<<<<<< HEAD
+<<<<<<< HEAD
               type="button"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <span>👍</span>;
               <span>Yes</span>;
@@ -234,7 +280,10 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
             <button
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}
@@ -244,6 +293,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
             </button>;
           </div>;
           <textarea
+<<<<<<< HEAD
 <<<<<<< HEAD
             placeholder="Optional feedback (what worked, what didn’t)"
             value={comment}
@@ -258,15 +308,22 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>;
           </div>;
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   );
@@ -276,13 +333,21 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export type FeedbackWidgetProps = {
   response_id?: string;
@@ -468,6 +533,10 @@ if ( {) {
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={_`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={_rating === 'up'}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <span>👍</span>
               <span>Yes</span>
@@ -510,6 +579,7 @@ if ( {) {
       )}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
   );
 }
@@ -523,3 +593,14 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

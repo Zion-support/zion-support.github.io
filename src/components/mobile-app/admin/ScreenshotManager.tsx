@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -237,12 +238,15 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -334,6 +338,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       <CardContent>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
@@ -349,6 +355,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
+<<<<<<< HEAD
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
@@ -359,15 +366,21 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
+<<<<<<< HEAD
             className="hidden"
           />
           <Button
             variant="outline"
             onClick = {(,) => fileInputRef.current?.click(),}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             ref={fileInputRef}
@@ -375,10 +388,17 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             multiple
             accept="image/*"
             onChange={handleFileSelect}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="hidden"
           />
           <Button 
             variant="outline" 
+<<<<<<< HEAD
           />
           <Button 
             variant="outline" 
@@ -390,10 +410,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick={() => fileInputRef.current?.click()}
 
             className="mt-2"
+=======
+
+
+            className="mt-2"
+          >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Plus className="mr-2 h-4 w-4" />
             Select Files
           </Button>
         </div>
+<<<<<<< HEAD
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios"
         
@@ -402,10 +429,20 @@ ursor/fix-website-loading-errors-and-merge-6662
           {platform === "ios"
         
         <div className="text-xs text-gray-300 mb-4">
+=======
+
+
+
+        
+
+        <div className="text-xs text-gray-300 mb-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {platform === "ios" 
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."}
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
+          }
         </div>
+<<<<<<< HEAD
         <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot,) => (
             <div key={screenshot.id} className="relative group">
@@ -420,6 +457,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
         </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
           <Button
@@ -445,8 +484,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               <img
                 src = {screenshot && screenshot.url,}
+<<<<<<< HEAD
               <img
                 src = {screenshot.url,}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         
         <div className="grid grid-cols-2 gap-3">
@@ -454,6 +496,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div key={screenshot.id} className="relative group">
               <img
                 src={screenshot.url}
+<<<<<<< HEAD
                 alt="App screenshot"
                 loading="lazy"
               />
@@ -461,6 +504,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick = {(,) => removeScreenshot(screenshot.id),}
                 onClick = {(,) => removeScreenshot(screenshot.id),}
                 onClick={() => removeScreenshot(screenshot.id)}
+=======
+
+                alt="App screenshot"
+                className="w-full h-auto rounded border border-zion-purple/20"
+                loading="lazy"
+              />;
+              <button
+
+
+                onClick={() => removeScreenshot(screenshot.id)}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 aria-label="Remove screenshot"
               >
@@ -468,6 +524,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </button>
             </div>
           ))}
+<<<<<<< HEAD
 }
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -476,6 +533,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>
   )
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
@@ -483,8 +542,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 };
 };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const add_screenshots = (files: File[], ) =>: any {
@@ -611,9 +673,12 @@ if ( {) {
 },
 ;
 };
+<<<<<<< HEAD
 =======
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

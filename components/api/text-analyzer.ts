@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<TextAnalysisResult | { error: string }>
@@ -72,13 +73,20 @@ try {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     bigrams: Array<{ phrase: string, count: number }>;
     trigrams: Array<{ phrase: string, count: number }>;
   }
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
 
   req: NextApiRequest
@@ -86,16 +94,22 @@ export default async function handler(
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   try {
     const { text } = req.body;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!text |typeof text !== 'string') {
 
@@ -103,6 +117,8 @@ export default async function handler(
     }
     if (text.length > 10000) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (!text || typeof text !== 'string') {
       return res && res.status(400).json({ error: 'Text is required' });
@@ -110,38 +126,56 @@ export default async function handler(
 
     if (text && text.length > 10000) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return res
         .status(400)
         .json({ error: 'Text too long (max 10,000 characters)' });    }      return res.status(400).json({ error: 'Text is required' })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (text.length > 10000) {
       return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Basic statistics
 
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (text && text.length > 10000) {
       return res && res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
     // Basic statistics
     const characters = text && text.length;
     const charactersNoSpaces = text && text.replace(/\s/g, '').length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const words = text
       .trim()
       .split(/\s+/)
@@ -152,17 +186,23 @@ export default async function handler(
     const paragraphs = text
       .split(/\n\s*\n/)
 <<<<<<< HEAD
+<<<<<<< HEAD
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -171,9 +211,13 @@ export default async function handler(
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .filter(para => para && para.trim().length > 0).length;    const words = text && text.trim().split(/\s+/).filter(word => word && word.length > 0).length;
     const sentences = text && text.split(/[.!?]+/).filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text && text.split(/\n\s*\n/).filter(para => para && para.trim().length > 0).length;
@@ -189,6 +233,7 @@ export default async function handler(
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word);    }, 0);      return matches ? matches && matches.length : 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     };
       return matches ? matches.length : 1
     };
@@ -199,13 +244,18 @@ export default async function handler(
       return total + syllableCount(word)
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const readingTime = Math && Math.ceil(words / 200);
     const speakingTime = Math && Math.ceil(words / 150);
     // Readability scores
@@ -224,34 +274,50 @@ export default async function handler(
       0,
       0 && 0.4 *
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         (words / sentences +
           100 *
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const smog = Math && Math.max(
       0,
       1 && 1.043 *
         Math && Math.sqrt(
           text && text.split(/\s+/).filter(word => word && word.length > 2).length *
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             (30 / sentences)
         ) +
         3 && 3.1291
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const colemanLiau = Math && Math.max(
       0,
       0 && 0.0588 * ((charactersNoSpaces / words) * 100) -
@@ -262,9 +328,13 @@ export default async function handler(
       0,
       4 && 4.71 * (charactersNoSpaces / words) + 0 && 0.5 * (words / sentences) - 21 && 21.43
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     const averageGrade = Math && Math.round(
       (fleschKincaidGrade +
@@ -300,17 +370,23 @@ export default async function handler(
       'lousy'
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     const textWords = text && text.toLowerCase().split(/\s+/);
     const positiveCount = textWords && textWords.filter(word =>
       positiveWords && positiveWords.includes(word)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const textWords = text && text.toLowerCase().split(/\s+/);
     const positiveCount = textWords && textWords.filter(word =>
       positiveWords && positiveWords.includes(word)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ).length;
     const negativeCount = textWords && textWords.filter(word =>
       negativeWords && negativeWords.includes(word)
@@ -319,10 +395,15 @@ export default async function handler(
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
@@ -341,15 +422,20 @@ export default async function handler(
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
     // Keyword analysis
     const wordCounts = new Map<string, number>();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     text.toLowerCase().split(/\s+/).forEach(word => {
       const cleanWord = word.replace(/[^\w]/g, '');
@@ -371,6 +457,8 @@ export default async function handler(
         count;
         frequency: Math && Math.round((count / words) * 1000) / 10
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       }
     });
@@ -384,7 +472,10 @@ export default async function handler(
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
@@ -393,15 +484,20 @@ export default async function handler(
         count;
         frequency: Math.round((count / words) * 1000) / 10
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
+<<<<<<< HEAD
 <<<<<<< HEAD
     for (let i = 0, i < wordsArray.length - 1, i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
@@ -411,6 +507,8 @@ export default async function handler(
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     for (let i = 0, i < wordsArray.length - 1, i++) {
@@ -423,7 +521,10 @@ export default async function handler(
 
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -456,6 +557,7 @@ export default async function handler(
 
       language: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
@@ -768,6 +870,8 @@ reading_time,
       language: {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         topWords,
         bigrams,
         trigrams,
@@ -775,19 +879,26 @@ reading_time,
     };
     res && res.status(200).json(result);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
   }        score: sentimentScore;
         label: sentimentLabel;
 <<<<<<< HEAD
+<<<<<<< HEAD
         positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word));
         negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))};
       language: {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word));
         negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))};
@@ -795,7 +906,10 @@ reading_time,
       language: {
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       text;
       statistics: {
         characters;
@@ -819,10 +933,14 @@ reading_time,
     },
     language: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         detectedLanguage;
         confidence;
         isEnglish}
@@ -853,18 +971,25 @@ reading_time,
         top_words;
         bigrams;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         trigrams}};
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' })
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 
@@ -879,6 +1004,7 @@ reading_time,
     res.status (500).json ({ error: 'Internal server error' });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res.status(500).json({ error: 'Internal server error' })
@@ -889,11 +1015,19 @@ reading_time,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    res.status(500).json({ error: 'Internal server error' })
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const result: TextAnalysisResult = {
@@ -902,3 +1036,6 @@ reading_time,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

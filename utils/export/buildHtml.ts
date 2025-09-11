@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { BookProject } from '../book/bookTypes',;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project,;
@@ -17,6 +18,9 @@ export function buildPrintableHtml(project: BookProject): string {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -25,6 +29,7 @@ export function buildPrintableHtml(project: BookProject): string {;
         <div class="content">${paragraphize(c.content)}</div>;
       </section>;
     `);
+<<<<<<< HEAD
 <<<<<<< HEAD
     .join('\n\n'),;
   const visualsHtml = [;
@@ -43,10 +48,17 @@ export function buildPrintableHtml(project: BookProject): string {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .join ('\n\n'),
   const visuals_html = [;
     ...visuals.timeline_images,
@@ -56,10 +68,14 @@ export function buildPrintableHtml(project: BookProject): string {;
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
 <<<<<<< HEAD
+<<<<<<< HEAD
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return `<!doctype html>;
 <html>;
 <head>;
@@ -68,17 +84,25 @@ export function buildPrintableHtml(project: BookProject): string {;
 <style>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 function escapeHtml(s: string): string {;
   return s;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -151,6 +175,7 @@ function escapeHtml(s: string): string {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
@@ -167,23 +192,31 @@ function escapeHtml(s: string): string {;
   .visual img { max-width: 100%, height: auto }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 </style>;
 </head>;
 <body>;
   <section class="cover">;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div>${escapeHtml(meta.publisher |'')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle |'')}</h3>;
     <div class="by">By ${escapeHtml(meta.author)}</div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     <div>${escape_html (meta.publisher || '')}</div>;
     <h1>${escape_html (meta.title)}</h1>;
     <h3>${escape_html (meta.subtitle || '')}</h3>;
     <div class="by">By ${escape_html (meta.author)}</div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ${barcode}
   </section>;
   ${quotesHtml}
@@ -195,14 +228,50 @@ function escapeHtml(s: string): string {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 function paragraphize(text: string): string {if (!text) return '';
   return text;
     .split(/\n\n+/);
     .map((p) => `<p>${escapeHtml(p)}</p>`);
     .join('\n');
+=======
+
+    <div>${escapeHtml(meta.publisher || '')}</div>;
+    <h1>${escapeHtml(meta.title)}</h1>;
+    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
+    <div class="by">By ${escapeHtml(meta.author)}</div>;
+    ${barcode  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  </section>;
+  ${quotesHtml  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ${chapterHtml  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ${visualsHtml  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+</body>;
+</html>`;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function escapeHtml(s: string): string {return s;
 ;
+<<<<<<< HEAD
 function escapeHtml(s: string): string {;
   return s;
   @page { margin: 1in   } catch (error) {
@@ -319,16 +388,24 @@ function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 <<<<<<< HEAD
 =======
+=======
+function paragraphize(text: string): string {;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -366,3 +443,12 @@ function escape_html (string: string): string {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

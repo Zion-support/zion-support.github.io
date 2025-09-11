@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 export default function Page() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import Head from 'next/head';
+export default function Page() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Playbook — Autonomous Delivery</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Head from 'next/head';
 export default function Page() {
@@ -17,6 +23,8 @@ export default function Page() {
         <title>Playbook — Autonomous Delivery</title>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta
           name='description'
           content='A practical step-by-step playbook for reliable autonomous delivery.'
@@ -37,12 +45,18 @@ export default function Page() {
           dangerouslySetInnerHTML={{
             __html:
 <<<<<<< HEAD
+<<<<<<< HEAD
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
 =======
 
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -53,10 +67,15 @@ export default function Page() {
   );export default function Page() {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75"></p>',
 
           }}
@@ -72,6 +91,7 @@ export default function Page() {
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Page() {
 =======
 =======
@@ -79,10 +99,16 @@ export default function Page() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+export default function Page() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Page() {
   return (
@@ -105,6 +131,9 @@ export default function Page() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -161,6 +190,7 @@ function Page() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       <Head>
@@ -194,12 +224,17 @@ function Page() {
 export default function Page() {
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Playbook — Autonomous Delivery</title>
@@ -213,6 +248,7 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class=\"text-white/75\"></p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>
       </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   );
@@ -232,8 +268,13 @@ export default function Page() {
 ;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

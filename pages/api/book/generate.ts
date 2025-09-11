@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
   const apiKey = process.env.OPENAI_API_KEY;
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -15,6 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const completion = await client.chat.completions.create({
@@ -26,6 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ chapters: drafted })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -58,6 +62,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ chapters: drafted })
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 }
 
 =======
@@ -80,10 +86,17 @@ if ( {) {
 if ( {) {
   $2
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
+=======
+
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
     // Fallback: return structured placeholders;
     const drafted = chapters.map ((c) => ({
@@ -108,6 +121,7 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req, res) {
   try {
@@ -156,6 +170,9 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -165,6 +182,7 @@ export default async function handler(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
   res.status(200).json({ chapters: drafted });
@@ -173,3 +191,6 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

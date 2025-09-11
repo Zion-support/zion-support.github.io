@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -24,6 +25,8 @@ export function CertificationsList({
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CertificationsListProps {
   certifications: Certification[]
   onEdit: (cert: Certification) => void
@@ -34,6 +37,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
   if (certifications.length === 0) {
     return null
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -41,6 +45,8 @@ import { Edit, Trash2 } from 'lucide-react';
 import { format } from 'date-fns',;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CertificationsListProps {;
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -62,6 +68,7 @@ interface CertificationsListProps {;
   onDelete: (id: string) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className="space-y-4">
@@ -230,6 +237,13 @@ interface CertificationsListProps {
 
                   className='text-primary hover:underline'>              <p className="text-xs mt-2">;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  variant='ghost'
+                  size='icon'
+                  onClick={() => onEdit(cert)}
+
+                  className='text-primary hover:underline'>              <p className="text-xs mt-2">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <a
                   href = {cert && cert.credential_url,}
 
@@ -250,6 +264,7 @@ interface CertificationsListProps {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   View credential
                 </a>;
               </p>;
@@ -259,6 +274,11 @@ interface CertificationsListProps {
                 >
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                >
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   View credential
                 </Link>
               </p>
@@ -266,6 +286,7 @@ interface CertificationsListProps {
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -377,3 +398,9 @@ if ( {) {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    </div>;
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

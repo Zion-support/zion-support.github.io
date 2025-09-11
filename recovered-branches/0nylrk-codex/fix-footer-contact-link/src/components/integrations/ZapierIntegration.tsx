@@ -3,12 +3,15 @@ import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Card
   CardContent
   CardFooter
   CardHeader
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {;
   Card,;
@@ -16,12 +19,16 @@ import {;
   CardFooter,;
   CardHeader,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
@@ -33,6 +40,19 @@ export function ZapierIntegration() {
     setTimeout(() => setCopied(false), 2000);
     toast.success("API key copied to clipboard");
   }
+=======
+
+
+export function ZapierIntegration() {;
+
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+
+  const handleCopyApiKey = () => {;
+    navigator && navigator.clipboard.writeText(apiKey);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -41,6 +61,7 @@ import {
   Card,
   CardContent,
   CardFooter,
+<<<<<<< HEAD
   CardHeader,;
   CardHeader,
 } from "@/components/ui/card";
@@ -105,6 +126,10 @@ export function ZapierIntegration() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">
@@ -113,16 +138,23 @@ export function ZapierIntegration() {;
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold">Zapier Connection</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Badge variant="outline" className="bg-blue-100 text-blue-800">Active</Badge>
 =======
               <Badge variant="outline" className="bg-blue-100 text-blue-800">
                 Active
               </Badge>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Badge variant="outline" className="bg-blue-100 text-blue-800">
+                Active
+              </Badge>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             
@@ -137,16 +169,27 @@ export function ZapierIntegration() {;
             </p>
 
 
+=======
+              Connect Zion with 3,000+ apps via Zapier. Use your API key below
+              to set up integrations.
+            </p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="space-y-4">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Your Zion API Key</label>
                 <div className="flex gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Input 
                     value={apiKey} 
                     readOnly 
@@ -166,6 +209,7 @@ export function ZapierIntegration() {;
             </Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -207,6 +251,12 @@ export function ZapierIntegration() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -240,6 +290,7 @@ export function ZapierIntegration() {;
         </Card>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -253,12 +304,19 @@ export function ZapierIntegration() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           
@@ -273,11 +331,19 @@ export function ZapierIntegration() {;
           </p>
 
 
+=======
+            Use these webhook triggers to start Zaps when events happen in your
+            Zion account.
+          </p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
@@ -285,6 +351,7 @@ export function ZapierIntegration() {;
                 Triggers when a new job is published on your account.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             
 
@@ -293,23 +360,32 @@ export function ZapierIntegration() {;
             </div>
             
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button size="sm" variant="outline">
                 Set Up Trigger
               </Button>
             </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a talent applies to your job.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             
 
@@ -318,22 +394,31 @@ export function ZapierIntegration() {;
             </div>
             
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button size="sm" variant="outline">
                 Set Up Trigger
               </Button>
             </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a contract is signed by all parties.
               </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button size="sm" variant="outline">Set Up Trigger</Button>
 =======
@@ -341,11 +426,17 @@ export function ZapierIntegration() {;
                 Set Up Trigger
               </Button>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Button size="sm" variant="outline">
+                Set Up Trigger
+              </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -386,6 +477,14 @@ export function ZapierIntegration() {;
 
 
 
+=======
+
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <p className="text - sm text - muted - foreground mb - 4">;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
@@ -407,6 +506,7 @@ export function ZapierIntegration() {;
                     {copied ? (
                       <Check className="h - 4 w - 4" />) : (
                       <Copy className="h - 4 w - 4" />)}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Badge variant="outline" className="bg-blue-100 text-blue-800">Active</Badge>;
             </div>;
@@ -431,11 +531,15 @@ export function ZapierIntegration() {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Button>;
                 </div>;
               </div>;
             </div>;
           </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <CardFooter className="flex flex-col items-start">;
             <Button variant="outline" className="gap-2">;
@@ -444,16 +548,22 @@ export function ZapierIntegration() {;
             <Button variant="outline" className="gap-2">;
               <ExternalLink className="h-4 w-4" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <CardFooter className="flex flex - col items - start">;
             <Button variant="outline" className="gap - 2">;
               <ExternalLink className="h - 4 w - 4" />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Open Zapier Dashboard;
             </Button>;
           </CardFooter>;
         </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <Card>;
@@ -478,6 +588,8 @@ export function ZapierIntegration() {;
                 <Check className="h-4 w-4 text-green-500" />;
                 <span>Create calendar events for interviews</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Card>;
           <CardHeader>;
@@ -501,12 +613,16 @@ export function ZapierIntegration() {;
                 <Check className="h - 4 w - 4 text - green - 500" />;
                 <span > Create calendar events for interviews</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </li>;
             </ul>;
           </CardContent>;
           <CardFooter>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button variant="outline" className="w-full gap-1">;
               <ExternalLink className="h-4 w-4" />;
               <span>Explore Zion Zaps</span>;
@@ -514,18 +630,26 @@ export function ZapierIntegration() {;
               <ExternalLink className="h-4 w-4" />;
               <span>Explore Zion Zaps</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <Button variant="outline" className="w - full gap - 1">;
               <ExternalLink className="h - 4 w - 4" />;
               <span > Explore Zion Zaps</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </CardFooter>;
         </Card>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <Card>;
         <CardHeader>;
@@ -541,7 +665,10 @@ export function ZapierIntegration() {;
               <h4 className="font - medium mb - 2">New Job Posted</h4>;
               <p className="text - xs text - muted - foreground mb - 3">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Triggers when a new job is published on your account.;
               </p>;
               <Button size="sm" variant="outline">;
@@ -549,16 +676,22 @@ export function ZapierIntegration() {;
               </Button>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="border rounded - md p - 4">;
               <h4 className="font - medium mb - 2">New Application</h4>;
               <p className="text - xs text - muted - foreground mb - 3">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="border rounded - md p - 4">;
               <h4 className="font - medium mb - 2">New Application</h4>;
               <p className="text - xs text - muted - foreground mb - 3">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Triggers when a talent applies to your job.;
               </p>;
               <Button size="sm" variant="outline">;
@@ -566,21 +699,28 @@ export function ZapierIntegration() {;
               </Button>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="border rounded - md p - 4">;
               <h4 className="font - medium mb - 2">Contract Signed</h4>;
               <p className="text - xs text - muted - foreground mb - 3">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="border rounded - md p - 4">;
               <h4 className="font - medium mb - 2">Contract Signed</h4>;
               <p className="text - xs text - muted - foreground mb - 3">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Triggers when a contract is signed by all parties.;
               </p>;
               <Button size="sm" variant="outline">;
                 Set Up Trigger;
               </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       <Card>;
@@ -614,11 +754,14 @@ export function ZapierIntegration() {;
               <Button size="sm" variant="outline">Set Up Trigger</Button>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </CardContent>;
       </Card>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -638,14 +781,21 @@ return (<div className="space-y-6" > <div className="grid md:grid-cols-3 gap-6" 
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
+<<<<<<< HEAD
 =======
     </div>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

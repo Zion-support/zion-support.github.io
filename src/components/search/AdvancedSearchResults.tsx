@@ -58,6 +58,13 @@ import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface SearchResult {;
 import React, { useState, useEffect, useMemo } from 'react';
 import { use_router } from 'next / router';
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect, useMemo } from 'react'
+import { useRouter } from 'next/router'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   Search,
   Filter,
@@ -89,6 +96,7 @@ import { Separator } from '@/components / ui / separator';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface SearchResult {
 
@@ -128,6 +136,8 @@ import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchResult {
   id: string;
   title: string;
@@ -141,38 +151,53 @@ interface SearchResult {
   rating?: number;
   tags?: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
   date?: string
 interface SearchFilters {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   date?: string;
 
 interface SearchFilters {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   types: string[];
   category: string;
   minPrice: number;
   maxPrice: number;
   minRating: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   sort: string
 interface SearchResponse {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   sort: string;
 
 interface SearchResponse {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   results: SearchResult[];
   totalCount: number;
   page: number;
   limit: number;
   query: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   hasMore: boolean
 // Highlight search terms in text
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const HighlightText: React.FC<{
   text: string
@@ -232,9 +257,12 @@ interface SearchResponse {;
   page: number,;
   limit: number,;
   query: string,;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   hasMore: boolean;
 }
 ;
@@ -249,10 +277,13 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
   
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const parts = text && text.split(;
     new RegExp(`(${searchTerm && searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   );
@@ -260,13 +291,17 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
 
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -283,6 +318,9 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
       <div className='flex-1'>
         <div className='flex items-start justify-between mb-2'>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {part}
           </mark>
         ) : (
@@ -291,6 +329,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}
     </span>
   )
+<<<<<<< HEAD
 =======
 
   date?: string;
@@ -317,6 +356,8 @@ const HighlightText: React.FC<{
   $2
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Search Result Card Component
 const SearchResultCard: React.FC<{
@@ -331,11 +372,14 @@ const SearchResultCard: React.FC<{
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   const cardClass = null;
     viewMode === 'grid'
       ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer'
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </span>;
   );
@@ -360,7 +404,10 @@ const SearchResultCard: React.FC<{;
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div onClick={handleClick} className={cardClass}>
       {result.image && (
@@ -373,14 +420,20 @@ const SearchResultCard: React.FC<{;
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }          />;
         </div>;
       )}
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </span>;
   );
 },;
@@ -411,22 +464,34 @@ const SearchResultCard: React.FC<{;
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
         </div>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="font-semibold text-lg mb-1">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div>
             <h3 className='font-semibold text-lg mb-1'>
+=======
+          <div>
+            <h3 className='font-semibold text-lg mb-1'>
+              <HighlightText text={result.title} searchTerm={searchTerm} />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h3>
             <Badge variant='secondary' className='text-xs'>
   const card_class =;
@@ -493,6 +558,7 @@ const SearchResultCard: React.FC<{;
           )}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             }          />
         </div>
       )}
@@ -549,6 +615,8 @@ const SearchResultCard: React.FC<{;
             </div>
           )}
         </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <p className='text-muted-foreground mb-3 line-clamp-2'>
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
@@ -556,9 +624,12 @@ const SearchResultCard: React.FC<{;
           <div className='flex gap-2 flex-wrap'>
             {result.category && (
               <Badge variant='outline' className='text-xs'>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <p className="text-muted-foreground mb-3 line-clamp-2">
           <HighlightText text={result.description} searchTerm={searchTerm} />
@@ -582,9 +653,13 @@ const SearchResultCard: React.FC<{;
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
         <p className='text - muted - foreground mb - 3 line - clamp - 2'>;
           <HighlightText text={result.description} search_term={search_term} />;
@@ -599,7 +674,10 @@ const SearchResultCard: React.FC<{;
                 {result.category}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       )}
 ;
@@ -621,11 +699,15 @@ const SearchResultCard: React.FC<{;
               {result.type === 'talent' && <span className="text-sm text-muted-foreground">/hr</span>}
             </div>;
           )}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
         <p className="text-muted-foreground mb-3 line-clamp-2">;
           <HighlightText text={result.description} searchTerm={searchTerm} />;
         </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
       </div>
@@ -676,6 +758,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {result.category}
               </Badge>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className='flex items-center justify-between'>;
           <div className='flex gap-2 flex-wrap'>;
@@ -684,8 +768,61 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {result && result.category}
               </Badge>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
+=======
+            )}
+
+              </Badge>)}
+            {result.tags?.slice (0, 3).map ((tag, index) => (
+              <Badge key={index} variant='outline' className='text - xs'>                <HighlightText text={tag} search_term={search_term} />;
+              </Badge>))}
+          </div>;
+
+          {result.rating && (
+            <div className='flex items - center gap - 1'>;
+              <span className='text - yellow - 500'>★</span>;
+              <span className='text - sm'>{result.rating.to_fixed (1)}</span>;
+            </div>)}
+        </div>;
+      </div>;
+    </div>);
+}
+// Filter Sidebar Component;
+const FilterSidebar: React.FC<{
+
+  filters: SearchFilters;
+  onFiltersChange: (filters: SearchFilters) => void;
+  available_categories: string[];
+}> = ({ filters, onFiltersChange, available_categories }) => {  const type_options = [;
+    { id: 'product', label: 'Products' },
+    { id: 'talent', label: 'Talent' },
+    { id: 'service', label: 'Services' },
+    { id: 'blog', label: 'Blog Posts' },
+  ];
+  const handleTypeChange = (type_id: string, checked: boolean) =>: any {
+    const new_types = checked      ? [...filters.types, type_id];
+      : filters.types.filter (t => t !== type_id);
+    onFiltersChange ({ ...filters, types: new_types });
+  }
+  const handlePriceChange = (values: number[]) =>: any {
+    onFiltersChange ({
+      ...filters,
+      min_price: values[0] ?? 0,
+      max_price: values[1] ?? 10000,
+    });
+
+  }
+          </div>;
+
+          {result && result.rating && (;
+            <div className='flex items-center gap-1'>;
+              <span className='text-yellow-500'>★</span>;
+              <span className='text-sm'>{result && result.rating.toFixed(1)}</span>;
+            </div>;
+          )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {result.tags?.slice(0, 3).map((tag, index) => (
               <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />
               </Badge>
@@ -697,6 +834,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>
           
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -740,14 +881,20 @@ const FilterSidebar: React.FC<{;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
                 id={option.id}
                 checked={filters.types.includes(option.id)}
+<<<<<<< HEAD
 
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
@@ -767,6 +914,8 @@ const FilterSidebar: React.FC<{;
               <Checkbox
                 id={option.id}
                 checked={filters.types.includes(option.id)}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onCheckedChange={checked =>
                   handleTypeChange(option.id, !!checked)
                 }              />
@@ -774,19 +923,28 @@ const FilterSidebar: React.FC<{;
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {option.label}
               </label>
             </div>
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </div>
       <Separator />
       <div>
         <h3 className='font-semibold mb-3'>Category</h3>
         <Select
+<<<<<<< HEAD
           value={filters.category}
           onValueChange={value =>
             onFiltersChange({
@@ -804,6 +962,8 @@ const FilterSidebar: React.FC<{;
       <div>;
         <h3 className='font-semibold mb-3'>Category</h3>;
         <Select
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           value={filters && filters.category}
           onValueChange={value =>;
             onFiltersChange({;
@@ -841,6 +1001,7 @@ const FilterSidebar: React.FC<{;
             });
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
         >          <SelectTrigger>
             <SelectValue placeholder='All Categories' />
 =======
@@ -852,6 +1013,10 @@ const FilterSidebar: React.FC<{;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        >          <SelectTrigger>
+            <SelectValue placeholder='All Categories' />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <h3 className="font-semibold mb-3">Category</h3>
         <Select value={filters.category} onValueChange={(value) => 
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
@@ -859,10 +1024,15 @@ const FilterSidebar: React.FC<{;
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -871,6 +1041,7 @@ const FilterSidebar: React.FC<{;
                 {category}
               </SelectItem>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </SelectContent>
         </Select>
@@ -882,6 +1053,8 @@ const FilterSidebar: React.FC<{;
           <Slider
             value={[filters.minPrice, filters.maxPrice]}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </SelectContent>;
         </Select>;
@@ -908,11 +1081,15 @@ const FilterSidebar: React.FC<{;
         <div className='px - 2'>;
           <Slider;
             value={[filters.min_price, filters.max_price]}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onValueChange={handlePriceChange}
             min={0}
             max={10000}
             step={50}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
@@ -923,17 +1100,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            className='mb-2'          />
+          <div className='flex justify-between text-sm text-muted-foreground'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
 
 
             <span>${filters.minPrice}</span>
+<<<<<<< HEAD
+=======
+            <span>${filters.maxPrice}</span>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </div>
       <Separator />
       <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
 =======
@@ -952,11 +1138,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <h3 className='font-semibold mb-3'>Minimum Rating</h3>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Select
           value={filters && filters.minRating.toString()}
           onValueChange={value =>;
             onFiltersChange({ ...filters, minRating: parseFloat(value) });
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
         >          <SelectTrigger>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -971,6 +1161,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        >          <SelectTrigger>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
@@ -979,6 +1172,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
             <SelectValue />
+<<<<<<< HEAD
+=======
+          </SelectTrigger>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <SelectContent>
             <SelectItem value="0">Any Rating</SelectItem>
             <SelectItem value="1">1+ Stars</SelectItem>
@@ -992,10 +1189,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 // No Results Component;
 }
 // No Results Component
+=======
+}
+// No Results Component;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const NoResultsState: React.FC<{
   searchTerm: string
   onNewSearch: (term: string) => void
@@ -1007,6 +1209,7 @@ const NoResultsState: React.FC<{
     'UI/UX Design'
     'Blockchain Development'
   ]
+<<<<<<< HEAD
       <div className='max-w-md mx-auto space-y-4'>
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
@@ -1063,6 +1266,8 @@ const NoResultsState: React.FC<{
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 
 // No Results Component
@@ -1091,6 +1296,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         </p>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className='max-w-md mx-auto space-y-4'>
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
@@ -1107,6 +1313,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         >          <SelectTrigger>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        >          <SelectTrigger>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className="max-w-md mx-auto space-y-4">
         <div>
@@ -1133,9 +1344,13 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         }>;
           <SelectTrigger>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <SelectValue />;
           </SelectTrigger>;
           <SelectContent>;
@@ -1181,13 +1396,18 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
               <Button
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 variant="outline";
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {suggestion}
               </Button>;
@@ -1215,6 +1435,15 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 
 
 <<<<<<< HEAD
+=======
+
+
+                {suggestion}
+              </Button>;
+            ))}
+          </div>
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='text-sm text-muted-foreground'>
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
@@ -1222,9 +1451,16 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <li>• Try different keywords</li>
+=======
+
+
+            <li>• Try different keywords</li>
+            <li>• Check your spelling</li>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <li>• Use fewer filters</li>
             <li>• Search for broader terms</li>
           </ul>
@@ -1232,6 +1468,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 // Main Search Results Page Component
@@ -1309,13 +1546,18 @@ export const AdvancedSearchResults: React.FC = () => {
       </div>;
     </div>);
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Main Search Results Page Component;
 export const AdvancedSearchResults: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 
 // Main Search Results Page Component
@@ -1330,16 +1572,24 @@ export const AdvancedSearchResults: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
+=======
+  
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
     category: '',
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     sort: 'relevance',
@@ -1357,10 +1607,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     if (router.isReady && router.query.q) {
@@ -1392,6 +1646,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       if (searchFilters.types.length > 0) {
         params.append('type', searchFilters.types.join(','))
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const router = use_router ();
   const [search_term, setSearchTerm] = useState ('');
@@ -1455,7 +1711,10 @@ if ( {) {
 }
         params.append ('type', search_filters.types.join (', '));
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       if (searchFilters.category) {
         params.append('category', searchFilters.category)
@@ -1473,6 +1732,7 @@ if ( {) {
         params.append('sort', searchFilters.sort)
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       const response = await fetch(`/api/search?${params}`)
       const data: SearchResponse = await response.json()
       if (page === 1) {
@@ -1489,6 +1749,8 @@ if ( {) {
         totalCount: data.totalCount
       })
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const response = await fetch (`/api / search?${params}`);
       const data: SearchResponse = await response.json ();
@@ -1511,7 +1773,10 @@ if ( {) {
         total_count: data.total_count,
       });
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {
       logErrorToProduction('Search failed', { data: error })
       setResults([])
@@ -1527,6 +1792,7 @@ if ( {) {
       setCurrentPage(1)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }, [searchTerm, filters])
   // Handle search input
   const handleSearch = (term: string) => {
@@ -1535,6 +1801,8 @@ if ( {) {
       shallow: true
     })
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }, [search_term, filters]);
   // Handle search input;
@@ -1544,7 +1812,10 @@ if ( {) {
       shallow: true,
     });
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Handle filter changes
   const handleFiltersChange = (newFilters: SearchFilters) => {
@@ -1557,6 +1828,7 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Active filters count
   const activeFiltersCount =
     filters.types.length +
@@ -1566,10 +1838,15 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
+<<<<<<< HEAD
 <<<<<<< HEAD
     (filters.minRating > 0 ? 1 : 0)
       const urlTerm = router.query.q as string,
@@ -1579,6 +1856,11 @@ if ( {) {
 
     (filters.minRating > 0 ? 1 : 0)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+    (filters.minRating > 0 ? 1 : 0)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
         <div className="text-sm text-muted-foreground">;
@@ -1718,14 +2000,18 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters.minRating > 0 ? 1 : 0),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="container mx-auto px-4 py-6">
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className='container mx-auto px-4 py-6'>;
@@ -1734,6 +2020,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className='flex-1'>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -1745,6 +2033,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
+<<<<<<< HEAD
 <<<<<<< HEAD
               placeholder='Search products, talent, services, and more...'            />
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
@@ -1760,6 +2049,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              placeholder='Search products, talent, services, and more...'            />
+              placeholder="Search products, talent, services, and more..."
+            />
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -1773,6 +2069,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex items-center gap-2'>
 =======
@@ -1797,10 +2094,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className='flex items-center gap-2'>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <div className='flex items-center gap-2'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Sort Options */}
               <Select
                 value={filters.sort}
                 onValueChange={value => setFilters({ ...filters, sort: value })}
+<<<<<<< HEAD
 <<<<<<< HEAD
               >
                 <SelectTrigger className='w-40'>                  <SelectValue />
@@ -1808,6 +2109,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              >
+                <SelectTrigger className='w-40'>                  <SelectValue />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="flex items-center gap-2">
               {/* Sort Options */}
@@ -1888,6 +2193,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
                 <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
                   size='sm'
                   onClick={() => setViewMode('grid')}                >
@@ -1901,13 +2207,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   variant={viewMode === 'list' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => setViewMode('list')}
                 >
                   <List className="h-4 w-4" />
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </Button>
               </div>
@@ -1955,6 +2266,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       available_categories = {available_categories, }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   size='sm'
                   onClick={() => setViewMode('grid')}                >
                   <GridIcon className='h-4 w-4' />
@@ -1980,6 +2292,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Filter Toggle */}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="lg:hidden">
@@ -1994,6 +2308,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="mt-6">
                     <FilterSidebar
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       filters = {filters,}
                       onFiltersChange = {handleFiltersChange,}
                       availableCategories = {availableCategories,}
@@ -2003,9 +2320,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Sheet>
             </div>
           </div>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
@@ -2015,12 +2335,18 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Sheet>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
 
       </div>;
@@ -2028,6 +2354,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       {searchTerm && (;
         <div className='flex gap-6'>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='hidden lg:block w-64 flex-shrink-0'>;
             <div className='bg-card border rounded-lg p-4 sticky top-4'>;
@@ -2042,6 +2369,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex gap-6">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Desktop Filters Sidebar */}
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="bg-card border rounded-lg p-4 sticky top-4">
@@ -2050,6 +2379,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {activeFiltersCount > 0 && (
                   <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant='ghost'
                     size='sm'
                     onClick={() =>
@@ -2064,6 +2396,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     }                  >
                     Clear All
                   </Button>
+<<<<<<< HEAD
 =======
 
                     onClick={() =>;
@@ -2080,6 +2413,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Button>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </div>
               <FilterSidebar
@@ -2087,10 +2422,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onFiltersChange = {handleFiltersChange,}
                 availableCategories = {availableCategories,}
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Main Content */}
           <div className='flex-1'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     variant="ghost"
@@ -2113,14 +2451,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onFiltersChange={handleFiltersChange}
                 availableCategories={availableCategories}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />;
             </div>;
           </div>;
 
           {/* Main Content */}
+<<<<<<< HEAD
 
                 </div>;
 
@@ -2141,6 +2484,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       ) : (;
                         'Load More Results';
           <div className="flex-1">
+=======
+          <div className="flex-1">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
@@ -2184,6 +2531,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
+<<<<<<< HEAD
 =======
                 {hasMore && (
 <<<<<<< HEAD
@@ -2230,12 +2578,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                       viewMode={viewMode}
                     />;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   ))}
                 </div>
                 {/* Load More Button */}
                 {hasMore && (
+<<<<<<< HEAD
 
+=======
+                  <div className='text-center'>
+                    <Button
+                      onClick={loadMore}
+                      disabled={loading}
+                      variant='outline'                    >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="text-center">
                     <Button 
                       onClick={loadMore} 
@@ -2243,9 +2601,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       variant="outline"
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -2262,6 +2624,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 setCurrentPage (data.page)
 setHasMore (data.hasMore)
@@ -2282,6 +2645,8 @@ setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 setCurrentPage (data.page);
@@ -2289,7 +2654,10 @@ setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {
@@ -2341,6 +2709,7 @@ setHasMore (data.hasMore);
 export default AdvancedSearchResults
 '"
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AdvancedSearchResults
 export default AdvancedSearchResults
 
@@ -2349,6 +2718,9 @@ export default AdvancedSearchResults
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default AdvancedSearchResults, ;
 export default AdvancedSearchResults;
@@ -2359,9 +2731,13 @@ export default AdvancedSearchResults;
 };
 export default AdvancedSearchResults;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>)}
       </div>;
@@ -2502,7 +2878,11 @@ export default AdvancedSearchResults;
 '";
 export default AdvancedSearchResults,
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AdvancedSearchResults,
 =======
 export default AdvancedSearchResults,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default AdvancedSearchResults,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

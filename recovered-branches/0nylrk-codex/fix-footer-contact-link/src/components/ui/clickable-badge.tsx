@@ -4,6 +4,7 @@ import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {badgeVariants} from "@/components/ui/badge-variants";
 <<<<<<< HEAD
+<<<<<<< HEAD
   onRemove?: () => void;
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
@@ -15,6 +16,8 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 
 export function ClickableBadge({;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface ClickableBadgeProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   onRemove?: () => void;
@@ -23,22 +26,32 @@ export interface ClickableBadgeProps extends React && React.HTMLAttributes<HTMLD
 
 
 export function ClickableBadge(): any ({;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children;
   className;
   variant = "default";
   onRemove;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ...props;
 }: ClickableBadgeProps) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ...props;
+}: ClickableBadgeProps) {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react",
@@ -59,10 +72,16 @@ export function ClickableBadge({
   variant;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  children;
+  className;
+  variant;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children,
   className,
   variant = "default",
   onRemove,
+<<<<<<< HEAD
 <<<<<<< HEAD
           onClick={(e) => {;
             e && e.stopPropagation();
@@ -92,6 +111,8 @@ export function ClickableBadge({
           }}
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ...props
 }: ClickableBadgeProps) {
 
@@ -108,10 +129,16 @@ export function ClickableBadge({
       {onRemove && (;
         <button
           type="button"
+<<<<<<< HEAD
           onClick={(e) => {;
             e && e.stopPropagation();
             onRemove();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          onClick={(e) => {
+            e.stopPropagation(),
+            onRemove()
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
 
     </div>;
@@ -119,6 +146,7 @@ export function ClickableBadge({
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
@@ -161,15 +189,24 @@ export function ClickableBadge({;
         <button;
           type="button";
           onClick={(e) => {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
           <X className="h-3 w-3" />
         </button>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { X } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -201,11 +238,14 @@ function ClickableBadge() {
           }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             e.stopPropagation();
             onRemove();
           }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -216,6 +256,7 @@ function ClickableBadge() {
   );
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   ),;}
@@ -248,3 +289,9 @@ onRemove && "pl-2.5 pr-1.5 py-1";
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

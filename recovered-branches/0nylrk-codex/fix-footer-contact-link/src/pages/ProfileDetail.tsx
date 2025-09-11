@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -15,6 +19,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Badge} from "@/components/ui/badge";
 import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe} from "lucide-react";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
@@ -63,6 +68,11 @@ export default function ProfileDetail() {
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+=======
+export default function ProfileDetail() {;
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
@@ -78,6 +88,7 @@ export default function ProfileDetail() {
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
 =======
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
@@ -115,11 +126,19 @@ export default function ProfileDetail() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          .single();
+          .single(),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (error) {
           throw new Error(error.message)
         }
         if (!data) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setError("Profile not found."),
           return
         }
@@ -133,6 +152,7 @@ export default function ProfileDetail() {;
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -260,15 +280,23 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    fetchProfile()
+  }, [profileId]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
 
     fetchProfile()
   }, [profileId]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -289,12 +317,16 @@ if ( {) {
         <p>Profile not found.</p>
       </div>
     )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -351,6 +383,7 @@ export default function ProfileDetail() {;
         }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
       } finally {
         setIsLoading (false);
       }
@@ -358,12 +391,16 @@ export default function ProfileDetail() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setProfileData(data);
       } catch (err: any) {;
         setError(err && err.message || "Failed to fetch profile."),;
         toast({;
           title: "Error",;
           description: err && err.message || "Failed to fetch profile.",;
+<<<<<<< HEAD
 <<<<<<< HEAD
         setProfileData(data);
       } catch (err: any) {;
@@ -373,10 +410,13 @@ export default function ProfileDetail() {;
           description: err.message || "Failed to fetch profile.",;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     },;
     fetchProfile();
@@ -384,6 +424,8 @@ export default function ProfileDetail() {;
   if (isLoading) {;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
 
     fetchProfile();
@@ -392,30 +434,40 @@ export default function ProfileDetail() {;
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="min-h-screen flex items-center justify-center">;
         <p>Loading profile...</p>;
       </div>;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (error) {;
     return (
 ;
   if (error) {;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (error) {;
 
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="min-h-screen flex items-center justify-center">;
         <p>Error: {error}</p>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!profileData) {;
     return (
@@ -423,17 +475,23 @@ export default function ProfileDetail() {;
   if (!profileData) {;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (!profileData) {;
 
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
         description={profileData.bio || "Check out this talent's profile on Zion!"}
 
@@ -451,21 +509,34 @@ export default function ProfileDetail() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <SEO
 
         title={`${profileData.full_name} | Zion AI Marketplace`}
+<<<<<<< HEAD
 
         description={profileData.bio || "Check out this talent's profile on Zion!"}
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        description={profileData.bio |"Check out this talent's profile on Zion!"}
+        description={profileData.bio || "Check out this talent's profile on Zion!"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -510,6 +581,7 @@ export default function ProfileDetail() {;
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>
                   )}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -599,6 +671,8 @@ export default function ProfileDetail() {;
                 </div>;
               </CardHeader>;
               <CardContent>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </CardContent>
             </Card>
@@ -606,11 +680,17 @@ export default function ProfileDetail() {;
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -654,6 +734,7 @@ export default function ProfileDetail() {;
               </CardContent>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="flex flex-wrap gap-4 text-sm">;
                   {profileData.location && (;
                     <div className="flex items-center text-zion-slate-light">;
@@ -678,11 +759,16 @@ export default function ProfileDetail() {;
 ;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
                 </div>;
               </CardContent>;
             </Card>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -690,16 +776,22 @@ export default function ProfileDetail() {;
               </CardHeader>;
               <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>;
               </CardContent>;
             </Card>;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
               </CardContent>;
             </Card>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -708,26 +800,35 @@ export default function ProfileDetail() {;
               <CardContent>;
                 <div className="flex flex-wrap gap-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {profileData.skills?.map((skill:string, index:number) => (;
 =======
                   {profileData && profileData.skills?.map((skill: string, index: number) => (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  {profileData && profileData.skills?.map((skill: string, index: number) => (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>;
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>;
               </CardHeader>;
               <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {profileData.experience ? (;
                   profileData.experience.map((exp:any, index:number) => (;
@@ -744,6 +845,8 @@ export default function ProfileDetail() {;
             </Card>;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {profileData && profileData.experience ? (;
                   profileData && profileData.experience.map((exp: any, index: number) => (;
                     <div key={index} className="mb-4">;
@@ -760,13 +863,17 @@ export default function ProfileDetail() {;
             </Card>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">Portfolio</CardTitle>;
               </CardHeader>;
               <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
@@ -780,6 +887,14 @@ export default function ProfileDetail() {;
                       <a
                         key={index}
                         href={link.url}
+=======
+                {profileData && profileData.portfolio_links ? (;
+                  <div className="flex flex-col gap-3">;
+                    {profileData && profileData.portfolio_links.map((link: any, index: number) => (;
+                      <a
+                        key={index}
+                        href={link && link.url}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
@@ -801,6 +916,7 @@ export default function ProfileDetail() {;
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
 =======
                 {profileData && profileData.portfolio_links ? (;
                   <div className="flex flex-col gap-3">;
@@ -832,10 +948,13 @@ export default function ProfileDetail() {;
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
               talentProfile={{
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
+<<<<<<< HEAD
                 {profileData.portfolio_links ? (;
                   <div className="flex flex-col gap-3">;
                     {profileData.portfolio_links.map((link:any, index:number) => (;
@@ -926,10 +1045,14 @@ export default function ProfileDetail() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
+<<<<<<< HEAD
 <<<<<<< HEAD
               }}
             />
@@ -980,6 +1103,8 @@ export default function ProfileDetail() {;
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
             />;
             {/* Contact Information */}
@@ -1006,7 +1131,12 @@ export default function ProfileDetail() {;
                     </a>;
                   </div>;
                 )}
+<<<<<<< HEAD
 
+=======
+              </div>
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
 
@@ -1172,14 +1302,20 @@ export default function ProfileDetail() {;
                   </a>)}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {profileData.linkedin_url && (
                   <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>
                 )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>
                 )}
               </div>
@@ -1193,18 +1329,23 @@ export default function ProfileDetail() {;
 }
                   </Link>
                 )}
+<<<<<<< HEAD
 =======
 
                   </Link>
                 )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   ),; import {
@@ -1283,3 +1424,11 @@ try {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    </>);
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

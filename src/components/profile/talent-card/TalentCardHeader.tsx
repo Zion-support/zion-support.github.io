@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { BadgeCheck } from 'lucide-react'
 import { TalentCardAvatar } from "./TalentCardAvatar";
@@ -15,6 +16,12 @@ yearsExperience
 }: TalentCardHeaderProps) {
   return (
     <div className='flex items-start gap-4 mb-4'>
+=======
+yearsExperience
+}: TalentCardHeaderProps) {
+  return (
+    <div className="flex items-start gap-4 mb-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
 
 export function TalentCardHeader(): any ({;
@@ -33,6 +40,7 @@ export function TalentCardHeader(): any ({;
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function TalentCardHeader({
   fullName
@@ -79,6 +87,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       <div className="flex-1">
         <div className="flex items-center justify-between">
@@ -86,6 +96,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             {fullName}
             {/* AI score could be used for verification badge */}
+<<<<<<< HEAD
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
@@ -142,6 +153,16 @@ export function TalentCardHeader({;
             )}
           </h3>;
 =======
+=======
+            {yearsExperience > 5 && (;
+              <BadgeCheck
+                className='h-4 w-4 text-zion-cyan'
+                aria-label='Verified Expert'
+              />;
+            )}
+
+          </h3>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>;
   );
@@ -151,7 +172,10 @@ export function TalentCardHeader({;
 }
           </h3>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
@@ -159,6 +183,7 @@ export function TalentCardHeader({;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -203,3 +228,5 @@ function TalentCardHeader() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

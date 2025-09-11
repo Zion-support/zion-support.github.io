@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  * 
@@ -24,6 +25,8 @@ const createProcessObject = () => ({
 })
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:
@@ -50,8 +53,13 @@ export const safeEnv = {
 export function getEnv(key: string, defaultValue = ''): string {
   if (
     typeof (globalThis as any).process !== 'undefined' &&
+<<<<<<< HEAD
     (globalThis as any).process && process.env &&
     typeof (globalThis as any).process && process.env[key] === 'string'
+=======
+    (globalThis as any).process.env &&
+    typeof (globalThis as any).process.env[key] === 'string'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ) {
 
     return (globalThis as any).process && process.env[key];
@@ -67,7 +75,11 @@ export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production'
 
 // Export the polyfilled process object
+<<<<<<< HEAD
 export const processEnv =
+=======
+export const processEnv = null;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process && process.env
 /**;
@@ -83,6 +95,7 @@ const default_env = {
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
 }
+<<<<<<< HEAD
   NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
@@ -94,10 +107,16 @@ const default_env = {
 // Create a safe process object
 const createProcessObject = () => ({
   env: { ...defaultEnv },
+=======
+// Create a safe process object;
+const createProcessObject = () =>: any ({
+  env: { ...default_env },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   versions: {},
   platform: 'browser',
   arch: 'x64',
   version: '18.0.0',
+<<<<<<< HEAD
   browser: true}),
 
   browser: true,
@@ -112,6 +131,9 @@ if (typeof globalThis !== 'undefined') {
   } else if (typeof (globalThis as any).process.env === 'undefined') {
 export default safeEnv
 export default safeEnv
+=======
+  browser: true,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 });
 // Ensure process is available on global_this;
 // Check condition
@@ -181,6 +203,11 @@ export const process_env =;
         NEXT_PUBLIC_SUPABASE_URL: ''
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
       }
+<<<<<<< HEAD
+=======
+console.log('✅ Environment polyfill loaded successfully')
+export default safeEnv
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 console && console.log('✅ Environment polyfill loaded successfully');
 
@@ -238,6 +265,7 @@ export function isProduction(): boolean {
 
 export default safeEnv;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     (globalThis as any).process.env = { ...defaultEnv } }
 }//Ensure process is available on window
@@ -363,13 +391,19 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 export default safeEnv;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 console.log ('✅ Environment polyfill loaded successfully');
 export default safe_env;
 export default safe_env;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default safe_env;
 =======
 export default safe_env;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default safe_env;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

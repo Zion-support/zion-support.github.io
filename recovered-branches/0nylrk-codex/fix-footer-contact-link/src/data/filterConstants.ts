@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const COMMON_SKILLS = [
   'Machine Learning',
   'Python',
@@ -15,6 +16,10 @@ export const COMMON_SKILLS = [
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -30,7 +35,10 @@ export const COMMON_SKILLS = [
   'TensorFlow',];
 // Regions
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 // Common skills for filtering;
 export const COMMON_SKILLS = [;
@@ -53,6 +61,7 @@ export const COMMON_SKILLS = [
 ;
 // Regions;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const REGIONS = [  "Machine Learning";
@@ -184,6 +193,8 @@ export const COMMON_SKILLS = [
 ;
 // Regions;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const REGIONS = [  "Machine Learning";
   "Python";
   "JavaScript";
@@ -201,6 +212,7 @@ export const REGIONS = [  "Machine Learning";
   "South America";
   "Middle East";
 
+<<<<<<< HEAD
 
 =======
 
@@ -213,6 +225,8 @@ export const REGIONS = [  "Machine Learning";
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Common skills for filtering
 export const COMMON_SKILLS = [
   "Machine Learning",
@@ -228,6 +242,10 @@ export const COMMON_SKILLS = [
   "TensorFlow"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

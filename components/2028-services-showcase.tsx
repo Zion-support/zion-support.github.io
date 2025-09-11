@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,16 +9,22 @@ import Head from 'next/head';
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   CheckCircle
@@ -49,6 +56,11 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   CheckCircle,
   ArrowRight,
@@ -78,11 +90,14 @@ import {
   Gamepad2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   CheckCircle,
   ArrowRight,
   Star,
@@ -107,6 +122,7 @@ import {
   Factory,
   Camera,
   Video,
+<<<<<<< HEAD
 <<<<<<< HEAD
   Music,
   Gamepad2,} from 'lucide-react';import {
@@ -224,15 +240,27 @@ export default function ServicesShowcase2028() {_return (_<>
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  Music,;
+  Gamepad2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
  } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -264,13 +292,18 @@ import { motion } from 'framer-motion';
 
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -454,11 +487,16 @@ export default function ServicesShowcase2028() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Hero Section */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
                 <span>View Pricing</span>;
                 <DollarSign className='w-5 h-5' />              </Link>;
@@ -483,6 +521,7 @@ export default function ServicesShowcase2028() {
               <Link
                 href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">50+</div>
@@ -493,6 +532,12 @@ export default function ServicesShowcase2028() {
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
+=======
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2">;
+                <span>Get Started</span>;
+                <ArrowRight className="w-5 h-5" />;
+              </Link>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link
                 href="/revolutionary-2028-pricing"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
@@ -530,6 +575,7 @@ export default function ServicesShowcase2028() {
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
 
+<<<<<<< HEAD
               </Link>
             </div>
 
@@ -546,23 +592,34 @@ export default function ServicesShowcase2028() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2">;
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2">;
                 <span>View Pricing</span>;
                 <DollarSign className="w-5 h-5" />;
               </Link>;
             </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Stats */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>;
               <div className='text-center'>;
@@ -597,19 +654,26 @@ export default function ServicesShowcase2028() {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Services Categories */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Services Categories */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Explore Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Service Categories</span>
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
 Discover our comprehensive range of futuristic services designed to transform your business
@@ -633,6 +697,9 @@ Discover our comprehensive range of futuristic services designed to transform yo
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Discover our comprehensive range of futuristic services designed to transform your business
               and propel you into the future of technology.
@@ -663,15 +730,21 @@ Discover our comprehensive range of futuristic services designed to transform yo
               <motion&& motion.div
                 key={category && category.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: 'from - red - 600 to - pink - 600',
     services: futuristic2028Services;
@@ -882,10 +955,23 @@ function ServicesShowcase2028() {
                       <category.icon className='w - 8 h - 8 text - white' />;
                     </div>;
                     <h3 className='text - 2xl font - bold text - white mb - 3'>;
+=======
+                className='group relative'
+                <div className='relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                  <div className='relative z-10'>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <category.icon className='w-8 h-8 text-white' />
+                    </div>
+                    <h3 className='text-2xl font-bold text-white mb-3'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {category.title}
                     </h3>
                     <p className='text-purple-300 mb-6'>
                       {category.description}
+<<<<<<< HEAD
                 <div className='relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>;
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>;
                   <div className='relative z-10'>;
@@ -936,17 +1022,37 @@ function ServicesShowcase2028() {
                     <h3 className="text-2xl font-bold text-white mb-3">{category.title}</h3>
                     <p className="text-purple-300 mb-6">{category.description}</p>
                     <div className="space-y-3 mb-6">
+=======
+                    </p>
+                    <div className='space-y-3 mb-6'>
+                      {category.services.slice(0, 3).map(service => (
+                        <div
+                          key={service.id}
+                          className='flex items-center space-x-3'
+                        >
+                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
+                          <span className='text-purple-200 text-sm'>
+                            {service.name}
+                          </span>                        </div>                    <div className="space-y-3 mb-6">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {category.services.slice(0, 3).map((service) => (
                         <div key={service.id} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      ))}
+                    </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       ))}
                     </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                         </div>
 
@@ -955,18 +1061,24 @@ function ServicesShowcase2028() {
 
                     <Link
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Link
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
                     >
                       <span>Explore More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
@@ -1121,13 +1233,22 @@ function ServicesShowcase2028() {
                       </div>;
                       <div className='text-sm text-purple-300'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Link>
                   </div>
                 </div>
               </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </div>;
@@ -1138,7 +1259,10 @@ function ServicesShowcase2028() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Featured Services */}
 
@@ -1149,12 +1273,16 @@ function ServicesShowcase2028() {
                 viewport={{ once: true }}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <span className='font-medium'>Market Size:</span>{' '}
                         {service && service.marketSize}
                       </div>;
                       <div className='text-sm text-purple-300'>;
                         <span className='font-medium'>Growth Rate:</span>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="group relative"
               >
@@ -1225,11 +1353,16 @@ function ServicesShowcase2028() {
                           {service.setupTime}
                         </div>                      </div>              >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 className="group relative"
               >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
@@ -1262,10 +1395,15 @@ function ServicesShowcase2028() {
                     <div className='flex items-center justify-between'>;
                       <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         href={service.link}
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
@@ -1280,11 +1418,28 @@ function ServicesShowcase2028() {
                 </div>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1305,6 +1460,7 @@ function ServicesShowcase2028() {
               Understand the market dynamics and growth potential of our futuristic services.
             </p>
           </div>
+<<<<<<< HEAD
 
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Insights;
@@ -1429,9 +1585,16 @@ Our services target markets with exponential growth potential
 
 =======
 =======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Market Analysis */}
@@ -1472,6 +1635,13 @@ Our services target markets with exponential growth potential
               <div className="text-purple-300">Average Annual Growth</div>
             </motion.div>
 =======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.6 }}
+              viewport={{ once: true }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
@@ -1496,11 +1666,15 @@ Our services target markets with exponential growth potential
             </motion && motion.div>;
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
@@ -1535,6 +1709,8 @@ Combined market size of our service categories exceeds
               <div className="text-blue-300">Total Addressable Market</div>
             </motion.div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'>;
@@ -1559,11 +1735,15 @@ Combined market size of our service categories exceeds
             </motion && motion.div>;
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
@@ -1662,6 +1842,8 @@ First-to-market solutions with proprietary technology
               </div>
               <div className="flex items-center space-x-2">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {/* CTA Section */}
@@ -1672,12 +1854,16 @@ First-to-market solutions with proprietary technology
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1694,10 +1880,19 @@ First-to-market solutions with proprietary technology
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='space-y-8'
 =======
@@ -1713,10 +1908,21 @@ First-to-market solutions with proprietary technology
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            className='space-y-8'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Transform
               </span>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
               Your Business?
             </h2>
@@ -1727,6 +1933,8 @@ First-to-market solutions with proprietary technology
             </p>
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               Your Business?;
             </h2>;
@@ -1738,7 +1946,10 @@ First-to-market solutions with proprietary technology
 
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link
                 href='/contact'
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2'
@@ -1748,6 +1959,7 @@ First-to-market solutions with proprietary technology
               </Link>
               <Link
                 href='/case-studies'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
               >
@@ -1775,11 +1987,18 @@ First-to-market solutions with proprietary technology
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
               Understand the market dynamics and growth potential of our futuristic services.;
@@ -1926,6 +2145,7 @@ First-to-market solutions with proprietary technology
       <UltraFuturisticFooter2028 />;
     </>);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <UltraFuturisticFooter2028 />
     </>
@@ -1957,3 +2177,11 @@ First-to-market solutions with proprietary technology
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <UltraFuturisticFooter2028 />
+  );
+=======
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

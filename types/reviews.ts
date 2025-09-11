@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -16,12 +17,18 @@ export type ReviewCategoryScores = {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 },;
 export type Review = {;
@@ -32,12 +39,16 @@ export type Review = {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type Review = {
   id: string;
   projectId: string;
   fromRole: ReviewRole;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   fromId: string; // clientId or talentSlug depending on fromRole
@@ -59,10 +70,16 @@ export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
   toId: string, // target id (talentSlug or clientId);
   rating: number, // 1-5;
+<<<<<<< HEAD
   text: string;
   categories?: ReviewCategoryScores;
   anonymous?: boolean;
@@ -73,11 +90,16 @@ export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   reports?: { reason: string, reportedAt: string }[],;
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type PublicReview = Omit<Review 'fromId'> & { authorName: string },;
 export type ReviewsSummary = {;
@@ -89,14 +111,22 @@ export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type ProjectStatus = 'InProgress' | 'Completed',
 export type Project = {
   id: string,
@@ -137,9 +167,13 @@ export type ReviewsSummary = {
   totalCompletedProjects: number,
   most_recent: PublicReview[];
 
+<<<<<<< HEAD
 
   mostRecent: PublicReview[];
 
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 <<<<<<< HEAD

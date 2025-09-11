@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 size: 'A4', margin: 50;
 });
 // Zion certificate template (simple) doc && doc.rect (0, 0, doc && doc.page.width, doc && doc.page.height) .fill ('#0f172a');
@@ -254,6 +255,8 @@ const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const doc = new PDFDocument ({
   size: 'A4', margin: 50
@@ -291,7 +294,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
     // Pipe to response
     // @ts-ignore
+<<<<<<< HEAD
     doc.pipe(res);
+=======
+    doc && doc.pipe(res);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Zion certificate template (simple)
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
     doc.fill('#ffffff');
@@ -343,9 +350,25 @@ function readJson(p: string) {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+=======
+
+  }
+}
+=======
+
+    doc.end()
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 ;
@@ -401,6 +424,7 @@ export default function handler(req, res) {
     doc.moveDown(2),
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
     doc.end()
+<<<<<<< HEAD
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
   }
@@ -435,3 +459,11 @@ export default function handler(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
+  }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

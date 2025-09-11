@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
@@ -79,6 +80,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Strongly Recommended": return "bg-green-100 text-green-800",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+// Get suggestion color
+  const getSuggestionColor = (suggestion: string | undefined,) => {
+    switch (suggestion) {
+      case "Strongly Recommended": return "bg-green-100 text-green-800"
+      case "Strongly Recommended": return "bg-green-100 text-green-800",
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
@@ -86,12 +95,15 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       default:
         return "bg-gray-100 text-gray-800"
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     }
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -136,6 +148,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         'trigger_resume_scoring'
         { application_id: application.id }
 <<<<<<< HEAD
+<<<<<<< HEAD
       )
       if (error) throw error
       toast.success("Resume scoring has been initiated")
@@ -146,6 +159,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      )
+      if (error) throw error
+      toast.success("Resume scoring has been initiated")
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ),
       
       if (error) throw error,
@@ -153,10 +171,13 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       toast.success("Resume scoring has been initiated"),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0
       const maxAttempts = 10
@@ -168,6 +189,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
           setIsScoring(false)
           toast.error("Failed to check scoring status")
@@ -210,6 +232,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     }
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface ApplicationScoreCardProps {;
   application: JobApplication,;
@@ -291,15 +315,24 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           setIsScoring(false),
           toast.error("Failed to check scoring status"),
           return;
+<<<<<<< HEAD
 
         }
         if (data.scored_at) {
 
+=======
+        }
+        if (data.scored_at) {
+          setIsScoring(false)
+          toast.success("Resume scoring completed")
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
 
         }
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
@@ -412,18 +445,37 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
 
         }
 
+=======
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
+          setIsScoring(false)
+          toast.info("Scoring is taking longer than expected. Check back later.")
+        }
+      }
+      setTimeout(checkScore, 3000)
+    } catch (error: any) {
+      setIsScoring(false)
+      toast.error(`Failed to score resume: ${error.message}`)
+    }
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   // Render the score result or button to score
@@ -435,6 +487,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       setTimeout(checkScore, 3000);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      setTimeout(checkScore, 3000);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error: any) {;
       setIsScoring(false),;
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
@@ -443,6 +500,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   // Render the score result or button to score;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       // Call the trigger_resume_scoring function;
@@ -501,10 +559,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <CardTitle className="text-lg font-medium flex items-center justify-between">;
           Resume Match Score;
+<<<<<<< HEAD
 <<<<<<< HEAD
           </Badge>;
         </CardTitle>;
@@ -516,6 +577,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardHeader>;
       ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
             {hasScore ? "SCORED" : "NOT SCORED"}
 
@@ -523,7 +586,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardTitle>;
       </CardHeader>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <CardContent>;
         {hasScore ? (;
           <div>;
@@ -535,6 +601,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div>;
                 <div className="text-sm text-muted-foreground">Match Score</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="font-semibold text-xl">{application.match_score}/100</div>;
               </div>;
             </div>;
@@ -543,6 +610,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-start mb-4">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
               </div>;
             </div>;
@@ -550,11 +619,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             {/* Summary */}
             <div className="flex items-start mb-4">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <BarChart2 className="h-5 w-5 text-primary" />;
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Summary</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Suggestion */}
             <div className="flex items-start">;
@@ -567,6 +640,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="font-medium">{application && application.match_summary}</div>;
               </div>;
             </div>;
@@ -575,11 +650,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             {/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Lightbulb className="h-5 w-5 text-primary" />;
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Suggestion</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Badge className={getSuggestionColor(application.match_suggestion)}>;
                   {application.match_suggestion}
@@ -587,14 +666,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Badge className={getSuggestionColor(application && application.match_suggestion)}>;
                   {application && application.match_suggestion}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <Badge className={getSuggestionColor(application && application.match_suggestion)}>;
+                  {application && application.match_suggestion}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Badge>;
                 {scoredDate && (;
                   <div className="text-xs text-muted-foreground mt-1">;
                     Scored on {scoredDate}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
             </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 )}
 
@@ -602,7 +688,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Breakdown (Collapsible) */}
             {application && application.match_breakdown && (;
               <div className="mt-4 pt-4 border-t">;
@@ -627,6 +716,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     )}
@@ -710,6 +800,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     
                     {application.match_breakdown.experience_match && (
                       <div>
@@ -892,21 +984,35 @@ if ( {) {
 
 
                     )}
+<<<<<<< HEAD
 
                     )}
                     
                     {application.match_breakdown.education_match && (
+=======
+                    
+                    {application.match_breakdown.education_match && (
+                      <div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
                       </div>;
                     )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {application && application.match_breakdown.experience_match && (;
                       <div>;
                         <p className="font-medium">Experience Match: {application && application.match_breakdown.experience_match && experience_match.score}/100</p>;
                         <p>{application && application.match_breakdown.experience_match && experience_match.analysis}</p>;
                       </div>;
                     )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {application && application.match_breakdown.certifications_match && (;
                       <div>;
                         <p className="font-medium">Certifications Match: {application && application.match_breakdown.certifications_match && certifications_match.score}/100</p>;
@@ -918,12 +1024,17 @@ if ( {) {
                         )}
                       </div>;
                     )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {application && application.match_breakdown.education_match && (;
                       <div>;
                         <p className="font-medium">Education Match: {application && application.match_breakdown.education_match && education_match.score}/100</p>;
                         <p>{application && application.match_breakdown.education_match && education_match.analysis}</p>;
                       </div>;
                     )}
+<<<<<<< HEAD
                   </div>;                )}
               </div>;
             </div>;
@@ -972,10 +1083,13 @@ if ( {) {
                         <p className="font-medium">Education Match:{application.match_breakdown.education_match.score}/100</p>;
                         <p>{application.match_breakdown.education_match.analysis}</p>;
                       </div>;                    )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 </details>;
               </div>;
             )}
+<<<<<<< HEAD
                     {application.match_breakdown.certifications_match && (
                       <div>
                         <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>
@@ -1016,6 +1130,19 @@ if ( {) {
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
+=======
+
+          </div>;
+        ) : (;
+          <div className="text-center py-4">;
+            <p className="text-muted-foreground mb-4">;
+              Analyze how well this resume matches your job requirements.;
+            </p>;
+
+            <Button
+              onClick = {handleScore,}
+              disabled = {isScoring,}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="w-full">;
               {isScoring ? (;
                 <>;
@@ -1044,6 +1171,7 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume"
+<<<<<<< HEAD
           </div>;
         ) :(;
           <div className="text-center py-4">;
@@ -1081,6 +1209,18 @@ if ( {) {
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              )}
+            </Button>;
+          </div>;
+        )}
+
+      </CardContent>;
+    </Card>;
+  );
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}
                     {application.match_breakdown.education_match && (
@@ -1112,6 +1252,7 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
   ),; interface ApplicationScoreCardProps {;
   application: JobApplication;
 onScoreUpdated?: (updatedApplication: JobApplication) => void ;
@@ -1189,3 +1330,7 @@ return ;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

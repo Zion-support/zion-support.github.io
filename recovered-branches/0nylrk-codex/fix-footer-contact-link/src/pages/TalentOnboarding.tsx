@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +27,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {TalentOnboardingForm} from "@/components/profile/TalentOnboardingForm";
 import {Header} from "@/components/Header";
@@ -35,13 +41,17 @@ export default function TalentOnboarding() {;
   const { user, isLoading } = useAuth();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // If not authenticated, redirect to login
@@ -62,10 +72,16 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 export default function TalentOnboarding() {
   const { user, isLoading } = useAuth(),
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return (
     <>
@@ -85,6 +101,7 @@ export default function TalentOnboarding() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 
 
 }
@@ -96,6 +113,9 @@ export default function TalentOnboarding() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",;
 import { Header } from "@/components/Header",;
@@ -110,6 +130,7 @@ export default function TalentOnboarding() {;
   }
 ;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   return (
@@ -139,6 +160,9 @@ export default function TalentOnboarding() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <Header />;
       <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
@@ -147,7 +171,10 @@ export default function TalentOnboarding() {;
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Talent Network</h1>;
             <p className="text-zion-slate-light max-w-2xl mx-auto">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from './react';
 import { TalentOnboardingForm } from '@/components / profile / TalentOnboardingForm';
@@ -177,21 +204,30 @@ if ( {) {
             <h1 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">Join Our Talent Network</h1>;
             <p className="text - zion - slate - light max - w-2xl mx - auto">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Showcase your skills to top clients and employers. Create a professional profile;
               to get discovered for AI and tech projects on the Zion Marketplace.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <TalentOnboardingForm />;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   ); export default function TalentOnboarding () {
@@ -219,3 +255,11 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    </>);
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   id: string;
@@ -38,21 +42,28 @@ import { ServiceVariant } from '../types/service-variants';
     website: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
   market_advantage: string;
 ;
@@ -635,6 +646,8 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     },;
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   market_advantage: string;
 ;
@@ -645,6 +658,7 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     features: [
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
@@ -693,6 +707,12 @@ const contact = {
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    features: [
+      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
+      'Advanced pattern recognitionCustom neuromorphic algorithms'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
     variant: 'ai-futuristic', contactInfo: contact
     realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
@@ -700,9 +720,13 @@ const contact = {
     rating: 4.8, reviews: 34
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+<<<<<<< HEAD
   }
 ];
 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEmergingTechService {;
   id: string,;
@@ -764,6 +788,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     period: '/month',;
     description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.',;
     features: [;
+<<<<<<< HEAD
       'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR, web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware',;
       'Custom avatar and environment creationE-commerce integration for virtual stores';
     ],;
@@ -1048,5 +1073,16 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'],;
     capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
+=======
+=======
+      'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications';
+      'Advanced pattern recognition_custom neuromorphic algorithms';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ];
+
+    popular: true, icon: '🧠',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

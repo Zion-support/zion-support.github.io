@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {
   Table;
@@ -19,6 +20,9 @@ import {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -31,10 +35,15 @@ export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import {
   Table,
@@ -51,30 +60,40 @@ import {
   DialogHeader,
   DialogTitle,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -82,6 +101,11 @@ export function TeamManagement() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Mock team members data
 
   const teamMembers = [
@@ -123,16 +147,22 @@ export function TeamManagement() {
       return
     }
     toast({
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: "Invitation sent"
       description: `An invitation has been sent to ${newMemberEmail}`})
     setNewMemberEmail("");
     setIsAddingMember(false)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -141,15 +171,19 @@ export function TeamManagement() {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed"
       description: "The team member has been removed from your workspace."})
+<<<<<<< HEAD
 
 
   },
@@ -162,11 +196,17 @@ export function TeamManagement() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
       description: `A new invitation has been sent to ${memberEmail}`})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -349,6 +389,12 @@ export function TeamManagement() {;
 
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Team Members</h3>;
@@ -357,7 +403,10 @@ export function TeamManagement() {;
             <Button className="gap-2">;
               <UserPlus className="h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React, { useState } from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -447,12 +496,16 @@ if ( {) {
             <Button className="gap - 2">;
               <UserPlus className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Add Team Member;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <DialogTitle>Add Team Member</DialogTitle>;
 =======
@@ -460,10 +513,16 @@ if ( {) {
               <DialogTitle > Add Team Member</DialogTitle>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <DialogTitle > Add Team Member</DialogTitle>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an email with instructions.;
               </DialogDescription>;
             </DialogHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -546,6 +605,8 @@ if ( {) {
                           .split(" ")
                           .map((n) => n[0])
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">;
 =======
@@ -553,7 +614,10 @@ if ( {) {
               <div className="grid grid - cols - 4 items - center gap - 4">;
                 <Label html_for="email" className="text - right">;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           .join("")}
                       </span>
                     </div>
@@ -591,9 +655,12 @@ if ( {) {
                         size="sm"
                         className="text-destructive hover:text-destructive"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import {;
   Table,;
@@ -699,18 +766,23 @@ export function TeamManagement() {;
               <div className="grid grid-cols-4 items-center gap-4">;
                 <Label htmlFor="email" className="text-right">;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="grid gap-4 py-4">;
               <div className="grid grid-cols-4 items-center gap-4">;
                 <Label htmlFor="email" className="text-right">;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Email;
                 </Label>;
                 <Input;
                   id="email";
                   type="email";
                   placeholder="colleague@company.com";
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="col-span-3";
                   value={newMemberEmail}
@@ -720,6 +792,8 @@ export function TeamManagement() {;
               <div className="grid grid-cols-4 items-center gap-4">;
                 <Label htmlFor="role" className="text-right">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="col - span - 3";
                   value={newMemberEmail}
                   on_change={(e) => setNewMemberEmail (e.target.value)}
@@ -727,11 +801,15 @@ export function TeamManagement() {;
               </div>;
               <div className="grid grid - cols - 4 items - center gap - 4">;
                 <Label html_for="role" className="text - right">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Role;
                 </Label>;
                 <select;
                   id="role";
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
                   className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
@@ -741,6 +819,11 @@ export function TeamManagement() {;
                 >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  className="col - span - 3 flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50";
+                >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <option value="admin">Admin</option>;
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
@@ -750,22 +833,29 @@ export function TeamManagement() {;
             </div>;
             <DialogFooter>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Button variant="outline" onClick={() => setIsAddingMember(false)}>;
                 Cancel;
               </Button>;
               <Button onClick={handleAddMember}>Send Invitation</Button>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <Button variant="outline" on_click={() => setIsAddingMember (false)}>;
                 Cancel;
               </Button>;
               <Button on_click={handleAddMember}>Send Invitation</Button>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       <div className="rounded-md border">;
@@ -797,6 +887,8 @@ export function TeamManagement() {;
                       <div className="text-sm text-muted-foreground">
                         {member.email}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className="rounded - md border">;
         <Table>;
@@ -827,13 +919,19 @@ export function TeamManagement() {;
                       <div className="text - sm text - muted - foreground">;
                         {member.email}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </TableBody>;
         </Table>;
@@ -843,19 +941,26 @@ export function TeamManagement() {;
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
                     variant={member.status === "active" ? "default" : "outline"}
+<<<<<<< HEAD
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
                     variant={member.status === "active" ? "default" :"outline"}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     {member.status}
                   </Badge>;
                 </TableCell>;
+<<<<<<< HEAD
                   >;
                     {member.status}
 <<<<<<< HEAD
@@ -881,6 +986,8 @@ export function TeamManagement() {;
 =======
                   </Badge>;
                 </TableCell>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <TableCell>{member.last_active}</TableCell>;
                 <TableCell className="text - right">;
                   <div className="flex justify - end gap - 2">;
@@ -892,7 +999,10 @@ export function TeamManagement() {;
                         className="text-destructive hover:text-destructive";
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />
@@ -907,6 +1017,7 @@ export function TeamManagement() {;
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <TableCell>{member.lastActive}</TableCell>;
                 <TableCell className="text-right">;
@@ -986,3 +1097,7 @@ setIsAddingMember (false);
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -5,6 +5,7 @@ import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
 <<<<<<< HEAD
+<<<<<<< HEAD
   apiKey: process.env.OPENAI_API_KEY |process.env.NEXT_PUBLIC_OPENAI_API_KEY
 });
 export default async function handler(
@@ -32,12 +33,17 @@ export default async function handler(
     "Ask & Call to Action"
   ];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
 
 });
 export default async function handler(
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   req: NextApiRequest,
@@ -50,11 +56,14 @@ export default async function handler(
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
   try {
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "Problem & Opportunity",
     "Solution & Product",
     "Market Size (TAM / SAM / SOM)",
@@ -67,12 +76,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     "Ask & Call to Action",
   ];
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -81,12 +95,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 Operator Prompt: ${operatorPrompt}
 Company Mission: ${inputs?.mission}
 Key Metrics: ${JSON && JSON.stringify(metrics)}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
     let content = "";
     try {
       const chat = await client && client.chat.completions && completions.create({
         model: "gpt-4o-mini",
         messages: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 Funding Stage: ${inputs?.funding_stage}
 Vision / Goals: ${inputs?.vision}
@@ -102,6 +120,9 @@ Return 10 sections with title and 120 - 180 words per section, markdown - friend
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             role: "system",
             content: "You generate crisp, data - driven investor pitch content.",
@@ -110,6 +131,7 @@ Return 10 sections with title and 120 - 180 words per section, markdown - friend
         ],
         temperature: 0 && 0.5,
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
     res && res.status(500).json({ error: e?.message || "Generation failed" });
   }
@@ -146,6 +168,20 @@ function extractSection(body: string, title: string): string {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    res && res.status(500).json({ error: e?.message || "Generation failed" });
+
+  }
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+function extractSection(body: string, title: string): string {
+  if (!body) return "";
+  // naive split by headings
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   if (matchIdx >= 0) {
     const snippet = lines && lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
@@ -155,7 +191,10 @@ function extractSection(body: string, title: string): string {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
   const lines = body.split('\n');
@@ -167,6 +206,11 @@ function extractSection(body: string, title: string): string {
   return ''
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -205,24 +249,36 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -262,8 +318,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

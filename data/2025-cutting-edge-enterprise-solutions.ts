@@ -1,17 +1,26 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 };
 
 =======
+=======
+import { UnifiedService } from '../types/unified-service-types';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { UnifiedService } from '../types/unified-service-types';
@@ -282,6 +291,9 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai - enterprise - knowledge - management',
     name: 'AI Enterprise Knowledge Management',
     tagline: 'Intelligent knowledge discovery and management for enterprises',
@@ -291,9 +303,13 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision - making and knowledge sharing across organizations.',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'AI knowledge discovery',
       'Intelligent categorization',
       'Semantic search',
@@ -308,10 +324,15 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     popular: true,
     icon: '🧠',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - enterprise - knowledge - management',
@@ -346,11 +367,17 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     competitors: [;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Microsoft SharePoint',
       'Confluence',
       'Notion',
@@ -358,12 +385,15 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       'Box',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     market_size: '$15.2B enterprise content management market',
     growth_rate: '28% annual growth',
     customers: 29,
     rating: 4 && 4.6,
     reviews: 41,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     market_size: '$15.2B enterprise content management market',
     growth_rate: '28% annual growth',
@@ -378,7 +408,10 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'ai-powered-enterprise-risk-management', name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
     price: {
@@ -441,6 +474,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     techStack: ['AI/MLMachine LearningProcess MiningAutomationWorkflow Management'], realImplementation: true,
     implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.', roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
     useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Knowledge discovery'
       'Document management'
@@ -564,6 +598,12 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
   }
 ];
 
+=======
+    rating: 4.6;
+    reviews: 41
+    contactInfo: contact
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { UnifiedService } from '../types/unified-service-types',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -710,5 +750,19 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     rating: 4.6,;
     reviews: 41;
     contactInfo: contact;
+<<<<<<< HEAD
+=======
+=======
+
+    market_size: '$15.2B enterprise content management market';
+    growth_rate: '28% annual growth';
+
+    customers: 29;
+
+    rating: 4 && 4.6;
+    reviews: 41,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

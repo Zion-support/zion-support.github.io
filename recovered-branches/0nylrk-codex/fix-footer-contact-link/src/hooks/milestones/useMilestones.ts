@@ -1,13 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -16,9 +22,13 @@ import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
 import {MilestoneStatus} from './types';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const use_milestones = (project_id?: string) =>: any {
   const { milestones, activities, is_loading, error, refetch } = useLoadMilestones (project_id);
   const { create_milestone, is_submitting: is_creating } = useCreateMilestone (project_id);
@@ -39,9 +49,13 @@ if (return null, ) {
   }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     milestones;
     activities;
@@ -50,6 +64,7 @@ if (return null, ) {
     is_submitting;
     create_milestone;
     updateMilestoneStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useMilestones = (projectId?: string) => {;
   const { milestones, activities, isLoading, error, refetch } = useLoadMilestones(projectId);
@@ -78,11 +93,14 @@ export const useMilestones = (projectId?: string) => {;
     refetch
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     update_milestone;
     delete_milestone;
     upload_deliverable: handleUploadDeliverable,
     refetch;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -92,6 +110,12 @@ export const useMilestones = (projectId?: string) => {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -126,6 +150,7 @@ export const useMilestones = (projectId?: string) => {;
     refetch;
 
 
+<<<<<<< HEAD
   }
 }
 ;
@@ -176,3 +201,9 @@ export const useMilestones = (projectId?:string) => {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

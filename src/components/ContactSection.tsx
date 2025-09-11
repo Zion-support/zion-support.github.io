@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: ""
@@ -194,6 +195,38 @@ fetch("/api/contact", {
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
 
+=======
+fetch("/api/contact", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(formData)})
+      .then(async (res) => {
+
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -203,13 +236,18 @@ fetch("/api/contact", {
         toast({
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
+<<<<<<< HEAD
 
 
 
@@ -219,6 +257,15 @@ fetch("/api/contact", {
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -240,39 +287,65 @@ fetch("/api/contact", {
                 </Link>
               </div>
             </div>
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+              Request Commercial Proposal
+            </Button>
           </div>
-        </div>
-
-        {/* Office Locations */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {officeLocations.map((office, index) => (<div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-3">
-                    <div className="text-white">
-                      {office.icon}
-                    </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>
+            <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">
+              <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
+                      Name
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      required
+                    />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                    )}
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white">{office.city}</h4>
-                    <p className="text-zion-slate-light text-sm">{office.country}</p>
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      required
+                    />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                    )}
                   </div>
                 </div>
-                <p className="text-zion-slate-light text-sm leading-relaxed">{office.address}</p>
-              </div>))}
-          </div>
-        </div>
-
-        {/* Support Features */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportFeatures.map((feature, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-white">
-                    {feature.icon}
-                  </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    Subject
+                  </label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    required
+                  />
+                  {errors.subject && (
+                    <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
@@ -281,6 +354,7 @@ fetch("/api/contact", {
                   <Textarea
                     id="message"
                     name="message"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     rows = {4,}
                     value = {formData.message,}
@@ -327,6 +401,47 @@ function ContactSection() {
   }>({});
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    rows = {4,}
+                    value = {formData.message,}
+                    onChange = {handleChange,}
+import { useState } from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/components/ui/use-toast",;
+import z from "zod",;
+import { Mail } from 'lucide-react';
+export function ContactSection() {;
+  const [formData, setFormData] = useState({;
+    name: "",;
+    email: "",;
+    subject: "",;
+    message: ""}),;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState<{;
+;
+export /**
+ * ContactSection - Function description
+ */
+function ContactSection() {
+  const [form_data, setFormData] = useState ({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""}),
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const [submitted, set_submitted] = useState (false);
+  const [errors, set_errors] = useState<{
+    name?: string;
+    email?: string;
+    subject?: string;
+    message?: string;
+  }>({});
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handle_change = (
     e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>) =>: any {
     const { name, value } = e.target;
@@ -355,27 +470,39 @@ function ContactSection() {
       <div className="max - w-7xl mx - auto">;
         <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
           initial = {
 =======
 
           initial = {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          initial = {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   { opacity: 0,
   coordinate_y: 20;
 }}
           whileInView = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   { opacity: 1,
   coordinate_y: 0;
 }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   { opacity: 1,
   coordinate_y: 0;
 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
           className="text - center mb - 16";
@@ -391,30 +518,44 @@ function ContactSection() {
           {contact_info.map ((contact, index)  => (
             <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
               key={index}
               initial = {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               key={index}
               initial = {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   { opacity: 0,
   coordinate_y: 20;
 }}
               whileInView = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   { opacity: 1,
   coordinate_y: 0;
 }}
               transition = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   { duration: 0.6,
   delay: index * 0.1;
 }}
@@ -490,6 +631,7 @@ if ( {) {
               <div>;
                 <p className="text - white font - semibold">Email Us</p>;
                 <a href="mailto:commercial@ziontechgroup.com" className="text - zion - cyan hover:text - zion - purple transition - colors">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from "react",;
@@ -622,10 +764,13 @@ export function ContactSection() {;
                 <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   commercial@ziontechgroup.com;
                 </a>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
@@ -633,10 +778,15 @@ export function ContactSection() {;
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Request Commercial Proposal;
             </Button>;
           </div>;
           <div className="relative">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>;
             <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">;
@@ -646,6 +796,8 @@ export function ContactSection() {;
                   <div>;
                     <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="absolute inset - 0 bg - gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 rounded - lg filter blur - 3xl opacity - 30"></div>;
             <div className="relative bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 8">;
@@ -656,12 +808,16 @@ export function ContactSection() {;
                     <label html_for="name" className="block text - sm font - medium text - zion - slate - light mb - 1" html_for="input-;
                       Name;
                     ">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Name;
                     </label>;
                     <Input;
                       id="name";
                       name="name";
+<<<<<<< HEAD
 <<<<<<< HEAD
                       value={formData.name}
                       onChange={handleChange}
@@ -678,6 +834,8 @@ export function ContactSection() {;
                   <div>;
                     <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       value = {form_data.name, }
                       on_change = {handle_change, }
                       className={`w - full rounded - md bg - zion - blue - dark border - zion - blue - light text - white ${errors.name ? 'border - red - 500 focus - visible:ring - red - 500' : ''}`}
@@ -690,13 +848,17 @@ export function ContactSection() {;
                     <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" html_for="input-;
                       Email;
                     ">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Email;
                     </label>;
                     <Input;
                       id="email";
                       name="email";
                       type="email";
+<<<<<<< HEAD
 <<<<<<< HEAD
                       value={formData.email}
                       onChange={handleChange}
@@ -714,6 +876,8 @@ export function ContactSection() {;
                 <div>;
                   <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       value = {form_data.email, }
                       on_change = {handle_change, }
                       className={`w - full rounded - md bg - zion - blue - dark border - zion - blue - light text - white ${errors.email ? 'border - red - 500 focus - visible:ring - red - 500' : ''}`}
@@ -727,12 +891,16 @@ export function ContactSection() {;
                   <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" html_for="input-;
                     Subject;
                   ">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Subject;
                   </label>;
                   <Input;
                     id="subject";
                     name="subject";
+<<<<<<< HEAD
 <<<<<<< HEAD
                     value={formData.subject}
                     onChange={handleChange}
@@ -749,6 +917,8 @@ export function ContactSection() {;
                 <div>;
                   <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     value = {form_data.subject, }
                     on_change = {handle_change, }
                     className={`w - full rounded - md bg - zion - blue - dark border - zion - blue - light text - white ${errors.subject ? 'border - red - 500 focus - visible:ring - red - 500' : ''}`}
@@ -761,12 +931,16 @@ export function ContactSection() {;
                   <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" html_for="input-;
                     Message;
                   ">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Message;
                   </label>;
                   <Textarea;
                     id="message";
                     name="message";
+<<<<<<< HEAD
 <<<<<<< HEAD
                     rows={4}
                     value={formData.message}
@@ -774,6 +948,9 @@ export function ContactSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -785,6 +962,7 @@ export function ContactSection() {;
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     disabled={isSubmitting}
                     rows={4}
@@ -809,16 +987,22 @@ export function ContactSection() {;
                   {submitted && (;
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>;
                   )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     disabled = {isSubmitting,}
                   >
                     disabled={isSubmitting}
                   >;
+<<<<<<< HEAD
 =======
 
                     disabled={isSubmitting}
                   >;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -832,12 +1016,18 @@ export function ContactSection() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </section>);
 }set_errors (field_errors);
 toast ({
@@ -861,6 +1051,7 @@ description: err.message;
 }</div> </form> </div> </div> </div> </div> </section>);
 }'"}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -933,3 +1124,6 @@ description: err.message;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

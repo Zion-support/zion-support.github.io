@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   LucideIcon
@@ -14,6 +15,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 export type BadgeKey =
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   LucideIcon,
   BadgeCheck,
@@ -34,8 +37,11 @@ export type BadgeKey =
   | 'featured_creator'
   | 'first_action'
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const badgeList: BadgeMeta[] = [
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   LucideIcon,
   BadgeCheck,
@@ -61,7 +67,10 @@ export interface BadgeMeta {
   color: string;
   bg: string;
 export const badge_list: BadgeMeta[] = [;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
   badgeList && badgeList.find(b => b && b.key === key);
@@ -69,6 +78,7 @@ export const getBadgeMeta = (key: BadgeKey) =>
   badgeList && badgeList.find((b) => b && b.key === key);
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   | 'monetized'
 export interface BadgeMeta {
@@ -135,6 +145,8 @@ export const getBadgeMeta = (key: BadgeKey) =>
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     key: 'first_listing',
     name: 'First Listing',
     description: 'Published your first product, service, or listing.',
@@ -163,6 +175,7 @@ export interface BadgeMeta {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const badgeList: BadgeMeta[] = [
     key: "first_listing",
@@ -211,12 +224,15 @@ export const badgeList: BadgeMeta[] = [
     icon: BadgeDollarSign,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const badgeList: BadgeMeta[] = [
   {
     key: "first_listing",
     name: "First Listing",
     description: "Published your first product, service, or listing.",
     icon: BadgeCheck,
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: "#8B5CF6",  // Vivid Purple
     bg: "#E5DEFF",     // Soft Purple
@@ -345,6 +361,8 @@ export const getBadgeMeta = (key: BadgeKey) =>;
 
   badge_list.find ((b) => b.key === key);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: '#8B5CF6', // Vivid Purple;
     bg: '#E5DEFF', // Soft Purple;
   },
@@ -389,5 +407,9 @@ export const getBadgeMeta = (key: BadgeKey) =>;
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find (boolean => b.key === key);
 export const getBadgeMeta = (key: BadgeKey) =>: any;
+<<<<<<< HEAD
   badge_list.find ((b) => b.key === key);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  badge_list.find ((b) => b.key === key);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

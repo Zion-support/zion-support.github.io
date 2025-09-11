@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
@@ -8,16 +9,24 @@ export function useFetchResume() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -34,18 +43,25 @@ export function useFetchResume() {;
       // If resumeId is provided, fetch that specific resume
       // Otherwise, fetch the user's active resume or most recent resume
 <<<<<<< HEAD
+<<<<<<< HEAD
 let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
       
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (resumeId) {
         resumeQuery = resumeQuery && resumeQuery.eq('id', resumeId)
       } else {
         resumeQuery = resumeQuery
           .eq('user_id', user && user.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
       let resumeQuery = supabase.from('talent_resumes').select('*');
       if (resumeId) {
@@ -55,10 +71,13 @@ let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
           .eq('user_id', user.id)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           .order('is_active', { ascending: false })
           .order('created_at', { ascending: false })
           .limit(1)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuery.single();
       if (resumeError) {
@@ -67,6 +86,8 @@ let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
       if (resumeError) {
         if (resumeError.code === 'PGRST116') {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       
       const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuery.single();
@@ -74,12 +95,18 @@ let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
 
       if (resumeError) {
         if (resumeError && resumeError.code === 'PGRST116') {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           // No resume found, this is not a critical error for a new user
           setResume(null);
           setIsLoading(false);
           return null
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume } from '@/types/resume',;
@@ -92,6 +119,7 @@ export function useFetchResume() {;
   const fetchResume = async (resumeId?: string) => {;
     if (!user) {;
       setError('You must be logged in to access resumes'),;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -114,6 +142,8 @@ if ( {) {
   $2
 }
       set_error ('You must be logged in to access resumes');
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return null;
     }
     setIsLoading (true);
@@ -124,6 +154,7 @@ if ( {) {
       // Otherwise, fetch the user's active resume or most recent resume;
       let resume_query = supabase.from ('talent_resumes').select ('*');
 ;
+<<<<<<< HEAD
       return null;
     }
 ;
@@ -150,6 +181,8 @@ if ( {) {
           setResume(null),;
           setIsLoading(false),;
           return null;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Check condition
 if ( {) {
   $2
@@ -176,6 +209,7 @@ if ( {) {
           set_resume (null);
           setIsLoading (false);
           return null;
+<<<<<<< HEAD
         }
         throw resumeError
       }
@@ -185,15 +219,34 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+        throw resume_error;
+      }
+
+
+      
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
         .select('*')
 <<<<<<< HEAD
+<<<<<<< HEAD
         .eq('resume_id', resumeData.id)
 =======
         .eq('resume_id', resumeData && resumeData.id)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .eq('resume_id', resumeData && resumeData.id)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .order('is_current', { ascending: false })
         .order('start_date', { ascending: false });
       if (workError) throw workError;
@@ -202,10 +255,14 @@ if ( {) {
         .from('education')
         .select('*')
 <<<<<<< HEAD
+<<<<<<< HEAD
         .eq('resume_id', resumeData.id)
 =======
         .eq('resume_id', resumeData && resumeData.id)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        .eq('resume_id', resumeData && resumeData.id)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .order('is_current', { ascending: false })
         .order('start_date', { ascending: false });
       if (educationError) throw educationError;
@@ -214,32 +271,49 @@ if ( {) {
         .from('resume_skills')
         .select('*')
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
         throw resume_error;
       }
         .eq('resume_id', resumeData && resumeData.id);
         .eq('resume_id', resumeData.id);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         .eq('resume_id', resumeData && resumeData.id);
         
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (skillsError) throw skillsError;
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
         .select('*')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('resume_id', resumeData && resumeData.id);
+=======
+
+        .eq('resume_id', resumeData && resumeData.id);
+        
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (certError) throw certError;
       const fullResume: Resume = {
         id: resumeData && resumeData.id;
         user_id: resumeData && resumeData.user_id;
         basic_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           id: resumeData && resumeData.id;
           title: resumeData && resumeData.title;
           headline: resumeData && resumeData.headline,
@@ -251,12 +325,21 @@ if ( {) {
         certifications: certData || [],
         is_active: resumeData && resumeData.is_active
       };
+<<<<<<< HEAD
+=======
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setResume(fullResume);
       return fullResume
     } catch (e: any) {
       console && console.error('Error fetching resume:', e);
       setError(e && e.message);
       return null
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Fetch work experience;
       const { data: work_data, error: work_error } = await supabase;
         .from ('work_history');
@@ -323,10 +406,15 @@ if (throw cert_error) {
       console.error ('Error fetching resume:', e);
       set_error (e.message);
       return null;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 ;
   return {
     isLoading;
@@ -576,3 +664,16 @@ is active: resumeData.is active
 
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return {
+    isLoading;
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    error;
+    resume;
+
+    fetch_resume}
+
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

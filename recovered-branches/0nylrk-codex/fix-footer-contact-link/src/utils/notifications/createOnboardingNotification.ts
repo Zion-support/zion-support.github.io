@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
@@ -11,6 +16,7 @@ import {OnboardingNotificationParams} from './types';
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { createNotification  } from './createNotification';
@@ -23,16 +29,23 @@ import {OnboardingNotificationParams} from './types';
 export async function createOnboardingNotification({;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   userId;
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   try {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  try {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -41,7 +54,10 @@ export async function createOnboardingNotification({;
     switch (missingMilestone) {
       case 'profile_completed':
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import {create_notification} from './create_notification';
 import {OnboardingNotificationParams} from './types';
@@ -105,7 +121,10 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return create_notification ({
     user_id;
     title;
@@ -115,6 +134,7 @@ if ( {) {
     action_url,
     action_text;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -178,13 +198,18 @@ import { OnboardingNotificationParams } from './types',;
   })
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 =======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -194,13 +219,19 @@ export async function createOnboardingNotification({;
   userId,;
   missingMilestone,;
   userRole;
+<<<<<<< HEAD
 } OnboardingNotificationParams) {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: OnboardingNotificationParams) {;
   let title = '',;
   let message = '',;
   let actionUrl = '',;
   let actionText = '',;
+<<<<<<< HEAD
   ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (userRole === 'talent') {;
     switch (missingMilestone) {;
       case 'profile_completed':;
@@ -220,7 +251,10 @@ export async function createOnboardingNotification({;
         message = 'Set your availability to help clients know when you can work',;
         actionUrl = '/profile/settings',;
         actionText = 'Set Availability',;
+<<<<<<< HEAD
         break,;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         break;
     }
   } else {;
@@ -246,10 +280,13 @@ export async function createOnboardingNotification({;
     }
   }
 ;
+<<<<<<< HEAD
         break,;
     }
   }
   ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return createNotification({;
     userId,;
     title,;
@@ -260,6 +297,7 @@ export async function createOnboardingNotification({;
     actionText;
   });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -302,3 +340,8 @@ case 'talent invited':
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

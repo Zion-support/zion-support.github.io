@@ -4,7 +4,9 @@
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
+=======
 
+=======
 
 console.log('🔍 Debugging Next.js project structure...'),;
 
@@ -37,6 +39,7 @@ if (fs.existsSync('pages')) {;
 console.log('🔍 Checking for problematic files...'),;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
@@ -103,12 +106,15 @@ const problematicFiles = [],;
 const problematicFiles = [];
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
-  try {;'
+  try {;
     const content = fs.readFileSync(file, 'utf8'),;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (content.includes('') || content.includes('
 }
@@ -151,3 +157,7 @@ console.log('✅ Debug completed'),;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

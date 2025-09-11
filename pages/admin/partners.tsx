@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState, useEffect } from 'react';
 
@@ -9,6 +13,7 @@ import Head from 'next / head';
 ;
 
 interface Partner {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -20,16 +25,27 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 interface Partner {
 interface Partner {;
+=======
+=======
+
+interface Partner {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   code: string;
   name: string;
   status: 'active' | 'inactive' | 'pending';
   commission: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const mockPartners: Partner[] = [;
   {;
     id: '1',;
@@ -71,11 +87,17 @@ const mockPartners: Partner[] = [;
     totalEarnings: 0;
   }
 ];
+<<<<<<< HEAD
 const AdminPartnersPage: React.FC = () => {;
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+const AdminPartnersPage: React.FC = () => {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -87,15 +109,26 @@ const AdminPartnersPage: React.FC = () => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from 'react';
+=======
+=======
+import { useEffect, useState } from 'react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
+<<<<<<< HEAD
 useEffect(() => {
+=======
+
+  useEffect(() => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     (async () => {
       try {
         const res = await fetch('/api/admin/partners/list');
@@ -104,6 +137,10 @@ useEffect(() => {
       } catch {}
     })()
   }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
       method: 'POST',
@@ -113,18 +150,31 @@ useEffect(() => {
     const json = await res.json();
     setPartners(json.partners || [])
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function viewFlags(code: string) {
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
     const json = await res.json();
     setFlags(json.flags || [])
   }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     // Simulate loading partners;
     setTimeout(() => {;
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);  }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function updatePartner(): any (code: string, updates: any) {;
     await fetch('/api/admin/partners/update', {;
       method: 'POST',;
@@ -133,6 +183,7 @@ useEffect(() => {
     });
     const res = await fetch('/api/admin/partners/list');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const json = await res.json();
@@ -181,6 +232,8 @@ export default function AdminPartners(req, res) {
     const res = await fetch('/api/admin/partners/list');
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const json = await res.json();
     setPartners(json.partners || []);
     } catch (error) {
@@ -193,17 +246,24 @@ export default function AdminPartners(req, res) {
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -324,11 +384,16 @@ function view_flags() {
                         commission_rate: Number(e && e.target.value),;
                       });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
       <div className='overflow-auto'>;
@@ -352,7 +417,10 @@ function view_flags() {
                   <input
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                     className='w-24 border rounded px-2 py-1';
                   />;
@@ -363,10 +431,15 @@ function view_flags() {
                     onClick={() =>;
                       updatePartner(p && p.code, { status: 'approved' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     on_blur={e =>;
                       update_partner (p.code, {
                         commission_rate: Number (e.target.value),
@@ -381,14 +454,19 @@ function view_flags() {
                     on_click={() =>;
                       update_partner (p.code, { status: 'approved' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   >;
                     Approve;
                   </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <button;
                     className='px - 2 py - 1 rounded border';
@@ -398,10 +476,15 @@ function view_flags() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }
                   >;
                     Reject;
                   </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     type="number"
                     defaultValue={p.commission_rate}
@@ -472,6 +555,10 @@ function view_flags() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -480,6 +567,7 @@ function view_flags() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD
             ))}
 
@@ -540,6 +628,59 @@ function view_flags() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </tbody>
+        </table>
+      </div>
+      {selected && (
+        <div className="p-4 rounded border">
+          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
+          <ul className="list-disc pl-6">
+            {flags.map((f, idx) => (
+              <li key={idx}>
+                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </li>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </ul>
+        </div>
+{/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
+            <p className="text-2xl font-bold">{totalPartners}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>
+            <p className="text-2xl font-bold text-green-600">{activePartners}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>
+            <p className="text-2xl font-bold">{totalReferrals}</p>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>
+            <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
+          </div>
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -558,9 +699,13 @@ function view_flags() {
               <select
                 value={statusFilter}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <button;
                     className='px - 2 py - 1 rounded border';
                     on_click={() => view_flags (p.code)}
@@ -637,9 +782,13 @@ function view_flags() {
             <h2 className="text - lg font - semibold">Partners ({filtered_partners.length})</h2>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
             <div className="text - center py - 8 text - gray - 500">;
@@ -702,9 +851,13 @@ function view_flags() {
                         <div className="flex space - x-2">;
                           {partner.status === 'pending' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onChange={(e) => setStatusFilter(e && e.target.value)}
                 className="w-full p-2 border rounded-md";
               >;
@@ -716,11 +869,19 @@ function view_flags() {
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Partners Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">;
           <div className="px-6 py-4 border-b">;
             <h2 className="text-lg font-semibold">Partners ({filteredPartners && filteredPartners.length})</h2>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {loading ? (;
             <div className="text-center py-8">Loading partners...</div>;
           ) : filteredPartners && filteredPartners.length === 0 ? (;
@@ -786,9 +947,13 @@ function view_flags() {
                           {partner && partner.status === 'pending' && (;
                             <>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
                                 className="text-green-600 hover:text-green-900";
@@ -819,6 +984,7 @@ function view_flags() {
                               Activate;
                             </button>;
                           )}
+<<<<<<< HEAD
                           <button className="text-blue-600 hover:text-blue-900">;
                             <>;
                               <button;
@@ -1046,6 +1212,8 @@ function view_flags() {
                               Activate
                             </button>
                           )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <button className="text-blue-600 hover:text-blue-900">
                             Edit
                           </button>
@@ -1061,7 +1229,10 @@ function view_flags() {
       </main>
     </>
   );
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
                     </tr>))}
@@ -1073,19 +1244,29 @@ function view_flags() {
     </>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1100,8 +1281,13 @@ function view_flags() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

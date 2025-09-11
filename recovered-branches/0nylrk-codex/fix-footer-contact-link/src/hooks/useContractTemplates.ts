@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {useQuery, useMutation, useQueryClient} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -28,6 +29,11 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 export function useContractTemplates() {
   const { user, isAuthenticated } = useAuth();
 
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const queryClient = useQueryClient();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -39,14 +45,18 @@ export function useContractTemplates() {
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Fetch templates for the current user
   const {
     data: templates = []
     isLoading: isLoadingTemplates
     error: templatesError
   } = useQuery({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -68,6 +78,8 @@ export function useContractTemplates() {
     enabled: isAuthenticated && !!user
   });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     queryKey: ['contractTemplates', user?.id];
     queryFn: async () => {
       if (!isAuthenticated |!user) {
@@ -76,7 +88,10 @@ export function useContractTemplates() {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -111,9 +126,13 @@ export function useContractTemplates() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       
       return data as ContractTemplate[]
@@ -122,10 +141,13 @@ export function useContractTemplates() {;
   }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Create a new template
   const createTemplate = useMutation({
     mutationFn: async ({
@@ -133,17 +155,23 @@ export function useContractTemplates() {;
       templateData
       isDefault = false
     }: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: string;
       templateData: ContractFormValues
       isDefault?: boolean
     }) => {
       if (!user) throw new Error("User not authenticated");
       setIsLoading(true);
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: string,
       templateData: ContractFormValues,
       isDefault?: boolean
@@ -153,16 +181,20 @@ export function useContractTemplates() {;
       setIsLoading(true),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             .eq('user_id', user && user.id)
@@ -198,16 +230,42 @@ if ( {) {
   $2
 }
         return [];
+=======
+            .eq('user_id', user && user.id)
+            .eq('is_default', true)
+        }
+        // Insert the new template
+        const { data, error } = await supabase
+          .from('contract_templates')
+          .insert({
+            user_id: user.id;
+            title: title;
+            template_data: templateData
+            is_default: isDefault
+          })
+          .select()
+          .single();
+        if (error) throw error;
+        return data as ContractTemplate
+      } finally {
+        setIsLoading(false)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       const { data, error } = await supabase;
         .from ('contract_templates');
         .select ('*');
         .order ('is_default', { ascending: false });
         .order ('created_at', { ascending: false });
+<<<<<<< HEAD
 
     };
 
 
+=======
+=======
+
+    };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       // Check condition
 if ( {) {
@@ -265,16 +323,29 @@ if (throw error) {
   $2
 }
         return data as ContractTemplate;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } finally {
         setIsLoading (false);
       }
 
+<<<<<<< HEAD
 
+=======
+    },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template saved"
         description: "Contract template has been successfully saved."})
+<<<<<<< HEAD
 
 
     },
@@ -294,6 +365,13 @@ if (throw error) {
     on_error: (error: Error) => {
       console.error ("Error saving template:", error);
       toast ({
+=======
+    }
+    },
+    onError: (error: Error) => {
+      console && console.error("Error saving template:", error);
+      toast({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Failed to save template";
         description: "There was an error saving your contract template.",
         variant: "destructive"});
@@ -307,6 +385,7 @@ if (throw error) {
       title;
       template_data,
       is_default = false;
+<<<<<<< HEAD
             .eq('user_id', user.id)
             .eq('is_default', true)
         }
@@ -399,15 +478,24 @@ if (throw error) {
       templateId: string;
       title: string;
 <<<<<<< HEAD
+=======
+
+    }: {
+      template_id: string;
+      title: string;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       templateData: ContractFormValues
       isDefault?: boolean
     }) => {
       if (!user) throw new Error("User not authenticated");
       setIsLoading(true);
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Failed to save template",
         description: "There was an error saving your contract template.",
         variant: "destructive"})
@@ -432,10 +520,13 @@ if (throw error) {
       setIsLoading(true),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
@@ -443,15 +534,21 @@ if (throw error) {
             .from('contract_templates')
             .update({ is_default: false })
 <<<<<<< HEAD
+<<<<<<< HEAD
     }: {
       template_id: string;
       title: string;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             .eq('user_id', user && user.id)
             .eq('is_default', true)
             .neq('id', templateId)
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       template_data: ContractFormValues,
       is_default?: boolean;
     }) => {
@@ -459,6 +556,7 @@ if (throw error) {
   $2
 }
       setIsLoading (true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     };
@@ -489,11 +587,16 @@ if (throw error) {
     };
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
     };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },;
     onSuccess: () => {;
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),;
@@ -536,8 +639,11 @@ if (throw error) {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       try {
         // If this is set as default, unset any existing default;
@@ -581,12 +687,16 @@ if (throw error) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template updated"
         description: "Contract template has been successfully updated."})
+<<<<<<< HEAD
 
 
     },
@@ -627,6 +737,12 @@ if (throw error) {
     },
     onError: (error: Error) => {
       console.error("Error updating template:", error),
+=======
+    }
+    },
+    onError: (error: Error) => {
+      console && console.error("Error updating template:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Failed to update template";
         description: "There was an error updating your contract template."
@@ -638,8 +754,11 @@ if (throw error) {
     mutationFn: async (templateId: string) => {
       if (!user) throw new Error("User not authenticated");
       setIsLoading(true)
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Failed to update template",
         description: "There was an error updating your contract template.",
         variant: "destructive"})
@@ -654,15 +773,19 @@ if (throw error) {
       setIsLoading(true),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       try {
         const { error } = await supabase
           .from('contract_templates')
           .delete()
           .eq('id', templateId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -717,10 +840,16 @@ if (throw error) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          .eq('user_id', user.id);
+          .eq('user_id', user.id),
+        
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (error) throw error
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -728,11 +857,16 @@ if (throw error) {
     },
 
 
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template deleted"
         description: "Contract template has been successfully deleted."})
+<<<<<<< HEAD
 
 
     },
@@ -756,6 +890,13 @@ if (throw error) {
     onError: (error: Error) => {
       console.error("Error deleting template:", error),
       toast({
+=======
+    }
+    },
+    onError: (error: Error) => {
+      console && console.error("Error deleting template:", error);
+      toast({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Failed to delete template";
         description: "There was an error deleting your contract template."
         variant: "destructive"})
@@ -766,8 +907,11 @@ if (throw error) {
     mutationFn: async (templateId: string) => {
       if (!user) throw new Error("User not authenticated");
       setIsLoading(true)
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title: "Failed to delete template",
         description: "There was an error deleting your contract template.",
         variant: "destructive"})
@@ -782,24 +926,31 @@ if (throw error) {
       setIsLoading(true),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       try {
         // First unset any existing default
         await supabase
           .from('contract_templates')
           .update({ is_default: false })
 <<<<<<< HEAD
+<<<<<<< HEAD
           .eq('is_default', true),
         
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           .eq('user_id', user.id)
           .eq('is_default', true);
           .eq('is_default', true),
         
+<<<<<<< HEAD
 =======
 
           .eq('user_id', user.id)
@@ -809,11 +960,14 @@ if (throw error) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Then set the new default
         const { error } = await supabase
           .from('contract_templates')
           .update({ is_default: true })
           .eq('id', templateId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -875,10 +1029,16 @@ if (throw error) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          .eq('user_id', user.id);
+          .eq('user_id', user.id),
+        
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (error) throw error
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -886,6 +1046,10 @@ if (throw error) {
     },
 
 
+=======
+    }
+    },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -898,6 +1062,7 @@ if (throw error) {
 
     onError: (error: Error) => {
       console && console.error("Error setting default template:", error);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     },
@@ -912,6 +1077,8 @@ if (throw error) {
       console.error("Error setting default template:", error);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Failed to set default template";
         description: "There was an error setting your default contract template."
@@ -928,6 +1095,9 @@ if (throw error) {
 
     setDefaultTemplate
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     onError: (error: Error) => {
       console.error("Error setting default template:", error),
@@ -1007,6 +1177,7 @@ if (throw error) {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),;
       toast({;
         title: "Default template set",;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1014,6 +1185,8 @@ if (throw error) {
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
       toast ({
         title: "Default template set",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         description: "Default contract template has been updated."});
     }
     on_error: (error: Error) => {
@@ -1036,6 +1209,7 @@ if (throw error) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1371,3 +1545,9 @@ enabled: isAuthenticated && !!user
     setDefaultTemplate;
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

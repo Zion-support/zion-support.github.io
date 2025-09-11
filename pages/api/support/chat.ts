@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import { readJson } from "../../../utils/fsDb";
@@ -25,14 +28,18 @@ export default async function handler(
     ? matchIntent(lastUser.content, articles)
     : { intentMatched: false, matchedArticleIds: [] }
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -57,11 +64,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   // Build context with top matched articles as brief references
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Build context with top matched articles as brief references
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, messages } = req && req.body as { sessionId?: string; messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> };
@@ -90,14 +102,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         matchedArticleIds: intent && intent.matchedArticleIds,
         links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id));
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
     .join('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
   const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
 =======
@@ -105,10 +123,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [sysMessage, ...messages],
+<<<<<<< HEAD
 <<<<<<< HEAD
 temperature: 0.2
     });
@@ -148,14 +172,26 @@ function handler() {
     return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
 
 
+=======
+      temperature: 0.2
+    });
+
+  } catch (e: any) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status(200).json({
       assistantMessage:
         "I could not reach the assistant right now. Please try again in a moment."
     });
     return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   if ()) {
   $2
@@ -208,15 +244,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         intent_matched: intent.intent_matched,
         matchedArticleIds: intent.matchedArticleIds,
 <<<<<<< HEAD
+<<<<<<< HEAD
 links: matched_articles.map ((a) => ({
 =======
 
         links: matched_articles.map ((a) => ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        links: matched_articles.map ((a) => ({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title: a.title,
           href: `/help/${a.slug}`,
         })),
       },
+<<<<<<< HEAD
 <<<<<<< HEAD
     });
   } catch (e: any) {
@@ -243,3 +285,11 @@ links: matched_articles.map ((a) => ({
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  } catch (e: any) {
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

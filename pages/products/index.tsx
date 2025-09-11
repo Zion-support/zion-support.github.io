@@ -1,33 +1,56 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
 =======
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from 'react';
 import { NextPage } from 'next';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -36,20 +59,26 @@ import { NextPage } from 'next';
 import type { NextPage } from 'next';
 import React from 'react';
 import { NextPage } from 'next';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -58,6 +87,8 @@ import Layout from '../../components/Layout';
 const Index: NextPage = () => {
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const products = [;
   {;
     id: 'ai-analytics-suite',;
@@ -126,6 +157,10 @@ const products = [;
     popular: false;
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const categories = [;
   'All',;
   'AI & Analytics',;
@@ -135,9 +170,17 @@ const categories = [;
   'Collaboration',;
   'Data Management';
 ];
+<<<<<<< HEAD
 const ProductsIndex: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = React && React.useState('All');
   const [searchTerm, setSearchTerm] = React && React.useState('');
+=======
+
+const ProductsIndex: NextPage = () => {;
+  const [selectedCategory, setSelectedCategory] = React && React.useState('All');
+  const [searchTerm, setSearchTerm] = React && React.useState('');
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const filteredProducts = products && products.filter(product => {;
     const matchesCategory = selectedCategory === 'All' || product && product.category === selectedCategory;
     const matchesSearch = product && product.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -146,6 +189,7 @@ const ProductsIndex: NextPage = () => {;
 
     return matchesCategory && matchesSearch;
   });
+<<<<<<< HEAD
 
 =======
 
@@ -163,6 +207,17 @@ const Index: NextPage = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/main
+origin/automation-improvements-final
+
+  return (
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -242,7 +297,10 @@ const Index: NextPage = () => {
 
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -410,9 +468,13 @@ const ProductsIndex: NextPage = () => {
                   }}
                   className="px - 6 py - 3 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors font - semibold";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   Clear Filters;
                 </button>;
@@ -420,6 +482,7 @@ const ProductsIndex: NextPage = () => {
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -432,6 +495,20 @@ const ProductsIndex: NextPage = () => {
                     <p className="text-gray-600 mb-4 leading-relaxed">;
                       {product && product.description}
                     </p>;
+=======
+
+                      </div>;
+                    </div>;
+
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
+                      {product && product.name}
+                    </h3>;
+
+                    <p className="text-gray-600 mb-4 leading-relaxed">;
+                      {product && product.description}
+                    </p>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-2 mb-4">;
                       <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>;
                       <ul className="space-y-1">;
@@ -443,6 +520,10 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-2 mb-6">;
                       <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>;
                       <ul className="space-y-1">;
@@ -454,12 +535,20 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-2 mb-6">;
                       <div className="flex justify-between items-center">;
                         <span className="text-sm font-medium text-gray-900">Pricing:</span>;
                         <span className="text-lg font-bold text-blue-600">{product && product.pricing}</span>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
                       Learn More;
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -468,6 +557,10 @@ const ProductsIndex: NextPage = () => {
                 </motion && motion.div>;
               ))}
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {filteredProducts && filteredProducts.length === 0 && (;
               <div className="text-center py-12">;
                 <div className="text-gray-400 mb-4">;
@@ -480,10 +573,15 @@ const ProductsIndex: NextPage = () => {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -508,6 +606,7 @@ const ProductsIndex: NextPage = () => {
 
 
 
+<<<<<<< HEAD
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
@@ -533,11 +632,27 @@ const ProductsIndex: NextPage = () => {
 
 import type { NextPage } from 'next';
 import Head from 'next/head';
+=======
+=======
+=======
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name='description' content='Index page' />
+      </Head>
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+export default ProductsIndex;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
 
 
 
@@ -552,6 +667,13 @@ export default ProductsIndex;
 export default Index;
 
   )
+=======
+  ),
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+  );
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 export default Index;
@@ -559,12 +681,16 @@ export default Index;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
@@ -673,6 +799,7 @@ export default Index;
       </div>;
     </Layout>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 },
 export default Index,
@@ -1018,6 +1145,8 @@ export default Index;
 },
 export default Index,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default ProductsIndex;
 
@@ -1028,6 +1157,10 @@ export default ProductsIndex;
 },
 export default Index,
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -7,6 +7,11 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -14,6 +19,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 
       id: 'ai-automation-manufacturing',
       title: 'AI-Powered Manufacturing Automation',
@@ -51,6 +57,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CaseStudyResourcePage() {
   const router = useRouter()
   const { id } = router.query
@@ -65,11 +73,17 @@ export default function CaseStudyResourcePage() {
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
       fullContent: `
         <h2>Executive Summary</h2>
+<<<<<<< HEAD
         <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations
+=======
+        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         and preventing them from meeting growing customer demands.</p>
@@ -86,6 +100,11 @@ export default function CaseStudyResourcePage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        and preventing them from meeting growing customer demands.</p>
+        <h2>Challenge</h2>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
@@ -122,6 +141,7 @@ export default function CaseStudyResourcePage() {
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
       `
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 import React from 'react',
@@ -190,6 +210,8 @@ function CaseStudyResourcePage() {
       `;
     },
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     {
@@ -251,13 +273,17 @@ function CaseStudyResourcePage() {
       `
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'cloud - infrastructure - optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E - commerce Platform',
       industry: 'Technology',
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
+<<<<<<< HEAD
 <<<<<<< HEAD
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
@@ -329,6 +355,10 @@ function CaseStudyResourcePage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
         reduce costs while improving performance and reliability for high-traffic applications.</p>
@@ -380,25 +410,35 @@ function CaseStudyResourcePage() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -582,6 +622,7 @@ export default function CaseStudyResourcePage(req, res) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
   ],
@@ -596,6 +637,11 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!caseStudy) {
     return (
       <>
@@ -613,12 +659,16 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link
               <Link 
               <Link
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -629,6 +679,7 @@ export default function CaseStudyResourcePage(req, res) {
         </div>
       </>
     )
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -646,6 +697,10 @@ export default function CaseStudyResourcePage(req, res) {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <Head>
@@ -665,23 +720,33 @@ export default function CaseStudyResourcePage(req, res) {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   {caseStudy.industry}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  {caseStudy.industry}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {caseStudy.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -696,6 +761,7 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div 
                 className="prose prose-invert max-w-none"
@@ -719,6 +785,9 @@ export default function CaseStudyResourcePage(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -730,12 +799,15 @@ export default function CaseStudyResourcePage(req, res) {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
   );
 };
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
@@ -808,6 +880,7 @@ if ( {) {
             <div className="max - w-4xl mx - auto text - center">;
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
               <p className="text - xl text - white / 80 mb - 8">;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
@@ -823,17 +896,24 @@ if ( {) {
             <div className="max-w-4xl mx-auto text-center">;
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>;
               <p className="text-xl text-white/80 mb-8">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
                 href="/resources";
+<<<<<<< HEAD
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+=======
+                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >;
                 ← Back to Resources;
               </Link>;
             </div>;
           </main>;
         </div>;
+<<<<<<< HEAD
       </>;
     );
     } catch (error) {
@@ -890,6 +970,50 @@ if ( {) {
               <Link;
                 href="/contact";
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+=======
+      </>);
+  }
+  return (
+    <>;
+      <Head>;
+        <title>{case_study.title} | Zion Tech Group - Case Study Resource</title>;
+        <meta name="description" content={case_study.description} />;
+        <meta property="og:title" content={`${case_study.title} | Zion Tech Group`} />;
+        <meta property="og:description" content={case_study.description} />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
+        <main className="container mx - auto px - 6 py - 12">;
+          <div className="max - w-4xl mx - auto">;
+            <nav className="mb - 8">;
+              <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
+                ← Back to Resources;
+              </Link>;
+            </nav>;
+            <header className="mb - 12">;
+              <div className="mb - 6">;
+                <span className="px - 3 py - 1 bg - cyan - 400 / 20 text - cyan - 400 text - sm rounded - full border border - cyan - 400 / 30">;
+                  {case_study.industry}
+                </span>;
+              </div>;
+              <h1 className="text - 4xl font - bold mb - 4 text - white">{case_study.title}</h1>;
+              <p className="text - xl text - cyan - 400 font - semibold mb - 2">{case_study.company}</p>;
+              <p className="text - white / 80 text - lg">{case_study.description}</p>;
+            </header>;
+            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20 mb - 8">;
+              <h2 className="text - 2xl font - bold mb - 4 text - white">Key Results</h2>;
+              <p className="text - green - 400 font - semibold text - lg">{case_study.results}</p>;
+            </div>;
+            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20 mb - 12">;
+              <div;
+                className="prose prose - invert max - w-none";
+                dangerouslySetInnerHTML={{ __html: case_study.full_content }}
+              />;
+            </div>;
+            <div className="text - center">;
+              <Link;
+                href="/contact";
+                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >;
                 Get Started with Your Project;
               </Link>;
@@ -899,6 +1023,7 @@ if ( {) {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -916,7 +1041,13 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -19,6 +19,7 @@ const faqs = [;
     question: "Are there any fees for listing my products or services?",;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
@@ -46,11 +47,16 @@ import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {FileText} from "lucide-react";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 =======
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -60,10 +66,14 @@ import {
 import { FileText } from "lucide-react",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -84,17 +94,23 @@ const faqs = [
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function FaqSection() {;
   return (
 
+<<<<<<< HEAD
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GradientHeading } from './GradientHeading';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';
 import { FileText } from './lucide-react';
@@ -140,6 +156,7 @@ function FaqSection() {
             {faqs.map ((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;
                 <AccordionTrigger className="text - white hover:text - zion - cyan">;
+<<<<<<< HEAD
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
 
@@ -183,6 +200,18 @@ export function FaqSection() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  {faq.question}
+
+=======
+                </AccordionTrigger>
+                <AccordionContent className="text-zion-slate-light">
+
+};
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -212,6 +241,7 @@ const faqs = [;
 export function FaqSection() {;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {faq.question}
                 </AccordionTrigger>;
                 <AccordionContent className="text - zion - slate - light">;
@@ -219,6 +249,9 @@ export function FaqSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 bg-zion-blue" id="faq">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -228,14 +261,19 @@ export function FaqSection() {;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">;
           <div className="flex items-center mb-6">;
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />;
             <h3 className="text-xl font-bold text-white">Common Questions</h3>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Accordion type="single" collapsible className="w-full">;
 
@@ -290,16 +328,24 @@ export function FaqSection() {;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
                   {faq.question}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <Accordion type="single" collapsible className="w-full">;
             {faqs && faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
                   {faq && faq.question}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </AccordionTrigger>;
                 <AccordionContent className="text-zion-slate-light">;
                   {faq.answer}
+=======
+                </AccordionTrigger>;
+                <AccordionContent className="text-zion-slate-light">;
+                  {faq && faq.answer}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </AccordionContent>;
               </AccordionItem>;
             ))}
@@ -307,6 +353,12 @@ export function FaqSection() {;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+=======
+  );
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
@@ -315,6 +367,7 @@ export function FaqSection() {;
     </section>);
 }
 
+<<<<<<< HEAD
 
 ;
 <<<<<<< HEAD
@@ -358,3 +411,10 @@ answer: "Zion's Green IT initiative focuses on sustainable IT practices througho
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

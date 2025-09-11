@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -24,6 +28,10 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -48,6 +56,7 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -85,6 +94,9 @@ import { useAuth } from "@/hooks/useAuth";
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
 // Define form schema
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters long"),
@@ -112,10 +124,13 @@ interface CategorizedSkills {
   platforms: string[]
   softSkills: string[]
   other: string[]
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -141,6 +156,7 @@ import { supabase } from "@/integrations/supabase/client",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { useAuth } from "@/hooks/useAuth",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Define form schema;
 const talentProfileSchema = z.object({;
   name: z.string().min(2, "Name must be at least 2 characters long"),;
@@ -155,6 +171,8 @@ const talentProfileSchema = z.object({;
 type TalentFormValues = z.infer<typeof talentProfileSchema>,;
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Define form schema;
 const talentProfileSchema = z && z.object({;
@@ -172,7 +190,10 @@ type TalentFormValues = z && z.infer<typeof talentProfileSchema>;
 
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CategorizedSkills {;
   programming: string[],;
   devops: string[],;
@@ -180,21 +201,30 @@ interface CategorizedSkills {;
   softSkills: string[],;
   other: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 interface EnhancedProfile {
   summary: string
   categorizedSkills: CategorizedSkills
 }
+<<<<<<< HEAD
 
 
 export function TalentRegistrationForm() {
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
   const { user } = useAuth();
@@ -220,9 +250,12 @@ export function TalentRegistrationForm() {
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema)
@@ -238,27 +271,39 @@ export function TalentRegistrationForm() {
   // Handle adding skill tags
   const handleAddSkill = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const skillInput = form.getValues("skills"),
     if (skillInput && !skillTags.includes(skillInput)) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const skillInput = form.getValues("skills");
     if (skillInput && !skillTags.includes(skillInput)) {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setSkillTags([...skillTags, skillInput]),
       form.setValue("skills", "")
     }
 
 <<<<<<< HEAD
+=======
+      setSkillTags([...skillTags, skillInput]),
+      form.setValue("skills", "")
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Handle removing skill tags
   const handleRemoveSkill = (skill: string) => {
     setSkillTags(skillTags.filter((s) => s !== skill))
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   // Handle removing skill tags
@@ -267,14 +312,18 @@ export function TalentRegistrationForm() {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddSkill()
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 
@@ -297,11 +346,16 @@ export function TalentRegistrationForm() {
     if (!formData.bio |formData.bio.length < 20) {
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export function TalentRegistrationForm() {;
   // Remove the useToast() hook since we're importing the toast function directly;
@@ -311,6 +365,7 @@ export function TalentRegistrationForm() {;
   const [isGenerating, setIsGenerating] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 interface EnhancedProfile {;
@@ -328,6 +383,9 @@ export function TalentRegistrationForm() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize form with default values;
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentProfileSchema),;
@@ -341,6 +399,7 @@ export function TalentRegistrationForm() {;
       availability: "available",;
       enhancedProfile: true}}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Handle adding skill tags;
   const handleAddSkill = () => {;
     const skillInput = form.getValues("skills"),;
@@ -349,6 +408,8 @@ export function TalentRegistrationForm() {;
       form.setValue("skills", "");
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Handle adding skill tags;
   const handleAddSkill = () => {;
@@ -359,7 +420,10 @@ export function TalentRegistrationForm() {;
       form && form.setValue("skills", "");
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   // Handle removing skill tags;
   const handleRemoveSkill = (skill: string) => {;
@@ -384,6 +448,7 @@ export function TalentRegistrationForm() {;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
     const formData = form.getValues();
     if (!formData.bio |formData.bio.length < 20) {
 
@@ -392,6 +457,9 @@ export function TalentRegistrationForm() {;
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
@@ -399,13 +467,19 @@ export function TalentRegistrationForm() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
+<<<<<<< HEAD
     const formData = form.getValues();
     if (!formData.bio |formData.bio.length < 20) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    const formData = form.getValues(),
+    if (!formData.bio || formData.bio.length < 20) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
@@ -432,6 +506,11 @@ export function TalentRegistrationForm() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle avatar upload;
   const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const file = e && e.target.files?.[0];
@@ -445,19 +524,26 @@ export function TalentRegistrationForm() {;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
 
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
     const formData = form && form.getValues();
     if (!formData && formData.bio || formData && formData.bio.length < 20) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     try {
@@ -485,12 +571,15 @@ export function TalentRegistrationForm() {;
     if (!formData.bio || formData.bio.length < 20) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({;
         title: "More information needed",;
         description: "Please provide at least a detailed bio before generating enhanced content."}),;
       return;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       }
@@ -513,6 +602,31 @@ export function TalentRegistrationForm() {;
       if (error) {;
         throw new Error(error.message);
       }
+=======
+    try {;
+      setIsGenerating(true);
+
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {;
+        body: {;
+          talentData: {;
+            name: formData && formData.name,;
+            title: formData && formData.title,;
+            bio: formData && formData.bio,;
+            skills: skillTags,;
+            location: formData && formData.location;
+          }
+        }
+
+      }),;
+      if (error) {;
+        throw new Error(error.message);
+
+
+
+      }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       setGeneratedContent(data as EnhancedProfile),
       
@@ -553,6 +667,7 @@ export function TalentRegistrationForm() {;
           categorySkills.forEach(skill => {
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
+<<<<<<< HEAD
       });
 =======
     try {;
@@ -613,6 +728,8 @@ const talentProfileSchema = z.object ({
   availability: z.enum (["available", "limited", "unavailable"]);
   enhanced_profile: z.boolean ().default (true)}),
 type TalentFormValues = z.infer < typeof talentProfileSchema>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'soft_skills' | 'other';
 ;
@@ -661,6 +778,7 @@ function TalentRegistrationForm() {
       form.set_value ("skills", "");
     }
 
+<<<<<<< HEAD
   }
 ;
   // Handle removing skill tags;
@@ -913,6 +1031,11 @@ export function TalentRegistrationForm() {;
               newSkills.push(skill);
             }
           })
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            }
+          });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       });
       if (newSkills.length > 0) {
@@ -920,22 +1043,29 @@ export function TalentRegistrationForm() {;
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   // Get category color
   const getCategoryColor = (category: CategoryType) => {
     switch (category) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   // Get category color;
   const getCategoryColor = (category: CategoryType) => {;
     switch (category) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
@@ -943,12 +1073,17 @@ export function TalentRegistrationForm() {;
   }
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -967,8 +1102,16 @@ export function TalentRegistrationForm() {;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -1029,6 +1172,7 @@ export function TalentRegistrationForm() {;
                 bio: values.bio
                 skills: skillTags
                 location: values.location
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -1072,6 +1216,8 @@ if ( {) {
   const sendEnhancementNotification = async (userId: string, email: string) => {;
     try {;
       await supabase && supabase.functions.invoke('send-email', {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             }
           });
@@ -1088,6 +1234,7 @@ if ( {) {
                     aiSkills.push(skill)
   },;
   // Send notification email;
+<<<<<<< HEAD
   const sendEnhancementNotification = async (userId: string, email: string) => {;
     try {;
       await supabase.functions.invoke('send-email', {;
@@ -1121,17 +1268,47 @@ if ( {) {
     if (skillTags.length === 0) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const sendEnhancementNotification = async (user_id: string, email: string) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    try {
+      await supabase.functions.invoke ('send - email', {
+        body: {
+
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
+    }
+
+        }
+      });
+    } catch (error) {;
+      console && console.error("Failed to send notification email:", error);
+    }
+
+  };
+
+  // Handle form submission;
+  const onSubmit = async (values: TalentFormValues) => {;
+    if (skillTags && skillTags.length === 0) {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({;
         title: "Skills required",;
         description: "Please add at least one skill to your profile.",;
         variant: "destructive"}),;
       return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     setIsSubmitting(true);
+=======
+
+    }
+    setIsSubmitting(true);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           to: email,
           subject: "Your Zion Talent Profile Has Been Enhanced",
           html: `;
@@ -1166,6 +1343,10 @@ if ( {) {
     }
     setIsSubmitting (true);
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -1174,6 +1355,10 @@ if ( {) {
 }
         throw new Error ("User not authenticated");
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Enhance profile if not already done;
       let final_summary = "";
       let final_skills = skill_tags;
@@ -1182,6 +1367,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
         try {
           const { data: ai_data } = await supabase.functions.invoke ('talent - profile - enhancer', {
             body: {
@@ -1193,17 +1379,28 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        try {
+          const { data: ai_data } = await supabase.functions.invoke ('talent - profile - enhancer', {
+            body: {
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       // For actual implementation with Supabase;
       if (!user?.id) {;
         throw new Error("User not authenticated");
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
             finalSummary = (aiData as EnhancedProfile).summary;
             // Safely merge AI suggested skills with user-provided skills;
             const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
             const aiSkills: string[] = [],;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       // Enhance profile if not already done;
       let finalSummary = "";
@@ -1231,7 +1428,10 @@ if ( {) {
 
             const aiSkills: string[] = [],;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Extract skills from each category and ensure they're strings;
             Object && Object.values(categorizedSkills).forEach(categorySkills => {;
               if (Array && Array.isArray(categorySkills)) {;
@@ -1239,10 +1439,15 @@ if ( {) {
                   if (typeof skill === 'string' && skill) {;
                     aiSkills && aiSkills.push(skill);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               talent_data: {
                 name: values.name,
                 title: values.title,
@@ -1262,6 +1467,7 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       // Enhance profile if not already done;
@@ -1289,11 +1495,15 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Object.values(categorizedSkills).forEach(categorySkills => {;
               if (Array.isArray(categorySkills)) {;
                 categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             // Create a unique set of skills;
@@ -1311,10 +1521,16 @@ if ( {) {
   $2
 }
                     ai_skills.push (skill);
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 });
               }
             });
+<<<<<<< HEAD
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
           }
@@ -1328,24 +1544,33 @@ if ( {) {
                 })
               }
             });
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -1353,10 +1578,15 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
       }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1373,16 +1603,24 @@ if ( {) {
       const userEmail = userData.user?.email;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      // Get user email for notification
+      const { data: userData } = await supabase.auth.getUser()
+      const userEmail = userData.user?.email;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = userData.user?.email,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
@@ -1394,6 +1632,7 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
         setIsSubmitting(false)
+<<<<<<< HEAD
 
 
       }, 1500),
@@ -1406,6 +1645,11 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      }, 1500);
+      }, 1500),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Here would be the actual code to save the profile to Supabase
       /*
       const { error } = await supabase
@@ -1421,6 +1665,7 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
+<<<<<<< HEAD
 
 
       // Get user email for notification;
@@ -1554,6 +1799,8 @@ if ( {) {
       const { error } = await supabase;
         .from('talent_profiles');
         .insert({;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         });
       if (error) throw error;
         }),
@@ -1562,15 +1809,20 @@ if ( {) {
       */
     } catch (error: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Error creating profile:", error),
 =======
       console.error("Error creating profile:", error);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console.error("Error creating profile:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Error Creating Profile"
         description: error.message |"There was an error creating your profile. Please try again."
         variant: "destructive"})
       setIsSubmitting(false)
+<<<<<<< HEAD
 
         });
       if (error) throw error;
@@ -1586,11 +1838,16 @@ if ( {) {
   }
   return (
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -1602,11 +1859,14 @@ if ( {) {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
+<<<<<<< HEAD
 =======
 
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -1653,6 +1913,7 @@ if ( {) {
   };
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
           user_id:user.id,;
           name:values.name,;
           title:values.title,;
@@ -1682,6 +1943,9 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -1691,11 +1955,14 @@ if ( {) {
           </CardDescription>;
         </CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
@@ -1704,12 +1971,16 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                   <div className="col-span-1">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <FormField;
                       control={form.control}
@@ -1719,12 +1990,18 @@ if ( {) {
                       control={form && form.control}
                       name="name"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <FormField
+                      control={form && form.control}
+                      name="name"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                           <FormControl>;
                             <div className="relative">;
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     />;
                   </div>;
@@ -1736,6 +2013,8 @@ if ( {) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="Your full name";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
@@ -1837,11 +2116,15 @@ if (throw error) {
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="Your full name";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
@@ -1854,6 +2137,8 @@ if (throw error) {
                       control={form.control}
                       name="title";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     />;
                   </div>;
@@ -1863,13 +2148,17 @@ if (throw error) {
                     <FormField
                       control={form && form.control}
                       name="title"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Professional Title</FormLabel>;
                           <FormControl>;
                             <div className="relative">;
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     />;
                   </div>;
@@ -1881,6 +2170,8 @@ if (throw error) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="e.g., Senior Software Developer";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., Senior Software Developer"
@@ -1903,11 +2194,15 @@ if (throw error) {
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="e.g., Senior Software Developer";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
@@ -1920,6 +2215,8 @@ if (throw error) {
                       control={form.control}
                       name="location";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     />;
                   </div>;
@@ -1929,13 +2226,17 @@ if (throw error) {
                     <FormField
                       control={form && form.control}
                       name="location"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>;
                           <FormControl>;
                             <div className="relative">;
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     />;
                   </div>;
@@ -1947,6 +2248,8 @@ if (throw error) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="City, State/Province, Country";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="City, State/Province, Country"
@@ -1969,11 +2272,15 @@ if (throw error) {
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="City, State / Province, Country";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
@@ -1986,6 +2293,8 @@ if (throw error) {
                       control={form.control}
                       name="hourlyRate";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     />;
                   </div>;
@@ -1995,7 +2304,10 @@ if (throw error) {
                     <FormField
                       control={form && form.control}
                       name="hourlyRate"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Hourly Rate (USD)</FormLabel>;
@@ -2003,10 +2315,13 @@ if (throw error) {
                             <div className="relative">;
                               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                               <Input;
                                 className="pl-8 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="e.g., 85";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <Input
                                 className="pl-8 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., 85"
@@ -2029,11 +2344,15 @@ if (throw error) {
                                 className="pl - 8 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="e.g., 85";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
@@ -2043,13 +2362,18 @@ if (throw error) {
                 </div>;
                 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     />;
                   </div>;
                 </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -2057,6 +2381,7 @@ if (throw error) {
                     <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light">;
                       {uploadedAvatar ? (;
                         <AspectRatio ratio={1/1}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(onSubmit)}>;
@@ -2163,10 +2488,13 @@ if (throw error) {
                         <AspectRatio ratio={1/1}>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <img
                             src={uploadedAvatar}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <img;
                             src={uploadedAvatar}
@@ -2180,10 +2508,16 @@ if (throw error) {
                         </AspectRatio>;
                       ) : (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          />;
+                        </AspectRatio>;
+                      ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="flex items-center justify-center h-full">;
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>;
                           />
@@ -2198,6 +2532,8 @@ if (throw error) {
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </div>;
 
@@ -2205,11 +2541,15 @@ if (throw error) {
                       <Upload className="mr-2 h-4 w-4" />;
                       <span>Upload Photo</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
+<<<<<<< HEAD
 ;
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
                       <Upload className="mr-2 h-4 w-4" />;
@@ -2332,6 +2672,9 @@ if (throw error) {
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
 =======
+=======
+                        onChange={handleAvatarUpload}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       />;
                     </label>;
@@ -2448,12 +2791,16 @@ if (throw error) {
                 {form && form.watch("enhancedProfile") && (;
                   <div className="flex justify-end">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={generateEnhancedProfile}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <Switch;
                           checked={field.value}
@@ -2479,14 +2826,22 @@ if (throw error) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Sparkles className="mr-2 h-4 w-4" />;
                       {isGenerating ? "Generating..." :"Generate Enhanced Profile"}
+=======
+                      disabled={isGenerating}>;
+                      <Sparkles className="mr-2 h-4 w-4" />;
+                      {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Button>;
                   </div>;
                 )}
 
+<<<<<<< HEAD
 
 
 
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Generated Content Display */}
                 {generatedContent && (;
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">;
@@ -2495,6 +2850,7 @@ if (throw error) {
                         <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />;
                         AI-Generated Content;
                       </h4>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       disabled={isGenerating}
                     >
@@ -2514,31 +2870,45 @@ if (throw error) {
                       </h4>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Button
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         onClick={applyGeneratedContent}>;
                         <Check className="mr-1 h-3 w-3" /> Apply;
                       </Button>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-4">;
                       <div>;
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
                         <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {generatedContent && generatedContent.categorizedSkills && (;
                         <div>;
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;
@@ -2546,9 +2916,13 @@ if (throw error) {
                             {Object && Object.entries(generatedContent && generatedContent.categorizedSkills).map(([category, skills]) => (;
                               <div key={category} className="flex items-center gap-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
@@ -2559,6 +2933,7 @@ if (throw error) {
                                       key={skill}
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
                                       {skill}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <Button;
                         type="button";
@@ -2595,6 +2970,8 @@ if (throw error) {
                                     >;                                      {skill}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                     </Badge>;
                                   ))}
                                 </div>;
@@ -2607,23 +2984,30 @@ if (throw error) {
                   </div>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
 ;
               <Separator className="bg-zion-blue-light/50" />;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>;
 
               <Separator className="bg-zion-blue-light/50" />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Skills and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 {/* Skills Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <FormField;
                     control={form.control}
@@ -2633,16 +3017,24 @@ if (throw error) {
                     control={form && form.control}
                     name="skills"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <FormField
+                    control={form && form.control}
+                    name="skills"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     render={({ field }) => (;
                       <FormItem>;
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>;
                         <div className="flex gap-2">;
                           <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <Input;
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white";
                               placeholder="Add a skill...";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a skill..."
@@ -2734,11 +3126,15 @@ if (throw error) {
                               className="flex - 1 bg - zion - blue border - zion - blue - light text - white";
                               placeholder="Add a skill...";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               {...field}
                               onKeyDown={handleSkillKeyPress}
                             />;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <Button;
                             type="button";
@@ -2873,6 +3269,8 @@ if (throw error) {
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
                       >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   />;
 
@@ -2882,11 +3280,15 @@ if (throw error) {
                       <Badge
                         key={skill}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {skill}
                         <button
                           type="button"
                           onClick={() => handleRemoveSkill(skill)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
                         >
@@ -2912,6 +3314,8 @@ if (throw error) {
                           <div className="space-y-2">
                             <div className="flex items-center space-x-2">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0 && 0.5";
                         >;
                           <X className="h-3 w-3" />;
@@ -2938,11 +3342,15 @@ if (throw error) {
                         <FormControl>;
                           <div className="space-y-2">;
                             <div className="flex items-center space-x-2">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <input
                                 type="radio"
                                 id="available"
                                 value="available"
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 checked={field && field.value === "available"}
                                 onChange={() => field && field.onChange("available")}
@@ -2957,6 +3365,11 @@ if (throw error) {
                                 checked={field && field.value === "available"}
                                 onChange={() => field && field.onChange("available")}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                                checked={field && field.value === "available"}
+                                onChange={() => field && field.onChange("available")}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="available" className="text-white flex items-center gap-2">;
@@ -2964,6 +3377,7 @@ if (throw error) {
                                 Available Now;
                               </label>;
                             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 checked={field.value === "available"}
                                 onChange={() => field.onChange("available")}
@@ -2980,10 +3394,16 @@ if (throw error) {
                             <div className="flex items-center space-x-2">;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                            <div className="flex items-center space-x-2">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <input
                                 type="radio"
                                 id="limited"
                                 value="limited"
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 checked={field && field.value === "limited"}
                                 onChange={() => field && field.onChange("limited")}
@@ -3000,6 +3420,11 @@ if (throw error) {
                                 checked={field && field.value === "limited"}
                                 onChange={() => field && field.onChange("limited")}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                                checked={field && field.value === "limited"}
+                                onChange={() => field && field.onChange("limited")}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="limited" className="text-white flex items-center gap-2">;
@@ -3007,6 +3432,7 @@ if (throw error) {
                                 Limited Availability;
                               </label>;
                             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 checked={field.value === "limited"}
                                 onChange={() => field.onChange("limited")}
@@ -3023,14 +3449,22 @@ if (throw error) {
                             <div className="flex items-center space-x-2">;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                            <div className="flex items-center space-x-2">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <input
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
                             <div className="flex items-center space-x-2">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 checked={field && field.value === "unavailable"}
                                 onChange={() => field && field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple";
@@ -3112,12 +3546,16 @@ if (throw error) {
                               </label>;
                             </div>;
                             <div className="flex items - center space - x-2">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               <input;
                                 type="radio";
                                 id="unavailable";
                                 value="unavailable";
                                 checked={field.value === "unavailable"}
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 onChange={() => field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple";
@@ -3125,18 +3563,24 @@ if (throw error) {
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 on_change={() => field.on_change ("unavailable")}
                                 className="text - zion - purple focus:ring - zion - purple";
                               />;
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;
                                 <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 checked={field.value === "unavailable"}
                                 onChange={() => field.onChange("unavailable")}
@@ -3155,6 +3599,13 @@ if (throw error) {
                   />
                   <div className="pt-2">
                     <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>
+=======
+
+                  />;
+
+                  <div className="pt-2">;
+                    <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Textarea
                       placeholder="Describe your availability, working hours, or when you'll be available next..."
                       className="mt-1.5 bg-zion-blue border-zion-blue-light text-white"
@@ -3189,6 +3640,7 @@ if (throw error) {
       </Card>
     </div>
   )
+<<<<<<< HEAD
 =======
 
                   />;
@@ -3459,3 +3911,8 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

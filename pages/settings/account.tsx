@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 
@@ -6,39 +7,63 @@ import Head from 'next/head';
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -46,6 +71,7 @@ export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -59,14 +85,25 @@ export default function AccountSettingsPage(req, res) {
 
 
 <<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -77,6 +114,7 @@ export default function AccountSettingsPage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   useEffect(() => {;
     const saved =;
       typeof window !== 'undefined';
@@ -84,6 +122,9 @@ export default function AccountSettingsPage(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
@@ -92,6 +133,7 @@ export default function AccountSettingsPage(req, res) {
         : null;
     setDisplayWeb3(pref === 'true');  }, []);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
@@ -111,10 +153,22 @@ export default function AccountSettingsPage(req, res) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const linkDID = async () => {
+  const [status, setStatus] = useState<string | null>(null);
+  useEffect(() => {;
+    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
+    if (saved) setUser(JSON.parse(saved));
+    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
+    setDisplayWeb3(pref === 'true');
+  }, []),;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const saveDisplayPref = (val: boolean) => {;
     setDisplayWeb3(val),;
     if (typeof window !== 'undefined');
       window && window.localStorage.setItem('zion-web3-display', String(val));  };
+<<<<<<< HEAD
   const linkDID = async () => {;
 <<<<<<< HEAD
 =======
@@ -122,11 +176,16 @@ export default function AccountSettingsPage(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const linkDID = async () => {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!user) return;
     setLinking(true);
     setStatus(null);
     try {;
       const nonceRes = await fetch('/api/auth/nonce');
+<<<<<<< HEAD
 
 
       const { nonce } = await nonceRes && nonceRes.json();
@@ -142,6 +201,24 @@ export default function AccountSettingsPage(req, res) {
       };
       const msg = `Link Web3 identities to Zion account\n${JSON && JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
+=======
+      const { nonce } = await nonceRes.json();
+      const payload = {
+        ens
+        lens
+        ceramic
+        farcaster
+        address: user.address
+        chain: user.chain
+        nonce
+        ts: Date.now()
+      }
+      const payload = { ens, lens, ceramic, farcaster, address: user.address, chain: user.chain, nonce, ts: Date.now() },;
+      const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
+      // Sign message with connected wallet if possible (best effort);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 export default /**
  * AccountSettingsPage - Function description
@@ -203,6 +280,10 @@ if (return) {
       }
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify (payload)}`;
       // Sign message with connected wallet if possible (best effort);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       let signature: string | null = null;
       try {;
         if (user && user.chain === 'evm' && (window as any).ethereum) {;
@@ -214,6 +295,7 @@ if (return) {
           signature = await signer && signer.signMessage(msg);
         } else if (user && user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
+<<<<<<< HEAD
 <<<<<<< HEAD
           const { signature: sig } = await (window as any).solana && solana.signMessage(;
             enc,;
@@ -344,12 +426,18 @@ const data = await res.json();
           signature = await signer.signMessage(msg);
         } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const { signature: sig } = await (window as any).solana.signMessage(
             enc
             'utf8'
           );
           const bs58 = (await import('bs58')).default;
+<<<<<<< HEAD
           signature = bs58.encode(sig);        }
+=======
+          signature = bs58 && bs58.encode(sig);        }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch {}
       const res = await fetch('/api/did/link', {
         method: 'POST'
@@ -427,6 +515,7 @@ const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Backup failed');
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
+<<<<<<< HEAD
           const { signature: sig } = await (window as any).solana && solana.signMessage(;
             enc,;
             'utf8';
@@ -437,6 +526,8 @@ const data = await res.json();
       } catch {}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (e: any) {
       setStatus(e?.message |'Backup failed');    }
   }
@@ -447,14 +538,18 @@ const data = await res.json();
         `/api/backup/restore?cid=${encodeURIComponent(restoreCid |backupCid)}`
       );      const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Restore failed');
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
       if (did) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         setEns(did.ens |'');
         setLens(did.lens |'');
@@ -484,6 +579,8 @@ const data = await res.json();
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({ payload, message: msg, signature }),
@@ -509,7 +606,10 @@ const data = await res.json();
         projects: [],
         reviews: [],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       const res = await fetch ('/api / backup / upload', {
         method: 'POST',
@@ -524,25 +624,53 @@ const data = await res.json();
       set_status ('Backup saved to decentralized storage');
     } catch (e: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (e: any) {;
       setStatus(e?.message || 'Linking failed');
     } finally {;
       setLinking(false);    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    } catch (error) {
+      setStatus(e?.message || 'Backup failed');
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  const doRestore = async () => {;
+    setStatus(null);
+    try {
+      const res = await fetch(`/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Restore failed');
+      const { user: u, preferences, did } = data;
+      if (u) setUser(u);
+      if (preferences) saveDisplayPref(!!preferences.displayWeb3);
+      if (did) {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setEns(did.ens || '');
         setLens(did.lens || '');
         setCeramic(did.ceramic || '');
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         setEns(did.ens || '');
         setLens(did.lens || '');
@@ -556,6 +684,8 @@ const data = await res.json();
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const doBackup = async () => {;
     setStatus(null);
     try {;
@@ -579,6 +709,10 @@ const data = await res.json();
     } catch (e: any) {;
       setStatus(e?.message || 'Backup failed');    }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const doRestore = async () => {;
     setStatus(null);
     try {;
@@ -600,11 +734,17 @@ const data = await res.json();
       setStatus(e?.message || 'Restore failed');    }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setFarcaster(did.farcaster || '');
         } catch (error) {
     console.error("Error:", error);
@@ -613,16 +753,23 @@ const data = await res.json();
 }
       setStatus('Profile restored from backup');
 
+<<<<<<< HEAD
   return (
 
 <<<<<<< HEAD
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>              </span>;
             </label>;
           </div>;
         </section>;
+<<<<<<< HEAD
         <section className='rounded-xl border p-5'>;
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>;
           <div className='grid grid-cols-1 gap-3'>;
@@ -630,6 +777,13 @@ const data = await res.json();
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        <section className='rounded-xl border p-5'>;
+          <h2 className='font-semibold mb-2'>Link Web3 identities</h2>;
+          <div className='grid grid-cols-1 gap-3'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <input
               value={ens}
               onChange={e => setEns(e && e.target.value)}
@@ -660,12 +814,20 @@ const data = await res.json();
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2'>;
               {linking ? 'Linking…' : 'Link & Verify'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </button>;
           </div>;
         </section>;
+=======
+
+            </button>;
+          </div>;
+        </section>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className='rounded-xl border p-5'>;
           <h2 className='font-semibold mb-2'>Decentralized Backup</h2>;
           <p className='text-sm text-gray-500 mb-3'>;
@@ -674,9 +836,13 @@ const data = await res.json();
           </p>;
           <div className='flex flex-wrap items-center gap-3'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button
               onClick={doBackup}
               className='rounded-md bg-emerald-600 text-white px-4 py-2'>;
@@ -695,14 +861,22 @@ const data = await res.json();
             <input
               value={restoreCid}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onChange={e => setRestoreCid(e && e.target.value)}
               placeholder='Enter CID to restore';
               className='flex-1 rounded-md border px-3 py-2';
             />;
             <button onClick={doRestore} className='rounded-md border px-4 py-2'>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       set_status (e?.message || 'Backup failed');    }
   }
 ;
@@ -834,13 +1008,18 @@ if ( {) {
             />;
             <button on_click={do_restore} className='rounded - md border px - 4 py - 2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Restore profile;
             </button>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -871,6 +1050,11 @@ if ( {) {
 }
   },
   return (
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>Account Settings — Zion</title>
@@ -959,26 +1143,40 @@ if ( {) {
             <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' : 'Link & Verify'}</button>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="rounded-xl border p-5">
           <h2 className="font-semibold mb-2">Decentralized Backup</h2>
           <p className="text-sm text-gray-500 mb-3">Back up talent profiles, resume, and project reviews to IPFS/Arweave (via Web3.Storage). Opt-in only.</p>
           <div className="flex flex-wrap items-center gap-3">
             <button onClick={doBackup} className="rounded-md bg-emerald-600 text-white px-4 py-2">Create Backup</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {backupCid && <span className="text-xs">CID: <code className="bg-gray-100 dark:bg-neutral-800 px-2 py-1 rounded">{backupCid}</code></span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
@@ -990,6 +1188,10 @@ if ( {) {
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -997,22 +1199,30 @@ if ( {) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {status && <div className="text-sm text-gray-600">{status}</div>}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     </>
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {status && <div className='text - sm text - gray - 600'>{status}</div>}
       </div>;
     </>);
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {status && <div className='text-sm text-gray-600'>{status}</div>}
@@ -1042,3 +1252,9 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

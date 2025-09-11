@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }; import React, { useState } from 'react'
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones'
 import { useAuth } from '@/hooks/useAuth'
@@ -118,6 +119,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   if (isLoading) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 if (isLoading) {
     return (
       <div className="space-y-4">
@@ -129,6 +132,7 @@ if (isLoading) {
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-4">;
         {[1, 2, 3].map((i,) => (;
@@ -139,10 +143,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
             </CardContent>;
           </Card>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ))}
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   
@@ -153,11 +160,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
+<<<<<<< HEAD
 <<<<<<< HEAD
         description = {isClient ?
           "Break down the project into manageable milestones to track progress and payments." :
@@ -174,6 +185,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
@@ -184,6 +198,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick: () => setShowAddForm(true)
           } : undefined
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
       />;
     );
@@ -191,6 +206,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
         }
+=======
+        }
+      />;
+    );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 
@@ -209,7 +231,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick: (,) => setShowAddForm(true);
           } : undefined;
         }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">
       {isClient && !showAddForm && (
@@ -221,6 +246,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       
 =======
@@ -230,12 +256,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {showAddForm && (;
@@ -243,6 +275,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <AddMilestoneForm
             <AddMilestoneForm 
@@ -257,6 +290,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
+=======
+            <AddMilestoneForm
+              onSubmit = {handleSubmit,}
+              isSubmitting = {isSubmitting,}
+              onCancel = {(,) => setShowAddForm(false),}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
           </CardContent>;
         </Card>;
@@ -266,6 +305,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
       <div className="space-y-4">
@@ -319,14 +359,33 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <MilestoneCard
+            key = {milestone && milestone.id,}
+            id = {milestone && milestone.id,}
+            projectId = {milestone && milestone.project_id,}
+            title = {milestone && milestone.title,}
+            description = {milestone && milestone.description,}
+            amount = {parseFloat(milestone && milestone.amount.toString()),}
+            status = {milestone && milestone.status,}
+            dueDate = {milestone && milestone.due_date,}
+            onApprove = {onApprove,}
+            onReject = {onReject,}
+          />;
+        ))}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
             <AddMilestoneForm 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Check condition
 if ( {) {
@@ -403,7 +462,11 @@ if ( {) {
 ";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <AddMilestoneForm
 =======
             <AddMilestoneForm
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <AddMilestoneForm
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

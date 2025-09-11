@@ -18,15 +18,22 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -88,7 +95,10 @@ import {Check, ExternalLink} from 'lucide-react';
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -158,6 +168,7 @@ function BrowserAutomationCloudPage() {
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
@@ -247,6 +258,8 @@ export default function BrowserAutomationCloudPage() {
       </main>
     </>
   );	return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
@@ -277,6 +290,7 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 =======
 
 
@@ -326,3 +340,7 @@ export default function BrowserAutomationCloudPage() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+	),
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

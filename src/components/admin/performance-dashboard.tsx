@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -26,6 +27,8 @@ interface PerformanceMetrics {
   performanceScore: number
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -50,6 +53,35 @@ interface PerformanceMetrics {;
   bundleSize: number;
   loadTime: number;
   performanceScore: number;
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+import {
+  Activity
+  Zap
+  Package
+  TrendingUp
+  TrendingDown
+  AlertTriangle
+  CheckCircle
+  RefreshCw
+  BarChart3
+  Clock
+  Globe
+} from 'lucide-react'
+import { bundleMonitor } from '@/utils/bundleMonitor'
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
+interface PerformanceMetrics {
+  bundleSize: number
+  loadTime: number
+  performanceScore: number
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   chunkCount: number;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -82,6 +114,10 @@ interface PerformanceMetrics {
   cls: number; // Cumulative Layout Shift;
   fid: number; // First Input Delay;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface BundleChunk {
   name: string;
   size: number;
@@ -138,6 +174,10 @@ function PerformanceDashboard() {
         cls: 0,
         fid: 0,
       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   const collectWebVitals = async (): Promise < Partial < PerformanceMetrics>> => {
@@ -156,6 +196,10 @@ if ( {) {
       vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart;
       vitals.lcp = navigation.loadEventEnd - navigation.fetch_start;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Use PerformanceObserver for more accurate metrics;
     // Check condition
 if ( {) {
@@ -172,6 +216,10 @@ if ( {) {
   $2
 }
                 vitals.fcp = entry.start_time;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             }
             // Check condition
@@ -180,11 +228,19 @@ if ( {) {
 }
               vitals.lcp = entry.start_time;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Check condition
 if ( {) {
   $2
 }
               vitals.cls = (vitals.cls || 0) + (entry as any).value;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
             // Check condition
 if ( {) {
@@ -192,6 +248,10 @@ if ( {) {
 }
               vitals.fid = (entry as any).processing_start - entry.start_time;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           });
         });
         observer.observe ({
@@ -229,6 +289,10 @@ if (return []) {
         type: categorize_chunk (entry.name),
       }));
       .sort ((a, b) => b.size - a.size);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const categorize_chunk = (filename: string): string => {
     if () return 'framework') {
@@ -254,6 +318,7 @@ if (return '0 B') {
     const sizes = ['B', 'KB', 'MB', 'GB'];
     const index = Math.floor (Math.log (bytes) / Math.log (k));
     return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
+<<<<<<< HEAD
   chunkCount: number;
   cacheHitRate: number;
   fcp: number; // First Contentful Paint
@@ -400,6 +465,8 @@ export function PerformanceDashboard() {
     const sizes = ['B', 'KB', 'MB', 'GB']
     const i = Math.floor(Math.log(bytes) / Math.log(k))
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600'
@@ -436,6 +503,7 @@ interface PerformanceMetrics {;
   cls: number, // Cumulative Layout Shift;
   fid: number, // First Input Delay;
 }
+<<<<<<< HEAD
   type: string;
 =======
   load_time: number;
@@ -620,6 +688,8 @@ if (return '0 B') {
 if (return 'text - green - 600') {
   $2
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Check condition
 if (return 'text - yellow - 600') {
   $2
@@ -641,16 +711,23 @@ if (
 
   type: string;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function PerformanceDashboard() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [chunks, setChunks] = useState<BundleChunk[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const collectMetrics = async () => {;
     try {;
       // Collect performance metrics;
@@ -660,14 +737,19 @@ export function PerformanceDashboard() {;
       )[0] as PerformanceNavigationTiming;
       const resourceCount = performance && performance.getEntriesByType('resource').length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const performanceMetrics: PerformanceMetrics = {;
         bundleSize: 0, // This would need to be calculated separately;
         loadTime: navigationEntry;
           ? navigationEntry && navigationEntry.loadEventEnd - navigationEntry && navigationEntry.fetchStart;
           : 0,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 interface BundleChunk {;
@@ -694,12 +776,15 @@ export function PerformanceDashboard() {;
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         performanceScore: 0, // This would need to be calculated;
         chunkCount: resourceCount,;
         cacheHitRate: 0, // This would need to be calculated from resource timing;
         fcp: 0, // First Contentful Paint - would need Performance Observer;
         lcp: 0, // Largest Contentful Paint - would need Performance Observer;
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;
+<<<<<<< HEAD
 <<<<<<< HEAD
         fid: 0  // First Input Delay - would need Performance Observer;
       },;
@@ -708,6 +793,8 @@ export function PerformanceDashboard() {;
         loadTime: performanceMetrics.loadTime,;
         resourceCount: performanceMetrics.chunkCount;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         fid: 0, // First Input Delay - would need Performance Observer;
       };
 
@@ -715,11 +802,15 @@ export function PerformanceDashboard() {;
       logInfo('Performance metrics collected successfully', {;
         loadTime: performanceMetrics && performanceMetrics.loadTime,;
         resourceCount: performanceMetrics && performanceMetrics.chunkCount,;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
     } catch (error) {;
       logErrorToProduction('Failed to collect performance metrics', error, {;
         component: 'PerformanceDashboard',;
+<<<<<<< HEAD
 <<<<<<< HEAD
         action: 'collectMetrics';
       }),;
@@ -727,6 +818,10 @@ export function PerformanceDashboard() {;
         action: 'collectMetrics',;
       });
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        action: 'collectMetrics',;
+      });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Set fallback metrics;
       setMetrics({;
         bundleSize: 0,;
@@ -737,6 +832,7 @@ export function PerformanceDashboard() {;
         fcp: 0,;
         lcp: 0,;
         cls: 0,;
+<<<<<<< HEAD
 <<<<<<< HEAD
         fid: 0;
       });
@@ -837,6 +933,8 @@ export function PerformanceDashboard() {;
     return () => clearInterval(interval)
   }, []),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         fid: 0,;
       });
     }
@@ -893,7 +991,10 @@ export function PerformanceDashboard() {;
         }, 2000);
       });    }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className="space-y-6">
@@ -907,14 +1008,18 @@ export function PerformanceDashboard() {;
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <RefreshCw
             className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
           />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <RefreshCw
             className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
           />
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
+<<<<<<< HEAD
               {lastUpdated && (
                 <p className='text-sm text-muted-foreground'>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -927,6 +1032,14 @@ ursor/fix-website-loading-errors-and-merge-6662
   };
   const collectChunkData = async (): Promise<BundleChunk[]> => {;
     if (typeof window === 'undefined') return [];
+=======
+    return vitals;
+  };
+
+  const collectChunkData = async (): Promise<BundleChunk[]> => {;
+    if (typeof window === 'undefined') return [];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const resourceEntries = performance && performance.getEntriesByType(;
       'resource';
     ) as PerformanceResourceTiming[];
@@ -934,6 +1047,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       entry =>;
         entry && entry.name.includes('/_next/static/') && entry && entry.name.endsWith('.js');
     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return scriptEntries;
       .map(entry => ({;
         name: entry && entry.name.split('/').pop()?.split('?')[0] || 'unknown',;
@@ -951,6 +1068,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     if (filename && filename.includes('chunks')) return 'chunk';
     return 'other';
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const formatSize = (bytes: number): string => {;
     if (bytes === 0) return '0 B';
     const k = 1024;
@@ -958,17 +1079,29 @@ ursor/fix-website-loading-errors-and-merge-6662
     const i = Math && Math.floor(Math && Math.log(bytes) / Math && Math.log(k));
     return parseFloat((bytes / Math && Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getScoreColor = (score: number): string => {;
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getScoreIcon = (score: number) => {;
     if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />;
     if (score >= 70);
       return <AlertTriangle className='w-4 h-4 text-yellow-600' />;
     return <AlertTriangle className='w-4 h-4 text-red-600' />;
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     collectMetrics();
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds;
@@ -998,14 +1131,25 @@ ursor/fix-website-loading-errors-and-merge-6662
             opportunities;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+
+        <Button onClick={collectMetrics} disabled={isLoading}>;
+          <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isLoading ? 'Collecting...' : 'Refresh'}
 
         </Button>;
       </div>;
 
 
+<<<<<<< HEAD
         </Button>;
       </div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Performance Score */}
       <Card>;
         <CardHeader>;
@@ -1023,6 +1167,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <Zap className='w - 5 h - 5' />;
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -1221,10 +1366,22 @@ export function PerformanceDashboard() {;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <Zap className="w-5 h-5" />;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Performance Score;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+=======
+
+
+              
+              {lastUpdated && (
+                <p className="text-sm text-muted-foreground">
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
                     </Badge>;
@@ -1232,6 +1389,10 @@ export function PerformanceDashboard() {;
                   <Progress value={metrics && metrics.performanceScore} className='h-2' />;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {lastUpdated && (;
                 <p className='text-sm text-muted-foreground'>;
                   Last updated: {lastUpdated && lastUpdated.toLocaleString()}
@@ -1246,8 +1407,16 @@ export function PerformanceDashboard() {;
               </p>;
             </div>;
           )}
+<<<<<<< HEAD
         </CardContent>;
       </Card>;
+=======
+
+        </CardContent>;
+      </Card>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Metrics Grid */}
       {metrics && (;
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>;
@@ -1259,12 +1428,20 @@ export function PerformanceDashboard() {;
               </div>;
               <p className='text-2xl font-bold mt-2'>;
                 {formatSize(metrics.bundleSize)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </p>;
               <p className='text-xs text-muted-foreground'>;
                 {metrics && metrics.chunkCount} chunks;
               </p>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Card>;
             <CardContent className='p-4'>;
               <div className='flex items-center gap-2'>;
@@ -1339,6 +1516,7 @@ export function PerformanceDashboard() {;
                 {metrics.load_time.to_fixed (0)}ms;
               </p>;
               <p className='text - xs text - muted - foreground'>;
+<<<<<<< HEAD
           {metrics ? (;
             <div className="space-y-4">;
               <div className="flex items-center gap-4">;
@@ -1395,10 +1573,14 @@ export function PerformanceDashboard() {;
               </div>;
               <p className="text-2xl font-bold mt-2">{metrics.loadTime.toFixed(0)}ms</p>;
               <p className="text-xs text-muted-foreground">;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Average chunk load time;
               </p>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 ;
           <Card>;
             <CardContent className="p-4">;
@@ -1410,10 +1592,27 @@ export function PerformanceDashboard() {;
                 {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` :'N/A'}
               </p>;
               <p className="text-xs text-muted-foreground">;
+=======
+
+          <Card>;
+            <CardContent className='p - 4'>;
+              <div className='flex items - center gap - 2'>;
+                <Globe className='w - 4 h - 4 text - green - 600' />;
+                <span className='text - sm font - medium'>;
+                  First Contentful Paint;
+                </span>;
+              </div>;
+              <p className='text - 2xl font - bold mt - 2'>;
+                {metrics.fcp ? `${metrics.fcp.to_fixed (0)}ms` : 'N / A'}
+              </p>;
+              <p className='text - xs text - muted - foreground'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Time to first paint;
               </p>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 ;
           <Card>;
             <CardContent className="p-4">;
@@ -1425,10 +1624,27 @@ export function PerformanceDashboard() {;
                 {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` :'N/A'}
               </p>;
               <p className="text-xs text-muted-foreground">;
+=======
+
+          <Card>;
+            <CardContent className='p - 4'>;
+              <div className='flex items - center gap - 2'>;
+                <BarChart3 className='w - 4 h - 4 text - orange - 600' />;
+                <span className='text - sm font - medium'>;
+                  Largest Contentful Paint;
+                </span>;
+              </div>;
+              <p className='text - 2xl font - bold mt - 2'>;
+                {metrics.lcp ? `${metrics.lcp.to_fixed (0)}ms` : 'N / A'}
+              </p>;
+              <p className='text - xs text - muted - foreground'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Time to largest paint;
               </p>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
         </div>;
       )}
 ;
@@ -1437,11 +1653,22 @@ export function PerformanceDashboard() {;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <Package className="w-5 h-5" />;
+=======
+
+        </div>)}
+      {/* Bundle Chunks */}
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items - center gap - 2'>;
+            <Package className='w - 5 h - 5' />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Bundle Chunks;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               {lastUpdated && (
                 <p className='text-sm text-muted-foreground'>
@@ -1520,6 +1747,8 @@ export function PerformanceDashboard() {;
       {/* Bundle Chunks */}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -1530,6 +1759,9 @@ export function PerformanceDashboard() {;
         <CardContent>
           {chunks.length > 0 ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='space-y-2'>
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div
@@ -1538,9 +1770,12 @@ export function PerformanceDashboard() {;
                 >
                   <div className='flex items-center gap-3'>
                     <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
@@ -1548,10 +1783,15 @@ export function PerformanceDashboard() {;
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -1575,11 +1815,15 @@ export function PerformanceDashboard() {;
                   </div>;
                 </div>;
               ))}
+<<<<<<< HEAD
 
 
               
 
 
+=======
+              
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {chunks.length > 10 && (
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
@@ -1590,6 +1834,7 @@ export function PerformanceDashboard() {;
                   ... and {chunks && chunks.length - 10} more chunks;
                 </p>;
               )}
+<<<<<<< HEAD
             </div>;
           ) : (;
             <p className='text-center py-8 text-muted-foreground'>;
@@ -1644,6 +1889,8 @@ export function PerformanceDashboard() {;
                   ... and {chunks.length - 10} more chunks
                 </p>
               )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           ) : (
             <p className="text-center py-8 text-muted-foreground">
@@ -1675,6 +1922,7 @@ export function PerformanceDashboard() {;
             </div>
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
+<<<<<<< HEAD
                 <p className="font-medium text-green-900 dark:text-green-100">
 ursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1684,6 +1932,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
@@ -1692,13 +1942,18 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   Performance monitoring active
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  Performance monitoring active
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
                 <p className='text-sm text-green-700 dark:text-green-300'>
                   Real-time performance tracking is helping optimize your
                   application
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
@@ -1724,6 +1979,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+                </p>
+              </div>
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
 
 
@@ -1731,15 +1991,20 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p className='font-medium text-yellow-900 dark:text-yellow-100'>
                     Consider more aggressive code splitting
                   </p>
                   <p className='text-sm text-yellow-700 dark:text-yellow-300'>
                     Bundle size is above 2MB. Consider implementing dynamic
                     imports for heavy components
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
@@ -1753,10 +2018,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     Bundle size is above 2MB. Consider implementing dynamic imports for heavy components
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </p>
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -1781,6 +2049,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardTitle className="flex items-center gap-2">;
             <TrendingUp className="w-5 h-5" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </CardContent>;
       </Card>;
@@ -1790,11 +2060,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <TrendingUp className='w-5 h-5' />;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Optimization Recommendations;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="space-y-3">;
             <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">;
@@ -1831,6 +2105,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-sm text-yellow-700 dark:text-yellow-300">;
                     Bundle size is above 2MB. Consider implementing dynamic imports for heavy components;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='space-y-3'>;
             <div className='flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded'>;
               <CheckCircle className='w-5 h-5 text-blue-600 mt-0 && 0.5' />;
@@ -1868,11 +2144,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-sm text-yellow-700 dark:text-yellow-300'>;
                     Bundle size is above 2MB. Consider implementing dynamic;
                     imports for heavy components;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </p>;
                 </div>;
               </div>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </CardContent>
@@ -1884,6 +2164,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1891,6 +2173,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>;
       </Card>;
     </div>;
+<<<<<<< HEAD
 
 } ;
 <<<<<<< HEAD
@@ -1898,6 +2181,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+} ;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {chunks.length > 0 ? (
             <div className='space - y-2'>;
@@ -1990,6 +2279,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>;
       </Card>;
     </div>);
+<<<<<<< HEAD
   ),;} 
  const collectMetrics = async () => {;
   try {;
@@ -2059,3 +2349,8 @@ return (<div className="space-y-6" > {;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

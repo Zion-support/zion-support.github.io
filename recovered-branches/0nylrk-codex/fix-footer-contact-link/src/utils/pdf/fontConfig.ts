@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
@@ -10,11 +11,18 @@ import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 =======
 
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -31,6 +39,7 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     // Font loading logic would go here
     // For demonstration purposes, we'll just set up the font using standard fonts
     switch (fontFamily) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'montserrat':;
         doc.setFont('helvetica');
@@ -55,6 +64,8 @@ export interface FontConfig {;
   italic?: ArrayBuffer,;
   boldItalic?: ArrayBuffer;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case 'montserrat':
         doc && doc.setFont('helvetica');
         break;
@@ -71,6 +82,7 @@ export interface FontConfig {;
     console && console.error('Error loading custom fonts:', error);
 
     // Fall back to default font
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     doc && doc.setFont('helvetica')
 import {jsPDF} from 'jspdf';
@@ -79,6 +91,15 @@ export interface FontConfig {
   bold?: ArrayBuffer;
   italic?: ArrayBuffer,
   bold_italic?: ArrayBuffer;
+=======
+    doc.setFont('helvetica')
+import { jsPDF } from 'jspdf',;
+export interface FontConfig {;
+  regular: ArrayBuffer,;
+  bold?: ArrayBuffer,;
+  italic?: ArrayBuffer,;
+  boldItalic?: ArrayBuffer;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;
@@ -109,6 +130,7 @@ if (return, ) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
 
+<<<<<<< HEAD
 
     doc.set_font ('helvetica');
 
@@ -162,10 +184,18 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     doc.setFont('helvetica');
 <<<<<<< HEAD
 =======
+=======
+    doc.setFont('helvetica');
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
+=======
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

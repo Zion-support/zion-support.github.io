@@ -8,15 +8,20 @@ import {useToast} from "@/hooks/use-toast";
 import {Checkbox} from "@/components/ui/checkbox";
 export function WaitlistSection() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -34,6 +39,11 @@ import { Checkbox } from "@/components/ui/checkbox",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -42,6 +52,9 @@ export function WaitlistSection() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -52,13 +65,17 @@ export function WaitlistSection() {
         description: "Please fill all fields and agree to the terms."})
       return
     }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setIsSubmitting(true);
     try {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000));
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -66,6 +83,8 @@ export function WaitlistSection() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     
     setIsSubmitting(true),
     
@@ -74,14 +93,18 @@ export function WaitlistSection() {
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
+<<<<<<< HEAD
 <<<<<<< HEAD
       setEmail(""),
       setName(""),
@@ -91,6 +114,11 @@ export function WaitlistSection() {
       setName("");
       setRole("");
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      setEmail("");
+      setName("");
+      setRole("");
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setAgreeTerms(false)
     } catch (error) {
       toast({
@@ -98,9 +126,13 @@ export function WaitlistSection() {
         title: "Something went wrong"
         description: "Please try again later."})
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { GradientHeading } from '@/components / GradientHeading';
@@ -150,12 +182,23 @@ if ( {) {
         variant: "destructive",
         title: "Something went wrong",
         description: "Please try again later."});
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault(),;
+=======
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!email || !name || !role || !agreeTerms) {;
       toast({;
         variant: "destructive",;
@@ -163,6 +206,7 @@ if ( {) {
         description: "Please fill all fields and agree to the terms."}),;
       return;
     }
+<<<<<<< HEAD
     setIsSubmitting(true);
     try {;
       // Simulating an API call;
@@ -170,6 +214,19 @@ if ( {) {
       toast({;
         title: "Success!",;
         description: "Thank you for registering with Zion. We'll be in touch soon."}),;
+=======
+
+    setIsSubmitting(true);
+
+    try {;
+      // Simulating an API call;
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      toast({;
+        title: "Success!",;
+        description: "Thank you for registering with Zion. We'll be in touch soon."}),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Reset form;
       setEmail("");
       setName("");
@@ -184,6 +241,7 @@ if ( {) {
       setIsSubmitting(false);
     }
   };
+<<<<<<< HEAD
     } finally {
       setIsSubmitting(false)
     }
@@ -248,11 +306,30 @@ export function WaitlistSection() {;
   return (;
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
+=======
+
+=======
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  },
+  
+  return (
+    <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
+      {/* Background elements */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">;
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]"></div>;
         <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]"></div>;
       </div>;
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="container mx-auto px-4 relative z-10">;
         <div className="max-w-3xl mx-auto">;
           <div className="text-center mb-12">;
@@ -262,6 +339,7 @@ export function WaitlistSection() {;
               Complete your registration to access exclusive features and personalized services.;
             </p>;
           </div>;
+<<<<<<< HEAD
     } finally {
       setIsSubmitting(false)
     }
@@ -290,45 +368,66 @@ export function WaitlistSection() {;
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">;
             <div className="space-y-2">;
               <Label htmlFor="name">Full Name</Label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Input
                 id="name"
                 placeholder="John Smith"
                 value={name}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onChange={(e) => setName(e && e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light";
               />;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="space-y-2">;
               <Label htmlFor="email">Email Address</Label>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="space-y-2">;
               <Label htmlFor="email">Email Address</Label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Input
                 id="email"
                 type="email"
                 placeholder="you@company && company.com"
                 value={email}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onChange={(e) => setEmail(e && e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light";
               />;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="space-y-2">;
               <Label htmlFor="role">Your Role</Label>;
@@ -350,39 +449,55 @@ export function WaitlistSection() {;
             <div className="space-y-2">
               <Label htmlFor="role">Your Role</Label>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="space-y-2">;
               <Label htmlFor="role">Your Role</Label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Input
                 id="role"
                 placeholder="IT Manager, Developer, Business Owner, etc."
                 value={role}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onChange={(e) => setRole(e && e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light";
               />;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="flex items-center space-x-2">;
               <Checkbox
                 id="terms" 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="flex items-center space-x-2">;
               <Checkbox
                 id="terms" 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 checked={agreeTerms}
                 onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
               />;
               <Label
                 htmlFor="terms"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onChange={(e) => setRole(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light"
@@ -403,6 +518,8 @@ export function WaitlistSection() {;
             </div>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Button 
@@ -410,6 +527,7 @@ export function WaitlistSection() {;
               disabled={isSubmitting} 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button
               type="submit"
@@ -419,6 +537,8 @@ export function WaitlistSection() {;
               disabled={isSubmitting} 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -428,6 +548,7 @@ export function WaitlistSection() {;
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 import { useState } from "react",;
@@ -456,30 +577,43 @@ export function WaitlistSection() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="text-sm text-zion-slate font-normal">;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               type="submit" 
               disabled={isSubmitting} 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
               {isSubmitting ? "Processing..." : "Complete Registration"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -493,6 +627,7 @@ export function WaitlistSection() {;
           <div className="text - center mb - 12">;
             <GradientHeading > Register Now</GradientHeading>;
             <p className="text - zion - slate - light text - lg mt - 4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
     setIsSubmitting(true),;
@@ -530,10 +665,13 @@ export function WaitlistSection() {;
             <p className="text-zion-slate-light text-lg mt-4">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Join our growing community of AI and tech professionals.;
               Complete your registration to access exclusive features and personalized services.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">;
@@ -544,10 +682,16 @@ export function WaitlistSection() {;
             <div className="space - y-2">;
               <Label html_for="name">Full Name</Label>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <form on_submit={handle_submit} className="space - y-6 bg - zion - blue - light p - 8 rounded - lg border border - zion - purple / 20">;
+            <div className="space - y-2">;
+              <Label html_for="name">Full Name</Label>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Input;
                 id="name";
                 placeholder="John Smith";
                 value={name}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onChange={(e) => setName(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light";
@@ -556,18 +700,24 @@ export function WaitlistSection() {;
             <div className="space-y-2">;
               <Label htmlFor="email">Email Address</Label>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 on_change={(e) => set_name (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue - light";
               />;
             </div>;
             <div className="space - y-2">;
               <Label html_for="email">Email Address</Label>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Input;
                 id="email";
                 type="email";
                 placeholder="you@company.com";
                 value={email}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light";
@@ -576,17 +726,23 @@ export function WaitlistSection() {;
             <div className="space-y-2">;
               <Label htmlFor="role">Your Role</Label>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 on_change={(e) => set_email (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue - light";
               />;
             </div>;
             <div className="space - y-2">;
               <Label html_for="role">Your Role</Label>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Input;
                 id="role";
                 placeholder="IT Manager, Developer, Business Owner, etc.";
                 value={role}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onChange={(e) => setRole(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light";
@@ -602,6 +758,8 @@ export function WaitlistSection() {;
                 htmlFor="terms";
                 className="text-sm text-zion-slate font-normal";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 on_change={(e) => set_role (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue - light";
               />;
@@ -615,11 +773,15 @@ export function WaitlistSection() {;
               <Label;
                 html_for="terms";
                 className="text - sm text - zion - slate font - normal";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
+<<<<<<< HEAD
             ;
             <Button ;
               type="submit" ;
@@ -635,12 +797,19 @@ export function WaitlistSection() {;
             >;
               {isSubmitting ? "Processing..." : "Complete Registration"}
 =======
+=======
+            <Button;
+              type="submit";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               disabled={is_submitting}
               className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
             >;
               {is_submitting ? "Processing..." : "Complete Registration"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </form>;
         </div>;
@@ -649,6 +818,7 @@ export function WaitlistSection() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </section>);
@@ -680,3 +850,8 @@ return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overf
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

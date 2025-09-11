@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +28,7 @@ class ErrorBoundary extends React.Component {
 }
 
 =======
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -34,19 +38,30 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -54,10 +69,18 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 
 
 const AppMetadataManager: React.FC = () => {
+=======
+
+
+
+const AppMetadataManager: React.FC = () => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <AppLayout>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AppMetadataManager: React.FC = () => {;
   return (
@@ -67,11 +90,16 @@ const AppMetadataManager: React.FC = () => {
     <AppLayout>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SEO
         title="App Metadata Manager"
         description="Manage app store metadata for the Zion mobile application"
         noindex={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />
       <div className="container py-8">
         <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>
@@ -82,6 +110,7 @@ const AppMetadataManager: React.FC = () => {
 }
 export default AppMetadataManager;
 
+<<<<<<< HEAD
 },
 
 export default AppMetadataManager,
@@ -103,6 +132,9 @@ const AppMetadataManager: React.FC = () => {;
   );
 };
 export default AppMetadataManager;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -116,10 +148,13 @@ const AppMetadataManager: React.FC = () => {
         noindex={true}
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </AppLayout>);
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="container py - 8">;
         <h1 className="text - 3xl font - bold text - zion - cyan mb - 8">App Metadata Manager</h1>;
         <MetadataManager />;
@@ -128,11 +163,15 @@ const AppMetadataManager: React.FC = () => {
 }
 ;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default AppMetadataManager;
 ;
@@ -180,3 +219,7 @@ export default AppMetadataManager;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default AppMetadataManager;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

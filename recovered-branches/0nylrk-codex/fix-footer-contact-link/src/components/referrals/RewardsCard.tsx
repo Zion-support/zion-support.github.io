@@ -1,14 +1,23 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
@@ -17,12 +26,17 @@ import { BadgeDollarSign, Badge } from "lucide-react",
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
 }
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {
@@ -52,11 +66,15 @@ import {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
 <<<<<<< HEAD
 } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
@@ -110,6 +128,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </CardContent>
       </Card>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from '@/components / ui / card';
 import { ReferralReward  } from '@/types / referrals';
 import { format_date  } from '@/utils / referral_utils';
@@ -147,7 +167,10 @@ if ( {) {
   }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
   }
   return (
@@ -169,14 +192,20 @@ if ( {) {
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   )
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
 import { formatDate } from "@/utils/referralUtils",;
@@ -186,6 +215,7 @@ interface RewardsCardProps {;
   rewards: ReferralReward[],;
   isLoading: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
@@ -248,11 +278,16 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -267,6 +302,7 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     ),;
   }
 ;
@@ -283,6 +319,13 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
   if (rewards && rewards.length === 0) {;
     return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    );
+  }
+
+  if (rewards && rewards.length === 0) {;
+    return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -301,13 +344,19 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Check condition
 if ( {) {
   $2
@@ -348,6 +397,10 @@ if ( {) {
         <div className="space - y-4">;
           {rewards.map ((reward, index) => (
             <div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               key={reward.id}
               className={`flex justify - between items - start ${
                 index !== rewards.length - 1 ? "border - b pb - 3" : "";
@@ -369,9 +422,13 @@ if ( {) {
                 </p>;
                 {reward.expires_at && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -392,6 +449,9 @@ if ( {) {
                 <div className="flex items-center gap-2">;
                   {reward && reward.reward_type === 'credit' ? (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <BadgeDollarSign className="h-4 w-4 text-green-600" />;
                   ) : (;
                     <Badge className="h-4 w-4 text-blue-600" />;
@@ -408,6 +468,7 @@ if ( {) {
                 {reward && reward.expires_at && (;
                   <p className="text-xs text-muted-foreground">;
                     Expires on {formatDate(reward && reward.expires_at)}
+<<<<<<< HEAD
     ),;
   }
     );
@@ -468,10 +529,15 @@ if ( {) {
                   </p>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  </p>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
       </CardContent>;
@@ -524,10 +590,13 @@ isLoading: boolean
 ;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
@@ -537,3 +606,9 @@ isLoading: boolean
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

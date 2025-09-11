@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',;
@@ -16,6 +17,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ ok: true });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { readJson, writeJson } from '../../../utils/fsDb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -26,6 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   feedback.push({ articleId, helpful, ts: Date.now() })
   writeJson('support/feedback.json', feedback)
 
+<<<<<<< HEAD
   return res.status(200).json({ ok: true })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -62,3 +67,6 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

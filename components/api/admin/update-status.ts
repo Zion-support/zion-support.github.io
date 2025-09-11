@@ -2,18 +2,24 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method Not Allowed' });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' });
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return;
   }
@@ -22,9 +28,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const body = req && req.body || {};
   const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');
   if (!fs && fs.existsSync(dataDir)) fs && fs.mkdirSync(dataDir, { recursive: true });
@@ -32,6 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const existing = fs && fs.existsSync(statusPath)
     ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
     : { agents: [] };
+<<<<<<< HEAD
 <<<<<<< HEAD
   const merged = {
   if (req.method !== 'POST') {
@@ -77,6 +88,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const merged = {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const merged = {
@@ -88,10 +103,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { isInternalAgentRequest } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -159,6 +179,7 @@ if ( {) {
   res.status (200).json ({ ok: true });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -179,3 +200,15 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  res.status(200).json({ ok: true })
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

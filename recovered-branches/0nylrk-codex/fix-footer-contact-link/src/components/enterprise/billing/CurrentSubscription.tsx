@@ -1,11 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function CurrentSubscription() {
   // Mock subscription data
@@ -31,6 +35,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function CurrentSubscription() {
   // Mock subscription data
 
@@ -46,6 +52,7 @@ export function CurrentSubscription() {
     billingCycle: "Annual",;
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
+<<<<<<< HEAD
     amount: "$1,999.00";
     billingCycle: "Annual",
     startDate: "May 1, 2025",
@@ -60,6 +67,8 @@ export function CurrentSubscription() {;
     billingCycle: "Annual",;
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     amount: "$1,999 && 999.00";
     teamSeats: {;
       used: 32,;
@@ -72,17 +81,24 @@ export function CurrentSubscription() {;
     plan: "Business",
     status: "active",
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     teamSeats: {
       used: 32
       total: 50
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
 
   return (
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -157,6 +173,13 @@ export function CurrentSubscription() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -176,6 +199,7 @@ export function CurrentSubscription() {;
     }
   };
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export function CurrentSubscription() {;
@@ -197,6 +221,9 @@ export function CurrentSubscription() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -209,6 +236,7 @@ export function CurrentSubscription() {;
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">;
           <div className="space-y-1">;
             <p className="text-sm font-medium leading-none text-muted-foreground">Plan</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-lg font-bold">{subscription.plan}</p>;
           </div>;
@@ -228,6 +256,8 @@ export function CurrentSubscription() {;
             <p className="text-sm font-medium leading-none text-muted-foreground">Next Billing Date</p>;
             <p className="text-lg">{subscription.nextBillingDate}</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <p className="text-lg font-bold">{subscription && subscription.plan}</p>;
           </div>;
           <div className="space-y-1">;
@@ -245,23 +275,32 @@ export function CurrentSubscription() {;
           <div className="space-y-1">;
             <p className="text-sm font-medium leading-none text-muted-foreground">Next Billing Date</p>;
             <p className="text-lg">{subscription && subscription.nextBillingDate}</p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           <div className="space-y-1">;
             <p className="text-sm font-medium leading-none text-muted-foreground">Team Seats</p>;
             <p className="text-lg">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {subscription.teamSeats.used} / {subscription.teamSeats.total} used;
             </p>;
           </div>;
         </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {subscription && subscription.teamSeats.used} / {subscription && subscription.teamSeats.total} used;
             </p>;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="rounded-lg bg-muted p-4 mt-4">;
           <div className="space-y-2">;
             <div className="flex items-center justify-between">;
@@ -270,9 +309,12 @@ export function CurrentSubscription() {;
             </div>;
             <div className="text-xs text-muted-foreground">;
 <<<<<<< HEAD
+<<<<<<< HEAD
               You're saving $4,797.60 per year with annual billing.;
               You're saving $4,797.60 per year with annual billing.;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               You're saving $4,797 && 797.60 per year with annual billing.;
 =======
 import React from './react';
@@ -344,11 +386,15 @@ function CurrentSubscription() {
             <div className="text - xs text - muted - foreground">;
               You're saving $4, 797.60 per year with annual billing.;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Card>);
       <CardFooter className="flex justify-between">;
@@ -363,6 +409,8 @@ flex items-center justify-between"> <CardTitle>Current Subscription</CardTitle> 
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -377,5 +425,9 @@ flex items-center justify-between"> <CardTitle>Current Subscription</CardTitle> 
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

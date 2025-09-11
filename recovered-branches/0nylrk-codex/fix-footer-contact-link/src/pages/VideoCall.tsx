@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -12,6 +13,9 @@ import { toast } from 'sonner';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -21,7 +25,10 @@ import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function VideoCall() {
@@ -39,7 +46,10 @@ import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {Button} from '@/components / ui / button';
 import {toast} from 'sonner';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * VideoCall - Function description
  */
@@ -54,9 +64,13 @@ function VideoCall() {
     id: string,
     name: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     avatar?: string;
     is_muted?: boolean;
     isVideoEnabled?: boolean;
@@ -64,6 +78,7 @@ function VideoCall() {
     is_host?: boolean;
   }>>([;
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
@@ -83,6 +98,8 @@ export default function VideoCall() {
     isHost?: boolean
   }>>([
     {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'user-1'
       name: 'You'
       isVideoEnabled: true
@@ -112,6 +129,7 @@ export default function VideoCall() {;
     isVideoEnabled?: boolean,;
     isScreenSharing?: boolean,;
     isHost?: boolean;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -122,6 +140,8 @@ export default function VideoCall() {;
     isVideoEnabled?: boolean
     isScreenSharing?: boolean
     isHost?: boolean
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }>>([;
     {;
       id: 'user-1',;
@@ -130,7 +150,33 @@ export default function VideoCall() {;
       isMuted: false;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]),
+=======
+
+
+  const handleJoinCall = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setIsJoining(true);
+    // Simulate connection delay;
+    setTimeout(() => {;
+      setHasJoined(true);
+      setIsJoining(false);
+
+      toast && toast.success("Call joined", {;
+        description: `You have joined meeting room ${roomId}`;
+      });
+    }, 1500);
+  };
+
+  const handleLeaveCall = () => {;
+
+    setHasJoined(false);
+    toast && toast.info("Call ended", {;
+      description: "You have left the meeting";
+    });
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleJoinCall = () => {
     setIsJoining(true),
@@ -142,6 +188,7 @@ export default function VideoCall() {;
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -170,10 +217,16 @@ export default function VideoCall() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast.info("Call ended", {
       description: "You have left the meeting"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -188,10 +241,16 @@ export default function VideoCall() {;
     
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    });
+    }),
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Navigate back after a short delay
     setTimeout(() => {
       navigate(-1)
     }, 1500)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -229,6 +288,8 @@ export default function VideoCall() {;
   }
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
@@ -237,6 +298,7 @@ export default function VideoCall() {;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
+<<<<<<< HEAD
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
     if (!participants.find(p => p.id === randomUser.id)) {
       setParticipants(prev => [...prev, randomUser]);
@@ -247,6 +309,17 @@ export default function VideoCall() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
+
+    if (!participants && participants.find(p => p && p.id === randomUser && randomUser.id)) {;
+
+      setParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser && randomUser.name} joined the call`);
+    }
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const simulateUserJoining = () => {
@@ -254,6 +327,7 @@ export default function VideoCall() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 
@@ -309,6 +383,8 @@ export default function VideoCall() {;
       setIsJoining(false),;
       toast.success("Call joined", {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -325,11 +401,15 @@ export default function VideoCall() {;
             <Button
               onClick={handleJoinCall} 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               disabled={isJoining}
               size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light">;
               {isJoining ? "Connecting..." : "Join Call"}
+<<<<<<< HEAD
 <<<<<<< HEAD
         description: `You have joined meeting room ${roomId}`;
       });
@@ -375,10 +455,13 @@ export default function VideoCall() {;
               className="bg-zion-purple hover:bg-zion-purple-light"
             >
               {isJoining ? "Connecting..." : "Join Call"}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>
           </div>
         ) : (
           <div className="space-y-4">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -432,13 +515,37 @@ export default function VideoCall() {;
     </>;
 =======
 
+=======
+            <VideoCallRoom
+              roomId={roomId |''}
+            <VideoCallRoom 
+              roomId={roomId || ''} 
+              participants={participants}
+              onLeave={handleLeaveCall}
+            />
+            {/* This button is just for demo/testing purposes */}
+            <div className="flex justify-center mt-4">
+              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+                Simulate user joining (demo only)
+              </Button>
+            </div>
+          </div>
+        )}
+
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </main>;
       <Footer />;
     </>;
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
@@ -522,6 +629,7 @@ export default function VideoCall() {;
       </main>;
       <Footer />;
     </>);
+<<<<<<< HEAD
   ),; roomId 
 }` 
 }) 
@@ -595,3 +703,15 @@ return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom room
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+;
+
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

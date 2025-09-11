@@ -1,21 +1,32 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 const hasSupabase =
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   !!process && process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process && process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x && x.trim());
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -35,14 +46,20 @@ export default async function handler(
       return res && res.status(500).json({ error: e && e.message });
     }  }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
@@ -415,6 +432,11 @@ request_quote: item.request_quote ?? null,
           created_at: item.created_at,
           original_language: item.original_language,
           translations: item.translations as any,
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method === 'GET') {
+    try {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method === 'POST') {
     try {
       const payload = req.body as Partial<TalentProfile>;
@@ -516,6 +538,7 @@ if (throw error) {
     }
   }
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -535,3 +558,7 @@ return res
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

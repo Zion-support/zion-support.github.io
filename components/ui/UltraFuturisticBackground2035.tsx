@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
@@ -58,6 +59,8 @@ const UltraFuturisticBackground2035: React.FC<;
       case 'quantum - fusion':;
         return {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -85,7 +88,10 @@ import { motion } from 'framer-motion';
   intensity?: 'low' | 'medium' | 'high';
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   intensity?: 'low' | 'medium' | 'high';
 
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -96,7 +102,10 @@ import { motion } from 'framer-motion';
   enableNeonEffects?: boolean;
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   intensity = 'medium';
   colorScheme = 'quantum-fusion';
   particleCount = 200;
@@ -108,16 +117,23 @@ import { motion } from 'framer-motion';
         return {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   enableNeonEffects = true,;
   enableSpaceTime = true;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getColorScheme = () => {;
     switch (colorScheme) {;
       case 'quantum-fusion':;
@@ -166,21 +182,30 @@ import { motion } from 'framer-motion';
         };    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           background: 'rgba (0, 0, 0, 0.95)',
           glow: 'rgba (0, 255, 255, 0.3)',        }          background: 'rgba (0, 0, 0, 0.95)';
           glow: 'rgba (0, 255, 255, 0.3)';
@@ -188,10 +213,13 @@ import { motion } from 'framer-motion';
       case 'neon - cyber':;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const _getColorScheme = () => {
     switch (colorScheme) {
       case 'quantum-fusion':
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return {
           primary: '#ff0080',
           secondary: '#00ff80',
@@ -225,11 +253,15 @@ import { motion } from 'framer-motion';
         }
       default:;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return {
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
+<<<<<<< HEAD
 <<<<<<< HEAD
           background: 'rgba(0, 0, 0, 0.95)',
           glow: 'rgba(0, 255, 255, 0.3)'
@@ -361,22 +393,30 @@ const UltraFuturisticBackground2035: React.FC<
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       canvas.height = window.innerHeight
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
     const initParticles = () => {
       particlesRef.current = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
           color: Math.random() > 0.5 ? colors.primary : colors.secondary
 });      }          color: Math.random() > 0.5 ? colors.primary : colors.secondary
         })
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       for (let i = 0, i < particleCount, i++) {
         particlesRef.current.push({
@@ -394,7 +434,10 @@ const UltraFuturisticBackground2035: React.FC<
         })
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
@@ -404,10 +447,14 @@ const UltraFuturisticBackground2035: React.FC<
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
@@ -427,6 +474,7 @@ const UltraFuturisticBackground2035: React.FC<
           color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
         });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     }
@@ -472,13 +520,20 @@ const UltraFuturisticBackground2035: React.FC<
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
     initParticles();
 
           particle.type = Math.random() > 0.7 ? 'quantum' : 'normal'
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         // Draw particle
         const alpha = particle.life / particle.maxLife;
@@ -497,17 +552,24 @@ const UltraFuturisticBackground2035: React.FC<
           ctx.fillStyle = colors.glow;
           ctx.fill();
 <<<<<<< HEAD
+<<<<<<< HEAD
           ctx.shadowBlur = 0;        } else {          ctx.shadowBlur = 0
 =======
 
           ctx.shadowBlur = 0
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          ctx.shadowBlur = 0
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         } else {
           // Normal particle
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ctx.fill();        }          ctx.fill()
 =======
@@ -515,10 +577,16 @@ const UltraFuturisticBackground2035: React.FC<
           ctx.fill()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          ctx.fill()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       });
       // Draw holographic grid
       if (enableHolographic) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
 animationRef.current = requestAnimationFrame(animate)
@@ -545,6 +613,8 @@ animationRef.current = requestAnimationFrame(animate)
       }
       animationRef.current = requestAnimationFrame(animate)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         drawHolographicGrid(ctx, colors)
       }
@@ -564,13 +634,19 @@ animationRef.current = requestAnimationFrame(animate)
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     // Animation loop;
@@ -658,7 +734,10 @@ animationRef.current = requestAnimationFrame(animate)
     enableNeonEffects,;
     enableSpaceTime,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ]);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const gridSize = 50;
@@ -668,6 +747,7 @@ animationRef.current = requestAnimationFrame(animate)
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const gridSize = 50;
+<<<<<<< HEAD
 <<<<<<< HEAD
         cancelAnimationFrame(animationRef.current)
         cancelAnimationFrame(animationRef.current);
@@ -699,6 +779,8 @@ animationRef.current = requestAnimationFrame(animate)
       ctx.moveTo(x, 0);
       ctx.lineTo(x, ctx.canvas.height);      ctx.beginPath();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         cancelAnimationFrame(animationRef.current)
       }
@@ -716,7 +798,10 @@ animationRef.current = requestAnimationFrame(animate)
     for (let x = 0, x < ctx.canvas.width, x += gridSize) {
       ctx.beginPath();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ctx.moveTo(x, 0);
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke()
@@ -725,6 +810,7 @@ animationRef.current = requestAnimationFrame(animate)
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(ctx.canvas.width, y);
+<<<<<<< HEAD
 <<<<<<< HEAD
       ctx.stroke();
     }
@@ -738,10 +824,16 @@ animationRef.current = requestAnimationFrame(animate)
       ctx.stroke()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      ctx.stroke()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // Animated diagonal lines
     ctx.strokeStyle = colors.secondary;
     ctx.globalAlpha = 0.2;
+<<<<<<< HEAD
 <<<<<<< HEAD
     for (let i = 0; i < 5; i++) {      const offset = (time + i * 0.5) * 100;
       ctx.beginPath();
@@ -753,10 +845,16 @@ animationRef.current = requestAnimationFrame(animate)
     for (let i = 0, i < 5, i++) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    for (let i = 0, i < 5, i++) {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const offset = (time + i * 0.5) * 100;
       ctx.beginPath();
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
+<<<<<<< HEAD
 <<<<<<< HEAD
       ctx.stroke();      ctx.stroke()
 =======
@@ -764,10 +862,16 @@ animationRef.current = requestAnimationFrame(animate)
       ctx.stroke()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      ctx.stroke()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Neon orbs
     for (let i = 0; i < 3; i++) {      const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
@@ -776,6 +880,11 @@ animationRef.current = requestAnimationFrame(animate)
     
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Neon orbs
     for (let i = 0, i < 3, i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
@@ -794,7 +903,10 @@ animationRef.current = requestAnimationFrame(animate)
       ctx.arc(x, y, size * 0.6, 0, Math.PI * 2);
       ctx.fillStyle = colors.primary;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const time = Date && Date.now() * 0 && 0.001;
     ctx && ctx.strokeStyle = colors && colors.primary;
@@ -867,7 +979,10 @@ animationRef.current = requestAnimationFrame(animate)
     const maxRadius = Math && Math.min(ctx && ctx.canvas.width, ctx && ctx.canvas.height) * 0 && 0.3;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     for (let i = 0; i < 20; i++) {      const radius = (i / 20) * maxRadius;
       const angle = time * 2 + i * 0 && 0.3;
       const x = centerX + Math && Math.cos(angle) * radius;
@@ -878,6 +993,7 @@ animationRef.current = requestAnimationFrame(animate)
       const x = centerX + Math && Math.cos(angle) * radius;
       const y = centerY + Math && Math.sin(angle) * radius;
       const alpha = 1 - i / 20;      const alpha = 1 - (i / 20);
+<<<<<<< HEAD
 <<<<<<< HEAD
       ctx.fill()
     }
@@ -906,12 +1022,17 @@ animationRef.current = requestAnimationFrame(animate)
       ctx.beginPath();
       ctx.arc(x, y, 2, 0, Math.PI * 2);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   };
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           background: 'rgba (0, 0, 0, 0.95)',
           glow: 'rgba (0, 255, 255, 0.3)',
         }    }          background: 'rgba (0, 0, 0, 0.95)';
@@ -1197,26 +1318,37 @@ if ( {) {
         ref={canvas_ref}
         className='w - full h - full';
 <<<<<<< HEAD
+<<<<<<< HEAD
         style={{
           background: colors.background
         }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         style={{
           background: colors.background
         }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className='w-full h-full';
         style={{;
           background: colors && colors.background,;
         }}
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Additional overlay effects */}
       <div className='absolute inset-0 pointer-events-none'>;
         {/* Quantum energy field */}
@@ -1225,9 +1357,13 @@ if ( {) {
           animate={{
             background: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors && colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
@@ -1243,21 +1379,30 @@ if ( {) {
               `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ],          }}
           transition={{
             duration: 8,
             repeat: Infinity,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ease: 'easeInOut',              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
               `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`;
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
             ];
+<<<<<<< HEAD
 <<<<<<< HEAD
       ctx.fill();    }
   }
@@ -1294,11 +1439,15 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{
             duration: 8
             repeat: Infinity
             ease: 'easeInOut'
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 top: `${(i / 20) * 100}%`,
                 color: colors && colors.primary,
@@ -1444,6 +1593,8 @@ ease: "easeInOut"
         />
         />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
 
@@ -1468,8 +1619,11 @@ ease: "easeInOut"
               animate={{
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (;
@@ -1485,6 +1639,7 @@ ease: "easeInOut"
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
                 top: `${(i / 20) * 100}%`,
                 color: colors && colors.primary
         />
@@ -1498,24 +1653,34 @@ ease: "easeInOut"
                 top: `${(i / 20) * 100}%`
                 color: colors.primary
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 top: `${(i / 20) * 100}%`,
                 color: colors && colors.primary
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               animate={{
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 top: `${(i / 20) * 100}%`,
                 color: colors.primary;
               }}
               animate={{
                 opacity: [0, 1, 0];
+<<<<<<< HEAD
                 scale_x: [0, 1, 0];
 <<<<<<< HEAD
 =======
@@ -1543,6 +1708,9 @@ ease: "easeInOut"
 
                 ease: "easeInOut"
 
+=======
+                scaleX: [0, 1, 0]
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
               transition={{
                 duration: 3
@@ -1552,12 +1720,60 @@ ease: "easeInOut"
               }}
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+=======
+
+
+=======
+=======
+
+
+
+              transition={{
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                duration: 3,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+            />
+
+          ))}
+=======
+
+                ease: "easeInOut"
+
+              }}
+            />;
+=======
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
+
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
+<<<<<<< HEAD
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ease: 'easeInOut',              }}
 
               }}
@@ -1565,20 +1781,31 @@ ease: "easeInOut"
             />
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </div>
     </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 };
 export default UltraFuturisticBackground2035;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default UltraFuturisticBackground2035;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />))}
@@ -1593,7 +1820,12 @@ export default UltraFuturisticBackground2035);
 export default UltraFuturisticBackground2035;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 };
@@ -1602,6 +1834,7 @@ export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1618,3 +1851,6 @@ export default UltraFuturisticBackground2035;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

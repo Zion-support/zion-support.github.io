@@ -19,12 +19,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+<<<<<<< HEAD
 
 import React from "react";
 import SEO from "../components/SEO";
@@ -44,6 +49,8 @@ import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -59,6 +66,7 @@ export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
+<<<<<<< HEAD
 =======
 =======
 
@@ -79,6 +87,8 @@ function ApiPerformanceTestingPage() {
     "k6 / Gatling - compatible test runner",
     "SLO - aware latency reports",
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -138,6 +148,7 @@ function ApiPerformanceTestingPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -150,6 +161,10 @@ function ApiPerformanceTestingPage() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
+=======
+
+return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <SEO;
@@ -168,6 +183,10 @@ function ApiPerformanceTestingPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <SEO
         title="API Performance Testing"
@@ -226,6 +245,7 @@ function ApiPerformanceTestingPage() {
         </section>;
       </main>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -407,3 +427,7 @@ return (
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

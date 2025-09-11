@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -79,6 +80,10 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -86,6 +91,7 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
 }
+<<<<<<< HEAD
 ;
 export function listProposals(): ProposalMeta[] {;
   ensureDirs();
@@ -95,11 +101,16 @@ export function listProposals(): ProposalMeta[] {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getProposal(id: string): ProposalMeta | null {try {;
 =======
@@ -208,13 +219,17 @@ export function listProposals(): ProposalMeta[] {;
 ;
 export function getProposal(id: string): ProposalMeta | null {;
   try {;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
-  } catch {;
-    return null;
+  } catch {return null;
   }
 }
+<<<<<<< HEAD
 ;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
@@ -342,6 +357,17 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
+    markdownPath?: string,;
+    jsonPath?: string,;
+    pdfPath?: string,;
+    ipfsCid?: string,;
+    ensRecordHash?: string,;
+    signature?: string;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
@@ -373,11 +399,21 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
+    ...meta;
+    artifacts: { ...meta.artifacts, ...artifacts }}));
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
+
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -388,3 +424,9 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

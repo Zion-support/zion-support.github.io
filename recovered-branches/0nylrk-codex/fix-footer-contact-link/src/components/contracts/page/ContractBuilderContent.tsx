@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
@@ -12,6 +13,9 @@ import { useAuth } from '@/hooks/useAuth';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -20,6 +24,7 @@ import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
 import {TalentProfile} from '@/types/talent';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Mock data for demo purposes
 
@@ -34,6 +39,8 @@ const mockTalent: TalentProfile = {
 export function ContractBuilderContent() {
 export function ContractBuilderContent() {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Mock data for demo purposes
 
@@ -41,7 +48,10 @@ export function ContractBuilderContent() {;
 export function ContractBuilderContent() {;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -65,6 +75,7 @@ export function ContractBuilderContent() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleContractGenerated = (content: string) => {
     console.log('Contract generated:', content.substring(0, 100) + '...')
   }
@@ -72,6 +83,10 @@ export function ContractBuilderContent() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -111,16 +126,23 @@ export function ContractBuilderContent() {;
     }
   ]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -142,10 +164,18 @@ export function ContractBuilderContent() {;
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const handleViewContract = (contractId: string) => {
+    console.log('Viewing contract:', contractId);
+    // Future implementation: View specific contract details
+  }
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <>
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <ContractTypeCards
       
@@ -168,6 +198,11 @@ export function ContractBuilderContent() {;
 
       
       <ContractTypeCards 
+=======
+      <ContractTypeCards
+      
+      <ContractTypeCards 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         onStandardClick={() => setShowBuilderType('standard')}
@@ -179,8 +214,11 @@ export function ContractBuilderContent() {;
       />
       {showBuilderType === 'standard' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
       {showBuilderType === 'smart' && (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -194,6 +232,7 @@ import {RecentContractsTable} from './RecentContractsTable';
 
       {showBuilderType === 'smart' && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <SmartContractBuilder
 
@@ -279,6 +318,22 @@ export function ContractBuilderContent() {;
         />;
       )}
     </>;
+=======
+        <SmartContractBuilder
+          isOpen={true}
+          onClose={() => setShowBuilderType('none')}
+          talent={mockTalent}
+          clientName={user?.displayName |'Client'}
+          onContractGenerated={handleContractGenerated}
+        />;
+      )}
+
+    </>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {TalentProfile} from '@/types / talent';
 import {use_auth} from '@/hooks / use_auth';
 // Mock data for demo purposes;
@@ -354,6 +409,7 @@ function ContractBuilderContent() {
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  //Future implementation: View specific contract details 
 };
@@ -415,3 +471,6 @@ function ContractBuilderContent() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

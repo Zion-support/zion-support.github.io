@@ -1,12 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
@@ -24,12 +29,17 @@ export default function AdminNotesConsole() {
   const [loading, setLoading] = useState(false)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     async function load() {
       setLoading(true)
       try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -61,6 +71,10 @@ if (return, ) {
 }
         const data = await res.json (),
         set_notes (data.notes || []);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } finally {
         set_loading (false);
       }
@@ -68,7 +82,10 @@ if (return, ) {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 type Note = {
   id: string;
@@ -105,7 +122,10 @@ export default function AdminNotesConsole(req, res) {
 }
     if (isAdmin) load()
   }, [isAdmin]),
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -128,6 +148,7 @@ export default function AdminNotesConsole(req, res) {
               <div>{n.text}</div>
             </div>
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -137,6 +158,15 @@ export default function AdminNotesConsole(req, res) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (load ()) {
   $2
+=======
+=======
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   }, [is_admin]),
   return (
@@ -160,6 +190,7 @@ export default function AdminNotesConsole(req, res) {
             </div>))}
         </div>)}
     </div>);
+<<<<<<< HEAD
     }
     if (isAdmin) load()
   }, [isAdmin]);
@@ -286,7 +317,14 @@ export default function AdminNotesConsole(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

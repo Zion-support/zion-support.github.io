@@ -18,6 +18,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -29,6 +30,17 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
+=======
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+type ResumeStep = "basics" | "experience" | "education" | "skills",;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Select
   SelectContent
@@ -72,16 +84,20 @@ export function MobileResumeBuilder() {
         return <EducationStep />
       case "skills":
         return <SkillsStep />
+<<<<<<< HEAD
       default:
         return <BasicsStep />
     }
   },;
 
         return <SkillsStep />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return <SkillsStep />,
       default:
         return <BasicsStep />
     }
+<<<<<<< HEAD
   }
 =======
 import {;
@@ -112,20 +128,28 @@ export function MobileResumeBuilder() {;
   },;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  },;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
           variant = {currentStep === "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {(,) => setCurrentStep("basics"),}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant = {currentStep === "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {(,) => setCurrentStep("basics"),}
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
+<<<<<<< HEAD
 =======
 
 
@@ -135,17 +159,25 @@ export function MobileResumeBuilder() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           Basics
         </Button>
         <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant = {currentStep === "experience" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("experience"),}
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
+<<<<<<< HEAD
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
@@ -154,21 +186,33 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         >
           Experience
         </Button>
         <Button
+<<<<<<< HEAD
 
+=======
+          variant = {currentStep === "education" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {() => setCurrentStep("education"),}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           Education
         </Button>
         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
           variant = {currentStep === "skills" ? "default" : "outline",}
           className="flex-1 rounded-full"
@@ -202,11 +246,17 @@ export function MobileResumeBuilder() {;
         </Button>
         <Button
 
+=======
+          variant = {currentStep === "skills" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {() => setCurrentStep("skills"),}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
 
         >
+<<<<<<< HEAD
         </Button>
       </div>
       {renderStepContent()}
@@ -222,6 +272,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          Skills
+        </Button>
+      </div>
+      {renderStepContent()}
+      <Button className="w-full flex gap-2" size="lg">
+        <Zap className="h-5 w-5" /> Enhance with AI
+      </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
@@ -229,6 +288,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
       <Button variant="default" className="w-full" size="lg">
+<<<<<<< HEAD
+=======
+        Save & Preview
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </Button>
     </div>
   )
@@ -259,6 +322,7 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Textarea 
             id="summary" 
@@ -339,6 +403,9 @@ export function MobileResumeBuilder() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >;
           Skills;
         </Button>;
@@ -382,17 +449,23 @@ function BasicsStep() {;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Textarea;
             id="summary";
             placeholder="Write a brief summary about yourself";
             rows={4}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Textarea
             id="summary" 
             placeholder="Write a brief summary about yourself" 
 
             rows = {4,}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
         </div>;
       </CardContent>;
@@ -400,26 +473,38 @@ function BasicsStep() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 unction ExperienceStep() {
 ursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 function ExperienceStep() {
+<<<<<<< HEAD
+=======
+  const [experiences, setExperiences] = useState([{ id: '1' }])
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const addExperience = () => {
     const newId = (experiences.length + 1).toString()
     setExperiences([...experiences, { id: newId }])
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   const removeEducation = (id: string,) => {
@@ -431,6 +516,8 @@ function ExperienceStep() {
 }
   )
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   };
@@ -606,6 +693,7 @@ function ExperienceStep() {;
 
   );
 }
+<<<<<<< HEAD
 
 
   };
@@ -971,3 +1059,5 @@ function SkillsStep() {;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

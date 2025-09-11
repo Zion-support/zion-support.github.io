@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -21,6 +22,11 @@ import { Button } from "./ui/button",
 
 
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
@@ -28,9 +34,16 @@ import {Button} from "./ui/button";
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const services = [
   {
     title: "Servers"
@@ -40,6 +53,7 @@ const services = [
     title: "Storage"
     description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems"
     icon: <HardDrive className="h-10 w-10" />}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -57,6 +71,8 @@ const services = [;
     description: "Scalable storage solutions from SSDs to large - scale enterprise storage systems",
     icon: <HardDrive className="h - 10 w - 10" />},
   {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "Networking"
     description: "Connectivity solutions including switches, routers, and network security devices";
@@ -65,10 +81,13 @@ const services = [;
     description: "Connectivity solutions including switches, routers, and network security devices",
     icon: <Network className="h-10 w-10" />},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "24x7x365 Support"
     description: "Around-the-clock technical support with rapid response times guaranteed"
@@ -81,6 +100,7 @@ const services = [;
     title: "Equipment Rentals"
     description: "Flexible rental options for temporary projects and scaling requirements"
     icon: <Truck className="h-10 w-10" />}]
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function GlobalServiceSection() {
@@ -153,6 +173,17 @@ export function GlobalServiceSection() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export function GlobalServiceSection() {
+  return (
+
+=======
+
+};
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
@@ -184,6 +215,7 @@ const services = [;
 export function GlobalServiceSection() {;
   return (;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
@@ -219,6 +251,8 @@ export function GlobalServiceSection() {;
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 bg-zion-blue" id="global-services">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-16">;
@@ -227,6 +261,7 @@ export function GlobalServiceSection() {;
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {service && service.icon}
               </div>;
@@ -238,13 +273,18 @@ export function GlobalServiceSection() {;
         <div className="flex justify-center mt-12">;
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services && services.map((service, index) => (;
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
               <div className="text-zion-cyan mb-4">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     icon: <Network className="h - 10 w - 10" />},
   {
     title: "24x7x365 Support",
@@ -283,6 +323,7 @@ function GlobalServiceSection() {
         </div>;
         <div className="flex justify - center mt - 12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;
+<<<<<<< HEAD
 ;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services.map((service, index) => (;
@@ -332,3 +373,20 @@ icon: <Recycle className="h-10 w-10" />
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            Get Your Free Commercial Proposal;
+          </Button>;
+        </div>;
+      </div>;
+
+    </section>);
+}
+
+=======
+}
+
+
+;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

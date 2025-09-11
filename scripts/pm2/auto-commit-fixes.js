@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -40,10 +41,14 @@ class AutoCommitFixes {,;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 #!/usr / bin / env node;
 const fs = require ('fs');
 const path = require ('path');
 const { exec_sync } = require ('child_process');
+<<<<<<< HEAD
 
 
 ;
@@ -90,31 +95,20 @@ class AutoCommitFixes {;
     this.startTime = Date.now();
     this.commitsMade = 0;
     this.filesChanged = 0;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
 
-  async checkGitStatus() {
-    try {
-      const status = execSync('git status --porcelain', {
-        cwd: this.projectRoot,
-        encoding: 'utf8'
-      });
+;
+class AutoCommitFixes { constructor () { this.project_root = process.cwd (); this.log_file = path.join (this.project_root, 'logs / pm2 / auto - commit - fixes.log'); this.start_time = Date.now (); this.commits_made = 0; this.files_changed = 0}
+; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`;
+; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}
+;
 
-      if (!status.trim()) {
-        return { hasChanges: false, files: [] };
 
-      const files = status.split('\n')
-        .filter(line => line.trim())
-        .map(line => {
-          const parts = line.trim().split(/\s+/);
-          return {
-            status: parts[0],
-            file: parts.slice(1).join(' ')
-          };
-        });
 
+<<<<<<< HEAD
       return { hasChanges: true, files };
     } catch (error) {
       this.log(`Error checking git status: ${error.message}`);
@@ -187,3 +181,5 @@ class AutoCommitFixes {;
       const fileName = file.file;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

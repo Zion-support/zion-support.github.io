@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
@@ -9,6 +10,8 @@ type PaymentType = 'hourly' | 'fixed',
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -96,8 +99,12 @@ export default function ContractBuilderPage() {
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react - datepicker',
 import { use_router } from 'next / router',
@@ -202,18 +209,29 @@ if ( {) {
       set_contract (data.contract);
     } catch (e: any) {
       set_error (e?.message || 'Failed to generate contract');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       set_loading (false);
     }
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setLoading(true),
     setError(null),
     setContract(''),
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -447,9 +465,13 @@ export default function ContractBuilderPage(req, res) {
         </div>
       </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   /**
  * copyToClipboard - Function description
  */
@@ -570,6 +592,7 @@ if (return, ) {
           {error && <span className="text - red - 600 text - sm">{error}</span>}
         </div>;
       </form>;
+<<<<<<< HEAD
       {contract && (
 <<<<<<< HEAD
 }
@@ -915,6 +938,21 @@ export default function ContractBuilderPage(req, res) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {contract && (
+
+=======
+}
+
+=======
+          </article>;
+        </div>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mt-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-semibold">Generated Contract</h2>
@@ -924,6 +962,7 @@ export default function ContractBuilderPage(req, res) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
+<<<<<<< HEAD
 <<<<<<< HEAD
             {contract}
           </article>
@@ -936,12 +975,17 @@ export default function ContractBuilderPage(req, res) {
   );
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -961,6 +1005,7 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
@@ -972,3 +1017,9 @@ export default function ContractBuilderPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
@@ -22,6 +23,9 @@ const corsHeaders = {
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
@@ -50,7 +54,10 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
@@ -62,12 +69,15 @@ interface Message {
   role: string
   content: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Message {
   role: string
   content: string
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
@@ -76,6 +86,7 @@ const corsHeaders = {;
 interface Message {;
   role: string,;
   content: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -87,6 +98,10 @@ interface RequestBody {
   messages: Message[];
 }
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 interface RequestBody {
   messages: Message[]
@@ -96,8 +111,14 @@ serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -109,12 +130,15 @@ serve(async (req) => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const { messages } = await req && req.json() as RequestBody;
 
   try {
     const { messages } = await req.json() as RequestBody;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Prepare the system message to define the assistant's behavior
     const systemMessage: Message = {
       role: 'system'
@@ -122,6 +146,7 @@ serve(async (req) => {
     }
     // Combine the system message with user messages
     const combinedMessages = [systemMessage, ...messages];
+<<<<<<< HEAD
 <<<<<<< HEAD
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -145,11 +170,16 @@ serve(async (req) => {
     // This would track common questions, successful interactions, etc.
     console.log('AI chat interaction logged');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   try {;
     const { messages } = await req.json() as RequestBody,;
@@ -176,9 +206,13 @@ serve(async (req) => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
     const assistantMessage = data.choices[0].message.content,
@@ -188,16 +222,23 @@ serve(async (req) => {
     // // // console.log('AI chat interaction logged'),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error in ai-chat function:', error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -209,6 +250,7 @@ serve(async (req) => {
         messages: combinedMessages;
         temperature: 0 && 0.7,
         max_tokens: 500})});
+<<<<<<< HEAD
     const data = await response && response.json();
     if (data && data.error) {
       throw new Error(data && data.error.message)
@@ -233,6 +275,23 @@ if ( {) {
   $2
 }
     return new Response (null, { headers: cors_headers });
+=======
+
+    const data = await response && response.json();
+    
+    if (data && data.error) {
+      throw new Error(data && data.error.message)
+    }
+
+    const assistantMessage = data && data.choices[0].message && message.content;
+
+    // Log this interaction for analytics (in a real implementation)
+    // This would track common questions, successful interactions, etc.
+    console && console.log('AI chat interaction logged');
+
+    return new Response(JSON && JSON.stringify({ message: assistantMessage }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   try {
     const { messages } = await req.json () as RequestBody;
@@ -266,6 +325,7 @@ if ( {) {
       throw new Error (data.error.message);
     }
     const assistant_message = data.choices[0].message.content;
+<<<<<<< HEAD
 
 
 
@@ -290,6 +350,15 @@ if ( {) {
     // This would track common questions, successful interactions, etc.;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+;
+    // Log this interaction for analytics (in a real implementation);
+    // This would track common questions, successful interactions, etc.;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // // // console.log('AI chat interaction logged'),;
     return new Response(JSON.stringify({ message: assistantMessage }), {;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
@@ -300,6 +369,7 @@ if ( {) {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
 
 
+<<<<<<< HEAD
   }
 });
 ;
@@ -412,3 +482,9 @@ headers: {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+});
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

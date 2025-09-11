@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
 export function EnterpriseTrustBadges() {
@@ -66,6 +67,8 @@ export function EnterpriseTrustBadges() {;
           <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>;
           <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export function EnterpriseTrustBadges() {;
@@ -80,7 +83,10 @@ export function EnterpriseTrustBadges() {;
           <p className="text-muted-foreground">;
             We maintain the highest standards of data protection and compliance;
           </p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">;
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">;
@@ -103,6 +109,7 @@ export function EnterpriseTrustBadges() {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -144,6 +151,10 @@ function EnterpriseTrustBadges() {
         </div>;
       </div>;
     </section>);
+=======
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -166,6 +177,7 @@ function EnterpriseTrustBadges() {
         </div>
       </div>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -175,3 +187,8 @@ function EnterpriseTrustBadges() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

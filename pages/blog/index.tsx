@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,6 +15,8 @@
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -33,9 +36,12 @@ const posts = [
   { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' },
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' },
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' }],
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground  intensity="medium">
@@ -58,6 +64,7 @@ export default function BlogIndexPage() {
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
@@ -66,6 +73,8 @@ export default function BlogIndexPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           ))}
         </div>
@@ -73,6 +82,7 @@ export default function BlogIndexPage() {
     </UltraFuturisticBackground>
   )
 }
+<<<<<<< HEAD
 =======
             </div>
 
@@ -83,11 +93,14 @@ export default function BlogIndexPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
         </div>;
@@ -105,3 +118,7 @@ export default function BlogIndexPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

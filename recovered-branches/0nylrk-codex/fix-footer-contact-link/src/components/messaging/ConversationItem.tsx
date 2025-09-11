@@ -1,13 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react';
@@ -22,6 +28,9 @@ interface ConversationItemProps {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -32,19 +41,25 @@ interface ConversationItemProps {;
   isActive: boolean,;
   onClick: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }
 }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   conversation: Conversation
   isActive: boolean
@@ -59,9 +74,13 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -83,12 +102,15 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>)}
       </div>;
       {conversation.unread_count > 0 && (
         <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
           {conversation.unread_count}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import {format} from 'date - fns';
 import {cn} from '@/lib / utils';
@@ -139,24 +161,35 @@ function ConversationItem() {
         <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
           {conversation.unread_count}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {format} from 'date-fns';
 import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ConversationItem(): any ({ conversation, isActive, onClick }: ConversationItemProps) {;
   return (
     <div
@@ -164,6 +197,7 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors"
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
         conversation && conversation.unread_count> 0 && "bg-zion-blue-dark/20";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react',;
@@ -187,10 +221,13 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
         conversation.unread_count > 0 && "bg-zion-blue-dark/20";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
       onClick={onClick}
     >;
       <Avatar className="h-12 w-12 border border-zion-purple/20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>)}
     </div>);
@@ -257,6 +294,8 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <AvatarImage src={conversation && conversation.other_user.avatar_url} alt={conversation && conversation.other_user.name} />;
         <AvatarFallback className="bg-zion-blue-dark text-white">;
           {conversation && conversation.other_user.name && name.charAt(0).toUpperCase()}
@@ -296,4 +335,7 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

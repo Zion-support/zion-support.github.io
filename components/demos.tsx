@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -25,6 +26,8 @@ import {
 
 <<<<<<< HEAD
 export default function DemosPage() {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -51,6 +54,7 @@ import {
   BarChart3,
   Code,;
   Play,;
+<<<<<<< HEAD
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 export default function DemosPage() {;
 } from 'lucide-react';
@@ -68,6 +72,13 @@ import {
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
@@ -136,9 +147,13 @@ export default function DemosPage() {
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -215,6 +230,7 @@ export default function DemosPage() {;
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
     <>
@@ -266,6 +282,8 @@ export default function DemosPage() {;
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 href='#demos'
                 size='lg'
@@ -280,6 +298,7 @@ export default function DemosPage() {;
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 style={{ animationDelay: '0.4s' }}
               >
@@ -312,6 +331,8 @@ export default function DemosPage() {;
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 style={{ animationDelay: '0 && 0.4s' }}>;
@@ -349,7 +370,10 @@ export default function DemosPage() {;
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 href="#demos"
                 size="lg"
@@ -364,6 +388,7 @@ export default function DemosPage() {;
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 style={{ animationDelay: '0.4s' }}
               >
@@ -719,10 +744,15 @@ export default function DemosPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Each demo showcases a different micro SaaS service with full;
               functionality;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button
               <button
@@ -732,6 +762,10 @@ export default function DemosPage() {;
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <button
 
 
@@ -763,7 +797,10 @@ export default function DemosPage() {;
             {demos.map ((demo) => (
               <button;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={demo.id}
                 on_click={() => setActiveDemo (demo.id)}
                 className={`p - 4 rounded - lg border transition - all duration - 300 text - left group ${
@@ -772,14 +809,20 @@ export default function DemosPage() {;
                     : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';
                 }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               >;
                 <div;
                   className={`w - 12 h - 12 rounded - lg bg - gradient - to - br ${demo.color} flex items - center justify - center mb - 3 group - hover:scale - 110 transition - transform duration - 300`}
                 >;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
@@ -792,6 +835,7 @@ export default function DemosPage() {;
                 </h3>;
                 <p className='text - sm text - gray - 400 leading - relaxed'>;
                   {demo.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </p>
                 {activeDemo === demo.id && (
@@ -814,6 +858,8 @@ export default function DemosPage() {;
                 >
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -827,16 +873,43 @@ export default function DemosPage() {;
                 </p>
                 {activeDemo === demo.id && (
                   <div className='mt-3 flex items-center text-blue-400 text-sm'>
+<<<<<<< HEAD
 
+=======
+                    <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo.icon}
+                </div>
+                <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                  {demo.title}
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {demo.description}
+                </p>
+                {activeDemo === demo.id && (
+                  <div className="mt-3 flex items-center text-blue-400 text-sm">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    Active Demo
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo
 
                     Active Demo
 
 
+<<<<<<< HEAD
                   </div>
                 )}
               </button>;
             ))}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                )}
+              </button>;
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </div>;
@@ -844,11 +917,14 @@ export default function DemosPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -859,9 +935,13 @@ export default function DemosPage() {;
             </div>;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -877,16 +957,23 @@ export default function DemosPage() {;
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {activeDemoData?.title}
             </h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               {activeDemoData?.title}
             </h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </p>;
           </div>;
           <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>;
@@ -895,18 +982,27 @@ export default function DemosPage() {;
             </div>;
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {activeDemoData?.title}
             </h2>;
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -917,6 +1013,7 @@ export default function DemosPage() {;
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4">
               <Play className="w-4 h-4 mr-2" />
               Live Demo
+<<<<<<< HEAD
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo.icon}
                 </div>
                 <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
@@ -924,11 +1021,18 @@ export default function DemosPage() {;
                 </h3>
                 <p className="text-sm text-gray-400 leading-relaxed">
                   {demo.description}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
                 {activeDemo === demo.id && (
                   <div className="mt-3 flex items-center text-blue-400 text-sm">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Active Demo
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo
 
                     Active Demo
@@ -958,6 +1062,7 @@ export default function DemosPage() {;
           </div>
           <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>
       </section>
+<<<<<<< HEAD
       {/* Features */}              Live Demo
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1015,6 +1120,13 @@ export default function DemosPage() {;
       </section>
       {/* Features */}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+        </div>
+      </section>
+      {/* Features */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -1065,6 +1177,7 @@ export default function DemosPage() {;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
 
+<<<<<<< HEAD
 =======
 
 
@@ -1072,6 +1185,11 @@ export default function DemosPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -1096,18 +1214,27 @@ export default function DemosPage() {;
               </p>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Play className="w-8 h-8 text-cyan-400" />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300">
                 Instant Testing
               </h3>
@@ -1116,18 +1243,27 @@ export default function DemosPage() {;
               </p>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-pink-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-pink-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="w-8 h-8 text-pink-400" />
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-pink-400 transition-colors duration-300">
                 Production Ready
               </h3>
@@ -1138,8 +1274,13 @@ export default function DemosPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
             </p>;
 </p>;
+=======
+=======
+            </p>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
@@ -1174,9 +1315,13 @@ export default function DemosPage() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
             <Card className='text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1'>;
               <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl bg - blue - 500 / 10 flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
@@ -1187,17 +1332,25 @@ export default function DemosPage() {;
               </h3>;
               <p className='text - gray - 400 leading - relaxed'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Test actual API endpoints with real data processing and response;
                 times;
               </p>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1'>;
               <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl bg - green - 500 / 10 flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
                 <CheckCircle className='w - 8 h - 8 text - green - 400' />;
@@ -1207,17 +1360,25 @@ export default function DemosPage() {;
               </h3>;
               <p className='text - gray - 400 leading - relaxed'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Experience complete service capabilities, not just mock;
                 responses;
               </p>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1'>;
               <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl bg - purple - 500 / 10 flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
                 <Code className='w - 8 h - 8 text - purple - 400' />;
@@ -1287,15 +1448,20 @@ export default function DemosPage() {;
               </h3>;
               <p className="text - gray - 400 leading - relaxed">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Same infrastructure that powers our production services;
               </p>;
             </Card>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -1379,6 +1545,10 @@ export default function DemosPage() {;
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Get Started;
             </Button>;
           </div>;
@@ -1391,6 +1561,7 @@ export default function DemosPage() {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
 );
@@ -1403,3 +1574,18 @@ export default function DemosPage() {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </>);
+=======
+  );
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+
+=======
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

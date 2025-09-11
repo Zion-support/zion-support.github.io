@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import {;
@@ -36,6 +37,8 @@ interface PerformanceMetrics {;
   loadTime: number;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -57,6 +60,20 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import {
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,;
+  Network,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 } from 'lucide-react';
@@ -66,7 +83,10 @@ interface PerformanceMetrics {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Zap,
   Clock,
   TrendingUp,
@@ -86,11 +106,14 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   timeToInteractive: number;
 ;
 }, []);
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   timeToInteractive: number;
 ;
@@ -100,7 +123,10 @@ import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
@@ -128,11 +154,14 @@ interface PerformanceOptimizerProps {
   class_name?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     loadTime: 0,
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ class_name = '' }) => {
   const [metrics, set_metrics] = useState < PerformanceMetrics>({
     load_time: 0,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 //Optimize images for (const img of Array && Array.from (images) ) {;
   if (img && img.complete && img && img.naturalWidth > 0) {;
@@ -162,11 +191,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     firstInputDelay: 0,;
     timeToInteractive: 0,  });    timeToInteractive: 0;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
@@ -199,6 +232,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       );
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
@@ -207,13 +242,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
       
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const newMetrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
         largestContentfulPaint: lcp ? lcp.startTime : 0
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API
         firstInputDelay: 0, // Would need to be measured with FID API
+<<<<<<< HEAD
 <<<<<<< HEAD
         timeToInteractive:
           navigation.domContentLoadedEventEnd - navigation.navigationStart
@@ -222,6 +261,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       }
       setMetrics(newMetrics)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart
       };
@@ -229,7 +270,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       setMetrics(newMetrics)
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
   // Optimize images
   const optimizeImages = useCallback(async () => {
@@ -243,7 +287,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
           // Add lazy loading
           img.loading = 'lazy';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   // Measure performance metrics;
@@ -254,7 +301,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       )[0] as PerformanceNavigationTiming;
       const paintEntries = performance && performance.getEntriesByType('paint');      const paintEntries = performance && performance.getEntriesByType('paint');
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const fcp = paintEntries && paintEntries.find(entry => entry && entry.name === 'first-contentful-paint');
       const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0];
       const fcp = paintEntries && paintEntries.find(;
@@ -273,6 +323,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       setMetrics(newMetrics);    }        timeToInteractive: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart;
       };
       setMetrics(newMetrics);
+<<<<<<< HEAD
 <<<<<<< HEAD
           // Add responsive sizes if not present
           if (!img.sizes) {
@@ -343,6 +394,9 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
           optimized_count++;        }
       }
@@ -358,9 +412,13 @@ if ( {) {
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setOptimizationStatus (`Optimized ${optimized_count} images`);
 ;
       // Simulate optimization delay;
@@ -376,9 +434,13 @@ if ( {) {
 ;
       setOptimizationStatus ('Image optimization complete');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {
       setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
@@ -387,12 +449,15 @@ if ( {) {
     }
   }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
           optimizedCount++;
         }
       }
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
       // Simulate optimization delay;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           optimizedCount++;
@@ -402,7 +467,10 @@ if ( {) {
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       await new Promise(resolve => setTimeout(resolve, 1000));
       setOptimizationStatus('Image optimization complete');
     } catch (error) {;
@@ -412,15 +480,21 @@ if ( {) {
       setIsOptimizing(false);    }      // Simulate optimization delay;
       await new Promise(resolve => setTimeout(resolve, 1000));
 <<<<<<< HEAD
+<<<<<<< HEAD
       setOptimizationStatus('Image optimization complete');
     } catch (error) {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       setOptimizationStatus('Image optimization complete');
     } catch (error) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setOptimizationStatus('Image optimization failed');
       console && console.error('Image optimization error:', error);
     } finally {;
@@ -428,10 +502,15 @@ if ( {) {
     }
   }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Optimize fonts;
   const optimizeFonts = useCallback(async () => {;
     setIsOptimizing(true);
@@ -442,34 +521,49 @@ if ( {) {
       style && style.textContent = `;
         @font-face {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           font-family: 'Inter';
           font-display: swap;
         }
         @font-face {;
           font-family: 'JetBrains Mono';        }
 <<<<<<< HEAD
+<<<<<<< HEAD
         @font-face {;
           font-family: 'JetBrains Mono',;
           font-display: swap;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         @font-face {;
           font-family: 'JetBrains Mono',;
           font-display: swap;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         @font-face {;
           font-family: 'Orbitron';
           font-display: swap;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           font-family: 'Inter',
           font-display: swap
 
@@ -478,6 +572,7 @@ if ( {) {
           font-family: 'Orbitron';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           font-family: 'Inter',
           font-display: swap
         }
@@ -485,6 +580,8 @@ if ( {) {
           font-family: 'Orbitron';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   // Optimize fonts;
   const optimize_fonts = useCallback (async () => {
@@ -513,6 +610,7 @@ if ( {) {
           font - family: 'Orbitron';
           font - display: swap;        }          font - family: 'Orbitron',
           font - display: swap;
+<<<<<<< HEAD
 <<<<<<< HEAD
       setMetrics(newMetrics)
     }
@@ -572,6 +670,8 @@ if ( {) {
         @font-face {
 `;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         }
 
@@ -583,7 +683,10 @@ if ( {) {
       `;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           font-display: swap;        }          font-family: 'Orbitron',;
           font-display: swap;
         }
@@ -591,7 +694,10 @@ if ( {) {
       document && document.head.appendChild(style);
       setOptimizationStatus('Font optimization complete');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       await new Promise(resolve => setTimeout(resolve, 800));
@@ -608,7 +714,10 @@ if ( {) {
       setIsOptimizing(false);
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 800))
@@ -625,18 +734,27 @@ if ( {) {
       setIsOptimizing (false);    }      // Simulate optimization delay;
       await new Promise (resolve => set_timeout (resolve, 800));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {
       setOptimizationStatus ('Font optimization failed');
       console.error ('Font optimization error:', error);
     } finally {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Optimize CSS and JavaScript;
   const optimizeCode = useCallback(async () => {;
     setIsOptimizing(true);
@@ -662,9 +780,13 @@ if ( {) {
         { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ];
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
       setIsOptimizing (false);
@@ -701,6 +823,7 @@ import React, { useEffect } from 'react;
 import Head from 'next / head;
 interface PerformanceOptimizerProps {preload_images?: string[];
   preload_fonts?: string[];
+<<<<<<< HEAD
   criticalCSS?: string;
 }
 <<<<<<< HEAD
@@ -978,6 +1101,96 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
       setIsOptimizing(false)
     }
 =======
+=======
+  criticalCSS?: string;
+}
+
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
+preloadImages = [], preloadFonts = [;
+    'https: //fonts && fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;
+  ], criticalCSS'}) => {;
+  useEffect(() => {;
+
+    // Performance monitoring;
+    if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
+        for (const entry of list && list.getEntries()) {;
+if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);
+'          }'          if (entry && entry.entryType === 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime);'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value);'            }'          }}
+      });
+
+      try {;
+        observer && observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
+        console && console.log('Performance monitoring not fully supported');
+'      }';
+      // Resource hints for better performance;
+
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
+preload_images = [], preload_fonts = [;
+    'https: //fonts.googleapis.com / css2?family = Inter:wght@300;400;500;600;700;800;900 & display = swap;
+  ], criticalCSS'}) => {
+  useEffect (() => {
+    // Performance monitoring;
+    if ( {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver ((list) => {) {
+  $2
+}
+        for (const entry of list.get_entries ()) {
+if ( {'            console.log ('LCP: ', entry.start_time)) {
+  $2
+}
+'          }'          if ( {'            console.log ('FID: ', entry.processing_start - entry.start_time)) {
+  $2
+}'          }'          if ( {'            if (!(entry as any).hadRecentInput) {'              console.log ('CLS: ', (entry as any).value)) {
+  $2
+}'            }'          }}
+      });
+      try {
+        observer.observe ({ entry_types: ['largest - contentful - paint', 'first - input', 'layout - shift'] });
+'      } catch (e) {'        // Fallback for browsers that don & apos;t support all entry types;
+        console.log ('Performance monitoring not fully supported');
+'      }';
+      // Resource hints for better performance;
+      const addResourceHint = (href: string, as: string, type?: string) =>: any {
+        const link = document.create_element ('link');
+        Object.entries (link_attrs).for_each (([key, value]) => {
+          // Check condition
+if ( {) {
+  $2
+}
+            link.set_attribute (key, value as string);
+
+          } else {
+      const addResourceHint = (href: string, as: string, type?: string) => {;
+        const link = document && document.createElement('link');
+        Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
+          if (key === 'crossorigin') {;
+            link && link.setAttribute(key, value as string);
+          } else {;
+            (link as any)[key] = value;
+          }
+        });
+
+
+      await new Promise(resolve => setTimeout(resolve, 1200));
+    } catch (error) {;
+      setOptimizationStatus('Code optimization failed');
+
+      console.error('Code optimization error:', error)
+    } finally {
+      setIsOptimizing(false)
+
+    }
+  }, []);
+
+
+  // Run all optimizations;
+  const runAllOptimizations = useCallback(async () => {;
+    setIsOptimizing(true);
+    setOptimizationStatus('Starting comprehensive optimization...');
+    try {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       await optimizeImages();
       await optimizeFonts();
@@ -1008,7 +1221,10 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
               // LCP should be under 2 && 2.5s;
               console && console.warn('LCP is too slow:', lcp);            }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       });      // Monitor for performance issues;
@@ -1019,12 +1235,20 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             if (lcp > 2500) { // LCP should be under 2 && 2.5s;
               console && console.warn('LCP is too slow:', lcp);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       // Monitor for performance issues
+=======
+
+=======
+      
+      // Monitor for performance issues
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
   // Initialize performance monitoring
   useEffect(() => {
@@ -1049,7 +1273,10 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
         document.head.append_child (link);
@@ -1140,12 +1367,16 @@ if ( { // LCP should be under 2.5s) {
 }
               console.warn ('LCP is too slow:', lcp);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
           }
         }
       });
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1188,6 +1419,8 @@ if ( { // LCP should be under 2.5s) {
 <<<<<<< HEAD
     }
   }, [measurePerformance]);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       return () => {
         window.removeEventListener('load', measurePerformance);
@@ -1202,18 +1435,27 @@ if ( { // LCP should be under 2.5s) {
 
   const getPerformanceScore = (): number => {
     let score = 100;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
     if (metrics.timeToInteractive > 3500) score -= 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     return Math.max(0, score)
 
     return Math.max(0, score)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1241,10 +1483,16 @@ if ( { // LCP should be under 2.5s) {
     
     return Math.max(0, score)
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
   const getPerformanceGrade = (score: number): string => {;
+=======
+  };
+  const getPerformanceGrade = (score: number): string => {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return Math.max(0, score);  }
     return Math.max(0, score)
   }
@@ -1253,6 +1501,7 @@ if ( { // LCP should be under 2.5s) {
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';
+<<<<<<< HEAD
 <<<<<<< HEAD
     return 'F';  };    return 'F'
   }
@@ -1267,6 +1516,8 @@ if ( { // LCP should be under 2.5s) {
           onClick={() => setShowMetrics(!showMetrics)}
           className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'        >  return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   };
@@ -1288,7 +1539,10 @@ if ( { // LCP should be under 2.5s) {
           onClick={() => setShowMetrics(!showMetrics)}
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-bold text-white flex items-center gap-2">
@@ -1297,21 +1551,30 @@ if ( { // LCP should be under 2.5s) {
         <button
           onClick={() => setShowMetrics(!showMetrics)}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
 =======
           className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-white/70">Performance Score</span>
           <span className="text-2xl font-bold text-cyan-400">{performanceGrade}</span>
         </div>
+<<<<<<< HEAD
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
 
@@ -1340,6 +1603,8 @@ if ( { // LCP should be under 2.5s) {
             {performanceGrade}
           </span>
         </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='w-full bg-white/10 rounded-full h-3'>
           <motion.div
             className='h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full'
@@ -1352,6 +1617,7 @@ if ( { // LCP should be under 2.5s) {
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>        </div>
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
@@ -1372,17 +1638,27 @@ if ( { // LCP should be under 2.5s) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />
         </div>
         <div className="text-right mt-1">
           <span className="text-sm text-white/60">{performanceScore}/100</span>
         </div>
       </div>
+<<<<<<< HEAD
 =======
 
 
@@ -1392,6 +1668,8 @@ if ( { // LCP should be under 2.5s) {
         <div className='text-right mt-1'>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>
 
         </div>
@@ -1399,16 +1677,21 @@ if ( { // LCP should be under 2.5s) {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Metrics Display */}
       {showMetrics && (
         <motion.div
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
@@ -1475,6 +1758,14 @@ if ( { // LCP should be under 2.5s) {
         >
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -1521,6 +1812,7 @@ if ( { // LCP should be under 2.5s) {
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
             <div className="text-xs text-white/60">FID</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </motion.div>
       )}
@@ -1538,6 +1830,8 @@ if ( { // LCP should be under 2.5s) {
         <button
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />;
@@ -1599,6 +1893,7 @@ if ( { // LCP should be under 2.5s) {
           </div>
         </motion.div>
       )}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <button
@@ -1610,6 +1905,17 @@ if ( { // LCP should be under 2.5s) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        <button
+=======
+
+
+      {/* Optimization Controls */}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -1617,6 +1923,7 @@ if ( { // LCP should be under 2.5s) {
               ? 'bg-gray-600 cursor-not-allowed'
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           } flex items-center justify-center gap-2`}
         >
@@ -1644,6 +1951,8 @@ if ( { // LCP should be under 2.5s) {
         )}
       </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="text-sm text-white/80">{optimizationStatus}</div>
           </div>
@@ -1658,7 +1967,10 @@ if ( { // LCP should be under 2.5s) {
       </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>;
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
@@ -1679,18 +1991,26 @@ if ( { // LCP should be under 2.5s) {
 };export default PerformanceOptimizer;}
       // Preload critical resources;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       preloadImages && preloadImages.forEach(image => {;
 addResourceHint(image, 'image');
 '      });';
       preloadFonts && preloadFonts.forEach(font => {;
         addResourceHint(font, 'style');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 '      });'    }}, [preloadImages, preloadFonts]);
   return (
     <Head>;
@@ -1699,10 +2019,15 @@ addResourceHint(image, 'image');
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Preload critical resources */}
       {preloadImages && preloadImages.map((image, index) => (;
         <link
@@ -1712,53 +2037,80 @@ key={`preload-image-${index}}          rel="preload""          as="image""      
 key={`preload-font-${index}`}          rel="preload""          as="style""          href={font}"          onLoad={() => {;
             const link = document && document.querySelector(link[href="${font}"]`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 "            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;
 }'          }}`        />;
       ))}
       {/* Performance hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <script
         dangerouslySetInnerHTML={{
           __html:             if ('serviceWorker' in navigator) {'              window && window.addEventListener('load', function() {'                navigator && navigator.serviceWorker.register('/sw && sw.js')'                  .then(function(registration) {'                    console && console.log('SW registered: ', registration)
 '                  })'                  .catch(function(registrationError) {
                     console && console.log('SW registration failed: ', registrationError)'                  })'              })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
           ``        }}/>;
     </Head>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
   );
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         )}
       </div>
 
       {/* Performance Tips */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         )}
@@ -1771,20 +2123,28 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
           Performance Tips
         </h4>
+<<<<<<< HEAD
 
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -1795,12 +2155,15 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 };
 export default PerformanceOptimizer;
 interface PerformanceMetrics {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [measure_performance]);
 ;
   const getPerformanceScore = (): number => {
@@ -1999,6 +2362,7 @@ if (return 'D') {
       </div>;
     </div>);
 }export default PerformanceOptimizer;}
+<<<<<<< HEAD
   );
 };export default PerformanceOptimizer;}
       // Preload critical resources;
@@ -2010,6 +2374,10 @@ addResourceHint (image, 'image');
 '      });'    }}, [preload_images, preload_fonts]);
   return (
     <Head>;
+=======
+=======
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Critical CSS inlined for above-the-fold content */}
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
@@ -2048,9 +2416,13 @@ export default PerformanceOptimizer;
 ;
 interface PerformanceMetrics {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   fcp: number;
   lcp: number;
   fid: number;
@@ -2063,19 +2435,29 @@ interface PerformanceMetrics {
   }
 }
 <<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-interface PerformanceOptimizerProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enable_reporting?: boolean;
-}
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+interface PerformanceOptimizerProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enable_reporting?: boolean;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PerformanceOptimizerProps {;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableReporting?: boolean;
@@ -2118,18 +2500,27 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   useEffect(() => {;
     if (document && document.readyState === 'complete') {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       measureWebVitals();
     } else {;
       window && window.addEventListener('load', measureWebVitals);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return () => {;
       window && window.removeEventListener('load', measureWebVitals);
     };
@@ -2137,15 +2528,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   // Monitor for performance issues;
   useEffect(() => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!metrics) return;
     const warnings: string[] = [];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (!metrics) return;
     const warnings: string[] = [];
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (metrics && metrics.fcp > 1800) warnings && warnings.push('First Contentful Paint is slow (>1 && 1.8s)');
     if (metrics && metrics.lcp > 2500) warnings && warnings.push('Largest Contentful Paint is slow (>2 && 2.5s)');
     if (metrics && metrics.ttfb > 600) warnings && warnings.push('Time to First Byte is slow (>600ms)');
@@ -2155,6 +2552,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
     }
     if (warnings && warnings.length > 0 && enableReporting) {;
       console && console.warn('Performance Issues Detected:', warnings);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2279,11 +2677,32 @@ export default PerformanceOptimizer;
 
 
 <<<<<<< HEAD
+=======
+
+    }
+  }, [metrics, enableReporting]);
+  return null;
+
+}
+
+export default PerformanceOptimizer;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };export default PerformanceOptimizer;
 
 export default PerformanceOptimizer;
+<<<<<<< HEAD
 export default PerformanceOptimizer;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

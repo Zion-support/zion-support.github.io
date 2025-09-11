@@ -1,9 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,6 +30,7 @@ import Link from './next / link';
 import { motion, AnimatePresence  } from './framer-motion';
 
 import {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 } from "lucide-react";
@@ -37,6 +55,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Menu,
   X,
   ChevronDown,
@@ -59,12 +79,17 @@ import {
 ursor/integrate-build-improve-and-re-verify-8f7d
   BarChart3,
   Search,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "lucide-react";
 import SearchModal from "./SearchModal";
   BarChart3,
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
+<<<<<<< HEAD
 =======
 import {;
   Menu,;
@@ -96,11 +121,14 @@ import SearchModal from "./SearchModal";
 
   BarChart3
 } from 'lucide-react;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   BarChart3
 } from 'lucide-react;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
@@ -108,12 +136,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
 origin/automation-improvements-final
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/automation-improvements-final
 
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Menu
   X
@@ -138,6 +171,7 @@ origin/automation-improvements-final
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+<<<<<<< HEAD
 
 
 
@@ -151,6 +185,13 @@ origin/main
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Navigation() {
 export default function Navigation() {;
+=======
+origin/main
+export default function Navigation() {
+=======
+export default function Navigation() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -158,9 +199,13 @@ export default function Navigation() {;
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from './lucide-react';
 import SearchModal from "./SearchModal";
 ;
@@ -195,9 +240,13 @@ function Navigation() {
       icon: Zap,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -218,9 +267,13 @@ function Navigation() {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const solutions = [;
     {
@@ -230,9 +283,13 @@ function Navigation() {
       icon: Building,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -241,9 +298,13 @@ function Navigation() {
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -325,9 +386,13 @@ function Navigation() {
       description: "Step - by - step guides",
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       name: "Training"
       href: "/training"
@@ -341,10 +406,15 @@ function Navigation() {
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const services = [;
     {;
       name: "AI Services",;
@@ -495,6 +565,7 @@ function Navigation() {
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   ];
@@ -512,6 +583,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  ];
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       {/* Top Bar */}
@@ -529,9 +606,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -600,9 +681,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </a>;
               </div>;
             </div>;
@@ -610,9 +695,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Link href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -637,25 +726,35 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </div>;
                 <div className="text - xs text - gray - 500">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Technology Solutions;
                 </div>;
               </div>;
             </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -714,15 +813,21 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <Link;
                               key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </AnimatePresence>;
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </AnimatePresence>;
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -800,15 +905,21 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <Link;
                               key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </AnimatePresence>;
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </AnimatePresence>;
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -847,15 +958,21 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     </motion && motion.div>;
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </AnimatePresence>;
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </AnimatePresence>;
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -894,8 +1011,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     </motion && motion.div>;
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </AnimatePresence>;
               </div>;
+=======
+                </AnimatePresence>
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -903,6 +1025,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 Pricing
               </Link>
             </div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -917,6 +1040,21 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 
+=======
+
+
+=======
+                </AnimatePresence>;
+              </div>;
+
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -928,16 +1066,21 @@ origin/automation-improvements-final
               </button>;
               <Link
                 href="/contact"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -954,6 +1097,11 @@ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 Get Started
               </Link>
@@ -984,15 +1132,21 @@ origin/automation-improvements-final
                 <Menu className="w-6 h-6" />;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </button>;
           </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </button>;
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Mobile Menu */}
           <AnimatePresence>;
             {isMenuOpen && (;
@@ -1007,17 +1161,23 @@ origin/automation-improvements-final
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   >;
                     Home;
                   </Link>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   >;
                     Home;
                   </Link>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1035,15 +1195,21 @@ origin/automation-improvements-final
                         </Link>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </div>;
                   </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </div>;
                   </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1061,15 +1227,21 @@ origin/automation-improvements-final
                         </Link>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </div>;
                   </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </div>;
                   </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1087,15 +1259,21 @@ origin/automation-improvements-final
                         </Link>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </div>;
                   </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </div>;
                   </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1113,31 +1291,45 @@ origin/automation-improvements-final
                         </Link>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </div>;
                   </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </div>;
                   </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     Pricing;
                   </Link>;
                   <div className="px-4 py-2 space-y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -1401,17 +1593,23 @@ origin/automation-improvements-final
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           </AnimatePresence>;
         </div>;
       </nav>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </AnimatePresence>;
         </div>;
       </nav>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

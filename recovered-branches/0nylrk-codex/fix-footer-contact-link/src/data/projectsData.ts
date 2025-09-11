@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     talent_profile: {
@@ -19,7 +22,10 @@ export const PROJECTS: Project[] = [
     talent_profile: {
       full_name: "Alexandra Chen";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       professional_title: "Senior AI Engineer"
     }
   }
@@ -29,6 +35,7 @@ export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
+<<<<<<< HEAD
   {
     id: "project-1",
     client_id: "client-1",
@@ -101,6 +108,9 @@ import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "project-1",
     client_id: "client-1",
@@ -123,9 +133,12 @@ export const PROJECTS: Project[] = [
     }
   }
 ];
+<<<<<<< HEAD
 
 
 =======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

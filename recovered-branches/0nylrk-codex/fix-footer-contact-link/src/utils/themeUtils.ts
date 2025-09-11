@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ThemeColors {;
 
 
@@ -10,11 +11,16 @@ export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface ThemeColors {;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -25,6 +31,9 @@ export interface ThemeColors {;
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   switch (preset) {
     case 'dark':
       return {;
@@ -68,6 +77,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         cardBackground: '#f8fafc'}
   }
 }
+<<<<<<< HEAD
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
 =======
@@ -92,6 +102,19 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+// Define theme presets;
+export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  switch (preset) {
+    case 'dark':;
+      return {
+
+
+  const root = document.documentElement,;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -103,12 +126,16 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
   document.body.style.color = colors.textColor
 <<<<<<< HEAD
+<<<<<<< HEAD
   switch (preset) {
     case 'dark':;
       return {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const root = document && document.documentElement,
   root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
   root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
@@ -116,6 +143,7 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   root && root.style.setProperty('--accent-color', colors && colors.accentColor);
   root && root.style.setProperty('--button-color', colors && colors.buttonColor);
   root && root.style.setProperty('--card-background', colors && colors.cardBackground);
+<<<<<<< HEAD
   // Set background and text colors on body
   document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
   document && document.body.style && style.color = colors && colors.textColor
@@ -126,6 +154,16 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+  // Set background and text colors on body
+  document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
+  document && document.body.style && style.color = colors && colors.textColor
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -134,6 +172,7 @@ export interface ThemeColors {;
   accentColor: string,;
   buttonColor: string,;
   cardBackground: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -186,6 +225,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 ;
 // Apply theme colors to document CSS variables;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -232,7 +273,10 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
 // Apply theme colors to document CSS variables;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function applyThemeColors(colors: ThemeColors) {;
   const root = document.documentElement,;
   root.style.setProperty('--primary-color', colors.primaryColor),;
@@ -244,6 +288,7 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -338,3 +383,11 @@ export function applyThemeColors(colors:ThemeColors) {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

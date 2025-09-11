@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {
 import { Button } from '@/components/ui/button';
@@ -11,6 +12,8 @@ import {
   Card,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Card,
   CardContent,
   CardDescription,
@@ -52,9 +55,12 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
 export default function Partners() {;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 xport default function Partners() {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   logInfo('PartnersPage rendering');
   const [activeTab, setActiveTab] = useState('overview');
   const { t } = useTranslation();
@@ -62,11 +68,16 @@ xport default function Partners() {;
   const router = useRouter();
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
   useEffect(() => {
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -88,6 +99,9 @@ import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
@@ -115,6 +129,7 @@ export default function Partners() {
 import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+<<<<<<< HEAD
 =======
 
   logInfo('PartnersPage rendering'),;
@@ -136,6 +151,10 @@ export default function Partners() {
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
 
   useEffect((,) => {
+=======
+
+  useEffect((,) => {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     async function checkHealth() {;
       try {;
         const res = await fetch('/api/auth/health');
@@ -204,6 +223,7 @@ function check_health() {
         logErrorToProduction ('Partner login auth health check failed', {
           data: err,
         });
+<<<<<<< HEAD
         setAuthServiceAvailable(false);
       }
     }
@@ -240,6 +260,18 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className='grid md:grid-cols-2 gap-8 mb-12'>
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
+=======
+        setAuthServiceAvailable (false);
+      }
+    }
+
+
+  // If not authenticated, display partner program info and signup CTA
+  if (!isAuthenticated) {
+    logInfo('PartnersPage rendering Unauthenticated View');
+    return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </p>                </div>        </div>
 
 
@@ -249,6 +281,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className="text-xl text-zion-slate-light">{t('partner.subtitle')}</p>
         </div>
 
+<<<<<<< HEAD
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
@@ -281,6 +314,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>                </div>        </div>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
+=======
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <Card className="bg-zion-blue-dark border-zion-blue-light">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <CardHeader>
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
@@ -306,12 +345,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div>
 
 
+<<<<<<< HEAD
                   <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
+=======
+
+
+                  <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
 
           <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -323,6 +372,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {t('partner.organizations.points.tracking_desc')}
                   </p>                </div>            <CardHeader>
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
+=======
+
+
+          <Card className="bg-zion-blue-dark border-zion-blue-light">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <Card className="bg-zion-blue-dark border-zion-blue-light">
 
@@ -349,6 +404,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
                 <div>
+<<<<<<< HEAD
                   <p className='font-medium text-white'>
                     {t('partner.organizations.points.tracking')}
                   </p>
@@ -376,6 +432,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
                 <div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -387,6 +445,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
         <div className='text-center mb-12'>
           <h2 className='text-2xl font-bold text-white mb-4'>
             {t('partner.how_it_works')}
@@ -396,6 +455,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
                   <Users className='h-6 w-6 text-zion-cyan' />
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -416,10 +478,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p>{t('partner.steps.join_desc')}</p>
               </CardContent>
             </Card>
+<<<<<<< HEAD
             <Card className='bg-zion-blue-dark border-zion-blue-light'>
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
                   <FileText className='h-6 w-6 text-zion-cyan' />
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center pb-2">
@@ -435,15 +503,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p>{t('partner.steps.share_desc')}</p>
               </CardContent>
             </Card>
+<<<<<<< HEAD
             <Card className='bg-zion-blue-dark border-zion-blue-light'>
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
                   <PieChart className='h-6 w-6 text-zion-cyan' />
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <PieChart className="h-6 w-6 text-zion-cyan" />
+<<<<<<< HEAD
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.earn_title')}</CardTitle>
               </CardHeader>
@@ -469,6 +544,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className='container max-w-7xl py-10'>
+=======
+
+
+
+                </div>
+                <CardTitle className="text-lg text-white">{t('partner.steps.earn_title')}</CardTitle>
+              </CardHeader>
+
+              <CardContent className="text-center text-sm text-zion-slate-light">
+
+                <p>{t('partner.steps.earn_desc')}</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+
+    checkHealth();  }, []);    checkHealth();
+  }, []);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         <div className="flex justify-center gap-4">
@@ -813,11 +909,19 @@ if ( {) {
           )}
         </div>;
       </div>;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
     );
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   // Authenticated user view - Partner Dashboard;
@@ -825,6 +929,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
 
   return (
+<<<<<<< HEAD
         <div className='flex justify-center gap-4'>
 
         <div className="flex justify-center gap-4">
@@ -1078,12 +1183,35 @@ export default function Partners() {;
           <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
           <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
         </div>
+=======
+    <div className='container max-w-7xl py-10'>;
+      <h1>DEBUG: Partners Page - Authenticated View</h1>;
+      <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>;
+        <div>;
+          <h1 className='text-3xl font-bold tracking-tight text-white'>;
+            {t('partner && partner.dashboard_title')}
+          </h1>;
+          <p className='text-zion-slate-light'>{t('partner && partner.dashboard_desc')}</p>;
+        </div>;
+        <div className='flex gap-2'>;
+          <Button
+            variant='outline'
+            className='flex items-center gap-2'
+
+
+  // Authenticated user view - Partner Dashboard
+  logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
+  return (
+
+        <div className="flex gap-2">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
             <FileDown className="h-4 w-4" />
             {t('partner.export_csv')}
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
       <Tabs
         value={activeTab}
         onValueChange={setActiveTab}
@@ -1119,6 +1247,10 @@ export default function Partners() {;
           <PartnerReferralLinks />
         </TabsContent>
         <TabsContent value='earnings' className='space-y-4'>          <Card>
+=======
+
+        </TabsList>        </TabsList>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1134,29 +1266,59 @@ export default function Partners() {;
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
         </TabsContent>
+<<<<<<< HEAD
         
         <TabsContent value="referrals" className="space-y-4">
           <PartnerReferralLinks />
         </TabsContent>
+=======
+        <TabsContent value="referrals" className="space-y-4">
+          <PartnerReferralLinks />
+        </TabsContent>
+
+        <TabsContent value='earnings' className='space-y-4'>          <Card>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
 
 
         <TabsContent value="earnings" className="space-y-4">
 
 
+<<<<<<< HEAD
         
         <TabsContent value="earnings" className="space-y-4">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Card>
             <CardHeader>
               <CardTitle>{t('partner.earnings_title')}</CardTitle>
               <CardDescription>{t('partner.earnings_desc')}</CardDescription>
             </CardHeader>
             <CardContent>
+<<<<<<< HEAD
+=======
+
+        </TabsContent>            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="leaderboard" className="space-y-4">
+          <PartnerLeaderboard />
+
+        </TabsContent>
+        <TabsContent value='leaderboard' className='space-y-4'>
+          <PartnerLeaderboard />
+        </TabsContent>
+
+        <TabsContent value='resources' className='space-y-4'>          <PartnerResources />
+        <TabsContent value="resources" className="space-y-4">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* This will be implemented later */}
               <p className="text-zion-slate-light">{t('partner.earnings_placeholder')}</p>
             </CardContent>
           </Card>
         </TabsContent>
+<<<<<<< HEAD
         <TabsContent value="leaderboard" className="space-y-4">
           <PartnerLeaderboard />
         </TabsContent>
@@ -1173,6 +1335,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           <PartnerLeaderboard />
         </TabsContent>
         <TabsContent value='resources' className='space-y-4'>          <PartnerResources />
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         <TabsContent value="leaderboard" className="space-y-4">
           <PartnerLeaderboard />
@@ -1186,7 +1353,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         </TabsContent>
       </Tabs>
     </div>
+<<<<<<< HEAD
   async function checkHealth () {try {}checkHealth () ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function checkHealth () {try {}checkHealth () ;
 
   async function checkHealth () {;
@@ -1410,6 +1581,7 @@ function check_health() {
 }</Button>) ;
 }</div> </div>) ";
 }//Authenticated user view - Partner Dashboard return (<div className="container max - w-7xl py - 10" > <h1 > DEBUG: Partners Page - Authenticated View</h1> <div className="flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb - 8" > <div> </Button> </div> </div> </TabsList> <TabsContent value="overview" className="space - y-4" > <PartnerDashboard /> </TabsContent> <TabsContent value="referrals" className="space - y-4" > <PartnerReferralLinks /> </TabsContent> <TabsContent value="earnings" className="space - y-4" > <Card> <CardHeader> <CardTitle> {';
+<<<<<<< HEAD
   );
   async function checkHealth () {try {}checkHealth () ;
   async function checkHealth () {;
@@ -1433,12 +1605,24 @@ function check_health() {
   )
 }
 ;
+=======
+  t ('partner.earnings title') ;
+}</CardTitle> <CardDescription> {';
+  t ('partner.earnings desc') ";
+}</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space - y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space - y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
+}'"}
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 
   )
 }
 ;
+<<<<<<< HEAD
 =======
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -11,9 +11,18 @@ import {RolePicker} from "../components/onboarding/RolePicker";
 import {SignUpForm} from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function MobileOnboarding() {
 
 export function MobileOnboarding() {;
+=======
+
+
+
+export function MobileOnboarding() {;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 import React, { useState } from "react",
@@ -27,6 +36,7 @@ type OnboardingStep = "language" | "role" | "signup",
 export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
   const navigate = useNavigate(),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -42,6 +52,9 @@ export function MobileOnboarding() {;
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role")
@@ -50,25 +63,34 @@ export function MobileOnboarding() {;
     } else {
       navigate("/mobile")
     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleRoleSelect = () => {
     setCurrentStep("signup")
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const handleRoleSelect = () => {
     setCurrentStep("signup")
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -109,18 +131,24 @@ export function MobileOnboarding() {;
             </div>
             <SignUpForm />
           </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -129,6 +157,7 @@ import { RolePicker } from "../components/onboarding/RolePicker",;
 import { SignUpForm } from "../components/onboarding/SignUpForm",;
 type OnboardingStep = "language" | "role" | "signup",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function MobileOnboarding() {;
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
@@ -136,12 +165,17 @@ export function MobileOnboarding() {;
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),;
   const navigate = useNavigate(),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function MobileOnboarding() {;
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const goToNextStep = () => {;
     if (currentStep === "language") {;
       setCurrentStep("role");
@@ -152,18 +186,24 @@ export function MobileOnboarding() {;
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleRoleSelect = () => {;
     setCurrentStep("signup");
   };
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleRoleSelect = () => {;
     setCurrentStep("signup");
   };
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min-h-screen flex flex-col">;
       <div className="flex-1 py-8">;
         {currentStep === "language" && (;
@@ -173,12 +213,18 @@ export function MobileOnboarding() {;
               <p className="text-muted-foreground">Let's set up your experience</p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <LanguageThemeSelector />;
 =======
 
             <LanguageThemeSelector />;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            <LanguageThemeSelector />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="px-4 mt-8">;
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
@@ -187,10 +233,14 @@ export function MobileOnboarding() {;
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {currentStep === "role" && (;
           <div className="space-y-6">;
             <div className="text-center mb-8">;
@@ -198,12 +248,18 @@ export function MobileOnboarding() {;
               <p className="text-muted-foreground">Choose what brought you to Zion</p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <RolePicker onSelect={handleRoleSelect} />;
 =======
 
             <RolePicker onSelect={handleRoleSelect} />;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            <RolePicker onSelect={handleRoleSelect} />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="px-4 mt-8">;
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
@@ -212,10 +268,14 @@ export function MobileOnboarding() {;
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {currentStep === "signup" && (;
           <div className="space-y-6">;
             <div className="text-center mb-6">;
@@ -223,9 +283,13 @@ export function MobileOnboarding() {;
               <p className="text-muted-foreground">Create your account to get started</p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <SignUpForm />;
           </div>;
         )}
@@ -234,9 +298,13 @@ export function MobileOnboarding() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -311,6 +379,7 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
+<<<<<<< HEAD
 
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -412,3 +481,11 @@ const handleRoleSelect = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -3,13 +3,18 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",
 import { BadgeCheck } from "lucide-react",
@@ -34,6 +39,8 @@ export function TalentCardHeader({
 import { TalentCardAvatar } from "./TalentCardAvatar",
 import { TalentCardAvailability } from "./TalentCardAvailability",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TalentCardHeaderProps {;
   fullName: string,;
   professionalTitle: string,;
@@ -51,7 +58,10 @@ export function TalentCardHeader(): any ({ ;
   yearsExperience;
 }: TalentCardHeaderProps) {;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
@@ -60,6 +70,7 @@ interface TalentCardHeaderProps {
   yearsExperience: number
 }
 
+<<<<<<< HEAD
 
 export function TalentCardHeader({ 
   fullName,
@@ -111,6 +122,8 @@ export function TalentCardHeader({ ;
             {yearsExperience > 5 && (;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function TalentCardHeader({ ;
   fullName;
 export function TalentCardHeader({ 
@@ -120,6 +133,7 @@ export function TalentCardHeader({
   availabilityType,
   yearsExperience
 }: TalentCardHeaderProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className="flex items-start gap-4 mb-4">
@@ -143,6 +157,8 @@ export function TalentCardHeader({
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
@@ -158,10 +174,21 @@ export function TalentCardHeader({
             {yearsExperience > 5 && (;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          </h3>
+          <TalentCardAvailability availabilityType={availabilityType} />
+        </div>
+        <p className="text-zion-cyan text-sm">{professionalTitle}</p>
+      </div>
+    </div>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { BadgeCheck } from "lucide-react",;
 import { TalentCardAvatar } from "./TalentCardAvatar",;
@@ -193,23 +220,30 @@ export function TalentCardHeader({;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </h3>;
           </h3>;
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </h3>;
 
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -289,3 +323,8 @@ yearsExperience
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

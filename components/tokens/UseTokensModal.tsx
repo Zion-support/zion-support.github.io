@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
 export type RedemptionType =
@@ -17,16 +18,22 @@ export default function UseTokensModal({
   defaultType
 }: {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -75,6 +82,10 @@ isOpen
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -82,10 +93,15 @@ isOpen
 }) {;
   const [account, setAccount] = useState<string | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
@@ -104,9 +120,13 @@ defaultType
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
@@ -121,6 +141,7 @@ defaultType
   useEffect(() => {;
     (async () => {;
       const accs = await getAccounts();
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (accs && accs.length > 0) setAccount(accs[0])
     })()
@@ -167,6 +188,8 @@ export default function UseTokensModal ({
   }, []);
     if (accs && accs.length > 0) setAccount(accs[0])
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     })();
@@ -175,21 +198,32 @@ export default function UseTokensModal ({
       if (accs && accs.length > 0) setAccount(accs[0])
     })()
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
 
     if (accs && accs.length > 0) setAccount(accs[0])
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   async function redeem() {
     setIsSubmitting(true);
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function connect() {;
     const accs = await connectMetaMask();
     if (accs && accs.length > 0) setAccount(accs[0]);
@@ -202,18 +236,27 @@ export default function UseTokensModal ({
         headers: { "Content-Type": "application/json" },;
         body: JSON && JSON.stringify({ account, amount: tokens, type, serviceId }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       const data = await res && res.json();
       if (data?.ok) {;
         onClose();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const res = await fetch('/api/tokens/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -222,25 +265,33 @@ export default function UseTokensModal ({
       if (data?.ok) {
         onClose()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } finally {;
       setIsSubmitting(false);
     }
   }
 
+<<<<<<< HEAD
 
   if (!isOpen) return null;
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!isOpen) return null;
 
   if (!isOpen) return null;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
@@ -335,6 +386,10 @@ if (return null) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <option value="boost_profile">Boost profile</option>;
               <option value="promote_listing">Promote listing</option>;
@@ -342,9 +397,13 @@ if (return null) {
             </select>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onChange={(e) => setTokens(parseInt(e && e.target.value || "0", 10))}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2";
             />;
@@ -358,28 +417,40 @@ if (return null) {
               </div>;
             ) : (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <button
                 onClick={connect}
                 className="enhanced-button enhanced-button-primary">;
                 Connect MetaMask;
               </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
 
             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
             )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
         <div className="mt-4 flex items-center justify-between">;
@@ -388,9 +459,13 @@ if (return null) {
             access premium support.;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
@@ -436,12 +511,18 @@ if (return null) {
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>
@@ -449,15 +530,21 @@ if (return null) {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>);
         </div>
       </div>
@@ -465,6 +552,7 @@ if (return null) {
   )
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -478,3 +566,5 @@ if (return null) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

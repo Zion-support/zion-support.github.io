@@ -4,6 +4,7 @@
 
 export function LoginCard() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 import { Link } from "react-router-dom";
 import { LoginForm } from "./LoginForm";
@@ -45,6 +46,10 @@ export function LoginCard() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="mx-auto w-full max-w-sm lg:w-96">;
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
@@ -53,14 +58,20 @@ export function LoginCard() {;
         <p className="mt-2 text-sm text-zion-slate-light">;
           Don't have an account?{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Link
             to="/signup"
 
             className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Link  } from './react-router-dom';
 import { LoginForm  } from './LoginForm';
 import { SocialLogin  } from './SocialLogin';
@@ -82,6 +93,7 @@ function LoginCard() {
           >;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from "react-router-dom",;
 import { LoginForm } from "./LoginForm",;
 import { SocialLogin } from "./SocialLogin",;
@@ -99,10 +111,13 @@ export function LoginCard() {;
           <Link to="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Sign up;
           </Link>;
         </p>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>);
 }
@@ -116,6 +131,8 @@ export function LoginCard() {;
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     </div>
@@ -129,7 +146,14 @@ export function LoginCard() {;
         <LoginForm />;
         <SocialLogin />;
       </div>;
+<<<<<<< HEAD
     </div>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </div>;
+  );
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

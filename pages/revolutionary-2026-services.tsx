@@ -1,6 +1,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
@@ -9,22 +14,41 @@ export default function Revolutionary2026ServicesPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -98,7 +122,10 @@ import {Phone, Mail} from 'lucide-react';
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * Revolutionary2026ServicesPage - Function description
  */
@@ -157,6 +184,10 @@ function Revolutionary2026ServicesPage() {
           name='address';
           content='364 E Main St STE 1008 Middletown DE 19709';
         />;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Structured Data */}
 
             __html: JSON && JSON.stringify({
@@ -165,6 +196,7 @@ function Revolutionary2026ServicesPage() {
               name: 'Zion Tech Group',
               url: 'https://ziontechgroup && ziontechgroup.com',
               logo: 'https://ziontechgroup && ziontechgroup.com/logo && logo.png',
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
@@ -286,6 +318,9 @@ export default function Revolutionary2026ServicesPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               description:
                 'Revolutionary AI, quantum computing, and emerging technology services for 2026'
               address: {
@@ -297,6 +332,7 @@ export default function Revolutionary2026ServicesPage() {
                 addressCountry: 'US'
               }
               contactPoint: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -329,6 +365,17 @@ export default function Revolutionary2026ServicesPage() {
               "name": "Zion Tech Group";
               "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/logo.png",
               "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026";
+=======
+
+                  color: 'from-indigo-500 to-purple-500'
+                }
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               "address": {
                 "@type": "PostalAddress";
                 "streetAddress": "364 E Main St STE 1008";
@@ -345,6 +392,7 @@ export default function Revolutionary2026ServicesPage() {
               };
               "sameAs": [
                 "https://github.com/Zion-Holdings"
+<<<<<<< HEAD
 
 export default function Revolutionary2026ServicesPage() {_return (
     <>
@@ -402,11 +450,14 @@ export default function Revolutionary2026ServicesPage() {_return (
               &quot;sameAs&quot;: [
                 &quot;https://github.com/Zion-Holdings&quot;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ]
             })
           }}
         />
       </Head>
+<<<<<<< HEAD
 <main className="min-h-screen bg-gray-900">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -429,11 +480,33 @@ export default function Revolutionary2026ServicesPage() {_return (
         {/* Additional Content Sections */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
+=======
+
+      <main className="min-h-screen bg-gray-900">
+        {/* Navigation */}
+        <Revolutionary2026UltimateNavigation />
+        
+        {/* Hero Section */}
+        <Revolutionary2026UltimateHero />
+        
+        {/* Services Showcase */}
+        <Revolutionary2026UltimateServicesShowcase />
+        
+        {/* Additional Content Sections */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
+          
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Why Choose Zion Tech Group */}
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
@@ -441,6 +514,7 @@ export default function Revolutionary2026ServicesPage() {_return (
                 We're not just another technology company. We're pioneers in the future of AI, quantum computing;
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Features Grid */}
 
@@ -703,6 +777,11 @@ color: 'from-indigo-500 to-purple-500'
               </p>
             </div>
             {/* Features Grid */}
+=======
+
+            </div>
+            {/* Features Grid */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {[
             {/* Features Grid */  } catch (error) {
     console.error("Error:", error);
@@ -716,31 +795,54 @@ color: 'from-indigo-500 to-purple-500'
                   title: 'AI Consciousness',
                   description: 'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500'
+<<<<<<< HEAD
                 },
+=======
+                };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {
                   icon: '⚛️',
                   title: 'Quantum Technology',
                   description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.',
+<<<<<<< HEAD
                   color: 'from-blue-500 to-cyan-500'
                 },
+=======
+    color: 'from-blue-500 to-cyan-500'
+                };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {
                   icon: '🚀',
                   title: 'Emerging Tech',
                   description: 'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.',
+<<<<<<< HEAD
                   color: 'from-green-500 to-emerald-500'
                 },
+=======
+    color: 'from-green-500 to-emerald-500'
+                };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {
                   icon: '🏥',
                   title: 'Healthcare Innovation',
                   description: 'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.',
+<<<<<<< HEAD
                   color: 'from-teal-500 to-cyan-500'
                 },
+=======
+    color: 'from-teal-500 to-cyan-500'
+                };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {
                   icon: '💰',
                   title: 'Fintech Revolution',
                   description: 'Next-generation autonomous business intelligence and quantum blockchain solutions.',
                   color: 'from-yellow-500 to-orange-500'
+<<<<<<< HEAD
                 },
+=======
+                };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {
                   icon: '🌐',
                   title: 'Global Impact',
@@ -755,16 +857,21 @@ color: 'from-indigo-500 to-purple-500'
                 <div key={index} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
+<<<<<<< HEAD
                       {feature.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                      {feature.icon}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
@@ -808,6 +915,10 @@ color: 'from-indigo-500 to-purple-500'
                   <a 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ))}
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Call to Action */}
             <div className='text-center'>
               <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>
@@ -826,6 +937,7 @@ color: 'from-indigo-500 to-purple-500'
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -834,30 +946,54 @@ color: 'from-indigo-500 to-purple-500'
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  Ready to Experience the Future?
+                </h3>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Join thousands of forward-thinking companies already using our revolutionary services 
+                  to gain competitive advantages and accelerate innovation.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     href="tel:+13024640950"
                     className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"
                   >
                     <Phone className="w-5 h-5" />
                     Call +1 302 464 0950
+<<<<<<< HEAD
                   </Link>
                   <a
+=======
+                  </a>
+                  <a 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     href="mailto:kleber@ziontechgroup.com"
                     className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <Mail className="w-5 h-5" />
                     Email Us
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>
 =======
 <<<<<<< HEAD
                   </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     href='mailto:kleber@ziontechgroup && ziontechgroup.com'
     </>
@@ -892,10 +1028,16 @@ color: 'from-indigo-500 to-purple-500'
                     <Mail className="w-5 h-5" />;
                     Email Us;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'>;
                     <Mail className='w-5 h-5' />                    Email Us;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             __html: JSON.stringify ({
               '@context': 'https://schema.org',
               '@type': 'Organization',
@@ -1030,8 +1172,11 @@ color: 'from-indigo-500 to-purple-500'
                   >;
                     <Mail className='w - 5 h - 5' />                    Email Us;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </div>;
               </div>;
@@ -1041,6 +1186,7 @@ color: 'from-indigo-500 to-purple-500'
       </main>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 ;
@@ -1059,13 +1205,21 @@ color: 'from-indigo-500 to-purple-500'
 }
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
     </>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

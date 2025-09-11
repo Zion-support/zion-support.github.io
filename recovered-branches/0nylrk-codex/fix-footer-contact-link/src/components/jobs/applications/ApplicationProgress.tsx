@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -23,6 +24,8 @@ import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -30,14 +33,18 @@ interface ApplicationProgressProps {
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Define the progress value based on status
 
   const getProgressValue = () => {
     switch (status) {
+<<<<<<< HEAD
 
 
 export function ApplicationProgress(): any ({;
@@ -80,6 +87,8 @@ function ApplicationProgress() {
     }
   }
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "new":;
         return 20;
       case "viewed":
@@ -94,10 +103,13 @@ function ApplicationProgress() {
         return 100;
       default:
         return 0;
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -106,17 +118,23 @@ function ApplicationProgress() {
       case "rejected": return 100,
       default: return 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   const progressValue = getProgressValue();
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
+<<<<<<< HEAD
 =======
 
     }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const progressValue = getProgressValue(),
@@ -125,6 +143,7 @@ function ApplicationProgress() {
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       
 =======
@@ -132,6 +151,11 @@ function ApplicationProgress() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -156,10 +180,14 @@ function ApplicationProgress() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
   )
+=======
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function StatusIcon({
   status
@@ -179,6 +207,7 @@ function StatusIcon({
   }
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
+<<<<<<< HEAD
 =======
   );
 }
@@ -186,6 +215,9 @@ function StatusIcon({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
@@ -200,9 +232,12 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (currentRank < statusRank_) {
     // This step is complete
@@ -213,12 +248,18 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   } else {
     // This step is upcoming
 <<<<<<< HEAD
+<<<<<<< HEAD
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
 }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
@@ -244,6 +285,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   },;
   const progressValue = getProgressValue(),;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
@@ -281,11 +323,16 @@ export function ApplicationProgress({ status, className } ApplicationProgressPro
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex justify-between text-xs text-muted-foreground">;
         <div className="flex flex-col items-center">;
           <StatusIcon status={status} current="new" />;
@@ -312,11 +359,14 @@ export function ApplicationProgress({ status, className } ApplicationProgressPro
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {;
   // Helper to determine if this step is active, completed, or inactive;
   const statusRank: Record<ApplicationStatus number> = {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function StatusIcon(): any ({;
   status,;
@@ -327,17 +377,23 @@ function StatusIcon(): any ({;
 }) {;
   // Helper to determine if this step is active, completed, or inactive;
   const statusRank: Record<ApplicationStatus, number> = {;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     new: 1,;
     viewed: 2,;
     shortlisted: 3,;
     interview: 4,;
     hired: 5,;
 <<<<<<< HEAD
+<<<<<<< HEAD
     rejected: 5},;
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     rejected: 5,;
   };
 
@@ -345,7 +401,10 @@ function StatusIcon(): any ({;
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (currentRank < statusRank_) {;
     // This step is complete;
     return <CheckCircle2 className="h-4 w-4 text-green-500" />;
@@ -357,9 +416,13 @@ function StatusIcon(): any ({;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const progress_value = getProgressValue ();
 ;
@@ -423,6 +486,7 @@ if ( {) {
     // This step is upcoming;
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
+<<<<<<< HEAD
 }
 ;
 
@@ -487,3 +551,12 @@ return (<div className= {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+=======
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

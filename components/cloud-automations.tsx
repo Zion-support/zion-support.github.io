@@ -3,10 +3,21 @@
 
 
 
+<<<<<<< HEAD
 export default function CloudAutomationsPage() {;
 
 
 export default function CloudAutomationsPage() {
+=======
+=======
+export default function CloudAutomationsPage() {;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function CloudAutomationsPage() {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function CloudAutomationsPage() {;
   const [data, setData] = useState<any>(null);
@@ -18,10 +29,15 @@ export default function CloudAutomationsPage() {;
       .then(setData);
       .catch(() => setData({ ok: false }));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
@@ -29,6 +45,7 @@ export default function CloudAutomationsPage() {
       .then((r) => r.json())
       .then(setData)
       .catch(() => setData({ ok: false }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 }, []);
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
@@ -137,12 +154,16 @@ export default function CloudAutomationsPage() {
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
   return (
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </div>;
@@ -150,11 +171,23 @@ export default function CloudAutomationsPage() {
 
       </div>;
     </div>;
+=======
+            ) : null}
+          </div>;
+        ))}
+      </div>
+    </div>
+);
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
@@ -185,6 +218,10 @@ export default function CloudAutomationsPage() {
             <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
             {value.metrics ? (
               <pre className=&quot;mt-2 text-xs whitespace-pre-wrap&quot;>{JSON.stringify(value.metrics, null, 2)}</pre>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ) : null}
           </div>
         ))}
@@ -193,6 +230,7 @@ export default function CloudAutomationsPage() {
 
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 );
@@ -208,3 +246,7 @@ export default function CloudAutomationsPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

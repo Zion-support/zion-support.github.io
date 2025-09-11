@@ -1,22 +1,41 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -66,18 +85,29 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
 		<>
 			<Head>
 				<title>Zero Trust Security Platform | Zion Tech Group</title>
+<<<<<<< HEAD
 <meta name="description" content="Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege." />
+=======
+				<meta name="description" content="Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege." />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform" />
 			</Head>
 			<ServiceLanding
 				title="Zero Trust Security Platform"
+<<<<<<< HEAD
 description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services."
+=======
+				description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services."
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 				subtitle="Trust nothing, verify everything"
 				pricePerMonthUSD={3499}
 				implementationWeeks="4-8 weeks"
@@ -97,10 +127,15 @@ description="Accelerate zero trust adoption with reference architectures, policy
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next / head';
 import ServiceLanding from '../components / sections / ServiceLanding';
@@ -147,6 +182,7 @@ function ZeroTrustSecurityPlatformPage() {
       />;
     </>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -301,7 +337,13 @@ export default function ZeroTrustSecurityPlatformPage(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

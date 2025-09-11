@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -9,6 +10,12 @@ import Link from 'next / link';
 import React from 'react';
 
 import Link from 'next/link';
+=======
+import React from 'react',
+import React from 'react';
+import Link from 'next/link';
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { motion } from 'framer-motion';
 
 
@@ -48,7 +55,10 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Star, 
@@ -68,7 +78,10 @@ const serviceCategories = [
     icon: Brain
     services: [
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
       { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
       { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
@@ -85,16 +98,22 @@ const serviceCategories = [
     ]
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     title: '⚛️ Quantum & Emerging Tech'
     services: [
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   {
     title: '⚛️ Quantum & Emerging Tech'
     services: [
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       { name: 'Quantum Computing', href: '/quantum-computing' },
       { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
       { name: 'IoT Platforms', href: '/iot-platforms' },
@@ -102,17 +121,23 @@ const serviceCategories = [
     ]
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     title: '🏙️ Enterprise Solutions'
     services: [
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   {
     title: '🏙️ Enterprise Solutions'
     services: [
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -226,28 +251,41 @@ const serviceCategories = [;
       { name: 'DevOps Automation', href: '/devops-automation' },;
     ],;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },];      { name: 'DevOps Automation', href: '/devops-automation' }
     ];
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       { name: 'Enterprise IT', href: '/enterprise-it' },
       { name: 'Cloud Solutions', href: '/cloud-solutions' },
       { name: 'Cybersecurity', href: '/cybersecurity' },
       { name: 'DevOps Automation', href: '/devops-automation' }
     ]
+<<<<<<< HEAD
 import React from 'react',
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -272,6 +310,8 @@ import {
   Cpu
   Database;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Phone,
   Mail,
   MapPin,
@@ -293,6 +333,7 @@ import {
   Zap,
   Sparkles,
   Shield,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -763,6 +804,17 @@ const UltraFuturisticFooter2029 = () => {
               ))}
             </div>
           </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+];
+
+
+              ))}
+
+            </div>;
+          </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {/* Service Categories */}
           <div className='lg:col-span-1'>
@@ -770,6 +822,7 @@ const UltraFuturisticFooter2029 = () => {
               Our Services
             </h4>
             <div className='space-y-4'>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
@@ -784,6 +837,12 @@ const UltraFuturisticFooter2029 = () => {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -793,7 +852,10 @@ const UltraFuturisticFooter2029 = () => {
                     {category.services.map(service => (
                       <li key={service.name}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           href={service && service.href}
@@ -813,11 +875,15 @@ const UltraFuturisticFooter2029 = () => {
                       </li>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
             <div className="space-y-4">
               {serviceCategories.map((category, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <Link
                           href={service.href}
@@ -826,6 +892,8 @@ const UltraFuturisticFooter2029 = () => {
                           <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200' />                          <span>{service.name}</span>              {serviceCategories.map((category, index) => (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div key={index}>
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{category.title}</h5>
                   <ul className="space-y-2">
@@ -840,14 +908,19 @@ const UltraFuturisticFooter2029 = () => {
                         </Link>
                       </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </ul>;
                 </div>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>;
           </div>;
@@ -863,6 +936,17 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
             </div>
           </div>
 
+=======
+            </div>
+          </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+            </div>;
+          </div>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -870,6 +954,7 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
             </h4>
             <div className='grid grid-cols-2 gap-2'>
               {quickLinks.map(link => (
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -881,6 +966,11 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
 
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <Link
                   key={link.name}
@@ -892,15 +982,30 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
                   href={link.href}
                   className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50"
                 >
+<<<<<<< HEAD
 
+=======
+                  <link.icon className="w-4 h-4" />
+                  <span>{link.name}</span>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>
 
                   <span>{link.name}</span>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              ))}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>
 
@@ -909,6 +1014,8 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
                 </Link>
               ))}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Footer Sections */}
           <div className='lg:col-span-1'>;
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>;
@@ -922,7 +1029,10 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
                     {section && section.links.map(link => (;
                       <li key={link && link.name}>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
 
@@ -954,15 +1064,21 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
                       </li>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Footer Sections */}
           <div className="lg:col-span-1">
             <h4 className="text-lg font-semibold text-white mb-6">Company</h4>
             <div className="space-y-4">
               {footerSections.map((section) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -971,6 +1087,15 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
 
 
 
+=======
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Footer Sections */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
@@ -980,10 +1105,14 @@ className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white tr
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div key={section.title}>
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{section.title}</h5>
                   <ul className="space-y-2">
@@ -1147,7 +1276,10 @@ const UltraFuturisticFooter2029 = () =>: any {
                         <Link;
                           href={link.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           className='text - sm text - gray - 400 hover:text - white transition - colors duration - 200'                        >                <div key={section.title}>;
                   <h5 className="text - sm font - medium text - gray - 300 mb - 3">{section.title}</h5>;
                   <ul className="space - y-2">;
@@ -1158,18 +1290,41 @@ const UltraFuturisticFooter2029 = () =>: any {
                           className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200";
                         >;
                           {link.name}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
       {/* Bottom Footer */}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Bottom Footer */}
+      <div className='border-t border-slate-700/50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+            <div className='text-sm text-gray-400'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
               © 2025 Zion Tech Group. All rights reserved.
             </div>
             <div className='flex items-center space-x-6 text-sm text-gray-400'>
@@ -1178,6 +1333,14 @@ const UltraFuturisticFooter2029 = () =>: any {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              © 2025 Zion Tech Group. All rights reserved.
+            </div>
+            <div className='flex items-center space-x-6 text-sm text-gray-400'>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </Link>;
                       </li>))}
                   </ul>;
@@ -1226,19 +1389,29 @@ const UltraFuturisticFooter2029 = () =>: any {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="border-t border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
               © 2025 Zion Tech Group. All rights reserved.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
+=======
+
+            </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                         >
                           {link.name}
@@ -1294,7 +1467,10 @@ const UltraFuturisticFooter2029 = () =>: any {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Newsletter Signup */}
 
                 className='hover:text-white transition-colors'>                Cookie Policy              © 2025 Zion Tech Group. All rights reserved.;
@@ -1322,8 +1498,11 @@ const UltraFuturisticFooter2029 = () =>: any {
             </h3>;
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>;
 =======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Newsletter Signup */}
       <div className='bg - gradient - to - r from - purple - 600 / 10 to - blue - 600 / 10 border - t border - slate - 700 / 50'>;
         <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
@@ -1333,26 +1512,38 @@ const UltraFuturisticFooter2029 = () =>: any {
             </h3>;
             <p className='text - gray - 400 mb - 8 max - w-2xl mx - auto'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Get the latest insights on AI, quantum computing, and autonomous;
               technology. Join our newsletter for exclusive updates and industry;
               insights.;
             </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Innovation
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h3>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               Get the latest insights on AI, quantum computing, and autonomous technology.
@@ -1360,9 +1551,13 @@ const UltraFuturisticFooter2029 = () =>: any {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />;
               <button className='px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'>                Subscribe              Stay Updated with Innovation;
             </h3>;
@@ -1372,15 +1567,21 @@ const UltraFuturisticFooter2029 = () =>: any {
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex flex - col sm:flex - row gap - 4 justify - center max - w-md mx - auto'>;
               <input;
@@ -1405,12 +1606,17 @@ const UltraFuturisticFooter2029 = () =>: any {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Subscribe;
               </button>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               />
               <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200">
@@ -1422,6 +1628,8 @@ const UltraFuturisticFooter2029 = () =>: any {
       </div>
     </footer>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 };
@@ -1431,7 +1639,10 @@ export default UltraFuturisticFooter2029;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </footer>);
 }
 ;
@@ -1441,7 +1652,12 @@ export default UltraFuturisticFooter2029);
 export default UltraFuturisticFooter2029;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 };
@@ -1450,6 +1666,7 @@ export default UltraFuturisticFooter2029;  )
 }
 export default UltraFuturisticFooter2029;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1468,3 +1685,6 @@ export default UltraFuturisticFooter2029;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

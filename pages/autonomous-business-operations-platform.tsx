@@ -1,16 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
 } from 'lucide-react',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
     {
@@ -19,6 +28,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "Fully autonomous business operations with intelligent decision-making",
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react';
@@ -73,6 +83,8 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Manufacturing"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       description: "Automated production lines, quality control, and supply chain management"
     }
     {
@@ -87,6 +99,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Retail"
       description: "Inventory management, customer service, and sales optimization"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   ]
   const benefits = [
@@ -142,23 +155,34 @@ const AutonomousBusinessOperationsPlatform = () => {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       icon: Brain,
       title: "Cognitive Business Intelligence",
       description: "Advanced AI that understands and optimizes your business processes",
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: "from-purple-500 to-pink-500"
 =======
 
       color: "from-purple-500 to-pink-500"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      color: "from-purple-500 to-pink-500"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       icon: Workflow,
       title: "Automated Workflows",
       description: "Seamless automation of complex business processes and operations",
+<<<<<<< HEAD
 <<<<<<< HEAD
       color: "from-emerald-500 to-teal-500"
 =======
@@ -166,10 +190,16 @@ const AutonomousBusinessOperationsPlatform = () => {
       color: "from-emerald-500 to-teal-500"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      color: "from-emerald-500 to-teal-500"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       icon: Shield,
       title: "Intelligent Security",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "AI-powered security monitoring and threat prevention",
       color: "from-red-500 to-orange-500"
@@ -181,25 +211,35 @@ const AutonomousBusinessOperationsPlatform = () => {
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       description: "AI-powered security monitoring and threat prevention",
       color: "from-red-500 to-orange-500"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ],
   const capabilities = [
     "24/7 autonomous operation",
     "Real-time decision making",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "Predictive analytics",
     "Process optimization",
     "Resource management",
     "Performance monitoring",
     "Risk assessment",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "Compliance automation";
   ],
@@ -208,6 +248,11 @@ const AutonomousBusinessOperationsPlatform = () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "Compliance automation"
   ],
 
@@ -227,6 +272,7 @@ const AutonomousBusinessOperationsPlatform = () => {
     },
     {
       title: "Retail",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ],
@@ -270,6 +316,11 @@ const AutonomousBusinessOperationsPlatform = () => {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      description: "Inventory management, customer service, and sales optimization"
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ],
   const benefits = [
     {
@@ -296,12 +347,17 @@ const AutonomousBusinessOperationsPlatform = () => {
       value: "250%",
       description: "Increase in team productivity"
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ],
   return (
     <>
@@ -315,6 +371,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         <meta property="og:url" content="https://ziontechgroup.com/autonomous-business-operations-platform" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+<<<<<<< HEAD
 
   ],
 =======
@@ -338,6 +395,9 @@ const AutonomousBusinessOperationsPlatform = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
 
 
+=======
+        {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -346,9 +406,13 @@ const AutonomousBusinessOperationsPlatform = () => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -357,10 +421,15 @@ const AutonomousBusinessOperationsPlatform = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       description: "Boost in operational efficiency";
     },
     {
@@ -395,9 +464,13 @@ const AutonomousBusinessOperationsPlatform = () => {
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20"></div>;
@@ -410,6 +483,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
                 Transform your business with AI-powered autonomous operations that work 24/7,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (_<>
       <Head>
@@ -504,6 +578,13 @@ const AutonomousBusinessOperationsPlatform = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+                Transform your business with AI-powered autonomous operations that work 24/7, 
+                Transform your business with AI-powered autonomous operations that work 24/7,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -518,6 +599,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -525,6 +607,16 @@ const AutonomousBusinessOperationsPlatform = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -702,14 +794,19 @@ const AutonomousBusinessOperationsPlatform = () => {;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -904,6 +1001,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
             <motion.div;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -925,11 +1024,17 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -940,6 +1045,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               {features.map((feature, index) => (
@@ -1000,6 +1106,18 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -1007,6 +1125,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 </motion.div>
@@ -1025,6 +1144,13 @@ const AutonomousBusinessOperationsPlatform = () => {;
           </div>;
         </section>;
 
+=======
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Capabilities Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -1033,6 +1159,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1051,6 +1178,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
               viewport={{ once: true }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1088,11 +1217,17 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1103,6 +1238,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               {capabilities.map((capability, index) => (
@@ -1163,10 +1299,23 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              {capabilities.map((capability, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, coordinate_x: -20 }}
+                  whileInView={{ opacity: 1, coordinate_x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 </motion.div>
@@ -1182,6 +1331,13 @@ const AutonomousBusinessOperationsPlatform = () => {;
           </div>;
         </section>;
 
+=======
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Benefits Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -1190,6 +1346,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1208,6 +1365,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
               viewport={{ once: true }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1245,11 +1404,17 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1260,12 +1425,16 @@ const AutonomousBusinessOperationsPlatform = () => {;
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -1323,6 +1492,16 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -1332,6 +1511,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
                     <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.value}</div>
                     <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   </div>
@@ -1354,6 +1534,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
           </div>;
         </section>;
 
+=======
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Industries Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -1362,6 +1550,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1381,6 +1570,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
               viewport={{ once: true }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1418,11 +1609,17 @@ const AutonomousBusinessOperationsPlatform = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1433,6 +1630,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               {industries.map((industry, index) => (
@@ -1493,12 +1691,27 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
                   <p className="text-gray-400 text-lg">{industry.description}</p>
                 </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
             </div>
           </div>
@@ -1517,6 +1730,12 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1562,6 +1781,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
       </div>
     </>
   )
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1631,6 +1851,25 @@ export default AutonomousBusinessOperationsPlatform,
                   <Bot className="ml-2 w-6 h-6" />;
                 </Link>;
                 <Link href="/services" className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 text-lg">;
+=======
+}
+export default AutonomousBusinessOperationsPlatform;
+
+=======
+            >;
+              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
+                Ready to Automate Your Business?;
+              </h2>;
+              <p className="text - xl text - gray - 400 mb - 8">;
+                Join the autonomous business revolution and transform your operations today;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - cyan - 600 transition - all duration - 200 text - lg">;
+                  Start Automation;
+                  <Bot className="ml - 2 w - 6 h - 6" />;
+                </Link>;
+                <Link href="/services" className="inline - flex items - center px - 8 py - 4 border border - blue - 500 text - blue - 400 font - semibold rounded - lg hover:bg - blue - 500 hover:text - white transition - all duration - 200 text - lg">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Explore All Services;
                 </Link>;
               </div>;
@@ -1639,16 +1878,20 @@ export default AutonomousBusinessOperationsPlatform,
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
 },;
 export default AutonomousBusinessOperationsPlatform;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </>);
 },
 export default AutonomousBusinessOperationsPlatform,
 ;
+<<<<<<< HEAD
 
 },
 
@@ -1656,3 +1899,11 @@ export default AutonomousBusinessOperationsPlatform,
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

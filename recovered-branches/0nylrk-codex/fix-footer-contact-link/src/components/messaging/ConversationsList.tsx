@@ -1,16 +1,20 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function ConversationsList({ ;
   conversations;
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { User  } from 'lucide-react';
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 interface ConversationsListProps {
 
+<<<<<<< HEAD
   conversations: Conversation[]
   activeConversation: Conversation | null
   setActiveConversation: (conversation: Conversation) => void
@@ -27,13 +31,19 @@ export function ConversationsList({
 export function ConversationsList({ ;
   conversations;
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export function ConversationsList({ ;
   conversations;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -47,6 +57,7 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
+<<<<<<< HEAD
 <<<<<<< HEAD
   activeConversation, 
   setActiveConversation, 
@@ -62,6 +73,11 @@ export function ConversationsList({
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -80,10 +96,14 @@ export function ConversationsList({
         <div>
           {conversations.map((conversation) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <ConversationItem
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
+<<<<<<< HEAD
 
 import React from 'react',;
 import { User } from 'lucide-react',;
@@ -128,14 +148,34 @@ export function ConversationsList({ ;
               onClick={() => {;
                 setActiveConversation(conversation);
                 markAsRead(conversation && conversation.id);
+=======
+              onClick={() => {
+                setActiveConversation(conversation);
+
+                markAsRead(conversation.id)
+              onClick={() => {;
+                setActiveConversation(conversation);
+                markAsRead(conversation.id);
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
             />;
           ))}
         </div>;
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
+=======
+
+    </div>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {User} from 'lucide-react';
 import {Conversation} from '@/types / messaging';
 import {ConversationItem} from './ConversationItem';
@@ -176,6 +216,7 @@ function ConversationsList() {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       ) :(;
         <div>;
@@ -219,3 +260,6 @@ function ConversationsList() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

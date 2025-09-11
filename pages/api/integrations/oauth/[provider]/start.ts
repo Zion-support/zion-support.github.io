@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { provider } = req && req.query as { provider: string };
 
 
@@ -52,6 +53,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const { provider } = req && req.query as { provider: string };
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -62,6 +70,7 @@ export default function handler(req, res) {
   const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
   res.writeHead(302, { Location: callbackUrl });
   res.end();
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   } catch (error) {
@@ -83,3 +92,8 @@ export default function handler(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

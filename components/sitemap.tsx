@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   ];
@@ -35,6 +36,13 @@ import React from "react";
 import Head from "next/head";
 
 
+=======
+import React from 'react';
+import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function SitemapPage() {
 
 
@@ -43,6 +51,7 @@ export default function SitemapPage() {
     { name: "Services", href: "/services" }
     {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -65,6 +74,8 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Head from "next/head";
 export default function SitemapPage() {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -78,6 +89,10 @@ export default function SitemapPage() {;
     { name: "Resources", href: "/resources" },;
     { name: "Support", href: "/support" },;
     { name: "Contact", href: "/contact" },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -107,6 +122,7 @@ export default function SitemapPage() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const links = [;
@@ -159,6 +175,9 @@ export default function SitemapPage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 	const links = [
 		{ name: 'Home', href: '/' },
@@ -201,11 +220,16 @@ export default function SitemapPage() {;
 			</div>
 		</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 =======
 	);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+	);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 import React from './react';
 import Head from './next / head';
@@ -217,7 +241,13 @@ function SitemapPage() {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     {
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: "All Services Showcase",
       href: "/comprehensive - services - showcase - 2025",
     },
@@ -226,6 +256,7 @@ function SitemapPage() {
     { name: "Services Advertising", href: "/services - advertising" },
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
+<<<<<<< HEAD
 <<<<<<< HEAD
     { name: "Contact", href: "/contact" },
 import React from 'react';
@@ -258,11 +289,16 @@ export default function SitemapPage() {
     { name: "Support", href: "/support" },
     { name: "Contact", href: "/contact" },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     { name: "Contact", href: "/contact" },;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -335,8 +371,14 @@ export default function SitemapPage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

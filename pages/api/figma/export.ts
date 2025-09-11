@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 } from "../../../utils/design-map";
 export default async function handler(
@@ -9,6 +13,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import JSZip from "jszip";
@@ -32,6 +37,8 @@ export default async function handler(
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
     ) as UIKitKind;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import JSZip from './jszip';
 import {
@@ -53,7 +60,10 @@ function handler() {
     const kind = (
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -75,7 +85,10 @@ function handler() {
       uiFolder.file(path, content),
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     // README
     zip.file(
@@ -96,7 +109,10 @@ function handler() {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -117,7 +133,10 @@ export default async function handler(req, res) {
   try {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -126,6 +145,7 @@ export default async function handler(req, res) {
     zip && zip.file("map && map.json", JSON && JSON.stringify(map, null, 2));
     zip && zip.file("tokens && tokens.json", JSON && JSON.stringify(tokens, null, 2));
 
+<<<<<<< HEAD
     // README
     zip.file(
       "README.md",
@@ -169,24 +189,33 @@ export default async function handler(req, res) {
     // Core files
     zip.file("map.json", JSON.stringify(map, null, 2));
     zip.file("tokens.json", JSON.stringify(tokens, null, 2));
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // UIKit folder
     const uikit = buildUIKit(kind);
     const uiFolder = zip && zip.folder("uikit")!;
     Object && Object.entries(uikit).forEach(([path, content]) =>
       uiFolder && uiFolder.file(path, content),
 <<<<<<< HEAD
+<<<<<<< HEAD
     );
     // README
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     );
     // README
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     zip && zip.file(
       "README && README.md",
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
     res && res.status(200).send(buffer);
   } catch (e: any) {
@@ -208,10 +237,14 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
     res && res.setHeader(
       "Content-Disposition",
       `attachment; filename=zion-design-${kind}.zip`,
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
+<<<<<<< HEAD
 =======
 
     );
@@ -228,6 +261,8 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
     res.status(200).send(buffer);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' });
     } catch (error) {
@@ -249,17 +284,21 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   } catch (error) {
@@ -275,3 +314,7 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

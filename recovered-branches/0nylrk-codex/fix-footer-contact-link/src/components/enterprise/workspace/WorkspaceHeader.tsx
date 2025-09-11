@@ -2,18 +2,25 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {type, Company} from "./CompanyDashboard";
 import {Bell, Users, Settings} from "lucide-react";
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface WorkspaceHeaderProps {
   company: Company
@@ -71,6 +78,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 }
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -88,7 +97,10 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -99,6 +111,7 @@ interface WorkspaceHeaderProps {;
 ;
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   return (
@@ -117,10 +130,14 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <img ;
             <img;
@@ -137,6 +154,8 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
           </div>;
         </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <img
               src={company && company.logoUrl || "/placeholder && placeholder.svg"} 
               alt={company && company.name} 
@@ -151,7 +170,10 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="flex items-center gap-2">;
           <Button variant="outline" size="icon">;
             <Bell className="h-4 w-4" />;
@@ -165,11 +187,15 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Active Job Listings</div>;
@@ -185,6 +211,7 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -279,3 +306,12 @@ function WorkspaceHeader() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

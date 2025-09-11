@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 
@@ -19,6 +20,8 @@ export function UploadSection({
   customFile
   onFileUpload
 }: UploadSectionProps) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
@@ -46,6 +49,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             ? customFile && customFile.name;
 import React from 'react';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -69,6 +73,17 @@ export function UploadSection({
 }: UploadSectionProps) {
   return (
 <<<<<<< HEAD
+=======
+import { Upload, FileText } from 'lucide-react';
+interface UploadSectionProps {
+  custom_file: File | null;
+  onFileUpload: (e: React.ChangeEvent < HTMLInputElement>) => void;
+export /**
+ * UploadSection - Function description
+ */
+function UploadSection() {
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space - y-3'>;
       <div className='flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
         <Upload className='h - 8 w - 8 text - zion - purple mb - 2' />;
@@ -80,6 +95,7 @@ export function UploadSection({
         <Button variant='outline' className='relative'>;
           Browse Files;
 
+<<<<<<< HEAD
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
@@ -93,6 +109,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         <Button variant="outline" className="relative">
           Browse Files
           <input
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
@@ -119,13 +137,21 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>          </div>      {customFile && (
       
       {customFile && (
+<<<<<<< HEAD
       
       {customFile && (
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       
       {customFile && (
 
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
+<<<<<<< HEAD
+=======
+          <div className="flex items-center justify-between">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="flex items-center">
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
               <span className="text-white">{customFile.name}</span>
@@ -133,10 +159,14 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
           </div>
         </div>
+<<<<<<< HEAD
       )}
     </div>
   )
 }
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from 'react',;
@@ -162,6 +192,18 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
             accept=".pdf";
             onChange={onFileUpload}
+<<<<<<< HEAD
+=======
+
+          />;
+        </Button>;
+      </div>;
+
+            type="file";
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
+            accept=".pdf";
+            onChange={onFileUpload}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
         </Button>;
       </div>;
@@ -180,6 +222,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
   );
 };
 }
+<<<<<<< HEAD
 }
 }
 ;
@@ -282,3 +325,5 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
   );
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

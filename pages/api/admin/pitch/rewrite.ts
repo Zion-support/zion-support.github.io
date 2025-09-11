@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { slide } = req.body || {};
   if (!slide) return res.status(400).json({ error: 'Missing slide' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -20,6 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!slide) return res.status(400).json({ error: 'Missing slide' })
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`
@@ -31,6 +34,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`
         messages: [
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -62,12 +66,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+=======
+    } catch (err) {
+      // keep original if AI fails;
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (req.method === 'POST') {
       const { slide } = req.body;
       if (!slide) return res.status(400).json({ error: 'Slide required' });
 
+<<<<<<< HEAD
       const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 Title: ${slide.title}
 Content:
@@ -96,6 +109,7 @@ ${slide.content}`;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (err) {
@@ -114,3 +128,8 @@ ${slide.content}`;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import {useEffect, useState} from 'react';
 function useCounter(): any (target: number, durationMs: number) {;
@@ -9,6 +10,10 @@ import {useEffect, useState} from 'react';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
@@ -20,14 +25,19 @@ function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let start: number | null = null;
     let raf: number;    const step = (ts: number) => {;
     let start: number | null = null,
     let raf: number,
     const step = (ts: number) => {
+<<<<<<< HEAD
       if (start === null) start = ts;
 
 <<<<<<< HEAD
@@ -91,14 +101,28 @@ export default function InteractiveStats() {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+export default function InteractiveStats() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect, useState} from 'react';
 /**
  * use_counter - Function description
@@ -150,17 +174,25 @@ function InteractiveStats() {
   return (
     <div className='grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <Stat label="Successful Hires" value={hires} suffix="+" />
@@ -169,6 +201,7 @@ function InteractiveStats() {
       <Stat label="Satisfaction" value={satisfaction} suffix="%" />
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -179,16 +212,34 @@ function InteractiveStats() {
   );
 
 
+=======
+
+}
+function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
+  return (
+    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
+      <div className="text-3xl font-bold">{value}{suffix}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+    </div>
+);
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function Stat({
   label
   value
   suffix = ''
 }: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 function Stat(): any ({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {;
@@ -202,7 +253,10 @@ function Stat(): any ({ label, value, suffix = '' }: { label: string, value: num
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>);
     </div>);
 }
@@ -228,6 +282,7 @@ function Stat() {
       <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -266,13 +321,22 @@ function Stat({
       <div className='text-3xl font-bold'>
         {value}
         {suffix}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
   );
+<<<<<<< HEAD
 }
   );
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

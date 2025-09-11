@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +53,7 @@ import {;
 import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
 export default function ZionHireAI() {;
+<<<<<<< HEAD
 
 import React from 'react'
 import { Header } from '@/components/Header'
@@ -83,16 +87,24 @@ export default function ZionHireAI() {
 
   return (
     <>
+=======
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
+  const { isAuthenticated } = useAuth();
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     <>;
 
       <SEO
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
+<<<<<<< HEAD
 
       <SEO
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <main className='flex-1'>;
@@ -147,12 +159,20 @@ import { useWhitelabel } from "@/context/WhitelabelContext";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import Link from "next/link";
 
 export default function ZionHireAI() { const { isWhitelabel, brandName, primaryColor  } = useWhitelabel(),
   const { isAuthenticated  } = useAuth(),
 
+=======
+import { useAuth } from "@/hooks/useAuth",
+import Link from "next/link",
+export default function ZionHireAI() {
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
+  const { isAuthenticated } = useAuth(),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
 import React from "react",
 import { Header } from "@/components/Header",
@@ -171,20 +191,32 @@ export default function ZionHireAI() {
 
 
   return (
+<<<<<<< HEAD
+=======
+    <>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SEO 
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
       />
       <Header />
+<<<<<<< HEAD
       <main className='flex-1'>
         {/* Hero Section */}
 <<<<<<< HEAD
+=======
+      <main className="flex-1">
+        {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section
           className='relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24'
           style={
             primaryColor
               ? {
+<<<<<<< HEAD
           <div className = "container mx-auto px-4 md: px-6">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`
                 }
               : {}
@@ -192,6 +224,7 @@ export default function ZionHireAI() {
         <section 
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
           style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
+<<<<<<< HEAD
 =======
 
 
@@ -201,6 +234,8 @@ export default function ZionHireAI() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-6 md:grid-cols-2 items-center">
@@ -218,6 +253,7 @@ export default function ZionHireAI() {
                     className="bg-zion-purple hover:bg-zion-purple-light text-white"
                     asChild
                   >
+<<<<<<< HEAD
                     <Link
                       href={isAuthenticated ? '/enterprise/admin' : '/login'}
                     >
@@ -250,10 +286,36 @@ export default function ZionHireAI() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <Link href={isAuthenticated ? "/enterprise/admin" : "/login"}>
+                      Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="bg-transparent border-white text-white hover:bg-white/10"
+                    asChild
+                  >
+                    <Link href="/enterprise/demo">
+                      Request Demo
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="relative hidden md:block">
+                <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
+                <img
+                  src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
+                  alt="Zion Hire AI Dashboard"
+                  className="relative z-10 rounded-lg shadow-xl"
+                  loading="lazy"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 />
 
 
               </div>
+<<<<<<< HEAD
           </div>
         </section>
 
@@ -305,6 +367,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -338,22 +409,33 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span>Optimized for inclusivity</span>
                     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Template
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li className="flex items-center">
 
 
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
+<<<<<<< HEAD
+=======
+                      <span>Industry-specific templates</span>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Card className='bg-card border border-border'>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -384,6 +466,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Card className='bg-card border border-border'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               
               <Card className="bg-card border border-border">
 
@@ -408,6 +493,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Experience verification</span>
                     </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
@@ -445,6 +531,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         Data
                       </span>                      <span>Performance tracking</span>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               
               <Card className="bg-card border border-border">
@@ -469,11 +557,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Performance tracking</span>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Card className='bg-card border border-border'>
                 <CardHeader>
@@ -528,6 +620,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Card>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -540,10 +634,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardContent>
               </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card className='bg-card border border-border'>                <CardHeader>
               
               <Card className="bg-card border border-border">
                 <CardHeader>
+<<<<<<< HEAD
 =======
 
 
@@ -553,6 +651,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
@@ -570,6 +672,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span>Culture fit prediction</span>
                     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <li className="flex items-center">
 =======
 
@@ -578,12 +681,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <li className='flex items-center'>
+                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Data
+                      </span>                    <li className="flex items-center">
+                    <li className="flex items-center">
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Performance tracking</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               
@@ -621,21 +734,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardContent>
               </Card>
               <Card className='bg-card border border-border'>                <CardHeader>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card className='bg-card border border-border'>                <CardHeader>
               
               <Card className="bg-card border border-border">
                 <CardHeader>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               
               <Card className="bg-card border border-border">
                 <CardHeader>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               
               <Card className="bg-card border border-border">
                 <CardHeader>
 
+<<<<<<< HEAD
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
                   <CardDescription>
                     Add an AI assistant to your careers page to answer applicant questions.
@@ -666,10 +785,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
+=======
+
+                      <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
+                      <span>Simple JavaScript snippet</span>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Card className='bg-card border border-border'>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -705,6 +830,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Card className='bg-card border border-border'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               
               <Card className="bg-card border border-border">
 
@@ -730,14 +858,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span>Candidate funnel metrics</span>
                     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li className='flex items-center'>
                       <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Data
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li className="flex items-center">
 
 
@@ -748,11 +882,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardContent>
               </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Card className='bg-card border border-border'>
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
 ursor/fix-website-loading-errors-and-merge-6662
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
+=======
+              <Card className='bg-card border border-border'>
+              
+              <Card className="bg-card border border-border">
+
+
+                <CardHeader>
+                  <Shield className='h-10 w-10 text-zion-purple mb-2' />
+                  <CardTitle>White-Labeled Platform</CardTitle>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <CardDescription>
                     Customize the platform with your company's branding and
                     identity.
@@ -780,6 +925,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </span>
                       <span>Co-branded or white-labeled</span>
                     </li>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -817,12 +963,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Card className="bg-card border border-border">
                 <CardHeader>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               
               <Card className="bg-card border border-border">
                 <CardHeader>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>White-Labeled Platform</CardTitle>
                   <CardDescription>
@@ -839,6 +990,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
@@ -862,11 +1014,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </li>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
+<<<<<<< HEAD
                     <li className="flex items-center">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <span>Team roles & permissions</span>
                     </li>
                   </ul>
@@ -875,6 +1032,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* CTA Section */}
 <<<<<<< HEAD
@@ -887,6 +1045,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               Join leading companies using Zion Hire AI to find better talent
               faster, reduce time-to-hire, and improve candidate experience.
 =======
+=======
+        {/* CTA Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -898,13 +1059,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               asChild
             >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
               Join leading companies using Zion Hire AI to find better talent faster, 
               reduce time-to-hire, and improve candidate experience.
+<<<<<<< HEAD
             </p>
             <Button 
               size="lg" 
@@ -918,21 +1083,36 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+            </p>
+            <Button 
+              size="lg" 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild
             >
 
 
               <Link href="/enterprise/demo">
+<<<<<<< HEAD
+=======
+                Schedule a Demo
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Link>
             </Button>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </main>;
     </>;
   );
 };
+<<<<<<< HEAD
 }
       </main>;
     </>;
@@ -1007,11 +1187,16 @@ export default function ZionHireAI() {;
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </main>
     </>
 
                   loading='lazy'                />                  src="https://placehold && placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   alt="Zion Hire AI Dashboard";
                   className="relative z-10 rounded-lg shadow-xl";
                   loading="lazy";
@@ -1193,7 +1378,10 @@ export default function ZionHireAI() {;
               reduce time-to-hire, and improve candidate experience.;
             </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               size='lg'
               className='bg-zion-purple hover:bg-zion-purple-light text-white'
@@ -1530,24 +1718,33 @@ export default function ZionHireAI() {;
               as_child;
             >;
               <Link href='/enterprise / demo'>Schedule a Demo</Link>            </Button>            </p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button;
               size="lg";
               className="bg-zion-purple hover: bg-zion-purple-light text-white";
               asChild;
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/enterprise/demo">;
 =======
               <Link href="/enterprise / demo">;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Link href="/enterprise / demo">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Schedule a Demo;
               </Link>;
             </Button>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -1557,10 +1754,16 @@ export default function ZionHireAI() {;
     </>);
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
 
     </>);
+<<<<<<< HEAD
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

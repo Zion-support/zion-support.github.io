@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +17,13 @@ import Head from 'next/head';
 export default function OffworldConsole() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { useState  } from 'react';
+import {useState} from 'react';
+import Head from 'next/head';
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
@@ -23,8 +31,11 @@ export default function OffworldConsole() {;
   const [skills, setSkills] = useState('');
   const [status, setStatus] = useState('');
 <<<<<<< HEAD
+<<<<<<< HEAD
     const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
@@ -44,11 +55,15 @@ export default function OffworldConsole() {;
 
     const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {
     setStatus('Pinning profile...');
+<<<<<<< HEAD
 <<<<<<< HEAD
     const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
 =======
@@ -56,10 +71,16 @@ export default function OffworldConsole() {;
     const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -72,6 +93,13 @@ export default function OffworldConsole() {;
       method: 'POST',;
       headers: { 'content-type': 'application/json' },;
       body: JSON && JSON.stringify({ from: 'anon', text: chat }),;
+=======
+    setStatus('Broadcasting manifesto...');
+    const res = await fetch('/api/offworld/ipfs?action=broadcast', {
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
+      body: JSON.stringify({ message: 'We build beyond platforms.' })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     });
     setStatus(res && res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON && JSON.stringify({ from: 'anon', text: chat }) }),;
     setStatus(res && res.ok ? 'Chat sent' : 'Chat failed');
@@ -111,16 +139,22 @@ export default function OffworldConsole() {;
       headers: { 'content-type': 'application/json' },;
       body: JSON && JSON.stringify({ message: 'We build beyond platforms.' }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='min-h-screen p-8 space-y-8'>;
       <Head>;
         <title>Zion Offworld Console</title>;
@@ -129,9 +163,13 @@ export default function OffworldConsole() {;
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Chat</h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <input
           className='border p-2 w-full'
           placeholder='Type message'
@@ -141,9 +179,13 @@ export default function OffworldConsole() {;
         <button
           className='px-3 py-2 bg-black text-white rounded'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={sendChat}>;
           Send;
         </button>;
@@ -151,9 +193,13 @@ export default function OffworldConsole() {;
       <section className='space-y-2'>;
         <h2 className='font-semibold'>DAO Voting</h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <input
           className='border p-2 w-full'
           placeholder='Proposal ID'
@@ -281,9 +327,13 @@ function broadcast() {
           <option value='abstain'>Abstain</option>;
         </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={castVote}>;
           Vote;
         </button>;
@@ -291,9 +341,13 @@ function broadcast() {
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Talent Profile Sync</h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <input
           className='border p-2 w-full'
           placeholder='Name'
@@ -309,25 +363,37 @@ function broadcast() {
         <button
           className='px-3 py-2 bg-black text-white rounded'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={syncProfile}>;
           Pin Profile to IPFS;
         </button>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setStatus('Broadcasting manifesto...');
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) }),
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
   }
@@ -339,6 +405,7 @@ function broadcast() {
           Broadcast;
         </button>;
       </section>;
+<<<<<<< HEAD
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
   );
@@ -349,6 +416,17 @@ function broadcast() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      {status && <p className='text-sm text-gray-700'>{status}</p>}
+    </div>
+);
+}
+    setStatus('Broadcasting manifesto...');
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -431,6 +509,7 @@ function broadcast() {
   )
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   async function sendChat() {
     setStatus('Sending chat...');
@@ -566,3 +645,6 @@ function broadcast() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

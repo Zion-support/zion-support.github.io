@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function KnowledgeGraph({ report }: Props) {
 =======
 
@@ -15,6 +16,11 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+export default function KnowledgeGraph({ report }: Props) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
     <div className="space-y-6">;
@@ -43,6 +49,7 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
+<<<<<<< HEAD
 
         </ul>;
       </section>;
@@ -54,6 +61,17 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        </ul>
+      </section>
+    </div>
+);
+}
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ) );
 }</ul> </section> <section>) );
@@ -110,6 +128,7 @@ export default function KnowledgeGraph({ report }: Props) {
         <ul className=&quot;flex flex-wrap gap-2 text-sm&quot;>
           {report.topTerms.map((t, i) => (
             <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -117,10 +136,14 @@ export default function KnowledgeGraph({ report }: Props) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ) )
 }</ul> </section> <section>) )
@@ -175,3 +198,6 @@ export default function KnowledgeGraph({ report }: Props) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

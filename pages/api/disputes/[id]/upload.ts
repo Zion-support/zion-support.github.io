@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
+<<<<<<< HEAD
   ensureDisputeUploadDir
   getDisputeById
   upsertDispute
@@ -25,6 +29,9 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ensureDisputeUploadDir,
   getDisputeById,
   upsertDispute,;
@@ -41,6 +48,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+<<<<<<< HEAD
 return res && res.status(400).json({ error: "Invalid id" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
@@ -59,6 +67,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const { files } =
 =======
+=======
+
+  const { id } = req.query;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (typeof id !== "string")
 
@@ -66,6 +78,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   const user = parseUserFromRequest(req);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
 
@@ -74,7 +90,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const { files } =
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -116,6 +135,7 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[];
@@ -225,6 +245,8 @@ fs && fs.mkdir(
         fs && fs.writeFile(filePath, data, (err2: any) =>
           err2 ? reject(err2) : resolve(),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[];
@@ -244,7 +266,10 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     dispute.updated_at = now;
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
@@ -264,12 +289,17 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
 }
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         );
       }
     );
   });
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -313,6 +343,8 @@ export default async function handler(req, res) {
 }
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 }
 
 
@@ -320,7 +352,10 @@ export default async function handler(req, res) {
 =======
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -415,7 +450,12 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

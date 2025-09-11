@@ -7,6 +7,7 @@ export const track_performance = () =>: any {
   console.log ('Tracking performance...');
 }
 ;
+<<<<<<< HEAD
 // Monitoring utilities
 export const logEvent = (event: string) => {;
   console.log('Event logged:', event);
@@ -45,3 +46,17 @@ export const trackPerformance = () => {;
 
 };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+// Monitoring utilities
+export const logEvent = (event: string) => {;
+  console.log('Event logged:', event);
+
+};
+
+export const trackPerformance = () => {;
+
+  console.log('Tracking performance...');
+
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

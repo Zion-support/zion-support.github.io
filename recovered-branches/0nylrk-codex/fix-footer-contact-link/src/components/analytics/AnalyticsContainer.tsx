@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -27,10 +28,19 @@ interface AnalyticsContainerProps {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
+<<<<<<< HEAD
 
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
@@ -46,6 +56,15 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const { isAuthenticated, isLoading, user } = useAuth();
 
+=======
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
+  const { isAuthenticated, isLoading, user } = useAuth();
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
@@ -57,8 +76,11 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // If still loading auth status, show loading
   if (isLoading) {
     return (
@@ -68,19 +90,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
     )
   }
 <<<<<<< HEAD
-  
-
-  
-  
-=======
-
-  
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  // If not authenticated, redirect
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/analytics' }} replace />
-  }
 <<<<<<< HEAD
   
 
@@ -91,6 +100,27 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  // If not authenticated, redirect
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: '/analytics' }} replace />
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  
+
+  
+  
+=======
+
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // If not admin, redirect
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
@@ -111,15 +141,21 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {children}
       </main>
       <Footer />
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -132,7 +168,10 @@ interface AnalyticsContainerProps {;
 ;
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { isAuthenticated, isLoading, user } = useAuth();
 
@@ -150,13 +189,23 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // If not authenticated, redirect;
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
   }
+<<<<<<< HEAD
   // If not admin, redirect;
   if (!isAdmin) {;
+=======
+
+  // If not admin, redirect;
+  if (!isAdmin) {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -173,6 +222,10 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
             Analytics Dashboard;
           </h1>;
           <p className="text-zion-slate-light">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Header  } from '@/components / Header';
 import { Footer  } from '@/components / Footer';
@@ -230,15 +283,20 @@ if ( {) {
           </h1>;
           <p className="text - zion - slate - light">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Track user behavior, page views, and conversion rates;
           </p>;
         </div>;
         {children}
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -307,6 +365,8 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>);
 
@@ -315,6 +375,10 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

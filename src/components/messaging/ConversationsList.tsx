@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo } from 'react';
 <<<<<<< HEAD
 import React, { useMemo } from 'react'
@@ -82,6 +83,11 @@ export function ConversationsList({;
         <ConversationItem;
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
+=======
+return (
+
+          isActive={activeConversation?.id === conversation && conversation.id}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={() => {;
             setActiveConversation(conversation);
             markAsRead(conversation.id);
@@ -91,6 +97,7 @@ export function ConversationsList({;
     )
   },
 
+<<<<<<< HEAD
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">
@@ -145,6 +152,11 @@ return (
 
   return (
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;
         <h3 className='font-medium text-white'>Conversations</h3>;
@@ -164,9 +176,23 @@ return (
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
+<<<<<<< HEAD
           width='100%'        >
           width="100%"
         >
+=======
+
+
+          width="100%"
+        >
+          {Row}
+        </List>
+      )}
+    </div>
+  )
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto'>;
       <div className='p - 3 border - b border - zion - purple / 20'>;
         <h3 className='font - medium text - white'>Conversations</h3>;
@@ -185,10 +211,15 @@ return (
           item_size={item_size}
           width='100%'        >;
           {Row}
+<<<<<<< HEAD
         </List>
       )}
     </div>
   )
+=======
+        </List>)}
+    </div>);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
           {Row}
@@ -198,6 +229,7 @@ return (
   );
 };
 }
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -212,12 +244,15 @@ return (
   );
 };
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           width="100%"
         >
           {Row}
         </List>;
       )}
 
+<<<<<<< HEAD
   );
 }
 ;
@@ -235,3 +270,9 @@ return (
   );
 };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </div>;
+  );
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

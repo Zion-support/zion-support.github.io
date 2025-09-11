@@ -23,9 +23,19 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
   GitPullRequest,;
   Cpu,;
+=======
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+  GitPullRequest,;
+  Cpu,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
@@ -41,6 +51,10 @@ import React from 'react';
       title: 'Security Automation'
       description: 'Automated security scanning and compliance checks'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 
 export default function DevOpsAutomationPage() {
@@ -51,10 +65,15 @@ export default function DevOpsAutomationPage() {
       description: 'Automated build, test, and deployment workflows',
     color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -80,12 +99,15 @@ export default function DevOpsAutomationPage() {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   GitBranch,
   Zap,
   Shield,
   BarChart3,
   Check,
   Star,
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
       icon: <Zap className="w - 6 h - 6" />,
@@ -103,6 +125,13 @@ export default /**
  */
 function DevOpsAutomationPage() {
   const features = [;
+=======
+
+  ];
+  const pricingPlans = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       icon: <GitBranch className='w - 6 h - 6' />, import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default /**
@@ -124,15 +153,22 @@ function DevOpsAutomationPage() {
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600';
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       icon: <Shield className="w - 6 h - 6" />,
       title: 'Security Automation',
       description: 'Automated security scanning and compliance checks',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600';
     }
     {
@@ -164,12 +200,16 @@ function DevOpsAutomationPage() {
       color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
     },  ];      color: 'bg - gradient - to - br from - orange - 500 to - red - 600';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function DevOpsAutomationPage() {
   const features = [
@@ -181,6 +221,14 @@ export default function DevOpsAutomationPage() {
   ];
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default function DevOpsAutomationPage() {
+  const features = [
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const pricing_plans = [;
 
@@ -219,10 +267,14 @@ export default function DevOpsAutomationPage() {_const _features = [
       period: '/month',
       description: 'Perfect for small teams and startups',
 <<<<<<< HEAD
+<<<<<<< HEAD
 features: [;
 =======
       features: [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      features: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Up to 5 repositories',
         'Basic CI / CD pipelines',
         'GitHub integration',
@@ -234,6 +286,7 @@ features: [;
       cta: 'Start Free Trial',
       color: 'border - gray - 600 hover:border - blue - 500',
     },    {        'Up to 5 repositories_basic CI / CD pipelinesGitHub integration_email notifications_basic security scanning_community support';
+<<<<<<< HEAD
 <<<<<<< HEAD
   GitPullRequest,;
   Cpu,;
@@ -320,6 +373,9 @@ export default function DevOpsAutomationPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ];
       popular: false
       cta: 'Start Free Trial'
@@ -405,24 +461,35 @@ export default function DevOpsAutomationPage() {
       popular: false,
       cta: 'Start Free Trial',
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: 'border - gray - 600 hover:border - blue - 500';
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       color: 'border - gray - 600 hover:border - blue - 500';
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Professional',
       price: '$129',
       period: '/month',
       description: 'Ideal for growing development teams',
+<<<<<<< HEAD
 <<<<<<< HEAD
 features: [;
 =======
 
       features: [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      features: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Up to 25 repositories',
         'Advanced CI / CD workflows',
         'Multi - cloud deployment',
@@ -460,29 +527,43 @@ features: [;
       color: 'border - gray - 600 hover:border - blue - 500',
     },  ];        'Unlimited repositories_enterprise CI / CDAdvanced IaC automation_custom integrations24 / 7 dedicated supportSLA guarantees_on - premise options_custom security policies';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ];
       popular: false,
       cta: 'Contact Sales',
       color: 'border - gray - 600 hover:border - blue - 500';
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   const market_comparison = [;
 =======
 
   const market_comparison = [;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const market_comparison = [;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       competitor: 'GitHub Actions',
       pricing: 'Free + $0.008 / min',
       repositories: 'Unlimited',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       rating: '4.6 / 5',
       pros: ['GitHub native', 'Good free tier'],
       cons: ['Expensive for teams', 'Limited features'],
@@ -490,17 +571,25 @@ features: [;
       cons: ['Expensive for teams_limited features'];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       competitor: 'GitLab CI / CD',
       pricing: '$19 / user / month',
       repositories: 'Unlimited',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       rating: '4.4 / 5',
       pros: ['Integrated platform', 'Good CI / CD'],
       cons: ['User - based pricing', 'Limited integrations'],
@@ -508,25 +597,35 @@ features: [;
       cons: ['User - based pricing_limited integrations'];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       competitor: 'Jenkins',
       pricing: 'Free',
       repositories: 'Unlimited',
+<<<<<<< HEAD
 <<<<<<< HEAD
 rating: '4.2 / 5',
 =======
 
       rating: '4.2 / 5',
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      rating: '4.2 / 5',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       pros: ['Completely free', 'Highly customizable'],
       cons: ['Requires maintenance', 'No managed service'],
     },  ];      pros: ['Completely free_highly customizable'],
       cons: ['Requires maintenance_no managed service'];
     }
   ];
+<<<<<<< HEAD
 ;
   const testimonials = [;
 <<<<<<< HEAD
@@ -577,6 +676,55 @@ content:;
   ];
 ;
   const automation_examples = [;
+=======
+  const testimonials = [
+    {
+      name: 'Michael Chen'
+      role: 'DevOps Lead'
+      company: 'TechStart Inc.'
+      content:
+        'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.'
+      rating: 5
+    },    {
+      name: 'Sarah Johnson'
+      role: 'Engineering Manager'
+      company: 'CloudWorks'
+      content:
+        'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.'
+      rating: 5
+    },    {
+      name: 'Robert Davis'
+      role: 'Site Reliability Engineer'
+      company: 'ScaleTech'
+      content:
+        'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.'
+      rating: 5
+    },  ];      content: 'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.'
+      rating: 5
+    }
+    {
+      name: 'Sarah Johnson'
+      role: 'Engineering Manager'
+      company: 'CloudWorks'
+      content:
+        'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.'
+      rating: 5
+    },      content: 'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.'
+      rating: 5
+    }
+    {
+      name: 'Robert Davis'
+      role: 'Site Reliability Engineer'
+      company: 'ScaleTech'
+      content:
+        'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.'
+      rating: 5
+    },      content: 'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.'
+      rating: 5
+    }
+  ];
+  const automationExamples = [
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: 'Automated Testing'
       description: 'Run comprehensive test suites on every commit'
@@ -621,6 +769,7 @@ content:;
     },      color: 'from-purple-500 to-indigo-600'
     }
   ];
+<<<<<<< HEAD
         'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
       ];
       popular: false,
@@ -649,6 +798,9 @@ content:;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
         />;
@@ -674,6 +826,7 @@ content:;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -718,6 +871,8 @@ content:;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 href='#pricing'
                 variant='primary'
@@ -737,10 +892,15 @@ content:;
               </Button>
               <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title>
@@ -776,7 +936,14 @@ content:;
                 Start Free Trial
               </Button>
               <Button
+<<<<<<< HEAD
                 href="#demo"
+=======
+                href='#demo'
+                variant='outline'
+                size='lg'
+                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                href="#demo"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 variant="outline"
                 size="lg"
                 className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
@@ -784,6 +951,10 @@ content:;
 
                 Watch Demo
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from - blue - 500 to - cyan - 600',
     },    {
       title: 'Infrastructure Management',
@@ -892,11 +1063,16 @@ content:;
               </p>;
             </div>;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Complete DevOps Automation Suite
+<<<<<<< HEAD
 <<<<<<< HEAD
                 href='#demo'
                 variant='outline'
@@ -939,6 +1115,8 @@ content:;
                   <p className='text-gray-400'>{feature.description}</p>                </Card>                Complete DevOps Automation Suite
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Everything you need to automate your development and deployment processes.
@@ -953,6 +1131,9 @@ content:;
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}>
                     {feature.icon}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
@@ -960,6 +1141,7 @@ content:;
 
                 </Card>
 
+<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -989,11 +1171,22 @@ content:;
 
                 </Card>
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
+<<<<<<< HEAD
 
+=======
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </section>;
@@ -1001,7 +1194,10 @@ content:;
 
         {/* Automation Examples Section */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
@@ -1012,10 +1208,13 @@ content:;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 What You Can Automate
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -1025,14 +1224,19 @@ content:;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {automationExamples.map((example, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Card
                   key={index}
                   className='text-center group hover:scale-105 transition-transform duration-300'
                 >
                   <div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1044,6 +1248,8 @@ content:;
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 What You Can Automate
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
                   >
                     {example.icon}
@@ -1052,8 +1258,11 @@ content:;
                     {example.title}
                   </h3>
                   <p className='text-gray-400'>{example.description}</p>                </Card>                What You Can Automate
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See how Zion DevOps can transform your development workflow.
@@ -1068,11 +1277,14 @@ content:;
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}>
                     {example.icon}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
                   <p className="text-gray-400">{example.description}</p>
                 </Card>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                   <h3 className='text - xl font - semibold text - white mb - 4'>;
                     {example.title}
@@ -1097,15 +1309,22 @@ content:;
                   >
                     {example.icon}
                   </div>
+<<<<<<< HEAD
                   <h3 className='text-xl font-semibold text-white mb-4'>
                     {example.title}
                   </h3>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
+                  <p className="text-gray-400">{example.description}</p>
+                </Card>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p className='text-gray-400'>{example.description}</p>                </Card>
 
                 </Card>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               ))}
             </div>
@@ -1115,6 +1334,8 @@ content:;
 
         {/* Pricing Section */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1185,19 +1406,31 @@ content:;
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
 
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1207,11 +1440,15 @@ content:;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -1234,6 +1471,7 @@ content:;
                   }`}
                 >;
                   {plan.popular && (
+<<<<<<< HEAD
 
 
 
@@ -1313,6 +1551,8 @@ content:;
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                        Most Popular
                       </span>
@@ -1350,15 +1590,66 @@ content:;
 
                           {feature}
 
+<<<<<<< HEAD
                         </li>
                       ))}
                     </ul>
                     <Button
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+                        </li>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      ))}
+                    </ul>;
+                    <Button
+
+
+=======
+                    <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
+                      <span className='bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium'>                        Most Popular;
+                      </span>;
+                    </div>)}                    <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
+                      <span className="bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium">;
+                        Most Popular;
+                      </span>;
+                    </div>)}
+                  <div className='text - center'>;
+                    <h3 className='text - 2xl font - bold text - white mb - 2'>;
+                      {plan.name}
+                    </h3>;
+                    <div className='mb - 6'>;
+                      <span className='text - 4xl font - bold text - white'>;
+                        {plan.price}
+                      </span>;
+                      <span className='text - gray - 400'>{plan.period}</span>;
+                    </div>;
+                    <p className='text - gray - 300 mb - 8'>{plan.description}</p>;
+                    <ul className='text - left space - y-3 mb - 8'>;
+                      {plan.features.map ((feature, feature_index) => (
+                        <li;
+                          key={feature_index}
+                          className='flex items - center text - gray - 300';
+                        >;
+                          <Check className='w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0' />                          {feature}                    </div>;
+                    <p className="text - gray - 300 mb - 8">{plan.description}</p>;
+                    <ul className="text - left space - y-3 mb - 8">;
+                      {plan.features.map ((feature, feature_index) => (
+                        <li key={feature_index} className="flex items - center text - gray - 300">;
+                          <Check className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0" />;
+                          {feature}
+                        </li>))}
+                    </ul>;
+                    <Button;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan.popular ? 'primary' : 'outline'}
                       size='lg'
                       className={`w-full ${
                         plan.popular
+<<<<<<< HEAD
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                      size="lg"
                       className={`w-full ${
                         plan.popular
@@ -1368,16 +1659,28 @@ content:;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                        plan.popular 
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       }`}
                     >;
                       {plan.cta}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       }`}
                     >;
@@ -1386,6 +1689,8 @@ content:;
           </div>;
         </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         plan && plan.popular 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                       }`}>;
@@ -1394,6 +1699,7 @@ content:;
                   </div>;
                 </Card>;
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
@@ -1427,6 +1733,16 @@ content:;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            </div>
+          </div>
+        </section>
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1437,24 +1753,36 @@ content:;
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
 
+<<<<<<< HEAD
 
         {/* Market Comparison Section */}
 <<<<<<< HEAD
         {/* Market Comparison Section */}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+        {/* Market Comparison Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 How We Compare to the Competition
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See why Zion DevOps is the smart choice for automation.
@@ -1463,6 +1791,10 @@ content:;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {marketComparison.map((competitor, index) => (
                 <Card key={index} className="p-6">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Button>
                   </div>
                 </Card>
@@ -1496,10 +1828,14 @@ content:;
                     <div className="flex items-center justify-center mb-2">
                       {[...Array(5)].map((_, i) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Star
                           key={i}
                           className={`w-5 h-5 ${
@@ -1509,6 +1845,7 @@ content:;
                           }`}
                         />;
                       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>
                     <p className='text-sm text-gray-400'>{competitor.rating}</p>
@@ -1543,6 +1880,10 @@ content:;
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {pro}
                           </li>
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         ))}
                       </ul>
                     </div>
@@ -1560,6 +1901,7 @@ content:;
                         {competitor.cons.map((con, conIndex) => (
                           <li key={conIndex} className="flex items-center">
                             <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
+<<<<<<< HEAD
 
 
                           </li>
@@ -1574,13 +1916,27 @@ content:;
                 </Card>;
               ))}
 <<<<<<< HEAD
+=======
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Testimonials Section */}
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </section>;
@@ -1590,7 +1946,10 @@ content:;
 
 
         {/* Testimonials Section */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
@@ -1599,10 +1958,13 @@ content:;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Trusted by DevOps Teams Worldwide
               </h2>
             </div>
@@ -1612,14 +1974,19 @@ content:;
                   <div className='flex items-center mb-4'>
                     {[...Array(testimonial.rating)].map((_, i) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Star
                         key={i}
                         className='w-5 h-5 text-yellow-400 fill-current'
                       />
                     ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1631,6 +1998,8 @@ content:;
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Trusted by DevOps Teams Worldwide
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <p className='text-gray-300 mb-6 italic'>
                     "{testimonial.content}"
@@ -1643,8 +2012,11 @@ content:;
                     <p className='text-sm text-blue-400'>
                       {testimonial.company}
                     </p>                  </div>                Trusted by DevOps Teams Worldwide
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1662,6 +2034,7 @@ content:;
                     <p className="text-sm text-blue-400">{testimonial.company}</p>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
                   </div>
@@ -1677,14 +2050,33 @@ content:;
                       {testimonial.company}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>                  </div>
 
                   </div>
 
+<<<<<<< HEAD
 
 
                 </Card>
               ))}
+=======
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
           </div>;
@@ -1699,7 +2091,10 @@ content:;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Ready to Automate Your DevOps?
 
             </h2>
@@ -1708,6 +2103,10 @@ content:;
               needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 href='#signup'
                 variant='secondary'
@@ -1720,12 +2119,17 @@ content:;
                 variant='outline'
                 size='lg'
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='border-white text-white hover:bg-white hover:text-blue-600'              >                href="#signup"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
                 Start Free Trial
               </Button>
+<<<<<<< HEAD
 
               <Button
 
@@ -1740,6 +2144,13 @@ content:;
               ))}
 =======
 =======
+              <Button
+
+=======
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
@@ -1752,7 +2163,10 @@ content:;
               <Button
                 href="#signup"
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </section>
@@ -1787,6 +2201,7 @@ content:;
               >
                 Start Free Trial
               </Button>
+<<<<<<< HEAD
               <Button
 href="/contact"
                 variant="outline"
@@ -2002,9 +2417,14 @@ href="/contact"
 =======
 
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO'
 import { GradientHeading } from '@/components/GradientHeading'
 import { Button } from '@/components/ui/button'
@@ -13,10 +14,13 @@ import Link from "next/link";
 import Link from "next/link",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Link from "next/link";
 xport default function GreenIT() {
@@ -42,6 +46,12 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
+=======
+      title: 'Energy-Efficient Hardware'
+      description:
+        'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.'
+      icon: Server
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     
     return this.props.children;
@@ -77,6 +87,7 @@ export default function GreenIT() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const greenITSolutions = [
     {
       title: 'Energy-Efficient Hardware'
@@ -99,6 +110,8 @@ export default function GreenIT() {;
   ]
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server},
@@ -107,6 +120,7 @@ export default function GreenIT() {;
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
       icon: Cloud},
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: 'Renewable Energy Integration',
       description:
@@ -148,10 +162,33 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  return (
+    <>;
+      <SEO
+        title="Green IT Solutions - Sustainable Technology"
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
+        keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+        canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Green IT Solutions</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Sustainable technology solutions that reduce environmental impact without compromising performance
+            </p>
+          </div>
+          <div className='mb-16'>
+            <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
                   <h2 className='text-3xl font-bold text-white mb-6'>
@@ -172,6 +209,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
                   <p className="text-zion-slate-light text-lg mb-6">
@@ -184,6 +225,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     for reducing your carbon footprint.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='mt-8'>
                     <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>                      Explore Green IT Solutions
                     </Button>
@@ -198,6 +242,7 @@ import Link from "next/link"
 export default function GreenIT() {
   const greenITSolutions = [
     {
+<<<<<<< HEAD
       title: "Energy-Efficient Hardware"
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power."
       icon: Server}
@@ -214,6 +259,8 @@ export default /**
 function GreenIT() {
   const greenITSolutions = [;
     {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'Energy - Efficient Hardware',
       description:;
         'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.',
@@ -289,16 +336,22 @@ function GreenIT() {
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
       icon: Server},
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
       icon: Cloud}
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "Renewable Energy Integration"
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         canonical='https://app && app.ziontechgroup.com/marketplace/category/green-it'
       />;
@@ -358,7 +411,10 @@ export default function GreenIT() {;
     {;
       title: "Renewable Energy Integration",;
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: Leaf}
   ]
 
@@ -368,6 +424,7 @@ export default function GreenIT() {;
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+<<<<<<< HEAD
 <<<<<<< HEAD
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -397,6 +454,10 @@ export default function GreenIT() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
@@ -404,9 +465,13 @@ export default function GreenIT() {;
                   </div>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         canonical="https://app && app.ziontechgroup.com/marketplace/category/green-it"
       />;
@@ -485,6 +550,7 @@ export default function GreenIT() {;
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
@@ -502,6 +568,8 @@ export default function GreenIT() {;
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </div>
             </div>
@@ -706,6 +774,7 @@ export default function GreenIT(...args: unknown[]): unknown {
     { id: 'data', name: 'Data Centers', count: 2 }
   ]
   const greenSolutions: unknown = [{}
+<<<<<<< HEAD
       id: 'energy - monitoring'
       name: 'Smart Energy Monitoring'
       category: 'energy'
@@ -1467,6 +1536,9 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -1491,9 +1563,13 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
               <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">'
                 Green IT''
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </span>{' '}
               Solutions"
             </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -1593,6 +1669,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
               <motion.div
                 key={solution.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}"
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -1601,6 +1678,8 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
                   <div className="p-6">""
                     <div className="flex items-center gap-3 mb-4">`
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       id: 'energy - monitoring',;
       name: 'Smart Energy Monitoring',;
@@ -2009,12 +2088,16 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                   <div className="p-6">"";
                     <div className="flex items-center gap-3 mb-4">`;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <span``
                         className={`px-3 py-1 rounded-full text-xs font-medium ${}
 '
 ''
 '''
+<<<<<<< HEAD
 <<<<<<< HEAD
                           solution.category === 'energy'''''
                             ? 'bg-green-500/20 text-green-400'''''
@@ -2024,6 +2107,8 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                                 ? 'bg-purple-500/20 text-purple-400'''`'`'`
                                 : 'bg-orange-500/20 text-orange-400'````
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}";
@@ -2045,7 +2130,10 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                                 ? 'bg - purple - 500 / 20 text - purple - 400'''`'`'`;
                                 : 'bg - orange - 500 / 20 text - orange - 400'````;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }`}
                       >
                         {categories.find(c => c.id === solution.category) ?.name}
@@ -2064,6 +2152,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {solution.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </p>                  </div>
                 ))}
               </div>
@@ -2071,6 +2160,8 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           solution && solution.category === 'energy'''''
                             ? 'bg-green-500/20 text-green-400'''''
@@ -2097,7 +2188,10 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                       {solution && solution.description}
                     </p>                  </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />
                 </div>
               </div>
@@ -2108,17 +2202,25 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {greenITSolutions.map((solution, index) => (
+=======
+                {greenITSolutions.map((solution, index) => (
+                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="flex justify-center mb-4">
                       <solution.icon className="h-12 w-12 text-zion-cyan" />
                     </div>
@@ -2139,6 +2241,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
                   </div>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             </div>
@@ -2192,10 +2295,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2210,6 +2319,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+=======
+                
+
+
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+                  <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <ul className="text-zion-slate-light space-y-2">
                     <li>• Significant cost savings on energy and cooling</li>
                     <li>• Enhanced brand reputation and stakeholder relations</li>
@@ -2220,6 +2336,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
@@ -2234,6 +2351,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               asChild
             >
               <Link href='/contact'>Contact Our Team</Link>            </Button>
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           
@@ -2244,6 +2364,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
               <Link href="/contact">Contact Our Team</Link>
+<<<<<<< HEAD
 export { GreenIT, GreenIT }
 }
           
@@ -2265,6 +2386,9 @@ export { GreenIT, GreenIT }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>
 
             </Button>
@@ -2273,6 +2397,7 @@ export { GreenIT, GreenIT }
         </div>
       </main>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}";
@@ -2431,10 +2556,13 @@ export { GreenIT, GreenIT }
                 </div>;
               </motion.div>) ) }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 "                    {expandedSection === solution.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}'
+<<<<<<< HEAD
 =======
 
                     </p>                  </div>))}
@@ -2530,6 +2658,8 @@ export { GreenIT, GreenIT }
                         initial={{ opacity: 0, height: 0 }}';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}"
                         transition={{ duration: 0.3 }}""
@@ -2688,6 +2818,7 @@ export { GreenIT, GreenIT }
                 </div>
               </motion.div>) ) }
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -2740,11 +2871,14 @@ export { GreenIT, GreenIT }
 export { GreenIT, GreenIT };
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   )
 
 export { GreenIT, GreenIT };
 };
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { SEO } from "@/components/SEO",;
@@ -2941,3 +3075,5 @@ export { GreenIT, GreenIT }
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

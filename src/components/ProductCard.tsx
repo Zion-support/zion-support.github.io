@@ -1,18 +1,18 @@
 <<<<<<< HEAD
 import Link from 'next/link';
 import { _Heart } from 'lucide-react';
-import { _useWishlist } from '@/hooks/useWishlist';
-import { _Button } from '@/components/ui/button';
-import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '@/components/ui/tooltip';
+import { _useWishlist } from '../hooks/useWishlist';
+import { _Button } from '../components/ui/button';
+import { _Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '../components/ui/tooltip';
 import { _useDispatch } from 'react-redux';
-import { _addItem } from '@/store/cartSlice';
+import { _addItem } from '../store/cartSlice';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { _useAuth } from '@/context/auth/AuthProvider';
+import { _useAuth } from '../context/auth/AuthProvider';
 import { _useRouter } from 'next/router';
 import { _useMediaQuery } from 'usehooks-ts';
-import { _useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { _captureException } from '@/utils/sentry';
+import { _useEnqueueSnackbar } from '../context/SnackbarContext';
+import { _captureException } from '../utils/sentry';
 
 
   const stockStatus = null;
@@ -35,6 +35,7 @@ import { _captureException } from '@/utils/sentry';
 ;
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
+<<<<<<< HEAD
 import { useWishlist } from '@/hooks/useWishlist',;
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
@@ -225,6 +226,20 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       extra: { product }}),
     return (
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
+=======
+import { useAuth } from '../hooks/useAuth';
+export default function ProductCard({ product, onBuy, buyDisabled = false }) {
+    const { isAuthenticated } = useAuth();
+    const { isWishlisted, toggle } = useWishlist();
+    const [imageError, setImageError] = useState(false);
+    const _router = useRouter();
+    const _enqueueSnackbar = useEnqueueSnackbar();
+    if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
+        captureException(new Error('Invalid product data received by ProductCard'), {
+            extra: { product },
+        });
+        return (<div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <p className="text-destructive text-sm">Product information unavailable.</p>
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}

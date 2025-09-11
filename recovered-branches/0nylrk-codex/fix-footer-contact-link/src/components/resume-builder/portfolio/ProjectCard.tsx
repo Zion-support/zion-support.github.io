@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (
     <Card className="h - full flex flex - col">;
       <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
@@ -36,6 +37,9 @@ AlertDialog
 import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
 import { PortfolioProject } from "@/types/resume";
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState  } from './react';
 import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -85,7 +89,10 @@ if ( {) {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useState} from 'react';
 import {Card, CardContent, CardFooter} from '@/components/ui/card';
@@ -95,15 +102,21 @@ import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, A
 import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
@@ -111,15 +124,21 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       onDelete(project.id)
 
@@ -131,6 +150,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       onDelete(project.id)
+=======
+
+      onDelete(project.id)
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -144,14 +169,22 @@ interface ProjectCardProps {;
   onEdit: (project: PortfolioProject) => void,;
   onDelete: (projectId: string) => void;
 }
+<<<<<<< HEAD
 export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+=======
+
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleDelete = () => {;
 
     if (project.id) {;
       onDelete(project.id);
 
 
+<<<<<<< HEAD
     }
     setDeleteDialogOpen(false);
   };
@@ -308,11 +341,16 @@ onDelete(project.id);
     setDeleteDialogOpen(false);
   };
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     setDeleteDialogOpen(false)
   },
   
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -416,6 +454,8 @@ onDelete(project.id);
     </Card>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project && project.image_url ? (;
@@ -453,6 +493,7 @@ onDelete(project.id);
 
           {project && project.description && (;
             <p className="text-sm text-muted-foreground line-clamp-3">{project && project.description}</p>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           )}
           ;
@@ -517,11 +558,116 @@ onDelete(project.id);
 }
 ;
 
+=======
+          )}
+
+          {project && project.technologies && project && project.technologies.length > 0 && (;
+            <div className="flex flex-wrap gap-1 mt-2">;
+              {project && project.technologies.map((tech, index) => (;
+                <Badge key={index} variant="secondary" className="text-xs">;
+
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+                </Badge>;
+              ))}
+            </div>;
+=======
+                  {tech}
+
+                </Badge>;
+              ))}
+            </div>;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          )}
+
+            </p>)}
+          {project.technologies && project.technologies.length > 0 && (
+            <div className="flex flex - wrap gap - 1 mt - 2">;
+              {project.technologies.map ((tech, index) => (
+                <Badge key={index} variant="secondary" className="text - xs">;
+                  {tech}
+                </Badge>))}
+            </div>)}
+        </div>;
+      </CardContent>;
+      <CardFooter className="flex justify - between border - t bg - muted / 40 p - 4">;
+        <div className="flex gap - 2">;
+
+          {project.github_url && (
+            <a;
+              href={project.github_url}
+
+              target="_blank";
+              rel="noopener noreferrer";
+            >;
+              <Button variant="ghost" size="icon">;
+                <Github className="h - 4 w - 4" />;
+              </Button>;
+            </a>)}
+
+          {project.demo_url && (
+            <a;
+              href={project.demo_url}
+
+        </div>;
+      </CardContent>;
+
+      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">;
+        <div className="flex gap-2">;
+          {project && project.github_url && (;
+            <a href={project && project.github_url} target="_blank" rel="noopener noreferrer">;
+              <Button variant="ghost" size="icon">;
+                <Github className="h-4 w-4" />;
+              </Button>;
+            </a>;
+          )}
+        </div>
+        <div className="flex gap-2">
+          <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
+            <Edit className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setDeleteDialogOpen(true)}
+          >
+            <Trash2 className="h-4 w-4" />
+          </Button>
+        </div>
+      </CardFooter>
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete Project</AlertDialogTitle>
+            <AlertDialogDescription>
+              Are you sure you want to delete this project? This action cannot
+              be undone.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleDelete}
+              className="bg-destructive text-destructive-foreground"
+            >
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </Card>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
   )
 }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

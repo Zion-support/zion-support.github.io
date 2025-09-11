@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -19,11 +20,14 @@ interface HeroProps {
     href: string;
   }
   secondary_action?: {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import React from 'react';
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
+<<<<<<< HEAD
   title: string;
   subtitle: string;
   primaryAction?: {
@@ -33,6 +37,10 @@ interface HeroProps {
   }
   secondaryAction?: {
 =======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -68,7 +76,10 @@ interface HeroProps {;
   }
   secondary_action?: {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     text: string;
     href: string;
   }
@@ -78,12 +89,15 @@ interface HeroProps {;
     color: string;
   }>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const Hero: React.FC<HeroProps> = ({
   title
@@ -92,9 +106,13 @@ const Hero: React.FC<HeroProps> = ({
   secondaryAction
   stats
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 const Hero: React.FC < HeroProps> = ({
   title,
@@ -112,9 +130,13 @@ const Hero: React.FC<HeroProps> = ({;
 }) => {;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='absolute inset-0'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0 && 0.08),transparent_50%)]' />;
@@ -123,10 +145,15 @@ const Hero: React.FC<HeroProps> = ({;
       {/* Grid Pattern */}
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Floating Elements */}
       <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float' />;
       <div
@@ -136,6 +163,7 @@ const Hero: React.FC<HeroProps> = ({;
       <div
         className='absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float'
         style={{ animationDelay: '3s' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -174,6 +202,8 @@ const Hero: React.FC<HeroProps> = ({
       <div
         className='absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float'
         style={{ animationDelay: '3s' }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         {/* Main Content */}
@@ -187,6 +217,7 @@ const Hero: React.FC<HeroProps> = ({
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
             {title}
           </h1>
+<<<<<<< HEAD
 
   title: string,
   subtitle: string,
@@ -198,6 +229,10 @@ const Hero: React.FC<HeroProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
+    text: string
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     href: string
   }
   secondaryAction?: {
@@ -213,7 +248,10 @@ const Hero: React.FC<HeroProps> = ({
 }
 const Hero: React.FC<HeroProps> = ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
       />;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -244,11 +282,15 @@ const Hero: React.FC<HeroProps> = ({
 }
 const Hero: React.FC<HeroProps> = ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title;
   subtitle;
   primaryAction;
   secondaryAction;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -293,26 +335,38 @@ const Hero: React.FC<HeroProps> = ({;
             {subtitle}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
 
           </p>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </p>;
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (;
@@ -322,6 +376,7 @@ const Hero: React.FC<HeroProps> = ({;
                   href={primaryAction && primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   style={{ animationDelay: '0 && 0.2s' }}>;
@@ -466,6 +521,8 @@ const Hero: React.FC < HeroProps> = ({
                   href={primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   style={{ animationDelay: '0.2s' }}
                 >
                   {primaryAction.text}
@@ -483,6 +540,7 @@ const Hero: React.FC < HeroProps> = ({
 
                 </Button>
 
+<<<<<<< HEAD
               )}
               {secondaryAction && (
                 <Button
@@ -494,6 +552,14 @@ const Hero: React.FC < HeroProps> = ({
                 >
                   <Play className='w-5 h-5 mr-2' />                  {secondaryAction.text}                  variant="outline"
 =======
+=======
+            {title}
+          </h1>;
+          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
+            {subtitle}
+          </p>;
+          {/* Action Buttons */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -504,12 +570,16 @@ const Hero: React.FC < HeroProps> = ({
 =======
                   href={secondaryAction.href}
                   variant="outline"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   size="lg"
                   className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
                   style={{ animationDelay: '0.4s' }}
                 >
                   <Play className="w-5 h-5 mr-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   {secondaryAction.text}
@@ -520,10 +590,20 @@ const Hero: React.FC < HeroProps> = ({
             </div>;
           )}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  {secondaryAction.text}
+                </Button>
+
+              )}
+            </div>;
+          )}
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -547,6 +627,12 @@ const Hero: React.FC < HeroProps> = ({
               </div>;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Stats Section */}
         {stats && (;
@@ -559,7 +645,10 @@ const Hero: React.FC < HeroProps> = ({
                   <div
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         {/* Stats Section */}
         {stats && (
@@ -626,15 +715,20 @@ const Hero: React.FC < HeroProps> = ({
                 <div className="relative">;
                   <div className={`text - 2xl sm:text - 3xl md:text - 4xl font - bold mb - 2 md:mb - 3 ${stat.color} group - hover:scale - 110 transition - transform duration - 300`}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {stat.value}
                   </div>;
                   <div className="absolute -inset - 2 bg - gradient - to - r from - transparent via - blue - 500 / 5 to - transparent rounded - lg opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
                 </div>;
                 <div className="text - gray - 400 text - xs sm:text - sm md:text - base font - medium">;
                   {stat.label}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="mt-16 md:mt-20 animate-fade-in" style={{ animationDelay: '0.8s' }}>
@@ -719,6 +813,9 @@ const Hero: React.FC < HeroProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}
                   >
                     {stat.value}
@@ -726,6 +823,9 @@ const Hero: React.FC < HeroProps> = ({
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}            {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative">
@@ -736,13 +836,17 @@ const Hero: React.FC < HeroProps> = ({
                 </div>
                 <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
                   {stat.label}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}
 
                   {stat.label}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
               </div>
@@ -750,19 +854,28 @@ const Hero: React.FC < HeroProps> = ({
           </div>
         )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         )}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+        {/* Trust Indicators */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div
           className='mt-16 md:mt-20 animate-fade-in'
 
@@ -772,6 +885,7 @@ const Hero: React.FC < HeroProps> = ({
               <Shield className="w-4 h-4" />
               <span>Enterprise Security</span>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Trust Indicators */}
@@ -786,11 +900,14 @@ const Hero: React.FC < HeroProps> = ({
             </div>              <span>Enterprise Security</span>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span>10,000+ Developers</span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex items-center gap-2'>
               <Users className='w-4 h-4' />
@@ -803,6 +920,11 @@ const Hero: React.FC < HeroProps> = ({
             <div className="flex items-center gap-2">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            <div className="flex items-center gap-2">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Star className="w-4 h-4 text-yellow-400" />
               <span>99.9% Uptime</span>
             </div>
@@ -811,10 +933,14 @@ const Hero: React.FC < HeroProps> = ({
       </div>
       {/* Scroll Indicator */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce'>
         <div className='w-6 h-10 border-2 border-white/20 rounded-full flex justify-center'>
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>
       </div>
+<<<<<<< HEAD
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
 
@@ -824,6 +950,9 @@ const Hero: React.FC < HeroProps> = ({
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
         </div>
@@ -863,13 +992,19 @@ const Hero: React.FC < HeroProps> = ({
       </div>;
       {/* Decorative Elements */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 export default Hero;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 }
@@ -877,9 +1012,13 @@ export default Hero;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
@@ -887,6 +1026,7 @@ export default Hero;
   )
 };
 export default Hero;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='absolute top - 1/4 right - 1/4 w - 2 h - 2 bg - blue - 500 rounded - full animate - pulse' />;
       <div;
@@ -908,6 +1048,8 @@ export default Hero;
 
       {/* Decorative Elements */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
                 </div>;
@@ -952,7 +1094,10 @@ export default Hero;
       </div>;
       {/* Decorative Elements */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>
       </div>
@@ -961,7 +1106,12 @@ export default Hero;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

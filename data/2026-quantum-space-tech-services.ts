@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface QuantumSpaceTechService2026 {
 export interface QuantumSpaceTechService2026 {;
   id: string;
@@ -32,11 +33,15 @@ export interface QuantumSpaceTechService2026 {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -72,6 +77,9 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -82,6 +90,7 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [;
     address: string
   }
 }
+<<<<<<< HEAD
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
     id: "2026-quantum-space-tech", name: "2026 Quantum Space Tech Platform",
@@ -114,6 +123,12 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   }
 ];
 ;
+=======
+
+export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
+  {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "2026-quantum-space-tech",
     name: "2026 Quantum Space Tech Platform",
     tagline: "Quantum computing meets space technology",
@@ -132,6 +147,7 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -141,6 +157,10 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

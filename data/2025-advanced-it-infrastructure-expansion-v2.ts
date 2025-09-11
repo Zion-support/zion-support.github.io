@@ -2,15 +2,21 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const advancedITInfrastructureExpansion2025V2 = [
@@ -648,6 +654,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
   }
 ];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: 'Autonomous DevOps Platform',
     description: 'Self - managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -1019,6 +1027,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'Quantum Identity Verification',
     description: 'Quantum - powered identity verification',
@@ -1260,12 +1269,20 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: 'Zero - Trust Security',
     description: 'Comprehensive zero - trust security platform',
     category: 'Cybersecurity',
     pricing: '$599 / month',
     features: [;
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Identity verification',
       'Access control',
       'Threat detection',
@@ -1278,7 +1295,18 @@ export const advancedITInfrastructureExpansion2025V2 = [
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
+<<<<<<< HEAD
 ];      'Identity verification_access control_threat detection_performance monitoring';
+=======
+export const advancedITInfrastructureExpansion2025V2 = [;
+  {;
+    name: 'Autonomous DevOps Platform',;
+    description: 'Self-managing DevOps automation platform',;
+    category: 'Cloud & FinOps',;
+    pricing: '$399/month',;
+    features: [;
+      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ];
 
   },;
@@ -1743,10 +1771,20 @@ export const advancedITInfrastructureExpansion2025V2 = [
 
 
 
+<<<<<<< HEAD
   }
 ];
 ;
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const advancedITInfrastructureExpansion2025V2 = [;
   {;
     name: 'Autonomous DevOps Platform',;

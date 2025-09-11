@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
@@ -20,6 +21,9 @@ import { useAuth } from "@/hooks/useAuth",
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 export function SignUpForm() {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
@@ -44,15 +48,20 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false),
   const [signupMode, setSignupMode] = useState(true),
   const [error, setError] = useState(""),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("")
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -61,13 +70,18 @@ export function SignUpForm() {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value })),
     setError("")
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setIsLoading(true)
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -76,10 +90,13 @@ export function SignUpForm() {
     setIsLoading(true),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       if (signupMode) {
         const { error } = await signup(formData.email, formData.password, {
@@ -89,6 +106,7 @@ export function SignUpForm() {
         }
         navigate("/mobile")
       } else {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -104,10 +122,16 @@ export function SignUpForm() {
         
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        const { error } = await login(formData.email, formData.password);
+        const { error } = await login(formData.email, formData.password),
+        
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (error) {
           throw new Error(error)
         }
         navigate("/mobile")
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -123,6 +147,8 @@ import {Alert, AlertDescription} from "@/components/ui/alert";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
 import { Input } from "@/components/ui/input",;
@@ -132,6 +158,7 @@ import { useAuth } from "@/hooks/useAuth",;
 import { AlertCircle } from "lucide-react",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
@@ -139,16 +166,22 @@ export function SignUpForm() {;
   const navigate = useNavigate(),;
   const { signup, login, loginWithGoogle } = useAuth(),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [formData, setFormData] = useState({;
     email: "",;
     password: "",;
     name: ""}),;
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     } catch (err: any) {;
@@ -157,6 +190,8 @@ export function SignUpForm() {;
       setIsLoading(false);
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
@@ -191,7 +226,10 @@ export function SignUpForm() {;
 
         navigate("/mobile");
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Label } from '@/components / ui / label';
 import { Input } from '@/components / ui / input';
@@ -249,14 +287,22 @@ if ( {) {
           throw new Error (error);
         }
         navigate ("/mobile");
+<<<<<<< HEAD
 
 
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } catch (err: any) {
       set_error (err.message);
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
   }
 ;
   const [isLoading, setIsLoading] = useState(false),;
@@ -310,36 +356,51 @@ if ( {) {
   };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setError(err && err.message);
     }
   };
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
+<<<<<<< HEAD
 <<<<<<< HEAD
       setError(err.message);
     }
@@ -366,6 +427,8 @@ if ( {) {
         </Button>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         <Button 
@@ -373,12 +436,15 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Button
           variant="outline"
         <Button 
           variant="outline" 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -403,10 +469,16 @@ if ( {) {
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </h2>;
+=======
+=======
+      </h2>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-2">;
         <Button
           variant="outline" 
@@ -420,11 +492,16 @@ if ( {) {
           </svg>;
           Continue with Google;
         </Button>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Button
           variant="outline" 
           className="w-full py-6 relative">;
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www && www.w3.org/2000/svg">;
             <path d="M24 12 && 12.073c0-5 && 5.8-4 && 4.85-10 && 10.5-10 && 10.826-10 && 10.5-6 && 6.02 0-10 && 10.93 4 && 4.7-10 && 10.93 10 && 10.5 0 5 && 5.234 3 && 3.875 9 && 9.575 8 && 8.95 10 && 10.359v-7 && 7.318h-2 && 2.696v-3 && 3.041h2.696V9 && 696V9.898c0-2 && 2.586 1 && 1.581-4 && 4.016 4 && 4.003-4 && 4.016 1 && 1.159 0 2 && 2.37.204 2 && 2.37.204v2 && 204v2.543h-1 && 1.334c-1 && 1.316 0-1 && 1.727.8-1 && 1.727 1 && 1.622v1.95h2 && 95h2.938l-.47 3 && 3.04h-2 && 2.468v7.318C20 && 318C20.125 21 && 21.648 24 17 && 17.307 24 12 && 12.073z" fill="#1877F2" />;
+<<<<<<< HEAD
 
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
@@ -519,28 +596,43 @@ export function SignUpForm() {;
         >;
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">;
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </svg>;
           Continue with Facebook;
         </Button>;
       </div>;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="relative flex items-center">;
         <div className="flex-grow border-t border-border"></div>;
         <span className="mx-2 text-xs text-muted-foreground">OR</span>;
         <div className="flex-grow border-t border-border"></div>;
       </div>;
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {error && (;
         <Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <form onSubmit={handleSubmit} className="space-y-4">;
         {signupMode && (;
           <div className="space-y-2">;
             <Label htmlFor="name">Full name</Label>;
+<<<<<<< HEAD
         <div className="space-y-2">;
           <Label htmlFor="email">Email address</Label>;
             <Input
@@ -557,16 +649,33 @@ export function SignUpForm() {;
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            <Input
+              id="name"
+              name="name"
+              value={formData && formData.name}
+              onChange={handleInputChange}
+              required
+              placeholder="Enter your full name"
+            />;
+          </div>;
+        )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         <div className="space-y-2">;
           <Label htmlFor="email">Email address</Label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Input
             id="email"
             name="email"
             type="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
           />;
         </div>;
@@ -581,6 +690,8 @@ export function SignUpForm() {;
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             value={formData && formData.email}
             onChange={handleInputChange}
             required
@@ -592,11 +703,15 @@ export function SignUpForm() {;
         <div className="space-y-2">;
           <Label htmlFor="password">Password</Label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Input
             id="password"
             name="password"
             type="password"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -615,6 +730,8 @@ export function SignUpForm() {;
         <Button 
           type="submit" 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             value={formData && formData.password}
             onChange={handleInputChange}
             required
@@ -625,7 +742,10 @@ export function SignUpForm() {;
           type="submit" 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="w-full py-6"
           disabled={isLoading}
         >
@@ -642,11 +762,18 @@ export function SignUpForm() {;
           ? "Already have an account? "
           : "Don't have an account? "
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
         </div>;
+=======
+=======
+          />;
+        </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Button
           type="submit" 
           className="w-full py-6"
@@ -659,10 +786,15 @@ export function SignUpForm() {;
           }
         </Button>;
       </form>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <p className="text-center text-sm">;
         {signupMode;
           ? "Already have an account? ";
           : "Don't have an account? ";
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Input;
               id="name";
@@ -728,18 +860,26 @@ export function SignUpForm() {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         <Button
           variant="link"
           className="p-0 h-auto"
           onClick={() => setSignupMode(!signupMode)}
 <<<<<<< HEAD
+<<<<<<< HEAD
         >
+=======
+        >;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {signupMode ? "Sign In" : "Sign Up"}
         </Button>
       </p>
     </div>
   )
+<<<<<<< HEAD
 =======
         >;
           {signupMode ? "Sign In" : "Sign Up"}
@@ -899,3 +1039,10 @@ if (error) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

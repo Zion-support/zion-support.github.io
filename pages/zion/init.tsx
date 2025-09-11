@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState> ({
@@ -54,6 +55,8 @@ setState((prev) => ({
       [group]: { ...prev[group], [key]: !prev[group][key] }}))
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   marketplace: true,
@@ -68,7 +71,10 @@ setState((prev) => ({
   };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -76,6 +82,7 @@ setState((prev) => ({
     setResult(null)
     try {
       const res = await fetch('/api/deploy/genesis', {
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -201,6 +208,30 @@ import React from 'react';
   const [state, setState] = useState<DeployFormState> ({;
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {;
   logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' };
+=======
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify(state)
+      });
+import { useState } from 'react';
+import type { NextPage } from 'next';
+type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
+type DeployFormState = {
+  instanceName: string;
+  defaultLanguage: string;
+  deploymentRegion: string;
+  tokenActivation: boolean;
+  governanceMode: GovernanceMode;
+  branding: {;
+    logoUrl: string;
+    primaryColor: string;
+    secondaryColor: string;
+    subdomain: string;
+  };
+  modules: Record<string, boolean>,;
+  bonusModules: Record<string, boolean>;
+},;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const defaultModules: DeployFormState['modules'] = {;
   marketplace: true,;
   gpt: true,;
@@ -214,6 +245,10 @@ const defaultModules: DeployFormState['modules'] = {;
   'api-docs-wiki': true,;
   'zion-brain': true,;
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const defaultBonus: DeployFormState['bonusModules'] = {;
   'global-map': false,;
   'franchise-onboarding': false,;
@@ -240,11 +275,19 @@ const InitPage: NextPage = () => {;
   });  const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {;
     setState(prev => ({;
       ...prev,;
       [group]: { ...prev[group], [key]: !prev[group][key] },;
     }));  };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setSubmitting(true);
@@ -255,6 +298,7 @@ const InitPage: NextPage = () => {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const json = await res.json();
@@ -361,6 +405,8 @@ const InitPage: NextPage = () => {;
   },
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         body: JSON.stringify(state)}),;
 
 
@@ -387,7 +433,10 @@ const InitPage: NextPage = () => {;
       </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'>;
@@ -399,6 +448,10 @@ const InitPage: NextPage = () => {;
               value={state && state.instanceName}
               onChange={e =>;
                 setState({ ...state, instanceName: e && e.target.value });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   'nation - builder': true,
   'launch - kit': true,
   'book - builder': true,
@@ -482,15 +535,23 @@ const InitPage: NextPage = () => {
               value={state.instance_name}
               on_change={e =>;
                 set_state ({ ...state, instance_name: e.target.value });
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
               required;
             />;
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <label className='block text - sm font - medium'>;
               Default Language;
             </label>;
@@ -500,17 +561,25 @@ const InitPage: NextPage = () => {
               on_change={e =>;
                 set_state ({ ...state, default_language: e.target.value });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <label className='block text - sm font - medium'>;
               Deployment Region;
             </label>;
@@ -520,17 +589,25 @@ const InitPage: NextPage = () => {
               on_change={e =>;
                 set_state ({ ...state, deployment_region: e.target.value });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 checked={state && state.tokenActivation}
                 onChange={() =>;
                   setState({;
@@ -538,6 +615,39 @@ const InitPage: NextPage = () => {
                     tokenActivation: !state && state.tokenActivation,;
                   });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+                }
+              />;
+              <label htmlFor='token' className='text-sm'>;
+=======
+            <label className='block text - sm font - medium'>;
+              Token Activation;
+            </label>;
+            <div className='mt - 2 flex items - center gap - 3'>;
+              <input;
+                id='token';
+                type='checkbox';
+                checked={state.token_activation}
+                on_change={() =>;
+                  set_state ({
+                    ...state,
+                    token_activation: !state.token_activation,
+                  });
+                }
+              />;
+              <label html_for='token' className='text - sm'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                Enable ZION$ token;
+              </label>;
+            </div>;
+          </div>;
+          <div>;
+
+            >              <option>Admin</option>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
@@ -550,6 +660,10 @@ const InitPage: NextPage = () => {
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div>
             <label className="block text-sm font-medium">Instance Name</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.instanceName} onChange={(e) => setState({ ...state, instanceName: e.target.value })} required />
@@ -576,6 +690,7 @@ const InitPage: NextPage = () => {
                     ...state
                     tokenActivation: !state.tokenActivation
                   })
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -641,6 +756,16 @@ const InitPage: NextPage = () => {
           </div>
           <div>
 <<<<<<< HEAD
+=======
+                }
+              />
+              <label htmlFor='token' className='text-sm'>
+                Enable ZION$ token
+              </label>
+            </div>
+          </div>
+          <div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <label className='block text-sm font-medium'>Governance Mode</label>
             <select
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
@@ -662,6 +787,7 @@ const InitPage: NextPage = () => {
             <label className="block text-sm font-medium">Governance Mode</label>
             <select className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.governanceMode} onChange={(e) => setState({ ...state, governanceMode: e.target.value as GovernanceMode })}>
               <option>Admin</option>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             <label className="block text-sm font-medium">Governance Mode</label>
@@ -671,14 +797,19 @@ const InitPage: NextPage = () => {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <option>DAO</option>
               <option>Hybrid</option>
             </select>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
               value={state && state.governanceMode}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               value={state && state.governanceMode}
               onChange={e =>;
@@ -694,6 +825,7 @@ const InitPage: NextPage = () => {
             </select>;
           </div>;
         </section>;
+<<<<<<< HEAD
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Logo URL</label>;
@@ -703,6 +835,12 @@ const InitPage: NextPage = () => {
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Logo URL</label>
+=======
+
+        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>Logo URL</label>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <input
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
               value={state && state.branding.logoUrl}
@@ -712,11 +850,16 @@ const InitPage: NextPage = () => {
                   branding: { ...state && state.branding, logoUrl: e && e.target.value },;
                 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
@@ -725,6 +868,7 @@ const InitPage: NextPage = () => {
             <input
               type='color'
               className='mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40'
+<<<<<<< HEAD
 <<<<<<< HEAD
               value={state && state.branding.primaryColor}
               onChange={e =>;
@@ -763,6 +907,10 @@ const InitPage: NextPage = () => {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
@@ -779,13 +927,18 @@ const InitPage: NextPage = () => {
                   branding: { ...state.branding, primary_color: e.target.value },
                 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               value={state && state.branding.secondaryColor}
               onChange={e =>;
@@ -814,10 +967,15 @@ const InitPage: NextPage = () => {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               value={state && state.branding.subdomain}
               onChange={e =>;
@@ -839,6 +997,10 @@ const InitPage: NextPage = () => {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     type='checkbox'
                     checked={state && state.modules[key]}
@@ -860,6 +1022,7 @@ const InitPage: NextPage = () => {
                   />                  <span>/{key}</span>;
                 </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -867,6 +1030,14 @@ const InitPage: NextPage = () => {
 
 
 
+=======
+
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -898,6 +1069,7 @@ const InitPage: NextPage = () => {
                     onChange={() => handleToggle('modules', key)}
                   />                  <span>/{key}</span>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
           <div>
             <label className="block text-sm font-medium">Logo URL</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.logoUrl} onChange={(e) => setState({ ...state, branding: { ...state.branding, logoUrl: e.target.value } })} />
@@ -927,6 +1099,8 @@ const InitPage: NextPage = () => {
                     onChange={() => handleToggle('modules', key)}
                   />                  <span>/{key}</span>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Auto-Deploy Modules</h3>
             <div className="space-y-2">
@@ -935,11 +1109,15 @@ const InitPage: NextPage = () => {
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
                   <span>/{key}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </label>
               ))  } catch (error) {
@@ -947,6 +1125,10 @@ const InitPage: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                </label>
+              ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -958,6 +1140,9 @@ const InitPage: NextPage = () => {
                   <span>/{key}</span>
                 </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -965,6 +1150,7 @@ const InitPage: NextPage = () => {
 }
             </div>
           </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -982,6 +1168,10 @@ const InitPage: NextPage = () => {
         <div className='flex items-center gap-3'>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        </section>
+        <div className='flex items-center gap-3'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button
             disabled={submitting}
             className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;
@@ -990,6 +1180,7 @@ const InitPage: NextPage = () => {
           </button>;
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>;
       </form>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1001,11 +1192,14 @@ const InitPage: NextPage = () => {
 };
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {result && (;
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
@@ -1047,6 +1241,8 @@ export default InitPage;
 
 };
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default InitPage;
 
 }
@@ -1078,9 +1274,16 @@ export default InitPage;
 }
     </div>;
   );
+<<<<<<< HEAD
 },;
 export default InitPage;
 =======
+=======
+}
+export default InitPage;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
             <label className='block text - sm font - medium'>Subdomain</label>;
             <input;
@@ -1148,6 +1351,10 @@ export default InitPage;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

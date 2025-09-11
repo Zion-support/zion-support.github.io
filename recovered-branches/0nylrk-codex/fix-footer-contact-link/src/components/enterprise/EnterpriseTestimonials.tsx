@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -8,11 +9,17 @@ import { Quote } from "lucide-react";
 
 import React from "react",;
 import { Quote } from "lucide-react",;
+=======
+import React from "react";
+import { Quote } from "lucide-react";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -22,6 +29,11 @@ import React from "react";
 import { Quote } from "lucide-react";
 import {
 =======
+=======
+  CarouselPrevious,;
+} from "@/components/ui/carousel";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const testimonials = [;
   {;
     quote:;
@@ -51,15 +63,26 @@ const testimonials = [;
 ];
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Carousel
   CarouselContent
   CarouselItem
@@ -92,10 +115,13 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -126,6 +152,7 @@ const testimonials = [
     image: "/placeholder.svg"}],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function EnterpriseTestimonials() {
   return (
     <section className="py-20 px-4 md:px-6">
@@ -150,13 +177,18 @@ export function EnterpriseTestimonials() {
                   <div className="flex items-center gap-4">
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function EnterpriseTestimonials() {;
   return (
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <img
                         src={testimonial.image}
                         alt={testimonial.author}
@@ -167,6 +199,7 @@ export function EnterpriseTestimonials() {;
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                         {testimonial.title}, {testimonial.company}
                       </p>
@@ -189,6 +222,10 @@ export function EnterpriseTestimonials() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -218,6 +255,7 @@ const testimonials = [;
     image: "/placeholder.svg"}];
 export function EnterpriseTestimonials() {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 export function EnterpriseTestimonials() {;
@@ -249,6 +287,9 @@ export function EnterpriseTestimonials() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
@@ -260,6 +301,7 @@ export function EnterpriseTestimonials() {;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
         <Carousel className="w-full">;
           <CarouselContent>;
@@ -268,21 +310,30 @@ export function EnterpriseTestimonials() {;
           <CarouselContent>;
             {testimonials.map((testimonial, index) => (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <Carousel className="w-full">;
           <CarouselContent>;
             {testimonials && testimonials.map((testimonial, index) => (;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     "{testimonial && testimonial.quote}";
                   </blockquote>;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       <img
@@ -304,11 +355,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components / ui / carousel';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <img;
 
 
 
 }
+<<<<<<< HEAD
 ;
 const testimonials = [;
   {
@@ -423,3 +477,7 @@ image: "/placeholder.svg"
 
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

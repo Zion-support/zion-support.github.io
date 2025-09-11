@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
       if (!has) {
         setOpen(true)
@@ -35,6 +36,8 @@ export default function OnboardingWizard() {;
         window.localStorage.setItem('zion_has_onboarded', '1');
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -55,7 +58,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 
@@ -81,6 +87,7 @@ import { useRole } from '../context/RoleContext';
       if (!has) {
         setOpen(true)
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
@@ -122,6 +129,15 @@ import { useRole } from '../context/RoleContext';
 <<<<<<< HEAD
 
 
+=======
+      }
+    } catch {}
+  }, []);
+  function completeOnboarding() {
+    try {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('zion_has_onboarded', '1');
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } catch {}
     setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
@@ -131,10 +147,18 @@ import { useRole } from '../context/RoleContext';
     setOpen(false);  }
 
   }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!open) return null;
 
   return (
+<<<<<<< HEAD
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'>
       <div className='w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl'>
         <div className='p-4 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between'>
@@ -243,6 +267,8 @@ import { useRole } from '../context/RoleContext';
 }
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -411,6 +437,10 @@ if (return null) {
 
   );
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -15,6 +16,9 @@ export interface ExportOptions {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -28,10 +32,15 @@ import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
 
@@ -49,13 +58,18 @@ export async function exportResumeToPDF(
   options: Partial<ExportOptions> = {}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ): Promise<Blob> {
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
@@ -63,6 +77,8 @@ export async function exportResumeToPDF(
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -76,6 +92,7 @@ export async function exportResumeToPDF(
   const colors = getPdfThemeColors(theme);
   // Set background color
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Add portfolio projects if needed
   doc.setFillColor(colors.background);
   doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
@@ -87,6 +104,22 @@ export async function exportResumeToPDF(
   currentY = addWorkExperienceSection(doc, resume.work_experience, colors, currentY);
   currentY = addEducationSection(doc, resume.education, colors, currentY);
   currentY = addCertificationsSection(doc, resume.certifications, colors, currentY);
+=======
+
+  doc && doc.setFillColor(colors && colors.background);
+  doc && doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
+  
+  // Set text color based on theme
+  doc && doc.setTextColor(colors && colors.text);
+  
+  // Add each section of the resume
+  let currentY = addBasicInfoSection(doc, resume && resume.basic_info, colors);
+  currentY = addSkillsSection(doc, resume && resume.skills, colors, currentY);
+  currentY = addWorkExperienceSection(doc, resume && resume.work_experience, colors, currentY);
+  currentY = addEducationSection(doc, resume && resume.education, colors, currentY);
+  currentY = addCertificationsSection(doc, resume && resume.certifications, colors, currentY);
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Add portfolio projects if needed
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {
@@ -107,6 +140,7 @@ export interface ExportOptions {;
   includePortfolio?: boolean,;
   maxProjects?: number,;
   fontFamily?: FontFamily;
+<<<<<<< HEAD
 =======
 
   doc && doc.setFillColor(colors && colors.background);
@@ -152,6 +186,8 @@ const default_options: ExportOptions = {
   include_portfolio: true;
   max_projects: 2,
   font_family: 'default';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export async function exportResumeToPDF (
@@ -194,6 +230,7 @@ export async function exportResumeToPDF (
 
 
 
+<<<<<<< HEAD
   }
   return doc.output ('blob');
 }
@@ -296,3 +333,10 @@ export async function exportResumeToPDF(;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+  return doc.output ('blob');
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

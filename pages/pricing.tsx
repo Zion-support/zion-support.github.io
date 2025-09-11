@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 import Head from 'next/head';
@@ -84,6 +89,216 @@ export default PricingPage;
 
 origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+import React from 'react';
+=======
+import {
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  ChevronRight,
+  Crown,
+  Infinity,
+  Zap as ZapIcon2,
+  Shield as ShieldIcon,
+  Users as UsersIcon,
+  Globe as GlobeIcon,
+  Cpu as CpuIcon,
+  Database as DatabaseIcon2,
+  Cloud as CloudIcon,
+  Smartphone as SmartphoneIcon,
+  Palette as PaletteIcon,
+  Search as SearchIcon,
+  MessageSquare as MessageSquareIcon,
+  FileText as FileTextIcon,
+  Calendar as CalendarIcon,
+  CreditCard as CreditCardIcon,
+  BarChart3 as BarChart3Icon,
+  Settings as SettingsIcon,
+  Zap as ZapIcon3,
+  Code as CodeIcon,
+  BookOpen as BookOpenIcon,
+  Activity as ActivityIcon,
+  Database as DatabaseIcon3,
+  Play as PlayIcon,
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+  MapPin as MapPinIcon,
+  Filter as FilterIcon,
+  Grid as GridIcon,
+  List as ListIcon,
+  ChevronDown as ChevronDownIcon,
+  ChevronUp as ChevronUpIcon,
+  Sparkles as SparklesIcon,
+  FlaskConical as FlaskConicalIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Brain as BrainIcon,
+  Atom as AtomIcon,
+  Globe2 as Globe2Icon,
+  Bot as BotIcon,;
+  ChevronRight as ChevronRightIcon,;
+} from 'lucide-react';import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import {
+  enhancedRealMicroSaasServices,
+  getServicesByCategory,;
+  getPopularServices,;
+} from '../data/enhanced-real-micro-saas-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+export default function PricingPage() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
+    'monthly';
+  );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+  const popularServices = getPopularServices();
+
+  // Combine all services for comprehensive pricing
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,  ];
+
+  // Enhanced service categories with pricing
+  const serviceCategories = [
+    {
+      name: 'Next-Generation AI',
+      description: 'Revolutionary AI platforms',
+      services: [
+        'AI Multimodal Fusion',
+        'AI Autonomous Decision Engine',
+        'AI Emotional Intelligence',
+      ],
+      avgPrice: '$3,199/month',
+      savings: 'Save 60-80% vs. competitors',
+    },
+    {
+      name: 'Cutting-Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions',
+      services: [
+        'Zero Trust Architecture',
+        'Edge Computing Orchestration',
+        '5G Private Networks',
+      ],
+      avgPrice: '$4,999/month',
+      savings: 'Save 50-70% vs. competitors',
+    },
+    {
+      name: 'Innovative Micro SaaS',
+      description: 'Creative and practical SaaS tools',
+      services: [
+        'AI Brand Personality',
+        'Virtual Event Holograms',
+        'AI Meeting Transcriber',
+      ],
+      avgPrice: '$199/month',
+      savings: 'Save 40-60% vs. competitors',
+    },
+    {
+      name: 'Quantum & Space Technology',
+      description: 'Quantum computing and space solutions',
+      services: [
+        'Quantum AI Hybrid',
+        'Space Technology Platform',
+        'Quantum Cybersecurity',
+      ],
+      avgPrice: '$5,999/month',
+      savings: 'Save 70-85% vs. competitors',
+    },
+    {
+      name: 'Enterprise IT Services',
+      description: 'Comprehensive enterprise solutions',
+      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+      avgPrice: '$2,999/month',
+      savings: 'Save 45-65% vs. competitors',
+    },  ];
+
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
@@ -283,6 +498,7 @@ export default function PricingPage() {
     },  ];
 
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -398,9 +614,12 @@ import Head from 'next/head';
 
 
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next / head';
@@ -420,6 +639,10 @@ import React from 'react';
 import Head from 'next / head';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   Check
   Star
@@ -528,24 +751,34 @@ import {
     ChevronRight as ChevronRightIcon
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Check,;
   Star,;
@@ -661,18 +894,27 @@ import {;
   getServicesByCategory,;
   getPopularServices,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
@@ -681,15 +923,20 @@ export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   const popularServices = getPopularServices();
@@ -699,6 +946,10 @@ export default function PricingPage() {
   }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ...enhancedRealMicroSaasServices;
     ...nextGenerationAIServices;
     ...cuttingEdgeITServices;
@@ -708,17 +959,75 @@ export default function PricingPage() {
   // Enhanced service categories with pricing
   const serviceCategories = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    {
+      name: 'Next-Generation AI'
+      description: 'Revolutionary AI platforms'
+      services: [
+        'AI Multimodal Fusion'
+        'AI Autonomous Decision Engine'
+        'AI Emotional Intelligence'
+      ]
+      avgPrice: '$3,199/month'
+      savings: 'Save 60-80% vs. competitors'
+    }
+    {
+      name: 'Cutting-Edge IT Infrastructure'
+      description: 'Advanced infrastructure solutions'
+      services: [
+        'Zero Trust Architecture'
+        'Edge Computing Orchestration'
+        '5G Private Networks'
+      ]
+      avgPrice: '$4,999/month'
+      savings: 'Save 50-70% vs. competitors'
+    }
+    {
+      name: 'Innovative Micro SaaS'
+      description: 'Creative and practical SaaS tools'
+      services: [
+        'AI Brand Personality'
+        'Virtual Event Holograms'
+        'AI Meeting Transcriber'
+      ]
+      avgPrice: '$199/month'
+      savings: 'Save 40-60% vs. competitors'
+    }
+    {
+      name: 'Quantum & Space Technology'
+      description: 'Quantum computing and space solutions'
+      services: [
+        'Quantum AI Hybrid'
+        'Space Technology Platform'
+        'Quantum Cybersecurity'
+      ]
+      avgPrice: '$5,999/month'
+      savings: 'Save 70-85% vs. competitors'
+    }
+    {
+      name: 'Enterprise IT Services'
+      description: 'Comprehensive enterprise solutions'
+      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening']
+      avgPrice: '$2,999/month'
+      savings: 'Save 45-65% vs. competitors'
+    },  ];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Button from '../components / ui / Button';
 import Card from '../components / ui / Card';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -758,16 +1067,22 @@ function PricingPage() {
   // Enhanced service categories with pricing;
   const service_categories = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
       name: 'Next - Generation AI',
       description: 'Revolutionary AI platforms',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       name: 'Next - Generation AI',
       description: 'Revolutionary AI platforms',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       services: [;
         'AI Multimodal Fusion',
         'AI Autonomous Decision Engine',
@@ -776,6 +1091,7 @@ function PricingPage() {
       avg_price: '$3, 199 / month',
       savings: 'Save 60 - 80% vs. competitors',
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
       services: [;
         'Zero Trust Architecture',
@@ -788,20 +1104,29 @@ function PricingPage() {
       name: 'Cutting - Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     {
       name: 'Cutting - Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function PricingPage() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(;
     'monthly';
   );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -809,12 +1134,18 @@ export default function PricingPage() {;
     website: 'https://ziontechgroup && ziontechgroup.com',;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const popularServices = getPopularServices();
 =======
 
   const popularServices = getPopularServices();
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const popularServices = getPopularServices();
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Combine all services for comprehensive pricing;
   const allServices = [;
     ...enhancedRealMicroSaasServices,;
@@ -822,9 +1153,13 @@ export default function PricingPage() {;
     ...cuttingEdgeITServices,;
     ...innovativeMicroSaasV2Services,  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Enhanced service categories with pricing;
   const serviceCategories = [;
     {;
@@ -879,9 +1214,13 @@ export default function PricingPage() {;
       savings: 'Save 45-65% vs. competitors',;
     },  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Enhanced pricing tiers with more realistic and comprehensive offerings;
   const pricingTiers = [;
     {;
@@ -961,9 +1300,13 @@ export default function PricingPage() {;
       ctaVariant: 'primary' as const,;
     },  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Service category pricing examples;
   const serviceCategoryPricing = [;
     {;
@@ -1027,9 +1370,13 @@ export default function PricingPage() {;
       icon: <Rocket className='w-6 h-6' />,;
     },  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Value propositions;
   const valuePropositions = [;
     {;
@@ -1044,9 +1391,13 @@ export default function PricingPage() {;
       description: 'Get up and running in under 24 hours',;
       icon: <Clock className='w-8 h-8' />,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       services: [;
         'Zero Trust Architecture',
         'Edge Computing Orchestration',
@@ -1054,6 +1405,7 @@ export default function PricingPage() {;
       ],
       avg_price: '$4, 999 / month',
       savings: 'Save 50 - 70% vs. competitors',
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   // Combine all services for comprehensive pricing
@@ -1311,15 +1663,21 @@ name: 'Starter'
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       name: 'Innovative Micro SaaS',
       description: 'Creative and practical SaaS tools',
 <<<<<<< HEAD
+<<<<<<< HEAD
 services: [;
 =======
       services: [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      services: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI Brand Personality',
         'Virtual Event Holograms',
         'AI Meeting Transcriber',
@@ -1331,10 +1689,14 @@ services: [;
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
 <<<<<<< HEAD
+<<<<<<< HEAD
 services: [;
 =======
       services: [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      services: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Quantum AI Hybrid',
         'Space Technology Platform',
         'Quantum Cybersecurity',
@@ -1346,10 +1708,14 @@ services: [;
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
 <<<<<<< HEAD
+<<<<<<< HEAD
 services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
 =======
       services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       avg_price: '$2, 999 / month',
       savings: 'Save 45 - 65% vs. competitors',
     },  ];
@@ -1510,9 +1876,13 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
       description: 'Get up and running in under 24 hours',
       icon: <Clock className='w - 8 h - 8' />,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       metric: '<24h',
       detail: 'Setup Time',
     },
@@ -1520,9 +1890,13 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
       title: 'Global Reach',
       description: 'Available in 150+ countries worldwide',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: <Globe className='w - 8 h - 8' />,
       metric: '150+',
       detail: 'Countries',
@@ -1535,9 +1909,13 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
       detail: 'Uptime SLA',
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
 ;
   return (
@@ -1548,9 +1926,13 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
           Quantum Services;
         </title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <meta name='author' content='Zion Tech Group' />;
         <meta name='robots' content='index, follow' />;
@@ -1570,15 +1952,21 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
         <meta
           property='og:image'
 <<<<<<< HEAD
+<<<<<<< HEAD
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
         <meta
@@ -1592,6 +1980,7 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
         <meta
           name='twitter:image'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>
           Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &
@@ -1637,12 +2026,15 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
           content='https://ziontechgroup.com/og-image.jpg'
         />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
 
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <Head>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -1689,6 +2081,10 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
 }
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Transparent Pricing
           </h1>
           <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
@@ -1697,9 +2093,13 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
             computing services.
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
       </Head>;
@@ -1760,13 +2160,18 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
           </h1>;
           <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Choose the perfect plan for your business. All plans include;
             generous free trials and access to our revolutionary AI & quantum;
             computing services.;
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* New 2026 Pricing Link */}
           <div className='mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto'>
@@ -1786,6 +2191,11 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               🚀 New for 2026: Revolutionary Services
             </h3>
             <p className='text-gray-300 mb-6'>
@@ -1805,6 +2215,7 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
               </span>;
             </Button>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Billing Toggle */}
         'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
@@ -1983,12 +2394,18 @@ icon: <TrendingUp className="w-8 h-8" />,
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Billing Toggle */}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+          {/* Billing Toggle */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
               Monthly;
             </span>;
             <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2004,6 +2421,13 @@ icon: <TrendingUp className="w-8 h-8" />,
 }
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+=======
+
+
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Monthly
             </span>
             <button
@@ -2014,16 +2438,21 @@ icon: <TrendingUp className="w-8 h-8" />,
               }
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
 <<<<<<< HEAD
+<<<<<<< HEAD
 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
             >
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Pricing Tiers */}
         <div className='mb-20'>
@@ -2107,17 +2536,27 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <UltraFuturisticCard
                 key={tier && tier.name}
                 variant={tier && tier.variant}
                 interactive={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 )}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* New 2026 Pricing Link */}
           <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -2193,18 +2632,30 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                     <div className='flex items - baseline justify - center'>;
                       <span className='text - 5xl font - bold text - cyan - 400'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         ${tier.price}
                       </span>;
                       <span className='text - xl text - gray - 400 ml - 2'>;
                         {tier.period}
                       </span>;
                     </div>;
+<<<<<<< HEAD
 
 
                     </div>
+=======
+=======
+
+
+                    </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {tier.savings && (
                       <div className='text - green - 400 text - sm mt - 2'>;
                         {tier.savings}
@@ -2242,6 +2693,7 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                       <div className='text-green-400 text-sm mt-2'>;
                         {tier && tier.savings}
                       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 glowIntensity={tier.popular ? 'high' : 'medium'}
                 className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
@@ -2344,6 +2796,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   <Button
                     href={tier.name === "Enterprise" ? "/contact" : "/services"}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     )}
                   </div>;
@@ -2363,6 +2817,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
 =======
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     variant={tier.ctaVariant}
                     size="lg"
@@ -2379,6 +2834,11 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 </div>;
         </div>;
 =======
+=======
+                    variant={tier.ctaVariant}
+                    size="lg"
+                    className="w-full"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     {tier.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -2386,14 +2846,20 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 </div>
               </UltraFuturisticCard>
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
 
           </div>;
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Value Propositions */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
@@ -2401,10 +2867,15 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   >
@@ -2415,6 +2886,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -2448,21 +2920,36 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+
+        {/* Value Propositions */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valuePropositions.map((proposition, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className="text-center p-6"
               >
@@ -2504,11 +2991,16 @@ className="text-center p-6"
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
 
           </div>;
         </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
@@ -2541,6 +3033,11 @@ className="text-center p-6"
               <UltraFuturisticCard
 <<<<<<< HEAD
 =======
+=======
+            {serviceCategoryPricing.map((category, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <UltraFuturisticCard
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
                       </div>)}
                   </div>;
@@ -2601,7 +3098,10 @@ className="text-center p-6"
             {serviceCategoryPricing.map ((category, index) => (
               <UltraFuturisticCard;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={index}
                 variant={
                   index % 3 === 0;
@@ -2612,27 +3112,38 @@ className="text-center p-6"
                 }
                 interactive={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='p - 6';
               >;
                 <div className='flex items - center mb - 4'>;
                   <div className='inline - flex items - center justify - center w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 mr - 4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {category.icon}
                   </div>;
                   <div>;
                     <h3 className='text - lg font - bold text - white'>;
                       {category.category}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <ul className='space-y-2 mb-4'>
                   {category.services.map((service, idx) => (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 className='p-6'>;
                 <div className='flex items-center mb-4'>;
@@ -2652,15 +3163,20 @@ className="text-center p-6"
                 <ul className='space-y-2 mb-4'>;
                   {category && category.services.map((service, idx) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li
                       key={idx}
                       className='text-sm text-gray-300 flex items-center'>;
                       <Check className='w-4 h-4 text-green-400 mr-2' />                      {service}
                     </li>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <ul className="space-y-2 mb-4">
                   {category.services.map((service, idx) => (
@@ -2679,13 +3195,18 @@ className="text-center p-6"
 }
                 </ul>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
                 </ul>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </ul>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -2698,10 +3219,15 @@ className="text-center p-6"
                   <ChevronRight className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -2739,6 +3265,7 @@ className="text-center p-6"
                 >
                   Explore Services
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
@@ -2764,6 +3291,21 @@ className="text-center p-6"
             Popular Services Pricing
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
+=======
+                  <ChevronRight className="ml-2 w-4 h-4" />
+                </Button>
+              </UltraFuturisticCard>
+
+            ))}
+
+=======
+
+
+
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2773,9 +3315,12 @@ className="text-center p-6"
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <ChevronRight className='ml-2 w-4 h-4' />                </Button>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Popular Services Pricing */}
@@ -2785,6 +3330,7 @@ className="text-center p-6"
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Popular Services Pricing */}
         {/* Popular Services Pricing */}
@@ -2800,11 +3346,17 @@ className="text-center p-6"
 
         {/* Popular Services Pricing */}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+        {/* Popular Services Pricing */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularServices.slice(0, 6).map((service, index) => (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2812,10 +3364,16 @@ className="text-center p-6"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <UltraFuturisticCard
                 key={service && service.id}
                 variant={service && service.variant as any}
                 interactive={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </h3>;
                     <div className='text - cyan - 400 font - semibold'>;
@@ -2874,11 +3432,14 @@ className='p - 6';
                       <li key={idx} className='flex items-center'>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                         <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
                       </li>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 className='p-6'>;
                 <div className='text-center mb-4'>;
@@ -2905,6 +3466,9 @@ className='p-6'>;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="p-6"
               >
                 <div className="text-center mb-4">
@@ -2913,7 +3477,15 @@ className='p-6'>;
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.category}</div>
                 </div>
+<<<<<<< HEAD
                 
+=======
+                <Button
+                  href={service.link}
+                  variant='primary'
+                  size='sm'
+                  className='w-full'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -2923,10 +3495,13 @@ className='p-6'>;
                         {feature}
                       </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ))}
                   </ul>;
                 </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     ))}
 
@@ -2934,8 +3509,11 @@ className='p-6'>;
                 </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -2945,16 +3523,25 @@ className='p-6'>;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 
                 <Button
                   href={service.link}
                   variant="primary"
                   size="sm"
                   className="w-full"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2962,6 +3549,7 @@ className='p-6'>;
                   Learn More
                   <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2992,6 +3580,8 @@ className='p-6'>;
                 trial.
               </p>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </UltraFuturisticCard>
 
 
@@ -3000,7 +3590,10 @@ className='p-6'>;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </UltraFuturisticCard>
             <UltraFuturisticCard variant='holographic' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -3030,6 +3623,47 @@ className='p-6'>;
                 instant deployment with our AI-powered setup wizards.
               </p>            </UltraFuturisticCard>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+        {/* Contact Information */}
+        <div className='mb-16'>
+          <h2 className='text-3xl font-bold text-white mb-8 text-center'>
+            Get In Touch
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
+            <UltraFuturisticCard variant='quantum' className='text-center p-6'>
+              <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
+              <h3 className='text-xl font-bold text-white mb-3'>Phone</h3>
+              <p className='text-cyan-400 text-lg font-semibold'>
+                {contactInfo.mobile}
+              </p>
+              <p className='text-gray-400 text-sm mt-2'>Available 24/7</p>
+            </UltraFuturisticCard>
+            <UltraFuturisticCard
+              variant='holographic'
+              className='text-center p-6'
+            >
+              <Mail className='w-12 h-12 text-purple-400 mx-auto mb-4' />
+              <h3 className='text-xl font-bold text-white mb-3'>Email</h3>
+              <p className='text-purple-400 text-lg font-semibold'>
+                {contactInfo.email}
+              </p>
+              <p className='text-gray-400 text-sm mt-2'>
+                Quick response guaranteed
+              </p>
+            </UltraFuturisticCard>
+            <UltraFuturisticCard variant='neural' className='text-center p-6'>
+              <MapPin className='w-12 h-12 text-green-400 mx-auto mb-4' />
+              <h3 className='text-xl font-bold text-white mb-3'>Address</h3>
+              <p className='text-green-400 text-sm font-semibold leading-relaxed'>
+                {contactInfo.address}
+              </p>
+              <p className='text-gray-400 text-sm mt-2'>Global operations</p>            </UltraFuturisticCard>
+          </div>
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <div className='text-center'>
           <UltraFuturisticCard
@@ -3055,6 +3689,12 @@ className='p-6'>;
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>
               <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </UltraFuturisticCard>
             
             <UltraFuturisticCard variant="holographic" className="p-6">
@@ -3071,6 +3711,7 @@ className='p-6'>;
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
           </div>
         </div>
         {/* Contact Information */}
@@ -3136,6 +3777,8 @@ variant='primary'
           </div>
         </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
@@ -3168,7 +3811,10 @@ variant='primary'
           </div>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
 
@@ -3259,6 +3905,7 @@ variant='primary'
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className='text-center'>
           <UltraFuturisticCard
@@ -3267,12 +3914,17 @@ variant='primary'
           >
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* CTA Section */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3281,6 +3933,12 @@ variant='primary'
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Ready to Get Started?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -3289,10 +3947,14 @@ variant='primary'
               required, instant setup, and full support included.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* CTA Section */}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='p-12'>;
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
               Ready to Get Started?;
@@ -3415,23 +4077,33 @@ variant='primary'
             </h2>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Start your free trial today and experience the power of;
               revolutionary AI & quantum computing services. No credit card;
               required, instant setup, and full support included.;
             </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 href='/services'
                 variant='primary'
@@ -3444,6 +4116,7 @@ variant='primary'
                 href='/contact'
                 variant='secondary'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='text-sm text-gray-400'>
         <div className="text-center">
@@ -3711,6 +4384,10 @@ Can I change my plan later?
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
             </div>
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </UltraFuturisticCard>
         </div>
       </div>
@@ -3719,9 +4396,12 @@ Can I change my plan later?
 
                 className='text-lg px-8 py-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 className='text-lg px-8 py-4'>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Contact Sales;
                 <MessageSquare className='ml-2 w-5 h-5' />;
               </Button>;
@@ -3734,6 +4414,7 @@ className='text-lg px-8 py-4'>;
               </p>;
               <p className='mt-2'>;
                 ✓ 24/7 Support • ✓ 99 && 99.99% Uptime SLA • ✓ Global Infrastructure;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -3809,6 +4490,11 @@ className='text-lg px-8 py-4'>;
               No credit card required, instant setup, and full support included.;
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">;
+=======
+
+=======
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button;
                 href='/services';
                 variant='primary';
@@ -3836,22 +4522,30 @@ className='text-lg px-8 py-4'>;
               <p className='mt - 2'>;
                 ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </UltraFuturisticBackground>
@@ -3904,6 +4598,16 @@ className='text-lg px-8 py-4'>;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+    </UltraFuturisticBackground>
+=======
+
+}
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </UltraFuturisticBackground>
   )
 }
@@ -3919,6 +4623,9 @@ origin/automation-improvements-final
   );
 }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

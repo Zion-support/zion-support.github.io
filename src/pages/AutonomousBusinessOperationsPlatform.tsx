@@ -6,7 +6,7 @@ import { _Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { CheckCircle } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Cloud } from 'lucide-react';

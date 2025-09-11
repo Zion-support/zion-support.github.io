@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useUIState() {
@@ -10,19 +11,27 @@ import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
   const [expandedSections, setExpandedSections] = useState({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import {useState} from 'react';
 import {TalentProfile} from '@/types / talent';
@@ -42,7 +51,10 @@ function useUIState() {
     experience: true
     price: true});
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   // Toggle expanded sections in the sidebar;
   const toggle_section = (section_name: keyof typeof expanded_sections) =>: any {
@@ -59,6 +71,7 @@ function useUIState() {
 ;
   // Effect to listen for the custom event to close mobile filter;
   // This would typically be in a useEffect hook, but we'll handle it via the button's on_click;
+<<<<<<< HEAD
     skills: true;
     availability: true;
     region: true;
@@ -81,11 +94,15 @@ function useUIState() {
   // This would typically be in a useEffect hook, but we'll handle it via the button's onClick
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
+<<<<<<< HEAD
 <<<<<<< HEAD
     selectedTalent;
     setSelectedTalent;
@@ -95,6 +112,10 @@ function useUIState() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    selected_talent;
+    setSelectedTalent;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
@@ -130,12 +151,15 @@ export function useUIState() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     expandedSections;
     toggleSection;
 
     expanded_sections;
     toggle_section;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     expandedSections;
@@ -145,6 +169,7 @@ export function useUIState() {;
     expanded_sections;
     toggle_section;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     closeMobileFilter}
 }
@@ -196,3 +221,7 @@ export function useUIState() {;
 
     closeMobileFilter}
 }
+=======
+    closeMobileFilter}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

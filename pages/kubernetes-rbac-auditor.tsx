@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -51,6 +52,10 @@ export default function KubernetesRbacAuditorPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-700 text-white">Start from $179/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </div>
@@ -65,6 +70,7 @@ export default function KubernetesRbacAuditorPage(req, res) {
   return (;
     <Layout>;
       <Head>;
+<<<<<<< HEAD
         <title>Kubernetes RBAC Auditor | Zion Tech Group</title>;
         <meta name="description" content="Detect over-permissive Kubernetes roles and unused bindings with least-privilege recommendations." />;
         <link rel="canonical" href="https://ziontechgroup.com/kubernetes-rbac-auditor" />;
@@ -72,12 +78,17 @@ export default function KubernetesRbacAuditorPage(req, res) {
 =======
     <Layout>;
       <Head>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <title > Kubernetes RBAC Auditor | Zion Tech Group</title>;
         <meta name="description" content="Detect over - permissive Kubernetes roles and unused bindings with least - privilege recommendations." />;
         <link rel="canonical" href="https://ziontechgroup.com / kubernetes - rbac - auditor" />;
       </Head>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>;
@@ -91,6 +102,7 @@ export default function KubernetesRbacAuditorPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
           <div className="flex gap-3">;
@@ -113,3 +125,8 @@ export default function KubernetesRbacAuditorPage(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

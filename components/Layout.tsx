@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -64,12 +65,58 @@ interface LayoutProps {
   keywords?: string;
   ogImage?: string;
   noIndex?: boolean;
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+origin/main
+interface LayoutProps {
+  children: React.ReactNode;
+interface LayoutProps {;
+  children: React && React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  og_title?: string;
+  og_description?: string;
+  og_image?: string;
+  no_index?: boolean;
+}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Layout: React.FC<LayoutProps> = ({;
   children,;
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
@@ -104,6 +151,7 @@ const Layout: React.FC<LayoutProps> = ({;
     },;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -119,6 +167,47 @@ const Layout: React.FC < LayoutProps> = ({
   noIndex = false
 }: LayoutProps) {
   return (
+=======
+
+
+  return (
+    <div className="min-h-screen bg-white">;
+const Layout: React.FC < LayoutProps> = ({
+  children,
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical = "https://ziontechgroup.com",
+  og_title,
+  og_description,
+  og_image = "https://ziontechgroup.com / og - image.jpg",
+  no_index = false,
+}) => {
+  const json_ld = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com / logo.png",
+    description: description,
+    address: {
+      "@type": "PostalAddress",
+      street_address: "364 E Main St STE 1008",
+      address_locality: "Middletown",
+      address_region: "DE",
+      postal_code: "19709",
+      address_country: "US",
+    },
+    contact_point: {
+      "@type": "ContactPoint",
+      telephone: "+1 - 302 - 464 - 0950",
+      contact_type: "customer service",
+      email: "kleber@ziontechgroup.com",
+    },
+  }
+;
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min - h-screen bg - white">;
       <Head>;
         <title>{title}</title>;
@@ -126,15 +215,21 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { ReactNode } from "react";
         <meta property="og:title" content={ogTitle || title} />;
         <meta
@@ -145,21 +240,23 @@ import React, { ReactNode } from "react";
         <meta property="og:url" content={canonical} />;
         <meta property="og:type" content="website" />;
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://ziontechgroup.com" />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={ogImage} />
-        
-        {/* SEO */}
-        {noIndex && <meta name="robots" content="noindex,nofollow" />}
-        
-        {/* Structured Data */}
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={ogTitle || title} />;
+        <meta
+          name="twitter:description"
+          content={ogDescription || description}
+        />;
+        <meta name="twitter:image" content={ogImage} />;
+        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
         />;
       </Head>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Header />;
       <main>{children}</main>;
       <Footer />;
@@ -173,7 +270,14 @@ import React, { ReactNode } from "react";
       <main>{children}</main>
       <Footer />
     </div>
+<<<<<<< HEAD
 import React, { ReactNode } from "react";
+=======
+=======
+import React, { ReactNode } from "react";
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface LayoutProps {
   children: ReactNode,
@@ -184,6 +288,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {children}
     </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -191,6 +296,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 export default Layout;
@@ -248,11 +358,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
     </main>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   );
 };
+<<<<<<< HEAD
 export default Layout;
 ;
 <<<<<<< HEAD
@@ -301,3 +415,7 @@ export default Layout;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default Layout;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

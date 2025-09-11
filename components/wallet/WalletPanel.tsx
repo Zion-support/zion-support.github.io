@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -6,7 +17,10 @@
 
 type Tx = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,6 +45,7 @@ import Badges from './Badges';
 type Tx = {;
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
@@ -48,6 +63,12 @@ import Badges from './Badges';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Tx = {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+
+type Tx = {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
@@ -61,7 +82,10 @@ type Summary = {;
 };
 function getUserId(): any (): string {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (typeof window === 'undefined') return 'demo-user';
   const fromStorage = window && window.localStorage.getItem('zion_user_id');
   if (fromStorage) return fromStorage;
@@ -83,15 +107,22 @@ export default function WalletPanel() {;
   amount: number
   reason: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = {
   created_at: string;
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Summary = {
   wallet: { user_id: string; balance: number }
   transactions: Tx[];
@@ -120,18 +151,27 @@ function WalletPanel() {
   const [tab, set_tab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings');  const [eth_address, setEthAddress] = useState < string | null>(null);type Tx = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
@@ -144,15 +184,20 @@ export default function WalletPanel() {;
   createdAt: string;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Summary = {;
   wallet: { userId: string, balance: number },;
   transactions: Tx[],;
   config: { usdPerToken: number, symbol: string }
 };
 function getUserId(): any (): string {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -201,6 +246,9 @@ type Summary = {
   config: { usdPerToken: number, symbol: string }
 }
 function getUserId(): string {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (typeof window === "undefined") return "demo-user";
   const fromStorage = window.localStorage.getItem("zion_user_id");
   if (fromStorage) return fromStorage;
@@ -211,6 +259,7 @@ function getUserId(): string {
 export default function WalletPanel() {
 
 export default function WalletPanel() {;
+<<<<<<< HEAD
 =======
 
 
@@ -219,12 +268,20 @@ export default function WalletPanel() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
   const userId = useMemo(() => getUserId(), []);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   async function refresh() {;
@@ -235,12 +292,16 @@ export default function WalletPanel() {;
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function refresh() {
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
     const data = await res.json();
     setSummary(data)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
   async function refresh() {
@@ -262,6 +323,10 @@ export default function WalletPanel() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     refresh()
   }, []);
@@ -273,7 +338,10 @@ export default function WalletPanel() {;
   const spending = (summary?.transactions |[]).filter((t) =>
     ["burn", "revoke", "redeem"].includes(t.type)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   useEffect(() => {;
@@ -297,9 +365,15 @@ export default function WalletPanel() {;
   const spending = (summary?.transactions || []).filter((t) =>;
     ["burn", "revoke", "redeem"].includes(t && t.type);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   const nextBadgeThreshold = useMemo(() => {;
+=======
+  );
+  const nextBadgeThreshold = useMemo(() => {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   const nextBadgeThreshold = useMemo(() => {
     if (balance < 50) return 50;
@@ -307,7 +381,10 @@ export default function WalletPanel() {;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       return;
@@ -368,11 +445,15 @@ if ( {) {
       return;
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
   }
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const res = await fetch("/api/wallet/redeem", {
       method: "POST",
@@ -387,6 +468,9 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   async function redeem(amount: number) {
@@ -403,14 +487,20 @@ if ( {) {
     };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (      refresh();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
   return (      refresh();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   return (
@@ -461,17 +551,25 @@ if ( {) {
               <div className='text - sm text - gray - 500'>Balance</div>;
               <div className='text - 2xl font - semibold'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {balance} {symbol}
               </div>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
@@ -487,16 +585,22 @@ if ( {) {
             {ethAddress ? `Connected: ${ethAddress.slice(0,6)}...${ethAddress.slice(-4)}` : "Connect Wallet"}
           </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </div>
         <div className="mt-4">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>
       </div>
         <div className="mt-4">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
         <div className='mt-4'>          <Badges balance={balance} />;
@@ -509,9 +613,13 @@ if ( {) {
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>;
         <div className='flex gap-3 mb-4 text-sm'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button
             onClick={() => setTab('earnings')}
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
@@ -539,9 +647,13 @@ if ( {) {
                 <div className='flex gap-2 items-center'>;
                   <span
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className={`px-2 py-0 && 0.5 rounded text-xs ${t && t.type === 'earn' || t && t.type === 'issue' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>;
                     {t && t.type}
                   </span>;
@@ -555,9 +667,13 @@ if ( {) {
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
             {(tab === 'earnings' ? earnings : spending).length === 0 && (;
               <div className='text-sm text-gray-500'>No transactions yet.</div>;
@@ -590,9 +706,13 @@ if ( {) {
                 className='px-3 py-1 rounded border'
                 onClick={() => redeem(500)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button;
             on_click={connect_wallet}
             className='px - 3 py - 1 text - sm rounded border';
@@ -695,10 +815,15 @@ if ( {) {
               </button>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="h-2 bg-gray-200 rounded">
             <div className="h-2 bg-yellow-400 rounded" style={{ width: `${progress}%` }} />
           </div>
@@ -801,6 +926,10 @@ export default function WalletPanel() {
   const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100)),
 
   async function connectWallet() {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return balance;
   }, [balance]);
   const progress = Math.min(
@@ -837,6 +966,7 @@ export default function WalletPanel() {
       console.error(e)
     }
   }
+<<<<<<< HEAD
       </div>;
     </div>;
   );
@@ -1065,6 +1195,8 @@ export default function WalletPanel() {
             <div className='text-gray-600'>
               Convert your {symbol} into credits.
             </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='text-gray-600'>
               Rate: 1 {symbol} = $
               {summary?.config.usdPerToken?.toFixed(2) ?? '0.00'}
@@ -1094,16 +1226,40 @@ export default function WalletPanel() {
             </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
           </div>
         )}
+<<<<<<< HEAD
       </div>
     </div>
 );
 }
 
+=======
+
+
+}
+
+
+=======
+}
+
+=======
+            <div className='text - xs text - gray - 500'>;
+              Coming soon: Redeem for branded perks and courses.;
+            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
+          </div>)}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
 
         )}
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 }
@@ -1116,3 +1272,9 @@ export default function WalletPanel() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+);
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

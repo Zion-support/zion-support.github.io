@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 try {
   if (req && req.method !== "POST")
@@ -10,6 +11,10 @@ try {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -18,11 +23,14 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const { job } = req.body as { job?: Record<string, any> }
   if (!job) return res.status(400).json({ error: "Missing job payload" });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   try {
   if (req && req.method !== "POST")
@@ -30,24 +38,36 @@ export default async function handler(
   const { job } = req && req.body as { job?: Record<string, any> };
   if (!job) return res && res.status(400).json({ error: "Missing job payload" });
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       c && c.providerId === "salesforce" ||
       c && c.providerId === "hubspot" ||
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -71,14 +91,22 @@ function handler() {
       c.provider_id === "hubspot" ||;
       c.provider_id === "zoho" ||;
       c.provider_id === "pipedrive",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
       level: "info",
@@ -88,17 +116,23 @@ function handler() {
       company: job && job.company,
       contact: job && job.contact,
 <<<<<<< HEAD
+<<<<<<< HEAD
     });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -114,17 +148,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
 <<<<<<< HEAD
+<<<<<<< HEAD
 results.push({ providerId: conn.providerId, ok: true })
   }
   // record Zapier event
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     results.push({ providerId: conn.providerId, ok: true })
 
   }
   // record Zapier event
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     s && s.events.push({
       id: `${Date && Date.now()}-job-posted`,
       type: "zion && zion.job.posted",
@@ -134,11 +174,14 @@ results.push({ providerId: conn.providerId, ok: true })
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   writeState(s => {
 res && res.status(200).json({ ok: true, results });
 }
 writeState(s => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res && res.status(200).json({ ok: true, results });
 
 
@@ -146,11 +189,20 @@ writeState(s => {
 
 
   writeState(s => {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
 
 res.status(200).json({ ok: true, results });
 
+=======
+    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
+=======
+
+res.status(200).json({ ok: true, results });
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -182,12 +234,19 @@ export default async function handler(req, res) {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
 
   });
+<<<<<<< HEAD
   res.status(200).json({ ok: true, results })
 }
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  res.status(200).json({ ok: true, results })
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
@@ -211,6 +270,7 @@ export default async function handler(req, res) {
   });
 ;
   res.status (200).json ({ ok: true, results });
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -269,3 +329,15 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

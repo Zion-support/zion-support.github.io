@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
 
@@ -30,6 +31,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     args: ['--no-sandbox--disable-setuid-sandbox']});
@@ -68,8 +71,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.status(200).send(pdfBuffer)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import puppeteer from 'puppeteer',
@@ -100,13 +106,18 @@ if ( {) {
     headless: true,
     args: ['--no - sandbox--disable - setuid - sandbox']}),
   try {
+<<<<<<< HEAD
 const page = await browser.new_page (),
+=======
+    const page = await browser.new_page (),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     await page.set_content (html, { wait_until: 'networkidle0' }),
     const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
     await browser.close (),
     res.set_header ('Content - Typeapplication / pdf'),
     res.set_header ('Content - Dispositionattachment, filename="zion - os - book.pdf"'),
     res.status (200).send (pdf_buffer);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (e: any) {
     try { await browser.close() } catch {}
@@ -194,3 +205,15 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  } catch (e: any) {
+    try { await browser.close () } catch {}
+    res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
+  }
+}
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

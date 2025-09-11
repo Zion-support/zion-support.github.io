@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
@@ -31,6 +32,8 @@ import { Crown, Medal, Trophy } from 'lucide-react'
   badges: string[]
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -46,6 +49,7 @@ export function PartnerLeaderboard() {
       earnings: 4500
       badges: ["gold", "trending"]
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
     }
@@ -53,10 +57,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
 
 
     {
+<<<<<<< HEAD
+=======
+      id: "2"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       rank: 2
       name: "Machine Learning Hub"
       avatar: ""
@@ -64,23 +75,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       earnings: 3625
       badges: ["silver"]
 <<<<<<< HEAD
-    }
-ursor/fix-website-loading-errors-and-merge-6662
-    }
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    },
-
-
-    {
-      rank: 3
-      name: "Neural Networks Pro"
-      avatar: ""
-      referrals: 124
-      earnings: 3100
-      badges: ["bronze"]
 <<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -89,16 +83,50 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
 
 
     {
+<<<<<<< HEAD
+=======
+      id: "3"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+      rank: 3
+      name: "Neural Networks Pro"
+      avatar: ""
+      referrals: 124
+      earnings: 3100
+      badges: ["bronze"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+ursor/fix-website-loading-errors-and-merge-6662
+    }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+    },
+
+
+    {
+<<<<<<< HEAD
+=======
+      id: "4"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       rank: 4
       name: "AI Career Insights"
       avatar: ""
       referrals: 98
       earnings: 2450
       badges: []
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     }
@@ -163,6 +191,9 @@ import { Crown, Medal, Trophy } from 'lucide-react';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -233,6 +264,7 @@ export function PartnerLeaderboard() {;
         return <Medal className="h-5 w-5 text-amber-700" />;
       default:;
         return <span className="text-sm font-semibold">{rank}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   };
@@ -364,6 +396,11 @@ export function PartnerLeaderboard() {;
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
 
@@ -435,7 +472,11 @@ function PartnerLeaderboard() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       badges: ["newcomer"]
 =======
       badges: ["newcomer"]
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      badges: ["newcomer"]
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

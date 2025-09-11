@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
@@ -10,6 +13,7 @@ import { NotificationContextType } from './types';
 // fully-typed object here avoids TypeScript errors that occur when an untyped
 // `createContext` call returns `{}` instead of the expected shape.
 
+<<<<<<< HEAD
 const defaultContext: NotificationContextType = {
   notifications: []
   filteredNotifications: []
@@ -40,6 +44,8 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     notificationOps.fetchNotifications();
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
@@ -47,25 +53,37 @@ import {NotificationContextType} from './types';
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;
 import { NotificationContextType } from './types',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Default context used when React type definitions are missing. Providing a;
 // fully-typed object here avoids TypeScript errors that occur when an untyped;
 // `createContext` call returns `{}` instead of the expected shape.;
@@ -81,6 +99,7 @@ const defaultContext: NotificationContextType = {;
   setFilter: () => {},;
   fetchNotifications: async () => {}},;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Cast the default context value to avoid issues when React types are missing.;
 const NotificationContext = createContext(;
   defaultContext as NotificationContextType;
@@ -93,6 +112,8 @@ export const useNotifications = (): NotificationContextType => {;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Cast the default context value to avoid issues when React types are missing.;
 const NotificationContext = createContext(;
@@ -108,11 +129,15 @@ export const useNotifications = (): NotificationContextType => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   return context
 },
 
+<<<<<<< HEAD
 
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
   const { user } = useAuth(),
@@ -123,6 +148,8 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   // Load notifications when user changes
   useEffect(() => {
     notificationOps.fetchNotifications();
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {;
   const { user } = useAuth();
   const notificationOps = useNotificationOperations(user?.id);
@@ -130,16 +157,23 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   const { user } = useAuth(),
   const notificationOps = useNotificationOperations(user?.id),
   
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Load notifications when user changes
   useEffect(() => {
     notificationOps.fetchNotifications(),
     
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Load notifications when user changes
   useEffect(() => {
     notificationOps.fetchNotifications();
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Set up real-time subscription for new notifications
     if (user) {
       const channel = supabase
@@ -152,9 +186,13 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             filter: `user_id=eq.${user.id}`
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           },
 
 
@@ -166,6 +204,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   return context;
@@ -249,6 +288,8 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     notificationOps.fetchNotifications(),;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
   return context;
 };
 
@@ -260,13 +301,19 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   useEffect(() => {;
     notificationOps && notificationOps.fetchNotifications();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Set up real-time subscription for new notifications;
     if (user) {;
       const channel = supabase;
         .channel('notifications-changes');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .on('postgres_changes', ;
           {;
             event: '*', ;
@@ -282,7 +329,10 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
         );
         .subscribe();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -346,11 +396,20 @@ if ( {) {
         );
         .subscribe ();
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return () => {
         supabase.remove_channel (channel);
       }
     }
   }, [user]);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return () => {;
         supabase && supabase.removeChannel(channel);
       }
@@ -361,6 +420,7 @@ if ( {) {
   return (
     <NotificationContext && NotificationContext.Provider value={notificationOps}>;
       {children}
+<<<<<<< HEAD
     </NotificationContext && NotificationContext.Provider>;
   );
 };
@@ -415,10 +475,20 @@ if ( {) {
   );
 };
 =======
+=======
+
+    </NotificationContext && NotificationContext.Provider>;
+  );
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

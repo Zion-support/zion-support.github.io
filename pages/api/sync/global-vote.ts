@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
@@ -20,6 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -50,6 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeState(state);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     eventId: uuidv4(), type: "proposal" as const,
     payload: {
        id: proposalId, proposalId, title, votes 
@@ -61,24 +65,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeState(state);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+=======
+
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
 import { computeMerkleRootFromVotes  } from '../../../utils / sync / merkle';,
@@ -129,6 +146,7 @@ if (headers["x - zion - signature"] = sig, ) {
       .filter ((p) => !p.paused);
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -308,6 +326,14 @@ merkleRoot},
 
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
 };
+=======
+
+=======
+  return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
+};
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -384,6 +410,7 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -391,6 +418,8 @@ export default async function handler(req, res) {
           // ignore
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -501,6 +530,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
@@ -508,3 +538,7 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

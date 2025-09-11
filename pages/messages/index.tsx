@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const Messages: NextPage = () => {
   return (
@@ -13,15 +17,21 @@ const Messages: NextPage = () => {
         <title>Messages - Zion</title>
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <h1 className="text-2xl font-semibold">Messages</h1>
       <EmptyState
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         icon={<span>📫</span>}
         primaryAction={{ label: 'Explore talent', href: '/talent' }}
@@ -35,6 +45,10 @@ export default Messages;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -49,6 +63,7 @@ const Messages: NextPage = () => {
         title="No messages yet";
         description="Start a conversation by requesting a quote or responding to an existing one.";
         icon={<span>📫</span>}
+<<<<<<< HEAD
         primary_action={{ label: 'Explore talent', href: '/talent' }}
         secondary_action={{ label: 'Browse services', href: '/services' }}
       />;
@@ -74,6 +89,15 @@ export default Messages,
 },
 
 export default Messages
+=======
+        primaryAction={{ label: 'Explore talent', href: '/talent' }}
+        secondaryAction={{ label: 'Browse services', href: '/services' }}
+      />
+    </div>
+  )
+}
+export default Messages;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default Messages,;
         icon={<span>📫</span>  } catch (error) {
@@ -92,9 +116,13 @@ export default Messages,;
   }
 }
       />;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 },;
@@ -102,7 +130,12 @@ export default Messages;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

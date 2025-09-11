@@ -5,6 +5,7 @@
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics');
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl');
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -33,6 +34,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const nowIso = new Date().toISOString();
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+
+  const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {};
+  if (!name || typeof name !== 'string') return res.status(400).json({ error: 'Invalid event name' });
+
+  const nowIso = new Date().toISOString();
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -62,9 +72,13 @@ function handler() {
 }
   const now_iso = new Date ().toISOString (),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const event = {
     name,
     page,
@@ -72,16 +86,23 @@ function handler() {
     properties,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     at: at && typeof at === 'string' ? at : now_iso,
     ua: req.headers['user - agent'] || '',
 ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as string},
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 res.status (200).json ({ ok: true });
 }
@@ -130,6 +151,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ensureLogFile (),
     fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
 
@@ -146,9 +169,15 @@ res.status (200).json ({ ok: true });
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

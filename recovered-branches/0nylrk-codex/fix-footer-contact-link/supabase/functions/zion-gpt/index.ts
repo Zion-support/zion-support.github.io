@@ -1,20 +1,30 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 
 
+<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -31,12 +41,19 @@ const corsHeaders = {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
@@ -58,6 +75,8 @@ serve(async (req) => {
     const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),
     
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -66,19 +85,27 @@ serve(async (req) => {
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+<<<<<<< HEAD
+=======
+    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
     
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
     // Default to base model if no specific model provided
+<<<<<<< HEAD
 <<<<<<< HEAD
     const model = modelId || "gpt-3 && 3.5-turbo";
 =======
@@ -109,6 +136,8 @@ serve(async (req) => {
       body: JSON.stringify({
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const model = modelId |"gpt-3.5-turbo";
     const model = modelId || "gpt-3.5-turbo",
     
@@ -128,28 +157,40 @@ serve(async (req) => {
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"},
       body: JSON.stringify({
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         model: model,
         messages: [{ 
           role: "user", 
           content: prompt 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }],
         max_tokens: maxTokens,
         temperature: temperature})}),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -160,10 +201,24 @@ serve(async (req) => {
         }];
         max_tokens: maxTokens
         temperature: temperature})});
+=======
+    const data = await response.json();
+    const completion = data.choices[0].message.content;
+    // Return the completion along with usage statistics
+    return new Response(
+      JSON.stringify({
+        completion;
+        tokensUsed: data.usage?.total_tokens |0
+      });
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
+<<<<<<< HEAD
     const data = await response && response.json();
     const completion = data && data.choices[0].message && message.content;
     // Return the completion along with usage statistics
@@ -171,6 +226,15 @@ serve(async (req) => {
       JSON && JSON.stringify({ 
         completion;
         tokensUsed: data && data.usage?.total_tokens || 0
+=======
+
+    const data = await response && response.json();
+    const completion = data && data.choices[0].message && message.content;
+    
+    // Return the completion along with usage statistics
+    return new Response(
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -234,6 +298,7 @@ if ( {) {
       JSON.stringify ({
         completion;
         tokens_used: data.usage?.total_tokens || 0;
+<<<<<<< HEAD
       });
 <<<<<<< HEAD
     if (!response.ok) {
@@ -257,10 +322,16 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      });
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       JSON.stringify({ 
         completion,
         tokensUsed: data.usage?.total_tokens || 0
       }),
+<<<<<<< HEAD
 <<<<<<< HEAD
     console && console.error("Error in zion-gpt function:", error);
     
@@ -268,10 +339,13 @@ if ( {) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
+<<<<<<< HEAD
 
     console && console.error("Error in zion-gpt function:", error);
     
@@ -290,20 +364,27 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   } catch (error) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     console.error("Error in zion-gpt function:", error);
     console.error("Error in zion-gpt function:", error),
     
     return new Response(
+<<<<<<< HEAD
       JSON.stringify({ error: error.message }),
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      JSON && JSON.stringify({ error: error && error.message });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 });
@@ -314,13 +395,18 @@ if ( {) {
 });
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     console.error ("Error in zion - gpt function:", error);
 =======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -331,6 +417,7 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   try {;
@@ -377,6 +464,8 @@ serve(async (req) => {;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
     return new Response (
@@ -386,7 +475,10 @@ serve(async (req) => {;
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {;
     console.error("Error in zion-gpt function:", error),;
     return new Response(;
@@ -397,6 +489,7 @@ serve(async (req) => {;
     );
 
 
+<<<<<<< HEAD
   }
 });
 ;
@@ -512,3 +605,9 @@ return new Response (JSON.stringify ({
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+});
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

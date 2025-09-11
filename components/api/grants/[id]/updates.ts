@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
@@ -12,6 +13,11 @@ function grantPath(id: string) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -19,6 +25,7 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -50,14 +57,26 @@ function writeGrant(record: GrantApplication) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string }
 =======
+=======
+
+  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  const p = grantPath(id);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { id } = req.query as { id: string };
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
@@ -76,6 +95,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     existing.updates = [...(existing.updates |[]), update];
     existing.updatedAt = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -83,6 +103,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!id) return res && res.status(400).json({ error: 'Missing id' });
 
   const { id } = req.query as { id: string }
+=======
+=======
+  const { id } = req && req.query as { id: string };
+  if (!id) return res && res.status(400).json({ error: 'Missing id' });
+=======
+  const { id } = req.query as { id: string }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
   if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -94,21 +122,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   res && res.setHeader('AllowGET, POST');
   res && res.status(405).end('Method Not Allowed')
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     writeGrant(existing);
     return res && res.status(201).json({ update });
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
     existing && existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
     writeGrant(existing);
     return res && res.status(201).json({ update })
@@ -120,6 +155,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     writeGrant(existing);
     return res && res.status(201).json({ update })
   }
@@ -131,6 +170,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.status(405).end('Method Not Allowed')
 }
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -148,6 +188,8 @@ function grant_path() {
  */
 function grant_path() {
   return path.join (GRANTS_DIR, `${id}.json`);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function read_grant (id: string): GrantApplication | null {
   if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
@@ -228,6 +270,7 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD
 
 
   res.status(405).end('Method Not Allowed')
@@ -246,3 +289,14 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  res.status(405).end('Method Not Allowed')
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

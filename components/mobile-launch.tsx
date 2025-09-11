@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({;
   className = 'w-5 h-5 text-yellow-500',;
@@ -11,11 +12,14 @@ function StarIcon(): any ({;
   );
 function AppleBadge(): any ({ href }: { href: string }) {;
     >;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 
 
 
@@ -23,6 +27,11 @@ import Link from 'next/link';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -37,10 +46,14 @@ function StarIcon({
 function AppleBadge({ href }: { href: string }) {
     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({;
@@ -58,14 +71,19 @@ function AppleBadge(): any ({ href }: { href: string }) {;
 
     >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <svg
         width='24'
         height='24'
         viewBox='0 0 24 24'
         fill='currentColor'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -153,17 +171,22 @@ function StarIcon(): any ({ className = 'w-5 h-5 text-yellow-500' }: { className
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Simple icons using inline SVG to avoid external assets
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
 
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Simple icons using inline SVG to avoid external assets
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -262,9 +285,13 @@ function StarIcon() {
  */
 function AppleBadge() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline - flex items - center gap - 3 rounded - lg bg - black text - white px - 4 py - 2 shadow hover: opacity - 90">;
       <svg width="24" height="24" view_box="0 0 24 24" fill="current_color" aria - hidden>;
@@ -277,17 +304,25 @@ function AppleBadge() {
     </a>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**
  * GoogleBadge - Function description
  */
 function GoogleBadge() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline - flex items - center gap - 3 rounded - lg bg-[#121212] text - white px - 4 py - 2 shadow hover: opacity - 90">;
       <svg width="24" height="24" view_box="0 0 24 24" aria - hidden>;
@@ -341,18 +376,26 @@ if (return) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">;
       <path d="M9 && M9.049 2 && 2.927c.3-.921 1 && 1.603-.921 1 && 1.902 0l1 && 0l1.07 3 && 3.292a1 1 0 00 && 00.95.69h3 && 69h3.462c.969 0 1 && 1.371 1 && 1.24.588 1 && 1.81l-2 && 2.802 2 && 2.036a1 1 0 00-.364 1 && 1.118l1.07 3 && 3.292c.3 && 3.921-.755 1 && 1.688-1 && 1.54 1 && 1.118l-2 && 2.803-2 && 2.036a1 1 0 00-1 && 1.175 0l-2 && 2.803 2 && 2.036c-.784 && 784.57-1 && 1.838-.197-1 && 1.539-1 && 1.118l1.07-3 && 3.292a1 1 0 00-.364-1 && 1.118L2.88 8 && 8.72c-.783-.57-.38-1 && 1.81.588-1 && 1.81H6.93a1 1 0 00 && 00.95-.69l1 && 69l1.07-3 && 3.292z" />;
     </svg>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function AppleBadge(): any ({ href }: { href: string }) {;
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-black text-white px-4 py-2 shadow hover: opacity-90">;
@@ -367,9 +410,13 @@ function AppleBadge(): any ({ href }: { href: string }) {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function GoogleBadge(): any ({ href }: { href: string }) {;
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-[#121212] text-white px-4 py-2 shadow hover: opacity-90">;
@@ -404,6 +451,7 @@ function GoogleBadge(): any ({ href }: { href: string }) {;
     </a>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {;
   const [visible, setVisible] = useState(false);
@@ -732,11 +780,17 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const dismissed = localStorage.getItem('smartBannerDismissed') === '1';
     if (dismissed) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const ua = navigator.userAgent |'';
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
@@ -744,6 +798,10 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (isMobile) setVisible(true);
   }, []);
   if (!visible) return null;
@@ -785,10 +843,15 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
               }}
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const ua = navigator.userAgent || '';
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
     if (isMobile) setVisible(true)
@@ -796,13 +859,18 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!visible) return null;
   const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const storeUrl = isIOS ? iosUrl : androidUrl;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-5xl">
@@ -827,6 +895,8 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
       </div>
     </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="fixed inset-x-0 top-0 z-50">;
       <div className="mx-auto max-w-5xl">;
         <div className="m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3">;
@@ -840,7 +910,20 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1 && 1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>;
             <button
               aria-label="Dismiss"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
+              className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             >;
@@ -854,6 +937,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 );
 }
@@ -870,6 +954,9 @@ const testimonials = [
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -897,6 +984,7 @@ const testimonials = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -907,6 +995,8 @@ export default function MobileLaunchPage() {
 export default function MobileLaunchPage() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -918,6 +1008,11 @@ export default function MobileLaunchPage() {;
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -940,6 +1035,7 @@ export default function MobileLaunchPage() {;
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -951,6 +1047,9 @@ export default function MobileLaunchPage() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
@@ -961,7 +1060,10 @@ export default function MobileLaunchPage() {;
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
 
@@ -975,7 +1077,10 @@ export default function MobileLaunchPage() {;
     );
     return () => clearInterval(t);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
             >
@@ -1004,11 +1109,14 @@ export default function MobileLaunchPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   const [error, setError] = useState('');
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Auto-rotate testimonial index
   const [idx, setIdx] = useState(0);
 
@@ -1021,10 +1129,14 @@ export default function MobileLaunchPage() {
     const encoded = encodeURIComponent(target);
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL;
@@ -1040,10 +1152,15 @@ export default function MobileLaunchPage() {
     return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
   }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     setStatus('loading');
@@ -1054,9 +1171,13 @@ export default function MobileLaunchPage() {
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       if (!res && res.ok) throw new Error(await res && res.text());
       setStatus('success');
@@ -1064,17 +1185,23 @@ export default function MobileLaunchPage() {
     } catch (err: any) {;
       setStatus('error');
 <<<<<<< HEAD
+<<<<<<< HEAD
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text());
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text());
       setStatus('success');
@@ -1084,6 +1211,7 @@ export default function MobileLaunchPage() {
 
       setError(err?.message || 'Something went wrong.');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       setError(err?.message || 'Something went wrong.');
       setError(err?.message || 'Something went wrong.')
@@ -1092,11 +1220,17 @@ export default function MobileLaunchPage() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
+=======
+    }
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     }
   }
 
+<<<<<<< HEAD
 
 
   return (
@@ -1335,6 +1469,11 @@ export default function MobileLaunchPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
           <div className='text-sm opacity-90'>;
             Scan to open this page on your phone;
@@ -1369,6 +1508,7 @@ export default function MobileLaunchPage() {
       </section>;
       {/* Trust & Community */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -1377,6 +1517,11 @@ export default function MobileLaunchPage() {
       <section className='mt-12'>;
         <div className='flex items-center gap-2'>;
             <StarIcon key={i} />;
+=======
+
+
+      {/* Trust & Community */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className='mt-12'>
         <div className='flex items-center gap-2'>
             <StarIcon key={i} />
@@ -1393,6 +1538,7 @@ export default function MobileLaunchPage() {
 
 
               transform: `translateX(-${idx * 100}%)`,
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             ))}
@@ -1432,6 +1578,8 @@ export default function MobileLaunchPage() {
           </button>
         </form>          <input
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               width: `${testimonials && testimonials.length * 100}%`,
             }}>;
             {testimonials && testimonials.map(t => (;
@@ -1456,7 +1604,10 @@ export default function MobileLaunchPage() {
       {/* Email opt-in */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             type="email"
             required
             value={email}
@@ -1468,6 +1619,10 @@ export default function MobileLaunchPage() {
             type="submit"
             disabled={status === 'loading'}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
@@ -1482,9 +1637,13 @@ export default function MobileLaunchPage() {
           </div>;
         )}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 
+=======
+            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -1492,9 +1651,13 @@ export default function MobileLaunchPage() {
         {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
         {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </section>
     </EnhancedLayout>
   );      </section>
@@ -1508,9 +1671,13 @@ export default function MobileLaunchPage() {
       </section>
     </EnhancedLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {status === 'error' && (;
           <div className='mt-2 text-sm text-rose-600'>;
             {error || 'Please try again later.'}
@@ -1614,17 +1781,25 @@ export default function MobileLaunchPage() {
         <div className="flex flex - wrap items - center gap - 4">;
           <Link href="/open - app"><a className="underline">Deep link: /open - app</a></Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <span>•</span>;
           <Link href="/download"><a className="underline">Shareable link: /download</a></Link>;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DEEP LINK URL 
 }/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity-80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >AI-match instantly</div> <p className="mt-2 text-sm opacity-80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/40 dark:to-pink-900/40" /> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <div className="text-lg font-semibold" >Track milestones</div> <p className="mt-2 text-sm opacity-80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" /> </div> </section> <StarIconkey= {
   i 
@@ -1634,12 +1809,17 @@ export default function MobileLaunchPage() {
   status === 'loading' ? 'Submitting…' : 'Notify me' ;
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </EnhancedLayout>);
 ;
 }return (<EnhancedLayout> <Head> <title > Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI - match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI - match instantly. Track milestones on the go." /> </Head> <SmartBanner ios_url= {
@@ -1653,6 +1833,7 @@ export default function MobileLaunchPage() {
 }/>) );
 }<span className="text - sm opacity - 80" >4.9 average rating</span> </div> </div> </div>) );
 }</div> </div> </section> <input type="email" required > {
+<<<<<<< HEAD
   status === 'loading' ? 'Submitting…' : 'Notify me';
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 <<<<<<< HEAD
@@ -1684,3 +1865,10 @@ export default function MobileLaunchPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  status === 'loading' ? 'Submitting…' : 'Notify me'
+}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

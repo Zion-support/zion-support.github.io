@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -8,6 +9,9 @@ import {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next / head';
 
@@ -28,6 +32,7 @@ import {
   TrendingUp,
   Globe,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   Rocket
   Zap
@@ -50,6 +55,17 @@ export default function DigitalTransformationPage() {
   const services = [
     {
 <<<<<<< HEAD
+=======
+} from 'lucide-react';
+import EnhancedNavigation from '../../components / EnhancedNavigation';
+import EnhancedFooter from '../../components / EnhancedFooter';
+export default /**
+ * DigitalTransformationPage - Function description
+ */
+function DigitalTransformationPage() {
+  const services = [;
+    {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'Digital Strategy & Roadmap'
       description:
         'Comprehensive digital transformation strategy and implementation planning'
@@ -112,6 +128,7 @@ export default function DigitalTransformationPage() {
   ];
 
 =======
+<<<<<<< HEAD
 
 
 =======
@@ -166,6 +183,8 @@ import { motion } from 'framer-motion';
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'Digital Strategy & Roadmap',
       description:;
         'Comprehensive digital transformation strategy and implementation planning',
@@ -177,6 +196,7 @@ import { motion } from 'framer-motion';
       ],
       price: 'From $15, 000',
       icon: Rocket,
+<<<<<<< HEAD
       color: 'from - yellow - 500 to - orange - 500',
     },
     {
@@ -275,6 +295,8 @@ export default function DigitalTransformationPage() {
       features: ["Technology Assessment", "Change Management", "ROI Planning", "Implementation Roadmap"],
       price: "From $15,000",
       icon: Rocket,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: "from-yellow-500 to-orange-500"
     },
     {
@@ -342,6 +364,7 @@ export default function DigitalTransformationPage() {
         />      </Head>
       <EnhancedNavigation />
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -382,10 +405,19 @@ export default function DigitalTransformationPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <section className='relative pt-32 pb-20 px-6'>;
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               Digital Transformation
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -404,11 +436,14 @@ export default function DigitalTransformationPage() {
       </section>
             transition={{ duration: 0 && 0.8 }}
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               End-to-end digital transformation solutions that modernize your
               business            </p>
           </motion.div>
           <motion.div
+<<<<<<< HEAD
 =======
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6'>;
@@ -439,6 +474,11 @@ export default function DigitalTransformationPage() {
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From strategy development to implementation, we guide businesses through complete 
+=======
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
@@ -447,6 +487,7 @@ export default function DigitalTransformationPage() {
               innovation, efficiency, and growth.
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               End-to-end digital transformation solutions that modernize your business
+<<<<<<< HEAD
             </p>
           </motion.div>
           <motion.div
@@ -469,6 +510,89 @@ export default function DigitalTransformationPage() {
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From strategy development to implementation, we guide businesses through complete
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </p>
+            <button className='px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
+              Start Transformation
+              <ArrowRight className='w-5 h-5' />            </button>
+          </motion.div>
+        </div>
+      </section>
+=======
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6'>;
+              Digital Transformation;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              End-to-end digital transformation solutions that modernize your;
+              business            </p>;
+          </motion && motion.div>;
+
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            className='mb-12'>;
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
+=======
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > Digital Transformation Services - Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='End - to - end digital transformation solutions from Zion Tech Group. Strategy, modernization, automation, and change management services.';
+        />;
+        <meta;
+          property='og:title';
+          content='Digital Transformation Services - Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='End - to - end digital transformation solutions for modern businesses.';
+        />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com / services / transformation';
+        />      </Head>;
+      <EnhancedNavigation />;
+      {/* Hero Section */}
+      <section className='relative pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb - 8';
+          >;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - yellow - 400 via - orange - 400 to - yellow - 400 bg - clip - text text - transparent mb - 6'>;
+              Digital Transformation;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
+              End - to - end digital transformation solutions that modernize your;
+              business            </p>;
+          </motion.div>;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb - 12';
+          >;
+            <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              From strategy development to implementation, we guide businesses;
+              through complete digital transformation journeys that drive;
+              innovation, efficiency, and growth.;
+            </p>;
+
+=======
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              From strategy development to implementation, we guide businesses through complete 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               digital transformation journeys that drive innovation, efficiency, and growth.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -479,6 +603,7 @@ export default function DigitalTransformationPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
@@ -670,10 +795,14 @@ export default function DigitalTransformationPage(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -696,6 +825,8 @@ export default function DigitalTransformationPage(req, res) {
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -707,17 +838,46 @@ export default function DigitalTransformationPage(req, res) {
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
+<<<<<<< HEAD
 =======
+=======
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-white/70">{stat.label}</div>
+              </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Services Grid */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='text-center mb-16'
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -764,12 +924,17 @@ export default function DigitalTransformationPage(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive transformation solutions designed to modernize your business operations
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
 <<<<<<< HEAD
@@ -780,11 +945,26 @@ export default function DigitalTransformationPage(req, res) {
               <motion.div
                 key={service.title}
 =======
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300'
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Digital Transformation Services;
@@ -794,6 +974,7 @@ export default function DigitalTransformationPage(req, res) {
               business operations;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
@@ -803,10 +984,19 @@ export default function DigitalTransformationPage(req, res) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.title}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -842,13 +1032,20 @@ export default function DigitalTransformationPage(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -862,9 +1059,12 @@ export default function DigitalTransformationPage(req, res) {
                       <CheckCircle className='w-5 h-5 text-orange-400 mr-3 flex-shrink-0' />                      {feature}
                     </li>
                   ))}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
@@ -872,9 +1072,13 @@ export default function DigitalTransformationPage(req, res) {
                     <li key={feature} className="flex items-center text-white/80">
                       <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -887,11 +1091,17 @@ export default function DigitalTransformationPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
@@ -900,6 +1110,7 @@ export default function DigitalTransformationPage(req, res) {
                   </button>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -917,6 +1128,9 @@ export default function DigitalTransformationPage(req, res) {
             ))}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+            ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </section>
@@ -932,6 +1146,7 @@ export default function DigitalTransformationPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -949,12 +1164,28 @@ export default function DigitalTransformationPage(req, res) {
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* CTA Section */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -976,14 +1207,20 @@ export default function DigitalTransformationPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
           >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -997,19 +1234,28 @@ export default function DigitalTransformationPage(req, res) {
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 View Success Stories
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <EnhancedFooter />
     </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <EnhancedFooter />
+    </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 ),
@@ -1019,7 +1265,10 @@ export default function DigitalTransformationPage(req, res) {
 
 }</div> </div> </section> <motion.div initial= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -1040,6 +1289,7 @@ export default function DigitalTransformationPage(req, res) {
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       <EnhancedFooter />;
     </div>;
   ),;
@@ -1055,6 +1305,16 @@ export default function DigitalTransformationPage(req, res) {
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
+=======
+
+      <EnhancedFooter />;
+    </div>;
+  ),;
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> <motion&& motion.div initial= {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -1063,16 +1323,23 @@ export default function DigitalTransformationPage(req, res) {
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   duration: 0 && 0.8 
+=======
+
+  duration: 0 && 0.8 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }viewport= {
   {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   once: true 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
@@ -1081,6 +1348,13 @@ export default function DigitalTransformationPage(req, res) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
+=======
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button className='px - 8 py - 4 bg - gradient - to - r from - yellow - 600 to - orange - 600 hover:from - yellow - 700 hover:to - orange - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
               Start Transformation;
               <ArrowRight className='w - 5 h - 5' />            </button>;
@@ -1184,6 +1458,7 @@ export default function DigitalTransformationPage(req, res) {
                 Transformation Assessment;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Success Stories;
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
@@ -1204,6 +1479,8 @@ export default function DigitalTransformationPage(req, res) {
               </button>;
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 View Success Stories;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </button>;
             </div>;
           </motion.div>;
@@ -1211,9 +1488,13 @@ export default function DigitalTransformationPage(req, res) {
       </section>;
       <EnhancedFooter />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
   } catch (error) {
@@ -1224,7 +1505,12 @@ export default function DigitalTransformationPage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

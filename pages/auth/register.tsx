@@ -1,7 +1,11 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -26,6 +30,7 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
+<<<<<<< HEAD
 
 import React, { useEffect } from 'react';
 import Head from 'next/head';
@@ -86,6 +91,11 @@ const RegisterPage = () => {;
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -106,10 +116,24 @@ const RegisterPage = () => {
     if (emailVerificationRequired) {
       router.push(`/verify-status?email=${encodeURIComponent(email)}`)
     } else {
+<<<<<<< HEAD
       router.push ('/auth / login?registration_success = true');
 
     }
 =======
+=======
+      router.push('/auth/login?registrationSuccess=true')
+    }
+  }
+const RegisterPage = () => {;
+  const router = useRouter();
+  useEffect(() => {;
+    fireEvent('signup_page_view');
+  }, []),;
+  const handleSuccess = ({ email, emailVerificationRequired }: {;
+    email: string;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     emailVerificationRequired: boolean;
   }) =>: any {
     // Check condition
@@ -123,8 +147,11 @@ if ( {) {
 
 
   },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <Head>
@@ -138,6 +165,7 @@ if ( {) {
               className="mx-auto h-12 w-auto"
               src="/logos/zion-logo.png"
               alt="Zion Tech"
+<<<<<<< HEAD
 
   },
   return (
@@ -153,12 +181,15 @@ if ( {) {
               className="mx - auto h - 12 w - auto";
               src="/logos / zion - logo.png";
               alt="Zion Tech";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               width={48}
               height={48}
               on_error={(e) => {
                 const target = e.current_target as HTMLImageElement,
                 target.style.display = 'none';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }}
             />;
@@ -171,6 +202,9 @@ if ( {) {
 =======
 
 
+=======
+              }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               width={48  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -196,14 +230,22 @@ if ( {) {
               Create your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              Or{' '}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Or{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -213,8 +255,12 @@ if ( {) {
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
+<<<<<<< HEAD
 
 
+=======
+          {/* Social signup options */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Social signup options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -222,6 +268,10 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -235,6 +285,7 @@ if ( {) {
           </div>
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
+<<<<<<< HEAD
 
               <Link;
                 href="/auth / login";
@@ -263,15 +314,20 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               By creating an account, you agree to our{' '}
               <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
                 Terms of Service;
               </Link>{' '}
               and{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -301,6 +357,7 @@ if ( {) {
       </div>
     </>
   )
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
@@ -311,6 +368,12 @@ if ( {) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default RegisterPage;
+=======
+}
+export default RegisterPage;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
                 Privacy Policy;
               </Link>;
@@ -322,6 +385,7 @@ export default RegisterPage;
 },
 export default RegisterPage,
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 },
@@ -541,10 +605,15 @@ export default RegisterPage,
 },;
 export default RegisterPage;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

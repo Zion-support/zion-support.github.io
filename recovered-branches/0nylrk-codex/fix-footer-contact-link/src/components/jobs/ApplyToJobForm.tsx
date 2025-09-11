@@ -1,9 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ApplyToJobFormProps {
 
   job: Job
@@ -11,9 +18,12 @@ interface ApplyToJobFormProps {
   onSuccess?: () => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -29,10 +39,14 @@ import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -45,8 +59,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 interface ApplyToJobFormProps {
@@ -55,10 +72,20 @@ interface ApplyToJobFormProps {
 
   onSuccess?: () => void
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+interface ApplyToJobFormProps {;
+  job: Job,;
+  onSuccess?: () => void;
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
+<<<<<<< HEAD
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
@@ -66,6 +93,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { resumes, isLoading: isResumesLoading } = useResume()
   const navigate = useNavigate();
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
+=======
+  const { resumes, isLoading: isResumesLoading } = useResume(),;
+  const navigate = useNavigate();
+
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [selectedResumeId, setSelectedResumeId] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -84,6 +117,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     
+<<<<<<< HEAD
 =======
 interface ApplyToJobFormProps {;
   job: Job,;
@@ -114,12 +148,15 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!user) {
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
       return
 
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter"),
@@ -130,15 +167,24 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     try {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (!coverLetter && coverLetter.trim()) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setError("Please provide a cover letter");
       return;
     }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    setIsSubmitting(true);
+    setError(null);
+    try {
+      const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     
     setIsSubmitting(true),
     setError(null),
@@ -146,6 +192,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     try {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (success) {
         toast.success("Your application has been submitted!"),
@@ -155,6 +202,10 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
       if (success) {
         toast.success("Your application has been submitted!");
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      if (success) {
+        toast.success("Your application has been submitted!");
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (onSuccess) {
           onSuccess()
         }
@@ -163,9 +214,13 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -236,15 +291,23 @@ if ( {) {
     } catch (err: any) {
       set_error (err.message || "Failed to submit application"),
       toast.error ("Failed to submit application");
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
   },
   
 
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsSubmitting(false)
     }
@@ -252,8 +315,11 @@ if ( {) {
 
   },
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -272,6 +338,7 @@ if ( {) {
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     setIsSubmitting(true);
     setError(null);
@@ -279,6 +346,8 @@ if ( {) {
       const success = await applyToJob(job && job.id, coverLetter, selectedResumeId || undefined);
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
     setIsSubmitting(true);
     setError(null);
@@ -286,7 +355,10 @@ if ( {) {
     try {;
       const success = await applyToJob(job && job.id, coverLetter, selectedResumeId || undefined);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (success) {;
         toast && toast.success("Your application has been submitted!");
         if (onSuccess) {;
@@ -301,9 +373,13 @@ if ( {) {
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <form onSubmit={handleSubmit} className="space-y-6">;
       <div>;
@@ -313,6 +389,7 @@ if ( {) {
         </p>;
       </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -390,12 +467,15 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
       ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {error && (;
         <Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       <div className="space-y-4">;
@@ -407,6 +487,8 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
             onChange={(e) => setCoverLetter(e && e.target.value)}
             rows={6}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <div className="space-y-4">;
         <div>;
@@ -450,7 +532,10 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
         <div>;
           <Label html_for="resume">Select Resume (Optional)</Label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {isResumesLoading ? (
             <div className="flex items - center gap - 2 mt - 2">;
               <Loader2 className="h - 4 w - 4 animate - spin" />;
@@ -459,6 +544,7 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
             <Select;
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Textarea
             id="coverLetter"
@@ -509,6 +595,10 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 type="button"
                 onClick={() => navigate("/dashboard/talent/portfolio")}
               >
@@ -523,9 +613,12 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
           type="button"
           variant="outline"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -608,9 +701,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             onChange={(e) => setCoverLetter(e.target.value)}
             rows={6}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
             className="mt-1";
           />;
@@ -619,9 +716,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div>;
           <Label htmlFor="resume">Select Resume (Optional)</Label>;
           {isResumesLoading ? (;
@@ -630,6 +731,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               <span>Loading your resumes...</span>;
             </div>;
           ) : resumes && resumes.length > 0 ? (;
+<<<<<<< HEAD
 <<<<<<< HEAD
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
             className="mt-1";
@@ -653,6 +755,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             >;
               <SelectTrigger className="mt-1">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}>;
@@ -661,11 +765,15 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             >;
               <SelectTrigger className="mt - 1">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
                 <SelectItem value="">No resume</SelectItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button
           type="button"
@@ -799,6 +907,8 @@ handleSubmit
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>;
       </div>;
@@ -822,16 +932,27 @@ handleSubmit
           ) : (;
             "Submit Application";
           )}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        </Button>
+      </div>
+    </form>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Button>;
       </div>;
     </form>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {resumes.map ((resume) => (
                   <SelectItem key={resume.id} value={resume.id}>;
@@ -882,6 +1003,9 @@ handleSubmit
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -10,6 +10,7 @@ import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {toast} from "sonner";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function WebhookManager() {
   const { ;
     webhooks;
@@ -29,11 +30,16 @@ export function WebhookManager() {
 
     loading
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function WebhookManager() {;
   const { ;
     webhooks;
     loading, ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     error;
     testResult;
@@ -42,7 +48,11 @@ export function WebhookManager() {;
     toggleWebhook;
     deleteWebhook;
 <<<<<<< HEAD
+<<<<<<< HEAD
     testWebhook
+=======
+    testWebhook;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } = useWebhooks();
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
@@ -59,6 +69,7 @@ export function WebhookManager() {
     testWebhook
   } = useWebhooks(),
   
+<<<<<<< HEAD
 =======
     testWebhook;
   } = useWebhooks();
@@ -67,6 +78,8 @@ export function WebhookManager() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [newWebhook, setNewWebhook] = useState({
 
     name: ""
@@ -75,6 +88,7 @@ export function WebhookManager() {
     eventTypes: [] as WebhookEventType[]
 
     secret: ""
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -90,13 +104,21 @@ export function WebhookManager() {
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  });
+  }),
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" }
     { value: "quote_received", label: "Quote Request Received" }
     { value: "milestone_approved", label: "Milestone Approved" }
     { value: "talent_hired", label: "Talent Hired" }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   useEffect(() => {
     fetchWebhooks()
@@ -104,9 +126,12 @@ export function WebhookManager() {
 
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ],
   
   useEffect(() => {
@@ -116,6 +141,7 @@ export function WebhookManager() {
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return,
     
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   },
@@ -136,6 +162,8 @@ export function WebhookManager() {
   
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return
@@ -145,6 +173,7 @@ export function WebhookManager() {
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
       selectedEvent: "" as WebhookEventType
     })
+<<<<<<< HEAD
 
 
   },
@@ -152,26 +181,40 @@ export function WebhookManager() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleCreateWebhook = async () => {
     if (!newWebhook.name |!newWebhook.url |newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields");
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields"),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return
     }
     await createWebhook(
@@ -180,6 +223,7 @@ export function WebhookManager() {
       newWebhook.eventTypes
       newWebhook.secret |undefined
     );
+<<<<<<< HEAD
 =======
 
       return
@@ -187,6 +231,8 @@ export function WebhookManager() {
     await createWebhook(
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       newWebhook.name, 
       newWebhook.url, 
       newWebhook.eventTypes, 
@@ -194,10 +240,13 @@ export function WebhookManager() {
     ),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Reset form
     setNewWebhook({
       name: ""
@@ -206,14 +255,20 @@ export function WebhookManager() {
       eventTypes: []
       secret: ""
     })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },
   
@@ -222,10 +277,13 @@ export function WebhookManager() {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-8">
       <Card>
@@ -249,12 +307,16 @@ export function WebhookManager() {
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Input
                 id="webhook-url"
                 placeholder="https://example.com/webhook"
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -368,6 +430,8 @@ export function WebhookManager() {;
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 value={newWebhook.url}
@@ -386,6 +450,9 @@ export function WebhookManager() {;
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
             </div>
             <div className="flex space-x-2">
@@ -411,6 +478,7 @@ export function WebhookManager() {;
           </div>
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -575,15 +643,20 @@ export function WebhookManager() {;
             Define webhooks to notify external systems when events occur in Zion.;
           </CardDescription>;
         </CardHeader>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Input
               id="webhook-secret"
             <Input 
               id="webhook-secret" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -602,6 +675,9 @@ export function WebhookManager() {;
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -626,6 +702,7 @@ export function WebhookManager() {;
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
+<<<<<<< HEAD
         <CardContent className="space-y-4">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <div className="space-y-2">;
@@ -704,15 +781,20 @@ export function WebhookManager() {;
           </div>;
         </CardContent>;
         <CardFooter>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Button
                           variant="outline"
                         <Button 
                           variant="outline" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -729,6 +811,7 @@ export function WebhookManager() {;
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                             {eventOptions.find(e => e.value === event)?.label || event}
@@ -742,6 +825,10 @@ export function WebhookManager() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                            {eventOptions.find(e => e.value === event)?.label |event}
+                            {eventOptions.find(e => e.value === event)?.label || event}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           </ClickableBadge>
                         ))}
                       </div>
@@ -750,6 +837,9 @@ export function WebhookManager() {;
                       {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         : 'Never triggered'}
                     </div>
                   </div>
@@ -772,6 +862,7 @@ export function WebhookManager() {;
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1010,6 +1101,13 @@ export function WebhookManager() {;
 
                       ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          Test {eventOptions.find(e => e.value === event)?.label |event}
+                        </SelectItem>
+                          Test {eventOptions.find(e => e.value === event)?.label || event}
+                        </SelectItem>;
+                      ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </SelectContent>;
                   </Select>;
                 </CardFooter>;
@@ -1017,6 +1115,7 @@ export function WebhookManager() {;
             ))}
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           Test {eventOptions.find(e => e.value === event)?.label |event}
                         </SelectItem>
@@ -1030,6 +1129,8 @@ export function WebhookManager() {;
             ))}
           </div>
         )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {testResult && (
           <Card className="mt-4 border-blue-200">
             <CardHeader>
@@ -1046,6 +1147,7 @@ export function WebhookManager() {;
                 <div>
                   <span className="font-medium">Response:</span>
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -1058,6 +1160,10 @@ export function WebhookManager() {;
                     {testResult.responseBody || '<empty>'}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    {testResult.responseBody |'<empty>'}
+                    {testResult.responseBody || '<empty>'}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </pre>
                 </div>
               </div>
@@ -1068,12 +1174,18 @@ export function WebhookManager() {;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         ;
+=======
+}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
             <CardHeader>;
@@ -1083,18 +1195,56 @@ export function WebhookManager() {;
               <div className="space-y-2">;
                 <div className="flex justify-between">;
                   <span className="font-medium">Status:</span>;
+<<<<<<< HEAD
                   <span className={testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' :'text-red-600'}>;
                     {testResult.status} {testResult.statusText}
+=======
+                  <span className={testResult && testResult.status >= 200 && testResult && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>;
+                    {testResult && testResult.status} {testResult && testResult.statusText}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </span>;
                 </div>;
                 <div>;
                   <span className="font-medium">Response:</span>;
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
+<<<<<<< HEAD
                     {testResult.responseBody || '<empty>'}
+=======
+                    {testResult && testResult.responseBody || '<empty>'}
+=======
+                      {webhook.event_types.map (event => (
+                        <SelectItem key={event} value={event}>;
+                          Test {event_options.find (e => e.value === event)?.label || event}
+                        </SelectItem>))}
+                    </SelectContent>;
+                  </Select>;
+                </CardFooter>;
+              </Card>))}
+          </div>)}
+        {test_result && (
+          <Card className="mt - 4 border - blue - 200">;
+            <CardHeader>;
+              <CardTitle className="text - lg">Webhook Test Result</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space - y-2">;
+                <div className="flex justify - between">;
+                  <span className="font - medium">Status:</span>;
+                  <span className={test_result.status >= 200 && test_result.status < 300 ? 'text - green - 600' : 'text - red - 600'}>;
+                    {test_result.status} {test_result.status_text}
+                  </span>;
+                </div>;
+                <div>;
+                  <span className="font - medium">Response:</span>;
+                  <pre className="mt - 1 p - 2 bg - gray - 100 rounded text - sm overflow - x-auto">;
+                    {test_result.response_body || '<empty>'}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </pre>;
                 </div>;
               </div>;
             </CardContent>;
+<<<<<<< HEAD
           </Card>;
         )}
       </div>;
@@ -1194,3 +1344,11 @@ newWebhook.secret || undefined);
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          </Card>)}
+      </div>;
+    </div>);
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

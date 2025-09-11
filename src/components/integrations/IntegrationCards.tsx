@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -42,6 +43,8 @@ import { Badge } from '@/components/ui/badge'
 } from 'lucide-react'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface IntegrationCardProps {
   title: string
   description: string
@@ -49,6 +52,7 @@ interface IntegrationCardProps {
   status?: 'connected' | 'disconnected' | 'pending'
   href?: string
   onConnect?: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function IntegrationCard({
   title
@@ -60,6 +64,8 @@ export function IntegrationCard({
 }: IntegrationCardProps) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from 'react';
@@ -80,6 +86,7 @@ import {;
   Users,;
 } from 'lucide-react';
 
+<<<<<<< HEAD
 }
 
 interface IntegrationCardProps {;
@@ -101,6 +108,13 @@ export function IntegrationCard({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function IntegrationCard({
   title,
   description,
@@ -110,6 +124,7 @@ export function IntegrationCard({
   onConnect}: IntegrationCardProps) {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
@@ -118,15 +133,21 @@ export function IntegrationCard({
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className='overflow-hidden'>;
       <CardHeader className='pb-2'>;
         <div className='flex justify-between items-start'>;
           <div className='flex items-center gap-3'>;
             <div className='h-9 w-9 flex items-center justify-center bg-muted rounded-md'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               {icon}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              {icon}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
             <div>;
               <h3 className='font-semibold'>{title}</h3>;
@@ -146,6 +167,7 @@ export function IntegrationCard({
           ) : (;
             <Badge variant='outline'>Not Connected</Badge>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               {icon}
             </div>
             <div>
@@ -161,6 +183,8 @@ export function IntegrationCard({
             <Badge variant="outline" className="bg-yellow-100 text-yellow-800">Pending</Badge>
           ) : (
             <Badge variant="outline">Not Connected</Badge>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )}
         </div>
       </CardHeader>
@@ -180,6 +204,7 @@ export function IntegrationCard({
             <span>Connect</span>
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />          </Button>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+<<<<<<< HEAD
 =======
           )}
         </div>;
@@ -207,6 +232,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface IntegrationCardProps {
   title: string
   description: string
@@ -244,6 +271,10 @@ interface IntegrationCardProps {;
 
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function IntegrationCard(): any ({;
   title;
   description;
@@ -275,6 +306,7 @@ export function IntegrationCard(): any ({;
           ) : (;
             <Badge variant="outline">Not Connected</Badge>;
           )}
+<<<<<<< HEAD
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 import React from "react",;
@@ -320,6 +352,9 @@ export function IntegrationCard({
           ) : (
             <Badge variant="outline">Not Connected</Badge>
           )}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>;
       </CardHeader>;
@@ -359,6 +394,7 @@ export function IntegrationCard({
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
         )}
       </CardFooter>
     </Card>
@@ -382,11 +418,18 @@ export function IntegrationCard({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
 
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
           </Button>;
         )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardFooter>;
     </Card>;
   );
@@ -402,6 +445,7 @@ export function IntegrationCards() {
   );
 }
 
+<<<<<<< HEAD
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
@@ -437,11 +481,19 @@ export function IntegrationCards() {
   );
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       <IntegrationCard
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title="Slack"
         description="Send notifications and interact with Zion from Slack."
         icon={<Slack className="h-5 w-5" />}
@@ -465,6 +517,7 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
@@ -473,12 +526,17 @@ export function IntegrationCards() {
       />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <IntegrationCard
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         icon = {<Users className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Teams clicked'),}
       />
@@ -486,6 +544,7 @@ export function IntegrationCards() {
   );
 };
 }
+<<<<<<< HEAD
 }
 =======
 
@@ -494,10 +553,15 @@ export function IntegrationCards() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
     </div>;
   );
 }
+<<<<<<< HEAD
 
   );
 }
@@ -672,3 +736,5 @@ function IntegrationCards() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

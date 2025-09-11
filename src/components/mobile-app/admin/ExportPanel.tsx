@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 <<<<<<< HEAD
@@ -135,6 +136,8 @@ import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
 interface ExportPanelProps {
@@ -168,8 +171,11 @@ if ( {) {
         content += '\n\n_keywords:\n' + metadata.keywords.join ();
 }        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
       }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface ExportPanelProps {;
   platform: AppPlatform,;
@@ -227,6 +233,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
   },;
 
   return (
+<<<<<<< HEAD
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">Export & Analytics</CardTitle>;
@@ -266,6 +273,8 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     toast.success ("Analytics tracking enabled");
   },
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="bg - zion - blue border - zion - purple / 30">;
       <CardHeader>;
         <CardTitle className="text - lg">Export & Analytics</CardTitle>;
@@ -308,7 +317,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     </Card>);
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

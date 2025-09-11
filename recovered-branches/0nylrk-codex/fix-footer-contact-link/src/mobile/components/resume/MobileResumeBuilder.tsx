@@ -14,6 +14,7 @@ import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
@@ -21,6 +22,10 @@ export function MobileResumeBuilder() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -36,6 +41,12 @@ import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
 export function MobileResumeBuilder() {;
@@ -45,6 +56,7 @@ export function MobileResumeBuilder() {
   
   const renderStepContent = () => {
     switch (currentStep) {
+<<<<<<< HEAD
       case "basics": return <BasicsStep />,
       case "experience":
         return <ExperienceStep />,
@@ -75,6 +87,8 @@ export function MobileResumeBuilder() {
   const renderStepContent = () => {
     switch (currentStep) {
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
@@ -83,7 +97,10 @@ export function MobileResumeBuilder() {;
     switch (currentStep) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -103,6 +120,7 @@ function MobileResumeBuilder() {
 ;
   const renderStepContent = () =>: any {
     switch (current_step) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       case "basics": return <BasicsStep />;
       case "experience":;
@@ -312,6 +330,9 @@ function MobileResumeBuilder() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "basics": return <BasicsStep />;
       case "experience":;
         return <ExperienceStep />;
@@ -327,23 +348,32 @@ function MobileResumeBuilder() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },
   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
         <Button
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
@@ -368,11 +398,14 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={() => setCurrentStep("basics")}
         >;
           Basics;
         </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Button;
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full";
@@ -381,10 +414,16 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <Button
+          variant={currentStep === "experience" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={() => setCurrentStep("experience")}
         >;
           Experience;
         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button;
           variant={currentStep === "education" ? "default" : "outline"}
@@ -394,10 +433,16 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <Button
+          variant={currentStep === "education" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={() => setCurrentStep("education")}
         >;
           Education;
         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         >;
           Education;
@@ -411,16 +456,22 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full";
           onClick={() => setCurrentStep("skills")}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Button
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >;
           Skills;
         </Button>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       {renderStepContent()}
@@ -435,6 +486,8 @@ export function MobileResumeBuilder() {;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {renderStepContent()}
 
@@ -442,11 +495,15 @@ export function MobileResumeBuilder() {;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>;
+<<<<<<< HEAD
   ),;
 }
 <<<<<<< HEAD
@@ -463,16 +520,27 @@ function BasicsStep() {;
 function BasicsStep() {;
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+
+function BasicsStep() {;
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Input id="title" placeholder="e.g. Senior Frontend Developer" />;
           <Input id="title" placeholder="e.g. Senior Frontend Developer" />;
 =======
           <Input id="title" placeholder="e && e.g. Senior Frontend Developer" />;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <Input id="title" placeholder="e && e.g. Senior Frontend Developer" />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
@@ -481,11 +549,15 @@ function BasicsStep() {;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Input id="email" type="email" placeholder="you@example.com" />;
           <Input id="email" type="email" placeholder="you@example.com" />;
 =======
           <Input id="email" type="email" placeholder="you@example && example.com" />;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <Input id="email" type="email" placeholder="you@example && example.com" />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
@@ -498,15 +570,21 @@ function BasicsStep() {;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Textarea;
             id="summary";
             placeholder="Write a brief summary about yourself";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Textarea
             id="summary" 
             placeholder="Write a brief summary about yourself" 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             rows={4}
           />;
         </div>;
@@ -514,6 +592,7 @@ function BasicsStep() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -525,11 +604,17 @@ function BasicsStep() {;
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
     setExperiences([...experiences, { id: newId }])
+<<<<<<< HEAD
 
   }
 ;
@@ -541,12 +626,17 @@ function ExperienceStep() {
   const addExperience = () => {
     const newId = (experiences.length + 1).toString(),
     setExperiences([...experiences, { id: newId }])
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const removeExperience = (id: string) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const removeExperience = (id: string) => {
@@ -554,22 +644,139 @@ function ExperienceStep() {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Textarea ;
             id="summary" ;
             placeholder="Write a brief summary about yourself" ;
+=======
+  return (
+    <div className="space - y-6 px - 4 pb - 24">;
+      <div className="flex justify - between px - 1 py - 2 overflow - x-auto hide - scrollbar">;
+        <Button;
+          variant={current_step === "basics" ? "default" : "outline"}
+          className="flex - 1 rounded - full";
+          on_click={() => setCurrentStep ("basics")}
+        >;
+          Basics;
+        </Button>;
+        <Button;
+          variant={current_step === "experience" ? "default" : "outline"}
+          className="flex - 1 rounded - full";
+          on_click={() => setCurrentStep ("experience")}
+        >;
+          Experience;
+        </Button>;
+        <Button;
+          variant={current_step === "education" ? "default" : "outline"}
+          className="flex - 1 rounded - full";
+          on_click={() => setCurrentStep ("education")}
+        >;
+          Education;
+        </Button>;
+        <Button;
+          variant={current_step === "skills" ? "default" : "outline"}
+          className="flex - 1 rounded - full";
+          on_click={() => setCurrentStep ("skills")}
+        >;
+          Skills;
+        </Button>;
+      </div>;
+      {renderStepContent ()}
+      <Button className="w - full flex gap - 2" size="lg">;
+        <Zap className="h - 5 w - 5" /> Enhance with AI;
+      </Button>;
+      <Button variant="default" className="w - full" size="lg">;
+        Save & Preview;
+      </Button>;
+    </div>);
+}
+/**
+ * BasicsStep - Function description
+ */
+function BasicsStep() {
+  return (
+    <Card>;
+      <CardContent className="p - 4 space - y-4">;
+        <div className="space - y-2">;
+          <Label html_for="title">Resume Title</Label>;
+          <Input id="title" placeholder="e.g. Senior Frontend Developer" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="full_name">Full Name</Label>;
+          <Input id="full_name" placeholder="Your full name" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="email">Email Address</Label>;
+          <Input id="email" type="email" placeholder="you@example.com" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="phone">Phone Number</Label>;
+          <Input id="phone" placeholder="Your phone number" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="location">Location</Label>;
+          <Input id="location" placeholder="City, Country" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="summary">Professional Summary</Label>;
+          <Textarea;
+            id="summary";
+            placeholder="Write a brief summary about yourself";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             rows={4}
           />;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 function ExperienceStep() {;
   const [experiences, setExperiences] = useState([{ id: '1' }]),;
+=======
+    </Card>);
+}
+/**
+ * ExperienceStep - Function description
+ */
+function ExperienceStep() {
+  const [experiences, set_experiences] = useState ([{ id: '1' }]),
+  const add_experience = () =>: any {
+    const new_id = (experiences.length + 1).to_string ();
+    set_experiences ([...experiences, { id: new_id }]);
+  }
+;
+  const remove_experience = (id: string) =>: any {
+    set_experiences (experiences.filter (exp => exp.id !== id));
+  }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return (
+    <div className="space - y-4">;
+      {experiences.map ((exp, index) => (
+        <Card key={exp.id}>;
+          <CardContent className="p - 4 space - y-4">;
+            <div className="flex justify - between items - center">;
+              <h3 className="font - medium">Work Experience {index + 1}</h3>;
+              {experiences.length > 1 && (
+
+
+function ExperienceStep() {;
+  const [experiences, setExperiences] = useState([{ id: '1' }]),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const addExperience = () => {;
     const newId = (experiences && experiences.length + 1).toString();
     setExperiences([...experiences, { id: newId }]);
   };
+<<<<<<< HEAD
   const removeExperience = (id: string) => {;
     setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
   };
+=======
+
+  const removeExperience = (id: string) => {;
+    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">;
       {experiences && experiences.map((exp, index) => (;
@@ -580,6 +787,7 @@ function ExperienceStep() {;
               {experiences && experiences.length > 1 && (;
                 <Button
                   variant="ghost" 
+<<<<<<< HEAD
                   size="icon"
                   onClick={() => removeExperience(exp && exp.id)}
     </Card>;
@@ -610,10 +818,16 @@ function ExperienceStep() {;
                   variant="ghost" ;
                   size="icon";
                   onClick={() => removeExperience(exp.id)}
+=======
+
+                  size="icon"
+                  onClick={() => removeExperience(exp && exp.id)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   <Trash2 className="h-5 w-5 text-destructive" />;
                 </Button>;
               )}
+<<<<<<< HEAD
   return (
     <div className="space-y-4">
       {experiences.map((exp, index) => (
@@ -630,6 +844,8 @@ function ExperienceStep() {;
                   <Trash2 className="h-5 w-5 text-destructive" />
                 </Button>
               )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <div className="space-y-2">
               <Label htmlFor={`title-${exp.id}`}>Job Title</Label>
@@ -663,6 +879,7 @@ function ExperienceStep() {;
           </CardContent>
         </Card>
       ))}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -786,15 +1003,23 @@ function EducationStep() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <Button
+        variant="outline"
+        className="w-full gap-2"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       <Button 
         variant="outline" 
         className="w-full gap-2" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         onClick={addExperience}
       >
         <Plus className="h-4 w-4" /> Add Another Experience
@@ -806,7 +1031,11 @@ function EducationStep() {
   const [educations, setEducations] = useState([{ id: '1' }])
   const addEducation = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const newId = (educations.length + 1).toString(),
+=======
+    const newId = (educations.length + 1).toString();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setEducations([...educations, { id: newId }])
   }
   const removeEducation = (id: string) => {
@@ -828,6 +1057,7 @@ function EducationStep() {
               {educations.length > 1 && (
                 <Button
                   variant="ghost"
+<<<<<<< HEAD
         </Card>))}
       <Button;
         variant="outline";
@@ -888,6 +1118,8 @@ function EducationStep() {;
               {educations && educations.length > 1 && (;
                 <Button
                   variant="ghost" 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   size="icon"
                   onClick={() => removeEducation(edu.id)}
                 >
@@ -933,6 +1165,7 @@ function EducationStep() {;
 function SkillsStep() {
   const [skills, setSkills] = useState([
     { id: '1', name: "", proficiency: "beginner" }
+<<<<<<< HEAD
 =======
     const newId = (educations.length + 1).toString();
     setEducations([...educations, { id: newId }])
@@ -1065,6 +1298,8 @@ function EducationStep() {;
 /**
  * SkillsStep - Function description
  */
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ]);
   ]),
   
@@ -1072,13 +1307,19 @@ function EducationStep() {;
     const newId = (skills.length + 1).toString(),
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id))
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const removeSkill = (id: string) => {
@@ -1086,14 +1327,18 @@ function EducationStep() {;
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(skills.map(skill =>
       skill.id === id ? { ...skill, [field]: value } : skill
     ))
+<<<<<<< HEAD
 <<<<<<< HEAD
 function SkillsStep() {
   const [skills, set_skills] = useState ([;
@@ -1111,12 +1356,17 @@ function SkillsStep() {
   
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
   },
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">
       <Card>
@@ -1153,9 +1403,12 @@ function SkillsStep() {
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       <Button;
         variant="outline";
@@ -1194,6 +1447,7 @@ function EducationStep() {;
                 </Button>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             ;
             <div className="space-y-2">;
             </div>;
@@ -1218,6 +1472,8 @@ function EducationStep() {;
                 <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>;
                 <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
             <div className="space-y-2">;
@@ -1236,12 +1492,16 @@ function EducationStep() {;
               <div className="space-y-2">;
                 <Label htmlFor={`eduEndDate-${edu && edu.id}`}>End Date</Label>;
                 <Input id={`eduEndDate-${edu && edu.id}`} type="month" placeholder="Present" />;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       <Button;
@@ -1250,17 +1510,23 @@ function EducationStep() {;
         onClick={addEducation}
       >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <Button
         variant="outline" 
         className="w-full gap-2" 
         onClick={addEducation}>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Plus className="h-4 w-4" /> Add Another Education;
       </Button>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 function SkillsStep() {;
@@ -1281,6 +1547,8 @@ function SkillsStep() {;
   };
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
@@ -1304,11 +1572,15 @@ function SkillsStep() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-4">;
       <Card>;
         <CardContent className="p-4">;
           <div className="space-y-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {skills.map((skill) => (;
               <div key={skill.id} className="flex items-center gap-2">;
@@ -1348,6 +1620,8 @@ function SkillsStep() {;
               variant="outline"
               className="w-full gap-2"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {skills && skills.map((skill) => (;
               <div key={skill && skill.id} className="flex items-center gap-2">;
                 <Input
@@ -1410,18 +1684,27 @@ function SkillsStep() {;
                 )}
               </div>;
             ))}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <Button
+              variant="outline"
+              className="w-full gap-2"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
             <Button 
               variant="outline" 
               className="w-full gap-2" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={addSkill}
             >
               <Plus className="h-4 w-4" /> Add Another Skill
@@ -1446,6 +1729,7 @@ function SkillsStep() {;
       </Card>
     </div>
   )
+<<<<<<< HEAD
 
                 {skills.length > 1 && (;
                   <Button;
@@ -1537,3 +1821,12 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

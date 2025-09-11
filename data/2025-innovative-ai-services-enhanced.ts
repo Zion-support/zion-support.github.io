@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   id: string;
@@ -37,6 +41,7 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'ai-consciousness-evolution',
   real_implementation: boolean;
@@ -408,6 +413,11 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
   {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -425,14 +435,19 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'AI - powered education platform with personalized learning algorithms and adaptive curriculum generation.';
     launch_date: '2024 - 03 - 25';
+<<<<<<< HEAD
 <<<<<<< HEAD
     customers: 156;
     rating: 4 && 4.8,
@@ -440,6 +455,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
   }
 ];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     customers: 156;
 
@@ -447,7 +464,10 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
 
     reviews: 89
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface InnovativeAIService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -641,6 +661,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -934,17 +955,30 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
+=======
+    
+    },
+    realImplementation: true, implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
+    launchDate: '2024-03-25', customers: 156,
+    rating: 4.8,
+    reviews: 89;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     realImplementation: true;
     implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.';
     launchDate: '2024-03-25';
     customers: 156;
 
+<<<<<<< HEAD
     rating: 4.8
 
     reviews: 89
   }
 ];
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIService2025 {;
   id: string,;
@@ -1207,7 +1241,15 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     customers: 156,;
     rating: 4.8;
     reviews: 89;
+<<<<<<< HEAD
   }
 ];
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

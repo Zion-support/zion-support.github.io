@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme";
@@ -144,6 +145,10 @@ export function LanguageThemeSelector() {;
             <Card;
 ursor/fix-website-loading-errors-and-merge-6662
               key={language.code}
+=======
+key={language.code}
+              className={`cursor-pointer transition-all ${
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 selectedLanguage === language.code
                   ? "border-primary bg-primary/5"
               onClick = {(,) => setSelectedLanguage(language && language.code),}
@@ -162,6 +167,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
               }`}
+<<<<<<< HEAD
               onClick={() => setSelectedLanguage(language.code)}
             >
               <CardContent className="p-3 flex items-center justify-between">
@@ -208,6 +214,10 @@ export function LanguageThemeSelector() {;
                   ? "border-primary bg-primary/5"
                   : "border-border hover:border-primary/40"
               }`}
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={() => setSelectedLanguage(language.code)}
             >
               <CardContent className="p-3 flex items-center justify-between">
@@ -229,12 +239,19 @@ export function LanguageThemeSelector() {;
           Select your preferred appearance
         </p>
         <div className='flex gap-3 mt-4'>
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               onClick={() => setSelectedLanguage(language.code)}
 
+=======
+          <Card
+              theme === 'light'
+                ? 'border-primary bg-primary/5'
+                : 'border-border hover:border-primary/40'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <CardContent className="p-3 flex items-center justify-between">;
                 <div className="flex items-center">;
@@ -260,6 +277,7 @@ export function LanguageThemeSelector() {;
         <div className='flex gap-3 mt-4'>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               theme === 'light'
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
@@ -267,6 +285,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             }`}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Card
               theme === 'light'
                 ? 'border-primary bg-primary/5'
@@ -306,9 +326,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
         <p className="text-muted-foreground">Select your preferred appearance</p>
@@ -331,6 +355,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {theme === 'light' && (
                 <Check className="h-4 w-4 text-primary mt-2" />
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </CardContent>;
@@ -399,6 +424,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </CardContent>;
           </Card>;
@@ -411,10 +438,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
 
+<<<<<<< HEAD
           
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               theme === 'dark' 
@@ -427,11 +457,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               )}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
             </CardContent>;
           </Card>;
@@ -445,6 +479,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
@@ -517,6 +555,7 @@ function LanguageThemeSelector() {
             </Card>))}
         </div>;
       </div>;
+<<<<<<< HEAD
       <div className='space - y-2'>;
         <h2 className='text - xl font - medium'>Choose theme</h2>;
         <p className='text - muted - foreground'>;
@@ -583,3 +622,5 @@ function LanguageThemeSelector() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

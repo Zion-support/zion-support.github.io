@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {authenticate_request} from '@/utils / auth';
 import {readJsonFile, updateJsonFile} from '@/utils / file_db';
 interface ReportingData {
@@ -9,6 +10,10 @@ interface ReportingData {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
@@ -16,6 +21,7 @@ interface ReportingData {
       updated_at: string;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const method = (req.method || 'GET').toUpperCase(),;
 
@@ -34,11 +40,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method |'GET').toUpperCase()
   const method = (req.method || 'GET').toUpperCase(),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     updatedAt: string
   }>
 }
@@ -53,7 +64,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
@@ -68,6 +82,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
+<<<<<<< HEAD
 <<<<<<< HEAD
     const { funnel, timeToHireDays, costPerHireUsd } = req && req.body || {};
   }
@@ -89,6 +104,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
   if (method === 'POST') {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const { funnel, timeToHireDays, costPerHireUsd } = req && req.body || {};
 
@@ -97,13 +114,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
 
         const next = curr && curr.byTenant || {};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{}
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
@@ -113,6 +134,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const next = curr && curr.byTenant || {};
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
           timeToHireDays:
@@ -132,6 +155,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr && curr.byTenant || {};
     const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() };
@@ -142,13 +166,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr.byTenant || {};
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr && curr.byTenant || {};
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -156,6 +185,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         updatedAt: new Date().toISOString()}
       return { byTenant: next }
     }, FALLBACK);
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
@@ -171,6 +201,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    return res && res.status(200).json(updated && updated.byTenant[tenantId])
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { by_tenant: {} }
 ;
@@ -244,6 +281,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
 
@@ -251,12 +289,18 @@ return res.status(405).json({ error: 'Method not allowed' });
 }
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

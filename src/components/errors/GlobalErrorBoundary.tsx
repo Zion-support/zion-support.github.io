@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -30,12 +31,15 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   AlertTriangle,
   RefreshCw,
   Home,
   Bug,
   Send,
+<<<<<<< HEAD
 <<<<<<< HEAD
   Clipboard,
   Clipboard,
@@ -47,11 +51,16 @@ import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
 import {logErrorToProduction} from '@/utils/productionLogger';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   Clipboard,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -59,6 +68,7 @@ import { Badge } from '@/components / ui / badge';
 import * as Sentry from '@sentry / nextjs';
 import { logErrorToProduction } from '@/utils / production_logger';
 interface ErrorBoundaryState {
+<<<<<<< HEAD
 <<<<<<< HEAD
   hasError: boolean
   error: Error | null
@@ -102,6 +112,37 @@ interface ErrorBoundaryProps {;
   context?: string
 }
 
+=======
+  has_error: boolean;
+  error: Error | null;
+  error_info: ErrorInfo | null;
+  error_id: string | null;
+  retry_count: number;
+  user_feedback: string;
+  show_details: boolean;
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableRetry?: boolean;
+  maxRetries?: number;
+
+  showReportButton?: boolean;
+  context?: string;  enable_retry?: boolean;
+  max_retries?: number;
+  showReportButton?: boolean;
+  context?: string;
+}
+
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      retryCount: 0,
+      userFeedback: '',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export class GlobalErrorBoundary extends Component<
   ErrorBoundaryProps
   ErrorBoundaryState
@@ -123,6 +164,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       userFeedback: ''
       showDetails: false
     } }    ,}
+<<<<<<< HEAD
 =======
   has_error: boolean;
   error: Error | null;
@@ -158,11 +200,15 @@ interface ErrorBoundaryProps {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       showDetails: false
     }
   }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
       hasError: true,
       error
@@ -272,6 +318,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       hasError: true,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      hasError: true,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       error
     }
   }
@@ -282,6 +333,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     const errorId = this.generateErrorId()
     // Enhanced error logging
     const enhancedError = {
+<<<<<<< HEAD
 <<<<<<< HEAD
       ...error
     // Enhanced error logging
@@ -327,6 +379,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ...error;
       componentStack: errorInfo.componentStack,
       errorBoundary: this.props.context || 'GlobalErrorBoundary',
@@ -334,6 +389,10 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',
       url: typeof window !== 'undefined' ? window.location.href : 'SSR',
       userId: this.getUserId(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       buildInfo: this.getBuildInfo()
 export class GlobalErrorBoundary extends Component<;
   ErrorBoundaryProps,
@@ -357,6 +416,33 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
     } }    , }
       show_details: false;
     }
+<<<<<<< HEAD
+=======
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.group('🚨 Error Boundary Caught Error')
+      logErrorToProduction('Error:', { data: error })
+      logErrorToProduction('Error Info:', { data: errorInfo })
+      logErrorToProduction('Enhanced Error:', { data: enhancedError })
+      console.groupEnd()
+    }
+    // Report to Sentry
+    Sentry.withScope(scope => {
+      scope.setTag(
+        'errorBoundary',
+        this.props.context || 'GlobalErrorBoundary';
+      );
+      scope.setLevel('error');      scope.setContext('errorInfo', {
+        componentStack: errorInfo.componentStack
+        retryCount: this.state.retryCount
+      })
+      Sentry.captureException(error)
+    })
+    // Custom error handler
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   static getDerivedStateFromError (error: Error): Partial < ErrorBoundaryState> {
     return {
@@ -394,6 +480,7 @@ if ( {) {
       logErrorToProduction ('Enhanced Error:', { data: enhanced_error });
       console.group_end ();
     }
+<<<<<<< HEAD
     })
 ;
   componentWillUnmount() {;
@@ -462,6 +549,15 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    })
+  }
+
+  componentWillUnmount() {
+    // Clear any pending retry timeouts
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     this.retryTimeouts.forEach(timeout => clearTimeout(timeout))
   }
   private generateErrorId(): string {
@@ -470,28 +566,40 @@ if ( {) {
   private generateErrorId(): string {
     return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   private getUserId(): string | null {
     // Try to get user ID from various sources
     if (typeof window !== 'undefined') {
       try {
         // Check localStorage, sessionStorage, or cookies
 <<<<<<< HEAD
+<<<<<<< HEAD
         return localStorage.getItem('userId') || 
                sessionStorage.getItem('userId') || 
                null
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         return localStorage.getItem('userId') || 
                sessionStorage.getItem('userId') || 
                null
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Report to Sentry;
     Sentry.with_scope (scope => {
       scope.set_tag (
@@ -575,6 +683,7 @@ if ( {) {
           null);
       } catch {
         return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   private getBuildInfo() {;
@@ -699,6 +808,8 @@ if ( {) {
     }
     return null
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
 
@@ -896,14 +1007,20 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       }
     }
     return null;  }      } catch {;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return null;
       }
     }
     return null;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return null
         return null;
@@ -912,16 +1029,24 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     return null;
 
   }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   private getBuildInfo () {
     return {
       version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',
       environment: process.env.NODE_ENV,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return 'This appears to be a temporary issue. Please try again.'
       build_time: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
     }
@@ -1021,15 +1146,21 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
     return 'This appears to be a temporary issue. Please try again.';
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   private retry = () => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
   private retry = () => {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const timeout = setTimeout(() => {
       this.setState({
         hasError: false,
@@ -1037,6 +1168,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         errorInfo: null,
         errorId: null,
         retryCount: this.state.retryCount + 1,
+<<<<<<< HEAD
 <<<<<<< HEAD
         return (
           localStorage.getItem('userId') |
@@ -1142,6 +1274,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         showDetails: false
       })
     }, retryDelay)
@@ -1175,9 +1310,13 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     this.retry_timeouts.push (timeout);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const error_details = {
       error_id: this.state.error_id,
       message: this.state.error?.message,
@@ -1188,9 +1327,13 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       user_agent:;
         typeof window !== 'undefined' ? navigator.user_agent : 'unknown',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     try {
       await navigator.clipboard.write_text (
@@ -1201,10 +1344,15 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   private copyErrorDetails = async () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -1216,10 +1364,15 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   private report_error = async () => {
     // Check condition
 if (return) {
@@ -1236,6 +1389,7 @@ if (return) {
       logErrorToProduction ('Failed to copy error details:', { data: err });
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!this.state.error || !this.state.errorId) return
   }
@@ -1272,22 +1426,33 @@ if (return) {
   private reportError = async () => {
     if (!this.state.error |!this.state.errorId) return
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (!this.state.error || !this.state.errorId) return
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // Report to your error reporting service
       const response = await fetch('/api/error-report', {
         method: 'POST'
         headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'Content-Type': 'application/json'
         }
           errorId: this.state.errorId
@@ -1304,6 +1469,7 @@ if (return) {
       });          timestamp: new Date().toISOString()
         })
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (response.ok) {
         // Show success message
@@ -1616,6 +1782,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (response.ok) {
         // Show success message
   private report_error = async () => {
@@ -1631,6 +1802,7 @@ if (return) {
           'Content - Type': 'application / json',
         },
           error_id: this.state.error_id,
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {
       await navigator.clipboard.writeText(
@@ -1664,11 +1836,14 @@ if (return) {
           errorId: this.state.errorId,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           error: {
             message: this.state.error.message,
             stack: this.state.error.stack,
             name: this.state.error.name,
           },
+<<<<<<< HEAD
 <<<<<<< HEAD
           errorInfo: this.state.errorInfo,
           userFeedback: this.state.userFeedback,
@@ -1840,6 +2015,8 @@ if (return) {
   }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           error_info: this.state.error_info,
           user_feedback: this.state.user_feedback,
           context: this.props.context,
@@ -1863,7 +2040,10 @@ if ( {) {
 
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     this.setState({
       errorInfo,
       errorId,
@@ -1871,6 +2051,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   private goHome = () => {
     if (typeof window !== 'undefined') {
@@ -1889,11 +2070,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   private goHome = () => {
     if (typeof window !== 'undefined') {
@@ -1905,10 +2089,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError && this.state.error) {
       // Use custom fallback if provided
       if (this.props.fallback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return this.props.fallback
         return this.props.fallback
@@ -1925,15 +2115,27 @@ ursor/fix-website-loading-errors-and-merge-6662
       const canRetry = this.props.enableRetry !== false &&
                        this.state.retryCount < (this.props.maxRetries |3)
       return (
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return this.props.fallback;
 
         return this.props.fallback;
 
 =======
+<<<<<<< HEAD
 
 
         return this.props.fallback;
 
+=======
+=======
+        return this.props.fallback;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   private getBuildInfo() {;
     return {;
@@ -1946,11 +2148,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
+<<<<<<< HEAD
 <<<<<<< HEAD
       const canRetry = null;
         this.props.enableRetry !== false &&
@@ -2142,14 +2348,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const canRetry = this.props.enableRetry !== false && 
                        this.state.retryCount < (this.props.maxRetries || 3)
 
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -2172,6 +2385,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Oops! Something went wrong
                 </CardTitle>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Card className='w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900'>
               <CardHeader className='text-center'>
                 <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20'>
@@ -2184,6 +2398,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
                 </CardTitle>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='flex items-center justify-center gap-2 mt-2'>
                   <Badge
                     variant={
@@ -2209,16 +2425,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Badge>
                   {this.state.errorId && (
                     <Badge variant='outline' className='text-xs'>                    <Badge variant="outline" className="text-xs">
+<<<<<<< HEAD
 =======
 
                     <Badge variant="outline" className="text-xs">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ID: {this.state.errorId.slice(-8)}
                     </Badge>
                   )}
                 </div>
               </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <CardContent className='space-y-6'>
                 <div className='text-center'>
@@ -2238,16 +2458,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </p>
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
@@ -2264,20 +2492,30 @@ ursor/fix-website-loading-errors-and-merge-6662
               </CardHeader>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {suggestion}
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  {this.state.retryCount > 0 && (
+                    <p className="text-sm text-orange-600 dark:text-orange-400">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }>;
                     {severity && severity.toUpperCase()}
                   </Badge>;
@@ -2299,22 +2537,39 @@ ursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>;
               </CardHeader>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <CardContent className='space-y-6'>;
                 <div className='text-center'>;
                   <p className='text-gray-600 dark:text-gray-300 mb-4'>;
                     {suggestion}
                   </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {this && this.state.retryCount > 0 && (;
                     <p className='text-sm text-orange-600 dark:text-orange-400'>;
                       Retry attempt: {this && this.state.retryCount}/;
                       {this && this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {this && this.state.retryCount > 0 && (;
                     <p className="text-sm text-orange-600 dark:text-orange-400">;
                       Retry attempt: {this && this.state.retryCount}/{this && this.props.maxRetries || 3}
                     </p>;
                   )}
                 </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Action Buttons */}
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>;
                   {canRetry && (;
@@ -2328,10 +2583,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Button
                     onClick={this && this.goHome}
                     variant='outline'
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='flex items-center gap-2'>;
                     <Home className='h-4 w-4' />;
                     Go Home;
                   </Button>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     onClick={() =>;
                       this && this.setState({ showDetails: !this && this.state.showDetails });
@@ -2345,6 +2609,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <RefreshCw className="h-4 w-4" />;
                       Try Again;
                     </Button>;
+<<<<<<< HEAD
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>
                   
@@ -2356,11 +2621,38 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
+=======
+
+                      Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
+                    </p>
+                  )}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  {canRetry && (
+                    <Button onClick={this.retry} className="flex items-center gap-2">
+                      <RefreshCw className="h-4 w-4" />
+                      Try Again
+                    </Button>
+
+                  )}
+
+                      Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
+                    </p>;
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )}
                 </div>
                 {/* Action Buttons */}
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {canRetry && (
                     <Button onClick={this.retry} className="flex items-center gap-2">
                       <RefreshCw className="h-4 w-4" />
@@ -2368,6 +2660,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Button>
                   )}
 
+<<<<<<< HEAD
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
                 </div>
@@ -2428,11 +2721,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     <Bug className="h-4 w-4" />
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
@@ -2471,10 +2767,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                   )}
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button onClick={this && this.goHome} variant="outline" className="flex items-center gap-2">;
                     <Home className="h-4 w-4" />;
                     Go Home;
                   </Button>;
+<<<<<<< HEAD
                   <Button
                     onClick={() => this && this.setState({ showDetails: !this && this.state.showDetails })}
   }
@@ -2554,11 +2855,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
                   <Button ;
                     onClick={() => this.setState({ showDetails:!this.state.showDetails })}
+=======
+
+                  <Button
+                    onClick={() => this && this.setState({ showDetails: !this && this.state.showDetails })}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant="ghost" ;
                     size="sm";
                     className="flex items-center gap-2";
                   >;
                     <Bug className="h-4 w-4" />;
+<<<<<<< HEAD
+=======
+                    {this && this.state.showDetails ? 'Hide' : 'Show'} Details;
+                  </Button>;
+                </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2571,13 +2883,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
                       className="border-t pt-4"
+=======
+                      className='border-t pt-4'
+                      className="border-t pt-4"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     >
                       <div className="space-y-4">
                         <div>
 
 
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
+<<<<<<< HEAD
                             {this.state.error.message}
                           </code>
                         </div>
@@ -2586,6 +2905,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
+                            {this.state.error.message}
+                          </code>
+                        </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2766,6 +3092,11 @@ if ( {) {
                               </h4>;
                               <pre className='p - 3 bg - gray - 50 dark:bg - gray - 800 rounded text - xs overflow - auto max - h-32'>;
                                 {this.state.error.stack}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className='border-t pt-4'>;
                       <div className='space-y-4'>;
                         <div>;
@@ -2783,6 +3114,10 @@ if ( {) {
                             {this && this.state.error && error.message}
                           </code>;
                         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {process && process.env.NODE_ENV === 'development' &&;
                           this && this.state.error && error.stack && (;
                             <div>;
@@ -2794,6 +3129,7 @@ if ( {) {
                               </pre>;
                             </div>;
                           )}
+<<<<<<< HEAD
                         <div className='flex gap-2'>
                           <Button
                             onClick={this && this.copyErrorDetails}
@@ -2830,19 +3166,34 @@ if ( {) {
                             Copy Details;
                           </Button>;
                           {this && this.props.showReportButton !== false && (;
+=======
+                            size='sm'
+                          >
+                            <Clipboard className='h-4 w-4 mr-2' />
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                          {this && this.props.showReportButton !== false && (;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <Button
                               onClick={this && this.reportError}
                               variant='outline'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
                             <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32">
                               {this.state.error.stack}
+<<<<<<< HEAD
 <<<<<<< HEAD
                             </pre>;
                           </div>;
@@ -2869,15 +3220,27 @@ if ( {) {
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             </pre>
                           </div>
                         )}
 
 
+<<<<<<< HEAD
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                            Copy Details
+                          </Button>
+                          {this.props.showReportButton !== false && (
+                        <div className="flex gap-2">
+                          <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
+                            <Clipboard className="h-4 w-4 mr-2" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
@@ -2889,6 +3252,7 @@ if ( {) {
                           {this.props.showReportButton !== false && (
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               Report Issue
@@ -2912,10 +3276,13 @@ if ( {) {
                   )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
                             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
                           )}
                         </div>
@@ -3157,6 +3524,8 @@ export const withErrorBoundary = <P extends object>(;
 export default GlobalErrorBoundary;
       );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               size='sm'>;
                               <Send className='h-4 w-4 mr-2' />                              Report Issue;
                         <div className="flex gap-2">;
@@ -3177,6 +3546,7 @@ export default GlobalErrorBoundary;
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     }
@@ -3195,6 +3565,16 @@ export default GlobalErrorBoundary;
   return WrappedComponent;
 }
 export default GlobalErrorBoundary 
+=======
+
+
+
+  return WrappedComponent;
+}
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Higher - order component for adding error boundaries;
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType < P>,
@@ -3212,6 +3592,7 @@ export default GlobalErrorBoundary;
   return WrappedComponent;
 }
 export default GlobalErrorBoundary;
+<<<<<<< HEAD
 }static getDerivedStateFromError (error: Error) : Partial<ErrorBoundaryState> {;
   return {;
   hasError: true, error ;
@@ -3374,6 +3755,8 @@ timestamp: new Date () .toISOString () ;
   Component.displayName || Component.name ;
 }) ` return WrappedComponent;
 }export default GlobalErrorBoundary '"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       );
 
@@ -3382,9 +3765,15 @@ timestamp: new Date () .toISOString () ;
     return this.props.children;
 
   }
+<<<<<<< HEAD
 // Hook for programmatic error boundary
 <<<<<<< HEAD
 export const useErrorBoundary = () => {
 =======
 export const useErrorBoundary = () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+// Hook for programmatic error boundary
+export const useErrorBoundary = () => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { memo, useMemo, useCallback } from 'react'
 // Higher-order component for performance optimization
 import React, { memo, useMemo, useCallback } from 'react'
@@ -29,6 +30,8 @@ export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React
 }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
@@ -36,7 +39,10 @@ export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
@@ -226,11 +232,14 @@ export const: OptimizedImage: React.FC<{,;
     </div>,;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 }
 }
@@ -250,11 +259,15 @@ export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {
     }, delay);
     return () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       clearTimeout(handler)
 }
   }, [value, delay])
   return debouncedValue
 }
+<<<<<<< HEAD
 // Performance metrics collection
 export const usePerformanceMetrics = () => {
   const [metrics, setMetrics] = React.useState({
@@ -276,6 +289,8 @@ export const usePerformanceMetrics = () => {
   }, [value, delay]);
   return debounced_value;
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React, { memo, useMemo, useCallback } from 'react';
@@ -318,8 +333,15 @@ export const useDebouncedSearch = (value: string, delay: number = 300) = > {; co
 export const usePerformanceMetrics = () = > {; const [metrics, setMetrics] = React && React.useState({; renderCount: 0, lastRenderTime: 0, averageRenderTime: 0});
 ; const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev && prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev && prev.averageRenderTime * prev && prev.renderCount + renderTime) / (prev && prev.renderCount + 1)}))}, []);
 ; return { metrics, recordRender }};};
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
+=======
+};
+};
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { memo, useMemo, useCallback } from 'react',
 ,
 // Higher-order component for performance optimization,
@@ -473,6 +495,7 @@ export const usePerformanceMetrics = () =>: any {
     }));
   }, []); return { metrics, record_render }
 }
+<<<<<<< HEAD
   return { metrics, record_render }
 }
 }
@@ -484,3 +507,9 @@ export const usePerformanceMetrics = () =>: any {
 =======
 },
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return { metrics, recordRender }
+}
+
+},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

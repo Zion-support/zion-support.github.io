@@ -1,16 +1,24 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
@@ -66,6 +74,8 @@ import { Link } from "react-router-dom",;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface OnboardingStep {;
   id: string,;
   label: string,;
@@ -74,7 +84,10 @@ export interface OnboardingStep {;
   action?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface OnboardingTrackerProps {;
   steps: OnboardingStep[],;
@@ -83,6 +96,7 @@ interface OnboardingTrackerProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface OnboardingStep {
   id: string,
@@ -106,15 +120,22 @@ interface OnboardingTrackerProps {;
   className?: string;
 }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function OnboardingTracker({ 
   steps,
   title = "Complete Your Profile", 
   className 
 }: OnboardingTrackerProps) {
+<<<<<<< HEAD
   const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const completedSteps = steps.filter(step => step.completed).length;
+  const progress = Math.round((completedSteps / steps.length) * 100);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
@@ -124,6 +145,7 @@ export function OnboardingTracker({
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
@@ -141,6 +163,10 @@ export function OnboardingTracker({;
   title?: string;
   className?: string;
 }
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function OnboardingTracker(): any ({ ;
   steps;
   title = "Complete Your Profile", ;
@@ -148,6 +174,7 @@ export function OnboardingTracker(): any ({ ;
 }: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 
@@ -185,28 +212,44 @@ export function OnboardingTracker({ ;
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      {/* Progress bar */}
+      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}></div>;
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
@@ -214,9 +257,13 @@ export function OnboardingTracker({ ;
         ></div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step) => (;
@@ -225,6 +272,7 @@ export function OnboardingTracker({ ;
               {step && step.completed ? (;
                 <CheckCircle className="h-5 w-5 text-zion-cyan" />;
               ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       {/* Progress bar */}
@@ -387,6 +435,8 @@ return (<div className= {
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Circle className="h-5 w-5 text-zion-slate-light" />;
               )}
 
@@ -408,15 +458,25 @@ return (<div className= {
             )}
           </div>;
         ))}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      </div>
+    </div>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import React from './react';
@@ -443,7 +503,10 @@ function OnboardingTracker() {
   const completed_steps = steps.filter (step => step.completed).length;
   const progress = Math.round ((completed_steps / steps.length) * 100);
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

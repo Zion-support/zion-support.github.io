@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { useHireRequestForm, FormValues } from './useHireRequestForm'
 import { Button } from '@/components/ui/button'
@@ -41,10 +42,13 @@ import { DialogFooter } from "@/components/ui/dialog",
 import { Form } from "@/components/ui/form",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Loader2 } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
@@ -54,6 +58,9 @@ import { BudgetFields } from "./BudgetFields";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
@@ -77,6 +84,7 @@ export interface HireRequestFormProps {;
 
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
+<<<<<<< HEAD
 
 export interface HireRequestFormProps {
   talent: TalentProfile,
@@ -88,6 +96,8 @@ import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -95,6 +105,7 @@ export interface HireRequestFormProps {
   userDetails?: {
     name?: string;
     email?: string;
+<<<<<<< HEAD
 =======
 
     name?: string,
@@ -104,6 +115,11 @@ export interface HireRequestFormProps {
   }
   onSubmitSuccess?: () => void
 <<<<<<< HEAD
+=======
+    id?: string
+  }
+  onSubmitSuccess?: () => void
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function HireRequestForm({
   talent
   onClose
@@ -122,8 +138,11 @@ export function HireRequestForm({
     id?: string
   },
   onSubmitSuccess?: () => void
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
@@ -143,12 +162,16 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           <PersonalInfoFields form={form} />
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <BudgetFields form={form} talent={talent} />
         </div>
         <DialogFooter className='pt-4'>
+<<<<<<< HEAD
 =======
 
     id?: string;
@@ -186,6 +209,8 @@ export function HireRequestForm(): any ({;
         <DialogFooter className='pt-4'>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             type='button'
             variant='outline'
@@ -197,13 +222,19 @@ export function HireRequestForm(): any ({;
           <Button
             type='submit'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}>;
             {isSubmitting ? (;
               <>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
@@ -225,6 +256,7 @@ export interface HireRequestFormProps {
     id?: string
   };
   onSubmitSuccess?: () => void
+<<<<<<< HEAD
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}
           >
             {isSubmitting ? (
@@ -280,6 +312,35 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             {isSubmitting ? (
               <>
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+=======
+
+}
+
+
+export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {;
+  const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
+    talent, ;
+    onClose: onSubmitSuccess || onClose, ;
+    initialJobTitle;
+    userDetails ;
+  });
+
+  return (
+    <Form {...form}>;
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <PersonalInfoFields form={form} />;
+        </div>;
+
+        <ProjectDetailsField form={form} />;
+        <TimelineField form={form} />;
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <BudgetFields form={form} talent={talent} />;
+        </div>;
+
+        <DialogFooter className="pt-4">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
 
         
@@ -292,6 +353,10 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         
         <DialogFooter className="pt-4">
           <Button 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             type="button" 
             variant="outline" 
             onClick={onClose}
@@ -301,17 +366,27 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
             disabled = {isSubmitting,}>;
             Cancel;
           </Button>;
+=======
+            disabled = {isSubmitting,}
+          >
+            Cancel
+          </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             disabled = {isSubmitting,}>;
             {isSubmitting ? (;
               <>;
@@ -341,6 +416,9 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             ) : (
               'Submit Request'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
           </Button>
         </DialogFooter>
@@ -349,6 +427,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   );
 };
 }
+<<<<<<< HEAD
 }
 import React from "react",;
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
@@ -421,12 +500,17 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Button>;
         </DialogFooter>;
       </form>;
     </Form>;
   );
 }
+<<<<<<< HEAD
 
   );
 }
@@ -552,3 +636,5 @@ function HireRequestForm() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

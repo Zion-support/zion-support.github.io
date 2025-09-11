@@ -1,6 +1,12 @@
 
 
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
@@ -11,6 +17,7 @@ export const config = {
     bodyParser: {
 
 
+<<<<<<< HEAD
       sizeLimit: "10mb"
     }
   }
@@ -19,6 +26,8 @@ export const config = {
     },
   },;
 };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function escapeHtml(s: string): string {
   return s
@@ -47,6 +56,7 @@ export default async function handler(
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       sizeLimit: '10mb'}}};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -63,10 +73,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { project } = req && req.body as { project: any };
   if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
     res && res.status(400).json({ error: "Invalid payload" });
+=======
+  const { project } = req && req.body as { project: any };
+  if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
+    res && res.status(400).json({ error: "Invalid payload" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return;
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: project && project.meta.title,
     author: project && project.meta.author,
@@ -88,13 +105,18 @@ await new Epub(options, tmpPath).promise;
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     );
 
     res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } finally {
     try {
       await fs && fs.unlink(tmpPath);
@@ -102,16 +124,26 @@ await new Epub(options, tmpPath).promise;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: project.meta.title, author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
+<<<<<<< HEAD
     res.status(200).send(buf);
 
+=======
+=======
+    res.status(200).send(buf);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 import { promises as fs } from 'fs';
@@ -158,7 +190,15 @@ export default async function handler(req, res) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
+<<<<<<< HEAD
 
+=======
+    try {
+      await fs.unlink(tmpPath);
+    } catch {}
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {;
@@ -167,12 +207,16 @@ export default async function handler(req, res) {
     publisher: project.meta.publisher || 'Zion';
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},;
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: project.meta.title, author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     await new Epub(options, tmpPath).promise;
     const buf = await fs.readFile(tmpPath);
@@ -185,6 +229,10 @@ export default async function handler(req, res) {
     try { await fs.unlink(tmpPath) } catch {}
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function chapterToHtml(text: string): string {
   if (!text) return '';
   return text
@@ -192,6 +240,10 @@ function chapterToHtml(text: string): string {
     .map((p) => `<p>${escapeHtml(p)}</p>`)
     .join('\n')
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, '&amp,')
@@ -200,6 +252,11 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { NextApiRequest, NextApiResponse  } from './next';
 import { randomUUID  } from './crypto';
 import { promises as fs  } from './fs';
@@ -211,6 +268,7 @@ export const config = {
       size_limit: "10mb",
     },
   },
+<<<<<<< HEAD
       sizeLimit: "10mb",
     },
   },;
@@ -223,6 +281,8 @@ function escapeHtml(s: string): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 function escape_html (string: string): string {
@@ -233,12 +293,34 @@ function escape_html (string: string): string {
     .replace (/"/g, "&quot;");
     .replace (/'/g, "&#039;");
 }
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== "POST") {;
     res.status(405).json({ error: "Method not allowed" });
+=======
+function chapterToHtml (text: string): string {
+  // Check condition
+if (return "") {
+  $2
+}
+  return text;
+    .split (/\n\n+/);
+    .map ((p) => `<p>${escape_html (p)}</p>`);
+    .join ("\n");
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: "Method not allowed" });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return;
   }
   const { project } = req.body as { project: any }
@@ -267,6 +349,7 @@ export default async function handler(
       "Content - Disposition",
       'attachment; filename="zion - os - book.epub"',
     );
+<<<<<<< HEAD
     res.status(200).send(buf);
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
@@ -308,6 +391,9 @@ export default async function handler(req, res) {
     res.setHeader('Content-Typeapplication/epub+zip'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
     res.status(200).send(buf)
+=======
+    res.status (200).send (buf);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || "Failed to build EPUB" });
   } finally {
@@ -316,6 +402,7 @@ export default async function handler(req, res) {
     } catch {}
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -362,8 +449,13 @@ function chapterToHtml(text: string): string {;
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

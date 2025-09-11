@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
@@ -8,16 +9,24 @@ export function useResumeList() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -36,12 +45,15 @@ export function useResumeList() {;
         .from('talent_resumes')
         .select('*')
 <<<<<<< HEAD
+<<<<<<< HEAD
         .eq('user_id', user.id)
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
       if (resumeError) throw resumeError;
       if (!resumeData |resumeData.length === 0) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .eq('user_id', user && user.id)
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
@@ -50,11 +62,15 @@ export function useResumeList() {;
       
       if (!resumeData || resumeData && resumeData.length === 0) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setResumes([]);
         return []
       }
       // Transform data to match Resume type
+<<<<<<< HEAD
 <<<<<<< HEAD
           id: resume && resume.id;
           title: resume && resume.title;
@@ -205,6 +221,8 @@ export function useResumeList() {;
     fetch_resumes;
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
         id: resume && resume.id;
         user_id: resume && resume.user_id;
@@ -226,6 +244,7 @@ function useResumeList() {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
@@ -325,6 +344,81 @@ is active: resume.is active
 }) );
 }
 =======
+=======
+}
+      set_error ('You must be logged in to access resumes');
+      return [];
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
+      // Fetch resume list with basic info for the current user;
+      const { data: resume_data, error: resume_error } = await supabase;
+        .from ('talent_resumes');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .order ('is_active', { ascending: false });
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw resume_error) {
+  $2
+}
+      // Check condition
+if ( {) {
+  $2
+}
+        set_resumes ([]);
+        return [];
+      }
+      // Transform data to match Resume type;
+      const transformed_resumes: Resume[] = resume_data.map (resume => ({
+        id: resume.id;
+        user_id: resume.user_id;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        basic_info: {
+
+          id: resume && resume.id;
+          title: resume && resume.title;
+          headline: resume && resume.headline,
+          summary: resume && resume.summary
+        };
+=======
+          headline: resume.headline,
+          summary: resume.summary;
+        }
+
+        work_experience: [];
+        education: [];
+        skills: [];
+        certifications: [],
+
+        is_active: resume.is_active;
+      }));
+;
+      set_resumes (transformed_resumes);
+      return transformed_resumes;
+    } catch (e: any) {
+      console.error ('Error fetching resumes:', e);
+      set_error (e.message);
+      return [];
+
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
+;
+  // Fetch resumes when the component mounts;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_resumes ();
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [user]);
 ;
 
@@ -335,6 +429,11 @@ is active: resume.is active
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
+=======
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

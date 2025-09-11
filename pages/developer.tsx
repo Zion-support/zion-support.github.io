@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -75,6 +76,11 @@ import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
 import Link from 'next/link'
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function DeveloperPage() {
   return (
     <>
@@ -93,6 +99,11 @@ export default function DeveloperPage() {
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</Link>
         <a href="/docs" className="text-cyan-400 underline">Guides</Link>
         <a href="/support" className="text-cyan-400 underline">Support</Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
       </div>
     </>
@@ -118,6 +129,10 @@ export default function DeveloperPage() {_return (
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, _SDKs, _and quickstarts for all services. Contact us for enterprise onboarding.</p>
               <div className="space-x-4">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
         <a href="/docs" className="text-cyan-400 underline">Guides</a>
         <a href="/support" className="text-cyan-400 underline">Support</a>
@@ -125,6 +140,7 @@ export default function DeveloperPage() {_return (
       </div>
     </>
   )
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -165,3 +181,8 @@ function DeveloperPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

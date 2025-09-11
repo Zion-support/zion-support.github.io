@@ -12,7 +12,6 @@ export interface ProfessionalService {
     mobile: string;
     email: string;
 export const professionalServices: ProfessionalService[] = [;
-<<<<<<< HEAD:data-disabled/professional-services.ts
   {
     id: "it-consulting",;
     name: "IT Consulting Services",;

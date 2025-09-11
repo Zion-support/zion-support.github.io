@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -33,6 +34,8 @@ import {toast} from 'sonner';
 export default function AccountSettings() {;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 =======
 
@@ -54,16 +57,23 @@ import {toast} from 'sonner';
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   useEffect(() => {;
@@ -75,6 +85,7 @@ import {toast} from 'sonner';
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
 
+<<<<<<< HEAD
   useEffect(() => {
     try {
 
@@ -88,6 +99,11 @@ import {toast} from 'sonner';
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -116,6 +132,7 @@ export default function AccountSettings() {
         setDisplayWeb3(!!parsed.displayWeb3),
         setDidHandle(parsed.didHandle || ''),
         setEnableBackup(!!parsed.enableBackup)
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
@@ -147,12 +164,18 @@ export default function AccountSettings() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     } catch (e) {
@@ -170,19 +193,31 @@ export default function AccountSettings() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }, []),
+=======
+=======
+  }, []),
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleSave = () => {
     setIsSubmitting(true),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Simulate API call
     setTimeout(() => {
       try {
         localStorage.setItem(
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, []);
 =======
@@ -191,10 +226,21 @@ export default function AccountSettings() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSave = () => {;
     setIsSubmitting(true);
+=======
+
+
+  const handleSave = () => {;
+    setIsSubmitting(true);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Simulate API call;
     setTimeout(() => {;
       try {;
         localStorage && localStorage.setItem(;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );
@@ -206,22 +252,39 @@ export default function AccountSettings() {;
       } finally {;
         setIsSubmitting(false);
       }
+<<<<<<< HEAD
     }, 1000);
   };
   const handleConnectWallet = async () => {;
     try {;
       // Check if wallet is available;
+=======
+
+    }, 1000);
+  };
+
+  const handleConnectWallet = async () => {;
+    try {;
+      // Check if wallet is available;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           'account_settings',
           JSON.stringify({ displayWeb3, didHandle, enableBackup })
         ),
@@ -233,6 +296,9 @@ export default function AccountSettings() {;
       } finally {
         setIsSubmitting(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }, 1000)
   }
@@ -259,9 +325,12 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {
           setDidHandle(ensName)
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []),;
   const handleSave = () => {;
     setIsSubmitting(true),;
@@ -292,16 +361,22 @@ export default function AccountSettings() {;
       }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Request accounts;
       const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       // Request accounts;
       const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Sign message to verify ownership;
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,;
       await ethereum && ethereum.request({;
@@ -309,9 +384,13 @@ export default function AccountSettings() {;
         params: [address, message];
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Auto-set DID handle if ENS is available;
       try {;
         const provider = new (window as any).ethers && ethers.providers.Web3Provider(ethereum);
@@ -319,17 +398,24 @@ export default function AccountSettings() {;
         if (ensName) {;
           setDidHandle(ensName);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 
@@ -340,10 +426,13 @@ export default function AccountSettings() {;
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`);
     } catch (error: any) {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -484,6 +573,8 @@ export default function AccountSettings() {;
   }
   },
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
 
@@ -491,6 +582,7 @@ export default function AccountSettings() {;
   },
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
   },
@@ -513,6 +605,11 @@ export default function AccountSettings() {;
                 <Label htmlFor="email">Email Address</Label>
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  };
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
@@ -533,21 +630,30 @@ export default function AccountSettings() {;
               <div className="space-y-2">;
                 <Label htmlFor="email">Email Address</Label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Input
                   id="email"
                   value={user?.email |''}
                   disabled
                   className="bg-gray-100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 />;
               </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 />;
               </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="space-y-2">;
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>;
                 <div className="flex gap-2">;
@@ -562,6 +668,7 @@ export default function AccountSettings() {;
                     onClick={handleConnectWallet}
                     type="button"
                     className="flex items-center gap-1">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Input;
                   id="email";
@@ -588,6 +695,8 @@ export default function AccountSettings() {;
                   >;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Wallet className="h-4 w-4" />;
                     Connect;
                   </Button>;
@@ -596,6 +705,7 @@ export default function AccountSettings() {;
                   Link your decentralized identity to display on your profile;
                 </p>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Switch
                   id="displayWeb3"
@@ -757,6 +867,8 @@ export default function AccountSettings() {;
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
                 </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="flex items-center justify-between">;
                 <div className="space-y-0 && 0.5">;
@@ -764,11 +876,15 @@ export default function AccountSettings() {;
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>;
                 </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Switch
                   id="displayWeb3"
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />
               </div>
@@ -784,6 +900,8 @@ export default function AccountSettings() {;
                   </p>
                 </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 />;
               </div>;
@@ -801,11 +919,15 @@ export default function AccountSettings() {;
                   </p>;
                 </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Switch
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />
               </div>
@@ -921,6 +1043,8 @@ export default function AccountSettings() {;
                   disabled={!enableBackup}
                 >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 />;
               </div>;
@@ -1027,6 +1151,7 @@ export default function AccountSettings() {;
                 <Button
                   variant="outline" 
                   className="w-full"
+<<<<<<< HEAD
                   disabled={!enableBackup}>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Restore Profile from Backup;
@@ -1044,6 +1169,13 @@ export default function AccountSettings() {;
 
 <<<<<<< HEAD
                     :'Enable backup first to use this feature'}
+=======
+                  disabled={!enableBackup}
+                >
+                  Restore Profile from Backup
+                </Button>
+                <p className="text-xs text-gray-500 mt-1">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {enableBackup
                     ? 'Restore your profile data from decentralized storage'
                     : 'Enable backup first to use this feature'}
@@ -1059,8 +1191,12 @@ export default function AccountSettings() {;
 }
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
+<<<<<<< HEAD
                     : 'Enable backup first to use this feature'}
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     : 'Enable backup first to use this feature'}
 =======
 export default /**
@@ -1327,7 +1463,10 @@ if ( {) {
                     ? 'Restore your profile data from decentralized storage';
                     : 'Enable backup first to use this feature'}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>;
               </div>;
             </CardContent>;
@@ -1335,6 +1474,7 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   ),; export default function AccountSettings () {
@@ -1385,12 +1525,17 @@ try {
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </>);
 }
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

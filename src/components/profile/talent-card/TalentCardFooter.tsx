@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter } from 'next/router'
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -129,11 +130,16 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   }
   },
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
   },
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <>
@@ -152,12 +158,18 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             </div>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
         </div>
         <div className="flex gap-2">
         </div>
         </div>
         </div>;
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Button
@@ -167,6 +179,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button 
             variant="default" 
             size="sm" 
+<<<<<<< HEAD
             onClick={handleRequestHire}
             onClick = {handleRequestHire,}
             onClick={handleRequestHire}
@@ -183,10 +196,15 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button
             variant="outline"
@@ -197,6 +215,8 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             onClick = {handleViewProfile,}
           
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           <Button 
@@ -204,12 +224,16 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             size="sm" 
 
             onClick = {handleViewProfile,}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
           <Button 
             variant="outline" 
             size="sm" 
             onClick={handleViewProfile}
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -220,11 +244,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+=======
+
+
+
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+          >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             View
             <ExternalLink className="h-3 w-3 ml-1" />
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -253,6 +285,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
@@ -260,12 +294,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
 };
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       
@@ -275,6 +312,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -396,3 +434,10 @@ if ( {) {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      />;
+    </>;
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

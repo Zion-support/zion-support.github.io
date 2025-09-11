@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
 import {Award, Share, Star, TrendingUp} from "lucide-react";
@@ -30,22 +31,31 @@ interface ReferralStatsProps {
   isLoading: boolean;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Total Referrals"
 =======
       title: "Total Referrals"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      title: "Total Referrals"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       value: stats.totalReferrals
       icon: <Share className="h-5 w-5 text-muted-foreground" />
       description: "People you've invited"
@@ -69,6 +79,9 @@ title: "Total Referrals"
       description: "Credits earned from referrals"
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
 
   return (
@@ -89,6 +102,7 @@ title: "Total Referrals"
                   {card.description}
                 </p>
               </>
+<<<<<<< HEAD
 =======
 =======
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -153,17 +167,26 @@ import {Award, Share, Star, TrendingUp} from "lucide-react";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
 import { Award, Share, Star, TrendingUp } from "lucide-react",;
 
+<<<<<<< HEAD
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
 import {Award, Share, Star, TrendingUp} from "lucide-react";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ReferralStatsProps {;
   stats: ReferralStatsType,;
   isLoading: boolean;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) {;
   const statCards = [;
     {;
@@ -186,6 +209,10 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
       value: stats && stats.totalRewards > 0 ? `$${stats && stats.totalRewards.toFixed(2)}` : "-",;
       icon: <Award className="h-5 w-5 text-muted-foreground" />,;
       description: "Credits earned from referrals"}],;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards && statCards.map((card, i) => (;
@@ -202,6 +229,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
               </>;
+<<<<<<< HEAD
             )}
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -293,3 +321,20 @@ description: "Credits earned from referrals"
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            )}
+          </CardContent>;
+        </Card>;
+      ))}
+    </div>
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

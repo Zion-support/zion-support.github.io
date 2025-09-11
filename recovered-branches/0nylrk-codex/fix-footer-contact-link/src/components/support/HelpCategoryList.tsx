@@ -1,15 +1,24 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 
+=======
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HelpCategory} from "./types";
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
 
 
 
+<<<<<<< HEAD
 import React from "react";
 
 import React from "react";
@@ -37,6 +46,9 @@ import { HelpCategory } from "./types",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -46,6 +58,7 @@ export function HelpCategoryList({
   categories
   onCategorySelect
   searchQuery
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react";
@@ -70,6 +83,8 @@ export function HelpCategoryList({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
@@ -77,10 +92,14 @@ export function HelpCategoryList({
     ? categories.filter(
         (category) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
 category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
 =======
           category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           category.description
             .toLowerCase()
             .includes(searchQuery.toLowerCase()) |
@@ -89,6 +108,7 @@ category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
+<<<<<<< HEAD
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
@@ -99,6 +119,10 @@ interface HelpCategoryListProps {;
   searchQuery: string;
 }
 
+=======
+      );
+    : categories;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )
     : categories,
 
@@ -117,6 +141,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
               article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
           );
       );
+<<<<<<< HEAD
     : categories;
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
@@ -139,6 +164,17 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
       </div>
     );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    : categories;
+
+  if (filteredCategories && filteredCategories.length === 0) {;
+    return (
+
+=======
+    );
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
@@ -163,6 +199,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface HelpCategoryListProps {;
@@ -282,6 +319,8 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface HelpCategoryListProps {;
   categories: HelpCategory[],;
   onCategorySelect: (categoryId: string) => void,;
@@ -359,12 +398,23 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
           </CardContent>
         </Card>
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      ))}
+
+    </div>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import {
   Card,
@@ -435,6 +485,7 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  interface HelpCategoryListProps {
   categories: HelpCategory[];
@@ -458,3 +509,6 @@ if (filteredCategories.length === 0) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

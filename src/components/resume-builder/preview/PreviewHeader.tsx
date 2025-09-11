@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link } from 'lucide-react'; import { PdfExportButton } from '../PdfExportButton'
@@ -11,10 +12,13 @@ import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface PreviewHeaderProps {
   resume: Resume;
@@ -41,6 +45,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           top: 0
           width: 100%
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           position: absolute;
@@ -49,11 +55,15 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           width: 100%;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
         .no-print {
           display: none !important }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     `
     document.head.appendChild(style)
@@ -173,6 +183,10 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         <Button variant='outline' className='gap-2'>
           <Link className='h-4 w-4' />          Add to Profile        
 
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </Button>
       <div
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}
@@ -211,14 +225,22 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         body * {;
           visibility: hidden;
         }
+<<<<<<< HEAD
         .print-section, .print-section * {;
           visibility: visible;
         }
+=======
+        .print-section, .print-section * {
+          visibility: visible
+        }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .print-section {;
           position: absolute,;
           left: 0,;
           top: 0,;
           width: 100%;
+<<<<<<< HEAD
         }
         .no-print {;
           display: none !important;
@@ -267,10 +289,51 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button variant="outline" className="gap-2">
         
+=======
+
+        }
+
+
+    `;
+    document && document.head.appendChild(style);
+
+    window && window.print();
+
+    // Remove the temporary style element after printing;
+    setTimeout(() => {;
+      document && document.head.removeChild(style);
+      setIsPrinting(false);
+    }, 1000);
+  };
+
+
+    >;
+      <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;
+        <ArrowLeft className='h-4 w-4' />        Back;
+      </Button>;
+
+
+
+      </Button>
+      <div
+
+        className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
+        <PdfExportButton resume={resume} />;
+
+
+        <Button
+          variant='outline'
+          onClick={handleBrowserPrint}
+          disabled={isPrinting}
+
+
+        <Button variant="outline" className="gap-2">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -300,6 +363,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 }
 }
 ;
+=======
+    </div>;
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
         .print - section {
@@ -349,7 +417,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 =======
   )
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  )
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

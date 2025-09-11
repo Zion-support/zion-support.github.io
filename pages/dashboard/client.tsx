@@ -1,20 +1,34 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
   { key: 'response', label: 'First response received' }] as const,
+<<<<<<< HEAD
 type StepKey = typeof STEPS[number]['key'];
 export default function ClientDashboard() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+type StepKey = typeof STEPS[number]['key'];
+
+export default function ClientDashboard() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
   useEffect(() => {
     try {
@@ -22,26 +36,40 @@ export default function ClientDashboard() {
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
 <<<<<<< HEAD
+<<<<<<< HEAD
   }, []);
   useEffect(() => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }, []);
   useEffect(() => {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ClientDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     job: false,;
     invite: false,;
     response: false,;
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     try {;
       const raw = window && window.localStorage.getItem('onboarding && onboarding.client');
       if (raw) setCompleted(JSON && JSON.parse(raw));    } catch {}
   }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     try {;
       window && window.localStorage.setItem(;
@@ -50,6 +78,7 @@ export default function ClientDashboard() {;
       );
     } catch {}
   }, [completed]);
+<<<<<<< HEAD
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
 <<<<<<< HEAD
@@ -59,6 +88,16 @@ export default function ClientDashboard() {;
   );
   const toggle = (key: StepKey) =>;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
+=======
+
+  const progress = Math && Math.round(;
+    (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
+
+  );
+  const toggle = (key: StepKey) =>;
+    setCompleted(c => ({ ...c, [key]: !c[key] }));
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -76,11 +115,18 @@ export default function ClientDashboard() {;
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />        </div>;
       </EnhancedCard>;
+=======
+
+          />        </div>;
+      </EnhancedCard>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <EnhancedCard>;
         <h2 className='font-semibold mb-2'>Checklist</h2>;
         <ul className='space-y-2'>;
@@ -88,9 +134,13 @@ export default function ClientDashboard() {;
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -113,6 +163,7 @@ export default function ClientDashboard() {;
                   {s && s.key === 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -194,9 +245,22 @@ export default function ClientDashboard(req, res) {
 =======
 =======
 
+=======
+    try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
+  }, [completed]);
+
+  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
+  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
+
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -211,6 +275,10 @@ export default function ClientDashboard(req, res) {
           <div className="h-2 rounded bg-blue-600" style={{ width: `${progress}%` }} />
         </div>
       </EnhancedCard>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <EnhancedCard>
         <h2 className="font-semibold mb-2">Checklist</h2>
         <ul className="space-y-2">
@@ -225,9 +293,18 @@ export default function ClientDashboard(req, res) {
               ) : (
 
 
+<<<<<<< HEAD
 
 }
 
+=======
+=======
+
+
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -241,7 +318,10 @@ export default function ClientDashboard(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </ul>;
       </EnhancedCard>;
@@ -250,9 +330,16 @@ export default function ClientDashboard(req, res) {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -346,6 +433,7 @@ function ClientDashboard() {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 type StepKey = typeof STEPS[number]['key'],
 
@@ -413,6 +501,10 @@ export default function ClientDashboard() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -420,8 +512,13 @@ export default function ClientDashboard() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

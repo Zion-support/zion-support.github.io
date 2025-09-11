@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
@@ -62,6 +63,15 @@ const AdminReviewsPage: NextPage = () => {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+
+    if (res.ok) refresh()
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
     } catch (error) {
@@ -83,6 +93,7 @@ const AdminReviewsPage: NextPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
     if (res.ok) refresh()
 
@@ -90,6 +101,8 @@ const AdminReviewsPage: NextPage = () => {;
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -109,6 +122,7 @@ const AdminReviewsPage: NextPage = () => {;
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
               </div>
             </div>
+<<<<<<< HEAD
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -126,6 +140,14 @@ const AdminReviewsPage: NextPage = () => {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          ))}
+          {!pending.length && <div>No pending reviews.</div>}
+        </div>
+      </section>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
@@ -135,17 +157,21 @@ const AdminReviewsPage: NextPage = () => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 export default AdminReviewsPage,
 
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 },
 export default AdminReviewsPage,
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
@@ -226,13 +252,19 @@ export default AdminReviewsPage,
         </div>
       </section>
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 export default AdminReviewsPage,
 },
 
+<<<<<<< HEAD
 export default AdminReviewsPage,;
 export default AdminReviewsPage,
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

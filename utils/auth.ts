@@ -1,18 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 // Authentication utilities
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -66,6 +74,26 @@ export function parseUserFromRequest (req: NextApiRequest): User {
 if ( {) {
   $2
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+  try {;
+    const user = parseUserFromRequest(req);
+
+
+    ensureAdmin(user);
+
+=======
+export function parseUserFromRequest (req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic;
+  const auth_header = req.headers.authorization;
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return { id: 'guest', email: 'guest@example.com', role: 'guest' }
   }
   // Simple mock for admin users;
@@ -86,11 +114,15 @@ if ( {) {
     throw error;
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface User {;
@@ -134,25 +166,43 @@ export function ensureAdmin(user: User): void {
   }
 }
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+<<<<<<< HEAD
 
   try {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {;
     const user = parseUserFromRequest(req);
     ensureAdmin(user);
 
+<<<<<<< HEAD
+=======
+=======
+export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
+  try {
+    const user = parseUserFromRequest (req);
+    ensure_admin (user);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Additional auth utilities for login;
 
 export interface DemoUser {
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Additional auth utilities for login
 export interface DemoUser {;
   id: string;
@@ -204,9 +254,13 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -255,15 +309,21 @@ if (return null) {
     return null;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     user,
     token,
     expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
   };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function isAuthenticated(session: AuthSession | null): boolean {
     if (!session) return false;
@@ -341,6 +401,15 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   }
 }
 
+=======
+=======
+
+  }
+}
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -356,11 +425,15 @@ export function hasRole(session: AuthSession | null, role: string): boolean {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function isModerator(session: AuthSession | null): boolean {
   return hasRole(session, 'moderator') || isAdmin(session);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
@@ -376,3 +449,10 @@ export function isModerator(session: AuthSession | null): boolean {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

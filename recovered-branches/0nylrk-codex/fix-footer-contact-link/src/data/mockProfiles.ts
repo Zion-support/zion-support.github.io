@@ -1,8 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
+=======
+
+      {
+
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p2',
         title: 'Financial Analytics Suite',
         description:;
@@ -13,6 +21,7 @@
         tags: ['Finance', 'Analytics', 'Python'],
         date: 'Jun 2023',
       },
+<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
@@ -75,6 +84,9 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         tags: ['Healthcare', 'AI', 'Machine Learning']
         date: 'Oct 2023'
       }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {
         id: 'p2'
         title: 'Financial Analytics Suite'
@@ -145,6 +157,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     aiScore: 97
     profileType: 'talent' as 'service' | 'talent'
     hourlyRate: 150
+<<<<<<< HEAD
 =======
 
       {
@@ -190,6 +203,8 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     hourlyRate: 150,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     skills: [
       { name: 'Machine Learning', level: 5, endorsements: 38 }
       { name: 'TensorFlow', level: 5, endorsements: 32 }
@@ -207,6 +222,10 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         imageUrl:
 
           'https://images && images.unsplash.com/photo-1526378800651-c32d170fe6f8?auto=format&fit=crop&w=500&h=300',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     experience: [;
       {
         id: 'e1',
@@ -276,9 +295,17 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         tags: ['Computer Vision', 'Deep Learning', 'Python'],
         date: 'Sep 2023',
       },
+<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=500&h=300',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=500&h=300',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p2',
         title: 'Sentiment Analysis API',
         description:;
@@ -289,9 +316,17 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         tags: ['NLP', 'API', 'Python'],
         date: 'May 2023',
       },
+<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=500&h=300',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=500&h=300',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: 'p3',
         title: 'Predictive Maintenance System',
         description:;
@@ -306,6 +341,10 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
 
           'Leading computer vision projects and mentoring junior engineers in deep learning techniques.'
         startDate: 'Mar 2021'
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ProfileData } from "@/types/profile";
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   "service-provider-1": {
@@ -386,6 +425,10 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     experience: [;
       {
         id: 'e1',
@@ -394,7 +437,10 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:;
           'Leading computer vision projects and mentoring junior engineers in deep learning techniques.',
         start_date: 'Mar 2021',
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         current: true,
       },
       {
@@ -408,15 +454,20 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         end_date: 'Feb 2021',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
     location: 'San Francisco, CA',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -437,6 +488,11 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ProfileData } from "@/types/profile",
 export const MOCK_PROFILES: Record<string ProfileData> = {
   "service-provider-1": {
@@ -449,10 +505,14 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
     location: "San Francisco, CA",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     rating: 4.9,
     reviewCount: 124,
     aiScore: 95,
@@ -474,9 +534,13 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         tags: ["Healthcare", "AI", "Machine Learning"],
         date: "Oct 2023"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       },
       {
         id: 'e3',
@@ -509,17 +573,24 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" }
         { day: "Wednesday", hours: "10:00 AM - 6:00 PM" }
         { day: "Thursday", hours: "10:00 AM - 6:00 PM" }
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { day: "Friday", hours: "10:00 AM - 2:00 PM" }
       ];
     }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       status: "limited",
       nextAvailable: "Jun 15, 2024",
       message: "Currently booked for the next 3 weeks. Available for new projects starting mid-June.",
@@ -609,6 +680,9 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
       message: "Open to new projects starting immediately. Prefer projects with 3+ month engagement.",
       availableHours: [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { day: 'Monday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
@@ -795,6 +869,7 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
     }
   }
 };
+<<<<<<< HEAD
 =======
 
         { day: "Monday", hours: "10:00 AM - 6:00 PM" },
@@ -971,3 +1046,7 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -17,6 +18,8 @@ export function addEducationSection(;
 ): number {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (education && education.length === 0) return startY;
   
 
@@ -24,6 +27,7 @@ export function addEducationSection(;
   // Check if we need to add a new page
   if (yPos > 250) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 if (education && education.length === 0) return startY;
   let yPos = startY;
@@ -33,15 +37,21 @@ if (education && education.length === 0) return startY;
     yPos = 20
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     doc && doc.addPage(),
     yPos = 20
   }
   
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   doc && doc.setFontSize(16);
   doc && doc.setTextColor(colors && colors.heading);
   doc && doc.text('Education', 20, yPos);
   yPos += 8;
+<<<<<<< HEAD
 <<<<<<< HEAD
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 60, yPos);
@@ -51,6 +61,8 @@ if (education && education.length === 0) return startY;
     if (a && a.is_current && !b && b.is_current) return -1;
     if (!a && a.is_current && b && b.is_current) return 1;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 60, yPos);
@@ -62,11 +74,15 @@ if (education && education.length === 0) return startY;
     if (a && a.is_current && !b && b.is_current) return -1;
     if (!a && a.is_current && b && b.is_current) return 1;
     
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
     const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
     return dateB && dateB.getTime() - dateA && dateA.getTime()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (education.length === 0) return startY;
   let yPos = startY;
@@ -91,10 +107,13 @@ if (education && education.length === 0) return startY;
     return dateB.getTime() - dateA.getTime()
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
@@ -112,6 +131,8 @@ if (education && education.length === 0) return startY;
       doc && doc.text(edu && edu.location, 70, yPos + 10)
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       doc && doc.addPage();
       yPos = 20
     }
@@ -137,11 +158,15 @@ if (education && education.length === 0) return startY;
       doc && doc.text(edu && edu.location, 70, yPos + 10)
     }
     
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (edu && edu.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(edu && edu.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
+<<<<<<< HEAD
 <<<<<<< HEAD
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
     } else {
@@ -176,6 +201,11 @@ if (education && education.length === 0) return startY;
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } else {
       yPos += 20
 import { jsPDF } from 'jspdf',;
@@ -243,17 +273,24 @@ export function addEducationSection(;
       yPos += 20;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
   return yPos + 5
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   return yPos + 5
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {jsPDF} from 'jspdf';
 import {Education} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -346,6 +383,7 @@ if ( {) {
     }
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -453,3 +491,7 @@ doc.text (dateText, 20, yPos + 10);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

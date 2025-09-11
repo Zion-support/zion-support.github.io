@@ -1,14 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +23,8 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/compo
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
@@ -26,14 +33,19 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
     title: "AI Talent Matching"
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   },
@@ -47,10 +59,15 @@ const features = [
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />
     title: "1-Click Hiring"
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   },
@@ -64,11 +81,16 @@ const features = [
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />
     title: "Resume Builder"
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   },
 =======
@@ -82,11 +104,16 @@ const features = [
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     icon: <Zap className="h-10 w-10 text-zion-cyan" />
     title: "Real-time Notifications"
     description: "Get instant alerts about new job opportunities, messages, and hiring requests."
   }
+<<<<<<< HEAD
 
 
 ],
@@ -99,6 +126,11 @@ const features = [
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+];
+],
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const AppFeatures: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -123,6 +155,7 @@ export const AppFeatures: React.FC = () => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;
@@ -140,6 +173,8 @@ import { Brain, Clock, Award, Zap } from "lucide-react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
@@ -147,30 +182,42 @@ import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const features = [;
   {;
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,;
     title: "AI Talent Matching",;
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements.";
 <<<<<<< HEAD
-  },;
-=======
-  };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  {;
-    icon: <Clock className="h-10 w-10 text-zion-cyan" />,;
-    title: "1-Click Hiring",;
-    description: "Streamlined hiring process that lets you connect with talent instantly with just one click.";
 <<<<<<< HEAD
   },;
 =======
   };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  {;
+    icon: <Clock className="h-10 w-10 text-zion-cyan" />,;
+    title: "1-Click Hiring",;
+    description: "Streamlined hiring process that lets you connect with talent instantly with just one click.";
+<<<<<<< HEAD
+<<<<<<< HEAD
+  },;
+=======
+  };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {;
     icon: <Award className="h-10 w-10 text-zion-cyan" />,;
     title: "Resume Builder",;
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -212,6 +259,8 @@ export const AppFeatures:React.FC = () => {;
 export const AppFeatures: React.FC = () => {;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   {;
     icon: <Zap className="h-10 w-10 text-zion-cyan" />,;
@@ -222,7 +271,10 @@ export const AppFeatures: React.FC = () => {;
 
 export const AppFeatures: React.FC = () => {;
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -231,6 +283,7 @@ export const AppFeatures: React.FC = () => {;
             Everything you love about Zion, now in your pocket. Our mobile app brings all the powerful features you need to succeed.;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
@@ -243,6 +296,8 @@ export const AppFeatures: React.FC = () => {;
               <CardContent>;
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {features && features.map((feature, index) => (;
@@ -253,7 +308,10 @@ export const AppFeatures: React.FC = () => {;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-gray-300">{feature && feature.description}</CardDescription>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </CardContent>;
             </Card>;
           ))}
@@ -262,6 +320,7 @@ export const AppFeatures: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -361,3 +420,5 @@ export const AppFeatures: React.FC = () => {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

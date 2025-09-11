@@ -1,10 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
 
   if (req.method === 'GET') {
@@ -59,6 +63,11 @@ return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowe
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  if (req.method === 'GET') {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export default async /**
  * handler - Function description
@@ -103,10 +112,15 @@ return res;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method === 'GET') {
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
@@ -127,6 +141,7 @@ return res;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
@@ -140,3 +155,6 @@ return res;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

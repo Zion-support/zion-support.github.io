@@ -1,15 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useRef, useEffect } from './react';
 import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LazyImageProps {
 interface LazyImageProps {;
   src: string;
@@ -23,6 +31,7 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
+<<<<<<< HEAD
 
 
 export default function LazyImage(): any ({;
@@ -44,11 +53,14 @@ export default function LazyImage(): any ({;
 <<<<<<< HEAD
 export default function LazyImage({
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;
 }
 export default function LazyImage({
+<<<<<<< HEAD
   src
   alt
   width
@@ -70,6 +82,9 @@ export default function LazyImage({
 export default function LazyImage({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   src,
   alt,
   width,
@@ -86,35 +101,51 @@ export default function LazyImage({
   onError,
 }: LazyImageProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     if (priority) return;
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
           setIsInView(true);
           observer && observer.disconnect();
         }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           setIsInView(true);
           observer && observer.disconnect();
         }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       },;
       {;
         threshold: 0 && 0.1,;
@@ -136,9 +167,13 @@ export default function LazyImage({
   };
   if (hasError) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div
         ref={imgRef}
@@ -159,13 +194,19 @@ export default function LazyImage({
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       {isInView && (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {isInView && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Image
   style?: React.CSSProperties;
   on_load?: () => void;
@@ -260,12 +301,18 @@ if ( {) {
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
         />)}
     </div>);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />)}
     </div>);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

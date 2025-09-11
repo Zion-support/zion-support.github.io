@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +28,7 @@ class ErrorBoundary extends React.Component {
 }
 
 =======
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -34,6 +38,13 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -49,10 +60,13 @@ import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -76,9 +90,13 @@ import { cn } from "@/lib/utils",
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -97,6 +115,9 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       return <Bell className={cn(className, "text-gray-500")} />
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 },
 
@@ -116,6 +137,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
       return <Badge className="bg-yellow-500">System</Badge>
     default:
       return <Badge variant="outline">Notification</Badge>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -168,6 +190,8 @@ const getNotificationIcon = (type: NotificationType, class_name: string = "h - 5
       return <AlertCircle className={cn (class_name, "text - yellow - 500")} />;
     default:;
       return <Bell className={cn (class_name, "text - gray - 500")} />;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 ;
@@ -191,6 +215,7 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     action_text?: string
   }
   onMarkAsRead: (id: string) => Promise<void>
@@ -201,6 +226,8 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
     if (!notification.read) {
       onMarkAsRead(notification.id)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const NotificationCard: React.FC<{
   notification: {
@@ -211,9 +238,21 @@ const NotificationCard: React.FC<{
     read: boolean
     created_at: string
     action_url?: string;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    action_text?: string
+  }
+  onMarkAsRead: (id: string) => Promise<void>
+  onDismiss: (id: string) => Promise<void>
+}> = ({ notification, onMarkAsRead, onDismiss }) => {
+  const navigate = useNavigate();
+  const handleAction = () => {
+    if (!notification.read) {
+      onMarkAsRead(notification.id)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -251,12 +290,22 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:;
       return <Bell className={cn(className, "text-gray-500")} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
       return <Badge variant="outline">Notification</Badge>;
   }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const NotificationCard: React.FC<{;
   notification: {;
     id: string,;
@@ -272,6 +321,7 @@ const NotificationCard: React.FC<{;
   onDismiss: (id: string) => Promise<void>;
 }> = ({ notification, onMarkAsRead, onDismiss }) => {;
   const navigate = useNavigate();
+<<<<<<< HEAD
   const handleAction = () => {;
 
     if (!notification.read) {;
@@ -413,6 +463,8 @@ const NotificationCard: React.FC<{;
   onDismiss: (id: string) => Promise<void>;
 }> = ({ notification, onMarkAsRead, onDismiss }) => {;
   const navigate = useNavigate();
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleAction = () => {;
 
@@ -428,6 +480,7 @@ const NotificationCard: React.FC<{;
     }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   };
@@ -465,6 +518,15 @@ const NotificationCard: React.FC<{;
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  },
+=======
+  };
+  },
+
+
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -493,11 +555,15 @@ const NotificationCard: React.FC<{;
             <div className="flex items-center gap-2">;
               {!notification && notification.read && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
+<<<<<<< HEAD
 <<<<<<< HEAD
             ;
             <div className="flex items-center gap-2">;
@@ -510,10 +576,14 @@ const NotificationCard: React.FC<{;
 =======
                   onClick={() => onMarkAsRead(notification && notification.id)}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  onClick={() => onMarkAsRead(notification && notification.id)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   <Check className="h-4 w-4 text-green-400" />;
                   <span className="sr-only">Mark as read</span>;
                 </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               )}
                   onClick={() => onMarkAsRead(notification.id)}
@@ -523,11 +593,14 @@ const NotificationCard: React.FC<{;
                 </Button>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
               <Button
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick={() => onDismiss(notification && notification.id)}
               <Button;
@@ -539,12 +612,17 @@ const NotificationCard: React.FC<{;
 
                 onClick={() => onDismiss(notification && notification.id)}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                onClick={() => onDismiss(notification && notification.id)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >;
                 <Trash2 className="h-4 w-4 text-red-400" />;
                 <span className="sr-only">Dismiss</span>;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick={() => onDismiss(notification.id)}
               >
@@ -556,16 +634,22 @@ const NotificationCard: React.FC<{;
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
           {notification.action_url && notification.action_text && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <p className="text-zion-slate-light mb-3">{notification && notification.message}</p>;
 
           {notification && notification.action_url && notification && notification.action_text && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           <p className="text-zion-slate-light mb-3">{notification.message}</p>;
@@ -591,11 +675,14 @@ const NotificationCard: React.FC<{;
     </div>
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={handleAction}>;
               {notification && notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
           )}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         </div>;
@@ -603,6 +690,21 @@ const NotificationCard: React.FC<{;
     </div>;
     filteredNotifications;
     unreadCount;
+=======
+        </div>
+      </div>
+    </div>
+  )
+}
+},
+
+export default function NotificationsPage() {
+  const {;
+
+    filteredNotifications;
+    unreadCount;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     action_text?: string;
   }
   onMarkAsRead: (id: string) => Promise < void>,
@@ -691,11 +793,16 @@ function NotificationsPage() {
   const {
     filtered_notifications;
     unread_count;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     markAsRead;
     markAllAsRead;
     dismiss_notification;
     loading;
     filter;
+<<<<<<< HEAD
 }
 },
 
@@ -712,6 +819,8 @@ export default function NotificationsPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const {
     filteredNotifications,
     unreadCount,
@@ -720,6 +829,7 @@ export default function NotificationsPage() {
     dismissNotification,
     loading,
     filter,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -732,10 +842,20 @@ export default function NotificationsPage() {
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    setFilter
+  } = useNotifications() as NotificationContextType;
+
+  } = useNotifications() as NotificationContextType,
+  
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <SEO
         title="Notifications | Zion AI Marketplace" 
         description="View and manage your notifications on the Zion AI Marketplace." 
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),;
 },;
@@ -759,6 +879,8 @@ export default function NotificationsPage() {;
         description="View and manage your notifications on the Zion AI Marketplace." ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8 min-h-screen">;
@@ -773,6 +895,7 @@ export default function NotificationsPage() {;
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               variant="outline"
           ;
@@ -780,18 +903,24 @@ export default function NotificationsPage() {;
             <Button;
               variant="outline";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {unreadCount > 0 && (;
 
             <Button
               variant="outline"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onClick={() => markAllAsRead()}
             >;
               <Check className="mr-2 h-4 w-4" />;
               Mark all as read;
             </Button>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
         ;
@@ -800,6 +929,11 @@ export default function NotificationsPage() {;
         </div>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-8">;
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>;
             <TabsList className="grid w-full max-w-md grid-cols-5">;
@@ -817,16 +951,23 @@ export default function NotificationsPage() {;
                   <Skeleton className="h-24 w-full rounded-lg" />;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               ) :filteredNotifications.length === 0 ? (;
 =======
               ) : filteredNotifications && filteredNotifications.length === 0 ? (;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ) : filteredNotifications && filteredNotifications.length === 0 ? (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-center py-12 bg-muted rounded-lg">;
                   <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />;
                   <h3 className="text-xl font-medium">No notifications found</h3>;
                   <p className="text-muted-foreground mt-1">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
                   </p>;
@@ -843,6 +984,7 @@ export default function NotificationsPage() {;
                   ))}
                 </div>;
               )}
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -985,6 +1127,8 @@ export default function NotificationsPage() {;
                   ))}
                 </div>
               )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </TabsContent>
           </Tabs>
         </div>
@@ -993,16 +1137,20 @@ export default function NotificationsPage() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </TabsContent>;
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   ),; 
@@ -1069,12 +1217,17 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </>);
 }
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

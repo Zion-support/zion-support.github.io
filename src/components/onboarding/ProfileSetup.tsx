@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues,) => void
 import {
@@ -47,12 +48,15 @@ interface ProfileSetupProps {
   userType: string
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 userType: string
 }
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       displayName: ""
       bio: ""
@@ -86,16 +90,23 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -105,10 +116,13 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </p>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Form {...form}>
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
 
       <Form {...form}>
@@ -132,15 +146,21 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 <FormMessage className="text-red-400" />
               </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
           />
           <FormField
             control = {form.control,}
             name="headline"
             render={({ field }: { field: any },) => (
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -176,8 +196,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
   const getTypeLabel = () => {;
     switch (userType) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
       case "serviceProvider": return "Service Provider",;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "serviceProvider": return "Service Provider";
   on_complete: (data: ProfileFormValues, ) => void,
   user_type: string;
@@ -195,7 +218,10 @@ function ProfileSetup() {
   const getTypeLabel = () =>: any {
     switch (user_type) {
       case "service_provider": return "Service Provider";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "talent":;
         return "Talent",;
       case "client":;
@@ -203,10 +229,13 @@ function ProfileSetup() {
       default:;
         return "User";
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   };
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     }
@@ -214,7 +243,10 @@ function ProfileSetup() {
 
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;
@@ -224,19 +256,25 @@ function ProfileSetup() {
       </div>;
       <Form {...form}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">;
           <FormField;
             control={form.control}
             name="displayName";
             render={({ field }: { field: any }) => (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
 
           <FormField
             control = {form && form.control,}
             name="displayName"
             render={({ field }: { field: any },) => (;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
@@ -253,7 +291,10 @@ function ProfileSetup() {
               </FormItem>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
 
@@ -266,16 +307,23 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
           <FormField;
             control={form.control}
             name="headline"
             render={({ field }: { field: any }) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
@@ -285,6 +333,7 @@ function ProfileSetup() {
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
+<<<<<<< HEAD
 <<<<<<< HEAD
                       }`}
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
@@ -302,6 +351,8 @@ function ProfileSetup() {
             name="bio"
             render={({ field }: { field: any },) => (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     <div className="space - y-6">;
       <div className="text - center mb - 6">;
@@ -366,7 +417,10 @@ function ProfileSetup() {
                 </FormControl>;
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
           <FormField;
             control = {form.control, }
@@ -384,8 +438,11 @@ function ProfileSetup() {
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
                     {...field}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </FormControl>;
 
@@ -395,7 +452,10 @@ function ProfileSetup() {
                     />
                     <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   </div>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
@@ -405,6 +465,17 @@ function ProfileSetup() {
             control = {form.control,}
             name="bio"
             render={({ field }: { field: any },) => (
+<<<<<<< HEAD
+=======
+          />;
+          <FormField;
+            control={form.control}
+            name="bio"
+            render={({ field }: { field: any }) => (
+
+
+              <FormItem>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
                   <Textarea
@@ -422,6 +493,7 @@ function ProfileSetup() {
             )}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
           />
           
 =======
@@ -431,27 +503,39 @@ function ProfileSetup() {
 
           <Button
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+          
+
+          <Button
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
           >
             Complete Profile
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </form>
       </Form>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
             )}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
           <Button;
             type="submit";
@@ -463,6 +547,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Form>;
     </div>;
   );
+<<<<<<< HEAD
 se "talent": return "Talent";"
 case "talent": return "Talent";"
 case "client": return "Client"
@@ -508,6 +593,8 @@ getTypeLabel () "
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 case "talent": return "Talent";";
 case "client": return "Client";
 default: ;
@@ -542,7 +629,10 @@ case "talent": return "Talent";";
 case "client": return "Client";
 default:;
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 getTypeLabel () ";
 }Profile</h3> <p className="text - zion - slate - light mt - 2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
   ...field ";
@@ -555,7 +645,11 @@ getTypeLabel () ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }"}
 =======
 }"}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

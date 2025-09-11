@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useEffect, useMemo, useState} from 'react';
 
@@ -6,6 +10,7 @@ import {useEffect, useMemo, useState} from 'react';
 import Link from 'next/link';
 
 
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import {useEffect, useMemo, useState} from 'react';
 import Link from 'next/link';
@@ -53,15 +58,26 @@ export default function CompanyAdmin() {
     'members'
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   number: string;
   amount_usd: number;
   periodStartIso: string;
   periodEndIso: string;
+<<<<<<< HEAD
+=======
+  status: string
+}
+const COMPANY_ID = 'cmp_acme';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   status: string,;
 };
 const COMPANY_ID = 'cmp_acme';
+<<<<<<< HEAD
 =======
 
 
@@ -76,19 +92,38 @@ export default function CompanyAdmin() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default function CompanyAdmin() {
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
+    'members'
+
+
+
+export default function CompanyAdmin() {;
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(;
+    'members';
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );  const [members, setMembers] = useState<Member[]>([]);
   const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   useEffect(() => {;
     fetch(`/api/enterprise/companies/${COMPANY_ID}/members`);
       .then(r => r && r.json());
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const seatsUsed = members && members.length;
   return (
@@ -126,6 +161,18 @@ export default function CompanyAdmin() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      .then(setMembers);
+    fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`)
+      .then(r => r.json())
+      .then(setUsage);
+    fetch(`/api/enterprise/companies/${COMPANY_ID}/activity`)
+      .then(r => r.json())
+      .then(setActivity);
+    fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`)
+      .then(r => r.json())
+      .then(setInvoices);  }, []);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const seatsUsed = members.length;
   return (
 
@@ -133,11 +180,16 @@ export default function CompanyAdmin() {
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
+<<<<<<< HEAD
 <Link href="/workspace/acme">Go to Workspace</Link>
+=======
+          <Link href="/workspace/acme">Go to Workspace</Link>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
 
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -217,6 +269,9 @@ function CompanyAdmin() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>;
         {(['members', 'usage', 'activity', 'billing'] as const).map(t => (;
+=======
+        {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <button
             key={t}
             onClick={() => setTab(t)}
@@ -226,15 +281,25 @@ function CompanyAdmin() {
               border: '1px solid #e5e7eb',;
               background: tab === t ? '#111827' : 'white',;
               color: tab === t ? 'white' : '#111827',;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               padding: '0.5rem 0.75rem',
               border_radius: 8,
               border: '1px solid #e5e7eb',
               background: tab === t ? '#111827' : 'white',
               color: tab === t ? 'white' : '#111827',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }}
           >;
             {t}
           </button>        ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </nav>;
       {tab === 'members' && (;
@@ -246,21 +311,30 @@ function MembersTab(): any ({;
 }: {;
   members: Member[];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   members: Member[];
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const add = async () => {;
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ name, email, role }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     });
     const created = await r && r.json();
     setMembers([created, ...members]);
@@ -268,14 +342,20 @@ function MembersTab(): any ({;
     setEmail('');
     setRole('viewer');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {tab === 'activity' && (
         <ActivityTab events={activity} />
       )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {tab === 'activity' && (
         <ActivityTab events={activity} />
@@ -300,13 +380,24 @@ function MembersTab(): any ({;
 
       {_tab === 'billing' && (
 
+=======
+      {tab === 'billing' && (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <BillingTab invoices={invoices} />
       )}
     </main>
   )
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {(['membersusageactivitybilling'] as const).map(t => (
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
         ))  } catch (error) {
@@ -354,6 +445,7 @@ function MembersTab(): any ({;
   }
 
 }
+<<<<<<< HEAD
 function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
 
 <<<<<<< HEAD
@@ -447,6 +539,11 @@ function MembersTab({
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
 =======
+=======
+
+function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [name, setName] = useState(''),
   const [email, setEmail] = useState(''),
   const [role, setRole] = useState<Member['role']>('viewer'),
@@ -454,13 +551,22 @@ function MembersTab({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const add = async () => {
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
     const created = await r.json();
     setMembers([created, ...members]);
     setName(''), setEmail(''), setRole('viewer')
+<<<<<<< HEAD
   };
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const remove = async (id: string) => {;
     await fetch(;
       `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;
@@ -468,6 +574,7 @@ function MembersTab({
     );
     setMembers(members && members.filter(m => m && m.id !== id));
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -486,6 +593,16 @@ function MembersTab({
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+  const changeRole = async (id: string, newRole: Member['role']) => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
+    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
+  },
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   set_members: (m: Member[]) => void;
 }) {  const [name, set_name] = useState ('');
   const [email, set_email] = useState ('');
@@ -498,8 +615,11 @@ function MembersTab({
       body: JSON.stringify ({ name, email, role }),
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const created = await r.json ();
     set_members ([created, ...members]);
     set_name ('');
@@ -558,7 +678,10 @@ function MembersTab({
                 padding: 8,
                 border_bottom: '1px solid #e5e7eb',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
             >;
               Name;
@@ -566,16 +689,22 @@ function MembersTab({
             <th;
               style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
                 text_align: 'left',
                 padding: 8,
                 border_bottom: '1px solid #e5e7eb',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 text_align: 'left',
                 padding: 8,
                 border_bottom: '1px solid #e5e7eb',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
             >;
               Email;
@@ -583,16 +712,22 @@ function MembersTab({
             <th;
               style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
                 text_align: 'left',
                 padding: 8,
                 border_bottom: '1px solid #e5e7eb',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 text_align: 'left',
                 padding: 8,
                 border_bottom: '1px solid #e5e7eb',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }}
             >;
               Role;
@@ -600,9 +735,13 @@ function MembersTab({
             <th;
               style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section>
       <h2>Team members</h2>
       <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
@@ -633,17 +772,25 @@ function MembersTab({
             <tr key={m.id}>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {m.name}
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 {m.email}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onChange={e => setRole(e && e.target.value as Member['role'])}
         >;
           <option value='recruiter'>Recruiter</option>;
@@ -654,6 +801,10 @@ function MembersTab({
         <button onClick={add} style={{ padding: '0 && 0.5rem 0 && 0.75rem' }}>;
           Add;
         </button>      </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>;
         <thead>;
           <tr>;
@@ -701,19 +852,31 @@ function MembersTab({
               </td>;
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <select
                   value={m && m.role}
                   onChange={e =>;
                     changeRole(m && m.id, e && e.target.value as Member['role']);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 <select;
                   value={m.role}
                   on_change={e =>;
                     change_role (m.id, e.target.value as Member['role']);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 >;
                   <option value='recruiter'>Recruiter</option>;
@@ -722,6 +885,7 @@ function MembersTab({
                   <option value='admin'>Admin</option>;
                 </select>;
               </td>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <td;
                 style={{
@@ -733,6 +897,8 @@ function MembersTab({
                 <button;
                   on_click={() => remove (m.id)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <td;
 
@@ -740,15 +906,22 @@ function MembersTab({
 
                   padding: 8,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   style={{ color: '#b91c1c' }}
                 >;
                   Remove;
                 </button>              </td>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </tr>))}
         </tbody>;
       </table>;
@@ -759,41 +932,67 @@ function UsageTab ({
   set_usage,
   seats_used,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }: {
+=======
+
+}: {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function UsageTab(): any ({;
   usage,;
   setUsage,;
   seatsUsed,;
 }: {;
+<<<<<<< HEAD
   usage: Usage;
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  usage: Usage;
+
+  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const save = async () => {;
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {;
       method: 'PATCH',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ monthlyJobPosts, budgetCapUsd }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     setUsage({ monthlyJobPosts, budgetCapUsd });  }
+=======
+
+    });
+    setUsage({ monthlyJobPosts, budgetCapUsd });  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section>;
       <h2>Usage limits</h2>;
       <div
         style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           display: 'grid',
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: 12,
@@ -802,9 +1001,13 @@ function UsageTab(): any ({;
         <label>;
           <div>Monthly job posts</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <input
             type='number'
             value={monthlyJobPosts}
@@ -823,9 +1026,13 @@ function UsageTab(): any ({;
       <div
         style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           marginTop: 12,
           display: 'flex',
           alignItems: 'center',
@@ -838,9 +1045,13 @@ function UsageTab(): any ({;
       </div>;
     </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 function ActivityTab(): any ({ events }: { events: any[] }) {;
   return (
@@ -867,6 +1078,7 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             <th
               style={{
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));  }
 
@@ -983,6 +1195,8 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
               style={{
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 textAlign: 'right'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
@@ -990,6 +1204,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
             >
               Actions
             </th>          </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
       </div>
@@ -1005,6 +1220,9 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
@@ -1015,6 +1233,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                   <option value="admin">Admin</option>
                 </select>
               </td>
+<<<<<<< HEAD
               <td
                 style={{
                   padding: 8
@@ -1028,11 +1247,17 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                 >
                   Remove
                 </button>              </td>
+=======
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
+                <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
+              </td>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </tr>
           ))}
         </tbody>
       </table>
     </section>
+<<<<<<< HEAD
   );
 function UsageTab({
   usage
@@ -1091,6 +1316,20 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) }),
     setUsage({ monthlyJobPosts, budgetCapUsd })
   },
+=======
+  )
+}
+
+function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
+  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
+  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
+
+  const save = async () => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
+    setUsage({ monthlyJobPosts, budgetCapUsd })
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section>
       <h2>Usage limits</h2>
@@ -1104,6 +1343,7 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
           <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
+<<<<<<< HEAD
       <div
         style={{
           marginTop: 12
@@ -1119,6 +1359,19 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
       </div>
     </section>
   );
+=======
+      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
+        <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
+        <span>Seats used: {seatsUsed}</span>
+      </div>
+    </section>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  )
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function ActivityTab({ events }: { events: any[] }) {
   return (
     <section>
@@ -1126,13 +1379,19 @@ function ActivityTab({ events }: { events: any[] }) {
       <ul>
         {events.map((e) => (
           <li key={e.id}>
+<<<<<<< HEAD
             <span style={{ color: '#6b7280' }}>
               {new Date(e.timestampIso).toLocaleString()} —{' '}
             </span>            <strong>{e.actorEmail}</strong> {e.action}
+=======
+            <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>
+            <strong>{e.actorEmail}</strong> {e.action}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </li>
         ))}
       </ul>
     </section>
+<<<<<<< HEAD
   );
       <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
         <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
@@ -1175,6 +1434,39 @@ function ActivityTab({ events }: { events: any[] }) {;
 }
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
+=======
+  )
+}
+
+function BillingTab({ invoices }: { invoices: Invoice[] }) {
+  return (
+=======
+
+
+  const save = async () => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) }),
+    setUsage({ monthlyJobPosts, budgetCapUsd })
+  },
+  return (
+    <section>
+      <h2>Usage limits</h2>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
+
+        <label>
+          <div>Monthly job posts</div>
+          <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
+        </label>
+        <label>
+          <div>Budget cap (USD)</div>
+          <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
+        </label>
+      </div>
+
+
+function BillingTab({ invoices }: { invoices: Invoice[] }) {
+  return (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section>
       <h2>Billing & invoices</h2>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -1235,6 +1527,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
+<<<<<<< HEAD
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
@@ -1418,6 +1711,8 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
             <tr key={inv.id}>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   set_usage: (u: Usage) => void;
   seats_used: number;
@@ -1553,6 +1848,7 @@ function BillingTab() {
             <tr key={inv.id}>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {inv.number}
               </td>;
@@ -1572,6 +1868,11 @@ function BillingTab() {
 <<<<<<< HEAD
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                {inv.number}
+              </td>;
+              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
@@ -1581,7 +1882,10 @@ function BillingTab() {
                   border_bottom: '1px solid #f3f4f6',
                   text_align: 'right',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }}
               >;
                 ${inv.amount_usd.to_fixed (2)}
@@ -1589,16 +1893,22 @@ function BillingTab() {
               <td;
                 style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
                   padding: 8,
                   border_bottom: '1px solid #f3f4f6',
                   text_align: 'center',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   padding: 8,
                   border_bottom: '1px solid #f3f4f6',
                   text_align: 'center',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }}
               >;
                 {inv.status}
@@ -1611,8 +1921,12 @@ function BillingTab() {
                 }}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 textAlign: 'left',
                 padding: 8,
                 borderBottom: '1px solid #e5e7eb',
@@ -1645,7 +1959,10 @@ function BillingTab() {
             </th>;
             <th
               style={{
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 textAlign: 'right',
                 padding: 8,
                 borderBottom: '1px solid #e5e7eb',
@@ -1676,12 +1993,16 @@ function BillingTab() {
             </tr>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
+<<<<<<< HEAD
 <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
               </td>
 <<<<<<< HEAD
@@ -1722,6 +2043,10 @@ function BillingTab() {
   }
 }
 =======
+=======
+                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
+              </td>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
                   border_bottom: '1px solid #f3f4f6',
@@ -1741,9 +2066,15 @@ function BillingTab() {
     </section>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

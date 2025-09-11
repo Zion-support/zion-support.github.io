@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 
 
 import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 
+=======
+import { useEffect, useState  } from 'react';
+import { useRouter  } from 'next/router';
+import {useEffect, useState} from 'react';
+import {useRouter} from 'next/router';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
 
 export default function GrantDetailPage() {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
@@ -15,16 +26,25 @@ export default function GrantDetailPage() {;
   const { id } = router && router.query as { id: string },;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
   useEffect(() => {;
     if (!id) return;
     setLoading(true);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -41,6 +61,10 @@ export default function GrantDetailPage() {;
     }
   }
   if (loading)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const addUpdate = async () => {;
     if (!id || !updateContent && updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r && r.json()).then((d) => setItem(d && d.record)).finally(() => setLoading(false));
@@ -73,9 +97,13 @@ export default function GrantDetailPage() {;
     );
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect, useState} from 'react';
 import {use_router} from 'next / router';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
@@ -153,18 +181,26 @@ if (
           <div className='text - sm text - gray - 600 dark:text - gray - 400'>;
             {item.sector || 'General'} • {item.region || 'Global'} •{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {item.program === 'incubator' ? 'Incubator' : 'Grant'}
           </div>;
         </div>;
         <div className='flex gap - 2 items - center'>;
           {item.program === 'incubator' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <EnhancedLayout>;
       <div className='flex items-center justify-between mb-4'>;
         <div>;
@@ -180,9 +216,13 @@ if (
               Incubated by Zion;
             </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )}
           {item && item.status === 'Approved' && (;
             <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -214,6 +254,7 @@ if (
                 <ul className='list-disc list-inside text-sm'>;
                   {item && item.supportingLinks.map((l, i) => (;
                     <li key={i}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
@@ -321,10 +362,14 @@ export default function GrantDetailPage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <a
                         className='text-blue-600'
                         href={l}
                         target='_blank'
+<<<<<<< HEAD
 <<<<<<< HEAD
             )}
           </section>;
@@ -510,10 +555,13 @@ export default function GrantDetailPage() {;
   );
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     </EnhancedLayout>
   );
+<<<<<<< HEAD
 
 
 }
@@ -551,6 +599,12 @@ export default function GrantDetailPage() {;
     </EnhancedLayout>;
   );
 }
+=======
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
@@ -695,4 +749,14 @@ export default function GrantDetailPage() {;
     </EnhancedLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+=======
+    </EnhancedLayout>
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

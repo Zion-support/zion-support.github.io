@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 interface TalentRateRecommenderProps {
@@ -47,11 +48,17 @@ import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { Sparkles } from 'lucide-react'
+interface TalentRateRecommenderProps {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -136,6 +143,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Track this suggestion application
+=======
+
+      // Track this suggestion application
+      if (user && user.id) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         trackPricingSuggestion({
           userId: user.id
           suggestionType: "talent"
@@ -239,11 +251,18 @@ if ( {) {
       }
     }
   }
+<<<<<<< HEAD
       }
     }
   }
   },
 
+=======
+  },
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">
       <div>
@@ -256,6 +275,7 @@ if ( {) {
             onClick={generateSuggestion}
             disabled={skills.length === 0 || yearsExperience <= 0}
             className="w-full"
+<<<<<<< HEAD
             onClick = {generateSuggestion,}
             disabled = {skills.length === 0 |yearsExperience <= 0,}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -271,6 +291,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
             className="w-full"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
           </Button>
@@ -281,6 +303,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>;
         ) : (;
           <PricingSuggestionBox
+<<<<<<< HEAD
 <<<<<<< HEAD
           <PricingSuggestionBox
             suggestion = {suggestion,}
@@ -312,6 +335,8 @@ return (<div className="space-y-4" > <div> {"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   rateType 
@@ -329,6 +354,7 @@ return (<div className="space-y-4" > <div> {"
         )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   rateType 
 }/>) 
 }</div> </div>) ;
@@ -343,14 +369,20 @@ return (<div className="space-y-4" > <div> {"
         )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     <div className="space - y-4">;
@@ -390,7 +422,11 @@ return (<div className="space - y-4" > <div> {";
 }
 '"},
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

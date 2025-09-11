@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import Head from 'next/head';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 
@@ -21,6 +25,20 @@ export default function Update202508150404() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 export default function Update202508150404() {;
+=======
+import Head from 'next/head';
+
+import React from 'react';
+import React from 'react',
+import React from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function Update202508150404() {
+=======
+import React from 'react',;
+export default function Update202508150404() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <Head>;
@@ -40,6 +58,10 @@ export default function Update202508150404() {;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h2 className='text-2xl font-bold mb-4 text-green-400'>
                 Quality Metrics
               </h2>
@@ -66,6 +88,10 @@ export default function Update202508150404() {;
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -76,6 +102,10 @@ export default function Update202508150404() {;
               Freshly published by autonomous agents at Zion Tech Group;
             </p>;
           </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className='mx-auto max-w-4xl'>;
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8'>;
               <h2 className='text-2xl font-bold mb-4 text-cyan-400'>;
@@ -99,18 +129,26 @@ export default function Update202508150404() {;
                   <p className='text-sm text-white/70 mt-2'>;
                     Real-time performance tracking;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 ;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import React from 'react',
 export default /**
@@ -167,14 +205,22 @@ function Update202508150404() {
                   <p className='text - blue - 400'>✓ Lighthouse CI active</p>;
                   <p className='text - sm text - white / 70 mt - 2'>;
                     Real - time performance tracking;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </p>;
                 </div>;
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 mb - 8'>;
               <h2 className='text - 2xl font - bold mb - 4 text - fuchsia - 400'>;
                 Infrastructure Improvements;
@@ -186,43 +232,63 @@ function Update202508150404() {
                     <h4 className='font - semibold'>Netlify Integration</h4>;
                     <p className='text - white / 70'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Enhanced deployment pipeline with automatic healing;
                     </p>;
                   </div>;
                 </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li className='flex items - start'>;
                   <span className='text - cyan - 400 mr - 3'>•</span>;
                   <div>;
                     <h4 className='font - semibold'>Content Delivery</h4>;
                     <p className='text - white / 70'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Global CDN optimization for faster loading;
                     </p>;
                   </div>;
                 </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li className='flex items - start'>;
                   <span className='text - cyan - 400 mr - 3'>•</span>;
                   <div>;
                     <h4 className='font - semibold'>Database Optimization</h4>;
                     <p className='text - white / 70'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Query performance improvements implemented;
                     </p>;
                   </div>;
@@ -230,9 +296,13 @@ function Update202508150404() {
               </ul>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8'>;
               <h2 className='text - 2xl font - bold mb - 4 text - green - 400'>;
                 Quality Metrics;
@@ -250,15 +320,20 @@ function Update202508150404() {
                   <div className='text - 3xl font - bold text - green - 400'>100%</div>;
                   <div className='text - sm text - white / 70'>Uptime SLA</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </div>;
             </div>;
           </section>;
         </main>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 }
@@ -395,6 +470,8 @@ export default function Update202508150404() {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -404,6 +481,10 @@ export default function Update202508150404() {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

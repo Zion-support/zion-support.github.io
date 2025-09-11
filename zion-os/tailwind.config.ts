@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { Config } from 'tailwindcss';
 const config: Config = {
   content: [;
@@ -15,6 +19,13 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+<<<<<<< HEAD
+=======
+=======
+    &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   theme: {
     extend: {
       colors: {
@@ -33,6 +44,7 @@ const config: Config = {
       background_image: {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 
   plugins: []}
@@ -44,4 +56,9 @@ const config: Config = {
 ;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  plugins: []}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default config;

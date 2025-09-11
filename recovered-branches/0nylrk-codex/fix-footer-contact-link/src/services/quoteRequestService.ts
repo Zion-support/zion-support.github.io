@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {supabase} from "@/integrations/supabase/client";
 
 
@@ -12,6 +17,7 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -25,12 +31,27 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export const quoteRequestService = {
+  // Get all quote requests (for admin);
+  get_all: async () => {
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .select (`;
+        *;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .select(`;
         *;
       .select(`
@@ -39,6 +60,7 @@ export const quoteRequestService = {
           display_name
         )
       `)
+<<<<<<< HEAD
       .select(`
         *,
 
@@ -47,6 +69,8 @@ export const quoteRequestService = {
         talent:talent_id (
     return data && data.map((item: any) => ({
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .order('created_at', { ascending: false });
     if (error) throw error;
     // Format the data to include talent_name
@@ -54,6 +78,7 @@ export const quoteRequestService = {
       ...item
       talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
+<<<<<<< HEAD
 =======
 
       .select(`
@@ -66,6 +91,8 @@ export const quoteRequestService = {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
@@ -73,20 +100,26 @@ export const quoteRequestService = {
     // Format the data to include talent_name
     return data.map((item: any) => ({
 <<<<<<< HEAD
+<<<<<<< HEAD
       ...item,
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   },
   
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       ...item,
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
@@ -94,14 +127,20 @@ export const quoteRequestService = {
       .select('*')
       .eq('talent_id', talentId)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .order('created_at', { ascending: false });
     if (error) throw error;
     return data as QuoteRequest[]
   }
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
@@ -109,6 +148,9 @@ export const quoteRequestService = {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
@@ -126,6 +168,7 @@ export const quoteRequestService = {
       ...data;
       talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest
   }
+<<<<<<< HEAD
 =======
 
 
@@ -144,6 +187,8 @@ if (throw error) {
       ...item,
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   // Get quote requests for a specific talent;
   getByTalentId: async (talent_id: string) => {
@@ -173,17 +218,24 @@ if (throw error) {
   };
   
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
     // If marking as responded, set replied_at
     if (status === 'responded') {
 <<<<<<< HEAD
+<<<<<<< HEAD
       updates.replied_at = new Date().toISOString()
 =======
       updates && updates.replied_at = new Date().toISOString()
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      updates && updates.replied_at = new Date().toISOString()
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
@@ -193,15 +245,21 @@ if (throw error) {
         .eq('id', id)
         .single();
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (!data.viewed_at) {
         updates.viewed_at = new Date().toISOString()
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       
       if (!data && data.viewed_at) {
         updates && updates.viewed_at = new Date().toISOString()
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
     const { data, error } = await supabase
@@ -233,6 +291,7 @@ if (throw error) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -672,6 +731,8 @@ if (error) throw error;
 return true;
 }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .single(),
     
     if (error) throw error,
@@ -689,6 +750,7 @@ return true;
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
 
+<<<<<<< HEAD
   }
 ;
   // Archive / Unarchive a quote request;
@@ -730,3 +792,8 @@ if (throw error) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

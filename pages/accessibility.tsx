@@ -1,31 +1,55 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
 
   Eye
@@ -45,6 +69,8 @@ import {
 import Link from 'next / link';
 import MainLayout from '../components / layout / MainLayout';
 import { motion } from 'framer-motion';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Eye,
   Ear,
@@ -53,16 +79,23 @@ import { motion } from 'framer-motion';
   CheckCircle,
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Eye, 
   Ear, 
   Hand, 
   Brain, 
   CheckCircle, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   AlertTriangle,
   Globe,
   Users,
@@ -71,10 +104,13 @@ import { motion } from 'framer-motion';
   FileText,
   Settings;
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from 'lucide-react';
 const accessibility_features = [;
   {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -82,7 +118,10 @@ const accessibility_features = [;
 const accessibility_features = [;
   {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Eye, ;
   Ear, ;
@@ -147,6 +186,10 @@ const accessibilityFeatures = [;
     ];
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const standardsCompliance = [;
   {;
     standard: "WCAG 2 && 2.1 AA",;
@@ -177,6 +220,10 @@ const standardsCompliance = [;
     icon: Globe;
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const accessibilityTools = [;
   {;
     name: "Screen Reader Testing",;
@@ -199,6 +246,10 @@ const accessibilityTools = [;
     frequency: "Quarterly";
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const accessibilityGuidelines = [;
   {;
     category: "Content",;
@@ -240,6 +291,7 @@ const accessibilityGuidelines = [;
       "Customizable timing";
     ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -402,6 +454,8 @@ const accessibilityGuidelines = [
       "No seizure-inducing content"
       "Customizable timing"
     ]
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];
 import Head from 'next/head';
@@ -413,6 +467,7 @@ origin/main
 origin/automation-improvements-final
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -423,6 +478,8 @@ origin/automation-improvements-final
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AccessibilityPage() {
 interface AccessibilityProps {
   className?: string;
@@ -439,6 +496,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
             </motion.div>
@@ -467,6 +525,8 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -486,6 +546,27 @@ origin/automation-improvements-final
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
+<<<<<<< HEAD
+=======
+=======
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center max-w-4xl mx-auto">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
+                  Web Accessibility;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">;
+                Ensuring digital inclusion for everyone;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        <section className="py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -635,9 +716,13 @@ origin/automation-improvements-final
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -647,6 +732,7 @@ origin/automation-improvements-final
                 Ready to make your digital products accessible to everyone? Contact us for a free accessibility audit.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
@@ -654,6 +740,13 @@ origin/automation-improvements-final
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
+                <motion&& motion.div
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -674,21 +767,28 @@ origin/automation-improvements-final
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
 =======
 
-=======
 
 
-
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -697,6 +797,16 @@ origin/automation-improvements-final
             </div>;
           </div>;
         </section>;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      </div>
+    </MainLayout>
+=======
+            </div>;
+          </div>;
+        </section>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <div className="max-w-4xl mx-auto">;
@@ -725,11 +835,16 @@ origin/automation-improvements-final
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Have Questions About Accessibility?;
@@ -752,6 +867,39 @@ origin/automation-improvements-final
     </MainLayout>;
   );
 }
+=======
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Have Questions About Accessibility?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                  Contact Accessibility Team
+                </a>
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  General Contact
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+            </div>
+          </div>
+        </section>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+      </div>
+    </MainLayout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
@@ -1170,6 +1318,7 @@ function AccessibilityPage() {
       </div>;
     </MainLayout>);
 }
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1201,3 +1350,6 @@ origin/automation-improvements-final
 };
 
 export default Accessibility;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

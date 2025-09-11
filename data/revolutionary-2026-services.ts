@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2026Service {;
   id: string;
@@ -28,6 +31,7 @@ export interface Revolutionary2026Service {;
   growthRate: string;
   variant: ServiceVariant;
   contactInfo: {
+<<<<<<< HEAD
     mobile: string;
     email: string;
     address: string;
@@ -2395,6 +2399,8 @@ export interface Revolutionary2026Service {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
     mobile: string, email: string,
     address: string,
@@ -2431,6 +2437,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     competitors: ['TableauPower BILookerQlikDomo'], marketSize: '$29.5B market',
     growthRate: '220% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
@@ -2459,6 +2466,8 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2026Service {;
   id: string,;
@@ -2537,6 +2546,15 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
+=======
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -3117,5 +3135,12 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     customers: 45,;
     rating: 4.8;
     reviews: 25;
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

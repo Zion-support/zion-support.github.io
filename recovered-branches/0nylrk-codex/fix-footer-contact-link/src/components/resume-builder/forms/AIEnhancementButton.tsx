@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
@@ -8,15 +9,23 @@ import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -25,11 +34,17 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
@@ -37,6 +52,7 @@ import {Sparkles, Loader2} from 'lucide-react';
 export function AIEnhancementButton({;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   buttonText?: string;
   className?: string
@@ -46,14 +62,20 @@ export function AIEnhancementButton({
 export function AIEnhancementButton({;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   currentContent;
   enhancementType;
   context;
   onEnhanced;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   buttonText = "Enhance with AI";
 
 
@@ -66,6 +88,7 @@ export function AIEnhancementButton({;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   buttonText = "Enhance with AI";
   className;
@@ -79,6 +102,8 @@ export function AIEnhancementButton({;
     }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setError(null);
     const enhancedContent = await enhanceContent(;
       currentContent;
@@ -86,16 +111,22 @@ export function AIEnhancementButton({;
       context;
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
     }
   };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   buttonText = "Enhance with AI";
   className
@@ -124,6 +155,11 @@ export function AIEnhancementButton({;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -153,6 +189,7 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     setError(null);
@@ -188,6 +225,11 @@ export function AIEnhancementButton({
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Button
       type="button"
@@ -195,6 +237,7 @@ export function AIEnhancementButton({
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from 'react',;
@@ -263,6 +306,21 @@ export function AIEnhancementButton({;
 
 
 }
+=======
+      disabled={isEnhancing}>;
+      {isEnhancing ? (;
+        <Loader2 className="h-3 w-3 animate-spin" />;
+      ) : (;
+        <Sparkles className="h-3 w-3" />;
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 interface AIEnhancementButtonProps {
   current_content: string,
@@ -279,6 +337,7 @@ function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handle_enhance = async () => {
     // Check condition
@@ -342,3 +401,5 @@ context);
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
@@ -7,21 +8,30 @@ export function addSkillsSection(
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   yPos += 8;
   // Group skills by category
@@ -40,6 +50,8 @@ export function addSkillsSection(;
   const skillsByCategory = skills.reduce((acc, skill) => {
     const category = skill.category |'Other';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (skills && skills.length === 0) return startY;
   
   let yPos = startY;
@@ -58,13 +70,17 @@ export function addSkillsSection(;
   const skillsByCategory = skills && skills.reduce((acc, skill) => {
     const category = skill && skill.category || 'Other';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(skill);
     return acc
   }, {} as Record<string, typeof skills>);
+<<<<<<< HEAD
 <<<<<<< HEAD
   doc.setFontSize(11);
   doc.setTextColor(colors.text);
@@ -128,13 +144,18 @@ export function addSkillsSection(;
   }
   return yPos + 5
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return yPos + 5
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -186,6 +207,7 @@ if ( {) {
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -249,3 +271,7 @@ return yPos + 5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,10 +1,15 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 let animationFrameId: number;
 let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
@@ -18,7 +23,10 @@ size: number;
 color: string;
 life: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 max_life: number;
 
@@ -26,7 +34,10 @@ constructor () {
   this.coordinate_x = Math.random () * canvas.width;
 this.coordinate_y = Math.random () * canvas.height;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 maxLife: number;
 constructor () {
   this.x = Math.random () * canvas.width;
@@ -36,7 +47,10 @@ this.vy = (Math.random () - 0.5) * 2;
 this.size = Math.random () * 3 + 1;
 this.color = `hsl ($ {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Math.random () * 360;
 }, 70%, 60%) `;
@@ -55,10 +69,17 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   constructor () {
   this.coordinate_x = Math.random () * canvas.width;
 this.coordinate_y = Math.random () * canvas.height;
+=======
+  constructor () {
+  this.coordinate_x = Math.random () * canvas.width;
+this.coordinate_y = Math.random () * canvas.height;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Math.random () * 360
 }, 70%, 60%) `;
 this.life = Math.random () * 100;
@@ -74,6 +95,7 @@ this.intensity = Math.random () * 0.5 + 0.5;
 this.phase = Math.random () * Math.PI * 2;
 this.color = `hsl ($ {
 <<<<<<< HEAD
+<<<<<<< HEAD
   children;
   className = ''
 }) => {
@@ -87,6 +109,8 @@ const UltraAdvancedQuantumBackground: React.FC<
   className = ''
 }) => {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -103,7 +127,10 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -111,6 +138,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+<<<<<<< HEAD
 <<<<<<< HEAD
     class Particle {;
 =======
@@ -183,6 +211,8 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let animationFrameId: number;
     let particles: Particle[] = [];
     let quantumFields: QuantumField[] = [];
@@ -195,6 +225,7 @@ if (return) {
       size: number;
       color: string;
       life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
@@ -214,6 +245,8 @@ if (return) {
       x: number,
       y: number,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     let animationFrameId: number,
     let particles: Particle[] = [];
@@ -225,13 +258,17 @@ if (return) {
 =======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       vx: number,
       vy: number,
       size: number,
       color: string,
       life: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 this.maxLife = 100
       maxLife: number;      x: number
@@ -255,6 +292,11 @@ this.maxLife = 100
         this.maxLife = 100
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        this.maxLife = 100
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       update() {
         this.x += this.vx;
@@ -266,9 +308,13 @@ this.maxLife = 100
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -297,17 +343,24 @@ this.maxLife = 100
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
 <<<<<<< HEAD
+<<<<<<< HEAD
           this.y = Math.random() * canvas.height
         }
       }
       draw() {;
 =======
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       }
       draw() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           this.y = Math.random() * canvas.height;        }
@@ -378,17 +431,28 @@ if (return) {
       }
 
 
+=======
+
+          this.y = Math.random() * canvas.height;        }
+
+        }
+      }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       draw() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (!ctx) return;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       radius: number;
       intensity: number;
       phase: number;
       color: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
           this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
           this.y = Math.random() * canvas.height;        }
@@ -444,6 +508,8 @@ if (return) {
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.stroke();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 });
@@ -452,11 +518,15 @@ if (return) {
             node_index++;
           }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     class NeuralNetwork {
       nodes: { x: number, y: number, connections: number[] }[],
       connections: { from: number, to: number, weight: number }[],
       constructor() {
+<<<<<<< HEAD
 <<<<<<< HEAD
         ctx.restore();      }
     }
@@ -497,6 +567,9 @@ if (return) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         this.nodes = [];
         this.connections = [];
         // Create neural network structure
@@ -517,7 +590,10 @@ if (return) {
                   weight: Math.random()
                 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
         });      }      constructor() {;
         this && this.nodes = [];
@@ -540,16 +616,22 @@ if (return) {
                   weight: Math && Math.random();
                 });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             }
             nodeIndex++;
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
         })
       }
           node.y += (Math.random() - 0.5) * 0.5
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         })
 
@@ -557,18 +639,27 @@ if (return) {
 
           node.y += (Math.random() - 0.5) * 0.5
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         })
       }
       draw() {
         if (!ctx) return;
         ctx.save();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Draw connections
         ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
         ctx.lineWidth = 1;
@@ -579,18 +670,25 @@ if (return) {
           ctx.moveTo(from.x, from.y);
           ctx.lineTo(to.x, to.y);
 <<<<<<< HEAD
+<<<<<<< HEAD
           ctx.stroke()
 =======
 
           ctx.stroke()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          ctx.stroke()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         });
         // Draw nodes
         ctx.fillStyle = 'rgba(100, 200, 255, 0.8)';
         this.nodes.forEach(node => {
           ctx.beginPath();
           ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
+<<<<<<< HEAD
 <<<<<<< HEAD
           ctx.fill()
         });
@@ -665,11 +763,17 @@ if (return) {
           ctx.fill()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          ctx.fill()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         });
         ctx.restore()
       }
     }
     // Initialize
+<<<<<<< HEAD
 <<<<<<< HEAD
     for (let i = 0; i < 100; i++) {
       particles.push(new Particle());
@@ -681,17 +785,28 @@ if (return) {
     for (let i = 0, i < 100, i++) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    for (let i = 0, i < 100, i++) {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       particles.push(new Particle())
     }
     for (let i = 0, i < 8, i++) {
       quantumFields.push(new QuantumField())
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     neuralNetworks.push(new NeuralNetwork());
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
@@ -700,16 +815,23 @@ if (return) {
       quantumFields.forEach(field => {
         field.update();
 <<<<<<< HEAD
+<<<<<<< HEAD
         field.draw();      });        field.draw()
 =======
 
         field.draw()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        field.draw()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       // Update and draw neural networks
       neuralNetworks.forEach(network => {
         network.update();
+<<<<<<< HEAD
 <<<<<<< HEAD
         network.draw();      });        network.draw()
 =======
@@ -717,10 +839,16 @@ if (return) {
         network.draw()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        network.draw()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
+<<<<<<< HEAD
 <<<<<<< HEAD
         particle.draw();      });        particle.draw()
 =======
@@ -728,13 +856,21 @@ if (return) {
         particle.draw()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        particle.draw()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       // Draw quantum entanglement effects
       ctx.save();
       ctx.strokeStyle = 'rgba(255, 100, 255, 0.3)';
       ctx.lineWidth = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       for (let i = 0, i < particles.length, i += 2) {
 
@@ -814,23 +950,38 @@ if (return) {
           const p2 = particles[i + 1];
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
 
+=======
+            ctx.stroke();          }            ctx.stroke()
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ctx.stroke();          }
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       }
 
       ctx && ctx.restore();
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
         if (i + 1 < particles.length) {
           const p1 = particles[i];
@@ -841,6 +992,7 @@ if (return) {
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
 <<<<<<< HEAD
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
             ctx.stroke();          }
 =======
@@ -848,17 +1000,27 @@ if (return) {
             ctx.stroke()
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       }
       ctx.restore();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       animationFrameId = requestAnimationFrame(animate)
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
 
     animate();
@@ -874,11 +1036,15 @@ if (return) {
     };  }, []);      cancelAnimationFrame(animationFrameId);
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -886,11 +1052,14 @@ if (return) {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }, []);
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>;
       {/* Quantum Matrix Overlay */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0 && 0.1),transparent_50%)]' />;
@@ -907,6 +1076,11 @@ if (return) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Animated Quantum Grid */}
       <div className='absolute inset-0 opacity-20'>;
         <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />;
@@ -915,17 +1089,23 @@ if (return) {
       <motion&& motion.div
         className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'      {/* Animated Quantum Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="absolute inset-0 opacity-20">;
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]" />;
         <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]" />;
       </div>
       {/* Floating Quantum Elements */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {/* Floating Quantum Elements */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         });      }      constructor () {
         this.nodes = [];
         this.connections = [];
@@ -1104,6 +1284,7 @@ if ( {) {
       <motion.div;
         className='absolute top - 20 left - 20 w - 32 h - 32 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full opacity - 20 blur - xl';
 <<<<<<< HEAD
+<<<<<<< HEAD
         animate={{
           scale: [1, 1 && 1.2, 1],
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
@@ -1146,13 +1327,18 @@ if ( {) {
           scale: [1, 1.2, 1]
           opacity: [0.2, 0.4, 0.2]
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         animate={{
 
           scale: [1, 1 && 1.2, 1],
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }}
         transition={{
           duration: 4
@@ -1166,12 +1352,18 @@ if ( {) {
           ease: "easeInOut"
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
       <motion&& motion.div
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
         animate={{
           scale: [1, 1 && 1.3, 1]
@@ -1185,6 +1377,7 @@ if ( {) {
 
       />;
       <motion.div
+<<<<<<< HEAD
         className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
         animate={{
           scale: [1, 1.2, 1];
@@ -1263,6 +1456,12 @@ ease: "easeInOut",
       <motion.div;
         className='absolute top - 40 right - 32 w - 24 h - 24 bg - gradient - to - r from - purple - 400 to - pink - 500 rounded - full opacity - 20 blur - xl';
         animate={{
+=======
+        className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl'
+        animate={{
+          scale: [1, 1.3, 1]
+          opacity: [0.2, 0.5, 0.2],        animate={{
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
@@ -1275,10 +1474,13 @@ ease: "easeInOut",
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 2,
+<<<<<<< HEAD
 =======
           opacity: [0.2, 0.4, 0.2]}}
         transition={{
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         }}
         transition={{
@@ -1287,16 +1489,22 @@ ease: "easeInOut",
           ease: 'easeInOut'
           delay: 1,        }}
 <<<<<<< HEAD
+<<<<<<< HEAD
       />;
       <motion.div;
         className='absolute bottom - 32 left - 1/3 w - 28 h - 28 bg - gradient - to - r from - green - 400 to - emerald - 500 rounded - full opacity - 20 blur - xl';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
       <motion.div;
         className='absolute bottom - 32 left - 1/3 w - 28 h - 28 bg - gradient - to - r from - green - 400 to - emerald - 500 rounded - full opacity - 20 blur - xl';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         animate={{
           scale: [1, 1.4, 1]
           opacity: [0.2, 0.6, 0.2]
@@ -1312,6 +1520,7 @@ ease: "easeInOut",
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,        }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1320,17 +1529,27 @@ ease: "easeInOut",
 
 =======
 =======
+      />
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
       />
@@ -1398,13 +1617,20 @@ ease: "easeInOut",
 <<<<<<< HEAD
 =======
 
+=======
+      {/* Content Layer */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             delay: 2
           }}
         />
       </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 export default UltraAdvancedQuantumBackground;  );
@@ -1414,9 +1640,14 @@ export default UltraAdvancedQuantumBackground;  );
 export default UltraAdvancedQuantumBackground;
 
 
+<<<<<<< HEAD
             ease: 'linear',          }}
 <<<<<<< HEAD
 =======
+=======
+=======
+            ease: 'linear',          }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <motion.div;
           className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent';
@@ -1433,10 +1664,15 @@ export default UltraAdvancedQuantumBackground;
     </div>);
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export default UltraAdvancedQuantumBackground;            ease: "linear"
 };
+=======
+};
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         style={{ zIndex: 1 }}
       />
@@ -1444,6 +1680,7 @@ export default UltraAdvancedQuantumBackground;            ease: "linear"
       {/* Content Layer */}
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
+<<<<<<< HEAD
 <<<<<<< HEAD
             delay: 2
           }}
@@ -1456,6 +1693,8 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",
 export default UltraAdvancedQuantumBackground;            ease: "linear",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             delay: 2;
           }}
         />;
@@ -1467,6 +1706,7 @@ export default UltraAdvancedQuantumBackground);
 }
 ;
 export default UltraAdvancedQuantumBackground;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1492,3 +1732,14 @@ export default UltraAdvancedQuantumBackground;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        />
+      </div>
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+      {/* Content Layer */}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

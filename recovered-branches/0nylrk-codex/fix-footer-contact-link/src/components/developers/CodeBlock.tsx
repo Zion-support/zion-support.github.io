@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
@@ -30,6 +31,9 @@ interface CodeBlockProps {
 }
 export function CodeBlock({
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
@@ -44,11 +48,15 @@ interface CodeBlockProps {;
 
 export function CodeBlock(): any ({ ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   code;
 
   language = 'bash';
   showLineNumbers = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
   className
 }: CodeBlockProps) {
@@ -60,6 +68,8 @@ import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
@@ -77,7 +87,10 @@ import { cn } from "@/lib/utils",
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -85,26 +98,36 @@ interface CodeBlockProps {
   className?: string
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function CodeBlock({ ;
   code;
   language = 'bash';
   showLineNumbers = false;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function CodeBlock({ 
   code,
   language = 'bash',
   showLineNumbers = false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
@@ -138,6 +161,17 @@ export function CodeBlock({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const handleCopyClick = async () => {
+    await navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false)
+    }, 2000)
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
@@ -152,9 +186,12 @@ export function CodeBlock({
             {code.split('\n').map((_, i) => (
               <div key={i} className="h-6 leading-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
 import { cn } from "@/lib/utils",;
@@ -173,9 +210,13 @@ export function CodeBlock({;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleCopyClick = async () => {;
     await navigator && navigator.clipboard.writeText(code);
     setCopied(true);
@@ -184,10 +225,15 @@ export function CodeBlock({;
     }, 2000);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
@@ -204,6 +250,7 @@ export function CodeBlock({;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {i + 1}
 
@@ -252,6 +299,8 @@ export function CodeBlock({ ;
       >;
         {copied ? <Check size={16} /> :<Copy size={16} />}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {i + 1}
               </div>;
@@ -265,7 +314,10 @@ export function CodeBlock({ ;
         onClick={handleCopyClick}
         aria-label="Copy code">;
         {copied ? <Check size={16} /> : <Copy size={16} />}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </button>;
       {language && (;
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">;
@@ -273,6 +325,7 @@ export function CodeBlock({ ;
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
 
 
 
@@ -280,6 +333,21 @@ export function CodeBlock({ ;
 
 
 export default CodeBlock;
+=======
+  );
+}
+
+
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default CodeBlock;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -333,6 +401,7 @@ function CodeBlock() {
     </div>);
 }
 export default CodeBlock;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
   ),;}
@@ -414,3 +483,8 @@ export default CodeBlock;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+export default CodeBlock;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile'
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
@@ -39,6 +40,8 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
           <div key={exp.id} className="flex">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <div key={exp.id} className="flex">
             <div className="mr-4">
               <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">
@@ -46,10 +49,13 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             
 
 
@@ -59,6 +65,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <div className="text-sm text-zion-slate-light mb-2">
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
@@ -75,27 +82,37 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-zion-slate">{exp.description}</p>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <p className='text-zion-slate'>{exp.description}</p>            </div>              <p className="text-zion-slate">{exp.description}</p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         ))}
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 };
 }
+<<<<<<< HEAD
 
 }
 
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
 
 
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
 
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-zion-slate">{exp.description}</p>
@@ -171,3 +188,5 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

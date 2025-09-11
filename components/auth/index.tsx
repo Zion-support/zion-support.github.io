@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return (
@@ -21,6 +24,7 @@
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 ;
@@ -60,6 +64,10 @@ import React from 'react';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from 'react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function AuthIndexPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -74,9 +82,12 @@ export default function AuthIndexPage() {
       <h1 className="text-2xl font-semibold">Sign In</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Authentication UI coming soon.</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   );
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
@@ -84,6 +95,7 @@ export default function AuthIndexPage() {
 }
     </div>
   );
+<<<<<<< HEAD
 }
 }
 =======
@@ -94,3 +106,7 @@ export default function AuthIndexPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

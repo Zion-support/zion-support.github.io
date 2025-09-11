@@ -1,59 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { PricingSection } from "@/components/PricingSection";
-import { TechSolutionsSection } from "@/components/TechSolutionsSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { TeamExpertiseSection } from "@/components/TeamExpertiseSection";
-import { GlobalPresenceSection } from "@/components/GlobalPresenceSection";
-import { InnovationResearchSection } from "@/components/InnovationResearchSection";
-import { ClientSuccessStoriesSection } from "@/components/ClientSuccessStoriesSection";
-import { TechnologyStackSection } from "@/components/TechnologyStackSection";
-import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
-import { AIServicesShowcase } from "@/components/AIServicesShowcase";
-import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-export default function Home() {
-    return (<>
-      <SEO title="Zion Tech Group - Leading AI & Technology Solutions" description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem." canonical="/" url="https://ziontechgroup.com"/>
-      
-      <HeroSection />
-      <QuickAccess />
-      <AIServicesShowcase />
-      <FeatureCTAs />
-      <FeatureHighlights />
-      <CategoriesSection />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <TechSolutionsSection />
-      <CaseStudiesSection />
-      <TeamExpertiseSection />
-      <GlobalPresenceSection />
-      <InnovationResearchSection />
-      <ClientSuccessStoriesSection />
-      <InteractiveTestimonials />
-      <TechnologyStackSection />
-      <SecurityComplianceSection />
-      <PricingSection />
-      <FeaturedListingsSection />
-      <NewsletterSection />
-      <ITServiceRequestHero />
-      <FloatingCTA />
-    </>)}
-=======
 
 const Home: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -80,6 +29,21 @@ const Home: React.FC = () => {
               </Link>
             </div>
           </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl md:text-6xl font-bold mb-8 text-center">
+          Welcome to Zion Tech Group
+        </h1>
+        <p className="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+          Leading provider of innovative technology solutions, AI services, and IT solutions
+          for businesses worldwide.
+        </p>
+        <div className="text-center">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Get Started
+          </button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </div>
 
@@ -136,4 +100,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
->>>>>>> 06e06048c0d59de66865eafd1bd98630feb518ac

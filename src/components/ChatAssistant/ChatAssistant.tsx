@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return;
@@ -8,6 +9,13 @@ import React, {
   useRef,
   ReactNode,
   useContext} from 'react',
+=======
+useState
+  useEffect
+  useRef
+  ReactNode
+  useContext} from 'react'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { AuthContext } from '../../context/auth/AuthContext'
 import { useDebounce } from '../../hooks/useDebounce'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
@@ -17,6 +25,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { X } from 'lucide-react'
 export interface Message {
+<<<<<<< HEAD
   id: string,
   role: 'user' | 'assistant',
   message: string,
@@ -214,6 +223,13 @@ export interface Message {
   message: string
   timestamp: Date
 
+=======
+  id: string
+  role: 'user' | 'assistant'
+  message: string
+  timestamp: Date
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   read?: boolean
 }
 export interface ChatAssistantProps {
@@ -270,7 +286,10 @@ export function ChatAssistant({
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
   const is_guest = !auth?.is_authenticated;
+<<<<<<< HEAD
 const is_guest = !auth?.is_authenticated;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSendMessage = async (message_content: string) => {
     if () return) {
   $2
@@ -351,6 +370,7 @@ if ( {) {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
+<<<<<<< HEAD
       } else {
         setDisplayGuestMessages(storedGuestMessages)
       }
@@ -392,6 +412,14 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+      const newMessages = null;
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setLoggedInMessages(newMessages)
     }
   }
@@ -455,7 +483,10 @@ if ( {) {
   if (!isOpen) return null
   const isGuest = !auth?.isAuthenticated;
 
+<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent && messageContent.trim()) return;
 import React, {;
@@ -479,6 +510,10 @@ export interface Message {;
   timestamp: Date,;
   read?: boolean;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface ChatAssistantProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -495,6 +530,10 @@ export interface ChatAssistantProps {;
   /** Optional canned questions shown when the chat is empty */;
   starterQuestions?: string[];
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ChatAssistant(): any ({;
   isOpen,;
   onClose,;
@@ -506,6 +545,10 @@ export function ChatAssistant(): any ({;
   starterQuestions = []}: ChatAssistantProps) {;
   const auth = useContext(AuthContext),;
   const isGuest = !auth?.isAuthenticated,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Hooks called unconditionally at the top;
   const localStorageKey = `chatHistory-${recipient && recipient.id}`, // Key is always generated;
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
@@ -515,6 +558,10 @@ export function ChatAssistant(): any ({;
   const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([]),;
   const [loggedInMessages, setLoggedInMessages] =;
     useState<Message[]>(initialMessages),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
   const [pendingApiCallParams, setPendingApiCallParams] = useState<{;
     message: string,;
@@ -522,6 +569,10 @@ export function ChatAssistant(): any ({;
   } | null>(null),;
   const [showGuestModal, setShowGuestModal] = useState(false),;
   const [guestMessage, setGuestMessage] = useState<string | null>(null),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Effect for guest user messages;
   useEffect((,) => {;
     if (isGuest) {;
@@ -539,6 +590,10 @@ export function ChatAssistant(): any ({;
     storedGuestMessages,;
     setStoredGuestMessages,;
     recipient && recipient.id]),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Effect for logged-in user messages;
   useEffect((,) => {;
     if (!isGuest) {;
@@ -546,6 +601,10 @@ export function ChatAssistant(): any ({;
       setLoggedInMessages(initialMessages);
     }
   }, [isGuest, initialMessages, recipient && recipient.id]),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Determine currentMessages and setCurrentMessages based on isGuest;
   const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,;
   const setCurrentMessages = (;
@@ -564,13 +623,20 @@ export function ChatAssistant(): any ({;
       setLoggedInMessages(newMessages);
     }
   },;
+<<<<<<< HEAD
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
+=======
+
+  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect((,) => {;
     if (debouncedApiCallParams) {;
       onSendMessage(debouncedApiCallParams && debouncedApiCallParams.message,;
         debouncedApiCallParams && debouncedApiCallParams.conversationId);
     }
   }, [debouncedApiCallParams, onSendMessage]),;
+<<<<<<< HEAD
   useEffect((,) => {;
     scrollToBottom();
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
@@ -579,6 +645,20 @@ export function ChatAssistant(): any ({;
   },;
   const handleSendMessage = async (messageContent: string,) => {;
     if (!messageContent && messageContent.trim()) return,;
+=======
+
+  useEffect((,) => {;
+    scrollToBottom();
+  }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
+
+  const scrollToBottom = () => {;
+    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  },;
+
+  const handleSendMessage = async (messageContent: string,) => {;
+    if (!messageContent && messageContent.trim()) return,;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (!isGuest) {;
       // Logged-in user;
       const newMessage: Message = {;
@@ -594,8 +674,15 @@ export function ChatAssistant(): any ({;
       setShowGuestModal(true);
     }
   },;
+<<<<<<< HEAD
   const handleModalSendConfirm = () => {;
     if (!guestMessage) return,;
+=======
+
+  const handleModalSendConfirm = () => {;
+    if (!guestMessage) return,;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const newMessage: Message = {;
       id: Date && Date.now().toString(),;
       role: 'user',;
@@ -603,13 +690,25 @@ export function ChatAssistant(): any ({;
       timestamp: new Date()},;
     setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
     setPendingApiCallParams({ message: guestMessage, conversationId }),;
+<<<<<<< HEAD
     setShowGuestModal(false),;
     setGuestMessage(null);
   },;
+=======
+
+    setShowGuestModal(false),;
+    setGuestMessage(null);
+  },;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleModalCancel = () => {;
     setShowGuestModal(false),;
     setGuestMessage(null);
   },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect((,) => {;
     if (!isOpen) return,;
     const handleKeyDown = (e: KeyboardEvent,) => {;
@@ -621,6 +720,10 @@ export function ChatAssistant(): any ({;
     document && document.addEventListener('keydown', handleKeyDown),;
     return () => document && document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!isOpen) return null,;
 
   return (
@@ -628,6 +731,7 @@ export function ChatAssistant(): any ({;
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, {;
   useState,;
@@ -826,11 +930,15 @@ export function ChatAssistant({;
 =======
       aria-labelledby="chat-assistant-title">;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      aria-labelledby="chat-assistant-title">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;
           <div className="flex items-center space-x-3">;
             <Avatar className="h-10 w-10 border border-zion-purple/20">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />;
               <AvatarFallback className="bg-zion-purple/20 text-white">;
@@ -840,10 +948,16 @@ export function ChatAssistant({;
               <AvatarFallback className="bg-zion-purple/20 text-white">;
                 {recipient && recipient.name.charAt(0).toUpperCase()}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <AvatarImage src={recipient && recipient.avatarUrl} alt={recipient && recipient.name} />;
+              <AvatarFallback className="bg-zion-purple/20 text-white">;
+                {recipient && recipient.name.charAt(0).toUpperCase()}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </AvatarFallback>;
             </Avatar>;
             <div>;
               <h2 id="chat-assistant-title" className="font-medium text-white">;
+<<<<<<< HEAD
 <<<<<<< HEAD
       aria-labelledby="chat-assistant-title"
     >
@@ -867,6 +981,8 @@ export function ChatAssistant({;
             </div>
           </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {recipient && recipient.name}
               </h2>;
               {recipient && recipient.role && (;
@@ -874,11 +990,15 @@ export function ChatAssistant({;
               )}
             </div>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
+<<<<<<< HEAD
 <<<<<<< HEAD
             onClick = {onClose,}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -886,10 +1006,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+            onClick = {onClose,}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick={onClose}
 
 
             aria-label="Close chat"
+<<<<<<< HEAD
             <X className="h-5 w-5" />
           </Button>
         </div>
@@ -897,10 +1021,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick = {onClose,}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          >
+            <X className="h-5 w-5" />
+          </Button>
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             aria-label="Close chat">;
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
+<<<<<<< HEAD
                 {recipient.name}
               </h2>;
               {recipient.role && (;
@@ -919,12 +1050,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>;
         </div>;
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
 ;
@@ -943,14 +1077,20 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )}
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           aria-live="polite"
         >
           {currentMessages.length === 0 ? (
@@ -959,6 +1099,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {starterQuestions.map((q, idx,) => (
                     <Button
                       key = {idx,}
@@ -966,6 +1109,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="text-xs"
                       onClick = {(,) => handleSendMessage(q),}
                     >
+<<<<<<< HEAD
         <div;
           className="flex-1 overflow-y-auto p-4 space-y-4";
           aria-live="polite";
@@ -1003,6 +1147,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {starterQuestions.map((q, idx) => (
                     <Button
                       key={idx}
@@ -1013,6 +1159,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                       {q}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </Button>
                   ))}
@@ -1033,6 +1180,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       {showGuestModal && guestMessage && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Button>;
                   ))}
                 </div>;
@@ -1055,11 +1204,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
       {showGuestModal && guestMessage && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       {showGuestModal && guestMessage && (;
@@ -1075,18 +1228,24 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="text-lg font-semibold text-white mb-4";
             >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           aria-labelledby="confirm-message-title">;
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">;
             <h3
               id="confirm-message-title"
               className="text-lg font-semibold text-white mb-4">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Confirm Message;
             </h3>;
             <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">;
               {guestMessage}
             </p>;
             <div className="flex justify-end space-x-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick = {handleModalCancel,}
           aria-labelledby="confirm-message-title"
@@ -1102,10 +1261,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               {guestMessage}
             </p>
             <div className="flex justify-end space-x-3">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="outline"
                 onClick = {handleModalCancel,}
                 onClick={handleModalCancel}
+<<<<<<< HEAD
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
@@ -1423,6 +1585,8 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 
 
                 onClick={handleModalCancel}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
@@ -1430,7 +1594,11 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
                 Cancel
               </Button>
               <Button
+<<<<<<< HEAD
 
+=======
+                onClick = {handleModalSendConfirm,}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={handleModalSendConfirm}
 
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -1449,6 +1617,7 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -1456,3 +1625,5 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

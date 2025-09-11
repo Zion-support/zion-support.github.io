@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method not allowed' });
@@ -24,16 +25,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   try {;
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
@@ -153,6 +162,7 @@ export default async function handler(req, res) {
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
@@ -297,11 +307,15 @@ export default async function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
       temperature: 0.4;
       max_tokens: 400});
+<<<<<<< HEAD
 <<<<<<< HEAD
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
@@ -343,6 +357,8 @@ export default async function handler(req, res) {
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
 
@@ -350,5 +366,8 @@ export default async function handler(req, res) {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

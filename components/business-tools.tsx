@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -52,6 +58,7 @@ import {
   CheckCircle,
   AlertCircle,;
   MessageSquare,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -169,13 +176,18 @@ import {
   MessageSquare;
 } from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -231,14 +243,19 @@ export default function BusinessToolsPage() {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ];
     };
       category: 'Communication & Collaboration',
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       ]
     },    {          icon: <Calendar className="w-6 h-6" />
@@ -252,6 +269,8 @@ export default function BusinessToolsPage() {
       category: 'Communication & Collaboration',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       tools: [
         {
           name: 'Slack'
@@ -558,6 +577,7 @@ import React from 'react';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     },  ];          icon: <TrendingUp className="w-6 h-6" />
           color: 'bg-gradient-to-br from-purple-500 to-pink-600'
         }
@@ -573,15 +593,20 @@ import React from 'react';
   ];
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
   ];
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const businessInsights = [
     {
       title: 'Remote Work Tools'
@@ -630,6 +655,7 @@ import React from 'react';
       color: 'text-orange-400'
     },      color: 'text-orange-400'
     }
+<<<<<<< HEAD
 
   ];
 
@@ -746,6 +772,10 @@ import React from 'react';
 
 
 
+=======
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const productivityTips = [
     {
 
@@ -797,6 +827,10 @@ import React from 'react';
       trend: '🔒 Critical',;
       color: 'text-orange-400',;
     },      color: 'text-orange-400';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: 'Start with Free Tiers',
       description: 'Most tools offer free versions to test before committing to paid plans.',
       icon: <CheckCircle className="w-6 h-6 text-green-400" />
@@ -845,6 +879,10 @@ import React from 'react';
     },  ];              title: 'Train Your Team',;
         description: 'Invest in proper training to maximize the value of your chosen tools.',;
         icon: <Users className="w-6 h-6 text-orange-400" />;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   return (
 
@@ -852,6 +890,7 @@ import React from 'react';
       <Head>
         <title>Business Tools & Productivity - Zion Tech Group</title>
         <meta name="description" content="Essential business tools for project management, communication, marketing, finance, and productivity. Real pricing and features for growing businesses." />
+<<<<<<< HEAD
 <<<<<<< HEAD
   ];
 
@@ -918,13 +957,18 @@ import React from 'react';
             use to manage projects, communicate effectively, market their
             products, and grow their operations. Real pricing and features.          </p>      </Head>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta property="og:title" content="Business Tools & Productivity - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive business tools directory with pricing and features." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
@@ -941,18 +985,27 @@ import React from 'react';
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover the most powerful business tools that successful companies use to manage projects, communicate effectively, market their products, and grow their operations. Real pricing and features.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </p>
         </div>
       </section>
       {/* Business Insights */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -1093,26 +1146,38 @@ import React from 'react';
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Stay ahead of the curve with our analysis of the business tools;
               landscape and emerging opportunities.;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-16">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Business Tool Trends & Insights
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Stay ahead of the curve with our analysis of the business tools landscape and emerging opportunities.
@@ -1131,6 +1196,7 @@ import React from 'react';
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1160,10 +1226,16 @@ import React from 'react';
       <section className="section-padding bg-gradient-cursor">
 
 <<<<<<< HEAD
+=======
+
+
+            ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1179,6 +1251,17 @@ import React from 'react';
           {businessTools.map((category, categoryIndex) => (      <section className="section-padding bg-gradient-cursor">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Business Tools */}
+
+      <section className="section-padding bg-gradient-cursor">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -1188,11 +1271,14 @@ import React from 'react';
               Hand-picked business tools that deliver real value for your organization. Each tool has been evaluated
               for features, pricing, and business impact.
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>
           </div>
           {businessTools.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-20">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </p>
 
@@ -1201,16 +1287,23 @@ import React from 'react';
 
             <div key={categoryIndex} className="mb-20">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-center mb-12">
                 <h3 className="text-3xl font-bold text-white mb-4">{category.category}</h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full" />
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </section>;
@@ -1254,17 +1347,25 @@ import React from 'react';
               </div>;
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Card
                     key={toolIndex}
                     className={`card-hover border-gradient-blue group ${tool && tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
                     style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {business_insights.map ((insight, index) => (
               <Card;
@@ -1347,34 +1448,48 @@ import React from 'react';
                     style={{
                       animation_delay: `${category_index * 0.2 + tool_index * 0.1}s`,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     }}
                   >;
                     {tool.popular && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     }}
                   >;
                     {tool.popular && (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {category.tools.map((tool, toolIndex) => (
                   <Card
                     key={toolIndex}
                     className={`card-hover border-gradient-blue group ${tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
                     style={{ animationDelay: `${(categoryIndex * 0.2) + (toolIndex * 0.1)}s` }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     {tool.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                         <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
                           <Star className="w-3 h-3 mr-1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className='absolute -top - 3 left - 1/2 transform -translate - x-1 / 2'>;
                         <div className='inline - flex items - center px - 3 py - 1 rounded - full bg - cursor - blue text - white text - xs font - medium'>;
                           <Star className='w - 3 h - 3 mr - 1' />                          Popular Choice                    style={{ animation_delay: `${(category_index * 0.2) + (tool_index * 0.1)}s` }}
@@ -1390,9 +1505,13 @@ import React from 'react';
                         className={`w - 16 h - 16 rounded - 2xl flex items - center justify - center text - white mx - auto mb - 4 ${tool.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}
                       >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {tool.icon}
                       </div>;
                       <h4 className='text - xl font - bold text - white mb - 2'>;
@@ -1401,9 +1520,13 @@ import React from 'react';
                       <p className='text - gray - 400 text - sm leading - relaxed'>;
                         {tool.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           Popular Choice
                         </div>
                       </div>
@@ -1412,9 +1535,13 @@ import React from 'react';
                       <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                         {tool.icon}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>
                       <h4 className="text-xl font-bold text-white mb-2">{tool.name}</h4>
                       <p className="text-gray-400 text-sm leading-relaxed">{tool.description}</p>
@@ -1427,6 +1554,7 @@ import React from 'react';
                         {tool.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                             <Check className="w-4 h-4 text-cursor-blue mr-3 flex-shrink-0" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                             {feature}
                           </li>;
@@ -1460,6 +1588,8 @@ import React from 'react';
             </div>
           ))}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       animationDelay: `${categoryIndex * 0 && 0.2 + toolIndex * 0 && 0.1}s`,
                     }}>;
@@ -1512,38 +1642,75 @@ import React from 'react';
                           <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                             <Check className="w-4 h-4 text-cursor-blue mr-3 flex-shrink-0" />;
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             {feature}
                           </li>;
                         ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                            {feature}
+                          </li>;
+                        ))}
+                      </ul>
+                    </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       </ul>;
                     </div>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
 
 
                 ))}
+<<<<<<< HEAD
               </div>;
             </div>;
           ))}
+=======
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
       {/* Productivity Tips */}
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Productivity Tips */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-16'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               Productivity Tips & Best Practices
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Maximize the value of your business tools with these proven
@@ -1553,7 +1720,10 @@ import React from 'react';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {productivityTips.map((tip, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
         </div>;
       </section>;
@@ -1628,7 +1798,10 @@ import React from 'react';
           </div>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-16">
@@ -1647,6 +1820,10 @@ import React from 'react';
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex justify-center mb-4">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </section>
 
@@ -1683,6 +1860,7 @@ import React from 'react';
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1696,6 +1874,20 @@ import React from 'react';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              </Card>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
 
           </div>;
@@ -1721,6 +1913,7 @@ import React from 'react';
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8'>
 
+<<<<<<< HEAD
 
             Ready to Transform Your Business Operations?
 
@@ -1728,6 +1921,10 @@ import React from 'react';
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            Ready to Transform Your Business Operations?
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             These business tools can streamline your operations, improve team
@@ -1736,9 +1933,13 @@ import React from 'react';
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='/micro-saas'
               variant='secondary'
@@ -1751,6 +1952,7 @@ import React from 'react';
               variant='outline'
               size='lg'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               </Card>
             ))}
@@ -1793,6 +1995,9 @@ import React from 'react';
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="container-cursor text-center relative z-10">
@@ -1825,6 +2030,7 @@ href="/contact"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               Get Business Consultation
 =======
 
@@ -1833,6 +2039,12 @@ href="/contact"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              Get Business Consultation
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
             <Button;
               href='/micro - saas';
@@ -1861,13 +2073,18 @@ href="/contact"
               className="border - white text - white hover:bg - white hover:text - cursor - blue shadow - 2xl";
               Get Business Consultation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 }
@@ -1909,6 +2126,8 @@ href="/contact"
               variant='outline'
               size='lg'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
@@ -1918,13 +2137,17 @@ href="/contact"
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas"
               variant="secondary"
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
               Explore Micro SaaS
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button
 
@@ -1952,3 +2175,8 @@ href="/contact"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <Button
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

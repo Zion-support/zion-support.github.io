@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { create_context, useContext, useEffect, useState } from 'react';
 ;
@@ -9,12 +10,29 @@ type UserRole = 'talent' | 'client';
       if (stored === 'talent' || stored === 'client') {
 
 
+=======
+import React, { create_context, useContext, useEffect, useState } from 'react';
+;
+type UserRole = 'talent' | 'client';
+
+
+      if (stored === 'talent' || stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
+        setRoleState(stored);      }
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (stored === 'talent' || stored === 'client') {
 
         setRoleState(stored);      }
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } catch {}
   }, []);
@@ -27,10 +45,15 @@ type UserRole = 'talent' | 'client';
   return (    try {
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type AuthContextType = {;
   role: UserRole;
   setRole: (role: UserRole) => void;
@@ -51,7 +74,10 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type AuthContextType = {
   role: UserRole,
   setRole: (role: UserRole) => void
@@ -65,10 +91,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } catch {}
   }, []);
@@ -76,11 +106,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setRoleState(r);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     } catch {}
   }
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try { 
@@ -254,6 +288,10 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
   return (
     <AuthContext.Provider value={{ role, setRole }}>
       {children}
+=======
+    <AuthContext.Provider value={{ role, set_role }}>;
+      {children}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </AuthContext.Provider>
   );
 export function useAuth() {
@@ -261,11 +299,19 @@ export function useAuth() {
   )
 }
 export function useAuth() {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
@@ -278,9 +324,15 @@ return useContext(AuthContext);
 }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

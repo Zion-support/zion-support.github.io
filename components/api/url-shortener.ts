@@ -1,9 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface ShortUrl {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 // In-memory storage (in production, use a database)
@@ -12,7 +15,10 @@ const urlStorage = new Map<string, ShortUrl>();
 function generateShortCode(length: number = 6): string {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   for (let i = 0, i < length, i++) {
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
   error?: string;  error?: string;
@@ -33,6 +39,7 @@ function generateShortCode (length: number = 6): string {
     result += chars.char_at (Math.floor (Math.random () * chars.length));
   }
   return result;
+<<<<<<< HEAD
 <<<<<<< HEAD
   id: string;
   originalUrl: string;
@@ -69,39 +76,56 @@ function generateShortCode(length: number = 6): string {
   return result
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Validate URL format
 function isValidUrl(url: string): boolean {
   try {
     new URL(url);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true;
   } catch {
     return false;
   }  } catch {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return false
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return false;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<UrlShortenerResponse>
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -147,11 +171,16 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          success: false,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           error: 'Original URL is required'
         })
       }
       if (!isValidUrl(originalUrl)) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -170,6 +199,8 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 if (!isValidUrl(originalUrl)) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return res && res.status(400).json({
       if () {) {
   $2
@@ -182,6 +213,7 @@ if (!isValidUrl(originalUrl)) {
   $2
 }
         return res.status (400).json ({
+<<<<<<< HEAD
 <<<<<<< HEAD
           success: false,
           error: 'Invalid URL format',
@@ -219,17 +251,23 @@ if (!isValidUrl(originalUrl)) {
           error: 'Invalid URL format'
         });      }          success: false;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           success: false,
           error: 'Invalid URL format',
         });      }          success: false;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           error: 'Invalid URL format'
         })
       }
       // Check if URL already exists
+<<<<<<< HEAD
 <<<<<<< HEAD
         return res.status(200).json({
           success: true,
@@ -242,6 +280,8 @@ if (!isValidUrl(originalUrl)) {
           success: true
           data: existingUrl
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const existingUrl = Array && Array.from(urlStorage && urlStorage.values()).find(
         url => url && url.originalUrl === originalUrl
       );
@@ -251,24 +291,34 @@ if (!isValidUrl(originalUrl)) {
           success: true,
           data: existingUrl,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         });      }
       // Generate short code
       let shortCode = customCode |generateShortCode();
           success: true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
         return res.status(200).json({
           success: true,
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           data: existingUrl
         })
       }
       // Generate short code
+<<<<<<< HEAD
 <<<<<<< HEAD
       let shortCode = customCode |generateShortCode();
       while (urlStorage.has(shortCode)) {
@@ -276,6 +326,8 @@ if (!isValidUrl(originalUrl)) {
       }
       const shortUrl: ShortUrl = {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       let shortCode = customCode || generateShortCode();
 
@@ -285,7 +337,10 @@ if (!isValidUrl(originalUrl)) {
       }
       const shortUrl: ShortUrl = {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: Date && Date.now().toString(),
         originalUrl,
         shortCode,
@@ -297,13 +352,18 @@ if (!isValidUrl(originalUrl)) {
         shortCode,
         shortUrl: `${req && req.headers.host}/api/url-shortener/${shortCode}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         createdAt: new Date().toISOString();
 
         clicks: 0
         isActive: true
+<<<<<<< HEAD
 <<<<<<< HEAD
       };
       urlStorage && urlStorage.set(shortCode, shortUrl);
@@ -320,6 +380,8 @@ if (!isValidUrl(originalUrl)) {
       })
     } catch (error) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         isActive: true
       };
@@ -388,12 +450,16 @@ if ( {) {
         data: short_url;
       });
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {
       console.error ('URL shortening error:', error);
       res.status (500).json ({
         success: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
     const urls = Array && Array.from(urlStorage && urlStorage.values());
     res && res.status(200).json({
@@ -413,12 +479,17 @@ if ( {) {
     });
     res.status (405).json ({
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const urls = Array && Array.from(urlStorage && urlStorage.values());
     res && res.status(200).json({
       success: true,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       success: false,
       error: 'Method not allowed',
     });
@@ -435,18 +506,27 @@ if ( {) {
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   params: { shortCode: string };
 }) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       data: urls as any
     })
   } else {
@@ -473,6 +553,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   }
   // Increment click count
 <<<<<<< HEAD
+<<<<<<< HEAD
       permanent: false
     }
 }
@@ -488,6 +569,8 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
     }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   shortUrl && shortUrl.clicks++;
   urlStorage && urlStorage.set(shortCode, shortUrl);
@@ -495,6 +578,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   // Redirect to original URL
   return {
     redirect: {
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       permanent: false
@@ -519,6 +603,18 @@ function getServerSideProps() {
 if ( {) {
   $2
 }
+=======
+      destination: shortUrl.originalUrl
+      permanent: false
+    }
+  };      destination: shortUrl.originalUrl;
+
+      permanent: false
+    }
+}
+}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       console.error('URL shortening error:', error);
       res.status(500).json({
         success: false
@@ -539,10 +635,13 @@ if ( {) {
   }
 // Handle redirects for short URLs
 export async function getServerSideProps({
+<<<<<<< HEAD
   params
 }: {
   params: { shortCode: string }
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   params,
 }: {;
   params: { shortCode: string };
@@ -565,6 +664,7 @@ export async function getServerSideProps({
       destination: shortUrl.originalUrl,
       permanent: false,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       destination: shortUrl.originalUrl
@@ -601,3 +701,7 @@ export async function getServerSideProps({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { X } from 'lucide-react';
 
 type ChatMessage = {
@@ -15,6 +21,7 @@ type ChatMessage = {
   timestamp?: number
 }
 function generateSessionId(): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function ChatWidget() {
@@ -29,6 +36,9 @@ export default function ChatWidget() {;
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -67,7 +77,10 @@ function generateSessionId(): any (): string {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -76,6 +89,7 @@ function generateSessionId(): any (): string {;
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef.current = generateSessionId()
@@ -165,6 +179,15 @@ function generateSessionId(): any (): string {;
 
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
       });    } catch {}
+=======
+
+
+  useEffect(() => {
+      });    } catch {}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     } catch {}
   }
@@ -172,6 +195,20 @@ function generateSessionId(): any (): string {;
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
+<<<<<<< HEAD
+=======
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+
+    } catch {}
+  }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
@@ -181,6 +218,7 @@ function generateSessionId(): any (): string {;
         })
       });
 
+<<<<<<< HEAD
 
   async function escalateSupport(reason: string) {
     try {
@@ -198,13 +236,29 @@ function generateSessionId(): any (): string {;
     } catch {}
   }
 
+=======
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+=======
+    } catch {}
+  }
+=======
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     } catch {}
   }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -318,6 +372,7 @@ function generateSessionId(): any (): string {;
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents(n => {;
 
+<<<<<<< HEAD
 
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
@@ -519,6 +574,8 @@ function generateSessionId(): any (): string {;
         setFailedIntents(n => {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -528,6 +585,7 @@ function generateSessionId(): any (): string {;
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (e) {
       setMessages(prev => [
@@ -563,6 +621,8 @@ function generateSessionId(): any (): string {;
     } finally {
       setIsLoading(false)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     } catch (e) {;
       setMessages(prev => [;
@@ -580,6 +640,7 @@ function generateSessionId(): any (): string {;
   }
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='fixed bottom-4 right-4 z-50'>      }
 
@@ -588,6 +649,13 @@ function generateSessionId(): any (): string {;
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
+=======
+    <div className='fixed bottom-4 right-4 z-50'>      }
+
+      if (data?.meta?.intentMatched === false) {;
+        setFailedIntents((n) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -604,6 +672,7 @@ function generateSessionId(): any (): string {;
 
     }
   }
+<<<<<<< HEAD
   return (
 
 
@@ -677,11 +746,39 @@ function generateSessionId(): any (): string {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    <div className='fixed bottom-4 right-4 z-50'>
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  return (
+
+
+
+    }
+  }
+
+  return (
+
+
+                <div
+                  className={
+                    m && m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
+                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 >
                   {m.content}
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             ))}
             {isLoading && (
@@ -693,13 +790,18 @@ function generateSessionId(): any (): string {;
               </div>
             )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
 
             )}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div ref={messagesEndRef} />;
           </div>;
           {!showEscalation && (;
@@ -707,13 +809,18 @@ function generateSessionId(): any (): string {;
               <div className='flex flex-wrap gap-2 mb-2'>;
                 {quickReplies && quickReplies.map(q => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <button
                     key={q}
                     onClick={() => onSend(q)}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
               <div className="flex flex-wrap gap-2 mb-2">;
@@ -762,6 +869,15 @@ function generateSessionId(): any (): string {;
                     {q}
                   </button>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+            <div className="px-3 pb-2">
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {q}
+                  </button>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))}
               </div>;
             </div>;
@@ -769,7 +885,10 @@ function generateSessionId(): any (): string {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -789,10 +908,14 @@ function generateSessionId(): any (): string {;
                       e && e.preventDefault();
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -811,10 +934,13 @@ function generateSessionId(): any (): string {;
                   onClick={() => onSend()}
                   disabled={isLoading}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <input
                   value={input}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
@@ -824,6 +950,7 @@ function generateSessionId(): any (): string {;
                 <input
                   value={input}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onChange={(e) => setInput(e && e.target.value)}
                   onKeyDown={(e) => {;
@@ -858,6 +985,11 @@ function generateSessionId(): any (): string {;
 
                     }
                   }}
+=======
+                      onSend()
+                    }
+                  }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
                   placeholder="Ask a question…"
@@ -867,21 +999,29 @@ function generateSessionId(): any (): string {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                  className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
 =======
                   className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   Send
                 </button>
               </div>
             ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='flex flex-col gap-2 text-sm'>
                 <div className='text-gray-700 dark:text-gray-300'>
@@ -903,10 +1043,14 @@ function generateSessionId(): any (): string {;
 =======
               <div className="flex flex-col gap-2 text-sm">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <div className="flex flex-col gap-2 text-sm">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-gray-700 dark:text-gray-300">We can escalate this to our team:</div>
                 <div className="flex gap-2">
                   <a href="mailto:support@zion.ai" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Email Support</a>
                   <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
 =======
@@ -915,14 +1059,22 @@ function generateSessionId(): any (): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                </div>
+              </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
           </div>;
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   );
@@ -932,13 +1084,21 @@ function generateSessionId(): any (): string {;
 
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 useEffect ( () => {
   // Check condition
 if ( {) {
@@ -1313,6 +1473,7 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
   );
 }
@@ -1322,3 +1483,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

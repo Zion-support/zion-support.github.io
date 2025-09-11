@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 function applyTranslations(item: TalentProfile, lang?: string) {
   if (!lang |!item.translations) return { item, translated: false }
@@ -53,12 +54,17 @@ export default async function handler(
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req.method !== 'GET') {;
     return res.setHeader('AllowGET').status(405).end('Method Not Allowed');
@@ -91,6 +97,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const base = LOCAL && LOCAL.find((t) => t && t.slug === slug) || null;
     if (!base) return res && res.status(404).json({ error: 'Not found' });
     const { item, translated } = applyTranslations(base, lang);
@@ -100,11 +109,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
 }
 }
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
@@ -125,6 +140,7 @@ function apply_translations() {
 if (return { item, translated: false }) {
   $2
 }
+<<<<<<< HEAD
   const t = item.translations;
   const translated: Partial < TalentProfile> = {}
   // Check condition
@@ -155,6 +171,10 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+=======
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
     return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
   }
@@ -222,8 +242,13 @@ if (throw error) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
 }
+<<<<<<< HEAD
   }
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

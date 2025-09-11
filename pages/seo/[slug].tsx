@@ -1,25 +1,45 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 
 =======
@@ -55,6 +75,8 @@ region?: string;
   faq: Array<{ q: string, a: string }>
 };
 import React from 'react';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useRouter  } from 'next/router';
 import { useRouter } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
@@ -63,6 +85,7 @@ export type LandingPayload = {;
 export type LandingPayload = {
   title: string;
   h1: string;
+<<<<<<< HEAD
   bodyHtml: string;
   region?: string;
   service?: string;
@@ -112,17 +135,34 @@ export default function SEOLandingPage() {;
   faq: Array<{ q: string; a: string }>;};
 
 export default function SEOLandingPage() {;
+=======
+  body_html: string;
+  region?: string;
+=======
+  faq: Array<{ q: string; a: string }>;};
+
+export default function SEOLandingPage() {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   service?: string,;
   faq: Array<{ q: string, a: string }>;
 },;
 export default function SEOLandingPage(req, res) {
   try {
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
   const [payload, setPayload] = React.useState<LandingPayload | null>(null);
   React.useEffect(() => {;
     if (!router.isReady || !slug) return,;
     const dataParam = (router.query?.data as string) || '';
+<<<<<<< HEAD
     if (dataParam) {;
       try {
         setPayload(JSON.parse(decodeURIComponent(dataParam)));
@@ -153,13 +193,23 @@ export default function SEOLandingPage(req, res) {
       } catch {}
     }
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+    if (dataParam) {;
+      try {;
+        setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
+        return;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
         return
       } catch {}
     }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -167,11 +217,17 @@ export default function SEOLandingPage(req, res) {
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!payload) return null;
 
   return (
@@ -180,6 +236,7 @@ export default function SEOLandingPage(req, res) {
       </div>
       <FAQ items={payload.faq} />
     </div>
+<<<<<<< HEAD
 
 
         dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
@@ -198,6 +255,12 @@ export default function SEOLandingPage(req, res) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**
@@ -259,6 +322,7 @@ if (return null) {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>{payload.h1}</h1>
       <div
         className='prose dark:prose-invert max-w-none'
@@ -285,6 +349,15 @@ if (return null) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+);
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
   } catch (error) {
     console.error("Error:", error);
@@ -293,8 +366,13 @@ if (return null) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

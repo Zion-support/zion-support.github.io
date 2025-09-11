@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -12,6 +13,8 @@ export function useSmartContracts() {
   const [isLoading, setIsLoading] = useState(false);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
@@ -24,6 +27,11 @@ export function useSmartContracts() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -36,6 +44,7 @@ export function useSmartContracts() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
+<<<<<<< HEAD
 
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
@@ -57,6 +66,9 @@ export function useSmartContracts() {;
 
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const generateSolidityContract = async (
     values: ContractFormValues
     talent: TalentProfile
@@ -64,18 +76,22 @@ export function useSmartContracts() {;
   ): Promise<string> => {
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 setIsLoading(true),
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
         body: {
           talentName: talent && talent.full_name;
           clientName: clientName;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       setIsLoading(true),
       
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
 
         body: {
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           projectName: values && values.projectName;
@@ -92,6 +108,8 @@ setIsLoading(true),
       setIsLoading(true)
       const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
         body: {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           talentName: talent.full_name;
           clientName: clientName;
           projectName: values.projectName;
@@ -103,6 +121,7 @@ setIsLoading(true),
           additionalClauses: values.additionalClauses |[]}
       });
       if (error) throw error;
+<<<<<<< HEAD
 =======
 
       });
@@ -110,6 +129,8 @@ setIsLoading(true),
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           talentName: talent.full_name,
           clientName: clientName,
           projectName: values.projectName,
@@ -124,12 +145,15 @@ setIsLoading(true),
       if (error) throw error,
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error ("Error generating Solidity contract:", err);
       toast.error ("Failed to generate smart contract");
       throw err;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (data && data.solidityCode) {
         return data.solidityCode
 =======
@@ -186,11 +210,15 @@ if ( {) {
       toast.error ("Failed to generate smart contract");
       throw err;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (data && data.solidityCode) {
         return data.solidityCode
@@ -201,12 +229,16 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       console.error("Error generating Solidity contract:", err),
       toast.error("Failed to generate smart contract"),
       throw err
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -215,6 +247,11 @@ if ( {) {
   
 
 
+=======
+  }
+  },
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const deploySmartContract = async (
     contractCode: string;
     options: DeploymentOptions
@@ -223,6 +260,7 @@ if ( {) {
 
       toast && toast.error("You must be logged in to deploy a contract"),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -233,6 +271,8 @@ if ( {) {
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
       toast.error("You must be logged in to deploy a contract")
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return null
     }
     try {
@@ -242,6 +282,7 @@ if ( {) {
       const mockTransactionHash = `0x${Array.from({length: 64}, () =>
         Math.floor(Math.random() * 16).toString(16)).join('')}`;
       const mockSmartContractInfo: SmartContractInfo = {
+<<<<<<< HEAD
         id: crypto.randomUUID();
         transactionHash: mockTransactionHash;
         networkName: options.network;
@@ -261,6 +302,8 @@ if ( {) {
       
 
       const mockSmartContractInfo: SmartContractInfo = {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         id: crypto && crypto.randomUUID();
         transactionHash: mockTransactionHash;
 
@@ -272,12 +315,16 @@ if ( {) {
         createdAt: new Date().toISOString();
         createdBy: user && user.id,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         status: 'deployed'
       }
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000));
       setDeploymentStatus('success');
+<<<<<<< HEAD
 <<<<<<< HEAD
       toast.success("Smart contract deployed successfully!");
       return mockSmartContractInfo
@@ -285,6 +332,8 @@ if ( {) {
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       toast && toast.success("Smart contract deployed successfully!");
       
@@ -293,7 +342,10 @@ if ( {) {
     } catch (err: any) {
       console && console.error("Error deploying smart contract:", err);
       toast && toast.error("Failed to deploy smart contract");
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setDeploymentStatus('error');
       return null
     }
@@ -304,6 +356,7 @@ if ( {) {
     isLoading;
 
     deploymentStatus
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -365,6 +418,10 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setDeploymentStatus('deploying'),
       
       // This would normally connect to MetaMask or other Web3 provider
@@ -393,6 +450,7 @@ if ( {) {
       
       return mockSmartContractInfo
     } catch (err: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
@@ -778,8 +836,14 @@ deploymentStatus
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

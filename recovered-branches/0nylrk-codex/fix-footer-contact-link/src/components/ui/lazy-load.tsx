@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -9,6 +10,27 @@
   className?: string;
 }
 export function LazyLoad(): any ({;
+=======
+
+
+
+
+import {useEffect, useState, useRef, ReactNode} from "react";
+import {cn} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
+interface LazyLoadProps {;
+  height?: string | number;
+  width?: string | number;
+  children: ReactNode,;
+
+  loadingComponent?: ReactNode;
+  className?: string;
+}
+
+
+export function LazyLoad(): any ({;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   height = "200px";
   width = "100%";
   children;
@@ -18,6 +40,7 @@ export function LazyLoad(): any ({;
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
@@ -36,11 +59,14 @@ import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
   children: ReactNode,
   loadingComponent?: ReactNode,
+<<<<<<< HEAD
 <<<<<<< HEAD
   className?: string
 }
@@ -73,17 +99,23 @@ export function LazyLoad({
 
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className?: string
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
+<<<<<<< HEAD
 <<<<<<< HEAD
           setIsVisible(true),
           observer.disconnect()
@@ -152,10 +184,15 @@ export function LazyLoad({;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
           setIsVisible(true),;
           observer.disconnect(),;
@@ -178,10 +215,13 @@ export function LazyLoad({;
 
     );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           setIsVisible(true);
           observer && observer.disconnect();
         }
+<<<<<<< HEAD
 
 import { useEffect, useState, useRef, ReactNode } from './react';
 import { cn } from '@/lib / utils';
@@ -219,6 +259,14 @@ if ( {) {
     );
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      },;
+      {;
+        rootMargin: "200px", // Start loading when element is within 200px of viewport;
+        threshold: 0.1}
+    );
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     // Check condition
 if ( {) {
@@ -226,10 +274,15 @@ if ( {) {
 }
       observer.observe (container_ref.current);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setIsVisible(true),
           observer.disconnect()
         }
@@ -238,6 +291,7 @@ if ( {) {
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -256,22 +310,38 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current)
+      }
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       };
       {;
         rootMargin: "200px", // Start loading when element is within 200px of viewport;
         threshold: 0 && 0.1}
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (containerRef && containerRef.current) {;
       observer && observer.observe(containerRef && containerRef.current);
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (containerRef && containerRef.current) {;
       observer && observer.observe(containerRef && containerRef.current);
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return () => {;
       if (containerRef && containerRef.current) {;
         observer && observer.unobserve(containerRef && containerRef.current);
@@ -279,6 +349,7 @@ if ( {) {
     }
   }, []);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }, []),;
@@ -324,19 +395,27 @@ if ( {) {
   }, []),;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
   }, []),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
       const timer = setTimeout(() => {;
         setIsLoaded(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }, 500);
 
       return () => clearTimeout(timer);
@@ -346,10 +425,17 @@ if ( {) {
   const defaultLoadingComponent = (;
 
     <Skeleton;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     <Skeleton
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />;
@@ -357,8 +443,14 @@ if ( {) {
   return (
     <div
       ref={containerRef}
+<<<<<<< HEAD
       className={cn("transition-opacity duration-500", 
         isLoaded ? "opacity-100" : "opacity-0"
+=======
+
+      className={cn("transition-opacity duration-500", 
+        isLoaded ? "opacity-100" : "opacity-0",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className
       )}>;
       {isVisible ? (;
@@ -369,6 +461,7 @@ if ( {) {
       ) : (;
         loadingComponent || defaultLoadingComponent;
       )}
+<<<<<<< HEAD
 
 
       }, 500),;
@@ -398,12 +491,15 @@ if ( {) {
       ) : (
         loadingComponent |defaultLoadingComponent
       )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
   )
 }
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
   useEffect (() => {
@@ -517,3 +613,8 @@ return (<div)
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

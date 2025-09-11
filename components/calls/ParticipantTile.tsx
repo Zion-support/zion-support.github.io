@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type {;
   RemoteParticipant,;
   LocalParticipant,;
   TrackPublication,;
   Track,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,9 +27,21 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useRef } from 'react';
 
+=======
+import React, { useEffect, useRef } from 'react';
+
+import type {
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,;
+  Track,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type {;
   RemoteParticipant,;
@@ -35,6 +50,7 @@ import type {;
   Track,;
 } from 'livekit-client';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 
@@ -50,6 +66,8 @@ import type {
 } from 'livekit-client';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
@@ -57,30 +75,42 @@ type Props = {;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ParticipantTile(): any ({;
   participant,;
   isLocal,;
   displayName,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isLocal?: boolean;
   displayName?: string;
 };
@@ -89,6 +119,7 @@ type Props = {
 
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export default function ParticipantTile({
@@ -136,6 +167,8 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         track.attach(audioRef.current)
       }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         track && track.attach(audioRef && audioRef.current);      }
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
@@ -143,8 +176,11 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         track && track.detach(videoRef && videoRef.current);
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current);
@@ -152,6 +188,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;
@@ -162,10 +199,15 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);        track && track.detach(videoRef && videoRef.current);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     };
@@ -187,6 +229,8 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       const track = pub.track;
       if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       }
@@ -196,14 +240,20 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       const track = pub.track;
       if (track) handleTrackSubscribed(pub, track)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);
@@ -219,10 +269,17 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       participant && participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [participant]);
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
+=======
+  }, [participant]);
+  return (
+    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     }
   }, [participant]);
@@ -235,6 +292,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         muted={Boolean(isLocal)}
         className='w-full h-48 object-cover bg-black'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       participant.off('trackUnsubscribed', handleTrackUnsubscribed)
     }
@@ -252,6 +310,8 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
   }, [participant]);
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <audio ref={audioRef} autoPlay className='hidden' />;
       <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>;
@@ -259,6 +319,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
           (participant as any).name ||;
 
           (isLocal ? 'You' : 'Participant')}
+<<<<<<< HEAD
 
 =======
       participant.off('trackUnsubscribed', handleTrackUnsubscribed)
@@ -270,6 +331,14 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      </div>
+    </div>
+  );  }, [participant]);
+
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">;
       <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />;
       <audio ref={audioRef} autoPlay className="hidden" />;
@@ -280,10 +349,15 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,
@@ -432,6 +506,7 @@ if ( {) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -458,12 +533,21 @@ if ( {) {
       <audio ref={audioRef} autoPlay className="hidden" />
       <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
         {displayName |(participant as any).name |(isLocal ? 'You' : 'Participant')}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     </div>
 );
 }
   );
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

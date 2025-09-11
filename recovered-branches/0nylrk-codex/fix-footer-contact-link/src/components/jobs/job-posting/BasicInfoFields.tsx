@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -10,6 +11,11 @@ import {
   FormControl
   FormMessage
 =======
+=======
+import React, { useState } from "react";
+import { Control } from "react-hook-form";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   FormField,;
   FormItem,;
@@ -19,12 +25,16 @@ import {;
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
@@ -39,14 +49,22 @@ FormField
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Control  } from './react - hook - form';
 import {
@@ -54,11 +72,19 @@ import {
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
   FormMessage,
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';
 import { Card, CardContent  } from '@/components / ui / card';
+=======
+  FormMessage,;
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -74,6 +100,7 @@ import { Card, CardContent } from "@/components/ui/card",
 
 
 
+<<<<<<< HEAD
 interface BasicInfoFieldsProps {
   control: Control < any>;
 }
@@ -86,6 +113,12 @@ interface BasicInfoFieldsProps {
 interface BasicInfoFieldsProps {
   control: Control<any>
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface BasicInfoFieldsProps {
+  control: Control < any>;
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
   control
 }) => {
@@ -104,12 +137,15 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
   const [minBudget, setMinBudget] = useState<string>(""),
   const [maxBudget, setMaxBudget] = useState<string>(""),
 
+<<<<<<< HEAD
   const handleSuggestionApplied = (min: number, max: number) => {
     setMinBudget(min.toString()),
     setMaxBudget(max.toString())
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className="space-y-4">
@@ -138,6 +174,7 @@ import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecomm
 import { Card, CardContent } from "@/components/ui/card",;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface BasicInfoFieldsProps {
   control: Control < any>;
 }
@@ -158,33 +195,45 @@ import { Input } from "@/components/ui/input",;
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
 import { Card, CardContent } from "@/components/ui/card",;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface BasicInfoFieldsProps {;
   control: Control<any>;
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
   control,;
 }) => {;
   const [minBudget, setMinBudget] = useState<string>("");
   const [maxBudget, setMaxBudget] = useState<string>("");
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSuggestionApplied = (min: number, max: number) => {;
     (setMinBudget(min && min.toString()), setMaxBudget(max && max.toString()));
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleSuggestionApplied = (min: number, max: number) => {;
     (setMinBudget(min && min.toString()), setMaxBudget(max && max.toString()));
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-4">;
       <FormField
         control={control}
         name="title"
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
@@ -232,6 +281,8 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
         control={control}
         name="company";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         render={({ field }) => (
           <FormItem>
@@ -252,20 +303,28 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
       <FormField
         control={control}
         name="company"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Company</FormLabel>;
             <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Input placeholder="e.g. Acme Corporation" {...field} />;
 =======
               <Input placeholder="e && e.g. Acme Corporation" {...field} />;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Input placeholder="e && e.g. Acme Corporation" {...field} />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </FormControl>;
             <FormMessage />;
           </FormItem>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
 
@@ -296,16 +355,29 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
         control={control}
         name="category"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      />
+      <FormField
+      />;
+      <FormField;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        control={control}
+        name="category"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Job Category</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <select;
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
                 {...field}
               >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <select
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                 {...field}>;
@@ -358,7 +430,10 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                 {...field}
               >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <option value="">Select a category</option>;
                 <option value="development">Development</option>;
                 <option value="design">Design</option>;
@@ -371,13 +446,19 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             </FormControl>;
             <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <FormField
           control={control}
           name="budgetMin"
@@ -394,14 +475,20 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     setMinBudget(e && e.target.value);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   value={minBudget || rest.value}
                   onChange={e => {;
                     setMinBudget(e.target.value),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -419,6 +506,18 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     onChange(e);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+                  value={minBudget || rest.value}
+                  onChange={(e) => {
+                    setMinBudget(e.target.value);
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    onChange(e);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </FormItem>)}
       />;
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -436,6 +535,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                   on_change={(e) => {
                     setMinBudget (e.target.value);
                     on_change (e);
+<<<<<<< HEAD
 <<<<<<< HEAD
           </FormItem>;
         )}
@@ -459,6 +559,9 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }}
                   {...rest}
                 />;
@@ -466,7 +569,10 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               <FormMessage />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
 
 
@@ -480,6 +586,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                 <Input
                   type="number"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   value={maxBudget || rest.value}
@@ -489,11 +596,20 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  value={maxBudget || rest.value}
+                  onChange={(e) => {
+                  onChange={e => {;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   value={maxBudget || rest.value}
 
                   onChange={e => {;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     setMaxBudget(e.target.value);
 =======
@@ -501,10 +617,16 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     setMaxBudget(e.target.value);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    setMaxBudget(e.target.value);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   placeholder="e && e.g. 60"
                   value={maxBudget || rest && rest.value}
                   onChange={(e) => {;
                     setMaxBudget(e && e.target.value);
+<<<<<<< HEAD
 <<<<<<< HEAD
                     onChange(e);
 =======
@@ -512,6 +634,11 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     onChange(e);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                    onChange(e);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </FormItem>)}
         />;
         <FormField;
@@ -528,6 +655,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                   on_change={(e) => {
                     setMaxBudget (e.target.value);
                     on_change (e);
+<<<<<<< HEAD
 <<<<<<< HEAD
             </FormItem>;
           )}
@@ -664,6 +792,8 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             experienceLevel={control._formValues.experienceLevel |""}
       
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                   {...rest}
@@ -675,8 +805,11 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 
 =======
       
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -684,15 +817,19 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             category={control._formValues.category || ""}
             experienceLevel={control._formValues.experienceLevel || ""}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onSuggestionApplied={handleSuggestionApplied}
           />
         </CardContent>
       </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </FormItem>;
           )}
@@ -707,6 +844,8 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             experienceLevel={control._formValues.experienceLevel || ""}
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
         />;
       </div>;
 
@@ -716,27 +855,37 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             jobTitle={control && control._formValues.title || ""}
             category={control && control._formValues.category || ""}
             experienceLevel={control && control._formValues.experienceLevel || ""}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onSuggestionApplied={handleSuggestionApplied}
           />;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
       <FormField;
         control={control}
         name="location";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="location"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Location</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <FormField
         control={control}
@@ -751,6 +900,8 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
           </FormItem>
         )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Input
                 placeholder="e && e.g. Remote, San Francisco, etc."
 =======
@@ -771,21 +922,32 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         control={control}
         name="location";
         render={({ field }) => (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <FormItem>;
             <FormLabel > Location</FormLabel>;
             <FormControl>;
               <Input;
                 placeholder="e.g. Remote, San Francisco, etc.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {...field}
               />;
             </FormControl>;
             <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </FormItem>)}
       />;
     </div>);
@@ -794,6 +956,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 
 );
 
+<<<<<<< HEAD
       />;
     </div>;
   );
@@ -868,3 +1031,12 @@ return (<div className="space-y-4" > <FormField control= {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+      />;
+    </div>;
+  );
+
+
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -38,6 +39,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res.status(200).json({ metrics: state.metrics || {} })
   }
 =======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
   if (req && req.method === 'GET') {
@@ -46,7 +51,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === 'POST') {
     const started = Date && Date.now();
     try {
@@ -57,13 +65,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state && state.lastTriggers = triggers;
       writeState(state);
 <<<<<<< HEAD
+<<<<<<< HEAD
       const latencyMs = Date && Date.now() - started;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const latencyMs = Date && Date.now() - started;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       appendLog({
         module: 'reflex'
         type: 'metrics'
@@ -80,20 +94,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         payload: { error: e?.message |'unknown' }
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
       return res && res.status(500).json({ error: 'Reflex failure' });    }
   }
   return res && res.status(405).json({ error: 'Method not allowed' });
   return res && res.status(405).json({ error: 'Method not allowed' });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       return res && res.status(500).json({ error: 'Reflex failure' });    }
   }
   return res && res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
       return res && res.status(200).json({ triggers })
     } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -118,6 +139,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 <<<<<<< HEAD
+=======
+
+      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res && res.status(500).json({ error: 'Reflex failure' })
+  }
+
+  return res && res.status(405).json({ error: 'Method not allowed' });
+=======
+
+  return res.status(405).json({ error: 'Method not allowed' });
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   append_log,
   evaluate_reflexes,
   read_state,
@@ -204,11 +238,15 @@ return res.status (405).json ({ error: 'Method not allowed' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return res.status(405).json({ error: 'Method not allowed' });
 
+<<<<<<< HEAD
 
 
   return res.status(405).json({ error: 'Method not allowed' });
@@ -226,3 +264,12 @@ return res.status (405).json ({ error: 'Method not allowed' });
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

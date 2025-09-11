@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -40,6 +41,16 @@ function EnhancedLayout() {
 ;
   return (
 =======
+=======
+import React, { useEffect } from 'react',
+import EnhancedNavigation from './EnhancedNavigation',
+import EnhancedFooter from './EnhancedFooter',
+import i18n, { isRtl } from '../../utils/i18n';
+import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -80,6 +91,7 @@ import EnhancedFooter from './EnhancedFooter';
       </header>;
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
         {children}
+<<<<<<< HEAD
 
 
   }, []);
@@ -88,12 +100,36 @@ import EnhancedFooter from './EnhancedFooter';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
+      <footer>
+        <EnhancedFooter />
+      </footer>
+    </div>
+);
+}
+}
+  );
+}
+}
+  );
+
+  return (
+import React, { useEffect } from 'react';
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+import i18n, { isRtl } from '../../utils/i18n';
+import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
       </footer>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -116,10 +152,27 @@ import EnhancedFooter from './EnhancedFooter';
 }
 =======
 =======
+
+
+}
+}
+  );
+=======
+
+
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="min - h-screen flex flex - col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
@@ -134,6 +187,7 @@ import EnhancedFooter from './EnhancedFooter';
 }
 }
   );
+<<<<<<< HEAD
 
   return (
     <div className=&quot;min-h-screen flex flex-col&quot;>
@@ -216,3 +270,10 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

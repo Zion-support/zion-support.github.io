@@ -11,13 +11,19 @@ import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -35,6 +41,7 @@ function MyApplications() {
 ;
   const getStatusBadge = (status: ApplicationStatus) =>: any {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const getStatusBadge = (status: ApplicationStatus) => {
@@ -51,12 +58,21 @@ import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
 
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Link } from "react-router-dom",
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
   
   const getStatusBadge = (status: ApplicationStatus) => {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>,
       case "viewed":
@@ -72,6 +88,7 @@ export function MyApplications() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+<<<<<<< HEAD
       case "new": return <Badge variant="secondary">New</Badge>;
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>;
@@ -83,6 +100,8 @@ export function MyApplications() {
     }
   };
   if (isLoading) {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
   },
@@ -94,7 +113,10 @@ export function MyApplications() {
       </div>
     )
   }
+<<<<<<< HEAD
   if (error) {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (error) {
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
@@ -102,7 +124,10 @@ export function MyApplications() {
       </div>
     )
   }
+<<<<<<< HEAD
   if (applications && applications.length === 0) {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (applications.length === 0) {
     return (
       <Card className="bg-muted/30">
@@ -117,6 +142,7 @@ export function MyApplications() {
       </Card>
     )
   }
+<<<<<<< HEAD
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {applications.map((application) => (
@@ -207,6 +233,12 @@ export function MyApplications() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -288,18 +320,25 @@ export function MyApplications() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {application.cover_letter}
                 </p>
               )}
               
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -312,9 +351,13 @@ export function MyApplications() {;
                   </Link>
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className="grid gap-4 md:grid-cols-2">;
@@ -329,6 +372,7 @@ export function MyApplications() {;
             </div>;
             <p className="text-sm text-muted-foreground">;
               Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -405,18 +449,49 @@ export function MyApplications() {;
             </div>;
             <p className="text-sm text-muted-foreground">;
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </p>;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-3">;
+<<<<<<< HEAD
+=======
+              {application && application.cover_letter && (;
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
+                  {application && application.cover_letter}
+                </p>;
+              )}
+
+              <div className="flex justify-between items-center">;
+                <Button
+                  variant="outline" 
+                  size="sm" 
+                  className="text-xs"
+                  asChild>;
+                  <Link to={`/jobs/${application && application.job_id}`}>;
+                    <ExternalLink className="h-3 w-3 mr-1" /> View Job;
+                  </Link>;
+                </Button>;
+
+                <Button
+                  variant="default" 
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <Button 
                   variant="default" 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   size="sm"
                   className="text-xs"
                   asChild>;
                   <Link to={`/messages?jobId=${application && application.job_id}`}>;
+<<<<<<< HEAD
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
                   {application.cover_letter}
@@ -442,6 +517,8 @@ export function MyApplications() {;
                   asChild;
                 >;
                   <Link to={`/messages?jobId=${application.job_id}`}>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
                   </Link>;
                 </Button>;
@@ -450,6 +527,7 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
     </div>;
   // Check condition
 if ( {) {
@@ -576,12 +654,15 @@ default: return <Badge variant="outline"> {
           </CardContent>
         </Card>
       ))}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
   )
 }
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -589,3 +670,19 @@ default: return <Badge variant="outline"> {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
+      case "interview":;
+        return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
+      case "hired":;
+        return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;
+      case "rejected":;
+        return <Badge className="bg - red - 100 text - red - 800">Rejected</Badge>,
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  }
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

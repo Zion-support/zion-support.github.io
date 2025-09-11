@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { 
   innovativeRealMicroSaasServices2025 
@@ -13,6 +14,8 @@ import {
 import {
   emergingTechServicesEnhanced2025
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,12 +36,21 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
 
+=======
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
+import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
+import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { ;
@@ -50,16 +62,22 @@ import { ;
 import { ;
   emergingTechServicesEnhanced2025 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from '../data/2025-emerging-tech-services-enhanced';
 import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 } from '../data/2025-emerging-tech-services-enhanced';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
@@ -67,6 +85,7 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
+<<<<<<< HEAD
 
 
 import {;
@@ -84,6 +103,24 @@ import {;
   Lock,;
   BarChart3,;
   Cloud,;
+=======
+import {
+  ArrowRight,
+  Star,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Lock,
+  BarChart3,;
+  Cloud,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 interface Homepage2025Props {;
   showInternalNav?: boolean;
@@ -91,19 +128,27 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
   showInternalNav = true,;
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { 
   ArrowRight, Star, Brain, Atom, Shield, Zap;
   Users, Globe, TrendingUp, Rocket, Cpu, Lock;
   BarChart3, Cloud
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Homepage2025Props { showInternalNav?: boolean }
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 interface Homepage2025Props { showInternalNav?: boolean }
@@ -113,20 +158,29 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   useEffect(() => {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   useEffect(() => {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setIsVisible(true);
     const interval = setInterval(() => {;
       setCurrentServiceIndex(;
@@ -138,10 +192,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     return () => clearInterval(interval);
   }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const scrollToSection = (sectionId: string) => {;
     const element = document && document.getElementById(sectionId),;
     if (element) {;
@@ -151,16 +210,22 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   };
   const allServices = [      element && element.scrollIntoView({ behavior: 'smooth' }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);
     }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   const allServices = [;
     ...innovativeRealMicroSaasServices2025,;
@@ -178,11 +243,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
     .slice(0, 12);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -248,16 +319,22 @@ const Homepage2025: React.FC < Homepage2025Props> = ({ showInternalNav = true })
     }, 5000);
     return () => clear_interval (interval);  }, []);      setCurrentServiceIndex ((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
 <<<<<<< HEAD
+<<<<<<< HEAD
     }, 5000);
     return () => clear_interval (interval);
   }, []);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }, 5000);
     return () => clear_interval (interval);
   }, []);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const scrollToSection = (section_id: string) =>: any {
     const element = document.getElementById (section_id),
@@ -277,6 +354,7 @@ if ( {) {
   }
 ;
   const all_services = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface Homepage2025Props {_showInternalNav?: boolean}
@@ -301,6 +379,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
     ...innovativeITServicesEnhanced2025,
@@ -310,20 +390,28 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
 <<<<<<< HEAD
+<<<<<<< HEAD
 ...emergingTechServices2026,
 =======
     ...emergingTechServices2026,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    ...emergingTechServices2026,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
 ;
   const featured_services = all_services;
     .filter (service => service.popular);
     .slice (0, 12);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ...innovativeRealMicroSaasServices2025;
     ...innovativeAIServicesEnhanced2025;
     ...innovativeITServicesEnhanced2025;
@@ -335,18 +423,25 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...emergingTechServices2026;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const navigationSections = [
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const featured_services = all_services.filter (service => service.popular).slice (0, 12);
   const navigation_sections = [;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
   const navigationSections = [
@@ -355,6 +450,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const navigation_sections = [;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { id: 'hero', label: 'Home', icon: '🏠' },
     { id: 'services', label: 'Micro SAAS', icon: '🚀' },
     { id: 'ai', label: 'AI Services', icon: '🧠' },
@@ -363,14 +460,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'it', label: 'IT Solutions', icon: '💻' },
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "AI-Powered Innovation",
       description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       title: "AI-Powered Innovation",
       description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth",
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       icon: Brain
     }
     {
@@ -395,16 +498,23 @@ title: "AI-Powered Innovation",
       icon: Zap
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 =======
 
   ];
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const itemVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 =======
@@ -412,23 +522,38 @@ title: "AI-Powered Innovation",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  };
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const staggerContainer = {
     initial: {}
     animate: {
       transition: {
+<<<<<<< HEAD
 
 
+=======
+        staggerChildren: 0.1
+      }
+    }
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         staggerChildren: 0.1,
       },
     },
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const featuredServices = allServices && allServices.filter(service => service && service.popular).slice(0, 12);
   const navigationSections = [;
     { id: 'hero', label: 'Home', icon: '🏠' },;
@@ -476,6 +601,7 @@ title: "AI-Powered Innovation",
     transition: { duration: 0 && 0.6 },  };    transition: { duration: 0 && 0.6 }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const staggerContainer = {;
     initial: {},;
     animate: {;
@@ -490,6 +616,9 @@ title: "AI-Powered Innovation",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>;
       {showInternalNav && (;
@@ -501,6 +630,7 @@ title: "AI-Powered Innovation",
                 <motion&& motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 
                   className='flex items-center space-x-2'>;
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg'></div>;
@@ -635,6 +765,9 @@ title: "AI-Powered Innovation",
                   {navigationSections.map(section => (                    <button  };
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -642,6 +775,7 @@ title: "AI-Powered Innovation",
                           ? 'text - cyan - 400 border - b-2 border - cyan - 400';
                           : 'text - gray - 300 hover:text - cyan - 400';
                       }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>;
                 {/* Contact Info */}
@@ -953,6 +1087,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                           ? 'text-cyan-400 border-b-2 border-cyan-400'
                           : 'text-gray-300 hover:text-cyan-400'
                       }`}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     >
                       <span>{section.icon}</span>
                       <span>{section.label}</span>
@@ -960,19 +1096,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   ))}
                 </div>
 
+<<<<<<< HEAD
 =======
 =======
+                </div>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className='hidden md:flex items-center space-x-4'
                 >
@@ -1003,6 +1150,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {/* Mobile Menu Button */}
                 <button
@@ -1027,9 +1176,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
@@ -1037,6 +1190,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1076,6 +1230,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='lg:hidden border-t border-white/10'
                   >
                     <div className='py-4 space-y-2'>
@@ -1085,10 +1241,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       {navigationSections.map((section) => (
                       {navigationSections.map(section => (                        <button
 
+<<<<<<< HEAD
                         <button
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -1096,10 +1258,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                               ? 'bg-cyan-400/20 text-cyan-400'
                               : 'text-gray-300 hover:bg-white/10'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           }`}
                         >;
                           <span>{section && section.icon}</span>;
@@ -1107,7 +1273,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                         </button>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <div className="pt-4 border-t border-white/10">
+=======
+                      <div className='pt-4 border-t border-white/10'>
+                        <a
+                          href='tel:+13024640950'
+                          className='flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300'                        >                      <div className="pt-4 border-t border-white/10">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <a
                           href="tel:+13024640950"
                           className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
@@ -1125,10 +1298,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
 </AnimatePresence>;
             </div>;
@@ -1136,9 +1312,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+
+      {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section
         id='hero'
         className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16'>;
@@ -1150,14 +1331,23 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <motion&& motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+              className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="text-center z-10 max-w-6xl mx-auto">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >
 
 
 
           <motion.div
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1169,7 +1359,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
                     >;
                       <span>{section.icon}</span>;
@@ -1280,9 +1473,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </>)}
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Hero Section */}
       <section;
@@ -1297,6 +1493,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <motion.div;
               animate={{ coordinate_y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1364,31 +1561,50 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='text-center max-w-6xl mx-auto relative z-10'            className="text-center max-w-6xl mx-auto relative z-10"
 =======
             className="text-center max-w-6xl mx-auto relative z-10"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            className="text-center max-w-6xl mx-auto relative z-10"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
 =======
               className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
+=======
+                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <Star className='w-5 h-5' />
                 <span>Innovation Leader 2025-2026</span>
@@ -1401,6 +1617,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 that drive business transformation
               </p>
 
+<<<<<<< HEAD
               {/* Enhanced CTA Section */}
               <motion.div
                 variants={itemVariants}
@@ -1429,6 +1646,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               >
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
@@ -1515,12 +1734,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </Link>;
               </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -1529,10 +1752,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
@@ -1563,6 +1793,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       {/* Features Section */}
@@ -1572,12 +1804,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <motion&& motion.div
 
 =======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1594,10 +1830,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1607,6 +1852,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            className='text-center mb-20'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Technology Solutions
@@ -1620,6 +1872,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {features.map((feature, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
 
             className="text-center mb-20"
           >
@@ -1628,6 +1881,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}          >
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}          >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Technology Solutions
             </h2>
@@ -1639,10 +1895,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {features.map((feature, index) => (
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-20'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Comprehensive Technology Solutions;
@@ -1670,6 +1930,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1686,10 +1947,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
@@ -1723,12 +1991,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 <<<<<<< HEAD
               </motion.div>
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </section>;
@@ -1742,6 +2017,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         <div className="max-w-6xl mx-auto">;
           <motion&& motion.div
             className="text-center mb-16"
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Enhanced Services Preview */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -1753,24 +2033,34 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
 
             initial={{ opacity: 0, y: 40 }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
 =======
@@ -1780,6 +2070,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             whileInView={{ opacity: 1, y: 0 }}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
               >;
                 <Star className='w - 5 h - 5' />;
@@ -1955,6 +2251,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2226,6 +2523,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           {/* Call to Action for Services Showcase */}
           <motion&& motion.div
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
                 onClick={() => (window.location.href = service.link)}
@@ -2262,19 +2565,28 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <motion.div
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
 
+<<<<<<< HEAD
 =======
 =======
 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
+
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             viewport={{ once: true }}>;
             <a
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Contact Section */}
               href='/comprehensive-services-showcase-2026'
@@ -2295,22 +2607,34 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Contact Section */}
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
 
             initial={{ opacity: 0, y: 40 }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -2363,13 +2687,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             whileInView={{ opacity: 1, y: 0 }}
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
@@ -2476,6 +2806,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>;
           <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -2510,6 +2841,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             className='text-center'            className="text-center"
 
 =======
+=======
+
+            className='text-center'            className="text-center"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center"
 =======
 
@@ -2517,12 +2853,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
@@ -2536,6 +2876,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 =======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -2544,12 +2887,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </a>
               <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href='tel:+13024640950'
                 className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'                href="tel:+13024640950"
 =======
                 href="tel:+13024640950"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                href="tel:+13024640950"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Call Us
@@ -2558,6 +2906,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <footer className="py-12 px-4 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
@@ -2625,6 +2974,8 @@ className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border bord
         </div>;
       </section>;
       {/* Footer */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               Website;
@@ -2635,6 +2986,7 @@ className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border bord
 
 
 };
+<<<<<<< HEAD
 export default Homepage2025;
 
 
@@ -2653,10 +3005,21 @@ export default Homepage2025;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default Homepage2025;
+
+export default Homepage2025;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -2672,3 +3035,6 @@ export default Homepage2025;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

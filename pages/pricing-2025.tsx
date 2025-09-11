@@ -1,9 +1,12 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -16,7 +19,10 @@ import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -28,10 +34,15 @@ import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Pricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
@@ -51,8 +62,11 @@ export default function Pricing2025() {
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
     return `$${Math.round(annualPrice)}`
 <<<<<<< HEAD
+<<<<<<< HEAD
 const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from 'react',
 import Head from 'next / head',
@@ -79,7 +93,10 @@ function Pricing2025() {
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
   ],
   const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     selected_category === 'all' || service.category.includes (selected_category)),
   const getAnnualPrice = (monthly_price: string) =>: any {
     const price = parse_float (monthly_price.replace ('$', '')),
@@ -89,9 +106,13 @@ function Pricing2025() {
   const container_variants = {
     hidden: { opacity: 0 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     visible: {
       opacity: 1
       transition: {
@@ -99,9 +120,13 @@ function Pricing2025() {
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
@@ -109,20 +134,30 @@ function Pricing2025() {
       opacity: 1,
       coordinate_y: 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       transition: {
         duration: 0.5;
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -206,6 +241,7 @@ export default function Pricing2025(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services — Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
+<<<<<<< HEAD
 
   },
   return (
@@ -234,6 +270,9 @@ export default function Pricing2025(req, res) {
 =======
 
 
+=======
+      {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -266,13 +305,17 @@ export default function Pricing2025(req, res) {
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
 
 
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -285,6 +328,10 @@ export default function Pricing2025(req, res) {
               Transparent pricing for our comprehensive collection of innovative micro SAAS services,
 <<<<<<< HEAD
 =======
+=======
+            {/* Billing Toggle */}
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
@@ -294,7 +341,10 @@ export default function Pricing2025(req, res) {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <div className="flex items-center justify-center gap-4 mb-12">
@@ -314,6 +364,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'right-1' : 'left-1'
@@ -1388,6 +1439,9 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'right-1' : 'left-1'
@@ -1409,6 +1463,10 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
@@ -1482,6 +1540,10 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -1505,12 +1567,18 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
               >;
                 {/* Popular Badge */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              >;
+                {/* Popular Badge */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {service.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
                     MOST POPULAR
@@ -1528,6 +1596,11 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="text-center mb-8">
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 mx-auto mb-4 flex items-center justify-center text-3xl`}>
                     {service.icon  } catch (error) {
@@ -1535,6 +1608,10 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
@@ -1567,6 +1644,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </span>
                   </div>
                   {billingCycle === 'annual' && (
@@ -1587,6 +1670,11 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="flex items-center justify-center gap-2 mb-6">
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
@@ -1609,6 +1697,10 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <span className="text-white/60 text-sm">
                     {service.rating} ({service.reviews} reviews)
@@ -1620,6 +1712,10 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="mb-8">
                   <h4 className="text-white font-semibold mb-4 text-center">Key Features:</h4>
                   <div className="space-y-3">
@@ -1633,6 +1729,10 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {service.features.length > 5 && (
                       <div className="text-cyan-400 text-sm font-medium text-center">
                         +{service.features.length - 5} more features
@@ -1676,6 +1776,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="mb-8 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
                   <div className="text-cyan-400 font-semibold mb-2 text-center">🚀 Expected ROI:</div>
                   <p className="text-white/80 text-sm text-center">{service.roi}</p>
@@ -1691,8 +1797,13 @@ export default function Pricing2025(req, res) {
                   </div>
                 </div>
                 {/* Action Buttons */}
+<<<<<<< HEAD
                 <div className="space-y-3">
                   <a
+=======
+                <div className="space - y-3">;
+                  <a;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     href={service.link}
                 {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
@@ -1706,6 +1817,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold text-white text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
@@ -1722,6 +1839,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="w-full px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white text-center transition-all duration-300 hover:bg-white/5"
                   >
                     Contact Sales
@@ -1733,6 +1856,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Need help? Contact us:</div>
                   <div className="flex items-center justify-center gap-4 text-sm">
@@ -1775,6 +1904,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
@@ -1787,6 +1922,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 View All Services
@@ -1808,6 +1949,11 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1831,14 +1977,25 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
               We offer custom enterprise solutions, volume discounts, and dedicated support
               We offer custom enterprise solutions, volume discounts, and dedicated support 
               We offer custom enterprise solutions, volume discounts, and dedicated support
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               for organizations requiring multiple services or specialized implementations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1850,6 +2007,12 @@ export default function Pricing2025(req, res) {
                 <ArrowRight className="w-5 h-5" />
               </a>
               </Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
@@ -1861,11 +2024,19 @@ export default function Pricing2025(req, res) {
         </div>
       </section>
       {/* FAQ Section */}
+<<<<<<< HEAD
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+      <section className="py - 20 px - 6">;
+        <div className="max - w-4xl mx - auto">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
       {/* FAQ Section */  } catch (error) {
@@ -1896,6 +2067,12 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -1937,6 +2114,7 @@ export default function Pricing2025(req, res) {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 question: "What payment methods do you accept?",
+<<<<<<< HEAD
                 answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms."
               },
               {
@@ -1998,11 +2176,38 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms.";
+              },
+              {
+                question: "Do you offer free trials?",
+                answer: "Yes! All our services come with free trial periods ranging from 14 to 60 days, depending on the service complexity.";
+              },
+              {
+                question: "Can I cancel my subscription anytime?",
+                answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period.";
+              },
+              {
+                question: "Do you offer volume discounts?",
+                answer: "Yes, we offer volume discounts for organizations using multiple services. Contact our sales team for custom pricing and enterprise solutions.";
+              },
+              {
+                question: "What kind of support do you provide?",
+                answer: "We provide comprehensive support including documentation, tutorials, email support, and priority support for enterprise customers. Some services include dedicated account managers.";
+              },
+              {
+                question: "Can I upgrade or downgrade my plan?",
+
+                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>
               </motion.div>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -2012,18 +2217,45 @@ export default function Pricing2025(req, res) {
   )
   );
 };
+=======
+
+
+  );
+};
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+
+}
+
+=======
+}
+
+=======
+                className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
+              >;
+                <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
+                <p className="text - white / 70 leading - relaxed">{faq.answer}</p>;
+              </motion.div>))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
   } catch (error) {
@@ -2031,12 +2263,18 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

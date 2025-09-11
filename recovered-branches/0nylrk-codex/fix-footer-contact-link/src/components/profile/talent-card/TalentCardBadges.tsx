@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
@@ -15,12 +16,19 @@ import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge",
 import { Award } from "lucide-react",
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
 
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -45,6 +53,9 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">
@@ -53,23 +64,45 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
       </Badge>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
   )
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Award} from "lucide-react";
 interface TalentCardBadgesProps {;
   featured: boolean | undefined;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from "lucide-react",;
 
+=======
+}
+
+export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
+  if (!featured) return null;
+
+  return (
+    <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">;
+      <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">;
+        <Award className="h-3 w-3" />;
+        <span>Featured</span>;
+      </Badge>;
+    </div>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Badge  } from '@/components / ui / badge';
 import { Award  } from './lucide-react';
@@ -92,6 +125,7 @@ if (return null) {
       </Badge>;
     </div>);
 }
+<<<<<<< HEAD
 
   )
   )
@@ -131,3 +165,13 @@ absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   setVendorApproval
@@ -9,6 +10,33 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body |{};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+=======
+import {
+  setVendorApproval,
+  setVendorCommission,;
+  suspendVendor,;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  try {
+    if (action === 'approve') setVendorApproval(String(vendorId), true);
+    else if (action === 'revoke') setVendorApproval(String(vendorId), false);
+    else if (action === 'suspend') suspendVendor(String(vendorId), true);
+    else if (action === 'unsuspend') suspendVendor(String(vendorId), false);
+
+
+  } catch (e: any) {
+    res && res.status(500).json({ error: e && e.message })
+  };
+}
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   setVendorApproval,
   setVendorCommission,;
   suspendVendor,;
@@ -19,6 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
   const { action, vendorId, value } = req.body || {};
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -65,6 +94,9 @@ function handler() {
   if (return res.status (405).json ({ error: 'Method not allowed' })) {
   $2
 }
+=======
+  const { action, vendorId, value } = req.body || {},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     if (setVendorApproval (String (vendor_id), true)) {
   $2
@@ -94,9 +126,12 @@ function handler() {
   }
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

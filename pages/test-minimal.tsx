@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -7,6 +8,15 @@ import React from 'react';
 export default function TestMinimal(req, res) {
   try {
 export default function TestMinimal() {;
+=======
+
+
+export default function TestMinimal(req, res) {
+  try {
+=======
+export default function TestMinimal() {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function TestMinimal(req, res) {
   try {
 
@@ -18,6 +28,7 @@ export default function TestMinimal(req, res) {
       <p>If you can see this page, Next.js is working correctly.</p>;
     </div>;
   );
+<<<<<<< HEAD
 
 export default /**
  * TestMinimal - Function description
@@ -50,10 +61,13 @@ export default function TestMinimal(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -63,3 +77,8 @@ export default function TestMinimal(req, res) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

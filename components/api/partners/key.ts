@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 id: uuidv4(),
     partnerId: auth && auth.partner.id,
     key: uuidv4(),
@@ -23,6 +24,9 @@ id: uuidv4(),
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
@@ -52,10 +56,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ apiKey: newKey.key })
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   authenticate_request,
   listApiKeys,
   saveApiKeys,
@@ -78,6 +87,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     return res.status (401).json ({ error: 'Unauthorized' });  }
   const { api_key } = auth;
   const keys = await listApiKeys ();
@@ -236,3 +246,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  const newKey = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

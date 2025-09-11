@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Search} from "lucide-react";
@@ -19,6 +20,9 @@ interface ApiDocsLayoutProps {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
@@ -27,6 +31,7 @@ interface ApiDocsLayoutProps {
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
+<<<<<<< HEAD
   const location = useLocation(),
   const currentPath = location.pathname,
 
@@ -38,20 +43,26 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const currentPath = location.pathname;
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const location = useLocation();
   const currentPath = location.pathname;
   const location = useLocation(),
   const currentPath = location.pathname,
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navigationItems = [
     { title: "Getting Started", path: "/developers/docs/getting-started" }
     { title: "API Reference", path: "/developers/docs/reference" }
     { title: "Webhooks", path: "/developers/docs/webhooks" }
     { title: "Sample Code", path: "/developers/docs/samples" }
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }]
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -103,6 +114,8 @@ export function ApiDocsLayout({ children } ApiDocsLayoutProps) {;
               <li key={item.path}>
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -152,7 +165,10 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
       {/* Sidebar */}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link
                   to={item.path}
                   className={cn(
@@ -161,7 +177,10 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-zinc-400 hover:text-white hover:bg-zinc-900"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )}
                 >
                   {item.title}
@@ -179,8 +198,11 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
   )
 }
 export default ApiDocsLayout;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
@@ -204,9 +226,13 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
     <div className="flex min-h-screen bg-zinc-950">;
       {/* Sidebar */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
         <Link to="/developers/docs" className="flex items-center mb-8">;
           <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">;
@@ -214,6 +240,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
           </div>;
           <span className="font-bold text-white">API Docs</span>;
         </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           </ul>;
         </nav>;
@@ -274,6 +301,8 @@ const navigationItems = [ return (<div className="flex min-h-screen bg-zinc-950"
       {/* Main content */}
       <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="mb-6">;
           <div className="relative">;
@@ -310,21 +339,28 @@ const navigationItems = [ return (<div className="flex min-h-screen bg-zinc-950"
 
       {/* Main content */}
       <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {children}
       </div>;
     </div>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export default ApiDocsLayout;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 
 
 export default ApiDocsLayout;
+<<<<<<< HEAD
 
 =======
 import React from './react';
@@ -395,3 +431,5 @@ export default ApiDocsLayout;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

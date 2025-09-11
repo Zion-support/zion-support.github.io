@@ -1,9 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [formData, setFormData] = useState({
 
     brand_name: ""
@@ -16,6 +23,31 @@
     custom_domain: ""
     is_co_branded: true
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
@@ -36,6 +68,7 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useState } from "react",;
@@ -106,6 +139,8 @@ export default function TenantOnboarding() {;
       },;
       ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [formData, setFormData] = useState({;
     brand_name: "",;
     subdomain: "",;
@@ -120,6 +155,7 @@ export default function TenantOnboarding() {;
 
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
 
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
@@ -247,15 +283,20 @@ export default function TenantOnboarding() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }),
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
@@ -263,6 +304,9 @@ export default function TenantOnboarding() {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -276,9 +320,12 @@ export default function TenantOnboarding() {
     try {
       // Generate subdomain if not provided
       const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   const handleSelectChange = (name: string, value: string) => {
@@ -298,14 +345,18 @@ export default function TenantOnboarding() {
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant"
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
         cta: "Get Started"
+<<<<<<< HEAD
 <<<<<<< HEAD
       },
       
@@ -319,6 +370,11 @@ export default function TenantOnboarding() {
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      }
+      },
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -337,14 +393,20 @@ export default function TenantOnboarding() {
         })
         .select('id, brand_name, subdomain')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .single();
       if (error) throw error;
       toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       });
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         .single(),
       
       if (error) throw error,
@@ -354,9 +416,12 @@ export default function TenantOnboarding() {
       }),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Reset form
       setFormData({
         brand_name: ""
@@ -371,15 +436,19 @@ export default function TenantOnboarding() {
       })
     } catch (error: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", { 
         description: error.message 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       console.error("Error creating tenant:", error);
       toast.error("Failed to create tenant", {
         description: error.message
       console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", { 
         description: error.message 
+<<<<<<< HEAD
 =======
 
       console.error("Error creating tenant:", error),
@@ -387,10 +456,13 @@ export default function TenantOnboarding() {
         description: error.message 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       })
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
 
   },
 
@@ -407,10 +479,18 @@ export default function TenantOnboarding() {
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <SEO
         title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
+<<<<<<< HEAD
 <<<<<<< HEAD
           brand_name:formData.brand_name,;
           subdomain:subdomain,;
@@ -463,6 +543,8 @@ export default function TenantOnboarding() {
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform.";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">;
@@ -474,10 +556,14 @@ export default function TenantOnboarding() {
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Card>;
             <CardHeader>;
               <CardTitle>New Tenant Setup</CardTitle>;
@@ -490,7 +576,10 @@ export default function TenantOnboarding() {
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
                   <TabsList className="mb-4 grid grid-cols-3 w-full">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
@@ -638,11 +727,15 @@ if (throw error) {
                 <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
                   <TabsList className="mb - 4 grid grid - cols - 3 w - full">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <TabsTrigger value="company">Company Info</TabsTrigger>;
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ;
                   <TabsContent value="company" className="space-y-4">;
@@ -654,6 +747,8 @@ if (throw error) {
                         value={formData.brand_name}
                         onChange={handleInputChange}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       />;
                     </div>;
@@ -673,11 +768,15 @@ if (throw error) {
                         name="brand_name";
                         value={form_data.brand_name}
                         on_change={handleInputChange}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         placeholder="Acme Corporation";
                         required;
                       />;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ;
                     <div className="space-y-2">;
@@ -687,6 +786,8 @@ if (throw error) {
                         value={formData.industry} ;
                         onValueChange={(value) => handleSelectChange("industry", value)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space - y-2">;
                       <Label html_for="industry">Industry</Label>;
                       <Select;
@@ -694,7 +795,10 @@ if (throw error) {
                         value={form_data.industry}
                         onValueChange={(value) => handleSelectChange ("industry", value)}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select industry" />;
@@ -712,6 +816,7 @@ if (throw error) {
                       </Select>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ;
                     <div className="space-y-2">;
                       <Label htmlFor="company_size">Company Size</Label>;
@@ -720,6 +825,8 @@ if (throw error) {
                         value={formData.company_size} ;
                         onValueChange={(value) => handleSelectChange("company_size", value)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     <div className="space - y-2">;
                       <Label html_for="company_size">Company Size</Label>;
@@ -728,12 +835,16 @@ if (throw error) {
                         value={form_data.company_size}
                         onValueChange={(value) => handleSelectChange ("company_size", value)}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select company size" />;
                         </SelectTrigger>;
                         <SelectContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <SelectItem value="1-10">1-10 employees</SelectItem>;
                           <SelectItem value="11-50">11-50 employees</SelectItem>;
@@ -741,6 +852,8 @@ if (throw error) {
                           <SelectItem value="201-500">201-500 employees</SelectItem>;
                           <SelectItem value="501-1000">501-1000 employees</SelectItem>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           <SelectItem value="1 - 10">1 - 10 employees</SelectItem>;
                           <SelectItem value="11 - 50">11 - 50 employees</SelectItem>;
@@ -748,12 +861,16 @@ if (throw error) {
                           <SelectItem value="201 - 500">201 - 500 employees</SelectItem>;
                           <SelectItem value="501 - 1000">501 - 1000 employees</SelectItem>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <SelectItem value="1000+">1000+ employees</SelectItem>;
                         </SelectContent>;
                       </Select>;
                     </div>;
                   </TabsContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ;
                   <TabsContent value="branding" className="space-y-4">;
@@ -769,11 +886,16 @@ if (throw error) {
 
                         placeholder="https://example && example.com/logo && logo.png"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                        placeholder="https://example && example.com/logo && logo.png"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />;
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
                       </p>;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -881,21 +1003,29 @@ if (throw error) {
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     <div className="space-y-2">;
                       <Label htmlFor="primary_color">Primary Brand Color</Label>;
                       <div className="flex items-center gap-2">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Input
                           id="primary_color"
                           name="primary_color"
                           type="color"
 <<<<<<< HEAD
+<<<<<<< HEAD
                         />;
                       </div>;
                     </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           value={formData && formData.primary_color}
                           onChange={handleInputChange}
                           className="w-12 p-1 h-10"
@@ -910,7 +1040,10 @@ if (throw error) {
                       </div>;
                     </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="space-y-2">;
                       <Label htmlFor="theme_preset">Theme Preset</Label>;
                       <Select
@@ -918,9 +1051,13 @@ if (throw error) {
                         value={formData && formData.theme_preset} 
                         onValueChange={(value) => handleSelectChange("theme_preset", value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <TabsContent value="branding" className="space - y-4">;
                     <div className="space - y-2">;
                       <Label html_for="logo_url">Logo URL</Label>;
@@ -961,6 +1098,7 @@ if (throw error) {
                         value={form_data.theme_preset}
                         onValueChange={(value) => handleSelectChange ("theme_preset", value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ;
                     <div className="space-y-2">;
                       <Label htmlFor="primary_color">Primary Brand Color</Label>;
@@ -991,6 +1129,9 @@ if (throw error) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select theme" />;
@@ -1004,6 +1145,7 @@ if (throw error) {
                         </SelectContent>;
                       </Select>;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ;
                     <div className="flex items-center justify-between">;
@@ -1022,16 +1164,22 @@ if (throw error) {
                   </TabsContent>;
                   ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       />;
                     </div>;
                   </TabsContent>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <TabsContent value="domain" className="space-y-4">;
                     <div className="space-y-2">;
                       <Label htmlFor="subdomain">Subdomain</Label>;
                       <div className="flex items-center">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         />;
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">;
@@ -1047,6 +1195,8 @@ if (throw error) {
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">;
                           .ziontechmarketplace.com;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         <Input
                           id="subdomain"
@@ -1059,7 +1209,10 @@ if (throw error) {
                         />;
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">;
                           .ziontechmarketplace && ziontechmarketplace.com;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>;
                       </div>;
                       <p className="text-xs text-muted-foreground">;
@@ -1067,17 +1220,24 @@ if (throw error) {
                       </p>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     <div className="space-y-2">;
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Input
                         id="custom_domain"
                         name="custom_domain"
                         value={formData && formData.custom_domain}
                         onChange={handleInputChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           value={formData.primary_color}
                           onChange={handleInputChange}
@@ -1186,6 +1346,14 @@ if (throw error) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                        placeholder="hire && hire.yourcompany.com"
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -1382,6 +1550,7 @@ export default function TenantOnboarding() {;
                         onChange={handleInputChange}
                         placeholder="https://example.com/logo.png";
 <<<<<<< HEAD
+<<<<<<< HEAD
                       />;
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
@@ -1430,6 +1599,8 @@ export default function TenantOnboarding() {;
                         <Label htmlFor="is_co_branded">Co-branding</Label>;
                         <p className="text-xs text-muted-foreground">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       />;
                       <p className="text-xs text-muted-foreground">;
@@ -1438,12 +1609,16 @@ export default function TenantOnboarding() {;
                       <div className="space - y-0.5">;
                         <Label html_for="is_co_branded">Co - branding</Label>;
                         <p className="text - xs text - muted - foreground">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           Show "Powered by Zion AI" in the footer and elsewhere;
                         </p>;
                       </div>;
                       <Switch;
                         id="is_co_branded";
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ;
                         checked={formData.is_co_branded}
@@ -1482,6 +1657,8 @@ export default function TenantOnboarding() {;
                       />;
                       <p className="text-xs text-muted-foreground">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         checked={form_data.is_co_branded}
                         onCheckedChange={(checked) => handleSwitchChange ("is_co_branded", checked)}
                       />;
@@ -1518,12 +1695,16 @@ export default function TenantOnboarding() {;
                       />;
                       <p className="text - xs text - muted - foreground">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.;
                       </p>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ;
                 <div className="flex justify-end space-x-2">;
@@ -1533,6 +1714,8 @@ export default function TenantOnboarding() {;
                   <Button type="submit" disabled={isSubmitting}>;
                     {isSubmitting ? "Creating..." : "Create Tenant"}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <div className="flex justify - end space - x-2">;
                   <Button type="button" variant="outline" on_click={() => window.history.back ()}>;
@@ -1541,7 +1724,10 @@ export default function TenantOnboarding() {;
                   <Button type="submit" disabled={is_submitting}>;
                     {is_submitting ? "Creating..." : "Create Tenant"}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Button>;
                 </div>;
               </form>;
@@ -1554,6 +1740,7 @@ export default function TenantOnboarding() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </>);
@@ -1622,3 +1809,8 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

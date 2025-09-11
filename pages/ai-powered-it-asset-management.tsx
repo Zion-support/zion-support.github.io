@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
 
@@ -165,6 +166,8 @@ import { motion } from 'framer-motion',
 import {
   Monitor, Brain, Cpu, Zap, Shield, Globe,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     {
@@ -173,7 +176,10 @@ import {
       title: "AI - Powered Asset Discovery",
       description: "Intelligent detection and cataloging of all IT assets across your network",
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone
@@ -192,14 +198,19 @@ const AIPoweredITAssetManagement = () => {
       description: "Continuous monitoring and health assessment of all IT assets",
       color: "from-blue-500 to-cyan-500"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       icon: Shield,
       title: "Security Compliance",
       description: "Automated security audits and compliance monitoring for all assets",
+<<<<<<< HEAD
 <<<<<<< HEAD
       color: "from-emerald-500 to-teal-500"
 =======
@@ -207,10 +218,16 @@ const AIPoweredITAssetManagement = () => {
       color: "from-emerald-500 to-teal-500"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      color: "from-emerald-500 to-teal-500"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
@@ -231,6 +248,8 @@ const AIPoweredITAssetManagement = () => {
   ],
   const assetTypes = [
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   ],
   const asset_types = [;
@@ -242,25 +261,44 @@ const AIPoweredITAssetManagement = () => {
   ],
   const assetTypes = [
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "Hardware devices (servers, workstations, mobile devices)",
     "Software licenses and applications",
     "Network infrastructure and equipment",
     "Cloud resources and virtual machines",
     "Security devices and appliances",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "Peripheral devices and accessories",
     "Peripheral devices and accessories"
   ],
 
+<<<<<<< HEAD
   const benefits = [
+=======
+
+  const benefits = [
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       icon: DollarSign,
       title: "Cost Optimization",
       value: "35%",
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       description: "Reduction in IT asset costs"
     },
     {
@@ -281,7 +319,10 @@ const AIPoweredITAssetManagement = () => {
       value: "200%",
       description: "Increased operational efficiency"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   ],
@@ -298,6 +339,7 @@ const AIPoweredITAssetManagement = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+<<<<<<< HEAD
 =======
       description: "Reduction in IT asset costs"
     },
@@ -381,6 +423,8 @@ const AIPoweredITAssetManagement = () => {
 export default AIPoweredITAssetManagement;
   ],
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>AI-Powered IT Asset Management - Zion Tech Group</title>
@@ -393,10 +437,14 @@ export default AIPoweredITAssetManagement;
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+        {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -412,6 +460,10 @@ export default AIPoweredITAssetManagement;
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -420,7 +472,10 @@ export default AIPoweredITAssetManagement;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 =======
       description: "Reduction in IT asset costs";
@@ -466,6 +521,10 @@ export default AIPoweredITAssetManagement;
         <meta property="og:url" content="https://ziontechgroup.com / ai - powered - it - asset - management" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - indigo - 600 / 20 to - purple - 600 / 20"></div>;
@@ -479,10 +538,17 @@ export default AIPoweredITAssetManagement;
                 Transform your IT operations with intelligent asset management that discovers,
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Transform your IT operations with intelligent asset management that discovers, 
                 Transform your IT operations with intelligent asset management that discovers,
 
+=======
+                Transform your IT operations with intelligent asset management that discovers, 
+                Transform your IT operations with intelligent asset management that discovers,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -497,8 +563,19 @@ export default AIPoweredITAssetManagement;
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 
+=======
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -717,16 +794,23 @@ const AIPoweredITAssetManagement = () => {;
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
+<<<<<<< HEAD
 <<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -795,6 +879,7 @@ const AIPoweredITAssetManagement = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -813,13 +898,18 @@ const AIPoweredITAssetManagement = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -831,6 +921,7 @@ const AIPoweredITAssetManagement = () => {;
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -849,6 +940,12 @@ const AIPoweredITAssetManagement = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Asset Types Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -858,12 +955,15 @@ const AIPoweredITAssetManagement = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {assetTypes.map((assetType, index) => (
                 <motion.div
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -965,6 +1065,7 @@ const AIPoweredITAssetManagement = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {assetTypes.map((assetType, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -983,13 +1084,18 @@ const AIPoweredITAssetManagement = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -998,6 +1104,7 @@ const AIPoweredITAssetManagement = () => {;
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{assetType}</span>
                 </motion.div>
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1013,6 +1120,12 @@ const AIPoweredITAssetManagement = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Benefits Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -1022,9 +1135,12 @@ const AIPoweredITAssetManagement = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1124,6 +1240,7 @@ const AIPoweredITAssetManagement = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -1142,13 +1259,18 @@ const AIPoweredITAssetManagement = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1163,6 +1285,7 @@ const AIPoweredITAssetManagement = () => {;
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1184,6 +1307,12 @@ const AIPoweredITAssetManagement = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Capabilities Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -1193,9 +1322,12 @@ const AIPoweredITAssetManagement = () => {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1295,6 +1427,7 @@ const AIPoweredITAssetManagement = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {capabilities.map((capability, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -1313,13 +1446,18 @@ const AIPoweredITAssetManagement = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1328,6 +1466,7 @@ const AIPoweredITAssetManagement = () => {;
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
                 </motion.div>
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -2554,6 +2693,8 @@ const AIPoweredITAssetManagement = () => {;
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
                 </motion.div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
             </div>
           </div>
@@ -2588,6 +2729,12 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -2668,6 +2815,7 @@ const AIPoweredITAssetManagement = () => {;
 }
 export default AIPoweredITAssetManagement;
 
+<<<<<<< HEAD
 },
 
 export default AIPoweredITAssetManagement,;
@@ -2686,6 +2834,22 @@ export default AIPoweredITAssetManagement,
                   <Monitor className="ml-2 w-6 h-6" />;
                 </Link>;
                 <Link href="/services" className="inline-flex items-center px-8 py-4 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200 text-lg">;
+=======
+=======
+            >;
+              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
+                Ready to Transform Your IT Asset Management?;
+              </h2>;
+              <p className="text - xl text - gray - 400 mb - 8">;
+                Join the AI revolution and optimize your IT infrastructure today;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - indigo - 500 to - purple - 500 text - white font - semibold rounded - lg hover:from - indigo - 600 hover:to - purple - 600 transition - all duration - 200 text - lg">;
+                  Get Started;
+                  <Monitor className="ml - 2 w - 6 h - 6" />;
+                </Link>;
+                <Link href="/services" className="inline - flex items - center px - 8 py - 4 border border - indigo - 500 text - indigo - 400 font - semibold rounded - lg hover:bg - indigo - 500 hover:text - white transition - all duration - 200 text - lg">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Explore All Services;
                 </Link>;
               </div>;
@@ -2693,15 +2857,25 @@ export default AIPoweredITAssetManagement,
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
 },;
 export default AIPoweredITAssetManagement;
 =======
+=======
+    </>);
+},
+export default AIPoweredITAssetManagement,
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

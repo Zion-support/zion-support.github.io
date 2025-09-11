@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
 
@@ -15,22 +16,35 @@ const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:40
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
+const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
+=======
+function setUserId(id) {
+  chrome && chrome.storage.local && local.set({ user_id: id })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
   })
 
+<<<<<<< HEAD
 function setUserId(id) {
   chrome && chrome.storage.local && local.set({ user_id: id })
 }
@@ -44,12 +58,19 @@ function setUserId(id) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 document && document.querySelectorAll('.example').forEach((btn) => {
   btn && btn.addEventListener('click', () => {
     document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
   })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }),
 
@@ -100,7 +121,10 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 document && document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document && document.getElementById('prompt').value && value.trim(),
   if (!prompt) return,
@@ -141,6 +165,7 @@ document && document.getElementById('viewNotifications').addEventListener('click
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2)
 }),
+<<<<<<< HEAD
   const id = crypto && crypto.randomUUID(),
   setUserId(id),
   document && document.getElementById('result').textContent = 'Signed in (local).';
@@ -288,3 +313,5 @@ document.getElementById('result').textContent = 'Signed in (local).';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

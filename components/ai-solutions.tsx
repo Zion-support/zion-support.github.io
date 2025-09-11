@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -11,12 +12,17 @@ import React from 'react';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from 'react',
+import React from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: 'machine-learning'
       title: 'Machine Learning Solutions'
@@ -25,6 +31,8 @@ export default function AISolutionsPage() {
       features: [
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
@@ -35,6 +43,7 @@ export default function AISolutionsPage() {
 
       complexity: 'Advanced'
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         'Predictive Analytics'
@@ -47,6 +56,10 @@ export default function AISolutionsPage() {
     }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Predictive Analytics',
         'Pattern Recognition',
         'Anomaly Detection',
@@ -56,10 +69,15 @@ export default function AISolutionsPage() {
       complexity: 'Advanced';
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -120,6 +138,7 @@ function AISolutionsPage() {
       complexity: 'Advanced';
     }
     {
+<<<<<<< HEAD
       id: 'natural - language - processing',
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
@@ -192,6 +211,59 @@ function AISolutionsPage() {
 
 
 
+=======
+      id: 'ai-automation'
+      title: 'AI-Powered Automation'
+      description: 'Intelligent automation that learns and improves over time.'
+      features: [
+        'Process Automation'
+        'Workflow Optimization'
+        'Intelligent Routing'
+        'Adaptive Workflows'
+      ]
+      icon: '⚡'
+      category: 'Automation'
+      complexity: 'Intermediate'
+    },  ];      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows']
+      icon: '⚡'
+      category: 'Automation'
+      complexity: 'Intermediate'
+    }
+  const useCases = [
+    {
+      industry: 'Manufacturing'
+      solutions: [
+        'Quality Control'
+        'Predictive Maintenance'
+        'Supply Chain Optimization'
+      ]
+      icon: '🏭'
+    }
+    {
+      industry: 'Healthcare'
+      solutions: [
+        'Diagnostic Support'
+        'Patient Care Optimization'
+        'Drug Discovery'
+      ]
+      icon: '🏥'
+    }
+    {
+      industry: 'Finance'
+      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading']
+      icon: '💳'
+    }
+    {
+      industry: 'Retail'
+      solutions: [
+        'Customer Segmentation'
+        'Inventory Management'
+        'Personalized Marketing'
+      ]
+      icon: '🛍️'
+    }
+  ];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const technologies = [
     'TensorFlow'
@@ -221,7 +293,10 @@ function AISolutionsPage() {
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -375,10 +450,15 @@ export default function AISolutionsPage() {;
   const technologies = [;
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const use_cases = [;
     {
       industry: 'Manufacturing',
@@ -450,9 +530,13 @@ export default function AISolutionsPage() {;
           AI Solutions | Zion Tech Group - Advanced AI & Machine Learning;
         </title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -469,9 +553,13 @@ export default function AISolutionsPage() {;
           </section>;
           <section className='mx-auto max-w-7xl'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* AI Solutions Grid */}
             <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>;
@@ -504,9 +592,13 @@ export default function AISolutionsPage() {;
                         </li>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   return (
     <>
@@ -517,6 +609,7 @@ export default function AISolutionsPage() {;
         <meta property="og:description" content="Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
     },      complexity: 'Intermediate'
     }
@@ -618,6 +711,8 @@ export default function AISolutionsPage() {;
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <section className='text-center mb-16'>
@@ -664,6 +759,7 @@ export default function AISolutionsPage() {;
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
       
 
                     <Link      </Head>
@@ -671,6 +767,9 @@ export default function AISolutionsPage() {;
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    <Link      </Head>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -683,7 +782,10 @@ export default function AISolutionsPage() {;
           </section>
           <section className="mx-auto max-w-7xl">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     </ul>;
                     <Link      </Head>;
@@ -699,7 +801,10 @@ export default function AISolutionsPage() {;
           </section>;
           <section className="mx-auto max-w-7xl">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* AI Solutions Grid */}
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
@@ -718,6 +823,7 @@ export default function AISolutionsPage() {;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                           <span className="text-cyan-400 mr-2">•</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -731,6 +837,23 @@ export default function AISolutionsPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+                    </ul>
+
+                    <Link
+                      href={`/services#${solution.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Learn More <span className="ml-1">→</span>
+                    </Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {feature}
                         </li>;
                       ))}
@@ -745,11 +868,17 @@ export default function AISolutionsPage() {;
                     </Link>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <meta;
           name='description';
           content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems.";
@@ -819,9 +948,13 @@ export default function AISolutionsPage() {;
           </section>;
           <section className="mx - auto max - w-7xl">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* AI Solutions Grid */}
             <div className="mb - 16">;
               <h2 className="text - 3xl font - bold mb - 8 text - center text - cyan - 400">Our AI Solutions</h2>;
@@ -841,7 +974,10 @@ export default function AISolutionsPage() {;
                           <span className="text - cyan - 400 mr - 2">•</span>;
                           {feature}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -850,10 +986,19 @@ export default function AISolutionsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+                ))}
+              </div>
+            </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
 
@@ -871,6 +1016,10 @@ export default function AISolutionsPage() {;
 
 
                 {useCases.map((useCase, index) => (
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>;
@@ -891,12 +1040,16 @@ export default function AISolutionsPage() {;
                         <li key={solutionIndex} className="text-sm text-white/70">;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
             </div>;
             {/* Industry Use Cases */}
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Industry Applications</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -908,16 +1061,25 @@ export default function AISolutionsPage() {;
                       {useCase.solutions.map((solution, solutionIndex) => (
                         <li key={solutionIndex} className="text-sm text-white/70">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {solution}
                         </li>;
                       ))}
                     </ul>;
                   </div>;
                 ))}
+<<<<<<< HEAD
+=======
+              </div>
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>;
             </div>;
@@ -927,16 +1089,22 @@ export default function AISolutionsPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -944,7 +1112,18 @@ export default function AISolutionsPage() {;
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='flex flex-wrap justify-center gap-4'>
+<<<<<<< HEAD
 
+=======
+                  {technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >                  {technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20"
+                    >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   {technologies.map((tech, index) => (
                     <span
@@ -954,6 +1133,7 @@ export default function AISolutionsPage() {;
                     >
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1045,11 +1225,40 @@ export default function AISolutionsPage() {;
                   </p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      {tech}
+                    </span>;
+                  ))}
+                </div>
+              </div>
+            </div>
+
+                </div>;
+              </div>;
+            </div>;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Success Stories */}
+
+
+                  <Link
+                    href="/case-studies#ai-automation-manufacturing"
+                    className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='text-cyan-400 hover:text-cyan-300 transition-colors'>                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
                   <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Content Generation Scale</h3>;
                   <p className="text-white/70 mb-4">;
                     Built autonomous content generation systems that increased output by 10x while maintaining quality standards.;
                   </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Link
                     href="/case-studies#content-generation-scale"
@@ -1057,6 +1266,8 @@ export default function AISolutionsPage() {;
                   >
                     Read Case Study →
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   <Link
@@ -1065,11 +1276,17 @@ export default function AISolutionsPage() {;
 
                   >
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     Read Case Study →
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    Read Case Study →
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </li>))}
                     </ul>;
                     <Link;
@@ -1190,13 +1407,18 @@ export default function AISolutionsPage() {;
                     className="text - cyan - 400 hover:text - cyan - 300 transition - colors";
                     Read Case Study →;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </Link>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-4 text-white">Ready to Harness the Power of AI?</h2>
@@ -1429,6 +1651,10 @@ export default function AISolutionsPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
@@ -1449,8 +1675,11 @@ export default function AISolutionsPage() {;
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   Explore Insights;
                 </Link>;
@@ -1460,6 +1689,7 @@ export default function AISolutionsPage() {;
         </main>;
       </div>;
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
@@ -1469,9 +1699,27 @@ export default function AISolutionsPage() {;
 }
 <<<<<<< HEAD
 
+=======
+  );
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+  );
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   );
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

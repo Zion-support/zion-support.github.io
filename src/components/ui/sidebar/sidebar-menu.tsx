@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 export { SidebarMenuItem, SidebarMenuGroup }
@@ -7,6 +8,11 @@ export { SidebarMenuItem, SidebarMenuGroup }
 return (<a;
           href={href}
     return (<button;
+=======
+return (<a;
+          href={href}
+    return(<button
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ref={ref}
 
 SidebarMenuItem.display_name = "SidebarMenuItem";
@@ -22,9 +28,12 @@ export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export { SidebarMenuItem, SidebarMenuGroup };
 
 
@@ -43,6 +52,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string,
   badge?: React.ReactNode
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -139,6 +149,8 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   badge?: React.ReactNode
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -242,7 +254,11 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
   );
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { SidebarMenuItem, SidebarMenuGroup };
 =======
 export { SidebarMenuItem, SidebarMenuGroup };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export { SidebarMenuItem, SidebarMenuGroup };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

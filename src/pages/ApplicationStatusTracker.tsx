@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   const isMobile = null;
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
@@ -10,6 +11,8 @@ function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
     <>;
       <SEO
@@ -20,6 +23,7 @@ return (
 
 
 
+<<<<<<< HEAD
   
 ursor/fix-website-loading-errors-and-merge-6662
 import { SEO } from '@/components/SEO'
@@ -46,10 +50,19 @@ function ApplicationStatusTrackerContent() {
 
 
   return (
+=======
+  const isMobile = useIsMobile()
+
+
+
+  return (
+    <>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SEO 
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='container mx-auto px-4 py-8'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
@@ -60,6 +73,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <div className='container mx-auto px-4 py-8'>
+        <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
@@ -93,10 +110,25 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardTitle className='flex items-center text-lg'>
                 <Inbox className='mr-2 h-5 w-5' /> Your Applications              </CardTitle>            <CardHeader className="border-b bg-muted/50">
 
+
+
+
         <div className="grid grid-cols-1 gap-6">
           <Card>
             <CardHeader className="border-b bg-muted/50">
 
+<<<<<<< HEAD
+=======
+          <Card>
+            <CardHeader className='border-b bg-muted/50'>
+              <CardTitle className='flex items-center text-lg'>
+                <Inbox className='mr-2 h-5 w-5' /> Your Applications              </CardTitle>            <CardHeader className="border-b bg-muted/50">
+
+        <div className="grid grid-cols-1 gap-6">
+          <Card>
+            <CardHeader className="border-b bg-muted/50">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
@@ -110,8 +142,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
+=======
+  )
+}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
@@ -119,7 +158,11 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
 
   )
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <ApplicationStatusTrackerContent />;
     </ProtectedRoute>;
   );
@@ -138,6 +181,7 @@ function ApplicationStatusTrackerContent() {;
       <SEO;
         title="Application Status Tracker | Zion AI Marketplace";
         description="Track the status of your job applications in the Zion AI marketplace.";
+<<<<<<< HEAD
       />;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
@@ -149,6 +193,28 @@ function ApplicationStatusTrackerContent() {;
         <div className="grid grid-cols-1 gap-6">;
           <Card>;
             <CardHeader className="border-b bg-muted/50">;
+=======
+
+      />;
+
+      <div className='container mx-auto px-4 py-8'>;
+        <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>;
+          <div>;
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>;
+              Application Status Tracker;
+            </h1>;
+            <p className='text-muted-foreground mt-1'>;
+              Track where you stand in the hiring process;
+            </p>;
+          </div>;
+        </div>;
+
+        <div className='grid grid-cols-1 gap-6'>;
+          <Card>;
+            <CardHeader className='border-b bg-muted/50'>;
+              <CardTitle className='flex items-center text-lg'>;
+                <Inbox className='mr-2 h-5 w-5' /> Your Applications              </CardTitle>            <CardHeader className="border-b bg-muted/50">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <CardTitle className="flex items-center text-lg">;
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications;
               </CardTitle>;
@@ -162,9 +228,15 @@ function ApplicationStatusTrackerContent() {;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 export default function ApplicationStatusTracker() {;
   return (;
+=======
+
+export default function ApplicationStatusTracker() {;
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <ProtectedRoute>;
       <ApplicationStatusTrackerContent />;
     </ProtectedRoute>;
@@ -229,6 +301,7 @@ function ApplicationStatusTracker() {
     </ProtectedRoute>);
 }
 ;
+<<<<<<< HEAD
 =======
 
   );
@@ -239,3 +312,5 @@ export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

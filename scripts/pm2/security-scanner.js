@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -24,10 +27,13 @@ scanner.run().catch(error = > {; process.exit(1)}));}),);
 ursor/integrate-build-improve-and-re-verify-8f7d
     
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class SecurityScanner { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "security-scanner";" this.scanDependencies = process.env.SCAN_DEPENDENCIES === "true";" this.scanCode = process.env.SCAN_CODE === "true";" this.scanConfigs = process.env.SCAN_CONFIGS === "true";" this.alertOnCritical = process.env.ALERT_ON_CRITICAL === "true";" this.logFile = "logs/pm2/security-scanner.log";" this.errorFile = "logs/pm2/security-scanner-error.log"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {" console.error("Failed to write to log file:", error.message); } } error(message) {" this.log(message, "ERROR"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`); } catch (err) {" console.error("Failed to write to error file:", err.message); } } async scanDependencies() {" this.log("Scanning dependencies for security vulnerabilities."); try { / Run npm audit" const auditResult = execSync("npm audit --json", { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" }); const auditData = JSON.parse(auditResult); if (auditData.vulnerabilities) { const vulnerabilities = Object.keys(auditData.vulnerabilities); const criticalVulns = vulnerabilities.filter(vuln => " auditData.vulnerabilities[vuln].severity === "critical" ); const highVulns = vulnerabilities.filter(vuln => " auditData.vulnerabilities[vuln].severity === "high" );` this.log(`Found ${vulnerabilities.length} vulnerabilities:`);` this.log(` - Critical: ${criticalVulns.length}`);` this.log(` - High: ${highVulns.length}`); if (criticalVulns.length > 0 && this.alertOnCritical) {"` this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(", ")}`); } return { success: true, vulnerabilities: auditData.vulnerabilities, critical: criticalVulns.length, high: highVulns.length, total: vulnerabilities.length }; } else {" this.log("No vulnerabilities found in dependencies"); return { success: true, vulnerabilities: {}, critical: 0, high: 0, total: 0 }; } } catch (error) {` this.error(`Dependency scan failed: ${error.message}`); return { success: false, error: error.message }; } } async scanCode() {" this.log("Scanning code for security issues."); try { const securityIssues = []; / Check for common security patterns const patterns = [" { pattern: /eval\s*\(/, severity: "high", message: "Use of eval() detected" }," { pattern: /innerHTML\s*=/, severity: "medium", message: "Direct innerHTML assignment detected" }," { pattern: /document\.write\s*\(/, severity: "medium", message: "Use of document.write() detected" }," { pattern: /localStorage\.setItem\s*\([^,]+,\s*[^)]*\+/, severity: "low", message: "Potential XSS in localStorage" }," { pattern: /console\.log\s*\([^)]*process\.env/, severity: "high", message: "Environment variables in console.log" }," { pattern: /password\s*=\s*[""][^""]*[""]/, severity: "high", message: "Hardcoded password detected" },"" { pattern: /api[_-]?key\s*=\s*[""][^""]*[""]/, severity: "high", message: "Hardcoded API key detected" },"" { pattern: /secret\s*=\s*[""][^""]*[""]/, severity: "high", message: "Hardcoded secret detected" } ]; / Scan JavaScript/TypeScript files" const filesToScan = this.getFilesToScan([".js", ".ts", ".jsx", ".tsx"]); for (const file of filesToScan) { try {" const content = fs.readFileSync(file, "utf8"); for (const { pattern, severity, message } of patterns) {" const matches = content.match(new RegExp(pattern.source, "g")); if (matches) { securityIssues.push({ file, severity, message, matches: matches.length }); } } } catch (error) {"` this.log(`Failed to scan file ${file}: ${error.message}`, "WARNING"); } } " const criticalIssues = securityIssues.filter(issue => issue.severity === "high");" const highIssues = securityIssues.filter(issue => issue.severity === "high");" const mediumIssues = securityIssues.filter(issue => issue.severity === "medium");` this.log(`Code scan completed:`);` this.log(` - Critical issues: ${criticalIssues.length}`);` this.log(` - High issues: ${highIssues.length}`);` this.log(` - Medium issues: ${mediumIssues.length}`); if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.length} issues found`); } return { success: true, issues: securityIssues, critical: criticalIssues.length, high: highIssues.length, medium: mediumIssues.length, total: securityIssues.length }; } catch (error) {` this.error(`Code scan failed: ${error.message}`); return { success: false, error: error.message }; } } async scanConfigs() {" this.log("Scanning configuration files for security issues."); try { const configIssues = []; const configFiles = [" "package.json"," "next.config.js"," "vite.config.js"," "webpack.config.js"," ".env"," ".env.local"," ".env.production"," "nginx.conf"," "docker-compose.yml"," "Dockerfile" ]; for (const configFile of configFiles) { if (fs.existsSync(configFile)) { try {" const content = fs.readFileSync(configFile, "utf8"); / Check for sensitive data in configs const sensitivePatterns = ["" { pattern: /password\s*[:=]\s*[""][^""]*[""]/, severity: "high", message: "Password in config file" },"" { pattern: /secret\s*[:=]\s*[""][^""]*[""]/, severity: "high", message: "Secret in config file" },"" { pattern: /api[_-]?key\s*[:=]\s*[""][^""]*[""]/, severity: "high", message: "API key in config file" },"" { pattern: /token\s*[:=]\s*[""][^""]*[""]/, severity: "high", message: "Token in config file" }," { pattern: /debug\s*[:=]\s*true/, severity: "medium", message: "Debug mode enabled in production config" } ]; for (const { pattern, severity, message } of sensitivePatterns) {" const matches = content.match(new RegExp(pattern.source, "g")); if (matches) { configIssues.push({ file: configFile, severity, message, matches: matches.length }); } } } catch (error) {"` this.log(`Failed to scan config file ${configFile}: ${error.message}`, "WARNING"); } } } " const criticalConfigIssues = configIssues.filter(issue => issue.severity === "high");` this.log(`Config scan completed: ${configIssues.length} issues found`);` this.log(` - Critical config issues: ${criticalConfigIssues.length}`); if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.length} issues found`); } return { success: true, issues: configIssues, critical: criticalConfigIssues.length, total: configIssues.length }; } catch (error) {` this.error(`Config scan failed: ${error.message}`); return { success: false, error: error.message }; } } getFilesToScan(extensions) { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { / Skip node_modules, .git, dist, build directories" if (!["node_modules", ".git", "dist", "build", "coverage", "logs"].includes(item)) { scanDirectory(fullPath); } } else if (stat.isFile()) { const ext = path.extname(item); if (extensions.includes(ext)) { files.push(fullPath); } } } } catch (error) {" / Skip directories we can"t read } } scanDirectory(process.cwd()); return files; } async generateSecurityReport() {" this.log("Generating security report."); try { const report = { timestamp: new Date().toISOString(), processName: this.processName, dependencyScan: this.scanDependencies ? await this.scanDependencies() : null, codeScan: this.scanCode ? await this.scanCode() : null, configScan: this.scanConfigs ? await this.scanConfigs() : null, environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() } }; / Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, securityScore: Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) };` const reportFile = `security-reports/security-report-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true }); } fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`Security report saved to: ${reportFile}`);` this.log(`Security score: ${report.summary.securityScore}/100`); return report; } catch (error) {` this.error(`Failed to generate security report: ${error.message}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial security scan await this.generateSecurityReport(); / Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {" this.log("Running scheduled security scan."); await this.generateSecurityReport(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main === module) { const scanner = new SecurityScanner(); scanner.start().catch(error => {" console.error("Security scanner failed to start:", error); process.exit(1); });}module.exports = SecurityScanner;'"`'"`
 #!/usr/bin/env node,
 /**;
@@ -53,10 +59,13 @@ class SecurityScanner {}
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -101,6 +110,7 @@ class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this
 const scanner = new SecurityScanner();
 scanner.run().catch(error = > {; process.exit(1)}));
 }),);
+<<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node,;
 const fs = require('fs'),;
@@ -617,6 +627,11 @@ class SecurityScanner {,;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   log(message, level = 'INFO') {'}
@@ -624,6 +639,7 @@ class SecurityScanner {,;
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
     );
     _console.log(logMessage.trim());
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
@@ -632,13 +648,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
       _console.error('Failed to write to log file:', error.message);',
     }
   }
-
   error(message) {}
     this.log(message, 'ERROR');',
     try {}
@@ -647,10 +666,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       _console.error('Failed to write to error file:', err.message);',
     }
   }
-
   async scanDependencies() {}
     this.log('Scanning dependencies for security vulnerabilities...');',
-
     try {
       // Run npm audit}
       const auditResult = execSync('npm audit --json', { '}),
@@ -658,9 +675,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         cwd: process.cwd(),
         stdio: 'pipe',
 ;      });,
-
       const auditData = JSON.parse(auditResult);
-
       if (auditData.vulnerabilities) {}
         const vulnerabilities = Object.keys(auditData.vulnerabilities);,
         const criticalVulns = vulnerabilities.filter(vuln => );,
@@ -669,15 +684,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         const highVulns = vulnerabilities.filter(vuln => );
           auditData.vulnerabilities[vuln].severity === 'high',
 ;        );,
-
         this.log(`Found ${vulnerabilities.length} vulnerabilities:`);,
         this.log(`  - Critical: ${criticalVulns.length}`);,
         this.log(`  - High: ${highVulns.length}`);,
-
         if (criticalVulns.length > 0 && this.alertOnCritical) {}
           this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(, ')}`);',
         }
-
         return {}
           success: true,
           vulnerabilities: auditData.vulnerabilities,
@@ -689,19 +701,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         this.log('No vulnerabilities found in dependencies');',
         return { success: true, vulnerabilities: {}, critical: 0, high: 0, total: 0 };,
       }
-
     } catch (error) {}
       this.error(`Dependency scan failed: ${error.message}`);,
       return { success: false, error: error.message };,
     }
   }
-
   async scanCode() {}
     this.log('Scanning code for security issues...');',
-
     try {}
       const securityIssues = [];,
-
       // Check for common security patterns;
       const patterns = [;
         { pattern: /eval\s*\(/, severity: 'high, message: 'Use of eval() detected' },',
@@ -713,14 +721,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         { pattern: /api[_-]?key\s*=\s*["'][^"']*["']/, severity: 'high, message: 'Hardcoded API key detected' },',
         { pattern: /secret\s*=\s*["'][^"']*["']/, severity: 'high, message: 'Hardcoded secret detected' }',
 ;      ];,
-
       // Scan JavaScript/TypeScript files;
       const filesToScan = this.getFilesToScan(['.js', '.ts', '.jsx', '.tsx']);',
-
       for (const file of, filesToScan) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');',
-
           for (const { pattern, severity, message } of, patterns) {}
             const matches = content.match(new RegExp(pattern.source, 'g'));',
             if (matches) {}
@@ -736,20 +741,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           this.log(`Failed to scan file ${file}: ${error.message}`, 'WARNING');',
         }
       }
-
       const criticalIssues = securityIssues.filter(issue => issue.severity === 'high');';
       const highIssues = securityIssues.filter(issue => issue.severity === 'high');';
       const mediumIssues = securityIssues.filter(issue => issue.severity === 'medium');';
-
       this.log(`Code scan completed:`);
       this.log(`  - Critical issues: ${criticalIssues.length}`);,
       this.log(`  - High issues: ${highIssues.length}`);,
       this.log(`  - Medium issues: ${mediumIssues.length}`);,
-
       if (criticalIssues.length > 0 && this.alertOnCritical) {}
         this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.length} issues found`);,
       }
-
       return {}
         success: true,
         issues: securityIssues,
@@ -758,16 +759,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         medium: mediumIssues.length,
         total: securityIssues.length,
       };,
-
     } catch (error) {}
       this.error(`Code scan failed: ${error.message}`);,
       return { success: false, error: error.message };,
     }
   }
-
   async scanConfigs() {}
     this.log('Scanning configuration files for security issues...');',
-
     try {}
       const configIssues = [];,
       const configFiles = [;,
@@ -782,12 +780,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         'docker-compose.yml',',
         'Dockerfile'';,
 ;      ];,
-
       for (const configFile of, configFiles) {}
         if (fs.existsSync(configFile)) {}
           try {}
             const content = fs.readFileSync(configFile, 'utf8');',
-
             // Check for sensitive data in configs;
             const sensitivePatterns = [;
               { pattern: /password\s*[:=]\s*["'][^"']*["']/, severity: 'high, message: 'Password in config file' },',
@@ -796,7 +792,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               { pattern: /token\s*[:=]\s*["'][^"']*["']/, severity: 'high, message: 'Token in config file' },',
               { pattern: /debug\s*[:=]\s*true/, severity: 'medium, message: 'Debug mode enabled in production config' }',
 ;            ];,
-
             for (const { pattern, severity, message } of, sensitivePatterns) {}
               const matches = content.match(new RegExp(pattern.source, 'g'));',
               if (matches) {}
@@ -813,40 +808,31 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           }
         }
       }
-
       const criticalConfigIssues = configIssues.filter(issue => issue.severity === 'high');';
-
       this.log(`Config scan completed: ${configIssues.length} issues found`);,
       this.log(`  - Critical config issues: ${criticalConfigIssues.length}`);,
-
       if (criticalConfigIssues.length > 0 && this.alertOnCritical) {}
         this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.length} issues found`);,
       }
-
       return {}
         success: true,
         issues: configIssues,
         critical: criticalConfigIssues.length,
         total: configIssues.length,
       };,
-
     } catch (error) {}
       this.error(`Config scan failed: ${error.message}`);,
       return { success: false, error: error.message };,
     }
   }
-
   getFilesToScan(extensions) {}
     const files = [];,
-
     function scanDirectory(dir) {}
       try {}
         const items = fs.readdirSync(dir);,
-
         for (const item of, items) {}
           const fullPath = path.join(dir, item);,
           const stat = fs.statSync(fullPath);,
-
           if (stat.isDirectory()) {
             // Skip node_modules, .git, dist, build directories}
             if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {'}
@@ -863,14 +849,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         // Skip directories we can't read';
       }
     }
-
     scanDirectory(process.cwd());
     return files;
   }
-
   async generateSecurityReport() {}
     this.log('Generating security report...');',
-
     try {}
       const report = {}
         timestamp: new Date().toISOString(),
@@ -884,68 +867,53 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           cwd: process.cwd(),
         }
 ;      };,
-
       // Calculate overall security score;
       let totalIssues = 0;
       let criticalIssues = 0;
-
       if (report.dependencyScan?.success) {}
         totalIssues += report.dependencyScan.total;,
         criticalIssues += report.dependencyScan.critical;,
       }
-
       if (report.codeScan?.success) {}
         totalIssues += report.codeScan.total;,
         criticalIssues += report.codeScan.critical;,
       }
-
       if (report.configScan?.success) {}
         totalIssues += report.configScan.total;,
         criticalIssues += report.configScan.critical;,
       }
-
       report.summary = {}
         totalIssues,
         criticalIssues,
         securityScore: Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)),
       };,
-
       const reportFile = `security-reports/security-report-${Date.now()}.json`;,
       const reportDir = path.dirname(reportFile);,
-
       if (!fs.existsSync(reportDir)) {}
         fs.mkdirSync(reportDir, { recursive: true });,
       }
-
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
       this.log(`Security report saved to: ${reportFile}`);,
       this.log(`Security score: ${report.summary.securityScore}/100`);,
-
       return report;
-
     } catch (error) {}
       this.error(`Failed to generate security report: ${error.message}`);,
       return null;,
     }
   }
-
   async start() {}
     this.log(`Starting ${this.processName}...`);,
-
     // Run initial security scan;
     await this.generateSecurityReport();
-
     // Set up periodic scanning;
     const interval = 12 * 60 * 60 * 1000; // 12 hours;
     setInterval(async () => {}
       this.log('Running scheduled security scan...');',
       await this.generateSecurityReport();,
     }, interval);,
-
     this.log(`${this.processName} started successfully`);,
   }
 }
-
 // Start the automation if this script is run directly;
 if (require.main === module) {}
   const scanner = new SecurityScanner();,
@@ -956,6 +924,7 @@ if (require.main === module) {}
 }
 
 module.exports = SecurityScanner;
+<<<<<<< HEAD
 
 module.exports = SecurityScanner;
 
@@ -980,14 +949,20 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
+=======
+module.exports = SecurityScanner;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-242d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class SecurityScanner {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -1224,12 +1199,15 @@ class SecurityScanner {;
 const scanner = new SecurityScanner();
 scanner.run().catch(error => {;
   process.exit(1);
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -1493,6 +1471,7 @@ const scanner = new SecurityScanner(),
 scanner.run().catch(error => {,
   process.exit(1),
 <<<<<<< HEAD
+<<<<<<< HEAD
 }),);
 =======
 
@@ -1589,6 +1568,8 @@ if ( {) {
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/automate-test-improve-and-merge-code-8ee2
 #!/usr/bin/env node;
 origin/automation-improvements-final
@@ -1611,6 +1592,10 @@ class SecurityScanner {constructor() {; this.projectRoot = process.cwd(); this.l
     message: `${highSeverity} high-severity security issues found in code`; action: 'Review and fix high-severity security issues'})}}; if (configResults.issues.length > 0) {report.recommendations.push({; priority: 'medium', message: 'Configuration security issues found', action: 'Review configuration files for security issues'})}; return report}; async saveReport(report) {try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })}; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}; async run() {this.log('🛡️ Starting Security Scanner...'); this.log(`Project root: ${this.projectRoot}`); try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })}; // Run all security scans; const depResults = await this.scanDependencies(); const codeResults = await this.scanCode(); const configResults = await this.scanConfigs(); // Generate report; this.log('📊 Generating security report...'); const report = await this.generateReport(depResults, codeResults, configResults); // Save report; await this.saveReport(report); const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Security Scanner Summary: '); this.log(`Dependencies: ${report.summary.dependencies}`); this.log(`Code: ${report.summary.code}`); this.log(`Configs: ${report.summary.configs}`); this.log(`Overall: ${report.summary.overall}`); this.log(`Duration: ${duration}ms`); if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ No security issues found!')}
 } catch (error) {this.log(`❌ Error running security scanner: ${error.message}`); process.exit(1)}}}
 // Run the security scanner;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const scanner = new SecurityScanner();
 scanner.run().catch(error = > {; process.exit(1)}));}),);
 }),);
@@ -1618,6 +1603,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
@@ -2394,3 +2380,13 @@ scanner.run().catch(error => {,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/main
+origin/automation-improvements-final
+scanner.run().catch(error = > {process.exit(1)}));}),);
+}),);
+}),),;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

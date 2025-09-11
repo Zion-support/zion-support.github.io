@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Card
@@ -30,6 +31,8 @@ interface UserLeaderboardProps {
   entries: LeaderboardEntry[]
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Trophy } from 'lucide-react'
   Card,
   CardContent,
@@ -39,6 +42,7 @@ import { Trophy } from 'lucide-react'
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
+<<<<<<< HEAD
   name: string;
   points: number;
 interface UserLeaderboardProps {
@@ -52,6 +56,15 @@ export interface LeaderboardEntry {
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
 }
+=======
+
+  name: string,
+  points: number
+}
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 import {;
   Card,;
@@ -65,17 +78,26 @@ export interface LeaderboardEntry {;
   name: string;
   points: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
   entries: LeaderboardEntry[];
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface LeaderboardEntry {;
   name: string,;
   points: number;
 }
+<<<<<<< HEAD
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
 }
@@ -87,12 +109,16 @@ export interface LeaderboardEntry {;
   points: number;
 }
 ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
 }
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <CardTitle className='flex items-center gap-2'>
@@ -110,6 +136,10 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
 <<<<<<< HEAD
         <div className='space-y-2'>        <CardTitle className="flex items-center gap-2">
         <CardTitle className="flex items-center gap-2">
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
@@ -121,11 +151,14 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               key={e.name}
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
               key = {e.name,}
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="space-y-2">
           {entries.map((e, idx) => (
             <div
@@ -138,6 +171,7 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               <span className="font-medium">
                 {idx + 1}. {e.name}
               </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className='text-sm'>{e.points} pts</span>            </div>              <span className="text-sm">{e.points} pts</span>
             </div>
@@ -182,16 +216,31 @@ export function UserLeaderboard({ entries } UserLeaderboardProps) {;
 
 
 
+=======
+              <span className='text-sm'>{e.points} pts</span>            </div>              <span className="text-sm">{e.points} pts</span>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>;
+  );
+};
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <span className="text-sm">{e.points} pts</span>
             </div>
           ))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -262,3 +311,5 @@ points: number ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

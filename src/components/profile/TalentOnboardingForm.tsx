@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -11,6 +12,11 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useRouter } from 'next/router'
 import { logErrorToProduction } from '@/utils/productionLogger'
+=======
+public_url;
+}= supabase.storage.from ('resumes') .getPublicUrl (file_name);
+return public_url;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -67,6 +73,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
+<<<<<<< HEAD
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth"
@@ -136,6 +143,8 @@ export function TalentOnboardingForm() {
   const totalSteps = 4
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
@@ -143,6 +152,7 @@ import { supabase } from "@/integrations/supabase/client",
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
+<<<<<<< HEAD
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
     resolver: zodResolver(talentSchema)
@@ -193,6 +203,8 @@ import { supabase } from "@/integrations/supabase/client",
   ) => {
     const file = e.target.files?.[0]
     if (!file) return
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         fullName: user?.displayName || "",
         professionalTitle: "",
         profilePicture: undefined},
@@ -204,6 +216,7 @@ import { supabase } from "@/integrations/supabase/client",
         skillsList: "",
         toolsUsed: ""},
       availability: {
+<<<<<<< HEAD
         availabilityType: '',
         timezone: '',
         hourlyRate: '',
@@ -235,6 +248,8 @@ import { supabase } from "@/integrations/supabase/client",
   ) => {
     const file = e.target.files?.[0]
     if (!file) return;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -261,6 +276,7 @@ import { supabase } from "@/integrations/supabase/client",
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+<<<<<<< HEAD
     
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -472,3 +488,9 @@ return public_url;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+}'}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

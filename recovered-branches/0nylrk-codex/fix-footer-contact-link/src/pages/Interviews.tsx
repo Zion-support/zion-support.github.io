@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
 import {Interview} from "@/types/interview";
@@ -47,14 +48,22 @@ function InterviewsContent() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
     const loadInterviews = async () => {
       await fetchInterviews()
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     loadInterviews()
   }, []);
@@ -65,8 +74,11 @@ function InterviewsContent() {
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date);
       return isAfter(interviewDate, now) &&
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     
     loadInterviews()
@@ -81,17 +93,23 @@ function InterviewsContent() {
       const interviewDate = parseISO(interview.scheduled_date),
       return isAfter(interviewDate, now) && 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
   const pendingInterviews = interviews.filter(interview =>
     interview.status === 'requested'
@@ -104,8 +122,11 @@ function InterviewsContent() {
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string, Interview[]> = {}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ),
   
   const pendingInterviews = interviews.filter(interview => 
@@ -122,6 +143,7 @@ function InterviewsContent() {
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string Interview[]> = {},
     
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     interviews.forEach((interview) => {
@@ -139,6 +161,8 @@ function InterviewsContent() {
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
       if (!grouped[dateKey]) {
@@ -232,8 +256,18 @@ function InterviewsContent() {;
 
       }
       grouped[dateKey].push(interview)
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    });
+    return grouped
+  }
+  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
+  const pendingGrouped = groupInterviewsByDate(pendingInterviews);
+  const pastGrouped = groupInterviewsByDate(pastInterviews);
+  const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }),
     
     return grouped
@@ -245,10 +279,13 @@ function InterviewsContent() {;
 
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return Object.entries(groupedInterviews)
       .sort(([dateA], [dateB]) =>
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
@@ -261,6 +298,7 @@ function InterviewsContent() {;
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <InterviewCard
                 key={interview.id}
@@ -411,6 +449,8 @@ function InterviewsContent() {;
     return Object.entries(groupedInterviews);
       .sort(([dateA], [dateB]) =>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     return grouped;
@@ -423,7 +463,10 @@ function InterviewsContent() {;
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {;
     return Object && Object.entries(groupedInterviews);
       .sort(([dateA], [dateB]) => ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         parseISO(dateA).getTime() - parseISO(dateB).getTime();
       );
       .map(([date, interviews]) => (;
@@ -437,19 +480,28 @@ function InterviewsContent() {;
               <InterviewCard
                 key={interview && interview.id} 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <InterviewCard 
                 key={interview.id} 
 
+<<<<<<< HEAD
             {interviews && interviews.map((interview) => (;
               <InterviewCard
                 key={interview && interview.id} 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
                 }}
               />;
             ))}
+<<<<<<< HEAD
 
 
   },
@@ -465,13 +517,18 @@ function InterviewsContent() {;
                 }}
               />
             ))}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       ))
   }
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <>
@@ -496,6 +553,7 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
                 </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
               )}
             </TabsTrigger>
@@ -575,10 +633,17 @@ export default function Interviews() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       ));
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <SEO
@@ -593,6 +658,10 @@ export default function Interviews() {
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">;
           <TabsList className="mb-6">;
             <TabsTrigger value="upcoming" className="flex items-center">;
@@ -602,6 +671,10 @@ export default function Interviews() {
                 <span className="ml-2 bg-primary rounded-full px-2 py-0 && 0.5 text-xs">;
                   {upcomingInterviews && upcomingInterviews.length}
                 </span>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               )}
             </TabsTrigger>;
             <TabsTrigger value="pending">;
@@ -611,9 +684,17 @@ export default function Interviews() {
                   {pendingInterviews && pendingInterviews.length}
                 </span>;
               )}
+<<<<<<< HEAD
             </TabsTrigger>;
             <TabsTrigger value="past">Past</TabsTrigger>;
           </TabsList>;
+=======
+
+            </TabsTrigger>;
+            <TabsTrigger value="past">Past</TabsTrigger>;
+          </TabsList>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <TabsContent value="upcoming" className="space-y-6">;
             {isLoading ? (;
               <div className="flex justify-center py-12">;
@@ -629,6 +710,10 @@ export default function Interviews() {
               </div>;
             )}
           </TabsContent>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <TabsContent value="pending" className="space-y-6">;
             {isLoading ? (;
               <div className="flex justify-center py-12">;
@@ -644,6 +729,10 @@ export default function Interviews() {
               </div>;
             )}
           </TabsContent>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <TabsContent value="past" className="space-y-6">;
             {isLoading ? (;
               <div className="flex justify-center py-12">;
@@ -657,7 +746,16 @@ export default function Interviews() {
                 <h3 className="text-xl font-medium mb-2">No past interviews</h3>;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>;
               </div>;
+<<<<<<< HEAD
             )}
+=======
+
+            )}
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
@@ -822,6 +920,7 @@ if ( {) {
                 <p className="text - muted - foreground">Your interview history will appear here.</p>;
               </div>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
             {interviews.map((interview) => (;
               <InterviewCard ;
                 key={interview.id} ;
@@ -933,6 +1032,8 @@ if ( {) {
   );
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </TabsContent>;
         </Tabs>;
@@ -964,9 +1065,16 @@ export default function Interviews() {;
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 
+=======
+;
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </>);
 }
 export default /**
@@ -978,6 +1086,7 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   ),;
@@ -995,3 +1104,6 @@ export default function Interviews() {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,8 +1,11 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type ForumCategory = 
 
 
@@ -12,15 +15,20 @@ export type ForumCategory =
   | 'feedback'
   | 'announcements';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type ForumCategory =;
   | 'getting - hired';
   | 'project - help';
   | 'ai - tools';
   | 'feedback';
   | 'announcements';
+<<<<<<< HEAD
 <<<<<<< HEAD
   id: ForumCategory;
   name: string;
@@ -30,6 +38,8 @@ export type ForumCategory =;
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -46,6 +56,7 @@ export interface ForumCategoryInfo {;
 }
 export interface ForumPost {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -58,6 +69,19 @@ export interface ForumPost {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+export interface ForumCategoryInfo {;
+  id: ForumCategory;
+  name: string;
+  description: string;
+  adminOnly: boolean
+  icon: string
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   title: string;
   content: string;
@@ -71,6 +95,7 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface ForumPost {
 
@@ -88,12 +113,17 @@ export interface ForumPost {;
   updatedAt: string;
   upvotes: number;
   downvotes: number;
+=======
+export interface ForumReply {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
   isLocked?: boolean
   isFeatured?: boolean
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -118,6 +148,10 @@ export interface ForumReply {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -129,6 +163,7 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface ForumReply {
 
@@ -169,6 +204,15 @@ export interface Badge {
 
 export interface Badge {;
 
+=======
+export interface Badge {
+=======
+  downvotes: number
+  isAnswer?: boolean
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   description: string;
@@ -183,6 +227,7 @@ export interface UserBadge {
 
 }
 export interface CommunityUser {
+<<<<<<< HEAD
 
 
 export interface UserBadge {;
@@ -193,6 +238,16 @@ export interface UserBadge {
 export interface UserBadge {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  id: string;
+  name: string;
+  description: string;
+  icon: string
+  color: string
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   userId: string;
   badgeId: string
   awardedAt: string
@@ -202,17 +257,22 @@ export interface UserBadge {;
 export interface CommunityUser {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface CommunityUser {
 
 export interface CommunityUser {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   avatar?: string;
   role: string;
   reputation: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   postCount: number;
   replyCount: number;
@@ -301,10 +361,15 @@ export interface CommunityUser {;
 ;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   post_count: number;
   reply_count: number;
   badges: Badge[];
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.handler = async function() {
   try {
     const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
@@ -17,6 +18,11 @@ exports.handler = async function() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -76,9 +82,13 @@ exports.handler = async function () {
         return map;
       }, {}),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 ;
     const owner = process.env.GITHUB_OWNER;
@@ -96,14 +106,19 @@ if ( {) {
         repo,
         path: 'data / learn / insights - weekly.json',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -117,6 +132,14 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return map
       }, {})
     },
@@ -128,6 +151,10 @@ if ( {) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     const owner = process.env.GITHUB_OWNER,
@@ -144,6 +171,7 @@ if ( {) {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
@@ -212,3 +240,5 @@ if ( {) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

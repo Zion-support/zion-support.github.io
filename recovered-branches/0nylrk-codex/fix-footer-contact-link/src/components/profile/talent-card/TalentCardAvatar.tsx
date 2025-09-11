@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 interface TalentCardAvatarProps {;
 
@@ -47,12 +48,39 @@ export function TalentCardAvatar({
 }: TalentCardAvatarProps) {
   // Get initials for avatar fallback
 
+=======
+
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+
+interface TalentCardAvatarProps {;
+
+  profilePicture?: string;
+  fullName: string;
+=======
+
+
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+
+=======
+import React from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+
+
+
+interface TalentCardAvatarProps {
+  profilePicture?: string,
+  fullName: string
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((part) => part[0])
       .join("")
       .toUpperCase();
+<<<<<<< HEAD
 }
 
   return (
@@ -115,6 +143,11 @@ export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarPr
   const getInitials = (name:string) => {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+
+export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
     return name;
@@ -122,6 +155,7 @@ export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarPr
       .map(part => part[0]);
       .join('');
       .toUpperCase();
+<<<<<<< HEAD
   },;
 ;
   return (;
@@ -137,18 +171,25 @@ export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarPr
         src={profilePicture || undefined} ;
         alt={fullName} ;
 =======
+=======
+  };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">;
       <AvatarImage
         src={profilePicture || undefined} 
         alt={fullName} 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">;
         {getInitials(fullName)}
       </AvatarFallback>;
     </Avatar>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -169,6 +210,10 @@ interface TalentCardAvatarProps {
 
   );
 
+=======
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export /**
  * TalentCardAvatar - Function description
@@ -183,6 +228,7 @@ function TalentCardAvatar() {
       .toUpperCase ();
   }
 ;
+<<<<<<< HEAD
   return (
     <Avatar className="w - 14 h - 14 border - 2 border - zion - blue - light">;
       <AvatarImage src={profile_picture || undefined} alt={full_name} />;
@@ -217,3 +263,9 @@ fullName: string
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

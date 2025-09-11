@@ -1,15 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   type: AnalyticsEventType,;
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { useLocation  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 // Analytics event types
 
+<<<<<<< HEAD
 export type AnalyticsEventType =
   | 'page_view'
   | 'button_click'
@@ -39,6 +43,11 @@ import {supabase} from '@/integrations / supabase / client';
   type: AnalyticsEventType,;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  type: AnalyticsEventType,;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   path?: string;
   component?: string;
   elementId?: string;
@@ -51,11 +60,14 @@ import {supabase} from '@/integrations / supabase / client';
 export interface AnalyticsContextType {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface AnalyticsContextType {
 
 export interface AnalyticsContextType {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number
@@ -65,6 +77,7 @@ export interface AnalyticsContextType {;
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
@@ -86,14 +99,22 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Analytics event types;
 export type AnalyticsEventType =;
   | 'page_view';
@@ -109,6 +130,7 @@ export type AnalyticsEventType =;
   | 'payment_completed';
   | 'signup';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useLocation} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
@@ -119,6 +141,8 @@ import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   | 'login';
 ;
 // Interface for analytics events;
@@ -131,7 +155,10 @@ export interface AnalyticsEvent {
 import {useLocation} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Analytics event types;
 export type AnalyticsEventType = ;
   | 'page_view';
@@ -146,6 +173,7 @@ export type AnalyticsEventType = ;
   | 'payment_initiated';
   | 'payment_completed';
   | 'signup';
+<<<<<<< HEAD
 <<<<<<< HEAD
   userId?: string | null;
   metadata?: Record<string, any>;
@@ -169,6 +197,8 @@ export interface AnalyticsContextType {;
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string any>) => void,;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string any>) => void,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   | 'login';
 
 // Interface for analytics events;
@@ -187,7 +217,10 @@ export interface AnalyticsEvent {;
 export interface AnalyticsContextType {;
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   pageViews: number,;
   lastEvent: AnalyticsEvent | null,;
   events: AnalyticsEvent[],;
@@ -195,14 +228,19 @@ export interface AnalyticsContextType {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Track page views when location changes
   useEffect(() => {
     trackEvent('page_view', { path: location.pathname })
     setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
+<<<<<<< HEAD
   }, [location.pathname]);
   // Function to track general analytics events
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string, any> = {}) => {
@@ -236,12 +274,19 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }, [location.pathname]),
+
+  // Function to track general analytics events
+  const trackEvent = async (type: AnalyticsEventType, metadata: Record<string, any> = {}) => {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const event: AnalyticsEvent = {
       type
       path: location.pathname
       timestamp: Date.now()
       userId: user?.id
       metadata
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     }
@@ -250,16 +295,24 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    setEvents((prevEvents) => [...prevEvents, event]);
+    setLastEvent(event);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     
     setEvents((prevEvents) => [...prevEvents, event]),
     setLastEvent(event),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
@@ -267,6 +320,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         path: location.pathname
         user_id: user?.id
         metadata: metadata
+<<<<<<< HEAD
 <<<<<<< HEAD
       }]);
       console.log(`Analytics event tracked: ${type}`, metadata)
@@ -308,6 +362,9 @@ export function AnalyticsProvider(): any ({ children }: { children: ReactNode })
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   element_id?: string;
   timestamp: number,
   user_id?: string | null;
@@ -365,17 +422,23 @@ function AnalyticsProvider() {
 ;
       console.log (`Analytics event tracked: ${type}`, metadata);
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
       console.error ('Error logging analytics event:', error);
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     } catch (error) {
       console.error ('Error logging analytics event:', error);
     }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Track page views when location changes;
   useEffect(() => {;
     trackEvent('page_view', { path: location && location.pathname }),;
@@ -383,9 +446,13 @@ function AnalyticsProvider() {
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, [location && location.pathname]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Function to track general analytics events;
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string, any> = {}) => {;
     const event: AnalyticsEvent = {;
@@ -396,14 +463,20 @@ function AnalyticsProvider() {
       metadata;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
     setEvents((prevEvents) => [...prevEvents, event]);
     setLastEvent(event);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setEvents((prevEvents) => [...prevEvents, event]);
     setLastEvent(event);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       // Store event in Supabase for persistent analytics;
       await supabase && supabase.from('analytics_events').insert([{;
@@ -413,13 +486,18 @@ function AnalyticsProvider() {
         metadata: metadata;
       }]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       console && console.log(`Analytics event tracked: ${type}`, metadata);
     } catch (error) {;
       console && console.error('Error logging analytics event:', error);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   // Function to track conversion events;
@@ -524,10 +602,37 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
         events
         clearEvents
       }}>;
+=======
+  };
+
+  // Function to track conversion events;
+  const trackConversion = (conversionType: string, value?: number, metadata: Record<string, any> = {}) => {;
+    trackEvent('conversion', { ;
+      conversionType, ;
+      value, ;
+      ...metadata ;
+    });
+  };
+
+  // Clear events (for development or testing);
+  const clearEvents = () => {;
+    setEvents([]);
+    setLastEvent(null);
+  };
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       }}
     >
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {children}
     </AnalyticsContext && AnalyticsContext.Provider>;
   );
@@ -536,6 +641,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
 
 export const useAnalytics = (): AnalyticsContextType => {;
 
+<<<<<<< HEAD
 
 
 export const useAnalytics = (): AnalyticsContextType => {;
@@ -552,6 +658,13 @@ export const useAnalytics = (): AnalyticsContextType => {
 export const useAnalytics = (): AnalyticsContextType => {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+export const useAnalytics = (): AnalyticsContextType => {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
@@ -561,6 +674,7 @@ export const useAnalytics = (): AnalyticsContextType => {;
   return context as AnalyticsContextType
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
 export const useAnalytics = (): AnalyticsContextType => {;
@@ -569,25 +683,35 @@ export const useAnalytics = (): AnalyticsContextType => {;
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const context = useContext(AnalyticsContext);
   if (!context) {;
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Cast is used here because the context default is undefined until provided;
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
   return context as AnalyticsContextType;
 
 };
+<<<<<<< HEAD
   }
 ;
   // Function to track conversion events;
@@ -705,3 +829,5 @@ setLastEvent (null)
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

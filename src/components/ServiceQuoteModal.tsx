@@ -1,6 +1,7 @@
 ...formData;            startDate: startDate?.toISOString(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             endDate: endDate?.toISOString()}
 ...formData;            startDate: startDate?.toISOString()
 ursor/fix-website-loading-errors-and-merge-6662
@@ -9,6 +10,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ...formData;            startDate: startDate?.toISOString(),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             endDate: endDate?.toISOString()}
         }
       })
@@ -16,11 +19,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 ...form_data;            start_date: start_date?.toISOString (),
@@ -33,6 +40,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 ;
+<<<<<<< HEAD
 
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
@@ -516,3 +524,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,21 +1,37 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -56,6 +72,13 @@ export default function ProjectMilestonesPage() {;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 <<<<<<< HEAD
+=======
+    
+    return this.props.children;
+  }
+}
+import React, { useEffect, useState } from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useRouter  } from 'next/router';
 import Head from 'next/head',
 import MilestoneForm from '../../../components/monetization/MilestoneForm',
@@ -65,6 +88,7 @@ import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
+<<<<<<< HEAD
 import { Milestone } from '../../../utils/types/milestones';
 import {
   createMilestone
@@ -74,6 +98,9 @@ import {
   createMilestone,
   fetchMilestones,;
   updateMilestoneStatus,;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -89,6 +116,7 @@ export default function ProjectMilestonesPage() {;
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
   useEffect(() => {
     setRole(getRoleFromEnvOrQuery());  }, []);
   // Demo cookie-based auth to hit API successfully
@@ -177,6 +205,10 @@ import { Milestone } from '../../../utils/types/milestones';
   useEffect(() => {;
     if (!projectId) return;
   useEffect(() => {;
+=======
+
+  useEffect(() => {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setRole(getRoleFromEnvOrQuery());
   }, []),;
   // Demo cookie-based auth to hit API successfully;
@@ -193,14 +225,34 @@ import { Milestone } from '../../../utils/types/milestones';
 }
   }, [role]),;
   useEffect(() => {;
+<<<<<<< HEAD
     if (!projectId) return,;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    if (!projectId) return;
+=======
+
+import {useRouter} from 'next/router';
+=======
+import { useRouter } from 'next/router';
+
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
+import { Milestone } from '../../../utils/types/milestones';
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let cancelled = false;
     (async () => {;
       setLoading(true);
       setError(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -209,10 +261,19 @@ import { Milestone } from '../../../utils/types/milestones';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+      try {;
+        const data = await fetchMilestones(projectId as string);
+        if (!cancelled) setMilestones(data.milestones |[]);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message |'Failed to load milestones');
+      } finally {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (!cancelled) setMilestones(data.milestones || []);
       } catch (error) {
         if (!cancelled) setError(e?.message || 'Failed to load milestones');
       } finally {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         if (!cancelled) setMilestones(data && data.milestones || []);
@@ -223,6 +284,10 @@ import { Milestone } from '../../../utils/types/milestones';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (!cancelled) setLoading(false);
+=======
+        if (!cancelled) setLoading(false);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {use_router} from 'next / router';
 import Head from 'next / head';
 import MilestoneForm from '../../../components / monetization / MilestoneForm';
@@ -299,14 +364,22 @@ if (return) {
         if (set_loading (false)) {
   $2
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     })();
     return () => {;
       cancelled = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     };
 
@@ -317,10 +390,13 @@ if (return) {
   const handleCreate = async (payload: {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   const handleCreate = async (payload: {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: string;
     description?: string;
     dueDate: string;
@@ -328,6 +404,7 @@ if (return) {
   }) => {;
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch {}
   }, [role]),
@@ -342,6 +419,8 @@ if (return) {
         const data = await fetchMilestones(projectId as string)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         if (!cancelled) setMilestones(data.milestones || [])
       } catch (e: any) {
@@ -349,6 +428,7 @@ if (return) {
       } finally {
         if (!cancelled) setLoading(false)
       }
+<<<<<<< HEAD
 })();
     return () => {
       cancelled = true
@@ -380,10 +460,23 @@ if (return) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    })();
+    return () => {
+      cancelled = true
+    }
+  }, [projectId]);
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setMilestones(prev => [res.milestone, ...prev]);  };
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -394,6 +487,7 @@ if (return) {
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -414,6 +508,8 @@ if (return) {
   },
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setMilestones((prev) => [res.milestone, ...prev])
 
   },
@@ -421,13 +517,17 @@ if (return) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => {
     if (!projectId) return
     const map: Record<string, string> = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -444,12 +544,15 @@ if (return) {
       approved: 'Approved',;
       paid: 'Paid',;
     };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       in_progress: 'In Progress'
       submitted: 'Submitted'
       approved: 'Approved'
       paid: 'Paid'
     }
     const status = map[action];
+<<<<<<< HEAD
     const res = await updateMilestoneStatus(projectId as string, milestoneId, {;
       status,;
     });
@@ -470,6 +573,11 @@ if (return) {
           name='description'
           content='Track project deliverables and milestone payments'
 <<<<<<< HEAD
+=======
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, {
+      status
+    });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setMilestones(prev =>
       prev.map(m => (m.id === milestoneId ? res.milestone : m))
     );  }
@@ -478,9 +586,16 @@ if (return) {
       submitted: 'Submitted',
       approved: 'Approved',
       paid: 'Paid'},
+<<<<<<< HEAD
     const status = map[action],
     const res = await updateMilestoneStatus(projectId as string, milestoneId, { status }),
     setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
+=======
+    const status = map[action];
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, { status });
+    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   return (
     <div>
@@ -494,6 +609,7 @@ if (return) {
           <p className='text-sm text-gray-600'>
             Project: {projectId as string}
           </p>
+<<<<<<< HEAD
 =======
 
           </p>
@@ -520,24 +636,35 @@ if (return) {
         <meta name="description" content="Track project deliverables and milestone payments" />
       </Head>
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
+=======
+        </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {role !== 'talent' && (
           <div className="mb-8 p-4 rounded bg-gray-50 border">
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-lg font-semibold">Add Milestone</h2>
               <span className="text-xs text-gray-500">Role: {role}</span>
             </div>
+<<<<<<< HEAD
             <MilestoneForm onSubmit={handleCreate} />
           </div>
 
@@ -572,6 +699,20 @@ if (return) {
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            <MilestoneForm onSubmit={handleCreate} />
+          </div>
+        )}
+        {loading && <div>Loading milestones...</div>}
+
+  }, [project_id]);
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -603,16 +744,22 @@ if (return, ) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {!loading && !error && (
           <div className='space - y-4'>;
             {milestones.length === 0 && (
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const map: Record < string, string> = {
       in_progress: 'In Progress',
@@ -657,16 +804,23 @@ if (return, ) {
             {milestones.length === 0 && (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {!loading && !error && (;
           <div className='space-y-4'>;
             {milestones && milestones.length === 0 && (;
               <div className='text-gray-600'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>;
@@ -675,10 +829,15 @@ if (return, ) {
               <MilestoneCard
                 key={m && m.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='text - gray - 600'>;
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
@@ -687,20 +846,30 @@ if (return, ) {
               <MilestoneCard;
                 key={m.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 milestone={m}
                 project_id={String (project_id)}
                 role={role}
                 on_action={handle_action}
               />            ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='mt-12 text-xs text-gray-500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
           Paid &rarr; capture via Stripe/PayPal/Escrow.;
@@ -709,16 +878,23 @@ if (return, ) {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -755,6 +931,12 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        {error && <div className="text-red-600">{error}</div>}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
@@ -763,6 +945,7 @@ if (return, ) {
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>
             )}
+<<<<<<< HEAD
             {milestones.map(m => (
               <MilestoneCard
                 key={m.id}
@@ -802,12 +985,21 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            {milestones.map((m) => (
+              <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />
+            ))}
+          </div>
+        )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>);
 ;
@@ -819,6 +1011,11 @@ if (return, ) {
 =======
 <<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>)}
         <div className='mt - 12 text - xs text - gray - 500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
@@ -826,7 +1023,10 @@ if (return, ) {
         </div>;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
   } catch (error) {
@@ -837,7 +1037,12 @@ if (return, ) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

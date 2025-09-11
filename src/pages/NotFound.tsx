@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -23,3 +24,18 @@ const NotFound: React.FC = () => {
 };
 
 export default NotFound;
+=======
+
+interface Props {
+  className?: string;
+}
+
+export const Component: React.FC<Props> = ({ className = '' }) => {
+  return (
+    <div className={`p-4 ${className}`}>
+      <h2 className="text-2xl font-bold mb-4">Component</h2>
+      <p>This is a placeholder component.</p>
+    </div>
+  );
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

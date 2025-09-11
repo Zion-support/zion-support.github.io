@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -7,6 +8,8 @@ import Link from 'next/link';
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,6 +30,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useRef, useEffect } from 'react';
+<<<<<<< HEAD
 
 import Link from 'next / link';
 ;
@@ -37,6 +41,10 @@ import Link from 'next / link';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import Link from 'next/link';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -47,9 +55,13 @@ interface SearchResult {;
   url: string, type: 'service' | 'page' | 'category',;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const SearchBar: React.FC = () => {
   const [query, set_query] = useState ('');
   const [results, set_results] = useState < SearchResult[]>([]);
@@ -70,25 +82,35 @@ const SearchBar: React.FC = () => {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
 <<<<<<< HEAD
+<<<<<<< HEAD
 url: '/ai - services',
 =======
       url: '/ai - services',
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      url: '/ai - services',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       type: 'category',
     },
     {
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
 <<<<<<< HEAD
+<<<<<<< HEAD
 url: '/it - services',
       type: 'category',
     },
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       url: '/it - services',
       type: 'category',
     },
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: 'Cloud Cost Guard'
       description: 'FinOps Assistant for anomaly detection and cost optimization'
@@ -109,10 +131,15 @@ url: '/it - services',
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [;
     {;
@@ -158,28 +185,39 @@ url: '/it - services',
       setIsOpen(false);
       return,;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     setIsLoading(true);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
     setIsLoading(true);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Simulate API delay;
     await new Promise(resolve => setTimeout(resolve, 300));
     const filteredResults = searchData && searchData.filter(item =>;
       item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
@@ -187,6 +225,11 @@ url: '/it - services',
   };
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const value = e && e.target.value;
     setQuery(value);
@@ -201,6 +244,7 @@ url: '/it - services',
     setIsOpen(false),;
     inputRef && inputRef.current?.blur();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleResultClick = () => {
     setIsOpen(false)
@@ -505,3 +549,5 @@ export default SearchBar;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SearchBar;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

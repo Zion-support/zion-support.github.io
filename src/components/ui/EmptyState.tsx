@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button',;
 interface EmptyStateProps {;
@@ -20,6 +21,8 @@ interface EmptyStateProps {
 import { Button } from './button';
 interface EmptyStateProps {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from './button';
 interface EmptyStateProps {;
 
@@ -31,6 +34,7 @@ interface EmptyStateProps {
   description?: string;
   onRetry?: () => void;
   showRetry?: boolean;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Package, RefreshCw } from 'lucide-react'
@@ -72,6 +76,12 @@ export function EmptyState({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   icon
+=======
+
+
+  icon
+}: EmptyStateProps) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
       <div className="mb-4 text-gray-400">
@@ -99,6 +109,7 @@ function EmptyState() {
         {text}
       </h3>
       {description && (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
   showRetry = false
@@ -134,6 +145,9 @@ function EmptyState() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   icon?: React && React.ReactNode;
 
@@ -188,10 +202,14 @@ export function EmptyState({;
       )}
       {showRetry && onRetry && (;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Button;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
@@ -199,6 +217,7 @@ export function EmptyState({;
           <RefreshCw className="h-4 w-4" />
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           Try Again
 
@@ -213,12 +232,15 @@ export function EmptyState({;
 }
 }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           Try Again
         </Button>
       )}
     </div>;
   );
+<<<<<<< HEAD
 } ;
 }
 }
@@ -235,6 +257,11 @@ export function EmptyState({;
 } 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+} 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
   icon,
@@ -273,7 +300,11 @@ export function EmptyState({;
         </Button>)}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

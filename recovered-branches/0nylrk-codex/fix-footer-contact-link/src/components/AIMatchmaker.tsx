@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from 'react';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+import React from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -11,6 +16,7 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
@@ -27,6 +33,8 @@ interface AIMatchmakerProps {
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface AIMatchmakerProps {;
   serviceType?: string;
@@ -42,6 +50,7 @@ export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, classNam
   const [hasSearched, setHasSearched] = useState(false);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface AIMatchmakerProps {
@@ -70,13 +79,27 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
 =======
 
+=======
+  onMatchSelect?: (match: any) => void
+import { Textarea } from "@/components/ui/textarea",
+import { Sparkles, Search } from "lucide-react",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+interface AIMatchmakerProps {
+  serviceType?: string,
+  onMatchSelect?: (match: any) => void,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className?: string
 }
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -85,10 +108,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"})
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 
 
@@ -100,6 +128,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: "Tell us what you're looking for so we can find matches.",;
         variant: "destructive"}),;
       return;
+<<<<<<< HEAD
     }
     setIsMatchmaking(true);
     setHasSearched(true);
@@ -111,12 +140,16 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         serviceType;
         3;
       );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     setIsMatchmaking(true);
     setHasSearched(true);
     try {
       console.log("Starting AI matching with query:", query, "and service type:", serviceType);
 
+<<<<<<< HEAD
     setIsMatchmaking(true),
     setHasSearched(true),
     
@@ -127,11 +160,28 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    try {;
+      console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
+
+      // Get AI matches;
+      const results = await findMatches(;
+
+        query;
+        serviceType;
+        3;
+      );
+
+      // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Get AI matches
       const results = await findMatches(
         query,
         serviceType,
         3
+<<<<<<< HEAD
 <<<<<<< HEAD
       );
       console.log("AI matching results:", results);
@@ -139,31 +189,44 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      );
+      console.log("AI matching results:", results);
+      setMatches(results);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ),
       
       // // // console.log("AI matching results:", results),
       setMatches(results),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Error during AI matching:", error),
 =======
       console.error("Error during AI matching:", error);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console.error("Error during AI matching:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Matching Error"
         description: "We couldn't find matches for your request. Please try again."
         variant: "destructive"})
       // Set empty matches to show no results found UI
       setMatches([])
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -226,12 +289,15 @@ function AIMatchmaker() {
         variant: "destructive"}),
       // Set empty matches to show no results found UI;
       set_matches ([]);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
 
       setIsMatchmaking(false)
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     } finally {
       setIsMatchmaking(false)
@@ -253,6 +319,9 @@ function AIMatchmaker() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -320,18 +389,25 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
@@ -347,6 +423,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         <div className="space-y-4">
           <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -354,6 +431,13 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   }
       console && console.log("AI matching results:", results);
       setMatches(results);
+=======
+=======
+
+      console && console.log("AI matching results:", results);
+      setMatches(results);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({;
         title: "Matches Found",;
         description: `Found ${results && results.length} matches based on your description.`});
@@ -369,6 +453,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       setIsMatchmaking(false);
     }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleItemSelect = (item: any) => {;
     if (onMatchSelect) {;
       // Find the original MatchResult that contains this item;
@@ -378,8 +466,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       }
     }
   };
+<<<<<<< HEAD
   // Extract just the items from each MatchResult;
   const matchItems = matches && matches.map(match => match && match.item);
+=======
+
+  // Extract just the items from each MatchResult;
+  const matchItems = matches && matches.map(match => match && match.item);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>;
       <CardHeader className="pb-2">;
@@ -388,6 +483,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
           AI Matchmaker;
         </CardTitle>;
         <p className="text-sm text-zion-slate-light">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const handleItemSelect = (item: any) =>: any {
     // Check condition
@@ -416,6 +515,7 @@ if ( {) {
           AI Matchmaker;
         </CardTitle>;
         <p className="text - sm text - zion - slate - light">;
+<<<<<<< HEAD
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -499,10 +599,14 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
           AI Matchmaker;
         </CardTitle>;
         <p className="text-sm text-zion-slate-light">;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
         <div className="space-y-4">;
           <div className="space-y-2">;
             <Textarea;
@@ -519,11 +623,26 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
               {isMatchmaking ? (;
                 <>Analyzing your needs...</>;
               ) :(;
+=======
+
+              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e && e.target.value)}
+              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
+            />;
+
+            <Button
+              onClick={handleSearch}
+              disabled={isMatchmaking}
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+              {isMatchmaking ? (;
+                <>Analyzing your needs...</>;
+              ) : (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <>;
                   <Search className="h-4 w-4 mr-2" />;
                   Find Matches;
                 </>;
               )}
+<<<<<<< HEAD
             </Button>;
           </div>;
             <AIMatchingResults
@@ -556,12 +675,21 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            </Button>;
+          </div>;
+
+          {hasSearched && (;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <AIMatchingResults
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),; interface AIMatchmakerProps {
   serviceType?: string;
@@ -614,6 +742,8 @@ if (onMatchSelect) {
     </Card>
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
           )}
         </div>;
@@ -654,5 +784,8 @@ if (onMatchSelect) {
       </CardContent>;
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

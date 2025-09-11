@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
 import { useConversationState  } from './useConversationState';
@@ -8,22 +9,33 @@ import { useMessages } from './useMessages';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  */
 export function useMessagingOperations(user: UserWithProfile) {
   // State management
@@ -91,6 +103,7 @@ import { Message, Conversation, ConversationContextData } from '@/types/messagin
 import { useConversationState } from './useConversationState',;
 import { useConversations } from './useConversations',;
 import { useMessages } from './useMessages',;
+<<<<<<< HEAD
 =======
 =======
 import {UserProfile, UserDetails} from '@/types / auth';
@@ -98,6 +111,8 @@ import {Message, Conversation, ConversationContextData} from '@/types / messagin
 import {useConversationState} from './useConversationState';
 import {use_conversations} from './use_conversations';
 import {use_messages} from './use_messages';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 ;
@@ -122,16 +137,23 @@ function useMessagingOperations() {
     active_conversation;
     setActiveConversation;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     is_loading,
     setIsLoading;
   } = useConversationState ();
 ;
   // Conversations management;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const {
     fetch_conversations;
     create_conversation;
@@ -140,16 +162,22 @@ function useMessagingOperations() {
     set_conversations;
     setUnreadCount;
 <<<<<<< HEAD
+<<<<<<< HEAD
     setIsLoading);
 ;
   // Messages management;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setIsLoading);
 ;
   // Messages management;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const {
     load_messages;
     send_message;
@@ -164,14 +192,20 @@ function useMessagingOperations() {
     setUnreadCount;
     setIsLoading;
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetch_conversations);
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     fetch_conversations);
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     // State;
     messages;
@@ -184,9 +218,13 @@ function useMessagingOperations() {
     active_conversation;
     setActiveConversation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     is_loading;
 ;
     // Operations;
@@ -194,6 +232,7 @@ function useMessagingOperations() {
     create_conversation;
     markAsRead;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     fetch_conversations;
     load_messages;
@@ -283,3 +322,8 @@ export function useMessagingOperations(user: UserWithProfile) {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

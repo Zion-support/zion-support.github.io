@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Header } from '@/components/Header';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
@@ -43,12 +44,19 @@ export default function LandingPage() {;
   const { isRTL } = useLanguage();
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 BarChart3,;
   Smartphone,;
 } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -77,6 +85,7 @@ export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   
+<<<<<<< HEAD
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -187,6 +196,11 @@ export default function LandingPage() {
       <HeroSection />
       
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -243,6 +257,7 @@ function LandingPage() {
   // Tools and features showcase;
   const tools_features = [;
     {
+<<<<<<< HEAD
       title: t ('home.tool_ai_matcher'),
       description: t ('home.tool_ai_matcher_desc'),
       icon: <Sparkles className='h - 6 w - 6 text - zion - cyan' />,
@@ -266,6 +281,31 @@ function LandingPage() {
       icon: <Settings className='h - 6 w - 6 text - zion - purple' />,
       link: '/equipment',
     },
+=======
+      title: t('home.tool_talent')
+      description: t('home.tool_talent_desc')
+      icon: <Users className='h-6 w-6 text-zion-purple' />
+      link: '/talent'
+    }
+    {
+      title: t('home.tool_services')
+      description: t('home.tool_services_desc')
+      icon: <Zap className='h-6 w-6 text-zion-cyan' />
+      link: '/services'
+    }
+    {
+      title: t('home.tool_equipment')
+      description: t('home.tool_equipment_desc')
+      icon: <Settings className='h-6 w-6 text-zion-purple' />
+      link: '/equipment'
+    }
+    {
+      title: t('home.tool_analytics')
+      description: t('home.tool_analytics_desc')
+      icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />
+      link: '/analytics'
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       title: t ('home.tool_analytics'),
       description: t ('home.tool_analytics_desc'),
@@ -280,7 +320,11 @@ function LandingPage() {
       link: '/mobile - launch',
     },
   ];
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
         title={t('home && home.seo_title')}
@@ -290,7 +334,10 @@ function LandingPage() {
       <Header />;
       <HeroSection />;
 
+<<<<<<< HEAD
       
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Quick Access Tools Section */}
       <section className='py-16 bg-zion-blue-dark'>;
         <div className='container mx-auto px-4'>;
@@ -404,6 +451,10 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
       {/* Quick Access Tools Section */}
+<<<<<<< HEAD
+=======
+      <section className="py-16 bg-zion-blue-dark">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
@@ -435,6 +486,10 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
                   {feature.icon}
+<<<<<<< HEAD
+=======
+                </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
@@ -457,6 +512,12 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <BenefitsSection />
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
+<<<<<<< HEAD
+=======
+
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
@@ -468,6 +529,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
         </div>;
       </section>;
 
+<<<<<<< HEAD
       <CategoriesSection />;
       <BenefitsSection />;
       <CategoriesSection />;
@@ -600,6 +662,8 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -646,6 +710,7 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -672,3 +737,11 @@ export default LandingPage;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+
+
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +28,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 
 =======
@@ -38,10 +42,19 @@ import {
 
 =======
 =======
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Code,
   Copy,
   RefreshCw,
@@ -60,14 +73,19 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Star } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
@@ -108,6 +126,8 @@ export default function JSONFormatterPage() {;
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -121,6 +141,7 @@ export default function JSONFormatterPage() {;
       setFormattedJson('');
       setIsValid(true);
       setErrorMessage('');
+<<<<<<< HEAD
 <<<<<<< HEAD
       return;    }
     try {
@@ -141,6 +162,8 @@ export default function JSONFormatterPage() {;
       setFormattedJson('');    }        ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indentSize);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
@@ -149,13 +172,17 @@ export default function JSONFormatterPage() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setFormattedJson(formatted);
       setIsValid(true);
       setErrorMessage('')
     } catch (error) {
       setIsValid(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 
@@ -219,19 +246,27 @@ export default function JSONFormatterPage() {;
   const minifyJSON = () => {
     if (!inputJson.trim()) return;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     }
 
     
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
       setFormattedJson(minified);
       setIsValid(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setErrorMessage('');
     } catch (error) {
       setIsValid(false);
@@ -267,6 +302,7 @@ export default function JSONFormatterPage() {;
     setInputJson('');
     setFormattedJson('');
     setIsValid(true);
+<<<<<<< HEAD
     setErrorMessage('');
   }
   const copyToClipboard = (text: string) => {
@@ -391,6 +427,8 @@ export default function JSONFormatterPage() {;
     setInputJson('');
     setFormattedJson('');
     setIsValid(true);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -405,7 +443,10 @@ export default function JSONFormatterPage() {;
       </Head>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -426,6 +467,7 @@ export default function JSONFormatterPage() {;
       </section>
       {/* JSON Formatter Tool */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -442,6 +484,11 @@ export default function JSONFormatterPage() {;
       <section className="py-20 bg-gray-900">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      <section className="py-20 bg-gray-900">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -450,9 +497,13 @@ export default function JSONFormatterPage() {;
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced JSON formatter provides multiple formatting options and real-time validation.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
       </Head>;
       {/* Hero Section */}
@@ -510,10 +561,15 @@ export default function JSONFormatterPage() {;
               Our advanced JSON formatter provides multiple formatting options and real-time validation.;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Settings Bar */}
           <Card className='p-6 bg-gray-800 border border-gray-700 mb-8'>;
             <div className='flex flex-wrap items-center justify-between gap-4'>;
@@ -539,21 +595,31 @@ export default function JSONFormatterPage() {;
                   <select
                     value={indentSize}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   >
 =======
 
                   >
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  >
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <option value={2}>2 spaces</option>
                     <option value={4}>4 spaces</option>
                     <option value={8}>8 spaces</option>
                   </select>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={(e) => setIndentSize(Number(e && e.target.value))}
                     className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500";
       JSON.parse (input_json);
@@ -727,27 +793,39 @@ export default function JSONFormatterPage() {;
                     on_change={(e) => setIndentSize (Number (e.target.value))}
                     className="px - 3 py - 2 bg - gray - 700 border border - gray - 600 rounded text - white text - sm focus:outline - none focus:ring - 2 focus:ring - teal - 500";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <option value={2}>2 spaces</option>;
                     <option value={4}>4 spaces</option>;
                     <option value={8}>8 spaces</option>;
                   </select>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='text-sm text-gray-300'>;
                     Compact mode;
                   </label>;
                 </div>;
                 <div className='flex items-center space-x-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     type='checkbox'
                     id='showLineNumbers'
@@ -758,9 +836,13 @@ export default function JSONFormatterPage() {;
                   <label
                     htmlFor='showLineNumbers'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='text-sm text-gray-300'>;
                 <div className='flex items - center space - x-2'>;
                   <input;
@@ -790,18 +872,27 @@ export default function JSONFormatterPage() {;
                     className='text - sm text - gray - 300';
                   >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Line numbers;
                   </label>;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 
                 <div className="flex items-center space-x-2">
                   <input
@@ -811,6 +902,7 @@ export default function JSONFormatterPage() {;
                     checked={compactMode}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   <input
                     type="checkbox"
@@ -818,6 +910,8 @@ export default function JSONFormatterPage() {;
                     checked={compactMode}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={(e) => setCompactMode(e && e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500";
                   />;
@@ -825,17 +919,25 @@ export default function JSONFormatterPage() {;
                 </div>;
                 <div className="flex items-center space-x-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     type="checkbox"
                     id="showLineNumbers"
                     checked={showLineNumbers}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={(e) => setShowLineNumbers(e && e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500";
                   />;
@@ -844,14 +946,21 @@ export default function JSONFormatterPage() {;
               </div>;
               <div className="flex items-center space-x-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   onClick={loadSampleJSON}
                   variant="outline"
                   size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="border-gray-600 text-gray-300 hover:bg-gray-700"
                 >
                   <Upload className="w-4 h-4 mr-2" />
@@ -877,9 +986,12 @@ export default function JSONFormatterPage() {;
               </div>
             </div>
           </Card>
+<<<<<<< HEAD
 
 
                     </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -908,13 +1020,20 @@ export default function JSONFormatterPage() {;
                 <div className="relative">
                   {showLineNumbers && (
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
+<<<<<<< HEAD
 =======
+=======
+                    <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
                       {getLineNumbers(inputJson)}
@@ -936,6 +1055,7 @@ export default function JSONFormatterPage() {;
                   <textarea
                     value={inputJson}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
 
@@ -943,28 +1063,37 @@ export default function JSONFormatterPage() {;
                     placeholder='Paste your JSON data here...'                    rows={15}                    onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     rows={15}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
                     }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   />
                 </div>
                 {!isValid && errorMessage && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   />;
                 </div>;
 
                 {!isValid && errorMessage && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>;
@@ -1014,17 +1143,40 @@ export default function JSONFormatterPage() {;
                     variant='outline'
 <<<<<<< HEAD
                   <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
+                  <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
+                  </div>;
+                )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
 
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
                 <div className='flex space-x-3'>
 
+<<<<<<< HEAD
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
                 <div className="flex space-x-3">
                   <Button
                     onClick={formatJSON}
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+                    <strong>Error:</strong> {errorMessage}
+                  </div>;
+                )}
+
+
+                <div className='flex space-x-3'>;
+
+                  <Button
+                    onClick={formatJSON}
+                    disabled={!inputJson && inputJson.trim()}
+                    className='flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>;
+                    <Code className='w-5 h-5 mr-2' />                    Format JSON                  <Button
+                    onClick={formatJSON}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     disabled={!inputJson.trim()}
                     className="flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
@@ -1040,6 +1192,7 @@ export default function JSONFormatterPage() {;
                   </Button>
                   <Button
                     onClick={minifyJSON}
+<<<<<<< HEAD
                     disabled={!inputJson.trim()}
                     variant='outline'
                     className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'                  >                    variant="outline"
@@ -1056,6 +1209,21 @@ export default function JSONFormatterPage() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    disabled={!inputJson && inputJson.trim()}
+                    variant='outline'
+                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>                    variant="outline";
+                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
+                  >;
+                    Minify;
+                  </Button>;
+                  <Button
+                    onClick={validateJSON}
+                    disabled={!inputJson && inputJson.trim()}
+                    variant='outline'
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
                   >
                     Validate
@@ -1064,7 +1232,10 @@ export default function JSONFormatterPage() {;
               </div>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>                    variant="outline";
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
@@ -1117,8 +1288,11 @@ export default function JSONFormatterPage() {;
                     className='border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50'                  >                    variant="outline";
                     className="border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50";
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >;
                     Validate;
                   </Button>;
@@ -1126,11 +1300,28 @@ export default function JSONFormatterPage() {;
               </div>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             {/* Output Section */}
+=======
+
+
+            {/* Output Section */}
+            <Card className='p-8 bg-gray-800 border border-gray-700'>;
+              <div className='flex items-center justify-between mb-6'>;
+                <h3 className='text-2xl font-bold text-white flex items-center'>;
+                  <CheckCircle className='w-6 h-6 mr-3 text-cyan-400' />;
+                  Formatted Output;
+                </h3>;
+                {formattedJson && (;
+                  <div className='flex items-center space-x-2'>;
+
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Output Section */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="flex items-center justify-between mb-6">
@@ -1141,10 +1332,14 @@ export default function JSONFormatterPage() {;
                 {formattedJson && (
                   <div className="flex items-center space-x-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       onClick={() => copyToClipboard(formattedJson)}
                       variant='outline';
@@ -1154,6 +1349,7 @@ export default function JSONFormatterPage() {;
                       <Copy className='w-4 h-4 mr-2' />;
                       Copy;
                     </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Output Section */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
@@ -1221,6 +1417,9 @@ export default function JSONFormatterPage() {;
                       Formatted JSON will appear here. Enter JSON data and click format to get started.;
                   </div>;
                 )}
+=======
+                    <Button
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onClick={() => downloadJSON(formattedJson, 'formatted.json')}
                       variant="outline"
                       size="sm"
@@ -1232,6 +1431,7 @@ export default function JSONFormatterPage() {;
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
                     <div className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
                       showLineNumbers ? 'pl-16' : ''
                     }`}>
@@ -1256,6 +1456,8 @@ export default function JSONFormatterPage() {;
                     <p>• Lines: {formattedJson.split('\n').length}</p>
                     <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
                   </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='space-y-4'>
                   <div className='relative'>
                     {showLineNumbers && (
@@ -1289,14 +1491,18 @@ export default function JSONFormatterPage() {;
                     <p>
                       • Size: {((formattedJson.length * 2) / 1024).toFixed(2)}{' '}
                       KB
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>                  </div>                  <div className="text-sm text-gray-400">
                     <p>• Characters: {formattedJson.length}</p>
                     <p>• Lines: {formattedJson.split('\n').length}</p>
                     <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
                     </p>                  </div>
 
+<<<<<<< HEAD
                   </div>
 
 =======
@@ -1305,6 +1511,10 @@ export default function JSONFormatterPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </div>
             </Card>
@@ -1312,13 +1522,23 @@ export default function JSONFormatterPage() {;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -1328,10 +1548,13 @@ export default function JSONFormatterPage() {;
       {/* Features */}
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               Professional JSON Formatting Features
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               Professional JSON Formatting Features
@@ -1340,6 +1563,9 @@ export default function JSONFormatterPage() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -1410,15 +1636,22 @@ export default function JSONFormatterPage() {;
               <p className="text-gray-400">
                 Adjust indentation size, toggle compact mode, and customize display options.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               </p>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              </p>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </h2>
       {/* Use Cases */}
@@ -1443,6 +1676,8 @@ export default function JSONFormatterPage() {;
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• API development and testing</li>              Perfect For Every JSON Need
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Use Cases */}
 
       <section className="py-20 bg-gray-900">
@@ -1451,7 +1686,10 @@ export default function JSONFormatterPage() {;
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Perfect For Every JSON Need
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
@@ -1471,6 +1709,7 @@ export default function JSONFormatterPage() {;
               </ul>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📊</div>
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1482,11 +1721,16 @@ export default function JSONFormatterPage() {;
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Data cleaning and preparation</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
               <p className="text-gray-400 mb-6">
@@ -1494,15 +1738,22 @@ export default function JSONFormatterPage() {;
               </p>
               <ul className="space-y-2 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <li>• Data cleaning and preparation</li>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                <li>• Data cleaning and preparation</li>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Report generation</li>
                 <li>• Data validation</li>
               </ul>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔧</div>
@@ -1515,11 +1766,16 @@ export default function JSONFormatterPage() {;
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Configuration management</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>
               <p className="text-gray-400 mb-6">
@@ -1527,15 +1783,22 @@ export default function JSONFormatterPage() {;
               </p>
               <ul className="space-y-2 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <li>• Configuration management</li>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                <li>• Configuration management</li>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Infrastructure validation</li>
                 <li>• Deployment automation</li>
               </ul>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📝</div>
@@ -1548,11 +1811,16 @@ export default function JSONFormatterPage() {;
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Documentation examples</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-4xl mb-4">📝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>
               <p className="text-gray-400 mb-6">
@@ -1560,11 +1828,17 @@ export default function JSONFormatterPage() {;
               </p>
               <ul className="space-y-2 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <li>• Documentation examples</li>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                <li>• Documentation examples</li>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• API documentation</li>
                 <li>• Technical specifications</li>
               </ul>
@@ -1572,6 +1846,7 @@ export default function JSONFormatterPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1582,6 +1857,43 @@ export default function JSONFormatterPage() {;
 {formattedJson && (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-teal-100 mb-8'>
+            Join thousands of developers and professionals who trust our JSON
+            formatter for their data needs.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-teal-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-teal-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-teal-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+=======
+
+                {formattedJson && (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='text-sm text-gray-400'>;
                     <p>• Characters: {formattedJson && formattedJson.length}</p>;
                     <p>• Lines: {formattedJson && formattedJson.split('\n').length}</p>;
@@ -1864,9 +2176,13 @@ export default function JSONFormatterPage() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>👨‍💻</div>;
@@ -1890,18 +2206,26 @@ export default function JSONFormatterPage() {;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• API development and testing</li>;
                 <li>• Configuration file management</li>;
                 <li>• Debug and troubleshooting</li>;
               </ul>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📊</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1919,17 +2243,25 @@ export default function JSONFormatterPage() {;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Report generation</li>;
                 <li>• Data validation</li>;
               </ul>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>🔧</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1947,17 +2279,25 @@ export default function JSONFormatterPage() {;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Infrastructure validation</li>;
                 <li>• Deployment automation</li>;
               </ul>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📝</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1975,9 +2315,13 @@ export default function JSONFormatterPage() {;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• API documentation</li>;
                 <li>• Technical specifications</li>;
               </ul>;
@@ -1985,6 +2329,7 @@ export default function JSONFormatterPage() {;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -2059,6 +2404,10 @@ export default function JSONFormatterPage() {;
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               View Pricing;
             </Button>;
           </div>;
@@ -2074,4 +2423,7 @@ export default function JSONFormatterPage() {;
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

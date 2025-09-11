@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -18,19 +22,61 @@ import ErrorBoundary from '@/components/GlobalErrorBoundary'
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
 
 const categories = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export default function AllCategoriesPage() {
+  return (
+    <div className='min-h-screen bg-zion-blue'>
+      <div className='container mx-auto px-4 py-12'>
+        <div className='text-center mb-12'>
+          <GradientHeading
+            level='h1'
+            className='text-4xl md:text-5xl font-bold mb-4'
+          >
+            All Categories
+          </GradientHeading>
+          <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
+            Explore our extensive range of AI services and products. Find
+            exactly what you're looking for to enhance your business or personal
+            projects.          </p>
+        </div>
+        <ErrorBoundary>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categories.map(category => (
+              <CategoryCard
+                key={category.id}
+                title={category.title}
+                description={category.description}
+                icon={category.icon}
+                href={category.href}
+              />
+            ))}
+          </div>
+        <ErrorBoundary>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category) => (
+              <CategoryCard
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading",
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -71,6 +117,7 @@ const categories = [;
 
 export default function AllCategoriesPage() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: 'Services'
     description: 'On-demand IT support, consulting, development, and more'
     icon: <Briefcase className='w-10 h-10' />
@@ -102,12 +149,15 @@ export default function AllCategoriesPage() {;
 export default function AllCategoriesPage() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className='min-h-screen bg-zion-blue'>
       <div className='container mx-auto px-4 py-12'>
         <div className='text-center mb-12'>
           <GradientHeading
             level='h1'
+<<<<<<< HEAD
 <<<<<<< HEAD
               <CategoryCard
                 key={category && category.id}
@@ -132,6 +182,8 @@ export default function AllCategoriesPage() {
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categories.map(category => (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             Explore our extensive range of AI services and products. Find;
@@ -140,7 +192,10 @@ export default function AllCategoriesPage() {
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <CategoryCard
                 key={category.id}
                 title={category.title}
@@ -149,6 +204,7 @@ export default function AllCategoriesPage() {
                 href={category.href}
               />
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         <ErrorBoundary>
@@ -164,6 +220,10 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
           </div>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+          </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </p>
         </div>
@@ -222,16 +282,21 @@ export default function AllCategoriesPage() {;
         </div>;
         <ErrorBoundary>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 title={category.title}
                 description={category.description}
@@ -245,6 +310,8 @@ export default function AllCategoriesPage() {;
               />;
             ))}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {categories.map((category,) => (
               <CategoryCard
                 key = {category.title,}
@@ -263,27 +330,36 @@ export default function AllCategoriesPage() {;
   );
 };
 }
+<<<<<<< HEAD
 }
 =======
 
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 // The CategoryCard itself is a Link to its specific category page;
                 // So we don't pass the category.link to a 'to' prop here directly;
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
               />;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </ErrorBoundary>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 
         <ErrorBoundary>;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
@@ -325,3 +401,5 @@ export default function AllCategoriesPage() {;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

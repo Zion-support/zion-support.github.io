@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: string;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   id: string;
   targetType: string;
@@ -10,6 +13,7 @@
   createdAt: number;
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const notesStore: Note[] = [];
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -30,11 +34,17 @@ const notesStore: Note[] = []
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+const notesStore: Note[] = [];
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   if (req.method === 'GET') {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const { targetType, targetId } = req.query;
     if (!targetType || Array.isArray(targetType)) {
@@ -50,11 +60,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 if (req.method === 'POST') {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
   if (req.method === 'POST') {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
     if (!targetType || !targetId || !text?.trim()) {
@@ -71,6 +86,7 @@ if (req.method === 'POST') {
     notesStore.push(note);
     return res.status(200).json({ ok: true, note });
   }
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });
 }
 export function getAllNotes(): Note[] {
@@ -140,6 +156,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+
+export function getAllNotes(): Note[] {
+  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

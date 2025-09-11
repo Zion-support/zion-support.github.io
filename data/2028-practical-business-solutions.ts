@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface PracticalBusinessSolution2028 {
 export interface PracticalBusinessSolution2028 {;
   id: string;
@@ -32,11 +33,15 @@ export interface PracticalBusinessSolution2028 {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -72,6 +77,9 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -82,6 +90,7 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
     address: string
   }
 }
+<<<<<<< HEAD
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   {
     id: "2028-practical-business-solution", name: "2028 Practical Business Solution Platform",
@@ -114,6 +123,12 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   }
 ];
 ;
+=======
+
+export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
+  {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "2028-practical-business-solution",
     name: "2028 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2028",
@@ -132,6 +147,7 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -141,6 +157,10 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

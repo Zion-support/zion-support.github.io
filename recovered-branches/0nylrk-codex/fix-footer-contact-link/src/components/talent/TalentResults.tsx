@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {TalentProfile} from "@/types/talent";
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
@@ -18,6 +19,10 @@ import { TalentGrid } from "@/components/talent/TalentGrid",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -28,8 +33,11 @@ interface TalentResultsProps {
   handleToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
   activeFiltersProps: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     selectedSkills: string[]
     toggleSkill: (skill: string) => void
     selectedAvailability: string[]
@@ -41,6 +49,7 @@ interface TalentResultsProps {
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
+<<<<<<< HEAD
 =======
 import React from "react";
 import {TalentProfile} from "@/types/talent";
@@ -50,6 +59,8 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     selectedSkills: string[],
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
@@ -60,6 +71,7 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
     clearFilters: () => void
   }
@@ -85,30 +97,42 @@ export function TalentResults({
 
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     clearFilters: () => void
   }
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   activeFiltersProps
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { TalentProfile } from "@/types/talent",;
 import { ActiveFilters } from "@/components/talent/ActiveFilters",;
 import { ResultsHeader } from "@/components/talent/ResultsHeader",;
 import { TalentGrid } from "@/components/talent/TalentGrid",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TalentResultsProps {;
   filteredTalents: TalentProfile[],;
   isLoading: boolean,;
@@ -125,8 +149,11 @@ interface TalentResultsProps {;
     selectedRegions: string[],;
     toggleRegion: (region: string) => void,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function TalentResults(): any ({;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     priceRange: [number, number];
 
@@ -140,13 +167,19 @@ export function TalentResults(): any ({;
 
 export function TalentResults(): any ({;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   filteredTalents;
   isLoading;
   viewProfile;
   handleRequestHire;
   savedTalents;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   handleToggleSave;
   isAuthenticated;
   activeFiltersProps;
@@ -156,6 +189,7 @@ export function TalentResults(): any ({;
 
 
 
+<<<<<<< HEAD
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />;
       {/* Results count */}
@@ -228,6 +262,8 @@ export function TalentResults({;
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Active filters */}
 
@@ -240,13 +276,17 @@ export function TalentResults({;
       />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Talents grid */}
       <TalentGrid
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
+<<<<<<< HEAD
 <<<<<<< HEAD
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
@@ -262,6 +302,8 @@ export function TalentResults({;
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from './react';
 import { TalentProfile } from '@/types / talent';
@@ -320,11 +362,15 @@ function TalentResults() {
         clearFilters={activeFiltersProps.clearFilters}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -411,3 +457,12 @@ export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _han
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

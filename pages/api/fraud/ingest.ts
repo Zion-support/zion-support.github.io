@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -37,9 +41,12 @@ export default async function handler(
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   try {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
@@ -49,6 +56,10 @@ import { extractClientIp } from '../../../utils/ip';
 import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
 import { sendWarningEmail } from '../../../utils/email';
 const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -58,13 +69,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const body = req && req.body || {};
     const source = body && body.source as MonitoredSource;
     if (!allowedSources && allowedSources.includes(source)) {
       res && res.status(400).json({ error: "Invalid source" });
       return;
     }
+<<<<<<< HEAD
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
 <<<<<<< HEAD
@@ -85,17 +100,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
 =======
+=======
+
+    const userId = typeof body && body.userId === "string" ? body && body.userId : null;
+    const content = typeof body && body.content === "string" ? body && body.content : null;
+
+
+    const metadata =
+      body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
+=======
+      res.status(400).json({ error: 'Invalid source' });
+      return
+    }
+
+    const userId = typeof body.userId === 'string' ? body.userId : null;
+    const content = typeof body.content === 'string' ? body.content : null;
+    const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    const ip = extractClientIp(req);
+    const store = getFraudStore();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
 import { classifyWithGPT  } from '../../../utils / fraud / gpt';
 import { getFraudStore, new_event  } from '../../../utils / fraud / store';
 import { extractClientIp  } from '../../../utils / ip';
 import {
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -108,13 +148,18 @@ import {
   GptClassificationLabel
   MonitoredSource
   StoredFraudRecord
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   StoredFraudRecord,
 } from '../../../utils / fraud / types';
 import { sendWarningEmail  } from '../../../utils / email';
@@ -163,11 +208,18 @@ if ( {) {
 ;
     const heuristic = await evaluate_heuristics (event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Check condition
 if ( {) {
   $2
@@ -179,9 +231,13 @@ if ( {) {
 }
         gpt = await classifyWithGPT (content, source);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     } else // Check condition
 if ( {) {
@@ -190,20 +246,27 @@ if ( {) {
       gpt = await classifyWithGPT (content, source);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
       gpt?.label || (heuristic && heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     if (heuristic && heuristic.severity === "high") combinedLabel = "DANGEROUS";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       gpt?.label || (heuristic && heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     if (heuristic && heuristic.severity === "high") combinedLabel = "DANGEROUS";
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (gpt?.label === "DANGEROUS") combinedLabel = "DANGEROUS";
     const autoHide =
       process && process.env.FRAUD_AUTOHIDE === "true" &&
       combinedLabel !== "SAFE" &&
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const event = newEvent({ source, userId, content, metadata, ipAddress: ip });
     const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) });
@@ -226,12 +289,19 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ...event,
       heuristic,
       gpt,
       autoHidden: !!autoHide,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       if (prior <= 1 && combinedLabel !== "SAFE") {
@@ -244,7 +314,10 @@ if ( {) {
     }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     res && res.status(200).json({
       id: saved && saved.id,
       flagged: combinedLabel !== "SAFE",
@@ -254,10 +327,15 @@ if ( {) {
       autoHidden: saved && saved.autoHidden,
       createdAt: saved && saved.createdAt,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -305,16 +383,23 @@ if ( {) {
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    });
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (e: any) {
 
 
       .json({ error: "Internal error", details: e?.message || String(e) });
 
 
+<<<<<<< HEAD
       .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
@@ -326,6 +411,22 @@ if ( {) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       status: 'PENDING'};
     const saved = await store.saveEvent(stored);
+=======
+=======
+      .json({ error: "Internal error", details: e?.message |String(e) });
+  }
+}
+=======
+    res
+      .status(500)
+      .json({ error: "Internal error", details: e?.message || String(e) });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+      status: 'PENDING'};
+
+    const saved = await store.saveEvent(stored);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
       const prior = await store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
@@ -334,6 +435,10 @@ if ( {) {
           body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
       }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     res.status(200).json({
       id: saved.id, flagged: combinedLabel !== 'SAFE',
       label: combinedLabel, heuristic,
@@ -344,6 +449,7 @@ if ( {) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     res;
       .status (500);
@@ -565,12 +671,17 @@ export default async function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -625,9 +736,12 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -635,4 +749,7 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

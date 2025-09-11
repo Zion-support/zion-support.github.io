@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -20,6 +21,10 @@ import { motion, AnimatePresence } from 'framer-motion',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
+=======
+import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
+import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
 import { ProductListing  } from '@/types/listings';
 import { SkeletonCard  } from '@/components/ui/skeleton';
@@ -34,6 +39,9 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "nvidia-a100-server";
     title: "NVIDIA A100 GPU Training Server";
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -45,10 +53,13 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     tags: ["AI", "Machine Learning", "GPU"],
     author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -217,14 +228,19 @@ const EquipmentFilterControls = ({
   </div>
 ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
@@ -374,6 +390,10 @@ function EquipmentPageContent() {;
       throw new Error('Failed to load equipment data. Please try again.');
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const {
     items: equipment,
@@ -413,10 +433,13 @@ function EquipmentPageContent() {;
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Loading state
   if (loading && equipment.length === 0) {
@@ -433,6 +456,7 @@ function EquipmentPageContent() {;
     )
   }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -678,3 +702,5 @@ function EquipmentPage() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

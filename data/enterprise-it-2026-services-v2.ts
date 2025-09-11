@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
@@ -7,10 +8,19 @@ export interface EnterpriseIt2026ServiceV2 {;
 import { ServiceVariant } from '../types/service-variants';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { ServiceVariant } from '../types/service-variants';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
+<<<<<<< HEAD
+=======
+export interface EnterpriseIt2026ServiceV2 {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   name: string;
   tagline: string;
@@ -43,6 +53,7 @@ export interface EnterpriseIt2026ServiceV2 {;
     address: string;
     website: string;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'zero-trust-network-architecture-pro',
   real_implementation: boolean;
@@ -798,11 +809,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   {
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -819,21 +835,28 @@ export interface EnterpriseIT2026ServiceV2 {
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     mobile: string, email: string,
     address: string,
     website: string
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
     mobile: string, email: string,
     address: string,
     website: string
   
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
@@ -841,13 +864,18 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
     price: '$1,199',
@@ -869,6 +897,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
     growthRate: '220% annual growth', variant: 'security-futuristic',
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1468,6 +1497,11 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -1482,7 +1516,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -1525,6 +1562,7 @@ export interface EnterpriseIT2026ServiceV2 {;
   reviews: number;
 }
 ;
+<<<<<<< HEAD
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   // Zero Trust Network Architecture;
   {;
@@ -2378,3 +2416,9 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
 ];
   }
 ];
+=======
+  }
+];
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

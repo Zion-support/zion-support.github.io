@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 
 import { useTranslation } from 'react-i18next'
@@ -163,6 +164,21 @@ export function ITServiceRequestHero() {
 import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {;
 ;export function ITServiceRequestHero(): any (...args[]):  {;
 
+=======
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import axios from 'axios';
+import { Loader2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {;
+;export function ITServiceRequestHero(): any (...args[]):  {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async e: React && React.FormEvent {;    e && e.preventDefault();
@@ -173,102 +189,49 @@ import { logErrorToProduction } from '@/utils/productionLogger';export function 
       setTimeout(: unknown {;
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
-  const _containerVariants = {
-=======
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin } from "lucide-react";
-export function ITServiceRequestHero() {
-    const [location, setLocation] = useState("");
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const navigate = useNavigate();
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (location.trim()) {
-            setIsSubmitting(true);
-            // Simulate API call
-            setTimeout(() => {
-                setIsSubmitting(false);
-                router(`/it-onsite-services?location=${encodeURIComponent(location)}`)}, 1000)}
-    };
-    const containerVariants = {
->>>>>>> origin/clean-error-fixing-automation
-  hidden: { opacity: 0,
-  y: 2 0
-},
-<<<<<<< HEAD
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        staggerChildren: 0.2
-      };
-    };
-  };
-  const _itemVariants = {
-=======
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                staggerChildren: 0.2
-            }
-        }
-    };
-    const itemVariants = {
->>>>>>> origin/clean-error-fixing-automation
-  hidden: { opacity: 0,
-  y: 2 0
-},
-<<<<<<< HEAD
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 };
-    };
-  };
-  const _features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },
-    { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },
-    { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
+  const containerVariants = {;
+  hidden: { opacity: 0,;
+  y: 20;
+},;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0 && 0.6,;
+        staggerChildren: 0 && 0.2;
+};
+};
+};
+  const itemVariants = {;
+  hidden: { opacity: 0,;
+  y: 20;
+},;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: { duration: 0 && 0.5 };
+};
+};
+  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },;
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },;
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-
-const features = [];
-const services = [];
-;
-,";
-    { "icon": "Glob e", "text": "Global Coverage", "color": "text-zion-purple" },";
-    { "icon": "Shiel d", "text": "Certified Technicians", "color": "text-zion-cyan-light" },;";
-    { "icon": "Za p", "text": "Fast Response", "color": "text-zion-purple-light" };
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';";
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },";
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },";
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-;
-export function ITServiceRequestHero("props": "any) {;
+export function ITServiceRequestHero() {;
   return (";
     <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">;
-      {/* Background Elements */"}";
+      {/* Background Elements */}";
       <div className="absolute inset-0">";
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>";
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>;
       </div>;
-      <motion.div";
-        className="container mx-auto px-4 relative z-10";
-        variants={containerVariants}";
-        initial="hidden";
-        whileInView="visible";
-        viewport={{ once: tru e }}
-"
-        <div className="grid grid-cols-1 lg: gri d-cols-2 gap-16 items-center">
-          {/* Left content */}"
-          <motion.div variants={itemVariants} className="text-white">"
-            <div className="flex items-center gap-3 mb-6">"
-              <div className="p-2 bg-zion-cyan/20 rounded-lg">"
-                <Zap className="w-6 h-6 text-zion-cyan"   />
-              </div>"              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
 
 export function ITServiceRequestHero() {;
   const [name, setName] = useState('');
@@ -280,6 +243,7 @@ export function ITServiceRequestHero() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const { t } = useTranslation();
+<<<<<<< HEAD
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -494,6 +458,160 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    if (!name || !email || !location) {;
+      toast({;
+        title: 'Missing Information',;
+        description: 'Name, email and location are required.',;
+        variant: 'destructive',;
+      });
+      return;
+    }
+
+
+import React, { useState } from 'react';
+import Image from 'next / image';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { use_toast } from '@/hooks / use - toast';
+import axios from 'axios';
+import { Loader2 } from 'lucide-react';
+import { use_translation } from 'react - i18next';
+import { logErrorToProduction } from '@/utils / production_logger'; export /**
+ * ITServiceRequestHero - Function description
+ */
+function ITServiceRequestHero() { export function ITServiceRequestHero (...args[]):  {
+  const [location, set_location] = useState ("");
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const handle_submit = async e: React.FormEvent {e.prevent_default ();
+    if () {) {
+  $2
+}
+      setIsSubmitting (true);
+      // Simulate API call;
+      set_timeout (: unknown {
+        setIsSubmitting (false);
+        router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}}}}}}
+  const container_variants = {
+  hidden: { opacity: 0,
+  coordinate_y: 20;
+},
+    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+      transition: {
+        duration: 0.6,
+        stagger_children: 0.2;
+}
+}
+}
+  const item_variants = {
+  hidden: { opacity: 0,
+  coordinate_y: 20;
+},
+    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+      transition: { duration: 0.5 }
+}
+}
+  const features = [{ icon: Clock, text: "24 / 7 Availability", color: "text - zion - cyan" },
+    { icon: Globe, text: "Global Coverage", color: "text - zion - purple" },
+    { icon: Shield, text: "Certified Technicians", color: "text - zion - cyan - light" },
+    { icon: Zap, text: "Fast Response", color: "text - zion - purple - light" }
+  ];
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';";
+    { icon: Globe, text: "Global Coverage", color: "text - zion - purple" }, ";
+    { icon: Shield, text: "Certified Technicians", color: "text - zion - cyan - light" }, ";
+    { icon: Zap, text: "Fast Response", color: "text - zion - purple - light" }
+  ];
+export /**
+ * ITServiceRequestHero - Function description
+ */
+function ITServiceRequestHero() {
+  return (";
+    <section className="py - 20 bg - gradient - to - br from - blue - 900 via - slate - 900 to - purple - 900 relative overflow - hidden">;
+      {/* Background Elements */}";
+      <div className="absolute inset - 0">";
+        <div className="absolute top - 0 left - 0 w - 96 h - 96 bg - blue - 500 / 10 rounded - full blur - 3xl"></div>";
+        <div className="absolute bottom - 0 right - 0 w - 96 h - 96 bg - purple - 500 / 10 rounded - full blur - 3xl"></div>;
+      </div>;
+export /**
+ * ITServiceRequestHero - Function description
+ */
+function ITServiceRequestHero() {
+  const [name, set_name] = useState ('');
+  const [email, set_email] = useState ('');
+  const [phone, set_phone] = useState ('');
+  const [company, set_company] = useState ('');
+  const [location, set_location] = useState ('');
+  const [details, set_details] = useState ('');
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const { toast } = use_toast ();
+  const { t } = use_translation ();
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Missing Information',
+        description: 'Name, email and location are required.',
+        variant: 'destructive',
+      });
+      return;
+    }
+    setIsSubmitting (true);
+    setIsSubmitting(true),
+
+
+
+    try {
+      const res = await axios.post ('/api / onsite - request', {
+        name,
+        email,
+        phone,
+        company,
+        location,
+
+
+
+      }
+    } catch (err: any) {
+      logErrorToProduction(err)
+      toast({
+
+        title: 'Submission Failed',
+        description: 'There was an error submitting your request.',
+        variant: 'destructive',
+
+      })
+
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+        title: "Submission Failed",
+        description: "There was an error submitting your request.",
+        variant: "destructive"})
+    } finally {
+      setIsSubmitting(false)
+    }
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <section
@@ -512,9 +630,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex flex-col md:flex-row items-center gap-4">
             <Image
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               src="/logos/zion-logo.png"
               alt="Zion logo"
               width={200}
@@ -529,6 +651,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 required
 
               />
+<<<<<<< HEAD
+=======
+              <p className='text-xs text-zion-slate-light'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {t(
                   'onsite_form.name_helper'
                   'Enter the main contact for this request.'
@@ -547,6 +673,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 type='email'
                 value={email}
 
+<<<<<<< HEAD
               src='/logos/zion-logo.png'
               alt='Zion logo'
               width={200}
@@ -592,6 +719,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                )}
+              </p>
+              <Input
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
@@ -608,6 +743,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>;
               <Input
                 value={phone}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 )}
               </p>
@@ -693,6 +829,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 onChange={e => setPhone(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />;
@@ -745,11 +883,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
                 value={details}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
@@ -780,19 +922,29 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {isSubmitting && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Request Service
               </Button>
             </form>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <p className='text-xs text-center text-zion-slate-light mt-3'>
             {t(
               'onsite_form.privacy_notice'
@@ -800,6 +952,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           <p className="text-xs text-center text-zion-slate-light mt-3">
             {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
+<<<<<<< HEAD
           <p className="text-xs text-center text-zion-slate-light mt-3">
             {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
 =======
@@ -810,11 +963,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </p>
         </div>
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }finally {
   setIsSubmitting (false)
@@ -921,6 +1077,8 @@ toast ({
       </div>;
     </section>);
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }catch (err: any) {
   logErrorToProduction (err);
 toast ({
@@ -931,7 +1089,10 @@ toast ({
   setIsSubmitting (false) ;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {
   email
@@ -962,6 +1123,7 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }Request Service </Button> </form> </div>
 }'"
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 ;
@@ -971,6 +1133,8 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 
@@ -1107,28 +1271,39 @@ export function ITServiceRequestHero() {;
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Request Service;
               </Button>;
             </form>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="text-xs text-center text-zion-slate-light mt-3">;
             {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <p className='text-xs text-center text-zion-slate-light mt-3'>;
             {t(;
               'onsite_form && onsite_form.privacy_notice',;
               'Rest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.';
             )}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </p>;
         </div>;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -1136,6 +1311,8 @@ export function ITServiceRequestHero() {;
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }catch (err: any) {;
   logErrorToProduction (err);
@@ -1173,6 +1350,7 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }Request Service </Button> </form> </div> ;
 }'";
 }
+<<<<<<< HEAD
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1215,3 +1393,5 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

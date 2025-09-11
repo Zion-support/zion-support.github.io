@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -321,6 +322,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
 =======
+=======
+}
+
+
+  )
+}
+
+import React, { useState } from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   TooltipTrigger } from '@/components / ui / tooltip'; import { use_toast  } from '@/hooks / use - toast';
 import { use_auth  } from '@/hooks / use_auth';
 export /**
@@ -354,5 +371,9 @@ if ( {) {
   );
 }
 
+<<<<<<< HEAD
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

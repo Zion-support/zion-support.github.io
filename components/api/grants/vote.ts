@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { GrantApplication, VotePayload } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -11,6 +12,8 @@ function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 function ensureDir() {
@@ -20,20 +23,28 @@ function ensureDir() {
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
   const p = grantPath(id);
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
@@ -42,6 +53,10 @@ function readGrant(id: string): GrantApplication | null {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs && fs.writeFileSync(
@@ -51,6 +66,7 @@ function writeGrant(record: GrantApplication) {
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     res.status(405).end('Method Not Allowed');
@@ -59,6 +75,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res && res.status(400).json({ error: 'Missing fields' });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { GrantApplication, VotePayload } from '../../../types / grants';
 ;
@@ -124,13 +142,17 @@ if ( {) {
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res && res.status(400).json({ error: 'Missing fields' });
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return;
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const payload = req && req.body as VotePayload;
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
@@ -165,11 +187,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   const payload = req.body as VotePayload;
+=======
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
     return
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {
@@ -179,6 +205,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const g = readGrant(payload.grantId);
   if (!g) return res.status(404).json({ error: 'Grant not found' });
   const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() }
@@ -187,9 +215,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(g);
   res.status(200).json({ record: g })
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+    res.status(400).json({ error: 'Missing fields' });
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: uuidv4(),
     voter: payload && payload.voter,
     choice: payload && payload.choice,
@@ -211,7 +248,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Check condition
 if ( {) {
   $2
@@ -271,6 +311,7 @@ if ( {) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 
@@ -284,11 +325,17 @@ if ( {) {
 }
     res.status(400).json({ error: 'Missing fields' });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

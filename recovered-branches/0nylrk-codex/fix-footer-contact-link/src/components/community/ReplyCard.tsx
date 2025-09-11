@@ -8,15 +8,22 @@ import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface ReplyCardProps {;
   reply: ForumReply,;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+interface ReplyCardProps {;
+  reply: ForumReply,;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
@@ -42,11 +49,16 @@ export const ReplyCard = ({
 import { ForumReply } from "@/types/community",
 import { cn } from "@/lib/utils",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -54,6 +66,7 @@ interface ReplyCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
 
 export const ReplyCard = ({ 
   reply,
@@ -62,20 +75,26 @@ export const ReplyCard = ({
   canMarkAnswer = false,
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const ReplyCard = ({ ;
   reply;
 export const ReplyCard = ({ 
   reply,
   onMarkAnswer, 
   canMarkAnswer = false,
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -89,12 +108,17 @@ export const ReplyCard = ({ ;
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20"
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -110,9 +134,12 @@ export const ReplyCard = ({ ;
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -133,6 +160,7 @@ export const ReplyCard = ({;
   onMarkAnswer,;
   canMarkAnswer = false,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   className;
 }: ReplyCardProps) => {;
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),;
@@ -147,6 +175,8 @@ export const ReplyCard = ({;
           <AvatarImage src={reply.authorAvatar} />;
           <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   className;
 }: ReplyCardProps) => {;
@@ -163,11 +193,15 @@ export const ReplyCard = ({;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} />;
           <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {reply.authorName}
             </span>;
@@ -184,6 +218,27 @@ export const ReplyCard = ({;
             )}
           </div>
           <div className="text-xs text-muted-foreground">
+=======
+              {reply && reply.authorName}
+            </span>;
+            {reply && reply.authorRole && (;
+              <Badge variant="outline" className="ml-2 text-xs">;
+
+
+
+                {reply.authorRole}
+              </Badge>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            )}
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
+            )}
+          </div>;
+          <div className="text-xs text-muted-foreground">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {timeAgo}
           </div>
         </div>
@@ -208,6 +263,7 @@ export const ReplyCard = ({;
             Mark as Answer
           </Button>
         )}
+<<<<<<< HEAD
 =======
               {reply && reply.authorName}
             </span>;
@@ -257,25 +313,34 @@ export const ReplyCard = ({;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardFooter>
     </Card>
   )
 }
 export default ReplyCard;
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardFooter>;
     </Card>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ReplyCard;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 export default ReplyCard;
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -482,3 +547,5 @@ export default ReplyCard;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 setIsMobile (isMobileDevice);
 
  setIsMobile (isMobileDevice);
 
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -31,9 +35,13 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   touchMoveRef.current = {
 });
 const handleTouchEnd = (e: TouchEvent) =>: any {
@@ -43,9 +51,13 @@ if ( {) {
 }
   touchStartRef.current = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 window && window.addEventListener ('orientationchange', checkOrientation);
 window && window.addEventListener ('resize', checkOrientation);
 const handleTouchStart = (e: TouchEvent) => {;
@@ -65,17 +77,25 @@ touchMoveRef && touchMoveRef.current = null ;
   font && font.setAttribute ('crossoriginanonymous') ;
 }) ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }, []);
 const longPressTimer = setTimeout ( () => {;
   const gesture: TouchGesture = {;
   let animationFrameId: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 touchMoveRef.current = null;
 });
 //Optimize fonts for high DPI fonts.for_each (font => {
@@ -91,16 +111,22 @@ if ( {) {
 }
   fps_ref.current = frameCountRef.current;
 <<<<<<< HEAD
+<<<<<<< HEAD
 frameCountRef.current = 0;
 lastTimeRef.current = current_time;
 //Update performance metrics setPerformanceMetrics (prev => ({
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 frameCountRef.current = 0;
 lastTimeRef.current = current_time;
 //Update performance metrics setPerformanceMetrics (prev => ({
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 if (currentTime - lastTimeRef && lastTimeRef.current >= 1000) {;
   fpsRef && fpsRef.current = frameCountRef && frameCountRef.current;
 frameCountRef && frameCountRef.current = 0;
@@ -111,10 +137,15 @@ lastTimeRef && lastTimeRef.current = currentTime;
 animationFrameId = requestAnimationFrame (measurePerformance);
 //Monitor memory usage ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }, 2000);
 //Monitor battery level if ('getBattery' in navigator) {;
   (navigator as any) .getBattery () .then ( (battery: unknown) => {;
@@ -134,9 +165,13 @@ if ( {) {
   setPerformanceMetrics (prev => ({
   updateBatteryLevel ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 battery && battery.addEventListener ('levelchange', updateBatteryLevel);
 }//Monitor network speed updateNetworkSpeed ();
 connection && connection.addEventListener ('change', updateNetworkSpeed);
@@ -158,16 +193,22 @@ style && style.textContent = `.mobile-optimized * {;
   touch-action: manipulation;
 -webkit-tap-highlight-color: transparent ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }.mobile-optimized button;
 .mobile-optimized a {;
   min-height: 44px;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }.mobile-optimized button;
 .mobile-optimized a {;
   min-height: 44px;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 }//Monitor network speed updateNetworkSpeed ();
 connection.addEventListener ('change', updateNetworkSpeed);
@@ -218,16 +259,22 @@ document.head.append_child (style);
 const enableMobilePerformanceMode = () =>: any {
   //Reduce animations on mobile document.document_element.class_list.add ('mobile - performance - mode');
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Optimize images const images = document.querySelectorAll ('img');
 images.for_each (img => {
   img.loading = 'lazy';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 //Optimize images const images = document.querySelectorAll ('img');
 images.for_each (img => {
   img.loading = 'lazy';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 img.decoding = 'async';
 });
 //Reduce motion for better performance if (') .matches) {) {
@@ -247,9 +294,13 @@ document.head.append_child (style);
 const applyPortraitOptimizations = () =>: any {
   //Portrait - specific optimizations document.document_element.class_list.remove ('landscape - mode');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 const optimizeForMobile = useCallback ( () => {
   // Check condition
@@ -258,9 +309,13 @@ if (return) {
 }
 //Optimize images const images = document.querySelectorAll ('img');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 min-width: 44px ;
 }.mobile-optimized input;
 .mobile-optimized select;
@@ -313,14 +368,32 @@ document && document.addEventListener ('touchmove', () => {;
 useEffect ( () => {;
   optimizeForMobile () ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }, [optimizeForMobile]);
 useEffect ( () => {;
   if (typeof window === 'undefined') return;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+//Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
+window.addEventListener ('resize', handleResize);
+//Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
+const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+  setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
+}
+if (!showPanel |!isVisible) return null;
+}
+const getStatusIcon = (status: string) => {
+  switch (status) {
+}
+children
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
 };
 if (!showPanel || !isVisible) return null;
@@ -332,8 +405,11 @@ const getStatusIcon = (status: string) => {
 
 };
 children 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {
@@ -350,11 +426,14 @@ children
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }, [optimizeForMobile]);
 useEffect ( () => {;
   if (typeof window === 'undefined') return;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
 window && window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
@@ -382,18 +461,25 @@ children ;
 }</style> </>) ;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default MobileOptimizer;
 
 export default MobileOptimizer;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default MobileOptimizer;
 export default MobileOptimizer;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default MobileOptimizer;
 export default MobileOptimizer;
@@ -414,6 +500,16 @@ interface MobileOptimizerProps {
   enableTouchGestures?: boolean;
   enableMobileLayout?: boolean;
   enablePerformanceMode?: boolean
+=======
+=======
+}
+}
+}
+}
+}
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 interface TouchGesture {
   type: 'swipe' | 'pinch' | 'rotate' | 'longPress',
@@ -1024,10 +1120,14 @@ className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm
   )
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default MobileOptimizer;
 images.for_each (img => {
   // Check condition
@@ -1037,6 +1137,7 @@ if (img.loading = 'lazy') {
 // Check condition
 if (img.decoding = 'async') {
   $2
+<<<<<<< HEAD
 window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {
@@ -1051,6 +1152,53 @@ const getStatusIcon = (status: string) =>: any {
   switch (status) {
 }
 children
+=======
+=======
+ setIsMobile (isMobileDevice);
+=======
+setIsMobile (isMobileDevice);
+=======
+ setIsMobile (isMobileDevice);
+setIsTablet (isTabletDevice);
+//Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
+  checkDevice ();
+window.addEventListener ('resize', checkDevice);
+}, [enableMobileLayout, enablePerformanceMode]);
+//Detect orientation changes checkOrientation ();
+window.addEventListener ('orientationchange', checkOrientation);
+window.addEventListener ('resize', checkOrientation);
+const handleTouchStart = (e: TouchEvent) => {
+  if (e.touches.length === 1) {
+  touchStartRef.current = {
+}
+});
+//Optimize fonts fonts.for_each (font => {
+  font.set_attribute ('crossoriginanonymous');
+});
+//Add mobile - specific event listeners document.addEventListener ('touchstart', () => {
+}, {
+  passive: true;
+});
+document.addEventListener ('touchmove', () => {
+}, {
+  passive: true;
+});
+}, [is_mobile]);
+useEffect ( () => {
+  optimizeForMobile ();
+}, [optimizeForMobile]);
+useEffect ( () => {
+  // Check condition
+if (return) {
+  $2
+}
+//Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
+window.addEventListener ('resize', handleResize);
+//Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
+const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+children
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
 };
 if (!showPanel || !isVisible) return null;
@@ -1079,6 +1227,7 @@ children
 export default MobileOptimizer;
 export default MobileOptimizer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 }
@@ -1093,3 +1242,7 @@ export default MobileOptimizer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

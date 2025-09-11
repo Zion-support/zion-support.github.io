@@ -14,7 +14,10 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {cleanupAuthState} from "@/utils/authUtils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Form validation schema;
 const updatePasswordSchema = z;
   .object({;
@@ -31,13 +34,17 @@ type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useNavigate, useLocation } from "react-router-dom",
@@ -73,11 +80,16 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { cleanupAuthState } from "@/utils/authUtils",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -88,8 +100,11 @@ const updatePasswordSchema = z
       .max(64, "Password must be less than 64 characters"),
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     message: "Passwords do not match"
     path: ["confirmPassword"]})
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
@@ -100,14 +115,20 @@ export default function UpdatePassword() {
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function UpdatePassword() {;
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
@@ -123,10 +144,13 @@ export default function UpdatePassword() {
   const navigate = useNavigate(),
   const location = useLocation(),
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
@@ -136,6 +160,9 @@ export default function UpdatePassword() {
   useEffect(() => {
     // Extract access token from URL hash
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const hashParams = new URLSearchParams(location.hash.substring(1));
     const token = hashParams.get("access_token");
     const hashParams = new URLSearchParams(location.hash.substring(1)),
@@ -148,6 +175,7 @@ export default function UpdatePassword() {
     }
     // Clean up auth state to prevent issues
     cleanupAuthState()
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -224,31 +252,50 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }, [location]);
+  }, [location]),
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
       setError("No access token found. Please request a new password reset link.")
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Initialize react-hook-form;
   const form = useForm<UpdatePasswordFormValues>({;
     resolver: zodResolver(updatePasswordSchema),;
     defaultValues: {;
       password: "",;
       confirmPassword: ""}}),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));
     const token = hashParams && hashParams.get("access_token");
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (token) {;
       setAccessToken(token);
     } else {;
       setError("No access token found. Please request a new password reset link.");
     }
+<<<<<<< HEAD
     // Clean up auth state to prevent issues;
     cleanupAuthState();
   }, [location]);
@@ -341,6 +388,23 @@ export default function UpdatePassword() {;
     setIsLoading(true),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    // Clean up auth state to prevent issues;
+    cleanupAuthState();
+  }, [location]);
+
+  // Form submission handler;
+  const onSubmit = async (data: UpdatePasswordFormValues) => {;
+    if (!accessToken) {;
+      setError("No access token found. Please request a new password reset link."),;
+      return;
+
+    }
+    setIsLoading(true);
+
+    setIsLoading(true),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
@@ -351,19 +415,26 @@ export default function UpdatePassword() {;
         password: data.password})
       if (error) {
         toast({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title: "Password update failed"
           description: error.message
           variant: "destructive"})
         setError(error.message);
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
         setError(error.message),
+<<<<<<< HEAD
 <<<<<<< HEAD
         return
       }
@@ -372,29 +443,42 @@ export default function UpdatePassword() {;
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return
       }
       // Show success message and clean up auth state
       setSuccess(true);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Password updated successfully"
         description: "You can now log in with your new password."})
       // Clean auth state and redirect after a delay
 <<<<<<< HEAD
+<<<<<<< HEAD
       cleanupAuthState(),
 =======
       cleanupAuthState();
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      cleanupAuthState();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setTimeout(() => {
         navigate("/login")
       }, 3000)
     } catch (error: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Password update error:", error),
 =======
       console.error("Password update error:", error);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console.error("Password update error:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({
         title: "Password update failed"
         description: error.message |"An unexpected error occurred"
@@ -403,10 +487,14 @@ export default function UpdatePassword() {;
     } finally {
       setIsLoading(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   }
   },
 
+<<<<<<< HEAD
   return (
     <>
       <Header />
@@ -554,6 +642,8 @@ export default function UpdatePassword() {;
       cleanupAuthState(),;
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
@@ -581,11 +671,15 @@ export default function UpdatePassword() {;
 
       // Clean auth state and redirect after a delay;
       cleanupAuthState();
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setTimeout(() => {;
         navigate("/login");
       }, 3000);
     } catch (error: any) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Password update error:", error),;
       toast({;
@@ -599,6 +693,8 @@ export default function UpdatePassword() {;
   };
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       console && console.error("Password update error:", error);
       toast({;
         title: "Password update failed",;
@@ -619,7 +715,10 @@ export default function UpdatePassword() {;
 
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <Header />;
       <div className="flex min-h-screen bg-zion-blue">;
@@ -634,14 +733,19 @@ export default function UpdatePassword() {;
               </p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
                   <p className="text-sm">{error}</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button;
                     className="mt-3 text-xs";
@@ -654,13 +758,25 @@ export default function UpdatePassword() {;
               )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <Button
                     className="mt-3 text-xs"
                     variant="outline"
+<<<<<<< HEAD
                   <Button ;
                     className="mt-3 text-xs";
                     variant="outline";
+=======
+=======
+
+                  <Button 
+                    className="mt-3 text-xs"
+                    variant="outline"
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onClick={() => navigate('/forgot-password')}
                   >;
                     Request new reset link;
@@ -670,11 +786,17 @@ export default function UpdatePassword() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -692,11 +814,16 @@ export default function UpdatePassword() {;
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {success ? (;
                 <div className="text-center py-8">;
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
@@ -710,16 +837,27 @@ export default function UpdatePassword() {;
                     Redirecting you to login...;
                   </p>;
                 </div>;
+<<<<<<< HEAD
               ) :(;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
                       control={form.control}
                       name="password";
+=======
+              ) : (;
+                <Form {...form}>;
+                  <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                    <FormField
+                      control={form && form.control}
+                      name="password"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>;
                           <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <FormField
                       control={form.control}
@@ -730,14 +868,19 @@ export default function UpdatePassword() {;
                           <FormControl>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               placeholder="••••••••"
+<<<<<<< HEAD
                             <Input;
                               type="password";
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
                               placeholder="••••••••";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               disabled={isLoading}
                               {...field}
                             />;
@@ -745,6 +888,7 @@ export default function UpdatePassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
+<<<<<<< HEAD
                     />;
 ;
                     <FormField;
@@ -806,6 +950,10 @@ export default function UpdatePassword() {;
                     </Button>
                     <div className="text-center">
 =======
+=======
+
+                    />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     <FormField
@@ -838,11 +986,15 @@ export default function UpdatePassword() {;
 
                     <div className="text-center">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Button
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         type="button"
                       >
@@ -874,6 +1026,9 @@ export default function UpdatePassword() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -1018,6 +1173,7 @@ if ( {) {
                         variant="link";
                         className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light p - 0";
                         on_click={() => navigate ("/login")}
+<<<<<<< HEAD
 ;
                     <Button;
                       type="submit";
@@ -1032,6 +1188,9 @@ if ( {) {
                         variant="link";
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0";
                         onClick={() => navigate("/login")}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         type="button";
                       >;
                         Back to login;
@@ -1039,6 +1198,7 @@ if ( {) {
                     </div>;
                   </form>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -1046,6 +1206,12 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       name="confirmPassword";
                       render={({ field }) => (;
                         <FormItem>;
@@ -1065,26 +1231,36 @@ if ( {) {
                 </Form>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </div>;
         <div className="hidden lg: block relative w-0 flex-1">;
+<<<<<<< HEAD
                 </Form>;
               )}
             </div>;
           </div>;
         </div>;
         <div className="hidden lg:block relative w-0 flex-1">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
             <div className="flex flex-col justify-center items-center h-full px-8">;
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
                 <p className="text-lg text-white/80">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
                 </Form>)}
             </div>;
@@ -1097,7 +1273,10 @@ if ( {) {
                 <h3 className="text - 3xl font - bold text - white mb - 4">Password Recovery</h3>;
                 <p className="text - lg text - white / 80">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -1110,6 +1289,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
     </>);
@@ -1172,3 +1352,8 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

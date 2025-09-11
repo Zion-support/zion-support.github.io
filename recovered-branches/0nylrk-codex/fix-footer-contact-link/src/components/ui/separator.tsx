@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 import {cn} from '@/lib/utils';
@@ -15,11 +16,21 @@ import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import { cn } from "@/lib/utils"
 
 =======
+=======
+
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+=======
+=======
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Separator = React.forwardRef<
@@ -131,12 +142,33 @@ const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 >(
+=======
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+></typeof>(
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   (
     { className, orientation = 'horizontal', decorative = true, ...props }
     { className, orientation = "horizontal", decorative = true, ...props },
     ref
   ) => (
     <SeparatorPrimitive.Root
+<<<<<<< HEAD
+=======
+=======
+
+const Separator = React && React.forwardRef<;
+  React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
+></typeof>(;
+  (;
+    { className, orientation = 'horizontal', decorative = true, ...props },;
+    ref;
+  ) => (;
+    <SeparatorPrimitive&& SeparatorPrimitive.Root
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ref={ref}
       decorative={decorative}
       orientation={orientation}
@@ -148,6 +180,7 @@ const Separator = React.forwardRef<
         className
       )}
       {...props}
+<<<<<<< HEAD
     />
   )
 );
@@ -162,3 +195,22 @@ export { Separator }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    />;
+  );
+);
+
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
+=======
+
+export { Separator }
+;
+
+=======
+
+
+export { Separator };
+export { Separator }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

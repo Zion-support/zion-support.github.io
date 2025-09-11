@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
@@ -14,6 +15,10 @@ import type { QuoteRequest } from "@/types/quotes",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -22,6 +27,7 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -57,17 +63,26 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     // Format quote data for CSV;
     const rows = quotes.map (quote => [;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
     const headers = [
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
       'StatusCreated Date'
     ];
+<<<<<<< HEAD
     // Format quote data for CSV
     const rows = quotes.map(quote => [
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+    // Format quote data for CSV;
+    const rows = quotes.map (quote => [;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       quote.id;
       quote.talent_name |'Unknown';
       quote.requester_name;
@@ -75,10 +90,15 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       quote.project_name;
       quote.project_summary;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Format quote data for CSV;
     const rows = quotes && quotes.map(quote => [;
       quote && quote.id;
@@ -93,14 +113,19 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
           : quote && quote.budget_min ;
             ? `$${quote && quote.budget_min}` ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             : 'Not specified');
       quote && quote.timeline;
       quote && quote.status;
       new Date(quote && quote.created_at).toLocaleDateString();
     ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
       quote.budget_display |
         (quote.budget_min && quote.budget_max
@@ -112,11 +137,14 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       quote.status;
       new Date(quote.created_at).toLocaleDateString()
     ]);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Create CSV content
     const csvContent = [
       headers.join();
       ...rows.map(row =>
         row.map(cell =>
+<<<<<<< HEAD
 =======
 
 
@@ -126,6 +154,8 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       'StatusCreated Date'
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ],
     
     // Format quote data for CSV
@@ -153,18 +183,24 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       ...rows.map(row => 
         row.map(cell => 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
       )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ].join('\n');
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
@@ -173,9 +209,12 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     link.setAttribute('href', url);
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ].join('\n'),
     
     // Create download link
@@ -186,6 +225,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),
     document.body.appendChild(link),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Download file and clean up
     link.click(),
@@ -200,12 +240,15 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Download file and clean up
     link.click();
     setTimeout(() => {
       document.body.removeChild(link);
       URL.revokeObjectURL(url)
     }, 100)
+<<<<<<< HEAD
 
 
     // Create CSV content;
@@ -246,11 +289,18 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  return (
+    <Button
+      variant="outline"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   
   return (
     <Button 
       variant="outline" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button",;
 import { Download } from "lucide-react",;
@@ -316,12 +366,18 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       variant="outline" 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     >;
 
       <Download size={16} />;
@@ -332,17 +388,25 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
 
 
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       quote.budget_display ||;
         (quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;
           : quote.budget_min;
             ? `$${quote.budget_min}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
       on_click={handle_export}
       className="flex items - center gap - 2";
@@ -458,6 +522,8 @@ new Date (quote.created at) .toLocaleDateString () ]);
   );
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             : 'Not specified');
       quote.timeline;
       quote.status;
@@ -504,4 +570,7 @@ new Date (quote.created at) .toLocaleDateString () ]);
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

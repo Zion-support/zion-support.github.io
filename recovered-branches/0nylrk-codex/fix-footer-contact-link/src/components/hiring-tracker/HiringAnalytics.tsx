@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,6 +10,8 @@ interface HiringAnalyticsProps {
 }
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -18,11 +21,15 @@ interface HiringAnalyticsProps {
   job_id?: string;
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface HiringAnalyticsProps {
   jobId?: string
@@ -114,6 +121,8 @@ interface HiringAnalyticsProps {;
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface HiringAnalyticsProps {;
   jobId?: string;
@@ -121,7 +130,10 @@ interface HiringAnalyticsProps {;
 
 export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId);
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [analyticsData, setAnalyticsData] = useState<{;
     statusDistribution: any[],;
     timeToHire: number,;
@@ -133,10 +145,13 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
     conversionRate: 0,;
     funnelData: []}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
   useEffect(() => {;
     if (applications && applications.length > 0) {;
       // Calculate status distribution;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   useEffect(() => {;
     if (applications && applications.length > 0) {;
@@ -181,11 +196,15 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
         statusDistribution;
         timeToHire: avgTimeToHire,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         conversionRate;
         funnelData});
     }
   }, [applications]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
@@ -277,6 +296,8 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (isLoading) {;
@@ -304,7 +325,10 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   
   if (!applications || applications.length === 0) {
@@ -320,6 +344,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
@@ -332,14 +357,21 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
   ;
   return (;
 =======
+=======
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}
       <Card>;
@@ -349,6 +381,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         <CardContent className="h-64">;
           <ResponsiveContainer width="100%" height="100%">;
             <PieChart>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
@@ -371,6 +404,10 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
               <Pie
                 data={analyticsData && analyticsData.statusDistribution}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <Pie
+                data={analyticsData && analyticsData.statusDistribution}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 cx="50%"
                 cy="50%"
                 labelLine={false}
@@ -378,6 +415,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
                 fill="#8884d8"
                 dataKey="count"
                 label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Pie;
                 data={analyticsData.statusDistribution}
@@ -394,13 +432,24 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
                 {analyticsData.statusDistribution.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />;
                 ))}
+=======
+              >;
+                {analyticsData && analyticsData.statusDistribution.map((entry, index) => (;
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
+                ))}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Pie>;
               <Tooltip />;
             </PieChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Time to Hire */}
       <Card>;
         <CardHeader>;
@@ -408,14 +457,22 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         </CardHeader>;
         <CardContent className="flex flex-col items-center justify-center h-64">;
           <div className="text-5xl font-bold text-primary">;
+<<<<<<< HEAD
             {analyticsData.timeToHire || "N/A"}
+=======
+            {analyticsData && analyticsData.timeToHire || "N/A"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           <div className="text-sm text-muted-foreground mt-2">;
             Average days from application to hire;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Conversion Rate */}
       <Card>;
         <CardHeader>;
@@ -423,14 +480,23 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         </CardHeader>;
         <CardContent className="flex flex-col items-center justify-center h-64">;
           <div className="text-5xl font-bold text-primary">;
+<<<<<<< HEAD
             {analyticsData.conversionRate}%;
+=======
+            {analyticsData && analyticsData.conversionRate}%;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
           <div className="text-sm text-muted-foreground mt-2">;
             Applications to hired ratio;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
       ;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Hiring Funnel */}
       <Card className="lg:col-span-3">;
         <CardHeader>;
@@ -438,14 +504,21 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         </CardHeader>;
         <CardContent className="h-80">;
           <ResponsiveContainer width="100%" height="100%">;
+<<<<<<< HEAD
             <BarChart;
               data={analyticsData.funnelData}
               layout="vertical";
             >;
+=======
+            <BarChart
+              data={analyticsData && analyticsData.funnelData}
+              layout="vertical">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <XAxis type="number" />;
               <YAxis dataKey="name" type="category" width={100} />;
               <Tooltip />;
               <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
+<<<<<<< HEAD
 export /**
  * HiringAnalytics - Function description
  */
@@ -667,6 +740,10 @@ if ( {) {
               <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>
                 {analyticsData.funnelData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+=======
+                {analyticsData && analyticsData.funnelData.map((entry, index) => (;
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))}
               </Bar>
             </BarChart>
@@ -676,16 +753,20 @@ if ( {) {
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   ),; interface HiringAnalyticsProps {
@@ -735,12 +816,17 @@ if (applications && applications.length > 0) {
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>);
 }
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

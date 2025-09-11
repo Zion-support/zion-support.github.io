@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
@@ -7,15 +8,21 @@ import { BadgeDollarSign } from 'lucide-react';
 export default function WalletPage() {
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { wallet, transactions, loading } = useWallet();
 import { useWallet } from '@/hooks/useWallet',
@@ -44,6 +51,10 @@ export default function WalletPage() {;
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="container max-w-4xl py-10">;
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;
         <BadgeDollarSign className="h-6 w-6" /> Wallet;
@@ -58,6 +69,7 @@ export default function WalletPage() {;
         <CardContent>;
           {loading ? (;
             <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ) :(;
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
@@ -81,6 +93,11 @@ export default function WalletPage() {;
           ) : (
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>
           )}
+=======
+          ) : (;
+            <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
+          )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </CardContent>
       </Card>
       <Tabs defaultValue="earnings">
@@ -124,6 +141,7 @@ export default function WalletPage() {;
       </div>
     </div>
   )
+<<<<<<< HEAD
 =======
           ) : (;
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
@@ -229,3 +247,8 @@ export default function WalletPage() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

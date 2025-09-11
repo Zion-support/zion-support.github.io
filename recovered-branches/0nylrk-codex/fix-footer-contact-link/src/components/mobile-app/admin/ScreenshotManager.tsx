@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -71,6 +72,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   },
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -91,16 +94,22 @@ type Screenshot = {
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     if (availableSlots <= 0) {
@@ -143,14 +152,18 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   }
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
     if (availableSlots <= 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return
@@ -269,11 +282,16 @@ type Screenshot = {
   
   
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -281,9 +299,13 @@ type Screenshot = {
       </CardHeader>
       <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -293,70 +315,139 @@ import {toast} from "sonner";
 interface ScreenshotManagerProps {;
   platform: AppPlatform;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Screenshot = {;
   id: string,;
   url: string,;
   file: File;
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleFileSelect = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     if (e && e.target.files) {;
       addScreenshots(Array && Array.from(e && e.target.files));
     }
   };
+<<<<<<< HEAD
   const addScreenshots = (files: File[]) => {;
     // Filter for image files only;
     const imageFiles = files && files.filter(file => file && file.type.startsWith('image/'));
+=======
+
+  const addScreenshots = (files: File[]) => {;
+    // Filter for image files only;
+    const imageFiles = files && files.filter(file => file && file.type.startsWith('image/'));
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (imageFiles && imageFiles.length === 0) {;
       toast && toast.error("Please select valid image files"),;
       return;
     }
+<<<<<<< HEAD
     // Limit the number of screenshots;
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots && screenshots.length;
+=======
+
+    // Limit the number of screenshots;
+    const maxScreenshots = platform === "ios" ? 10 : 8;
+    const availableSlots = maxScreenshots - screenshots && screenshots.length;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (availableSlots <= 0) {;
       toast && toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return;
     }
+<<<<<<< HEAD
     const filesToAdd = imageFiles && imageFiles.slice(0, availableSlots);
+=======
+
+    const filesToAdd = imageFiles && imageFiles.slice(0, availableSlots);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const newScreenshots = filesToAdd && filesToAdd.map(file => ({;
       id: Math && Math.random().toString(36).substring(2, 9);
       url: URL && URL.createObjectURL(file),;
       file;
     }));
+<<<<<<< HEAD
     setScreenshots(prev => [...prev, ...newScreenshots]);
+=======
+
+    setScreenshots(prev => [...prev, ...newScreenshots]);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (filesToAdd && filesToAdd.length < imageFiles && imageFiles.length) {;
       toast && toast.warning(`Only added ${filesToAdd && filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
     }
   };
+<<<<<<< HEAD
   const removeScreenshot = (id: string) => {;
     setScreenshots(prev => {;
       const filtered = prev && prev.filter(screenshot => screenshot && screenshot.id !== id);
+=======
+
+  const removeScreenshot = (id: string) => {;
+    setScreenshots(prev => {;
+      const filtered = prev && prev.filter(screenshot => screenshot && screenshot.id !== id);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Revoke object URL to avoid memory leaks;
       const removed = prev && prev.find(screenshot => screenshot && screenshot.id === id),;
       if (removed) {;
         URL && URL.revokeObjectURL(removed && removed.url);
       }
+<<<<<<< HEAD
       return filtered;
     });
   };
+=======
+
+      return filtered;
+    });
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleDragOver = (e: React && React.DragEvent) => {;
     e && e.preventDefault(),;
     setIsDragging(true);
   };
+<<<<<<< HEAD
   const handleDragLeave = () => {;
     setIsDragging(false);
   };
   const handleDrop = (e: React && React.DragEvent) => {;
     e && e.preventDefault();
     setIsDragging(false),;
+=======
+
+  const handleDragLeave = () => {;
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React && React.DragEvent) => {;
+    e && e.preventDefault();
+    setIsDragging(false),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (e && e.dataTransfer.files) {;
       addScreenshots(Array && Array.from(e && e.dataTransfer.files));
     }
   };
+<<<<<<< HEAD
   return (
 
 import React, { useState, useRef } from "react",;
@@ -452,29 +543,41 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
   },;
   ;
   return (;
+=======
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
 
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
+<<<<<<< HEAD
 <<<<<<< HEAD
           onDrop={handleDrop}
         >
@@ -485,6 +588,11 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
           <p className="text-sm mb-2">Drag & drop screenshots here</p>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          onDrop={handleDrop}>;
+          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
+          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <input
             ref={fileInputRef}
             type="file"
@@ -492,6 +600,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div ;
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
@@ -519,17 +628,42 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
           <Button ;
             variant="outline" ;
             onClick={() => fileInputRef.current?.click()}
+=======
+
+          />;
+          <Button
+            variant="outline" 
+            onClick={() => fileInputRef && fileInputRef.current?.click()}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="mt-2";
           >;
             <Plus className="mr-2 h-4 w-4" />;
             Select Files;
           </Button>;
         </div>;
+<<<<<<< HEAD
+=======
+
+        <div className="text-xs text-gray-400 mb-4">;
+          {platform === "ios" ;
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
+          }
+        </div>;
+
+        <div className="grid grid-cols-2 gap-3">;
+          {screenshots && screenshots.map((screenshot) => (;
+            <div key={screenshot && screenshot.id} className="relative group">;
+              <img
+                src={screenshot && screenshot.url}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />;
               <button
                 onClick={() => removeScreenshot(screenshot && screenshot.id)}
+<<<<<<< HEAD
         ;
         <div className="text-xs text-gray-400 mb-4">;
           {platform === "ios" ;
@@ -548,6 +682,8 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
               />;
               <button;
                 onClick={() => removeScreenshot(screenshot.id)}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
               >;
                 <Trash2 className="h-3 w-3" />;
@@ -558,6 +694,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>;
       </CardContent>;
     </Card>;
@@ -566,6 +703,8 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
         </div>;
@@ -578,6 +717,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -811,3 +951,5 @@ return filtered;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase();
 import { authenticateRequest } from '@/utils/auth';
@@ -23,6 +24,8 @@ export default async function handler(
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, candidateProfiles } = req.body |{}
@@ -35,40 +38,58 @@ export default async function handler(
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 <<<<<<< HEAD
+<<<<<<< HEAD
     `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const text = await generateText(
     prompt
     'You are a matching engine. Output strictly valid JSON.'
   );
   return res && res.status(200).json({ matches: text });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { jobDescription, candidateProfiles } = req.body || {};
   if (!jobDescription || !Array.isArray(candidateProfiles)) return res.status(400).json({ error: 'jobDescription and candidateProfiles[] required' });
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const prompt = `Given a job description and candidate profiles, output JSON with topMatches (array of {index, matchScore, rationale}) and gaps for each.\n` +
     `Job Description:\n${jobDescription}\n\n` +
 
     `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const text = await generateText(prompt, 'You are a matching engine. Output strictly valid JSON.');
@@ -76,6 +97,7 @@ export default async function handler(
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { jobDescription, candidateProfiles } = req.body || {};
   if (!jobDescription || !Array.isArray(candidateProfiles)) return res.status(400).json({ error: 'jobDescription and candidateProfiles[] required' });
@@ -88,6 +110,9 @@ export default async function handler(
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -136,6 +161,7 @@ function handler() {
   return res.status (200).json ({ matches: text });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -156,3 +182,15 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return res.status(200).json({ matches: text })
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

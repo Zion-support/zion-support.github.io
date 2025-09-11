@@ -9,6 +9,7 @@ import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   const { projects, isLoading } = useProjects();
@@ -22,6 +23,9 @@ import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { projects, isLoading } = useProjects();
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
@@ -31,6 +35,7 @@ export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
+<<<<<<< HEAD
 =======
 
   const { projects, isLoading } = useProjects();
@@ -41,6 +46,8 @@ export function ActiveProjectsCard() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -48,6 +55,7 @@ export function ActiveProjectsCard() {
       ).slice(0, 3), // Limit to 3 most recent projects
       setActiveProjects(active)
     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -59,12 +67,17 @@ export function ActiveProjectsCard() {
   
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [projects, isLoading]);
 
   }, [projects, isLoading]),
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (isLoading) {
     return (
       <Card>
@@ -80,9 +93,12 @@ export function ActiveProjectsCard() {
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
 import { BriefcaseIcon, Clock } from "lucide-react",;
@@ -95,13 +111,18 @@ export function ActiveProjectsCard() {;
   const { projects, isLoading } = useProjects(),;
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects && projects.filter(p => ;
         ['offer_acceptedin_progress'].includes(p && p.status);
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {;
     if (projects && !isLoading) {;
@@ -109,10 +130,13 @@ export function ActiveProjectsCard() {;
         ['offer_acceptedin_progress'].includes(p.status);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ).slice(0, 3), // Limit to 3 most recent projects;
       setActiveProjects(active);
     }
   }, [projects, isLoading]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isLoading) {;
 
@@ -142,11 +166,16 @@ export function ActiveProjectsCard() {;
     return (;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -160,11 +189,23 @@ export function ActiveProjectsCard() {;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             ))}
           </div>
         </CardContent>
       </Card>
     )
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   
   if (activeProjects.length === 0) {
@@ -224,6 +265,7 @@ export function ActiveProjectsCard() {;
           </Button>
         </CardFooter>
       )}
+<<<<<<< HEAD
 =======
 
 
@@ -437,12 +479,15 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
   activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link to="/projects">View All Projects</Link> </Button> </CardFooter>) 
 }</Card>) 
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </Card>
   )
 }
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -450,3 +495,22 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { useEffect, useState } from './react';
+import { Link } from './react-router-dom';
+import { BriefcaseIcon, Clock } from './lucide-react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { use_projects } from '@/hooks / use_projects';
+import { Project } from '@/types / projects';
+export /**
+ * ActiveProjectsCard - Function description
+ */
+function ActiveProjectsCard() {
+  const { projects, is_loading } = use_projects ();
+  const [active_projects, setActiveProjects] = useState < Project[]>([]);
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -28,6 +29,8 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -48,6 +51,7 @@ import {
   Smartphone
   Zap;
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+<<<<<<< HEAD
 
 =======
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
@@ -67,6 +71,8 @@ import Button from '../components/ui/Button';
 
 import {
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Search,
   TrendingUp,
   CheckCircle,
@@ -77,6 +83,7 @@ import {
   Globe,
   Smartphone,;
   Zap,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {;
@@ -89,11 +96,18 @@ export default function SEOAnalyzerToolPage() {
 
 export default function SEOAnalyzerToolPage() {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export default function SEOAnalyzerToolPage() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const features = [
     {
       icon: <Search className='w-8 h-8 text-white' />
@@ -162,6 +176,7 @@ export default function SEOAnalyzerToolPage() {;
       category: 'Local SEO'
       factors: [
         'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -171,12 +186,65 @@ export default function SEOAnalyzerToolPage() {;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ]
       icon: '📍'
       color: 'text-orange-400'
     }
+<<<<<<< HEAD
 features: [;
 =======
+=======
+    {
+      category: 'Technical SEO'
+      factors: [
+        'Page load speed'
+        'Mobile responsiveness'
+        'XML sitemap'
+        'Robots.txt configuration'
+        'SSL certificate'
+        'Core Web Vitals'
+      ]
+      icon: '⚙️'
+      color: 'text-blue-400'
+    }
+      ],
+      icon: '📍',
+      color: 'text-orange-400',
+
+    },
+    {
+      category: 'Content SEO'
+      factors: [
+        'Keyword density'
+        'Content relevance'
+        'Readability scores'
+        'Content freshness'
+        'Multimedia optimization'
+        'Schema markup'
+      ]
+      icon: '📊'
+      color: 'text-purple-400'
+    }
+    {
+      category: 'Local SEO'
+      factors: [
+        'Google My Business'
+        'Local citations'
+        'Review management'
+        'Local keyword targeting'
+        'Location-based content'
+        'Local link building'
+      ]
+      icon: '📍'
+      color: 'text-orange-400'
+    },  ];      color: 'text-orange-400'
+    }
+  ];
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const features = [;
     {;
       icon: <Search className='w-8 h-8 text-white' />,;
@@ -302,7 +370,10 @@ features: [;
       period: '/month',
       description: 'Perfect for small businesses and bloggers',
       features: [;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         '10 website analyses / month',
         'Basic SEO metrics',
         'Keyword research (100 keywords)',
@@ -316,19 +387,28 @@ features: [;
       popular: false;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Professional',
       price: '$89',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
+<<<<<<< HEAD
 <<<<<<< HEAD
 features: [;
 =======
 
       features: [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      features: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         '50 website analyses / month',
         'Advanced SEO metrics',
         'Keyword research (500 keywords)',
@@ -344,19 +424,28 @@ features: [;
       popular: true;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: 'Enterprise',
       price: '$249',
       period: '/month',
       description: 'For large organizations and SEO agencies',
+<<<<<<< HEAD
 <<<<<<< HEAD
 features: [;
 =======
 
       features: [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      features: [;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Unlimited analyses',
         'Enterprise SEO metrics',
         'Unlimited keyword research',
@@ -367,6 +456,10 @@ features: [;
         'Custom integrations',
       ],
       popular: false,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       category: 'Technical SEO'
       factors: [
@@ -380,6 +473,10 @@ features: [;
       icon: '⚙️'
       color: 'text-blue-400'
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ],
       icon: '📍',
       color: 'text-orange-400',
@@ -473,10 +570,13 @@ features: [;
   $2
 }        'Unlimited analyses_enterprise SEO metrics_unlimited keyword research_advanced competitive analysis24 / 7 dedicated support_custom reporting_white - label options_custom integrations';
 <<<<<<< HEAD
+<<<<<<< HEAD
       ];
       popular: false;
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       ];
       popular: false;
@@ -489,7 +589,10 @@ features: [;
 
     
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
@@ -502,9 +605,13 @@ features: [;
         mobileScore: 85
         issues: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleAnalyzeSEO = async () => {
     if () return) {
   $2
@@ -521,9 +628,13 @@ features: [;
         mobile_score: 85,
         issues: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             type: 'error'
             message: 'Missing meta description'
@@ -536,9 +647,13 @@ features: [;
           }
           {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             type: 'info',
             message: 'Consider adding more internal links',
             priority: 'low',
@@ -552,9 +667,13 @@ features: [;
         ],
         keywords: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {
             keyword: 'website optimization'
             volume: '12K'
@@ -568,6 +687,61 @@ features: [;
           }
         ]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+  const handleAnalyzeSEO = async () => {;
+    if (!url && url.trim()) return;
+    setIsAnalyzing(true);
+    // Simulate SEO analysis;
+    setTimeout(() => {;
+      setAnalysisResults({;
+        url: url,;
+        overallScore: 78,;
+        onPageScore: 82,;
+        technicalScore: 75,;
+        contentScore: 80,;
+        mobileScore: 85,;
+        issues: [;
+          {;
+            type: 'error',;
+            message: 'Missing meta description',;
+            priority: 'high',;
+          },;
+          {;
+            type: 'warning',;
+            message: 'Title tag too long (65 characters)',;
+            priority: 'medium',;
+          },;
+          {;
+            type: 'info',;
+            message: 'Consider adding more internal links',;
+            priority: 'low',;
+          },;
+        ],;
+        recommendations: [;
+          'Optimize meta descriptions for better click-through rates',;
+          'Improve page load speed by optimizing images',;
+          'Add more relevant internal links to improve site structure',;
+          'Implement schema markup for rich snippets',;
+        ],;
+        keywords: [;
+          {;
+            keyword: 'website optimization',;
+            volume: '12K',;
+            difficulty: 'medium',;
+          },;
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },;
+          {;
+            keyword: 'search engine optimization',;
+            volume: '15K',;
+            difficulty: 'high',;
+          },;
+        ],;
+      });
+      setIsAnalyzing(false);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }, 4000);  };        recommendations: [
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
         ];
@@ -577,9 +751,24 @@ features: [;
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
         ]
       });
+<<<<<<< HEAD
       setIsAnalyzing(false)
     }, 4000)
   }
+=======
+
+      setIsAnalyzing(false);
+    }, 4000);
+  };
+=======
+
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      setIsAnalyzing(false);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }, 4000);  };
 
   };
@@ -661,6 +850,7 @@ features: [;
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -767,11 +957,16 @@ features: [;
 <<<<<<< HEAD
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setIsAnalyzing (false);
     }, 4000);  }        recommendations: [;
           'Optimize meta descriptions for better click - through rates_improve page load speed by optimizing images_add more relevant internal links to improve site structure_implement schema markup for rich snippets';
@@ -788,9 +983,13 @@ features: [;
 ;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>;
       <Head>;
         <title>;
@@ -798,9 +997,13 @@ features: [;
           Optimization;
         </title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -847,14 +1050,19 @@ features: [;
           </h1>;
           <p className='text - responsive - md text - gray - 300 max - w-5xl mx - auto leading - relaxed mb - 12'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Analyze your website's SEO performance with our comprehensive tool.;
             Get detailed insights, keyword research, and optimization;
             recommendations to improve your search rankings and drive more;
             organic traffic.;
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <>
       <Head>
@@ -884,6 +1092,10 @@ features: [;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing || !url && url.trim()}>;
                 {isAnalyzing ? (;
                   <>;
@@ -923,6 +1135,7 @@ features: [;
                 size="lg"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 disabled={isAnalyzing || !url.trim()}
               >
                 {isAnalyzing ? (
@@ -944,6 +1157,10 @@ features: [;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='#pricing'
               variant='outline'
@@ -964,6 +1181,7 @@ features: [;
             <Button
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               href='/contact'
               variant='outline'
               size='lg'
@@ -973,6 +1191,8 @@ features: [;
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
               href="/contact"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -985,12 +1205,16 @@ features: [;
               View Pricing
             </Button>
             <Button
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 href="/contact"
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               Schedule Demo
 =======
@@ -999,6 +1223,11 @@ href="/contact"
               Schedule Demo
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              Schedule Demo
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </div>;
@@ -1107,6 +1336,10 @@ href="/contact"
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Schedule Demo
             </Button>
           </div>
@@ -1121,26 +1354,38 @@ href="/contact"
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Our SEO analyzer provides comprehensive insights and tools to help;
               you dominate search rankings.;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Powerful SEO Features
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.
@@ -1166,37 +1411,77 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
 
+=======
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {feature.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
                     </p>
                   </div>
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* SEO Factors Section */}
+=======
+      {/* SEO Factors Section */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1206,6 +1491,7 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1234,6 +1520,8 @@ href="/contact"
                     <h3 className='text - 2xl font - bold mb - 4 text - white'>;
                       {feature.title}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
           </div>;
         </div>;
@@ -1266,14 +1554,25 @@ href="/contact"
             </p>;
           </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+<<<<<<< HEAD
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
+=======
+=======
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       {feature.description}
 
@@ -1294,9 +1593,13 @@ href="/contact"
 
               Comprehensive SEO Analysis
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We analyze every aspect of your website's SEO to provide actionable insights and recommendations.
@@ -1316,6 +1619,7 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-green"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1339,6 +1643,19 @@ href="/contact"
             ))}
 <<<<<<< HEAD
 =======
+=======
+
+
+                      {factor}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1408,12 +1725,18 @@ href="/contact"
         </div>;
       </section>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1424,26 +1747,38 @@ href="/contact"
               </h2>;
               <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Here's a sample analysis of a website. Get comprehensive;
                 insights for your own website.;
               </p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="section-padding bg-gradient-cursor-accent">
           <div className="container-cursor">
             <div className="text-center mb-12">
               <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
                 SEO Analysis Results
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.
@@ -1493,11 +1828,16 @@ href="/contact"
             </div>;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Overall Score */}
               <Card className="border-gradient-green text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall SEO Score</h3>;
@@ -1512,9 +1852,13 @@ href="/contact"
                       strokeDasharray={`${(analysisResults && analysisResults.overallScore / 100) * 100}, 100`}
                       className="text-green-500"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     />;
                   </svg>;
                 </div>;
@@ -1543,10 +1887,15 @@ href="/contact"
                 </div>;
               </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Issues */}
               <Card className='border-gradient-green'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
@@ -1562,6 +1911,7 @@ href="/contact"
                       ) : (;
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
                       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1588,15 +1938,23 @@ href="/contact"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Issues */}
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
                 <div className="space-y-3">
                   {analysisResults.issues.map((issue, index) => (
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div>
                         <span className='text-gray-300'>{issue.message}</span>
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
+<<<<<<< HEAD
 
                         </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -1614,6 +1972,8 @@ href="/contact"
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Issues */}
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1633,28 +1993,55 @@ href="/contact"
                         <span className='text-gray-300'>{issue.message}</span>
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                      ) : (
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      )}
+                      <div>
+                        <span className="text-gray-300">{issue.message}</span>
+                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
+                      </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>                      </div>
 
                       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  ))}
+                </div>
+              </Card>
+            </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </div>;
               </Card>;
             </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1663,6 +2050,12 @@ href="/contact"
                   ))}
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
@@ -1684,7 +2077,10 @@ href="/contact"
                       <span className="text-gray-300">{rec}</span>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </Card>
             </div>
@@ -1700,6 +2096,7 @@ href="/contact"
                       <span className="text-gray-300">{rec}</span>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   ))}
 =======
 
@@ -1707,6 +2104,11 @@ href="/contact"
                   ))}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  ))}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </Card>;
               <Card className='border-gradient-green'>;
@@ -1715,9 +2117,13 @@ href="/contact"
                 </h3>;
                 <div className='space-y-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div
                       key={index}
                       className='border-b border-gray-700 pb-3 last:border-b-0'>;
@@ -1752,10 +2158,15 @@ href="/contact"
                     </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
                 <div className="space-y-4">
@@ -1773,6 +2184,7 @@ href="/contact"
                           'bg-red-500/20 text-red-400'
                         }`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
 
                           {keyword.difficulty}
@@ -1781,10 +2193,13 @@ href="/contact"
                           {keyword.difficulty}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                         </span>
                       </div>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ))}
       <section id="pricing" className="section-padding bg-gradient-cursor">
@@ -2009,6 +2424,12 @@ href="/contact"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -2025,10 +2446,14 @@ href="/contact"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -2050,9 +2475,13 @@ href="/contact"
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {pricing.map ((plan, index) => (              Simple Pricing;
             </h2>;
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
@@ -2078,9 +2507,13 @@ href="/contact"
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
@@ -2088,17 +2521,25 @@ href="/contact"
                       {plan.price}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {plan.popular && (
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <span className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular
@@ -2106,7 +2547,10 @@ href="/contact"
                   </div>
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
@@ -2114,6 +2558,7 @@ href="/contact"
                 )}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <div className='text-center mb-8'>
@@ -2142,6 +2587,8 @@ href="/contact"
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -2154,6 +2601,11 @@ href="/contact"
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
@@ -2170,18 +2622,26 @@ href="/contact"
                       {feature}
                     </li>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
                     </li>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
 
                 </ul>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {feature}
                     </li>;
@@ -2189,10 +2649,13 @@ href="/contact"
                 </ul>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   href='/contact'
                   size='lg'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2201,12 +2664,18 @@ href="/contact"
 
                       {feature}
 
+=======
+=======
+                      {feature}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {feature}
 
                     </li>
                   ))}
                 </ul>
                 <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
                   href='/contact'
                   size='lg'
@@ -2217,11 +2686,15 @@ href="/contact"
 =======
                   href="/contact"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  href="/contact"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 </Button>
@@ -2231,14 +2704,33 @@ href="/contact"
                 >
                   Get Started
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
 
+<<<<<<< HEAD
 
 
               </Card>
             ))}
+=======
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </div>;
@@ -2249,6 +2741,7 @@ href="/contact"
 
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
@@ -2263,11 +2756,14 @@ href="/contact"
       {/* CTA Section */}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
+<<<<<<< HEAD
 
             Ready to Improve Your SEO Rankings?
 
@@ -2279,12 +2775,17 @@ href="/contact"
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            Ready to Improve Your SEO Rankings?
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
             search rankings and drive more organic traffic.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button
               href='/contact'
@@ -2295,6 +2796,8 @@ href="/contact"
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
@@ -2303,11 +2806,15 @@ href="/contact"
               Start Free Trial;
               <ArrowRight className='w-5 h-5 ml-2' />;
             </Button>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/contact"
               variant="outline"
@@ -2339,6 +2846,10 @@ href="/contact"
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Schedule Demo;
             </Button>;
           </div>;
@@ -2354,4 +2865,7 @@ href="/contact"
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

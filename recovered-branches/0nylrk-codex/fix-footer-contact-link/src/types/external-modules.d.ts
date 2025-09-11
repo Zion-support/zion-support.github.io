@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 declare module "@radix - ui / react - hover - card";
@@ -14,11 +17,15 @@ declare module "@radix - ui / react - toggle";
 declare module '@tanstack / react - query';
 declare module 'react - day - picker' {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export interface DateRange {
     from?: Date;
     to?: Date;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
@@ -42,10 +49,14 @@ declare module 'react-day-picker' {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -62,6 +73,8 @@ declare module "@radix-ui/react-toggle-group";
 declare module "@radix-ui/react-toggle";
 declare module '@tanstack/react-query';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // eslint - disable - next - line @typescript - eslint / no - explicit - any;
   export const DayPicker: any;
 
@@ -69,7 +82,10 @@ declare module '@tanstack/react-query';
 =======
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -81,6 +97,7 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -97,6 +114,14 @@ declare module 'react-day-picker' {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -114,6 +139,7 @@ declare module 'react-day-picker' {;
     from?: Date,;
     to?: Date;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -137,25 +163,36 @@ import {FC, SVGProps} from 'react';
 };
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 declare module 'sonner';
 declare module 'lucide-react' {
 
 import {FC, SVGProps} from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
   export type LucideProps = SVGProps<SVGSVGElement>;
   export type LucideIcon = FC<LucideProps>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   export type LucideProps = SVGProps < SVGSVGElement>;
   export type LucideIcon = FC < LucideProps>;
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export const AlertCircle: LucideIcon;
   export const AlertTriangle: LucideIcon;
   export const Apple: LucideIcon;
@@ -348,38 +385,54 @@ import {FC, SVGProps} from 'react';
   export const XCircle: LucideIcon;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export const Zap: LucideIcon,;
   const icons: { [key: string]: LucideIcon };
 
 
   export default icons
 <<<<<<< HEAD
+<<<<<<< HEAD
   export const Zap: LucideIcon,
   const icons: { [key: string]: LucideIcon }
   export default icons;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
   export const Zap: LucideIcon,
   const icons: { [key: string]: LucideIcon }
   export default icons;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 declare module 'child_process';
 declare module 'date - fns';
 declare module 'jspdf' {
 <<<<<<< HEAD
+<<<<<<< HEAD
   export const jsPDF: any,
   export default jsPDF;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   export const jsPDF: any,
   export default jsPDF;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 declare module '@hookform / resolvers / zod';
 declare module '@radix - ui / react - accordion';
@@ -419,6 +472,7 @@ declare module 'i18next - browser - languagedetector';
 declare module 'react - helmet - async';
 declare module 'react - hook - form' {
   import type { ComponentType, ReactElement, ReactNode } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
   export const Zap: LucideIcon
   const icons: { [key: string]: LucideIcon }
@@ -470,12 +524,29 @@ declare module 'i18next-browser-languagedetector';
 declare module 'react-helmet-async';
 declare module 'react-hook-form' {
   import type { ComponentType, ReactElement, ReactNode } from 'react';
+=======
+
+;
+  // Minimal generic typings to satisfy local usage without full type defs;
+  export type FieldValues = Record < string, any>;
+  export type FieldPath < TFieldValues extends FieldValues> =;
+    keyof TFieldValues & string;
+  export type Control < TFieldValues extends FieldValues = FieldValues> = any;
+  export interface UseFormReturn<;
+
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Minimal generic typings to satisfy local usage without full type defs
   export type FieldValues = Record<string, any>
   export type FieldPath<TFieldValues extends FieldValues> =
     keyof TFieldValues & string
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
+<<<<<<< HEAD
   export interface UseFormReturn<
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   export interface UseFormReturn<;
     TFieldValues extends FieldValues = FieldValues;
@@ -486,6 +557,7 @@ declare module 'react-hook-form' {
     formState: any
     [key: string]: any
   }
+<<<<<<< HEAD
   export function useForm<
     TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn<TFieldValues>
@@ -493,6 +565,8 @@ declare module 'react-hook-form' {
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
   export interface ControllerProps<
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   export function useForm<;
     TFieldValues extends FieldValues = FieldValues;
@@ -512,7 +586,10 @@ declare module 'react-hook-form' {
     render: (props: any) => ReactElement
   }
   export const Controller: ComponentType<ControllerProps<any, any>>
+<<<<<<< HEAD
   export interface FormProviderProps<
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   export interface FormProviderProps<;
     TFieldValues extends FieldValues = FieldValues;
@@ -535,7 +612,12 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
+<<<<<<< HEAD
 
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export interface DateRange {
     from?: Date,
     to?: Date
@@ -812,6 +894,7 @@ declare module 'react-hook-form' {;
   export type FieldPath<TFieldValues extends FieldValues> =;
     keyof TFieldValues & string;
   export type Control<TFieldValues extends FieldValues = FieldValues> = any;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -835,6 +918,13 @@ declare module 'react-hook-form' {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  export interface UseFormReturn<;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     TFieldValues extends FieldValues = FieldValues;
   > {
     control: Control < TFieldValues>;
@@ -844,7 +934,10 @@ declare module 'react-hook-form' {;
     [key: string]: any;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -861,7 +954,10 @@ declare module 'react-hook-form' {;
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export function use_form<;
     TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn < TFieldValues>;
@@ -872,9 +968,13 @@ declare module 'react-hook-form' {;
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath < TFieldValues> = FieldPath < TFieldValues>,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   > {
     name: TName;
     control?: Control < TFieldValues>;
@@ -883,37 +983,52 @@ declare module 'react-hook-form' {;
     render: (props: any) => ReactElement;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export const Controller: ComponentType<ControllerProps<any, any>>
 
 
   export interface FormProviderProps<;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode;
     [key: string]: any;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   export const FormProvider: ComponentType < FormProviderProps < any>>;
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn < TFieldValues>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 declare module 'react - i18next';
@@ -1255,6 +1370,8 @@ declare module 'tailwind-merge';
 declare module 'next-themes';
 declare module 'tailwind-merge';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 declare module 'react - i18next';
@@ -1268,4 +1385,7 @@ declare module 'recharts';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

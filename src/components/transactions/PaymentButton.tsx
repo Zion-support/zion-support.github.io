@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -46,10 +47,18 @@ interface PaymentButtonProps {
   className?: string,
   onPaymentInitiated?: () => void,
   redirectUrl?: string
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 redirectUrl?: string
 }
 export function PaymentButton({
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   amount
   serviceId
   providerId
@@ -60,6 +69,29 @@ export function PaymentButton({
   const [isProcessing, setIsProcessing] = useState(false)
   const { isAuthenticated, user } = useAuth()
   const router = useRouter()
+<<<<<<< HEAD
+=======
+
+        description: "Please sign in to make a purchase."}),
+import { use_router } from 'next / router';
+import {logErrorToProduction} from '@/utils / production_logger';
+interface PaymentButtonProps {
+  amount: number,
+  service_id: string,
+  provider_id: string,
+  button_text?: string;
+  class_name?: string;
+  onPaymentInitiated?: () => void;
+  redirect_url?: string;
+}
+export /**
+ * PaymentButton - Function description
+ */
+function PaymentButton() {
+  const [is_processing, setIsProcessing] = useState (false);
+  const { is_authenticated, user } = use_auth ();
+  const router = use_router ();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handlePaymentClick = async () => {
     // Check condition
 if ( {) {
@@ -72,6 +104,7 @@ if ( {) {
       router.push (`/auth / login?return_to=${return_to}`);
       return;
 
+<<<<<<< HEAD
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
@@ -85,6 +118,16 @@ if ( {) {
       setIsProcessing(true)
       if (onPaymentInitiated) {
         onPaymentInitiated()
+=======
+    }
+    try {
+      setIsProcessing (true);
+      // Check condition
+if ( {) {
+  $2
+}
+        onPaymentInitiated ();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
 
 
@@ -100,6 +143,7 @@ if ( {) {
   const { isAuthenticated, user } = useAuth(),
   const router = useRouter(),
   
+<<<<<<< HEAD
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
@@ -215,12 +259,18 @@ if (?.url) {) {
     } catch (error) {
       logErrorToProduction('Payment error:', { data: error })
   
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please sign in to make a purchase."}),
 
+<<<<<<< HEAD
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`)
       router.push(`/auth/login?returnTo=${returnTo}`)
       return;
@@ -282,11 +332,16 @@ redirectUrl?: string
 }
 export function PaymentButton({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
+<<<<<<< HEAD
           amount,
           serviceId,
 <<<<<<< HEAD
@@ -296,6 +351,10 @@ export function PaymentButton({
           serviceId,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
@@ -323,6 +382,7 @@ export function PaymentButton({
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
       }, 1500)
     }
@@ -364,6 +424,33 @@ export function PaymentButton({
         throw new Error("No checkout URL returned");
       }
 ;
+=======
+      }, 1500)
+
+
+;
+      // Call the create-checkout edge function;
+      const { data, error } = await supabase && supabase.functions.invoke("create-checkout", {;
+        body: {;
+          amount;
+          serviceId;
+          providerId,;
+          userId: user?.id,;
+          successUrl: redirectUrl || window && window.location.href,;
+          cancelUrl: window && window.location.href}}),;
+      if (error) {;
+        throw error;
+      }
+
+      // Type assertion needed for mock Supabase client compatibility;
+      if ((data as any)?.url) {;
+        // Open Stripe checkout in a new tab;
+        window && window.open((data as any).url, '_blank');
+      } else {;
+        throw new Error("No checkout URL returned");
+      }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {;
       logErrorToProduction('Payment error:', { data: error }),;
       toast({;
@@ -372,11 +459,16 @@ export function PaymentButton({
         variant: "destructive"});
     } finally {;
       // Reset button state after a short delay;
+<<<<<<< HEAD
       setTimeout(() => {;
+=======
+      setTimeout((,) => {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         setIsProcessing(false);
       }, 1500);
     }
   };
+<<<<<<< HEAD
   return (;
     <Button;
       onClick={handlePaymentClick}
@@ -389,6 +481,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
     >
+=======
+
+  return (
+
+        "relative min-w-[120px]",
+        className
+      )}
+
+
+
+    >
+      {isProcessing ? (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <>
           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
           Processing...
@@ -396,6 +501,20 @@ ursor/fix-website-loading-errors-and-merge-6662
       ) : (
         buttonText
       )}
+<<<<<<< HEAD
+=======
+
+        "relative min-w-[120px]"        className
+      ),}>;
+      {isProcessing ? (;
+        <>;
+          <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+          Processing...;
+        </>;
+      ) : (;
+        buttonText;
+      )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </Button>;
   );
 
@@ -451,6 +570,7 @@ toast ({
   //Reset button state after a short delay set_timeout ( () => {
   setIsProcessing (false);
 }, 1500);
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
     </Button>
@@ -479,3 +599,8 @@ toast ({
 =======
       }, 1500)
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

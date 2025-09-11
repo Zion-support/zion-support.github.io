@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -21,6 +22,8 @@ interface SafeConsole {
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Mock implementation of Slack bot that doesn't require external dependencies;
 // This replaces the original implementation which had dependency issues;
 
@@ -44,7 +47,10 @@ interface SafeConsole {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Declare available globals
 declare const globalThis: {
   console?: SafeConsole;
@@ -63,6 +69,7 @@ class MockApp {
   command(commandName: string, handler: Function) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Define console type to avoid TypeScript errors;
 interface SafeConsole {
   log: (message: string) => void;
@@ -72,11 +79,15 @@ interface SafeConsole {
 =======
     this && this.commandHandlers[commandName] = handler,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    this && this.commandHandlers[commandName] = handler,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return this
   }
   async start(port?: number): Promise<void> {
     // Safely log without direct console reference
+<<<<<<< HEAD
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
 
@@ -90,6 +101,9 @@ interface SafeConsole {
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined;
 
     if (safeConsole && safeConsole.log) {
@@ -98,7 +112,10 @@ interface SafeConsole {
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Declare available globals;
 declare const globalThis: {;
@@ -114,6 +131,7 @@ declare const globalThis: {;
 class MockApp {;
   private commandHandlers: Record<string Function> = {},;
   command(commandName: string, handler: Function) {;
+<<<<<<< HEAD
     return Promise && Promise.resolve()
 
 // Mock implementation of Slack bot that doesn't require external dependencies;
@@ -151,6 +169,8 @@ class MockApp {;
   private commandHandlers:Record<string Function> = {},;
 ;
   command(commandName:string, handler:Function) {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     this.commandHandlers[commandName] = handler,;
     return this;
   }
@@ -163,15 +183,20 @@ class MockApp {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     return Promise.resolve()
   }
 }
 
 
+<<<<<<< HEAD
   async start(port?:number):Promise<void> {;
     // Safely log without direct console reference;
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console :undefined,;
@@ -199,23 +224,33 @@ async function askZionGPT(prompt:string):Promise<string> {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
   // Safely log without direct console reference
 <<<<<<< HEAD
+<<<<<<< HEAD
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined,
 
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Create a mock app instance;
 const app = new MockApp(),;
@@ -224,6 +259,7 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -283,11 +319,21 @@ case 'suggest-talent': {
   
 }case 'help': default: await respond ('Commands:\n' + '`/zion post-job` - post a new job\n' + '`/zion suggest-talent [skills]` - AI talent suggestions\n' + '`/zion track-project [name]` - project status\n' + '`/zion help` - show this list') 
 }
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
   return `AI response to: ${prompt}`
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
@@ -319,6 +365,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       await respond(answer),;
       break;
     }
+<<<<<<< HEAD
     case 'track-project': {;
       const project = args.join(' '),;
       await respond(`Tracking project **${project}** - feature coming soon.`),;
@@ -438,6 +485,8 @@ export default app;
           '`/zion track-project [name]` - project status\n' +
           '`/zion help` - show this list'
       )
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 });
 // Mock startup with safer environment access
@@ -451,16 +500,25 @@ export default app;
 export default app;
 
 }),;
+<<<<<<< HEAD
 // Mock startup with safer environment access;
 (async () => {;
   // Get PORT from environment or use default;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Mock startup with safer environment access;
+(async () => {
+  // Get PORT from environment or use default;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const env = typeof globalThis !== 'undefined' && globalThis.process ?;
     globalThis.process.env : {},;
   const port = env.PORT ? Number(env.PORT) : 3000,;
   await app.start(port);
 })(),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 // Mock startup with safer environment access export default app;
@@ -473,3 +531,8 @@ export default app;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+export default app;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

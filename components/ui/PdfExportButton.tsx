@@ -3,9 +3,12 @@
     const opt = {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       margin: [10, 10, 10, 10];
       filename: fileName,
       image: { type: 'jpeg', quality: 0.98 },
@@ -13,9 +16,13 @@
 
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 =======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -56,9 +63,14 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
     } as any;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+    html2pdf().set(opt).from(element).save();
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 html2pdf () .set (opt) .from (element) .save () 
 };
 
@@ -70,7 +82,10 @@ export default function PdfExportButton({
       Download as PDF
     </button>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
       >;
       Download as PDF;
@@ -78,15 +93,22 @@ export default function PdfExportButton({
   );
 }  return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <button
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
+<<<<<<< HEAD
 <<<<<<< HEAD
     </button>;
   );
@@ -101,6 +123,11 @@ export default function PdfExportButton({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     html2pdf ().set (opt).from (element).save ();
   }
@@ -132,6 +159,7 @@ export default function PdfExportButton({
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -146,3 +174,14 @@ export default function PdfExportButton({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      Download as PDF
+    </button>
+);
+}
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

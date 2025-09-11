@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { MapPin  } from './lucide-react';
 import { PaymentButton  } from '@/components / transactions / PaymentButton';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
@@ -10,13 +13,18 @@ import { toast  } from '@/hooks / use - toast';
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PaymentSectionProps {
   selected_country: CountryPricing;
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       title: "Processing your request",
@@ -48,6 +56,8 @@ interface PaymentSectionProps {
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handlePaymentInitiated = () => {
     toast({
       title: "Processing your request"
@@ -62,11 +72,14 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       description: "You'll be redirected to our secure payment portal momentarily."})
   },
   
+<<<<<<< HEAD
 =======
       title: "Processing your request",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -75,11 +88,14 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -104,15 +120,22 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
         amount={selectedCountry.pricePerIncident}
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface PaymentSectionProps {
   selected_country: CountryPricing;
@@ -120,6 +143,9 @@ interface PaymentSectionProps {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {MapPin} from "lucide-react";
 import {PaymentButton} from "@/components/transactions/PaymentButton";
 import {CountryPricing} from "@/data/onsiteServicePricing";
@@ -128,9 +154,13 @@ interface PaymentSectionProps {;
   selectedCountry: CountryPricing;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {;
   // Handle successful payment;
   const handlePaymentInitiated = () => {;
@@ -138,6 +168,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
       title: "Processing your request",;
       description: "You'll be redirected to our secure payment portal momentarily."});
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 
@@ -163,14 +194,32 @@ export function PaymentSection({ selectedCountry } PaymentSectionProps) {;
 
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="text-center">;
       <p className="text-zion-slate-light mb-2">Selected Country</p>;
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
         serviceId="it-onsite-service"
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry.country}`}
+=======
+        {selectedCountry && selectedCountry.country}
+      </h4>;
+      <p className="text-2xl font-bold text-zion-cyan mb-6">;
+        ${selectedCountry && selectedCountry.pricePerIncident.toFixed(2)}
+      </p>;
+      <PaymentButton
+        amount={selectedCountry && selectedCountry.pricePerIncident}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        serviceId="it-onsite-service"
+        providerId="zion-tech-group"
+        buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6"
         redirectUrl="/it-onsite-services?success=true"
         onPaymentInitiated={handlePaymentInitiated}
@@ -180,6 +229,7 @@ export function PaymentSection({ selectedCountry } PaymentSectionProps) {;
         billed separately.
       </p>
     </div>
+<<<<<<< HEAD
 
         {selectedCountry.country}
 =======
@@ -206,6 +256,15 @@ export function PaymentSection({ selectedCountry } PaymentSectionProps) {;
   )
 
 }
+=======
+  );
+}
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export /**
  * PaymentSection - Function description
  */
@@ -219,6 +278,7 @@ function PaymentSection() {
     });
   }
 ;
+<<<<<<< HEAD
   return (
     <div className="text - center">;
       <p className="text - zion - slate - light mb - 2">Selected Country</p>;
@@ -267,3 +327,5 @@ function PaymentSection() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

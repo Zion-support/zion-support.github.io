@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -82,6 +83,11 @@ export function MobileConversationList({
 export function MobileConversationList({
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export function MobileConversationList({
+  conversations
+  activeConversation
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   conversations,
   activeConversation,
 
@@ -196,6 +202,7 @@ function MobileConversationList() {
               'px-4',
               activeConversation === conversation && conversation.id && 'bg-primary/5'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             )}
             onClick={() => onSelectConversation(conversation && conversation.id)}          >;
@@ -234,12 +241,15 @@ function MobileConversationList() {
               activeConversation === conversation.id && 'bg-primary/5'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             )}
             onClick={() => onSelectConversation(conversation.id)}          >
             <div className='flex items-center gap-3 py-3 cursor-pointer'>
               <Avatar>
                 <AvatarImage
+<<<<<<< HEAD
 <<<<<<< HEAD
                   src={conversation.avatar}
                   alt={conversation.name}
@@ -274,11 +284,18 @@ function MobileConversationList() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex-1 min-w-0'>
                 <div className='flex justify-between items-baseline'>
                   <h3 className='font-medium truncate'>{conversation.name}</h3>
@@ -291,6 +308,7 @@ function MobileConversationList() {
                       <em>Typing...</em>
                     ) : (
                       conversation.lastMessage
+<<<<<<< HEAD
 =======
 
                   src={conversation && conversation.avatar}
@@ -319,6 +337,8 @@ function MobileConversationList() {
                     ) : (;
                       conversation && conversation.lastMessage;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                   </p>;
 
@@ -352,15 +372,19 @@ function MobileConversationList() {
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </p>
                   {conversation.unreadCount > 0 && (
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
                   </p>
                   {conversation.unreadCount > 0 && (
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -372,18 +396,26 @@ function MobileConversationList() {
 <<<<<<< HEAD
                   </p>
                   {conversation.unreadCount > 0 && (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -395,6 +427,8 @@ function MobileConversationList() {
         ))}
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>
           </div>
         ))}
@@ -406,12 +440,17 @@ function MobileConversationList() {
             <div className="border-t border-border ml-12"></div>
           </div>
         ))}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 ;
@@ -464,3 +503,5 @@ function MobileConversationList() {
 }
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

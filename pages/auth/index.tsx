@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
+<<<<<<< HEAD
 import type { NextPage } from './next';
 import Head from './next / head';
 import { useState  } from './react';
@@ -64,6 +68,8 @@ import { useState  } from './react';
 import EnhancedButton from "../../components / ui / EnhancedButton";
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const steps = ["Account", "Profile", "Preferences", "Preview"];
 
 import type { NextPage } from 'next';
@@ -78,22 +84,31 @@ const Onboarding: NextPage = () => {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 const steps = ['AccountProfilePreferencesPreview'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
   const prev = () => setStep((s) => Math.max(s - 1, 0)),
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 =======
@@ -103,10 +118,16 @@ const Onboarding: NextPage = () => {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">
       <Head>
         <title>Onboarding - Zion</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <h1 className="text-2xl font-semibold">Get Started</h1>
       <div className="flex items-center gap-2 text-sm flex-wrap">
@@ -162,23 +183,33 @@ const Onboarding: NextPage = () => {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <h1 className="text-2xl font-semibold">Get Started</h1>
 
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
+=======
+      </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex gap-2">
         <EnhancedButton variant="secondary" onClick={prev} disabled={step === 0}>Back</EnhancedButton>
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const [step, set_step] = useState (0);
 ;
@@ -225,18 +256,25 @@ const Onboarding: NextPage = () => {
 }
 ;
 export default Onboarding;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 },
 export default Onboarding,
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -249,3 +287,6 @@ export default Onboarding,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

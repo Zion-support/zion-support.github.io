@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const categories: ForumCategoryInfo[] = [
   {
@@ -52,12 +53,15 @@ import { ForumCategoryInfo } from "@/types/community",
   {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 {
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -67,6 +71,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
 
@@ -85,6 +92,9 @@ const categories: ForumCategoryInfo[] = [;
     icon: "Briefcase";
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ]
 const iconMap = {
   Briefcase
@@ -92,6 +102,7 @@ const iconMap = {
   Code
   FileText
   Megaphone
+<<<<<<< HEAD
 }
 export const ForumCategories = () => {
   const { user } = useAuth()
@@ -131,11 +142,16 @@ export const ForumCategories = () =>: any {
           </Link>);
       })}
     </div>);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ],
 
 const iconMap = {
@@ -175,6 +191,7 @@ export const ForumCategories = () => {
           </Link>
         )
 <<<<<<< HEAD
+<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
 export default ForumCategories
 
@@ -188,6 +205,8 @@ export default ForumCategories
 export default ForumCategories
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories;
@@ -199,6 +218,7 @@ import { useAuth } from "@/hooks/useAuth",;
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react';
 import { ForumCategoryInfo } from "@/types/community",;
 const categories: ForumCategoryInfo[] = [;
+<<<<<<< HEAD
   {
     id: "getting - hired",
     name: "Getting Hired",
@@ -277,17 +297,26 @@ const categories: ForumCategoryInfo[] = [;
     icon: "Briefcase";
   },;
 =======
+=======
+  {;
+    id: "getting-hired",;
+    name: "Getting Hired",;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,;
     icon: "Briefcase";
   };
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   {;
@@ -298,6 +327,8 @@ const categories: ForumCategoryInfo[] = [;
     icon: "Code";
   },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   {;
     id: "ai-tools",;
@@ -306,7 +337,10 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "Code";
   };
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
@@ -314,10 +348,14 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "FileText";
 <<<<<<< HEAD
+<<<<<<< HEAD
   },;
 =======
   };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {;
     id: "announcements",;
     name: "Announcements",;
@@ -325,6 +363,7 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ";
@@ -400,6 +439,8 @@ export const ForumCategories = () => {;
           <Link key={category.id} href={`/community/category/${category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 
 const iconMap = {;
@@ -424,22 +465,31 @@ export const ForumCategories = () => {;
         const Icon = iconMap[category && category.icon as keyof typeof iconMap];        return (
           <Link key={category && category.id} href={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <CardHeader className="flex flex-row items-center gap-4">;
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <CardTitle className="text-xl">{category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category.description}</CardDescription>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <CardTitle className="text-xl">{category && category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category && category.description}</CardDescription>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </CardContent>;
             </Card>;
           </Link>;
@@ -449,20 +499,30 @@ export const ForumCategories = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ForumCategories;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default ForumCategories;
 
 export default ForumCategories;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ForumCategories;
 =======
 export default ForumCategories;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default ForumCategories;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

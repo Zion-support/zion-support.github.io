@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { RealMarketService } from './real-market-services';
@@ -55,33 +56,55 @@ export const real2029Q4Additions: RealMarketService[] = [;
       'Auto-tagging and routing to teams',
       'PII redaction and allowlist domains',
       'SLA-aware escalations and summaries',
+=======
+import { RealMarketService } from './real-market-services';
+
+
+      'Intent classification and priority scoring',
+      'One - click reply drafts with tone controls',
+      'Auto - tagging and routing to teams',
+      'PII redaction and allowlist domains',
+      'SLA - aware escalations and summaries',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Analytics: response time, CSAT impact, volume by topic',
     ],
     popular: true,
     icon: '✉️',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / ai - email - triage - copilot',
     market_position:;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Alternative to basic autoresponders; focuses on triage quality and CRM integration.',
     target_audience: 'Support teams, sales ops, founders',
     trial_days: 14,
     setup_time: '1 day',
     category: 'AI & Data',
 <<<<<<< HEAD
+<<<<<<< HEAD
     real_service: true,
     technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     real_service: true,
     technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365'],
     use_cases: ['Customer support triage', 'Lead routing', 'Internal helpdesk'],
     roi: 'Reduce manual triage time by 60–80% and improve first - response SLAs.',
@@ -100,10 +123,14 @@ export const real2029Q4Additions: RealMarketService[] = [;
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Branching logic and progress-save',
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
     tagline:;
@@ -115,6 +142,10 @@ export const real2029Q4Additions: RealMarketService[] = [;
     features: [;
       'Branching logic and progress - save',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
@@ -123,15 +154,24 @@ export const real2029Q4Additions: RealMarketService[] = [;
     ],
     popular: false,
     icon: '📱',
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / mobile - survey - studio',
     market_position:;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     target_audience: 'Growth teams, product managers, agencies',
     trial_days: 7,
     setup_time: 'Same day',
     category: 'Developer Tools',
+<<<<<<< HEAD
       'Responsive renderer with schema-driven forms and analytics.',
     launchDate: '2029-11-05',
     real_service: true,
@@ -232,12 +272,15 @@ export const real2029Q4Additions: RealMarketService[] = [;
     link: 'https://ziontechgroup.com/services/mobile-survey-studio',
     marketPosition:;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / mobile - survey - studio',
     market_position:;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     targetAudience: 'Growth teams, product managers, agencies',
@@ -253,6 +296,9 @@ export const real2029Q4Additions: RealMarketService[] = [;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -267,12 +313,16 @@ export const real2029Q4Additions: RealMarketService[] = [;
     realImplementation: true
     implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Responsive renderer with schema-driven forms and analytics.'
     launchDate: '2029-11-05'
     customers: 60
     rating: 4.6
     reviews: 33
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -301,6 +351,8 @@ export const real2029Q4Additions: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 33,
   },
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
 
       'QR tickets and check-in app',
@@ -359,9 +411,13 @@ export const real2029Q4Additions: RealMarketService[] = [;
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
     tagline:;
@@ -414,9 +470,13 @@ export const real2029Q4Additions: RealMarketService[] = [;
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
     tagline:;
@@ -471,9 +531,13 @@ export const real2029Q4Additions: RealMarketService[] = [;
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
     tagline:;
@@ -629,9 +693,13 @@ export const real2029Q4Additions: RealMarketService[] = [;
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
     tagline:;
@@ -681,6 +749,7 @@ export const real2029Q4Additions: RealMarketService[] = [;
   },
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
       'QR tickets and check-in app',
@@ -1014,6 +1083,9 @@ export const real2029Q4Additions: RealMarketService[] = [;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
     tagline:;
@@ -1024,9 +1096,13 @@ export const real2029Q4Additions: RealMarketService[] = [;
       'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Configurable detectors (SSN, phone, email, credit card)',
       'Context - aware redaction and masking',
       'Audit logs and retention policies',
@@ -1037,9 +1113,13 @@ export const real2029Q4Additions: RealMarketService[] = [;
     popular: false,
     icon: '🧼',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - teal - 600 to - cyan - 700',
     text_color: 'text - teal - 300',
     link: 'https://ziontechgroup.com / services / redaction - compliance - api',
@@ -1053,9 +1133,13 @@ export const real2029Q4Additions: RealMarketService[] = [;
     integrations: ['S3 / R2', 'GCS', 'BigQuery'],
     use_cases: ['Data minimization', 'Compliance workflows', 'PII scrubbing'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     roi: 'Reduce compliance risk and review time.',
     competitors: ['Nightfall', 'Very Good Security'],
     market_size: 'Data security $20B+',
@@ -1071,6 +1155,7 @@ export const real2029Q4Additions: RealMarketService[] = [;
   },
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'kpi-scorecards-studio'
     name: 'KPI Scorecards Studio'
@@ -1116,6 +1201,8 @@ export const real2029Q4Additions: RealMarketService[] = [;
   }
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -1128,7 +1215,10 @@ export const real2029Q4Additions: RealMarketService[] = [;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -1139,7 +1229,10 @@ export const real2029Q4Additions: RealMarketService[] = [;
     popular: false,
     icon: '📊',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 300',
@@ -1152,7 +1245,10 @@ export const real2029Q4Additions: RealMarketService[] = [;
     real_service: true,
     technology: ['Next.js', 'Supabase', 'BigQuery'],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],
     use_cases: ['OKRs / scorecards', 'Exec reporting'],
     roi: 'Improve visibility and accountability.',
@@ -1168,8 +1264,11 @@ export const real2029Q4Additions: RealMarketService[] = [;
     rating: 4 && 4.4,
     reviews: 16,
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },;
 
@@ -1177,7 +1276,10 @@ export const real2029Q4Additions: RealMarketService[] = [;
 ];	{
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/kpi-scorecards-studio',
@@ -1217,10 +1319,14 @@ export const real2029Q4Additions: RealMarketService[] = [
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
@@ -1228,12 +1334,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.';
 		targetAudience: 'Support teams, sales ops, founders';
 		trialDays: 14;
@@ -1254,12 +1366,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-12';
 		customers: 120;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.8,
 =======
 
 		rating: 4 && 4.8,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.8,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 74
 	}
 	{
@@ -1277,12 +1395,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.';
 		targetAudience: 'Growth teams, product managers, agencies';
 		trialDays: 7;
@@ -1303,12 +1427,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-05';
 		customers: 60;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.6,
 =======
 
 		rating: 4 && 4.6,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.6,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 33
 	}
 	{
@@ -1326,14 +1456,20 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-purple-600 to-pink-600';
 		textColor: 'text-purple-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/event-ops-dashboard';
 		marketPosition: 'Focused micro-SaaS alternative to all-in-one event platforms.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/event-ops-dashboard';
 		marketPosition: 'Focused micro-SaaS alternative to all-in-one event platforms.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		targetAudience: 'Marketing teams, conference organizers, communities';
 		trialDays: 14;
 		setupTime: '2 days';
@@ -1353,12 +1489,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-09-23';
 		customers: 48;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.7,
 =======
 
 		rating: 4 && 4.7,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.7,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 29
 	}
 	{
@@ -1376,12 +1518,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.';
 		targetAudience: 'SRE teams, startups, agencies';
 		trialDays: 14;
@@ -1402,12 +1550,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-30';
 		customers: 32;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.5,
 =======
 
 		rating: 4 && 4.5,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.5,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 19
 	}
 	{
@@ -1425,14 +1579,20 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-amber-600 to-orange-700';
 		textColor: 'text-amber-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/seo-content-optimizer-pro';
 		marketPosition: 'Practical mid-market tool between basic plugins and enterprise suites.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/seo-content-optimizer-pro';
 		marketPosition: 'Practical mid-market tool between basic plugins and enterprise suites.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		targetAudience: 'Content teams, agencies, solo founders';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -1452,12 +1612,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-09-10';
 		customers: 95;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.6,
 =======
 
 		rating: 4 && 4.6,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.6,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 54
 	}
 	{
@@ -1475,14 +1641,20 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-slate-700 to-gray-800';
 		textColor: 'text-slate-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/feature-flags-lite';
 		marketPosition: 'Minimal alternative to enterprise flag platforms for SMBs.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/feature-flags-lite';
 		marketPosition: 'Minimal alternative to enterprise flag platforms for SMBs.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		targetAudience: 'Startups, agencies, indie devs';
 		trialDays: 14;
 		setupTime: 'Same day';
@@ -1502,12 +1674,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-02';
 		customers: 70;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.5,
 =======
 
 		rating: 4 && 4.5,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.5,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 21
 	}
 	{
@@ -1525,14 +1703,20 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-sky-600 to-blue-700';
 		textColor: 'text-sky-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/sales-lead-enrichment';
 		marketPosition: 'Affordable enrichment focused on actionable signals.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/sales-lead-enrichment';
 		marketPosition: 'Affordable enrichment focused on actionable signals.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		targetAudience: 'Sales teams, SDRs, growth marketers';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -1552,12 +1736,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-18';
 		customers: 40;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.4,
 =======
 
 		rating: 4 && 4.4,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.4,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 17
 	}
 	{
@@ -1575,14 +1765,20 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-rose-600 to-pink-700';
 		textColor: 'text-rose-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/invoice-ocr-processor';
 		marketPosition: 'Cost-effective alternative with human review for accuracy.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/invoice-ocr-processor';
 		marketPosition: 'Cost-effective alternative with human review for accuracy.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		targetAudience: 'Finance teams, accounting firms, SMBs';
 		trialDays: 7;
 		setupTime: '2 days';
@@ -1602,12 +1798,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-12-01';
 		customers: 27;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.5,
 =======
 
 		rating: 4 && 4.5,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.5,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 14
 	}
 	{
@@ -1625,14 +1827,20 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-fuchsia-600 to-purple-700';
 		textColor: 'text-fuchsia-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/rpa-browser-automation';
 		marketPosition: 'Builder-focused alternative to heavyweight RPA suites.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/rpa-browser-automation';
 		marketPosition: 'Builder-focused alternative to heavyweight RPA suites.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		targetAudience: 'Ops teams, agencies, internal tools';
 		trialDays: 14;
 		setupTime: '3 days';
@@ -1652,12 +1860,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-11-28';
 		customers: 38;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.4,
 =======
 
 		rating: 4 && 4.4,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.4,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 18
 	}
 	{
@@ -1675,14 +1889,20 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-teal-600 to-cyan-700';
 		textColor: 'text-teal-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/redaction-compliance-api';
 		marketPosition: 'Developer-first compliance tooling.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/redaction-compliance-api';
 		marketPosition: 'Developer-first compliance tooling.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		targetAudience: 'Developers, compliance teams';
 		trialDays: 14;
 		setupTime: 'Same day';
@@ -1702,12 +1922,18 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-12-03';
 		customers: 22;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		rating: 4 && 4.3,
 =======
 
 		rating: 4 && 4.3,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+		rating: 4 && 4.3,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		reviews: 12
 	}
 	{
@@ -1725,14 +1951,20 @@ export const real2029Q4Additions: RealMarketService[] = [
 		color: 'from-green-600 to-emerald-700';
 		textColor: 'text-green-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 		link: 'https://ziontechgroup && ziontechgroup.com/services/kpi-scorecards-studio';
 		marketPosition: 'Simple executive dashboards without BI bloat.',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/kpi-scorecards-studio';
 		marketPosition: 'Simple executive dashboards without BI bloat.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		targetAudience: 'Founders, execs, ops';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -1752,11 +1984,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 		launchDate: '2029-10-20';
 		customers: 36;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 		rating: 4 && 4.4,
 
 		reviews: 16
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 	}
@@ -1770,6 +2006,15 @@ export const real2029Q4Additions: RealMarketService[] = [
 ];
 =======
 =======
+=======
+
+=======
+=======
+	}
+];
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
@@ -2177,11 +2422,18 @@ export const real2029Q4Additions: RealMarketService[] = [
   reviews: 16;
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 		rating: 4.4
 		reviews: 16
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { RealMarketService } from './real-market-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -2596,10 +2848,15 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		customers: 36,;
 		rating: 4.4;
 		reviews: 16;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 	}
 ];
+<<<<<<< HEAD
 ;
 
 import { RealMarketService } from './real-market-services',;
@@ -3018,3 +3275,5 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		reviews: 16;
 	}
 ];
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

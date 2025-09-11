@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import { Menu } from 'lucide-react'
 
@@ -38,6 +39,15 @@ export function EnterpriseStickyNav() {
               <Link
                 href='#features'
                 className='text-sm font-medium hover:text-primary'>;
+=======
+import { useState } from 'react';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
+
+  const [ open, setOpen ] = useState(false),;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next / link';
@@ -61,29 +71,57 @@ import Link from 'next / link';
                 href='#features';
                 className='text - sm font - medium hover:text - primary';
               >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Features;
               </Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link;
                 href='#pricing';
                 className='text - sm font - medium hover:text - primary';
               >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Pricing;
               </Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link;
                 href='#testimonials';
                 className='text - sm font - medium hover:text - primary';
               >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Testimonials;
               </Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
 import { useState } from "react";
 import { Menu } from 'lucide-react'
 import Link from "next/link";
+=======
+
+import { useState } from "react";
+import { useState } from 'react'
+import { Menu } from 'lucide-react'
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function EnterpriseStickyNav() {
                 className='text-sm font-medium hover:text-primary'>;
                 Contact Us;
@@ -108,6 +146,7 @@ export function EnterpriseStickyNav() {
 
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             onClick={() => setOpen(!open)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
@@ -170,25 +209,34 @@ export function EnterpriseStickyNav() {
             </li>
             <li>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             aria-label="Toggle navigation";
             aria-expanded={open}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
             </li>
           </ul>
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </nav>;
   );
 };
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </nav>;
   );
 };
     </nav>
+<<<<<<< HEAD
   )
 }
 import { useState } from "react",;
@@ -219,6 +267,10 @@ export function EnterpriseStickyNav() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >;
             <Menu className="h-6 w-6" />;
           </button>;
@@ -235,9 +287,13 @@ export function EnterpriseStickyNav() {;
             <li>;
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link;
                 href='#contact';
                 className='text - sm font - medium hover:text - primary';
@@ -275,15 +331,20 @@ function EnterpriseStickyNav() {
             <li>;
               <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </li>;
           </ul>;
         </div>;
       </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             </li>;
           </ul>;
@@ -316,3 +377,9 @@ return (<nav className="sticky top-16 z-40 bg-card border-b border-border" > <di
     </nav>);
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+    </nav>);
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

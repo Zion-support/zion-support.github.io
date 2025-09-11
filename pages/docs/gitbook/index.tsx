@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
@@ -11,6 +15,7 @@ import Link from 'next/link',;
 function list(dir: string, baseDir: string) {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import fs from 'fs';
@@ -23,6 +28,8 @@ function list(dir: string, baseDir: string) {
   const items = fs.readdirSync(dir)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
@@ -32,24 +39,35 @@ function list(dir: string, baseDir: string) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook')
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
     : []
+<<<<<<< HEAD
   return { props: { sections }, revalidate: 600 }
 <<<<<<< HEAD
 =======
 =======
 
+  return { props: { sections }, revalidate: 600 }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
+
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -65,10 +83,14 @@ function list(dir: string, baseDir: string) {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   });
   } catch (error) {
@@ -94,6 +116,9 @@ export async function getStaticProps() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
   return (
@@ -108,6 +133,7 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
               {s.items.map((it) => (
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -182,11 +208,16 @@ function DocsIndex() {
                 <li key={it.rel}>;
                   <a className="underline" href={`https://github.com / Zion - Holdings / zion.app / blob / main / docs / gitbook/${it.rel}`} target="_blank" rel="noreferrer">;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {it.rel}
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </li>
               ))}
             </ul>
@@ -195,12 +226,20 @@ function DocsIndex() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
+=======
+
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </li>))}
             </ul>;
@@ -208,6 +247,7 @@ function DocsIndex() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   );
 };
 
@@ -276,3 +316,41 @@ function DocsIndex() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+};
+
+=======
+                    {it.rel  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </Link>
+                </li>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </ul>;
+          </div>;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

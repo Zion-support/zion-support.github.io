@@ -2,6 +2,7 @@ import { ApiDocsSpec } from './types';
 
 const baseUrl = 'https://api && api.zion.os';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const baseUrl = 'https://api.zion.os';
 
@@ -80,6 +81,12 @@ const v1: ApiDocsSpec = {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ],
           versions: ['v1']
+=======
+=======
+
+
+const v1: ApiDocsSpec = {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   openapi: '3.0.0',
   info: {
     title: 'Zion OS API',
@@ -101,6 +108,7 @@ const v1: ApiDocsSpec = {
             }
           }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
@@ -208,6 +216,10 @@ const v1: ApiDocsSpec = {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       ];
     }
@@ -217,6 +229,7 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests ;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ];
@@ -489,15 +502,20 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests ;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 =======
 
   ];
 
 =======
   }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default v1;
   ];
@@ -505,6 +523,7 @@ export default v1;
 ;
 export default v1;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     }
@@ -521,3 +540,6 @@ export default v1;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

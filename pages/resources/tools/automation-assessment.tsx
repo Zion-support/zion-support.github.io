@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -11,15 +15,21 @@ export default function ToolPage() {
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function ToolPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<{ [key: string]: number }>({})
@@ -28,6 +38,10 @@ export default function ToolPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const questions = [
     {
       id: 'current-automation'
@@ -42,6 +56,7 @@ export default function ToolPage() {
       options: [
         'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
     {
@@ -65,6 +80,10 @@ export default function ToolPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       options: [
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
@@ -74,13 +93,18 @@ export default function ToolPage() {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -100,11 +124,16 @@ export default function ToolPage() {
       setCurrentQuestion(currentQuestion + 1)
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -152,9 +181,12 @@ function ToolPage() {
       ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -192,6 +224,7 @@ function ToolPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   },
+<<<<<<< HEAD
   const calculate_score = () =>: any {
     const total_score = Object.values (answers).reduce ((sum, score) => sum + score, 0),
     const max_score = questions.length * 5,
@@ -306,12 +339,15 @@ export default function ToolPage(req, res) {
   }
 }
   },
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const resetAssessment = () => {
     setCurrentQuestion(0)
     setAnswers({})
     setShowResults(false)
   }
   },
+<<<<<<< HEAD
 =======
 
 =======
@@ -320,6 +356,8 @@ export default function ToolPage(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (showResults) {
     const result = calculateScore()
     return (
@@ -337,6 +375,11 @@ export default function ToolPage(req, res) {
                 </Link>
               </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
                 <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
@@ -351,6 +394,7 @@ export default function ToolPage(req, res) {
                       <p className="text-white/80 text-sm">Score: {answers[q.id] |0}/5</p>
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
                     </div>
+<<<<<<< HEAD
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -394,11 +438,14 @@ export default function ToolPage(req, res) {
 
 
                     </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className=&quot;text-center mb-12&quot;>
                 <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Assessment Results</h1>
@@ -416,14 +463,19 @@ export default function ToolPage(req, res) {
                       <p className=&quot;text-white/80 text-sm&quot;>Score: {answers[q.id] || 0}/5</p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                   ))}
                 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <button 
 
@@ -431,9 +483,13 @@ export default function ToolPage(req, res) {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
@@ -444,6 +500,7 @@ export default function ToolPage(req, res) {
 
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <button 
@@ -462,6 +519,8 @@ export default function ToolPage(req, res) {
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     Get Personalized Recommendations
                   </Link>
@@ -472,6 +531,7 @@ export default function ToolPage(req, res) {
         </div>
       </>
     )
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -485,6 +545,9 @@ export default function ToolPage(req, res) {
   const currentQ = questions[currentQuestion],
 
 
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const currentQ = questions[currentQuestion]
 
 }
@@ -504,29 +567,41 @@ export default function ToolPage(req, res) {
               </Link>
             </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-white mb-4">Automation Readiness Assessment</h1>
               <p className="text-white/80 text-lg">Evaluate your organization's readiness for AI automation</p>
               <div className="mt-4 text-cyan-400">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Question {currentQuestion + 1} of {questions.length}
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                Question {currentQuestion + 1} of {questions.length}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Question {currentQuestion + 1} of {questions.length  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>
             </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -534,7 +609,10 @@ export default function ToolPage(req, res) {
             </div>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
               <h2 className="text-2xl font-bold mb-6 text-white">{currentQ.question}</h2>
               <div className="space-y-4 mb-8">
@@ -542,6 +620,7 @@ export default function ToolPage(req, res) {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   const currentQ = questions[currentQuestion],
@@ -724,6 +803,8 @@ export default function ToolPage(req, res) {
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       name={currentQ.id}
                       value={index + 1}
                       checked={answers[currentQ.id] === index + 1}
@@ -852,10 +933,17 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
                   </label>
+<<<<<<< HEAD
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -881,6 +969,10 @@ export default function ToolPage(req, res) {
   }
 }
 =======
+=======
+                ))}
+              </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               <div className="flex justify-between">
@@ -889,11 +981,15 @@ export default function ToolPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -914,6 +1010,8 @@ export default function ToolPage(req, res) {
       </div>
     </>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 }
@@ -929,6 +1027,7 @@ export default function ToolPage(req, res) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const result = calculate_score (),
     return (
@@ -980,11 +1079,17 @@ if ( {) {
       </>);
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const current_q = questions[current_question],
   return (
@@ -1038,6 +1143,7 @@ if ( {) {
                   className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed";
                 >;
                   {current_question === questions.length - 1 ? 'Get Results' : 'Next'}
+<<<<<<< HEAD
   );
 };
                 <button
@@ -1058,6 +1164,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </button>;
               </div>;
             </div>;
@@ -1065,10 +1173,13 @@ if ( {) {
         </main>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </>;
   );
@@ -1076,6 +1187,7 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 }
@@ -1084,3 +1196,10 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

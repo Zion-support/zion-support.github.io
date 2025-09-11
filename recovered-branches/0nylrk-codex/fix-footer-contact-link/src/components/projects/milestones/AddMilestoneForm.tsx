@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 
@@ -40,6 +41,11 @@ interface AddMilestoneFormProps {
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 
+=======
+
+import React from 'react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
 import {format} from 'date - fns';
@@ -63,11 +69,15 @@ interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues) => void,;
   isSubmitting: boolean,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -90,6 +100,21 @@ export function AddMilestoneForm({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  projectType?: string;
+}
+
+
+export function AddMilestoneForm(): any ({;
+
+=======
+
+
+
+export function AddMilestoneForm({;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onSubmit;
   isSubmitting;
   onCancel;
@@ -97,14 +122,20 @@ export function AddMilestoneForm({;
   projectStartDate = '';
   projectEndDate = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       return
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   projectType = 'Other'
 }: AddMilestoneFormProps) {
@@ -133,6 +164,9 @@ export function AddMilestoneForm({;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -180,9 +214,13 @@ export function AddMilestoneForm({;
   projectStartDate = '',;
   projectEndDate = null,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
@@ -191,6 +229,7 @@ export function AddMilestoneForm({;
       title: '',;
       description: '',;
       amount: 0}}),;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleSubmit = (values: MilestoneFormValues) => {;
     onSubmit(values),;
@@ -219,6 +258,8 @@ export function AddMilestoneForm({;
       })
     })
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleSubmit = (values: MilestoneFormValues) => {;
     onSubmit(values),;
@@ -237,6 +278,7 @@ export function AddMilestoneForm({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -254,6 +296,27 @@ export function AddMilestoneForm({;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+
+    // If there are multiple milestones, submit them one by one
+    milestones.forEach(milestone => {
+      onSubmit({
+        title: milestone.title
+        description: milestone.description
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+      })
+    })
+  }
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -261,6 +324,7 @@ export function AddMilestoneForm({;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
+<<<<<<< HEAD
 
 
     }
@@ -395,15 +459,23 @@ export function AddMilestoneForm({;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
 
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    <div className="space-y-6">;
+      {/* AI Milestone Generator */}
+      {projectScope && projectStartDate && (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <AIMilestoneGenerator
           scope={projectScope}
           startDate={projectStartDate}
@@ -411,6 +483,7 @@ export function AddMilestoneForm({;
           projectType={projectType}
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         />;
@@ -429,11 +502,21 @@ export function AddMilestoneForm({;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
 =======
 =======
+        />;
+      )}
+
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <FormField
             control={form && form.control}
             name="title"
@@ -441,9 +524,13 @@ export function AddMilestoneForm({;
               <FormItem>;
                 <FormLabel>Title</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {GeneratedMilestone} from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
   title: z.string ().min (1, 'Title is required');
@@ -533,13 +620,18 @@ if ( {) {
               <FormItem>;
                 <FormLabel > Title</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <FormControl>;
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           />;
           <FormField
@@ -565,6 +657,8 @@ if ( {) {
             control={form.control}
             name="description";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
 
@@ -572,16 +666,22 @@ if ( {) {
           <FormField
             control={form && form.control}
             name="description"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Description (optional)</FormLabel>;
                 <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Textarea;
                     placeholder="Describe what needs to be delivered";
                     className="min-h-[100px]";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Textarea
                     placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
@@ -599,11 +699,15 @@ if ( {) {
                     placeholder="Describe what needs to be delivered";
                     className="min - h-[100px]";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <FormField
               control={form && form.control}
@@ -617,6 +721,8 @@ if ( {) {
               control={form.control}
               name="due_date";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />;
 
@@ -625,13 +731,17 @@ if ( {) {
             <FormField
               control={form && form.control}
               name="due_date"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               render={({ field }) => (;
                 <FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
                   <Popover>;
                     <PopoverTrigger asChild>;
                       <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <Button;
                           variant="outline";
@@ -641,13 +751,18 @@ if ( {) {
                             format(field.value, "PPP");
                           ) :(;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Button
                           variant="outline"
                           className="w-full pl-3 text-left font-normal">;
                           {field && field.value ? (;
                             format(field && field.value, "PPP");
                           ) : (;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <span className="text-muted-foreground">;
                               Pick a date;
                             </span>;
@@ -657,6 +772,7 @@ if ( {) {
                       </FormControl>;
                     </PopoverTrigger>;
                     <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
             <FormField
@@ -669,6 +785,8 @@ if ( {) {
                         disabled={(date) => date < new Date()}
                         initialFocus;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Calendar
                         mode="single"
                         selected={field && field.value}
@@ -709,11 +827,15 @@ if ( {) {
                         disabled={(date) => date < new Date ()}
                         initial_focus;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </FormItem>;              )}
             />;
@@ -722,6 +844,8 @@ if ( {) {
               control={form.control}
               name="amount";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
 
@@ -729,13 +853,19 @@ if ( {) {
             <FormField
               control={form && form.control}
               name="amount"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Input
                       type="number"
                       min="0"
@@ -751,20 +881,28 @@ if ( {) {
                 <FormItem>;
                   <FormLabel > Amount ($)</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Input;
                       type="number";
                       min="0";
                       step="0.01";
                       placeholder="0.00";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
         />
       )}
@@ -863,6 +1001,8 @@ if ( {) {
           <div className="flex justify-end space-x-2 pt-4">
             {onCancel && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             />;
           </div>;
@@ -870,11 +1010,15 @@ if ( {) {
           <div className="flex justify-end space-x-2 pt-4">;
             {onCancel && (;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 type="button"
                 variant="outline"
                 onClick={onCancel}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </FormItem>;
               )}
@@ -892,6 +1036,9 @@ if ( {) {
 =======
                 disabled={isSubmitting}>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                disabled={isSubmitting}>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Cancel;
               </Button>;
             )}
@@ -902,13 +1049,19 @@ if ( {) {
                   Saving...;
                 </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ) : (;
                 "Add Milestone";
               )}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </FormItem>)}
             />;
           </div>;
@@ -930,16 +1083,21 @@ if ( {) {
                 </>) : (
                 "Add Milestone")}
 <<<<<<< HEAD
+<<<<<<< HEAD
               ) :(;
                 "Add Milestone";
               )}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </form>;
       </Form>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   ),;}
@@ -994,8 +1152,13 @@ const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </div>);
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

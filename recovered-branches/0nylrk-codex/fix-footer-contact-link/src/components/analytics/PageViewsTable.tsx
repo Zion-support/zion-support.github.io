@@ -11,6 +11,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -28,6 +29,8 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -39,12 +42,16 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
@@ -52,6 +59,9 @@ const timeRangeToInterval = {
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
@@ -136,6 +146,7 @@ export function PageViewsTable() {
             pageViews.map((page, index) => {
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
 
+<<<<<<< HEAD
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0',
               
               return (
@@ -187,6 +198,8 @@ const timeRangeToInterval = {;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
@@ -194,6 +207,7 @@ const timeRangeToInterval = {;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
 
+<<<<<<< HEAD
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -319,6 +333,8 @@ export function PageViewsTable() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           style={{ width: `${percentage}%` }}
                         />;
                       </div>;
@@ -326,6 +342,7 @@ export function PageViewsTable() {;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
               ),;
             });
           ) :(;
@@ -464,19 +481,38 @@ return data || []
 }) ) : (<div className="text-center py-8 text-zion-slate" > No page view data available for this time period </div>) 
 }</div> </CardContent> </Card>) 
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               );
             });
           ) : (;
             <div className="text-center py-8 text-zion-slate">;
               No page view data available for this time period;
             </div>;
+<<<<<<< HEAD
           )}
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

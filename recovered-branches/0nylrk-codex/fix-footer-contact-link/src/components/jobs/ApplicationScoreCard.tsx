@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -21,17 +22,23 @@ import { JobApplication } from "@/types/jobs";
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ApplicationScoreCardProps {
 
   application: JobApplication
 
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
@@ -40,6 +47,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
   const [isScoring, setIsScoring] = useState(false),
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
@@ -48,6 +61,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   const scoredDate = application.scored_at 
     ? new Date(application.scored_at).toLocaleDateString() 
     : null,
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -59,6 +73,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const hasScore = typeof application.match_score === 'number';
   // Format the date when the application was scored
   const scoredDate = application.scored_at
@@ -67,6 +84,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       case "Strongly Recommended": return "bg-green-100 text-green-800",
       case "Recommended for Review":
@@ -97,6 +115,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const checkScore = async () => {
         attempts++;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import {useState} from "react";
 import {Badge} from "@/components/ui/badge";
@@ -134,7 +154,10 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -163,6 +186,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 interface ApplicationScoreCardProps {;
   application:JobApplication,;
@@ -189,10 +213,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case "Low Match":;
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   // Trigger the scoring process;
@@ -205,6 +233,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
     }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -252,14 +284,20 @@ function ApplicationScoreCard() {
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc (
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'trigger_resume_scoring';
         { application_id: application && application.id }
       );
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   // Trigger the scoring process;
   const handleScore = async () => {;
@@ -275,10 +313,14 @@ function ApplicationScoreCard() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       toast.success("Resume scoring has been initiated"),
       
@@ -290,16 +332,22 @@ function ApplicationScoreCard() {
         attempts++,
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           .single();
           .single(),
           
@@ -316,6 +364,7 @@ function ApplicationScoreCard() {
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -371,18 +420,26 @@ function ApplicationScoreCard() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           setIsScoring(false);
           return toast && toast.error("Failed to check scoring status");
+=======
+          setIsScoring(false);
+          toast.info("Scoring is taking longer than expected. Check back later.")
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
 
 
         if (data && data.scored_at) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setIsScoring(false);
           toast && toast.success("Resume scoring completed");
           if (onScoreUpdated) onScoreUpdated(data as JobApplication);
           return;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 
@@ -398,6 +455,8 @@ function ApplicationScoreCard() {
   }
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         if (attempts < maxAttempts) {;
           setTimeout(checkScore, 3000);
@@ -413,7 +472,10 @@ function ApplicationScoreCard() {
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
       ),;
@@ -454,6 +516,7 @@ function ApplicationScoreCard() {
       toast.error(`Failed to score resume: ${error.message}`);
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (attempts < maxAttempts) {;
           setTimeout(checkScore, 3000);
@@ -532,6 +595,9 @@ function ApplicationScoreCard() {
   // Render the score result or button to score;
   return (;
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
@@ -548,11 +614,15 @@ function ApplicationScoreCard() {
 
   // Render the score result or button to score;
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <CardTitle className="text-lg font-medium flex items-center justify-between">;
           Resume Match Score;
+<<<<<<< HEAD
 <<<<<<< HEAD
           </Badge>;
         </CardTitle>;
@@ -564,6 +634,8 @@ function ApplicationScoreCard() {
       </CardHeader>;
       ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
             {hasScore ? "SCORED" : "NOT SCORED"}
 
@@ -571,7 +643,10 @@ function ApplicationScoreCard() {
         </CardTitle>;
       </CardHeader>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <CardContent>;
         {hasScore ? (;
           <div>;
@@ -583,6 +658,7 @@ function ApplicationScoreCard() {
               <div>;
                 <div className="text-sm text-muted-foreground">Match Score</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="font-semibold text-xl">{application.match_score}/100</div>;
               </div>;
             </div>;
@@ -591,6 +667,8 @@ function ApplicationScoreCard() {
             <div className="flex items-start mb-4">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
               </div>;
             </div>;
@@ -598,11 +676,15 @@ function ApplicationScoreCard() {
             {/* Summary */}
             <div className="flex items-start mb-4">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <BarChart2 className="h-5 w-5 text-primary" />;
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Summary</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Suggestion */}
             <div className="flex items-start">;
@@ -615,6 +697,8 @@ function ApplicationScoreCard() {
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="font-medium">{application && application.match_summary}</div>;
               </div>;
             </div>;
@@ -623,11 +707,15 @@ function ApplicationScoreCard() {
             {/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Lightbulb className="h-5 w-5 text-primary" />;
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Suggestion</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Badge className={getSuggestionColor(application.match_suggestion)}>;
                   {application.match_suggestion}
@@ -635,14 +723,21 @@ function ApplicationScoreCard() {
                 <Badge className={getSuggestionColor(application && application.match_suggestion)}>;
                   {application && application.match_suggestion}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <Badge className={getSuggestionColor(application && application.match_suggestion)}>;
+                  {application && application.match_suggestion}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Badge>;
                 {scoredDate && (;
                   <div className="text-xs text-muted-foreground mt-1">;
                     Scored on {scoredDate}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
             </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 )}
 
@@ -650,7 +745,10 @@ function ApplicationScoreCard() {
             </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Breakdown (Collapsible) */}
             {application && application.match_breakdown && (;
               <div className="mt-4 pt-4 border-t">;
@@ -669,6 +767,7 @@ function ApplicationScoreCard() {
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Render the score result or button to score
   return (
@@ -769,11 +868,26 @@ function ApplicationScoreCard() {
                         <p>{application && application.match_breakdown.experience_match && experience_match.analysis}</p>;
                       </div>;
                     )}
+=======
+
+                      </div>;
+=======
+=======
+                      </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    )}
+                      </div>;
+                    )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {application && application.match_breakdown.education_match && (;
                       <div>;
                         <p className="font-medium">Education Match: {application && application.match_breakdown.education_match && education_match.score}/100</p>;
                         <p>{application && application.match_breakdown.education_match && education_match.analysis}</p>;
                       </div>;
+<<<<<<< HEAD
                     )}
                     )}
                     {application.match_breakdown.education_match && (
@@ -781,6 +895,9 @@ function ApplicationScoreCard() {
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                   </div>
                 </details>
@@ -788,15 +905,25 @@ function ApplicationScoreCard() {
                   </div>;
                 </details>;
               </div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
 
                   </div>;
                 </details>;
               </div>;
 
+<<<<<<< HEAD
             )}
 
             )}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         ) : (;
           <div className="text-center py-4">;
@@ -805,6 +932,10 @@ function ApplicationScoreCard() {
             </p>;
             <Button
               onClick={handleScore} 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               disabled={isScoring}
               className="w-full">;
               {isScoring ? (;
@@ -818,6 +949,7 @@ function ApplicationScoreCard() {
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
                   </div>;
                 </details>;
               </div>;
@@ -844,6 +976,8 @@ function ApplicationScoreCard() {
             </Button>
           </div>
         )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardContent>
     </Card>
   )
@@ -852,6 +986,7 @@ function ApplicationScoreCard() {
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
       // Check condition
 if (throw error) {
@@ -1144,3 +1279,8 @@ return
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

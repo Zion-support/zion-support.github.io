@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -34,6 +35,10 @@ import { Search } from "lucide-react",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -48,6 +53,7 @@ const BLOG_POSTS: BlogPost[] = [
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "ai-trends-2025"
     title: "10 Emerging AI Trends to Watch in 2025"
     slug: "ai-trends-2025"
@@ -56,6 +62,8 @@ const BLOG_POSTS: BlogPost[] = [
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
@@ -66,6 +74,7 @@ const BLOG_POSTS: BlogPost[] = [
 <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
 <h2>5. AI for Climate Solutions</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
     author: {
 =======
@@ -74,6 +83,10 @@ const BLOG_POSTS: BlogPost[] = [
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
+    author: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -92,6 +105,7 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
@@ -113,6 +127,9 @@ const BLOG_POSTS: BlogPost[] = [
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -123,17 +140,24 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Consider offering tiered packages that cater to different client needs and budgets. Clearly differentiate what's included in each tier, and consider adding value-based pricing elements that tie your compensation to client results.</p>
 <h2>Leveraging Reviews and Testimonials</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`,
 =======
 <p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "Marcus Johnson"
       title: "Marketing Strategist"
       avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     publishedDate: "Apr 10, 2025";
     readTime: "8 min read"
@@ -147,8 +171,11 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "green-it"
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability."
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     publishedDate: "Apr 10, 2025",
     readTime: "8 min read",
@@ -162,6 +189,7 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "green-it",
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
 <<<<<<< HEAD
+<<<<<<< HEAD
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
 
@@ -170,6 +198,13 @@ const BLOG_POSTS: BlogPost[] = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -180,16 +215,23 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Right-sizing infrastructure and implementing dynamic workload management ensures computing resources are used efficiently. Modern orchestration tools can automatically balance workloads to maximize utilization while powering down unused capacity.</p>
 <h2>Measuring and Reporting Impact</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`,
 =======
 <p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "Sophia Chen"
       title: "Sustainability Engineer"
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     publishedDate: "Apr 5, 2025";
     readTime: "6 min read"
@@ -197,9 +239,12 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     publishedDate: "Apr 5, 2025",
     readTime: "6 min read",
@@ -208,10 +253,13 @@ const BLOG_POSTS: BlogPost[] = [
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "ai-ethics-frameworks"
     title: "Implementing Ethical AI Frameworks in Enterprise Applications"
@@ -228,16 +276,23 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Even highly accurate AI systems require human oversight mechanisms. Implement appropriate appeal processes, confidence thresholds that trigger human review, and ongoing monitoring for performance drift that might introduce new ethical concerns.</p>
 <h2>Continuous Ethical Evaluation</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`,
 =======
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "Dr. James Peterson"
       title: "AI Ethics Officer"
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     publishedDate: "Mar 30, 2025";
     readTime: "7 min read"
@@ -245,9 +300,12 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     publishedDate: "Mar 30, 2025",
     readTime: "7 min read",
@@ -256,10 +314,13 @@ const BLOG_POSTS: BlogPost[] = [
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "ai-talent-acquisition"
     title: "Winning the AI Talent War: Recruitment Strategies for 2025"
@@ -276,16 +337,23 @@ const BLOG_POSTS: BlogPost[] = [
 <p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>
 <h2>Retention Through Growth Paths</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`,
 =======
 <p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "Elena Rodriguez"
       title: "Head of AI Talent"
       avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     publishedDate: "Mar 22, 2025";
     readTime: "9 min read"
@@ -293,9 +361,12 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"];
     featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     publishedDate: "Mar 22, 2025",
     readTime: "9 min read",
@@ -304,10 +375,13 @@ const BLOG_POSTS: BlogPost[] = [
     featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     id: "ai-compute-optimization"
     title: "AI Compute Optimization: Balancing Performance and Cost"
@@ -324,14 +398,19 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
 <h2>Inference Serving Architecture</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`,
 =======
 <p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     author: {
       name: "Michael Wong"
       title: "ML Infrastructure Architect"
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -540,11 +619,18 @@ const BLOG_POSTS: BlogPost[] = [;
     readTime: "6 min read",;
     category: "Infrastructure",;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    publishedDate: "Mar 15, 2025";
+    readTime: "6 min read",;
+    category: "Infrastructure",;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
     featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630";
   }
 ];
+<<<<<<< HEAD
 // Categories for filtering;
 const CATEGORIES = [;
 import { useState } from './react';
@@ -749,6 +835,8 @@ const CATEGORIES = [;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     publishedDate: "Mar 15, 2025",
     readTime: "6 min read",
@@ -759,9 +847,12 @@ const CATEGORIES = [;
 ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -772,6 +863,9 @@ const CATEGORIES = [
   "Recruitment",
   "Infrastructure"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -810,6 +904,7 @@ export default function Blog() {
   
   // Get featured posts
   const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -821,6 +916,9 @@ export default function Blog() {
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <SEO
@@ -838,6 +936,7 @@ export default function Blog() {
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -845,6 +944,8 @@ export default function Blog() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -1035,16 +1136,22 @@ const CATEGORIES = [;
   "Infrastructure";
 ],;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Blog() {;
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default function Blog() {;
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter blog posts based on search and category;
   const filteredPosts = BLOG_POSTS && BLOG_POSTS.filter(post => {;
     const matchesSearch = ;
@@ -1052,12 +1159,15 @@ export default function Blog() {;
       post && post.excerpt.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       post && post.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
 <<<<<<< HEAD
+<<<<<<< HEAD
     const matchesCategory = selectedCategory === "All Categories" || post && post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
   // Get featured posts;
   const featuredPosts = BLOG_POSTS && BLOG_POSTS.filter(post => post && post.isFeatured);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     const matchesCategory = selectedCategory === "All Categories" || post && post.category === selectedCategory;
 
@@ -1067,7 +1177,10 @@ export default function Blog() {;
   // Get featured posts;
   const featuredPosts = BLOG_POSTS && BLOG_POSTS.filter(post => post && post.isFeatured);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <SEO
@@ -1075,6 +1188,7 @@ export default function Blog() {;
         description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." 
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
         canonical="https://app && app.ziontechgroup.com/blog"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from "react",;
@@ -1347,6 +1461,8 @@ export default function Blog() {;
         canonical="https://app.ziontechgroup.com/blog";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;
@@ -1358,32 +1474,44 @@ export default function Blog() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ;
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-16">;
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 <div className="aspect-video overflow-hidden rounded-lg">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <img ;
                     src={featuredPosts[0].featuredImage} ;                    alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <img
                     src={featuredPosts[0].featuredImage} 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   />;
                 </div>;
                 <div className="flex flex-col justify-center">;
@@ -1396,9 +1524,12 @@ export default function Blog() {;
                   <p className="text-zion-slate-light mb-6">;
                     {featuredPosts[0].excerpt}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </p>;
                   <div className="flex items-center mb-6">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   </p>;
                   <div className="flex items-center mb-6">;
@@ -1406,11 +1537,15 @@ export default function Blog() {;
                       src={featuredPosts[0].author && author.avatarUrl} 
                       alt={featuredPosts[0].author && author.name}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="w-10 h-10 rounded-full mr-3"
                     />;
                     <div>;
                       <p className="text-white font-medium">{featuredPosts[0].author && author.name}</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <img ;
                       src={featuredPosts[0].author.avatarUrl} ;                      alt={featuredPosts[0].author.name}
@@ -1429,6 +1564,8 @@ export default function Blog() {;
                   >;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <p className="text-sm text-zion-slate-light">;
                         {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
 
@@ -1522,12 +1659,16 @@ function Blog() {
                   >;
                     <Link to={`/blog/${featured_posts[0].slug}`}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Read Article;
                     </Link>;
                   </Button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>;
           )}
@@ -1537,11 +1678,17 @@ function Blog() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (
@@ -1597,18 +1744,25 @@ function Blog() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Input
                   type="text"
                   placeholder="Search articles..."
                   value={searchQuery}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onChange={(e) => setSearchQuery(e && e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                 />;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Input;
                   type="text";
@@ -1622,16 +1776,22 @@ function Blog() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>;
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
                   <SelectValue placeholder="Select Category" />;
                 </SelectTrigger>;
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       {category}
                     </SelectItem>;
                   ))}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {CATEGORIES && CATEGORIES.map((category) => (;
                     <SelectItem key={category} value={category} className="text-white">;
 
@@ -1639,7 +1799,10 @@ function Blog() {
                     </SelectItem>;
                   ))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>)}
           {/* Filters and Search */}
           <div className="bg - zion - blue - dark rounded - lg p - 6 mb - 8 border border - zion - blue - light">;
@@ -1664,18 +1827,24 @@ function Blog() {
                       {category}
                     </SelectItem>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {CATEGORIES.map((category) => (;
                     <SelectItem key={category} value={category} className="text-white">;                      {category}
                     </SelectItem>;
                   ))}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Blog Posts Grid */}
           {filtered_posts.length > 0 ? (
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
@@ -1695,7 +1864,10 @@ function Blog() {
                     <div className="flex items - center justify - between mb - 3">;
                       <span className="text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {post.category}
                       </span>;
                       <div className="text - xs text - zion - slate - light">;
@@ -1708,17 +1880,25 @@ function Blog() {
                     <p className="text - zion - slate - light mb - 4 line - clamp - 3">;
                       {post.excerpt}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Blog Posts Grid */}
           {filteredPosts && filteredPosts.length > 0 ? (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -1761,16 +1941,22 @@ function Blog() {
                     <Button
                       variant="link" 
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild>;
                       <Link to={`/blog/${post && post.slug}`}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild>;
                       <Link to={`/blog/${post && post.slug}`}>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>;
                     <div className="flex items - center">;
                       <img;
@@ -1786,6 +1972,7 @@ function Blog() {
                       variant="link";
                       className="text - zion - cyan p - 0 hover:text - zion - purple";
                       as_child;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
           {/* Blog Posts Grid */}
@@ -1838,12 +2025,20 @@ function Blog() {
                       <Link to={`/blog/${post.slug}`}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    >;
+                      <Link to={`/blog/${post.slug}`}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         Read More →;
                       </Link>;
                     </Button>;
                   </CardFooter>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   setSearchQuery(""),
@@ -1857,6 +2052,7 @@ function Blog() {
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
               <Button
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 variant="outline" 
                 onClick={() => {;
@@ -1955,22 +2151,34 @@ function Blog() {
                 variant="outline"
                 onClick={() => {
                   setSearchQuery("");
+=======
+                variant="outline"
+                onClick={() => {
+                  setSearchQuery("");
+                  setSelectedCategory("All Categories");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   setSearchQuery(""),
                   setSelectedCategory("All Categories")
                 }}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           )}
         </div>
@@ -1983,6 +2191,10 @@ function Blog() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>;
                     <div className="flex items-center">;
                       <img;
@@ -2023,6 +2235,7 @@ function Blog() {
               </Button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
           )}
@@ -2034,16 +2247,22 @@ function Blog() {
           )}
           )}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
           )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </div>;
       <Footer />;
     </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   );
@@ -2163,3 +2382,8 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

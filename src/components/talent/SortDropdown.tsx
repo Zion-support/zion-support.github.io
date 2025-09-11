@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
@@ -36,11 +37,14 @@ import {
   DropdownMenu;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface SortDropdownProps {
 import { Button } from "@/components/ui/button",
@@ -65,10 +69,18 @@ import { SortDesc, ChevronDown } from 'lucide-react'
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   sortOption: string
 
   setSortOption: (option: string) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
   return (
@@ -110,6 +122,8 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         {SORT_OPTIONS.map((option) => (
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label |"Sort by"}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -123,11 +137,15 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
   return (
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
       </DropdownMenuTrigger>
+<<<<<<< HEAD
       <DropdownMenuContent
         align="start"
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
@@ -148,13 +166,24 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
     </DropdownMenu>
   )
 }
+=======
+      <DropdownMenuContent 
+        align="start" 
+        className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
+      >
+
+        {SORT_OPTIONS.map((option) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
@@ -183,7 +212,11 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           <div className="flex items-center gap-2">;
             <SortDesc className="h-4 w-4 text-zion-purple" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
           </div>;
@@ -194,6 +227,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
             }`}
+<<<<<<< HEAD
           >;
             {option && option.label}
           </DropdownMenuItem>;
@@ -225,10 +259,13 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             }`}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >
             {option.label}
           </DropdownMenuItem>
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </DropdownMenuContent>
     </DropdownMenu>;
@@ -247,16 +284,25 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
   );
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
@@ -334,6 +380,7 @@ function SortDropdown() {
           <DropdownMenuItem;
             key={option.value}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
             }`}
@@ -366,3 +413,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
             onClick={() => setSortOption(option.value)}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            onClick={() => setSortOption(option.value)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

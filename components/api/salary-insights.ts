@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
@@ -6,14 +7,22 @@
 =======
 =======
 }const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
+}const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
@@ -23,6 +32,7 @@ type InsightResponse = {
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -34,6 +44,8 @@ type InsightResponse = {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -57,6 +69,7 @@ type InsightResponse = {
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const mid = Math && Math.floor(arr && arr.length / 2);
   if (arr && arr.length === 0) return 0;
   return arr && arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
@@ -75,6 +88,10 @@ function median(values: number[]): number {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function groupBy<T, K extends string | number>(
   items: T[]
   getKey: (item: T) => K
@@ -89,21 +106,30 @@ function groupBy<T, K extends string | number>(
   );
 function extractCountry(location: string): string {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const parts = location.split(',').map(p => p.trim());
   return parts[parts.length - 1] |'Global';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const parts = location && location.split(',').map(p => p && p.trim());
   return parts[parts && parts.length - 1] || 'Global';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function calculateSimilarityScore(
   targetSkills: string[]
   profile: TalentProfile
 ): number {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const set = new Set(targetSkills && targetSkills.map(s => s && s.toLowerCase()));
   const overlap = profile && profile.skills.filter(s => set && set.has(s && s.toLowerCase())).length;
@@ -153,7 +179,10 @@ function prng (seed: string): () => number {
   for (let index = 0; i < seed.length; i++);
     h = Math.imul (h ^ seed.charCodeAt (i), 16777619);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const set = new Set(targetSkills.map(s => s.toLowerCase()));
   const overlap = profile.skills.filter(s => set.has(s.toLowerCase())).length;
   return overlap / Math.max(1, targetSkills.length);
@@ -170,7 +199,10 @@ function prng(seed: string): () => number {
     return (h >>> 0) / 4294967295;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 function build_trend (
@@ -190,20 +222,29 @@ function build_trend (
     'Nov',
     'Dec',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const now = new Date ();
   const seed = prng (seed_key);
   const series: { label: string; value: number }[] = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
@@ -249,6 +290,8 @@ async function maybeGetGptRecommendation(
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items.reduce((acc, item) => {
     const key = getKey(item);
@@ -257,6 +300,7 @@ function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => 
   }, {} as Record<K, T[]>)
 }
 function extractCountry(location: string): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const parts = location.split().map((p) => p.trim());
   return parts[parts.length - 1] |'Global'
@@ -303,6 +347,8 @@ function build_trend (base_monthly: number, seed_key: string): { label: string, 
     const date = new Date (now.getFullYear (), now.get_month () - i, 1);
     const drift = (seed () - 0.5) * 0.03, // +/-3%;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const parts = location && location.split().map((p) => p && p.trim());
   return parts[parts && parts.length - 1] || 'Global'
@@ -320,11 +366,15 @@ function prng(seed: string): () => number {
   for (let index = 11; i >= 0; i--) {
     const date = new Date (now.getFullYear (), now.get_month () - i, 1);
     const drift = (seed () - 0.5) * 0.03; // +/-3%;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     current = Math.max (base_monthly * 0.7, current * (1 + drift));
     series.push ({ label: months[date.get_month ()], value: Math.round (current) });
   }
   return series;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 async /**
@@ -333,18 +383,24 @@ async /**
 function maybeGetGptRecommendation() {
   const api_key = process.env.OPENAI_API_KEY;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 async /**
  * maybeGetGptRecommendation - Function description
  */
 function maybeGetGptRecommendation() {  const api_key = process.env.OPENAI_API_KEY;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Check condition
 if (return undefined) {
   $2
 }
   try {
     const client = new OpenAI ({ api_key });
+<<<<<<< HEAD
 <<<<<<< HEAD
     const skills_str = input.skills.join (', ');    const skills_str = input.skills.join ();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.role_title} with ${skills_str} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
@@ -356,6 +412,8 @@ if (return undefined) {
           role: 'system',
           content:;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const skills_str = input.skills.join (', ');    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.role_title} with ${skills_str} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 function group_by < T, K extends string | number>(items: T[], get_key: (item: T) => K): Record < K, T[]> {
   return items.reduce ((acc, item) => {
@@ -390,7 +448,10 @@ function prng (seed: string): () => number {
       messages: [
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             'You are a compensation analyst. Be specific and concise. Use USD.',
         },
         { role: 'user', content: prompt },
@@ -403,10 +464,15 @@ function prng (seed: string): () => number {
     return undefined;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
         { role: 'user', content: prompt }];
       temperature: 0.2,
@@ -439,6 +505,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const skillsStr = input.skills.join(', ');    const skillsStr = input.skills.join();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
     const completion = await client.chat.completions.create({
@@ -466,10 +533,14 @@ export default async function handler(
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return undefined
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
@@ -508,6 +579,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
 .slice(0, 20);
@@ -526,6 +601,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const min = Math && Math.min(...rates);
   const max = Math && Math.max(...rates);
   // Adjustments
+<<<<<<< HEAD
 <<<<<<< HEAD
           ? 1 && 1.2
           : 1 && 1.35;
@@ -588,6 +664,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
@@ -596,20 +677,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   // Tags
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Tags
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const undersupplied = (skills || []).some(s =>
     scarceSkills && scarceSkills.some(t => s && s.toLowerCase().includes(t && t.toLowerCase()))
   );
   if (remote) tags && tags.push('Remote Premium');
   if (undersupplied) tags && tags.push('Undersupplied Skill'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const gptRecommendation = await maybeGetGptRecommendation(body, {
     median: baseMedian
     min
@@ -618,9 +707,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   });
   const response: InsightResponse = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     recommendedHourlyUsd: recommendedHourly,
     recommendedMonthlyUsd: recommendedMonthly,
     medianHourlyUsd: Math && Math.round(baseMedian),
@@ -634,11 +727,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   };
   return res && res.status(200).json(response);  return res && res.status(200).json(response)
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
@@ -802,6 +900,7 @@ if ( {) {
   }
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
+<<<<<<< HEAD
   return res.status(200).json(response)
 
 <<<<<<< HEAD
@@ -822,3 +921,7 @@ return res.status (200).json (response);  return res.status (200).json (response
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

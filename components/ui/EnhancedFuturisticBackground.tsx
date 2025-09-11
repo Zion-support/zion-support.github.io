@@ -1,13 +1,28 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+const colorSchemes = {
+  quantum: {
+  resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+// Wrap around edges if (this.x < 0) this.x = canvas.width;
+if (this.x > canvas.width) this.x = 0;
+if (this.y < 0) this.y = canvas.height;
+if (this.y > canvas.height) this.y = 0;
+// Fade out near end of life if (this.life < 20) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx.fill_style = colors.primary;
 ctx.font = `$ {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,11 +49,16 @@ interface EnhancedFuturisticBackgroundProps {
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
   particleCount?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 animationSpeed?: number
 =======
   animationSpeed?: number
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  animationSpeed?: number
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 import React from 'react';
  const colorSchemes = {;
@@ -66,11 +86,17 @@ const EnhancedFuturisticBackground: React.FC<;
   particleCount = 100,;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   font_size;
 }px monospace`;
 ;
@@ -84,9 +110,13 @@ const EnhancedFuturisticBackground: React.FC<;
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children;
   class_name = '';
   intensity = 'medium';
@@ -105,7 +135,10 @@ const EnhancedFuturisticBackground: React.FC<;
       x: number;
       y: number;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       background: 'rgba (10, 10, 30, 0.9)',
       particles: [;
         '#ff6b6b',
@@ -154,6 +187,7 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   children;
   class_name = '';
@@ -332,6 +366,9 @@ const EnhancedFuturisticBackground: React.FC<
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       vx: number;
       vy: number;
       size: number;
@@ -339,12 +376,15 @@ const EnhancedFuturisticBackground: React.FC<
       opacity: number;
       life: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
 max_life: number;      coordinate_x: number,
       coordinate_y: number,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     // Enhanced particle system
     class Particle {
@@ -354,7 +394,10 @@ max_life: number;      coordinate_x: number,
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       vx: number,
       vy: number,
       size: number,
@@ -362,15 +405,21 @@ max_life: number;      coordinate_x: number,
       opacity: number,
       life: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
 this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
 =======
 
         this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         this.opacity = Math.random() * settings.opacity;
         this.life = Math.random() * 100;
         this.maxLife = 100
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       maxLife: number;      x: number
       y: number
@@ -398,6 +447,10 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -414,6 +467,7 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
 
         }
       }
+<<<<<<< HEAD
 
           this.opacity *= 0.95;        }
 
@@ -423,11 +477,21 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
 
 
 
+=======
+=======
+
+          this.opacity *= 0.95;        }
+
+        }
+      }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
 
         
+<<<<<<< HEAD
 <<<<<<< HEAD
           this.opacity *= 0.95;        }          this.opacity *= 0.95
           this.opacity *= 0.95;        }
@@ -440,19 +504,27 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
         ctx.globalAlpha = this.opacity;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Create gradient for particle
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
 <<<<<<< HEAD
         ctx.restore();
       }
@@ -464,24 +536,49 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
         
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ctx.restore()
         return this.life <= 0 || this.opacity < 0.01;      }
 
       }
       isDead() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        return this.life <= 0 |this.opacity < 0.01;      }
+        return this.life <= 0 || this.opacity < 0.01;      }        
+        ctx.restore()
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+=======
+      }
+      isDead() {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return this.life <= 0 || this.opacity < 0.01
       }
 
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         return this.life <= 0 || this.opacity < 0.01;      }        
 
         ctx.restore()
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         return this.life <= 0 || this.opacity < 0.01;      }
 
 
@@ -491,11 +588,15 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
         return this.life <= 0 |this.opacity < 0.01
     }
 
+<<<<<<< HEAD
 
     // Connection lines between particles
 <<<<<<< HEAD
         return this.life <= 0 || this.opacity < 0.01
 =======
+=======
+    // Connection lines between particles
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
@@ -540,6 +641,7 @@ if ( {) {
 }
           this.opacity *= 0.95;        }          this.opacity *= 0.95;
         }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
@@ -548,11 +650,49 @@ if ( {) {
     // Connection lines between particles
     class Connection {
 =======
+=======
+      }
+      draw () {
+        ctx.save ();
+        ctx.global_alpha = this.opacity;
+;
+        // Create gradient for particle;
+        const gradient = ctx.createRadialGradient (
+          this.x,
+          this.y,
+          0,
+          this.x,
+          this.y,
+          this.size);
+        gradient.addColorStop (0, this.color);
+        gradient.addColorStop (1, 'transparent');        // Create gradient for particle;
+        const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size);
+        gradient.addColorStop (0, this.color);
+        gradient.addColorStop (1, 'transparent');
+;
+        ctx.fill_style = gradient;
+        ctx.begin_path ();
+        ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill ();
+;
+        ctx.restore ();
+      }
+      is_dead () {
+        return this.life <= 0 || this.opacity < 0.01;      }
+        ctx.restore ();
+      }
+      is_dead () {
+        return this.life <= 0 || this.opacity < 0.01;
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Connection lines between particles;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     class Connection {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       p1: Particle,
       p2: Particle,
       opacity: number,
@@ -565,9 +705,13 @@ constructor(p1: Particle, p2: Particle) {
         const distance = Math.sqrt(
           Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         );
         if (distance < 150) {
           ctx.save();
@@ -579,9 +723,13 @@ constructor(p1: Particle, p2: Particle) {
           ctx.lineTo(this.p2.x, this.p2.y);
           ctx.stroke();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -683,22 +831,31 @@ constructor(p1: Particle, p2: Particle) {
           ctx && ctx.stroke();
           ctx && ctx.restore();        }
 <<<<<<< HEAD
+<<<<<<< HEAD
           ctx.restore()
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       }
     }
           ctx && ctx.restore();
 <<<<<<< HEAD
+<<<<<<< HEAD
           ctx.restore()
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
           ctx.restore()
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
@@ -736,15 +893,20 @@ if ( {) {
     }
           ctx.restore ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       }
     }
     let particles: Particle[] = [];
     let connections: Connection[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     }
@@ -762,18 +924,27 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas && canvas.width / fontSize;
       const drops: number[] = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas.width / fontSize;
       const drops: number[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
       for (let i = 0, i < columns, i++) {
 =======
@@ -781,6 +952,11 @@ if ( {) {
       for (let i = 0, i < columns, i++) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      for (let i = 0, i < columns, i++) {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         drops[i] = 1
       }
       const drawMatrix = () => {
@@ -789,10 +965,15 @@ if ( {) {
         ctx.fillStyle = colors.primary;
         ctx.font = `${fontSize}px monospace`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       for (let i = 0; i < columns; i++) {;
         drops[i] = 1;      }      for (let i = 0, i < columns, i++) {;
         drops[i] = 1;
@@ -808,10 +989,15 @@ if ( {) {
           ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
@@ -857,6 +1043,7 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
+<<<<<<< HEAD
 
 
         for (let i = 0, i < drops.length, i++) {
@@ -876,6 +1063,18 @@ if (> 0.975) {) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      }
+      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0
+          }
+          drops[i]++
+        }
+      }
+      return drawMatrix
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       };
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
@@ -884,6 +1083,7 @@ if (> 0.975) {) {
           drops[i]++;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     };
 =======
 
@@ -891,6 +1091,11 @@ if (> 0.975) {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -903,20 +1108,30 @@ if (> 0.975) {) {
       particles.forEach(particle => {
         particle.update();
 <<<<<<< HEAD
+<<<<<<< HEAD
         particle.draw()
 =======
 
         particle.draw()
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        particle.draw()
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       // Remove dead particles and add new ones
       particles = particles.filter(particle => !particle.isDead());
       while (particles.length < settings.particleCount) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       };
       return drawMatrix;
     };
@@ -939,21 +1154,31 @@ if (> 0.975) {) {
         particles && particles.push(new Particle());      }
       // Create connections between nearby particles;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle());
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Create connections between nearby particles;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       // Create connections between nearby particles;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
@@ -961,10 +1186,15 @@ if (> 0.975) {) {
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         particles.push(new Particle())
       }
 ;
@@ -978,6 +1208,7 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
+<<<<<<< HEAD
       }
 <<<<<<< HEAD
       }
@@ -1051,13 +1282,23 @@ if (> 0.975) {) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           }
         }
       }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -1069,21 +1310,30 @@ if (> 0.975) {) {
         
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           }
         }
       }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ctx.save();
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
         
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
@@ -1092,9 +1342,13 @@ if (> 0.975) {) {
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       for (let index = 0; i < particles.length; i++) {
         for (let inner_index = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt (
@@ -1144,18 +1398,27 @@ if (< 0.5) {) {
           ctx.close_path ();
           ctx.stroke ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         } else {
           // Draw square;
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Draw connections;
       connections && connections.forEach(connection => connection && connection.draw());
       // Add floating geometric shapes;
@@ -1182,12 +1445,17 @@ if (< 0.5) {) {
           const text = characters[Math.floor(Math.random() * characters.length)]
           ctx.fillText(text, i * fontSize, drops[i] * fontSize),
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
           }
           drops[i]++
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
 ctx && ctx.restore();
@@ -1297,6 +1565,11 @@ ctx && ctx.restore();
       }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Respect reduced motion;
       const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
       if (prefersReduced) {;
@@ -1306,6 +1579,7 @@ ctx && ctx.restore();
         }, 100);
       } else {;
         animationRef && animationRef.current = requestAnimationFrame(animate);
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     }
@@ -1426,6 +1700,10 @@ ctx && ctx.restore();
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
     animate();
@@ -1438,7 +1716,10 @@ ctx && ctx.restore();
   }, [colorScheme, intensity, particleCount, animationSpeed]);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return () => {;
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
@@ -1454,6 +1735,7 @@ ctx && ctx.restore();
     <div className={`relative min-h-screen ${className}`}>;
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
 <<<<<<< HEAD
         ctx.restore ();
       }
@@ -1513,12 +1795,17 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
         style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'transparent' }}
@@ -1541,6 +1828,11 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
@@ -1549,6 +1841,7 @@ if ( {) {
 export default EnhancedFuturisticBackground;
 
 
+<<<<<<< HEAD
 export default EnhancedFuturisticBackground;
 
 <<<<<<< HEAD
@@ -1557,6 +1850,12 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 =======
+=======
+=======
+
+export default EnhancedFuturisticBackground;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
@@ -1570,4 +1869,7 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

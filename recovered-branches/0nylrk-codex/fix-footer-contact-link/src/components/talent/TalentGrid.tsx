@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;
 
@@ -17,6 +18,9 @@ export interface TalentGridProps {
   viewProfile?: (id: string) => void
   clearFilters?: () => void;
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentProfile} from "@/types/talent";
 export interface TalentGridProps {;
@@ -33,6 +37,7 @@ export interface TalentGridProps {;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
@@ -45,6 +50,17 @@ import { TalentProfile } from "@/types/talent",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { TalentCard } from "@/components/talent/TalentCard",
+import { TalentProfile } from "@/types/talent",
+=======
+import {TalentCard} from "@/components/talent/TalentCard";
+import {TalentProfile} from "@/types/talent";
+=======
+import { TalentCard } from "@/components/talent/TalentCard",
+import { TalentProfile } from "@/types/talent",
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -53,14 +69,18 @@ export interface TalentGridProps {
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
 <<<<<<< HEAD
+<<<<<<< HEAD
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
 
   handleRequestHire?: (talent: TalentProfile) => void
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   viewProfile?: (id: string) => void,;
   clearFilters?: () => void;
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
+<<<<<<< HEAD
   handleRequestHire?: (talent: TalentProfile) => void
 =======
 
@@ -71,6 +91,11 @@ export interface TalentGridProps {
   handleRequestHire?: (talent: TalentProfile) => void
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  handleRequestHire?: (talent: TalentProfile) => void
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export function TalentGrid({
   talents
@@ -79,6 +104,7 @@ export function TalentGrid({
   savedTalentIds
   onToggleSave
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -87,11 +113,17 @@ export function TalentGrid({
   clearFilters;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  isAuthenticated;
+  viewProfile;
+  clearFilters;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function TalentGrid({ 
   talents, 
   isLoading, 
   onTalentClick, 
   savedTalentIds, 
+<<<<<<< HEAD
 <<<<<<< HEAD
   onToggleSave, ;
   isAuthenticated;
@@ -106,12 +138,18 @@ export function TalentGrid({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   handleRequestHire
 }: TalentGridProps) {
 
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -144,6 +182,10 @@ if ( {) {
       console.log ("Request to hire:", talent.id);
     }
   }
+=======
+    } else {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const handleViewProfile = (id: string) =>: any {
     // Check condition
@@ -151,6 +193,7 @@ if ( {) {
   $2
 }
       view_profile (id);
+<<<<<<< HEAD
     } else {
       // Default implementation
       console.log("Request to hire:", talent.id)
@@ -170,6 +213,18 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    } else {
+      onTalentClick (id);
+    }
+
+      // Default implementation
+
+  };
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
@@ -212,19 +267,25 @@ export function TalentGrid({;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   
   
   
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -235,6 +296,7 @@ export function TalentGrid({;
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
       {clearFilters && (
+<<<<<<< HEAD
 <<<<<<< HEAD
     } else {
       onTalentClick (id);
@@ -260,27 +322,46 @@ export interface TalentGridProps {;
 }
 ;
 export function TalentGrid({ ;
+=======
+
+export function TalentGrid(): any ({ ;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talents, ;
   isLoading, ;
   onTalentClick, ;
   savedTalentIds, ;
   onToggleSave, ;
+<<<<<<< HEAD
   isAuthenticated,;
   viewProfile,;
   clearFilters,;
   handleRequestHire;
 } TalentGridProps) {;
   const handleRequestHireInternal = (talent:TalentProfile) => {;
+=======
+  isAuthenticated;
+  viewProfile;
+  clearFilters;
+  handleRequestHire;
+}: TalentGridProps) {;
+  const handleRequestHireInternal = (talent: TalentProfile) => {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (handleRequestHire) {;
       handleRequestHire(talent);
     } else {;
       // Default implementation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       console && console.log("Request to hire:", talent && talent.id);
     }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      console && console.log("Request to hire:", talent && talent.id);
+    }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <button
           onClick={clearFilters}
           className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
@@ -288,11 +369,16 @@ export function TalentGrid({ ;
           Clear Filters
         </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   };
+=======
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleViewProfile = (id: string) => {;
     if (viewProfile) {;
       viewProfile(id);
@@ -300,6 +386,7 @@ export function TalentGrid({ ;
       onTalentClick(id);
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
       // // // console.log("Request to hire:", talent.id),;
     }
@@ -317,10 +404,14 @@ export function TalentGrid({ ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (isLoading) {;
     return <div className="py-8 text-center">;
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>;
       <p className="text-zion-cyan">Loading talent profiles...</p>;
+<<<<<<< HEAD
     </div>,;
   }
     </div>;
@@ -420,6 +511,10 @@ if (isLoading) {
         <button;
           onClick={clearFilters}
 =======
+=======
+    </div>;
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!talents || talents && talents.length === 0) {;
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">;
@@ -429,11 +524,15 @@ if (isLoading) {
         <button
           onClick={clearFilters}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
         >
           Clear Filters
         </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
     </div>
@@ -460,6 +559,8 @@ if (isLoading) {
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -484,7 +585,13 @@ if (isLoading) {
           isAuthenticated={isAuthenticated}
         />;
       ))}
+<<<<<<< HEAD
 
+=======
+    </div>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 }
@@ -492,7 +599,10 @@ if (isLoading) {
 =======
   }
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -6,18 +7,28 @@
 import React from 'react';
 
 
+=======
+import React from 'react',
+import React from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import React from 'react';
 import Card from '../ui / Card';
 import { Zap } from 'lucide-react';
 ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   icon: React.ReactNode;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -41,7 +52,10 @@ import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   title: string;
@@ -51,7 +65,15 @@ import { Zap } from 'lucide-react';
 
   delay?: number;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+interface FeaturesProps {
+  title: string;
+  subtitle: string;
+  features: Feature[];
+  columns?: 2 | 3 | 4;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   columns?: 2 | 3 | 4;
 
@@ -70,10 +92,15 @@ const Features: React.FC<FeaturesProps> = ({;
     4: 'md:grid-cols-2 lg:grid-cols-4',;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section className='py-24 bg-black relative overflow-hidden'>;
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
@@ -89,10 +116,15 @@ const Features: React.FC<FeaturesProps> = ({;
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -130,6 +162,7 @@ const Features: React.FC<FeaturesProps> = ({
 {title}
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -210,13 +243,31 @@ const Features: React.FC<FeaturesProps> = ({
             {title}
           </h2>
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {subtitle}
           </p>
         </div>
 
+<<<<<<< HEAD
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>
           {features.map((feature, index) => (
+=======
+          </p>;
+        </div>;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Features Grid */}
+        <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
+          {features && features.map((feature, index) => (;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card
               key={index}
               className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -256,6 +307,7 @@ const Features: React.FC<FeaturesProps> = ({
 export default Features;  )
 }
 export default Features;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -266,3 +318,6 @@ export default Features;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

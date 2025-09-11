@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -337,6 +338,17 @@ import Link from 'next/link';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+import Head from 'next/head';
+import Link from 'next/link';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Terms() {
   const contact = {
     phone: '+1 302 464 0950'
@@ -437,6 +449,7 @@ export default function Terms() {
                 <p className="text-slate-300">
                   <strong>Address:</strong> {contact.address}
                 </p>
+<<<<<<< HEAD
 
 
 
@@ -444,6 +457,8 @@ export default function Terms() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </section>
           </div>
@@ -455,6 +470,7 @@ export default function Terms() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
             <section className="mb-12">;
               <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Contact Information</h2>;
               <p className="text-slate-300 mb-4">;
@@ -482,6 +498,8 @@ function Terms() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com';
   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -566,6 +584,7 @@ content: 'In no event shall Zion Tech Group be liable for any damages arising ou
 
 }> <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Terms of Service </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto" > Please read these terms carefully before using our services. They govern your use of Zion Tech Group's technology solutions. </p> </div> </motion.div> </div> </section> <motion.div initial= {
   {
+<<<<<<< HEAD
   opacity: 0, x: -20 
 
 }whileInView= {
@@ -812,6 +831,13 @@ content: 'In no event shall Zion Tech Group be liable for any damages arising ou
 
 
 
+=======
+
+
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: 'Limitations',
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
@@ -822,12 +848,17 @@ content: 'In no event shall Zion Tech Group be liable for any damages arising ou
 }
 ],
 export default function Terms() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout>;
       <SEO
         title="Terms of Service | Zion Tech Group"
         description="Read Zion Tech Group's Terms of Service, including usage policies, user agreements, and legal conditions for accessing our technology services."
         keywords={["terms of service", "user agreement", "legal terms", "conditions of use", "service agreement", "Zion Tech Group"]}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
       <div className="min-h-screen bg-black text-white">;
@@ -838,15 +869,20 @@ export default function Terms() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
 
       <div className="min-h-screen bg-black text-white">;
+<<<<<<< HEAD
 =======
 
       />;
       <div className="min-h-screen bg-black text-white">;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">;
@@ -867,12 +903,20 @@ export default function Terms() {
                 These Terms of Service ("Terms") govern your use of Zion Tech Group's website and services. By accessing or using our services, you agree to be bound by these Terms.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>;
               <p className="text-gray-600 mb-4">;
                 By accessing or using our website, services, or any content provided by Zion Tech Group, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, please do not use our services.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">2. Description of Services</h2>;
               <p className="text-gray-600 mb-4">;
@@ -887,6 +931,10 @@ export default function Terms() {
                 <li>Technology consulting and advisory services</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">3. User Accounts and Registration</h2>;
               <p className="text-gray-600 mb-4">;
@@ -899,6 +947,10 @@ export default function Terms() {
                 <li>Notifying us immediately of any unauthorized use</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">4. Acceptable Use</h2>;
               <p className="text-gray-600 mb-4">;
@@ -914,6 +966,10 @@ export default function Terms() {
                 <li>Attempt to reverse engineer or copy our technology</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">5. Intellectual Property Rights</h2>;
               <p className="text-gray-600 mb-4">;
@@ -923,12 +979,20 @@ export default function Terms() {
                 You may not reproduce, distribute, modify, or create derivative works without our express written consent.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">6. Privacy and Data Protection</h2>;
               <p className="text-gray-600 mb-4">;
                 Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">7. Service Availability and Modifications</h2>;
               <p className="text-gray-600 mb-4">;
@@ -940,6 +1004,10 @@ export default function Terms() {
                 <li>Update or change our services to improve functionality</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">8. Limitation of Liability</h2>;
               <p className="text-gray-600 mb-4">;
@@ -955,6 +1023,10 @@ export default function Terms() {
                 Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">9. Indemnification</h2>;
               <p className="text-gray-600 mb-4">;
@@ -967,6 +1039,10 @@ export default function Terms() {
                 <li>Any content you submit or transmit through our services</li>;
               </ul>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">10. Termination</h2>;
               <p className="text-gray-600 mb-4">;
@@ -976,6 +1052,10 @@ export default function Terms() {
                 Upon termination, your right to use our services will cease immediately, and we may delete or remove any content associated with your account.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">11. Governing Law and Dispute Resolution</h2>;
               <p className="text-gray-600 mb-4">;
@@ -985,6 +1065,10 @@ export default function Terms() {
                 Any disputes arising from these Terms or your use of our services shall be resolved through binding arbitration in San Francisco, California, in accordance with the rules of the American Arbitration Association.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">12. Changes to Terms</h2>;
               <p className="text-gray-600 mb-4">;
@@ -994,18 +1078,30 @@ export default function Terms() {
                 Your continued use of our services after any changes constitutes acceptance of the new Terms.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">13. Severability</h2>;
               <p className="text-gray-600 mb-4">;
                 If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that these Terms will otherwise remain in full force and effect.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">14. Entire Agreement</h2>;
               <p className="text-gray-600 mb-4">;
                 These Terms, together with our Privacy Policy and any other agreements referenced herein, constitute the entire agreement between you and Zion Tech Group regarding your use of our services.;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">15. Contact Information</h2>;
               <p className="text-gray-600 mb-4">;
@@ -1016,6 +1112,10 @@ export default function Terms() {
                   <strong>Zion Tech Group</strong><br />;
                   Email: legal@ziontechgroup && ziontechgroup.com<br />;
                   Phone: +1 (555) 123-4567<br />;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </>);
 }
 export default /**
@@ -1199,9 +1299,13 @@ function Terms() {
                   Email: legal@ziontechgroup.com < br />;
                   Phone: +1 (555) 123 - 4567 < br />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Address: 123 Tech Street, San Francisco, CA 94105;
                 </p>;
               </div>;
@@ -1209,7 +1313,10 @@ function Terms() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1265,7 +1372,10 @@ function Terms() {
           </div>
         </section>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16">;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
@@ -1276,9 +1386,13 @@ function Terms() {
               </p>;
             </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 <div>;
@@ -1310,6 +1424,10 @@ function Terms() {
                     <div className="bg-gray-800/50 rounded-xl p-4">;
                       <h4 className="font-semibold text-red-400 mb-2">Termination</h4>;
                       <p className="text-gray-300 text-sm">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* User Obligations Section */}
         <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -1359,9 +1477,13 @@ function Terms() {
                       <h4 className="font - semibold text - red - 400 mb - 2">Termination</h4>;
                       <p className="text - gray - 300 text - sm">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         Severe or repeated violations may result in permanent service termination.;
                       </p>;
                     </div>;
@@ -1372,7 +1494,10 @@ function Terms() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1442,7 +1567,10 @@ function Terms() {
           </div>
         </section>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16">;
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
                 Liability & Limitations;
@@ -1453,6 +1581,10 @@ function Terms() {
                 Understanding our intellectual property rights and your usage permissions.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               className="text-center mb-16";
             >;
@@ -1463,6 +1595,10 @@ function Terms() {
                 Additional terms that apply to specific services or situations.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="space-y-6">;
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1477,6 +1613,10 @@ function Terms() {
                   Our total liability to you for any claims arising from the use of our services shall not exceed the amount you paid us in the twelve (12) months preceding the claim.;
                 </p>;
               </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1487,6 +1627,10 @@ function Terms() {
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of our services shall be resolved in the courts of the United States.;
                 </p>;
               </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1504,10 +1648,15 @@ function Terms() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Limitation of Liability Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1517,7 +1666,10 @@ function Terms() {
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1569,7 +1721,10 @@ function Terms() {
           </div>
         </section>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16">;
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
                 Questions About Terms?;
@@ -1580,6 +1735,10 @@ function Terms() {
                 Understanding the scope of our liability and your rights as a user.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50">;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 <div>;
@@ -1596,6 +1755,10 @@ function Terms() {
                     <li className="flex items-start gap-3 text-gray-300">;
                       <CheckCircle className="w-5 h-5 text-blue-400 mt-0 && 0.5 flex-shrink-0" />;
                       <span>Liability is limited to the amount paid for services</span>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Liability Limitations */}
         {/* Intellectual Property Section */}
         <section className="py - 20">;
@@ -1705,26 +1868,38 @@ function Terms() {
                       <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 0.5 flex - shrink - 0" />;
                       <span > Liability is limited to the amount paid for services</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </li>;
                   </ul>;
                 </div>;
                 <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <h3 className="text - 2xl font - bold text - white mb - 6">Force Majeure:</h3>;
                   <p className="text - gray - 300 mb - 4">;
                     We are not liable for delays or failures due to circumstances beyond our control, including:;
                   </p>;
                   <ul className="space - y-2 text - gray - 400">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li>• Natural disasters and extreme weather</li>;
                     <li>• Government actions and regulations</li>;
                     <li>• Infrastructure failures and cyber attacks</li>;
@@ -1736,7 +1911,10 @@ function Terms() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1750,7 +1928,10 @@ function Terms() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Questions About These Terms?;
@@ -1777,6 +1958,10 @@ function Terms() {
               <p className="text-lg text-gray-300 mb-8">;
                 If you have any questions about these Terms of Service, please contact us.;
               </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <motion&& motion.button
                   whileHover={{ scale: 1 && 1.05 }}
@@ -1792,6 +1977,10 @@ function Terms() {
                 </motion && motion.button>;
               </div>;
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         {/* Contact Section */}
         <section className="py - 20">;
@@ -1848,17 +2037,25 @@ function Terms() {
               </div>;
             </motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </section>;
       </div>;
     </Layout>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             transition={{ duration: 0 && 0.8 }}
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -1868,14 +2065,22 @@ function Terms() {
               Key sections of our terms of service and what they cover;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {termsSections && termsSections.map((section, index) => (;
               <motion&& motion.div
                 key={section && section.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1890,25 +2095,35 @@ function Terms() {
               </motion && motion.div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </div>;
       </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Service Categories */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 className="group cursor-pointer"
@@ -1926,6 +2141,7 @@ function Terms() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -1934,6 +2150,12 @@ function Terms() {
             whileInView={{ opacity: 1, y: 0 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Terms Overview */}
       <section id="terms - sections" className="py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -1990,9 +2212,13 @@ function Terms() {
             {service_categories.map ((service, index) => (
               <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={service.category}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2003,9 +2229,13 @@ function Terms() {
                   <div className="h - 24 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify - center">;
                     <div className="w - 12 h - 12 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 flex items - center justify - center">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 className="group"
@@ -2014,9 +2244,13 @@ function Terms() {
                   <div className="h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {service.icon}
                     </div>;
                   </div>;
@@ -2046,9 +2280,13 @@ function Terms() {
             </p>;
           </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="grid lg:grid-cols-2 gap-8">;
             {serviceCategories && serviceCategories.map((service, index) => (;
               <motion&& motion.div
@@ -2068,6 +2306,10 @@ function Terms() {
                       {service && service.category}
                     </h3>;
                     <p className="text-gray-300 mb-4">{service && service.description}</p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>;
                       <ul className="text-sm text-gray-300 space-y-1">;
@@ -2076,6 +2318,7 @@ function Terms() {
                             <CheckCircle className="w-4 h-4 text-green-400 mt-0 && 0.5 flex-shrink-0" />;
                             {feature}
                           </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2089,6 +2332,13 @@ function Terms() {
                         {service && service.restrictions.map((restriction, restrictionIndex) => (;
                           <li key={restrictionIndex} className="flex items-start gap-2">;
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0" />;
+=======
+
+                        ))}
+                      </ul>
+    'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities'
+  ];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             {restriction}
                           </li>;
                         ))}
@@ -2097,7 +2347,10 @@ function Terms() {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2105,10 +2358,18 @@ function Terms() {
     'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only'
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const limitations = [;
     'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only';
   ];
+=======
+  const limitations = [;
+    'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  ];
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </h3>;
                     <p className="text - gray - 300 mb - 4">{service.description}</p>;
                     <div className="mb - 4">;
@@ -2137,15 +2398,23 @@ function Terms() {
     'Services provided "as is" without warranties_no guarantee of uninterrupted service_limitation of liability for damages_no responsibility for third - party content_service availability subject to change_technical support during business hours only';
   ];
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <ErrorBoundary>;
       <SEOOptimizer />;
       <AnalyticsTracker />;
       <Layout>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.6 }}>;
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
                   Terms of Service;
@@ -2161,25 +2430,35 @@ function Terms() {
             </div>;
           </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Overview */}
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">;
             <div className="max-w-6xl mx-auto">;
               <div className="grid lg:grid-cols-2 gap-12 items-center">;
                 <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
+<<<<<<< HEAD
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
 
@@ -2188,6 +2467,12 @@ function Terms() {
                   whileInView={{ opacity: 1, x: 0 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   transition={{ duration: 0 && 0.6 }}>;
                   <h2 className="text-4xl font-bold mb-6 text-white">;
                     Understanding Our Terms;
@@ -2206,6 +2491,10 @@ function Terms() {
                     <span className="font-medium">Clear and fair terms</span>;
                   </div>;
                 </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <motion&& motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -2218,6 +2507,10 @@ function Terms() {
                       </div>;
                       <h3 className="text-2xl font-bold text-white">Legal Framework</h3>;
                       <p className="text-gray-300">Protecting your rights and ours</p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="grid grid-cols-2 gap-4 text-sm">;
                         <div className="text-center">;
                           <div className="text-2xl font-bold text-cyan-400">100%</div>;
@@ -2226,6 +2519,10 @@ function Terms() {
                         <div className="text-center">;
                           <div className="text-2xl font-bold text-purple-400">24/7</div>;
                           <div className="text-gray-400">Support</div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <main className="relative z - 10 pt - 8">;
           {/* Hero Section */}
           <section className="py - 20 px - 4">;
@@ -2296,22 +2593,32 @@ function Terms() {
                           <div className="text - 2xl font - bold text - purple - 400">24 / 7</div>;
                           <div className="text - gray - 400">Support</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>;
                       </div>;
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -2321,14 +2628,22 @@ function Terms() {
                 <h2 className="text-4xl font-bold mb-4 text-white">Key Terms and Conditions</h2>;
                 <p className="text-xl text-gray-300">Essential information about using our services</p>;
               </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="grid md:grid-cols-2 gap-8">;
                 {termsSections && termsSections.map((section, index) => (;
                   <motion&& motion.div
                     key={section && section.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -2350,25 +2665,35 @@ function Terms() {
                   </motion && motion.div>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
             </div>;
           </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>;
             </div>;
           </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Prohibited Activities */}
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">;
             <div className="max-w-6xl mx-auto">;
               <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
@@ -2390,6 +2715,7 @@ function Terms() {
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -2398,16 +2724,28 @@ function Terms() {
                 whileInView={{ opacity: 1, y: 0 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.6 }}
                 className="text-center mb-16">;
                 <h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>;
                 <p className="text-xl text-gray-300">Activities that are not allowed when using our services</p>;
               </motion && motion.div>;
+<<<<<<< HEAD
               <motion&& motion.div
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <motion&& motion.div
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -2435,23 +2773,33 @@ function Terms() {
             </div>;
           </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Service Limitations */}
           <section className="py-20 px-4">;
             <div className="max-w-6xl mx-auto">;
               <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -2460,16 +2808,28 @@ function Terms() {
                 whileInView={{ opacity: 1, y: 0 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.6 }}
                 className="text-center mb-16">;
                 <h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>;
                 <p className="text-xl text-gray-300">Important information about service availability and warranties</p>;
               </motion && motion.div>;
+<<<<<<< HEAD
               <motion&& motion.div
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <motion&& motion.div
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -2498,23 +2858,33 @@ function Terms() {
             </div>;
           </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Detailed Terms */}
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">;
             <div className="max-w-4xl mx-auto">;
               <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-4xl mx-auto">
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -2523,10 +2893,20 @@ function Terms() {
                 whileInView={{ opacity: 1, y: 0 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.6 }}
                 className="space-y-12">;
                 <div>;
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Terms and Conditions</h2>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="space-y-8">;
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">1. Service Agreement</h3>;
@@ -2541,6 +2921,10 @@ function Terms() {
                         constitutes acceptance of the new terms.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">2. Service Description and Availability</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2554,6 +2938,10 @@ function Terms() {
                         circumstances beyond our control.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">3. User Accounts and Responsibilities</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2567,6 +2955,10 @@ function Terms() {
                         and in compliance with applicable laws and regulations.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">4. Payment Terms and Billing</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2578,6 +2970,10 @@ function Terms() {
                         suspension or termination. You are responsible for all applicable taxes.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">5. Intellectual Property Rights</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2589,6 +2985,10 @@ function Terms() {
                         our written permission. You may not reverse engineer or attempt to extract source code.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">6. Data Privacy and Security</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2600,6 +3000,10 @@ function Terms() {
                         absolute security. You are responsible for maintaining the security of your own systems.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">7. Limitation of Liability</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2612,6 +3016,10 @@ function Terms() {
                         damages, including lost profits, data, or business opportunities.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">8. Termination and Suspension</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2623,6 +3031,10 @@ function Terms() {
                         in accordance with our data retention policies.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">9. Governing Law and Disputes</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2635,6 +3047,10 @@ function Terms() {
                         class action lawsuits or class-wide arbitration.;
                       </p>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">10. Contact Information</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2649,6 +3065,10 @@ function Terms() {
                         </p>;
                         <p className="text-gray-300">;
                           <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </motion.div>;
               </div>;
             </div>;
@@ -2902,16 +3322,23 @@ function Terms() {
                         <p className="text - gray - 300">;
                           <strong > Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </p>;
                       </div>;
                     </div>;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2925,7 +3352,10 @@ function Terms() {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="text-center mb-16">;
               <h2 className="text-4xl font-bold mb-6">Terms Overview</h2>;
               <p className="text-xl text-gray-400 leading-relaxed">;
@@ -2934,10 +3364,15 @@ function Terms() {
               </p>;
             </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Key Terms Points */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">;
               {termsSections && termsSections.map((section, index) => (;
@@ -2956,17 +3391,23 @@ function Terms() {
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Detailed Terms */}
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -2976,7 +3417,10 @@ function Terms() {
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -2988,7 +3432,14 @@ function Terms() {
                   </div>
                   <p className="text-gray-300">{section.content}</p>
                 </motion.div>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* Detailed Terms */}
@@ -2999,6 +3450,11 @@ function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3037,6 +3493,10 @@ function Terms() {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="space-y-12"
             >
               <div className="text-center mb-16">
@@ -3072,6 +3532,10 @@ function Terms() {
                   Complete terms governing your use of our services.;
                 </p>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Section 1: Definitions */}
               <div className="prose prose-invert max-w-none">;
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">1. Definitions</h3>;
@@ -3080,6 +3544,10 @@ function Terms() {
                     The following terms shall have the meanings set forth below:;
                   </p>;
                   <ul className="list-disc list-inside space-y-2 ml-4">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </motion.div>;
               <FileText className="w - 16 h - 16 text - cyan - 400 mx - auto mb - 6" />;
               <h1 className="text - 5xl md:text - 6xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
@@ -3156,9 +3624,13 @@ function Terms() {
                   </p>;
                   <ul className="list - disc list - inside space - y-2 ml - 4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <li><strong>"Company"</strong> refers to Zion Tech Group</li>;
                     <li><strong>"Services"</strong> refers to our website, platforms, and technology solutions</li>;
                     <li><strong>"User"</strong> refers to any individual or entity using our services</li>;
@@ -3171,7 +3643,10 @@ function Terms() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-purple-400 mb-4">2. Acceptance of Terms</h3>
                 <div className="text-gray-300 space-y-4">
@@ -3181,7 +3656,10 @@ function Terms() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="prose prose-invert max-w-none">
                 <h3 className="text-2xl font-bold text-emerald-400 mb-4">3. Use of Services</h3>
@@ -3324,21 +3802,31 @@ function Terms() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </motion.div>
           </div>
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
             >
               <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -3361,6 +3849,7 @@ export default Terms;
             </div>
           </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             </motion.div>
@@ -3646,6 +4135,8 @@ export default Terms;
               viewport={{ once: true }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl">;
               <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
               <h3 className="text-2xl font-bold mb-4">Agreement Acknowledgment</h3>;
@@ -3663,6 +4154,7 @@ export default Terms;
     </Layout>;
   );
 };
+<<<<<<< HEAD
 export default Terms;
             </div>;
           </section>;
@@ -3671,19 +4163,32 @@ export default Terms;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export default Terms;
+            </div>;
+          </section>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Contact Information */}
           <section className="py-20 px-4">;
             <div className="max-w-4xl mx-auto text-center">;
               <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -3692,6 +4197,12 @@ export default Terms;
                 whileInView={{ opacity: 1, y: 0 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0 && 0.6 }}>;
                 <h2 className="text-4xl font-bold mb-6 text-white">;
                   Questions About These Terms?;
@@ -3702,9 +4213,13 @@ export default Terms;
                 </p>;
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <a
                     href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">;
@@ -3718,6 +4233,7 @@ export default Terms;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -3725,6 +4241,11 @@ export default Terms;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default TermsPage;
 
@@ -3733,7 +4254,15 @@ export default TermsPage;
 };export default TermsPage;
 
 
+<<<<<<< HEAD
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
+=======
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">;
                     <User className="w-5 h-5" />;
                     Contact Form;
@@ -3747,6 +4276,7 @@ export default TermsPage;
     </ErrorBoundary>;
   );
 };
+<<<<<<< HEAD
 export default TermsPage;
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion && motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) ;
 };export default TermsPage;
@@ -3787,6 +4317,29 @@ export default TermsPage;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="p - 8 bg - gradient - to - br from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20 border border - cyan - 400 / 20 rounded - xl";
+=======
+
+
+ursor/fix-lint-push-and-merge-to-main-ae4e
+}
+export default TermsPage;
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) 
+};export default TermsPage;
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
+};export default TermsPage;
+export default TermsPage;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+
+origin/main
+},
+export default TermsPage,
+              className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <Scale className="w - 12 h - 12 text - cyan - 400 mx - auto mb - 4" />;
               <h3 className="text - 2xl font - bold mb - 4">Agreement Acknowledgment</h3>;
@@ -3849,6 +4402,7 @@ export default TermsPage;
 }> <h2 className="text - 4xl font - bold mb - 6 text - white" > Questions About These Terms? </h2> <p className="text - xl text - gray - 300 mb - 8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <Mail className="w - 5 h - 5" /> Email Us </Link> <a href="/contact" className="border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <User className="w - 5 h - 5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>);
 }export default TermsPage;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
     },
     {
@@ -6116,3 +6670,6 @@ export default TermsPage;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

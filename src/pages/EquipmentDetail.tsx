@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -103,22 +104,30 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce(
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
   equipment_listings.reduce (
     (acc, item) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
       acc[item.id] = convertProductListingToEquipmentDetails(item)
       return acc
     }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       acc[item.id] = convertProductListingToEquipmentDetails (item);
       return acc;
     },
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {} as { [key: string]: EquipmentDetails }
   )
 export default function EquipmentDetail() {
@@ -151,9 +160,12 @@ export default function EquipmentDetail() {
           return;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         // Try to get from session_storage (for dynamically generated equipment);
         // Check condition
@@ -161,7 +173,10 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           try {
             const stored = sessionStorage.getItem(`equipment:${id}`)
             if (stored) {
@@ -173,11 +188,14 @@ if ( {) {
                 equipmentData = storedData
               } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // It's a ProductListing, convert it
                 equipmentData = convertProductListingToEquipmentDetails(
                   storedData as ProductListing
                 )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import { useState, useEffect } from 'react';
@@ -333,12 +351,16 @@ export default function EquipmentDetail() {;
                 equipmentData = convertProductListingToEquipmentDetails(;
                   storedData as ProductListing;
                 );
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
               setEquipment(equipmentData)
               setLoading(false)
               return;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
           } catch (storageError) {
             logErrorToProduction('Error reading from sessionStorage:', {
@@ -350,6 +372,8 @@ export default function EquipmentDetail() {;
         setError('Equipment not found')
         setLoading(false)
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 // It's a ProductListing, convert it;
                 equipment_data = convertProductListingToEquipmentDetails (
@@ -369,18 +393,27 @@ export default function EquipmentDetail() {;
         set_error ('Equipment not found');
         set_loading (false);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
         logErrorToProduction('Error loading equipment:', { data: error })
         setError('Failed to load equipment details')
         setLoading(false)
       }
     }
+<<<<<<< HEAD
     loadEquipment()
 <<<<<<< HEAD
   }, [id])
     loadEquipment()
   }, [id])
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { NextSeo } from '@/components/NextSeo',
@@ -545,15 +578,24 @@ export default function EquipmentDetail() {;
 
     loadEquipment()
   }, [id]),
+<<<<<<< HEAD
     if (!equipment |!isAuthenticated) {
       toast({
         title: 'Authentication Required'
         description: 'Please log in to add items to cart'
         variant: 'destructive'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
+<<<<<<< HEAD
         title: 'Authentication Required'
         description: 'Please log in to add items to cart'
         variant: 'destructive'
@@ -600,10 +642,27 @@ export default function EquipmentDetail() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        title: 'Authentication Required',
+        description: 'Please log in to add items to cart',
+        variant: 'destructive',
+
+      })
+      return;
+    }
+
+
+    setIsAdding(true),
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       dispatch({
         type: 'ADD_ITEM'
         payload: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       dispatch({
         type: 'ADD_ITEM'
@@ -629,6 +688,8 @@ export default function EquipmentDetail() {;
         payload: {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     load_equipment ();
   }, [id]);
@@ -643,6 +704,7 @@ if ( {) {
         variant: 'destructive',
       });
       return;
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {
       toast({
@@ -700,6 +762,25 @@ if ( {) {
 
   const inCart = items.some(item => item.id === equipment?.id),
 =======
+=======
+    }
+    setIsAdding (true);
+    try {
+      dispatch ({
+        type: 'ADD_ITEM',
+        payload: {
+          id: equipment.id,
+          name: equipment.name,
+          price: equipment.price,
+          quantity,
+        },
+      });
+      toast ({
+        title: 'Added to Cart',
+        description: `${equipment.name} has been added to your cart.`,
+      });
+    } catch (error) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast ({
         title: 'Error',
         description: 'Failed to add item to cart. Please try again.',
@@ -713,8 +794,16 @@ if ( {) {
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+=======
+          quantity}}),
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Loading state
   if (loading) {
     return (
@@ -837,6 +926,7 @@ if ( {) {
     return (
       <>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   // Error state
   if (error |!equipment) {
@@ -844,6 +934,8 @@ if ( {) {
       <>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <NextSeo
           title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
@@ -854,7 +946,10 @@ if ( {) {
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </h1>;
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>;
@@ -874,13 +969,17 @@ if ( {) {
                 </Button>;
                 <Button
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               animate={{ opacity: 1, y: 0 }}
             >
               <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
               <h1 className="text-3xl font-bold text-white mb-4">
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
                 {error === 'Equipment not found'
@@ -923,6 +1022,11 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Browse Equipment
                 </Button>
               </div>
@@ -931,6 +1035,7 @@ if ( {) {
         </div>
       </>
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
               : undefined
 
@@ -954,6 +1059,14 @@ if ( {) {
       <NextSeo
         title={`${equipment && equipment.name} - Zion Marketplace`}
         description = {equipment && equipment.description,}
+=======
+  }
+  return (
+    <>
+      <NextSeo
+        title={`${equipment.name} - Zion Marketplace`}
+        description = {equipment.description,}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         openGraph={{
 
           title: `${equipment && equipment.name} - Zion Marketplace`,
@@ -962,6 +1075,7 @@ if ( {) {
             equipment && equipment.images.length> 0 && equipment && equipment.images[0];
               ? [{ url: equipment && equipment.images[0] }];
               : undefined,;
+<<<<<<< HEAD
 
 
               : undefined,
@@ -1082,11 +1196,15 @@ if ( {) {
         title={`${equipment.name} - Zion Marketplace`}
         description = {equipment.description,}
         openGraph={{
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title: `${equipment.name} - Zion Marketplace`
           description: equipment.description
           images:
             equipment.images.length > 0 && equipment.images[0]
               ? [{ url: equipment.images[0] }]
+<<<<<<< HEAD
               : undefined
 
 
@@ -1214,14 +1332,22 @@ if ( {) {
 
         }}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+        }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />
       <div className="min-h-screen bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           {/* Breadcrumb */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               Equipment
             <span className='mx-2 text-zion-slate-light'>/</span>
             <span className='text-zion-slate-light'>{equipment.name}</span>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <motion.nav
             className='flex mb-8'
             initial={{ opacity: 0, y: -20 }}
@@ -1230,10 +1356,13 @@ if ( {) {
             <button
               onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <motion.nav 
             className="flex mb-8"
             initial={{ opacity: 0, y: -20 }}
@@ -1244,20 +1373,28 @@ if ( {) {
               className="text-zion-cyan hover:text-white transition-colors"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Equipment
             </button>
             <span className="mx-2 text-zion-slate-light">/</span>
             <span className="text-zion-slate-light">{equipment.name}</span>
           </motion.nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className='grid lg:grid-cols-2 gap-12'>
           </motion.nav>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               onClick={() => router && router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >;
@@ -1274,6 +1411,7 @@ if ( {) {
           <div className="grid lg:grid-cols-2 gap-12">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Images */}
             <motion&& motion.div
               className='space-y-4'
@@ -1281,6 +1419,8 @@ if ( {) {
           <div className="grid lg:grid-cols-2 gap-12">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Images */}
             <motion.div 
               className="space-y-4"
@@ -1291,11 +1431,15 @@ if ( {) {
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
                 <ImageWithRetry
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   src={
                     equipment.images[selectedImageIndex] |
                     equipment.images[0] |
                     'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
                   }
+<<<<<<< HEAD
                   alt={equipment.name}
                   className='object-cover'                />
               </AspectRatio>
@@ -1311,6 +1455,8 @@ if ( {) {
                     equipment && equipment.images[0] ||
                     'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
                   }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   alt={equipment && equipment.name}
                   className='object-cover'                />;
               </AspectRatio>;
@@ -1322,7 +1468,10 @@ if ( {) {
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
                   className="object-cover"
@@ -1342,19 +1491,29 @@ if ( {) {
                       }`}
                     >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <ImageWithRetry;
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}
                         className="object-cover"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
                       />
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+                      />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </button>
                   ))}
                 </div>;
@@ -1366,12 +1525,16 @@ if ( {) {
             {/* Product Details */}
             <motion.div
               className='space-y-6'
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div 
               className="space-y-6"
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
               transition={{ delay: 0 && 0.4 }}>;
@@ -1389,11 +1552,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="space-y-6"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
             >
               {/* Header */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='space-y-2'>
                 <div className='flex items-center gap-2 mb-2'>
@@ -1407,6 +1573,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className='border-zion-slate-light text-zion-slate-light'>;
                     {equipment && equipment.brand}
                   </Badge>;
@@ -1423,7 +1592,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {[...Array(5)].map((_, i) => (                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
+<<<<<<< HEAD
                             i < Math && Math.floor(equipment && equipment.rating!)
+=======
+                            i < Math.floor(equipment.rating!)
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
 
@@ -1438,6 +1611,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Badge>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <h1 className='text-3xl font-bold text-white'>
                   {equipment.name}
                 </h1>
@@ -1450,9 +1626,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                             i < Math.floor(equipment.rating!)
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
                 
@@ -1468,6 +1647,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                               : 'text-zion-slate-light';
 
                           }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         />
                       ))}
@@ -1540,6 +1720,34 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
                   disabled={isAdding |!equipment.inStock}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                        />;
+                      ))}
+                    </div>;
+                    <span className='text-sm text-zion-slate-light'>;
+                      {equipment && equipment.rating?.toFixed(1)} ({equipment && equipment.reviewCount}{' '}
+                      reviews);
+                    </span>;
+                  </div>;
+                )}
+
+              </div>;
+
+
+              {/* Price */}
+              <div className='bg-zion-blue-light rounded-lg p-4'>;
+                <div className='text-3xl font-bold text-zion-cyan mb-2'>;
+                  {formatPrice(equipment && equipment.price)}
+                </div>;
+                <div className='flex items-center gap-2 text-sm'>;
+                  <Clock className='h-4 w-4 text-zion-cyan' />;
+                  <span
+                    className={
+
+              </div>
+              {/* Price */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="bg-zion-blue-light rounded-lg p-4">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">
                   {formatPrice(equipment.price)}
@@ -1770,6 +1978,7 @@ if ( {) {
 
               {equipment.specifications.length > 0 && (
 
+<<<<<<< HEAD
               {/* Description */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white'>
@@ -1800,6 +2009,8 @@ if ( {) {
                         <span className='text-white'>
                           {spec.value |'Enterprise Grade'}
                         </span>                      </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white">Specifications</h3>
                   <div className="grid gap-2">
@@ -1808,6 +2019,7 @@ if ( {) {
                         <span className="text-zion-slate-light">{spec.name}</span>
                         <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
                       </div>
+<<<<<<< HEAD
                     ))}
                   </div>
                 </div>
@@ -1822,6 +2034,16 @@ if ( {) {
                       size='sm'
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       className='h-8 w-8 p-0'                    >
+=======
+
+                    ))}
+                  </div>;
+                </div>;
+              )}
+              {/* Add to Cart */}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="space-y-4 pt-6 border-t border-zion-blue-light">
                 <div className="flex items-center gap-4">
                   <label className="text-white font-medium">Quantity:</label>
@@ -1832,23 +2054,40 @@ if ( {) {
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       className="h-8 w-8 p-0"
                     >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       -
                     </Button>
                     <span className="text-white w-8 text-center">{quantity}</span>
                     <Button
+<<<<<<< HEAD
                       variant='outline'
                       size='sm'
                       onClick={() => setQuantity(quantity + 1)}
                       className='h-8 w-8 p-0'                    >
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       variant="outline"
                       size="sm"
                       onClick={() => setQuantity(quantity + 1)}
                       className="h-8 w-8 p-0"
                     >
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       +
                     </Button>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className='h-8 w-8 p-0'                    >;
                 </p>;
               </div>;
@@ -1902,6 +2141,7 @@ if ( {) {
                   disabled={isAdding || !equipment.inStock}
 
 
+<<<<<<< HEAD
                 <Button
                   onClick={handleAddToCart}
                   disabled={isAdding |!equipment.inStock}
@@ -1923,6 +2163,23 @@ if ( {) {
                 >
                   <ShoppingCart className="h-4 w-4 mr-2" />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
+=======
+                  size='lg'
+                  variant='outline'
+                  className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
+                  data-testid='add-to-cart-button'>;
+                  <ShoppingCart className='h-4 w-4 mr-2' />;
+                  {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
+
+                </Button>;
+              </div>;
+
+
+              {/* Additional Info */}
+              <div className='space-y-4 border-t border-zion-blue-light pt-4'>;
+                {/* Shipping */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='flex gap-3 text-zion-slate-light'>;
                   <Truck className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
                   <div>;
@@ -1942,6 +2199,7 @@ if ( {) {
                 </Button>;
               </div>;
               {/* Additional Info */}
+<<<<<<< HEAD
               <div className="space-y-4 border-t border-zion-blue-light pt-4">
                 <div className="flex gap-3 text-zion-slate-light">
                   <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />
@@ -2003,6 +2261,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </div>
                 
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Warranty */}
                 {equipment.warranty && (
                   <div className="flex gap-3 text-zion-slate-light">
@@ -2013,6 +2274,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
 
@@ -2026,6 +2291,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                   </div>;
                 )}
+<<<<<<< HEAD
 =======
                         />;
                       ))}
@@ -2116,16 +2382,35 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                {/* Return Policy */}
+                {equipment && equipment.returnPolicy && (;
+                  <div className='flex gap-3 text-zion-slate-light'>;
+                    <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
+                    <div>;
+                      <p className='text-white text-sm font-medium'>Returns</p>;
+                      <p className='text-xs'>{equipment && equipment.returnPolicy}</p>;
+                    </div>;
+                  </div>;
+                )}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </motion && motion.div>;
           </div>;
@@ -2164,6 +2449,7 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 }
 ;
@@ -2171,3 +2457,7 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

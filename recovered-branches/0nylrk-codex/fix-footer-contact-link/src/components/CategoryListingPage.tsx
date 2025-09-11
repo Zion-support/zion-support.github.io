@@ -3,10 +3,15 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from 'react';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+import React from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -17,7 +22,10 @@ import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // Example listing type;
 interface Listing {;
@@ -27,7 +35,10 @@ interface Listing {;
   category: string,;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -38,6 +49,7 @@ import { Input } from '@/components / ui / input';
 import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Example listing type
 import { useState } from "react",
@@ -146,17 +158,28 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 // Example listing type
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+// Example listing type
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface Listing {
   id: string,
   title: string,
   description: string,
   category: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   subcategory?: string,
   image?: string,
   tags?: string[],
@@ -167,6 +190,7 @@ interface Listing {
   reviewCount?: number,
   price?: number | null,
   createdAt: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -196,10 +220,14 @@ interface Listing {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   subcategory?: string;
   image?: string;
@@ -214,6 +242,8 @@ interface Listing {;
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CategoryListingPageProps {;
   title: string,;
   description: string,;
@@ -222,6 +252,7 @@ interface CategoryListingPageProps {;
   filterOptions?: { label: string, value: string }[];
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function CategoryListingPage({ 
   title, ;
@@ -449,6 +480,8 @@ export function CategoryListingPage({ ;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -458,15 +491,19 @@ export function CategoryListingPage({ ;
           </div>;
 
 
+<<<<<<< HEAD
               {description}
             </p>;
           </div>;
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {description}
             </p>
@@ -478,10 +515,13 @@ export function CategoryListingPage({ ;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Input
                   type="text"
                   placeholder="Search listings..."
                   value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -494,6 +534,21 @@ export function CategoryListingPage({ ;
                       <ArrowDownAZ className="mr-2 h-4 w-4" />
                     ) : selectedSort === 'z-a' ? (
                       <ArrowUpZA className="mr-2 h-4 w-4" />
+=======
+
+                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e && e.target.value)}
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
+                />;
+              </div>;
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                  <div className="flex items-center">;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className="mr-2 h-4 w-4" />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className="mr-2 h-4 w-4" />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ) : null}
                     <span>
                       {sortOptions.find(option => option.value === selectedSort)?.label |'Sort By'}
@@ -534,6 +589,7 @@ export function CategoryListingPage({ ;
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -585,6 +641,9 @@ export function CategoryListingPage({ ;
                     <SelectItem key={option.value} value={option.value} className="text-white">;                      {option.label}
                     </SelectItem>;
                   ))}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </SelectContent>;
               </Select>;
             </div>;
@@ -592,17 +651,24 @@ export function CategoryListingPage({ ;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
                 <ListingScoreCard
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 =======
@@ -632,12 +698,26 @@ export function CategoryListingPage({ ;
                   ai_score={listing.ai_score}
                   rating={listing.rating}
 =======
+=======
+=======
+          {/* Results Count */}
+          <div className="mb - 6">;
+            <p className="text - zion - slate - light">;
+              Showing {processed_listings.length} results;
+              {search_query && ` for "${search_query}"`}
+            </p>;
+          </div>;
+          {/* Listings Grid */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {processed_listings.length > 0 ? (
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
               {processed_listings.map ((listing) => (
                 <ListingScoreCard;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -646,8 +726,13 @@ export function CategoryListingPage({ ;
                   tags={listing.tags}
                   author={listing.author}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   authorImage={listing.authorImage}
                   aiScore={listing.aiScore}
+=======
+                  author_image={listing.author_image}
+                  ai_score={listing.ai_score}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   rating={listing.rating}
                   reviewCount={listing.reviewCount}
                 />
@@ -660,6 +745,7 @@ export function CategoryListingPage({ ;
               <Button
                 variant="outline"
                 onClick={() => {
+<<<<<<< HEAD
 =======
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
@@ -695,6 +781,11 @@ export function CategoryListingPage({ ;
                   setSearchQuery(""),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  setSearchQuery("");
+
+                  setSearchQuery(""),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   setSelectedFilter(filterOptions[0].value)
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -702,16 +793,20 @@ export function CategoryListingPage({ ;
                 Clear all filters
               </Button>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           ) : (;
             <div className="text-center py-20">;
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   reviewCount={listing.reviewCount}
                 />;
@@ -735,6 +830,8 @@ export function CategoryListingPage({ ;
                   setSelectedFilter(filterOptions[0].value);
                 }}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="outline" 
                 onClick={() => {;
@@ -743,12 +840,16 @@ export function CategoryListingPage({ ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),; //Example listing type interface Listing {
   id: string;
@@ -896,6 +997,8 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
     </>
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -928,5 +1031,8 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
       <Footer />;
     </>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }

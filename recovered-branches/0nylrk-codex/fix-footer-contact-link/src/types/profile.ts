@@ -1,8 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export interface ProfileSkill {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -24,6 +29,7 @@ export interface ProfileProject {
 
 }
 export interface ProfileExperience {
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface ProfileSkill {
 
@@ -50,18 +56,26 @@ export interface ProfileExperience {
 export interface ProfileExperience {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   role: string;
   company: string;
   description: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   start_date: string;
   end_date?: string,
   current?: boolean;
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface Availability {
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
@@ -74,6 +88,7 @@ export interface ProfileData {
   name: string;
   title: string;
   avatar_url: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   startDate: string;
 
@@ -100,10 +115,13 @@ export interface ProfileData {;
   avatarUrl: string;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   coverImageUrl?: string;
   bio: string;
   location?: string;
   rating?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   reviewCount?: number;
   aiScore?: number;
@@ -113,11 +131,17 @@ export interface ProfileData {;
   ai_score?: number;
   profile_type: 'service' | 'talent';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  review_count?: number;
+  ai_score?: number;
+  profile_type: 'service' | 'talent';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   skills: ProfileSkill[];
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   hourlyRate?: number
 
@@ -177,10 +201,15 @@ export interface ProfileData {;
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   hourly_rate?: number,
   contact_email?: string;
 
 }
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

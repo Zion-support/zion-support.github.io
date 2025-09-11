@@ -1,12 +1,15 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   height
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   src;
   alt;
   className = ''
@@ -51,30 +54,43 @@ import React from 'react';
   const imgRef = useRef<HTMLImageElement>(null);
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           setIsInView(true);
           observer && observer.disconnect();
         }
       },      { threshold }
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);          observer && observer.disconnect();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);          observer && observer.disconnect();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       }
       { threshold }
@@ -123,6 +139,7 @@ if ( {) {
 }
       observer.observe (img_ref.current);          observer.disconnect ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
@@ -161,12 +178,18 @@ useEffect ( () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       }
       { threshold }
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     if (imgRef && imgRef.current) {;
@@ -181,7 +204,10 @@ useEffect ( () => {
   const handleLoad = () => {;
     setIsLoaded(true);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   return (
     <div className={`relative overflow-hidden ${className}`}>;
@@ -203,6 +229,7 @@ if ( {) {
   const handle_load = () =>: any {
     setIsLoaded (true);
   }
+<<<<<<< HEAD
 ;
   return (
     <div className={`relative overflow - hidden ${class_name}`}>;
@@ -230,11 +257,17 @@ if ( {) {
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
+=======
+  return (
+    <div className={`relative overflow - hidden ${class_name}`}>;
+      {/* Placeholder */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <img
         src={placeholder}
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -245,6 +278,10 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
@@ -252,14 +289,19 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Actual Image */}
       {isInView && (;
@@ -320,17 +362,23 @@ if ( {) {
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ref={imgRef}
           src={src}
           alt={alt}
           onLoad={handleLoad}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 alt=''        className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${        alt="";
         className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${
@@ -371,6 +419,8 @@ export default LazyImage;
     </div>
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
           className='w - full h - full object - cover';
           loading='lazy'          style={{ width, height }}
         />)}
@@ -390,4 +440,7 @@ export default LazyImage);
 export default LazyImage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

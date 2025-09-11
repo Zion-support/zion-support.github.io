@@ -4,6 +4,7 @@ import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",
 import { Header } from "@/components/Header";
@@ -12,10 +13,15 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function CreatorDashboard() {
   return (
     <SidebarProvider>
@@ -58,6 +64,7 @@ export default function CreatorDashboard() {
               </p>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Placeholder for more creator-specific content */}
             </div>
           </main>
@@ -72,10 +79,15 @@ export default function CreatorDashboard() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
@@ -88,11 +100,16 @@ export default function CreatorDashboard() {;
 export default function CreatorDashboard() {;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CreatorDashboard() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <SidebarProvider>;
       <div className="min-h-screen flex w-full bg-zion-blue">;
         <AppSidebar />;
@@ -102,10 +119,15 @@ export default function CreatorDashboard() {;
             <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
 import { AppSidebar } from '@/components / creator / CreatorSidebar';
 import { Header } from '@/components / Header';
@@ -154,12 +176,17 @@ function CreatorDashboard() {
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.;
               </p>;
               {/* Placeholder for more creator - specific content */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </main>;
           <Footer />;
         </div>;
       </div>;
       <SidebarTrigger />;
+<<<<<<< HEAD
     </SidebarProvider>);
 }
 <<<<<<< HEAD
@@ -179,3 +206,15 @@ function CreatorDashboard() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </SidebarProvider>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

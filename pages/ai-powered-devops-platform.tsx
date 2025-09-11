@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -7,6 +8,8 @@ export default function AIPoweredDevOpsPlatformPage() {
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 class ErrorBoundary extends React.Component {
@@ -14,16 +17,32 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -65,24 +84,39 @@ import React from 'react';
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
 		<>
 			<Head>
 				<title>AI-Powered DevOps Platform | Zion Tech Group</title>
+<<<<<<< HEAD
 <meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
+=======
+				<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops-platform" />
 			</Head>
 			<ServiceLanding
 				title="AI-Powered DevOps Platform"
+<<<<<<< HEAD
 description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
+=======
+				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 				subtitle="Ship faster with higher reliability"
 				pricePerMonthUSD={2499}
 				implementationWeeks="2-4 weeks"
 				roiNote="Cut MTTR by 40% and increase deployment frequency 3-5x"
+<<<<<<< HEAD
 features={[
+=======
+				features={[
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 					"Autonomous CI/CD optimization and caching";
 					"Flaky test detection and auto quarantine";
 					"Change-risk scoring before deploy";
@@ -97,16 +131,22 @@ features={[
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 export default /**
  * AIPoweredDevOpsPlatformPage - Function description
  */
 function AIPoweredDevOpsPlatformPage() {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -176,6 +216,8 @@ export default function AIPoweredDevOpsPlatformPage() {
 }
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <Head>;
@@ -210,9 +252,15 @@ export default function AIPoweredDevOpsPlatformPage() {
     </>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

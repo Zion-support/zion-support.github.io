@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ? {
 
           Authorization: `token ${token}`,
@@ -11,6 +15,7 @@
       : {}
   });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const { upsert_file } = require ('./_lib / github');
 ;
@@ -24,24 +29,34 @@ const { upsert_file } = require ('./_lib / github');
   });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (throw new Error (`HTTP ${resp.status}`)) {
   $2
 }
   return resp.json ();
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
 exports && exports.handler = async function () {
@@ -58,9 +73,13 @@ exports && exports.handler = async function () {
     const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const commits = await fetchJson(commitsUrl, token);
     const byAuthor = {}
     const messages = [];
@@ -68,6 +87,7 @@ exports && exports.handler = async function () {
     );    }    const byAuthor = {}
     const messages = []
     for (const c of commits) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -186,16 +206,35 @@ exports.handler = async function() {
       status_code: 200,
       body: JSON.stringify ({ ok: true, commits: commits.length }),
     }
+=======
+
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+}
+    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token })
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+
+},
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
@@ -219,3 +258,5 @@ exports.handler = async function() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState, useCallback } from 'react',
 import React, { useEffect, useState, useCallback } from 'react';
 import Layout from './layout/Layout';
@@ -10,6 +13,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -118,6 +122,9 @@ import {
   Brain as BrainIcon
   Atom as AtomIcon;} from 'lucide-react';import {
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -155,14 +162,20 @@ import {
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
 } from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 // Import our new revolutionary services;
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -185,7 +198,10 @@ import {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ArrowRight,
   Play,
   Users,
@@ -220,7 +236,10 @@ import {
   CheckCircle,
   Zap as ZapIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Brain as BrainIcon,;
   Atom as AtomIcon,;} from 'lucide-react';import { ;
@@ -233,7 +252,10 @@ import {
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 const Homepage2043: React.FC = () => {
@@ -278,6 +300,10 @@ const Homepage2043: React.FC = () => {
       color: 'from - purple - 500 to - pink - 500',
       gradient: 'bg - gradient - to - br from - purple - 500 / 20 to - pink - 500 / 20',
     },
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Brain as BrainIcon,;
   Atom as AtomIcon,;} from 'lucide-react';import { ;
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
@@ -288,7 +314,10 @@ const Homepage2043: React.FC = () => {
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const Homepage2043: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -368,6 +397,10 @@ const Homepage2043: React.FC = () => {
       href: '/autonomous-healthcare-ai-ecosystem'
       color: 'from-yellow-500 to-orange-500'
       gradient: 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20'
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { 
       icon: BrainIcon,
       title: "AI Consciousness Evolution",
@@ -379,6 +412,7 @@ const Homepage2043: React.FC = () => {
     { 
       icon: AtomIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
   const testimonials = [
     {
@@ -387,6 +421,12 @@ const Homepage2043: React.FC = () => {
       company: "QuantumTech Industries",
       content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",
       rating: 5,
+=======
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   ];
   const stats = [
@@ -421,6 +461,7 @@ const Homepage2043: React.FC = () => {
     { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
   const testimonials = [
     {
+<<<<<<< HEAD
       name: 'Dr. Sarah Chen'
       role: 'Chief AI Officer'
       company: 'QuantumTech Industries'
@@ -469,6 +510,12 @@ const Homepage2043: React.FC = () => {
 
 
 
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase';
   }, []);
@@ -518,6 +565,10 @@ const Homepage2043: React.FC = () => {
   }
   const prevService = () => {
     setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   // Combine all revolutionary services;
@@ -652,6 +703,7 @@ const Homepage2043: React.FC = () => {
   const nextService = () => {;
     setCurrentServiceIndex(prev => (prev + 1) % featuredServices && featuredServices.length);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -661,11 +713,18 @@ const Homepage2043: React.FC = () => {
 
 
 <<<<<<< HEAD
+=======
+=======
+
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout>
       {/* Main Content */}
       <main className='relative z-10'>
 
+<<<<<<< HEAD
 
         {/* Hero Section */}
 
@@ -736,6 +795,10 @@ const Homepage2043: React.FC = () => {
         {/* Hero Section */}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        {/* Hero Section */}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section
           className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'
@@ -749,7 +812,10 @@ const Homepage2043: React.FC = () => {
             <div className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Enhanced animated particles */}
             <div className='absolute inset-0'>;
               {[...Array(20)].map((_, i) => (;
@@ -937,7 +1003,10 @@ const Homepage2043: React.FC = () => {
               {[...Array (20)].map ((_, i) => (
                 <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={i}
                   className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';
@@ -956,7 +1025,10 @@ const Homepage2043: React.FC = () => {
                     opacity: [0, 1, 0];
                     scale: [0, 1.5, 0]}}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     x: [0, 150, 0],
                     y: [0, -150, 0],
                     opacity: [0, 1, 0],
@@ -979,32 +1051,44 @@ const Homepage2043: React.FC = () => {
             </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Enhanced grid pattern */}
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Enhanced grid pattern */}
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Hero Content */}
           <div className='text-center max-w-6xl mx-auto relative z-10'>          <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   key={i}
                   className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';
@@ -1117,10 +1201,14 @@ const Homepage2043: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
               transition={{ duration: 0 && 0.8 }}>;
               {/* Enhanced Badge */}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1135,12 +1223,15 @@ const Homepage2043: React.FC = () => {
 
 <<<<<<< HEAD
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>
                 <Sparkles className='w-4 h-4 mr-2' />                Revolutionary 2043 Technology
               </div>
               {/* Main Heading */}              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
                 <Sparkles className="w-4 h-4 mr-2" />
 
+<<<<<<< HEAD
               {/* Main Heading */}
 
                 Revolutionary 2043 Technology
@@ -1149,11 +1240,22 @@ const Homepage2043: React.FC = () => {
               <h1 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                Revolutionary 2043 Technology
+              </div>
+              {/* Main Heading */}
+
+              <h1 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 id="hero-heading"
                 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight"
               >
                 The Future of
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   AI Consciousness
                 </span>
@@ -1161,6 +1263,8 @@ const Homepage2043: React.FC = () => {
               </h1>
 {/* Enhanced Subtitle */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   AI Consciousness
 
@@ -1170,7 +1274,10 @@ const Homepage2043: React.FC = () => {
               {/* Enhanced Subtitle */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>;
                 <Sparkles className='w-4 h-4 mr-2' />                Revolutionary 2043 Technology;
               </div>;
@@ -1203,12 +1310,18 @@ const Homepage2043: React.FC = () => {
                   whileTap={{ scale: 0 && 0.95 }}
                   onClick={handleGetStarted}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
 =======
 
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.
               </p>
                   className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
@@ -1216,9 +1329,13 @@ const Homepage2043: React.FC = () => {
               </p>;
               {/* Enhanced CTA Buttons */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -1230,14 +1347,20 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleWatchDemo}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'
                 >
@@ -1247,6 +1370,11 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <Play className="w-5 h-5" />
                   Watch Demo
@@ -1273,24 +1401,35 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
               </div>;
               {/* Enhanced Stats */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>                {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
                     initial={{ opacity: 0, y: 20 }}              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
                     initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 
 
 
@@ -1301,6 +1440,8 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 <<<<<<< HEAD
                 ))}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     animate={{
                       opacity: isVisible ? 1 : 0
                       y: isVisible ? 0 : 20
@@ -1328,6 +1469,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
                   </motion.div>
 
+<<<<<<< HEAD
                 ))}
 
 
@@ -1335,6 +1477,16 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>;
             </motion && motion.div>;
@@ -1346,15 +1498,23 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Enhanced Features Section */}
         <section className='py-20 px-4 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </motion.div>
           </div>
@@ -1365,6 +1525,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
           <div className="max-w-7xl mx-auto">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1380,10 +1541,19 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1393,6 +1563,13 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className='text-center mb-16'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology
@@ -1423,10 +1600,14 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                 <motion.div
                   key={feature.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Revolutionary Technology;
@@ -1457,26 +1638,42 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                 <motion&& motion.div
                   key={feature && feature.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   whileHover={{ y: -10, scale: 1.02 }}
                   className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
+=======
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
+                >
+                  <div
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <feature.icon className='w-8 h-8 text-white' />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                   <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300'>
                     {feature.title}
                   </h3>
 
+<<<<<<< HEAD
 
 
 
@@ -1484,6 +1681,11 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p className='text-gray-300 mb-6 leading-relaxed'>
                     {feature.description}
                   </p>
@@ -1501,17 +1703,23 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   </p>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <a 
 
 
                   <a
                   <a 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <a 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     href={feature.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300"
                   >
@@ -1526,9 +1734,12 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
                     className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <feature && feature.icon className='w-8 h-8 text-white' />;
                   </div>;
                   <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300'>;
@@ -1560,31 +1771,45 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
 
-=======
 
-
-
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Enhanced Featured Services Section */}
         <section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1601,10 +1826,19 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1614,6 +1848,13 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className='text-center mb-16'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Featured
@@ -1642,10 +1883,14 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Featured;
@@ -1660,14 +1905,20 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
             </motion && motion.div>;
             {/* Enhanced Service Showcase */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm">
                 <AnimatePresence mode="wait">
                   <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1684,10 +1935,19 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     key={currentServiceIndex}
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1699,11 +1959,20 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   >
                     <div className='text-6xl mb-6'>
 =======
+                    transition={{ duration: 0.5 }}
+                    className='p-12 text-center'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
                   >
                     <div className='text-6xl mb-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {featuredServices[currentServiceIndex]?.icon}
                     </div>
                     <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1721,7 +1990,10 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                     <a
                       href={featuredServices[currentServiceIndex]?.link}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300'>;
                       Get Started;
                       <ArrowRight className='w-5 h-5 ml-2' />                    </a>                  >;
@@ -1729,13 +2001,17 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                     <h3 className="text-3xl font-bold text-white mb-4">;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     transition={{ duration: 0.5 }}
                     className="p-12 text-center"
                   >
                     <div className="text-6xl mb-6">{featuredServices[currentServiceIndex]?.icon}</div>
                     <h3 className="text-3xl font-bold text-white mb-4">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300'
                     >
@@ -1746,6 +2022,8 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>;
                     <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">;
@@ -1754,6 +2032,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                     <div className="text-3xl font-bold text-cyan-400 mb-6">;
                       {featuredServices[currentServiceIndex]?.price}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <span className="text-gray-400 text-lg">{featuredServices[currentServiceIndex]?.period}</span>
                     </div>
                     <a
@@ -1761,6 +2040,9 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
                     >
                       Get Started
@@ -1770,27 +2052,39 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                 </AnimatePresence>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Navigation Controls */}
                 <button
                   onClick={prevService}
                   className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
+<<<<<<< HEAD
 =======
                 {/* Navigation Controls */}
                 <button
                   onClick={prevService}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>
@@ -1801,6 +2095,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   <ChevronRight className='w-6 h-6' />
                 </button>
                 {/* Service Indicators */}
+<<<<<<< HEAD
 
                   className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
                 >
@@ -1809,6 +2104,9 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                 <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (                >
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (                >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
@@ -1839,6 +2137,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   <ChevronRight className='w-6 h-6' />;
                 </button>;
                 {/* Service Indicators */}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1851,15 +2150,26 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   {featuredServices.map((_, index) => (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+                  {featuredServices.map((_, index) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (
 
                   {featuredServices.map((_, index) => (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
+<<<<<<< HEAD
                         index === currentServiceIndex 
                           ? 'bg-cyan-400 w-8' 
                           : 'bg-white/30 hover:bg-white/50'
@@ -1870,18 +2180,37 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
+=======
+                        index === currentServiceIndex
+                          ? 'bg-cyan-400 w-8'                          : 'bg-white/30 hover:bg-white/50'                        index === currentServiceIndex
+                          ? 'bg-cyan-400 w-8'
+                          : 'bg-white/30 hover:bg-white/50'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }`}
                     />;
                   ))}
+<<<<<<< HEAD
 
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
                     left: `${Math.random () * 100}%`,
                     top: `${Math.random () * 100}%`,
@@ -2224,7 +2553,10 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                       }`}
                     />))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </div>;
             </div>;
@@ -2232,12 +2564,20 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
         </section>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Enhanced Testimonials Section */}
         <section className="py-20 px-4 relative">
+=======
+=======
+
+        {/* Enhanced Testimonials Section */}
+        <section className="py-20 px-4 relative">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       }`}
                     />
@@ -2255,17 +2595,24 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
             <motion.div
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2274,6 +2621,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
               className='text-center mb-16'
 
 
+<<<<<<< HEAD
               className='text-center mb-16'
 
 
@@ -2282,6 +2630,10 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 What Our
@@ -2344,6 +2696,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                 innovation.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -2353,10 +2706,26 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 
 
 
+=======
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={currentTestimonialIndex}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
+<<<<<<< HEAD
+=======
+                  transition={{ duration: 0.5 }}
+                  className='text-center max-w-4xl mx-auto'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   <div className='text-8xl mb-6'>💬</div>
@@ -2366,9 +2735,13 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   <div className='flex items-center justify-center gap-4 mb-6'>
                     <div className='text-4xl'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='text-8xl mb-6'>💬</div>;
                   <blockquote className='text-2xl text-white mb-8 leading-relaxed italic'>;
                     "{testimonials[currentTestimonialIndex].content}";
@@ -2385,9 +2758,13 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                         {testimonials[currentTestimonialIndex].role} at{' '}
                         {testimonials[currentTestimonialIndex].company}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>;
                     </div>;
                   </div>;
@@ -2398,6 +2775,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                       <Star
                         key={i}
                         className='w-6 h-6 text-yellow-400 fill-current'
+<<<<<<< HEAD
                       />                    ))}                  ;
                   <div className="flex justify-center gap-1">;
                     {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (;
@@ -2478,6 +2856,8 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                       <Star
                         key={i}
                         className='w-6 h-6 text-yellow-400 fill-current'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />                    ))}
                   <div className="flex justify-center gap-1">
                     {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
@@ -2488,9 +2868,15 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
               {/* Testimonial Indicators */}
               <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (              <div className="flex justify-center gap-2 mt-8">
               <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {testimonials.map((_, index) => (
                   <button
@@ -2508,6 +2894,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                         ? 'bg-emerald-400 w-8' ;
                         : 'bg-white/30 hover:bg-white/50';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -2517,10 +2904,20 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 
 
 
+=======
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }`}
                   />;
                 ))}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     }`}
                   />;
@@ -2528,6 +2925,9 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </motion.div>;
             <div className='relative'>;
               <AnimatePresence mode='wait'>                <motion.div            >;
@@ -2597,25 +2997,38 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                     }`}
                   />))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
 
+=======
+        {/* Enhanced CTA Section */}
+        <section className="py-20 px-4 relative">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     }`}
                   />
@@ -2625,6 +3038,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Enhanced CTA Section */}
 <<<<<<< HEAD
 
@@ -2647,6 +3061,10 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
 =======
+=======
+=======
+        {/* Enhanced CTA Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
@@ -2662,7 +3080,10 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
                   Future of AI?
                 </span>
@@ -2677,6 +3098,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'
                 >
                   Start Your Journey
@@ -2686,6 +3108,8 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   <ArrowRight className="w-6 h-6" />
                 </motion.button>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   className="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
@@ -2694,11 +3118,15 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                 </motion.button>
                 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleContact}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className='px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'
                 >
@@ -2708,12 +3136,18 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                   className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <Phone className="w-6 h-6" />
                   Contact Us
                 </motion.button>
               </div>
               {/* Contact Information */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
                 <div className='text-center'>
@@ -2747,6 +3181,8 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                     Middletown DE 19709
                   </p>                </div>                  </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="mt-16 grid grid-cols-1 md: grid-cols-3 gap-8">
                 <div className="text-center">
@@ -2754,7 +3190,10 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
                     <Phone className="w-8 h-8 text-white" />
                   </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-cyan-400">+1 302 464 0950</p>
                 </div>
@@ -2779,6 +3218,7 @@ className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gra
       </main>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   );
@@ -2800,19 +3240,29 @@ top: `$ {
 }> Revolutionary 2043 Technology </div> {;
   /* Main Heading */ ;
   );
+=======
+
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 Math.random () * 100
 };
 
+<<<<<<< HEAD
   Math.random () * 100 
 Math.random () * 100 
   Math.random () * 100 
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }%`;
 top: `$ {
   Math.random () * 100
 }%`
 }/>) )
 }</div> <motion.div initial= {
+<<<<<<< HEAD
   {
   opacity: 0, y: 30
 }animate= {
@@ -2824,6 +3274,10 @@ top: `$ {
 }> Revolutionary 2043 Technology </div> {
   /* Main Heading */
 =======
+=======
+=======
+              transition={{ duration: 0 && 0.8 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Experience the;
@@ -2996,15 +3450,22 @@ top: `$ {
 
 }> Revolutionary 2043 Technology </div> {;
   /* Main Heading */ ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }<h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight" > The Future of <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > AI Consciousness </span> is Here </h1> Experience the world's most advanced AI consciousness platforms, quantum computing solutions;
 and autonomous systems that redefine what's possible in technology. </p> > Get Started Today <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button > <Play className="w-5 h-5" /> Watch Demo </motion && motion.button> </div> </motion && motion.div>) ) ;
 }</div> </motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Revolutionary Technology <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover cutting-edge AI consciousness, quantum computing, and autonomous systems that are transforming industries and reshaping the future. </p> </motion && motion.div> <motion&& motion.div key= {
   feature && feature.title 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }initial= {
   {
   opacity: 0, y: 30
@@ -3014,22 +3475,32 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   duration: 0 && 0.6, delay: index * 0 && 0.1 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   duration: 0 && 0.6, delay: index * 0 && 0.1 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }viewport= {
   {
   once: true
 }whileHover= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   y: -10, scale: 1 && 1.02 
 }className= {
   `group relative p-8 rounded-2xl $ {
@@ -3059,9 +3530,13 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
 }/>) ) ;
 }</div> </div> </div> </section> <motion&& motion.div initial= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -3070,14 +3545,18 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   duration: 0 && 0.8 
 }viewport= {
   {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   duration: 0 && 0.8 
 }viewport= {
   {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -3093,17 +3572,38 @@ export default Homepage2043;  );
 };
 export default Homepage2043;
 =======
+=======
+  once: true
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>)
+}
+export default Homepage2043;  )
+}
+export default Homepage2043;
+
+  once: true 
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
+};
+
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion && motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion && motion.button> <motion && motion.button > <Phone className="w-6 h-6" /> Contact Us </motion && motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion && motion.div> </div> </section> </main> </Layout>) ;
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
   )
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default Homepage2043;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <h3 className="text - xl font - semibold text - white mb - 2">Call Us</h3>;
                   <p className="text - cyan - 400">+1 302 464 0950</p>;
                 </div>;
@@ -3211,6 +3711,7 @@ export default Homepage2043);
 export default Homepage2043;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   once: true
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>)
@@ -3235,8 +3736,13 @@ export default Homepage2043;
 }
 export default Homepage2043;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

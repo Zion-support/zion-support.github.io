@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }; import {
   FormField
   FormItem
@@ -12,12 +13,15 @@ import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommende
 import { Card, CardContent } from "@/components/ui/card"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } import {
   FormField;
   FormItem;
   FormLabel;
   FormControl;
   FormDescription;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -63,11 +67,21 @@ interface RateOptimizationSectionProps {
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+=======
+
+
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
+import { Card, CardContent } from "@/components/ui/card",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
+<<<<<<< HEAD
   location?: string,
 <<<<<<< HEAD
   location?: string
@@ -80,22 +94,45 @@ interface RateOptimizationSectionProps {
 }
 <<<<<<< HEAD
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+=======
+
+
+
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
+import { Card, CardContent } from "@/components/ui/card",
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   control
   setValue
   skills
   yearsExperience
+<<<<<<< HEAD
   location
   location
   location
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   control,
   setValue,
   skills,
   yearsExperience,
+<<<<<<< HEAD
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
   }
+=======
+
+
+
+  location,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   rateType
 },) => {
   const handleSuggestionApplied = (rate: number,) => {
@@ -107,12 +144,21 @@ import { Input  } from '@/components / ui / input';
 import { TalentRateRecommender  } from '@/components / pricing / TalentRateRecommender';
 import { Card, CardContent  } from '@/components / ui / card';
 interface RateOptimizationSectionProps {
+<<<<<<< HEAD
   control: Control < any>,
   set_value: UseFormSetValue < any>,
   skills: string[],
   years_experience: number,
   location?: string;
   rate_type: "hourly" | "fixed";
+=======
+  control: Control<any>,
+  setValue: UseFormSetValue<any>,
+  skills: string[],
+  yearsExperience: number,
+  location?: string,
+  rateType: "hourly" | "fixed"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> = ({
   control;
@@ -125,6 +171,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
   const handleSuggestionApplied = (rate: number, ) =>: any {
     set_value ("hourly_rate", rate);
 
+<<<<<<< HEAD
   location,
   rateType
 }) => {
@@ -139,6 +186,9 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   },
 
+=======
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },
 
@@ -156,6 +206,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 type="number"
                 min="1"
                 step="0.01"
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { Control, UseFormSetValue } from "react-hook-form",;
 import {;
@@ -165,15 +219,23 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage;
+<<<<<<< HEAD
 } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",;
 import { Card, CardContent } from "@/components/ui/card",;
+=======
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface RateOptimizationSectionProps {;
   control: Control<any>,;
   setValue: UseFormSetValue<any>,;
   skills: string[],;
   yearsExperience: number,;
+<<<<<<< HEAD
   location?: string,;
   rateType: "hourly" | "fixed";
 }
@@ -197,11 +259,42 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         render={({ field }: { field: any }) => (;
           <FormItem>;
             <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
+=======
+  location?: string;
+  rateType: "hourly" | "fixed";
+}
+
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+  location,;
+  rateType;
+},) => {;
+  const handleSuggestionApplied = (rate: number,) => {;
+    setValue("hourlyRate", rate);
+  };
+
+  return (
+
+    <div className="space - y-4">;
+      <FormField;
+        control = {control, }
+        name="hourly_rate";
+        render={({ field }: { field: any }, ) => (
+          <FormItem>;
+            <FormLabel > Your {rate_type === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <FormControl>;
               <Input;
                 type="number";
                 min="1";
                 step="0.01";
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {...field}
               />;
             </FormControl>;
@@ -217,6 +310,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
           <TalentRateRecommender
 
+<<<<<<< HEAD
                 {...field}
               />
             </FormControl>
@@ -243,16 +337,26 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 }
 "}
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
 "};
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             skills={skills}
             yearsExperience={yearsExperience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
             rateType={rateType}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
         </CardContent>;
       </Card>;
@@ -261,6 +365,10 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 };
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </FormItem>)}
       />;
       <Card>;
@@ -278,6 +386,9 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 }
 "},
 }
+<<<<<<< HEAD
 =======
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

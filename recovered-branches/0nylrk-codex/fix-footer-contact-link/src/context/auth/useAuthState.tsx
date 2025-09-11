@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import type { UserProfile } from "@/types/auth";
 /**
@@ -16,15 +17,21 @@ import type { UserProfile } from "@/types/auth",
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**
  * Custom hook to manage auth state
  */
 export function useAuthState() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [user, setUser] = useState<UserProfile | null>(null),
   const [isLoading, setIsLoading] = useState<boolean>(true),
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
   
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
@@ -32,6 +39,7 @@ export function useAuthState() {
   const [isLoading, setIsLoading] = useState<boolean>(true),
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
   
+<<<<<<< HEAD
 =======
 
   const [user, setUser] = useState<UserProfile | null>(null),
@@ -41,6 +49,8 @@ export function useAuthState() {
   
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     user,
     setUser,
@@ -50,6 +60,7 @@ export function useAuthState() {
     setOnboardingStep
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
   }
@@ -57,18 +68,26 @@ import type { UserProfile } from "@/types/auth",;
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**;
  * Custom hook to manage auth state;
  */;
 export function useAuthState() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React, { useState } from './react';
 import type { UserProfile } from "@/types / auth";
@@ -83,7 +102,10 @@ function useAuthState() {
   const [is_loading, setIsLoading] = useState < boolean>(true);
   const [onboarding_step, setOnboardingStep] = useState < string | null>(null);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [user, setUser] = useState<UserProfile | null>(null),;
   const [isLoading, setIsLoading] = useState<boolean>(true),;
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
@@ -95,13 +117,18 @@ function useAuthState() {
     onboardingStep;
     setOnboardingStep;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   }
 }
+<<<<<<< HEAD
 ;
   return {
 
@@ -126,3 +153,7 @@ function useAuthState() {
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

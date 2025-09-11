@@ -5,6 +5,7 @@
     return res.status(200).json({ ok: true });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getServerSupabase } from '../../../../utils / supabase / server',
 export default async /**
@@ -59,6 +60,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { error } = await supabase.from('partners').update(updates).eq('code', String(code).toLowerCase())
     if (error) return res.status(500).json({ error: error.message });
     return res.status(200).json({ ok: true });
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const supabase = getServerSupabase (),
     const updates: any = {},
     // Check condition
@@ -75,16 +79,22 @@ if (updates.commission_rate = commission_rate, ) {
 }
     return res.status (200).json ({ ok: true });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   } catch (e: any) {
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  } catch (e: any) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status (500).json ({ error: e?.message });
   }
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -102,6 +112,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
+=======
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (req.method === 'POST') {
       const { code, status, commission_rate } = req.body;
       if (!code) return res.status(400).json({ error: 'Code required' });
@@ -119,6 +138,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 =======
 =======
 }
@@ -129,10 +149,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -142,3 +165,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

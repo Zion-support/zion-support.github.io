@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const LanguageSync: NextPage = () => {
   return (
@@ -28,17 +32,21 @@ const LanguageSync: NextPage = () => {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 export default LanguageSync,
 
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 },
 export default LanguageSync,
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
@@ -71,13 +79,19 @@ const LanguageSync: NextPage = () => {
 },
 export default LanguageSync,
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 export default LanguageSync,
 },
 
+<<<<<<< HEAD
 export default LanguageSync,;
 export default LanguageSync,
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

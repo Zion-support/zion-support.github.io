@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import * as React from &quot;react&quot;
+import { cn } from &quot;@/lib/utils&quot;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
   ({ className, type, ...props }, ref) => {
@@ -39,10 +45,20 @@ import { cn } from "@/lib/utils"
 
 
         )}
+=======
+
+
+        )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
 )}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ref={ref}
         {...props}
       />);
@@ -52,6 +68,7 @@ import { cn } from &quot;@/lib / utils & quot;
 Input.display_name = &quot;Input & quot;
 
 export { Input }
+<<<<<<< HEAD
 
 export { Input };
 
@@ -59,12 +76,20 @@ export { Input };
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+export { Input };
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Input.displayName = "Input"
 
 export { Input }
 
 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
         ref={ref}
@@ -85,3 +110,6 @@ export { Input }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Star, ArrowRight, Play, CheckCircle;
@@ -30,6 +31,8 @@ import {
   MapPin;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -52,7 +55,13 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Rocket,
   Brain,
   Atom,
@@ -70,10 +79,15 @@ import React from 'react';
   MapPin,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 const contactInfo = {
@@ -111,9 +125,13 @@ const heroStats = [
   { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' }
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 const featuredServices = [
 import {motion} from 'framer-motion';
@@ -174,52 +192,76 @@ const hero_stats = [;
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from - green - 400 to - emerald - 400' }
 const featured_services = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     name: 'AI Consciousness Evolution',
     description: 'Develop genuine AI consciousness',
     price: '$19, 999 / month',
     icon: Brain,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - violet - 600 to - purple - 600',
     href: '/ai - consciousness - evolution - platform',
   },  {    href: '/ai - consciousness - evolution - platform';
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     name: 'Space Mining Automation',
     description: 'Automated asteroid mining',
     price: '$45, 999 / month',
     icon: Rocket,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     color: 'from - teal - 600 to - emerald - 600',
     href: '/space - mining - automation - platform',
   },  {    href: '/space - mining - automation - platform';
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     name: 'Quantum Internet Security',
     description: 'Unbreakable encryption',
     price: '$15, 999 / month',
     icon: Shield,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Rocket,;
   Brain,;
@@ -302,8 +344,11 @@ const featuredServices = [;
   },];
 export default function UltraFuturisticHero2032() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
 
@@ -330,7 +375,10 @@ function UltraFuturisticHero2032() {
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway';
   }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>    href: '/quantum-internet-security-gateway'
   };
 ];
@@ -351,14 +399,20 @@ function UltraFuturisticHero2032() {
               className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
               style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 duration: 3 + Math.random() * 2
                 repeat: Infinity
                 delay: Math.random() * 2
               }}            />                delay: Math.random() * 2}}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -379,22 +433,34 @@ function UltraFuturisticHero2032() {
                 repeat: Infinity,
                 delay: Math.random() * 2}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             />
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+            />
+          ))}
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           ))}
         </div>
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Gradient Orbs */}
 
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             />
           ))}
@@ -407,6 +473,8 @@ function UltraFuturisticHero2032() {
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
       </div>
@@ -431,24 +499,34 @@ function UltraFuturisticHero2032() {
       </div>;
       {/* Main Content */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 =======
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Hero Badge */}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Hero Badge */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm'
         >
           <Sparkles className='w-5 h-5 text-purple-400' />
           <span className='text-purple-300 font-medium'>
             🚀 2032 Revolutionary Technology
           </span>
+<<<<<<< HEAD
           className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
 
           <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
@@ -456,10 +534,14 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <Sparkles className="w-5 h-5 text-purple-400" />
           <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>
           <Sparkles className="w-5 h-5 text-cyan-400" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -480,21 +562,28 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>
 
         </motion.div>
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         </motion.div>
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Main Heading */}
         <motion&& motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -514,6 +603,14 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
@@ -543,17 +640,24 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         </motion && motion.h1>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Subheading */}
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -561,6 +665,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 
         </motion.p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -643,11 +748,21 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
+        </motion.p>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
         >
@@ -694,17 +809,46 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           </Link>;
           <Link
 =======
+=======
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+        >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          <Link
+            href='/services'
+
+            className='group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25'>;
+            <span>Explore All Services</span>;
+            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
+          </Link>;
+
+
+          <Link
+            href={`tel:${contactInfo && contactInfo.mobile}`}
+            className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300'>;
+            <Phone className='w-5 h-5' />            <span>Call {contactInfo && contactInfo.mobile}</span>        >;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <Link
             href="/services"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <Link
+            href="/services"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             href={`tel:${contactInfo.mobile}`}
             className="group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300"
           >
@@ -713,6 +857,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           </Link>
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -721,10 +866,19 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 
 
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Stats Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -733,12 +887,20 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{ duration: 0.8, delay: 0.8 }}
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           {heroStats.map((stat, index) => (
             <motion.div
@@ -866,13 +1028,18 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='text-center group'
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -900,6 +1067,8 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         >
               className='text-center group'
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <div
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
@@ -922,13 +1091,17 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         </motion.div>
               <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </motion.div>
 
           ))}
         </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Featured Services */}
         <motion.div
@@ -948,6 +1121,20 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Featured Services */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className='mb-16'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -960,10 +1147,13 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
             {featuredServices.map((service, index) => (
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 key={service.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -972,14 +1162,20 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link
                   href={service && service.href}
                   className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'>;
                   <div
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1057,6 +1253,8 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
                   className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'
                 >
                   <div
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}
                   >
                     <service.icon className='w-8 h-8 text-white' />
@@ -1082,6 +1280,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           </div>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1090,6 +1289,32 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Contact Information */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.6 }}
+          className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+        >
+          <h3 className='text-2xl font-bold text-white mb-6 text-center'>
+            Ready to Transform Your Business?
+          </h3>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
+            <div className='flex items-center space-x-3 text-gray-300'>
+              <Phone className='w-5 h-5 text-cyan-400' />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           transition={{ duration: 0 && 0.8, delay: 1 && 1.6 }}
           className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'>;
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>;
@@ -1107,6 +1332,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
             <div className='flex items-center space-x-3 text-gray-300'>;
               <Mail className='w-5 h-5 text-purple-400' />;
               <a
+<<<<<<< HEAD
 <<<<<<< HEAD
           transition={{ duration: 0.8, delay: 1.6 }}
           className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
@@ -1147,12 +1373,17 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
               <span>Get Started Today</span>
               <ArrowRight className='w-5 h-5' />            </Link>        >
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           transition={{ duration: 0.8, delay: 1.6 }}
           className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto"
         >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             Ready to Transform Your Business?
           </h3>
@@ -1197,9 +1428,13 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='text-center'>;
             <Link
               href='/contact'
@@ -1238,19 +1473,28 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
         </motion && motion.div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 
 
-=======
 
-
-
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Floating Action Button */}
       <motion&& motion.div
                 className='group';
@@ -1359,11 +1603,17 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
       {/* Floating Action Button */}
       <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
@@ -1378,6 +1628,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 2 }}
@@ -1386,6 +1637,11 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className='fixed bottom - 8 right - 8 z - 50';
       >;
         <Link;
@@ -1413,14 +1669,20 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className='fixed bottom-8 right-8 z-50'
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Floating Action Button */}
@@ -1433,6 +1695,8 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -1441,6 +1705,7 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
         </Link>
       </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </section>
     </section>;
@@ -1464,3 +1729,8 @@ className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/2
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

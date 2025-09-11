@@ -36,7 +36,6 @@ export interface RealMicroSaasService2024 {
   implementationDetails?: string;
   launchDate?: string;
   reviews?: number}
-<<<<<<< HEAD:data-disabled/2024-real-micro-saas-services.ts
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [;
   {

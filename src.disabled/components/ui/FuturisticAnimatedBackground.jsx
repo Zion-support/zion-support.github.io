@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{ useEffect,useRef } from\';react\'; import { motion } from\';\';framer-motion\'; \"export\": const FuturisticAnimatedBackground = ({ variant =\';\';cyberpunk\',intensity =\';\';medium\',\"className\": = \'';\'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return\'; const ctx = canvas.getContext(\'';2d\') \"if\": (!ctx) return\'';\';
 const React,{ useEffect,useRef } from";react"; import { motion } from";";framer-motion"; export: const FuturisticAnimatedBackground = ({ variant =";";cyberpunk",intensity =";";medium",className: = "";"}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return"; const ctx = canvas.getContext("";2d") if: (!ctx) return"";";"""
 :src.disabled/components/ui/FuturisticAnimatedBackground.jsx
@@ -13,6 +14,8 @@ const React,{ useEffect,useRef } from";react"; import { motion } from";";framer-
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext('';2d') "if": (!ctx) return'';';
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
@@ -23,13 +26,19 @@ const React,{ useEffect,useRef } from";react"; import { motion } from";";framer-
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext('';2d') "if": (!ctx) return'';';
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React,{ useEffect,useRef } from\';react\'; import { motion } from\';\';framer-motion\'; \"export\": const FuturisticAnimatedBackground = ({ variant =\';\';cyberpunk\',intensity =\';\';medium\',\"className\": = \'';\'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return\'; const ctx = canvas && canvas.getContext(\'';2d\') \"if\": (!ctx) return\'';\';
 const React,{ useEffect,useRef } from";react"; import { motion } from";";framer-motion"; export: const FuturisticAnimatedBackground = ({ variant =";";cyberpunk",intensity =";";medium",className: = "";"}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return"; const ctx = canvas && canvas.getContext("";2d") if: (!ctx) return"";";"""
 
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef && canvasRef.current if (!canvas) return'; const ctx = canvas && canvas.getContext('';2d') "if": (!ctx) return'';';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext('';2d') "if": (!ctx) return'';';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

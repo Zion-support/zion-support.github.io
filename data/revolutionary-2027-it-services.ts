@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Revolutionary2027ItService {
 export interface Revolutionary2027ItService {;
   id: string;
@@ -32,11 +33,15 @@ export interface Revolutionary2027ItService {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -72,6 +77,9 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -82,6 +90,7 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [;
     address: string
   }
 }
+<<<<<<< HEAD
 export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
     id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform",
@@ -114,6 +123,12 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   }
 ];
 ;
+=======
+
+export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
+  {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "2027-revolutionary-it",
     name: "2027 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2027",
@@ -132,6 +147,7 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -141,6 +157,10 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

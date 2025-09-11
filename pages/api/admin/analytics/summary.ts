@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -77,6 +78,10 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     }
     return rows;
 =======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
@@ -85,14 +90,20 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch {
     return [];
   }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
   const p = page.toLowerCase()
@@ -102,6 +113,7 @@ if (!page) return 'other'
   return 'other'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   const { start, end, userType } = req.query as { 
@@ -124,27 +136,59 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const { allowed } = await ensureAdminFromApi(req)
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
+  const { start, end, userType } = req.query as { start?: string, end?: string, userType?: string }
+  const rows = parseLines(start, end).filter((r) => !userType |userType === 'all' |(r.userType |'guest') === userType)
+  const byFeature: Record<string, number> = {}
+  const byEvent: Record<string, number> = {}
+  const byDay: Record<string, number> = {}
+  for (const r of rows) {
+    const f = featureFromPath(r.page)
+    byFeature[f] = (byFeature[f] |0) + 1
+    byEvent[r.name] = (byEvent[r.name] |0) + 1
+    const day = r.at.slice(0, 10)
+    byDay[day] = (byDay[day] |0) + 1
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     .sort((a, b) => b.value - a.value);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+    .sort((a, b) => b.value - a.value),
+
+
+
+    .sort((a, b) => b.value - a.value);
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     .sort((a, b) => b.value - a.value),
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
   const days = Object.keys(byDay).sort();
   const line = days.map((d) => ({ date: d, value: byDay[d] }));
+=======
+  const days = Object.keys(byDay).sort();
+  const line = days.map((d) => ({ date: d, value: byDay[d] }));
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const funnelStages = [
     'Visit',
     'AI Prompt Used',
@@ -155,11 +199,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: stage, 
     value: byEvent[stage] || 0 
   }));
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -211,6 +262,7 @@ function handler() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 
     .sort((a, b) => b.value - a.value)
@@ -235,10 +287,16 @@ function handler() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -259,8 +317,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

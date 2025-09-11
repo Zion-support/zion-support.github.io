@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 :hooks/useResponsive.ts
@@ -7,6 +8,11 @@
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+:hooks/useResponsive.ts
+        "isDesktop":width >= 1024})}
+    updateDimensions();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "isDesktop":width >= 1024})},;
 ;
     updateDimensions(),;
@@ -15,6 +21,9 @@
   'resize', updateDimensions);
     return () => window.removeEventListener(;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 :hooks/useResponsive.ts
   'resize', updateDimensions)}, []),;
   return state},;
@@ -22,6 +31,7 @@ export default useResponsive,;import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
 import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
+<<<<<<< HEAD
 =======
 
   'resize', updateDimensions)}, []),;
@@ -30,6 +40,8 @@ export default useResponsive,;import { useState, useEffect } from 'react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   'resize', updateDimensions)}, []);
   return state}
@@ -48,6 +60,7 @@ const defaultBreakpoints: Breakpoints = {
   xl: 1280
   '2xl': 1536
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -140,3 +153,5 @@ main:hooks/useResponsive.ts
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useResponsive.ts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

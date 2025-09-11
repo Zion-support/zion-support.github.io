@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, ControllerRenderProps } from "react-hook-form"
@@ -156,15 +157,42 @@ export default function UpdatePassword() {
                 Enter your new password below.
               </p>
             </div>
+=======
+Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
 
-            <div className="bg-zion-blue-dark rounded-lg p-6">
-              {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
-                  <p className="text-sm">{error}</p>
-                  <Button className="mt-3 text-xs" variant="outline" onClick={() => router('/forgot-password')}>
-                    Request new reset link
-                  </Button>
-                </div>)}
 
+  )
+}
+
+
+  FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
+import { cleanupAuthState  } from '@/utils / auth_utils';
+import { logErrorToProduction } from '@/utils / production_logger';
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object ({
+    password: z;
+      .string ();
+      .min (8, "Password must be at least 8 characters");
+      .max (64, "Password must be less than 64 characters");
+    confirm_password: z.string ()});
+  .refine ((data, ) => data.password === data.confirm_password, {
+    message: "Passwords do not match",
+    path: ["confirm_password"]}),
+type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
+}
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+
+      .max(64, "Password must be less than 64 characters"),
+      .max(64, "Password must be less than 64 characters"),
+
+<<<<<<< HEAD
               {success ? (<div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
                     <LockKeyhole className="h-6 w-6 text-zion-purple"/>
@@ -274,3 +302,9 @@ type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
 =======
     path: ["confirmPassword"]}),
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    confirmPassword: z.string()})
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"]}),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

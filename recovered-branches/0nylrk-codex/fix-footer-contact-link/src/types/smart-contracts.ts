@@ -15,6 +15,7 @@ export interface SmartContractInfo {;
   createdAt: string;
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
+<<<<<<< HEAD
 
 ;
 export interface SmartContractInfo {
@@ -44,6 +45,13 @@ export interface EscrowContractDetails {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export interface EscrowContractDetails {
+=======
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   client: string;
   talent: string;
   amount: number;
@@ -56,6 +64,7 @@ export interface DeploymentOptions {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   completionDeadline: string
   arbitrator?: string
 }
@@ -64,12 +73,17 @@ export interface DeploymentOptions {
 export interface DeploymentOptions {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
 
   deployToChain: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none',;
@@ -93,10 +107,13 @@ export interface EscrowContractDetails {;
   currency: string,;
   deliverables: string,;
   completionDeadline: string,;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   completion_deadline: string,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   arbitrator?: string;
 }
 export interface DeploymentOptions {
@@ -111,6 +128,7 @@ export interface DeploymentOptions {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   arbitrator?: string;
 }
 ;
@@ -124,3 +142,6 @@ export interface DeploymentOptions {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

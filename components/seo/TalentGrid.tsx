@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -21,12 +22,15 @@ class ErrorBoundary extends React.Component {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
 type Props = {;
   region?: string;
   service?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import { TALENT_PROFILES } from '../../data/talent';
@@ -53,6 +57,8 @@ export default function TalentGrid(): any ({ region, service }: Props) {;
       ),;
     [region, service],;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 };
@@ -60,7 +66,10 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
   if (!region) return true;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
   if (items && items.length === 0) {;
     return (
@@ -103,10 +112,15 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r)
 }
@@ -120,11 +134,16 @@ export default function TalentGrid({ region, service }: Props) {
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
     [region, service]
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 =======
   );
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (items.length === 0) {
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
   }
@@ -148,6 +167,7 @@ export default function TalentGrid({ region, service }: Props) {
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       ))}
     </div>;
   );
@@ -155,6 +175,9 @@ export default function TalentGrid({ region, service }: Props) {
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ))}
     </div>;
   );
@@ -164,7 +187,10 @@ export default function TalentGrid({ region, service }: Props) {
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -318,6 +344,7 @@ export default function TalentGrid(_{_region, _service}: Props) {_const _items =
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
@@ -405,3 +432,5 @@ export default function TalentGrid({ region, service }: Props) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

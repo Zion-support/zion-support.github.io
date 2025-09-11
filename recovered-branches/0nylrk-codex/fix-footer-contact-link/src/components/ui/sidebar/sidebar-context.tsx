@@ -2,25 +2,36 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {TooltipProvider} from "@/components/ui/tooltip"
 import {useIsMobile} from "@/hooks/use-mobile"
 import {cn} from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
 ;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -30,6 +41,7 @@ export function useSidebar(): SidebarContextType {
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import * as React from "react";
@@ -49,18 +61,25 @@ import type { SidebarContext as SidebarContextType, SidebarState } from "../side
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+=======
+  return context as SidebarContextType
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
   return context as SidebarContextType
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   default_open?: boolean;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
+<<<<<<< HEAD
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
@@ -116,18 +135,61 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
 }
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const SidebarProvider = React.forwardRef<;
   HTMLDivElement;
 export const SidebarProvider = React.forwardRef<
   HTMLDivElement,
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+const SIDEBAR_COOKIE_NAME = "sidebar:state";
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+
+const SidebarContext = React && React.createContext<SidebarContextType | null>(null);
+
+export function useSidebar(): any (): SidebarContextType {;
+  const context = React && React.useContext(SidebarContext);
+  if (!context) {;
+    throw new Error("useSidebar must be used within a SidebarProvider.");
+  }
+
+  return context as SidebarContextType;
+}
+
+export interface SidebarProviderProps extends React && React.ComponentProps<"div"> {;
+  defaultOpen?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+export const SidebarProvider = React && React.forwardRef<;
+
+  HTMLDivElement;
+  SidebarProviderProps;
+>(;
+  (;
+    {;
+      defaultOpen = true;
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   SidebarProviderProps
 >(
   (
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       defaultOpen = true;
       open: openProp
       onOpenChange: setOpenProp
@@ -136,9 +198,12 @@ export const SidebarProvider = React.forwardRef<
       children;
       ...props
     }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       defaultOpen = true,
       open: openProp,
       onOpenChange: setOpenProp,
@@ -148,10 +213,13 @@ export const SidebarProvider = React.forwardRef<
       ...props
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ref
   ) => {
     const isMobile = useIsMobile()
@@ -162,6 +230,9 @@ export const SidebarProvider = React.forwardRef<
     const open = openProp ?? _open
     const setOpen = React.useCallback(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       (value: boolean | ((value: boolean) => boolean)) => {
         const openState = typeof value === "function" ? value(open) : value
         if (setOpenProp) {
@@ -171,6 +242,7 @@ export const SidebarProvider = React.forwardRef<
         }
 
 
+<<<<<<< HEAD
 =======
 =======
 export const SidebarProvider = React.forward_ref<;
@@ -212,6 +284,11 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -235,12 +312,17 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
       }
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -265,12 +347,16 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         }
       }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         }
       }
 
+<<<<<<< HEAD
 =======
 
         }
@@ -279,6 +365,8 @@ if ( {) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
@@ -287,9 +375,13 @@ if ( {) {
     const state = open ? "expanded" : "collapsed" as SidebarState
     const contextValue = React.useMemo(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${open_state}, path=/, max - age=${SIDEBAR_COOKIE_MAX_AGE}`;
       }
@@ -319,7 +411,13 @@ if (
     // This makes it easier to style the sidebar with Tailwind classes.;
     const state = open ? "expanded" : "collapsed" as SidebarState;
     const context_value = React.useMemo (
+<<<<<<< HEAD
       (): SidebarContextType => ({
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      (): SidebarContextType => ({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       open: openProp,;
       onOpenChange: setOpenProp,;
       className;
@@ -331,6 +429,10 @@ if (
   ) => {;
     const isMobile = useIsMobile();
     const [openMobile, setOpenMobile] = React && React.useState(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // This is the internal state of the sidebar.;
     // We use openProp and setOpenProp for control from outside the component.;
     const [_open, _setOpen] = React && React.useState(defaultOpen);
@@ -338,6 +440,7 @@ if (
     const setOpen = React && React.useCallback(;
       (value: boolean | ((value: boolean) => boolean)) => {;
         const openState = typeof value === "function" ? value(open) : value;
+<<<<<<< HEAD
       defaultOpen = true,;
       open:openProp,;
       onOpenChange:setOpenProp,;
@@ -358,13 +461,66 @@ if (
     const setOpen = React.useCallback(;
       (value:boolean | ((value:boolean) => boolean)) => {;
         const openState = typeof value === "function" ? value(open) :value;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (setOpenProp) {;
           setOpenProp(openState);
         } else {;
           _setOpen(openState);
         }
+<<<<<<< HEAD
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
     );
+=======
+
+        // This sets the cookie to keep the sidebar state.;
+        document && document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      };
+      [setOpenProp, open];
+    );
+
+    // Helper to toggle the sidebar.;
+    const toggleSidebar = React && React.useCallback(() => {;
+      return isMobile;
+        ? setOpenMobile((open) => !open);
+        : setOpen((open) => !open);
+    }, [isMobile, setOpen, setOpenMobile]);
+
+    // Adds a keyboard shortcut to toggle the sidebar.;
+    React && React.useEffect(() => {;
+      const handleKeyDown = (event: KeyboardEvent) => {;
+        if (;
+          event && event.key === SIDEBAR_KEYBOARD_SHORTCUT &&;
+          (event && event.metaKey || event && event.ctrlKey);
+        ) {;
+          event && event.preventDefault();
+          toggleSidebar();
+        }
+      }
+
+      window && window.addEventListener("keydown", handleKeyDown);
+      return () => window && window.removeEventListener("keydown", handleKeyDown);
+    }, [toggleSidebar]);
+
+    // We add a state so that we can do data-state="expanded" or "collapsed".;
+    // This makes it easier to style the sidebar with Tailwind classes.;
+    const state = open ? "expanded" : "collapsed" as SidebarState;
+
+    const contextValue = React && React.useMemo(;
+      (): SidebarContextType => ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        state;
+        open;
+        set_open;
+        is_mobile;
+        open_mobile;
+        setOpenMobile;
+
+      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
+    );
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <SidebarContext && SidebarContext.Provider value={contextValue}>;
         <TooltipProvider delayDuration={0}>;
@@ -376,6 +532,7 @@ if (
                 ...style} as CSSProperties
               }
             className={cn(
+<<<<<<< HEAD
 
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar"
@@ -383,6 +540,11 @@ if (
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar"
+=======
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
+
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className
             )}
             ref={ref}
@@ -393,10 +555,18 @@ if (
       </SidebarContext && SidebarContext.Provider>;
     );
   }
+<<<<<<< HEAD
 
 );
 SidebarProvider && SidebarProvider.displayName = "SidebarProvider";
 export { SidebarContext }
+=======
+)
+SidebarProvider.displayName = "SidebarProvider"
+export { SidebarContext }
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         toggle_sidebar});
       [state, open, set_open, is_mobile, open_mobile, setOpenMobile, toggle_sidebar]);
     return (
@@ -423,6 +593,7 @@ export { SidebarContext }
 );
 SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }
+<<<<<<< HEAD
 
 
 
@@ -585,3 +756,11 @@ export { SidebarContext }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

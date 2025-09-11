@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -19,11 +20,16 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Payments() {
   return (
     <>
@@ -84,6 +90,9 @@ export default function Payments() {
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <label
                           htmlFor="notify-email"
                           className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white"
@@ -112,6 +121,7 @@ export default function Payments() {
     </>
   )
 }
+<<<<<<< HEAD
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -148,17 +158,23 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 // Import UI components for Payment Settings tab;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Import UI components for Payment Settings tab
 import { Button } from "@/components/ui/button",
@@ -278,6 +294,9 @@ export default function Payments() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -374,6 +393,7 @@ function Payments() {
 }
 // Import UI components for Payment Settings tab;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 // Import UI components for Payment Settings tab;
 import { Button } from "@/components/ui/button",;
@@ -382,11 +402,14 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from '@/components / ui / button';
 import { Switch } from '@/components / ui / switch';
 import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
 ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -400,3 +423,10 @@ import { Checkbox } from "@/components/ui/checkbox",; return (<> <Header /> <div
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

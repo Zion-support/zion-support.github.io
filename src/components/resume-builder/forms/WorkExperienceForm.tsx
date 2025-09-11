@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -94,6 +95,8 @@ export function WorkExperienceForm({
         success = await updateWorkExperience(editingId, experienceData)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       // Check condition
 if ( {) {
@@ -103,6 +106,7 @@ if ( {) {
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (success) {
         form.reset({
@@ -124,15 +128,24 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (work: WorkExperience) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -147,6 +160,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   const handleDelete = async (id: string,) => {
@@ -196,6 +210,8 @@ interface WorkExperienceFormProps {;
   onBack: () => void;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
@@ -269,13 +285,18 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience (id);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -291,6 +312,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -306,6 +331,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { format } from 'date-fns';
+<<<<<<< HEAD
+=======
+import {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Form,;
   FormControl,;
   FormField,;
@@ -428,11 +457,18 @@ export function WorkExperienceForm(): any ({;
     }
   };
 
+<<<<<<< HEAD
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   },
 
   },
+=======
+  const handleEnhanceDescription = (enhancedContent: string) => {;
+    form && form.setValue('description', enhancedContent);
+  };
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space-y-6'>;
       <div>;
         <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>;
@@ -456,6 +492,7 @@ export function WorkExperienceForm(): any ({;
                       {typeof work && work.start_date === 'string';
                         ? work && work.start_date;
                         : format(work && work.start_date, 'MMM yyyy')}{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       -{' '}
                       {work && work.is_current;
@@ -502,6 +539,8 @@ export function WorkExperienceForm(): any ({;
                         : format(work.start_date, 'MMM yyyy')}{' '}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       -{' '}
                       {work.is_current
                         ? 'Present'
@@ -528,15 +567,20 @@ export function WorkExperienceForm(): any ({;
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
                   </div>
                   <div className="flex gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
                       variant='ghost'
                       size='icon'
@@ -558,21 +602,43 @@ export function WorkExperienceForm(): any ({;
                       <Edit className="h-4 w-4" />
                     </Button>
                     <Button
+=======
+                    <Button
+
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleEdit(work)}
+                      aria-label='Edit experience'                    >;
+                      <Edit className='h-4 w-4' />;
+                    </Button>;
+                    <Button
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       variant="ghost"
                       size="icon"
                       onClick={() => handleDelete(work.id!)}
                       aria-label="Delete experience"
                     >
                       <Trash2 className="h-4 w-4" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </Button>
                   </div>
                 </div>
                 {work.description && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
 
                 )}
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
         </div>;
                   <p className='text-sm mt-3 line-clamp-2'>
                     {work.description}
@@ -594,6 +660,18 @@ export function WorkExperienceForm(): any ({;
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
+=======
+          ))}
+        </div>;
+      )}
+
+
+
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
         <Form {...form}>
@@ -609,16 +687,106 @@ export function WorkExperienceForm(): any ({;
             className='space-y-4'>;
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
               <FormField
+<<<<<<< HEAD
                 control={form.control}
                 name='company_name'
                 render={({ field }: { field: any }) => (                  <FormItem>
                 name='company_name'
                 render={({ field }: { field: any }) => (                  <FormItem>
+=======
+
+    <div className='space - y-6'>;
+      <div>;
+        <h2 className='text - xl font - semibold mb - 2'>Work Experience</h2>;
+        <p className='text - muted - foreground'>;
+          Add your work history to showcase your professional experience.;
+        </p>;
+      </div>;
+      {work_experiences.length > 0 && (
+        <div className='space - y-4'>;
+          <h3 className='text - md font - medium'>Added Experience</h3>;
+          {work_experiences.map (work => (
+            <Card key={work.id} className='bg - muted / 40'>;
+              <CardContent className='pt - 6'>;
+                <div className='flex justify - between'>                  <div>;
+                    <h4 className='font - medium'>{work.role_title}</h4>;
+                    <p className='text - sm text - muted - foreground'>;
+                      {work.company_name}
+                    </p>;
+                    <p className='text - xs text - muted - foreground mt - 1'>;
+                      {typeof work.start_date === 'string';
+                        ? work.start_date;
+                        : format (work.start_date, 'MMM yyyy')}{' '}
+                      -{' '}
+                      {work.is_current;
+                        ? 'Present';
+                        : work.end_date;
+                          ? typeof work.end_date === 'string';
+                            ? work.end_date;
+                            : format (work.end_date, 'MMM yyyy');
+                          : ''}
+                    </p>;
+                    {work.location && (
+                      <p className='text - xs text - muted - foreground'>;
+                        {work.location}
+                      </p>)}
+                  </div>;
+                  <div className='flex gap - 2'>;
+                    <Button;
+                      variant='ghost';
+                      size='icon';
+                      on_click={() => handle_edit (work)}
+                      aria - label='Edit experience'                    >;
+                      <Edit className='h - 4 w - 4' />;
+                    </Button>;
+                    <Button;
+                      variant='ghost';
+                      size='icon';
+                      on_click={() => handle_delete (work.id!)}
+                      aria - label='Delete experience'                    >;
+                      <Trash2 className='h - 4 w - 4' />;
+                    </Button>;
+                  </div>;
+                </div>;
+                {work.description && (
+                  <p className='text - sm mt - 3 line - clamp - 2'>;
+                    {work.description}
+                  </p>)}
+              </CardContent>;
+            </Card>))}
+        </div>)}
+      <div className='bg - muted / 40 p - 6 rounded - lg'>;
+        <h3 className='text - md font - medium mb - 4'>;
+          {editing_id ? 'Update Experience' : 'Add Experience'}
+        </h3>;
+        <Form {...form}>;
+          <form;
+            on_submit={form.handle_submit (handleAddOrUpdate)}
+            className='space - y-4';
+          >;
+            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+              <FormField;
+                control={form.control}
+                name='company_name';
+                render={({ field }: { field: any }) => (                  <FormItem>;
+                    <FormLabel > Company Name</FormLabel>;
+
+                    <FormControl>;
+                      <Input placeholder='Google, Microsoft, etc.' {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 control={form.control}
 
                 name="company_name"
                 render={({ field }: { field: any }) => (
                   <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Google, Microsoft, etc." {...field} />
@@ -626,6 +794,7 @@ export function WorkExperienceForm(): any ({;
                     <FormMessage />
                   </FormItem>
                 )}
+<<<<<<< HEAD
               />
 ursor/fix-website-loading-errors-and-merge-6662
               />;
@@ -638,6 +807,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 control={form.control}
                 name='role_title'
                 render={({ field }: { field: any }) => (                  <FormItem>
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />;
 
               <FormField
@@ -652,9 +824,18 @@ ursor/fix-website-loading-errors-and-merge-6662
               />;
               <FormField;
                 control={form.control}
+<<<<<<< HEAD
                 name="role_title"
                 render={({ field }: { field: any }) => (
                   <FormItem>
+=======
+
+                name="role_title"
+                render={({ field }: { field: any }) => (
+                  <FormItem>
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
                       <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
@@ -662,10 +843,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormMessage />
                   </FormItem>
                 )}
+<<<<<<< HEAD
               />
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               />;
             </div>;
@@ -674,6 +858,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
               <FormField
+<<<<<<< HEAD
                 control={form.control}
                 name='start_date'
 
@@ -703,6 +888,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   name='is_current'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
+=======
+
+                control={form.control}
+                name="start_date"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 render={({ field }: { field: any }) => (
                   <FormItem>
@@ -721,6 +912,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormMessage />
                   </FormItem>
 
+<<<<<<< HEAD
               />
 
 
@@ -728,6 +920,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Input 
                         type="date" 
                         {...field} 
@@ -740,6 +934,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                 )}
+<<<<<<< HEAD
               />
 
               <div className='space-y-4'>;
@@ -770,20 +965,67 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormField
                     control={form.control}
                     name='end_date'
+=======
+              />;
+
+              <div className='space-y-4'>;
+                <FormField
+
+                  control={form.control}
+
+
+
+                        <Checkbox
+                          checked = {field && field.value,}
+                          onCheckedChange = {field && field.onChange,}
+                        />;
+                      </FormControl>;
+                      <div className='space-y-1 leading-none'>;
+                        <FormLabel>I currently work here</FormLabel>;
+                      </div>;
+                    </FormItem>;
+                  )}
+
+                />;
+
+                {!form && form.watch('is_current') && (;
+
+                  <FormField
+                    control={form && form.control}
+                    name='end_date'
+                    render={({ field }: { field: any }) => (;
+                      <FormItem>;
+                        <FormLabel>End Date</FormLabel>;
+                        <FormControl>;
+                          <Input
+                            type='date'
+                            {...field}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 />;
                 {!form.watch('is_current') && (;
                   <FormField;
                     control={form.control}
                     name="end_date"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     render={({ field }: { field: any }) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
                         <FormControl>
+<<<<<<< HEAD
                           <Input
                             type='date'
                             {...field}
                             value={field.value |''}                          />
                             value={field.value || ''}                          />
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             value={field.value || ''}                          />
 
                           <Input 
@@ -791,6 +1033,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             {...field} 
                             value={field.value || ''} 
                           />
+<<<<<<< HEAD
                         <FormMessage />
                       </FormItem>
                     )}
@@ -842,6 +1085,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Alert>
             )}
             <div className='flex justify-between pt-2'>
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -849,12 +1096,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </FormControl>;
                         <FormMessage />;
                       </FormItem>;
+<<<<<<< HEAD
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
                 )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                   />;
                 )}
@@ -864,15 +1114,74 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
 
+<<<<<<< HEAD
               </div>
             </div>
             <FormField
               control={form.control}
               name='location'
+=======
+            <FormField
+              control={form && form.control}
+              name='location'
+              render={({ field }: { field: any }) => (;
+                <FormItem>;
+                  <FormLabel>Location (Optional)</FormLabel>;
+                  <FormControl>;
+                    <Input
+                  </FormItem>)}
+              />;
+            </div>;
+            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+              <FormField;
+                control={form.control}
+                name='start_date';
+                render={({ field }: { field: any }) => (
+                  <FormItem>;
+                    <FormLabel > Start Date</FormLabel>;
+                    <FormControl>;
+                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />;
+              <div className='space - y-4'>;
+                <FormField;
+                  control={form.control}
+                  name='is_current';
+                  render={({ field }: { field: any }) => (
+                    <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                      <FormControl>;
+                        <Checkbox;
+                          checked = {field.value, }
+                          onCheckedChange = {field.on_change, }
+                        />;
+                      </FormControl>;
+                      <div className='space - y-1 leading - none'>;
+                        <FormLabel > I currently work here</FormLabel>;
+                      </div>;
+                    </FormItem>)}
+                />;
+                {!form.watch ('is_current') && (
+                  <FormField;
+                    control={form.control}
+                    name='end_date';
+                    render={({ field }: { field: any }) => (
+                      <FormItem>;
+                        <FormLabel > End Date</FormLabel>;
+                        <FormControl>;
+                          <Input;
+                            type='date';
+                            {...field}
+                            value={field.value || ''}                          />;
+                        </FormControl>;
+                        <FormMessage />;
+                      </FormItem>)}
+                  />)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
             <FormField;
               control={form.control}
+<<<<<<< HEAD
               name="location"
               render={({ field }: { field: any }) => (
                 <FormItem>
@@ -902,6 +1211,29 @@ ursor/fix-website-loading-errors-and-merge-6662
                     />
                   </FormLabel>
                   <FormControl>
+=======
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+              name='description'
+              render={({ field }: { field: any }) => (;
+                <FormItem>;
+                  <FormLabel className='flex justify-between'>;
+                    <span>Job Description</span>;
+                    <AIEnhancementButton
+
+                      currentContent={field && field.value || ''}
+
+                      enhancementType='work-description'
+                      context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
+                      onEnhanced={handleEnhanceDescription}
+                    />;
+                  </FormLabel>;
+                  <FormControl>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Textarea
                       placeholder='Describe your responsibilities and accomplishments...'
                       className='min-h-[100px]'
@@ -940,6 +1272,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               )}
 
 
+<<<<<<< HEAD
                       {...field}
                     />
                   </FormControl>
@@ -953,6 +1286,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Alert>
             )}
             <div className='flex justify-between pt-2'>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />;
             <FormField;
               control={form.control}
@@ -976,14 +1311,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                     />;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<< HEAD
                 </FormItem>;
               )}
+=======
+
+                </FormItem>;
+              )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
               <Button
+<<<<<<< HEAD
                 type="button"
                 variant="outline"
                 onClick={() => {
@@ -1000,6 +1343,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     })
 
               <Button
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 type='button'
                 variant='outline'
                 onClick={() => {
@@ -1011,6 +1356,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                     form.reset({
+<<<<<<< HEAD
                     setEditingId(null),
                     setEditingId(null),
 =======
@@ -1019,11 +1365,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     setEditingId(null),
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     form.reset({
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+<<<<<<< HEAD
                       location: ''})
 <<<<<<< HEAD
                       location: '',
@@ -1033,6 +1382,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   } else {
                     onBack()
             />;
@@ -1061,6 +1414,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   } else {;
                     onBack();
 <<<<<<< HEAD
+<<<<<<< HEAD
                       location: ''})
                       location: '',
                     })
@@ -1069,22 +1423,31 @@ ursor/fix-website-loading-errors-and-merge-6662
                     onBack()
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
+<<<<<<< HEAD
 =======
 
               </Button>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
@@ -1092,11 +1455,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                   {editingId ? 'Update' : 'Add'} Experience
+<<<<<<< HEAD
+=======
+                </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {!editingId && workExperiences.length > 0 && (
                   <Button type="button" onClick={onComplete}>
                     Next
                   </Button>
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             </div>
@@ -1114,6 +1482,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </Button>;
 
@@ -1149,6 +1519,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 if ( {) {
   $2
 }
+<<<<<<< HEAD
                     setEditingId (null);
                     form.reset ({
                       company_name: '',
@@ -1208,3 +1579,5 @@ if ( {) {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

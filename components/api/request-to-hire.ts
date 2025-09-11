@@ -3,16 +3,23 @@ import fs from 'fs';
 import path from 'path';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res && res.status(400).json({ error: 'Missing required fields' });
 =======
 
   }
+=======
+
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
 
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
@@ -43,6 +50,16 @@ import path from 'path';
     return res.status(200).json({ ok: true });
   } catch (err) {
 
+=======
+  }
+
+  try {
+    const timestamp = new Date().toISOString();
+
+
+    });
+    // Persist to data/requests as a simple CMS-like log
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const dir = path && path.join(process && process.cwd(), 'data', 'requests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
 ;
@@ -94,6 +111,7 @@ if ( {) {
 }
     const payload = {
 <<<<<<< HEAD
+<<<<<<< HEAD
       timestamp,
     console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo });
 =======
@@ -101,10 +119,16 @@ if ( {) {
       timestamp,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      timestamp,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'datarequests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
     const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo };
+<<<<<<< HEAD
 <<<<<<< HEAD
     const file = path.join(dir, `request-${timestamp.replace(/[:.]/g, '-')}.json`);
     fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8');
@@ -116,6 +140,8 @@ if ( {) {
   };
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -129,7 +155,10 @@ if ( {) {
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       talent_slug,
       requester_name,
       requester_email,
@@ -143,6 +172,7 @@ if ( {) {
     if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
 }
+<<<<<<< HEAD
     const payload = { timestamp, talent_slug, requester_name, requester_email, project_info }
     const file = path.join (dir, `request-${timestamp.replace (/[:.]/g, '-')}.json`);
     fs.writeFileSync (file, JSON.stringify (payload, null, 2), 'utf8');
@@ -259,11 +289,22 @@ console.error('Request-to-hire failed', err);
 }
 
 =======
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

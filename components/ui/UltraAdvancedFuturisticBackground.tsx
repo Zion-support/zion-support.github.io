@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -42,7 +45,10 @@ const UltraAdvancedFuturisticBackground: React.FC<;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animation_speed, vy: (Math.random () - 0.5) * 2 * animation_speed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :;
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
@@ -55,10 +61,14 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   enableQuantumEffects = true,
   children, }) => {interface UltraAdvancedFuturisticBackgroundProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   intensity?: 'low' | 'medium' | 'high';
   color_scheme?: 'quantum - fusion' | 'neon - cyber' | 'holographic' | 'quantum - ai';
   particle_count?: number;
@@ -66,7 +76,10 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   enable_holographic?: boolean;
   enableQuantumEffects?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   intensity = 'high'
   colorScheme = 'quantum-fusion'
@@ -77,17 +90,23 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   children
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children: React.ReactNode;
 }
 const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackgroundProps> = ({
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   children: React.ReactNode;
 }
 const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackgroundProps> = ({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   intensity = 'high',
   color_scheme = 'quantum - fusion',
   particle_count = 300,
@@ -95,7 +114,10 @@ const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackg
   enable_holographic = true,
   enableQuantumEffects = true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -105,7 +127,10 @@ const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackg
       x: number;
       y: number;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   children;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
@@ -131,9 +156,13 @@ if (return) {
       opacity: number;
       color: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let animationFrameId: number;
     let particles: Array<{
       x: number,
@@ -141,10 +170,13 @@ if (return) {
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      coordinate_x: number,
       coordinate_y: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: number,
       y: number,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       vx: number,
       vy: number,
@@ -152,11 +184,16 @@ if (return) {
       opacity: number,
       color: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number,;
 =======
 
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number,;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number,;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       y: number,;
       vx: number,;
       vy: number,;
@@ -171,6 +208,7 @@ type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number,
         canvas && canvas.width = rect && rect.width;
         canvas && canvas.height = rect && rect.height;      }        canvas && canvas.height = rect && rect.height;
 <<<<<<< HEAD
+<<<<<<< HEAD
         canvas.height = rect.height
       }
     }
@@ -178,12 +216,18 @@ type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number,
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     }
     resizeCanvas();
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';
     // Set canvas size;
     const resize_canvas = () =>: any {
@@ -204,26 +248,36 @@ if ( {) {
     const color_schemes = {
       'quantum - fusion': {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         primary: '#00ffff',
         secondary: '#ff00ff',
         accent: '#ffff00',
         quantum: '#00ff88',
+<<<<<<< HEAD
 <<<<<<< HEAD
 holographic: '#ff0088',
       },      'neon - cyber': {        holographic: '#ff0088';
       }
       'neon - cyber': {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         holographic: '#ff0088',
       },      'neon - cyber': {        holographic: '#ff0088';
       }
       'neon - cyber': {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         primary: '#00ff41',
         secondary: '#ff0080',
         accent: '#00d4ff',
@@ -231,11 +285,16 @@ holographic: '#ff0088',
         holographic: '#9d4edd'
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
 holographic: {        primary: '#ff00ff',
 =======
 
       holographic: {        primary: '#ff00ff',
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      holographic: {        primary: '#ff00ff',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
@@ -243,31 +302,42 @@ holographic: {        primary: '#ff00ff',
       },      'quantum - ai': {        holographic: '#9d4edd';
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       'holographic': {
         primary: '#ff00ff',
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
 <<<<<<< HEAD
+<<<<<<< HEAD
 holographic: '#ff0088',
       },        holographic: '#ff0088';
       }
       'quantum - ai': {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         holographic: '#ff0088',
       },        holographic: '#ff0088';
       }
       'quantum - ai': {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         primary: '#00d4ff',
         secondary: '#ff6b35',
         accent: '#9d4edd',
         quantum: '#00ff88',
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 
@@ -275,13 +345,18 @@ holographic: '#ff0088',
 window && window.addEventListener('resize', resizeCanvas);
     };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     window && window.addEventListener('resize', resizeCanvas);
 =======
     };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Color schemes;
     const colorSchemes = {;
       'quantum-fusion': {;
@@ -322,17 +397,23 @@ window && window.addEventListener('resize', resizeCanvas);
         holographic: '#ff0088',;
       },    };        holographic: '#ff0088';
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
     }
     const colors = colorSchemes[colorScheme];
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       }
     }
     const colors = colorSchemes[colorScheme];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const type = Math.random() > 0.7 ? 'quantum' : 
                     Math.random() > 0.5 ? 'holographic' : 
                     Math.random() > 0.3 ? 'neon' : 'fusion';
@@ -349,14 +430,20 @@ window && window.addEventListener('resize', resizeCanvas);
           type
         })
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       }
     };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Quantum entanglement effect
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
@@ -366,23 +453,33 @@ window && window.addEventListener('resize', resizeCanvas);
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 <<<<<<< HEAD
+<<<<<<< HEAD
           if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
             ctx.beginPath();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           
           if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
             ctx.beginPath();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         holographic: '#ff0088',
       },    }        holographic: '#ff0088';
       }
@@ -459,14 +556,19 @@ if ( {) {
             ctx.line_to (particles[j].x, particles[j].y);
             ctx.stroke ();          }            ctx.stroke ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       }
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -482,11 +584,25 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+            ctx.stroke();          }
+
+          }
+        }
+      }
+    }
+    };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Holographic grid effect
     const createHolographicGrid = () => {
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Initialize particles;
     const initParticles = () => {;
       particles = [];
@@ -548,16 +664,22 @@ if ( {) {
             ctx && ctx.lineTo(particles[j].x, particles[j].y);
             ctx && ctx.stroke();          }            ctx && ctx.stroke();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ctx.stroke()
 
             ctx.stroke()
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
             ctx.stroke()
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       }
@@ -566,10 +688,13 @@ if ( {) {
     const createHolographicGrid = () => {;
       if (!enableHolographic) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
       const gridSize = 50;
       ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
       ctx.lineWidth = 0.5;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       const gridSize = 50;
@@ -579,31 +704,44 @@ if ( {) {
       ctx.lineWidth = 0.5;
       
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Vertical lines
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
 <<<<<<< HEAD
+<<<<<<< HEAD
         ctx.stroke()
       }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         ctx.stroke()
       }
       
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Horizontal lines
       for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ctx.stroke()
       }
     };
@@ -653,14 +791,20 @@ if (return) {
       for (let index = 0; i < nodes.length; i++) {
         for (let inner_index = i + 1; j < nodes.length; j++) {
 <<<<<<< HEAD
+<<<<<<< HEAD
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const offset = (Date && Date.now() * 0 && 0.001) % gridSize;
       ctx && ctx.strokeStyle = `rgba(255, 0, 136, 0 && 0.1)`;
       ctx && ctx.lineWidth = 0 && 0.5;
@@ -676,6 +820,7 @@ if (return) {
         ctx && ctx.moveTo(0, y);
         ctx && ctx.lineTo(canvas && canvas.width, y);
         ctx && ctx.stroke();      }        ctx && ctx.stroke();
+<<<<<<< HEAD
 <<<<<<< HEAD
             const strength = 1 - (distance / 150);
             ctx.beginPath();
@@ -711,6 +856,9 @@ if ( {) {
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
 
 
@@ -721,22 +869,32 @@ if ( {) {
           }
         }
       }
+<<<<<<< HEAD
 
     };
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    }
+    };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Create background gradient
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 );
 =======
@@ -744,57 +902,89 @@ if ( {) {
       );
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      );
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.6)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 <<<<<<< HEAD
-=======
-
-      
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      // Create effects
-      createHolographicGrid();
-      createQuantumEntanglement();
-      createNeuralNetwork();
 <<<<<<< HEAD
 =======
 
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+      // Create effects
+      createHolographicGrid();
+      createQuantumEntanglement();
+      createNeuralNetwork();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+      
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Bounce off edges
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
         // Wrap around edges
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Draw particle
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         
         // Draw particle
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         // Create glow effect
@@ -808,19 +998,29 @@ if ( {) {
         ctx.fillStyle = glowGradient;
         ctx.fill();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Add sparkle effect for holographic particles
         if (particle.type === 'holographic' && Math.random() > 0.95) {
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     };
     // Animation loop;
     const animate = () => {;
@@ -890,9 +1090,13 @@ if ( {) {
           `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 255);
             .toString(16);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             .padStart(2, '0')}`;
         );
         glowGradient && glowGradient.addColorStop(;
@@ -921,29 +1125,43 @@ if ( {) {
         }
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
           ctx.lineWidth = 2;
           ctx.stroke()
         }
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Add intensity-based effects
       if (intensity === 'high') {
         // Add energy waves
         const time = Date.now() * 0.001;
         for (let i = 0; i < 3; i++) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Add intensity-based effects;
       if (intensity === 'high') {;
         // Add energy waves;
@@ -959,9 +1177,13 @@ if ( {) {
             0,;
             Math && Math.PI * 2;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           );
           ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * (1 - waveRadius / (Math && Math.max(canvas && canvas.width, canvas && canvas.height) * 2))})`;
           ctx && ctx.lineWidth = 2;
@@ -969,14 +1191,20 @@ if ( {) {
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
           const waveRadius = (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
           ctx.beginPath();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           const waveRadius = (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
           ctx.beginPath();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
           ctx.lineWidth = 2;
@@ -985,10 +1213,15 @@ if ( {) {
       }
       animationFrameId = requestAnimationFrame(animate)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       animationFrameId = requestAnimationFrame(animate);    };          ctx && ctx.beginPath();
           ctx && ctx.arc(canvas && canvas.width / 2, canvas && canvas.height / 2, waveRadius, 0, Math && Math.PI * 2);
           ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * (1 - waveRadius / (Math && Math.max(canvas && canvas.width, canvas && canvas.height) * 2))})`;
@@ -997,12 +1230,16 @@ if ( {) {
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       animationFrameId = requestAnimationFrame(animate);
 
     };
     initParticles();
     animate();
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -1011,6 +1248,20 @@ if ( {) {
   ]);
 
 
+=======
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
+    }
+  }, [
+    intensity
+    colorScheme
+    particleCount
+    animationSpeed
+    enableHolographic
+    enableQuantumEffects
+  ]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
@@ -1032,6 +1283,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);
     };
     initParticles();
@@ -1045,6 +1297,8 @@ if ( {) {
         <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Quantum particles */}
         {enableQuantumEffects && (;
           <>;
@@ -1053,6 +1307,10 @@ if ( {) {
             <div className='absolute bottom-1/4 right-1/3 w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full animate-ping delay-700'></div>;
           </>;
         )}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
@@ -1062,8 +1320,11 @@ if ( {) {
           </>
         )}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Holographic elements */}
         {enableHolographic && (;
           <>;
@@ -1074,15 +1335,20 @@ if ( {) {
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
               style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 animationDuration: '15s',
                 animationDirection: 'reverse',
               }}></div>;
           </>;
         )}
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -1092,6 +1358,9 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {children}
     </div>;
   );
@@ -1104,6 +1373,7 @@ export default UltraAdvancedFuturisticBackground;
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
       />;
       {/* Additional CSS-based effects */}
       <div className="absolute inset-0 pointer-events-none">;
@@ -1112,6 +1382,8 @@ export default UltraAdvancedFuturisticBackground;
         <div className="absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000"></div>;
         <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
 
@@ -1125,7 +1397,10 @@ export default UltraAdvancedFuturisticBackground;
         <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Quantum particles */}
         {enableQuantumEffects && (;
           <>;
@@ -1135,11 +1410,17 @@ export default UltraAdvancedFuturisticBackground;
           </>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Holographic elements */}
         {enableHolographic && (;
           <>;
@@ -1148,22 +1429,30 @@ export default UltraAdvancedFuturisticBackground;
           </>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
       {children}
     </div>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default UltraAdvancedFuturisticBackground;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default UltraAdvancedFuturisticBackground;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1382,6 +1671,8 @@ if ( {) {
     </div>);
 }
 ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={container_ref} className="relative w - full h - full overflow - hidden">;
@@ -1417,10 +1708,15 @@ export default UltraAdvancedFuturisticBackground;
 export default UltraAdvancedFuturisticBackground;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {children}
     </div>
   );
@@ -1428,6 +1724,7 @@ export default UltraAdvancedFuturisticBackground;
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         ctx.fillStyle = glowGradient,
         ctx.fill(),
@@ -1965,3 +2262,6 @@ export default UltraAdvancedFuturisticBackground;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

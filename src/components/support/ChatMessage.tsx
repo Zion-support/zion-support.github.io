@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { cn } from '@/lib/utils'
@@ -32,6 +33,8 @@ import { format } from "date-fns";
 // from the ThemeProvider context
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {;
   message: string;
@@ -54,6 +57,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
 
 
+<<<<<<< HEAD
   return (
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
@@ -93,6 +97,9 @@ interface ChatMessageProps {
       </Avatar>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
@@ -111,6 +118,7 @@ interface ChatMessageProps {
           </>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </Avatar>
 =======
 
@@ -118,6 +126,9 @@ interface ChatMessageProps {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      </Avatar>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div
         className={cn(
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
@@ -125,6 +136,7 @@ interface ChatMessageProps {
 
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
 
+<<<<<<< HEAD
           isUser
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
 ursor/fix-website-loading-errors-and-merge-6662
@@ -155,6 +167,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -165,9 +180,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             : "bg-gray-100 text-gray-800"
       )}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
           "text-xs mt-1",
@@ -179,15 +197,19 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}>
           {format(timestamp, "h:mm a")}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
     </div>
   )
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 },
@@ -203,6 +225,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 },
@@ -214,10 +238,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
+<<<<<<< HEAD
+=======
+// dependency like DOMPurify for now and instead escape the five critical
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
+<<<<<<< HEAD
 <<<<<<< HEAD
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -246,6 +275,13 @@ function formatMessageWithLinks(message: string): string {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
@@ -335,9 +371,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
         )}>;
           {format(timestamp, "h:mm a")}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </div>;
     </div>;
@@ -350,9 +390,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 function escapeHtml(unsafe: string): string {;
   return unsafe;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -377,7 +421,12 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage; return formattedMessage
 }
 ;
+<<<<<<< HEAD
 
+=======
+}
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function formatMessageWithLinks(message: string): string {;
 
   // First, escape any HTML so that user input cannot break out of the intended;
@@ -400,6 +449,7 @@ function formatMessageWithLinks(message: string): string {;
 
   return formattedMessage;  return formattedMessage;
 }
+<<<<<<< HEAD
 
 
 
@@ -527,3 +577,5 @@ function formatMessageWithLinks (message: string): string {
 }
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

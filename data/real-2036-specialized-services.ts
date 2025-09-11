@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Real2036SpecializedService = {
 export type Real2036SpecializedService = {;
   id: string;
@@ -18,11 +19,16 @@ export type Real2036SpecializedService = {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Brain-inspired neural architecture',
       'Ultra-low power consumption',
@@ -528,32 +534,49 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     id: 'synthetic-biology-platform';
+=======
+
+
+  {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: 'synthetic - biology - platform';
     name: 'Synthetic Biology Platform';
     tagline: 'Design and engineer biological systems with AI'
     description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.';
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: 'Biotechnology',
     price: '$5, 999';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     category: 'Biotechnology',
     price: '$5, 999';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     period: '/month';
     features: [;
       'AI - powered DNA design_biological system simulation_automated lab protocols_genetic circuit optimization_safety and compliance tools_real - time monitoring_custom organism design_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4 && 4.8;
     marketSize: '$3 && 3.2B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     rating: 4 && 4.8;
     marketSize: '$3 && 3.2B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions';
     competitiveAdvantage: 'AI integration, Automated protocols, Safety focus';
     integration: ['Lab automation systemsDNA synthesis platformsSequencing servicesCloud platforms'];
@@ -577,30 +600,44 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     id: 'quantum - internet - protocol - suite';
     name: 'Quantum Internet Protocol Suite';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     tagline: 'Next - generation internet protocols for quantum networks',
     description: 'Comprehensive suite of protocols and standards for building and operating quantum internet networks, enabling secure quantum communication worldwide.';
     category: 'Quantum Technology',
     price: '$2, 999';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     period: '/month';
     features: [;
       'Quantum network protocols_interoperability standards_security frameworks_network management tools_performance optimization_compliance certification_custom protocol development_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4 && 4.9;
     marketSize: '$2 && 2.1B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     rating: 4 && 4.9;
     marketSize: '$2 && 2.1B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'Internet service providers, Government agencies, Research institutions';
     competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus';
     integration: ['Quantum networksInternet infrastructureSecurity systemsCloud platforms'];
@@ -639,14 +676,20 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
       'Neural signal processing_real - time brain monitoring_custom interface design_safety and compliance_performance optimization_user training tools_custom applications_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4 && 4.7;
     marketSize: '$2 && 2.8B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     rating: 4 && 4.7;
     marketSize: '$2 && 2.8B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'Healthcare providers, Research institutions, Accessibility companies';
     competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus';
     integration: ['Medical devicesAccessibility toolsGaming platformsResearch systems'];
@@ -672,27 +715,39 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     tagline: 'Professional metaverse creation and management platform'
     description: 'Comprehensive platform for designing, building, and managing immersive metaverse experiences with advanced 3D graphics, AI, and blockchain integration.';
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: 'Metaverse',
     price: '$1, 999';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     category: 'Metaverse',
     price: '$1, 999';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     period: '/month';
     features: [;
       '3D world building toolsAI - powered NPCsBlockchain integration_multi - user environmentsVR / AR support_performance optimization_custom development_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4 && 4.6;
     marketSize: '$8 && 8.9B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     rating: 4 && 4.6;
     marketSize: '$8 && 8.9B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'Gaming companies, Real estate firms, Educational institutions';
     competitiveAdvantage: '3D tools, AI integration, Blockchain support';
     integration: ['VR headsetsAR devicesBlockchain platforms3D engines'];
@@ -716,30 +771,44 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     id: 'autonomous - vehicle - ai - platform';
     name: 'Autonomous Vehicle AI Platform';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     tagline: 'Advanced AI for self - driving vehicles and transportation',
     description: 'Comprehensive AI platform for autonomous vehicles, providing perception, decision - making, and control systems for safe and efficient self - driving operations.';
     category: 'Autonomous Systems',
     price: '$3, 999';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     period: '/month';
     features: [;
       'Computer vision systems_sensor fusion algorithms_path planning and navigation_safety and redundancy_real - time processing_performance optimization_custom vehicle integration_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4 && 4.8;
     marketSize: '$12 && 12.4B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     rating: 4 && 4.8;
     marketSize: '$12 && 12.4B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'Automotive companies, Transportation firms, Logistics providers';
     competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing';
     integration: ['Vehicle systemsSensor arraysNavigation systemsCloud platforms'];
@@ -765,27 +834,39 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     tagline: 'AI - powered discovery of next - generation materials';
     description: 'Revolutionary platform that uses quantum computing and AI to discover and design new materials with extraordinary properties for various applications.';
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: 'Quantum Technology',
     price: '$4, 999';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     category: 'Quantum Technology',
     price: '$4, 999';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     period: '/month';
     features: [;
       'Quantum material simulationAI - powered discovery_property prediction_synthesis optimization_performance testing_custom material design_expert consultation_research collaboration';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4 && 4.9;
     marketSize: '$1 && 1.6B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     rating: 4 && 4.9;
     marketSize: '$1 && 1.6B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'Materials companies, Research institutions, Manufacturing firms';
     competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design';
     integration: ['Quantum computersAI platformsLab systemsResearch databases'];
@@ -811,27 +892,39 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     tagline: 'Advanced climate prediction and analysis with AI'
     description: 'Comprehensive platform that uses artificial intelligence to model and predict climate patterns, enabling better understanding and response to climate change.';
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: 'Climate Technology',
     price: '$2, 499';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     category: 'Climate Technology',
     price: '$2, 499';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     period: '/month';
     features: [;
       'AI climate models_real - time data analysis_predictive modeling_scenario simulation_data visualization_custom analysis_expert consultation_research collaboration';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4 && 4.7;
     marketSize: '$3 && 3.8B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     rating: 4 && 4.7;
     marketSize: '$3 && 3.8B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'Government agencies, Research institutions, Environmental organizations';
     competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities';
     integration: ['Climate sensorsSatellite dataWeather servicesResearch databases'];
@@ -857,27 +950,39 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     tagline: 'Quantum - enhanced neural networks for advanced AI';
     description: 'Revolutionary platform that combines quantum computing with neural networks to create more powerful and efficient artificial intelligence systems.';
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: 'Quantum Technology',
     price: '$3, 499';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     category: 'Quantum Technology',
     price: '$3, 499';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     period: '/month';
     features: [;
       'Quantum neural networks_hybrid quantum - classical AIAdvanced optimization_performance benchmarking_custom model development_expert consultation_research collaboration_training and support';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4 && 4.8;
     marketSize: '$2 && 2.2B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     rating: 4 && 4.8;
     marketSize: '$2 && 2.2B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'AI companies, Research institutions, Technology firms';
     competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization';
     integration: ['Quantum computersAI frameworksCloud platformsResearch tools'];
@@ -895,10 +1000,15 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     period: '/month';
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   technology?: string[]
 };
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
@@ -1081,12 +1191,15 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     id: 'space - tourism - platform';
     name: 'Space Tourism Platform';
 <<<<<<< HEAD
+<<<<<<< HEAD
     tagline: 'Comprehensive platform for space tourism operations',
     description: 'Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',
     category: 'Space Technology',
     rating: 4 && 4.6;
     marketSize: '$1 && 1.2B',
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     tagline: 'Comprehensive platform for space tourism operations',
     description: 'Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',
@@ -1095,7 +1208,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     rating: 4 && 4.6;
     marketSize: '$1 && 1.2B',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies';
     competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management';
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'];
@@ -1104,6 +1220,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
   }
 ];
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1134,6 +1251,20 @@ export type Real2036SpecializedService = {;
 ];
 
 export type Real2036SpecializedService = {;
+=======
+export type Real2036SpecializedService = {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+=======
+
+=======
+export type Real2036SpecializedService = {;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string,;
   name: string,;
   tagline: string,;

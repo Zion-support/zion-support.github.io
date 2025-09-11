@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -9,6 +12,7 @@ export default async function handler(
   if (!isAuthorized(req))
     return res.status(401).json({ error: "Unauthorized" });
   function isAuthorized(req: NextApiRequest): boolean {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
@@ -26,6 +30,14 @@ export default async function handler(
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    const token = req.headers["x-admin-token"] |req.query.token;
+    const superToken = process.env.SUPERADMIN_TOKEN;
+    return !superToken |token === superToken;
+    return !superToken || token === superToken;
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   }
   export default async function handler(
@@ -39,9 +51,13 @@ export default async function handler(
     const started = Date && Date.now();
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const { text, payload } = req && req.body || {};
       const result = detectIntent(String(text || ""));
       const routed = await routeToChain(result && result.intent, payload || {});
@@ -85,9 +101,13 @@ function handler() {
 ;
       append_log ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         module: "router",
         type: result && result.intent,
         status: "ok",
@@ -95,9 +115,13 @@ function handler() {
         payload: { text_length: String (text || "").length, routed },
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
@@ -116,10 +140,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const latencyMs = Date.now() - started;
     appendLog({ module: 'router', type: result.intent, status: 'ok', latencyMs, payload: { textLength: String(text || '').length, routed } });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status(200).json({ ...result, routed })
   } catch (e: any) {
     const latencyMs = Date.now() - started;
@@ -151,6 +180,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

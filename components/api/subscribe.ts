@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { supabase } from '../../utils/supabase/client';
 
 export default async function handler(
@@ -13,6 +14,10 @@ export default async function handler(
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     // Basic validation
     const normalized = email && email.trim().toLowerCase();
@@ -25,6 +30,7 @@ export default async function handler(
 
     const { data, error } = await supabase
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
@@ -78,6 +84,8 @@ return res.status(200).json({ ok: true, data })
         created_at: new Date().toISOString()
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (isPlaceholder) {
       return res && res.status(200).json({ ok: true, simulated: true })
@@ -86,11 +94,15 @@ return res.status(200).json({ ok: true, data })
       .from('email_signups')
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       .select('*')
       .single();
 
     if (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (error.message && error.message.includes('duplicate')) {
         return res.status(200).json({ ok: true, duplicate: true });
@@ -121,6 +133,8 @@ return res.status(200).json({ ok: true, data })
   };
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
@@ -198,7 +212,10 @@ if ( {) {
     }
     return res.status (200).json ({ ok: true, data });
   } catch (e: any) {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status (500).send (e?.message || 'Unexpected error');
   }      }
       return res.status (500).send (error.message || 'Database error');
@@ -208,6 +225,7 @@ if ( {) {
     return res.status (500).send (e?.message || 'Unexpected error');
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     return res.status(500).send(e?.message || 'Unexpected error');
@@ -227,3 +245,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    return res.status(500).send(e?.message || 'Unexpected error');
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

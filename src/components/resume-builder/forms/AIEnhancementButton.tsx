@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Sparkles, Loader2 } from 'lucide-react'
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
@@ -72,6 +73,8 @@ interface AIEnhancementButtonProps {;
   className?: string;
 }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
@@ -80,6 +83,7 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
+<<<<<<< HEAD
   const { enhanceContent, isEnhancing } = useResumeEnhancer()
   const [error, setError] = useState<string | null>(null)
   const handleEnhance = async () => {
@@ -109,6 +113,11 @@ export function AIEnhancementButton({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return
     }
     setError(null)
@@ -146,6 +155,7 @@ export function AIEnhancementButton(): any ({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
+<<<<<<< HEAD
   }
 
     }
@@ -191,6 +201,10 @@ export function AIEnhancementButton(): any ({;
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
@@ -216,6 +230,7 @@ function AIEnhancementButton() {
 if (.length < 10) {) {
   $2
 }
+<<<<<<< HEAD
 ;
 }
       on_enhanced (enhanced_content);
@@ -232,6 +247,31 @@ if (.length < 10) {) {
   return (
 
 
+=======
+      set_error ('Please enter at least some basic content before enhancing');
+      return;
+    }
+    set_error (null);
+    const enhanced_content = await enhance_content (
+      current_content,
+      enhancement_type,
+      context);
+    // Check condition
+if ( {) {
+  $2
+}
+      on_enhanced (enhanced_content);
+    }
+
+  return (
+    <Button
+      type="button"
+      variant="ghost"
+      size="sm"
+      className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       onClick={handleEnhance}
       disabled={isEnhancing}
 
@@ -277,6 +317,7 @@ if (.length < 10) {) {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 ;
@@ -286,3 +327,6 @@ if (.length < 10) {) {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

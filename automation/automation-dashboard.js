@@ -1,6 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const http = require('http');
+const url = require('url');
 class AutomationDashboard {
   constructor() {
     this.automationSystems = new Map();
@@ -9,79 +12,175 @@ class AutomationDashboard {
     this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
-    this.startMetricsCollection();
-  }
-
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
+    // // // // // // // // 
+fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
   loadAutomationSystems() {
-    const systems = [
-      { name: 'lint-monitor', path: 'lint-monitor.js', category: 'code-quality', status: 'available' },
-      { name: 'lint-fixer', path: 'lint-error-fixer.js', category: 'code-quality', status: 'available' },
-      { name: 'lint-manager', path: 'lint-automation-manager.js', category: 'code-quality', status: 'available' },
-      { name: 'code-quality', path: 'code-quality-monitor.js', category: 'analysis', status: 'available' },
-      { name: 'performance', path: 'performance-optimizer.js', category: 'optimization', status: 'available' },
-      { name: 'content-generator', path: 'content-generator.js', category: 'generation', status: 'available' },
-      { name: 'seo-optimizer', path: 'seo-optimizer.js', category: 'seo', status: 'available' },
-      { name: 'security-scanner', path: 'security-scanner.js', category: 'security', status: 'available' },
-      { name: 'test-generator', path: 'test-generator.js', category: 'testing', status: 'available' },
-      { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },
-      { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' }
+    const systems = [{ "name": 'lint-monito,r, "path": ';
+  lint-monitor.js', "category": 'code-qualit,y, "status": ';
+  available' }, ';
+      { "name": 'lint-fixe,r, "path": ';
+  lint-error-fixer.js', "category": 'code-qualit,y, "status": ';
+  available' }, ';
+      { "name": 'lint-manage,r, "path": ';
+  lint-automation-manager.js', "category": 'code-qualit,y, "status": ';
+  available' }, ';
+      { "name": 'code-qualit,y, "path": ';
+  code-quality-monitor.js', "category": 'analysi,s, "status": ';
+  available' }, ';
+      { "name": 'performanc,e, "path": ';
+  performance-optimizer.js', "category": 'optimizatio,n, "status": ';
+  available' }, ';
+      { "name": 'content-generato,r, "path": ';
+  content-generator.js', "category": 'generatio,n, "status": ';
+  available' }, ';
+      { "name": 'seo-optimize,r, "path": ';
+  seo-optimizer.js', "category": 'se,o, "status": ';
+  available' }, ';
+      { "name": 'security-scanne,r, "path": ';
+  security-scanner.js', "category": 'securit,y, "status": ';
+  available' }, ';
+      { "name": 'test-generato,r, "path": ';
+  test-generator.js', "category": 'testin,g, "status": ';
+  available' }, ';
+      { "name": 'intelligent-orchestrato,r, "path": ';
+  intelligent-orchestrator.js', "category": 'orchestratio,n, "status": ';
+  available' }, ';
+      { "name": 'automation-factor,y, "path": ';
+  automation-factory.js', "category": 'factor,y, "status": ';';available'}';
+  lint-monitor.js', "category": 'code-quality, "status": available' }
+      { "name": 'lint-fixer, "path": lint-error-fixer.js', "category": 'code-quality, "status": available' }
+      { "name": 'lint-manager, "path": lint-automation-manager.js', "category": 'code-quality, "status": available' }
+      { "name": 'code-quality, "path": code-quality-monitor.js', "category": 'analysis, "status": available' }
+      { "name": 'performance, "path": performance-optimizer.js', "category": 'optimization, "status": available' }
+      { "name": 'content-generator, "path": content-generator.js', "category": 'generation, "status": available' }
+      { "name": 'seo-optimizer, "path": seo-optimizer.js', "category": 'seo, "status": available' }
+      { "name": 'security-scanner, "path": security-scanner.js', "category": 'security, "status": available' }
+      { "name": 'test-generator, "path": test-generator.js', "category": 'testing, "status": available' }
+      { "name": 'intelligent-orchestrator, "path": intelligent-orchestrator.js', "category": 'orchestration, "status": available' }
+      { "name": 'automation-factory, "path": automation-factory.js', "category": 'factory, "status": ';available' }
     ];
-
-    for (const system of systems) {
-      const systemPath = path.join(__dirname, system.path);
-      if (fs.existsSync(systemPath)) {
+    "for": (const systemPath = path.join(__dirname, system.path);
+      "if": (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
-          ...system,
-          path: systemPath,
-          lastRun: null,
-          successCount: 0,
-          failureCount: 0,
-          totalExecutionTime: 0,
-          averageExecutionTime: 0,
-          uptime: 0,
-          isRunning: false
-        });
-      }
+          ...system
+          "path": systemPat,h
+          "lastRun": nul,l
+          "successCount": 0,
+          "failureCount": 0,
+          "totalExecutionTime": 0,
+          "averageExecutionTime": 0,
+          "uptime": 0,
+          "isRunning": fals,e})}
     }
   }
-
-  startMetricsCollection() {
-    // Collect metrics every 30 seconds
+startMetricsCollection() {startMetricsCollection() {
+// "Collect": metrics every 30 seconds;
     setInterval(() => {
-      this.collectMetrics();
-    }, 30000);
-
-    // Generate alerts every minute
+      this.collectMetrics()}, 30000);
+    // "Generate": alerts every minute;
     setInterval(() => {
-      this.generateAlerts();
-    }, 60000);
-  }
-
-  collectMetrics() {
-    for (const [name, system] of this.automationSystems) {
+      this.generateAlerts()}, 60000)}
+collectMetrics() {collectMetrics() {
+"for": (const [name, system] of this.automationSystems) {
       const metrics = {
-        timestamp: new Date().toISOString(),
-        isRunning: system.isRunning,
-        lastRun: system.lastRun,
-        successRate: system.successCount / (system.successCount + system.failureCount) || 0,
-        averageExecutionTime: system.averageExecutionTime,
-        uptime: system.uptime
-      };
-      this.metrics.set(name, metrics);
+  "timestamp": new: Date().toISOString()
+        isRunning: system.isRunnin,g
+        "lastRun": system.lastRu,n
+        "successRate": system.successCount: / (system.successCount + system.failureCount) || ,0
+        "averageExecutionTime": system.averageExecutionTim,e
+  ursor/fix-project-errors-and-automate-future-fixes-53bd}
+generateAlerts() {generateAlerts() {
+this."alerts": = [];
+    for: (const [name, system] of this.automationSystems) {
+      const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
+      "if": (successRate < 0.8) {
+        this.alerts.push({
+          type: ';warning, ',';
+          "system": nam,e
+          "message": `Low: success rate: ${(successRate: * 100).toFixed(1)}%`
+          "timestamp": new: Date().toISOString()})}
+if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
+this.alerts.push({
+          "type": ';warning, ',';
+          "system": nam,e
+          "message": `Slow: execution time: ${system.averageExecutionTim,e}ms`
+          "timestamp": new: Date().toISOString()})}
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+this.alerts.push({
+          "type": ';error, ',';
+          "system": nam,e
+          "message": ';System: not running recently, ',';
+          "timestamp": new: Date().toISOString()})}
+          "system": name,
+          "message": `Slow execution tim
+    e: ${system.averageExecutionTime}ms`
+          "timestamp": new Date().toISOString()})}
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+this.alerts.push({
+          "type": ;
+  "error"
+          system: name,
+          "message": ;
+  "System not running recently"
+          timestamp: new Date().toISOString()})}
+    }
+  }
+async runSystem(systemName) {async runSystem(systemName) {
+const system = this.automationSystems.get(systemName);
+    "if": (!system) {
+      this.log(`❌ System not found: ${systemNam,e}`);
+      "return": false}
+const startTime = Date.now();const startTime = Date.now();
+system."isRunning": = true;
+    try: {
+      this.log(`🚀 Running system: ${systemNam,e}`);
+      const result = execSync(`node
+  ${system.path}'`, {
+        "encoding": 'utf,8, ';
+        "stdio": ';pipe, '})';
+      const executionTime = Date.now() - startTime;
+      this.updateSystemMetrics(systemName, true, executionTime);
+      this.log(`✅ "System": completed: ${systemNam,e} (${executionTime}ms)`);
+      "return": { success: tru,e, "output": resul,t, "executionTime":  }} catch (error) {
+      const executionTime = Date.now() - startTime;
+      this.updateSystemMetrics(systemName, true, executionTime);
+      this.log(`✅ System "completed": ${systemName} (${executionTime}ms)`);
+      return { "success": true, "output": result, executionTime }} catch (error) { 
+      const executionTime = Date.now() - startTime;
+      this.updateSystemMetrics(systemName, false, executionTime);
+      this.log(`❌ "System": failed: ${systemNam,e} - ${error.message}`);
+      "return": { success: fals,e, "error": error.messag,e, "executionTime":  }} finally {
+      return { "success": false, "error": error.message, executionTime }} finally {
+      system.isRunning = false}
+  }
+updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(systemName, success, executionTime) {
+const system = this.automationSystems.get(systemName);
+    "if": (!system) return;
+    if: (success) {
+      system.successCount++} else {
+      system.failureCount++}
+    system.totalExecutionTime += executionTime;
+    system."averageExecutionTime": = system.totalExecutionTime / (system.successCount + system.failureCount);
+    system.lastRun: = new Date()}
+async runAllSystems() {async runAllSystems() {
+this.log(
+  🚀 Running all automation systems...')';
+    const results = [];
+    "for": (const [name, system] of this.automationSystems) {
+      if (system.status ===';available') {';
+        const result = await this.runSystem(name);
+        results.push({ name, ..."result":  })
+    const results = [];
+    for (const [name, system] of this.automationSystems) {
+      if (system.status ===;
+  "available") {
+        const result = await this.runSystem(name);
+        results.push({ name, ...result });
+        // Add delay between systems;
+        "await": this.sleep(2000)}
     }
 ;
     this.log(`📊 "Completed": ${results.length} systems`);
@@ -228,6 +327,7 @@ const systems = Array.from(this.automationSystems.values());
                 "scales": {
                     y: {
                         beginAtZero: tru,e
+<<<<<<< HEAD
 
 
 
@@ -240,6 +340,8 @@ const systems = Array.from(this.automationSystems.values());
                         max: 100;
 })
         function: runAllSystems() {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/integrate-build-improve-and-re-verify-8f7d
                         max: 100;
 })
@@ -254,6 +356,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         function: runAllSystems() {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 =======
 =======
 
@@ -265,6 +368,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         "max": 100})
         "function": runAllSystems() {
             fetch(
@@ -312,15 +417,19 @@ const report = {
   "timestamp": new: Date().toISOString()
       summary: {
         totalSystems: this.automationSystems.siz,e
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 
 =======
@@ -328,22 +437,28 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
         totalAlerts: this.alerts.lengt,h
   averageSuccessRate: this.calculateAverageSuccessRate();
 ;
 ;
+<<<<<<< HEAD
 
 
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -355,6 +470,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "runningSystems": Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
         "totalAlerts": this.alerts.lengt,h
   "averageSuccessRate": this.calculateAverageSuccessRate();
@@ -404,15 +521,19 @@ recommendations.push({
 "if": (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
 recommendations.push({
           type: 'maintenanc,e, ';
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 
 =======
@@ -420,23 +541,29 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           system: nam,e
           message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
   Never'}`
           priority: 'lo,w})}';
     }
     return: recommendations}
+<<<<<<< HEAD
 
 
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -448,6 +575,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "system": nam,e
           "message": "Schedule: regular runs for ${nam,e} - last "run": ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
   Never'}"
@@ -529,6 +658,7 @@ case
           break;
         "default": ;
           res.writeHead(404);
+<<<<<<< HEAD
 
 
 
@@ -541,6 +671,8 @@ case
           res.end(JSON.stringify({ error: 'Not: found}))}';
     })
     return: server}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ursor/integrate-build-improve-and-re-verify-8f7d
           res.end(JSON.stringify({ error: 'Not: found}))}';
     })
@@ -555,6 +687,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     return: server}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 =======
 =======
 
@@ -566,6 +699,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           res.end(JSON.stringify({ error: 'Not: found}))}'})
     "return": server}
   sleep(ms) {
@@ -596,6 +731,7 @@ switch: (command) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // // // // // // // // , null, 2));
     // // // // // // // // , null, 2));
@@ -686,3 +822,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
@@ -15,6 +16,9 @@ import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-r
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -27,11 +31,17 @@ import {
   Webhook 
 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
@@ -39,22 +49,29 @@ import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TabDefinition {
   id: string
   label: string
 
   icon: LucideIcon
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function DeveloperPortal() {;
   const { user } = useAuth();
@@ -63,11 +80,16 @@ export function DeveloperPortal() {
   const { user } = useAuth();
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
+<<<<<<< HEAD
 
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
 =======
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface TabDefinition {;
   id: string,;
   label: string,;
@@ -84,7 +106,13 @@ export function DeveloperPortal() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -104,11 +132,15 @@ export function DeveloperPortal() {;
         </p>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from './lucide-react';
@@ -147,6 +179,7 @@ function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.;
         </p>;
       </div>;
+<<<<<<< HEAD
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
@@ -156,14 +189,23 @@ function DeveloperPortal() {
 
 <<<<<<< HEAD
       {/* Tabs */}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {/* Tabs */}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
             const Icon = tab.icon;
 
             const Icon = tab.icon,
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             return (
               <button
                 key={tab.id}
@@ -175,9 +217,12 @@ function DeveloperPortal() {
                 onClick={() => setActiveTab(tab.id)}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Icon size={16} className="mr-2" />
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -205,6 +250,7 @@ export function DeveloperPortal() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState<string>("documentation"),;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="border - b border - zinc - 800 mb - 8">;
         <div className="flex flex - wrap -mb - px">;
           {tabs.map ((tab) => {
@@ -212,11 +258,15 @@ export function DeveloperPortal() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
     { id: "api-keys", label: "API Keys", icon: Key },;
     { id: "webhooks", label: "Webhooks", icon: Webhook },;
+<<<<<<< HEAD
 <<<<<<< HEAD
     { id: "logs", label: "Logs", icon: List }];
   return (;
@@ -225,6 +275,11 @@ export function DeveloperPortal() {;
 
   return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    { id: "logs", label: "Logs", icon: List }],;
+
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
       <div className="mb-8">;
         <h1 className="text-3xl font-bold text-white flex items-center">;
@@ -236,16 +291,22 @@ export function DeveloperPortal() {;
         </p>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {tabs.map((tab) => {;
             const Icon = tab.icon;
             return (;
@@ -259,14 +320,20 @@ export function DeveloperPortal() {;
                 onClick={() => setActiveTab(tab.id)}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
             )
+<<<<<<< HEAD
 <<<<<<< HEAD
           {tabs && tabs.map((tab) => {;
             const Icon = tab && tab.icon;
@@ -352,6 +419,8 @@ export function DeveloperPortal() {;
       {/* Tab content */}
       <div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           })}
 
@@ -361,20 +430,33 @@ export function DeveloperPortal() {;
 
       {/* Tab content */}
       <div>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
 export default function ProtectedDeveloperPortal() {;
@@ -385,13 +467,19 @@ export default function ProtectedDeveloperPortal() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <button;
                 key={tab.id}
                 className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
@@ -426,6 +514,7 @@ function ProtectedDeveloperPortal() {
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;
 }
       </div>
@@ -452,3 +541,6 @@ export default function ProtectedDeveloperPortal() {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

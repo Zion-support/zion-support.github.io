@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -47,6 +48,10 @@ export default function AwsCostAnomalyMonitorPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </div>
       </div>
@@ -61,6 +66,7 @@ export default function AwsCostAnomalyMonitorPage(req, res) {
   return (;
     <Layout>;
       <Head>;
+<<<<<<< HEAD
         <title>AWS Cost Anomaly Monitor | Zion Tech Group</title>;
         <meta name="description" content="Real-time AWS cost anomaly alerts with Slack notifications, budgets, and remediation playbooks." />;
         <link rel="canonical" href="https://ziontechgroup.com/aws-cost-anomaly-monitor" />;
@@ -68,12 +74,17 @@ export default function AwsCostAnomalyMonitorPage(req, res) {
 =======
     <Layout>;
       <Head>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <title > AWS Cost Anomaly Monitor | Zion Tech Group</title>;
         <meta name="description" content="Real - time AWS cost anomaly alerts with Slack notifications, budgets, and remediation playbooks." />;
         <link rel="canonical" href="https://ziontechgroup.com / aws - cost - anomaly - monitor" />;
       </Head>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AWS Cost Anomaly Monitor</h1>;
@@ -87,6 +98,7 @@ export default function AwsCostAnomalyMonitorPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
           <div className="flex gap-3">;
@@ -109,3 +121,8 @@ export default function AwsCostAnomalyMonitorPage(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

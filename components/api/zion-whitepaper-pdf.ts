@@ -1,13 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 import {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
@@ -16,6 +22,7 @@ import {
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 480,
   try {
@@ -36,6 +43,8 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
     align: 'left'
   });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   doc && doc.addPage(),
   doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
   doc && doc.moveDown();
@@ -51,7 +60,10 @@ function write_section() {
   doc.font_size (20).fill_color ('#111111').text (title, { underline: true });
   doc.move_down ();
   doc.font_size (11).fill_color ('#222222').text (content, {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     width: 480,
 
@@ -61,6 +73,7 @@ function write_section() {
   try {
   const editionParam = (req && req.query.edition as string) || 'full';
 
+<<<<<<< HEAD
 
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
@@ -73,10 +86,19 @@ function write_section() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+) {;
+  const editionParam = (req.query.edition as string) || 'full';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
@@ -85,12 +107,15 @@ function write_section() {
   );
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     align: 'left'})
 }
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
@@ -104,21 +129,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const editionParam = (req.query.edition as string) || 'full';
+  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
+<<<<<<< HEAD
 <<<<<<< HEAD
   doc.addPage();
   doc.fontSize(26).fillColor('#000000').text('Zion Protocol Whitepaper', { align: 'left' });
@@ -161,12 +202,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Cover page
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // End
   doc && doc.addPage();
   doc && doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));  doc.moveDown();
   doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`);
@@ -180,6 +224,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc && doc.end()
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  doc && doc.end()
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -286,6 +334,7 @@ function handler() {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   // End
   doc.addPage();
   doc
@@ -309,6 +358,11 @@ function handler() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   doc.moveDown(0.5);
@@ -318,7 +372,12 @@ function handler() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

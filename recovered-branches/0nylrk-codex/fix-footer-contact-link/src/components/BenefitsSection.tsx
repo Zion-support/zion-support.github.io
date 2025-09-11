@@ -9,6 +9,7 @@ const benefits = [;
     icon: <Bot className="w - 8 h - 8" />},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
@@ -25,23 +26,34 @@ import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "Global Availability"
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
@@ -52,10 +64,13 @@ const benefits = [
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
     icon: <Globe className="w-8 h-8" />},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "24/7 Support"
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey."
@@ -65,6 +80,9 @@ const benefits = [
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors."
     icon: <TrendingDown className="w-8 h-8" />}]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function BenefitsSection() {
   return (
@@ -79,6 +97,7 @@ export function BenefitsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <FeatureCard
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -126,6 +145,12 @@ export function BenefitsSection() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+};
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -149,6 +174,7 @@ const benefits = [;
 export function BenefitsSection() {;
   return (;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
@@ -176,6 +202,8 @@ export function BenefitsSection() {;
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section className="py-20 bg-zion-blue-light">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
@@ -184,6 +212,7 @@ export function BenefitsSection() {;
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {benefits && benefits.map((benefit, index) => (;
             <FeatureCard
@@ -199,11 +228,21 @@ export function BenefitsSection() {;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </div>;
     </section>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     icon: <Globe className="w - 8 h - 8" />},
   {
     title: "24 / 7 Support",
@@ -239,6 +278,7 @@ function BenefitsSection() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 }
@@ -290,3 +330,14 @@ icon: <Clock className="w-8 h-8" />
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+          {benefits.map((benefit, index) => (;
+            <FeatureCard;
+}
+
+
+;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

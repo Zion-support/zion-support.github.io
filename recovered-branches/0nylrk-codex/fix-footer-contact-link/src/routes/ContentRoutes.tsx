@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes, Navigate} from "react-router-dom";
 import Home from "@/pages/Home";
@@ -112,6 +113,8 @@ import VideoCall from "@/pages/VideoCall",;
 const ContentRoutes = () => {;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -155,12 +158,22 @@ const ContentRoutes = () => {;
       <Route path="/search" element={<SearchPage />} />;
 
       {/* Sitemap Page */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Route path="/sitemap-page" element={<SitemapPage />} />;
     </Routes>;
   );
 };
 export default ContentRoutes;
+=======
+      <Route path="/sitemap-page" element={<SitemapPage />} />
+    </Routes>
+  )
+}
+export default ContentRoutes;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Fragment } from './react';
 import { Route, Routes, Navigate } from './react-router-dom';
 import Home from "@/pages / Home";
@@ -190,6 +203,7 @@ const ContentRoutes = () =>: any {
       <Route path="/blog/:slug" element={<BlogPost />} />;
       {/* Green IT Route */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Route path="/green-it" element={<GreenIT />} />;
       {/* Careers Route */}
       <Route path="/careers" element={<Careers />} />;
@@ -207,6 +221,8 @@ const ContentRoutes = () =>: any {
   );
 },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route path="/green - it" element={<GreenIT />} />;
       {/* Careers Route */}
       <Route path="/careers" element={<Careers />} />;
@@ -219,15 +235,23 @@ const ContentRoutes = () =>: any {
       {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />} />;
       {/* Sitemap Page */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route path="/sitemap - page" element={<SitemapPage />} />;
     </Routes>);
 }
 ;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 },
 
 
+<<<<<<< HEAD
 export default ContentRoutes;
 ;
 <<<<<<< HEAD
@@ -321,3 +345,7 @@ export default ContentRoutes;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default ContentRoutes;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState, useMemo } from 'react';
@@ -31,11 +32,14 @@ import {;
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Search
   Star
@@ -52,11 +56,16 @@ import {
   Shield
   Phone
   Mail;
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import {
@@ -97,10 +106,15 @@ import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const categories = [
@@ -135,6 +149,10 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
@@ -152,6 +170,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
             return service.category?.includes('Micro SaaS');
           case 'emerging':
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Price range filter
             return (
               service.category?.includes('Emerging') |
@@ -162,6 +181,8 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         }
       });    }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic');
           default: return true
@@ -170,13 +191,17 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         switch (selectedPriceRange) {
           case 'low':
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           default: return true
@@ -236,6 +261,9 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
@@ -254,19 +282,35 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       icon: '🔬',;
       count: emergingTechCount,;
     },  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'low', name: 'Under $500', range: 'Under $500' },;
     { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },;
     { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const sortOptions = [;
     { id: 'name', name: 'Name' },;
     { id: 'price', name: 'Price' },;
     { id: 'rating', name: 'Rating' },;
     { id: 'popularity', name: 'Popularity' },  ];
+<<<<<<< HEAD
   // Filter and sort services;
   const filteredServices = useMemo(() => {;
     let filtered = allServices;
+=======
+
+  // Filter and sort services;
+  const filteredServices = useMemo(() => {;
+    let filtered = allServices;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Category filter;
     if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => {;
@@ -288,12 +332,20 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           default: return true,;
         }
       });    }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Price range filter;
     if (selectedPriceRange !== 'all') {;
       filtered = filtered && filtered.filter(service => {;
         const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
         switch (selectedPriceRange) {;
           case 'low':;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             return price < 500;
           case 'medium':;
             return price >= 500 && price <= 1000;
@@ -321,7 +373,10 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
       );    }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Sort;
     filtered && filtered.sort((a, b) => {;
       switch (sortBy) {;
@@ -335,12 +390,15 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           return b && b.customers - a && a.customers;
         default: return a && a.name.localeCompare(b && b.name),;
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
     });
     return filtered
   }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
   const containerVariants = {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     });
@@ -350,6 +408,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
   }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
 
   const containerVariants = {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         default: return a.name.locale_compare (b.name),
@@ -395,10 +454,13 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     });
     return filtered;  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
   const containerVariants = {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  }
@@ -421,6 +483,10 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       opacity: 1,
       transition: {
 
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   };
 
@@ -434,6 +500,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       },;
     },  };
 
+<<<<<<< HEAD
 
         duration: 0.5
       }
@@ -443,15 +510,24 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         duration: 0.5,
       },
     },  };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Innovative2026ServicesShowcase(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
@@ -606,9 +682,13 @@ export default function Innovative2026ServicesShowcase(req, res) {
 }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
@@ -616,9 +696,13 @@ export default function Innovative2026ServicesShowcase(req, res) {
       opacity: 1,;
       transition: {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         duration: 0.5;
         } catch (error) {
     console.error("Error:", error);
@@ -633,6 +717,11 @@ export default function Innovative2026ServicesShowcase(req, res) {
   },
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/2026-innovative-services-showcase'
@@ -640,6 +729,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
       </Head>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <>
@@ -664,6 +754,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <UltraAdvancedFuturisticBackground2026
+        intensity='extreme'
+        colorScheme='neural-network'        particleCount={800}
+        animationSpeed={3 && 3.0}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>2026 Innovative Services Showcase - Zion Tech Group</title>
@@ -675,29 +773,46 @@ export default function Innovative2026ServicesShowcase(req, res) {
         <meta property="og:url" content="https://ziontechgroup.com/2026-innovative-services-showcase" />
         <link rel="canonical" href="https://ziontechgroup.com/2026-innovative-services-showcase" />
       </Head>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         animationSpeed={3.0}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <UltraAdvancedFuturisticBackground2026
+        intensity='extreme'
+        colorScheme='neural-network'        particleCount={800}
+        animationSpeed={3.0}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         enableHolographic={true}
         enableQuantumEffects={true}
         enableNeuralNetworks={true}
         enableMultidimensional={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       />;
 
       <UltraAdvancedNavigation2026 />;
+<<<<<<< HEAD
       <div className='min-h-screen relative z-10'>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      <div className='min-h-screen relative z-10'>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <UltraAdvancedNavigation2026 />
@@ -783,11 +898,16 @@ className="mb-8"
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
                 Discover the future of technology with our cutting-edge 2026 services.
                 From AI-powered solutions to quantum computing and emerging technologies,
                 transform your business with next-generation innovation.
@@ -813,11 +933,23 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 }
 =======
 <<<<<<< HEAD
+=======
+                Discover the future of technology with our cutting-edge 2026 services. 
+                From AI-powered solutions to quantum computing and emerging technologies,
+                transform your business with next-generation innovation.
+              </p>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            </motion.div>
+            <motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
@@ -835,15 +967,19 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="max-w-4xl mx-auto"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Search and Filters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.4 }}
               className='max-w-4xl mx-auto'
             {/* Search and Filters */  } catch (error) {
@@ -886,6 +1022,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             {/* Search and Filters */}
@@ -902,13 +1040,17 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                   value={searchTerm}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search innovative services..."
+<<<<<<< HEAD
               <div className="flex flex-wrap gap-4 justify-center mb-8">
                 {categories.map((category) => (
                   <button
@@ -928,6 +1070,10 @@ className="flex flex-wrap justify-center gap-4 mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
                 />
               </div>
@@ -939,16 +1085,33 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       selectedCategory === category.id
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    }`}
+              <div className="flex flex-wrap gap-4 justify-center mb-8">
+                {categories.map((category) => (
+                  <button
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent';
                 />;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex flex-wrap gap-4 justify-center mb-8'>;
                 {categories && categories.map(category => (                  <button
                     key={category && category.id}
                     onClick={() => setSelectedCategory(category && category.id)}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -959,22 +1122,32 @@ className="flex flex-wrap justify-center gap-4 mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${;
                       selectedCategory === category && category.id;
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     }`}
                   >;
                     <span className='mr-2'>{category && category.icon}</span>                    {category && category.name} ({category && category.count});
                   </button>;
 
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     }`}
               <div className="flex flex-wrap gap-4 justify-center mb-8">
@@ -1002,16 +1175,23 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     <span className="mr-2">{category.icon}</span>
                     {category.name} ({category.count})
                   </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -1023,6 +1203,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                   <button
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
               <div className='flex flex-wrap gap-4 justify-center'>
                 {priceRanges.map(range => (                  <button
@@ -1032,6 +1214,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       selectedPriceRange === range.id
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
@@ -1200,6 +1383,9 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                   >;
                     {range.name}
                   </button>))}
+=======
+                    }`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   >
                     {range.name}
                   </button>
@@ -1214,6 +1400,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
               <div className="flex flex-wrap gap-4 justify-center">
                 {priceRanges.map((range) => (
                   <button
+<<<<<<< HEAD
                     key={range.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1250,6 +1437,30 @@ className="flex flex-wrap justify-center gap-4 mb-12"
           </div>;
         </section>;
 =======
+=======
+
+              </div>;
+
+              <div className='flex flex-wrap gap-4 justify-center'>;
+                {priceRanges && priceRanges.map(range => (                  <button
+                    key={range && range.id}
+                    onClick={() => setSelectedPriceRange(range && range.id)}
+                    className={`px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 ${;
+                      selectedPriceRange === range && range.id;
+                        ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300';
+                        : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
+
+                    }`}
+                  >;
+                    {range && range.name}
+                  </button>;
+                ))}
+
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* Services Grid */}
@@ -1286,21 +1497,29 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       <div className='flex items - center justify - between mb - 4'>;
                         <div className='text - 2xl font - bold text - white'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {service.price}
                         </div>;
                         <div className='text - gray - 400 text - sm'>;
                           {service.period}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </div>;
                       <h3 className='text-xl font-bold text-white mb-2'>;
                         {service && service.name}
                       </h3>;
                       <p className='text-gray-300 text-sm'>{service && service.tagline}</p>;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1466,6 +1685,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                     {/* Service Content */}
@@ -1473,6 +1694,10 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       <p className='text-gray-300 text-sm mb-4 line-clamp-3'>;
                         {service && service.description}
                       </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className='flex items-center justify-between mb-4'>;
                         <div className='flex items-center space-x-2'>;
                           <Star className='w-4 h-4 text-yellow-500 fill-current' />;
@@ -1511,9 +1736,49 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 
 
                       {/* Features Preview */}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      <div className='mb-4'>
+                        <h4 className='text-white font-semibold mb-2'>
+                          Key Features:
+                        </h4>
+                        <div className='space-y-1'>
+                          {service.features
+                            .slice(0, 3)
+                            .map((feature, index) => (
+                              <div
+                                key={index}
+                                className='flex items-center space-x-2'
+                              >
+                                <CheckCircle className='w-3 h-3 text-green-400' />
+                                <span className='text-gray-300 text-xs'>
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          {service.features.length > 3 && (
+                            <span className='text-gray-500 text-xs'>
+                              +{service.features.length - 3} more features
+                            </span>                          )}
+                        </div>
+                      </div>
+                      {/* Category Badge */}
+                      <div className='mb-4'>
+                        <span
+                          className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}
+                        >                          {service.category}
+                        </span>
+                      </div>
+                      {/* CTA Button */}
+                      {/* Features Preview */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="mb-4">
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                         <div className="space-y-1">
@@ -1523,19 +1788,27 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                               <span className="text-gray-300 text-xs">{feature}</span>
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           ))}
                           {service.features.length > 3 && (
                             <span className="text-gray-500 text-xs">+{service.features.length - 3} more features</span>
                           )}
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
                           {service.category}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </span>
                       </div>
@@ -1582,12 +1855,21 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       <Link href={service.link}>
                         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
 =======
+=======
+                        </span>
+                      </div>
+                      {/* CTA Button */}
+                      <Link href={service.link}>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
                         </span>;
                       </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
@@ -1596,11 +1878,15 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       </Link>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>
                 </motion.div>
               ))}
             </motion.div>
+<<<<<<< HEAD
 {/* CTA Button */}
                       <Link href={service && service.link}>;
                         <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>;
@@ -1611,10 +1897,13 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       </Link>;
                     </div>;
             </motion.div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {filteredServices.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+<<<<<<< HEAD
                 className='text-center py-16'
                     {/* Hover Effect Overlay */  } catch (error) {
     console.error("Error:", error);
@@ -1664,14 +1953,20 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all')
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >
                   Clear Filters
                 </button>
               </motion.div>
             )}
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>
         </section>
         {/* Contact Section */}
@@ -1684,6 +1979,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                     setSearchTerm(''),
                     setSelectedCategory('all'),
                     setSelectedPriceRange('all')
+<<<<<<< HEAD
                   }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1694,11 +1990,15 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                   }}
 <<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Clear Filters
                 </button>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             )}
           </div>
@@ -1746,6 +2046,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </section>;
@@ -1754,12 +2056,20 @@ className="flex flex-wrap justify-center gap-4 mb-12"
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1768,15 +2078,19 @@ className="flex flex-wrap justify-center gap-4 mb-12"
             >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             >
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to learn more about our innovative 2026 services and how they can revolutionize your operations.
               </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>
@@ -1791,6 +2105,9 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
@@ -1804,24 +2121,33 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                   Get Started Today
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                   Get Started Today
+<<<<<<< HEAD
 =======
 
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                   Get Started Today
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </button>
               </Link>
             </motion.div>
@@ -1829,6 +2155,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
 =======
@@ -1839,6 +2166,9 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
@@ -1849,6 +2179,10 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                 Contact our team to learn more about our innovative 2026;
                 services and how they can revolutionize your operations.;
               </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>;
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />;
@@ -1866,11 +2200,16 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                   <p className='text-green-300'>ziontechgroup && ziontechgroup.com</p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link href='/contact'>;
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today;
                 </button>;
               </Link>;
             </motion && motion.div>;
+<<<<<<< HEAD
 );
   )
             >;
@@ -1903,20 +2242,30 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                 </button>;
               </Link>;
             </motion.div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </section>;
       </div>;
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>);
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>;
                       </div>;
                       <div className='flex items - center justify - between mb - 4'>;
@@ -2039,15 +2388,24 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 
     </>;
   );
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

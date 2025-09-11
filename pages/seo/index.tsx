@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -13,11 +14,18 @@ function SEOIndex() {
   }, []),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from 'react';
+export default function SEOIndex() {
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div>;
       <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
       {slugs.length === 0 ? (
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -25,12 +33,19 @@ function SEOIndex() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="text - sm text - gray - 500">Generated pages will appear once deployed.</div>) : (
         <ul className="list - disc ml - 5">;
           {slugs.map ((s) => (
             <li key={s}><a className="text - cyan - 600" href={`/seo/${s}`}>{s}</a></li>))}
         </ul>)}
     </div>);
+<<<<<<< HEAD
 import React from 'react';
 export default function SEOIndex() {
 
@@ -68,10 +83,16 @@ export default function SEOIndex() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -80,6 +101,9 @@ export default function SEOIndex() {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</Link></li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -99,6 +123,7 @@ export default function SEOIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
@@ -110,3 +135,9 @@ export default function SEOIndex() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

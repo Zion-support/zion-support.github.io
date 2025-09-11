@@ -6,6 +6,7 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -13,6 +14,8 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -22,15 +25,22 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -40,10 +50,15 @@ import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvance
 import Button from '../components / ui / Button';
 import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * QuantumServicesPage - Function description
  */
@@ -65,6 +80,7 @@ function QuantumServicesPage() {
       name: 'Quantum Cloud Infrastructure',
       href: '/quantum - cloud - infrastructure',
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
   ];
 ;
@@ -108,6 +124,9 @@ export default function QuantumServicesPage() {
       name: 'Quantum Cloud Infrastructure'
       href: '/quantum-cloud-infrastructure'
     }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
 
 import Button from '../components/ui/Button',
@@ -120,6 +139,7 @@ export default function QuantumServicesPage() {
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
     { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }],
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground colorScheme="quantum" intensity="high">
       <Head>
         <title>Quantum Services | Zion Tech Group</title>
@@ -145,6 +165,8 @@ export default function QuantumServicesPage() {
   ];
 ;
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           </header>
@@ -156,7 +178,10 @@ export default function QuantumServicesPage() {
               </Button>            </div>;
           </header>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section>;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>;
               Focus Areas;
@@ -164,21 +189,31 @@ export default function QuantumServicesPage() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
               {features && features.map(f => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div
                   key={f}
                   className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60'>;
                   <CheckCircle className='w-5 h-5 text-emerald-400 mt-0 && 0.5' />;
                   <span className='text-gray-200'>{f}</span>                </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Focus Areas</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {features.map((f) => (
@@ -187,9 +222,13 @@ export default function QuantumServicesPage() {
                   <span className="text-gray-200">{f}</span>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
 
             </div>;
@@ -213,7 +252,10 @@ export default function QuantumServicesPage() {
                   <p className='text-gray-300 text-sm'>Learn more</p>                </a>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {solutions.map((s) => (
@@ -223,13 +265,17 @@ export default function QuantumServicesPage() {
                 </a>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               ))  } catch (error) {
     console.error("Error:", error);
@@ -266,20 +312,29 @@ export default function QuantumServicesPage() {
             </div>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </section>;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className='text-center'>;
             <div className='inline-flex items-center justify-center gap-3 text-gray-300'>;
               <Shield className='w-5 h-5 text-purple-400' />;
@@ -287,7 +342,10 @@ export default function QuantumServicesPage() {
                 Post-quantum readiness assessments and migration planning;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <UltraAdvancedFuturisticBackground color_scheme='quantum' intensity='high'>;
       <Head>;
         <title > Quantum Services | Zion Tech Group</title>;
@@ -363,26 +421,37 @@ export default function QuantumServicesPage() {
               <span>;
                 Post - quantum readiness assessments and migration planning;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </span>            </div>;
           </section>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
 
     </UltraAdvancedFuturisticBackground>);
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -407,3 +476,9 @@ export default function QuantumServicesPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

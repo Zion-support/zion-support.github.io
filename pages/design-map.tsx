@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react'
 import Head from 'next/head'
 import { getZionDesignMap } from '../utils/design-map'
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useMemo, useState } from "react";
 import Head from "next/head";
 import { getZionDesignMap } from "../utils/design-map";
 export default function DesignMapPage() {
 
+<<<<<<< HEAD
   const designMap = useMemo(() => getZionDesignMap(), []);
   const [screenName, setScreenName] = useState("");
   const [role, setRole] = useState("Talent");
@@ -78,6 +82,11 @@ import { getZionDesignMap } from '../utils/design-map';
     try {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    }
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const res = await fetch('/api/figma/wireframe-suggest', {;
         method: 'POST';
         headers: { 'Content-Type': 'application/json' };
@@ -98,6 +107,7 @@ import { getZionDesignMap } from '../utils/design-map';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     try {
@@ -119,28 +129,39 @@ const res = await fetch("/api/figma/wireframe-suggest", {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <Head>
         <title>Zion OS Design Map</title>
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <section className="space-y-6">
 =======
       <section className="space-y-6">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      <section className="space-y-6">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
           <div className="flex gap-2">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</a>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -228,12 +249,21 @@ const res = await fetch("/api/figma/wireframe-suggest", {
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</Link>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</Link>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</Link>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</Link>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid md:grid-cols-2 gap-6">
           <MapColumn title="Foundations" sections={designMap.products.foundations} />
           <MapColumn title="Talent UI" sections={designMap.products.talent} />
@@ -243,14 +273,20 @@ const res = await fetch("/api/figma/wireframe-suggest", {
           <MapColumn title="Admin Console" sections={designMap.products.admin} />
           <MapColumn title="Mobile Layouts" sections={designMap.products.mobile} />
         </div>
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
             <div className="flex-1 w-full">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
 
@@ -270,6 +306,8 @@ const res = await fetch("/api/figma/wireframe-suggest", {
 
 <<<<<<< HEAD
 <label className="block text-xs text-gray-500 mb-1">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <label className="block text-xs text-gray-500 mb-1">
                 Screen name
               </label>
@@ -292,11 +330,15 @@ const res = await fetch("/api/figma/wireframe-suggest", {
             </div>
             <div>
               <label className="block text-xs text-gray-500 mb-1">Role</label>
+<<<<<<< HEAD
 
               <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <option>Talent</option>
                 <option>Client</option>
                 <option>Admin</option>
@@ -305,6 +347,7 @@ const res = await fetch("/api/figma/wireframe-suggest", {
                 <option>Mobile</option>
               </select>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <button
               onClick={requestWireframe}
@@ -345,16 +388,25 @@ function MapColumn({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </button>
           </div>
           {suggestion && (
             <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           )}
         </div>
       </section>
     </>
+<<<<<<< HEAD
   )
           )  } catch (error) {
     console.error("Error:", error);
@@ -534,10 +586,16 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </pre>)}
         </div>;
       </section>;
     </>);
+<<<<<<< HEAD
 
 
 }
@@ -615,6 +673,19 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
+  return (
+
+                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
+
+                  {i.title}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </span>
               ))}
             </div>
@@ -622,6 +693,7 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 )
 }
@@ -683,6 +755,11 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">{title}</h3>
       <div className="grid gap-3">
@@ -691,6 +768,7 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
                 <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
@@ -698,3 +776,6 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

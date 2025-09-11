@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function About() {;
   return (
     </div>);
@@ -12,11 +13,14 @@ export default function About() {;
     </div>;
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default function About() {;
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div>;
       <main>;
@@ -40,3 +44,5 @@ function About() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

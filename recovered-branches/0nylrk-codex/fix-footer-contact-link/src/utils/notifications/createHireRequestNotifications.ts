@@ -1,11 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 /**
@@ -18,15 +21,20 @@ export async function createHireRequestNotifications({;
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,10 +45,13 @@ export async function createHireRequestNotifications({
     ? `${projectType} project` 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talentId;
   adminId;
   requesterName;
 
+<<<<<<< HEAD
   requesterEmail
 
   projectType;
@@ -52,6 +63,13 @@ export async function createHireRequestNotifications({
     ? `${projectType} project`
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  try {
+  const projectInfo = projectType 
+    ? `${projectType} project` 
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -81,12 +99,16 @@ export async function createHireRequestNotifications({
     });
     return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
 
       adminNotification
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -104,6 +126,11 @@ export async function createHireRequestNotifications({
   requesterName,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  talentId,
+  adminId,
+  requesterName,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   requesterEmail, 
   projectType,
   projectSummary,
@@ -146,6 +173,7 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
@@ -197,6 +225,9 @@ export async function createHireRequestNotifications({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     }
   }
@@ -205,6 +236,10 @@ export async function createHireRequestNotifications({;
     success: talentNotification && talentNotification.success,
 
     talentNotification
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {create_notification} from './create_notification';
 import {HireRequestNotificationParams} from './types';
 /**;
@@ -260,6 +295,7 @@ if ( {) {
     success: talent_notification.success,
     talent_notification;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
   return {
@@ -269,5 +305,8 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }

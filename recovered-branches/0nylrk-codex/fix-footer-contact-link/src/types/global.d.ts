@@ -1,13 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {ReactNode} from 'react';
 
 
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
+<<<<<<< HEAD
 <<<<<<< HEAD
     class_name?: string,
     key?: number | string;
@@ -24,16 +30,22 @@ declare module '@/components/FeatureCard' {
   export interface FeatureCardProps {;
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 import {ReactNode} from 'react';
 // Extend FeatureCardProps to include key for mapping;
 declare module '@/components / FeatureCard' {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   export interface FeatureCardProps {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: string;
     description: string;
     icon: ReactNode;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     className?: string
 
@@ -44,6 +56,8 @@ declare module '@/components / FeatureCard' {
 declare module '@/components/ListingScoreCard' {
   export interface ListingScoreCardProps {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     class_name?: string,
     key?: number | string;
   }
@@ -52,7 +66,10 @@ declare module '@/components/ListingScoreCard' {
 declare module '@/components / ListingScoreCard' {
 
   export interface ListingScoreCardProps {
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: string;
     description: string;
     category: string;
@@ -60,10 +77,16 @@ declare module '@/components / ListingScoreCard' {
     tags?: string[];
     author?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     authorImage?: string;
     aiScore?: number;
     rating?: number;
     reviewCount?: number;
+=======
+    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     key?: string | number
 
@@ -116,6 +139,7 @@ declare module '@/components/ListingScoreCard' {;
     rating?: number,;
     reviewCount?: number,;
     key?: string | number,;
+<<<<<<< HEAD
     review_count?: number;
     key?: string | number,
     variant?: string;
@@ -190,6 +214,8 @@ declare module '@/components/ProductListingCard' {;
 
     review_count?: number;
     key?: string | number,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     variant?: string;
   }
 }
@@ -212,5 +238,9 @@ declare module '@/components / ProductListingCard' {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
+<<<<<<< HEAD
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

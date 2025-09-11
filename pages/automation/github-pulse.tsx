@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function GithubPulsePage() {
 
   const repo = data?.repo |{}
@@ -13,11 +19,16 @@ export default function GithubPulsePage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">GitHub Pulse</h1>
+<<<<<<< HEAD
 
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
 
 
+=======
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
           <Metric label="Stars" value={repo.stargazers_count} />
           <Metric label="Forks" value={repo.forks} />
@@ -37,10 +48,16 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
 =======
+=======
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
@@ -76,6 +93,7 @@ function Metric() {
       <div className="text - xs text - gray - 500 dark:text - gray - 400">{label}</div>;
       <div className="text - lg font - semibold">{value ?? '—'}</div>;
     </div>);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,7 +156,14 @@ function Metric({ label, value }: { label: string, value: any }) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

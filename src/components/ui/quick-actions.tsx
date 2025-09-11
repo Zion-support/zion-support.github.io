@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
@@ -8,6 +9,8 @@ import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -25,6 +28,7 @@ import {;
   Monitor,;
 } from 'lucide-react';
 interface QuickAction {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   id: string;
   label: string;
@@ -66,12 +70,15 @@ import {
 interface QuickAction {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   label: string;
   description: string;
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
@@ -98,15 +105,24 @@ export function QuickActions() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
   const executeAction = async (actionId: string, action: () => void) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
@@ -114,13 +130,27 @@ export function QuickActions() {
         data: error
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { logErrorToProduction } from '@/utils / production_logger';
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   Zap,
   Download,
@@ -161,11 +191,15 @@ if ( {) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
       });
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       setIsProcessing(null)
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const actions: QuickAction[] = [
     // Performance Actions
@@ -200,6 +234,8 @@ if ( {) {
       dangerous: true
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       id: 'enable - performance - monitor',
 
@@ -243,6 +279,7 @@ export function QuickActions() {;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -286,6 +323,11 @@ export function QuickActions() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -295,6 +337,7 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
@@ -313,11 +356,16 @@ export function QuickActions() {;
         window.location.reload()
       }},
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -325,6 +373,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
@@ -343,11 +392,16 @@ export function QuickActions() {;
         window.location.reload()
       }},
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -361,6 +415,7 @@ export function QuickActions() {;
             names.forEach(name => caches.delete(name))
           })
         }
+<<<<<<< HEAD
       }
     }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -397,6 +452,8 @@ if ( {) {
             names.for_each (name => caches.delete (name));
           });
         }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       },
@@ -408,6 +465,10 @@ if ( {) {
 
 
     {
+<<<<<<< HEAD
+=======
+      id: 'preload-critical-resources'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       label: 'Preload Critical Resources'
       description: 'Preload fonts, images, and critical assets'
       icon: <Zap className='w-4 h-4' />
@@ -415,6 +476,7 @@ if ( {) {
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
+<<<<<<< HEAD
 <<<<<<< HEAD
           '/fonts/inter-var.woff2'
           '/fonts/cal-sans.woff2'
@@ -775,6 +837,8 @@ export function QuickActions() {;
             colorDepth: screen.colorDepth
           }
         },
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
@@ -789,6 +853,7 @@ export function QuickActions() {;
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     {
@@ -845,6 +910,8 @@ export function QuickActions() {;
   if (!isVisible) {
       <div className='fixed bottom-4 left-4 z-50'>;
         <Button
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -855,6 +922,7 @@ export function QuickActions() {;
       action: () => {
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
+<<<<<<< HEAD
         throw new Error(
           'Test error for Sentry integration - this is intentional!'
         )
@@ -862,6 +930,8 @@ export function QuickActions() {;
     },
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -870,6 +940,7 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
+<<<<<<< HEAD
       },
     },
   ]
@@ -888,6 +959,8 @@ export function QuickActions() {;
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }}],
 
   const categorizedActions = {
@@ -900,10 +973,13 @@ export function QuickActions() {;
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
           type: 'application/json',;
@@ -1004,21 +1080,30 @@ export function QuickActions() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
           className='bg-background/80 backdrop-blur-sm'        >
           <Settings className='w-4 h-4 mr-2' />
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
@@ -1028,6 +1113,10 @@ export function QuickActions() {;
 
 
           Quick Actions
+<<<<<<< HEAD
+=======
+        </Button>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>
     )
           className='bg-background/80 backdrop-blur-sm'        >;
@@ -1060,6 +1149,7 @@ export function QuickActions() {;
             </Button>
           </div>
         </CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               variant='ghost'
@@ -1134,6 +1224,10 @@ export function QuickActions() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -1179,9 +1273,13 @@ export function QuickActions() {;
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         local_storage.clear ();
@@ -1371,7 +1469,11 @@ if ( {) {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

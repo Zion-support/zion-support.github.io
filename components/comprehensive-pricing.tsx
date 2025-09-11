@@ -5,28 +5,50 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {;
   revolutionaryMicroSaasServices,;
@@ -34,6 +56,7 @@ import {;
 
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
 <<<<<<< HEAD
@@ -41,26 +64,38 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 export default function ComprehensivePricingPage() {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 export default function ComprehensivePricingPage() {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
+<<<<<<< HEAD
 <<<<<<< HEAD
   const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices];
   const priceRanges = [
@@ -200,6 +235,8 @@ function ComprehensivePricingPage() {
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -217,19 +254,27 @@ function ComprehensivePricingPage() {
 
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     filteredServices = filteredServices.filter(service => {
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity |price <= max)
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -238,39 +283,58 @@ function ComprehensivePricingPage() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
+<<<<<<< HEAD
 <<<<<<< HEAD
 );
 =======
     );
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    );
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
 <<<<<<< HEAD
+<<<<<<< HEAD
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
 =======
 
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const allServices = [;
     ...revolutionaryMicroSaasServices,;
     ...enhancedMicroSaasServices,;
@@ -352,12 +416,15 @@ function ComprehensivePricingPage() {
     }
   });
 
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -365,11 +432,18 @@ function ComprehensivePricingPage() {
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
       default: return a.name.localeCompare(b.name)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
   // Filter and sort services;
   let filtered_services = all_services;
@@ -439,6 +513,10 @@ if ( {) {
         return b_roi - a_roi;
       default:;
         return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   });
 ;
@@ -446,6 +524,7 @@ if ( {) {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1141,6 +1220,10 @@ export default function ComprehensivePricingPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Pricing tiers
   const pricingTiers = [
     {
@@ -1246,6 +1329,7 @@ export default function ComprehensivePricingPage() {;
     },      icon: <Shield className="w-6 h-6" />
     }
     {
+<<<<<<< HEAD
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
@@ -1328,17 +1412,30 @@ if ( {) {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
       icon: <Star className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-600',
       popular: false
+<<<<<<< HEAD
     };
     {
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -1442,6 +1539,96 @@ if ( {) {
       description: 'Proven business value',
 
 <<<<<<< HEAD
+=======
+    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />
+      color: 'from-blue-500 to-cyan-600'
+      popular: false
+    }
+      name: 'Professional'
+      price: '$199'
+      period: '/month'
+      description: 'Ideal for growing businesses and teams'
+      features: [
+        'Advanced service access'
+        'Priority support'
+        'Advanced features'
+        'API access'
+        'Advanced analytics'
+        'Custom integrations'
+      ]
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
+      ];
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    }
+      name: 'Enterprise'
+      price: '$499'
+      period: '/month'
+      description: 'For large organizations and enterprises'
+      features: [
+        'Full service access'
+        '24/7 dedicated support'
+        'All features'
+        'Custom development'
+        'Enterprise analytics'
+        'White-label options'
+        'SLA guarantees'
+      ]
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
+      ];
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    }
+  // Market statistics
+  const marketStats = [
+    {
+      metric: '$15.2B'
+      label: 'Total Market Size'
+      description: 'Combined market value of all services'
+      icon: <ChartBar className='w-6 h-6' />
+    },    {
+      metric: '400+'
+      label: 'Services Available'
+      description: 'Comprehensive micro SaaS portfolio'
+      icon: <Database className='w-6 h-6' />
+    },    {
+      metric: '99.99%'
+      label: 'Uptime Guarantee'
+      description: 'Enterprise-grade reliability'
+      icon: <Shield className='w-6 h-6' />
+    },    {
+      metric: '2000%+'
+      label: 'Average ROI'
+      description: 'Proven business value'
+      icon: <TrendingUp className='w-6 h-6' />
+    },  ];      icon: <ChartBar className="w-6 h-6" />
+    }
+    {
+      metric: '400+'
+      label: 'Services Available'
+      description: 'Comprehensive micro SaaS portfolio'
+      icon: <Database className='w-6 h-6' />
+    },      icon: <Database className="w-6 h-6" />
+    }
+    {
+      metric: '99.99%'
+      label: 'Uptime Guarantee'
+      description: 'Enterprise-grade reliability'
+      icon: <Shield className='w-6 h-6' />
+    },      icon: <Shield className="w-6 h-6" />
+    }
+    {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       metric: '2000%+'
       label: 'Average ROI'
       description: 'Proven business value'
@@ -1452,6 +1639,7 @@ if ( {) {
       label: 'Average ROI',
       description: 'Proven business value',
 
+<<<<<<< HEAD
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
@@ -1461,6 +1649,8 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -1473,19 +1663,26 @@ if ( {) {
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
 
 
   const contactInfo = {;
@@ -1662,14 +1859,27 @@ if ( {) {
       },
     },
 
+=======
+        duration: 0.5
+      }
+    }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         duration: 0.5,
       },
     },
 
 
+<<<<<<< HEAD
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <UltraFuturisticBackground variant='holographic' intensity='high'>;
+      <div className='min - h-screen'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Head>;
           <title>;
             Comprehensive Pricing | Zion Tech Group - Micro SaaS Services;
@@ -1700,6 +1910,7 @@ if ( {) {
 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Comprehensive
@@ -1766,10 +1977,13 @@ if ( {) {
               <motion.h1
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0.8 }}
               >
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Comprehensive
+<<<<<<< HEAD
                 </span>
                 <br />
                 <span className='text-white'>Pricing & Plans</span>
@@ -1784,12 +1998,16 @@ if ( {) {
                 guaranteed ROI and enterprise-grade reliability.                  Comprehensive
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </span>
                 <br />
                 <span className="text-white">Pricing & Plans</span>
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1803,10 +2021,17 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1832,6 +2057,13 @@ if ( {) {
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 =======
+=======
+
+                Transparent pricing for all our revolutionary micro SaaS services. 
+                Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
+              </motion.p>
+              {/* Market Stats */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <motion.div
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 Transparent pricing for all our revolutionary micro SaaS;
@@ -1856,10 +2088,16 @@ if ( {) {
               {/* Market Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1878,11 +2116,16 @@ if ( {) {
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ))}
               </motion.div>
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                ))}
+              </motion.div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   </div>
 
@@ -1890,11 +2133,16 @@ if ( {) {
               </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -1903,19 +2151,28 @@ if ( {) {
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+=======
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               >              <motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
 
 
 
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
@@ -1923,6 +2180,17 @@ if ( {) {
               >              <motion.div
               >              <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+=======
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               >
 
                 initial={{ opacity: 0, y: 20 }}
@@ -1949,9 +2217,13 @@ if ( {) {
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {marketStats.map((stat, index) => (
@@ -1965,16 +2237,25 @@ if ( {) {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
 <<<<<<< HEAD
+<<<<<<< HEAD
 variant="primary" 
 =======
                   variant="primary" 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  variant="primary" 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   size="lg"
                   onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
                 >
@@ -1988,17 +2269,23 @@ variant="primary"
                 >
                   Browse All Services
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Search className='ml-2 w-5 h-5' />                </Button>                  <Search className="ml-2 w-5 h-5" />
 =======
                   <Search className="ml-2 w-5 h-5" />
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  <Search className="ml-2 w-5 h-5" />
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </Button>
               </motion.div>
             </div>
           </div>
         </section>
         {/* Contact Information Banner */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>
           <div className='container mx-auto px-4'>
@@ -2015,6 +2302,8 @@ variant="primary"
                 <Globe className='w-5 h-5 text-blue-400' />
                 <span className='text-white'>{contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20">
           <div className="container mx-auto px-4">
@@ -2027,11 +2316,15 @@ variant="primary"
               </div>
               <div className="flex items-center gap-4">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <MapPin className="w-5 h-5 text-green-400" />
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             </div>
@@ -2051,6 +2344,8 @@ variant="primary"
               initial={{ opacity: 0, y: 20 }}
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               </div>
 
@@ -2062,6 +2357,7 @@ variant="primary"
         <section id="pricing-tiers" className="py-20">
 
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 20 }}
 
@@ -2078,10 +2374,19 @@ variant="primary"
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            <motion.div
+              className="text-center mb-16"
+            <motion.div 
+              className="text-center mb-16"
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
@@ -2097,6 +2402,8 @@ variant="primary"
             </motion.div>
             <motion.div
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 >;
                   Browse All Services;
@@ -2153,11 +2460,15 @@ variant="primary"
             </motion && motion.div>;
             <motion&& motion.div
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -2179,6 +2490,8 @@ variant="primary"
             <motion.div
             <motion.div 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -2186,11 +2499,15 @@ variant="primary"
             <motion.div 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+<<<<<<< HEAD
 <<<<<<< HEAD
           <meta;
             name='description';
@@ -2484,12 +2801,17 @@ variant="primary"
                       ))}
                     </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                       ))}
                     </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>;
                         {tier && tier.icon}
                       </div>;
@@ -2508,16 +2830,22 @@ variant="primary"
                     </div>;
                     <div className='text-center'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <Button
                         variant={tier && tier.popular ? 'futuristic' : 'primary'}
                         size='md'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       <Button
                         variant={tier && tier.popular ? 'futuristic' : 'primary'}
                         size='md'
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         onClick={() =>;
                           window && window.open(;
                             'https://ziontechgroup && ziontechgroup.com/contact',;
@@ -2531,9 +2859,13 @@ variant="primary"
                                              <Button
                          variant={tier && tier.popular ? 'futuristic' : 'primary'} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                          size="md"
                          onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
                          className="w-full";
@@ -2545,10 +2877,15 @@ variant="primary"
                 </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="text-center">
                                              <Button 
                          variant={tier.popular ? 'futuristic' : 'primary'} 
@@ -2558,6 +2895,7 @@ variant="primary"
                        >
                         Get Started
                         <ArrowRight className="ml-2 w-4 h-4" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>
                   </UltraFuturisticCard>
@@ -2575,12 +2913,17 @@ variant="primary"
             <motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </Button>
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
 
             </motion && motion.div>;
@@ -2592,11 +2935,17 @@ variant="primary"
         <section id='services-pricing' className='py-20'>;
           <div className='container mx-auto px-4'>;
 =======
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        {/* Services Pricing Grid */}
+        <section id="services-pricing" className="py-20">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion&& motion.div
@@ -2604,25 +2953,45 @@ variant="primary"
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <motion&& motion.div 
 
               className="mb-8"
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
             <motion.div
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
+          <div className="container mx-auto px-4">
+            {/* Filters and Controls */}
+            <motion.div
+              className="mb-8"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='mb-8'              initial={{ opacity: 0, y: 20 }}
 
               initial={{ opacity: 0, y: 20 }}
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -2655,6 +3024,7 @@ variant="primary"
 
 
                   <select
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion&& motion.div 
               className="mb-8"
@@ -2712,6 +3082,8 @@ variant="primary"
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     value={sortBy}
                     onChange={e => setSortBy(e && e.target.value)}
                     className='px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400';
@@ -2729,15 +3101,22 @@ variant="primary"
                   <div className='relative'>;
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <input
                       type='text'
                       placeholder='Search services...'
                       value={searchQuery}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onChange={e => setSearchQuery(e && e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
@@ -2749,9 +3128,13 @@ variant="primary"
                       <Grid className='w-4 h-4' />                    </button>                  ;
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -2761,6 +3144,7 @@ variant="primary"
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2832,6 +3216,10 @@ variant="primary"
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </button>;
                   </div>;
                 </div>;
@@ -2841,11 +3229,15 @@ variant="primary"
               className={viewMode === 'grid' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             </motion.div>;
             {/* Services Display */}
@@ -2874,11 +3266,15 @@ variant="primary"
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2889,6 +3285,14 @@ variant="primary"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              whileInView="visible"
+              whileInView='visible'              viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -2897,18 +3301,25 @@ variant="primary"
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
 <<<<<<< HEAD
+<<<<<<< HEAD
                     variant={service.variant as any || 'quantum-advanced'}
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     variant={service.variant as any || 'quantum-advanced'}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
@@ -2926,15 +3337,27 @@ variant="primary"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               variants={container_variants}
               initial='hidden';
               whileInView='visible'              viewport={{ once: true }}            <motion.div;
@@ -2963,9 +3386,13 @@ variant="primary"
                         <div className='text - 4xl mb - 4'>{service.icon}</div>;
                         <h3 className='text - xl font - bold text - white mb - 2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {service.name}
                         </h3>;
                         <p className='text - gray - 300 mb - 4 text - sm'>;
@@ -2977,10 +3404,15 @@ variant="primary"
                         <div className='text - sm text - gray - 400 mb - 4'>;
                           {service.period}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     variant={(service && service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service && service.variant as any || 'quantum-advanced'}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}>;
@@ -3010,6 +3442,10 @@ variant="primary"
 
                           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <div className="text-center">
                         <div className="text-4xl mb-4">{service.icon}</div>
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -3021,6 +3457,7 @@ variant="primary"
                             <div key={idx} className="flex items-center gap-2 text-sm">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
+<<<<<<< HEAD
 
                         </div>;
                       <div className="text-center">;
@@ -3034,12 +3471,15 @@ variant="primary"
                             <div key={idx} className="flex items-center gap-2 text-sm">;
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
                               <span className="text-gray-300">{feature}</span>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           ))}
                         </div>
                         <div className='text-center space-y-2'>
                           <Button
                             variant='primary'
                             size='sm'
+<<<<<<< HEAD
                             onClick={() => window && window.open(service && service.link, '_blank')}
                             className='w-full';
                           >;
@@ -3055,6 +3495,33 @@ variant="primary"
                         <div className="text-center space-y-2">
                                                      <Button 
                              variant="primary" 
+=======
+                            onClick={() => window.open(service.link, '_blank')}
+                            className='w-full'
+                          >
+                            Learn More
+                            <ExternalLink className='ml-2 w-4 h-4' />
+                          </Button>
+                          <Button
+                            variant='futuristic'
+                            size='sm'
+                            onClick={() =>
+                              window.open(
+                                'https://ziontechgroup.com/contact'
+                                '_blank'
+                              )
+                            }
+                            className='w-full'
+                          >
+                            Get Pricing
+                            <DollarSign className='ml-2 w-4 h-4' />
+                          </Button>                        </div>
+                      </div>
+                    ) : (
+                      // List View                        <div className="text-center space-y-2">
+                                                     <Button
+                             variant="primary"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                              size="sm"
                              onClick={() => window.open(service.link, '_blank')}
                              className="w-full"
@@ -3071,6 +3538,7 @@ variant="primary"
                              Get Pricing
                              <DollarSign className="ml-2 w-4 h-4" />
                            </Button>
+<<<<<<< HEAD
                         </div>;
                         <div className='space - y-2 mb - 6'>;
                           {service.features.slice (0, 3).map ((feature, idx) => (
@@ -3338,10 +3806,104 @@ variant="primary"
                               </div>
                             </div>
                           </div>
+=======
+                      </div>
+                    ) : (
+                      // List View
+                      <div className='flex flex-col md:flex-row gap-6 w-full'>
+                        <div className='text-4xl md:text-5xl flex-shrink-0'>
+                          {service.icon}
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>
+                            <div>
+                              <h3 className='text-xl font-bold text-white mb-2'>
+                                {service.name}
+                              </h3>
+                              <p className='text-gray-300 text-sm'>
+                                {service.tagline}
+                              </p>
+                            </div>
+                            <div className='text-right mt-2 md:mt-0'>
+                              <div className='text-2xl font-bold text-cyan-400'>
+                                {service.price}
+                              </div>
+                              <div className='text-sm text-gray-400'>
+                                {service.period}
+                              </div>
+                            </div>
+                          </div>
+                          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
+                            <div>
+                              <h4 className='text-sm font-semibold text-cyan-400 mb-2'>
+                                Key Features
+                              </h4>
+                              <div className='space-y-1'>
+                                {service.features
+                                  .slice(0, 4)
+                                  .map((feature, idx) => (
+                                    <div
+                                      key={idx}
+                                      className='flex items-center gap-2 text-sm'
+                                    >
+                                      <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+                                      <span className='text-gray-300'>
+                                        {feature}
+                                      </span>
+                                    </div>
+                                  ))}
+                              </div>
+                            </div>
+                            <div>
+                              <h4 className='text-sm font-semibold text-purple-400 mb-2'>
+                                Market Info
+                              </h4>
+                              <div className='space-y-1 text-sm text-gray-300'>
+                                <div>
+                                  <span className='text-gray-400'>ROI:</span>{' '}
+                                  {service.roi}
+                                </div>
+                                <div>
+                                  <span className='text-gray-400'>Market:</span>{' '}
+                                  {service.marketSize}
+                                </div>
+                                <div>
+                                  <span className='text-gray-400'>Growth:</span>{' '}
+                                  {service.growthRate}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className='flex gap-2'>
+                            <Button
+                              variant='primary'
+                              size='sm'
+                              onClick={() =>
+                                window.open(service.link, '_blank')
+                              }
+                            >
+                              Learn More
+                              <ExternalLink className='ml-2 w-4 h-4' />
+                            </Button>
+                            <Button
+                              variant='futuristic'
+                              size='sm'
+                              onClick={() =>
+                                window.open(
+                                  'https://ziontechgroup.com/contact'
+                                  '_blank'
+                                )
+                              }
+                            >
+                              Get Pricing
+                              <DollarSign className='ml-2 w-4 h-4' />
+                            </Button>                          </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div className="flex gap-2">
                                                          <Button
                                variant="primary"
                                size="sm"
+<<<<<<< HEAD
                                onClick={() => window.open(service.link, '_blank')}
                              >
                                Learn More
@@ -3372,6 +3934,8 @@ variant="primary"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                size="sm"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                onClick={() => window && window.open('https: //ziontechgroup && ziontechgroup.com/contact_blank')}
                              >;
                                Get Pricing;
@@ -3384,15 +3948,20 @@ variant="primary"
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </motion && motion.div>;
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -3445,6 +4014,12 @@ variant="primary"
 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+=======
+
+                className="text-center py-16"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 transition={{ duration: 0.6 }}
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -3456,11 +4031,16 @@ variant="primary"
                 </p>
                 <Button
                   variant='primary'
+<<<<<<< HEAD
                   onClick={() => {
+=======
+                  onClick={() => {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     setSearchQuery('');
                     setSelectedCategory('All');
                     setPriceRange('All');
                   }}
+<<<<<<< HEAD
                 >
                   Clear Filters
                 </Button>              </motion.div>                <div className="text-6xl mb-4">🔍</div>
@@ -3470,23 +4050,33 @@ variant="primary"
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   Clear Filters;
                 </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                                  <Button
                    variant="primary"
                    onClick={() => {;
                      setSearchQuery('');
                      setSelectedCategory('All');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                      setPriceRange('All')
                    }}
@@ -3505,6 +4095,8 @@ variant="primary"
             <motion.div
               className="max-w-4xl mx-auto"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                      setPriceRange('All');
 
                    }}
@@ -3520,11 +4112,15 @@ variant="primary"
 
               initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -3535,6 +4131,8 @@ variant="primary"
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </div>;
         </section>;
@@ -3558,7 +4156,10 @@ variant="primary"
               </p>;
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant='primary'
                   size='lg'
@@ -3576,14 +4177,20 @@ variant="primary"
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
@@ -3622,10 +4229,14 @@ variant="primary"
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 </div>
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -3639,6 +4250,7 @@ variant="primary"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
 
                 </div>
@@ -3647,6 +4259,9 @@ variant="primary"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </motion.div>
           </div>
@@ -3654,8 +4269,11 @@ variant="primary"
       </div>
     </UltraFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 >;
                   Schedule Demo;
@@ -3731,7 +4349,10 @@ variant="primary"
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
                           <div className='flex gap - 2'>;
@@ -3929,6 +4550,7 @@ variant="primary"
     </UltraFuturisticBackground>));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   );
 
@@ -3936,11 +4558,17 @@ variant="primary"
 }
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   );
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

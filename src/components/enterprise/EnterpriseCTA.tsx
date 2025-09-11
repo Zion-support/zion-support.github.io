@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react'
@@ -16,6 +17,8 @@ import { Button } from '@/components/ui/button'
 import { Calendar, ArrowRight } from 'lucide-react'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -77,6 +80,7 @@ export function EnterpriseCTA() {
                         4
                       </span>                    </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
@@ -86,12 +90,17 @@ xport function EnterpriseCTA() {
                       <span className="text-primary text-sm font-medium">4</span>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Calendar } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -157,19 +166,25 @@ export function EnterpriseCTA() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>;
   );
 };
 }
     </section>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
     </section>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -236,6 +251,7 @@ export function EnterpriseCTA() {;
                   <li className="flex gap-3">;
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">;
                       <span className="text-primary text-sm font-medium">4</span>;
+<<<<<<< HEAD
 export function EnterpriseCTA() {;
   return (
 <<<<<<< HEAD
@@ -258,6 +274,11 @@ export function EnterpriseCTA() {;
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export function EnterpriseCTA() {;
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <section id="contact" className="py-20 px-4 md: px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">;
@@ -438,6 +459,7 @@ function EnterpriseCTA() {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </section>;
   );
 }
@@ -464,3 +486,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  );
+}
+
+    </section>);
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

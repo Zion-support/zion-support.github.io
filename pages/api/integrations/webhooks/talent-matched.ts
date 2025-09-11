@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
@@ -13,15 +17,19 @@ export default async function handler(
 
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 try {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { match } = req && req.body as {
     match?: { talentId: string; jobId: string; summary?: string };
   };
   if (!match) return res && res.status(400).json({ error: "Missing match payload" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState, readState } from '../../../../lib/integrations/fileStore';
@@ -32,20 +40,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!match) return res.status(400).json({ error: 'Missing match payload' });
 // record Zapier event
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // record Zapier event
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     s && s.events.push({
       id: eventId,
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state, read_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -71,6 +89,7 @@ function handler() {
       id: event_id,
       type: "zion.talent.matched",
       timestamp: Date.now (),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -140,11 +159,23 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+      payload: { match },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    });
+=======
+  const eventId = `${Date.now()}-talent-matched`;
+  writeState(s => {
+    s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
 
 
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // log to connected CRMs as a note;
   const state = readState();
@@ -164,6 +195,29 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  // log to connected CRMs as a note;
+  const state = read_state ();
+  const crms = state.connections.filter ((c) =>;
+    ["salesforce", "hubspot", "zoho", "pipedrive"].includes (c.provider_id),
+  );
+  for (const conn of crms) {
+    const log = {
+      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
+      provider_id: conn.provider_id,
+      level: "info",
+      action: "add_project_note",
+    }
+    await crm.addProjectNote (conn, {
+      job_id: match.job_id,
+      note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim (),
+    });
+    write_state ((s) => s.logs.push (log));
+  }
+  res.status (200).json ({ ok: true, event_id });
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -173,6 +227,7 @@ export default async function handler(req, res) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 }
@@ -180,3 +235,5 @@ export default async function handler(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

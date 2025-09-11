@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -22,6 +23,8 @@ export function ChatAssistantTrigger() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle sending messages to the AI chat assistant
 
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -29,39 +32,53 @@ export function ChatAssistantTrigger() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
         })});
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       console.error("Error in AI chat:", error),
+=======
+      console.error("Error in AI chat:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return Promise.resolve()
     }
   }
   return (
     <>
       <Button
+<<<<<<< HEAD
 =======
       console.error("Error in AI chat:", error);
       return Promise.resolve()
@@ -73,10 +90,13 @@ import {ChatAssistant} from "@/components/ChatAssistant";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { MessageSquare } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { ChatAssistant } from "@/components/ChatAssistant",;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Button
 
@@ -115,6 +135,8 @@ export function ChatAssistantTrigger() {;
       <Button;
         onClick={() => setIsOpen(true)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -150,7 +172,10 @@ export function ChatAssistantTrigger() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         onClick={() => setIsOpen(true)}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         size="icon";
         variant="outline";
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50";
@@ -159,7 +184,10 @@ export function ChatAssistantTrigger() {;
         <MessageSquare className="h-5 w-5" />;
       </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {isOpen && (;
         <ChatAssistant
@@ -171,23 +199,35 @@ export function ChatAssistantTrigger() {;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
 }
 =======
 
+=======
+    </>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </>;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -198,6 +238,7 @@ export /**
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise < void> => {
@@ -343,3 +384,5 @@ export function ChatAssistantTrigger() {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

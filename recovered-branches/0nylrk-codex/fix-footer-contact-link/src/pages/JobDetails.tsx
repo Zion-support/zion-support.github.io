@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -10,6 +14,7 @@ import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
@@ -34,11 +39,17 @@ export default function JobDetails() {
   const { jobId } = useParams() as { jobId?: string };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?: string };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 import {ApplyToJobModal} from '@/components/messaging/job-application';
@@ -56,6 +67,11 @@ export default function JobDetails() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -79,9 +95,12 @@ export default function JobDetails() {
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
@@ -116,6 +135,7 @@ export default function JobDetails() {
       return
     }
     setIsApplyModalOpen(true)
+<<<<<<< HEAD
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
@@ -187,6 +207,8 @@ export default function JobDetails() {;
         </div>;
         <Footer />;
       </>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   },
 
@@ -200,20 +222,28 @@ export default function JobDetails() {;
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   const isOwnJob = user?.id === job.client_id;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  const isOwnJob = user?.id === job.client_id;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
 
   const isOwnJob = user?.id === job.client_id,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <SEO
@@ -258,6 +288,7 @@ export default function JobDetails() {;
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -265,6 +296,8 @@ export default function JobDetails() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -318,6 +351,7 @@ export default function JobDetails() {;
     }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleApply = () => {;
     if (!isAuthenticated) {;
       toast && toast.error("Please log in to apply for this job");
@@ -327,31 +361,45 @@ export default function JobDetails() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast && toast.error("Only job seekers can apply for jobs");
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     setIsApplyModalOpen(true);
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     setIsApplyModalOpen(true);
   };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleApplySuccess = async (appliedJobId: string) => {;
     toast && toast.success("Application submitted successfully!"),;
     setIsApplyModalOpen(false);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const formatBudget = (budget: any) => {;
     if (!budget) return "Not specified",;
     return `$${budget && budget.min} - $${budget && budget.max}`;
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   const isOwnJob = user?.id === job && job.client_id;
 =======
@@ -359,11 +407,17 @@ export default function JobDetails() {;
   const isOwnJob = user?.id === job && job.client_id;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const isOwnJob = user?.id === job && job.client_id;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <SEO
         title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job && job.description.substring(0, 160)}
+<<<<<<< HEAD
 <<<<<<< HEAD
     ),;
   }
@@ -423,10 +477,13 @@ export default function JobDetails() {;
         description={job.description.substring(0, 160)}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Header />;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button ;
             variant="outline" ;
@@ -439,22 +496,32 @@ export default function JobDetails() {;
             variant="outline" 
             size="sm"
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <Button
+            variant="outline" 
+            size="sm"
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onClick={() => navigate('/jobs')}
           >;
             ← Back to Jobs;
           </Button>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <Card>;
               <CardHeader>;
                 <div className="flex justify-between items-start">;
                   <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>;
                     <div className="flex items-center text-muted-foreground">;
@@ -471,6 +538,8 @@ export default function JobDetails() {;
                   </div>;
                   <Badge>{job.category}</Badge>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <CardTitle className="text-2xl mb-2">{job && job.title}</CardTitle>;
                     <div className="flex items-center text-muted-foreground">;
                       <Calendar className="mr-2 h-4 w-4" />;
@@ -478,13 +547,17 @@ export default function JobDetails() {;
                     </div>;
                   </div>;
                   <Badge>{job && job.category}</Badge>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </CardHeader>;
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
                   <div className="whitespace-pre-wrap">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {job.description}
                   </div>;
@@ -505,6 +578,23 @@ export default function JobDetails() {;
                       <Badge key={i} variant="secondary">;
                         {skill}
                       </Badge>
+=======
+                    {job && job.description}
+                  </div>;
+                </div>;
+
+                <div>;
+                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
+                  <div className="flex flex-wrap gap-2">;
+                    {job && job.skills?.map((skill: string, i: number) => (;
+                      <Badge key={i} variant="secondary">;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                        {skill}
+                      </Badge>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </div>
                 </div>
@@ -538,6 +628,7 @@ export default function JobDetails() {;
                   </div>
                 </div>
                 {!isOwnJob && (
+<<<<<<< HEAD
 =======
                     {job && job.description}
                   </div>;
@@ -599,11 +690,14 @@ export default function JobDetails() {;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     className="w-full mt-4"
                   <Button 
                     className="w-full mt-4" 
                     onClick={handleApply}
+<<<<<<< HEAD
                     disabled={isOwnJob}
                   >
                     Apply Now
@@ -612,6 +706,13 @@ export default function JobDetails() {;
                 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    disabled={isOwnJob}>;
+                    Apply Now;
+                  </Button>;
+                )}
+                
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
@@ -624,15 +725,23 @@ export default function JobDetails() {;
       </main>
       <Footer />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {isOwnJob && (;
                   <div className="text-center p-2 bg-muted rounded-md mt-4">;
                     <p className="text-sm text-muted-foreground">This is your job posting</p>;
                   </div>;
                 )}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react';
 import {use_params, use_navigate} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -803,6 +912,7 @@ if (return "Not specified", ) {
                     disabled={isOwnJob}
                   >;
                     Apply Now;
+<<<<<<< HEAD
                   </Button>;
                 )}
                 ;
@@ -811,12 +921,21 @@ if (return "Not specified", ) {
                     <p className="text-sm text-muted-foreground">This is your job posting</p>;
                   </div>;
                 )}
+=======
+                  </Button>)}
+                {isOwnJob && (
+                  <div className="text - center p - 2 bg - muted rounded - md mt - 4">;
+                    <p className="text - sm text - muted - foreground">This is your job posting</p>;
+                  </div>)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </CardContent>;
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
       ;
       {/* Job application modal */}
       {job && (;
@@ -828,12 +947,31 @@ if (return "Not specified", ) {
             company_name:job.company_name || "Company",;
             budget:job.budget,;
             client_id:job.client_id;
+=======
+
+            id: job && job.id,
+            title: job && job.title,
+            description: job && job.description,
+            company_name: job && job.company_name || "Company",
+            budget: job && job.budget,
+            client_id: job && job.client_id
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />;
       )}
+<<<<<<< HEAD
     </>;
+=======
+
+    </>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal;
@@ -850,6 +988,7 @@ if (return "Not specified", ) {
         />)}
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),;}
  const [isApplyModalOpen, setIsApplyModalOpen] = useState (false);
@@ -911,3 +1050,6 @@ const isOwnJob = user?.id === job.client id;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

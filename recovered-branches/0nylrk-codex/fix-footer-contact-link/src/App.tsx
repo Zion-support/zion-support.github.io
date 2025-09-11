@@ -22,6 +22,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React, { Suspense } from "react";
@@ -89,6 +93,10 @@ const App = () => {;
             {baseRoutes && baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { Suspense } from './react';
 import { Routes, Route  } from './react-router-dom';
 import "./App.css";
@@ -96,6 +104,7 @@ import { ThemeProvider  } from './components / ThemeProvider';
 import { WhitelabelProvider  } from './context / WhitelabelContext';
 import { Toaster  } from './components / ui / toaster';
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { Routes, Route  } from 'react-router-dom';
@@ -255,6 +264,8 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -266,8 +277,11 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DeveloperRoutes,;
 } from "./routes";
 const Home = React.lazy(() => import("./pages/Home"));
@@ -287,8 +301,11 @@ const ITOnsiteServicesPage = React.lazy(
 );
 const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React.lazy(() => import("./pages/Contact"));
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DeveloperRoutes
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
@@ -307,9 +324,12 @@ const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPa
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -355,6 +375,9 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 export default App;
@@ -362,6 +385,7 @@ export default App;
   )
 },
 
+<<<<<<< HEAD
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -464,3 +488,8 @@ export default App;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default App;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -28,6 +29,16 @@ export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React, { useState, useEffect } from 'react';
+
+
+
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -36,8 +47,11 @@ export function ProjectMilestonesContent() {;
     isLoading: milestonesLoading
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 export function ProjectMilestonesContent() {;
@@ -49,21 +63,29 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading, ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
     uploadDeliverable;
     isSubmitting;
 <<<<<<< HEAD
+<<<<<<< HEAD
     refetch
 =======
     refetch;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    refetch;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } = useMilestones(projectId);
   const [project, setProject] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('milestones');
+<<<<<<< HEAD
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
@@ -76,6 +98,12 @@ export function ProjectMilestonesContent() {;
       if (!projectId) return;
       setIsLoading(true);
       try {
+=======
+
+  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+
+  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         const projectData = await getProjectById(projectId);
         if (projectData) {
@@ -118,6 +146,7 @@ export function ProjectMilestonesContent() {;
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return;
+<<<<<<< HEAD
       setIsLoading(true);
       try {;
 =======
@@ -128,11 +157,16 @@ export function ProjectMilestonesContent() {;
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       setIsLoading(true);
       try {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
@@ -141,9 +175,13 @@ export function ProjectMilestonesContent() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -151,6 +189,7 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false);
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {;
     async function loadProject() {;
@@ -169,6 +208,10 @@ export function ProjectMilestonesContent() {;
     }
     loadProject();
     refetch()
+=======
+    loadProject();
+    refetch();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [projectId, getProjectById, refetch]);
   const handleMilestoneCreated = async () => {
     await refetch()
@@ -179,6 +222,7 @@ export function ProjectMilestonesContent() {;
   // Determine project type based on job category or default to "Other"
   const projectType = job?.category |"Other";
   if (isLoading |!project) {
+<<<<<<< HEAD
 =======
 
 
@@ -190,11 +234,14 @@ export function ProjectMilestonesContent() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     
     loadProject(),
     refetch()
   }, [projectId, getProjectById, refetch]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleMilestoneCreated = async () => {
     await refetch()
@@ -272,6 +319,8 @@ export function ProjectMilestonesContent() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleMilestoneCreated = async () => {;
     await refetch();
@@ -295,6 +344,7 @@ export function ProjectMilestonesContent() {;
   }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     loadProject();
     refetch();
@@ -457,6 +507,8 @@ export function ProjectMilestonesContent() {;
         <ProjectActions;
           projectId={projectId || ''}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleMilestoneSubmit = async (data: any) => {;
     if (!projectId) return,;
 
@@ -504,22 +556,31 @@ export function ProjectMilestonesContent() {;
 
 
           projectId={projectId || ''}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
           onAddMilestone={() => setActiveTab('create')}
 <<<<<<< HEAD
+<<<<<<< HEAD
         />;
       </div>;
       ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Tabs value={activeTab} onValueChange={setActiveTab}>;
         <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
@@ -527,6 +588,7 @@ export function ProjectMilestonesContent() {;
           {isTalent && (;
             <TabsTrigger value="create">Create Milestone</TabsTrigger>;
           )}
+<<<<<<< HEAD
         </TabsList>;
 
 <<<<<<< HEAD
@@ -547,12 +609,15 @@ export function ProjectMilestonesContent() {;
           {isTalent && (
             <TabsTrigger value="create">Create Milestone</TabsTrigger>
           )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </TabsList>
         <TabsContent value="milestones">
           <MilestoneManager
             projectId={projectId |''}
           <MilestoneManager 
             projectId={projectId || ''}
+<<<<<<< HEAD
 =======
         <TabsContent value="milestones">;
           <MilestoneManager
@@ -565,21 +630,29 @@ export function ProjectMilestonesContent() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
             isTalent={isTalent}
 <<<<<<< HEAD
+<<<<<<< HEAD
             paymentTerms={project.paymentterms}
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             paymentTerms={project && project.payment_terms}
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {use_params} from 'react-router-dom';
 import {use_projects} from '@/hooks / use_projects';
 import {use_milestones} from '@/hooks / use_milestones';
@@ -714,10 +787,15 @@ if (return, ) {
             payment_terms={project.payment_terms}
             is_submitting={is_submitting}
             onCreateMilestone={create_milestone}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             onUpdateStatus={updateMilestoneStatus}
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
             refetch={refetch}
+<<<<<<< HEAD
             paymentTerms={project.payment_terms}
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
@@ -725,12 +803,15 @@ if (return, ) {
             onDeleteMilestone={deleteMilestone}
             onUploadDeliverable={uploadDeliverable}
             refetch={refetch}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />
         </TabsContent>
         <TabsContent value="activity">
           <MilestoneActivities projectId={projectId |''} />
         </TabsContent>
         <TabsContent value="create">
+<<<<<<< HEAD
 
           />;
         </TabsContent>;
@@ -739,12 +820,19 @@ if (return, ) {
           {(isClient || isTalent) && (
             <MilestoneCreator 
 
+=======
+          {(isClient |isTalent) && (
+            <MilestoneCreator
+          {(isClient || isTalent) && (
+            <MilestoneCreator 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
               projectStartDate={project && project.start_date}
               projectEndDate={project && project.end_date}
+<<<<<<< HEAD
         ;
         <TabsContent value="activity">;
           <MilestoneActivities projectId={projectId || ''} />;
@@ -767,13 +855,26 @@ if (return, ) {
     </div>;
 =======
 
+=======
+              projectType={projectType}
+            />;
+          )}
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </TabsContent>;
       </Tabs>;
     </div>;
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
         </TabsContent>;
         <TabsContent value="activity">;
@@ -793,6 +894,7 @@ if (return, ) {
         </TabsContent>;
       </Tabs>;
     </div>);
+<<<<<<< HEAD
   ),; setIsLoading (true);
 try {
   
@@ -901,3 +1003,9 @@ await handleMilestoneCreated ()
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

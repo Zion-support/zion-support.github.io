@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   if (!pool) {;
@@ -5,9 +6,11 @@
 
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
 import { Pool, PoolClient } from 'pg';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
-let pool: Pool | null = null;
 
+<<<<<<< HEAD
 export function getPool(): Pool {
   if (!pool) {
 
@@ -22,10 +25,38 @@ export function getPool(): Pool {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
+=======
+  if (!pool) {;
+    pool = new Pool({ connectionString:process.env.DATABASE_URL });
+=======
+  if (!pool) {;
+    pool = new Pool({ connectionString:process.env.DATABASE_URL });
   }
   return pool;
 }
 
+
+
+export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
+
+
+  const client = await getPool().connect();
+  try {
+    await client.query('BEGIN');
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
+    const result = await fn(client);
+=======
+import { Pool, PoolClient } from 'pg',;
+let pool: Pool | null = null,;
+export function getPool(): Pool {;
+  if (!pool) {;
+    pool = new Pool({ connectionString: process.env.DATABASE_URL });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+  }
+  return pool;
+}
+
+<<<<<<< HEAD
 
 
 export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
@@ -71,6 +102,8 @@ export function getPool(): Pool {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
   const client = await getPool().connect(),;
@@ -79,17 +112,23 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),;
     const result = await fn(client),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     await client.query('COMMIT');
     await client.query('COMMIT');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
     await client.query('COMMIT');
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return result;
   } catch (err) {
     await client.query('ROLLBACK');
@@ -99,17 +138,25 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 
     client && client.release();  }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 client.release ();  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
 client.release();  }
 }
 
+=======
   } finally {;
     client.release();
   }
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   } finally {
 client.release();  }
@@ -125,3 +172,6 @@ client.release();  }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

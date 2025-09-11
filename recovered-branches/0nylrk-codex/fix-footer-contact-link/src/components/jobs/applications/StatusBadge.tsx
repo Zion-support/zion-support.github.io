@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { ApplicationStatus } from "@/types/jobs";
 import { Badge } from "@/components/ui/badge";
@@ -10,14 +13,23 @@ interface StatusBadgeProps {;
 }
 
 
+<<<<<<< HEAD
 
 import { ApplicationStatus } from "@/types/jobs";
 import { Badge } from "@/components/ui/badge";
+=======
+export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
+  switch (status) {;
+=======
+import { ApplicationStatus  } from '@/types / jobs';
+import { Badge  } from '@/components / ui / badge';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface StatusBadgeProps {
   status: ApplicationStatus;
 }
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     case "new": return <Badge variant;
     default:
@@ -25,6 +37,8 @@ export function StatusBadge({ status }: StatusBadgeProps) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     case "new":;
       return <Badge variant="secondary">Submitted</Badge>;
@@ -44,6 +58,7 @@ export function StatusBadge({ status }: StatusBadgeProps) {
       return <Badge variant="outline">{status}</Badge>;
   }
 }
+<<<<<<< HEAD
 =======
 =======
 
@@ -120,6 +135,8 @@ function StatusBadge() {
       return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
     default:;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
@@ -130,6 +147,7 @@ interface StatusBadgeProps {
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
 
+<<<<<<< HEAD
       return <Badge variant="outline">{status}</Badge>;
   }
 
@@ -174,3 +192,5 @@ default: return <Badge variant="outline"> {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

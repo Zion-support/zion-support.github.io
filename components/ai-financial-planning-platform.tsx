@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -10,6 +11,12 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 =======
+=======
+import React from 'react',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { 
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
@@ -18,10 +25,31 @@ import {
 } from 'lucide-react';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
 
+=======
+import {
+  DollarSign
+  TrendingUp
+  Shield
+  Zap
+  Target
+  BarChart3
+  CheckCircle
+  Star
+  Globe
+  Lock
+  Smartphone
+  Monitor
+  Award
+  MessageCircle
+  Calculator;} from 'lucide-react';import {
+  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   DollarSign,
   TrendingUp,
   Shield,
@@ -38,7 +66,10 @@ import {
 
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Award, MessageCircle, Calculator
 export default function AIFinancialPlanningPlatform() {
   const features = [
@@ -90,6 +121,10 @@ export default function AIFinancialPlanningPlatform() {
       </div>
     </div>
     <p className='mt-4 text-sm text-gray-400'>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -366,6 +401,7 @@ function AIFinancialPlanningPlatform() {
       .;
     </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           href='https://ziontechgroup && ziontechgroup.com/ai-financial-planning-platform'
         />;
       </Head>;
@@ -441,6 +477,8 @@ function AIFinancialPlanningPlatform() {
               className='text-center'      </Head>;
       <div className="min-h-screen bg-black text-white">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           href='https://ziontechgroup && ziontechgroup.com/ai-financial-planning-platform'
         />;
@@ -449,7 +487,10 @@ function AIFinancialPlanningPlatform() {
         {/* Hero Section */}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">;
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>;
@@ -457,6 +498,7 @@ function AIFinancialPlanningPlatform() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>
@@ -844,15 +886,33 @@ export default function AIFinancialPlanningPlatform() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Intelligent financial planning and wealth management with AI.;
                 Get personalized plans, portfolio optimization, and risk;
                 management that drives financial success.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+=======
+
+
+        {/* Features Section */}
+        <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <motion&& motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -879,6 +939,7 @@ export default function AIFinancialPlanningPlatform() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 
 =======
@@ -1015,6 +1076,16 @@ export default function AIFinancialPlanningPlatform() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
 
+=======
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
                     <div className='text-yellow-400'>{feature.icon}</div>
@@ -1037,6 +1108,7 @@ export default function AIFinancialPlanningPlatform() {
 
                 </motion.div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1054,6 +1126,24 @@ export default function AIFinancialPlanningPlatform() {
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              ))}
+            </div>
+          </div>
+        </section>
+
+            </div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Benefits Section */}
         <section className='py-20 bg-black'>;
@@ -1062,7 +1152,12 @@ export default function AIFinancialPlanningPlatform() {
               whileInView={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
+=======
+              className='text-center mb-16'        <section className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='text-center mb-16'
 
 
@@ -1072,7 +1167,10 @@ export default function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Benefits Section */}
         <section className="py-20 bg-black">
@@ -1084,6 +1182,7 @@ export default function AIFinancialPlanningPlatform() {
               className="text-center mb-16"
             >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'        <section className="py-20 bg-black">;
@@ -1126,6 +1225,8 @@ export default function AIFinancialPlanningPlatform() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>              {benefits.map((benefit, index) => (            >
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Financial Future
               </h2>
@@ -1164,10 +1265,15 @@ export default function AIFinancialPlanningPlatform() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group'
                 >
@@ -1181,6 +1287,7 @@ export default function AIFinancialPlanningPlatform() {
                     <CheckCircle className="w-5 h-5 text-yellow-400" />
                     <span className="text-white font-medium text-sm">{benefit}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                   </div>
@@ -1190,11 +1297,14 @@ export default function AIFinancialPlanningPlatform() {
               ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1207,6 +1317,13 @@ export default function AIFinancialPlanningPlatform() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Use Cases Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -1214,6 +1331,7 @@ export default function AIFinancialPlanningPlatform() {
               whileInView={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
               className='text-center mb-16'
 
@@ -1238,21 +1356,36 @@ export default function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               className='text-center mb-16'
 
+<<<<<<< HEAD
 =======
+=======
+
+
+            <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* Use Cases Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
             >
@@ -1271,6 +1404,11 @@ export default function AIFinancialPlanningPlatform() {
             >
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className="text-center mb-16"
+            >
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Financial Planning Solutions
               </h2>
@@ -1283,9 +1421,13 @@ export default function AIFinancialPlanningPlatform() {
               {useCases.map((useCase, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -1310,9 +1452,13 @@ export default function AIFinancialPlanningPlatform() {
               {useCases && useCases.map((useCase, index) => (;
                 <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -1330,11 +1476,17 @@ export default function AIFinancialPlanningPlatform() {
                   <span className="text-white font-medium text-sm">{useCase}</span>;
                 </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </motion.div>;
             <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {features.map ((feature, index) => (            >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -1464,9 +1616,13 @@ export default function AIFinancialPlanningPlatform() {
               {use_cases.map ((use_case, index) => (
                 <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -1477,6 +1633,10 @@ export default function AIFinancialPlanningPlatform() {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Calculator className="w-6 h-6 text-yellow-400" />
@@ -1484,10 +1644,13 @@ export default function AIFinancialPlanningPlatform() {
                   <span className="text-white font-medium text-sm">{useCase}</span>
                 </motion.div>
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))}
 
             </div>;
@@ -1496,16 +1659,23 @@ export default function AIFinancialPlanningPlatform() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div>;
           </div>;
         </section>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center'
 
                 >
@@ -1528,6 +1698,7 @@ export default function AIFinancialPlanningPlatform() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
 
         {/* CTA Section */}
 <<<<<<< HEAD
@@ -1536,6 +1707,13 @@ export default function AIFinancialPlanningPlatform() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* CTA Section */}
@@ -1543,6 +1721,7 @@ export default function AIFinancialPlanningPlatform() {
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
@@ -1554,6 +1733,8 @@ export default function AIFinancialPlanningPlatform() {
                 Ready to Transform Your Financial Planning?
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1562,7 +1743,10 @@ export default function AIFinancialPlanningPlatform() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Financial Planning?
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of individuals that have already revolutionized their financial planning
@@ -1580,12 +1764,18 @@ export default function AIFinancialPlanningPlatform() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'                >                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"
 =======
 
                   className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover: bg-yellow-500/10 transition-all duration-200"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   Contact Sales
                 </motion.button>
@@ -1596,8 +1786,11 @@ export default function AIFinancialPlanningPlatform() {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -1634,17 +1827,29 @@ export default function AIFinancialPlanningPlatform() {
               </h2>;
               <p className='text - xl text - gray - 300 mb - 8'>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Join thousands of individuals that have already revolutionized;
                 their financial planning with AI automation. Start your free;
                 trial today.;
               </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
 
   );
 }
+=======
+
+  );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
   );
@@ -1656,7 +1861,10 @@ export default function AIFinancialPlanningPlatform() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                 <motion.button;
                   while_hover={{ scale: 1.05 }}
@@ -1688,6 +1896,7 @@ export default function AIFinancialPlanningPlatform() {
         </section>;
       </div>;
     </>);
+<<<<<<< HEAD
 );
   );
 }
@@ -1701,3 +1910,10 @@ export default function AIFinancialPlanningPlatform() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  );
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

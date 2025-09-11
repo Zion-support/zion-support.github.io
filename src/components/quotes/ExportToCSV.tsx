@@ -5,6 +5,7 @@ import type { QuoteRequest } from "@/types/quotes";
 
 import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
@@ -118,6 +119,11 @@ import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { Download } from 'lucide-react'
+import type { QuoteRequest } from "@/types/quotes";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
@@ -153,6 +159,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       ...rows.map(row =>
         row.map(cell =>
 <<<<<<< HEAD
+<<<<<<< HEAD
       ...rows.map(row =>
         row.map(cell =>
       new Date(quote.created_at).toLocaleDateString()
@@ -168,11 +175,20 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
 
           // Escape commas and quotes in cell values
+=======
+
+
+          // Escape commas and quotes in cell values
+          typeof cell === 'string' && (cell.includes() |cell.includes('"'))
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ].join('\n')
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })
@@ -184,6 +200,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     // Download file and clean up
     link.click()
     setTimeout(() => {
+<<<<<<< HEAD
       document.body.removeChild(link)
 =======
 
@@ -202,6 +219,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       document.body.removeChild(link);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      document.body.removeChild(link);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       URL.revokeObjectURL(url)
     }, 100)
 import { Button } from '@/components / ui / button';
@@ -332,11 +354,25 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   } }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 '"}
   )
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    <Button
+      variant="outline"
+      onClick = {handleExport,}
+      className="flex items-center gap-2"
+      disabled={quotes.length === 0}
+    >
+      <Download size={16} />
+      Export CSV
+    </Button>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import { Button } from "@/components/ui/button",
@@ -390,6 +426,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   );
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ].join('\n'),
     
     // Create download link
@@ -415,9 +456,13 @@ import { Button } from "@/components/ui/button",;
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;
@@ -475,7 +520,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     }, 100);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       >;
       <Download size={16} />;
@@ -484,7 +532,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   );
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   return (
@@ -503,9 +554,12 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Button;
       variant="outline";
       onClick={handleExport}
@@ -517,8 +571,12 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     </Button>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

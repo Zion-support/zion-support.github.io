@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
@@ -11,7 +15,10 @@ import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createDispute, readAllDisputes } from '../../../utils/fsdb';
@@ -20,14 +27,19 @@ import { DisputeCase, DisputeReason } from '../../../types/disputes';
 import { generateCaseId } from '../../../utils/fsdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 
+<<<<<<< HEAD
   const user = parseUserFromRequest(req);
 
 
@@ -35,6 +47,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const user = parseUserFromRequest(req);
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === "GET") {
     const all = await readAllDisputes();
     let filtered = all;
@@ -42,21 +60,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       filtered = all && all.filter(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
 <<<<<<< HEAD
+<<<<<<< HEAD
       );
     }
     return res && res.status(200).json({ disputes: filtered });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       );
     }
     return res && res.status(200).json({ disputes: filtered });
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
     return res.status(200).json({ disputes: filtered })
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 =======
@@ -66,6 +91,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  }
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
     const {
@@ -77,7 +108,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       reason,
       reasonDetails,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     if (
       !projectId |
@@ -89,6 +123,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(400).json({ error: "Missing required fields" });
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description} = req.body || {};
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
@@ -178,6 +213,15 @@ if ( {) {
     }
     const id = generateCaseId ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      description} = req.body || {};
+
+    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
+      return res.status(400).json({ error: 'Missing required fields' })
+
+    }
+    const id = generateCaseId();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const dispute: DisputeCase = {
 
 
@@ -203,12 +247,18 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       project_id: String (project_id),
       entity_type,
       entity_id,
@@ -231,14 +281,20 @@ if ( {) {
   return res.status (405).end ("Method Not Allowed");
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req.method === "POST") {
     const now = new Date().toISOString();
@@ -304,6 +360,9 @@ res.setHeader("Allow", "GET,POST");
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -401,11 +460,17 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
   } catch (error) {
@@ -430,8 +495,13 @@ export default async function handler(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

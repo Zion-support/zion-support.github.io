@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -9,6 +10,12 @@ export default function AdminWeb3Page() {
 
 
 <<<<<<< HEAD
+=======
+
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+export default function AdminWeb3Page() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
   useEffect(() => {
@@ -28,8 +35,11 @@ export default function AdminWeb3Page() {
     disabled: users.filter(u => !u.enabled).length}
 
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const metrics = {
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
@@ -37,11 +47,14 @@ export default function AdminWeb3Page() {
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
@@ -53,23 +66,33 @@ export default function AdminWeb3Page() {
         </div>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Users</div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -78,6 +101,7 @@ export default function AdminWeb3Page() {
                   <span>Web3</span>
                   <input type="checkbox" checked={u.enabled} onChange={(e) => {
                     const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -158,6 +182,8 @@ export default function AdminWeb3Page(req, res) {
 }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }} />
                 </label>
               </li>
@@ -218,9 +244,15 @@ function AdminWeb3Page() {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

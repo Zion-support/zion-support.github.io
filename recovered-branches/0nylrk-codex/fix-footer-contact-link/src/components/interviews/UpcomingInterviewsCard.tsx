@@ -10,12 +10,15 @@ import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {;
     const loadInterviews = async () => {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
@@ -25,11 +28,15 @@ export function UpcomingInterviewsCard() {;
   useEffect(() => {;
     const loadInterviews = async () => {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
         const now = new Date();
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
@@ -57,6 +64,10 @@ export function UpcomingInterviewsCard() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   useEffect(() => {
 
@@ -64,14 +75,18 @@ export function UpcomingInterviewsCard() {
       setIsLoading(true),
       try {
 <<<<<<< HEAD
+<<<<<<< HEAD
         const interviews = await fetchInterviews(),
         const now = new Date(),
         
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const interviews = await fetchInterviews();
         const now = new Date();
         const interviews = await fetchInterviews(),
         const now = new Date(),
         
+<<<<<<< HEAD
 =======
 
         const interviews = await fetchInterviews(),
@@ -80,6 +95,8 @@ export function UpcomingInterviewsCard() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -92,9 +109,13 @@ export function UpcomingInterviewsCard() {
           .slice(0, 3), // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from './react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -120,14 +141,19 @@ function UpcomingInterviewsCard() {
         const now = new Date ();
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
         console.error("Error loading upcoming interviews:", error)
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     }
@@ -138,15 +164,23 @@ function UpcomingInterviewsCard() {
   }, []);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    loadInterviews()
+  }, []);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
 
     loadInterviews()
   }, []),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -167,9 +201,12 @@ function UpcomingInterviewsCard() {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -190,7 +227,10 @@ export function UpcomingInterviewsCard() {;
         const interviews = await fetchInterviews(),;
         const now = new Date(),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
@@ -210,7 +250,10 @@ export function UpcomingInterviewsCard() {;
     }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
           .filter(interview => ;
@@ -219,6 +262,7 @@ export function UpcomingInterviewsCard() {;
           );
           .sort((a, b) => ;
             parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
@@ -290,6 +334,8 @@ export function UpcomingInterviewsCard() {;
   if (isLoading) {;
     return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           );
           .slice(0, 3), // Take only the next 3 interviews;
 
@@ -307,7 +353,10 @@ export function UpcomingInterviewsCard() {;
   if (isLoading) {;
 
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -328,9 +377,12 @@ export function UpcomingInterviewsCard() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
@@ -340,6 +392,7 @@ export function UpcomingInterviewsCard() {;
     );
   }
 
+<<<<<<< HEAD
 
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
 
@@ -361,6 +414,11 @@ export function UpcomingInterviewsCard() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  if (upcomingInterviews.length === 0) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -378,6 +436,7 @@ export function UpcomingInterviewsCard() {;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ))}
           </div>
@@ -409,11 +468,16 @@ export function UpcomingInterviewsCard() {;
   }
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
   }
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -425,6 +489,9 @@ export function UpcomingInterviewsCard() {;
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h: mm a')
@@ -433,8 +500,11 @@ export function UpcomingInterviewsCard() {;
             const isStartingSoon =
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime();
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
@@ -447,10 +517,13 @@ export function UpcomingInterviewsCard() {;
               interviewDate.getTime() > now.getTime(),
             
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -475,6 +548,9 @@ export function UpcomingInterviewsCard() {;
                         Soon
                       </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">
@@ -496,6 +572,7 @@ export function UpcomingInterviewsCard() {;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
     ),;
   }
 ;
@@ -717,3 +794,8 @@ return (<img src= {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

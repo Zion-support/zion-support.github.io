@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,8 +41,16 @@ import React, { useState } from 'react';
 
   Settings,;
   Trash2,;
+<<<<<<< HEAD
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+
+=======
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 
@@ -49,6 +69,7 @@ export default function URLShortenerPage() {;
     setLongUrl('');
     setCustomAlias('');
     setIsShortening(false);
+<<<<<<< HEAD
 
   };
 
@@ -409,6 +430,8 @@ export default function URLShortenerPage() {;
   const generateRandomAlias = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     let result = ''
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   const generateRandomAlias = () => {
     const chars =
@@ -452,6 +475,7 @@ export default function URLShortenerPage() {;
       createdAt: new Date().toISOString()
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     }
+<<<<<<< HEAD
     setShortenedUrls(prev => [newShortUrl, ...prev]);
     setLongUrl('');
     setCustomAlias('');
@@ -790,6 +814,61 @@ export default function URLShortenerPage() {;
               </h3>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+=======
+    
+    setIsShortening(true);
+    
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    const alias = customAlias.trim() || generateRandomAlias();
+    const shortUrl = `https://zion.tech/${alias}`;
+    
+=======
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+  Link,
+  Copy,
+  BarChart3,
+  ArrowRight,
+  RefreshCw,
+  CheckCircle,
+  ExternalLink,
+  QrCode,
+  Settings,;
+  Trash2,;
+} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+export default function URLShortenerPage() {;
+  const [longUrl, setLongUrl] = useState('');
+  const [customAlias, setCustomAlias] = useState('');
+  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
+  const [isShortening, setIsShortening] = useState(false);
+
+  const [showQR, setShowQR] = useState<string | null>(null);
+  const generateShortUrl = async () => {
+    if (!longUrl.trim()) return;
+    setIsShortening(true);
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    const alias = customAlias.trim() |generateRandomAlias();
+    const shortUrl = `https://zion.tech/${alias}`;
+    const newShortUrl = {
+      id: Date.now()
+      longUrl: longUrl.trim()
+      shortUrl
+      alias
+      clicks: 0
+      createdAt: new Date().toISOString()
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
+    }
+    setShortenedUrls(prev => [newShortUrl, ...prev]);
+    setLongUrl('');
+    setCustomAlias('');
+    setIsShortening(false);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <Button
                   onClick={generateShortUrl}
@@ -834,6 +913,7 @@ export default function URLShortenerPage() {;
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>;
                     <div className='text-3xl font-bold text-orange-400 mb-2'>;
                       {getTotalUrls()}
+<<<<<<< HEAD
                     </div>;
                     <div className='text-sm text-gray-400'>Total URLs</div>;
                   </div>;
@@ -900,6 +980,8 @@ export default function URLShortenerPage() {;
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>
                     <div className='text-3xl font-bold text-orange-400 mb-2'>
                       {getTotalUrls()}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                     <div className='text-sm text-gray-400'>Total URLs</div>
                   </div>
@@ -915,9 +997,12 @@ export default function URLShortenerPage() {;
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-gray-700 rounded-lg">
                     <div className="text-3xl font-bold text-orange-400 mb-2">
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {getTotalUrls()}
                     </div>
                     <div className="text-sm text-gray-400">Total URLs</div>
@@ -925,6 +1010,7 @@ export default function URLShortenerPage() {;
                   <div className="text-center p-4 bg-gray-700 rounded-lg">
                     <div className="text-3xl font-bold text-red-400 mb-2">
                       {getTotalClicks()}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>
                     <div className="text-sm text-gray-400">Total Clicks</div>
@@ -967,6 +1053,11 @@ export default function URLShortenerPage() {;
 
                     </div>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+                    </div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="text-sm text-gray-400">Total Clicks</div>;
                   </div>;
                 </div>;
@@ -1002,8 +1093,15 @@ export default function URLShortenerPage() {;
                         </div>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ))}
                   </div>;
+=======
+
+
+                    ))}
+                  </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 )}
               </div>
             </Card>
@@ -1011,6 +1109,7 @@ export default function URLShortenerPage() {;
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
         <section className='py-20 bg-gray-800'>
@@ -1030,6 +1129,8 @@ export default function URLShortenerPage() {;
                   </div>;
                 )}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1039,7 +1140,10 @@ export default function URLShortenerPage() {;
       {shortenedUrls.length > 0 && (
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-20 bg-gray-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -1048,9 +1152,13 @@ export default function URLShortenerPage() {;
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </Card>;
           </div>;
@@ -1079,9 +1187,13 @@ export default function URLShortenerPage() {;
             <div className='space-y-4'>;
               {shortenedUrls && shortenedUrls.map(url => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Card
                   key={url && url.id}
                   className='p-6 bg-gray-700 border border-gray-600'>;
@@ -1111,6 +1223,7 @@ export default function URLShortenerPage() {;
                           <div className='flex items-center space-x-4 mt-3 text-sm text-gray-400'>;
                             <span>;
                               Created:{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                               {new Date(url.createdAt).toLocaleDateString()}
                             </span>                            <span>Alias: {url.alias}</span>                    {/* URL Info */}
@@ -1144,12 +1257,17 @@ export default function URLShortenerPage() {;
                         <div className='text-xs text-gray-400'>
                           Total Clicks
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     <div className="flex flex-col space-y-3">
                       <div className="text-center p-4 bg-gray-800 rounded-lg">
                         <div className="text-2xl font-bold text-orange-400 mb-1">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {url.clicks}
                         </div>
                         <div className="text-xs text-gray-400">Total Clicks</div>
@@ -1162,9 +1280,13 @@ export default function URLShortenerPage() {;
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                               {new Date(url && url.createdAt).toLocaleDateString()}
                             </span>                            <span>Alias: {url && url.alias}</span>                    {/* URL Info */}
                     <div className="lg:col-span-2">;
@@ -1211,9 +1333,13 @@ export default function URLShortenerPage() {;
                       </div>;
                       <div className='flex space-x-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Button
                           onClick={() => copyToClipboard(url && url.shortUrl)}
                           variant="outline";
@@ -1233,14 +1359,19 @@ export default function URLShortenerPage() {;
                         </Button>;
                         <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <Copy className="w-4 h-4 mr-2" />
                           Copy
                         </Button>
                         <Button
                           onClick={() => incrementClicks(url.id)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           variant='outline'
                           size='sm'
@@ -1262,6 +1393,10 @@ export default function URLShortenerPage() {;
                           variant="outline"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                          variant="outline"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           size="sm"
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
@@ -1270,9 +1405,13 @@ export default function URLShortenerPage() {;
                         </Button>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           onClick={() => incrementClicks(url && url.id)}
                           variant='outline';
                           size='sm';
@@ -1291,9 +1430,13 @@ export default function URLShortenerPage() {;
                       </div>;
                       <div className='flex space-x-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <Button
                           onClick={() =>;
                             setShowQR(showQR === url && url.id ? null : url && url.id);
@@ -1315,6 +1458,7 @@ export default function URLShortenerPage() {;
                           QR Code;
                         </Button>;
                         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <div className="flex space-x-2">
                         <Button
@@ -1347,6 +1491,11 @@ onClick={() => deleteUrl(url && url.id)}
 
                           onClick={() => deleteUrl(url && url.id)}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+                          onClick={() => deleteUrl(url && url.id)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           variant='outline';
                           size='sm';
                           className='border-red-600 text-red-400 hover:bg-red-600 hover:text-white';
@@ -1360,7 +1509,10 @@ onClick={() => deleteUrl(url && url.id)}
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1370,13 +1522,17 @@ onClick={() => deleteUrl(url && url.id)}
                         className="mx-auto mb-3 w-32 h-32"
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />
                       <p className="text-sm text-gray-400">
                         Scan this QR code to visit the shortened URL
                       </p>
                     </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {/* QR Code */}
                       />;
@@ -1396,6 +1552,8 @@ onClick={() => deleteUrl(url && url.id)}
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )}
 </Card>;
               ))}
@@ -1404,9 +1562,13 @@ onClick={() => deleteUrl(url && url.id)}
         </section>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       />
                       <p className="text-sm text-gray-400">
                       </p>
@@ -1419,7 +1581,10 @@ onClick={() => deleteUrl(url && url.id)}
         </section>
       )}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Features */}
       <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1427,6 +1592,7 @@ onClick={() => deleteUrl(url && url.id)}
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
 
+<<<<<<< HEAD
       {/* Features */}
 
 
@@ -1437,6 +1603,8 @@ onClick={() => deleteUrl(url && url.id)}
               Professional URL Shortening Features
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -1507,15 +1675,22 @@ onClick={() => deleteUrl(url && url.id)}
               <p className="text-gray-400">
                 Simple dashboard to manage, edit, and delete your shortened URLs as needed.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               </p>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              </p>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </h2>
       {/* Use Cases */}
@@ -1542,6 +1717,8 @@ onClick={() => deleteUrl(url && url.id)}
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Track campaign performance</li>              Perfect For Every Business Need
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Use Cases */}
 
       <section className="py-20 bg-gray-800">
@@ -1550,7 +1727,10 @@ onClick={() => deleteUrl(url && url.id)}
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Perfect For Every Business Need
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From marketing campaigns to social media, our URL shortener serves all your link management needs.
@@ -1570,6 +1750,7 @@ onClick={() => deleteUrl(url && url.id)}
               </ul>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📱</div>
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1581,11 +1762,16 @@ onClick={() => deleteUrl(url && url.id)}
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Professional appearance</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-4xl mb-4">📱</div>
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
               <p className="text-gray-400 mb-6">
@@ -1593,15 +1779,22 @@ onClick={() => deleteUrl(url && url.id)}
               </p>
               <ul className="space-y-2 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <li>• Professional appearance</li>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                <li>• Professional appearance</li>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Engagement tracking</li>
                 <li>• Brand consistency</li>
               </ul>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📧</div>
@@ -1614,11 +1807,16 @@ onClick={() => deleteUrl(url && url.id)}
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Clean email design</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-4xl mb-4">📧</div>
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>
               <p className="text-gray-400 mb-6">
@@ -1626,15 +1824,22 @@ onClick={() => deleteUrl(url && url.id)}
               </p>
               <ul className="space-y-2 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <li>• Clean email design</li>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                <li>• Clean email design</li>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Subscriber analytics</li>
                 <li>• A/B testing support</li>
               </ul>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🏢</div>
@@ -1647,11 +1852,16 @@ onClick={() => deleteUrl(url && url.id)}
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Professional branding</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className="text-4xl mb-4">🏢</div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>
               <p className="text-gray-400 mb-6">
@@ -1659,11 +1869,17 @@ onClick={() => deleteUrl(url && url.id)}
               </p>
               <ul className="space-y-2 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                 <li>• Professional branding</li>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                <li>• Professional branding</li>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Easy sharing</li>
                 <li>• Access tracking</li>
               </ul>
@@ -1672,6 +1888,7 @@ onClick={() => deleteUrl(url && url.id)}
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='py-20 bg-gray-900'>;
 <section className='py-20 bg-gray-900'>;
 =======
@@ -1679,6 +1896,42 @@ onClick={() => deleteUrl(url && url.id)}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section className='py-20 bg-gray-900'>;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-orange-100 mb-8'>
+            Join thousands of businesses using our professional URL shortening
+            service to improve their link management.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-orange-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-orange-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-orange-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+=======
+      <section className='py-20 bg-gray-900'>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
@@ -2304,9 +2557,13 @@ onClick={() => deleteUrl(url && url.id)}
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📢</div>;
@@ -2353,17 +2610,25 @@ onClick={() => deleteUrl(url && url.id)}
               </p>;
               <ul className="space - y-2 text - gray - 300">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Engagement tracking</li>;
                 <li>• Brand consistency</li>;
               </ul>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📧</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -2401,9 +2666,13 @@ onClick={() => deleteUrl(url && url.id)}
               </p>;
               <ul className="space - y-2 text - gray - 300">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <li>• Easy sharing</li>;
                 <li>• Access tracking</li>;
               </ul>;
@@ -2411,6 +2680,7 @@ onClick={() => deleteUrl(url && url.id)}
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -2474,6 +2744,10 @@ onClick={() => deleteUrl(url && url.id)}
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               View Pricing;
             </Button>;
           </div>;
@@ -2486,6 +2760,7 @@ onClick={() => deleteUrl(url && url.id)}
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
 );
@@ -2498,3 +2773,18 @@ onClick={() => deleteUrl(url && url.id)}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </>);
+=======
+  );
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+
+=======
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,6 +1,7 @@
 
 // AI Matchmaking utility functions;
 
+<<<<<<< HEAD
 // AI Matchmaking utility functions;
 export interface MatchResultItem {
 
@@ -16,11 +17,22 @@ export interface MatchResultItem {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export interface MatchResultItem {
+=======
+
+
+
+export interface MatchResultItem {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   title: string;
   description: string;
   category: string;
   price?: number;
+<<<<<<< HEAD
 export interface MatchResult {
 }
 
@@ -86,16 +98,22 @@ const sampleData: MatchResultItem[] = [
   {
     id: "talent-1";
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   skills?: string[],
   image?: string;
 
 }
 export interface MatchResult {
 =======
+<<<<<<< HEAD
 }
 
 
 export interface MatchResult {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   item: MatchResultItem;
@@ -109,11 +127,15 @@ const sample_data: MatchResultItem[] = [;
 
   {
     id: "talent - 1";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     price: 120
 
@@ -122,17 +144,23 @@ const sample_data: MatchResultItem[] = [;
   {
     id: "service-1";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     price: 120,
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
 
   }
   {
     id: "service - 1";
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "AI Model Training";
     description: "Custom AI model training service with data preparation and deployment";
     category: "Services - AI Development";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     price: 5000
 
@@ -155,6 +183,8 @@ export async function findMatches(
 
   type: string = ""
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     price: 5000,
     skills: ["Machine Learning", "Model Training", "AI Deployment"];
 
@@ -169,7 +199,10 @@ export async function findMatches(
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -189,11 +222,17 @@ export interface MatchResult {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -224,6 +263,7 @@ const sampleData: MatchResultItem[] = [
 
 // Function to find matches based on query and type
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -232,21 +272,27 @@ export async function findMatches(
 
   type: string = "",
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export async function findMatches(;
   query: string;
 export async function findMatches(
   query: string,
   type: string = "",
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -256,6 +302,11 @@ export async function findMatches(
     
 
 
+=======
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000)),
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Filter by type if provided
     let filteredItems = sampleData;
     if (type && type !== "all") {
@@ -266,6 +317,7 @@ export async function findMatches(
       )
     }
     // Sort by simulated relevance (random for now)
+<<<<<<< HEAD
     await new Promise(resolve => setTimeout(resolve, 1000));
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
@@ -277,6 +329,8 @@ export async function findMatches(
       )
     }
     // Sort by simulated relevance (random for now)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const matches: MatchResult[] = filteredItems.map(item => ({
       item
       score: Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99
@@ -284,6 +338,7 @@ export async function findMatches(
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     }));
     // Sort by score
+<<<<<<< HEAD
     return matches.sort((a, b) => b.score - a.score).slice(0, limit)
   } catch (error) {
     console.error("Error in matchmaking:", error);
@@ -422,6 +477,16 @@ export async function find_matches (
 if ( {) {
   $2
 
+=======
+    return matches && matches.sort((a, b) => b && b.score - a && a.score).slice(0, limit)
+  } catch (error) {
+
+    console && console.error("Error in matchmaking:", error);
+
+    return []
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -431,10 +496,16 @@ if ( {) {
   } catch (error) {
     console.error("Error in matchmaking:", error),
     return []
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }
+=======
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       filtered_items = sample_data.filter (item =>;
         item.category.toLowerCase ().includes (type.toLowerCase ()));
@@ -447,6 +518,7 @@ if ( {) {
       reason: `This ${item.category.split (' - ')[0].toLowerCase ()} matches your needs based on the provided description.`;
     }));
 ;
+<<<<<<< HEAD
     // Sort by score;
     return matches.sort ((a, b) => b.score - a.score).slice (0, limit);
   } catch (error) {
@@ -548,3 +620,5 @@ export async function findMatches(;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

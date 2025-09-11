@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -9,6 +10,10 @@ import { format } from 'date-fns';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -16,6 +21,7 @@ import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -24,15 +30,21 @@ import { format } from 'date-fns';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -45,17 +57,25 @@ interface CertificationsListProps {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export function CertificationsList({
   certifications
   onEdit
   onDelete
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }: CertificationsListProps) {
   if (certifications.length === 0) {
 =======
@@ -76,6 +96,7 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
     return null;
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -87,6 +108,10 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
   return (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Certification  } from '@/types / resume';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -118,6 +143,7 @@ if ( {) {
                 <h4 className="font - medium">{cert.name}</h4>;
                 <p className="text - sm text - muted - foreground">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {cert.issuing_organization}
                 </p>;
                 <p className="text - xs text - muted - foreground mt - 1">;
@@ -136,6 +162,11 @@ if ( {) {
                   {cert.issuing_organization}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  {cert.issuing_organization}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Certifications</h3>;
       {certifications && certifications.map((cert) => (;
@@ -153,6 +184,7 @@ if ( {) {
                     <> · Expires: {typeof cert && cert.expiration_date === 'string' ;
                       ? cert && cert.expiration_date ;
                       : format(cert && cert.expiration_date, 'MMM yyyy')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Certification } from '@/types/resume',;
@@ -316,6 +348,11 @@ export function CertificationsList({
                 <h4 className="font-medium">{cert.name}</h4>
                 <p className="text-sm text-muted-foreground">
                   {cert.issuing_organization}
+=======
+                    </>;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
                   Issued:{" "}
@@ -332,6 +369,7 @@ export function CertificationsList({
                         ? cert.expiration_date
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
+<<<<<<< HEAD
 =======
                     </>;
 
@@ -340,6 +378,8 @@ export function CertificationsList({
                 <p className="text-xs text-muted-foreground mt-1">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
@@ -350,6 +390,7 @@ export function CertificationsList({
                     </>;
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </p>
               </div>
               <div className="flex gap-2">
@@ -358,10 +399,16 @@ export function CertificationsList({
               </div>;
               <div className="flex gap-2">;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                </p>;
+              </div>;
+              <div className="flex gap-2">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => onEdit(cert)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >
                   <Edit className="h-4 w-4" />
@@ -380,6 +427,8 @@ export function CertificationsList({
                 <a
                   href={cert.credential_url}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >;
                   <Edit className="h-4 w-4" />;
                 </Button>;
@@ -456,7 +505,10 @@ export function CertificationsList({
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
@@ -469,6 +521,7 @@ export function CertificationsList({
         </Card>
       ))}
     </div>
+<<<<<<< HEAD
   )
 }
 ;
@@ -497,9 +550,15 @@ export function CertificationsList({
 }
 ;
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 }
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

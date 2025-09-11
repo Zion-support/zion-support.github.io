@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
 import {type, VariantProps} from 'class-variance-authority';
@@ -17,6 +18,8 @@ import * as React from "react"
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
 import { type VariantProps } from "class-variance-authority"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -26,7 +29,10 @@ import { type VariantProps } from "class-variance-authority"
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { cn } from "@/lib/utils"
 import { toggleVariants } from "@/components/ui/toggle"
@@ -38,16 +44,22 @@ const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
   variant: "default"})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
     VariantProps<typeof toggleVariants>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ></typeof>(({ className, variant, size, children, ...props }, ref) => (
   <ToggleGroupPrimitive.Root
 =======
@@ -72,10 +84,17 @@ const ToggleGroup = React && React.forwardRef<;
     </ToggleGroupContext && ToggleGroupContext.Provider>;
   </ToggleGroupPrimitive && ToggleGroupPrimitive.Root>;
 ));
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ToggleGroup && ToggleGroup.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Root.displayName;
+=======
+
+
+ToggleGroup && ToggleGroup.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Root.displayName;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const ToggleGroupItem = React && React.forwardRef<;
   React && React.ElementRef<typeof ToggleGroupPrimitive && ToggleGroupPrimitive.Item>,;
   React && React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive && ToggleGroupPrimitive.Item> &;
@@ -84,17 +103,38 @@ const ToggleGroupItem = React && React.forwardRef<;
   const context = React && React.useContext(;
     ToggleGroupContext;
   ) as ToggleGroupContextProps;
+<<<<<<< HEAD
     >;
 
 
+=======
+
+
+    >;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {children}
     </ToggleGroupPrimitive && ToggleGroupPrimitive.Item>;
   );
 });
+<<<<<<< HEAD
 export { ToggleGroup, ToggleGroupItem };
 
 ToggleGroupItem && ToggleGroupItem.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Item.displayName;
 export { ToggleGroup, ToggleGroupItem };
+=======
+
+
+ToggleGroupItem && ToggleGroupItem.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Item.displayName;
+
+export { ToggleGroup, ToggleGroupItem };
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as ToggleGroupPrimitive from '@radix - ui / react - toggle - group';
 import {type, VariantProps} from 'class - variance - authority';
 ;
@@ -142,6 +182,7 @@ ToggleGroupItem.display_name = ToggleGroupPrimitive.Item.display_name;
 ;
 export { ToggleGroup, ToggleGroupItem }
 ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -234,3 +275,10 @@ export { ToggleGroup, ToggleGroupItem }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

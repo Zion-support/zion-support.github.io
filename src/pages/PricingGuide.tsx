@@ -1,50 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { _EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { _Button } from '@/components/ui/button';
-import { _Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { _Badge } from '@/components/ui/badge';
-import { _Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { _SEO } from '@/components/SEO';
-
-import SEO from '@/components/SEO';
-import { Shield } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Check } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Icon } from 'lucide-react';
-const services = [];
-const solutions = [];
-export default function PricingGuide() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const _filteredServices = selectedCategory === 'all'
-        ? EXPANDED_SERVICES
-        : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
-    const _getCategoryIcon = (category) => {
-        const _icons = {
-            'AI Development': <Brain className="w-6 h-6"/>,
-            'Cloud Services': <Cloud className="w-6 h-6"/>,
-            'DevOps': <Zap className="w-6 h-6"/>,
-            'Cybersecurity': <Shield className="w-6 h-6"/>,
-            'Data & Analytics': <Database className="w-6 h-6"/>,
-            'Digital Transformation': <TrendingUp className="w-6 h-6"/>,
-            'Emerging Tech': <Globe className="w-6 h-6"/>,
-            'Managed Services': <Lock className="w-6 h-6"/>
-        };
-        return icons[category] || <Star className="w-6 h-6"/>;
-    };
-    const _formatPrice = (price) => {
-        if (price >= 1000) {
-            return `$${(price / 1000).toFixed(0)}K`;
-        }
-        return `$${price}`;
-    };
-    const _getMarketComparison = (price, category) => {
-        const _comparisons = {
-            'AI Development': { avg: price * 1.3, savings: 23 },
-=======
 import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -80,7 +34,6 @@ export default function PricingGuide() {
   savings: 23 
 
 },
->>>>>>> origin/clean-error-fixing-automation
             'Cloud Services': { avg: price * 1.25, savings: 20 },
             'DevOps': { avg: price * 1.35, savings: 26 },
             'Cybersecurity': { avg: price * 1.4, savings: 29 },
@@ -89,12 +42,7 @@ export default function PricingGuide() {
             'Emerging Tech': { avg: price * 1.5, savings: 33 },
             'Managed Services': { avg: price * 1.2, savings: 17 }
         };
-<<<<<<< HEAD
-        return comparisons[category] || { avg: price * 1.3, savings: 23 };
-    };
-=======
         return comparisons[category] || { avg: price * 1.3, savings: 23 }};
->>>>>>> origin/clean-error-fixing-automation
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="IT Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI." keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing" canonical="https://ziontechgroup.com/pricing-guide"/>
 
@@ -205,11 +153,7 @@ export default function PricingGuide() {
           {/* Services Pricing Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredServices.map((service) => {
-<<<<<<< HEAD
-            const _marketComparison = getMarketComparison(service.price, service.category);
-=======
             const marketComparison = getMarketComparison(service.price, service.category);
->>>>>>> origin/clean-error-fixing-automation
             return (<Card key={service.id} className="bg-white/5 border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-3">
@@ -282,12 +226,7 @@ export default function PricingGuide() {
                       </Button>
                     </div>
                   </CardContent>
-<<<<<<< HEAD
-                </Card>);
-        })}
-=======
                 </Card>)})}
->>>>>>> origin/clean-error-fixing-automation
           </div>
 
           {filteredServices.length === 0 && (<div className="text-center py-16">
@@ -393,9 +332,4 @@ export default function PricingGuide() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}
-=======
     </div>)}
->>>>>>> origin/clean-error-fixing-automation

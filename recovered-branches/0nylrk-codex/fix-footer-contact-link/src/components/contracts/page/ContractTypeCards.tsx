@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "@/components/ui/card";
 import { Button  } from '@/components / ui / button';
 import {
@@ -21,10 +22,13 @@ import {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 import {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { Button } from "@/components/ui/button";
@@ -37,22 +41,30 @@ import {
   CardTitle
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
 <<<<<<< HEAD
+<<<<<<< HEAD
   CardTitle,;
 } from "@/components/ui/card";
 import { FileText, ShieldCheck } from "lucide-react";
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { FileText, ShieldCheck } from "lucide-react",
 
+<<<<<<< HEAD
 import { FileText, ShieldCheck } from "lucide-react";
 interface ContractTypeCardsProps {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onStandardClick: () => void;
   onSmartClick: () => void
 }
@@ -60,6 +72,7 @@ export function ContractTypeCards({
   onStandardClick
   onSmartClick
 }: ContractTypeCardsProps) {
+<<<<<<< HEAD
 =======
 
 interface ContractTypeCardsProps {;
@@ -81,16 +94,21 @@ import { FileText, ShieldCheck } from "lucide-react";
 interface ContractTypeCardsProps {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onStandardClick: () => void,
   onSmartClick: () => void
 }
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -118,6 +136,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -131,6 +150,12 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -158,6 +183,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardFooter>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   CardTitle,
 } from '@/components / ui / card';
 import { FileText, ShieldCheck  } from './lucide-react';
@@ -169,11 +195,15 @@ interface ContractTypeCardsProps {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ContractTypeCards(): any ({;
   onStandardClick,;
   onSmartClick,;
 }: ContractTypeCardsProps) {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Button
@@ -189,10 +219,15 @@ export function ContractTypeCards(): any ({;
 }
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -205,6 +240,7 @@ interface ContractTypeCardsProps {;
 ;
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -220,13 +256,19 @@ export function ContractTypeCards({ onStandardClick, onSmartClick } ContractType
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 export /**
  * ContractTypeCards - Function description
@@ -239,7 +281,10 @@ function ContractTypeCards() {
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -247,6 +292,7 @@ function ContractTypeCards() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <ul className="space-y-2">;
             <li className="text-sm">✓ Legally binding templates</li>;
@@ -258,6 +304,8 @@ function ContractTypeCards() {
         <CardFooter>;
           <Button variant="outline" onClick={onStandardClick}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <ul className="space - y-2">;
             <li className="text - sm">✓ Legally binding templates</li>;
@@ -269,11 +317,15 @@ function ContractTypeCards() {
         <CardFooter>;
           <Button variant="outline" on_click={onStandardClick}>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Create Standard Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ;
       <Card>;
@@ -285,6 +337,8 @@ function ContractTypeCards() {
             </CardTitle>;
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <Card>;
         <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg">;
@@ -295,7 +349,10 @@ function ContractTypeCards() {
             </CardTitle>;
             <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               Blockchain Powered;
             </span>;
           </div>;
@@ -305,6 +362,7 @@ function ContractTypeCards() {
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <ul className="space-y-2">;
             <li className="text-sm">✓ All standard contract features</li>;
             <li className="text-sm">✓ Automatic escrow payment release</li>;
@@ -312,6 +370,8 @@ function ContractTypeCards() {
             <li className="text-sm">✓ Permanent on-chain record</li>;
             <li className="text-sm">✓ Multi-signature approval flow</li>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <ul className="space - y-2">;
             <li className="text - sm">✓ All standard contract features</li>;
@@ -319,25 +379,35 @@ function ContractTypeCards() {
             <li className="text - sm">✓ Transaction verification</li>;
             <li className="text - sm">✓ Permanent on - chain record</li>;
             <li className="text - sm">✓ Multi - signature approval flow</li>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </ul>;
         </CardContent>;
         <CardFooter>;
           <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
             onClick={onSmartClick}
           >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
             on_click={onSmartClick}
           >;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -370,3 +440,13 @@ onSmartClick: () => void
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </div>;
+  );
+}
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

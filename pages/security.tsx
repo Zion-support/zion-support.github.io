@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -34,16 +35,24 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import Layout from '../components/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const securityFeatures = [
   {
     title: 'Data Encryption'
@@ -82,6 +91,7 @@ const securityFeatures = [
     details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis']
   }
 ];
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -94,6 +104,9 @@ const securityFeatures = [
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const securityStats = [
   { number: '99.9%', label: 'Uptime Guarantee' }
   { number: '24/7', label: 'Security Monitoring' }
@@ -102,8 +115,13 @@ const securityStats = [
 ];
 export default function SecurityPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const securityFeatures = [;
   {;
     title: 'Data Encryption',;
@@ -151,14 +169,26 @@ const securityStats = [;
 ];
 
 export default function SecurityPage() {;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Layout
       title="Security - Zion Tech Group"
       description="Learn about our comprehensive security measures and how we protect your data and systems."
+<<<<<<< HEAD
       keywords="security, data protection, encryption, compliance, cybersecurity"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+=======
+      keywords="security, data protection, encryption, compliance, cybersecurity">;
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -166,6 +196,7 @@ export default function SecurityPage() {;
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
+<<<<<<< HEAD
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -200,6 +231,8 @@ export default function SecurityPage() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
@@ -274,9 +307,12 @@ export default function Security(req, res) {
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -339,8 +375,11 @@ export default function Security(req, res) {
             </motion.p>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Security Stats */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -352,8 +391,11 @@ export default function Security(req, res) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Security Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -362,10 +404,15 @@ export default function Security(req, res) {
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -381,6 +428,7 @@ export default function Security(req, res) {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Security Stats */}
 <<<<<<< HEAD
         <section className="py-16 bg-white">
@@ -427,12 +475,41 @@ export default function Security(req, res) {
           </div>
         </section>
 =======
+=======
+=======
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Security & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Protection</span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Your security is our top priority. Learn about our comprehensive security measures and how we protect your data.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        {/* Security Stats */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Security Features */}
         <section className="py-16">
@@ -455,6 +532,14 @@ export default function Security(req, res) {
               {securityFeatures.map((feature, index) => (
                 <motion.div
 =======
+=======
+        {/* Security Features */}
+        <section className="py-16">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -547,6 +632,7 @@ function SecurityPage() {
             <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
               {security_stats.map ((stat, index) => (
                 <motion.div;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -554,6 +640,12 @@ function SecurityPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
 =======
+=======
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="text - center";
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
@@ -689,7 +781,10 @@ function SecurityPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2">HIPAA</h3>;
                 <p className="text-gray-600 text-sm">Health Insurance Portability and Accountability Act</p>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 p - 6";
                 >;
                   <div className="flex items - center mb - 4">;
@@ -699,6 +794,7 @@ function SecurityPage() {
                     <h3 className="text - xl font - bold text - gray - 900">{feature.title}</h3>;
                   </div>;
                   <p className="text - gray - 600 mb - 4 leading - relaxed">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
                 >
@@ -711,6 +807,8 @@ function SecurityPage() {
                   <p className="text-gray-600 mb-4 leading-relaxed">
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     {feature.description}
                   </p>;
                   <div className="space - y-2">;
@@ -720,6 +818,7 @@ function SecurityPage() {
                         <li key={idx} className="flex items - center text - sm text - gray - 600">;
                           <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
                           {detail}
+<<<<<<< HEAD
                         </li>
                       ))}
                     </ul>
@@ -729,6 +828,15 @@ function SecurityPage() {
             </div>
           </div>
         </section>
+=======
+                        </li>))}
+                    </ul>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Compliance Section */}
         <section className="py - 16 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -774,19 +882,29 @@ function SecurityPage() {
                 <h3 className="text - lg font - bold text - gray - 900 mb - 2">HIPAA</h3>;
                 <p className="text - gray - 600 text - sm">Health Insurance Portability and Accountability Act</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -816,13 +934,17 @@ function SecurityPage() {
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </ul>
                   </div>
@@ -1156,6 +1278,8 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
@@ -1211,6 +1335,7 @@ export default function Security() {
       ],
     },  ];
 
+<<<<<<< HEAD
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -1932,10 +2057,16 @@ origin/automation-improvements-final
 </Link>
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+</Link>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <EnhancedFooter />
       </div>
@@ -1945,6 +2076,11 @@ origin/automation-improvements-final
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Compliance Details;
                 </Link>;
@@ -1960,12 +2096,17 @@ origin/automation-improvements-final
   );
 
   )
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
+<<<<<<< HEAD
 }
   );
 <<<<<<< HEAD
@@ -2052,6 +2193,9 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   )
 }
@@ -2064,6 +2208,9 @@ origin/main
   )
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

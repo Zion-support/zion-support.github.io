@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap  } from 'lucide-react';
@@ -6,6 +7,8 @@ import { revolutionary2025MicroSaasServices  } from '../../data/revolutionary-20
 import { emergingTech2025Services  } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +30,16 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleServices, setVisibleServices] = useState(12);
   const categories = [
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
       id: 'all'
@@ -139,6 +146,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {
     }
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
@@ -204,20 +213,31 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
   };
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 
 
+=======
+        duration: 0.5
+      }
+    }
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         duration: 0.5,
       },
     },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         duration: 0.5
       }
@@ -245,6 +265,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     },;
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const filteredServices = activeCategory === 'all' ;
     ? allServices ;
     : allServices && allServices.filter(service => {;
@@ -259,14 +281,18 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));
   };
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
+<<<<<<< HEAD
 
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
@@ -277,12 +303,27 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <motion.div
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+        <motion&& motion.div
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
@@ -295,7 +336,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           viewport={{ once: true }}
         >
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <motion&& motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -315,6 +359,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             services that were once science fiction.          </p>;
         </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Category Filter */}
         <motion&& motion.div
           className='flex flex-wrap justify-center gap-4 mb-12'          initial={{ opacity: 0, y: 20 }}              Revolutionary 2025
@@ -322,6 +367,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Revolutionary 2025
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {/* Category Filter */}
@@ -332,7 +379,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Revolutionary 2025
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </span>
             <br />
             <span className="text-white">Services</span>
@@ -344,11 +394,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion.div>
         {/* Category Filter */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion.div
           className='flex flex-wrap justify-center gap-4 mb-12'        <motion.div
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </span>;
             <br />;
             <span className="text-white">Services</span>;
@@ -359,6 +413,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           </p>;
         </motion && motion.div>;
         {/* Category Filter */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -451,11 +506,17 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
           {categories.map(category => (            <button
               key={category.id}
@@ -465,10 +526,14 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 =======
           {categories.map((category) => (
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          {categories.map((category) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button
               key={category.id}
               onClick={() => {
                 setActiveCategory(category.id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -489,6 +554,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                 activeCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25'
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50'
+=======
+                setVisibleServices(12)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              }}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
+                activeCategory === category && category.id;
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }`}
             >
               {category.name}
@@ -496,6 +570,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                 {category.count}
               <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}
 
+<<<<<<< HEAD
                 {category.count}
 
               </span>
@@ -515,10 +590,19 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               }`}
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </span>
             </button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
+<<<<<<< HEAD
+=======
+        </motion.div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </motion && motion.div>;
 
@@ -527,9 +611,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -544,6 +632,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
+<<<<<<< HEAD
               style={{ perspective: '1000px' }}>;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
@@ -558,17 +647,34 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               style={{ perspective: '1000px' }}>;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               style={{ perspective: '1000px' }}
             >
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>
+<<<<<<< HEAD
                 {/* Background Effects */}
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>;
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+              style={{ perspective: '1000px' }}>;
+              <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
+              <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
+                {/* Background Effects */}
+
+                <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
+                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>;
+                  <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Popular Badge */}
                 {service && service.popular && (;
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
@@ -673,7 +779,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion.div>;
         {/* Services Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               className='group relative cursor-pointer'
 
@@ -688,7 +797,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 {/* Background Effects */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">;
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>;
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>;
@@ -701,6 +813,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   </div>
                 )}
 
+<<<<<<< HEAD
                 {/* Popular Badge */}
                 {service && service.popular && (;
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
@@ -715,6 +828,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                 {/* Service Header */}
 <<<<<<< HEAD
 =======
+=======
+                {/* Service Header */}
+                <div className='relative z-10'>
+                  <div className='flex items-start justify-between mb-4'>
+                    <div className='flex items-center space-x-3'>
+                      <div className='text-4xl'>{service.icon}</div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -724,7 +844,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <motion.div;
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
           variants={container_variants}
@@ -773,6 +896,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div className='text - 4xl'>{service.icon}</div>;
                       <div>;
                         <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {/* Service Header */}
                 <div className='relative z-10'>
@@ -796,12 +923,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div className='text - gray - 400 text - sm'>;
                         {service.period}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </div>                    </div>;
                   </div>;
                   {/* Description */}
                   <p className='text - gray - 300 mb - 4 leading - relaxed'>;
                     {service.description}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       </div>                    </div>;
                   </div>;
@@ -810,16 +940,23 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   <p className='text - gray - 300 mb - 4 leading - relaxed'>;
                     {service.description}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="text-4xl">{service.icon}</div>
                       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
                           {service.name}
                         </h3>
@@ -833,9 +970,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   </div>
                   {/* Description */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div className='relative z-10'>;
                   <div className='flex items-start justify-between mb-4'>;
                     <div className='flex items-center space-x-3'>;
@@ -878,10 +1019,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   </p>;
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Stats Grid */}
                   <div className='grid grid-cols-2 gap-3 mb-4'>;
                     <div className='flex items-center space-x-2 text-sm'>;
@@ -912,9 +1058,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   <div className='flex space-x-3 mt-6'>;
                   {/* Stats Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="grid grid-cols-2 gap-3 mb-4">;
                     <div className="flex items-center space-x-2 text-sm">;
                       <Users className="w-4 h-4 text-cyan-400" />;
@@ -934,6 +1084,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {/* Action Buttons */}
                   <div className="flex space-x-3 mt-6">
                     <a
@@ -941,6 +1092,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       target="_blank"
                       rel="noopener noreferrer"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   {/* Action Buttons */}
@@ -1042,11 +1195,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     </a>;
                     <button className="px - 4 py - 3 border border - white / 20 hover:border - cyan - 400 / 50 text - white rounded - lg transition - all duration - 300 hover:bg - white / 5">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Learn More;
                     </button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {/* Floating Particles */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -1083,27 +1240,39 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     style={{ left: '80%', top: '70%' }}
                   ></div>                </div>                <div className="absolute inset-0 pointer-events-none overflow-hidden">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 {/* Floating Particles */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }}></div>
                   <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }}></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>
             </motion.div>
           ))}
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {/* Floating Particles */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {/* Floating Particles */}
                 <div className='absolute inset-0 pointer-events-none overflow-hidden'>;
@@ -1131,13 +1300,17 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             </motion && motion.div>;
           ))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </motion && motion.div>;
         {/* Load More Button */}
         {visibleServices < filteredServices && filteredServices.length && (;
           <motion&& motion.div
             className='text-center'            initial={{ opacity: 0 }}          <motion && motion.div 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
 
@@ -1152,14 +1325,19 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             className="text-center"
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="text-center"
 =======
 
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
 
             className="text-center"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
@@ -1169,16 +1347,21 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <button
               onClick={loadMore}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
@@ -1188,21 +1371,32 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >
               Load More Revolutionary Services
             </button>
           </motion.div>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion&& motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion && motion.div 
 
         <motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Call to Action */}
         <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+<<<<<<< HEAD
 
         {/* Call to Action */}
         <motion.div
@@ -1241,6 +1435,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion && motion.div 
 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -1263,7 +1459,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               href='/pricing'
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the revolution with our cutting-edge AI, quantum, and emerging technology services.
@@ -1287,6 +1486,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 export default RevolutionaryServicesShowcase;  );
   )
@@ -1295,6 +1495,8 @@ export default RevolutionaryServicesShowcase;  );
 };
 export default RevolutionaryServicesShowcase;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            Ready to Experience the Future?;
@@ -1325,6 +1527,7 @@ export default RevolutionaryServicesShowcase;  );
 =======
   )
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 export default RevolutionaryServicesShowcase;
@@ -1440,10 +1643,22 @@ export default RevolutionaryServicesShowcase;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default RevolutionaryServicesShowcase;
+
+export default RevolutionaryServicesShowcase;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -1459,3 +1674,6 @@ export default RevolutionaryServicesShowcase;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

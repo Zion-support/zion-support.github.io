@@ -2,15 +2,19 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function slugify(title: string, separator = "-"): string {
@@ -26,6 +30,13 @@ export function slugify(title: string, separator = "-"): string {
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator,
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return title
     .trim()
@@ -48,23 +59,37 @@ export function unslugify(slug: string, separator = "-"): string {
     .split(separator)
     .filter(Boolean)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     .map(w => w && w.charAt(0).toUpperCase() + w && w.slice(1))
     .join(" ")
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    .map(w => w && w.charAt(0).toUpperCase() + w && w.slice(1))
+    .join(" ")
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function slugify (title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
 ;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -88,6 +113,7 @@ export function slugify(title: string, separator = "-"): string {;
 export function unslugify (slug: string, separator = "-"): string {
   return slug;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     .split (separator);
@@ -128,6 +154,8 @@ export function unslugify(slug: string, separator = "-"): string {;
   return slug;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .split(separator);
     .filter(Boolean);
     .map(w => w.charAt(0).toUpperCase() + w.slice(1));
@@ -135,9 +163,15 @@ export function unslugify(slug: string, separator = "-"): string {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,18 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { useState, useEffect } from 'react'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
       })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
+=======
+import { useState, useEffect } from "react";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Star } from 'lucide-react'
 import { ReviewStats } from "@/components/reviews/ReviewStats",
 import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 =======
@@ -24,6 +32,10 @@ import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface ProfileRatingsProps {
   userId: string,
@@ -55,6 +67,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [reviews]);
 
   // Fetch reviews when component mounts;
+<<<<<<< HEAD
   useEffect(() => {;
     fetchUserReviews(userId);
   }, [userId]);
@@ -249,13 +262,37 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value='all'>              <ReviewsList
             <TabsContent value='all'>              <ReviewsList        
 =======
+=======
+  useEffect(() => {;
+    fetchUserReviews(userId);
+  }, [userId]);
+
+
+  return (
+    <div className='space-y-6'>;
+      <div className='flex flex-col md:flex-row gap-6'>;
+        <div className='md:w-1/3'>          <ReviewStats
+
+
+
+  return (
+    <div className="space-y-6">;
+      <div className="flex flex-col md:flex-row gap-6">;
+        <div className="md:w-1/3">;
+          <ReviewStats
+            averageRating={averageRating}
+            totalReviews={ratingCount}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             ratingDistribution={ratingDistribution}
           />
         </div>
         
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -265,15 +302,22 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsList>
             <TabsContent value="all">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               <ReviewsList
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <ReviewsList
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}              />
             </TabsContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 isLoading={isLoading}
                 onReportReview={reportReview}
@@ -283,6 +327,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             ratingDistribution={ratingDistribution}          />;
@@ -315,6 +361,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <ReviewsList
 
                 reviews={reviews.filter((r) => r.rating >= 4)}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 isLoading={isLoading}
                 onReportReview={reportReview}              />;
@@ -332,6 +379,13 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsContent>;
 
             <TabsContent value='critical'>;
+=======
+                isLoading={isLoading}
+                onReportReview={reportReview}
+              />
+            </TabsContent>
+            <TabsContent value='critical'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <ReviewsList
                 reviews={reviews && reviews.filter(r => r && r.rating < 4)}                isLoading={isLoading}                reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
 
@@ -341,6 +395,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             
             <TabsContent value="critical">
@@ -395,11 +450,16 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value="critical">
               <ReviewsList
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             
             <TabsContent value="positive">
               <ReviewsList
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
@@ -419,6 +479,11 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
@@ -567,6 +632,7 @@ if ( {) {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -574,6 +640,8 @@ if ( {) {
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     </div>);
@@ -605,5 +673,9 @@ if ( {) {
 }/> </TabsContent> </Tabs> </div> </div> </div>);
 }"}
 }
+<<<<<<< HEAD
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

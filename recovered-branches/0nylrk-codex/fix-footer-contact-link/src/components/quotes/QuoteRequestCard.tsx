@@ -1,16 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { format } from "date-fns";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {format} from "date-fns";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",
 import { format } from "date-fns",
@@ -20,13 +25,18 @@ import { format } from "date-fns",
 import React from "react",
 import { format } from "date-fns",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 import React from "react",
 import { format } from "date-fns",
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { 
   Card;
   CardContent;
@@ -36,6 +46,7 @@ import {
 } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -109,12 +120,18 @@ import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide
 import type { QuoteRequest } from "@/types/quotes",
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
@@ -124,6 +141,7 @@ type QuoteRequestCardProps = {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 type QuoteRequestCardProps = {
   quote: QuoteRequest
@@ -143,6 +161,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   onMarkAsResponded,
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onToggleArchive
 }) => {
   // Format date for display
@@ -152,6 +172,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
+<<<<<<< HEAD
 
   },
 
@@ -167,6 +188,13 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
@@ -177,6 +205,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             </CardDescription>;
           </div>;
           <QuoteStatusBadge status={quote && quote.status} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const formatDate = (dateString:string) => {;
     try {;
@@ -199,10 +228,13 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <QuoteStatusBadge status={quote.status} />;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>;
       </CardHeader>;
       <CardContent>;
         <div className="text-sm text-zion-slate-light mb-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -232,6 +264,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
         <div className="flex justify-between items-center mt-4">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <span className="text-white font-medium">From: </span>;
           {quote && quote.requester_name}
         </div>;
@@ -245,11 +279,15 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
         <div className="flex justify-between items-center mt-4">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             variant="outline"
             size="sm"
             onClick={() => onViewDetails(quote)}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="flex items-center gap-1"
           >
@@ -262,6 +300,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 variant="ghost"
                 size="sm"
@@ -284,6 +326,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 <ArchiveIcon className="h-4 w-4" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               )}
             </Button>
           </div>
@@ -297,6 +340,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -353,6 +400,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <CalendarIcon className="h-4 w-4" />;
           <span>Timeline: {quote.timeline}</span>;
         </div>;
+<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
@@ -367,21 +415,28 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <span>Timeline:{quote.timeline}</span>;
         </div>;
         ;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="flex justify-between items-center mt-4">;
           <Button;
             variant="outline";
             size="sm";
             onClick={() => onViewDetails(quote)}
 <<<<<<< HEAD
+<<<<<<< HEAD
             onClick={() => onViewDetails(quote)}
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className="flex items-center gap-1";
           >;
             <Eye className="h-4 w-4" />;
             View Details;
           </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ;
           <div className="flex items-center">;
@@ -391,6 +446,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 size="sm";
                 onClick={() => onMarkAsResponded(quote.id)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           <div className="flex items-center">;
             {quote && quote.status !== 'responded' && onMarkAsResponded && (;
@@ -399,7 +456,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 variant="ghost"
                 size="sm"
                 onClick={() => onMarkAsResponded(quote && quote.id)}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="flex items-center gap-1";
               >;
                 <MessageSquare className="h-4 w-4" />;
@@ -407,7 +467,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               </Button>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -424,7 +487,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               )}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return date_string;
     }
   }
@@ -483,6 +549,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 <RefreshCw className="h - 4 w - 4" />) : (
                 <ArchiveIcon className="h - 4 w - 4" />)}
 <<<<<<< HEAD
+<<<<<<< HEAD
             ;
 ;
             <Button;
@@ -499,6 +566,9 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </div>;
@@ -507,6 +577,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
     </Card>);
@@ -553,3 +624,7 @@ quote, onViewDetails, onMarkAsResponded, onToggleArchive
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

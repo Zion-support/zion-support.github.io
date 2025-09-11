@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { useEffect, useState } from 'react'
 import {supabase} from '@/utils/supabase/client'
@@ -48,6 +49,8 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
     router.push('/auth/login')
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 'use client';
 import React, { useEffect, useState } from 'react';
 import {supabase} from '@/utils / supabase / client';
@@ -106,7 +109,10 @@ function UserProfile() {
 if ( {) {
   $2
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 'use client';
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/utils/supabase/client';
@@ -120,6 +126,7 @@ interface UserProfileProps {;
   onUserChange?: (user: SupabaseUser | null) => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export default function UserProfile({ onUserChange }: UserProfileProps) {;
   const [user, setUser] = useState<SupabaseUser | null>(null);
@@ -130,6 +137,8 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
     const getInitialSession = async () => {;
       const { data: { session } } = await supabase.auth.getSession();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <Card className='w - full max - w-sm'>;
         <CardContent className='p - 6'>;
@@ -193,13 +202,17 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       const {;
         data: { session },;
       } = await supabase && supabase.auth.getSession();
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setUser(session?.user ?? null);
       setLoading(false);
       onUserChange?.(session?.user ?? null);
     };
 
     getInitialSession();
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Listen for auth changes;
     const { data: { subscription } } = supabase.auth.onAuthStateChange(;
@@ -354,6 +367,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Listen for auth changes;
     const {;
       data: { subscription },;
@@ -365,6 +381,7 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       }
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
     return () => subscription && subscription.unsubscribe();
   }, [onUserChange]);
   const handleSignOut = async () => {;
@@ -374,6 +391,8 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     router && router.push('/auth/login');
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     return () => subscription && subscription.unsubscribe();
   }, [onUserChange]);
@@ -386,7 +405,10 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     router && router.push('/auth/login');
   };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (loading) {;
     return (
       <Card className='w-full max-w-sm'>;
@@ -400,16 +422,22 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!user) {;
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <User className='h-5 w-5' />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 import React, { useEffect, useState } from 'react';
@@ -482,10 +510,13 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
             <User className="h-5 w-5" />;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Not Signed In;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button onClick={handleSignIn} className="w-full">;
             <LogIn className="h-4 w-4 mr-2" />;
@@ -493,6 +524,10 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
           <Button onClick={handleSignIn} className='w-full'>;
             <LogIn className='h-4 w-4 mr-2' />;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <Button onClick={handleSignIn} className='w-full'>;
+            <LogIn className='h-4 w-4 mr-2' />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Sign In;
           </Button>;
         </CardContent>;
@@ -500,6 +535,7 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
     );
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Card className="w-full max-w-sm">
       <CardHeader>
@@ -533,6 +569,10 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           Sign Out
         </Button>;
       </CardContent>;
@@ -540,6 +580,7 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
   );
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
@@ -549,6 +590,8 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
           <LogOut className="h-4 w-4 mr-2" />
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
@@ -558,6 +601,7 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
         </Button>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 ;
@@ -595,10 +639,46 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
         ;
         <Button onClick={handleSignOut} variant="outline" className="w-full">;
           <LogOut className="h-4 w-4 mr-2" />;
+=======
+
+    <Card className='w-full max-w-sm'>;
+      <CardHeader>;
+        <CardTitle className='flex items-center gap-2'>;
+          <User className='h-5 w-5' />;
+          User Profile;
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent className='space-y-4'>;
+        <div className='space-y-2'>;
+          <div className='flex items-center gap-2'>;
+            <span className='text-sm font-medium'>Email:</span>;
+            <span className='text-sm'>{user && user.email}</span>;
+          </div>;
+          <div className='flex items-center gap-2'>;
+            <span className='text-sm font-medium'>Status:</span>;
+            <Badge variant={user && user.email_confirmed_at ? 'default' : 'secondary'}>;
+              {user && user.email_confirmed_at ? 'Verified' : 'Unverified'}
+            </Badge>;
+          </div>;
+          <div className='flex items-center gap-2'>;
+            <span className='text-sm font-medium'>Joined:</span>;
+            <span className='text-sm'>;
+              {new Date(user && user.created_at).toLocaleDateString()}
+            </span>;
+          </div>;
+        </div>;
+
+        <Button onClick={handleSignOut} variant='outline' className='w-full'>;
+          <LogOut className='h-4 w-4 mr-2' />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           Sign Out;
         </Button>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   )
@@ -657,6 +737,7 @@ if ( {) {
         </Button>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );} 
 'use client' import { ;
   {;
@@ -705,3 +786,6 @@ import {;
 =======
     </Card>);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </Card>);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

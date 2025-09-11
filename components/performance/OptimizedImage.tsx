@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 interface OptimizedImageProps {;
   src: string, alt: string,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,7 +32,10 @@ interface OptimizedImageProps {;
   src: string, alt: string,;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
@@ -44,9 +50,13 @@ interface OptimizedImageProps {
   style?: React && React.CSSProperties;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
   alt,;
@@ -61,6 +71,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 }) => {;
   if (fill) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
 
@@ -71,6 +82,11 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
 =======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   src,
   alt,
   width,
@@ -97,13 +113,19 @@ if ( {) {
         quality={quality}
         style={style}
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Image;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     <Image;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       src={src}
       alt={alt}
       width={width |800}
@@ -122,6 +144,11 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       quality={quality}
       style={style}
 
@@ -131,6 +158,7 @@ if ( {) {
   );
 };
 
+<<<<<<< HEAD
 export default OptimizedImage;
 quality={quality}
       style={style}
@@ -155,17 +183,29 @@ export default OptimizedImage;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default OptimizedImage;
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
       quality={quality}
       style={style}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 };
 
 export default OptimizedImage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from './react';
 ;
 export interface Notification {
@@ -14,13 +15,20 @@ export interface Notification {;
 
 =======
 
+=======
+import React from "react";
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -28,6 +36,7 @@ export interface Notification {;
   duration?: number;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -92,6 +101,13 @@ interface NotificationSystemProps {
   notifications: Notification[];
   onDismiss?: (id: string) => void;
   className?: string;
+=======
+
+interface NotificationSystemProps {
+interface NotificationSystemProps {;
+  notifications: Notification[];
+  onDismiss?: (id: string) => void;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
           key;
@@ -141,27 +157,39 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, [])
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     success: "bg-green-50 border-green-400 text-green-800",
     error: "bg-red-50 border-red-400 text-red-800",
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
     info: "bg-blue-50 border-blue-400 text-blue-800",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   return `${baseStyles} ${typeStyles[type]}`;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 interface Notification {
@@ -169,6 +197,7 @@ interface Notification {
   type: 'success' | 'error' | 'warning' | 'info';
   title?: string;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function NotificationSystem({
   notifications,
@@ -201,13 +230,18 @@ export function useToast() {
   return useContext(NotificationContext)
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications,
   onDismiss,
@@ -229,7 +263,10 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function NotificationSystem({
   notifications,
   onDismiss,
@@ -237,6 +274,7 @@ export default function NotificationSystem({
 
   if (notifications.length === 0) return null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
     const id = Math.random().toString(36).slice(2),
@@ -308,6 +346,9 @@ const getNotificationStyles = (type: Notification["type"]): string => {
   }
   return `${base_styles} ${type_styles[type]}`;
 }
+=======
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export default function NotificationSystem ({
   notifications,
@@ -380,7 +421,10 @@ if (return null) {
     </div>);
 }
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 }
@@ -388,6 +432,10 @@ if (return null) {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Service {
   Star,
   Users,
@@ -20,6 +21,8 @@ interface Service {
 import Button from '../ui / Button';
 interface Service {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -44,8 +47,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface Service {
 =======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Star,;
   Users,;
@@ -95,18 +101,25 @@ interface Service {;
   growth_rate: string;
   variant: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   contact_info: {
 =======
 
   contact_info: {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  contact_info: {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     mobile: string;
     email: string;
     address: string;
     website: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -116,6 +129,8 @@ interface Service {;
 ;
 interface EnhancedServiceShowcaseProps {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   real_implementation: boolean;
   implementation_details: string;
@@ -128,16 +143,24 @@ interface EnhancedServiceShowcaseProps {
 ;
 interface EnhancedServiceShowcaseProps {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   title: string;
   subtitle: string;
   show_filters?: boolean;
   services?: Service[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { 
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket;
@@ -194,29 +217,44 @@ interface EnhancedServiceShowcaseProps {
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   subtitle;
   showFilters = false;
   services = []
   maxServices = 12
 <<<<<<< HEAD
+<<<<<<< HEAD
 }) => {
 =======
 
 }) => {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}) => {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
   const categories = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   max_services?: number;
 ;
 const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
@@ -235,9 +273,13 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
 ;
   const categories = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { id: 'all', name: 'All Services', icon: '🚀' },
     { id: 'ai', name: 'AI & ML', icon: '🧠' },
     { id: 'quantum', name: 'Quantum', icon: '⚛️' },
@@ -245,31 +287,44 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  ];
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { id: 'all', name: 'All Prices' },
     { id: 'low', name: 'Under $1K/month' },
     { id: 'medium', name: '$1K - $5K/month' },
     { id: 'high', name: '$5K - $20K/month' },
     { id: 'premium', name: '$20K+/month' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
   const sortOptions = [
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   ];
   const sortOptions = [
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     { id: 'popular', name: 'Most Popular' },
     { id: 'rating', name: 'Highest Rated' },
     { id: 'roi', name: 'Best ROI' },
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 =======
@@ -277,6 +332,11 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  ];
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const filteredServices = useMemo(() => {
     const filtered = services.filter(service => {
       const matchesCategory = selectedCategory === 'all' |
@@ -303,9 +363,13 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
       case 'roi':
         filtered.sort((a, b) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
   title,;
   subtitle,;
@@ -524,9 +588,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         break;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
           return bROI - aROI
@@ -536,6 +604,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 ;
   const stats = [;
     {
+<<<<<<< HEAD
       label: 'Total Services',
       value: services.length,
       icon: Rocket,
@@ -926,6 +995,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
   const stats = [
     {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       label: 'Total Services'
       value: services.length
       icon: Rocket
@@ -954,6 +1025,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   ];
 
   return (
+<<<<<<< HEAD
     <section className='py-20 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
@@ -982,12 +1054,103 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+=======
+    <section className='py - 20 px - 4 sm:px - 6 lg:px - 8'>;
+      <div className='max - w-7xl mx - auto'>;
+        {/* Header */}
+        <div className='text - center mb - 16'>          <motion.h2;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text - 4xl md:text - 5xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'          >        });
+
+        break;
+      case 'price - low':;
+        filtered.sort ((a, b) => parse_float (a.price.replace (/[$]/g, '')) - parse_float (b.price.replace (/[$]/g, '')));
+        break;
+      case 'price - high':;
+        filtered.sort ((a, b) => parse_float (b.price.replace (/[$]/g, '')) - parse_float (a.price.replace (/[$]/g, '')));
+        break;
+
+
+    return filtered && filtered.slice(0, maxServices);
+  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
+
+  const stats = [;
+    {;
+      label: 'Total Services',;
+      value: services && services.length,;
+      icon: Rocket,;
+      color: 'text-blue-400',;
+    },;
+    {;
+      label: 'Active Customers',;
+      value: services && services.reduce((sum, s) => sum + (s && s.customers || 0), 0),;
+      icon: Users,;
+      color: 'text-green-400',;
+    },;
+    {;
+      label: 'Average Rating',;
+      value: (;
+        services && services.reduce((sum, s) => sum + (s && s.rating || 0), 0) / services && services.length;
+      ).toFixed(1),;
+      icon: Star,;
+      color: 'text-yellow-400',;
+    },;
+    {;
+      label: 'Market Growth',;
+      value: '300%+',;
+      icon: TrendingUp,;
+      color: 'text-purple-400',;
+    },;
+
+  ];
+=======
+  ];
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+      <div className='max-w-7xl mx-auto'>;
+        {/* Header */}
+        <div className='text-center mb-16'>          <motion&& motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>        });
+        break;
+      case 'price-low':;
+        filtered && filtered.sort((a, b) => parseFloat(a && a.price.replace(/[$]/g, '')) - parseFloat(b && b.price.replace(/[$]/g, '')));
+        break;
+      case 'price-high':;
+        filtered && filtered.sort((a, b) => parseFloat(b && b.price.replace(/[$]/g, '')) - parseFloat(a && a.price.replace(/[$]/g, '')));
+        break;
+      default: break;
+    }
+
+
+    return filtered && filtered.slice(0, maxServices);
+  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
+  const stats = [;
+    { label: 'Total Services', value: services && services.length, icon: Rocket, color: 'text-blue-400' },;
+    { label: 'Active Customers', value: services && services.reduce((sum, s) => sum + (s && s.customers || 0), 0), icon: Users, color: 'text-green-400' },;
+    { label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + (s && s.rating || 0), 0) / services && services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },;
+
+    { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
+  ];
+  return (
+    <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
 
 
@@ -1011,12 +1174,23 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
+          >
+
+
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
             {subtitle}
@@ -1027,6 +1201,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
+            {subtitle}
+          </motion.p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
 
           >
@@ -1035,6 +1216,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           </motion.p>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
@@ -1045,10 +1227,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1058,15 +1244,29 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             {stats.map((stat, index) => (
+=======
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+          >
+            {stats.map((stat, index) => (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
             {subtitle}
           </motion.p>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
 
           >
@@ -1099,17 +1299,24 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
+<<<<<<< HEAD
 
           </motion && motion.div>;
         </div>;
 
 
+=======
+            ))}
+          </motion.div>
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             ))}
           </motion.div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             ))}
           </motion.div>
@@ -1120,11 +1327,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Filters */}
         {showFilters && (;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1135,14 +1347,25 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             className='mb-12'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className='mb-12'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Category Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -1150,6 +1373,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   </label>
                   <select
                     value={selectedCategory}
+<<<<<<< HEAD
 
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-12"
@@ -1158,20 +1382,27 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
                     {categories.map(category => (                      <option key={category.id} value={category.id}>          >
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* Category Filter */}
                 <div>;
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
                   <select
                     value={selectedCategory}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1232,6 +1463,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 <<<<<<< HEAD
                     ))}
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
@@ -1239,14 +1472,24 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <option key={category.id} value={category.id}>
                     {categories.map(category => (                      <option key={category.id} value={category.id}>
 
+<<<<<<< HEAD
                       <option key={category.id} value={category.id}>
 
                         {category.icon} {category.name}
                       </option>
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                        {category.icon} {category.name}
+                      </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
                   </select>
                 </div>
 
+<<<<<<< HEAD
                 {/* Price Range Filter */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Price Range">Price Range</label>
@@ -1353,6 +1596,23 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     Price Range;
                   </label>;
                   <select;
+=======
+                  </select>;
+                </div>;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Price Range Filter */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Price Range
+                  </label>
+                  <select
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     value={selectedPriceRange}
                     onChange={e => setSelectedPriceRange(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
@@ -1366,17 +1626,39 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <option key={range.id} value={range.id}>
                     {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
+<<<<<<< HEAD
                       <option key={range.id} value={range.id}>
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {range.name}
                       </option>
                     ))}
                   </select>
                 </div>
 
+<<<<<<< HEAD
                 {/* Sort Options */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Sort By">Sort By</label>
+=======
+                  </select>;
+                </div>;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Sort Options */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Sort By
+                  </label>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
@@ -1391,6 +1673,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <option key={option.id} value={option.id}>
                     {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
 
+<<<<<<< HEAD
                       <option key={option.id} value={option.id}>
 
                         {option.name}
@@ -1399,6 +1682,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                        {option.name}
+                      </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ))}
 
                       </option>))}
@@ -1424,13 +1715,19 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         {option.name}
                       </option>))}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </select>;
                 </div>;
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   </select>
                 </div>
@@ -1439,6 +1736,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           </motion.div>
         )}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -1461,14 +1759,24 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
         {/* Services Grid */}
         <motion.div
+=======
+        {/* Services Grid */}
+        <motion&& motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -1488,7 +1796,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 
+=======
+                whileHover={{ y: -5, scale: 1.02 }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className='group'
 
 
@@ -1500,6 +1812,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   {service.popular && (
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
                       ⭐ Most Popular
@@ -1530,6 +1846,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <div className='text - 3xl'>{service.icon}</div>;
                       <div className='text - right'>;
                         <div className='text - 2xl font - bold text - white'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
                 className='group'
@@ -1562,10 +1879,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {service.price}
                         </div>;
                         <div className='text - sm text - gray - 400'>;
                           {service.period}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         </div>
 
@@ -1576,6 +1897,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </h3>
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}                      </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-4">
@@ -1585,7 +1908,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         <div className="text-sm text-gray-400">{service.period}</div>
                       </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     </h3>;
@@ -1597,7 +1923,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     <p className="text - gray - 300 text - sm leading - relaxed">;
                       {service.tagline}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   <div className='mb-6'>;
                     <div className='flex items-center justify-between mb-4'>;
@@ -1628,7 +1957,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   {/* Features */}
 
                         </div>
+<<<<<<< HEAD
 
+=======
+                        <div className='text-sm text-gray-400'>
+                          {service.period}
+                        </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -1637,17 +1975,43 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
                     </h3>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {service.tagline}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
 
                       {service.tagline}
 
 
+<<<<<<< HEAD
+=======
+                    </p>
+                  </div>
+                  {/* Features */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
+                      <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Key Features
                     </h4>
                     <ul className='space-y-2'>
                       {service.features.slice(0, 4).map((feature, idx) => (
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <li
                           key={idx}
                           className='text-sm text-gray-400 flex items-start'>;
@@ -1659,6 +2023,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                           <span className="text-cyan-400 mr-2">•</span>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {/* Features */}
 =======
 =======
@@ -1666,6 +2031,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+=======
+=======
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
+                      <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
 
                       {service.tagline}
@@ -1684,11 +2057,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {feature}
                         </li>;
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1705,15 +2083,23 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -1746,22 +2132,29 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>
                   </div>
                   {/* ROI Highlight */}
+<<<<<<< HEAD
 
                   <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
 
 <<<<<<< HEAD
                   <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
                     <div className='text-sm text-green-400 font-semibold mb-1'>
                       🚀 ROI Promise
                     </div>
                     <div className='text-xs text-gray-300 leading-relaxed'>                      {service.roi}                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.roi}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {service.roi}
 
@@ -1770,11 +2163,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   {/* Market Position */}
                   <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                       {service.roi}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
@@ -1782,16 +2180,23 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                   <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.marketPosition}
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </ul>;
                   </div>;
                   {/* Stats */}
@@ -1850,36 +2255,54 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   {/* CTA */}
 
                   {/* CTA */}
                   <div className='mt-auto'>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <Button
                       href={service && service.link}
                       variant='primary'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {/* CTA */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className='w-full group-hover:bg-cyan-500 transition-colors'>;
                       Get Started;
                       <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>;
                   </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Contact Info */}                    <Button
                       href={service && service.link}
                   <div className="mt-auto">
                   <div className='mt-auto'>
 
+<<<<<<< HEAD
                     <Button
                       href={service.link}
                       variant="primary"
@@ -1887,16 +2310,28 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+                    <Button
+                      href={service.link}
+                      variant="primary"
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       className="w-full group-hover:bg-cyan-500 transition-colors">;
                       Get Started;
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />;
                     </Button>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>;
                     <div className='text-xs text-gray-500'>;
@@ -1920,10 +2355,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* Contact Info */}
                   <div className="mt-4 text-center">
                     <div className="text-xs text-gray-500">
@@ -1932,20 +2372,30 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     <div className="text-xs text-gray-500">
                       Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                   </div>
                 </div>
               </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            ))}
+          </AnimatePresence>
+        </motion.div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </AnimatePresence>;
         </motion && motion.div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -2016,12 +2466,23 @@ Schedule a Consultation
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className='text-center mt-16'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
               <Button
@@ -2063,6 +2524,7 @@ Schedule a Consultation
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='primary'
@@ -2101,6 +2563,8 @@ Schedule a Consultation
       </div>
     </section>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default EnhancedServiceShowcase;  );
 };
@@ -2108,7 +2572,10 @@ export default EnhancedServiceShowcase;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </p>;
                   </div>;
                   {/* Features */}
@@ -2291,15 +2758,21 @@ export default EnhancedServiceShowcase);
 export default EnhancedServiceShowcase;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -2322,3 +2795,6 @@ export default EnhancedServiceShowcase;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

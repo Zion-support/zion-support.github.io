@@ -9,6 +9,7 @@ import {Navigate} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
 export default function PostJob() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
 import { Header } from "@/components/header",
@@ -23,11 +24,17 @@ export default function PostJob() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { isAuthenticated, isLoading } = useAuth();
 
   const isMobile = useIsMobile();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Navigate } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
 export default function PostJob() {
@@ -42,6 +49,7 @@ export default function PostJob() {
     )
   }
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Post a Job | Zion AI Marketplace"
@@ -104,6 +112,12 @@ export default function PostJob() {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -125,16 +139,20 @@ export default function PostJob() {;
 ;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
     <>;
       <SEO;
         title="Post a Job | Zion AI Marketplace";
         description="Post a job to find the perfect AI talent for your project.";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     <>;
       <SEO
         title="Post a Job | Zion AI Marketplace" 
         description="Post a job to find the perfect AI talent for your project." 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <Header />;
@@ -171,12 +189,19 @@ export default function PostJob() {;
         <Card className="border shadow-md">;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' :'3xl'} font-bold`}>Post a Job</CardTitle>;
+=======
+      />;
+      <Header />;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>;
         <Card className="border shadow-md">;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { Header } from '@/components / header';
 import { Footer } from '@/components / Footer';
@@ -214,7 +239,10 @@ if ( {) {
           <CardHeader>;
             <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -230,6 +258,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
       {is_mobile && <div className="h - 16"></div>}
@@ -269,3 +298,8 @@ if (isLoading) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

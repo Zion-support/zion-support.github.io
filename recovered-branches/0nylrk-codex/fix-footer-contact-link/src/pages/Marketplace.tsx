@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +27,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -41,6 +47,7 @@ import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
 export default function Marketplace() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
@@ -66,6 +73,8 @@ import { AppLayout } from "@/layout/AppLayout";
 export default function Marketplace() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
@@ -73,6 +82,7 @@ export default function Marketplace() {
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
   const filterOptions = generateFilterOptions();
@@ -87,15 +97,23 @@ export default function Marketplace() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -103,11 +121,14 @@ export default function Marketplace() {
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -140,11 +161,17 @@ export default function Marketplace() {;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -162,15 +189,21 @@ export default function Marketplace() {;
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
       return false
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {
     console.log(`Filter changed: ${filterType} = ${value}`)
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     
     return true
   }),
@@ -178,16 +211,22 @@ export default function Marketplace() {;
   const handleFilterChange = (filterType: string, value: string) => {
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         );
         break;
       case 'location':
@@ -198,6 +237,7 @@ export default function Marketplace() {;
       case 'availability':
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -264,6 +304,8 @@ export default function Marketplace() {;
       case 'availability':
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ),
         break
     }
@@ -271,15 +313,19 @@ export default function Marketplace() {;
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const clearAllFilters = () => {
     setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -294,6 +340,11 @@ export default function Marketplace() {;
   
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+  },
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -301,6 +352,7 @@ export default function Marketplace() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -316,6 +368,11 @@ export default function Marketplace() {;
       
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      });
+      }),
+      
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -325,12 +382,15 @@ export default function Marketplace() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     return true;
   }),;
@@ -360,6 +420,7 @@ export default function Marketplace() {;
     setSelectedLocations([]),;
     setSelectedAvailability([]),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -368,20 +429,38 @@ export default function Marketplace() {;
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
     const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === listingId),;
+=======
+
+    setSelectedRating(null);
+  };
+
+  // Handle requesting a quote;
+  const handleRequestQuote = (listingId: string) => {;
+    const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === listingId),;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (listing) {;
       toast({;
         title: "Quote Requested",;
         description: `Your quote request for ${listing && listing.title} has been sent.`;
       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Navigate to the quote request page with the listing information;
       navigate("/request-quote", {;
         state: { ;
           serviceType: listing && listing.category,;
           specificItem: {;
+<<<<<<< HEAD
             id: listing && listing.id,;
             title: listing && listing.title,;
             category: listing && listing.category,;
             image: listing && listing.images?.[0];
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -496,6 +575,7 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
 <<<<<<< HEAD
+<<<<<<< HEAD
     setSelectedRating(null);
   },;
   // Handle requesting a quote;
@@ -515,16 +595,25 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           }
         }
       });
@@ -532,10 +621,15 @@ if ( {) {
 
 
   },
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   },
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   return (
@@ -697,13 +791,21 @@ navigate("/request-quote", {state: {
   return (
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <AppLayout>;
       <main className="flex-grow container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto mb-8">;
           <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
           <p className="text-zion-slate-light">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 ;
   return (
@@ -713,11 +815,15 @@ navigate("/request-quote", {state: {
           <h1 className="text - 3xl font - bold text - white mb - 4">AI & Tech Marketplace</h1>;
           <p className="text - zion - slate - light">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Discover professional services and products for your AI and tech projects.;
             Browse our curated collection of solutions from verified providers.;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         {/* Search and filter bar */}
@@ -732,6 +838,9 @@ navigate("/request-quote", {state: {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />;
             </div>;
             <div className="flex gap-2">;
@@ -741,7 +850,10 @@ navigate("/request-quote", {state: {
               <Button variant="ghost" size="icon" className="text-zion-slate-light">;
                 <ListFilter className="h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
         {/* Search and filter bar */}
         <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">;
@@ -761,14 +873,20 @@ navigate("/request-quote", {state: {
               <Button variant="ghost" size="icon" className="text - zion - slate - light">;
                 <ListFilter className="h - 4 w - 4" />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>;
             </div>;
           </div>;
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Main layout with sidebar and results */}
         <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;
           {/* Sidebar Filters */}
@@ -776,6 +894,7 @@ navigate("/request-quote", {state: {
             <FilterSidebar;
 
               filters={{
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 selectedProductTypes
@@ -786,10 +905,16 @@ navigate("/request-quote", {state: {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                selectedProductTypes;
+                selectedLocations;
+                selectedAvailability
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               filters={{
@@ -822,6 +947,8 @@ navigate("/request-quote", {state: {
             />;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 selectedRating
 =======
                 selected_locations;
@@ -860,12 +987,16 @@ navigate("/request-quote", {state: {
             />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Results count */}
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
+<<<<<<< HEAD
 
 
             
@@ -957,6 +1088,14 @@ navigate("/request-quote", {state: {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              </p>
+            </div>
+            
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -974,11 +1113,18 @@ navigate("/request-quote", {state: {
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </p>;
             </div>;
+=======
+=======
+              </p>;
+            </div>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               {filteredListings && filteredListings.length > 0 ? (;
@@ -995,6 +1141,10 @@ navigate("/request-quote", {state: {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">;
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.;
                   </p>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Button
                     onClick={clearAllFilters}
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
@@ -1002,6 +1152,7 @@ navigate("/request-quote", {state: {
                   </Button>;
                 </div>;
               )}
+<<<<<<< HEAD
               onRemoveRating={() => setSelectedRating (null)}
               onClearSearch={() => setSearchQuery ("")}
             />;
@@ -1089,6 +1240,8 @@ navigate("/request-quote", {state: {
                   </Button>
                 </div>
               )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
@@ -1096,15 +1249,19 @@ navigate("/request-quote", {state: {
     </AppLayout>
   )
 }
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </AppLayout>;
   ),; const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions ();
@@ -1195,12 +1352,17 @@ Discover professional services and products for your AI and tech projects. Brows
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     </AppLayout>);
 }
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

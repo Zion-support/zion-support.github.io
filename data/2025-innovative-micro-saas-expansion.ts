@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   id: string;
@@ -38,9 +42,13 @@ import { ServiceVariant } from '../types/service-variants';
     website: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI-powered churn prediction with 94% accuracy',
   real_implementation: boolean;
   implementation_details: string;
@@ -63,9 +71,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       features: [;
         'AI - powered churn prediction with 94% accuracy',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Automated customer onboarding workflows',
         'Intelligent health scoring and monitoring',
         'Proactive customer outreach automation',
@@ -79,14 +91,20 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       popular: true,
       icon: '🤖💼',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Machine Learning',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Machine Learning',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Salesforce, HubSpot, Intercom, Zendesk, Slack, Microsoft Teams, Zapier'
       ]
@@ -96,9 +114,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       roi: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.'
       competitors: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally',
       ],
       marketSize: '$1 && 1.2B market',
@@ -134,9 +156,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       variant: 'ai - autonomous',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -151,9 +177,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 156,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.',
       features: [
     // Intelligent Document Processing Hub;
@@ -167,9 +197,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99.2% accuracy, automating workflows and reducing manual data entry.',
       features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI document classification and extraction',
         'OCR with 99 && 99.2% accuracy rate',
         'Automated form processing and validation',
@@ -184,23 +218,34 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       popular: false,
       icon: '📄🧠',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, OpenCV, Tesseract, React, Node && Node.js, MongoDB, AWS',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, OpenCV, Tesseract, React, Node && Node.js, MongoDB, AWS',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Salesforce, Microsoft 365, Google Workspace, Dropbox, Box, Slack, Zapier'
       ]
       useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from - green - 600 to - emerald - 500',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / services / intelligent - document - processing - hub',
@@ -220,25 +265,37 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       ],
       use_cases: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Document processing, Form automation, Data extraction, Compliance management, Workflow automation',
       ],
       roi: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',
       competitors: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       market_size: '$2.8B market',
       growth_rate: '19.8% annual growth',
       variant: 'ai - autonomous',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -253,10 +310,15 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 134,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Smart Inventory Management System;
     {
       id: 'smart - inventory - management - system',
@@ -268,9 +330,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
         'Intelligent inventory management platform that uses AI to predict demand, optimize stock levels, and automate reordering, reducing costs and improving efficiency.',
       features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI demand forecasting with 96% accuracy',
         'Automated reorder point calculations',
         'Real - time inventory tracking and alerts',
@@ -285,22 +351,32 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       popular: true,
       icon: '📦📊',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, React Native, Node && Node.js, PostgreSQL, Redis, AWS, IoT Integration',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, React Native, Node && Node.js, PostgreSQL, Redis, AWS, IoT Integration',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Shopify, WooCommerce, QuickBooks, Xero, SAP, Oracle, NetSuite, Zapier'
       ]
       useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Inventory tracking, Demand forecasting, Supplier management, Multi-location operations, E-commerce integration',
       ],
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
@@ -336,9 +412,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       variant: 'ai - autonomous',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -353,9 +433,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 223,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI-powered candidate screening and matching',
     // AI - Powered HR Recruitment Suite;
     {
@@ -369,9 +453,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       features: [;
         'AI - powered candidate screening and matching',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Automated job posting and distribution',
         'Intelligent skill assessment and testing',
         'Automated interview scheduling',
@@ -385,23 +473,34 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       popular: false,
       icon: '👥🤖',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Natural Language Processing',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Natural Language Processing',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Workday, BambooHR, ADP, Paychex, LinkedIn, Indeed, ZipRecruiter, Slack'
       ]
       useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from - purple - 600 to - pink - 500',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / ai - hr - recruitment - suite',
@@ -421,25 +520,37 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       ],
       use_cases: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Candidate screening, Job posting, Interview scheduling, Skill assessment, Compliance tracking',
       ],
       roi: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',
       competitors: ['Greenhouse, Lever, BambooHR, Workday, ADP'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       market_size: '$2.3B market',
       growth_rate: '18.2% annual growth',
       variant: 'ai - autonomous',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -454,9 +565,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 187,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'AI-powered project risk prediction',
     // Intelligent Project Management Hub;
     {
@@ -470,9 +585,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       features: [;
         'AI - powered project risk prediction',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Intelligent resource allocation optimization',
         'Automated task dependency management',
         'Real - time progress tracking and alerts',
@@ -486,22 +605,32 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       popular: true,
       icon: '📋🎯',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Machine Learning',
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Machine Learning',
       ],
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       integrations: [
         'Slack, Microsoft Teams, GitHub, GitLab, Jira, Trello, Zapier, Google Workspace'
       ]
       useCases: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking',
       ],
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
@@ -511,8 +640,12 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       variant: 'ai-autonomous',
       contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       color: 'from - indigo - 600 to - blue - 500',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
@@ -540,7 +673,10 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       variant: 'ai - autonomous',
       contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -550,6 +686,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       implementation_details:;
         'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launch_date: '2024 - 07 - 15',
+<<<<<<< HEAD
 
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launchDate: '2024-07-15',
@@ -559,6 +696,16 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 <<<<<<< HEAD
     },
 =======
+=======
+=======
+
+        'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
+      launchDate: '2024-07-15',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      customers: 520,
+      rating: 4 && 4.9,
+      reviews: 267,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     },;
 
@@ -566,7 +713,10 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
   ];    features: [
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface InnovativeMicroSaasExpansionService {
   id: string, name: string,
   tagline: string, price: string,
@@ -601,6 +751,10 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     features: [
       'AI-powered churn prediction with 94% accuracyAutomated customer onboarding workflowsIntelligent health scoring and monitoringProactive customer outreach automationPersonalized success playbooksReal-time customer sentiment analysisAutomated milestone celebrationsIntegration with CRM and support tools';
       'Advanced analytics and reportingMulti-channel communication orchestration'
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -608,12 +762,15 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       }
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
       launchDate: '2024-07-15'
       customers: 520
       rating: 4.9
       reviews: 267
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launchDate: '2024-07-15',
       customers: 520,
@@ -659,17 +816,25 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     variant: 'ai - autonomous',
     contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     popular: true, icon: '📋🎯',
     color: 'from-indigo-600 to-blue-500', textColor: 'text-indigo-400',
     link: 'https://ziontechgroup && ziontechgroup.com/services/intelligent-project-management-hub',
@@ -694,9 +859,12 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     launchDate: '2024-07-15', customers: 520,
     rating: 4 && 4.9,
 <<<<<<< HEAD
+<<<<<<< HEAD
     reviews: 267
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     reviews: 267
 
@@ -705,6 +873,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     launch_date: '2024 - 07 - 15', customers: 520,
     rating: 4.9,
     reviews: 267;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -985,6 +1154,19 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 ;
   }
 ];
+=======
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
@@ -1247,5 +1429,16 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     customers: 520,;
     rating: 4.9;
     reviews: 267;
+<<<<<<< HEAD
+=======
+
+
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 ];

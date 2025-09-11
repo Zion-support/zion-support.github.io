@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -10,12 +13,15 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /** @type {import('next').NextConfig} */;
 
 const nextConfig = {;
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 /** @type {import('next').NextConfig} */;
 const nextConfig = {reactStrictMode: true;
   compress: true;
@@ -42,16 +48,21 @@ const nextConfig = {reactStrictMode: true;
 }
 module.exports = nextConfig;
 const nextConfig = {;
+<<<<<<< HEAD
   reactStrictMode: true;
   reactStrictMode: true,;
   reactStrictMode: true;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
+<<<<<<< HEAD
 <<<<<<< HEAD
   dist_dir: '.next';
 },
@@ -111,6 +122,8 @@ module.exports = nextConfig;
 },;
 module.exports = nextConfig,;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Image optimization;
   images: {
@@ -128,8 +141,14 @@ module.exports = nextConfig,;
   // Generate ETags;
   generate_etags: true,
   // Dist directory;
+<<<<<<< HEAD
   dist_dir: '.next';
 },
 module.exports = next_config,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  distDir: '.next';
+},;
+module.exports = nextConfig,;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

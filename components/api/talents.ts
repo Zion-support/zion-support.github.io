@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
@@ -13,17 +16,25 @@ import {
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
   'talents'
   'talents.json'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const TALENTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
@@ -49,6 +60,7 @@ export default async function handler(
     return res && res.status(405).json({ error: 'Method Not Allowed' });
   }
   const { name, email, skills, programTrack, certificationStatus } =
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     req && req.body || {};
@@ -59,6 +71,12 @@ export default async function handler(
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    req.body |{}
+  if (!name |!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+    return res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE));
   const records = (await fs && fs.pathExists(TALENTS_FILE))
@@ -113,6 +131,7 @@ if ( {) {
   const records = (await fs.path_exists (TALENTS_FILE));
     ? await fs.readJSON (TALENTS_FILE);
     : [];
+<<<<<<< HEAD
   const now = new Date ().toISOString ();
   const record = {
 <<<<<<< HEAD
@@ -122,6 +141,19 @@ if ( {) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+  const now = new Date().toISOString();
+  const record = {
+    id: uuidv4()
+    name
+    email
+    skills: skills |[]
+    programTrack: programTrack |null
+    certificationStatus: certificationStatus |'pending'
+    partnerId: auth.partner.id
+createdAt: now
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: uuidv4(),
     name,
     email,
@@ -138,10 +170,15 @@ if ( {) {
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -184,9 +221,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ id: record.id })
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: uuidv4 (),
     name,
     email,
@@ -245,6 +286,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -327,3 +369,5 @@ createdAt: now,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -10,6 +10,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Star, AlertTriangle} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
@@ -25,10 +26,15 @@ function ReviewsModerationContent() {
 function ReviewsModerationContent() {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+function ReviewsModerationContent() {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Star, AlertTriangle } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
@@ -39,12 +45,20 @@ import { toast } from "@/components/ui/use-toast",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
@@ -61,6 +75,7 @@ function ReviewsModerationContent() {
         variant: "destructive"})
       setIsLoading(false)
     }
+<<<<<<< HEAD
   
 
 =======
@@ -88,6 +103,15 @@ function ReviewsModerationContent() {
       setIsLoading(false);
     }
   };
+=======
+  }
+  useEffect(() => {
+    fetchReviews()
+  }, [activeTab]);
+  const handleRefresh = () => {
+    fetchReviews()
+  }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   },
 
@@ -95,6 +119,7 @@ function ReviewsModerationContent() {
   useEffect(() => {;
     fetchReviews();
   }, [activeTab]);
+<<<<<<< HEAD
   const handleRefresh = () => {;
     fetchReviews();
   };
@@ -114,22 +139,34 @@ function ReviewsModerationContent() {
   }, [activeTab]),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  const handleRefresh = () => {;
+    fetchReviews();
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleRefresh = () => {
     fetchReviews()
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>;
       <SEO
         title="Review Moderation | Zion AI Marketplace"
         description="Moderate and manage reviews in the Zion AI Marketplace"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -180,6 +217,8 @@ function ReviewsModerationContent() {;
         description="Moderate and manage reviews in the Zion AI Marketplace";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -190,10 +229,14 @@ function ReviewsModerationContent() {;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <Card>;
           <CardHeader>;
             <CardTitle className="flex items-center gap-2">;
@@ -210,6 +253,7 @@ function ReviewsModerationContent() {;
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>;
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>;
               </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <ReviewsModerationTable
               ;
@@ -254,10 +298,16 @@ function ReviewsModerationContent() {;
               <TabsContent value="pending" className="mt-0">;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              <TabsContent value="pending" className="mt-0">;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <ReviewsModerationTable
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />
               </TabsContent>
@@ -289,12 +339,17 @@ export default function ReviewsModeration() {
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -368,17 +423,23 @@ function ReviewsModerationContent() {;
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 />;
               </TabsContent>;
               ;
                 />;
               </TabsContent>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 />;
               </TabsContent>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TabsContent value="reported" className="mt-0">;
                 <div className="text-center py-12 border rounded-lg">;
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />;
@@ -394,6 +455,7 @@ function ReviewsModerationContent() {;
       </main>;
       <Footer />;
     </>;
+<<<<<<< HEAD
 }
 export default function ReviewsModeration() {;
   return (
@@ -412,6 +474,9 @@ export default function ReviewsModeration() {;
 
 ;
 =======
+=======
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -433,7 +498,10 @@ function ReviewsModerationContent() {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export default function ReviewsModeration() {
@@ -444,10 +512,15 @@ export default function ReviewsModeration() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const fetch_reviews = async () => {
     setIsLoading (true);
     try {
@@ -537,6 +610,7 @@ function ReviewsModeration() {
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;
 }
 ;
@@ -569,3 +643,6 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -13,10 +14,17 @@ export interface TokenTransaction {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   userId: string;
+=======
+
+
+  id: string;
+  user_id: string;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   amount: number;
-  type: 'mint' | 'burn' | 'transfer';
+  type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -134,16 +142,128 @@ export interface TokenConfig {
   isActive: boolean;
   createdAt: Date;
   updatedAt: Date;
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
-export function getConfig(): TokenConfig {
-  return tokenStore.getConfig();
+// Mock data storage - replace with actual database
+let transactions: TokenTransaction[] = [];
+
+
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now();
+  };
+  
+
+
+  transactions.push(transaction);
+  return transaction;
+}
+export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId
+    amount: -amount, // Negative for redemption
+
+;
+export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now ();
+  }
+;
+  transactions.push (transaction);
+  return transaction;
+}
+export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
+    amount: -amount, // Negative for redemption;
+    type: 'redeem',
+    reason,
+    timestamp: Date.now ();
+  }
+;
+  transactions.push (transaction);
+
+=======
+
+    type: 'redeem',
+    reason,
+    timestamp: Date.now();
+  };
+  
+
+  transactions.push(transaction);
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return transaction;
+=======
+    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    reason,
+    timestamp: Date && Date.now()
+  };
+  
+  transactions.push(transaction);
+  return transaction;
 }
 
-export function getAllTransactions(): TokenTransaction[] {
-  return tokenStore.getAllTransactions();
+  const current = tokenStore && tokenStore.getConfig();
+  tokenStore && tokenStore.setConfig({ ...current, ...partial });
+
+=======
+// Token service utilities
+export interface TokenConfig {
+  id: string;
+  name: string;
+  symbol: string;
+  decimals: number;
+  totalSupply: string;
+  contractAddress?: string;
+  network: string;
+  isActive: boolean;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
+<<<<<<< HEAD
+=======
+export interface TokenBalance {
+  address: string;
+  balance: string;
+  tokenId: string;
+  lastUpdated: Date;
+}
+
+// Mock database - in production, this would connect to a real database
+const tokenConfigs: TokenConfig[] = [];
+const tokenBalances: TokenBalance[] = [];
+
+export async function createTokenConfig(config: Omit<TokenConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<TokenConfig> {
+  const newConfig: TokenConfig = {
+    ...config,
+    id: `token_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  };
+  tokenConfigs.push(newConfig);
+  return newConfig;
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export async function getTokenConfig(id: string): Promise<TokenConfig | null> {
   return tokenConfigs.find(config => config.id === id) || null;
 }
@@ -205,6 +325,7 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
+<<<<<<< HEAD
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
@@ -228,6 +349,9 @@ export function setConfig(
 
 =======
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
@@ -235,5 +359,13 @@ export function set_config (
   Object.assign (current, partial);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

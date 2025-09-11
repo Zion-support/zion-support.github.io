@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -57,6 +58,8 @@ export class ApiErrorBoundary extends Component<
       error
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
       return (
 
@@ -75,6 +78,7 @@ export class ApiErrorBoundary extends Component<
       this.set_state ({ is_retrying: false });
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
@@ -279,6 +283,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 
       return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render () {
     // Check condition
 if ( {) {
@@ -306,7 +312,10 @@ if ( {) {
                   <WifiOff className='h - 4 w - 4' />) : (
                   <RefreshCw className='h - 4 w - 4' />)}
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
@@ -324,24 +333,35 @@ if ( {) {
                   <WifiOff className="h-4 w-4" />
                 ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <RefreshCw className='h-4 w-4' />
                 )}
                 <AlertTitle>
                   {isNetworkError
                     ? 'Connection Problem'
                     : 'Something went wrong'}
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -357,33 +377,48 @@ if ( {) {
               </AlertDescription>
             </Alert>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='flex flex-col gap-2'>
               <Button
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className='w-full'              >
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className='flex flex-col gap-2'>;
               <Button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="flex flex-col gap-2">
               <Button
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -396,11 +431,19 @@ if ( {) {
                   </>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+              </Button>
+              <Button
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
@@ -409,12 +452,15 @@ if ( {) {
 
                 Reload Page
               </Button>
+<<<<<<< HEAD
               <Button
                 variant='outline'
                 onClick={() => window.location.reload()}
                 className='w-full'              >
 ursor/fix-website-loading-errors-and-merge-6662
                 Reload Page
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
@@ -504,6 +550,7 @@ export const useApiErrorHandler = () =>: any {
               </details>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 variant='outline'
                 onClick={() => window.location.reload()}
                 className='w-full'              >
@@ -523,10 +570,13 @@ export const useApiErrorHandler = () =>: any {
             {process.env.NODE_ENV === 'development' && this.state.error && (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
@@ -537,11 +587,18 @@ export const useApiErrorHandler = () =>: any {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
+                <pre className="mt-2 whitespace-pre-wrap break-all">
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 }, ;
   return { handleApiError };
@@ -572,15 +629,21 @@ export const useApiErrorHandler = () => {
 }, ;
   return { handleApiError };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }, ;
   return { handleApiError };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
       );
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
     return this.props.children;
@@ -605,6 +668,22 @@ export const useApiErrorHandler = () => {;
 };
 };
 };
+=======
+
+    return this && this.props.children;
+  }
+
+// Hook for accessing query client in function components;
+export const useApiErrorHandler = () => {;
+  const handleApiError = (error: Error) => {;
+    Sentry && Sentry.withScope(scope => {;
+      scope && scope.setTag('source', 'useApiErrorHandler');
+      scope && scope.setLevel('error');
+      Sentry && Sentry.captureException(error);
+    });
+  };
+  return { handleApiError }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -615,7 +694,11 @@ export const useApiErrorHandler = () => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

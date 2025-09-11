@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -19,16 +22,25 @@ export default async function handler(
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+<<<<<<< HEAD
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
 <<<<<<< HEAD
 if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { code, event, url, referrer } = req && req.body || {};
   if (!code || !event) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -36,9 +48,13 @@ if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
     }
     const supabase = getServerSupabase();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { error } = await supabase && supabase.from("referral_events").insert({
       partner_code: String(code).toLowerCase(),
       event: String(event),
@@ -53,6 +69,7 @@ if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
     if (error) return res && res.status(500).json({ error: "Database error" });
     return res && res.status(200).json({ saved: true });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -65,31 +82,58 @@ if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  } catch (e: any) {
+    return res.status(200).json({ saved: false, error: e?.message });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
   const { code, event, url, referrer } = req.body || {};
   if (!code || !event) return res.status(400).json({ error: 'Missing code or event' });
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+=======
+
+  const { code, event, url, referrer } = req.body || {};
+  if (!code || !event) return res.status(400).json({ error: 'Missing code or event' });
+
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     if (usingPlaceholder) {
       return res.status(200).json({ saved: false, mock: true })
     }
+<<<<<<< HEAD
 const supabase = getServerSupabase();
+=======
+
+    const supabase = getServerSupabase();
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { error } = await supabase.from('referral_events').insert({
       partner_code: String(code).toLowerCase(), event: String(event),
       url: url || null, referrer: referrer || null,
       user_agent: req.headers['user-agent'] || null,
       ip_address: (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || null});
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (error) return res.status(500).json({ error: error.message });
     return res.status(200).json({ saved: true })
   } catch (e: any) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -108,12 +152,18 @@ function handler() {
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
       "placeholder - key";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
     return res.status(200).json({ saved: false, error: e?.message });
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+    return res.status(200).json({ saved: false, error: e?.message });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -121,7 +171,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req, res) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     // Check condition
@@ -147,6 +200,7 @@ if ( {) {
 }
     return res.status (200).json ({ saved: true });
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status (200).json ({ saved: false, error: e?.message });
 
@@ -204,6 +258,12 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    return res.status (200).json ({ saved: false, error: e?.message });
+  }
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -245,14 +305,20 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
   }
 }
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

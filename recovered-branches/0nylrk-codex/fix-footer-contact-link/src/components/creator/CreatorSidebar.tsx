@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -27,6 +28,12 @@ import {
   SidebarGroupLabel
   SidebarGroupContent
 =======
+=======
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
+import {
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {
 
@@ -39,7 +46,10 @@ import {;
   Settings,;
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Bell,
   FileText,
   Home,
@@ -48,11 +58,24 @@ import {;
   Settings,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 =======
   Users,;
 } from "lucide-react";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  Users,;
+} from "lucide-react";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {;
   Sidebar,;
   SidebarContent,;
@@ -61,6 +84,7 @@ import {;
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 } from "@/components/ui/sidebar";
 export function AppSidebar() {;
@@ -88,6 +112,17 @@ import {
   SidebarMenuButton,
   SidebarGroupLabel,
   SidebarGroupContent} from "@/components/ui/sidebar",
+=======
+  SidebarGroupContent,;
+
+
+
+} from "@/components/ui/sidebar";
+
+export function AppSidebar() {;
+  return (
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -113,6 +148,7 @@ import {
         
 
 
+<<<<<<< HEAD
         
         
 =======
@@ -131,6 +167,9 @@ export function AppSidebar() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -141,10 +180,14 @@ export function AppSidebar() {;
                     <FileText size={16} />
                     <span>My Content</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>
 =======
                   </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -153,15 +196,20 @@ export function AppSidebar() {;
                     <Search size={16} />
                     <span>Analytics</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>
 =======
                   </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -176,6 +224,12 @@ export function AppSidebar() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -186,10 +240,14 @@ export function AppSidebar() {;
                     <Users size={16} />
                     <span>Profile</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>
 =======
                   </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -198,16 +256,21 @@ export function AppSidebar() {;
                     <Settings size={16} />
                     <span>Settings</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>
 =======
                   </a>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Sidebar>
   );
@@ -232,6 +295,9 @@ export function AppSidebar() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -244,7 +310,10 @@ export function AppSidebar() {;
                     <Home size={16} />;
                     <span>Home</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
   Bell,
   FileText,
@@ -282,47 +351,63 @@ function AppSidebar() {
                     <Home size={16} />;
                     <span > Home</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <SidebarMenuButton asChild>;
                   <a href="/messaging">;
                     <Mail size={16} />;
                     <span>Messages</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <SidebarMenuButton as_child>;
                   <a href="/messaging">;
                     <Mail size={16} />;
                     <span > Messages</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <SidebarMenuButton asChild>;
                   <a href="/notifications">;
                     <Bell size={16} />;
                     <span>Notifications</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <SidebarMenuButton as_child>;
                   <a href="/notifications">;
                     <Bell size={16} />;
                     <span > Notifications</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <SidebarGroup>;
@@ -335,6 +420,8 @@ function AppSidebar() {
                     <FileText size={16} />;
                     <span>My Content</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <SidebarGroup>;
           <SidebarGroupLabel > Content</SidebarGroupLabel>;
@@ -346,30 +433,40 @@ function AppSidebar() {
                     <FileText size={16} />;
                     <span > My Content</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <SidebarMenuButton asChild>;
                   <a href="/analytics">;
                     <Search size={16} />;
                     <span>Analytics</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <SidebarMenuButton as_child>;
                   <a href="/analytics">;
                     <Search size={16} />;
                     <span > Analytics</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         ;
         <SidebarGroup>;
@@ -382,6 +479,8 @@ function AppSidebar() {
                     <Users size={16} />;
                     <span>Profile</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <SidebarGroup>;
           <SidebarGroupLabel > Settings</SidebarGroupLabel>;
@@ -393,24 +492,33 @@ function AppSidebar() {
                     <Users size={16} />;
                     <span > Profile</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <SidebarMenuButton asChild>;
                   <a href="/settings">;
                     <Settings size={16} />;
                     <span>Settings</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 <SidebarMenuButton as_child>;
                   <a href="/settings">;
                     <Settings size={16} />;
                     <span > Settings</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -418,6 +526,7 @@ function AppSidebar() {
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -455,3 +564,10 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </Sidebar>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

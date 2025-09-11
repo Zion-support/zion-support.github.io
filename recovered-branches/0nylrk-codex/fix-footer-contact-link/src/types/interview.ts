@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
@@ -7,6 +8,8 @@ export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-a
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type InterviewStatus =;
   | 'requested';
   | 'confirmed';
@@ -22,15 +25,20 @@ export type MeetingPlatform = 'zoom' | 'google - meet' | 'teams' | 'other' | 'in
 
 export interface Interview {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type InterviewStatus = 
   | 'requested' 
   | 'confirmed' 
   | 'declined' 
   | 'rescheduled' 
   | 'completed' ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
@@ -39,6 +47,8 @@ export interface Interview {
 
 export interface Interview {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
@@ -48,7 +58,10 @@ export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-a
 export interface Interview {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   client_id: string;
   talent_id: string;
@@ -65,6 +78,7 @@ export interface Interview {;
   interview_type: InterviewType;
   client_name?: string;
   talent_name?: string;
+<<<<<<< HEAD
 
   client_avatar?: string,
   talent_avatar?: string;
@@ -86,6 +100,15 @@ export interface InterviewRequest {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export interface InterviewRequest {
+=======
+  client_avatar?: string
+  talent_avatar?: string
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -93,6 +116,7 @@ export interface InterviewRequest {;
   notes?: string;
   meeting_link?: string;
   meeting_platform?: MeetingPlatform;
+<<<<<<< HEAD
 
   interview_type: InterviewType,
   title?: string;
@@ -177,6 +201,14 @@ export interface InterviewResponse {;
   message?: string;
 
 =======
+=======
+export interface InterviewResponse {
+=======
+  interview_type: InterviewType
+  title?: string
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   interview_id: string;
   status: InterviewStatus;
@@ -185,4 +217,7 @@ export interface InterviewResponse {;
   message?: string;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

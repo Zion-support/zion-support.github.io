@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
@@ -27,12 +31,17 @@ function buildIpfsClient() {
     process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
 
   if (!projectId || !projectSecret) return null;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const auth =
     "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
     url: apiUrl
     headers: { authorization: auth } as any
   });
+<<<<<<< HEAD
 }
 
 
@@ -49,10 +58,23 @@ function buildIpfsClient() {
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument && PDFDocument.create();
   const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
   const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch (error) {
     console.error("Error:", error);
@@ -65,10 +87,15 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const fontSize = 11;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PDFDocument, StandardFonts  } from './pdf - lib';
@@ -132,16 +159,25 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           current = word;
         } else {
           current = test;
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -161,6 +197,7 @@ if ( {) {
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -168,6 +205,13 @@ if ( {) {
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
+=======
+
+    });
+  let y = page && page.getHeight() - margin;
+  page && page.drawText(title, { x: margin, y, size: 16, font });
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (wrapped.push (current)) {
   $2
 }
@@ -175,11 +219,16 @@ if ( {) {
     });
   let coordinate_y = page.get_height () - margin;
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font });
+<<<<<<< HEAD
   y -= 24;
 <<<<<<< HEAD
   for (const line of lines) {
   return pdfDoc && pdfDoc.save();
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  y -= 24;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   for (const line of lines) {
@@ -187,7 +236,10 @@ if ( {) {
 
   return pdfDoc && pdfDoc.save();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default async function handler(
   req: NextApiRequest
@@ -195,9 +247,13 @@ export default async function handler(
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin;
@@ -207,6 +263,7 @@ export default async function handler(
     y -= 14
   }
 
+<<<<<<< HEAD
 }
 
   try {
@@ -215,6 +272,22 @@ export default async function handler(
   try {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  if (req.method !== "POST") return res.status($1).json({ $2 });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  try {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { id } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
@@ -224,13 +297,18 @@ export default async function handler(
       "public",
       meta && meta.artifacts.markdownPath || "",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")
       : "# Proposal";
+<<<<<<< HEAD
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta && meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
     const hasher = crypto && crypto.createHash("sha256");
@@ -249,6 +327,12 @@ export default async function handler(
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return pdfDoc.save()
 }
+=======
+
+  return pdfDoc.save()
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
@@ -256,28 +340,45 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!id) return res.status(400).json({ error: 'id is required' });
     const meta = getProposal(id);
     if (!meta) return res.status(404).json({ error: 'Proposal not found' });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || '');
     const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal';
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
+<<<<<<< HEAD
     const hasher = crypto.createHash('sha256');
     hasher.update(markdown);
     const digest = '0x' + hasher.digest('hex');
+=======
+
+    const hasher = crypto.createHash('sha256');
+    hasher.update(markdown);
+    const digest = '0x' + hasher.digest('hex');
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     let signature: string | undefined;
     const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res && res.status(200).json({ meta: updated });
         const { cid } = await ipfs.add(markdown);
@@ -293,6 +394,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         const { cid } = await ipfs.add(markdown);
 
         ipfsCid = cid.toString();
@@ -302,6 +405,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res && res.status(500).json({ error: error?.message || "Export failed" });
   }
 }
@@ -309,6 +413,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // Check condition
 if ( {) {
   $2
@@ -370,6 +478,7 @@ if ( {) {
         ipfs_cid = cid.to_string ();
       } catch {}
     }
+<<<<<<< HEAD
     const updated = update_artifacts (id, {
       pdf_path: pdf_url,
       signature,
@@ -612,11 +721,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ipfsCid = cid.toString();
       } catch {}
     }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const updated = updateArtifacts(id, {
       pdfPath: pdfUrl
       signature
       ipfsCid
     });
+<<<<<<< HEAD
     return res.status(200).json({ meta: updated });
 
   } catch (error: any) {
@@ -624,6 +736,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(500).json({ error: error?.message || "Export failed" });
       } catch {  } catch (error) {
+=======
+    return res.status (200).json ({ meta: updated });
+  } catch (error: any) {
+
+=======
+    return res.status(500).json({ error: error?.message || "Export failed" });
+=======
+      } catch {  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -656,18 +778,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: error?.message || 'Export failed' })
   }
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 =======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    return res.status (500).json ({ error: error?.message || "Export failed" });
+  }
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -680,14 +812,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
   }
 }
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

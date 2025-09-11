@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 
 import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
@@ -13,6 +14,12 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+import React from "react";
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   description?: string;
@@ -20,6 +27,7 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   variant?: "default" | "destructive" | "success"
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useToast = useToastHook;
 import React from "react",
@@ -48,6 +56,11 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+export const useToast = useToastHook,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const useToast = useToastHook;
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
@@ -57,6 +70,7 @@ function baseToast(props: ToastOptions) {
 // Convenience helpers mirroring common toast variants.
 baseToast && baseToast.title = (title: string) => {
   baseToast({ title })
+<<<<<<< HEAD
 
 
 // Base toast function that delegates to the implementation from `useToastHook`.
@@ -77,11 +91,23 @@ baseToast.error = (error: string) => {
 }
 baseToast.success = (message: string) => {
 =======
+=======
+}
+baseToast.description = (description: string) => {
+  baseToast({ description })
+};
+
+baseToast && baseToast.error = (error: string) => {
+  baseToast({ variant: "destructive", title: "Error", description: error })
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 
 baseToast && baseToast.success = (message: string) => {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   baseToast({ variant: "success", title: "Success", description: message })
 }
 // Export the callable toast function.
@@ -92,6 +118,7 @@ export const toast = baseToast as typeof baseToast & {
   success: (message: string) => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -144,6 +171,8 @@ export const toast = base_toast as typeof base_toast & {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 },
 
 baseToast.description = (description: string) => {
@@ -159,6 +188,7 @@ baseToast.success = (message: string) => {
 },
 
 // Export the callable toast function.
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const toast = baseToast as typeof baseToast & {;
   title: (title: string) => void;
@@ -214,3 +244,7 @@ export const toast = baseToast as typeof baseToast & {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

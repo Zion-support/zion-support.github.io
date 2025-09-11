@@ -1,11 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {
   onCreateClick: () => void;
 }
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
   return (
+<<<<<<< HEAD
     <div className="flex justify-between items-center mb-8">
       <div>
         <h1 className="text-3xl font-bold">Smart Contract Builder</h1>
@@ -63,6 +67,8 @@ export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
   return (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="flex justify-between items-center mb-8">;
       <div>;
         <h1 className="text-3xl font-bold">Smart Contract Builder</h1>;
@@ -71,17 +77,23 @@ export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
         </p>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
       ;
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {
@@ -92,9 +104,13 @@ interface ContractHeaderProps {
 
 
     </div>;
+<<<<<<< HEAD
 import { Button  } from '@/components / ui / button';
 interface ContractHeaderProps {
   onCreateClick: () => void;
+=======
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export /**
  * ContractHeader - Function description
@@ -112,6 +128,7 @@ function ContractHeader() {
         Create New Contract;
       </Button>;
     </div>);
+<<<<<<< HEAD
 }
 
 
@@ -137,3 +154,12 @@ function ContractHeader() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (req.method !== 'POST') return res.status(405).end();
   const { payload, message, signature } = req.body || {};
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' });
@@ -31,21 +32,30 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 (global as any).__ZION_DID_STORE__ = store,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
 (global as any).__ZION_DID_STORE__ = store
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== 'POST') return res.status(405).end()
   const { payload, message, signature } = req.body |{}
   if (!payload |!payload.address) return res.status(400).json({ error: 'Missing payload' })
@@ -58,6 +68,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+  if (req.method !== 'POST') return res.status(405).end();
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (req.method !== 'POST') return res.status(405).end(),
   const { payload, message, signature } = req.body || {},
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' }),
@@ -67,9 +83,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // In-memory demo store per process;
 const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
 export default function handler(req: any, res: any) {
@@ -86,6 +106,7 @@ export default function handler(req, res) {
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' });
   const key = `${payload.address}`;
   store[key] = { payload, message, signature, updatedAt: Date.now() };
+<<<<<<< HEAD
   return res.status(200).json({ ok: true })
 }
 
@@ -132,6 +153,8 @@ export default function handler(req, res) {
   const { payload, message, signature } = req.body || {};
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   store[key] = { payload, message, signature, updatedAt: Date.now() };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return res.status(200).json({ ok: true });
   } catch (error) {
     console.error("Error:", error);
@@ -140,13 +163,17 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -168,3 +195,9 @@ export default function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

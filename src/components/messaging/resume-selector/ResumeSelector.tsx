@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -27,10 +28,13 @@ import { Label } from "@/components/ui/label",
 import { Plus, Loader2 } from 'lucide-react'
 import { useResume } from "@/hooks/useResume",
 import { exportResumeToPDF } from "@/utils/pdfExport",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Fetch resume data when component mounts
   useEffect((,) => {
     const loadResumes = async () => {
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Button  } from '@/components / ui / button';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
@@ -112,10 +116,16 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
   )
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ;
 };
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -136,6 +146,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const [customFile, setCustomFile] = useState<File | null>(null),;
   const [isLoading, setIsLoading] = useState(false),;
   const { resume, fetchResume } = useResume(),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Fetch resume data when component mounts;
   useEffect(() => {;
     const loadResumes = async () => {;
@@ -165,6 +179,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         setSelectedResume(options[0]),;
         onResumeSelected(options[0]);
       }
+<<<<<<< HEAD
     }
   }, [resume, selectedOption, onResumeSelected]),;
   // Handle radio option change;
@@ -386,3 +401,13 @@ export const ResumeSelector: React.FC<ResumeSelectorProps> = ({
   );
 };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+  );
+}
+
+
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

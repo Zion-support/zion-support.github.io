@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {;
   Mail,;
   Phone,;
@@ -21,6 +22,8 @@ import {;
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -40,11 +43,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { motion } from 'framer-motion';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -67,6 +74,8 @@ import {
   Briefcase
   Atom;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 } from 'lucide-react';
 
 import Link from 'next/link';
@@ -75,7 +84,10 @@ import { AnimatePresence } from 'framer-motion';
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Mail,
   Phone,
   MapPin,
@@ -92,9 +104,12 @@ import { AnimatePresence } from 'framer-motion';
   Users,
   BookOpen,
 <<<<<<< HEAD
+<<<<<<< HEAD
   external?: boolean;
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   Briefcase,;
   Atom,;
@@ -113,11 +128,15 @@ interface FooterLink {;
   external?: boolean;
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface FooterSection {
 interface FooterSection {;
   title: string;
   links: FooterLink[];} from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { 
   Mail, Phone, MapPin, Globe, 
@@ -129,6 +148,8 @@ import Link from 'next/link';
 import Link from 'next / link';
 import { AnimatePresence } from 'framer-motion';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import Link from 'next/link';
@@ -136,7 +157,10 @@ import Link from 'next / link';
 import { AnimatePresence } from 'framer-motion';
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const footerSections: FooterSection[] = [
   {
     title: 'Services',
@@ -149,6 +173,7 @@ const footerSections: FooterSection[] = [
       { label: 'Cybersecurity', href: '/cybersecurity', description: 'Enterprise security' },
       { label: 'Cloud Solutions', href: '/cloud-platform', description: 'Scalable cloud infrastructure' },
       { label: 'View All Services', href: '/services', description: 'Complete service portfolio' }
+<<<<<<< HEAD
 <<<<<<< HEAD
     ]
   }
@@ -233,6 +258,9 @@ const footerSections: FooterSection[] = [
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     ]
   }
   {
@@ -289,6 +317,7 @@ const footerSections: FooterSection[] = [
       { label: 'Careers', href: '/careers', description: 'Join our team' }
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
     ]
+<<<<<<< HEAD
 
   };
   external?: boolean;
@@ -455,6 +484,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   };
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   {
     title: 'Company'
@@ -597,8 +628,161 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
 
   };
+<<<<<<< HEAD
 
 =======
+=======
+  external?: boolean;
+}
+interface FooterSection {
+  title: string,
+  links: FooterLink[];
+}
+const footer_sections: FooterSection[] = [;
+  {
+    title: 'Services',
+    links: [;
+      {
+        label: 'AI & Machine Learning',
+        href: '/ai - services',
+        description: 'Advanced AI solutions',
+      },
+      {
+        label: 'Quantum Computing',
+        href: '/quantum - computing',
+        description: 'Next - gen quantum tech',
+      },
+      {
+        label: 'Space Technology',
+        href: '/space - tech',
+        description: 'Innovative space solutions',
+      },
+      {
+        label: 'Q4 2025 Innovation',
+        href: '/innovative - 2025 - q4 - showcase',
+        description: 'Latest revolutionary services',
+      },
+      {
+        label: 'Pricing Guide',
+        href: '/comprehensive - pricing - 2025 - q4',
+        description: 'Comprehensive pricing',
+      },
+      {
+        label: 'Cybersecurity',
+        href: '/cybersecurity',
+        description: 'Enterprise security',
+      },
+      {
+        label: 'Cloud Solutions',
+        href: '/cloud - platform',
+        description: 'Scalable cloud infrastructure',
+      },
+      {
+        label: 'View All Services',
+        href: '/services',
+        description: 'Complete service portfolio',
+      },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [;
+      {
+        label: 'Healthcare & Biotech',
+        href: '/healthcare - solutions',
+        description: 'Medical technology',
+      },
+      {
+        label: 'Financial Services',
+        href: '/solutions?industry = financial',
+        description: 'Fintech solutions',
+      },
+      {
+        label: 'Manufacturing',
+        href: '/solutions?industry = manufacturing',
+        description: 'Industry 4.0',
+      },
+      {
+        label: 'Retail & E - commerce',
+        href: '/solutions?industry = retail',
+        description: 'Digital commerce',
+      },
+      {
+        label: 'Government',
+        href: '/solutions?industry = government',
+        description: 'Public sector',
+      },
+      {
+        label: 'Education',
+        href: '/solutions?industry = education',
+        description: 'EdTech solutions',
+      },
+  {
+    title: 'Solutions',
+    links: [;
+      { label: 'Healthcare & Biotech', href: '/healthcare - solutions', description: 'Medical technology' },
+      { label: 'Financial Services', href: '/solutions?industry = financial', description: 'Fintech solutions' },
+      { label: 'Manufacturing', href: '/solutions?industry = manufacturing', description: 'Industry 4.0' },
+      { label: 'Retail & E - commerce', href: '/solutions?industry = retail', description: 'Digital commerce' },
+      { label: 'Government', href: '/solutions?industry = government', description: 'Public sector' },
+      { label: 'Education', href: '/solutions?industry = education', description: 'EdTech solutions' }
+    ];
+  }
+  {
+    title: 'Company',
+    links: [;
+      { label: 'About Us', href: '/about', description: 'Our mission and values' },
+      { label: 'Careers', href: '/careers', description: 'Join our team' },
+      { label: 'Contact', href: '/contact', description: 'Get in touch' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [;
+      {
+        label: 'About Us',
+        href: '/about',
+        description: 'Our mission and values',
+      },
+      { label: 'Careers', href: '/careers', description: 'Join our team' },
+      { label: 'Contact', href: '/contact', description: 'Get in touch' },
+    ],
+  },  {
+    title: 'Resources',
+    links: [;
+      { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
+    title: 'Solutions',
+    links: [;
+      { label: 'Healthcare & Biotech', href: '/healthcare - solutions', description: 'Medical technology' },
+      { label: 'Financial Services', href: '/solutions?industry = financial', description: 'Fintech solutions' },
+      { label: 'Manufacturing', href: '/solutions?industry = manufacturing', description: 'Industry 4.0' },
+      { label: 'Retail & E - commerce', href: '/solutions?industry = retail', description: 'Digital commerce' },
+      { label: 'Government', href: '/solutions?industry = government', description: 'Public sector' },
+      { label: 'Education', href: '/solutions?industry = education', description: 'EdTech solutions' }
+    ];
+  }
+  {
+    title: 'Company',
+    links: [;
+      { label: 'About Us', href: '/about', description: 'Our mission and values' },
+      { label: 'Careers', href: '/careers', description: 'Join our team' },
+      { label: 'Contact', href: '/contact', description: 'Get in touch' }
+    ];
+  }
+
+  {
+    title: 'Resources',
+    links: [;
+      { label: 'Blog', href: '/blog', description: 'Industry insights' },
+
+  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
+  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
+  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
+  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
+];
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
@@ -609,11 +793,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const footerSections = [
     {
       title: 'Services'
       items: [
+<<<<<<< HEAD
 
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
@@ -640,6 +828,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       items: [
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { label: 'AI & Machine Learning', href: '/ai-services' }
         { label: 'Quantum Computing', href: '/quantum-computing' }
         { label: 'Space Technology', href: '/space-tech' }
@@ -687,9 +877,33 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Quantum Computing', href: '/quantum-computing' },
         { label: 'Space Technology', href: '/space-tech' },
         { label: 'Cybersecurity', href: '/cybersecurity' },
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
+      ]
+    };
+
+    {
+      title: 'Solutions'
+      items: [
+
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
+        { label: 'Micro SAAS', href: '/micro-saas' },
+        { label: 'IT Services', href: '/it-services' },
+        { label: 'Innovation Lab', href: '/innovation-lab' },
+        { label: 'Research & Development', href: '/research-development' }
+      ]
+    };
+
+    {
+      title: 'Company'
+      items: [
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { label: '2040 Services', href: '/innovative-2040-services-showcase' },
       ],
     },    {
@@ -728,6 +942,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     {
       title: 'Company',
       items: [;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         { label: 'Research & Development', href: '/research-development' },
       ],
     },    {
@@ -741,13 +959,17 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Careers', href: '/careers' },
         { label: 'Investors', href: '/investors' },
 <<<<<<< HEAD
+<<<<<<< HEAD
         { label: 'Press & Media', href: '/press' },
       ],
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
         { label: 'Press & Media', href: '/press' },
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     },    {        { label: 'Press & Media', href: '/press' }
       ];
@@ -1547,6 +1769,26 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
+=======
+      <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
+        {[...Array(30)].map((_, i) => (
+          <motion.div
+            key={i}  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+  return (
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
+      {/* Animated Background Elements */}
+
+
+        {/* Quantum Particle Field */}
+        {[...Array(30)].map((_, i) => (;
+          <motion&& motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             key={i}
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
@@ -1567,6 +1809,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
               delay: Math.random() * 8
               ease: 'easeInOut'
             }}
+<<<<<<< HEAD
             style={{
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
@@ -1586,20 +1829,29 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           />;
         ))}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>;
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>;
       </div>;
       <div className="relative z-10">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion&& motion.div
@@ -1610,6 +1862,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">;
             {/* Company Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="relative">
@@ -1650,14 +1905,20 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   <Globe className="w-4 h-4 text-blue-400" />
                   <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     ziontechgroup.com
                   </a>
                 </div>
@@ -1665,7 +1926,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
             </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion && motion.div variants={itemVariants} className="lg:col-span-2">;
               <div className="flex items-center space-x-3 mb-6">;
                 <div className="relative">;
@@ -1683,7 +1947,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
               </div>;
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div key={section.title} variants={itemVariants}>
@@ -1692,6 +1959,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   {section.title === 'Solutions' && <Zap className="w-5 h-5 text-purple-400" />}
                   {section.title === 'Company' && <Users className="w-5 h-5 text-pink-400" />}
                   {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
@@ -1711,6 +1979,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <span>{section.title}</span>
                 </h4>
                 <ul className='space-y-3'>
@@ -1838,7 +2108,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                       <Link;
                         href={item.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         className='text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block'                      >                  <span>{section.title}</span>;
                 </h4>;
                 <ul className="space - y-3">;
@@ -1846,11 +2119,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     <li key={item.label}>;
                       <Link;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         href={item.href}
                         className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
                       >;
                         {item.label}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </motion && motion.div>;
           {/* Social Links & Newsletter */}
@@ -1858,6 +2135,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                         className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
                       >
                         {item.label}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       </Link>
                     </li>
                   ))}
@@ -1865,12 +2144,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           </motion && motion.div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1882,14 +2165,34 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
           <motion.div
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* Social Links & Newsletter */}
+          <motion&& motion.div
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
+=======
+            className='mt-16 pt-12 border-t border-gray-800/50'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+          >
+            <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Social Links */}
               <div className='flex items-center space-x-6'>;
                 <span className='text-gray-400 font-medium'>Follow Us:</span>;
@@ -1901,6 +2204,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     rel='noopener noreferrer'
                     className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
                     whileHover={{ y: -2 }}
+<<<<<<< HEAD
 
             className="mt-16 pt-12 border-t border-gray-800/50"
           >
@@ -1913,6 +2217,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <social.icon className='w-5 h-5' />                  </motion.a>          >
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Social Links */}
               <div className="flex items-center space-x-6">;
                 <span className="text-gray-400 font-medium">Follow Us:</span>;
@@ -1920,6 +2231,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   <motion&& motion.a
                     key={social && social.label}
                     href={social && social.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='mt-16 pt-12 border-t border-gray-800/50'
 
@@ -1949,10 +2261,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     href={social.href}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
                     whileHover={{ y: -2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>;
               {/* Newsletter Signup */}
@@ -1973,6 +2288,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   <motion&& motion.button
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1 && 1.05 }}                </p>;
                 <div className="flex space-x-2">;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     whileTap={{ scale: 0.95 }}
                   >
                     <social.icon className="w-5 h-5" />
@@ -1981,11 +2298,26 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
               </div>
                     <social.icon className='w-5 h-5' />                  </motion.a>
 
+<<<<<<< HEAD
                   </motion.a>
 
                 ))}
               </div>
 
+=======
+
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />;
+                  <motion&& motion.button
+                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -1995,6 +2327,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   Get the latest insights on AI consciousness, quantum
                   computing, and future technology.
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -2005,14 +2342,18 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   <motion.button
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}                </p>
                 <div className="flex space-x-2">
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <input
                     type="email"
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+<<<<<<< HEAD
                   />;
                   <motion&& motion.button
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
@@ -2040,6 +2381,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  />
+                  <motion.button
+                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
+                    className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -2054,9 +2404,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 
                     whileHover={{ scale: 1 && 1.05 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 whileHover={{ scale: 1 && 1.05 }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     whileTap={{ scale: 0 && 0.95 }}>;
                     Subscribe;
                   </motion && motion.button>;
@@ -2066,19 +2419,26 @@ whileHover={{ scale: 1 && 1.05 }}
           </motion && motion.div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Bottom Bar */}
         <motion&& motion.div
                       </Link>;
@@ -2164,17 +2524,28 @@ whileHover={{ scale: 1 && 1.05 }}
         {/* Bottom Bar */}
         <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Bottom Bar */}
         <motion.div
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
+=======
+          className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -2182,15 +2553,23 @@ whileHover={{ scale: 1 && 1.05 }}
               <div className='text-gray-400 text-sm'>
                 © 2024 Zion Tech Group. All rights reserved.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-gray-400 text-sm'>;
                 © 2024 Zion Tech Group. All rights reserved. |;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
 
         >
@@ -2204,7 +2583,10 @@ whileHover={{ scale: 1 && 1.05 }}
                   Privacy Policy;
                 </Link>{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   className='hover:text-white transition-colors duration-200 ml-2'
                 >
@@ -2225,7 +2607,10 @@ whileHover={{ scale: 1 && 1.05 }}
                 <div className='flex items-center space-x-2'>
                   <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -2253,9 +2638,13 @@ whileHover={{ scale: 1 && 1.05 }}
                 <span>•</span>
                 <div className="flex items-center space-x-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Rocket className="w-4 h-4 text-pink-400" />
                   <span>Space Technology</span>
                 </div>
@@ -2267,9 +2656,12 @@ whileHover={{ scale: 1 && 1.05 }}
 
                 |;
 <<<<<<< HEAD
+<<<<<<< HEAD
 |;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <Link
                   href='/terms'
 
@@ -2278,11 +2670,17 @@ whileHover={{ scale: 1 && 1.05 }}
                 </Link>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <div className='flex items-center space-x-4 text-gray-400 text-sm'>;
                 <span>Powered by</span>;
                 <div className='flex items-center space-x-2'>;
@@ -2338,13 +2736,18 @@ whileHover={{ scale: 1 && 1.05 }}
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button>;
     </footer>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 export default UltraAdvancedFuturisticFooter2025;
@@ -2359,27 +2762,37 @@ export default UltraAdvancedFuturisticFooter2025;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
 <<<<<<< HEAD
+<<<<<<< HEAD
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 1 }}
       >
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
         <ArrowUp className='w-6 h-6 mx-auto' />
@@ -2427,10 +2840,17 @@ export default UltraAdvancedFuturisticFooter2025;
 =======
   );
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        <ArrowUp className="w-6 h-6 mx-auto" />
+      </motion.button>
+    </footer>
+  );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
@@ -2438,3 +2858,6 @@ export default UltraAdvancedFuturisticFooter2025;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

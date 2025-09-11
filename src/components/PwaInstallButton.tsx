@@ -3,6 +3,7 @@ const in_standalone = window.match_media ('(display - mode: standalone)').matche
       return;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches
         description: 'Your browser does not support app installation.'})
       return
@@ -86,3 +87,8 @@ export default PwaInstallButton,
 =======
 export default PwaInstallButton,
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
+        description: 'Your browser does not support app installation.'}),
+      return;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

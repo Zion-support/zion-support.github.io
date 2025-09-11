@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -10,26 +11,38 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       additionalClauses} = await req && req.json();
 
@@ -42,6 +55,11 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
+=======
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === 'OPTIONS') {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -60,13 +78,17 @@ serve(async (req) => {
       endDate;
       paymentTerms;
       paymentAmount;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       additionalClauses} = await req.json();
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -84,11 +106,16 @@ serve(async (req) => {
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -122,11 +149,16 @@ serve(async (req) => {;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -144,6 +176,7 @@ serve(async (req) => {;
       prompt += `
       Please also include the following additional clauses as on-chain functionality where possible:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     
 
@@ -156,6 +189,8 @@ serve(async (req) => {;
     }
     
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
       ${additionalClauses && additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
       ${additionalClauses && additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
@@ -167,20 +202,28 @@ serve(async (req) => {;
     
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
     // Call OpenAI API
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON && JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -190,11 +233,15 @@ serve(async (req) => {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         model: 'gpt-4o';
         messages: [
           {
             role: 'system'
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}
+<<<<<<< HEAD
 <<<<<<< HEAD
         temperature: 0 && 0.7})});
     const data = await response && response.json();
@@ -223,6 +270,8 @@ serve(async (req) => {;
         error: error.message |'Failed to generate smart contract'
       });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
@@ -313,6 +362,7 @@ if ( {) {
     if (!response && response.ok) {
       throw new Error(data && data.error?.message || 'Failed to generate smart contract')
     }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     const solidityCode = data && data.choices[0].message && message.content.trim();
@@ -339,12 +389,27 @@ if ( {) {
       JSON && JSON.stringify({ 
         success: false, 
         error: error && error.message || 'Failed to generate smart contract' 
+=======
+    const solidityCode = data.choices[0].message.content.trim();
+    return new Response(JSON.stringify({
+      success: true
+      solidityCode
+    }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  } catch (error) {
+    console.error('Error generating smart contract:', error);
+    return new Response(
+      JSON.stringify({
+        success: false
+        error: error.message |'Failed to generate smart contract'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
 
 
       { 
         status: 500, 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {
         status: 500
@@ -353,6 +418,9 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;
@@ -395,17 +463,23 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 
+<<<<<<< HEAD
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -554,3 +628,5 @@ if (additionalClauses && additionalClauses.length > 0) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

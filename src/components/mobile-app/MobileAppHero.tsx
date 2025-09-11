@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 import React from "react"
 import Link from "next/link"
@@ -61,11 +62,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<Link href="/open-app">
+              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 Open App
                 <ArrowRight size={20} />
               </Button>
             </Link>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           
           
@@ -88,10 +94,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 "
 
+=======
+          
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -127,6 +139,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="absolute inset - 0 bg - zion - cyan / 20 rounded - 3xl blur - xl"></div>;
               <Phone className="w - full h - auto text - white" />;
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* This would be replaced with an actual phone mockup image in production */}
             </div>;
           </div>;
@@ -146,6 +160,7 @@ import { AppStoreButtons } from "./AppStoreButtons";
 };
 ";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               {/* This would be replaced with an actual phone mockup image in production */}
             </div>
@@ -218,3 +233,9 @@ export const MobileAppHero: React.FC = () => {;
 
 ";
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+"
+
+
+";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 
 
@@ -45,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
   const prompt = document && document.getElementById('prompt').value,
   if (!prompt && prompt.trim()) {
@@ -57,12 +61,29 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
   })
 });
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Attach handlers once the DOM is fully loaded to avoid null element errors
+
+document && document.addEventListener('DOMContentLoaded', () => {
+  document && document.getElementById('ask')?.addEventListener('click', ask),
+
+  document.getElementById('post-job')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'post-job' })
+  })
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 async /**
  * ask - Function description
  */
@@ -93,6 +114,7 @@ document.addEventListener ('DOMContentLoaded', () => {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 async function ask() {;
   const prompt = document.getElementById('prompt').value,;
   if (!prompt.trim()) {;
@@ -109,6 +131,17 @@ async function ask() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+  document.getElementById('resume-search')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'resume-search' })
+  })
+  document.getElementById('view-notifications')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'view-notifications' })
+  })
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -124,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {;
   });
 }),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   document.getElementById('post-job')?.addEventListener('click', () => {;
@@ -141,3 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

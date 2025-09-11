@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useRouter  } from 'next/router';
 import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
@@ -6,6 +7,8 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,6 +38,7 @@ import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 
+<<<<<<< HEAD
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -48,6 +52,11 @@ import { Loader2 } from 'lucide-react'
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -73,12 +82,21 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
+<<<<<<< HEAD
+=======
+import { Loader2 } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 import { Loader2 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -104,6 +122,7 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface SearchResult {
@@ -114,6 +133,11 @@ import { Loader2 } from 'lucide-react'
 ursor/fix-website-loading-errors-and-merge-6662
 import { Loader2 } from 'lucide-react'
 interface SearchResult {
+=======
+
+interface SearchResult {
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string
   type: "product" | "service" | "talent" | "blog" | "doc"
   title: string
@@ -121,6 +145,7 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (!term) return text
@@ -135,11 +160,45 @@ function highlight(text: string, term: string) {
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   const regex = new RegExp(`(${escaped})`, "gi"),
   const parts = text.split(regex),
+=======
+
+
+  TabsTrigger} from "@/components/ui/tabs";
+import { Loader2 } from 'lucide-react';
+interface SearchResult {;
+  id: string,;
+  type: "product" | "service" | "talent" | "blog" | "doc",;
+  title: string,;
+  description: string;
+}
+
+function highlight(): any (text: string, term: string) {;
+  if (!term) return text,;
+  const escaped = term && term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(`(${escaped})`, "gi");
+  const parts = text && text.split(regex);
+
+  return (
+    <>;
+      {parts && parts.map((part, i,) =>;
+        regex && regex.test(part) ? (;
+          <mark key={i} className="bg-yellow-200 text-black">;
+            {part}
+          </mark>;
+        ) : (;
+          part;
+        );
+      )}
+
+  if (!term) return text,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <>
       {parts.map((part, i) =>
         regex.test(part) ? (
           <mark key={i} className="bg-yellow-200 text-black">
+<<<<<<< HEAD
             {part}
           </mark>
         ) : (
@@ -157,10 +216,18 @@ export default function SearchPage() {
   const suggestions: SearchSuggestion[] = generateSearchSuggestions()
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [loading, setLoading] = useState(false);
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   // Force re-render and reset state when route changes;
   const routeKey = useRouteChange(() => {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setResults([]);    setLoading(false)
   })
   const productResults = results.filter(
@@ -172,18 +239,28 @@ export default function SearchPage() {
   const marketplaceResults = [...productResults, ...talentResults]
   // Sync query with URL parameter changes
   useEffect(() => {
+<<<<<<< HEAD
     if (!router.isReady) return
     const urlQuery = (router.query.q as string) |""
     if (!router.isReady) return
     const urlQuery = (router.query.q as string) |""
     if (!router.isReady) return;
     const urlQuery = (router.query.q as string) || ""
+=======
+
+
+    if (!router.isReady) return;
+    const urlQuery = (router.query.q as string) || ""
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     if (urlQuery !== query) {
       setQuery(urlQuery)
     }
   }, [router.isReady, router.query.q]), // Fixed dependency array
   // Fetch results when query changes
   useEffect(() => {
+<<<<<<< HEAD
     if (!router.isReady) return;
     if (query.trim()) {
       fetchResults(query.trim())
@@ -211,6 +288,11 @@ import {;
   TabsContent,;
   TabsList,;
   TabsTrigger} from "@/components/ui/tabs",;
+=======
+    if (!router.isReady) return
+    if (query.trim()) {
+      fetchResults(query.trim())
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const page_key = `search-${route_key}-${router.as_path}`;
 import { use_router } from 'next / router';
 import { useRouterReady, useRouteChange } from '@/hooks / useRouterReady';
@@ -295,6 +377,7 @@ if (return) {
 }
       fetch_results (query.trim ());
     } else {
+<<<<<<< HEAD
       setResults([])
     }
   }, [router.isReady, query]), // Fixed dependency array
@@ -350,10 +433,60 @@ function highlight(text: string, term: string) {;
           part;
         );
       )}
+=======
+      set_results ([]);
+    }
+
+
+      setResults([]),
+      return;
+
+
+    }
+    setLoading(true)
+  }, [router.is_ready, query]), // Fixed dependency array;
+  const fetch_results = async (term: string, ) => {
+    if () {) {
+  $2
+}
+      set_results ([]),
+      return;
+    }
+    set_loading (true);
+    try {
+      const res = await fetch (`/api / search?query=${encodeURIComponent (term)}`);
+      const data = await res.json ();
+      if () {) {
+  $2
+}
+        set_results (data.results);
+      } else {
+        set_results ([]);
+        logErrorToProduction ('Search API response structure is not as expected:', { data: data });
+      }
+    } catch (error) {
+
+      logErrorToProduction ('Search failed:', { data: error }),
+      set_results ([]);
+
+    } finally {
+      set_loading (false);
+    }
+  }
+  const handle_submit = (e: React.FormEvent) =>: any {
+    e.prevent_default ();    if () {) {
+  $2
+}
+      router.push (`/search?q=${encodeURIComponent (query.trim ())}`);
+    }
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </>;
   );
 }
 
+<<<<<<< HEAD
 export default function SearchPage() {
   const router = useRouterReady(), // Use our custom hook
   const [query, setQuery] = useState(""),
@@ -457,6 +590,71 @@ export default function SearchPage() {;
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default function SearchPage() {;
+  const router = useRouterReady(), // Use our custom hook;
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+  // Force re-render and reset state when route changes;
+  const routeKey = useRouteChange(() => {;
+    setResults([]);    setLoading(false);
+  });
+
+  const productResults = results && results.filter(;
+    r => r && r.type === 'product' || r && r.type === 'service';
+  );
+  const talentResults = results && results.filter(r => r && r.type === 'talent');
+  const docResults = results && results.filter(r => r && r.type === 'doc');
+  const blogResults = results && results.filter(r => r && r.type === 'blog');
+  const marketplaceResults = [...productResults, ...talentResults];
+
+  // Sync query with URL parameter changes;
+  useEffect(() => {;
+    if (!router && router.isReady) return;    ;
+    const urlQuery = (router && router.query.q as string) || "";
+    if (urlQuery !== query) {;
+      setQuery(urlQuery);
+    }
+  }, [router && router.isReady, router && router.query.q]), // Fixed dependency array;
+
+  // Fetch results when query changes;
+  useEffect(() => {;
+    if (!router && router.isReady) return;    ;
+    if (query && query.trim()) {;
+      fetchResults(query && query.trim());
+    } else {;
+      setResults([]);
+    }
+  }, [router && router.isReady, query]), // Fixed dependency array;
+
+  const fetchResults = async (term: string,) => {;
+    if (!term && term.trim()) {;
+      setResults([]),;
+      return;
+    }
+
+    setLoading(true);
+    try {;
+      const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`);
+      const data = await res && res.json();
+      if (data && data.results && Array && Array.isArray(data.results)) {;
+        setResults(data.results);
+      } else {;
+        setResults([]);
+        logErrorToProduction('Search API response structure is not as expected:', { data: data });
+
+      }
+    } catch (error) {;
+      logErrorToProduction('Search failed:', { data: error }),;
+      setResults([]);
+    } finally {;
+      setLoading(false);
+    }
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -466,8 +664,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Add key prop to force re-render when route changes
   const pageKey = `search-${routeKey}-${router.asPath}`,
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();    if (query && query.trim()) {;
@@ -478,11 +679,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -494,6 +698,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               const searchTerm = suggestion.text.trim()
               setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
 
+<<<<<<< HEAD
 
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion.text.trim();
@@ -501,6 +706,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
 <<<<<<< HEAD
+=======
+            }}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             searchSuggestions = {suggestions,}
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion.text.trim();
@@ -508,12 +716,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
+<<<<<<< HEAD
 =======
             searchSuggestions={suggestions}
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             placeholder="Search talent, jobs, and projects..."
+=======
+
+
+            placeholder="Search talent, jobs, and projects..."
+          />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </form>
         {loading && (
           <div className="flex justify-center py-8">
@@ -550,6 +765,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className="text-zion-slate-light">No results found for "{query}".</p>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {!loading && marketplaceResults.length > 0 && (
           <Tabs defaultValue="products" className="space-y-4">
             <TabsList className="mb-4">
@@ -571,6 +787,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {!loading && marketplaceResults && marketplaceResults.length > 0 && (;
           <Tabs defaultValue="products" className="space-y-4">;
             <TabsList className="mb-4">;
@@ -596,6 +815,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 .filter((r) => r.type === "product" || r.type === "service")
                 .map((r) => (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div
                     key={`${r.type}-${r.id}`}
@@ -626,6 +846,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 .map((r) => (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -693,6 +915,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Tabs>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 return
       </main>
     </div>
@@ -710,12 +933,17 @@ if (query.trim () ) {
 return
 return;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 return;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
@@ -872,6 +1100,7 @@ if () {) {
 }else {
   set_results ([]);';
 logErrorToProduction ('Search API response structure is not as expected:', {
+<<<<<<< HEAD
   data: data
 })
 }catch (error) {'
@@ -886,10 +1115,24 @@ setResults ([])
   set_loading (false);
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  data: data;
+});
+}catch (error) {';
+  logErrorToProduction ('Search failed:', {
+  data: error;
+});
+set_results ([]);
+}finally {
+  set_loading (false);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ()
 router.push (`/search?q=$ {
+<<<<<<< HEAD
 <<<<<<< HEAD
   encodeURIComponent (query.trim () )
 }`)
@@ -919,6 +1162,8 @@ router.push (`/search?q=$ {
 }</main> </div>)
 }'"  )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   encodeURIComponent (query.trim () );
 }`);
@@ -948,7 +1193,10 @@ router.push (`/search?q=$ {
 }</main> </div>);
 }'"  );
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Sort Options */}
               <div  className="mb-6">
                 <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>
@@ -986,6 +1234,7 @@ router.push (`/search?q=$ {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max - w-6xl mx -auto">
           {/* Results Count */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div  className="mb-6">
             <p className="text-slate -300">
@@ -1027,6 +1276,8 @@ router.push (`/search?q=$ {
     </div>;
   );
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 ;
@@ -1062,7 +1313,10 @@ router.push (`/search?q=$ {
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
               <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
@@ -1076,9 +1330,13 @@ router.push (`/search?q=$ {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 }
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

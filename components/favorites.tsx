@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -7,6 +8,12 @@ import {useEffect, useMemo, useState} from 'react';
 import Head from 'next/head';
 
 
+=======
+import { useEffect, useMemo, useState  } from 'react';
+import Head from 'next/head',
+import {useEffect, useMemo, useState} from 'react';
+import Head from 'next/head';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 
@@ -25,6 +32,7 @@ import { TALENT_PROFILES } from '../data/talent';
 
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
@@ -45,12 +53,17 @@ function useFavorites() {
   return { favorites, remove }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2">
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const remove = (slug: string) => setFavorites((prev) => prev && prev.filter((s) => s !== slug)),;
@@ -153,14 +166,19 @@ function FavoritesPage() {
             </Link>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>) : (
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {profiles.map (t => (
             <div;
               key={t.slug}
+<<<<<<< HEAD
               className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 5 bg - white / 70 dark:bg - black / 40';
             >;
               <div className='flex items - center justify - between'>;
@@ -291,6 +309,8 @@ export default function FavoritesPage() {;
           {profiles.map(t => (
             <div
               key={t.slug}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40'
             >
               <div className='flex items-center justify-between'>
@@ -338,11 +358,16 @@ export default function FavoritesPage() {;
               </div>
             </div>
           ))}
+<<<<<<< HEAD
 </div>;
       )}
     </div>;
   );
 }
+=======
+        </div>
+      )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
 );
 }
@@ -350,6 +375,7 @@ export default function FavoritesPage() {;
           </ol>
         </nav>
       </div>
+<<<<<<< HEAD
 =======
 =======
     </div>
@@ -393,3 +419,15 @@ export default function FavoritesPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+    </div>;
+  );
+}
+
+=======
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

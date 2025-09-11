@@ -1,9 +1,12 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -21,7 +24,10 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
@@ -36,6 +42,7 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -59,6 +66,13 @@ import {
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from 'react',
+import Layout from '../components / layout / Layout',
+import SEO from '../components / SEO',
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { motion } from 'framer-motion',
 import {
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu,
@@ -69,9 +83,13 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
@@ -79,6 +97,7 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
 
+<<<<<<< HEAD
 const Solutions: NextPage = () => {
   const industry_solutions = [;
     {
@@ -198,6 +217,12 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
 const Solutions: NextPage = () => {
   const industrySolutions = [
     {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const Solutions: NextPage = () => {
+  const industry_solutions = [;
+    {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'healthcare'
       name: 'Healthcare Solutions'
       description: 'AI-powered healthcare technology solutions'
@@ -295,6 +320,7 @@ const Solutions: NextPage = () => {
       title: "Healthcare Provider Digital Transformation"
       industry: "Healthcare"
       description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency."
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       results: [
@@ -345,6 +371,38 @@ const Solutions: NextPage = () => {
   ]
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      results: [
+        "30% reduction in administrative overhead"
+        "Improved patient satisfaction scores"
+        "Enhanced data security and compliance"
+      ]
+      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+    }
+    {
+      title: "E-commerce Platform Modernization"
+      industry: "Retail"
+      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales."
+      results: [
+        "45% increase in conversion rates"
+        "60% improvement in page load times"
+        "Enhanced mobile user experience"
+      ]
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
+    }
+    {
+      title: "Manufacturing IoT Integration"
+      industry: "Manufacturing"
+      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency."
+      results: [
+        "25% reduction in unplanned downtime"
+        "15% improvement in production efficiency"
+        "Predictive maintenance cost savings"
+      ]
+      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+    }
+  ]
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       id: 'healthcare',
       name: 'Healthcare Solutions',
       description: 'AI-powered healthcare technology solutions',
@@ -403,12 +461,16 @@ const Solutions: NextPage = () => {
       period: 'month',
       popular: false,
       icon: <BookOpenCheck className="w-8 h-8" />
+<<<<<<< HEAD
     }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ],
   const solutionCapabilities = [
     {
@@ -440,12 +502,17 @@ const Solutions: NextPage = () => {
       title: 'Analytics & Insights',
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
+<<<<<<< HEAD
     }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ],
   const caseStudies = [
     {
@@ -474,6 +541,7 @@ const Solutions: NextPage = () => {
       title: "Manufacturing IoT Integration",
       industry: "Manufacturing",
       description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -505,6 +573,25 @@ const Solutions: NextPage = () => {
 =======
 
 
+=======
+      results: [
+        "25% reduction in unplanned downtime",
+        "15% improvement in production efficiency",
+        "Predictive maintenance cost savings"
+      ],
+      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+
+
+  ],
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
+          <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
+        </Head>
+        {/* Hero Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -540,7 +627,10 @@ const Solutions: NextPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <a
@@ -548,6 +638,10 @@ const Solutions: NextPage = () => {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -556,6 +650,7 @@ const Solutions: NextPage = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
             >;
               <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 via - red - 500 to - pink - 600 bg - clip - text text - transparent">;
@@ -585,6 +680,8 @@ const Solutions: NextPage = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Solution Capabilities */}
         <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900">;
           <div className="max - w-6xl mx - auto">;
@@ -594,9 +691,12 @@ const Solutions: NextPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Solution Capabilities */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -640,6 +740,7 @@ const Solutions: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutionCapabilities.map((capability, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -658,11 +759,14 @@ const Solutions: NextPage = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={capability.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   className="bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border border - gray - 700 hover:border - orange - 500 transition - all duration - 300";
                 >;
                   <div className="flex items - center mb - 4">;
@@ -672,6 +776,8 @@ const Solutions: NextPage = () => {
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={capability.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -703,19 +809,28 @@ const Solutions: NextPage = () => {
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      {capability.icon}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {capability.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
+<<<<<<< HEAD
 
                     </div>;
                     <h3 className="text - xl font - semibold text - white">{capability.title}</h3>;
@@ -729,6 +844,12 @@ const Solutions: NextPage = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Industry Solutions */}
         <section className="py - 20 px - 4">;
           <div className="max - w-6xl mx - auto">;
@@ -738,9 +859,12 @@ const Solutions: NextPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -792,6 +916,7 @@ const Solutions: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industrySolutions.map((solution, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
@@ -810,19 +935,26 @@ const Solutions: NextPage = () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={solution.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className={`relative bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
                     solution.popular;
                       ? 'border - orange - 500 shadow - lg shadow - orange - 500 / 25';
                       : 'border - gray - 700 hover:border - orange - 500';
+<<<<<<< HEAD
 <<<<<<< HEAD
                   }`}
                 >;
@@ -833,6 +965,10 @@ const Solutions: NextPage = () => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+                  }`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   key={solution.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -867,6 +1003,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
                 >
                   {solution.popular && (
@@ -892,6 +1029,20 @@ const Solutions: NextPage = () => {
 =======
 
 
+=======
+                >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {solution.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
+                      {solution.icon}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -910,14 +1061,22 @@ const Solutions: NextPage = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
                     <div className="text-3xl font-bold text-orange-400 mb-2">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      {solution.price}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       {solution.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
@@ -931,6 +1090,10 @@ const Solutions: NextPage = () => {
                   <a 
                     href="/contact" 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -942,12 +1105,19 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </ul>
                   <a
                     href="/contact"
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
                     Get Started
@@ -979,6 +1149,7 @@ const Solutions: NextPage = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
                       <span className="text - lg text - gray - 400">/{solution.period}</span>;
                     </div>;
@@ -1038,6 +1209,9 @@ const Solutions: NextPage = () => {
 =======
 
 
+=======
+        {/* CTA Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1078,7 +1252,10 @@ const Solutions: NextPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 <a
@@ -1086,6 +1263,10 @@ const Solutions: NextPage = () => {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -1097,6 +1278,7 @@ const Solutions: NextPage = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
 
 };
 
@@ -1108,6 +1290,12 @@ export default Solutions;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default Solutions;
+=======
+}
+export default Solutions;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
                 Ready for Industry Transformation?;
@@ -1137,6 +1325,7 @@ export default Solutions;
 },
 export default Solutions,
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 },
@@ -1639,10 +1828,15 @@ export default Solutions,
 },;
 export default Solutions;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

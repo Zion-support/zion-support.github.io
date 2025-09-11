@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { Star, Flag, User } from 'lucide-react'
@@ -79,6 +80,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
@@ -87,6 +90,15 @@ return (
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
           />;
 
+<<<<<<< HEAD
+=======
+import { Review } from '@/types/reviews'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {  Dialog,  Dialog,
 
 import { useState } from "react",
@@ -104,6 +116,11 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import { useState } from "react",
@@ -121,6 +138,7 @@ import {
   DialogHeader,
   DialogTitle,
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   
@@ -213,11 +231,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ))}
 
 
               <AvatarFallback className="bg-muted">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <User className="h-4 w-4" />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </AvatarFallback>
             </Avatar>
           ) : (
@@ -237,6 +261,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <AvatarFallback>
                   {review.reviewer_profile?.display_name ?
                     getInitials(review.reviewer_profile.display_name) : "??"}
+<<<<<<< HEAD
 =======
                 <User className="h-4 w-4" />
               </AvatarFallback>
@@ -256,6 +281,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {review.reviewer_profile?.display_name ? 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -394,6 +421,7 @@ if (return null) {
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -549,10 +577,18 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              )}
+            </Avatar>;
+          )}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
             {review.communication_rating && (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Communication
@@ -563,6 +599,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
 
               </Badge>
@@ -606,9 +646,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>;
               </Badge>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {review.would_work_again !== undefined && (
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
@@ -618,7 +661,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   : 'Would not work again'}              </Badge>
                 {review.would_work_again ? "Would work again" : "Would not work again"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           
 
@@ -638,7 +684,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -656,6 +705,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           </div>;
         </div>;
         <div className="flex">;
+<<<<<<< HEAD
           {renderStars(review.rating)}
         <div className='flex'>{renderStars(review.rating)}</div>
       </div>
@@ -797,6 +847,61 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 {review.would_work_again ? "Would work again" : "Would not work again"}
               </Badge>
 =======
+=======
+          {render_stars (review.rating)}
+        </div>;
+      </div>;
+      <div className="mb - 4">;
+        <p className="text - sm whitespace - pre - wrap">{review.review_text}</p>;
+      </div>;
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+        <div className="border - t pt - 3 mt - 3">;
+          <div className="flex flex - wrap gap - 2">;
+            {review.communication_rating && (
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Communication;
+                <span className="ml - 1 text - yellow - 500">{review.communication_rating}/5</span>;
+              </Badge>)}
+            {review.quality_rating && (
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Quality;
+                <span className="ml - 1 text - yellow - 500">{review.quality_rating}/5</span>;
+              </Badge>)}
+            {review.timeliness_rating && (
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Timeliness;
+                <span className="ml - 1 text - yellow - 500">{review.timeliness_rating}/5</span>;
+              </Badge>)}
+            {review.would_work_again !== undefined && (
+              <Badge;
+
+              </Badge>
+            )}
+            {review.quality_rating && (
+
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Quality
+                <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
+
+              </Badge>
+            )}
+            {review.timeliness_rating && (
+
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Timeliness
+                <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
+
+              </Badge>
+            )}
+            {review.would_work_again !== undefined && (
+
+              <Badge 
+
+                variant={review.would_work_again ? "default" : "secondary"}
+                className={`${review.would_work_again ? "bg - green - 100 text - green - 800 hover:bg - green - 200" : "bg - gray - 100 text - gray - 800 hover:bg - gray - 200"}`}
+              >;
+                {review.would_work_again ? "Would work again" : "Would not work again"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -834,7 +939,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   {review && review.communication_rating}/5;
                 </span>;
               </Badge>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             )}
 
             {review && review.quality_rating && (;
@@ -918,24 +1026,34 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant='ghost' size='sm' className='text-muted-foreground'>
               <Flag className='h-3 w-3 mr-1' />              Report
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               <Flag className="h-3 w-3 mr-1" />
+<<<<<<< HEAD
       
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -950,29 +1068,42 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               Report
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               Report
 
               Report
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>
+=======
+            </Button>
+          </DialogTrigger>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 If you believe this review violates our community guidelines
                 If you believe this review violates our community guidelines
                 If you believe this review violates our community guidelines,
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                 If you believe this review violates our community guidelines,
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -1022,6 +1153,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
               onChange = {(e,) => setReportReason(e.target.value),}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="min-h-[100px]"
             />
               className="min-h-[100px]"
@@ -1033,6 +1165,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -1042,12 +1179,16 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
               className="min-h-[100px]"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />
             
@@ -1073,6 +1214,8 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 ursor/fix-website-loading-errors-and-merge-6662
 
               className="min-h-[100px]"
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             />
             
             <DialogFooter>
@@ -1083,26 +1226,36 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={handleReport}
                 disabled={!reportReason.trim() |isReporting}              >
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <Button 
-                onClick={handleReport} 
-                disabled={!reportReason.trim() || isReporting}
-              >
-                {isReporting ? "Submitting..." : "Submit Report"}
 <<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+              <Button 
+                onClick={handleReport} 
+                disabled={!reportReason.trim() || isReporting}
+              >
+                {isReporting ? "Submitting..." : "Submit Report"}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
     </div>
@@ -1129,6 +1282,8 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 ;
 }"}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 disabled={!reportReason && reportReason.trim() || isReporting}>;
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
@@ -1171,11 +1326,21 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
           </DialogContent>;
         </Dialog>;
       </div>;
+<<<<<<< HEAD
     </div>);
 }</div>);
 }";
 return (<div className="border rounded - lg p - 4 bg - card"> <div className="flex justify - between items - start mb - 3"> <div className="flex items - center gap - 3"> {";
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg - muted"> <User className="h - 4 w - 4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
+=======
+    </div>;
+  );
+}</div>) ;
+};"
+return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
+  review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
   review.reviewer profile.avatar url;
 }alt= {
@@ -1211,5 +1376,9 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
 }disabled= {
   !report_reason.trim () || is_reporting;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
+<<<<<<< HEAD
 }"}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}"}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

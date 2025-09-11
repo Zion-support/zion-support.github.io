@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -57,6 +58,18 @@ export default function MessagingInbox() {
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
+=======
+import React, { useEffect, useState } from 'react';
+
+import {MessageSquare, Video} from 'lucide-react';
+import {use_messaging} from '@/context / MessagingContext';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+import {ConversationsList, ConversationDetailView} from '@/components / messaging';
+import {useIsMobile} from '@/hooks / use - mobile';
+import {toast} from 'sonner';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -66,6 +79,7 @@ export default function MessagingInbox() {
         console.error("Failed to load conversations:", error),
         toast.error("Failed to load messages. Please try again.")
       }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -113,16 +127,27 @@ function MessagingInbox() {
   }, [fetchConversations]);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    loadData()
+  }, [fetchConversations]);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     },
     
     loadData()
   }, [fetchConversations]),
   
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
+=======
+  const startVideoCall = () => {
+    if (!activeConversation) {
+      toast.error("Please select a conversation first");
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return
     }
     const roomId = `msg-${activeConversation.id}`;
@@ -134,6 +159,7 @@ function MessagingInbox() {
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   }
+<<<<<<< HEAD
 =======
 
   const startVideoCall = () => {
@@ -143,6 +169,8 @@ function MessagingInbox() {
     }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     
     const roomId = `msg-${activeConversation.id}`,
@@ -158,10 +186,13 @@ function MessagingInbox() {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -173,11 +204,17 @@ function MessagingInbox() {
             </h1>
             {activeConversation && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
@@ -197,9 +234,12 @@ function MessagingInbox() {
               ) : (
                 <ConversationsList
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -222,15 +262,20 @@ export default function MessagingInbox() {;
   const navigate = useNavigate(),;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     // Fetch conversations when component mounts;
     const loadData = async () => {;
       try {;
         await fetchConversations();
       } catch (error) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
         console.error("Failed to load conversations:", error),;
         toast.error("Failed to load messages. Please try again.");
@@ -255,6 +300,8 @@ export default function MessagingInbox() {;
   };
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         console && console.error("Failed to load conversations:", error);
         toast && toast.error("Failed to load messages. Please try again.");
       }
@@ -282,7 +329,10 @@ export default function MessagingInbox() {;
   };
 
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <ProtectedRoute>;
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto py-8 px-4">;
@@ -291,6 +341,7 @@ export default function MessagingInbox() {;
               <MessageSquare className="h-6 w-6" />;
               Messages;
             </h1>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {activeConversation && (;
               <Button;
@@ -305,6 +356,8 @@ export default function MessagingInbox() {;
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             {activeConversation && (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -321,7 +374,10 @@ export default function MessagingInbox() {;
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -329,9 +385,13 @@ export default function MessagingInbox() {;
                 </div>;
               ) : (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
 ;
     load_data ();
@@ -383,13 +443,22 @@ if ( {) {
                   <div className="animate - pulse">Loading conversations...</div>;
                 </div>) : (
                 <ConversationsList;
+<<<<<<< HEAD
                 <ConversationsList;
 
+=======
+
+=======
+                <ConversationsList;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -481,11 +550,15 @@ export default function MessagingInbox() {;
                 />;
               )}
               ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Conversation Detail */}
               <ConversationDetailView />;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 ;
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}
@@ -553,6 +626,9 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
             </div>
           </div>
         </div>
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}
       </div>
@@ -561,6 +637,9 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }
 }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

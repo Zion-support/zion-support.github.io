@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -31,28 +32,47 @@ import React, { useState } from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React, { useState } from "react";
+import React, { useState } from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name: string;
   path: string;
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
+<<<<<<< HEAD
 
 
+=======
+interface TreeProps {
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function NodeItem({
   node
   depth
   onDeploy
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 interface TreeProps {
   nodes: TreeNode[];
@@ -76,17 +96,23 @@ function NodeItem(): any ({;
 
 import React, { useState } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TreeNode {
   name: string
   path: string
   type: "folder" | "file"
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export interface TreeNode {
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
   const copyPath = async () => {;
@@ -97,18 +123,27 @@ export interface TreeNode {;
   type: "folder" | "file",;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   name: string,
   path: string,
   type: "folder" | "file",;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -121,6 +156,7 @@ interface TreeProps {;
 
 function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   exists?: boolean;
   children?: TreeNode[];
@@ -193,10 +229,13 @@ interface TreeProps {
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [open, setOpen] = useState<boolean>(false);
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path)
@@ -213,6 +252,8 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       body: JSON.stringify({ path: node.path })
     });  };      headers: {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
@@ -222,12 +263,16 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       method: "POST",
       headers: {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "Content-Type": "application/json";
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   on_deploy?: (path: string) => void;
 }) {
@@ -312,6 +357,8 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
             title='Auto - deploy';
           >;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const copyPath = async () => {;
     await navigator && navigator.clipboard.writeText(node && node.path);
@@ -338,34 +385,75 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
   return (
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             Deploy;
           </button>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {has_children && open && (
         <div className='ml - 4 border - l pl - 2'>;
           {node.children!.map (child => (
             <NodeItem;
               key={child.path}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               node={child}
               depth={depth + 1}
               on_deploy={on_deploy}
             />          ))}
+<<<<<<< HEAD
 
+=======
+        </div>
+      )}
+    </div>        {hasChildren ? (
+          <button className="text-sm" onClick={toggle} aria-label="Toggle">
+            {open ? "▾" : "▸"}
+          </button>
+        ) : (
+          <span className="inline-block w-4" />
+        )}
+        <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>
+          {node.path}
+        </span>
+        <div className="ml-auto flex gap-2">
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={copyPath} title="Copy path">Copy</button>
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={clonePath} title="Create template">Template</button>
+          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded" onClick={deploy} title="Auto-deploy">Deploy</button>
+        </div>
+      </div>
+      {hasChildren && open && (
+        <div className="ml-4 border-l pl-2">
+          {node.children!.map((child) => (
+            <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
+    </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
 
 
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
@@ -386,11 +474,16 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+export function Tree({ nodes, onDeploy }: TreeProps) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
+<<<<<<< HEAD
 
     </div>;
 
@@ -400,6 +493,20 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );  )
+}
+export function Tree({ nodes, onDeploy }: TreeProps) {
+  return (
+    <div className="w-full">
+      {nodes.map((n) => (
+      ))}
+    </div>
+    </div>;
+  );
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </span>;
         <div className="ml - auto flex gap - 2">;
           <button className="px - 2 py - 0.5 text - xs bg - gray - 100 rounded" on_click={copy_path} title="Copy path">Copy</button>;
@@ -434,6 +541,7 @@ function Tree() {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Tree;
 =======
 
@@ -441,23 +549,36 @@ export default Tree;
 export default Tree;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export default Tree;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }</div> </div> {;
   hasChildren && open && (<div className="ml-4 border-l pl-2"> {;
   node && node.children!.map ( (child) => (<NodeItemkey= {
   child && child.path 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }node= {
   child
 }depth= {
   depth + 1
 }onDeploy= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   onDeploy 
 }/>) ) ;
 }</div>) ;
@@ -469,24 +590,32 @@ export default Tree;
   nodes && nodes.map ( (n) => (<NodeItemkey= {
   n && n.path 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }node= {
   n
 }depth= {
   0
 }onDeploy= {
 <<<<<<< HEAD
+<<<<<<< HEAD
   onDeploy 
 }/>) ) ;
 }</div>) ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   onDeploy 
 }/>) ) ;
 }</div>) ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }export default Tree;}
 =======
@@ -495,25 +624,43 @@ export default Tree;
 export default Tree;
     <div className="w-full">
       {nodes.map((n) => (
+=======
+
+export default Tree;
+
+=======
+    <div className="w-full">
+      {nodes.map((n) => (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }export default Tree;}
 export default Tree;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export default Tree;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   child.path;
 }node= {
   child;
@@ -542,6 +689,7 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -716,3 +864,6 @@ export default Tree;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

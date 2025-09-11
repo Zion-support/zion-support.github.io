@@ -3,9 +3,13 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -15,22 +19,39 @@ import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PaymentButtonProps {;
   amount: number,;
   serviceId: string,;
   providerId: string,;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
   redirectUrl?: string;
 }
+<<<<<<< HEAD
 export function PaymentButton(): any ({;
   amount;
   serviceId;
   providerId;
+=======
+
+
+export function PaymentButton(): any ({;
+
+  amount;
+  serviceId;
+  providerId;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   buttonText = "Purchase";
   className;
   onPaymentInitiated;
@@ -38,11 +59,17 @@ export function PaymentButton(): any ({;
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handlePaymentClick = async () => {;
     if (!isAuthenticated) {;
       toast({;
         title: "Authentication required",;
         description: "Please sign in to make a purchase."}),;
+<<<<<<< HEAD
       navigate("/login", { ;
         state: { from: window && window.location.pathname } ;
 import { useState } from "react",
@@ -67,6 +94,16 @@ import { Loader2 } from "lucide-react",
 import { useNavigate } from "react-router-dom",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      navigate("/login", { ;
+        state: { from: window && window.location.pathname } ;
+
+      });
+      return;
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -74,6 +111,7 @@ interface PaymentButtonProps {
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
+<<<<<<< HEAD
 <<<<<<< HEAD
   redirectUrl?: string
 }
@@ -197,12 +235,17 @@ export function PaymentButton({;
 
 =======
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   redirectUrl?: string
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       
       // Call the create-checkout edge function
@@ -216,11 +259,14 @@ export function PaymentButton({;
           cancelUrl: window.location.href}}),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (error) {
         throw error
       }
@@ -228,12 +274,16 @@ export function PaymentButton({;
         // Open Stripe checkout in a new tab
         window.open(data.url, '_blank')
 <<<<<<< HEAD
+<<<<<<< HEAD
       });
       return;
     }
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { cn } from '@/lib / utils';
@@ -302,15 +352,24 @@ if ( {) {
 }
         // Open Stripe checkout in a new tab;
         window.open (data.url, '_blank');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } else {
         throw new Error ("No checkout URL returned");
       }
     } catch (error) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       console.error ("Payment error:", error);
       toast ({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
         variant: "destructive"});
+<<<<<<< HEAD
     } finally {
       // Reset button state after a short delay;
       set_timeout (() => {
@@ -338,16 +397,35 @@ if ( {) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    } finally {
+
+
+    try {;
+      setIsProcessing(true);
+
+      if (onPaymentInitiated) {;
+        onPaymentInitiated();
+      }
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
       // Call the create-checkout edge function;
@@ -360,22 +438,29 @@ if ( {) {
           successUrl: redirectUrl || window && window.location.href,;
           cancelUrl: window && window.location.href}}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (error) {;
         throw error;
       }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       if (error) {;
         throw error;
       }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (data?.url) {;
         // Open Stripe checkout in a new tab;
         window && window.open(data && data.url, '_blank');
       } else {;
         throw new Error("No checkout URL returned");
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch (error) {;
       console && console.error("Payment error:", error);
@@ -416,6 +501,11 @@ if ( {) {
     } catch (error) {;
       console && console.error("Payment error:", error);
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    } catch (error) {;
+      console && console.error("Payment error:", error);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       toast({;
         title: "Payment error",;
         description: "There was a problem initiating your payment. Please try again.",;
@@ -428,6 +518,7 @@ if ( {) {
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (;
     <Button;
       onClick={handlePaymentClick}
@@ -437,6 +528,8 @@ if ( {) {
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (;
     <Button;
@@ -444,6 +537,7 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       onClick={handlePaymentClick}
       disabled={isProcessing}
@@ -460,6 +554,12 @@ if ( {) {
         "relative min-w-[120px]"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
+        "relative min-w-[120px]",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         className
       )}>;
       {isProcessing ? (;
@@ -470,6 +570,7 @@ if ( {) {
       ) : (;
         buttonText;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className
       )}
@@ -494,17 +595,23 @@ if ( {) {
     </Button>;
   );
 =======
-
-    </Button>;
-  );
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
     </Button>;
   );
 =======
+
+    </Button>;
+  );
+=======
 =======
     </Button>;
   );
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -702,3 +809,12 @@ return (<Button)
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

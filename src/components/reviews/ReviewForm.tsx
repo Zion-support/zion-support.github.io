@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react"
 import { Star } from 'lucide-react'import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
@@ -23,12 +24,15 @@ interface ReviewFormValues {
   is_anonymous?: boolean
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 rating?: number;
   review_text?: string;
   communication_rating?: number;
   quality_rating?: number;
   timeliness_rating?: number;
   would_work_again?: boolean;
+<<<<<<< HEAD
   is_anonymous?: boolean;
 }
 
@@ -58,6 +62,11 @@ import {
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
+=======
+import { useState } from "react",
+import { Star } from 'lucide-react'
+import { useForm } from "react-hook-form",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import {
@@ -80,6 +89,7 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
+<<<<<<< HEAD
 }
 interface ReviewFormProps {
 
@@ -101,6 +111,8 @@ interface ReviewFormProps {;
   )
 }
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { Star } from 'lucide-react';
 import { useForm } from "react-hook-form",;
@@ -125,13 +137,23 @@ interface ReviewFormValues {;
   quality_rating?: number,;
   timeliness_rating?: number,;
   would_work_again?: boolean,;
+<<<<<<< HEAD
   is_anonymous?: boolean;
 }
 ;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  is_anonymous?: boolean;
+}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
   revieweeName: string,;
+<<<<<<< HEAD
   onSubmit: (data: any) => Promise<boolean>,;
   defaultValues?: Review,;
   isSubmitting: boolean;
@@ -415,6 +437,14 @@ export function ReviewForm({
 ;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  onSubmit: (data: any) => Promise<boolean>, ;
+
+  }
+
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ReviewFormProps {
   project_id: string,
   reviewee_id: string,
@@ -423,7 +453,11 @@ interface ReviewFormProps {
   }
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

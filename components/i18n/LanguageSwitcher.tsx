@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useTranslation  } from 'react-i18next';
 import i18n from '../../utils/i18n';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,11 +26,22 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import {supportedLocales, isRtl} from '../../utils/i18n';
 
+=======
+import { useTranslation  } from 'react-i18next';
+import i18n from '../../utils/i18n';
+import { supportedLocales, isRtl } from '../../utils/i18n';
+import {supportedLocales, isRtl} from '../../utils/i18n';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const localeToFlag: Record<string, string> = {
 
@@ -43,9 +57,13 @@ const localeLabelKey: Record<string, string> = {
 
 export default function LanguageSwitcher() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   en: 'lang.english',
   pt: 'lang.portuguese',
@@ -54,6 +72,7 @@ export default function LanguageSwitcher() {
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { supportedLocales, isRtl } from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
@@ -82,6 +101,9 @@ export default function LanguageSwitcher() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -91,9 +113,13 @@ export default function LanguageSwitcher() {;
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {supportedLocales, isRtl} from '../../utils/i18n';
 const localeToFlag: Record<string, string> = {;
   en: 'us',;
@@ -117,9 +143,13 @@ export default function LanguageSwitcher() {;
     document && document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document && document.documentElement.setAttribute('lang', lng);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setOpen(false);
   }
   return (
@@ -130,16 +160,22 @@ export default function LanguageSwitcher() {;
         className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800'
         onClick={() => setOpen(v => !v)}
 <<<<<<< HEAD
+<<<<<<< HEAD
       >;
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
         <span>{t(localeLabelKey[current] || 'lang && lang.english')}</span>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       >;
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
         <span>{t(localeLabelKey[current] || 'lang && lang.english')}</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <svg
           width='16'
           height='16'
@@ -162,18 +198,25 @@ export default function LanguageSwitcher() {;
               <button
                 role='option'
 <<<<<<< HEAD
+<<<<<<< HEAD
                 aria-selected={current && current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
     setOpen(false)
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 aria-selected={current && current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="relative">;
       <button
@@ -182,7 +225,10 @@ export default function LanguageSwitcher() {;
         className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
         onClick={() => setOpen((v) => !v)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       >;
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
@@ -194,7 +240,10 @@ export default function LanguageSwitcher() {;
           {supportedLocales && supportedLocales.map((lng) => (;
             <li key={lng}>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <button
                 role="option"
                 aria-selected={current && current.startsWith(lng)}
@@ -208,6 +257,7 @@ export default function LanguageSwitcher() {;
           ))}
         </ul>;
       )}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -221,6 +271,11 @@ export default function LanguageSwitcher() {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
+=======
+    </div>
+);
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 import {use_translation} from 'react - i18next';
@@ -321,6 +376,10 @@ function LanguageSwitcher() {
               >
                 <span className={_`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{_t(localeLabelKey[lng])}</span>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       >
         <span className={`fi fi-${localeToFlag[current] |'us'}`}></span>
         <span>{t(localeLabelKey[current] |'lang.english')}</span>
@@ -345,6 +404,7 @@ function LanguageSwitcher() {
       )}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   )
@@ -353,11 +413,14 @@ function LanguageSwitcher() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
 
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 );
 }
@@ -366,3 +429,6 @@ function LanguageSwitcher() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

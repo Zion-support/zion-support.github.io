@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check } from 'lucide-react'
 export function ServiceIncludes() {
   return (
@@ -40,10 +41,15 @@ export function ServiceIncludes() {
 </div>
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>
+=======
+</div>
+            <div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <h3 className="text-white font-medium">Transportation to Site</h3>
               <p className="text-zion-slate-light">All travel costs to your location are included in the base price.</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
@@ -77,6 +83,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className='text-zion-slate-light'>
                 Comprehensive evaluation of issues and required solutions.
               </p>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
@@ -86,8 +94,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Check className="h-5 w-5 text-zion-cyan" />
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <div>
               <h3 className="text-white font-medium">First Hour of Service</h3>
@@ -95,6 +106,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
@@ -102,15 +114,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <div className='flex items-start'>
+            <div className='mt-1 mr-4'>
+              <Check className='h-5 w-5 text-zion-cyan' />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <div>
               <h3 className="text-white font-medium">Technical Assessment</h3>
@@ -119,10 +141,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='space-y-4'>
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
+<<<<<<< HEAD
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
@@ -145,22 +171,30 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <div>
               <h3 className="text-white font-medium">Basic Hardware Diagnostics</h3>
               <p className="text-zion-slate-light">Component testing and hardware issue identification.</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
@@ -169,15 +203,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+          <div className='flex items-start'>
+            <div className='mt-1 mr-4'>
+              <Check className='h-5 w-5 text-zion-cyan' />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
             <div>
               <h3 className="text-white font-medium">Network Connectivity</h3>
@@ -185,6 +229,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
@@ -196,6 +243,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>            </div>
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
+<<<<<<< HEAD
 =======
 
 
@@ -203,6 +251,8 @@ import { Check } from 'lucide-react'
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
@@ -270,10 +320,15 @@ export function ServiceIncludes() {
             <div>
 
               <h3 className="text-white font-medium">Service Documentation</h3>
+<<<<<<< HEAD
+=======
+              <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -288,13 +343,18 @@ export function ServiceIncludes() {
   )
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
     </div>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
   return (;
@@ -507,6 +567,7 @@ function ServiceIncludes() {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -515,10 +576,16 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>);
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 }
 
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

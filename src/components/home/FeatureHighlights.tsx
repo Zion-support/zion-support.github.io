@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Check } from 'lucide-react'
@@ -141,6 +142,62 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ]
     },
     {
+=======
+className?: string;
+  style?: React && React.CSSProperties;
+
+export function FeatureHighlights({
+  className
+  style
+}: FeatureHighlightsProps) {
+  const highlightsData = [
+    {
+      title: 'For Talent Seekers'
+      features: [
+        'AI-powered talent matching based on your specific project requirements'
+        'Verified profiles with skills validation and credential checking'
+        'Transparent pricing and no hidden fees'
+        'Direct communication with potential candidates'
+        'Secure payment protection and dispute resolution'
+        'Post jobs and receive AI-matched applicants'
+      ]
+    }
+    {
+      title: 'For Talent & Service Providers'
+      features: [
+        'Create a professional profile showcasing your skills and experience'
+        'Get matched with relevant projects that fit your expertise'
+        'Secure payment processing with on-time disbursements'
+        'Build your reputation through client reviews and ratings'
+        'Access to enterprise clients and high-value projects'
+        'Professional development resources and community support'
+      ]
+    }
+    {
+      title: 'For Enterprise Clients'
+      features: [
+        'White-labeled talent portal with your company branding'
+        'Dedicated account management and priority support'
+        'Custom talent pools and preferred provider networks'
+        'Advanced analytics and reporting capabilities'
+        'API access for seamless integration with your HR systems'
+        'Customizable workflow and approval processes'
+      ]
+    }
+  ]
+import { cn } from "@/lib/utils",
+interface FeatureHighlightsProps {
+  class_name?: string;
+  style?: React.CSSProperties;
+export /**
+ * FeatureHighlights - Function description
+ */
+function FeatureHighlights() {
+  const highlights_data = [;
+
+
+  const highlightsData = [
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     {
       title: 'For Talent Seekers',
@@ -168,6 +225,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 
       title: "For Enterprise Clients",
       features: [
+<<<<<<< HEAD
         'White-labeled talent portal with your company branding',
         'Dedicated account management and priority support',
         'Custom talent pools and preferred provider networks',
@@ -177,6 +235,32 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ],
     },
   ]
+=======
+      title: "For Talent Seekers",
+      features: [
+        "AI-powered talent matching based on your specific project requirements",
+        "Verified profiles with skills validation and credential checking",
+        "Transparent pricing and no hidden fees",
+        "Direct communication with potential candidates",
+        "Secure payment protection and dispute resolution",
+        "Post jobs and receive AI-matched applicants"
+      ]
+    },
+    {
+      title: "For Talent & Service Providers",
+      features: [
+        "Create a professional profile showcasing your skills and experience",
+        "Get matched with relevant projects that fit your expertise",
+        "Secure payment processing with on-time disbursements",
+        "Build your reputation through client reviews and ratings",
+        "Access to enterprise clients and high-value projects",
+        "Professional development resources and community support"
+      ]
+    },
+    {
+      title: "For Enterprise Clients",
+      features: [
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
@@ -186,16 +270,25 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ]
     }
   ],
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -205,6 +298,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 '"`
 )
@@ -391,6 +485,10 @@ export function FeatureHighlights() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 '"`;
 );
@@ -409,9 +507,13 @@ export function FeatureHighlights() {
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from 'lucide-react';
@@ -478,16 +580,23 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   ))}
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           {highlights_data.map ((category, index) => (
@@ -593,6 +702,7 @@ export /**
  * FeatureHighlights - Function description
  */
 function FeatureHighlights() {
+<<<<<<< HEAD
   return (";
     <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">";
       <div className="max - w-7xl mx - auto px - 6">;
@@ -731,198 +841,75 @@ import { motion  } from 'framer-motion';
 };
 };
 export function FeatureHighlights() {;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (";
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <div className="max-w-7xl mx-auto px-6">;
-        <motion.div          className="text-center mb-16";
-          initial = {;
-  { "opacity": 0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.6 "}}
+    <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">";
+      <div className="max - w-7xl mx - auto px - 6">;
+        <motion.div          className="text - center mb - 16";
+          initial = {
+
+  { opacity: 0,
+  coordinate_y: 20;
+}}
+          whileInView = {
+  { opacity: 1,
+  coordinate_y: 0;
+}}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >";
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">";
-            <Award className="w-4 h-4"   />            <span>Why Choose Zion</span>;
+          <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";
+            <Award className="w - 4 h - 4"  />            <span > Why Choose Zion</span>;
           </div>;
 ";
-          <h2 className="text-3xl "md": "tex t-4xl "lg": tex t-5xl font-bold text-white mb-6">;
+          <h2 className="text - 3xl md:text - 4xl lg:text - 5xl font - bold text - white mb - 6">;
             Built for the Future of Work;
           </h2>;
 ";
-          <p className="text-lg "md": tex t-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">;
-            Experience the next generation of talent marketplace with cutting-edge AI",;
-            global reach, and enterprise-grade security.</p>;
+          <p className="text - lg md:text - xl text - zion - slate - light max - w-3xl mx - auto leading - relaxed">;
+            Experience the next generation of talent marketplace with cutting - edge AI,
+            global reach, and enterprise - grade security.</p>;
         </motion.div>;
 ";
-        <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-3 gap-8">;
-          {features.map((feature", index (;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          {features.map ((feature, index (
             <motion.div;
               key={index}
-              variants={itemVariants}
-              whileHover={{;
-                "y": "-5",;
-                "scale": "1.02",;
-                "transition": "{ "duration": 0.3 "}
+              variants={item_variants}
+              while_hover={{
+                coordinate_y: -5,
+                scale: 1.02,
+
+                transition: { duration: 0.3 }
               }}";
               className="group";
 ";
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 "hover": "borde r-white/20 transition-all duration-300">;
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color"} rounded-lg flex items-center justify-center mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>`;
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />;
+              <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300">;
+                <div className={`w - 12 h - 12 bg - gradient - to - r ${feature.color} rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 300`}>`;
+                  <feature.icon className={`w - 6 h - 6 ${feature.icon_color}`} />;
                 </div>;
 ";
-                <h3 className="text-xl font-semibold text-white mb-2 group-"hover": "tex t-blue-400 transition-colors duration-300">;
-                  {feature.title"}
+                <h3 className="text - xl font - semibold text - white mb - 2 group - hover:text - blue - 400 transition - colors duration - 300">;
+                  {feature.title}
                 </h3>;
 ";
-                <p className="text-gray-400 group-"hover": "tex t-gray-300 transition-colors duration-300">;
-                  {feature.description"}
+                <p className="text - gray - 400 group - hover:text - gray - 300 transition - colors duration - 300">;
+                  {feature.description}
                 </p>;
               </div>;
-              <h3 className="text-xl font-bold text-white mb-3 group-"hover": "tex t-blue-400 transition-colors duration-200">;
-                {feature.title"}
+              <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - blue - 400 transition - colors duration - 200">;
+                {feature.title}
               </h3>;
-              <p className="text-gray-400 text-sm leading-relaxed">;                y: -5,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}"
-              className="group"
-"
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: borde r-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover: scal e-110 transition-transform duration-300`}>`
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+              <p className="text - gray - 400 text - sm leading - relaxed">;
+                {feature.description}
 
-=======
-import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
-const highlights = [
-    {
-        icon: Brain,
-        title: 'AI-Powered Intelligence',
-        description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-        features['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
-        color: 'from-zion-purple to-zion-purple-dark',
-        bgColor: 'bg-zion-purple/10',
-        borderColor: 'border-zion-purple/20'
-    },
-    {
-        icon: Globe,
-        title: 'Global Network',
-        description: 'Connect with professionals and businesses from over 150 countries worldwide.',
-        features['Multi-language Support', 'Local Expertise', '24/7 Availability'],
-        color: 'from-zion-cyan to-zion-cyan-dark',
-        bgColor: 'bg-zion-cyan/10',
-        borderColor: 'border-zion-cyan/20'
-    },
-    {
-        icon: Shield,
-        title: 'Enterprise Security',
-        description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-        features['Data Protection', 'Access Control', 'Audit Trails'],
-        color: 'from-zion-blue to-zion-blue-dark',
-        bgColor: 'bg-zion-blue/10',
-        borderColor: 'border-zion-blue/20'
-    }
-];
-const achievements = [
-    { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
-    { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
-    { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
-    { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
-];
-const technologies = [
-    'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
-];
-export function FeatureHighlights() {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-  hidden: { opacity: 0, y: 30,
-  scale: 0.95 
-
-},
-        visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };
-    const achievementVariants = {
-  hidden: { opacity: 0,
-  scale: 0.8 
-
-},
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: { duration: 0.5 }
-        }
-    };
-    const techVariants = {
-  hidden: { opacity: 0,
-  x: -20 
-
-},
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: { duration: 0.5 }
-        }
-    };
-    return (<section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <motion.div className="text-center mb-20" initial = {
-  { opacity: 0,
-  y: 20 
-
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Why Industry Leaders
-            <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-              Choose Zion Tech Group
-            </span>
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover the cutting-edge features and capabilities that make us the preferred choice for forward-thinking organizations
-          </p>
-        </motion.div>
-
-        {/* Feature Highlights Grid */}
-        <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {highlights.map((highlight, index) => (<motion.div key={index} variants={itemVariants} whileHover = {
-  {
-                y: -10,
-                scale: 1.02,
-  transition: { duration: 0.3 
-
+        </div>;
+      </div>;
+    </section>;
+  );
 }
+<<<<<<< HEAD
             }} className="group">
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {/* Background gradient overlay */}
@@ -960,3 +947,5 @@ export function FeatureHighlights() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

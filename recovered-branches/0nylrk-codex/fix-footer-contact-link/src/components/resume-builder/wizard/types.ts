@@ -8,6 +8,7 @@ export interface StepProps {
 export interface NavigationButtonsProps {
   on_back?: () => void;
   on_next?: () => void;
+<<<<<<< HEAD
 
 import { Resume } from "@/types/resume",
 
@@ -22,15 +23,32 @@ export interface StepProps {
 export interface NavigationButtonsProps {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+
+import { Resume } from "@/types/resume",
+
+=======
+import {Resume} from "@/types/resume";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface StepProps {
   id: string;
   label: string
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface NavigationButtonsProps {;
   onBack?: () => void;
   onNext?: () => void;
+=======
+
+export interface NavigationButtonsProps {;
+
+  onBack?: () => void;
+  onNext?: () => void;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   isNextDisabled?: boolean;
 
   back_label?: string;
@@ -52,12 +70,19 @@ export interface CreateResumeFormProps {
 export interface EmptyResumeProps {
   onCreateClick: () => void;
 }
+<<<<<<< HEAD
 
+=======
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export interface ResumeProgressProps {
   resume: Resume | null,
   progress: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Resume } from "@/types/resume";
 export interface StepProps {
@@ -79,10 +104,13 @@ export interface ResumeProgressProps {
   progress: number;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 onCancel: () => void,
   isLoading: boolean
@@ -90,12 +118,19 @@ onCancel: () => void,
   onCancel: () => void,
   isLoading: boolean
 =======
+=======
+  onCancel: () => void,
+  isLoading: boolean
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Resume } from "@/types/resume",
 export interface StepProps {
   id: string,
   label: string
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Resume } from "@/types/resume",;
 export interface StepProps {;
   id: string,;
@@ -110,6 +145,7 @@ export interface NavigationButtonsProps {;
   nextLabel?: string,;
   isLoading?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface ResumeProgressProps {
   resume: Resume | null;
@@ -123,6 +159,10 @@ export interface CreateResumeFormProps {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export interface ResumeProgressProps {;
@@ -130,6 +170,7 @@ export interface ResumeProgressProps {;
   progress: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface ResumeProgressProps {
   resume: Resume | null;
@@ -143,6 +184,9 @@ export interface CreateResumeFormProps {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
@@ -150,6 +194,10 @@ export interface CreateResumeFormProps {;
   isLoading: boolean;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export interface EmptyResumeProps {
 
@@ -157,6 +205,7 @@ export interface EmptyResumeProps {
 }
 ;
 
+<<<<<<< HEAD
 }
 export interface EmptyResumeProps {
 
@@ -181,3 +230,6 @@ export interface EmptyResumeProps {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

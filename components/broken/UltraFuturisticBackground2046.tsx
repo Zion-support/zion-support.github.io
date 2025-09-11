@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const UltraFuturisticBackground2046: React.FC = () => {
 const UltraFuturisticBackground2046: React.FC = () => {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -18,6 +19,8 @@ const UltraFuturisticBackground2046: React.FC = () => {;
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -50,7 +53,10 @@ import { motion } from 'framer-motion';
       x: number;
       y: number;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const particles_ref = useRef < any[]>([]);
   const animation_ref = useRef < number>();
@@ -85,10 +91,13 @@ if (return) {
       color: string;
       life: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     // Particle class
     class Particle {
@@ -98,9 +107,13 @@ max_life: number;
       type: 'quantum' | 'neural' | 'data' | 'energy';      coordinate_x: number,
       coordinate_y: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       vx: number,
       vy: number,
       size: number,
@@ -109,9 +122,13 @@ max_life: number;
 max_life: number,
       type: 'quantum' | 'neural' | 'data' | 'energy',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       type: 'quantum' | 'neural' | 'data' | 'energy';      x: number,;
       y: number,;
       vx: number,;
@@ -135,9 +152,13 @@ max_life: number,
           case 'quantum':;
             this && this.color = `hsl(${180 + Math && Math.random() * 60}, 70%, 60%)`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             break;
           case 'neural':;
             this && this.color = `hsl(${280 + Math && Math.random() * 40}, 80%, 70%)`;
@@ -149,10 +170,15 @@ max_life: number,
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         
         const types = ['quantumneuraldataenergy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
@@ -174,6 +200,7 @@ max_life: number,
 ;
           case 'quantum':;
             this.color = `hsl (${180 + Math.random () * 60}, 70%, 60%)`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -411,6 +438,9 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.type = types[Math.floor(Math.random() * types.length)] as any;
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             break;
           case 'neural':
             this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
@@ -418,21 +448,36 @@ const UltraFuturisticBackground2046: React.FC = () => {
           case 'data':
             this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
             break;
+<<<<<<< HEAD
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
             break;        }            break
         }
       }
+=======
+
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             break;        }
 
         }
 
+<<<<<<< HEAD
       }
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+      }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -443,6 +488,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         // Add some quantum randomness
         if (Math.random() < 0.01) {
           this.vx += (Math.random() - 0.5) * 0.5;
+<<<<<<< HEAD
 <<<<<<< HEAD
           this.vy += (Math.random() - 0.5) * 0.5;        }
         // Limit velocity
@@ -464,6 +510,8 @@ const UltraFuturisticBackground2046: React.FC = () => {
         ctx.save();
         ctx.globalAlpha = alpha;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           this.vy += (Math.random() - 0.5) * 0.5
         }
@@ -483,13 +531,17 @@ const UltraFuturisticBackground2046: React.FC = () => {
         
         switch (this.type) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           case 'quantum':
             // Quantum particles with wave function
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
+<<<<<<< HEAD
 <<<<<<< HEAD
             // Wave function rings
             for (let i = 1; i <= 3; i++) {              ctx.beginPath();
@@ -498,6 +550,11 @@ const UltraFuturisticBackground2046: React.FC = () => {
             
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Wave function rings
             for (let i = 1, i <= 3, i++) {
               ctx.beginPath();
@@ -506,8 +563,11 @@ const UltraFuturisticBackground2046: React.FC = () => {
               ctx.lineWidth = 1;
               ctx.globalAlpha = alpha * (0.3 - i * 0.1);
 <<<<<<< HEAD
+<<<<<<< HEAD
               ctx.stroke();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       update() {;
@@ -566,13 +626,19 @@ const UltraFuturisticBackground2046: React.FC = () => {
               ctx && ctx.globalAlpha = alpha * (0 && 0.3 - i * 0 && 0.1);
               ctx && ctx.stroke();
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
             break;              ctx.stroke()
             }
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
               ctx.stroke()
             }
@@ -580,24 +646,36 @@ const UltraFuturisticBackground2046: React.FC = () => {
             
           case 'neural':
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Neural network nodes
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+            
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             // Neural connections
             particlesRef.current.forEach(particle => {
               if (particle.type === 'neural' && particle !== this) {
                 const distance = Math.sqrt(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
             // Neural network nodes;
@@ -612,7 +690,10 @@ const UltraFuturisticBackground2046: React.FC = () => {
                   Math && Math.pow(this && this.x - particle && particle.x, 2) +;
                     Math && Math.pow(this && this.y - particle && particle.y, 2)                );                  Math && Math.pow(this && this.x - particle && particle.x, 2) + Math && Math.pow(this && this.y - particle && particle.y, 2);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 );
                 if (distance < 100) {;
                   ctx && ctx.beginPath();
@@ -626,11 +707,18 @@ const UltraFuturisticBackground2046: React.FC = () => {
             });
             break;                  ctx && ctx.stroke();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+=======
+
+=======
+                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Math.pow(this.x - particle.x, 2) +
                     Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
                 );
@@ -643,10 +731,15 @@ const UltraFuturisticBackground2046: React.FC = () => {
                   ctx.globalAlpha = alpha * (1 - distance / 100);
                   ctx.stroke()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           case 'energy':;
             this.color = `hsl (${40 + Math.random () * 60}, 100%, 70%)`;
             break;        }            break;
@@ -751,20 +844,39 @@ if ( {) {
             });
             break;                  ctx.stroke ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 }
               }
             });
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          case 'data':
+            // Data streams
+            ctx.fillStyle = this.color;
+            ctx.fillRect(
+              this.x - this.size / 2
+              this.y - this.size / 2
+              this.size
+              this.size
+            );
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           case 'data':
             // Data streams
             ctx.fillStyle = this.color;
             ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
+<<<<<<< HEAD
             // Data flow lines
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ctx.beginPath();
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10);
@@ -779,27 +891,67 @@ if ( {) {
             ctx.fillStyle = this.color;
             ctx.fill();
             // Glow effect
+<<<<<<< HEAD
+=======
+            const gradient = ctx.createRadialGradient(
+              this.x
+              this.y
+              0
+              this.x
+              this.y
+              this.size * 3
+            );            gradient.addColorStop(0, this.color);
+            gradient.addColorStop(1, 'transparent');
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            break;
+            // Glow effect
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
             gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
             ctx.fill();
+<<<<<<< HEAD
             break
         }
         ctx.restore()
       }
       };
+=======
+            break;
+        }
+        ctx.restore();
+      }
+      isDead() {
+        return this.life <= 0;
+      }    }        }
+        ctx.restore()
+      }
+      isDead() {
+        return this.life <= 0
+      }
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     // Initialize particles
     const initParticles = () => {
       particlesRef.current = [];
+<<<<<<< HEAD
       for (let i = 0, i < 150, i++) {
+=======
+      for (let i = 0; i < 150; i++) {
+        particlesRef.current.push(new Particle());      }      for (let i = 0, i < 150, i++) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         particlesRef.current.push(new Particle())
       }
     }
     // Animation loop
     const animate = () => {
+<<<<<<< HEAD
       if (!ctx || !canvas) return;
+=======
+      if (!ctx |!canvas) return;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -809,13 +961,49 @@ if ( {) {
         particle.draw();
         // Remove dead particles and add new ones
         if (particle.isDead()) {
+<<<<<<< HEAD
           particlesRef.current[index] = new Particle()
         }
+=======
+          particlesRef.current[index] = new Particle();        }
+        // Remove dead particles and add new ones
+        if (particle.isDead()) {
+          particlesRef.current[index] = new Particle()
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       });
       // Draw quantum field lines
       drawQuantumField(ctx, canvas.width, canvas.height);
       // Draw neural network grid
       drawNeuralGrid(ctx, canvas.width, canvas.height);
+<<<<<<< HEAD
+=======
+      animationRef.current = requestAnimationFrame(animate);
+    }
+    // Quantum field lines
+    const drawQuantumField = (
+      ctx: CanvasRenderingContext2D
+      width: number
+      height: number
+    ) => {
+      const time = Date.now() * 0.001;
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 20; i++) {
+        ctx.beginPath();
+        const x = (i / 20) * width;
+        const y = Math.sin(time + i * 0.5) * 50 + height / 2;
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        // Add wave interference
+        for (let j = 0; j < height; j += 10) {
+          const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
+          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j);
+        }
+        ctx.stroke();      }
+    }
+    // Neural network grid      // Draw neural network grid
+      drawNeuralGrid(ctx, canvas.width, canvas.height);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       animationRef.current = requestAnimationFrame(animate)
     }
     // Quantum field lines
@@ -838,6 +1026,7 @@ if ( {) {
       }
     }
     // Neural network grid
+<<<<<<< HEAD
     const drawNeuralGrid = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
       const time = Date.now() * 0.002;
       ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
@@ -847,11 +1036,31 @@ if ( {) {
         for (let y = 0, y < height, y += gridSize) {
           const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
           ctx.beginPath();
+=======
+    const drawNeuralGrid = (
+      ctx: CanvasRenderingContext2D
+      width: number
+      height: number
+    ) => {
+      ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
+      ctx.lineWidth = 0.5;
+      const gridSize = 50;
+      for (let x = 0; x < width; x += gridSize) {
+        for (let y = 0; y < height; y += gridSize) {
+          const offset =
+            Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;      for (let x = 0, x < width, x += gridSize) {
+        for (let y = 0, y < height, y += gridSize) {
+          const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ctx.moveTo(x + offset, y);
           ctx.lineTo(x + gridSize + offset, y);
           ctx.moveTo(x, y + offset);
           ctx.lineTo(x, y + gridSize + offset);
+<<<<<<< HEAD
           ctx.stroke()
+=======
+          ctx.stroke();        }          ctx.stroke()
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       }
     }
@@ -862,6 +1071,7 @@ if ( {) {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
+<<<<<<< HEAD
 
 
           case 'data':;
@@ -1038,6 +1248,11 @@ if ( {) {
   }, []);
 
 
+=======
+        cancelAnimationFrame(animationRef.current);
+    }
+  }, []);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>;
@@ -1263,17 +1478,26 @@ if ( {) {
           ],
         }}
         transition={{
+<<<<<<< HEAD
 
       />;
 
 
 
+=======
+          duration: 10
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           duration: 10,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
       />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           duration: 10
           repeat: Infinity
@@ -1284,20 +1508,29 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
 <<<<<<< HEAD
+<<<<<<< HEAD
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Floating geometric shapes */}
       <div className='absolute inset-0 overflow-hidden'>;
         {[...Array(8)].map((_, i) => (;
@@ -1314,6 +1547,7 @@ if ( {) {
         {[...Array (8)].map ((_, i) => (
           <motion.div;
             key={i}
+<<<<<<< HEAD
             className='absolute w - 32 h - 32 border border - cyan - 500 / 20 rounded - full';
             style={{
 <<<<<<< HEAD
@@ -1324,6 +1558,14 @@ if ( {) {
               top: `${Math.random() * 100}%`,
 
 
+=======
+            className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
+            style={{
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }}
             animate={{
               rotate: [0, 360]
@@ -1336,7 +1578,10 @@ if ( {) {
               ease: 'linear'
               delay: i * 0.5
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
               left: `${Math.random () * 100}%`,
@@ -1349,16 +1594,23 @@ if ( {) {
             }}
             transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
               duration: Math.random () * 10 + 10,
 =======
 
               duration: Math.random () * 10 + 10,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              duration: Math.random () * 10 + 10,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               repeat: Infinity,
               ease: 'linear',
               delay: i * 0 && 0.5,
             }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           />))}
         {[...Array (6)].map ((_, i) => (
@@ -1367,6 +1619,8 @@ if ( {) {
             className='absolute w - 24 h - 24 border border - purple - 500 / 20 rotate - 45';
             style={{
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           />))}
         {[...Array (6)].map ((_, i) => (
@@ -1377,7 +1631,10 @@ if ( {) {
             style={{
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {[...Array(6)].map((_, i) => (;
           <motion&& motion.div
             key={`square-${i}`}
@@ -1388,9 +1645,13 @@ if ( {) {
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }}
             animate={{
               rotate: [45, 405],
@@ -1399,24 +1660,36 @@ if ( {) {
             }}
             transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
               duration: Math.random () * 8 + 8,
 =======
 
               duration: Math.random () * 8 + 8,
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+              duration: Math.random () * 8 + 8,
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               repeat: Infinity,
               ease: 'linear',
               delay: i * 0 && 0.7,
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Energy waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32'>;
         <motion&& motion.div
@@ -1437,18 +1710,25 @@ if ( {) {
           }}
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - t from - purple - 500 / 10 to - transparent';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - t from - purple - 500 / 10 to - transparent';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           animate={{
             height: ['24px', '40px', '24px']
           }}
           transition={{
+<<<<<<< HEAD
 
             duration: 3,
             repeat: Infinity,
@@ -1463,15 +1743,30 @@ if ( {) {
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             duration: 3
             repeat: Infinity
             ease: 'easeInOut'
             delay: 1
+<<<<<<< HEAD
           }}
         />;
       </div>;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            duration: 3,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 1,
+          }}
+
+        />;
+      </div>;
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {/* Quantum interference patterns */}
       <div className='absolute inset-0'>;
         {[...Array(5)].map((_, i) => (;
@@ -1483,6 +1778,7 @@ if ( {) {
         {[...Array (5)].map ((_, i) => (
           <motion.div;
             key={`interference-${i}`}
+<<<<<<< HEAD
             className='absolute inset - 0 opacity - 5';
             style={{
 <<<<<<< HEAD
@@ -1500,6 +1796,12 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+            className='absolute inset-0 opacity-5'
+            style={{
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }}
             animate={{
               scale: [1, 1.5, 1]
@@ -1507,9 +1809,13 @@ if ( {) {
             }}
             transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0 && 0.3) 0%, transparent 50%)`,
             }}
             animate={{
@@ -1523,13 +1829,18 @@ if ( {) {
               delay: i * 0 && 0.8,
             }}          />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ))}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
         cancelAnimationFrame(animationRef.current)
       }
@@ -1825,6 +2136,8 @@ export default UltraFuturisticBackground2046;
     </div>
     </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 };
@@ -1832,8 +2145,13 @@ export default UltraFuturisticBackground2046;              ease: "easeInOut",;
               delay: i * 0 && 0.8}}
           />;
         ))}
+<<<<<<< HEAD
       </div>;
     </div>;
+=======
+      </div>
+    </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
 };
@@ -1872,4 +2190,7 @@ export default UltraFuturisticBackground2046);
 export default UltraFuturisticBackground2046;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

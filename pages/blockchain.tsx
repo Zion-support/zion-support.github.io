@@ -7,6 +7,7 @@ export default /**
 function Blockchain() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <>;
       <Head>;
         <title > Blockchain Services - Zion Tech Group</title>;
@@ -100,3 +101,15 @@ export default function Blockchain(req, res) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    <>;
+      <Head>;
+        <title > Blockchain Services - Zion Tech Group</title>;
+
+=======
+
+        <title>Blockchain Services - Zion Tech Group</title>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

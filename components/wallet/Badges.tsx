@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 import React from 'react';
@@ -15,7 +18,10 @@ export function currentBadge(balance: number): Badge | null {;
 
   let current: Badge | null = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 threshold: number, //token balance threshold ;
 };
@@ -27,7 +33,10 @@ const BADGES: Badge[] = [;
 ];
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 
 export type Badge = {
@@ -42,6 +51,10 @@ const BADGES: Badge[] = [
   { id: "elite", label: "Elite", threshold: 1000 }],
 export function currentBadge(balance: number): Badge | null {
   let current: Badge | null = null,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 import React from 'react';
@@ -57,7 +70,10 @@ const BADGES: Badge[] = [;
   { id: 'pro', label: 'Pro', threshold: 500 },
   { id: 'elite', label: 'Elite', threshold: 1000 },
 ];
+<<<<<<< HEAD
 export function currentBadge(balance: number): Badge | null {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function currentBadge(balance: number): Badge | null {;
   let current: Badge | null = null;
@@ -74,9 +90,13 @@ export default function Badges({ balance }: { balance: number }) {;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   for (const b of BADGES) {
     // Check condition
 if (current = b) {
@@ -84,6 +104,7 @@ if (current = b) {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="flex gap-2 items-center flex-wrap">
       {BADGES.map((b) => (
@@ -94,6 +115,8 @@ if (current = b) {
   );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return current;
 export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
@@ -132,7 +155,10 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
     </div>;
   );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
     </div>;
   );
@@ -158,6 +184,7 @@ function Badges() {
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -233,6 +260,16 @@ export default function Badges({ balance }: { balance: number }) {
   return current
 }
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function Badges({ balance }: { balance: number }) {;
 
 export default function Badges({ balance }: { balance: number }) {
@@ -250,6 +287,7 @@ export default function Badges({ balance }: { balance: number }) {
               : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
               : "bg-gray-100 border-gray-200 text-gray-500"
 
+<<<<<<< HEAD
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >
@@ -275,3 +313,19 @@ export default function Badges({ balance }: { balance: number }) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          }`}
+          title={`Requires ${b.threshold} ZION$`}
+        >;
+          {b.label}
+        </span>))}
+      {active && (
+
+        <span className='ml - 2 text - xs text - green - 600'>;
+          Current: {active.label}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

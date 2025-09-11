@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
 export function issueTokens(userId: string, amount: number, reason: string) {
   return addTransaction({
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   const actualAmount = Math && Math.min(amount, currentBalance);
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     userId
     type: 'earn'
@@ -28,6 +32,8 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
   const actualAmount = Math.min(amount, currentBalance);
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return addTransaction({
     userId
     type: 'spend'

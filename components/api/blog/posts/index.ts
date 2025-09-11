@@ -2,13 +2,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
   if (req.method === 'GET') {
+<<<<<<< HEAD
 
   if (req.method === 'GET') {;
 
+=======
+=======
+
+  if (req.method === 'GET') {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
+<<<<<<< HEAD
 <<<<<<< HEAD
       posts = posts && posts.filter(p => (p && p.topics || []).includes(topic));
     if (tag && typeof tag === 'string')
@@ -101,12 +110,17 @@ return res.status(405).end();
   return res && res.status(405).end();
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -189,6 +203,7 @@ if ( {) {
       tags: body.tags || [],
       topics: body.topics || [],
       seo: {
+<<<<<<< HEAD
         meta_title: body.seo?.meta_title || body.title!,
         meta_description: body.seo?.meta_description || '',
 
@@ -274,6 +289,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       tags: body.tags |[]
       topics: body.topics |[]
       seo: {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         metaTitle: body.seo?.metaTitle |body.title!
         metaDescription: body.seo?.metaDescription |''
         ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |''
@@ -291,11 +308,16 @@ return res.status(405).end();
 }
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
       status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 },
+<<<<<<< HEAD
     };
     posts.unshift(post);
     writePosts(posts);
@@ -315,3 +337,14 @@ return res.status(405).end();
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    }
+    posts.unshift (post);
+    write_posts (posts);
+    return res.status (201).json (post);
+  }
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

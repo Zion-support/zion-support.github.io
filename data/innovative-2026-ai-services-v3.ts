@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Innovative2026AiServiceV3 {
 export interface Innovative2026AiServiceV3 {;
   id: string;
@@ -32,11 +33,15 @@ export interface Innovative2026AiServiceV3 {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -72,6 +77,9 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -82,6 +90,7 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [;
     address: string
   }
 }
+<<<<<<< HEAD
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {
     id: "2026-innovative-ai-v3", name: "2026 Innovative AI Platform V3",
@@ -114,6 +123,12 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   }
 ];
 ;
+=======
+
+export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
+  {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     id: "2026-innovative-ai-v3",
     name: "2026 Innovative AI Platform V3",
     tagline: "Third generation innovative AI",
@@ -132,6 +147,7 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -141,6 +157,10 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

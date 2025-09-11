@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { Interface } from 'ethers';
@@ -19,6 +20,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }
   try {
@@ -28,9 +33,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       data: bytecode + data.slice(2)
       // gas and value are intentionally left for client to estimate via MetaMask
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     return res.status(200).json({ abi, tx })
@@ -41,7 +49,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { Interface } from 'ethers',
 // Simple ABI for demonstration (release / refund);
@@ -75,6 +86,7 @@ if ( {) {
     return res.status (200).json ({ abi, tx });
   } catch (e: any) {
     return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
+<<<<<<< HEAD
     }
 
     return res.status(200).json({ abi, tx })
@@ -144,15 +156,24 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

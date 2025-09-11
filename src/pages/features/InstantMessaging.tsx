@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -31,6 +32,8 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -77,10 +80,18 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
+=======
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function InstantMessaging() {
   const schema = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const schema = {
@@ -100,13 +111,18 @@ export default function InstantMessaging() {
         keywords='real-time messaging, Socket.IO chat, project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Instant Messaging",
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
 
   return (
@@ -144,6 +160,7 @@ export default function InstantMessaging() {
           </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function InstantMessaging() {
@@ -164,6 +181,8 @@ export default function InstantMessaging() {
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
@@ -177,12 +196,15 @@ export default function InstantMessaging() {
         type="application/ld+json"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -216,6 +238,7 @@ export default function InstantMessaging() {
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -301,6 +324,12 @@ export default function InstantMessaging() {
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
+=======
+
+
+
+          <div className="text-center">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
             </Button>
@@ -310,6 +339,7 @@ export default function InstantMessaging() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 =======
@@ -317,6 +347,11 @@ export default function InstantMessaging() {
 ;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -353,6 +388,7 @@ export default function InstantMessaging() {;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <img;
               src="https://placehold.co/800x400";
               alt="Screenshot of chat interface";
@@ -380,17 +416,23 @@ export default function InstantMessaging() {;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/open-app">Start Chatting</Link>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of chat interface"
               className="object-cover"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -402,3 +444,5 @@ export default function InstantMessaging() {;
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

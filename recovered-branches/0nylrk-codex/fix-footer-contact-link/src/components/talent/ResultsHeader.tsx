@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Loader2 } from "lucide-react",
 
 import { Loader2 } from "lucide-react";
@@ -21,20 +22,31 @@ interface ResultsHeaderProps {
   resultCount: number;
 
 =======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import { Loader2 } from "lucide-react",
 
 =======
 import {Loader2} from "lucide-react";
+<<<<<<< HEAD
 =======
 import { Loader2 } from "lucide-react",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { Loader2 } from "lucide-react",
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -47,6 +59,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       ) : (
         <span>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Loader2 } from "lucide-react",;
 ;
@@ -74,6 +87,8 @@ interface ResultsHeaderProps {;
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {Loader2} from "lucide-react";
 interface ResultsHeaderProps {;
   isLoading: boolean,;
@@ -82,7 +97,10 @@ interface ResultsHeaderProps {;
 
 export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="flex items-center mb-6 text-zion-slate-light">;
       {isLoading ? (;
         <div className="flex items-center">;
@@ -96,6 +114,7 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
           ) : (;
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           )}
         </span>;
@@ -105,6 +124,9 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {resultCount === 0 ? (
             "No talents found. Try adjusting your filters."
@@ -115,6 +137,7 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
           )}
         </span>;
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -141,12 +164,15 @@ function ResultsHeader() {
         </span>)}
     </div>);
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
 
   )
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       ) :(;
         <span>;
@@ -190,3 +216,6 @@ resultCount: number
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

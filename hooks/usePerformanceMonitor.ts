@@ -1,6 +1,7 @@
 ;
 interface PerformanceMetrics {
 <<<<<<< HEAD
+<<<<<<< HEAD
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
@@ -24,6 +25,8 @@ export function usePerformanceMonitor() {;
         if (entry.entryType === 'navigation') {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       const entries = list && list.getEntries();
       
@@ -37,16 +40,22 @@ export function usePerformanceMonitor() {;
         }
         if (entry && entry.entryType === 'paint') {
 <<<<<<< HEAD
+<<<<<<< HEAD
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               ...prev,
               firstContentfulPaint: paintEntry && paintEntry.startTime,
             }));
@@ -72,10 +81,15 @@ export function usePerformanceMonitor() {;
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -163,14 +177,20 @@ if ( {) {
       });
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
       observer && observer.disconnect();
     };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       observer && observer.disconnect();
     };
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, []);
   return { metrics, isSupported }
 }

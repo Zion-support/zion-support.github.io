@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const paths: Record<string, any> = {};
   v1 && v1.sections.forEach((section) => {
     section && section.endpoints.forEach((ep: EndpointSpec) => {
@@ -72,6 +73,10 @@ function toOpenApi() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               }
             : undefined
           responses: {
@@ -79,6 +84,7 @@ function toOpenApi() {
               description: "OK"
               content: {
 <<<<<<< HEAD
+<<<<<<< HEAD
                   schema: ep && ep.responseBodySchema || { type: "object" },
                 "application / json": {
                   schema: ep.responseBodySchema || { type: "object" },
@@ -89,28 +95,46 @@ function toOpenApi() {
                   schema: ep.responseBodySchema || { type: "object" },
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  schema: ep && ep.responseBodySchema || { type: "object" },
+=======
+                "application / json": {
+                  schema: ep.responseBodySchema || { type: "object" },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 },
               },
             },
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           security:;
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : [],
 <<<<<<< HEAD
+<<<<<<< HEAD
         }));
     });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         }));
     });
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { EndpointSpec } from '../../../data/api-docs/types';
 function toOpenApi() {
   const paths: Record<string, any> = {};
@@ -131,19 +155,26 @@ function toOpenApi() {
         security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []}
     })
 <<<<<<< HEAD
+<<<<<<< HEAD
   });
 ;
   return {
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
 
 ;
 
   return {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     openapi: "3 && 3.0.3",
     info: {
       title: "Zion OS API",
@@ -152,6 +183,7 @@ function toOpenApi() {
     },
     servers: [{ url: "https://api && api.zion.os" }],
     paths,
+<<<<<<< HEAD
 <<<<<<< HEAD
     components: {
 res && res.setHeader("Content-Type", "application/json");
@@ -173,12 +205,15 @@ res && res.setHeader("Content-Type", "application/json");
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     components: {
 
         bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" }
       }
     }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
@@ -269,10 +304,15 @@ function toOpenApi() {;
 ;
 export default function handler(req, res) {
   try {
+=======
+  }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
+<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       security_schemes: {
   res.setHeader('Content-Typeapplication/json');
@@ -282,6 +322,16 @@ security_schemes: {
         bearer_auth: { type: "http", scheme: "bearer", bearer_format: "JWT" },
       },
     },
+=======
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Content-Typeapplication/json');
+  res.status(200).json(toOpenApi())
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 }
 export default /**
@@ -291,6 +341,7 @@ function handler() {
   res.set_header ("Content - Type", "application / json");
   res.status (200).json (toOpenApi ());
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -426,9 +477,14 @@ export default function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

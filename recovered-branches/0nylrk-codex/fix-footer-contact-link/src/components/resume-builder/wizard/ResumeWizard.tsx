@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {Button} from '@/components / ui / button';
@@ -37,6 +38,8 @@ import {Resume} from '@/types/resume';
 // Import components
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 =======
 
@@ -54,7 +57,10 @@ import {Button} from '@/components / ui / button';
 import {Resume} from '@/types / resume';
 
 // Import components;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {ResumeProgress} from './ResumeProgress';
 import {EmptyResumeState} from './EmptyResumeState';
 import {CreateResumeForm} from './CreateResumeForm';
@@ -63,6 +69,7 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ResumeWizard() {;
   const { user } = useAuth();
@@ -113,6 +120,8 @@ export function ResumeWizard() {;
 
   };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -129,13 +138,20 @@ export function ResumeWizard() {;
 
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+<<<<<<< HEAD
+=======
+  // Use the extracted hook for progress calculation
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
   };
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -166,6 +182,7 @@ export function ResumeWizard() {;
   const [activeTab, setActiveTab] = useState('basic-info'),;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation;
@@ -173,17 +190,25 @@ export function ResumeWizard() {;
   // Use the extracted hook for progress calculation;
   const progress = useResumeProgress(resume),;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   // Use the extracted hook for progress calculation;
   const progress = useResumeProgress(resume);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     if (user) {;
       fetchResume();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [user, fetchResume]);
 
   const handleCreateNewResume = async (title: string) => {;
@@ -206,6 +231,7 @@ export function ResumeWizard() {;
     if (currentIndex > 0) {;
       setActiveTab(RESUME_STEPS[currentIndex - 1].id);
     }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   },
@@ -229,6 +255,14 @@ export function ResumeWizard() {;
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  },
+
+  },
+  
+  if (isLoading) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="flex justify-center items-center h-64">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -236,13 +270,19 @@ export function ResumeWizard() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (error) {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   if (error) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <Alert variant="destructive" className="mb-6">;
         <AlertCircle className="h-4 w-4" />;
@@ -251,6 +291,7 @@ export function ResumeWizard() {;
       </Alert>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [user, fetchResume]),;
   const handleCreateNewResume = async (title: string) => {;
@@ -287,6 +328,9 @@ export function ResumeWizard() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (error) {
     return (
       <Alert variant="destructive" className="mb-6">
@@ -298,19 +342,26 @@ export function ResumeWizard() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   if (showNewResumeForm) {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   if (showNewResumeForm) {
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
+<<<<<<< HEAD
   if (showNewResumeForm) {;
 <<<<<<< HEAD
     return (
@@ -409,10 +460,18 @@ export function ResumeWizard() {;
   if (showNewResumeForm) {;
     return (;
       <CreateResumeForm ;
+=======
+
+  if (showNewResumeForm) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+      <CreateResumeForm
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         onCreateResume={handleCreateNewResume}
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
       />;
+<<<<<<< HEAD
 
 
 
@@ -423,13 +482,25 @@ export function ResumeWizard() {;
   }
   ;
   return (;
+=======
+    );
+  }
+  
+  return (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
         <h1 className="text-2xl font-bold">Resume Builder</h1>;
         <div className="flex gap-4 flex-wrap items-center">;
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+<<<<<<< HEAD
           <Button ;
             onClick={() => setShowNewResumeForm(true)}
+=======
+          <Button
+            onClick={() => setShowNewResumeForm(true)}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             variant="outline";
             size="sm";
             className="gap-2";
@@ -439,13 +510,18 @@ export function ResumeWizard() {;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Card>;
         <CardContent className="pt-6">;
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
+<<<<<<< HEAD
   }
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
@@ -488,12 +564,17 @@ export function ResumeWizard() {;
             <ResumeProgress resume={resume} progress={progress} />
           </div>
           <Tabs value={activeTab} onValueChange={setActiveTab}>
+=======
+
+          <Tabs value={activeTab} onValueChange={setActiveTab}>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <ResumeSteps
               steps={RESUME_STEPS}
               activeTab={activeTab}
               onChange={setActiveTab}
             />
             {resume && (
+<<<<<<< HEAD
 =======
       />;
     );
@@ -558,10 +639,17 @@ export function ResumeWizard() {;
             {resume && (;
               <ResumeStepContent ;
                 activeTab={activeTab}                resume={resume as Resume}
+=======
+              <ResumeStepContent
+              <ResumeStepContent 
+                activeTab={activeTab}
+                resume={resume as Resume}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
               />;
             )}
+<<<<<<< HEAD
               <ResumeStepContent
               <ResumeStepContent 
 =======
@@ -574,21 +662,27 @@ export function ResumeWizard() {;
 <<<<<<< HEAD
               />
             )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Tabs>
         </CardContent>
       </Card>
     </div>
   )
 }
+<<<<<<< HEAD
 =======
               />;
             )}
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
+<<<<<<< HEAD
   const [active_tab, setActiveTab] = useState ('basic - info');
   const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 ;
@@ -757,6 +851,10 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 <<<<<<< HEAD
 ;
 =======
+=======
+  );
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 export /**
@@ -772,7 +870,10 @@ function ResumeWizard() {
     create_resume;
   } = use_resume ();
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

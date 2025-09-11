@@ -5,16 +5,29 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -26,12 +39,22 @@ import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+    return this.props.children;
+  }
+}
+import {useRouter} from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 
 
 import {useCurrentUser} from '../../utils/auth';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const REASONS = [
   'Scope Disagreement'
@@ -53,6 +76,8 @@ export default function NewDisputePage() {
   } = router.query as Record<string, string>;  const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId |'');
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 const REASONS = [;
   'Scope Disagreement',;
@@ -67,16 +92,22 @@ type ReasonType = (typeof REASONS)[number];
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function NewDisputePage() {;
   const router = useRouter();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const REASONS = [
   'Scope Disagreement',
   'Quality Issues',
@@ -98,26 +129,39 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
+<<<<<<< HEAD
 export default function NewDisputePage() {;
   const router = useRouter();
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+type ReasonType = typeof REASONS[number];
+export default function NewDisputePage(req, res) {
+  try {
+  const router = useRouter();
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [projectId, setProjectId] = useState(qProjectId || '');
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
+<<<<<<< HEAD
 
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(;
@@ -126,6 +170,60 @@ export default function NewDisputePage() {;
   const [submitting, setSubmitting] = useState(false);
   useEffect(() => {;
     if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
+=======
+  const [talentUserId, setTalentUserId] = useState(talentId |'');
+  const [clientUserId, setClientUserId] = useState(
+    clientId |(user.role === 'client' ? user.id : '')
+  );
+  const [submitting, setSubmitting] = useState(false);
+  useEffect(() => {
+    if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!projectId |!description |!clientUserId |!talentUserId)
+      return alert('Please fill required fields');    setSubmitting(true);
+    try {
+      const res = await fetch('/api/disputes', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          projectId
+          entityType
+          entityId
+          clientUserId
+          talentUserId
+          reason
+          reasonDetails
+          description
+        })
+      });      if (!res.ok) throw new Error('Failed to create');
+      const { dispute } = await res.json();
+      if (files.length > 0) {
+        const filePayload = await Promise.all(
+          files.map(async f => ({
+            fileName: f.name
+            mimeType: f.type
+            base64: await toBase64(f)
+          }))        );
+        await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
+          method: 'POST'
+          headers: { 'Content-Type': 'application/json' }
+          body: JSON.stringify({ files: filePayload })
+        });
+      }
+      router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
+    } catch (e: any) {
+      alert(e.message |'Error');
+    } finally {
+      setSubmitting(false);    }
+  }
+  const [talentUserId, setTalentUserId] = useState(talentId || '');
+  const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
+  const [submitting, setSubmitting] = useState(false);
+  useEffect(() => {;
+    if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     if (!projectId || !description || !clientUserId || !talentUserId);
@@ -146,6 +244,10 @@ export default function NewDisputePage() {;
         }),;
       });      if (!res && res.ok) throw new Error('Failed to create');
       const { dispute } = await res && res.json();
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       if (files && files.length > 0) {;
         const filePayload = await Promise && Promise.all(;
           files && files.map(async f => ({;
@@ -159,6 +261,10 @@ export default function NewDisputePage() {;
           body: JSON && JSON.stringify({ files: filePayload }),;
         });
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       router && router.push(`/disputes/${encodeURIComponent(dispute && dispute.id)}`);
     } catch (e: any) {;
       alert(e && e.message || 'Error');
@@ -166,11 +272,15 @@ export default function NewDisputePage() {;
 
       setSubmitting(false);    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
@@ -178,18 +288,35 @@ export default function NewDisputePage() {;
   useEffect(() => {
     if (qProjectId) setProjectId(qProjectId)
   }, [qProjectId]);
+=======
+  const [talentUserId, setTalentUserId] = useState(talentId || '');
+  const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (qProjectId) setProjectId(qProjectId)
+  }, [qProjectId]);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
     setSubmitting(true);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {use_router} from 'next / router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
+<<<<<<< HEAD
 
 const REASONS = [
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -198,11 +325,14 @@ const REASONS = [
   'Other',
 ] as const;
 <<<<<<< HEAD
+<<<<<<< HEAD
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 type ReasonType = (typeof REASONS)[number];
 ;
@@ -251,7 +381,10 @@ function handle_submit() {
 
   return (
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({
           project_id,
@@ -326,22 +459,31 @@ if ( {) {
                 required;
                 className='mt - 1 w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               />;
             </div>;
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               onChange={e => setFiles(Array && Array.from(e && e.target.files || []))}
               className='mt-1';
             />;
           </div>;
           <div className='pt-2'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -349,6 +491,13 @@ if ( {) {
             <button
               disabled={submitting}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;
+=======
+
+            <button
+              disabled={submitting}
+              className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <label className='block text - sm font - medium'>Reason</label>;
             <select;
               value={reason}
@@ -395,11 +544,16 @@ if ( {) {
               disabled={submitting}
               className='px - 4 py - 2 rounded bg - blue - 600 text - white hover:bg - blue - 700 disabled:opacity - 50';
             >;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>          </div>;
         </form>;
       </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 type ReasonType = (typeof REASONS)[number];
 
@@ -609,18 +763,24 @@ function toBase64(file: File): Promise<string> {;
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function toBase64(): any (file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     const reader = new FileReader();
     reader && reader.onload = () => resolve(String(reader && reader.result));
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);
+<<<<<<< HEAD
 <<<<<<< HEAD
   });
 }
@@ -630,6 +790,8 @@ function toBase64(): any (file: File): Promise<string> {;
 }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   });
@@ -650,13 +812,19 @@ const reader = new FileReader ();
   });
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 }
 }
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -664,8 +832,13 @@ const reader = new FileReader ();
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

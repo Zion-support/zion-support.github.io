@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -154,6 +155,8 @@ export function ResumeWizard() {;
 if (isLoading) {
     return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
@@ -161,22 +164,30 @@ if (isLoading) {
       </div>;
     );
   }
+<<<<<<< HEAD
 
 
   
 
 
+=======
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (error) {
 
   if (error) {;
     return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 ursor/fix-website-loading-errors-and-merge-6662
@@ -216,11 +227,16 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
@@ -237,6 +253,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         onCancel = {(,) => setShowNewResumeForm(false),}
         isLoading = {isLoading,}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -251,10 +268,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
     );
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
   
@@ -270,10 +291,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   if (!resume && !showNewResumeForm) {;
@@ -291,6 +315,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <div className="space-y-6">
@@ -299,10 +325,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <Button
             onClick = {(,) => setShowNewResumeForm(true),}
           <Button;
             onClick={() => setShowNewResumeForm(true)}
+<<<<<<< HEAD
 =======
 
 
@@ -311,6 +341,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             variant="outline"
             size="sm"
             className="gap-2"
@@ -321,20 +353,28 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       
 
 
       <Card>
+<<<<<<< HEAD
+=======
+        <CardContent className="pt-6">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -361,6 +401,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           
 
@@ -431,6 +474,7 @@ if ( {) {
             {resume && (;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             {resume && (
               <ResumeStepContent
             {resume && (
@@ -440,10 +484,14 @@ if ( {) {
 =======
               <ResumeStepContent
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              <ResumeStepContent
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
+<<<<<<< HEAD
               />
             )}
 <<<<<<< HEAD
@@ -507,11 +555,17 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              />;
+            )}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
   );
+<<<<<<< HEAD
 
 };
 
@@ -574,3 +628,5 @@ if ( {) {
 =======
 }'"}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

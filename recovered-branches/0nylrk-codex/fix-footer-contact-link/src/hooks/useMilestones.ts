@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -20,3 +21,14 @@ export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+export { useMilestones } from './milestones/useMilestones',;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+export { useMilestones } from './milestones/useMilestones',;
+export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

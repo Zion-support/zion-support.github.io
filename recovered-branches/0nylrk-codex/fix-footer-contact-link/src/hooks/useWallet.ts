@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -22,6 +23,8 @@ export function useWallet() {;
       return
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -66,15 +69,26 @@ if ( {) {
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } finally {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
     setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
+=======
+
+    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     try {
@@ -122,6 +136,8 @@ if ( {) {
         user_id: user.id;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         amount;
         transaction_type: 'earn';
         reason: reason |null
@@ -132,6 +148,7 @@ if ( {) {
     if (!user?.id) return;
     setWallet(prev =>
 <<<<<<< HEAD
+<<<<<<< HEAD
       prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
     );
     setTransactions(prev => [
@@ -139,13 +156,18 @@ if ( {) {
         id: crypto.randomUUID();
         user_id: user.id;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
     );
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         amount;
         transaction_type: 'burn';
         reason: reason |null
@@ -157,7 +179,10 @@ if ( {) {
     fetchTransactions()
   }, [user?.id]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
   async /**
  * fetch_transactions - Function description
@@ -231,17 +256,24 @@ if (return) {
   }, [user?.id]);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return {
     wallet;
     transactions;
     loading;
     error;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     fetchWallet;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    fetchWallet;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -340,21 +372,30 @@ export function useWallet() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     fetchTransactions;
     earnTokens;
 
     spendTokens}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -468,3 +509,7 @@ export function useWallet() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

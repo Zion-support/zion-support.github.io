@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
@@ -90,29 +91,50 @@ if (return) {
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({ action, admin_notes }),
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
     );
     set_selected (null);
@@ -120,18 +142,27 @@ import React, { useMemo, useState } from 'react';
   return (
     <EnhancedLayout>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             value={filters && filters.status || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             value={filters && filters.status || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             }
             className='border rounded px-2 py-1';
+=======
+            }
+            className='border rounded px-2 py-1';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='max - w-7xl mx - auto'>;
         <div className='flex items - center justify - between mb - 4'>;
           <h1 className='text - 2xl font - semibold'>Admin Content Review</h1>;
@@ -143,6 +174,10 @@ import React, { useMemo, useState } from 'react';
               set_filters (function => ({ ...f, status: e.target.value || undefined }));
             }
             className='border rounded px - 2 py - 1';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >;
             <option value=''>All Statuses</option>;
             <option value='pending'>Pending</option>;
@@ -152,9 +187,13 @@ import React, { useMemo, useState } from 'react';
             <option value='banned'>Banned</option>;
           </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             value={filters && filters.contentType || ''}
             onChange={e =>;
               setFilters(f => ({;
@@ -162,11 +201,18 @@ import React, { useMemo, useState } from 'react';
                 contentType: e && e.target.value || undefined,;
               }));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             }
             className='border rounded px-2 py-1';
+=======
+
+            }
+            className='border rounded px-2 py-1';
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <select;
             value={filters.content_type || ''}
             on_change={e =>;
@@ -176,6 +222,10 @@ import React, { useMemo, useState } from 'react';
               }));
             }
             className='border rounded px - 2 py - 1';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >;
             <option value=''>All Types</option>;
             <option value='listing'>Listing</option>;
@@ -184,25 +234,35 @@ import React, { useMemo, useState } from 'react';
             <option value='job'>Job Post</option>;
           </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             value={filters && filters.reason || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, reason: e && e.target.value || undefined }));
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             value={filters && filters.reason || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, reason: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
             className='border rounded px-2 py-1';
           />;
           <input
             placeholder='User email'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             value={filters && filters.userEmail || ''}
             onChange={e =>;
               setFilters(f => ({;
@@ -210,15 +270,23 @@ import React, { useMemo, useState } from 'react';
                 userEmail: e && e.target.value || undefined,;
               }));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             }
             className='border rounded px-2 py-1';
           />;
           <button
             onClick={() => setFilters({ status: 'pending' })}
             className='border rounded px-2 py-1';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <input;
             placeholder='Reason contains...';
             value={filters.reason || ''}
@@ -241,10 +309,15 @@ import React, { useMemo, useState } from 'react';
           <button;
             on_click={() => set_filters ({ status: 'pending' })}
             className='border rounded px - 2 py - 1';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           >;
             Reset;
           </button>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
@@ -374,14 +447,21 @@ export default function ContentReviewPage(req, res) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <EnhancedLayout>
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Admin Content Review</h1>
         </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
           <select
             value={filters.status |''}
@@ -438,9 +518,12 @@ export default function ContentReviewPage(req, res) {
           >
             Reset
           </button>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
           <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className="border rounded px-2 py-1">
             <option value="">All Statuses</option>
@@ -461,11 +544,14 @@ export default function ContentReviewPage(req, res) {
           <input placeholder="User email" value={filters.userEmail || ''} onChange={e => setFilters(f => ({ ...f, userEmail: e.target.value || undefined }))} className="border rounded px-2 py-1" />
           <button onClick={() => setFilters({ status: 'pending' })} className="border rounded px-2 py-1">Reset</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -496,6 +582,7 @@ export default function ContentReviewPage(req, res) {
                   </td>
                 </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               ))}
@@ -514,10 +601,25 @@ export default function ContentReviewPage(req, res) {
               ))  } catch (error) {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              ))}
+              {flags.length === 0 && (
+
+
+=======
+
+
+}
+
+=======
+                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+              )  } catch (error) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
               {flags.length === 0 && (
                 <tr>
@@ -533,15 +635,23 @@ export default function ContentReviewPage(req, res) {
         </div>
       </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </tbody>;
           </table>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {selected && (;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {selected && (
+=======
+
+      {selected && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
@@ -549,10 +659,13 @@ export default function ContentReviewPage(req, res) {
         />;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </EnhancedLayout>;
   );
     </EnhancedLayout>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -604,6 +717,7 @@ export default function ContentReviewPage(req, res) {
                     No results;
                   </td>;
                 </tr>              )}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 );
@@ -615,10 +729,13 @@ export default function ContentReviewPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </tbody>;
           </table>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {selected && (;
         <ModerationModal;
@@ -647,6 +764,8 @@ export default function ContentReviewPage(req, res) {
   );
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {selected && (
         <ModerationModal;
           flag={selected}
@@ -656,9 +775,13 @@ export default function ContentReviewPage(req, res) {
     </EnhancedLayout>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -666,8 +789,13 @@ export default function ContentReviewPage(req, res) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

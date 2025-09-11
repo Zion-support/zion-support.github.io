@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -11,6 +12,10 @@ import React from 'react';
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from 'react',
+import React from 'react';
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
@@ -22,6 +27,7 @@ export default function TechnologyInsightsPage() {
       description:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
       readTime: '15 min read'
       featured: true
@@ -29,15 +35,23 @@ export default function TechnologyInsightsPage() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -137,6 +151,28 @@ export default function TechnologyInsightsPage() {
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     },  ];      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
   ];
 
@@ -199,6 +235,7 @@ export default function TechnologyInsightsPage() {
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
+<<<<<<< HEAD
 =======
 
 
@@ -277,6 +314,8 @@ import React from 'react';
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
@@ -309,15 +348,60 @@ import React from 'react';
                     </Link>
                       Read More <span className='ml-1'>→</span>                    </Link>
 
+<<<<<<< HEAD
                     </Link>
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
+        <main className='container mx-auto px-6 py-12'>;
+          <section className='text-center mb-16'>;
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
+              Technology Insights;
+            </h1>;
+            <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
+=======
+        <meta;
+          name='description';
+          content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies.";
+        />;
+        <meta;
+          property='og:title';
+          content='Technology Insights | Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Research insights, technology trends, and thought leadership in AI and automation.';
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
+        <main className='container mx - auto px - 6 py - 12'>;
+          <section className='text - center mb - 16'>;
+            <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
+              Technology Insights;
+            </h1>;
+            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
+
+              Research insights, technology trends, and thought leadership in;
+              AI, automation, and emerging technologies;
+            </p>;
+          </section>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       href={`/blog/${trend && trend.id}`}
@@ -326,6 +410,8 @@ import React from 'react';
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {researchAreas.map((area, index) => (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                       href={`/blog/${trend && trend.id}`}
@@ -364,15 +450,23 @@ import React from 'react';
               </div>;
             </div>;
             {/* Research Areas */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Research Areas */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Research Focus Areas
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -385,6 +479,13 @@ import React from 'react';
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+                {researchAreas.map((area, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'
@@ -399,7 +500,10 @@ import React from 'react';
                         <li
                           key={focusIndex}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           className='text-sm text-white/60 flex items-center'>;
                           <span className='text-cyan-400 mr-2'>•</span>                          {focus}                {researchAreas && researchAreas.map((area, index) => (;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
@@ -412,17 +516,23 @@ import React from 'react';
                           <span className="text-cyan-400 mr-2">•</span>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {researchAreas.map((area, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                           className='text-sm text-white/60 flex items-center'
                         >
                           <span className='text-cyan-400 mr-2'>•</span>                          {focus}                {researchAreas.map((area, index) => (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="text-4xl mb-4">{area.icon}</div>
                     <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>
@@ -432,6 +542,7 @@ import React from 'react';
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -449,6 +560,19 @@ import React from 'react';
             {/* Whitepapers */}
 =======
 
+=======
+                          {focus}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
 
@@ -457,12 +581,16 @@ import React from 'react';
 
 
             {/* Whitepapers */}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
                 Research Whitepapers
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -475,6 +603,13 @@ import React from 'react';
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+                {whitepapers.map((paper, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'
@@ -493,6 +628,7 @@ import React from 'react';
                     <p className='text-white/70 mb-4'>{paper.description}</p>
                     <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
@@ -508,6 +644,12 @@ import React from 'react';
                       Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                      href={paper.downloadUrl}
+                      className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
+                    >
+                      Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
@@ -522,27 +664,44 @@ import React from 'react';
                       Download PDF <span className="ml-1">→</span>
                     </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       Download PDF <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>
                 ))}
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -550,6 +709,7 @@ import React from 'react';
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
@@ -557,17 +717,23 @@ import React from 'react';
 
 
             {/* Innovation Lab */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -592,6 +758,7 @@ import React from 'react';
                     </ul>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
                     <p className='text-white/60 text-sm'>Innovation Lab</p>                  </div>                  <div className="text-center">
@@ -600,12 +767,18 @@ import React from 'react';
                   <div className="text-center">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  <div className="text-center">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <div className="text-6xl mb-4">🧪</div>
                     <p className="text-white/60 text-sm">Innovation Lab</p>
                   </div>
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -900,6 +1073,8 @@ href={paper && paper.downloadUrl}
   );
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   Read Our Blog;
                 </Link>;
@@ -911,7 +1086,21 @@ href={paper && paper.downloadUrl}
 
 
 }
+<<<<<<< HEAD
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

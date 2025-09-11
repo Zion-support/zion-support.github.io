@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,7 +29,10 @@ import { X } from 'lucide-react';
   role: 'talent' | 'client';
   user_id?: string | null;
   message: string;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
@@ -62,6 +68,7 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
   const dismiss = React.useCallback(() => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client';
@@ -69,6 +76,8 @@ export type SmartNudgeBannerProps = {
   message: string;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 };
 export default function SmartNudgeBanner(): any ({;
   role,;
@@ -98,6 +107,7 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
       setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client',
   userId?: string | null;
@@ -113,10 +123,14 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch {}
   }, [storageKey]);
   const dismiss = React && React.useCallback(() => {;
     setHidden(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -137,12 +151,28 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+    setHidden(true);
+    try {
+      if (typeof window !== 'undefined')
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         {message}
@@ -151,21 +181,29 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     </div>;
   );
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className='text-sm'>{message}</div>
     </div>
 
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4">
       <button onClick={dismiss} aria-label="Dismiss" className="absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10">
@@ -180,6 +218,9 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 export default /**
@@ -263,6 +304,7 @@ if (return null) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { X } from 'lucide-react';
 
@@ -345,3 +387,9 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

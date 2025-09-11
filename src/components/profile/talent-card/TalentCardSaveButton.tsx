@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -131,6 +132,9 @@ export function TalentCardSaveButton({;
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
@@ -138,11 +142,17 @@ export function TalentCardSaveButton({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -200,6 +210,7 @@ export function TalentCardSaveButton(): any ({;
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
 <<<<<<< HEAD
+<<<<<<< HEAD
         )}      />
 
     </button>
@@ -212,6 +223,8 @@ export function TalentCardSaveButton(): any ({;
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         )}      />;
     </button>;
@@ -222,7 +235,10 @@ export function TalentCardSaveButton(): any ({;
   )
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }variant: "default" 
 }) 
 };
@@ -241,10 +257,15 @@ export function TalentCardSaveButton(): any ({;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -290,6 +311,7 @@ if ( {) {
     toast ({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites',
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <button 
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
@@ -309,6 +331,8 @@ if ( {) {
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       description: localIsSaved;
         ? `${profileName} has been removed from your favorites`;
         : `${profileName} has been added to your favorites`,;
@@ -331,6 +355,7 @@ if ( {) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 ;
 
@@ -345,3 +370,5 @@ if ( {) {
 
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

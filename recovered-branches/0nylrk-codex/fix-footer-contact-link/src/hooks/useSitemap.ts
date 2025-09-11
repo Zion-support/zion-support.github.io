@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -10,6 +11,17 @@ import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
 
 
+=======
+
+
+import {useAuth} from './useAuth';
+import {getAccessibleRoutes} from '@/config/sitemap';
+import type { SitemapItem } from '@/config/sitemap';
+// Define the allowed user types
+
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function useSitemap() {;
 
 
@@ -25,6 +37,7 @@ export function useSitemap() {;
   };
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useAuth  } from './useAuth';
@@ -48,22 +61,31 @@ export function useSitemap() {;
   }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Helper function to check if a user can access a specific path
   const canAccessRoute = (path: string): boolean => {
     const route = findRouteByPath(path);
     if (!route) return false;
     // If route requires authentication and user is not authenticated
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (route && route.requiredAuth && !isAuthenticated) return false;
+=======
+
+    if (route && route.requiredAuth && !isAuthenticated) return false;
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     // If route requires specific roles and user doesn't have one
     if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
       if (!user || !user && user.userType) return false;
       const userTypeEnum = isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined,
       return userTypeEnum ? route && route.requiredRoles.includes(userTypeEnum) : false
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useAuth } from './useAuth',;
 import { getAccessibleRoutes } from '@/config/sitemap',;
@@ -116,6 +138,8 @@ export function useSitemap() {;
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     }
     return true
   }
@@ -127,6 +151,7 @@ export function useSitemap() {;
     accessibleRoutes;
     findRouteByPath;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     canAccessRoute
@@ -135,6 +160,13 @@ export function useSitemap() {;
 import {use_auth} from './use_auth';
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';
+=======
+
+    canAccessRoute
+import { useAuth } from './useAuth',;
+import { getAccessibleRoutes } from '@/config/sitemap',;
+import type { SitemapItem } from '@/config/sitemap',;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 // Define the allowed user types;
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
@@ -193,6 +225,7 @@ if (return false) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -257,3 +290,9 @@ export function useSitemap() {;
     canAccessRoute;
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

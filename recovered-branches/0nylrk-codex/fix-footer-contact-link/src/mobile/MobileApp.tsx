@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Routes, Route, Navigate} from "react-router-dom";
 import {MobileThemeProvider} from "./theme/MobileThemeProvider";
@@ -38,6 +39,11 @@ export function MobileApp() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <MobileThemeProvider>
       <Routes>
@@ -60,9 +66,12 @@ export function MobileApp() {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react";
 import {Routes, Route, Navigate} from "react-router-dom";
 import {MobileThemeProvider} from "./theme/MobileThemeProvider";
@@ -78,7 +87,10 @@ import {useAuth} from "@/hooks/useAuth";
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -91,10 +103,13 @@ import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",;
 import { MobileJobPost } from "./pages/MobileJobPost",;
 import { useAuth } from "@/hooks/useAuth",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function MobileApp() {;
   const { isAuthenticated } = useAuth();
   return (;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export function MobileApp() {;
   const { isAuthenticated } = useAuth();
@@ -127,12 +142,16 @@ function MobileApp() {
   const { is_authenticated } = use_auth ();
 ;
   return (
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <MobileThemeProvider>;
       <Routes>;
         <Route path="/onboarding" element={<MobileOnboarding />} />;
         <Route;
           path="/";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",;
@@ -163,16 +182,22 @@ export function MobileApp() {;
             isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
           } ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           element={
             is_authenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
           }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
         <Route path="/browse" element={<MobileBrowse />} />;
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
         <Route path="/resume" element={<MobileResumeBuilder />} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </MobileThemeProvider>);
 }
@@ -185,6 +210,8 @@ export function MobileApp() {;
 }
 ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -199,5 +226,9 @@ export function MobileApp() {;
       </Routes>;
     </MobileThemeProvider>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -38,7 +38,6 @@ export interface Revolutionary2026Service {
   rating: number;
 export const revolutionary2026Services: Revolutionary2026Service[] = [;
   // AI-Powered Business Intelligence & Analytics;
-<<<<<<< HEAD:data-disabled/revolutionary-2026-services.ts
   {
     id: "ai-business-intelligence-suite-2026",;
     name: "AI Business Intelligence Suite 2026",;

@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{ useState,useRef,useEffect } from\';react\'; import { cn } from\';\';@/lib/utils\'; import { motion,AnimatePresence } from\';\';framer-motion\'; \"export\": function OptimizedImage({ src,alt,width,height,className,placeholder =\';\';/images/placeholder.svg\',fallback =\';\';/images/fallback.svg\',\"priority\": \'= false\',sizes =\';\';100vw\',loading =\';\';lazy\',onLoad,onError,aspectRatio =\';\';auto\',objectFit =\';\';cover\',\"blur\": \'= false\',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)\'';\';
 const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/lib/utils"; import { motion,AnimatePresence } from";";framer-motion"; export: function OptimizedImage({ src,alt,width,height,className,placeholder =";";/images/placeholder.svg",fallback =";";/images/fallback.svg",priority: "= false",sizes =";";100vw",loading =";";lazy",onLoad,onError,aspectRatio =";";auto",objectFit =";";cover",blur: "= false",quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)"";";"""
 :src.disabled/components/ui/OptimizedImage.jsx
@@ -13,6 +14,8 @@ const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 =======
 =======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 =======
@@ -23,13 +26,19 @@ const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React,{ useState,useRef,useEffect } from\';react\'; import { cn } from\';\';@/lib/utils\'; import { motion,AnimatePresence } from\';\';framer-motion\'; \"export\": function OptimizedImage({ src,alt,width,height,className,placeholder =\';\';/images/placeholder && placeholder.svg\',fallback =\';\';/images/fallback && fallback.svg\',\"priority\": \'= false\',sizes =\';\';100vw\',loading =\';\';lazy\',onLoad,onError,aspectRatio =\';\';auto\',objectFit =\';\';cover\',\"blur\": \'= false\',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)\'';\';
 const React,{ useState,useRef,useEffect } from";react"; import { cn } from";";@/lib/utils"; import { motion,AnimatePresence } from";";framer-motion"; export: function OptimizedImage({ src,alt,width,height,className,placeholder =";";/images/placeholder && placeholder.svg",fallback =";";/images/fallback && fallback.svg",priority: "= false",sizes =";";100vw",loading =";";lazy",onLoad,onError,aspectRatio =";";auto",objectFit =";";cover",blur: "= false",quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)"";";"""
 
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder && placeholder.svg',fallback =';';/images/fallback && fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ useState,useRef,useEffect } from';react'; import { cn } from';';@/lib/utils'; import { motion,AnimatePresence } from';';framer-motion'; "export": function OptimizedImage({ src,alt,width,height,className,placeholder =';';/images/placeholder.svg',fallback =';';/images/fallback.svg',"priority": '= false',sizes =';';100vw',loading =';';lazy',onLoad,onError,aspectRatio =';';auto',objectFit =';';cover',"blur": '= false',quality = 75 }) {} const [isLoaded,setIsLoaded] = useState(false) const [hasError,setHasError] = useState(false) const [isInView,setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)'';';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { X } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -114,6 +115,8 @@ export function ClickableBadge({
 }
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ClickableBadge({
 
 
@@ -147,9 +150,13 @@ export function ClickableBadge({;
         className;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
   )
   )
@@ -158,6 +165,9 @@ export function ClickableBadge({;
             onRemove()
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -169,16 +179,21 @@ export function ClickableBadge({;
 };
 }
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
+<<<<<<< HEAD
 =======
 
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           aria-label="Remove";
         >;
           <X className="h-3 w-3" />;
         </button>;
       )}
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -247,3 +262,5 @@ function ClickableBadge() {
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

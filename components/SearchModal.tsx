@@ -1,15 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X, ArrowRight, Clock  } from './lucide-react';
 import Link from './next / link';
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchResult {
 interface SearchResult {;
   title: string;
@@ -18,18 +26,27 @@ interface SearchResult {;
   category: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const search_data: SearchResult[] = [;
   // Services;
   {
@@ -57,9 +74,13 @@ const search_data: SearchResult[] = [;
     category: "Services",
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -68,9 +89,13 @@ const search_data: SearchResult[] = [;
   }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
     url: "/blockchain - services",
@@ -122,9 +147,13 @@ const search_data: SearchResult[] = [;
   },
   // Company;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -158,6 +187,7 @@ const search_data: SearchResult[] = [;
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   useEffect(() => {;
     if (isOpen && inputRef && inputRef.current) {;
       inputRef && inputRef.current.focus();
@@ -167,6 +197,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface SearchModalProps {;
   isOpen: boolean;
@@ -287,12 +319,20 @@ const searchData: SearchResult[] = [;
   },;
 ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -300,6 +340,8 @@ const searchData: SearchResult[] = [;
     }
   }, [isOpen]);
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   useEffect(() => {;
@@ -308,7 +350,10 @@ const searchData: SearchResult[] = [;
     }
   }, [isOpen]);
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   useEffect(() => {;
     // Load recent searches from localStorage;
     const saved = localStorage && localStorage.getItem("recent-searches");
@@ -324,9 +369,13 @@ const searchData: SearchResult[] = [;
           item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       );
       setResults(filtered);
     } else {;
@@ -379,15 +428,21 @@ if ( {) {
     setSelectedIndex (0);
   }, [query]);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === "Escape") {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === "Escape") {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       onClose();
     } else if (e && e.key === "ArrowDown") {;
       e && e.preventDefault();
@@ -399,9 +454,13 @@ if ( {) {
       handleResultClick(results[selectedIndex]);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   };
   const handleResultClick = (result: SearchResult) => {;
     // Add to recent searches;
@@ -416,9 +475,13 @@ if ( {) {
   };
   const handleRecentClick = (search: string) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setQuery(search);
   }
   if (!isOpen) return null;
@@ -430,13 +493,19 @@ if ( {) {
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
 <<<<<<< HEAD
+<<<<<<< HEAD
         />;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         />;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
           {/* Search Input */}
@@ -454,18 +523,27 @@ if ( {) {
             <button
               onClick={onClose}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className="ml-3 p-1 hover:bg-gray-100 rounded">;
               <X className="w-5 h-5" />;
             </button>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">;
             {query && query.trim() ? (;
@@ -564,10 +642,15 @@ if (return null) {
                           : "hover:bg - gray - 50";
                       }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div>;
                   <div className="text-sm text-gray-500 mb-3">;
                     Popular Searches;
@@ -580,9 +663,13 @@ if (return null) {
                       "Digital Transformation",;
                     ].map((term) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <button
                         key={term}
                         onClick={() => setQuery(term)}

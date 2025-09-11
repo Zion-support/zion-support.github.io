@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -32,12 +33,15 @@ export function SkillsFilter({
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
 
+<<<<<<< HEAD
 const POPULAR_SKILLS = [
 <<<<<<< HEAD
   'Machine Learning'
@@ -123,10 +127,13 @@ export function SkillsFilter(): any ({;
 
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
@@ -139,12 +146,20 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        className='flex w-full items-center justify-between text-white font-medium'      >
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <span>Skills</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </button>
       
@@ -179,6 +194,13 @@ const POPULAR_SKILLS = [
   "DevOps"
   "Security"
 ]
+=======
+
+
+      
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {expanded && (
         <div className='mt-4 space-y-2'>
           {POPULAR_SKILLS.map(skill => (
@@ -191,6 +213,7 @@ const POPULAR_SKILLS = [
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
+<<<<<<< HEAD
 =======
 
 
@@ -213,6 +236,21 @@ const POPULAR_SKILLS = [
 
             <div key={skill} className="flex items-center">;
 
+=======
+
+            <div key={skill} className="flex items-center">;
+
+export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
+      <button
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label
+                htmlFor={`skill-${skill}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+              >
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -299,6 +337,7 @@ const POPULAR_SKILLS = [;
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >                {skill}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                htmlFor="input-
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
@@ -367,12 +406,17 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
+              >;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {skill}
               ">
               </label>
             </div>
           ))}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           ))}
         </div>
@@ -392,6 +436,12 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </div>;
+  );
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>
   );
 }
@@ -432,7 +482,14 @@ function SkillsFilter() {
     </div>);
 }
         </div>
+<<<<<<< HEAD
 
+=======
+      )}
+    </div>
+  )
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {skill}
@@ -442,13 +499,21 @@ function SkillsFilter() {
         </div>;
       )}
       )};
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </div>;
   );
 };
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

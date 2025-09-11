@@ -2,10 +2,14 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -59,11 +63,18 @@ const whitepapers = {
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -86,6 +97,19 @@ publish_date: 'January 2025',
     content: {
 <<<<<<< HEAD
 =======
+=======
+// Mock whitepaper data - in a real app, this would come from an API or database
+const whitepapers = {
+  'autonomous-systems-guide': {
+    id: 'autonomous-systems-guide'
+    title: 'The Complete Guide to Autonomous Systems'
+    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.'
+    category: 'Technology'
+    pages: '45'
+    author: 'Zion Tech Group Research Team'
+    publishDate: 'January 2025'
+    content: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
@@ -95,8 +119,13 @@ publish_date: 'January 2025',
   }
   'ai-ethics-framework': {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'ai-ethics-framework',
+=======
+    id: 'ai-ethics-framework',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       executive_summary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
       key_topics: [;
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions';
@@ -107,18 +136,27 @@ publish_date: 'January 2025',
   'ai - ethics - framework': {
     id: 'ai - ethics - framework',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: 'AI Ethics Framework for Business',
     description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
     category: 'Ethics',
     pages: '32',
     author: 'Zion Tech Group Ethics Committee',
+<<<<<<< HEAD
 publish_date: 'January 2025',
     content: {
 <<<<<<< HEAD
 =======
+=======
+    publish_date: 'January 2025',
+    content: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       keyTopics: [
@@ -129,8 +167,13 @@ publish_date: 'January 2025',
   }
   'automation-roi-calculator': {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'automation-roi-calculator',
+=======
+    id: 'automation-roi-calculator',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       executive_summary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
       key_topics: [;
         'Ethical AI PrinciplesImplementation GuidelinesRisk Assessment & MitigationCompliance & Governance';
@@ -141,19 +184,28 @@ publish_date: 'January 2025',
   'automation - roi - calculator': {
     id: 'automation - roi - calculator',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     title: 'Automation ROI Calculator Guide',
     description: 'How to calculate and maximize return on investment for automation initiatives.',
     category: 'Business',
     pages: '28',
     author: 'Zion Tech Group Business Analytics Team',
+<<<<<<< HEAD
 publish_date: 'January 2025',
     content: {
 <<<<<<< HEAD
 };
 =======
+=======
+    publish_date: 'January 2025',
+    content: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
       keyTopics: [
@@ -164,6 +216,7 @@ publish_date: 'January 2025',
   }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function WhitepaperPage() {
   const router = useRouter();
@@ -175,12 +228,25 @@ export default function WhitepaperPage() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default function WhitepaperPage() {
+  const router = useRouter();
+  const { id } = router.query;
+  
+  const whitepaper = whitepapers[id as keyof typeof whitepapers];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+  if (!whitepaper) {
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       executive_summary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
       key_topics: [;
         'ROI Calculation MethodsCost - Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies';
       ],
       target_audience: 'Business analysts, project managers, and executives evaluating automation investments.';
     }
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -189,6 +255,18 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  }
+},
+export default /**
+ * WhitepaperPage - Function description
+ */
+function WhitepaperPage() {
+  const router = use_router (),
+  const { id } = router.query,
+  const whitepaper = whitepapers[id as keyof typeof whitepapers],
+  if (!whitepaper) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return (
       <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
         <main className="container mx - auto px - 6 py - 12">;
@@ -203,19 +281,38 @@ if ( {) {
       </div>);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 
   return (
 
 
+=======
+}
+  return (
+    <>
+      <Head>
+        <title>{whitepaper.title} | Zion Tech Group</title>
+        <meta name="description" content={whitepaper.description} />
+        <meta property="og:title" content={whitepaper.title} />
+        <meta property="og:description" content={whitepaper.description} />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          {/* Breadcrumb */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -223,11 +320,16 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Resources
             </Link>
           </nav>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   return (
@@ -273,6 +375,20 @@ if ( {) {
 =======
 
 
+=======
+          {/* Header */}
+          <header className="text-center mb-16">
+            <div className="mb-6">
+              <span className="px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
+                {whitepaper.category}
+              </span>
+            </div>
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              {whitepaper.title}
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6">
+              {whitepaper.description}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -313,9 +429,13 @@ if ( {) {
               <span>{whitepaper.publishDate}</span>
             </div>
           </header>
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+          {/* Whitepaper Content */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Whitepaper Content */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -323,6 +443,10 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
@@ -347,6 +471,7 @@ if ( {) {
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
             </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -399,6 +524,9 @@ if ( {) {
 =======
 
 
+=======
+            {/* Download Section */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Download Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -413,22 +541,34 @@ if ( {) {
                   Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
                 </p>
                 <button className="px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg">
+<<<<<<< HEAD
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  Download {whitepaper.title}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Download {whitepaper.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </button>
                 <p className="text-white/60 text-sm mt-4">
                   PDF format • {whitepaper.pages} pages • Free download
                 </p>
               </div>
             </section>
+<<<<<<< HEAD
 
 
+=======
+            {/* Related Whitepapers */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {/* Related Whitepapers */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -436,6 +576,10 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -468,6 +612,7 @@ if ( {) {
       </div>
     </>
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -475,6 +620,12 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </button>;
                 <p className="text - white / 60 text - sm mt - 4">;
                   PDF format • {whitepaper.pages} pages • Free download;
@@ -525,6 +676,7 @@ if ( {) {
         </main>;
       </div>;
     </>);
+<<<<<<< HEAD
   }
 },
 
@@ -1109,7 +1261,14 @@ export default function WhitepaperPage(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

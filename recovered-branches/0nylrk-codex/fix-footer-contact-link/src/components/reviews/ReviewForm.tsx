@@ -9,11 +9,17 @@ import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface ReviewFormValues {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+interface ReviewFormValues {;
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -24,6 +30,10 @@ import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
 import { Switch } from '@/components / ui / switch';
 import { Review } from '@/types / reviews';
 interface ReviewFormValues {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   rating?: number;
   review_text?: string;
   communication_rating?: number;
@@ -33,6 +43,7 @@ interface ReviewFormValues {
   is_anonymous?: boolean;
 }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -66,6 +77,12 @@ import { Review } from "@/types/reviews",
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -74,17 +91,26 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+interface ReviewFormProps {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
   revieweeName: string,;
   onSubmit: (data: any) => Promise<boolean>, ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   defaultValues?: Review;
   isSubmitting: boolean;
@@ -104,26 +130,42 @@ interface ReviewFormProps {
 
 export function ReviewForm({;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   defaultValues?: Review;
   isSubmitting: boolean;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export function ReviewForm(): any ({;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   projectId;
   revieweeId;
   revieweeName;
   onSubmit;
   defaultValues;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -160,7 +202,10 @@ interface ReviewFormProps {;
   isSubmitting: boolean;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function ReviewForm({
   projectId,
   revieweeId,
@@ -168,19 +213,25 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   isSubmitting}: ReviewFormProps) {
+<<<<<<< HEAD
 
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
 
 <<<<<<< HEAD
   isSubmitting}: ReviewFormProps) {
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [hoveredStar, setHoveredStar] = useState<number>(0);
 
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -191,6 +242,9 @@ export function ReviewForm({
       would_work_again: defaultValues.would_work_again
       is_anonymous: defaultValues.is_anonymous} : {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       rating: 0
       review_text: ""
       communication_rating: undefined
@@ -199,6 +253,7 @@ export function ReviewForm({
       would_work_again: undefined
       is_anonymous: false}
   });
+<<<<<<< HEAD
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
       ...values
@@ -240,31 +295,45 @@ export function ReviewForm({
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
       project_id: projectId,;
       reviewee_id: revieweeId},;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const success = await onSubmit(formattedData);
     if (success) {;
       form && form.reset();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
   const watchRating = form && form.watch("rating");
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   };
 
   const watchRating = form && form.watch("rating");
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
@@ -273,6 +342,7 @@ export function ReviewForm({
           control={form && form.control}
           name="rating"
           rules={{ required: "Rating is required" }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from "react",;
@@ -362,6 +432,8 @@ export function ReviewForm({;
           rules={{ required:"Rating is required" }}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           render={({ field }) => (;
             <FormItem>;
               <FormLabel className="block text-center mb-2">;
@@ -371,20 +443,27 @@ export function ReviewForm({;
                 <div className="flex justify-center gap-1">;
                   {[1, 2, 3, 4, 5].map((star) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <button;
                       key={star}
                       type="button";
                       onClick={() => field.onChange(star)}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     <button
                       key={star}
                       type="button"
                       onClick={() => field && field.onChange(star)}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       onMouseEnter={() => setHoveredStar(star)}
                       onMouseLeave={() => setHoveredStar(0)}
                       className="focus:outline-none transition-transform hover:scale-110";
                     >;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           star <= (hoveredStar || field && field.value || 0)
                             ? "fill-yellow-400 text-yellow-400"
@@ -395,6 +474,8 @@ export function ReviewForm({;
                             ? "fill-yellow-400 text-yellow-400";
                             :"text-gray-300";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Star
                         className={`h-10 w-10 ${
 
@@ -402,7 +483,10 @@ export function ReviewForm({;
 
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         } transition-colors`}
                       />;
                     </button>;
@@ -415,6 +499,7 @@ export function ReviewForm({;
             </FormItem>;
           )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -680,6 +765,8 @@ export function ReviewForm({;
         <FormField
           control={form.control}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         />;
 
 
@@ -690,7 +777,10 @@ export function ReviewForm({;
         {/* Review Text */}
         <FormField
           control={form && form.control}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           name="review_text"
           rules={{
             required: "Please provide feedback"
@@ -698,6 +788,7 @@ export function ReviewForm({;
               value: 20
 
               message: "Review must be at least 20 characters"}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
           render={({ field }) => (
             <FormItem>
@@ -875,6 +966,8 @@ export function ReviewForm({;
     </Form>
   )
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Your Review</FormLabel>;
@@ -995,6 +1088,7 @@ if ( {) {
         />;
 
         {/* Additional Rating Categories (only shown if main rating is provided) */}
+<<<<<<< HEAD
         {watchRating > 0 && (;
           <div className="space-y-6 border-t pt-6">;
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
@@ -1005,6 +1099,13 @@ if ( {) {
             
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        {watchRating > 0 && (
+          <div className="space-y-6 border-t pt-6">
+            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
+            
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Communication */}
             <FormField
@@ -1277,6 +1378,7 @@ if ( {) {
           className="w-full"
           disabled={isSubmitting || !form && form.formState.isValid}>;
           {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Button>;
       </form>;
@@ -1456,3 +1558,12 @@ defaultValues: defaultValues ? {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        </Button>
+      </form>
+    </Form>
+  )
+}
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

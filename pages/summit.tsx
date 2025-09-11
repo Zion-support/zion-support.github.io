@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   method: 'POST';
 
 try {;
@@ -24,6 +25,11 @@ try {
   method: 'POST';
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+  method: 'POST';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 headers: {;
   'Content-Type': 'application/json' ;
 };
@@ -36,6 +42,7 @@ if (!res && res.ok) throw new Error (data?.error || 'Failed');
 setResult ({;
   ok: true ;
 });
+<<<<<<< HEAD
 setForm ({;
   name: '', email: '', role: '', country: '' ;
 }) ;
@@ -49,6 +56,20 @@ setForm ({;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+setForm ({
+  name: '', email: '', role: '', country: ''
+})
+}catch (err: any) {
+  setResult ({
+  error: err?.message |'Unexpected error'
+})
+}finally {
+  setSubmitting (false)
+export default function SummitPage() {
+  const [platform, setPlatform] = React.useState<
+    'youtube' | 'twitch' | 'twitter'
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -59,15 +80,19 @@ export default function SummitPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function SummitPage() {;
   const [platform, setPlatform] = React && React.useState<;
     'youtube' | 'twitch' | 'twitter';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   >('youtube');
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -82,6 +107,8 @@ export default function SummitPage() {;
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [form, setForm] = React.useState({
 
     name: '',
@@ -90,9 +117,13 @@ export default function SummitPage() {;
     country: '',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
@@ -100,9 +131,13 @@ export default function SummitPage() {;
     error?: string;
   } | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const speakers: Speaker[] = [;
     {;
       name: 'Featured Speaker: Your Name',;
@@ -125,22 +160,32 @@ export default function SummitPage() {;
       twitter: 'https://twitter && twitter.com',;
     },;
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const partners: Partner[] = [;
     { name: 'Gov Partner' },;
     { name: 'Venture Partner' },;
     { name: 'University Partner' },;
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
   const onSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   ];
   const onSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Head from 'next/head';
 import React from 'react';
 type Speaker = {
@@ -148,46 +193,86 @@ type Speaker = {
   title: string,
   avatarUrl: string,
   bio: string,
+<<<<<<< HEAD
 twitter?: string;
   linkedin?: string;
   highlight?: boolean
 };
+=======
+  twitter?: string;
+  linkedin?: string;
+  highlight?: boolean
+};
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Partner = {
   name: string,
   logoUrl?: string
 };
+<<<<<<< HEAD
 const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
+=======
+
+const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function useCountdown(targetIso: string) {
   const [remainingMs, setRemainingMs] = React.useState<number>(() => {
     return new Date(targetIso).getTime() - Date.now()
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   React.useEffect(() => {
     const id = setInterval(() => {
       setRemainingMs(new Date(targetIso).getTime() - Date.now())
     }, 1000);
     return () => clearInterval(id)
   }, [targetIso]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const isPast = remainingMs <= 0;
   const totalSec = Math.max(0, Math.floor(remainingMs / 1000));
   const days = Math.floor(totalSec / 86400);
   const hours = Math.floor((totalSec % 86400) / 3600);
   const minutes = Math.floor((totalSec % 3600) / 60);
   const seconds = totalSec % 60;
+<<<<<<< HEAD
   return { isPast, days, hours, minutes, seconds }
 }
+=======
+
+  return { isPast, days, hours, minutes, seconds }
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube');
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
+<<<<<<< HEAD
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null);
+=======
+  const [submitting, setSubmitting] = React.useState(false),
+  const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null),
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
+<<<<<<< HEAD
 avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
+=======
+    avatarUrl: '/favicon.svg',
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({
@@ -221,6 +306,7 @@ function SummitPage() {
   const { is_past, days, hours, minutes, seconds } =;
     use_countdown (EVENT_START_ISO);
   const [form, set_form] = React.useState ({
+<<<<<<< HEAD
 
 const partners: Partner[] = [ {
   name: 'Gov Partner'
@@ -275,10 +361,13 @@ export default function SummitPage() {
     email: ''
     role: ''
     country: ''
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     name: '',
     email: '',
     role: '',
     country: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
   });
   const [submitting, setSubmitting] = React.useState(false);
@@ -391,6 +480,8 @@ export default function SummitPage() {
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   });
   const [submitting, set_submitting] = React.useState (false);
   const [result, set_result] = React.useState<{
@@ -404,7 +495,10 @@ export default function SummitPage() {
       avatar_url: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI - native digital nations.',
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       twitter: 'https://twitter.com',
       linkedin: 'https://www.linkedin.com',
       highlight: true},
@@ -412,7 +506,10 @@ export default function SummitPage() {
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       avatar_url: '/favicon.svg',
       bio: 'Leading the architecture of ZionDAO and trust rails.',
@@ -424,7 +521,10 @@ export default function SummitPage() {
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     setResult(null),;
     try {;
       const res = await fetch('/api/summit/register', {;
@@ -441,22 +541,29 @@ export default function SummitPage() {
     } finally {;
       setSubmitting(false);    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, source: 'summit-page' })}),
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed');
+<<<<<<< HEAD
       avatarUrl: '/favicon.svg',
       bio: 'Leading the architecture of ZionDAO and trust rails.'},
     {
@@ -480,23 +587,32 @@ export default function SummitPage() {
         body: JSON.stringify({ ...form, source: 'summit-page' })}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed'),
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setResult({ ok: true }),
       setForm({ name: '', email: '', role: '', country: '' })
     } catch (err: any) {
       setResult({ error: err?.message || 'Unexpected error' })
     } finally {
       setSubmitting(false)
+<<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   },
+=======
+    }
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+<<<<<<< HEAD
         />
       )
 
@@ -548,11 +664,18 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+          src={`https://www.youtube.com/embed/${embedId}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title="YouTube livestream"
           allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
           allowFullScreen
         />
       )
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -567,16 +690,22 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
 
       return (
         <iframe
+<<<<<<< HEAD
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
           src={`https://player.twitch.tv/?channel=${embedId}&parent=${typeof window !== 'undefined' ? window.location.hostname : 'localhost'}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+          className="w-full aspect-video rounded-lg border border-gray-200 dark: border-gray-800"
+          src={`https://player.twitch.tv/?channel=${embedId}&parent=${typeof window !== 'undefined' ? window.location.hostname : 'localhost'}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           title="Twitch livestream"
           allowFullScreen
         />
       )
+<<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -590,12 +719,20 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+    }
+    return (
+      <iframe
+        className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+        src={`https://twitter.com/i/broadcasts/${embedId}`}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         title="Twitter livestream"
         allowFullScreen
       />
     )
   },
   return (
+<<<<<<< HEAD
         />;
       </Head>;
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>;
@@ -632,6 +769,8 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
             <a
               href='#agenda'
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <>
       <Head>
         <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
@@ -652,6 +791,7 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
           <div className='mt-6 flex flex-wrap gap-3'>
             <a
               href='#register'
+<<<<<<< HEAD
               className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'
             >
               Register
@@ -698,6 +838,20 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+              className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'>;
+              Register;
+            </a>;
+            <a
+              href='#livestream'
+              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'>;
+              Livestream;
+            </a>;
+            <a
+              href='#agenda'
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
@@ -705,9 +859,13 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
           </ol>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
@@ -716,6 +874,7 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
             <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </section>
       </div>
@@ -912,6 +1071,26 @@ if ( {) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        </section>
+      </div>
+      <section
+        id='speakers'
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
+        <h2 className='text-2xl font-bold mb-6'>Speakers</h2>;
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>;
+          {speakers && speakers.map(s => (;
+            <div
+              key={s && s.name}
+              className={`p-4 rounded-lg border ${s && s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>;
+              <div className='flex items-center gap-4'>;
+                <img
+                  src={s && s.avatarUrl}
+                  alt={s && s.name}
+                  className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
+                />
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -920,12 +1099,18 @@ if ( {) {
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
@@ -934,12 +1119,16 @@ if ( {) {
               <p className="mt-3 text-sm">{s.bio}</p>
               <div className="mt-3 flex gap-3 text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {s.twitter && <a className="underline" href={s.twitter} target="_blank" rel="noreferrer">Twitter</a>}
                 {s.linkedin && <a className="underline" href={s.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -949,6 +1138,15 @@ if ( {) {
       </section>;
 
 
+=======
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>
+      </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -956,6 +1154,7 @@ if ( {) {
           <h2 className='text-2xl font-bold'>Partners</h2>;
           <a
             href='#register'
+<<<<<<< HEAD
             className='px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800'>;
             Become a Sponsor;
           </a>;
@@ -983,18 +1182,29 @@ if ( {) {
           <h2 className="text-2xl font-bold">Partners</h2>
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</a>
 
+=======
+            className='px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800'
+          >
+            Become a Sponsor
+          </a>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Partners</h2>
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</Link>
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         </div>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {partners.map((p) => (
             <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1013,10 +1223,27 @@ if ( {) {
           <h2 className='text-2xl font-bold'>Livestream</h2>;
           <div className='flex flex-wrap items-center gap-2'>;
 
+=======
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>
+      </section>
+      <section
+        id='livestream'
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
+      >
+        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
+          <h2 className='text-2xl font-bold'>Livestream</h2>
+          <div className='flex flex-wrap items-center gap-2'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
+<<<<<<< HEAD
 
             <select
               aria-label='Platform'
@@ -1030,6 +1257,10 @@ if ( {) {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section;
         id='speakers';
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
@@ -1111,22 +1342,32 @@ if ( {) {
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             >;
               <option value='youtube'>YouTube</option>;
               <option value='twitch'>Twitch</option>;
               <option value='twitter'>Twitter</option>;
             </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <input;
               aria - label='Embed ID';
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             <input;
               aria - label='Embed ID';
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               placeholder={
                 platform === 'youtube';
                   ? 'YouTube Video ID';
@@ -1135,18 +1376,27 @@ if ( {) {
                     : 'Twitter Broadcast ID';
               }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </div>;
         </div>;
         <div className='mt-4'>{livestreamEmbed()}</div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -1154,6 +1404,10 @@ if ( {) {
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm mb-1'>Name</label>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
@@ -1161,6 +1415,10 @@ if ( {) {
 
           <div>
             <label className="block text-sm mb-1">Name</label>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <input
               required
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
@@ -1209,14 +1467,22 @@ if ( {) {
               </span>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {result?.error && (;
               <span className='text-red-600'>{result && result.error}</span>;
             )}          </div>;
         </form>;
       </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>;
         <h2 className='text-xl font-semibold'>;
           AI Session Summaries (Optional);
@@ -1228,10 +1494,15 @@ if ( {) {
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
@@ -1254,7 +1525,11 @@ if ( {) {
               onChange={(e) => setEmbedId(e.target.value)}
             />
             {isPast ? (
+<<<<<<< HEAD
 <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+=======
+              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ) : (
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )}
@@ -1264,9 +1539,23 @@ if ( {) {
           {livestreamEmbed()}
         </div>
       </section>
+<<<<<<< HEAD
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
+=======
+      <section
+        id='register'
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
+      >
+        <h2 className='text-2xl font-bold mb-4'>Register</h2>
+        <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>
+      <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+        <h2 className="text-2xl font-bold mb-4">Register</h2>
+        <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div>
             <label className="block text-sm mb-1">Name</label>
             <input
@@ -1277,7 +1566,11 @@ if ( {) {
             />
           </div>
           <div>
+<<<<<<< HEAD
 <label className="block text-sm mb-1">Email</label>
+=======
+            <label className="block text-sm mb-1">Email</label>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <input
               type="email"
               required
@@ -1287,7 +1580,11 @@ if ( {) {
             />
           </div>
           <div>
+<<<<<<< HEAD
 <label className="block text-sm mb-1">Role</label>
+=======
+            <label className="block text-sm mb-1">Role</label>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <input
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -1296,7 +1593,11 @@ if ( {) {
             />
           </div>
           <div>
+<<<<<<< HEAD
 <label className="block text-sm mb-1">Country</label>
+=======
+            <label className="block text-sm mb-1">Country</label>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <input
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -1304,7 +1605,11 @@ if ( {) {
               onChange={(e) => setForm({ ...form, country: e.target.value })}
             />
           </div>
+<<<<<<< HEAD
 <div className="md:col-span-2 flex items-center gap-3">
+=======
+          <div className="md:col-span-2 flex items-center gap-3">
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <button
               type="submit"
               disabled={submitting}
@@ -1317,6 +1622,10 @@ if ( {) {
           </div>
         </form>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
@@ -1324,6 +1633,11 @@ if ( {) {
     </>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               value={embed_id}
               on_change={e => setEmbedId (e.target.value)}
             />;
@@ -1405,6 +1719,7 @@ if ( {) {
           Auto - generated summaries and ZionGPT moderation prompts coming soon.;
         </p>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 ;
@@ -2027,6 +2342,9 @@ export default function SummitPage(req, res) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </>;
   );
   } catch (error) {
@@ -2037,7 +2355,12 @@ export default function SummitPage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

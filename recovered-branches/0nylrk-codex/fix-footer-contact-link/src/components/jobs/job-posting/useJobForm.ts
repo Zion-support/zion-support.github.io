@@ -8,6 +8,7 @@ import {use_navigate} from 'react-router-dom';
 import {job_schema, JobSchemaType} from './validation';
 import { use_auth } from '@/hooks / use_auth';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from 'react';
@@ -21,6 +22,10 @@ import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -38,10 +43,15 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -52,15 +62,21 @@ import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }
 
+<<<<<<< HEAD
 
   const { user } = useAuth(),
   const navigate = useNavigate(),
@@ -72,6 +88,8 @@ export interface JobPostingProps {
   onSuccess?: () => void
 }
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -82,8 +100,11 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
   const { user } = useAuth(),
   const navigate = useNavigate(),
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
@@ -91,6 +112,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [isLoading, setIsLoading] = useState(false),
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
 
+<<<<<<< HEAD
 
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema);
@@ -363,6 +385,11 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
     resolver: zod_resolver (job_schema);
     default_values: {
 
+=======
+  const form = useForm<JobSchemaType>({
+    resolver: zodResolver(jobSchema);
+    defaultValues: {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: '';
       company: '';
       location: '';
@@ -406,6 +433,7 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       return jobData
     } catch (error: any) {
 
+<<<<<<< HEAD
       console && console.error("Error in job form submission:", error);
       toast && toast.error(error && error.message || "Failed to process form");
 
@@ -443,6 +471,8 @@ if ( {) {
 }
         on_success ();
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       title: '',
       company: '',
       location: '',
@@ -469,16 +499,21 @@ if ( {) {
       navigate("/login"),
       return
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
       return job_data;
     } catch (error: any) {
       console.error ("Error in job form submission:", error);
       toast.error (error.message || "Failed to process form");
       throw error;
+<<<<<<< HEAD
 <<<<<<< HEAD
     } finally {
       }
@@ -531,6 +566,10 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 ;
 
@@ -548,6 +587,7 @@ if ( {) {
     initial_values;
     setInitialValues;
     submit_job;
+<<<<<<< HEAD
       setIsLoading(false)
 
 
@@ -563,3 +603,12 @@ if ( {) {
 };
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+      setIsLoading(false)
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+};
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

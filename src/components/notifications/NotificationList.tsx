@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -53,6 +54,8 @@ interface NotificationListProps {;
 }
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 onRetry
 },) => {
 } import React from 'react';
@@ -63,6 +66,10 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components / ui / empty - state';
 import { Bell } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -93,6 +100,7 @@ interface NotificationListProps {;
   onRetry: () => void;
 }
 
+<<<<<<< HEAD
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
@@ -128,6 +136,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   notifications,
   onMarkAsRead,
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export const NotificationList: React.FC<NotificationListProps> = ({;
   loading;
   error;
@@ -142,6 +152,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
         <div className="p-8 text-center text-amber-500">;
           <p>{error}</p>;
           <Button
+<<<<<<< HEAD
             variant="outline" 
             size="sm" 
 
@@ -154,10 +165,13 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
         <div className="p-8 text-center text-amber-500">
           <p>{error}</p>
           <Button
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             variant="outline"
             size="sm"
             className="mt-2"
             onClick={onRetry}
+<<<<<<< HEAD
 =======
   onMarkAllAsRead,
   onClearAll,
@@ -249,6 +263,18 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
           ))}
         </div>
 <<<<<<< HEAD
+=======
+          >
+            Try Again
+          </Button>
+        </div>
+      ) : loading ? (
+        <div className="p-4 space-y-4">
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+        </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       ) : notifications.length === 0 ? (
         <div className="p-8">
           <EmptyState
@@ -262,6 +288,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
       ) : (
         notifications.map((notification) => (
           <NotificationItem
+<<<<<<< HEAD
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
@@ -269,10 +296,14 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
           />;
         ));
       )}
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </ScrollArea>;
   );
 };
 
+<<<<<<< HEAD
 
             key = {notification.id,}
             notification = {notification,}
@@ -285,10 +316,48 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   )
 }
 "
+=======
+        <div className="p - 8 text - center text - amber - 500">;
+          <p>{error}</p>;
+          <Button;
+            variant="outline";
+            size="sm";
+            className="mt - 2";
+            on_click = {on_retry, }
+          >;
+            Try Again;
+          </Button>;
+        </div>) : loading ? (
+        <div className="p - 4 space - y-4">;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+        </div>) : notifications.length === 0 ? (
+        <div className="p - 8">;
+          <EmptyState;
+            icon = {<Bell className="h - 8 w - 8" />, }
+            title="No Notifications";
+            description="You're all caught up.";
+            action={{ text: 'Refresh', on_click: on_retry }}
+            className="border - none bg - transparent";
+          />;
+        </div>) : (
+        notifications.map ((notification, ) => (
+          <NotificationItem;
+            key = {notification.id, }
+            notification = {notification, }
+            onMarkAsRead = {onMarkAsRead, }
+            on_dismiss = {on_dismiss, }
+          />)))}
+    </ScrollArea>);
+}
+";
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   );
 };
 ";
+<<<<<<< HEAD
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
@@ -305,3 +374,5 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   );
 };
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

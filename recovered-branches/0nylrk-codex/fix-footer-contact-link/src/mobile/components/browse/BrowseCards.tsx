@@ -3,15 +3,20 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react",
@@ -35,6 +40,14 @@ interface BrowseItem {
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 =======
+=======
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface BrowseItem {;
   id: string,;
   title: string,;
@@ -48,7 +61,10 @@ import { Badge } from '@/components / ui / badge';
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface BrowseItem {
   id: string,
@@ -56,11 +72,15 @@ interface BrowseItem {
   subtitle: string,
   description: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   location?: string,
   badges: string[],
   price?: string,
   image?: string,
   match?: number,
+<<<<<<< HEAD
   location?: string;
   badges: string[],;
 =======
@@ -75,10 +95,13 @@ interface BrowseItem {
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   timePosted?: string
 }
 interface BrowseCardsProps {
 
+<<<<<<< HEAD
   items: BrowseItem[]
   type: "jobs" | "talents"
 
@@ -97,12 +120,21 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+
+  const [savedItems, setSavedItems] = useState<string[]>([]),
+  
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const toggleSaved = (id: string) => {
     setSavedItems(prev =>
       prev.includes(id)
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -184,11 +216,14 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
 
   },
   
   return (
+<<<<<<< HEAD
     <div className="space-y-4 pb-24">
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
@@ -285,6 +320,8 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;
         <Card key={item && item.id} className="overflow-hidden">;
@@ -327,7 +364,10 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -395,25 +435,32 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </button>;
               </div>;
                 </button>;
               </div>;
               <div className="mt-3 flex flex-wrap gap-1">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 </button>;
               </div>;
 
               <div className="mt-3 flex flex-wrap gap-1">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {item.badges.map((badge, index) => (;
                   <Badge;
                     key={index} ;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {item && item.badges.map((badge, index) => (;
                   <Badge
@@ -465,10 +512,49 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 {item.match && (;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;
                     {item.match}% match;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {badge}
+                  </Badge>;
+                ))}
+
+              </div>;
+
+              <p className="mt-3 text-sm line-clamp-2">{item && item.description}</p>;
+
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;
+                {item && item.location && (;
+                  <div className="flex items-center gap-1">;
+                    <MapPin className="h-3 w-3" />;
+                    <span>{item && item.location}</span>;
+                  </div>;
+                )}
+
+                {item && item.price && (;
+                  <div className="flex items-center gap-1">;
+                    <DollarSign className="h-3 w-3" />;
+                    <span>{item && item.price}</span>;
+                  </div>;
+                )}
+
+                {item && item.timePosted && (;
+                  <div className="flex items-center gap-1">;
+                    <Clock className="h-3 w-3" />;
+                    <span>{item && item.timePosted}</span>;
+                  </div>;
+                )}
+
+                {item && item.match && (;
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
+                    {item && item.match}% match;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </div>;
                 )}
               </div>;
             </div>;
+<<<<<<< HEAD
               <Button
                 size="sm"
                 onClick={() => onViewDetails(item && item.id)}
@@ -477,6 +563,14 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               <Button ;
                 size="sm";
                 onClick={() => onViewDetails(item.id)}
+=======
+
+            <div className="border-t border-border p-3 flex justify-end">;
+
+              <Button
+                size="sm"
+                onClick={() => onViewDetails(item && item.id)}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 className="gap-1";
               >;
                 View Details <ChevronRight className="h-4 w-4" />;
@@ -485,7 +579,16 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
     </div>;
+=======
+
+    </div>;
+  );
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   time_posted?: string;
 }
 interface BrowseCardsProps {
@@ -583,6 +686,7 @@ function BrowseCards() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),;}
  interface BrowseItem {
   id: string;
@@ -676,3 +780,6 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -4,6 +4,7 @@ import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
 import { TalentProfile } from '@/types / talent';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
@@ -11,10 +12,17 @@ import { TalentProfile } from "@/types/talent";
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     professional_title: string,
     email?: string;
   }
@@ -23,6 +31,7 @@ export interface HireRequestData {
     email: string,
     id?: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     professional_title: string
 
@@ -44,16 +53,25 @@ export interface HireRequestData {
     id?: string;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   project: {
     overview: string;
     timeline: string;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     budgetMin: number
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -63,10 +81,15 @@ export interface HireRequestData {
     id: string;
     full_name: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -76,9 +99,12 @@ export interface HireRequestData {
     id: string,
     full_name: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     professional_title: string,
     email?: string
   },
@@ -99,6 +125,7 @@ export interface HireRequestData {
 export function useHireRequest() {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     budgetMax: number
   }
 }
@@ -108,6 +135,9 @@ export function useHireRequest() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -116,6 +146,7 @@ export function useHireRequest() {;
     setError(null)
     try {
       // Call the edge function to process the hire request
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       }),
@@ -126,6 +157,9 @@ export function useHireRequest() {;
       toast({
 
       const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
+=======
+      const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         body: requestData
       });
       }),
@@ -142,6 +176,7 @@ export function useHireRequest() {;
         ? error.message
         : "There was a problem submitting your request. Please try again.";
         title: "Request Submitted",
+<<<<<<< HEAD
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),
       
       return { success: true, requestId: response?.request_id }
@@ -188,6 +223,8 @@ export function useHireRequest() {;
 
 
         title: "Request Submitted",
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         description: `Your request to hire ${requestData && requestData.talent.full_name} has been sent successfully.`});
       
       return { success: true, requestId: response?.request_id }
@@ -257,6 +294,7 @@ if (throw error) {
         ? error.message 
         : "There was a problem submitting your request. Please try again.",
       
+<<<<<<< HEAD
 
       setError(errorMessage);
       toast({
@@ -543,6 +581,8 @@ if (throw error) {
         : "There was a problem submitting your request. Please try again.",
       
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       setError(errorMessage);
       toast({
 
@@ -551,6 +591,7 @@ if (throw error) {
         variant: "destructive"}),
       
 
+<<<<<<< HEAD
   }
 }
   },
@@ -589,3 +630,8 @@ error
   }
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

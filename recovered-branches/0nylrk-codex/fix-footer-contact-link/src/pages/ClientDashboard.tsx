@@ -17,6 +17,7 @@ import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
@@ -51,6 +52,10 @@ function ClientDashboardContent() {
 function ClientDashboardContent() {;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+function ClientDashboardContent() {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
@@ -58,8 +63,11 @@ function ClientDashboardContent() {;
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useIsMobile } from "@/hooks/use-mobile",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   // Set the first job as selected when jobs are loaded (if any);
@@ -73,7 +81,10 @@ import { useIsMobile } from "@/hooks/use-mobile",
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -81,13 +92,17 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = useIsMobile(),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)
     }
+<<<<<<< HEAD
 
   }, [jobs, selectedJobId]),
 
@@ -99,6 +114,8 @@ function ClientDashboardContent() {
   },
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }, [jobs, selectedJobId]);
   }, [jobs, selectedJobId]),
 
@@ -107,9 +124,12 @@ function ClientDashboardContent() {
     setSelectedJobTitle(jobTitle)
   }
   },
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <>
@@ -170,6 +190,7 @@ function ClientDashboardContent() {
           </div>
           <div>
             <div className="sticky top-4 space-y-6">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -177,6 +198,8 @@ function ClientDashboardContent() {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -208,13 +231,18 @@ function ClientDashboardContent() {;
     }
   }, [jobs, selectedJobId]),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleJobSelect = (jobId: string, jobTitle: string) => {;
     setSelectedJobId(jobId),;
     setSelectedJobTitle(jobTitle);
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (;
     <>;
@@ -222,13 +250,18 @@ function ClientDashboardContent() {;
         title="Client Dashboard | Zion AI Marketplace";
         description="Manage your jobs and talent requests in the Zion AI Marketplace.";
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
     <>;
       <SEO
         title="Client Dashboard | Zion AI Marketplace" 
         description="Manage your jobs and talent requests in the Zion AI Marketplace." 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -239,6 +272,7 @@ function ClientDashboardContent() {;
           </div>;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader", ;
@@ -293,11 +327,16 @@ function ClientDashboardContent() {;
           </div>;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' :''}`}>;
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' :''}>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Link to="/hiring-tracker">;
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;
               </Link>;
             </Button>;
+<<<<<<< HEAD
             <Button asChild className={isMobile ? 'w-full justify-center' :''}>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link to="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
@@ -306,18 +345,26 @@ function ClientDashboardContent() {;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* New Onboarding Steps */}
         <div className="mb-8">;
           <ClientOnboardingSteps />;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="lg:col-span-2">;
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>;
@@ -328,6 +375,7 @@ function ClientDashboardContent() {;
                 <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>;
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>;
               </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
@@ -344,6 +392,9 @@ function ClientDashboardContent() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <TabsContent value="all" className="mt-0">;
                 <JobsList onSelectJob={handleJobSelect} />;
               </TabsContent>;
@@ -362,15 +413,20 @@ function ClientDashboardContent() {;
             </Tabs>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           ;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <div>;
             <div className="sticky top-4 space-y-6">;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
@@ -379,6 +435,8 @@ function ClientDashboardContent() {;
               <UpcomingInterviewsCard />;
               ;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
@@ -386,7 +444,10 @@ function ClientDashboardContent() {;
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
@@ -394,21 +455,28 @@ function ClientDashboardContent() {;
                   AI Talent Suggestions;
                 </h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ;
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) :(;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) : (;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="bg-muted/30 border rounded-lg p-6 text-center">;
                     <p className="text-muted-foreground">;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 )}
           <div>;
@@ -445,6 +513,11 @@ function ClientDashboardContent() {;
                 )}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                )}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -564,6 +637,10 @@ if ( {) {
                       Select a job to see AI - matched talent suggestions;
                     </p>;
                   </div>)}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               </div>;
             </div>;
           </div>;
@@ -571,6 +648,12 @@ if ( {) {
       </main>;
       <Footer />;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 
 export default function ClientDashboard() {;
@@ -581,6 +664,13 @@ export default function ClientDashboard() {;
   );
 }
 
+<<<<<<< HEAD
+=======
+;
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     </>);
 }
 export default /**
@@ -592,6 +682,7 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>;
             </div>;
@@ -623,3 +714,6 @@ export default function ClientDashboard() {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

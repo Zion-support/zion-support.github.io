@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 
 import Link from 'next/link'
@@ -84,6 +85,8 @@ import {
 import { Button } from '@/components / ui / button';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next / link';
 import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
@@ -91,6 +94,7 @@ import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
   style?: React.CSSProperties;
 }
 interface InteractiveFeaturesProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
   className?: string,
   style?: React.CSSProperties
@@ -162,6 +166,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               <CardHeader className='flex flex-row items-start space-x-3'>
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   class_name?: string;
   style?: React.CSSProperties;
 export /**
@@ -204,7 +210,10 @@ function InteractiveFeatures() {
       icon: <Settings className='h - 8 w - 8 text - amber - 700' />,
       link: '/equipment',
     },
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   ];
   const handle_toggle = (index: number) =>: any {
     setOpenIndex (prev => (prev === index ? null : index));
@@ -216,6 +225,7 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -223,6 +233,8 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -232,15 +244,22 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     return this.props.children;
   }
 }
@@ -260,25 +279,35 @@ import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {;
   style?: React && React.CSSProperties;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface InteractiveFeaturesProps {;
   className?: string;
   style?: React && React.CSSProperties;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 interface InteractiveFeaturesProps {;
   className?: string;
   style?: React && React.CSSProperties;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export function InteractiveFeatures(): any ({;
   className,;
   style,;
 }: InteractiveFeaturesProps) {;
   const [openIndex, setOpenIndex] = React && React.useState<number | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const features = [;
     {;
       title: 'AI Talent Matching',;
@@ -316,13 +345,18 @@ export function InteractiveFeatures(): any ({;
     },;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleToggle = (index: number) => {;
     setOpenIndex(prev => (prev === index ? null : index));
   };
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <section className={cn ('py - 16 bg - zion - blue - dark', class_name)} style={style}>;
       <div className='container mx - auto px - 4'>;
@@ -415,17 +449,23 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
           {features.map((feature, index) => (;
             <Card;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {features.map((feature, index) => (;
             <Card;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -438,13 +478,20 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 
 <<<<<<< HEAD
                 {feature.icon}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               className='cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg'            >
               <CardHeader className='flex flex-row items-start space-x-3'>
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -455,6 +502,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </CardHeader>
               <div
                 className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
                   'transition-all duration-300'
                   'transition-all duration-300'
@@ -470,6 +518,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   'transition-all duration-300',
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                  'transition-all duration-300',
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
@@ -491,11 +544,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <p>{feature.details}</p>
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
@@ -506,6 +565,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </Card>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg";
             >;
@@ -536,15 +596,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default InteractiveFeatures;
 ;
 }
 }
 
         </div>;
+<<<<<<< HEAD
 export default InteractiveFeatures
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </div>;
     </section>;
   );
@@ -556,6 +624,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </section>);
 export default InteractiveFeatures;
+<<<<<<< HEAD
             </Card>;
           ))}
         </div>;
@@ -606,3 +675,8 @@ export default InteractiveFeatures;
 =======
 export default InteractiveFeatures;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+;
+export default InteractiveFeatures;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

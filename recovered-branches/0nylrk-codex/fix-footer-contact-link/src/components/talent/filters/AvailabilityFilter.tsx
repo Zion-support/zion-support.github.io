@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
 import {AvailabilityFilterProps} from "@/types/filters";
@@ -8,10 +9,18 @@ import { AvailabilityFilterProps } from "@/types/filters";
 
 import { Checkbox } from "@/components/ui/checkbox",
 import { AvailabilityFilterProps } from "@/types/filters",
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
   { id: "project", label: "Project-based" }
+<<<<<<< HEAD
 
 
 
@@ -21,6 +30,8 @@ const AVAILABILITY_OPTIONS = [
 
 ],
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ];
 export function AvailabilityFilter({
   selectedAvailability
@@ -31,6 +42,7 @@ export function AvailabilityFilter({
 }: AvailabilityFilterProps) {
 ],
 
+<<<<<<< HEAD
 =======
 
 
@@ -59,6 +71,8 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -73,9 +87,12 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
         )}
       </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {expanded && (
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map((option) => (
@@ -91,9 +108,12 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
@@ -104,6 +124,7 @@ const AVAILABILITY_OPTIONS = [;
 ];
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
   return (;
+<<<<<<< HEAD
 ];
 export function AvailabilityFilter({
   selectedAvailability
@@ -114,6 +135,9 @@ export function AvailabilityFilter({
 }: AvailabilityFilterProps) {
 export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
   return (
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
         onClick={toggleSection}
@@ -124,11 +148,21 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
       </button>;
+=======
+
+      </button>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {AVAILABILITY_OPTIONS && AVAILABILITY_OPTIONS.map(option => (;
             <div key={option && option.id} className="flex items-center">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               <Checkbox
                 id={`availability-${option && option.id}`}
                 checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
@@ -145,17 +179,30 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 {option.label}
               </label>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           ))}
         </div>;
       )}
 
     </div>;
   );
+<<<<<<< HEAD
     </div>
 
   )
 
 }
+=======
+}
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { AvailabilityFilterProps  } from '@/types / filters';
@@ -165,6 +212,7 @@ const AVAILABILITY_OPTIONS = [;
   { id: "project", label: "Project - based" },
 ];
 ;
+<<<<<<< HEAD
 export /**
  * AvailabilityFilter - Function description
  */
@@ -257,3 +305,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

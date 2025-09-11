@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { useState } from 'react'
@@ -290,17 +291,30 @@ export function CodeBlock({ ;
         )}
         <code className='language-javascript'>{code}</code>
       </pre>
+=======
+))}
+          </div>;
+        )}
+        <code className='language-javascript'>{code}</code>
+      </pre>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <button
         className='absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors'
         onClick={handleCopyClick}
         aria-label='Copy code'      >
         {copied ? <Check size={16} /> : <Copy size={16} />}
+<<<<<<< HEAD
 =======
 ))}
           </div>;
         )}
 
 
+=======
+      </button>
+      {language && (
+        <div className='absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <code className="language-javascript">{code}</code>
       </pre>
       <button
@@ -313,12 +327,16 @@ export function CodeBlock({ ;
       {language && (
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
           {language}
         </div>;
       )}
 
+<<<<<<< HEAD
       </button>;
       {language && (;
         <div className='absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400'>;
@@ -337,6 +355,13 @@ export function CodeBlock({ ;
         </div>;
       )}
     </div>;
+=======
+    </div>;
+  );
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
     >;
       <pre;
@@ -361,6 +386,12 @@ export function CodeBlock({ ;
           {language}
         </div>)}
     </div>);
+export default CodeBlock;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+export default CodeBlock;
+;
 }
 }
 }
@@ -370,6 +401,7 @@ export function CodeBlock({ ;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),;}
 ;
@@ -423,3 +455,6 @@ export default CodeBlock;
 =======
 export default CodeBlock;
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default CodeBlock;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

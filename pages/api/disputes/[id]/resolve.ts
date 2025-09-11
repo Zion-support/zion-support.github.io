@@ -1,25 +1,41 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   const { id } = req && req.query;
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 
   const { id } = req.query;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   if (typeof id !== "string")
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
@@ -27,9 +43,12 @@ export default async function handler(
 
   if (req && req.method === "POST") {
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (req && req.method === "POST") {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     try {
       ensureAdmin(user);
     } catch (e: any) {
@@ -39,14 +58,19 @@ if (req && req.method === "POST") {
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const now = new Date().toISOString();
 
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
       return res && res.status(400).json({ error: "Invalid status" });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
@@ -69,12 +93,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
+=======
+
+    }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 
 
 
 
+<<<<<<< HEAD
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
@@ -92,6 +122,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(405).end("Method Not Allowed");
 }
 =======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   res && res.setHeader("Allow", "POST");
@@ -101,7 +137,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
@@ -148,6 +187,7 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status(200).json({ dispute });
 
@@ -275,10 +315,15 @@ export default async function handler(req, res) {
   }
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     return res.status(200).json({ dispute });
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

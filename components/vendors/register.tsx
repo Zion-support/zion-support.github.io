@@ -1,18 +1,26 @@
 
 import {FormEvent, useState} from 'react';
+<<<<<<< HEAD
 export default function VendorRegisterPage() {;
 <<<<<<< HEAD
 
 import {FormEvent, useState} from 'react';
 
 =======
+=======
+
+export default function VendorRegisterPage() {;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 =======
 
 import {FormEvent, useState} from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
@@ -20,9 +28,13 @@ import {FormEvent, useState} from 'react';
     setLoading(true);
     setMessage(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const form = e && e.currentTarget;
     const formData = new FormData(form);
     const payload = Object && Object.fromEntries(formData && formData.entries()),;
@@ -49,10 +61,15 @@ import {FormEvent, useState} from 'react';
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -63,6 +80,7 @@ import {FormEvent, useState} from 'react';
           about: String(payload.about || ''),
           verificationDocs: String(payload.verificationDocs || '')
             .split()
+<<<<<<< HEAD
 <<<<<<< HEAD
           slug: String(payload.slug),
           name: String(payload.name),
@@ -111,6 +129,8 @@ export default function VendorRegisterPage() {;
             .split(',')
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             .map(s => s.trim())
             .filter(Boolean)
           caseStudies: []
@@ -127,11 +147,19 @@ export default function VendorRegisterPage() {;
   }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -147,9 +175,13 @@ export default function VendorRegisterPage() {;
 
       form.reset()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import {FormEvent, useState} from 'react';
 export default /**
  * VendorRegisterPage - Function description
@@ -194,8 +226,12 @@ function on_submit() {
 }
       set_message ('Application submitted. Await approval.');
       form.reset ();
+<<<<<<< HEAD
       setLoading(false);    }
   }
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return (
 
@@ -211,13 +247,100 @@ function on_submit() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
+<<<<<<< HEAD
 
       form.reset()
     } catch (err: any) {
+=======
+=======
+
+      form.reset()
+    } catch (err: any) {
+      setMessage(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <div className='max-w-2xl mx-auto space-y-6'>
+      <h1 className='text-2xl font-semibold'>
+        Apply to become a Vendor Partner
+      </h1>
+      <form onSubmit={onSubmit} className='space-y-4'>
+          <label className='block text-sm mb-1'>Agency Name</label>
+          <input
+            name='name'
+            required
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>Unique URL Slug</label>
+          <input
+            name='slug'
+            required
+            pattern='[a-z0-9-]+'
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+          <p className='text-xs text-gray-500'>Example: acme-ai</p>
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>Services Offered</label>
+          <input
+            name='servicesOffered'
+            placeholder='AI prototyping, Data labeling, MLOps'
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>Team Size</label>
+          <input
+            name='teamSize'
+            type='number'
+            min={1}
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>About</label>
+          <textarea
+            name='about'
+            rows={4}
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>
+            Verification Docs (URLs, comma-separated)
+          </label>
+          <input
+            name='verificationDocs'
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <button
+          disabled={loading}
+          className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+        >
+          {loading ? 'Submitting...' : 'Submit Application'}
+        </button>
+      </form>
+      {message && <div className='text-sm'>{message}</div>}
+      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
+    </div>
+);
+}
+
+    }
+=======
+    } catch (err: any) {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       set_message (err.message);
     } finally {
       set_loading (false);    }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (            .map (string => s.trim ());
             .filter (Boolean);
@@ -241,6 +364,10 @@ function on_submit() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (            .map(s => s && s.trim());
             .filter(Boolean);
           teamSize: Number(payload && payload.teamSize || 0),;
@@ -258,6 +385,7 @@ function on_submit() {
       setMessage(err && err.message);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -311,6 +439,13 @@ function on_submit() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+    }
+  }
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
       set_loading (false);
@@ -419,6 +554,7 @@ function on_submit() {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -499,11 +635,18 @@ function on_submit() {
   return (
   return (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

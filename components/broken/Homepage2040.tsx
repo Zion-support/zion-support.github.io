@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   opacity: 0 
 
 import React from 'react';
@@ -17,12 +18,17 @@ interface Homepage2040Props {
   hidden: {
   opacity: 0 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
   opacity: 0 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react';
 
 interface Homepage2040Props {
@@ -37,19 +43,25 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 };
 };
 };
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -116,6 +128,7 @@ const Homepage2040: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -328,6 +341,8 @@ const Homepage2040: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         stagger_children: 0.1,
         delay_children: 0.2;
       }
@@ -355,6 +370,7 @@ const Homepage2040: React.FC = () => {
       name: "Cybersecurity",
       icon: Shield,
       count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
+<<<<<<< HEAD
 
 
       color: "from-green-500 to-emerald-600"
@@ -368,6 +384,11 @@ const Homepage2040: React.FC = () => {
       transition: {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      color: "from-green-500 to-emerald-600"
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Enhanced animation variants for better performance;
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -475,6 +496,7 @@ const Homepage2040: React.FC = () => {
           <div className="absolute inset-0 pointer-events-none">;
             {/* Animated geometric shapes */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -482,6 +504,10 @@ const Homepage2040: React.FC = () => {
             <motion.div 
 
 
+=======
+            <motion.div
+            <motion.div 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               variants={floatingVariants}
               animate="float"
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
@@ -499,9 +525,13 @@ const Homepage2040: React.FC = () => {
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
             ></motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             <motion&& motion.div 
               variants={floatingVariants}
               animate="float"
@@ -627,6 +657,7 @@ const Homepage2040: React.FC = () => {
               {[...Array (20)].map ((_, i) => (
                 <motion.div;
                   key={i}
+<<<<<<< HEAD
                   className="absolute w - 1 h - 1 bg - cyan - 400 / 30 rounded - full";
                   style={{
 <<<<<<< HEAD
@@ -640,6 +671,16 @@ const Homepage2040: React.FC = () => {
                     animationDelay: `${Math.random() * 3}s`;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
+                  style={{
+                    left: `${Math.random() * 100}%`
+                    top: `${Math.random() * 100}%`
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 3}s`;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     left: `${Math && Math.random() * 100}%`,
                     top: `${Math && Math.random() * 100}%`,
                     animationDelay: `${Math && Math.random() * 3}s`
@@ -652,12 +693,20 @@ const Homepage2040: React.FC = () => {
                     opacity: [0, 1, 0]}}
                   transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     duration: 3,
                     repeat: Infinity,
 
+=======
+                    duration: 3
+                    repeat: Infinity
+                    duration: 3,
+                    repeat: Infinity,
+                    delay: Math.random() * 3
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   }}
                 />;
               ))}
@@ -701,8 +750,13 @@ const Homepage2040: React.FC = () => {
 
 
 
+<<<<<<< HEAD
               
 
+=======
+=======
+              
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Enhanced CTA Section */}
               <motion.div 
                 variants={itemVariants}
@@ -727,6 +781,7 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
+<<<<<<< HEAD
 
                 aria-label="Company recognition">;
                 <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />;
@@ -736,11 +791,17 @@ const Homepage2040: React.FC = () => {
 
               <motion&& motion.h1 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               
 
 
               {/* Enhanced Trust Indicators */}
               <motion.div
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight">;
@@ -777,6 +838,10 @@ const Homepage2040: React.FC = () => {
                 </Link>;
               </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
               {/* Enhanced Trust Indicators */}
               <motion&& motion.div
                 variants={itemVariants}
@@ -831,15 +896,29 @@ const Homepage2040: React.FC = () => {
                   <div className="text-gray-400">{stat && stat.description}</div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </motion && motion.div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -885,15 +964,29 @@ const Homepage2040: React.FC = () => {
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </motion && motion.div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -1168,6 +1261,10 @@ const Homepage2040: React.FC = () => {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                       {/* CTA Button */}
@@ -1223,19 +1320,31 @@ const Homepage2040: React.FC = () => {
                 </motion && motion.div>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 {/* View All Services Button */}
                 <motion&& motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     duration: 3,
                     repeat: Infinity,
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </span>;
                       </div>;
                       {/* CTA Button */}
@@ -1254,14 +1363,20 @@ const Homepage2040: React.FC = () => {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                   className="text-center mt-12">;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                   transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                   className="text-center mt-12">;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <Link
                     href="/innovative-2040-futuristic-services-showcase"
                     className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg">;
@@ -1270,12 +1385,19 @@ const Homepage2040: React.FC = () => {
                   </Link>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             </motion && motion.div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1287,6 +1409,13 @@ const Homepage2040: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1388,13 +1517,17 @@ const Homepage2040: React.FC = () => {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default Homepage2040;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 export default Homepage2040;
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -2130,3 +2263,6 @@ export default Homepage2040;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export default Homepage2040;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

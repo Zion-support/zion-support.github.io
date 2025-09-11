@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   // add more env variables as needed;
@@ -32,11 +35,14 @@ declare let __dirname: string;
 declare let process: {env: {;
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
+<<<<<<< HEAD
 =======
 ;
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   // add more env variables as needed;
@@ -83,25 +89,33 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     PORT?: string;
   }
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   // add more env variables as needed;
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 interface ImportMetaEnv {;
@@ -188,6 +202,8 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
     key?: string | number
 },;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Global type declarations;
 declare namespace React {
@@ -205,7 +221,10 @@ declare module '@vitejs/plugin-react - swc' {
   import { Plugin } from 'vite',
   export default function reactSWC (): Plugin;
 }
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 declare module 'path' {
   export function resolve (...paths: string[]): string,
   export function join (...paths: string[]): string,
@@ -214,6 +233,7 @@ declare module 'path' {
 declare module 'lovable - tagger' {
   import { Plugin } from 'vite',
   export function component_tagger (): Plugin;
+<<<<<<< HEAD
 <<<<<<< HEAD
 declare module 'vitest/config' {;
   export { defineConfig } from 'vite';
@@ -348,6 +368,8 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
     timestamp?: Date,;
     key?: string | number;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 // Add Node.js globals;
 declare let __dirname: string,
@@ -409,11 +431,15 @@ declare module '@/components / ChatAssistant / ChatMessage' {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 declare module '@livekit/components-styles' {// Empty stub for the styles;
 }
@@ -443,6 +469,8 @@ declare module '@/components/ProductListingCard' {;
 // Create a replacement stub for LiveKit components;
 declare module '@livekit / components - styles' {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 declare module '@/components / ProductListingCard' {
   export interface ProductListingCardProps {
@@ -466,6 +494,7 @@ declare module '@livekit / components - react' {
   export const VideoCall: React.FC < VideoCallProps>;
   export const LiveKitRoom: React.FC < any>;
 }
+<<<<<<< HEAD
 declare module '@livekit / components - styles' {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -524,3 +553,11 @@ declare module '@livekit/components-styles' {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+;
+
+declare module '@livekit/components-styles' {;
+  // Empty stub for the styles;
+}
+;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

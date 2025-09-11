@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
@@ -87,6 +88,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       return
     }
     const app: Application = {
@@ -104,9 +108,12 @@ createdAtIso: now}
   res.status(405).end('Method Not Allowed')
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 type Application = {
   id: string;
   jobId: string;
@@ -117,6 +124,7 @@ type Application = {
 
 const FILE = 'applications.json';
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (!rateLimit(req, res)) return;
@@ -179,3 +187,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

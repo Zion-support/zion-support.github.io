@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,12 +12,16 @@ export type Course = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+export type Course = {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
   category: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type Course = {
   id: string,
@@ -98,6 +103,8 @@ export default function CourseCard({ course }: { course: Course }) {
   );
 }
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -106,7 +113,10 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   certification_badge: string,
   description?: string;
 export default /**
@@ -154,6 +164,7 @@ function CourseCard() {
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 
   );
@@ -169,3 +180,8 @@ function CourseCard() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

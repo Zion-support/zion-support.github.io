@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
@@ -18,6 +19,15 @@ export async function getServerSideProps() {;
     const json = JSON.parse(raw);
     routes = json.routes |[];
     generatedAt = json.generatedAt |''
+=======
+
+}</tbody> </table> </div> </div>) import fs from 'fs';
+=======
+import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+import path from 'path';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   } catch {}
   return { props: { routes, generatedAt } }
@@ -51,6 +61,7 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
           </tbody>
         </table>
       </div>
+<<<<<<< HEAD
 
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import fs from 'fs';
@@ -70,6 +81,9 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
@@ -79,16 +93,25 @@ export async function getServerSideProps() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string }
 export async function getServerSideProps() {
+<<<<<<< HEAD
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+=======
+=======
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
@@ -112,6 +135,7 @@ function getServerSideProps() {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     routes = json.routes |[];
@@ -124,21 +148,29 @@ function getServerSideProps() {
 
 
     </div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 );
 }
+<<<<<<< HEAD
 =======
           </tbody>;
         </table>;
       </div>;
     </div>;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 }
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export default /**
  * SiteMapIntelPage - Function description
  */
@@ -168,11 +200,17 @@ function SiteMapIntelPage() {
             <tr>
               <th className=&quot;text-left p-2&quot;>Route</th>
               <th className=&quot;text-left p-2&quot;>Last Modified</th>
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     routes = json.routes || [];
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { routes, generatedAt } }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
@@ -207,3 +245,6 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

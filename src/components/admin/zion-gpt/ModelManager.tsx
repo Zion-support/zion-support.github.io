@@ -4,6 +4,7 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       }
 import { useState, useEffect  } from 'react';
@@ -14,6 +15,18 @@ import { Badge } from "@/components/ui/badge";
 
         .order('createdAt', { ascending: false }),
 
+=======
+        await supabase;
+
+          .from('model_versions');
+          .update({ active: false });
+          .eq('purpose', purpose);
+
+
+      }
+
+      // Update this model;
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
     try {
       // If activating, deactivate all other models with the same purpose
@@ -22,6 +35,7 @@ import { Badge } from "@/components/ui/badge";
           .from('model_versions')
           .update({ active: false })
           .eq('purpose', purpose)
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -34,6 +48,9 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -47,6 +64,7 @@ interface ModelVersionData extends ModelConfig {;
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
   errorMessage?: string;
 }
+<<<<<<< HEAD
 
 
         .order('createdAt', { ascending: false })
@@ -58,6 +76,8 @@ interface ModelVersionData extends ModelConfig {;
           .from('model_versions')
           .update({ active: false })
           .eq('purpose', purpose)
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]),;
@@ -109,6 +129,7 @@ export function ZionGPTModelManager() {;
         );
       ),;
       // Also update in the database;
+<<<<<<< HEAD
       await supabase;
         .from('model_versions');
         .update({;
@@ -152,6 +173,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       }
 
       // Update this model;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -176,6 +201,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       }
 
       // Update this model;
@@ -241,6 +271,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Badge className="bg-blue-500">Training</Badge>;
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
+<<<<<<< HEAD
   }
   },
 
@@ -291,6 +322,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Badge className="bg-blue-500">Training</Badge>
                     ) : (
                       <Badge className="bg-yellow-500">Queued</Badge>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     )}
                     {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>
@@ -313,6 +346,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         variant="ghost"
                         size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
                         onClick = {(,) => checkTrainingStatus(model.id),}
@@ -322,6 +356,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -335,6 +372,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         variant = {model.active ? "outline" : "default",}
                         size="sm"
                         onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
+<<<<<<< HEAD
                         )}
                         <span className="ml-1">Check</span>
                       </Button>
@@ -351,6 +389,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                        variant={model.active ? "outline" : "default"}
+                        size="sm"
+                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >
                         {model.active ? (
                           <>
@@ -364,15 +409,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </Button>;
                     ) : (;
 <<<<<<< HEAD
+<<<<<<< HEAD
                         )}
                       </Button>
                     ) : (
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <Button
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         title = {model.errorMessage |"Training failed",}
                         title={model.errorMessage || "Training failed"}
@@ -381,6 +430,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
@@ -398,6 +450,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </Button>
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         title = {model.errorMessage |"Training failed",}
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
@@ -411,6 +464,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                  </TableCell>
+                </TableRow>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   </TableCell>;
                 </TableRow>;
 
@@ -418,13 +475,18 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TableBody>;
           </Table>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         )}
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        )}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -448,6 +510,10 @@ main
 }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   },
   return (
     <Card className="w - full">;
@@ -537,7 +603,11 @@ main
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
@@ -303,6 +304,16 @@ import ContractBuilder from "@/pages/ContractBuilder",;
 
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const DashboardRoutes = () => {
+=======
+const DashboardRoutes = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <Routes>;
       {/* Dashboard Routes */}
@@ -447,6 +458,10 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <Route
         path="/developers"
         element={
@@ -466,6 +481,10 @@ const DashboardRoutes = () => {;
       <Route
         path="/dashboard/api-access"
         element={
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
@@ -473,6 +492,10 @@ const DashboardRoutes = () => {;
       />;
       <Route
         path="/contract-builder"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
@@ -497,12 +520,16 @@ import WalletPage from "@/pages / Wallet";
 import ContractBuilder from "@/pages / ContractBuilder";
 const DashboardRoutes = () =>: any {
   return (
+<<<<<<< HEAD
 const DashboardRoutes = () => {;
   return (;
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <Routes>;
       {/* Dashboard Routes */}
       <Route;
         path="/dashboard";
+<<<<<<< HEAD
         element={;
           <ProtectedRoute>;
             <Dashboard />;
@@ -525,12 +552,32 @@ const DashboardRoutes = () => {;
         path="/talent - dashboard";
         element={
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+        element={
+          <ProtectedRoute>;
+            <Dashboard />;
+          </ProtectedRoute>;
+        }
+      />;
+      <Route;
+        path="/client - dashboard";
+        element={
+          <ProtectedRoute>;
+            <ClientDashboard />;
+          </ProtectedRoute>;
+        }
+      />;
+      <Route;
+        path="/talent - dashboard";
+        element={
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <TalentDashboard />;
           </ProtectedRoute>;
         }
       />;
       <Route;
+<<<<<<< HEAD
 <<<<<<< HEAD
         path="/creator-dashboard";
         element={;
@@ -559,6 +606,8 @@ const DashboardRoutes = () => {;
         path="/project/:id";
         element={;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         path="/creator - dashboard";
         element={
           <ProtectedRoute>;
@@ -585,11 +634,15 @@ const DashboardRoutes = () => {;
       <Route;
         path="/project/:id";
         element={
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <ProjectDetails />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <Route
@@ -599,6 +652,8 @@ const DashboardRoutes = () => {;
             <ProjectRoom />
           </ProtectedRoute>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Route;
         path="/project/:id / room";
@@ -606,11 +661,15 @@ const DashboardRoutes = () => {;
           <ProtectedRoute>;
             <ProjectRoom />;
           </ProtectedRoute>;
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         }
       />;
       <Route;
         path="/messages";
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Route ;
         path="/talent-dashboard" ;
@@ -800,6 +859,8 @@ const DashboardRoutes = () => {;
         path="/developers";
         element={;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         element={
           <ProtectedRoute>;
             <MessagingInbox />;
@@ -873,19 +934,28 @@ const DashboardRoutes = () => {;
       <Route;
         path="/developers";
         element={
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         element={;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />;
       <Route;
         path="/wallet";
         element={
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <ProtectedRoute>;
             <WalletPage />;
           </ProtectedRoute>;
@@ -893,7 +963,10 @@ const DashboardRoutes = () => {;
       />;
       <Route;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         path="/dashboard / api - access";
         element={
           <ProtectedRoute>;
@@ -904,7 +977,10 @@ const DashboardRoutes = () => {;
       <Route;
         path="/contract - builder";
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         element={
           <ProtectedRoute>;
             <ContractBuilder />;
@@ -916,6 +992,7 @@ const DashboardRoutes = () => {;
 
 
 export default DashboardRoutes;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -961,3 +1038,5 @@ export default DashboardRoutes;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

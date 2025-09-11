@@ -1,27 +1,40 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 import React from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
@@ -32,6 +45,12 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 function Calendar({
   className,
   classNames,
@@ -75,6 +94,7 @@ function Calendar({
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+<<<<<<< HEAD
 =======
 
 
@@ -114,19 +134,28 @@ function Calendar() {
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
         table: "w-full border-collapse space-y-1",
         head_row: "flex",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         head_cell:
           "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
         row: "flex w-full mt-2",
@@ -149,6 +178,7 @@ function Calendar() {
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -264,14 +294,21 @@ function Calendar() {
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {...props}
     />;
   );
 }
+<<<<<<< HEAD
 
 Calendar && Calendar.displayName = "Calendar";
 
@@ -327,10 +364,16 @@ export { Calendar }
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+Calendar.displayName = "Calendar";
+export { Calendar }
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 Calendar.displayName = "Calendar",
 
 export { Calendar },
 Calendar.displayName = "Calendar";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -426,3 +469,7 @@ export { Calendar };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+export { Calendar };
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

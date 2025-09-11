@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
@@ -215,6 +216,16 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import Head from 'next/head';
+
+} from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+
+=======
+import {
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -222,12 +233,16 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
@@ -246,6 +261,14 @@ import {
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
 export default function InnovativeServicesPage() {
+=======
+import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+
+
+export default function InnovativeServicesPage() {;
+=======
+import {
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -260,11 +283,14 @@ export default function InnovativeServicesPage() {;
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
   const sortOptions = [
 import Head from 'next / head';
 import {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -274,7 +300,10 @@ import {
     { value: '5001+', label: '$5,001+' }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   Check,
   Star,
   Zap,
@@ -361,7 +390,10 @@ import {
   Truck as TruckIcon,
   Microscope as MicroscopeIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
@@ -375,7 +407,10 @@ import QuantumHolographicBackground from '../components/ui/QuantumHolographicBac
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -410,6 +445,7 @@ export default function InnovativeServicesPage() {;
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
 
   ];
+<<<<<<< HEAD
 
     filteredServices = filteredServices.filter(service =>
 <<<<<<< HEAD
@@ -478,6 +514,48 @@ function InnovativeServicesPage() {
 
   // Sort services
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  // Filter and sort services
+  let filteredServices = innovativeMicroSaasServices;
+  // Category filter
+  if (selectedCategory !== 'All') {
+    filteredServices = getInnovativeServicesByCategory(selectedCategory);  }
+  // Price range filter
+  if (priceRange !== 'All') {
+    const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);  }
+  // Search filter
+  if (searchQuery) {    filteredServices = getInnovativeServicesByCategory(selectedCategory)
+  }
+  // Price range filter
+  if (priceRange !== 'All') {
+    const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getInnovativeServicesByPriceRange(min, max)
+  }
+  // Search filter
+  if (searchQuery) {
+    filteredServices = filteredServices.filter(
+      service =>
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );  }    filteredServices = filteredServices.filter(service =>
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  }
+
+
+  // Sort services
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -541,6 +619,7 @@ if ( {) {
       case 'category':;
         return a.category.locale_compare (b.category);
       case 'roi': {
+<<<<<<< HEAD
 <<<<<<< HEAD
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
@@ -642,6 +721,8 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
         );
       }    }              default: {
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
@@ -649,7 +730,10 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
       }
               default: {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
           const aLevel = a.innovationLevel.split(' - ')[0];
@@ -663,6 +747,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -684,6 +769,13 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
     website: 'https://ziontechgroup.com'
 };
 =======
+=======
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   // Search filter;
   if (searchQuery) {;
     filteredServices = filteredServices && filteredServices.filter(;
@@ -729,6 +821,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
         }
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   };
@@ -806,6 +899,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
           </section>
 =======
 
+=======
+
+  };
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
@@ -818,12 +916,19 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
           </section>;
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           <section className="px-4 sm:px-6 lg:px-8 mb-12">
             <div className="max-w-7xl mx-auto">
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                 <div className="flex flex-col lg:flex-row gap-6">
                   {/* Search */}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           {/* Filters and Search */}
           <section className='px-4 sm:px-6 lg:px-8 mb-12'>
             <div className='max-w-7xl mx-auto'>
@@ -843,14 +948,19 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <input
                         type="text"
                         placeholder="Search innovative services..."
                         value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         onChange={(e) => setSearchQuery(e && e.target.value)}
                         className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
@@ -859,12 +969,17 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   </div>;
                   {/* Category Filter */}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   {/* Category Filter */}
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="flex-shrink-0">
                     <select
                       value={selectedCategory}
@@ -872,6 +987,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
                       <option value='All'>All Categories</option>
+<<<<<<< HEAD
                       {categories.map(category => (                        <option key={category.name} value={category.name}>                    <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
@@ -925,12 +1041,21 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
                           {category.name} ({category.count})
                         </option>
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          {category.name} ({category.count})
+                        </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ))}
                     </select>
                   </div>
                   {/* Price Range Filter */}
                   <div className='flex-shrink-0'>
 
+<<<<<<< HEAD
                   {/* Price Range Filter */}
                   <div className='flex-shrink-0'>
 
@@ -952,12 +1077,21 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
                           {range.label}
                         </option>
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          {range.label}
+                        </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       ))}
                     </select>
                   </div>
                   {/* Sort Options */}
                   <div className='flex-shrink-0'>
 
+<<<<<<< HEAD
                   {/* Sort Options */}
                   <div className='flex-shrink-0'>
 
@@ -1014,12 +1148,15 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Sort Options */}
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {option.value}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
@@ -1027,6 +1164,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   </div>;
 
 
+=======
+                      ))}
+                    </select>
+                  </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
@@ -1034,6 +1176,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </select>
                   </div>
@@ -1044,11 +1187,20 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   {/* View Mode Toggle */}
 <<<<<<< HEAD
 =======
+=======
+                    </select>
+                  </div>
+
+                  {/* View Mode Toggle */}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                   {/* View Mode Toggle */}
@@ -1057,6 +1209,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
@@ -1064,6 +1217,9 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -1072,9 +1228,13 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             : 'text-gray-400 hover:text-white';
                         }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                       >
                         <Grid className="w-5 h-5" />
                       </button>
@@ -1082,6 +1242,9 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           viewMode === 'list'
                             ? 'bg-cyan-500 text-white'
                             : 'text-gray-400 hover:text-white'
@@ -1092,18 +1255,23 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                       >
                         <List className="w-5 h-5" />
 
+<<<<<<< HEAD
                       </button>
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         </div>;
                         {/* Tagline */}
@@ -1271,6 +1439,8 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className='flex items-start justify-between mb-4'>
                           <div className='flex items-center space-x-3'>
                             <div className='text-3xl'>{service.icon}</div>
@@ -1284,8 +1454,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             </div>
                           </div>
                           {service.popular && (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR              {filteredServices.length === 0 ? (
                 <div className="text-center py-20">
                   <div className="text-6xl mb-4">🔍</div>
@@ -1297,6 +1470,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   {filteredServices.map((service) => (
                     <QuantumHolographicCard key={service.id} className="group">
                       <div className="p-6">
+<<<<<<< HEAD
           {/* Services Grid / List */}
           <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
             <div className='max - w-7xl mx - auto'>;
@@ -1333,14 +1507,30 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                               </p>;
                             </div>;
                           </div>;
+=======
+                        {/* Service Header */}
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex items-center space-x-3">
+                            <div className="text-3xl">{service.icon}</div>
+                            <div>
+                              <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                {service.name}
+                              </h3>
+                              <p className="text-sm text-gray-400">{service.category}</p>
+                            </div>
+                          </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                               POPULAR
                             </div>
                           )}
                         </div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR
 
                               POPULAR
@@ -1350,10 +1540,14 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -1362,11 +1556,15 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -1381,6 +1579,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           </div>
                           <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>                            {service.innovationLevel}
                         {/* Description */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service.description}</p>
                         {/* Innovation Level */}
@@ -1417,6 +1616,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                         <div className="grid grid-cols-2 gap-4 mb-6">
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                        <div className="grid grid-cols-2 gap-4 mb-6">
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div className="text-center">
                             <div className="text-2xl font-bold text-cyan-400">${service.price.monthly.toLocaleString()}</div>
                             <div className="text-xs text-gray-400">per month</div>
@@ -1425,12 +1629,18 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             <div className="text-lg font-bold text-green-400">{service.roi.split(' ')[0]}</div>
                             <div className="text-xs text-gray-400">average ROI</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                           </div>
 =======
 
                           </div>
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                          </div>
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         </div>
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service && service.description}</p>;
                         {/* Innovation Level */}
@@ -1472,10 +1682,15 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                         </div>;
                         {/* Key Features */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
@@ -1487,6 +1702,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             ))}
                             {service.features.length > 3 && (
                               <div className="text-xs text-cyan-400 text-center pt-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
                               </div>
                             )}
@@ -1521,6 +1737,20 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+                            )}
+                          </div>
+                        </div>
+                        {/* Market Info */}
+                        <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
+
+                        <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -1561,15 +1791,19 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                         </div>;
                         {/* CTA Buttons */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <div className="flex space-x-3">
                           <Button
                             href={service.link}
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                             className='px-4'>;
                             <Mail className='w-4 h-4' />                          </Button>;
                         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         {/* Contact Info */}                          <Button
                             href={service && service.link}
@@ -1577,6 +1811,8 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           <Button
                             href={service.link}
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
                         {/* Contact Info */}                          <Button
@@ -1587,8 +1823,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           <Button
                             href={service.link}
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                             variant="primary"
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
                             Learn More;
@@ -1598,6 +1837,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
                             variant="secondary"
 <<<<<<< HEAD
+<<<<<<< HEAD
                             className="px-4">;
                             <Mail className="w-4 h-4" />;
                           </Button>;
@@ -1606,6 +1846,10 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {/* Contact Info */}
                         <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
                           <div>;
@@ -1619,10 +1863,15 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                     </QuantumHolographicCard>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                         {/* Contact Info */}
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
                           <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>
@@ -1631,6 +1880,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                       </div>
                     </QuantumHolographicCard>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1638,17 +1888,38 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   ))}
 </div>;
               )}
+=======
+
+                  ))}
+</div>;
+              )}
+            </div>
+          </section>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
           {/* Call to Action */}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* Call to Action */}
+          <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <EnhancedFuturisticCard className='p-12'>
+                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -1658,9 +1929,13 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>;
           </section>;
           {/* Call to Action */}
@@ -1678,6 +1953,10 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             </div>
           </section>
 
@@ -1704,6 +1983,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   <Button
                     href={`mailto:${contactInfo && contactInfo.email}`}
                     variant='secondary'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                     className='px-8 py-4 text-lg'                  Ready to Lead the Future?
@@ -1718,6 +1998,9 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+                    className='px-8 py-4 text-lg'                  Ready to Lead the Future?
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   Join the revolution with our breakthrough micro SAAS services.
@@ -1735,8 +2018,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                     variant="primary"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className='px-8 py-4 text-lg'
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
                   >
                     <Phone className="w-5 h-5 mr-2" />
@@ -1763,6 +2049,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   <div className="mt-1">Website: {contactInfo.website}</div>
                     className='px-8 py-4 text-lg'
 
+<<<<<<< HEAD
 =======
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
                   >
@@ -1773,18 +2060,27 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                     Call Now: {contactInfo.mobile}
                   </Button>
                   <Button
                     href={`mailto:${contactInfo.email}`}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1793,8 +2089,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
       </QuantumHolographicBackground>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className='px-8 py-4 text-lg'>;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
                     className='px-8 py-4 text-lg'>;
                     <Mail className='w-5 h-5 mr-2' />;
@@ -2027,7 +2326,10 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   <div > Address: {contact_info.address}</div>;
                   <div className="mt - 1">Website: {contact_info.website}</div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
                 </div>;
               </EnhancedFuturisticCard>;
             </div>;
@@ -2035,11 +2337,20 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
         </div>;
       </QuantumHolographicBackground>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   );
 
   );
 }
+=======
+
+  );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 
   );
@@ -2051,6 +2362,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
 );
@@ -2066,3 +2378,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    </>);
+=======
+  );
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

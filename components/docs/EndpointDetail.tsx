@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -30,6 +31,8 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
     <div className="space-y-4">
       <div>
 <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import React from 'react',
 import CodeSamples from './CodeSamples',
 import React from 'react';
@@ -37,19 +40,36 @@ import CodeSamples from './CodeSamples';
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 
+<<<<<<< HEAD
 export default function EndpointDetail({
   endpoint
 }: {
   endpoint,
 }: {;
+=======
+
+import TryItConsole from './TryItConsole';
+
+
+  endpoint,
+}: {;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   endpoint: EndpointSpec;
 }) {
 
   return (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     <div className='space-y-4'>
 
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
+<<<<<<< HEAD
           {endpoint.title}
         </div>
         <div className='text-sm text-high-contrast-muted'>
@@ -67,6 +87,8 @@ export default function EndpointDetail({
           </span>        </div>
       </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 =======
 import { EndpointSpec } from '../../data / api - docs / types';
 ;
@@ -96,7 +118,10 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
   return (
     <div className="space-y-4">
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div>
         <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
       </div>
@@ -107,9 +132,12 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
           <code className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.path}</code>
           <span className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.visibility}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         </div>
 
@@ -186,11 +214,15 @@ export default function EndpointDetail(): any ({;
       <div>;
         <div className='font-medium mb-2'>Try It</div>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <TryItConsole
           method={endpoint && endpoint.method}
           path={endpoint && endpoint.path}
           requiresAuth={
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="font-medium mb-2">Try It</div>
         <TryItConsole method={endpoint.method} path={endpoint.path} requiresAuth={(endpoint.auth || []).includes('jwt') || (endpoint.auth || []).includes('wallet')} />
@@ -221,19 +253,27 @@ export default function EndpointDetail(): any ({;
                 {r.burst ? `, burst ${r.burst}` : ''}
               </li>            ))}      </div>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
         <div className="font-medium mb-2">Try It</div>
         <TryItConsole method={endpoint.method} path={endpoint.path} requiresAuth={(endpoint.auth || []).includes('jwt') || (endpoint.auth || []).includes('wallet')} />
       </div>
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {(endpoint.rateLimits && endpoint.rateLimits.length > 0) && (
         <div>
           <div className="font-medium mb-2">Rate Limits</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
 
@@ -243,6 +283,7 @@ export default function EndpointDetail(): any ({;
         />;
       </div>;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
@@ -250,6 +291,13 @@ export default function EndpointDetail(): any ({;
             ))}
 <<<<<<< HEAD
 =======
+=======
+
+
+=======
+
+            ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -259,7 +307,10 @@ export default function EndpointDetail(): any ({;
       )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0 && (;
         <div>;
           <div className='font-medium mb-2'>Rate Limits</div>;
@@ -276,20 +327,30 @@ export default function EndpointDetail(): any ({;
             {endpoint && endpoint.rateLimits.map((r, idx) => (;
               <li key={idx}>{r && r.tier}: {r && r.limitPerMinute}/min{r && r.burst ? `, burst ${r && r.burst}` : ''}</li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             ))}
           </ul>;
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
@@ -307,10 +368,15 @@ export default function EndpointDetail(): any ({;
           </ul>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       )}
     </div>;
   );
@@ -332,18 +398,26 @@ export default function EndpointDetail(): any ({;
         <div>
           <div className=&quot;font-medium mb-2&quot;>Rate Limits</div>
           <ul className=&quot;list-disc pl-5 text-sm text-high-contrast-muted&quot;>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
 
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       {(endpoint.errors && endpoint.errors.length > 0) && (
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
           </ul>
         </div>
       )}
@@ -359,6 +433,15 @@ export default function EndpointDetail(): any ({;
           </ul>
         </div>
       )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+          </ul>
+        </div>
+      )}
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
             ))}
 
@@ -380,16 +463,24 @@ export default function EndpointDetail(): any ({;
 
             ))}
 
+<<<<<<< HEAD
+=======
+=======
+            ))}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
           </ul>
         </div>
       )}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
 }
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 
           </span>        </div>;
@@ -453,11 +544,17 @@ export default function EndpointDetail(): any ({;
 =======
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 }
 
@@ -465,8 +562,12 @@ export default function EndpointDetail(): any ({;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

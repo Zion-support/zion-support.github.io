@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 };
@@ -10,8 +13,11 @@
 export default function InnovationDigest(): any ({ items }: Props) {;
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
     <div className="space-y-6">;
       <header className="space-y-2">;
@@ -33,6 +39,7 @@ export default function InnovationDigest(): any ({ items }: Props) {;
           </li>;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -40,6 +47,11 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 =======
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+ 
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
  
 
 
@@ -74,6 +86,7 @@ export default function InnovationDigest({ items }: Props) {
 
     </div>;
 
+<<<<<<< HEAD
 );
 }
 <<<<<<< HEAD
@@ -90,6 +103,16 @@ export default function InnovationDigest({ items }: Props) {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+);
+}
+  );
+}
+
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 </header> {
   items.length === 0 && (<div className="text - gray - 600 dark:text - gray - 400" >No entries yet. The automation will populate this feed shortly.</div>);
@@ -141,6 +164,7 @@ export default function InnovationDigest({ items }: Props) {
             </div>
             <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;mt-1 block font-medium text-blue-600 dark:text-cyan-400&quot;>{it.title}</a>
             {it.summary && <p className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300&quot;>{it.summary}</p>}
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -189,3 +213,6 @@ export default function InnovationDigest({ items }: Props) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

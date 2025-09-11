@@ -1,20 +1,10 @@
 
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-};
 
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export const measure_performance = (): PerformanceMetrics | null => {
   if () {) {
@@ -23,9 +13,13 @@ export const measure_performance = (): PerformanceMetrics | null => {
     return null;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   try {
     const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
     const paint_entries = performance.getEntriesByType ('paint');
@@ -35,6 +29,7 @@ export const measure_performance = (): PerformanceMetrics | null => {
       return acc + (entry as any).value;
     }, 0);
 
+<<<<<<< HEAD
   observer.observe(img);
 };
 
@@ -77,6 +72,17 @@ export const analyzeBundleSize = (): void => {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+    return {
+      fcp: fcp ? fcp.startTime : undefined
+      lcp: lcp ? lcp.startTime : undefined
+      fid: fid ? fid.processingStart - fid.startTime : undefined
+      cls: cls
+      ttfb: navigation ? navigation.responseStart - navigation.requestStart : undefined
+    }
+
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
     const fid = performance.getEntriesByType ('first - input')[0] as PerformanceEventTiming;
 ;
     return {
@@ -87,17 +93,25 @@ export const analyzeBundleSize = (): void => {
       ttfb: navigation ? navigation.response_start - navigation.request_start : undefined;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   } catch (error) {
     console.warn('Error measuring performance:', error);
     return null;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 }
 ;
 
@@ -107,12 +121,14 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 
 }
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
+=======
 
 };
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
@@ -121,6 +137,8 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -131,9 +149,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
 } => {
   const thresholds = {
-export const getPerformanceScore = (metrics: PerformanceMetrics): {
-  overall: 'good' | 'needs - improvement' | 'poor';
-  scores: {
     fcp: { good: 1000, needsImprovement: 2000 }
     lcp: { good: 1500, needsImprovement: 3000 }
     fid: { good: 50, needsImprovement: 100 }
@@ -177,6 +192,7 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
@@ -185,24 +201,33 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return { overall, scores };
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 
 
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+=======
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -222,6 +247,7 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 };
@@ -236,6 +262,15 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 =======
   return { overall, scores }
 }
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+};
+=======
+  return { overall, scores }
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ;
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') =>: any {
   console.group (`🚀 ${label}`);
@@ -257,5 +292,8 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   console.group_end ();
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

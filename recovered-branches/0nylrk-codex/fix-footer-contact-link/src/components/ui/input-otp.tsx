@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input-otp';
 import {Dot} from 'lucide-react';
@@ -50,6 +51,8 @@ const InputOTP = React.forwardRef<
       'flex items-center gap-2 has-[:disabled]:opacity-50'
       "flex items-center gap-2 has-[:disabled]:opacity-50",
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 =======
@@ -62,8 +65,11 @@ import { Dot } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
@@ -78,17 +84,25 @@ const InputOTP = React && React.forwardRef<;
   <OTPInput
     ref={ref}
     containerClassName={cn(
+<<<<<<< HEAD
 
 
       "flex items-center gap-2 has-[:disabled]:opacity-50",
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      'flex items-center gap-2 has-[:disabled]:opacity-50'
+      "flex items-center gap-2 has-[:disabled]:opacity-50",
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       containerClassName
     )}
     className={cn('disabled:cursor-not-allowed', className)}
     {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   />
 ));
 InputOTP.displayName = 'InputOTP';
@@ -109,6 +123,7 @@ const InputOTPSlot = React.forwardRef<
 ))
 InputOTP.displayName = "InputOTP"
 
+<<<<<<< HEAD
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
@@ -146,6 +161,9 @@ InputOTP.displayName = "InputOTP"
 
 
 InputOTP && InputOTP.displayName = 'InputOTP';
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const InputOTPGroup = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
   React && React.ComponentPropsWithoutRef<'div'>;
@@ -153,13 +171,25 @@ const InputOTPGroup = React && React.forwardRef<;
   <div ref={ref} className={cn('flex items-center', className)} {...props} />;
 ));
 InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 const InputOTPSlot = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
   React && React.ComponentPropsWithoutRef<'div'> & { index: number }
 >(({ index, className, ...props }, ref) => {;
   const inputOTPContext = React && React.useContext(OTPInputContext) as any;
   const { char, hasFakeCaret, isActive } = inputOTPContext && inputOTPContext.slots[index];
+<<<<<<< HEAD
     >;
+=======
+
+
+
+
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
@@ -167,6 +197,7 @@ const InputOTPSlot = React && React.forwardRef<;
         </div>;
       )}
 
+<<<<<<< HEAD
       {char}
       {hasFakeCaret && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -175,15 +206,21 @@ const InputOTPSlot = React && React.forwardRef<;
       )}
     </div>
 <<<<<<< HEAD
+=======
+    </div>
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   );
 });
 InputOTPSlot.displayName = 'InputOTPSlot';
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<'div'>
   React.ComponentPropsWithoutRef<'div'>
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   )
 })
 InputOTPSlot.displayName = "InputOTPSlot"
@@ -192,13 +229,17 @@ const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 >(({ ...props }, ref) => (
   <div ref={ref} role='separator' {...props}>
     <Dot />
   </div>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </div>;
@@ -336,12 +377,15 @@ React.ComponentPropsWithoutRef<typeof OTPInput> > ( ({
   <div ref={ref} role="separator" {...props}>
     <Dot />
   </div>
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 ));
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
+<<<<<<< HEAD
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
@@ -350,3 +394,7 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

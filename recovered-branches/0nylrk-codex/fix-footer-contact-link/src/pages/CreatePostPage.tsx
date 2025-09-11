@@ -1,12 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 interface PostFormValues {
 
   title: string
@@ -19,6 +25,7 @@ interface PostFormValues {
 
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const handleSubmit = async (values: PostFormValues) => {
@@ -95,6 +102,8 @@ export default function CreatePostPage() {;
     <AppLayout>;
 export default function CreatePostPage() {
 
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
@@ -114,14 +123,20 @@ export default function CreatePostPage() {
     categoryId: initialCategory || "project-help"
   },
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       const tagsArray = values.tags.split(",").map(tag => tag.trim());
       const tagsArray = values.tags.split(",").map(tag => tag.trim()),
       
@@ -131,6 +146,7 @@ export default function CreatePostPage() {
       });
       }),
       
+<<<<<<< HEAD
 =======
 
 
@@ -146,6 +162,8 @@ export default function CreatePostPage() {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       // Redirect to the forum category
       navigate(`/community/category/${values.categoryId}`)
     } catch (error) {
@@ -155,6 +173,7 @@ export default function CreatePostPage() {
         variant: "destructive"
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
   },
@@ -162,6 +181,8 @@ export default function CreatePostPage() {
   return (
     <AppLayout>
 =======
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useSearchParams} from "react-router-dom";
@@ -214,6 +235,7 @@ export default function CreatePostPage() {;
 
     }
   }
+<<<<<<< HEAD
 =======
     }
 
@@ -221,16 +243,26 @@ export default function CreatePostPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+  },
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   return (
 
     <AppLayout>;
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       />
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -245,6 +277,7 @@ export default function CreatePostPage() {;
       </div>
     </AppLayout>
   )
+<<<<<<< HEAD
 
 
 }
@@ -253,6 +286,9 @@ export default function CreatePostPage() {;
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -303,6 +339,7 @@ export default function CreatePostPage() {;
         title="Create New Post | Community Forum | Zion AI Marketplace";
         description="Create a new discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, create post, new thread";
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
 
@@ -372,6 +409,11 @@ export default function CreatePostPage() {;
       />;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+      />;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -381,21 +423,31 @@ export default function CreatePostPage() {;
           <span className="text-sm font-medium">Create Post</span>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
 =======
 
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
       </div>;
     </AppLayout>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -467,6 +519,7 @@ function CreatePostPage() {
         <PostForm initial_values={initial_values} on_submit={handle_submit} />;
       </div>;
     </AppLayout>);
+<<<<<<< HEAD
         ;
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
         ;
@@ -507,3 +560,11 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
