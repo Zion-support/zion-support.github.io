@@ -21,12 +21,17 @@ automation/logs/*.runtime.log
 automation/data/*.json
 !automation/data/autonomous-config.json
 .next/
-core
 
 # TypeScript build info
 *.tsbuildinfo
 
 # npm cache
 .npm-cache/
+
+# Ignore core dumps
 core
+core.*
 *.core
+
+core
+
