@@ -1,5 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -12,12 +11,23 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 interface ThemeProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
   defaultTheme?: Theme;
+  storageKey?: string;
 }
 
-export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProviderProps) {
-  const [theme, setTheme] = useLocalStorage<Theme>('theme', defaultTheme);
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({
+  children,
+  defaultTheme = 'system',
+  storageKey = 'zion-theme'
+}) => {
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+    }
+    return defaultTheme;
+  });
+
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
@@ -45,6 +55,7 @@ export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProvid
   }, [theme]);
 
   useEffect(() => {
+    // Apply theme to document
     const root = document.documentElement;
     
     // Remove existing theme classes
@@ -53,17 +64,21 @@ export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProvid
     // Add new theme class
     root.classList.add(resolvedTheme);
     
-    // Update meta theme-color
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', resolvedTheme === 'dark' ? '#0f172a' : '#ffffff');
-    }
+    // Set data attribute for CSS
+    root.setAttribute('data-theme', resolvedTheme);
   }, [resolvedTheme]);
+
+  useEffect(() => {
+    // Save theme to localStorage
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(storageKey, theme);
+    }
+  }, [theme, storageKey]);
 
   const value: ThemeContextType = {
     theme,
     setTheme,
-    resolvedTheme,
+    resolvedTheme
   };
 
   return (
@@ -71,12 +86,12 @@ export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProvid
       {children}
     </ThemeContext.Provider>
   );
-}
+};
 
-export function useTheme(): ThemeContextType {
+export const useTheme = (): ThemeContextType => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
-}
+};

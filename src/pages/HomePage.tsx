@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import AnimatedSection from '../components/AnimatedSection';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Helmet>
         <title>Home - Zion Tech Group</title>
         <meta name="description" content="Leading provider of AI, blockchain, cloud computing, and cybersecurity solutions for modern businesses." />
+        <meta property="og:title" content="Zion Tech Group - Advanced Technology Solutions" />
+        <meta property="og:description" content="Empowering businesses with cutting-edge AI, blockchain, cloud computing, and cybersecurity solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zion.app" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced Technology Solutions" />
+        <meta name="twitter:description" content="Empowering businesses with cutting-edge AI, blockchain, cloud computing, and cybersecurity solutions." />
+        <link rel="canonical" href="https://zion.app" />
       </Helmet>
       
       <div className="home-page">
@@ -22,8 +41,20 @@ const HomePage: React.FC = () => {
               and cybersecurity solutions that drive innovation and growth.
             </p>
             <div className="hero-actions">
-              <button className="btn btn-primary">Get Started</button>
-              <button className="btn btn-secondary">Learn More</button>
+              <button 
+                className="btn btn-primary"
+                onClick={() => window.location.href = '/contact'}
+                aria-label="Get started with Zion Tech Group"
+              >
+                Get Started
+              </button>
+              <button 
+                className="btn btn-secondary"
+                onClick={() => window.location.href = '/services'}
+                aria-label="Learn more about our services"
+              >
+                Learn More
+              </button>
             </div>
           </div>
           <div className="hero-visual">
@@ -132,7 +163,13 @@ const HomePage: React.FC = () => {
               <div className="cta-content">
                 <h2>Ready to Transform Your Business?</h2>
                 <p>Let's discuss how our technology solutions can drive your success.</p>
-                <button className="btn btn-primary btn-large">Contact Us Today</button>
+                <button 
+                  className="btn btn-primary btn-large"
+                  onClick={() => window.location.href = '/contact'}
+                  aria-label="Contact us today to get started"
+                >
+                  Contact Us Today
+                </button>
               </div>
             </div>
           </section>

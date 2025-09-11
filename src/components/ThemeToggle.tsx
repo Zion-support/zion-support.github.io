@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
-import './ThemeToggle.css';
 
 const ThemeToggle: React.FC = () => {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -19,9 +18,9 @@ const ThemeToggle: React.FC = () => {
 
   const getLabel = () => {
     if (theme === 'system') {
-      return 'System';
+      return 'System theme';
     }
-    return resolvedTheme === 'dark' ? 'Dark' : 'Light';
+    return resolvedTheme === 'dark' ? 'Dark theme' : 'Light theme';
   };
 
   return (
@@ -29,12 +28,14 @@ const ThemeToggle: React.FC = () => {
       className="theme-toggle"
       onClick={handleThemeChange}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light'} theme`}
-      title={`Current: ${getLabel()} theme`}
+      title={getLabel()}
     >
-      <span className="theme-toggle__icon" role="img" aria-hidden="true">
+      <span className="theme-toggle-icon" role="img" aria-hidden="true">
         {getIcon()}
       </span>
-      <span className="theme-toggle__label">{getLabel()}</span>
+      <span className="theme-toggle-label">
+        {getLabel()}
+      </span>
     </button>
   );
 };
