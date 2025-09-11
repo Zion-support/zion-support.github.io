@@ -222,6 +222,18 @@ export default function HomePage() {
               icon='🛡️'
             />
             <Card
+              title='GenAI Security in 2025'
+              href='/blog/genai-security-2025'
+              description='A pragmatic blueprint for securing GenAI systems in production with real controls.'
+              icon='🔒'
+            />
+            <Card
+              title='LLM Cost Optimization Playbook'
+              href='/blog/llm-cost-optimization-playbook'
+              description='Reduce inference spend 20–50% with routing, retrieval, batching, and observability.'
+              icon='💸'
+            />
+            <Card
               title='Micro SaaS Distribution 2025'
               href='/blog/startup-micro-saas-distribution-2025'
               description='Repeatable channels to land the first 100–500 customers efficiently.'
