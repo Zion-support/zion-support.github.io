@@ -1,14 +1,4 @@
-import { Cloud } from 'lucide-react';
-const features = [];
-const benefits = [];
-const useCases = [];
-const integrations = [];
-const technologies = [];
-const services = [];
-const solutions = [];
-const implementation = [];
-
-export type InnovativeService = {;
+export type InnovativeService = {
   id: string;
   title: string;
   description: string;
@@ -33,7 +23,9 @@ export type InnovativeService = {;
   mobile?: boolean;
   enterprise?: boolean;
   startup?: boolean;
-  smb?: boolean};
+  smb?: boolean;
+};
+
 export const innovativeServices2026: InnovativeService[] = [
   // MICRO SAAS SERVICES
   {
@@ -64,7 +56,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Subscription box services',
       'Digital content providers'
     ],
-    targetMarket['SaaS Companies', 'E-commerce', 'Subscription Services', 'Digital Media'],
+    targetMarket: ['SaaS Companies', 'E-commerce', 'Subscription Services', 'Digital Media'],
     ctaLabel: 'Start Free Trial',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -72,7 +64,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '300%',
     implementationTime: '2-4 weeks',
     supportLevel: '24/7',
-    compliance['GDPR', 'CCPA', 'SOC 2'],
+    compliance: ['GDPR', 'CCPA', 'SOC 2'],
     integrations: ['Salesforce', 'HubSpot', 'Stripe', 'Shopify'],
     api: true,
     mobile: true,
@@ -108,7 +100,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Manufacturing companies',
       'Distribution centers'
     ],
-    targetMarket['Retail', 'E-commerce', 'Manufacturing', 'Logistics'],
+    targetMarket: ['Retail', 'E-commerce', 'Manufacturing', 'Logistics'],
     ctaLabel: 'Optimize Inventory',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -116,7 +108,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '250%',
     implementationTime: '3-5 weeks',
     supportLevel: 'Business hours + emergency',
-    compliance['ISO 9001', 'FDA', 'GMP'],
+    compliance: ['ISO 9001', 'FDA', 'GMP'],
     integrations: ['SAP', 'Oracle', 'NetSuite', 'QuickBooks'],
     api: true,
     mobile: true,
@@ -152,7 +144,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Retail stores',
       'Data centers'
     ],
-    targetMarket['Commercial Real Estate', 'Manufacturing', 'Retail', 'Data Centers'],
+    targetMarket: ['Commercial Real Estate', 'Manufacturing', 'Retail', 'Data Centers'],
     ctaLabel: 'Monitor Energy',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -160,7 +152,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '200%',
     implementationTime: '1-2 weeks',
     supportLevel: '24/7 monitoring',
-    compliance['LEED', 'ISO 50001', 'Energy Star'],
+    compliance: ['LEED', 'ISO 50001', 'Energy Star'],
     integrations: ['Building Management Systems', 'Smart Meters', 'Solar Panels'],
     api: true,
     mobile: true,
@@ -196,7 +188,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Technology companies',
       'Government contractors'
     ],
-    targetMarket['Healthcare', 'Finance', 'Technology', 'Government'],
+    targetMarket: ['Healthcare', 'Finance', 'Technology', 'Government'],
     ctaLabel: 'Ensure Compliance',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -204,7 +196,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '400%',
     implementationTime: '4-6 weeks',
     supportLevel: '24/7 + compliance experts',
-    compliance['GDPR', 'HIPAA', 'SOC 2', 'PCI DSS', 'ISO 27001'],
+    compliance: ['GDPR', 'HIPAA', 'SOC 2', 'PCI DSS', 'ISO 27001'],
     integrations: ['AWS', 'Azure', 'GCP', 'Jira', 'ServiceNow'],
     api: true,
     mobile: true,
@@ -212,6 +204,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
+
   // AI SOLUTIONS
   {
     id: 'autonomous-customer-service-agent',
@@ -241,7 +234,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Banking customer service',
       'Healthcare patient support'
     ],
-    targetMarket['E-commerce', 'SaaS', 'Banking', 'Healthcare', 'Telecommunications'],
+    targetMarket: ['E-commerce', 'SaaS', 'Banking', 'Healthcare', 'Telecommunications'],
     ctaLabel: 'Deploy AI Agent',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -249,7 +242,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '500%',
     implementationTime: '6-8 weeks',
     supportLevel: '24/7 + AI specialists',
-    compliance['GDPR', 'CCPA', 'HIPAA'],
+    compliance: ['GDPR', 'CCPA', 'HIPAA'],
     integrations: ['Zendesk', 'Intercom', 'Slack', 'Microsoft Teams'],
     api: true,
     mobile: true,
@@ -285,7 +278,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Oil and gas facilities',
       'Transportation fleets'
     ],
-    targetMarket['Manufacturing', 'Energy', 'Oil & Gas', 'Transportation', 'Utilities'],
+    targetMarket: ['Manufacturing', 'Energy', 'Oil & Gas', 'Transportation', 'Utilities'],
     ctaLabel: 'Predict Maintenance',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -293,7 +286,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '350%',
     implementationTime: '8-12 weeks',
     supportLevel: '24/7 + field engineers',
-    compliance['ISO 55001', 'OSHA', 'API'],
+    compliance: ['ISO 55001', 'OSHA', 'API'],
     integrations: ['SAP', 'Maximo', 'Oracle', 'Siemens Mindsphere'],
     api: true,
     mobile: true,
@@ -329,7 +322,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'E-commerce payments',
       'Insurance claims'
     ],
-    targetMarket['Banking', 'E-commerce', 'Insurance', 'Payment Processors'],
+    targetMarket: ['Banking', 'E-commerce', 'Insurance', 'Payment Processors'],
     ctaLabel: 'Detect Fraud',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -337,7 +330,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '600%',
     implementationTime: '10-14 weeks',
     supportLevel: '24/7 + security experts',
-    compliance['PCI DSS', 'SOC 2', 'ISO 27001', 'GDPR'],
+    compliance: ['PCI DSS', 'SOC 2', 'ISO 27001', 'GDPR'],
     integrations: ['Stripe', 'PayPal', 'Square', 'Banking APIs'],
     api: true,
     mobile: true,
@@ -345,6 +338,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
+
   // IT SERVICES
   {
     id: 'cloud-migration-accelerator',
@@ -374,7 +368,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Application modernization',
       'Disaster recovery setup'
     ],
-    targetMarket['Enterprise', 'Mid-market', 'Government', 'Healthcare'],
+    targetMarket: ['Enterprise', 'Mid-market', 'Government', 'Healthcare'],
     ctaLabel: 'Start Migration',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -382,7 +376,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '200%',
     implementationTime: '8-16 weeks',
     supportLevel: '24/7 + migration specialists',
-    compliance['SOC 2', 'ISO 27001', 'HIPAA', 'FedRAMP'],
+    compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'FedRAMP'],
     integrations: ['AWS', 'Azure', 'GCP', 'VMware', 'OpenStack'],
     api: false,
     mobile: false,
@@ -418,7 +412,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Merger and acquisition due diligence',
       'Annual security reviews'
     ],
-    targetMarket['Enterprise', 'Mid-market', 'Healthcare', 'Finance'],
+    targetMarket: ['Enterprise', 'Mid-market', 'Healthcare', 'Finance'],
     ctaLabel: 'Assess Security',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -426,7 +420,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '300%',
     implementationTime: '4-6 weeks',
     supportLevel: 'Business hours + emergency',
-    compliance['ISO 27001', 'NIST', 'SOC 2', 'PCI DSS'],
+    compliance: ['ISO 27001', 'NIST', 'SOC 2', 'PCI DSS'],
     integrations: ['Security tools', 'SIEM systems', 'Vulnerability scanners'],
     api: false,
     mobile: false,
@@ -462,7 +456,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Customer experience transformation',
       'Operational excellence initiatives'
     ],
-    targetMarket['Enterprise', 'Mid-market', 'Government', 'Healthcare'],
+    targetMarket: ['Enterprise', 'Mid-market', 'Government', 'Healthcare'],
     ctaLabel: 'Transform Digitally',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -470,7 +464,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '250%',
     implementationTime: '12-24 weeks',
     supportLevel: 'Business hours + strategic support',
-    compliance['Industry standards', 'Best practices'],
+    compliance: ['Industry standards', 'Best practices'],
     integrations: ['Enterprise systems', 'Cloud platforms', 'Digital tools'],
     api: false,
     mobile: false,
@@ -478,6 +472,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: false,
     smb: true
   },
+
   // EMERGING TECHNOLOGIES
   {
     id: 'quantum-computing-as-a-service',
@@ -507,7 +502,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Logistics optimization',
       'Cryptography research'
     ],
-    targetMarket['Research Institutions', 'Pharmaceutical', 'Finance', 'Technology'],
+    targetMarket: ['Research Institutions', 'Pharmaceutical', 'Finance', 'Technology'],
     ctaLabel: 'Access Quantum',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -515,7 +510,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '400%',
     implementationTime: '6-8 weeks',
     supportLevel: 'Business hours + quantum experts',
-    compliance['Research standards', 'Data security'],
+    compliance: ['Research standards', 'Data security'],
     integrations: ['Classical computing', 'Cloud platforms', 'Research tools'],
     api: true,
     mobile: false,
@@ -551,7 +546,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Luxury goods authentication',
       'Sustainable sourcing verification'
     ],
-    targetMarket['Food & Beverage', 'Pharmaceutical', 'Luxury Goods', 'Manufacturing'],
+    targetMarket: ['Food & Beverage', 'Pharmaceutical', 'Luxury Goods', 'Manufacturing'],
     ctaLabel: 'Track Supply Chain',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -559,7 +554,7 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '300%',
     implementationTime: '8-12 weeks',
     supportLevel: '24/7 + blockchain experts',
-    compliance['FDA', 'EU regulations', 'Industry standards'],
+    compliance: ['FDA', 'EU regulations', 'Industry standards'],
     integrations: ['ERP systems', 'IoT devices', 'Mobile apps'],
     api: true,
     mobile: true,
@@ -595,7 +590,7 @@ export const innovativeServices2026: InnovativeService[] = [
       'Automotive showrooms',
       'Entertainment venues'
     ],
-    targetMarket['Retail', 'Real Estate', 'Automotive', 'Entertainment'],
+    targetMarket: ['Retail', 'Real Estate', 'Automotive', 'Entertainment'],
     ctaLabel: 'Enter Metaverse',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -603,36 +598,37 @@ export const innovativeServices2026: InnovativeService[] = [
     roi: '350%',
     implementationTime: '12-16 weeks',
     supportLevel: 'Business hours + metaverse experts',
-    compliance['Digital rights', 'Privacy regulations'],
+    compliance: ['Digital rights', 'Privacy regulations'],
     integrations: ['E-commerce platforms', 'Payment gateways', 'Social media'],
     api: true,
     mobile: true,
     enterprise: true,
     startup: true,
     smb: true
+  }
 ];
-export const _serviceCategories = [
+
+export const serviceCategories = [
   {
     name: 'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
-    services: innovativeServices2026.filter(s  => s.category === 'Micro SaaS')
+    services: innovativeServices2026.filter(s => s.category === 'Micro SaaS')
   },
   {
     name: 'AI Solutions',
     description: 'Advanced artificial intelligence and machine learning solutions',
-    services: innovativeServices2026.filter(s  => s.category === 'AI Solutions')
+    services: innovativeServices2026.filter(s => s.category === 'AI Solutions')
   },
   {
     name: 'IT Services',
     description: 'Comprehensive IT consulting and implementation services',
-    services: innovativeServices2026.filter(s  => s.category === 'IT Services')
+    services: innovativeServices2026.filter(s => s.category === 'IT Services')
   },
-    services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-  };
-  {;
-    name: 'Emerging Technologies',;
-    description: 'Cutting-edge technologies shaping the future',;
-    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
-  };
+  {
+    name: 'Emerging Technologies',
+    description: 'Cutting-edge technologies shaping the future',
+    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+  }
 ];
-export default innovativeServices2026;}}
+
+export default innovativeServices2026;

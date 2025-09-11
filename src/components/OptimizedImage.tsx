@@ -65,42 +65,34 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
-      {/* Placeholder */}
-      {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-200 to-slate-300 animate-pulse flex items-center justify-center">
-          {placeholder && (
-            <div className="text-slate-500 text-sm">{placeholder}</div>
-          )}
+      {placeholder && !isLoaded && !hasError && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Loading...</div>
         </div>
       )}
-
-      {/* Error state */}
-      {hasError && (
-        <div className="absolute inset-0 bg-slate-200 flex items-center justify-center">
-          <div className="text-slate-500 text-sm">Failed to load image</div>
-        </div>
-      )}
-
-      {/* Actual image */}
+      
       {isInView && (
         <motion.img
           src={src}
           alt={alt}
-          className={`transition-opacity duration-300 ${
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
           onError={handleError}
-          loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: isLoaded ? 1 : 0 }}
           transition={{ duration: 0.3 }}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
         />
+      )}
+      
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Failed to load</div>
+        </div>
       )}
     </div>
   );
 };
-
-export default OptimizedImage;

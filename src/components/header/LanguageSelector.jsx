@@ -1,21 +1,42 @@
-import React {useState, useRef, useEffect } from 'react',;';';
-    ;
-import {Globe, Check} from 'lucide-react',;';';
-    ';';';
-export function LanguageSelector("props": "any) {const [isOpen", setIsOpen] = useState(false);;
-import React { useState } from &apos;react&apos; import {ChevronDown, Globe} from &apos;lucide-react&apos;&apos;' export const LanguageSelector = ("props": "any) => {"} const [isOpen, setIsOpen] = useState(false) const;const [currentLanguage, setCurrentLanguage] = useState(&apos;EN&apos)&apos;' const;const languages = [ {"code": "&apos;EN&apos", "name": "&apos;English&apos", "flag": "&apos;🇺🇸&apos"} {"code": "&apos;ES&apos", "name": "&apos;Español&apos", "flag": "&apos;🇪🇸&apos"} {"code": "&apos;FR&apos", "name": "&apos;Français&apos", "flag": "&apos;🇫🇷&apos"} {"code": "&apos;DE&apos", "name": "&apos;Deutsch&apos", "flag": "&apos;🇩🇪&apos"} {"code": "&apos;IT&apos", "name": "&apos;Italiano&apos", "flag": "&apos;🇮🇹&apos"} {"code": "&apos;PT&apos", "name": "&apos;Português&apos", "flag": "&apos;🇵🇹&apos"} {"code": "&apos;RU&apos", "name": "&apos;Русский&apos", "flag": "&apos;🇷🇺&apos"} {"code": "&apos;ZH&apos", "name": "&apos;中文&apos", "flag": "&apos;🇨🇳&apos"} {"code": "&apos;JA&apos", "name": "&apos;日本語&apos", "flag": "&apos;🇯🇵&apos"} {"code": "&apos;KO&apos", "name": "&apos;한국어&apos", "flag": "&apos;🇰🇷&apos"} ] ;&apos;const handleLanguageChange = ("props": "any) => {setCurrentLanguage(languageCode) setIsOpen(false)'",',';';
-    ;
-&apos}'',';';
-    ';';';
-import React {useState, useRef, useEffect} from 'react';""',';';
-    ';';';
-import React {useState} from 'react' import {ChevronDown, Globe} from 'lucide-react' export const LanguageSelector = ("props": "any) => { const [isOpen", setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('EN') const languages = [ { "code": 'EN', "name": 'English', "flag": '🇺🇸' } {"code": 'ES', "name": 'Español', "flag": '🇪🇸'} {"code": 'FR', "name": 'Français', "flag": '🇫🇷'} {"code": 'DE', "name": 'Deutsch', "flag": '🇩🇪'} {"code": 'IT', "name": 'Italiano', "flag": '🇮🇹'} {"code": 'PT', "name": 'Português', "flag": '🇵🇹'} {"code": 'RU', "name": 'Русский', "flag": '🇷🇺'} {"code": 'ZH', "name": '中文', "flag": '🇨🇳'} {"code": 'JA', "name": '日本語', "flag": '🇯🇵'} {"code": 'KO', "name": '한국어', "flag": '🇰🇷'} ] const handleLanguageChange = ("props": "any) => { setCurrentLanguage(languageCode) setIsOpen(false)'",;',';';
-    ';
-import React { useState, useRef, useEffect } from 'react;',';';
-    ';';';
-import {Globe, Check} from 'lucide-react';';';
-export function LanguageSelector("props": "any) {';';';
-  const [isOpen", setIsOpen] = useState(false);""',';';
-    ';';';
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
-  const menuRef = useRef(null);
+import React, { useState } from 'react';
+import { ChevronDown, Globe } from 'lucide-react';
+export const LanguageSelector = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentLanguage, setCurrentLanguage] = useState('EN');
+    const languages = [
+        { code: 'EN', name: 'English', flag: '🇺🇸' },
+        { code: 'ES', name: 'Español', flag: '🇪🇸' },
+        { code: 'FR', name: 'Français', flag: '🇫🇷' },
+        { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
+        { code: 'IT', name: 'Italiano', flag: '🇮🇹' },
+        { code: 'PT', name: 'Português', flag: '🇵🇹' },
+        { code: 'RU', name: 'Русский', flag: '🇷🇺' },
+        { code: 'ZH', name: '中文', flag: '🇨🇳' },
+        { code: 'JA', name: '日本語', flag: '🇯🇵' },
+        { code: 'KO', name: '한국어', flag: '🇰🇷' }
+    ];
+    const handleLanguageChange = (languageCode) => {
+        setCurrentLanguage(languageCode);
+        setIsOpen(false);
+        // Here you would typically implement language change logic
+    };
+    const currentLang = languages.find(lang => lang.code === currentLanguage);
+    return (<div className="relative">
+      <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">
+        <Globe className="w-4 h-4"/>
+        <span className="text-sm font-medium">{currentLang?.code}</span>
+        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
+      </button>
+
+      {isOpen && (<div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
+          <div className="py-2">
+            {languages.map((language) => (<button key={language.code} onClick={() => handleLanguageChange(language.code)} className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${currentLanguage === language.code
+                    ? 'text-zion-cyan bg-gray-800/50'
+                    : 'text-white hover:text-zion-cyan hover:bg-gray-800/30'}`}>
+                <span className="text-lg">{language.flag}</span>
+                <span>{language.name}</span>
+              </button>))}
+          </div>
+        </div>)}
+    </div>);
+};

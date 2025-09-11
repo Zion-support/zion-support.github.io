@@ -63,7 +63,6 @@ import {
   UserX,
   UserSearch,
   UserCog,
-  UserStar,
   BarChart3,
   PieChart as PieChartIcon,
   LineChart as LineChartIcon
