@@ -38,7 +38,6 @@ export interface CuttingEdge2029Service {
   rating: number;
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
   // AI Consciousness & Emotional Intelligence;
-<<<<<<< HEAD:data-disabled/2029-cutting-edge-innovations-v2.ts
   {
     id: "ai-consciousness-evolution-platform",;
     name: "AI Consciousness Evolution Platform",;

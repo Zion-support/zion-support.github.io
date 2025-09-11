@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-const _DropdownMenuContext = createContext(undefined);
+const DropdownMenuContext = createContext(undefined);
 export function DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value={{ isOpen, setIsOpen }}>
@@ -9,7 +9,7 @@ export function DropdownMenu({ children }) {
     </DropdownMenuContext.Provider>);
 }
 export function DropdownMenuTrigger({ children, asChild = false }) {
-    const _context = useContext(DropdownMenuContext);
+    const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {
@@ -22,12 +22,12 @@ export function DropdownMenuTrigger({ children, asChild = false }) {
     </div>);
 }
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {
-    const _context = useContext(DropdownMenuContext);
+    const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)
         return null;
-    const _alignClasses = {
+    const alignClasses = {
         start: 'left-0',
         center: 'left-1/2 transform -translate-x-1/2',
         end: 'right-0'
@@ -37,10 +37,10 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     </div>);
 }
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {
-    const _context = useContext(DropdownMenuContext);
+    const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuItem must be used within DropdownMenu');
-    const _handleClick = () => {
+    const handleClick = () => {
         if (onClick)
             onClick();
         context.setIsOpen(false);

@@ -1,68 +1,117 @@
-import React, { useState } from 'react';
-import { _Link, useLocation } from 'react-router-dom';
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
-import User from 'lucide-react/dist/esm/icons/user';
-import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
-import Home from 'lucide-react/dist/esm/icons/home';
-import Store from 'lucide-react/dist/esm/icons/store';
-import Users from 'lucide-react/dist/esm/icons/users';
-import Settings from 'lucide-react/dist/esm/icons/settings';
-import { _useAuth } from '@/hooks/useAuth';
-import { _useTranslation } from 'react-i18next';
-import { _cn } from '@/lib/utils';
-import { _Button } from '@/components/ui/button';
 
-import { Link } from 'react-router-dom';
-import { Settings } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { Icon } from 'lucide-react';
-export function MobileMenu({ className }) {
-    const { user, isAuthenticated } = useAuth();
-    const _location = useLocation();
-    const { t } = useTranslation();
-    const [isOpen, setIsOpen] = useState(false);
-    const _toggleMenu = () => setIsOpen(!isOpen);
-    const _navigationItems = [
-        { href: '/', label: t('nav.home'), icon: Home, matches: (path) => path === '/' },
-        { href: '/marketplace', label: t('nav.marketplace'), icon: Store, matches: (path) => path.startsWith('/marketplace') },
-        { href: '/talent', label: t('nav.talent'), icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
-        { href: '/categories', label: t('nav.categories'), icon: Store, matches: (path) => path.startsWith('/categories') },
-        { href: '/equipment', label: t('nav.equipment'), icon: Store, matches: (path) => path.startsWith('/equipment') },
-        { href: '/community', label: t('nav.community'), icon: Users, matches: (path) => path.startsWith('/community') },
-    ];
-    if (isAuthenticated) {
-        navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') });
-    }
-    return (<div className={cn("md:hidden", className)}>
-      {/* Mobile menu button */}
-      <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
-        {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
-      </Button>
+export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
+  const router = useRouter(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const { t } = useTranslation(),
 
-      {/* Mobile menu overlay */}
-      {isOpen && (<div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-          <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
-            <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
-              <h2 className="text-lg font-semibold text-white">Menu</h2>
-              <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20">
-                <X className="h-5 w-5"/>
-              </Button>
+  const baseItems = [
+    {
+      key: 'home',
+      href: '/',
+      icon: Home,
+      matches: (path: string) => path === '/'},
+    {
+      key: 'explore',
+      href: '/talent',
+      icon: Search,
+      matches: (path: string) =>
+        path.startsWith('/talent') ||
+        path.startsWith('/categories') ||
+        path.startsWith('/marketplace')},
+    {
+      key: 'community',
+      href: '/community',
+      icon: MessageCircle,
+      matches: (path: string) =>
+        path.startsWith('/community') || path.startsWith('/forum')},
+    {
+      key: 'post_job',
+      href: '/post-job',
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith('/post-job'),
+      authRequired: true},
+    {
+      key: 'messages',
+      href: '/messages',
+      icon: MessageSquare,
+      matches: (path: string) =>
+        path.startsWith('/messages') || path.startsWith('/inbox'),
+      badge: unreadCount,
+      authRequired: true},
+    {
+      key: 'dashboard',
+      href: '/dashboard',
+      icon: User,
+      matches: (path: string) => path.startsWith('/dashboard'),
+      authRequired: true}],
+
+  const navItems = baseItems.map((item) => ({
+    ...item,
+    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
+
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(
+    (item) => !item.authRequired || (item.authRequired && isAuthenticated)),
+
+  return (
+    <div className="py-6">
+      <div className="flex justify-between items-center px-6 mb-6">
+        <h2 className="text-xl font-bold text-foreground">Menu</h2>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onClose}
+          aria-label="Close menu"
+          title="Close menu"
+        >
+          <X className="h-5 w-5" />
+        </Button>
+      </div>
+
+      <nav className="space-y-1">
+        {visibleItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            aria-label={item.name}
+            className={cn(;
+              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
+              item.matches(router.pathname);
+                ? 'bg-primary/20 text-primary border-l-4 border-primary';
+                : 'text-foreground hover:bg-primary/10 hover:text-primary')}
+            onClick={(e) => {;
+              const routeIsProtected = item.authRequired || isProtectedRoute(item.href),;
+              if (!isAuthenticated && routeIsProtected) {;
+                e.preventDefault(),;
+                // Update URL to include returnTo, then open modal;
+                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true });
+                openLoginModal(item.href);
+                // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.;
+                // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.;
+              }
+}
+ursor/expand-services-advertise-and-build-project-4b36
+              onClose(), // Close mobile menu on any click
+            }}
+          >
+            <div className="relative mr-4">
+              <item.icon className="h-5 w-5" aria-hidden="true" />
+              {item.badge && item.badge > 0 && (
+                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+              )}
             </div>
-
-            {/* Navigation items */}
-            <nav className="p-4 space-y-2">
-              {navigationItems.map((item) => {
-                const _Icon = item.icon;
-                const _isActive = item.matches(location.pathname);
-                return (<Link key={item.href} to={item.href} onClick={toggleMenu} className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors", isActive
-                        ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
-                        : "hover:bg-zion-purple/10 hover:text-zion-cyan")}>
-                    <Icon className="w-5 h-5"/>
-                    <span className="font-medium">{item.label}</span>
-                  </Link>);
-            })}
-            </nav>
+            {item.name}
+          </Link>
+        ))}
+      </nav>
+      <div className="mt-6 px-6">
+        <ModeToggle />
+      </div>
+    </div>
+  )
 
             {/* User section */}
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
@@ -93,4 +142,13 @@ export function MobileMenu({ className }) {
           </div>
         </div>)}
     </div>);
+}
+}
+;
+
+name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
+}
+  );
+}
+
 }

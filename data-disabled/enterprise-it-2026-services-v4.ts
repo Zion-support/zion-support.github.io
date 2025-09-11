@@ -38,7 +38,6 @@ export interface EnterpriseIT2026ServiceV4 {
   rating: number;
 export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
   // Zero-Trust Network Architecture Platform;
-<<<<<<< HEAD:data-disabled/enterprise-it-2026-services-v4.ts
   {
     id: "zero-trust-network-architecture-platform",;
     name: "Zero-Trust Network Architecture Platform",;

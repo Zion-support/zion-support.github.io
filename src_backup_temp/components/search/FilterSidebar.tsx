@@ -16,7 +16,8 @@ import React from 'react';
             >;
               Clear all;
             </button>;
-          </div>;          <button onClick={onClose}"
+          </div>;
+          <button onClick={onClose}"
             className="lg: hidden p-2 hover: b g-zion-blue-light/20 rounded-lg transition-colors"
 "
             <X className="w-5 h-5 text-zion-slate-light"   />          </button>
@@ -33,7 +34,6 @@ import React from 'react';
               Clear all
             </button>
           </div>
-
           {/* Filter groups */"}
           {filters.map((group) => (;";
             <div key={group.key} className="space-y-3">;";

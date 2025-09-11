@@ -1,11 +1,8 @@
-import { _ProductListing  } from '@/types/listings';
+import { ProductListing } from "@/types/listings";
 
-import { Cloud } from 'lucide-react';
-const integrations = [];
-const applications = [];
-const solutions = [];
 // Advanced AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions with real market applications
+
 export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
   // AI-Powered Autonomous Research Assistant
   {
@@ -38,6 +35,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "6-8 weeks",
     integrations: ["Research Databases", "Academic APIs", "Data Sources", "Publication Platforms", "Collaboration Tools"]
   },
+
   // AI-Powered Metaverse Development Platform
   {
     id: "ai-metaverse-development-platform",
@@ -69,6 +67,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "8-10 weeks",
     integrations: ["VR Headsets", "3D Modeling Tools", "Blockchain Platforms", "Payment Gateways", "Social Platforms"]
   },
+
   // AI-Powered Space Technology Analytics
   {
     id: "ai-space-technology-analytics",
@@ -100,6 +99,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "10-12 weeks",
     integrations: ["Satellite APIs", "Ground Stations", "Weather Services", "Navigation Systems", "Space Agencies"]
   },
+
   // AI-Powered Quantum Machine Learning Platform
   {
     id: "ai-quantum-machine-learning",
@@ -131,6 +131,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "12-16 weeks",
     integrations: ["Quantum Computers", "ML Frameworks", "Cloud Platforms", "Data Sources", "AI Models"]
   },
+
   // AI-Powered Environmental Technology Platform
   {
     id: "ai-environmental-technology-platform",
@@ -162,6 +163,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "5-7 weeks",
     integrations: ["IoT Sensors", "Satellite Data", "Weather APIs", "Government Databases", "Sustainability Tools"]
   },
+
   // AI-Powered Entertainment Content Generation
   {
     id: "ai-entertainment-content-generation",
@@ -193,6 +195,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     setupTime: "6-8 weeks",
     integrations: ["Video Editing Tools", "Audio Software", "3D Modeling", "Streaming Platforms", "Social Media"]
   },
+
   // AI-Powered Education Personalization Platform
   {
     id: "ai-education-personalization",

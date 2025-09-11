@@ -1,8 +1,17 @@
-export function slugify(text: string, separator: string = '-'): string {
+export function slugify(text: string): string {
   return text
+    .toString()
     .toLowerCase()
-    .normalize('NFD') // Normalize to decomposed form
-    .replace(/[\u0300-\u036f]/g, '') // Remove accent marks
-    .replace(/[^\w\s-]/g, '') // Remove special characters
-    .replace(/[\s_-]+/g, separator) // Replace spaces and underscores with separator
-    .replace(new RegExp(`^${separator}+|${separator}+$`, 'g'), ''); // Remove leading/trailing separators
+    .trim()
+    .replace(/\s+/g, '-')        // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')    // Remove all non-word chars
+    .replace(/\-\-+/g, '-')      // Replace multiple - with single -
+    .replace(/^-+/, '')          // Trim - from start of text
+    .replace(/-+$/, '');         // Trim - from end of text
+}
+
+export function deslugify(slug: string): string {
+  return slug
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, l => l.toUpperCase());
+}

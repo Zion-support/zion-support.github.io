@@ -1,9 +1,12 @@
-import React from 'react',;',';';';';
-    ';';';';';';
-import { _Route, Routes  } from 'react-router-dom',;';';';';
-    ';';';';';';
-import { _Suspense, lazy } from 'react',;',';';';';
-    ';';';';';';
-import LoadingSpinner from '../components/LoadingSpinner',;';';';';
-    ';';';';';
-// Lazy load error pages';';';';';';
+import { Route, Routes } from "react-router-dom";
+import NotFound from "@/pages/NotFound";
+
+const ErrorRoutes = () => {
+  return (
+    <Routes>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
+
+export default ErrorRoutes;

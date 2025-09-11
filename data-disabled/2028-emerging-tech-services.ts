@@ -35,7 +35,6 @@ export interface EmergingTechService2028 {
   rating: number;
 export const emergingTech2028Services: EmergingTech2028Service[] = [;
   // Biometric Authentication Platform;
-<<<<<<< HEAD:data-disabled/2028-emerging-tech-services.ts
   {
     id: "biometric-authentication-platform",;
     name: "Biometric Authentication Platform",;

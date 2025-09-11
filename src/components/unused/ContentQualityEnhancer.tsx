@@ -4,10 +4,10 @@ import { _DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, Informatio
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { CheckCircle } from 'lucide-react';
 import { Check } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 import { Icon } from 'lucide-react';
 const implementation = [];
 export const _ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section'] }) => {

@@ -13,7 +13,6 @@ export interface QuantumSpaceTechService2026 {
     mobile: string;
     email: string;
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [;
-<<<<<<< HEAD:data-disabled/2026-quantum-space-tech-services.ts
   {
     id: "2026-quantum-space-tech",;
     name: "2026 Quantum Space Tech Platform",;

@@ -12,7 +12,6 @@ export interface PracticalBusinessSolution2028 {
     mobile: string;
     email: string;
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [;
-<<<<<<< HEAD:data-disabled/2028-practical-business-solutions.ts
   {
     id: "2028-practical-business-solution",;
     name: "2028 Practical Business Solution Platform",;

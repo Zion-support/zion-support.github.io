@@ -3,7 +3,7 @@ import { _motion } from 'framer-motion';
 import { _FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap } from 'lucide-react';
 
 import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Target } from 'lucide-react';

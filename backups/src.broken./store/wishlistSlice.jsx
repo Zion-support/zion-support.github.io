@@ -3,7 +3,7 @@ const initialState = {
     items: [],
 };
 export const getApiUrl = () => {
-    var _a, _b;
+    let _a, _b;
     const env = (_b = (_a = import.meta) === null || _a === void 0 ? void 0 : _a.env) !== null && _b !== void 0 ? _b : process.env;
     return env.VITE_API_URL || env.API_URL || '';
 };

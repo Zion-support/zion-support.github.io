@@ -37,7 +37,6 @@ export interface CuttingEdgeInnovativeService {
   rating: number;
 export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [;
   // AI-POWERED INNOVATIVE SERVICES;
-<<<<<<< HEAD:data-disabled/2025-cutting-edge-innovative-services.ts
   {
     id: "ai-autonomous-business-manager",;
     name: "AI Autonomous Business Manager",;

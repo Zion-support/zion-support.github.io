@@ -35,7 +35,6 @@ export interface FuturisticInnovation2028 {
   rating: number;
 export const futuristic2028Services: Futuristic2028Service[] = [;
   // AI-Powered Climate Prediction Platform;
-<<<<<<< HEAD:data-disabled/2028-futuristic-innovations.ts
   {
     id: "ai-climate-prediction-platform",;
     name: "AI Climate Prediction Platform",;

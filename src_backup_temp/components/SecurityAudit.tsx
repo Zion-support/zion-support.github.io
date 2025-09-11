@@ -91,7 +91,8 @@ const "SecurityAudit": "React.FC = ("props": any) => {;
       ;
       <div className="space-y-3">;
         {checks.map((check, index) => (;
-          <div;  return (
+          <div;
+  return (
     <div className="bg-gray-100 p-4 rounded-lg">
       <div className="flex items-center mb-4">
         <Shield className="w-5 h-5 mr-2 text-blue-500" />

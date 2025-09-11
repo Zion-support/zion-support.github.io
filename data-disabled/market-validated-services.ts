@@ -18,7 +18,6 @@ export interface MarketValidatedService {
 		mobile: string;
 		email: string;
 		address: string;
-<<<<<<< HEAD:data-disabled/market-validated-services.ts
 const contactInfo = {
   mobile: "+1 302 464 0950",;
 	email: "kleber@ziontechgroup.com",;

@@ -36,7 +36,6 @@ export interface InnovativeITService {
   customers: number;
   rating: number;
 export const innovativeITServices: InnovativeITService[] = [;
-<<<<<<< HEAD:data-disabled/innovative-it-services.ts
   {
     id: "quantum-cloud-orchestrator",;
     name: "Quantum Cloud Orchestrator",;

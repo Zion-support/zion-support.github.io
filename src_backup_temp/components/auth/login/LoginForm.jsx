@@ -4,7 +4,6 @@ export default function Page("props": "any) {;
 );
 ;
   const onSubmit = async data => {;
-
     if(isSubmitting) return;
 ;
     try {;
@@ -12,19 +11,16 @@ export default function Page("props": "any) {;
       const result = await login(data.email", data.password);
 ;
       if(result.success) {;
-
         navigate('/');
       } else {;
-
         form.setError('root', {;
-
+          "message": 'Login failed.Please check your credentials.'});
           message: 'Login failed.Please check your credentials.'}
     );
       }
     } catch(error) {;
-
       form.setError('root', {;
-
+        "message": 'An error occurred.Please try again.'});
         message: 'An error occurred.Please try again.'}
     );
     } finally {setIsSubmitting(false);}
@@ -66,7 +62,6 @@ export default function Page("props": "any) {;
             </FormItem>;
           )}
         />;
-
         <FormField;
           control={form.control}";
           name="password";
@@ -116,7 +111,6 @@ export default function Page("props": "any) {;
             </Link>;
           </div>;
         </div>;
-
         <Button";
           type="submit";
           className="w-full bg-zion-purple "hover":bg-zion-purple-dark text-white";

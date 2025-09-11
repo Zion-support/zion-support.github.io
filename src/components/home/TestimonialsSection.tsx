@@ -1,10 +1,6 @@
 import React from 'react';
-
-const testimonials = [];
-const solutions = [];
-const implementation = [];
 export function TestimonialsSection() {
-    const _testimonials = [
+    const testimonials = [
         {
             name: 'Sarah Johnson',
             role: 'CTO',
@@ -30,7 +26,7 @@ export function TestimonialsSection() {
             avatar: '👩‍🔬'
         }
     ];
-    const _renderStars = (rating) => {
+    const renderStars = (rating) => {
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>));

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react"; import { _motio
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Shield } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';

@@ -1,5 +1,4 @@
 export const cuttingEdgeMicroSaasServices2025 = [;
-<<<<<<< HEAD:data-disabled/2025-cutting-edge-micro-saas.ts
   {
     id: "customer-success-ai-pro",;
     name: "Customer Success AI Pro",;

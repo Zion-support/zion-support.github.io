@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'; import { _motio
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 import { CheckCircle } from 'lucide-react';
 import { Settings } from 'lucide-react';
 import { Target } from 'lucide-react';

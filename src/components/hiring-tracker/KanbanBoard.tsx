@@ -1,11 +1,11 @@
 import { _useState, useEffect } from "react";
 import { _DragDropContext } from "@hello-pangea/dnd";
-import { _useJobApplications } from "@/hooks/useJobApplications";
-import { _Card, CardContent, CardHeader } from "@/components/ui/card";
-import { _Skeleton } from "@/components/ui/skeleton";
-import { _toast } from "@/hooks/use-toast";
+import { _useJobApplications } from "../../hooks/useJobApplications";
+import { _Card, CardContent, CardHeader } from "../../components/ui/card";
+import { _Skeleton } from "../../components/ui/skeleton";
+import { _toast } from "../../hooks/use-toast";
 import { _KanbanColumn } from "./KanbanColumn";
-import { _useIsMobile } from "@/hooks/use-mobile";
+import { _useIsMobile } from "../../hooks/use-mobile";
 
 const applications = [];
 // Define the kanban board columns based on application statuses

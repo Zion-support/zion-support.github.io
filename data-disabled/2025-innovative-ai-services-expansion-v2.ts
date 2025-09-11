@@ -1,6 +1,5 @@
 export const innovativeAIServices2025ExpansionV2 = [;
   // AI Consciousness Evolution Platform;
-<<<<<<< HEAD:data-disabled/2025-innovative-ai-services-expansion-v2.ts
   {
     id: "ai-consciousness-evolution-platform",;
     name: "AI Consciousness Evolution Platform",;

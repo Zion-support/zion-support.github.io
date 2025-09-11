@@ -12,7 +12,6 @@ export interface CuttingEdgeMicroSaas2028 {
     mobile: string;
     email: string;
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [;
-<<<<<<< HEAD:data-disabled/2028-cutting-edge-micro-saas.ts
   {
     id: "2028-cutting-edge-micro-saas",;
     name: "2028 Cutting-Edge Micro SAAS Platform",;

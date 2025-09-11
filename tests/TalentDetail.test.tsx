@@ -1,1 +1,56 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { render,screen } from @testing-library/react\''; import { MemoryRouter,Route,Routes } from \'react-router-dom\'; import { QueryClient,QueryClientProvider } from \'@tanstack/react-query\'; import { rest } from \'msw\'; import { setupServer } from \'msw/node\'; import TalentDetail from \'@/pages/TalentDetail\'; const server = setupServer( rest.get( \'/api/talent/t-001\',(_req,res,ctx) =>\'; res( ctx.json({ \"id\": \'t-00,1,\'; \"full_name\": Test: Talent\',\'; \"bio\": \'Bi,o,\'; \"skills\": [\';React\'],\'; \"average_rating\": \'4.\',5})))); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()) afterAll(() => server.close()) \"function\": renderPage() { return render( <QueryClientProvider client={new QueryClient()}> <MemoryRouter initialEntries={[\'/talent/t-001\']}>\'; <Routes> <\"Route\": path=\'/talent/:id\' element={<TalentDetail: />} />\'; </Routes> </MemoryRouter> </QueryClientProvider> )} test( \'"renders\": profile data from API\',async () => {\'; renderPage() expect(\"await\": screen.findByTestId( \'talent-name\')).toHaveTextContent(\'';Test: Talent\')})\';
+const { render,screen } from @testing-library/react""; import { MemoryRouter,Route,Routes } from "react-router-dom"; import { QueryClient,QueryClientProvider } from "@tanstack/react-query"; import { rest } from "msw"; import { setupServer } from "msw/node"; import TalentDetail from "@/pages/TalentDetail"; const server = setupServer( rest.get( "/api/talent/t-001",(_req,res,ctx) =>"; res( ctx.json({ id: "t-00,1,"; full_name: Test: Talent","; bio: "Bi,o,"; skills: [";React"],"; average_rating: "4.",5})))); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()) afterAll(() => server.close()) function: renderPage() { return render( <QueryClientProvider client={new QueryClient()}> <MemoryRouter initialEntries={["/talent/t-001"]}>"; <Routes> <Route: path="/talent/:id" element={<TalentDetail: />} />"; </Routes> </MemoryRouter> </QueryClientProvider> )} test( "renders: profile data from API",async () => {"; renderPage() expect(await: screen.findByTestId( "talent-name")).toHaveTextContent("";Test: Talent")})";"""
 import { render,screen } from @testing-library/react''; import { MemoryRouter,Route,Routes } from 'react-router-dom'; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { rest } from 'msw'; import { setupServer } from 'msw/node'; import TalentDetail from '@/pages/TalentDetail'; const server = setupServer( rest.get( '/api/talent/t-001',(_req,res,ctx) =>'; res( ctx.json({ "id": 't-00,1,'; "full_name": Test: Talent,'; "bio": 'Bi,o,'; "skills": [';_React'],'; "average_rating": '4.',5})))); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()) afterAll(() => server.close()) "function": renderPage() { return render( <QueryClientProvider client={new QueryClient()}> <MemoryRouter initialEntries={['/talent/t-001']}>'; <Routes> <"Route": path='/talent/:id' element={<TalentDetail: />} />'; </Routes> </MemoryRouter> </QueryClientProvider> )} test( '"renders": profile data from API',async () => {'; renderPage() expect("await": screen.findByTestId( 'talent-name')).toHaveTextContent('';Test: Talent')})';
+=======
+<<<<<<< HEAD
+import { render,screen } from @testing-library/react''; import { MemoryRouter,Route,Routes } from 'react-router-dom'; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { rest } from 'msw'; import { setupServer } from 'msw/node'; import TalentDetail from '@/pages/TalentDetail'; const server = setupServer( rest.get( '/api/talent/t-001',(_req,res,ctx) =>'; res( ctx.json({ "id": 't-00,1,'; "full_name": Test: Talent,'; "bio": 'Bi,o,'; "skills": [';_React'],'; "average_rating": '4.',5})))); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()) afterAll(() => server.close()) "function": renderPage() { return render( <QueryClientProvider client={new QueryClient()}> <MemoryRouter initialEntries={['/talent/t-001']}>'; <Routes> <"Route": path='/talent/:id' element={<TalentDetail: />} />'; </Routes> </MemoryRouter> </QueryClientProvider> )} test( '"renders": profile data from API',async () => {'; renderPage() expect("await": screen.findByTestId( 'talent-name')).toHaveTextContent('';Test: Talent')})';
+=======
+import { render,screen } from @testing-library/react\''; import { MemoryRouter,Route,Routes } from \'react-router-dom\'; import { QueryClient,QueryClientProvider } from \'@tanstack/react-query\'; import { rest } from \'msw\'; import { setupServer } from \'msw/node\'; import TalentDetail from \'@/pages/TalentDetail\'; const server = setupServer( rest.get( \'/api/talent/t-001\',(_req,res,ctx) =>\'; res( ctx.json({ \"id\": \'t-00,1,\'; \"full_name\": Test: Talent\',\'; \"bio\": \'Bi,o,\'; \"skills\": [\';React\'],\'; \"average_rating\": \'4.\',5})))); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()) afterAll(() => server.close()) \"function\": renderPage() { return render( <QueryClientProvider client={new QueryClient()}> <MemoryRouter initialEntries={[\'/talent/t-001\']}>\'; <Routes> <\"Route\": path=\'/talent/:id\' element={<TalentDetail: />} />\'; </Routes> </MemoryRouter> </QueryClientProvider> )} test( \'"renders\": profile data from API\',async () => {\'; renderPage() expect(\"await\": screen.findByTestId( \'talent-name\')).toHaveTextContent(\'';Test: Talent\')})\';
+const { render,screen } from @testing-library/react""; import { MemoryRouter,Route,Routes } from "react-router-dom"; import { QueryClient,QueryClientProvider } from "@tanstack/react-query"; import { rest } from "msw"; import { setupServer } from "msw/node"; import TalentDetail from "@/pages/TalentDetail"; const server = setupServer( rest.get( "/api/talent/t-001",(_req,res,ctx) =>"; res( ctx.json({ id: "t-00,1,"; full_name: Test: Talent","; bio: "Bi,o,"; skills: [";React"],"; average_rating: "4.",5})))); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()) afterAll(() => server.close()) function: renderPage() { return render( <QueryClientProvider client={new QueryClient()}> <MemoryRouter initialEntries={["/talent/t-001"]}>"; <Routes> <Route: path="/talent/:id" element={<TalentDetail: />} />"; </Routes> </MemoryRouter> </QueryClientProvider> )} test( "renders: profile data from API",async () => {"; renderPage() expect(await: screen.findByTestId( "talent-name")).toHaveTextContent("";Test: Talent")})";"""
+import { render,screen } from @testing-library/react''; import { MemoryRouter,Route,Routes } from 'react-router-dom'; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { rest } from 'msw'; import { setupServer } from 'msw/node'; import TalentDetail from '@/pages/TalentDetail'; const server = setupServer( rest.get( '/api/talent/t-001',(_req,res,ctx) =>'; res( ctx.json({ "id": 't-00,1,'; "full_name": Test: Talent,'; "bio": 'Bi,o,'; "skills": [';_React'],'; "average_rating": '4.',5})))); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()) afterAll(() => server.close()) "function": renderPage() { return render( <QueryClientProvider client={new QueryClient()}> <MemoryRouter initialEntries={['/talent/t-001']}>'; <Routes> <"Route": path='/talent/:id' element={<TalentDetail: />} />'; </Routes> </MemoryRouter> </QueryClientProvider> )} test( '"renders": profile data from API',async () => {'; renderPage() expect("await": screen.findByTestId( 'talent-name')).toHaveTextContent('';Test: Talent')})';
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
+import TalentDetail from '@/pages/TalentDetail';
+
+const server = setupServer(
+  rest.get('/api/talent/t-001', (_req, res, ctx) => {
+    return res(
+      ctx.json({
+        id: 't-001',
+        full_name: 'Test Talent',
+        bio: 'Bio',
+        skills: ['React'],
+        average_rating: 4.5
+      })
+    );
+  })
+);
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
+
+function renderPage() {
+  return render(
+    <QueryClientProvider client={new QueryClient()}>
+      <MemoryRouter initialEntries={['/talent/t-001']}>
+        <Routes>
+          <Route path="/talent/:id" element={<TalentDetail />} />
+        </Routes>
+      </MemoryRouter>
+    </QueryClientProvider>
+  );
+
+test('renders profile data from API', async () => {
+  renderPage();
+  expect(await screen.findByTestId('talent-name')).toHaveTextContent('Test Talent');
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

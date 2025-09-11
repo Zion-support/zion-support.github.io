@@ -2,52 +2,52 @@ import { ServiceCategory, ITService, AIService, MicroSAAS } from '@/types/servic
 export const SERVICE_CATEGORIES: ServiceCategory[] = [;
   {;
     id: 'ai-services',;
-    name: 'AI & Machine Learning',,
-  description: 'Cutting-edge artificial intelligence solutions for business automation and insights',;
-    icon: '',;
+    name: 'AI & Machine Learning',;
+    description: 'Cutting-edge artificial intelligence solutions for business automation and insights',;
+    icon: '🤖',;
     color: 'bg-gradient-to-r from-purple-500 to-pink-500';
   },;
   {;
     id: 'it-services',;
-    name: 'IT Infrastructure & Support',,
-  description: 'Comprehensive IT services for modern business operations',;
-    icon: '',;
+    name: 'IT Infrastructure & Support',;
+    description: 'Comprehensive IT services for modern business operations',;
+    icon: '🖥️',;
     color: 'bg-gradient-to-r from-blue-500 to-cyan-500';
   },;
   {;
     id: 'micro-saas',;
-    name: 'Micro SAAS Solutions',,
-  description: 'Specialized software-as-a-service tools for specific business needs',;
-    icon: '',;
+    name: 'Micro SAAS Solutions',;
+    description: 'Specialized software-as-a-service tools for specific business needs',;
+    icon: '☁️',;
     color: 'bg-gradient-to-r from-green-500 to-emerald-500';
   },;
   {;
     id: 'cybersecurity',;
-    name: 'Cybersecurity & Compliance',,
-  description: 'Advanced security solutions to protect your digital assets',;
-    icon: '',;
+    name: 'Cybersecurity & Compliance',;
+    description: 'Advanced security solutions to protect your digital assets',;
+    icon: '🔒',;
     color: 'bg-gradient-to-r from-red-500 to-orange-500';
   },;
   {;
     id: 'data-analytics',;
-    name: 'Data Analytics & BI',,
-  description: 'Transform data into actionable business intelligence',;
-    icon: '',;
+    name: 'Data Analytics & BI',;
+    description: 'Transform data into actionable business intelligence',;
+    icon: '📊',;
     color: 'bg-gradient-to-r from-indigo-500 to-purple-500';
   },;
   {;
     id: 'cloud-solutions',;
-    name: 'Cloud & DevOps',,
-  description: 'Scalable cloud infrastructure and development operations',;
-    icon: '',;
+    name: 'Cloud & DevOps',;
+    description: 'Scalable cloud infrastructure and development operations',;
+    icon: '☁️',;
     color: 'bg-gradient-to-r from-sky-500 to-blue-500';
   }
 ],;
 export const AI_SERVICES: AIService[] = [;
   {;
     id: 'ai-customer-service',;
-    title: 'AI Customer Service Automation',,
-  description: 'Intelligent chatbot system with natural language processing for 24/7 customer support',;
+    title: 'AI Customer Service Automation',;
+    description: 'Intelligent chatbot system with natural language processing for 24/7 customer support',;
     category: 'AI & Machine Learning',;
     provider: {;
       id: 'zion-ai',;
@@ -107,8 +107,8 @@ export const AI_SERVICES: AIService[] = [;
   },;
   {;
     id: 'ai-content-generation',;
-    title: 'AI Content Generation Suite',,
-  description: 'Advanced AI-powered content creation for blogs, marketing materials, and social media',;
+    title: 'AI Content Generation Suite',;
+    description: 'Advanced AI-powered content creation for blogs, marketing materials, and social media',;
     category: 'AI & Machine Learning',;
     provider: {;
       id: 'zion-content',;
@@ -168,8 +168,8 @@ export const AI_SERVICES: AIService[] = [;
   },;
   {;
     id: 'ai-data-analytics',;
-    title: 'AI-Powered Business Intelligence',,
-  description: 'Intelligent data analysis and predictive insights for data-driven decision making',;
+    title: 'AI-Powered Business Intelligence',;
+    description: 'Intelligent data analysis and predictive insights for data-driven decision making',;
     category: 'AI & Machine Learning',;
     provider: {;
       id: 'zion-analytics',;
@@ -201,158 +201,38 @@ export const AI_SERVICES: AIService[] = [;
         period: 'month',;
         features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution'];
       }
-    },
-    features: ['Predictive analyticsNatural language queriesAutomated insightsReal-time dashboardsCustom ML models'],
-    benefits: ['Faster decision makingPredictive insightsAutomated reportingCost reductionCompetitive advantage'],
-    useCases: ['Sales forecastingCustomer segmentationRisk assessmentPerformance optimizationMarket analysis'],
-    technologies: ['TensorFlowPyTorchScikit-learnPythonReact'],
-    deploymentTime: '3-6 weeks',
-    support: ['Email supportPhone supportData consultationTraining sessionsCustom development'],
-    integrations: ['SalesforceHubSpotGoogle AnalyticsMySQLPostgreSQL'],
-    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],
-    compliance: ['GDPRCCPASOC 2HIPAA'],
-    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = $2;
-    demoUrl: 'https://ziontechgroup.com/demo/ai-analytics',
-    documentationUrl: 'https://docs.ziontechgroup.com/ai-analytics',
-    createdAt: '2024-01-01T00: 00: 00.000Z',
-    updatedAt: '2024-12-19T00: 00: 00.000Z',
-    tags: ['AIAnalyticsBusiness IntelligencePredictive AnalyticsData Science'],
-    aiScore: 96,
-    marketTrend: 'rising',
-    industryFocus: ['FinanceHealthcareRetailManufacturing'],
-    aiModel: 'Custom ML Models + TensorFlow',
-    accuracy: 93.5,
-    trainingData: '100M+ data points across industries',
-    customization: true,
-    apiAccess: true,
-    realTimeProcessing: true}
-],
-
-export const IT_SERVICES: ITService[] = [
-  {
-    id: 'onsite-it-support',
-    title: 'Onsite IT Support & Infrastructure',
-    description: 'Comprehensive onsite IT services including network setup, hardware maintenance, and technical support',
-    category: 'IT Infrastructure & Support',
-    provider: {
-      id: 'zion-it',
-      name: 'Zion IT Services',
-      logo: 'https://ziontechgroup.com/assets/logo.png',
-      rating: 4.8,
-      reviewCount: 178,
-      location: 'Middletown, DE',
-      verified: true,
-      specialties: ['IT SupportInfrastructureNetwork Security']
-    },
-    pricing: {
-      basic: {
-        price: 150,
-        currency: '$',
-        period: 'hour',
-        features: ['Basic troubleshootingHardware installationSoftware setupEmail support']
-      },
-      professional: {
-        price: 125,
-        currency: '$',
-        period: 'hour',
-        features: ['Advanced troubleshootingNetwork configurationSecurity setupPhone supportRemote assistance'],
-        popular: true},
-      enterprise: {
-        price: 100,
-        currency: '$',
-        period: 'hour',
-        features: ['Full IT management24/7 monitoringDedicated technicianEmergency responseSLA guarantee']
-      }
-    },
-    features: ['Network setup & configurationHardware installation & maintenanceSoftware deploymentSecurity implementationBackup solutions'],
-    benefits: ['Reduced downtimeImproved securityCost-effective IT managementExpert technical supportScalable solutions'],
-    useCases: ['Office setupNetwork expansionSecurity upgradesHardware upgradesDisaster recovery'],
-    technologies: ['CiscoMicrosoftVMwareLinuxWindows Server'],
-    deploymentTime: '1-3 days',
-    support: ['Onsite supportRemote assistance24/7 emergency supportPreventive maintenanceTraining sessions'],
-    integrations: ['Active DirectoryOffice 365Google WorkspaceVPN solutionsBackup systems'],
-    security: ['Firewall configurationVPN setupAccess controlsSecurity auditsCompliance monitoring'],
-    compliance: ['SOC 2HIPAAPCI DSSGDPR'],
-    images: ['https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto = $2;
-    demoUrl: 'https://ziontechgroup.com/demo/onsite-it',
-    documentationUrl: 'https://docs.ziontechgroup.com/onsite-it',
-    createdAt: '2024-01-01T00: 00: 00.000Z',
-    updatedAt: '2024-12-19T00: 00: 00.000Z',
-    tags: ['IT SupportInfrastructureNetworkHardwareSecurity'],
-    aiScore: 85,
-    marketTrend: 'stable',
-    industryFocus: ['HealthcareFinanceEducationManufacturing'],
-    serviceType: 'onsite',
-    responseTime: '4 hours',
-    coverage: ['DelawareMarylandPennsylvaniaNew Jersey'],
-    emergencySupport: true,
-    sla: '99.9% uptime guarantee'
-  },
-  {
-    id: 'cloud-migration',
-    title: 'Cloud Migration & Optimization',
-    description: 'Seamless migration to cloud platforms with optimization for performance and cost efficiency',
-    category: 'IT Infrastructure & Support',
-    provider: {
-      id: 'zion-cloud',
-      name: 'Zion Cloud Solutions',
-      logo: 'https://ziontechgroup.com/assets/logo.png',
-      rating: 4.9,
-      reviewCount: 145,
-      location: 'Middletown, DE',
-      verified: true,
-      specialties: ['Cloud MigrationAWSAzureGoogle Cloud']
-    },
-    pricing: {
-      basic: {
-        price: 5000,
-        currency: '$',
-        period: 'project',
-        features: ['Basic migration planningSingle application migrationBasic testingEmail support']
-      },
-      professional: {
-        price: 15000,
-        currency: '$',
-        period: 'project',
-        features: ['Comprehensive migrationMultiple applicationsPerformance optimizationPhone supportTraining'],
-        popular: true},
-      enterprise: {
-        price: 50000,
-        currency: '$',
-        period: 'project',
-        features: ['Full enterprise migrationCustom optimizationDedicated team24/7 supportSLA guarantee']
-      }
-    },
-    features: ['Migration planning & strategyApplication assessmentPerformance optimizationCost optimizationSecurity implementation'],
-    benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced securityBetter performanceDisaster recovery'],
-    useCases: ['Legacy system migrationData center consolidationApplication modernizationDisaster recovery setupCost optimization'],
-    technologies: ['AWSAzureGoogle CloudDockerKubernetes'],
-    deploymentTime: '4-12 weeks',
-    support: ['Project managementTechnical supportTraining sessionsPost-migration supportPerformance monitoring'],
-    integrations: ['Active DirectoryOffice 365SAPOracleCustom applications'],
-    security: ['Identity managementEncryptionCompliance monitoringSecurity auditsAccess controls'],
-    compliance: ['SOC 2HIPAAPCI DSSGDPRFedRAMP'],
-    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = $2;
-    demoUrl: 'https://ziontechgroup.com/demo/cloud-migration',
-    documentationUrl: 'https://docs.ziontechgroup.com/cloud-migration',
-    createdAt: '2024-01-01T00: 00: 00.000Z',
-    updatedAt: '2024-12-19T00: 00: 00.000Z',
-    tags: ['Cloud MigrationAWSAzureOptimizationDevOps'],
-    aiScore: 88,
-    marketTrend: 'rising',
-    industryFocus: ['FinanceHealthcareManufacturingRetail'],
-    serviceType: 'hybrid',
-    responseTime: '24 hours',
-    coverage: ['Global'],
-    emergencySupport: true,
-    sla: '99.95% uptime guarantee'
+    },;
+    features: ['Predictive analyticsNatural language queriesAutomated insightsReal-time dashboardsCustom ML models'],;
+    benefits: ['Faster decision makingPredictive insightsAutomated reportingCost reductionCompetitive advantage'],;
+    useCases: ['Sales forecastingCustomer segmentationRisk assessmentPerformance optimizationMarket analysis'],;
+    technologies: ['TensorFlowPyTorchScikit-learnPythonReact'],;
+    deploymentTime: '3-6 weeks',;
+    support: ['Email supportPhone supportData consultationTraining sessionsCustom development'],;
+    integrations: ['SalesforceHubSpotGoogle AnalyticsMySQLPostgreSQL'],;
+    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],;
+    compliance: ['GDPRCCPASOC 2HIPAA'],;
+    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500'],;
+    demoUrl: 'https://ziontechgroup.com/demo/ai-analytics',;
+    documentationUrl: 'https://docs.ziontechgroup.com/ai-analytics',;
+    createdAt: '2024-01-01T00:00:00.000Z',;
+    updatedAt: '2024-12-19T00:00:00.000Z',;
+    tags: ['AIAnalyticsBusiness IntelligencePredictive AnalyticsData Science'],;
+    aiScore: 96,;
+    marketTrend: 'rising',;
+    industryFocus: ['FinanceHealthcareRetailManufacturing'],;
+    aiModel: 'Custom ML Models + TensorFlow',;
+    accuracy: 93.5,;
+    trainingData: '100M+ data points across industries',;
+    customization: true,;
+    apiAccess: true,;
+    realTimeProcessing: true;
   }
 ],;
 export const IT_SERVICES: ITService[] = [;
   {;
     id: 'onsite-it-support',;
-    title: 'Onsite IT Support & Infrastructure',,
-  description: 'Comprehensive onsite IT services including network setup, hardware maintenance, and technical support',;
+    title: 'Onsite IT Support & Infrastructure',;
+    description: 'Comprehensive onsite IT services including network setup, hardware maintenance, and technical support',;
     category: 'IT Infrastructure & Support',;
     provider: {;
       id: 'zion-it',;
@@ -411,8 +291,8 @@ export const IT_SERVICES: ITService[] = [;
   },;
   {;
     id: 'cloud-migration',;
-    title: 'Cloud Migration & Optimization',,
-  description: 'Seamless migration to cloud platforms with optimization for performance and cost efficiency',;
+    title: 'Cloud Migration & Optimization',;
+    description: 'Seamless migration to cloud platforms with optimization for performance and cost efficiency',;
     category: 'IT Infrastructure & Support',;
     provider: {;
       id: 'zion-cloud',;
@@ -444,98 +324,37 @@ export const IT_SERVICES: ITService[] = [;
         period: 'project',;
         features: ['Full enterprise migrationCustom optimizationDedicated team24/7 supportSLA guarantee'];
       }
-    },
-    features: ['AI-powered lead scoringAutomated follow-upsSales forecastingPipeline managementCustomer insights'],
-    benefits: ['Increased salesBetter customer relationshipsAutomated workflowsData-driven decisionsImproved efficiency'],
-    useCases: ['Sales managementCustomer supportLead generationAccount managementSales forecasting'],
-    technologies: ['ReactNode.jsPostgreSQLRedisAI/ML'],
-    deploymentTime: '1-2 weeks',
-    support: ['Email supportPhone supportVideo tutorialsTraining sessionsCustom development'],
-    integrations: ['GmailOutlookSlackZapierSalesforce'],
-    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],
-    compliance: ['GDPRCCPASOC 2'],
-    images: ['https://images.unsplash.com/photo-1518441902114-f0ce5d1fb743?auto = $2;
-    demoUrl: 'https://ziontechgroup.com/demo/crm',
-    documentationUrl: 'https://docs.ziontechgroup.com/crm',
-    createdAt: '2024-01-01T00: 00: 00.000Z',
-    updatedAt: '2024-12-19T00: 00: 00.000Z',
-    tags: ['CRMSales AutomationAI AnalyticsLead ManagementCustomer Insights'],
-    aiScore: 91,
-    marketTrend: 'rising',
-    industryFocus: ['SalesMarketingReal EstateConsulting'],
-    userLimit: 500,
-    whiteLabel: true,
-    apiRateLimit: '2000 requests/hour',
-    dataRetention: '10 years',
-    backupFrequency: 'Real-time',
-    uptime: 99.95
-  },
-  {
-    id: 'hr-management-saas',
-    title: 'HR Management & Talent Platform',
-    description: 'Comprehensive HR solution with AI-powered recruitment, employee management, and performance analytics',
-    category: 'Micro SAAS Solutions',
-    provider: {
-      id: 'zion-hr',
-      name: 'Zion HR Solutions',
-      logo: 'https://ziontechgroup.com/assets/logo.png',
-      rating: 4.6,
-      reviewCount: 134,
-      location: 'Middletown, DE',
-      verified: true,
-      specialties: ['HR ManagementRecruitmentPerformance Analytics']
-    },
-    pricing: {
-      basic: {
-        price: 39,
-        currency: '$',
-        period: 'month',
-        features: ['Up to 25 employeesBasic HR functionsEmployee portalEmail support']
-      },
-      professional: {
-        price: 89,
-        currency: '$',
-        period: 'month',
-        features: ['Up to 100 employeesAI recruitmentPerformance trackingPriority supportAnalytics'],
-        popular: true},
-      enterprise: {
-        price: 199,
-        currency: '$',
-        period: 'month',
-        features: ['Unlimited employeesCustom AI modelsDedicated supportAPI accessWhite-label']
-      }
-    },
-    features: ['AI-powered recruitmentEmployee onboardingPerformance managementTime trackingBenefits administration'],
-    benefits: ['Faster hiringBetter employee retentionImproved performanceCompliance automationCost savings'],
-    useCases: ['RecruitmentEmployee managementPerformance reviewsTime trackingBenefits management'],
-    technologies: ['ReactNode.jsPostgreSQLRedisAI/ML'],
-    deploymentTime: '2-3 weeks',
-    support: ['Email supportPhone supportHR consultationTraining sessionsCompliance support'],
-    integrations: ['ADPPaychexSlackMicrosoft TeamsGoogle Workspace'],
-    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],
-    compliance: ['GDPRCCPASOC 2HIPAA'],
-    images: ['https://images.unsplash.com/photo-1521791136064-7986c2920216?auto = $2;
-    demoUrl: 'https://ziontechgroup.com/demo/hr-management',
-    documentationUrl: 'https://docs.ziontechgroup.com/hr-management',
-    createdAt: '2024-01-01T00: 00: 00.000Z',
-    updatedAt: '2024-12-19T00: 00: 00.000Z',
-    tags: ['HR ManagementRecruitmentPerformance AnalyticsEmployee PortalCompliance'],
-    aiScore: 87,
-    marketTrend: 'stable',
-    industryFocus: ['TechnologyHealthcareFinanceManufacturing'],
-    userLimit: 2000,
-    whiteLabel: true,
-    apiRateLimit: '1500 requests/hour',
-    dataRetention: '7 years',
-    backupFrequency: 'Daily',
-    uptime: 99.9
+    },;
+    features: ['Migration planning & strategyApplication assessmentPerformance optimizationCost optimizationSecurity implementation'],;
+    benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced securityBetter performanceDisaster recovery'],;
+    useCases: ['Legacy system migrationData center consolidationApplication modernizationDisaster recovery setupCost optimization'],;
+    technologies: ['AWSAzureGoogle CloudDockerKubernetes'],;
+    deploymentTime: '4-12 weeks',;
+    support: ['Project managementTechnical supportTraining sessionsPost-migration supportPerformance monitoring'],;
+    integrations: ['Active DirectoryOffice 365SAPOracleCustom applications'],;
+    security: ['Identity managementEncryptionCompliance monitoringSecurity auditsAccess controls'],;
+    compliance: ['SOC 2HIPAAPCI DSSGDPRFedRAMP'],;
+    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500'],;
+    demoUrl: 'https://ziontechgroup.com/demo/cloud-migration',;
+    documentationUrl: 'https://docs.ziontechgroup.com/cloud-migration',;
+    createdAt: '2024-01-01T00:00:00.000Z',;
+    updatedAt: '2024-12-19T00:00:00.000Z',;
+    tags: ['Cloud MigrationAWSAzureOptimizationDevOps'],;
+    aiScore: 88,;
+    marketTrend: 'rising',;
+    industryFocus: ['FinanceHealthcareManufacturingRetail'],;
+    serviceType: 'hybrid',;
+    responseTime: '24 hours',;
+    coverage: ['Global'],;
+    emergencySupport: true,;
+    sla: '99.95% uptime guarantee';
   }
 ],;
 export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
   {;
     id: 'project-management-saas',;
-    title: 'Smart Project Management Platform',,
-  description: 'Intelligent project management with AI-powered task automation, team collaboration, and progress tracking',;
+    title: 'Smart Project Management Platform',;
+    description: 'Intelligent project management with AI-powered task automation, team collaboration, and progress tracking',;
     category: 'Micro SAAS Solutions',;
     provider: {;
       id: 'zion-projects',;
@@ -595,8 +414,8 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
   },;
   {;
     id: 'crm-saas',;
-    title: 'AI-Powered CRM System',,
-  description: 'Intelligent customer relationship management with AI-driven insights, automation, and predictive analytics',;
+    title: 'AI-Powered CRM System',;
+    description: 'Intelligent customer relationship management with AI-driven insights, automation, and predictive analytics',;
     category: 'Micro SAAS Solutions',;
     provider: {;
       id: 'zion-crm',;
@@ -656,8 +475,8 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
   },;
   {;
     id: 'hr-management-saas',;
-    title: 'HR Management & Talent Platform',,
-  description: 'Comprehensive HR solution with AI-powered recruitment, employee management, and performance analytics',;
+    title: 'HR Management & Talent Platform',;
+    description: 'Comprehensive HR solution with AI-powered recruitment, employee management, and performance analytics',;
     category: 'Micro SAAS Solutions',;
     provider: {;
       id: 'zion-hr',;
@@ -719,8 +538,8 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [;
 export const CYBERSECURITY_SERVICES: ITService[] = [;
   {;
     id: 'security-audit',;
-    title: 'Comprehensive Security Audit & Penetration Testing',,
-  description: 'In-depth security assessment including vulnerability scanning, penetration testing, and compliance verification',;
+    title: 'Comprehensive Security Audit & Penetration Testing',;
+    description: 'In-depth security assessment including vulnerability scanning, penetration testing, and compliance verification',;
     category: 'Cybersecurity & Compliance',;
     provider: {;
       id: 'zion-security',;
@@ -781,8 +600,8 @@ export const CYBERSECURITY_SERVICES: ITService[] = [;
 export const DATA_ANALYTICS_SERVICES: AIService[] = [;
   {;
     id: 'business-intelligence',;
-    title: 'Advanced Business Intelligence Platform',,
-  description: 'Comprehensive BI solution with real-time dashboards, predictive analytics, and automated reporting',;
+    title: 'Advanced Business Intelligence Platform',;
+    description: 'Comprehensive BI solution with real-time dashboards, predictive analytics, and automated reporting',;
     category: 'Data Analytics & BI',;
     provider: {;
       id: 'zion-bi',;
@@ -814,37 +633,38 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [;
         period: 'month',;
         features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution'];
       }
-    },
-    features: ['CI/CD pipeline automationInfrastructure as codeMonitoring & alertingAuto-scalingSecurity scanning'],
-    benefits: ['Faster deploymentsReduced errorsBetter scalabilityCost optimizationImproved security'],
-    useCases: ['Software deploymentInfrastructure managementApplication monitoringSecurity automationPerformance optimization'],
-    technologies: ['DockerKubernetesJenkinsTerraformAWS/Azure'],
-    deploymentTime: '2-4 weeks',
-    support: ['Email supportPhone supportDevOps consultationTraining sessionsCustom development'],
-    integrations: ['GitHubGitLabAWSAzureGoogle Cloud'],
-    security: ['SOC 2 Type IIGDPR compliantSecurity scanningAccess controlsAudit logs'],
-    compliance: ['SOC 2GDPRISO 27001'],
-    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = $2;
-    demoUrl: 'https://ziontechgroup.com/demo/devops-automation',
-    documentationUrl: 'https://docs.ziontechgroup.com/devops-automation',
-    createdAt: '2024-01-01T00: 00: 00.000Z',
-    updatedAt: '2024-12-19T00: 00: 00.000Z',
-    tags: ['DevOpsCI/CDAutomationCloud InfrastructureMonitoring'],
-    aiScore: 86,
-    marketTrend: 'rising',
-    industryFocus: ['TechnologyFinanceHealthcareE-commerce'],
-    serviceType: 'remote',
-    responseTime: '4 hours',
-    coverage: ['Global'],
-    emergencySupport: true,
-    sla: '99.9% uptime guarantee'
+    },;
+    features: ['Real-time dashboardsPredictive analyticsAutomated reportingData visualizationCustom AI models'],;
+    benefits: ['Faster insightsPredictive capabilitiesAutomated reportingBetter decisionsCompetitive advantage'],;
+    useCases: ['Sales analyticsCustomer insightsOperational efficiencyFinancial analysisMarket research'],;
+    technologies: ['Power BITableauPythonRMachine Learning'],;
+    deploymentTime: '4-8 weeks',;
+    support: ['Email supportPhone supportData consultationTraining sessionsCustom development'],;
+    integrations: ['SalesforceHubSpotSAPOracleCustom databases'],;
+    security: ['SOC 2 Type IIGDPR compliantData encryptionAccess controlsAudit logs'],;
+    compliance: ['GDPRCCPASOC 2HIPAA'],;
+    images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500'],;
+    demoUrl: 'https://ziontechgroup.com/demo/business-intelligence',;
+    documentationUrl: 'https://docs.ziontechgroup.com/business-intelligence',;
+    createdAt: '2024-01-01T00:00:00.000Z',;
+    updatedAt: '2024-12-19T00:00:00.000Z',;
+    tags: ['Business IntelligenceData AnalyticsPredictive AnalyticsDashboardsReporting'],;
+    aiScore: 94,;
+    marketTrend: 'rising',;
+    industryFocus: ['FinanceHealthcareRetailManufacturing'],;
+    aiModel: 'Custom ML Models + TensorFlow + PyTorch',;
+    accuracy: 95.2,;
+    trainingData: '500M+ data points across industries',;
+    customization: true,;
+    apiAccess: true,;
+    realTimeProcessing: true;
   }
 ],;
 export const CLOUD_SOLUTIONS: ITService[] = [;
   {;
     id: 'devops-automation',;
-    title: 'DevOps Automation & CI/CD Pipeline',,
-  description: 'Complete DevOps solution with automated deployment, monitoring, and infrastructure management',;
+    title: 'DevOps Automation & CI/CD Pipeline',;
+    description: 'Complete DevOps solution with automated deployment, monitoring, and infrastructure management',;
     category: 'Cloud & DevOps',;
     provider: {;
       id: 'zion-devops',;

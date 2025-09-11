@@ -9,7 +9,7 @@ import { Brain } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Cpu } from 'lucide-react';
 import { Check } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Icon } from 'lucide-react';
 export default ComprehensiveNewServicesShowcase2025;';';
   NEW_MICRO_SAAS_SERVICES_2025,;

@@ -1,12 +1,13 @@
-import React from 'react';
-export default function ServicesLayout(): any ({;
-  children,;
-}: {;
-  children: React && React.ReactNode;
-}) {;
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+=======
 export default /**
  * ServicesLayout - Function description
  */
-function ServicesLayout() {
-  return <div>{children}</div>;
+function ServicesLayout() {  return <div>{children}</div>;
 }

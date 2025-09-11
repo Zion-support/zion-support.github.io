@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { _Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { _Button } from "@/components/ui/button";
-import { _Label } from "@/components/ui/label";
-import { _Checkbox } from "@/components/ui/checkbox";
-import { _toast } from "sonner";
-
-import { Settings } from 'lucide-react';
-import { Check } from 'lucide-react';
-export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "sonner";
+export function IntegrationConnectionModal(_{ isOpen, _onClose, _integration }) {
     const [isConnecting, setIsConnecting] = useState(false);
     const [syncSettings, setSyncSettings] = useState({
         autoCreateContacts: true,
@@ -15,7 +12,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
         syncJobDetails: true,
         syncApplicantData: true
     });
-    const _handleConnectOAuth = () => {
+    const handleConnectOAuth = () => {
         setIsConnecting(true);
         // Simulate OAuth flow 
         setTimeout(() => {
@@ -26,12 +23,12 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
         // In a real application, this would open a popup for OAuth authentication
         // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600');
     };
-    const _handleDisconnect = () => {
+    const handleDisconnect = () => {
         // In a real application, this would revoke the OAuth token
         toast.info(`Disconnected from ${integration.name}`);
         onClose();
     };
-    const _handleSaveSettings = () => {
+    const handleSaveSettings = () => {
         // In a real application, this would save the sync settings
         toast.success("Integration settings saved");
         onClose();

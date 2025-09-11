@@ -92,7 +92,6 @@ export interface EmergingTech2026Service {;
 ;
 export const emergingTech2026Services: EmergingTech2026Service[] = [;
   // Neural Interface Development Platform;
-<<<<<<< HEAD:data-disabled/emerging-tech-2026-services.ts
   {
     id: "neural-interface-dev-platform",;
     name: "Neural Interface Development Platform",;

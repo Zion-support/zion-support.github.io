@@ -1,30 +1,22 @@
-import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
-import { Check } from 'lucide-react';
-const features = [];
-const benefits = [];
-const applications = [];
-const solutions = [];
-
 export class ContentOptimizer {
     static MIN_WORD_COUNT = 300;
     static MIN_HEADING_COUNT = 2;
     static MIN_IMAGE_COUNT = 1;
     static MIN_LINK_COUNT = 3;
     static analyzeContent(content, page) {
-        const _wordCount = this.countWords(content);
-        const _headingCount = this.countHeadings(content);
-        const _imageCount = this.countImages(content);
-        const _linkCount = this.countLinks(content);
-        const _readabilityScore = this.calculateReadabilityScore(content);
-        const _seoScore = this.calculateSEOScore(content, page);
-        const _issues = this.identifyIssues(content, page, {
+        const wordCount = this.countWords(content);
+        const headingCount = this.countHeadings(content);
+        const imageCount = this.countImages(content);
+        const linkCount = this.countLinks(content);
+        const readabilityScore = this.calculateReadabilityScore(content);
+        const seoScore = this.calculateSEOScore(content, page);
+        const issues = this.identifyIssues(content, page, {
             wordCount,
             headingCount,
             imageCount,
             linkCount
         });
-        const _suggestions = this.generateSuggestions(issues, page);
+        const suggestions = this.generateSuggestions(issues, page);
         return {
             page,
             wordCount,
@@ -39,50 +31,50 @@ export class ContentOptimizer {
     }
     static countWords(content) {
         // Remove HTML tags and count words
-        const _textContent = content.replace(/<[^>]*>/g, ' ').trim();
+        const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         return textContent.split(/\s+/).filter(word => word.length > 0).length;
     }
     static countHeadings(content) {
-        const _headingMatches = content.match(/<h[1-6][^>]*>/gi);
+        const headingMatches = content.match(/<h[1-6][^>]*>/gi);
         return headingMatches ? headingMatches.length : 0;
     }
     static countImages(content) {
-        const _imageMatches = content.match(/<img[^>]*>/gi);
+        const imageMatches = content.match(/<img[^>]*>/gi);
         return imageMatches ? imageMatches.length : 0;
     }
     static countLinks(content) {
-        const _linkMatches = content.match(/<a[^>]*>/gi);
+        const linkMatches = content.match(/<a[^>]*>/gi);
         return linkMatches ? linkMatches.length : 0;
     }
     static calculateReadabilityScore(content) {
-        const _textContent = content.replace(/<[^>]*>/g, ' ').trim();
-        const _sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
-        const _words = textContent.split(/\s+/).filter(w => w.length > 0);
-        const _syllables = this.countSyllables(textContent);
+        const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+        const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
+        const words = textContent.split(/\s+/).filter(w => w.length > 0);
+        const syllables = this.countSyllables(textContent);
         if (sentences.length === 0 || words.length === 0)
             return 0;
         // Flesch Reading Ease formula
-        const _score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
+        const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
         return Math.max(0, Math.min(100, score));
     }
     static countSyllables(text) {
         // Simplified syllable counting
-        const _words = text.toLowerCase().split(/\s+/);
-        const _syllableCount = 0;
+        const words = text.toLowerCase().split(/\s+/);
+        let syllableCount = 0;
         words.forEach(word => {
             if (word.length <= 3) {
                 syllableCount += 1;
             }
             else {
                 // Count vowel groups
-                const _vowelGroups = word.match(/[aeiouy]+/g);
+                const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
             }
         });
         return syllableCount;
     }
     static calculateSEOScore(content, page) {
-        const _score = 100;
+        let score = 100;
         // Check for title
         if (!content.includes('<title>'))
             score -= 20;
@@ -95,18 +87,18 @@ export class ContentOptimizer {
         if (!content.includes('<h2>'))
             score -= 5;
         // Check for images with alt text
-        const _images = content.match(/<img[^>]*>/gi) || [];
-        const _imagesWithAlt = images.filter(img => img.includes('alt='));
+        const images = content.match(/<img[^>]*>/gi) || [];
+        const imagesWithAlt = images.filter(img => img.includes('alt='));
         if (images.length > 0 && imagesWithAlt.length === 0)
             score -= 10;
         // Check for internal links
-        const _internalLinks = content.match(/href="\/[^"]*"/g) || [];
+        const internalLinks = content.match(/href="\/[^"]*"/g) || [];
         if (internalLinks.length < 2)
             score -= 10;
         return Math.max(0, score);
     }
     static identifyIssues(content, page, metrics) {
-        const _issues = [];
+        const issues = [];
         // Check for missing headings
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
@@ -144,9 +136,9 @@ export class ContentOptimizer {
             });
         }
         // Check for missing keywords
-        const _pageKeywords = this.extractPageKeywords(page);
-        const _contentKeywords = this.extractContentKeywords(content);
-        const _missingKeywords = pageKeywords.filter(kw => !contentKeywords.includes(kw));
+        const pageKeywords = this.extractPageKeywords(page);
+        const contentKeywords = this.extractContentKeywords(content);
+        const missingKeywords = pageKeywords.filter(kw => !contentKeywords.includes(kw));
         if (missingKeywords.length > 0) {
             issues.push({
                 type: 'missing-keywords',
@@ -158,7 +150,7 @@ export class ContentOptimizer {
         return issues;
     }
     static generateSuggestions(issues, page) {
-        const _suggestions = [];
+        const suggestions = [];
         issues.forEach(issue => {
             switch (issue.type) {
                 case 'missing-headings':
@@ -207,20 +199,20 @@ export class ContentOptimizer {
     }
     static extractPageKeywords(page) {
         // Extract keywords from page path
-        const _segments = page.split('/').filter(Boolean);
-        const _keywords = [];
+        const segments = page.split('/').filter(Boolean);
+        const keywords = [];
         segments.forEach(segment => {
-            const _words = segment.split('-').filter(w => w.length > 2);
+            const words = segment.split('-').filter(w => w.length > 2);
             keywords.push(...words);
         });
         return keywords;
     }
     static extractContentKeywords(content) {
         // Extract potential keywords from content (simplified)
-        const _textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
-        const _words = textContent.split(/\s+/).filter(w => w.length > 3);
+        const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
+        const words = textContent.split(/\s+/).filter(w => w.length > 3);
         // Count word frequency and return most common
-        const _wordCount = {};
+        const wordCount = {};
         words.forEach(word => {
             wordCount[word] = (wordCount[word] || 0) + 1;
         });
@@ -230,7 +222,7 @@ export class ContentOptimizer {
             .map(([word]) => word);
     }
     static generateContentTemplate(page, contentType) {
-        const _templates = {
+        const templates = {
             service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>
@@ -326,15 +318,15 @@ export class ContentOptimizer {
         return templates[contentType] || templates.service;
     }
     static generateMetaDescription(page, contentType) {
-        const _baseDescriptions = {
+        const baseDescriptions = {
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',
             about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.',
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',
             blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.'
         };
-        const _baseDescription = baseDescriptions[contentType];
-        const _pageKeywords = this.extractPageKeywords(page).join(' ');
+        const baseDescription = baseDescriptions[contentType];
+        const pageKeywords = this.extractPageKeywords(page).join(' ');
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
     }
 }
-export const _contentOptimizer = new ContentOptimizer();
+export const contentOptimizer = new ContentOptimizer();

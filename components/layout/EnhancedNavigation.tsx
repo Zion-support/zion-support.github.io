@@ -1,15 +1,120 @@
-import React, { useState } from "react;
-import Link from "next/link;
-import { Menu, X, ChevronDown } from "lucide-react;
-const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+<<<<<<< HEAD
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Search,;
+  User,;
+  Settings,;
+  LogOut,;
+  Bell,;
+  Globe,;
+  Zap,;
+  Brain,;
+  Rocket,;
+  Dna,;
+  DollarSign,;
+  Lock,;
+  Wifi,;
+  Truck,;
+  Gamepad2,;
+  Bot,;
+  Factory,;
+  Car,;
+
+=======
+
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Search, User, 
+  Settings, LogOut, Bell, Globe, Zap
+} from 'lucide-react';
+import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Wifi,
+  Truck,
+  Gamepad2,
+  Bot,
+  Factory,
+  Car,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+} from "lucide-react";
+import Link from "next/link";
+<<<<<<< HEAD
+interface EnhancedNavigationProps {;
+=======
+>>>>>>> origin/main
+interface EnhancedNavigationProps {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+  className?: string;
+}
+
+
+
+
+
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-const EnhancedNavigation = () => {
+
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          {/* comment */}
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -18,18 +123,242 @@ const EnhancedNavigation = () => {
               <div className="text-xl font-bold text-gray-800">Zion Tech Group</div>
             </div>
           </Link>
-          {/* comment */}
+
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
-            {/* comment */}
+            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Home
+            </Link>
+            
+            {/* Services Dropdown */}
             <div className="relative group">
-              <button;
+              <button 
                 className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
                 Services
-                <ChevronDown className="ml-1 w-4 h-4"   />
+                <ChevronDown className="ml-1 w-4 h-4" />
               </button>
-              <div
-                className={"absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? "block" : "hidden"}"}
+              <div 
+                className={`absolute top-full left-0 w-80 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                <Link href="/services/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Services
+                </Link>
+                <Link href="/services/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  IT Services
+                </Link>
+                <Link href="/services/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Micro SaaS
+                </Link>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">AI Products</div>
+                <Link href="/services/ai-email-responder" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Email Responder
+                </Link>
+                <Link href="/services/ai-content-studio" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Content Studio
+                </Link>
+                <Link href="/services/ai-support-desk" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Support Desk
+                </Link>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">IT & Cloud</div>
+                <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Development
+                </Link>
+                <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Cloud Services
+                </Link>
+                <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Web Development
+                </Link>
+                <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Mobile Development
+                </Link>
+                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Blockchain Solutions
+                </Link>
+                <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  IoT Platforms
+                </Link>
+                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Cybersecurity
+                </Link>
+              </div>
+            </div>
+
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                onMouseEnter={() => setSolutionsOpen(true)}
+                onMouseLeave={() => setSolutionsOpen(false)}
+              >
+                Solutions
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              <div 
+                className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
+                onMouseEnter={() => setSolutionsOpen(true)}
+                onMouseLeave={() => setSolutionsOpen(false)}
+              >
+                <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Enterprise Solutions
+                </Link>
+                <Link href="/solutions/small-business" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Small Business
+                </Link>
+                <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Startups
+                </Link>
+                <Link href="/solutions/healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Healthcare
+                </Link>
+                <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Finance
+                </Link>
+                <Link href="/case-studies" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Case Studies
+                </Link>
+              </div>
+            </div>
+
+            <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Products
+            </Link>
+            <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Services
+            </Link>
+            <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
+              About
+            </Link>
+            <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Blog
+            </Link>
+            <Link href="/careers" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Careers
+            </Link>
+            <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Contact
+            </Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:block">
+            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block">
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden text-gray-600 hover:text-gray-900"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden border-t border-gray-200 py-4">
+            <div className="space-y-2">
+              <Link href="/" className="block py-2 text-gray-600 hover:text-blue-600">
+                Home
+              </Link>
+              <div className="py-2">
+                <div className="text-gray-600 font-semibold mb-2">Services</div>
+                <div className="pl-4 space-y-2">
+                  <Link href="/services/ai-services" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Services
+                  </Link>
+                  <Link href="/services/it-services" className="block py-1 text-gray-500 hover:text-blue-600">
+                    IT Services
+                  </Link>
+                  <Link href="/services/micro-saas" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Micro SaaS
+                  </Link>
+                  <div className="text-xs uppercase text-gray-400 mt-2">AI Products</div>
+                  <Link href="/services/ai-email-responder" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Email Responder
+                  </Link>
+                  <Link href="/services/ai-content-studio" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Content Studio
+                  </Link>
+                  <Link href="/services/ai-support-desk" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Support Desk
+                  </Link>
+                  <Link href="/services/ai-development" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Development
+                  </Link>
+                  <Link href="/services/cloud-services" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Cloud Services
+                  </Link>
+                  <Link href="/services/web-development" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Web Development
+                  </Link>
+                  <Link href="/services/mobile-development" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Mobile Development
+                  </Link>
+                  <Link href="/services/blockchain-solutions" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Blockchain Solutions
+                  </Link>
+                  <Link href="/services/iot-platforms" className="block py-1 text-gray-500 hover:text-blue-600">
+                    IoT Platforms
+                  </Link>
+                  <Link href="/services/cybersecurity" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Cybersecurity
+                  </Link>
+                </div>
+              </div>
+              <div className="py-2">
+                <div className="text-gray-600 font-semibold mb-2">Solutions</div>
+                <div className="pl-4 space-y-2">
+                  <Link href="/solutions/enterprise" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Enterprise Solutions
+                  </Link>
+                  <Link href="/solutions/small-business" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Small Business
+                  </Link>
+                  <Link href="/solutions/startups" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Startups
+                  </Link>
+                  <Link href="/solutions/healthcare" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Healthcare
+                  </Link>
+                  <Link href="/solutions/finance" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Finance
+                  </Link>
+                </div>
+              </div>
+              <Link href="/products" className="block py-2 text-gray-600 hover:text-blue-600">
+                Products
+              </Link>
+              <Link href="/about" className="block py-2 text-gray-600 hover:text-blue-600">
+                About
+              </Link>
+              <Link href="/blog" className="block py-2 text-gray-600 hover:text-blue-600">
+                Blog
+              </Link>
+              <Link href="/careers" className="block py-2 text-gray-600 hover:text-blue-600">
+                Careers
+              </Link>
+              <Link href="/contact" className="block py-2 text-gray-600 hover:text-blue-600">
+                Contact
+              </Link>
+              <div className="pt-4">
+                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center">
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default EnhancedNavigation;
