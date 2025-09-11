@@ -38,11 +38,3 @@ export interface SpaceColonization2029Service {
   rating: number;
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
   // Space Colonization & Mining Services;
-<<<<<<< HEAD:data-disabled/2029-space-colonization-services.ts
-  {
-    id: "mars-colonization-automation-platform",;
-    name: "Mars Colonization Automation Platform",;
-    tagline: "Automate Mars colonization process with AI and robotics",;
-    price: "$99,999",;
-    period: "/month",;
-    description: "Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.",;

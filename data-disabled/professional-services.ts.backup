@@ -12,10 +12,3 @@ export interface ProfessionalService {
     mobile: string;
     email: string;
 export const professionalServices: ProfessionalService[] = [;
-<<<<<<< HEAD:data-disabled/professional-services.ts
-  {
-    id: "it-consulting",;
-    name: "IT Consulting Services",;
-    tagline: "Expert IT consulting for business growth",;
-    price: "$120/hour",;
-    description: "Professional IT consulting services to help businesses optimize their technology investments.",;

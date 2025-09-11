@@ -39,11 +39,3 @@ export interface EmergingTechService {
   rating: number;
 export const emergingTechServices: EmergingTechService[] = [;
   // Quantum Internet Security Platform;
-<<<<<<< HEAD:data-disabled/emerging-tech-services.ts
-  {
-    id: "quantum-internet-security-platform",;
-    name: "Quantum Internet Security Platform",;
-    tagline: "Unbreakable security using quantum cryptography for the post-quantum era",;
-    price: "$12,999",;
-    period: "/month",;
-    description: "Next-generation quantum internet security platform that provides unbreakable encryption using quantum key distribution and post-quantum cryptography algorithms.",;

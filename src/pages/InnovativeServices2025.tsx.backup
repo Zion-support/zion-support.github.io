@@ -17,7 +17,6 @@ const _InnovativeServices2025 = () => {
                     name: "AI-Powered HR Assistant",
                     description: "Revolutionary HR automation platform that transforms recruitment, onboarding, and employee management through artificial intelligence.",
                     features: [
-=======
 import { Link } from 'react-router-dom';
 const InnovativeServices2025 = () => {
     const innovativeServices = [
@@ -139,8 +138,3 @@ const InnovativeServices2025 = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-=======
-    </div>)};export default InnovativeServices2025;

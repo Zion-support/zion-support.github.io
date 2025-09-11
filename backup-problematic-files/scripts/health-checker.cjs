@@ -72,5 +72,3 @@ checker.checkFileExists('next.config.js', 'Next.js configuration');
 checker.checkPackageJson();
 checker.checkNodeModules();
 checker.generateReport();
-<<<<<<< HEAD=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

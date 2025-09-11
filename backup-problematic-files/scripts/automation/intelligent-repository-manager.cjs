@@ -72,8 +72,4 @@
       this.log(`Error resolving "conflicts"`)
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
-<<<<<<< HEAD
     console.error('Failed to start Intelligent Repository "Manager")
-=======
-    console.error('Failed to start Intelligent Repository "Manager")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

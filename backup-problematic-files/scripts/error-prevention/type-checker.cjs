@@ -27,20 +27,6 @@ class TypeChecker {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-<<<<<<< HEAD
-=======
-      child.on('close', (code) => {}
-        if ( {})
-          console.log('Type check passed ✓')) {}
-     {}
-          console.log('Type check passed ✓')}} else {}
-          console.log('Type check failed ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
-<<<<<<< HEAD
-=======
-          
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           // Log type errors for manual review;
           this.logTypeErrors(output + errorOutput)};
       })} catch (error) {}
@@ -51,10 +37,6 @@ class TypeChecker {}
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
-<<<<<<< HEAD
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -91,8 +73,4 @@ if ( {})
 });
   
   checker.start().catch(console.error)};
-<<<<<<< HEAD
 module.exports = TypeChecker;
-=======
-module.exports = TypeChecker;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

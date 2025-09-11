@@ -76,5 +76,3 @@ class BundleAnalyzer {
 const analyzer = new BundleAnalyzer();
 analyzer.analyzeBundle();
 analyzer.generateReport();
-<<<<<<< HEAD=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

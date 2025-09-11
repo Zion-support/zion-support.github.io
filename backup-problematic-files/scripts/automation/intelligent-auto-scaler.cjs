@@ -3,7 +3,6 @@
  * Intelligent Auto-Scaler;
  * AI-powered auto-scaling system for PM2 processes;
  */
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -32,7 +31,3 @@ const { execSync } = require('child_process')
         "action"
       this.log(` Strategy optimization "failed"`)
       "onlineProcesses"
-<<<<<<< HEAD
-      this.log(` Fatal "error"`)
-=======
-      this.log(` Fatal "error"`)
