@@ -21,6 +21,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/utils/*": ["./src/utils/*"],
@@ -31,6 +32,29 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+=======
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "pages",
+    "components",
+    "types",
+>>>>>>> origin/chore/stabilize-build-minimal-index
     ".next/types/**/*.ts"
   ],
   "exclude": [

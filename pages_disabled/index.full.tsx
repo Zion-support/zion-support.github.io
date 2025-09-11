@@ -14,6 +14,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
+<<<<<<< HEAD:pages/index.tsx
       <div className="relative">
         <Landing />
       </div>
@@ -475,5 +476,10 @@ export default function Home() {
  </main>
 >>>>>>> origin/chore/futuristic-front-automation
     </div>
+=======
+      {/* Footer */}
+      <UltraFuturisticFooter2029 />
+    </>
+>>>>>>> origin/chore/stabilize-build-minimal-index:pages_disabled/index.full.tsx
   );
 }
