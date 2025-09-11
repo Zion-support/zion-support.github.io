@@ -181,6 +181,43 @@ export const MICRO_SAAS_SERVICES: ProductListing[] = [
     aiScore: 91,
     link: "https://ziontechgroup.com"
   }
+  ,
+  {
+    id: "ai-agent-016",
+    title: "AI Service Desk Agent",
+    description: "Autonomous L1/L2 support agent that triages tickets, suggests fixes, and auto-resolves common issues across Slack, Teams, email, and web.",
+    price: "$129",
+    category: "AI Operations",
+    images: ["https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=800"],
+    rating: 4.8,
+    reviewCount: 76,
+    aiScore: 93,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "sales-copilot-017",
+    title: "Sales Copilot for CRM",
+    description: "AI copilot that writes emails, updates CRM records, summarizes calls, and recommends next-best actions for your pipeline.",
+    price: "$179",
+    category: "AI Business Solutions",
+    images: ["https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800"],
+    rating: 4.9,
+    reviewCount: 132,
+    aiScore: 95,
+    link: "https://ziontechgroup.com"
+  },
+  {
+    id: "sec-compliance-018",
+    title: "Security Compliance Tracker",
+    description: "Automated SOC2/ISO27001 tracker with evidence collection, policy templates, risk register, and audit-ready reports.",
+    price: "$249",
+    category: "Cybersecurity",
+    images: ["https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800"],
+    rating: 4.7,
+    reviewCount: 88,
+    aiScore: 90,
+    link: "https://ziontechgroup.com"
+  }
 ];
 
 export const MICRO_SAAS_CATEGORIES = [
