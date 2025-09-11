@@ -1,13 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/AppMinimal.tsx"
   ],
   "exclude": [
     "node_modules",
@@ -21,9 +15,22 @@
     "src_backup",
     "src.broken",
     "src.corrupted",
+    "src/utils/**",
+    "src/pages/**",
+    "src/routes/**",
+    "src/services/**",
+    "src/store/**",
+    "src/test/**",
+    "src/tests/**",
+    "src/types/**",
     "utils",
     "supabase",
-    "scripts"
+    "scripts",
+    "types/**",
+    "pages/**",
+    "services/**",
+    "store/**",
+    "utils/**"
   ]
 }
 
