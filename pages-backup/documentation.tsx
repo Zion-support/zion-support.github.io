@@ -18,7 +18,3 @@ const Component = () => {
             </div>;
         </section>;
       </div>;
-    </MainLayout>;
-  )}
-
-"export default Documentation

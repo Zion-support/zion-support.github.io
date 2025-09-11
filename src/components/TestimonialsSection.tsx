@@ -1,412 +1,106 @@
-import React, { useState } from 'react';';
-export const TestimonialsSection: Reac t.FC = () => {';';
-import React, { useState } from 'react';
-export const "TestimonialsSection": "React.FC = () => {;
-import { motion", AnimatePresence  } from 'framer-motion';
-;
-export default function Page("props": "any) {;
-",;
-  {;
-    "id": "4",";
-    "name": "James Thompson",";
-    "position": "CEO",";
-    "company": "FinTech Innovations",";
-    "avatar": "/images/testimonials/james-thompson.jpg",;
-    "rating": "5",";
-    "content": "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.",";
-    "industry": "Finance",";
-    "results": "["25% market outperformance"", "Real-time analytics", "Risk reduction"],;
-    "verified": "tru e;
-  "},;
-  {;
-    "id": "5",";
-    "name": "Lisa Park",";
-    "position": "Head of Marketing",";
-    "company": "E-commerce Dynamics",";
-    "avatar": "/images/testimonials/lisa-park.jpg",;
-    "rating": "5",";
-    "content": "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.",";
-    "industry": "E-commerce",";
-    "results": "["150% conversion increase"", "80% cost reduction", "Personalized campaigns"],;
-    "verified": "tru e;
-  "}";
-    "company": "Healthcare Innovations",;";
-    "content": "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
-    "rating": "5",;";
-    "industry": "Healthcare",;";
-    "project": "Cloud Migration & Optimization"};export const TestimonialsSection: React.FC = () => {
-import { motion, AnimatePresence  } from 'framer-motion';
-export default function Page(props: any) {
-,
-  {
-    id: 4,"
-    name: "James Thompson","
-    position: "CEO","
-    company: "FinTech Innovations","
-    avatar: "/images/testimonials/james-thompson.jpg",
-    rating: 5,"
-    content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.","
-    industry: "Finance","
-    results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],
-    verified: tru e
-  },
-  {
-    id: 5,"
-    name: "Lisa Park","
-    position: "Head of Marketing","
-    company: "E-commerce Dynamics","
-    avatar: "/images/testimonials/lisa-park.jpg",
-    rating: 5,"
-    content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.","
-    industry: "E-commerce","
-    results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
-    verified: tru e
-  }"
-    company: "Healthcare Innovations",;"
-import React, { useState } from 'react';
-export const TestimonialsSection: React.FC = () => {;
-import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page(props: any) {;
-,;
-  {;
-    id: 4,";
-    name: "James Thompson",";
-    position: "CEO",";
-    company: "FinTech Innovations",";
-    avatar: "/images/testimonials/james-thompson.jpg",;
-    rating: 5,";
-    content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.",";
-    industry: "Finance",";
-    results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],;
-    verified: tru e;
-  },;
-  {;
-    id: 5,";
-    name: "Lisa Park",";
-    position: "Head of Marketing",";
-    company: "E-commerce Dynamics",";
-    avatar: "/images/testimonials/lisa-park.jpg",;
-    rating: 5,";
-    content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.",";
-    industry: "E-commerce",";
-    results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],;
-    verified: tru e;
-  }";
-    company: "Healthcare Innovations",;";
-export const TestimonialsSection: React.FC = props {
-  const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
-  const [currentTestimonial, setCurrentTestimonial] = useState<any>(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState<any>(true) }}};
-;
-  // Auto - play functionality;
-  React.useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};  // Auto - play functionality
-  React.useEffect(() => {
-  // TODO: Add dependencies if needed
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!isAutoPlaying) return}, 5000) ;
-    return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;
-;
-  return (";
-    <section className="py-20 bg-zion-blue-dark">";
-      <div className="container mx-auto px-4">";
-        <div className="text-center mb-16">"          <h2 className="text-3xl "md": "tex t-4xl font-bold text-white mb-4">;
-            What Our Users Say;
-          </h2>";
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
-            Join thousands of satisfied professionals who trust Zion for their technology needs;
-          </p>;
-        </div>";
-        <div className="grid grid-cols-1 "md": gri d-cols-3 gap-8 max-w-6xl mx-auto">;
-          {testimonials.map((testimonial", index) => (;
-            <div;
-              key={index}";
-              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 "hover": "borde r-zion-purple/50 transition-all duration-300 "hover": transform "hover":scale-105 group";
-              {/* Quote icon */"}";
-              <div className="mb-4">";
-                <Quote className="w-8 h-8 text-zion-cyan opacity-60"   />              </div>;
-              {/* Rating */}";
-              <div className="flex items-center mb-4"> {[...Array(testimonial.rating)].map((_, i) => (;";  return ("
-    <section className="py-20 bg-zion-blue-dark">"
-      <div className="container mx-auto px-4">"
-        <div className="text-center mb-16">"          <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
-            What Our Users Say
-          </h2>"
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-            Join thousands of satisfied professionals who trust Zion for their technology needs
+import React from 'react';
+import { Star, Quote } from 'lucide-react';
+export const TestimonialsSection = () => {
+    const testimonials = [
+        {
+            id: 1,
+            name: "Sarah Johnson",
+            comp: "TechCorp Solutions",
+            role: "CTO",
+            content: "Zion Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.",
+            rating: 5,
+            avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+            id: 2,
+            name: "Michael Chen",
+            comp: "InnovateTech",
+            role: "VP of Engineering",
+            content: "The team at Zion delivered exceptional results. Their AI-powered security solutions protected our systems from advanced threats while maintaining optimal performance.",
+            rating: 5,
+            avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+            id: 3,
+            name: "Emily Rodriguez",
+            comp: "DataFlow Systems",
+            role: "Data Science Director",
+            content: "Working with Zion Tech Group was a game-changer. Their AI business intelligence platform gave us insights we never had before, driving 25% revenue growth.",
+            rating: 5,
+            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+            id: 4,
+            name: "David Kim",
+            comp: "Quantum Industries",
+            role: "Research Director",
+            content: "Zion's quantum computing expertise is unmatched. They helped us implement cutting-edge quantum algorithms that solved problems we thought were impossible.",
+            rating: 5,
+            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+            id: 5,
+            name: "Lisa Thompson",
+            comp: "GreenTech Solutions",
+            role: "Sustainability Officer",
+            content: "Zion's Green IT solutions helped us reduce our carbon footprint by 30% while improving our technology infrastructure. Truly innovative approach.",
+            rating: 5,
+            avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+            id: 6,
+            name: "Robert Wilson",
+            comp: "SpaceTech Ventures",
+            role: "CEO",
+            content: "The space technology solutions from Zion Tech Group are revolutionary. They helped us develop satellite systems that exceeded all our expectations.",
+            rating: 5,
+            avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+        }
+    ];
+    return (<section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">
+            <Quote className="w-4 h-4 mr-2"/>
+            Client Success Stories
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            What Our Clients Say
+          </h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Discover how Zion Tech Group has transformed businesses across industries 
+            with our cutting-edge technology solutions.
           </p>
-        </div>"
-        <div className="grid grid-cols-1 md: gri d-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}"
-              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover: borde r-zion-purple/50 transition-all duration-300 hover: transform hover:scale-105 group"
-              {/* Quote icon */}"
-              <div className="mb-4">"
-                <Quote className="w-8 h-8 text-zion-cyan opacity-60"   />              </div>
-              {/* Rating */}"
-              <div className="flex items-center mb-4"> {[...Array(testimonial.rating)].map((_, i) => (;"
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />                ))}
-              </div>
-              {/* Content */}"
-              <p className="text-zion-slate-light mb-6 leading-relaxed">"
-                "{testimonial.content}"
-              </p>
-              {/* Author */}"
-              <div className="flex items-center">"
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">
-                  {testimonial.avatar}
-                </div>
-                <div>"
-                  <div className="text-white font-semibold">{testimonial.name}</div>"
-                  <div className="text-zion-slate-light text-sm">{testimonial.role}</div>"
-                  <div className="text-zion-cyan text-sm">{testimonial.comp}</div>
-                </div>
-              </div>
-            </div>) ) }
-        </div>
-        {/* Trust indicators */}"
-        <div className="text-center mt-16">"
-          <div className="inline-flex items-center space-x-6 bg-zion-blue/50 backdrop-blur-sm border border-zion-cyan/20 rounded-full px-8 py-4">"
-            <div className="flex items-center space-x-2">"
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
-              <span className="text-zion-cyan text-sm font-medium">Verified Reviews</span>
-            </div>"
-            <div className="w-px h-4 bg-zion-cyan/30"></div>"
-            <div className="flex items-center space-x-2">"
-              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>"
-              <span className="text-zion-cyan text-sm font-medium">Real Users</span>
-            </div>"
-            <div className="w-px h-4 bg-zion-cyan/30"></div>"
-            <div className="flex items-center space-x-2">"
-              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>"
-              <span className="text-zion-cyan text-sm font-medium">Recent Feedback</span>
-            </div>
-          </div>
-        </div>
-        {/* Stats Section */}
-        <motion.div";
-          className="text-center mb-16";
-          initial={{ "opacity": "0", "y": "3 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.8 "}}
-        >";
-          <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-6">;
-            Trusted by Industry Leaders;
-          </h2>";
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-            See how Zion Tech Group is transforming businesses across industries with our cutting-edge AI solutions;
-          </p>;
-        </motion.div>;
-        {/* Stats Section */"}
-        <motion.div";
-          className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-20";
-          initial={{ "opacity": 0", "y": "3 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
-          transition={{ "duration": "0.8", "delay": "0.2 "}}
-        >;
-          {stats.map((stat, index) => (";
-            <div key={index} className="text-center">";
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">";
-                <stat.icon className="w-8 h-8 text-white" />;
-              </div>";
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>";
-              <div className="text-lg font-semibold text-cyan-400 mb-1">{stat.label}</div>";
-              <div className="text-sm text-gray-400">{stat.description}</div>;
-            </div>;              initial={{ opacity: 0, x: 5 0 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}"
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12"
-            >"
-              <div className="flex flex-col lg: fle x-row items-start gap-8">
-                {/* Testimonial Content */}"
-                <div className="flex-1">"
-                  <div className="flex items-center gap-2 mb-4">
-                    {[...Array(current.rating)].map((_, i) => ("
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />
-                    ))}
-                  </div>
-                  <Quote className="w-8 h-8 text-cyan - 400 mb-4"  />
-                  <blockquote className="text-lg md: tex t-xl text-white mb-6 leading -relaxed">
-                    "{current.content}"
-                  </blockquote>
-                  <div  className="space - y-3">
-                    <h4 className="text-xl font - semibold text-white">{current.name}</h4>
-                    <p className="text-cyan -400">{current.position}</p>
-                    <p className="text-gray -300">{current.company}</p>
-                    <p className="text-sm text-gray -400">{current.industry} Industry</p>                  </div>
-                </div>
-                {/* Results and Verification */}"
-                <div className="lg:w-80 space-y-6">
-                  {/* Verification Badge */}
-                  {current.verified && ("
-                    <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
-                    </div>
-                  )}
-                  {/* Results */}"
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-4">"
-                    <h5 className="text-white font-semibold mb-3">Key Results</h5>"
-                    <ul className="space-y-2">
-                      {current.results.map((result, index) => ("
-                        <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"   />                          {result}
-                        </li>) ) }
-                    </ul>;
-                  </div>;
-                  {/* Industry Badge */}";
-                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg p-3 text-center">";
-                    <span className="text-cyan-400 text-sm font-medium">{current.industry}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </AnimatePresence>;
-          {/* Navigation Controls */}";
-          <div className="flex items-center justify-center mt-8 gap-4">;
-            <button;
-              onClick={prevTestimonial}";
-              className="p-3 bg-white/10 "hover": "b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 "hover": scal e-110";
-            >";
-              <ChevronLeft className="w-5 h-5"   />            </button>;
-            {/* Dots */"}";
-            <div className="flex gap-2">;
-              {testimonials.map((_, index) => (;
-                <button;
-                  key={index}
-                  onClick={() => goToTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial';
-                      ? 'bg-cyan-400 scale-125'';
-                      : 'bg-white/30 "hover": "b g-white/50'`;
-                  "}`}`;                  {current.verified && (";
-                    <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">";
-                      <CheckCircle className="w-5 h-5 text-green-400"   />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>;
-                    </div>;
-                  )}
-;
-                  {/* Results */}";
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-4">";
-                    <h5 className="text-white font-semibold mb-3">Key Results</h5>";
-                    <ul className="space-y-2">;
-                      {current.results.map((result, index) => (";
-                        <li key={index} className="flex items-center gap-2 text-sm text-gray-300">";
-                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0"   />                          {result}
-                        </li>) ) }
-                    </ul>;
-                  </div>;
-                  {/* Industry Badge */}";
-                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg p-3 text-center">";
-                    <span className="text-cyan-400 text-sm font-medium">{current.industry}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </AnimatePresence>;
-          {/* Navigation Controls */}";
-          <div className="flex items-center justify-center mt-8 gap-4">;
-            <button;
-              onClick={prevTestimonial}";
-              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110";
-            >";
-              <ChevronLeft className="w-5 h-5"   />            </button>;
-            {/* Dots */}";
-            <div className="flex gap-2">;
-              {testimonials.map((_, index) => (;
-                <button;
-                  key={index}
-                  onClick={() => goToTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial';
-                      ? 'bg-cyan-400 scale-125'';
-                      : 'bg-white/30 hover: b g-white/50'`;
-                  }`}`;
-            </div>
-            <button
-              onClick={nextTestimonial}"
-              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110"
-            >"
-              <ChevronRight className="w-5 h-5"   />            </button>
-          </div>
-          {/* Auto-play Toggle */}"
-          <div className="flex justify-center mt-4">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}`
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying'
-                  ? 'bg-cyan-500 text-white''
-                  : 'bg-white/10 text-gray-300 hover: b g-white/20'`
-              }`}
-            >
-              {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation
-            </button>
-          </div>
         </div>
 
-            </div>;
-            <button;
-              onClick={nextTestimonial}";
-              className="p-3 bg-white/10 hover: b g-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover: scal e-110";
-            >";
-              <ChevronRight className="w-5 h-5"   />            </button>;
-          </div>;
-          {/* Auto-play Toggle */}";
-          <div className="flex justify-center mt-4">;
-            <button;
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}`;
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying';
-                  ? 'bg-cyan-500 text-white'';
-                  : 'bg-white/10 text-gray-300 hover: b g-white/20'`;
-              }`}
-            >;
-              {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation;
-            </button>;
-          </div>;
-        </div>;
-        {/* Trust Indicators */}
-        <motion.div"
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 3 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >"
-          <h3 className="text-2xl font-semibold text-white mb-8">Trusted by Leading Organizations"
-          <div className="flex flex-wrap justify-center items-center gap-8 md: ga p-16 opacity-60">
-            {/* Add company logos here */}"
-            <div className="text-gray-400 text-sm">Fortune 500 Companies</div>"
-            <div className="text-gray-400 text-sm">Government Agencies</div>"
-            <div className="text-gray-400 text-sm">Research Institutions</div>"
-            <div className="text-gray-400 text-sm">Startups & Scale-ups</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial) => (<div key={testimonial.id} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="flex -space-x-2 mr-4">
+                  <img className="w-12 h-12 rounded-full border-2 border-white/20" src={testimonial.avatar} alt={testimonial.name}/>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  <p className="text-sm text-orange-400">{testimonial.comp}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current"/>))}
+              </div>
+
+              <blockquote className="text-gray-300 italic">
+                "{testimonial.content}"
+              </blockquote>
+            </div>))}
+        </div>
+
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300">
+            <Quote className="w-5 h-5 mr-2"/>
+            Read More Success Stories
           </div>
-        </motion.div>
+        </div>
       </div>
-    </section>
-  )};"
-            <div className="text-zion-slate-light">Support Available</div>;
-          </div>;
-        </motion.div>;
-      </div>;';
-    </section>;) };';';      </div>;
-    </section>;) };
-'"`;
-</motion>;
-</button>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</typeof>;
-</typeof>;
-</any>
-</typeof>
-</typeof>
+    </section>)};

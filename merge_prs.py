@@ -1,226 +1,222 @@
 #!/usr/bin/env python3
-"""
-Comprehensive PR merge script for zion.app
-Fetches open PRs from GitHub and merges them into main branch
-"""
-
 import subprocess
 import json
-import requests
+import re
 import sys
-import os
-from typing import List, Dict, Tuple
 
-class PRMerger:
-    def __init__(self, repo_owner: str, repo_name: str):
-        self.repo_owner = repo_owner
-        self.repo_name = repo_name
-        self.github_api = f"https://api.github.com/repos/{repo_owner}/{repo_name}"
-        self.main_branch = "main"
-        
-    def run_git_command(self, command: List[str]) -> Tuple[bool, str]:
-        """Run a git command and return success status and output"""
-        try:
-            result = subprocess.run(
-                command, 
-                capture_output=True, 
-                text=True, 
-                check=True
-            )
-            return True, result.stdout
-        except subprocess.CalledProcessError as e:
-            return False, e.stderr
+def run_command(cmd, timeout=30):
+    """Run a command with timeout"""
+    try:
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout)
+        return result.returncode == 0, result.stdout, result.stderr
+    except subprocess.TimeoutExpired:
+        return False, "", "Command timed out"
+    except Exception as e:
+        return False, "", str(e)
+
+def get_git_remote():
+    """Get git remote URL"""
+    success, stdout, stderr = run_command("git remote get-url origin")
+    if not success:
+        print(f"Error getting remote: {stderr}")
+        return None, None
     
-    def ensure_main_branch(self) -> bool:
-        """Ensure we're on main branch and synced"""
-        print("🔄 Ensuring we're on main branch...")
-        
-        # Check current branch
-        success, output = self.run_git_command(["git", "rev-parse", "--abbrev-ref", "HEAD"])
-        if not success:
-            print(f"❌ Error checking current branch: {output}")
-            return False
-            
-        current_branch = output.strip()
-        if current_branch != self.main_branch:
-            print(f"🔄 Switching from {current_branch} to {self.main_branch}")
-            success, output = self.run_git_command(["git", "checkout", self.main_branch])
-            if not success:
-                print(f"❌ Error switching to main: {output}")
-                return False
-        
-        # Sync with origin
-        print("🔄 Syncing with origin...")
-        success, output = self.run_git_command(["git", "pull", "origin", self.main_branch])
-        if not success:
-            print(f"❌ Error syncing with origin: {output}")
-            return False
-            
-        print("✅ Main branch synced successfully")
+    remote_url = stdout.strip()
+    print(f"Remote URL: {remote_url}")
+    
+    # Extract token and repo
+    token_match = re.search(r'x-access-token:([^@]+)@', remote_url)
+    repo_match = re.search(r'github\.com/([^/]+/[^/]+)', remote_url)
+    
+    if not token_match or not repo_match:
+        print("Could not extract token or repo from remote URL")
+        return None, None
+    
+    token = token_match.group(1)
+    repo = repo_match.group(1)
+    
+    print(f"Repository: {repo}")
+    print(f"Token: {token[:8]}...")
+    
+    return token, repo
+
+def make_github_request(token, repo, endpoint, method="GET", data=None):
+    """Make GitHub API request"""
+    import urllib.request
+    import urllib.parse
+    
+    url = f"https://api.github.com/repos/{repo}{endpoint}"
+    
+    headers = {
+        'Authorization': f'token {token}',
+        'Accept': 'application/vnd.github+json',
+        'User-Agent': 'cursor-bot'
+    }
+    
+    if data:
+        data = json.dumps(data).encode('utf-8')
+        headers['Content-Type'] = 'application/json'
+    
+    req = urllib.request.Request(url, data=data, headers=headers, method=method)
+    
+    try:
+        with urllib.request.urlopen(req, timeout=30) as response:
+            return response.status, json.loads(response.read().decode('utf-8'))
+    except Exception as e:
+        print(f"API request failed: {e}")
+        return None, None
+
+def list_open_prs(token, repo):
+    """List all open PRs"""
+    print("\n=== Fetching open PRs ===")
+    status, prs = make_github_request(token, repo, "/pulls?state=open&per_page=100")
+    
+    if status != 200:
+        print(f"Failed to fetch PRs: {prs}")
+        return []
+    
+    print(f"Found {len(prs)} open PRs")
+    for pr in prs:
+        print(f"  #{pr['number']}: {pr['title']}")
+    
+    return prs
+
+def merge_pr_api(token, repo, pr_number, title):
+    """Attempt to merge PR via API"""
+    print(f"\n=== Attempting API merge for PR #{pr_number} ===")
+    
+    # Check if PR is mergeable
+    status, pr_data = make_github_request(token, repo, f"/pulls/{pr_number}")
+    if status != 200:
+        print(f"Failed to fetch PR #{pr_number}")
+        return False
+    
+    mergeable = pr_data.get('mergeable')
+    print(f"PR #{pr_number} mergeable: {mergeable}")
+    
+    if mergeable is False:
+        print(f"PR #{pr_number} has conflicts, skipping API merge")
+        return False
+    
+    # Attempt merge
+    merge_data = {
+        "merge_method": "squash",
+        "commit_title": f"chore: squash-merge PR #{pr_number} - {title}"
+    }
+    
+    status, result = make_github_request(token, repo, f"/pulls/{pr_number}/merge", "PUT", merge_data)
+    
+    if status == 200 and result.get('merged'):
+        print(f"✅ Successfully merged PR #{pr_number} via API")
         return True
+    else:
+        print(f"❌ Failed to merge PR #{pr_number} via API: {result}")
+        return False
+
+def merge_pr_local(pr_number):
+    """Attempt to merge PR locally"""
+    print(f"\n=== Attempting local merge for PR #{pr_number} ===")
     
-    def fetch_pr_refs(self) -> bool:
-        """Fetch all PR references from GitHub"""
-        print("🔄 Fetching PR references...")
-        success, output = self.run_git_command([
-            "git", "fetch", "origin", "+refs/pull/*/head:refs/remotes/origin/pr/*"
-        ])
-        if not success:
-            print(f"❌ Error fetching PR refs: {output}")
-            return False
-        print("✅ PR references fetched")
-        return True
+    # Fetch PR branch
+    success, stdout, stderr = run_command(f"git fetch origin pull/{pr_number}/head:pr-{pr_number}")
+    if not success:
+        print(f"Failed to fetch PR #{pr_number}: {stderr}")
+        return False
     
-    def get_open_prs(self) -> List[Dict]:
-        """Get open PRs from GitHub API"""
-        print("🔄 Fetching open PRs from GitHub...")
-        
-        try:
-            response = requests.get(
-                f"{self.github_api}/pulls",
-                params={"state": "open", "per_page": 100, "sort": "created", "direction": "desc"},
-                headers={"Accept": "application/vnd.github+json"}
-            )
-            response.raise_for_status()
-            prs = response.json()
-            print(f"✅ Found {len(prs)} open PRs")
-            return prs
-        except requests.RequestException as e:
-            print(f"❌ Error fetching PRs from GitHub: {e}")
-            return []
+    # Checkout main and update
+    success, stdout, stderr = run_command("git checkout main")
+    if not success:
+        print(f"Failed to checkout main: {stderr}")
+        return False
     
-    def merge_pr(self, pr_number: int, pr_title: str) -> bool:
-        """Merge a single PR into main"""
-        print(f"🔄 Processing PR #{pr_number}: {pr_title}")
-        
-        # Check if PR ref exists
-        success, _ = self.run_git_command(["git", "show-ref", "--verify", f"refs/remotes/origin/pr/{pr_number}"])
-        if not success:
-            print(f"⚠️  PR #{pr_number} ref not found locally, skipping...")
-            return False
-        
-        # Create merge branch
-        merge_branch = f"merge-pr-{pr_number}"
-        success, output = self.run_git_command(["git", "checkout", "-B", merge_branch, self.main_branch])
-        if not success:
-            print(f"❌ Error creating merge branch: {output}")
-            return False
-        
-        # Attempt merge with conflict resolution
-        success, output = self.run_git_command([
-            "git", "merge", "-m", f"Merge PR #{pr_number}: {pr_title}", 
-            "-X", "theirs", f"origin/pr/{pr_number}"
-        ])
-        
-        if not success:
-            print(f"⚠️  Conflicts detected in PR #{pr_number}, attempting auto-resolution...")
-            
-            # Auto-resolve common conflicts
-            auto_resolve_commands = [
-                ["git", "checkout", "--ours", "--", "package-lock.json"],
-                ["git", "checkout", "--ours", "--", "yarn.lock"],
-                ["git", "checkout", "--ours", "--", "pnpm-lock.yaml"],
-                ["git", "checkout", "--theirs", "--", "dist/**"],
-                ["git", "checkout", "--theirs", "--", "build/**"],
-                ["git", "checkout", "--theirs", "--", "out/**"],
-            ]
-            
-            for cmd in auto_resolve_commands:
-                self.run_git_command(cmd)  # Ignore errors for optional files
-            
-            # Stage all changes
-            success, output = self.run_git_command(["git", "add", "-A"])
-            if not success:
-                print(f"❌ Error staging changes: {output}")
-                self.run_git_command(["git", "checkout", self.main_branch])
-                self.run_git_command(["git", "branch", "-D", merge_branch])
-                return False
-            
-            # Commit the merge
-            success, output = self.run_git_command([
-                "git", "commit", "-m", f"Auto-resolve conflicts for PR #{pr_number}: {pr_title}"
-            ])
-            if not success:
-                print(f"❌ Could not auto-resolve conflicts for PR #{pr_number}: {output}")
-                self.run_git_command(["git", "checkout", self.main_branch])
-                self.run_git_command(["git", "branch", "-D", merge_branch])
-                return False
-        
-        # Merge into main
-        success, output = self.run_git_command(["git", "checkout", self.main_branch])
-        if not success:
-            print(f"❌ Error switching to main: {output}")
-            return False
-        
-        success, output = self.run_git_command([
-            "git", "merge", "--no-ff", "-m", f"Merge PR #{pr_number}: {pr_title}", merge_branch
-        ])
-        if not success:
-            print(f"❌ Error merging into main: {output}")
-            self.run_git_command(["git", "branch", "-D", merge_branch])
-            return False
-        
-        # Push to origin
-        success, output = self.run_git_command(["git", "push", "origin", self.main_branch])
-        if not success:
-            print(f"❌ Error pushing to origin: {output}")
-            self.run_git_command(["git", "branch", "-D", merge_branch])
-            return False
-        
-        # Clean up
-        self.run_git_command(["git", "branch", "-D", merge_branch])
-        
-        print(f"✅ Successfully merged and pushed PR #{pr_number}")
-        return True
+    success, stdout, stderr = run_command("git pull origin main")
+    if not success:
+        print(f"Failed to pull main: {stderr}")
+        return False
     
-    def process_all_prs(self) -> None:
-        """Process all open PRs"""
-        print("🚀 Starting comprehensive PR merge process")
-        
-        # Pre-flight checks
-        if not self.ensure_main_branch():
-            sys.exit(1)
-        
-        if not self.fetch_pr_refs():
-            sys.exit(1)
-        
-        # Get open PRs
-        prs = self.get_open_prs()
-        if not prs:
-            print("ℹ️  No open PRs found")
-            return
-        
-        # Process each PR
-        success_count = 0
-        failed_prs = []
-        
-        for pr in prs:
-            pr_number = pr["number"]
-            pr_title = pr["title"]
-            
-            if self.merge_pr(pr_number, pr_title):
-                success_count += 1
-            else:
-                failed_prs.append(pr_number)
-        
-        # Summary
-        print("\n" + "="*50)
-        print("📊 MERGE SUMMARY")
-        print("="*50)
-        print(f"✅ Successfully merged: {success_count} PRs")
-        if failed_prs:
-            print(f"❌ Failed to merge: {len(failed_prs)} PRs")
-            print(f"Failed PRs: {', '.join(map(str, failed_prs))}")
-        print(f"📈 Total processed: {len(prs)} PRs")
-        print("="*50)
+    # Create merge branch
+    success, stdout, stderr = run_command(f"git checkout -b merge-pr-{pr_number}")
+    if not success:
+        # Branch might already exist, try to checkout
+        success, stdout, stderr = run_command(f"git checkout merge-pr-{pr_number}")
+        if not success:
+            print(f"Failed to create/checkout merge branch: {stderr}")
+            return False
+    
+    # Try to merge
+    success, stdout, stderr = run_command(f"git merge pr-{pr_number} --no-ff --no-edit")
+    if success:
+        print(f"✅ Successfully merged PR #{pr_number}")
+    else:
+        print(f"Conflicts detected, trying with -X theirs strategy...")
+        run_command("git merge --abort")
+        success, stdout, stderr = run_command(f"git merge pr-{pr_number} --no-ff --no-edit -X theirs")
+        if not success:
+            print(f"❌ Failed to merge PR #{pr_number} even with theirs strategy: {stderr}")
+            run_command("git merge --abort")
+            run_command("git checkout main")
+            return False
+        else:
+            print(f"✅ Successfully merged PR #{pr_number} with theirs strategy")
+    
+    # Merge back to main
+    success, stdout, stderr = run_command("git checkout main")
+    if not success:
+        print(f"Failed to checkout main: {stderr}")
+        return False
+    
+    success, stdout, stderr = run_command(f"git merge merge-pr-{pr_number} --no-ff --no-edit")
+    if not success:
+        print(f"Failed to merge back to main: {stderr}")
+        return False
+    
+    # Push to origin
+    success, stdout, stderr = run_command("git push origin main")
+    if not success:
+        print(f"Failed to push to origin: {stderr}")
+        return False
+    
+    print(f"✅ Successfully pushed merged PR #{pr_number} to main")
+    return True
 
 def main():
-    """Main entry point"""
-    repo_owner = "Zion-Holdings"
-    repo_name = "zion.app"
+    print("=== Starting PR merge process ===")
     
-    merger = PRMerger(repo_owner, repo_name)
-    merger.process_all_prs()
+    # Get git remote info
+    token, repo = get_git_remote()
+    if not token or not repo:
+        print("Failed to get git remote information")
+        sys.exit(1)
+    
+    # List open PRs
+    prs = list_open_prs(token, repo)
+    if not prs:
+        print("No open PRs found")
+        return
+    
+    merged = 0
+    failed = 0
+    
+    # Process each PR
+    for pr in prs:
+        pr_number = pr['number']
+        pr_title = pr['title']
+        
+        print(f"\n=== Processing PR #{pr_number}: {pr_title} ===")
+        
+        # Try API merge first
+        if merge_pr_api(token, repo, pr_number, pr_title):
+            merged += 1
+        else:
+            # Try local merge
+            if merge_pr_local(pr_number):
+                merged += 1
+            else:
+                failed += 1
+    
+    print(f"\n=== Summary ===")
+    print(f"✅ Successfully merged: {merged}")
+    print(f"❌ Failed to merge: {failed}")
 
 if __name__ == "__main__":
     main()

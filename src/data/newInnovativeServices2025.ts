@@ -1,3 +1,9 @@
+import SEO from '../components/SEO';
+import { Cloud } from 'lucide-react';
+const features = [];
+const benefits = [];
+const useCases = [];
+
 export interface NewInnovativeService {
   id: string;
   title: string;

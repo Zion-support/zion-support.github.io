@@ -1,3 +1,7 @@
+import React from 'react';'''';';
+import ReactMarkdown from 'react-markdown';'''';';
+import {Header} from '@/components/Header';'''';';
+import {Footer} from '@/components/Footer';'''';';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import {Header} from '@/components/Header';
@@ -39,6 +43,8 @@ export {PrivacyPolicy};
 export {PrivacyPolicy};
 ;
 export {PrivacyPolicy};
+';
+</SEO>;';;';
 ;
 </SEO>;
 ;

@@ -1,11 +1,31 @@
+
+=======
+
+
+=======
+ 
+}else {
+  console.warn ('Missing artifact for', name) 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+}else {
+  console.warn ('Missing artifact for', name)
+}main ();
+=======const fs = require('fs'),
+const path = require('path'),
+
+
+function main() {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } else {
-      console.warn('Missing artifact for', name)
+      console && console.warn('Missing artifact for', name)
     }
   }
 }
 }main ();main(),
 
-}main ();main(),
+
 
 main(),
 ;
@@ -47,3 +67,7 @@ function main() {
 }main ();main()
 
 }main ();main(),
+==============
+
+}main ();main(),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

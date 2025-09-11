@@ -1,10 +1,12 @@
 import React from 'react';
-import { cn } from "../../utils/cn";
+import { _cn } from "../../utils/cn";
 ;
 interface SwitchProps {;
-import { cn } from "@/lib/utils"
+import { _cn } from "../../lib/utils"
+
+import { Check } from 'lucide-react';
   checked?: boolean;
-  onCheckedChange?: (checked: boolean) => void;const Switch = React.forwardRef<
+  onCheckedChange?: (checked: boolean) => void;const _Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
 >(({ className, ...props }, ref) => (

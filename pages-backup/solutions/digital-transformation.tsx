@@ -16,7 +16,3 @@ import React from "react";
             </div>;
         </section>;
       </div>;
-    </MainLayout>;
-  )}
-
-"export default DigitalTransformation

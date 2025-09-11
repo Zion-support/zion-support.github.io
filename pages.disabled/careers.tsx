@@ -5,5 +5,3 @@ export default function CareersPage() {;
       <h1 className="text-3xl font-bold mb-4">Careers</h1>;
       <p className="text-gray-700">We are hiring! Check back for openings.</p>;
     </main>;
-  );
-}

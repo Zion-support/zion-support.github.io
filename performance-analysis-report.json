@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-09-06T05:21:58.576Z",
+  "metrics": {
+    "codeComplexity": {
+      "totalFiles": 1667,
+      "totalLines": 163022,
+      "averageLinesPerFile": 98,
+      "complexFiles": 281,
+      "complexityRatio": "16.9"
+    },
+    "dependencies": {
+      "production": 100,
+      "development": 40,
+      "total": 140
+    }
+  },
+  "analysis": [],
+  "optimizations": [
+    {
+      "type": "dependencies",
+      "priority": "medium",
+      "description": "Large number of dependencies, review and remove unused ones",
+      "impact": "Reduces bundle size and build time"
+    }
+  ],
+  "score": 80
+}

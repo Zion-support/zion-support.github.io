@@ -1,3 +1,5 @@
+import { Check } from 'lucide-react';
+
 export interface CartItem {
   id: string;
   name: string;
@@ -18,13 +20,13 @@ export interface CartState {
 }
 
 // Calculate total cart value
-export const calculateCartTotal = (items: CartItem[]): number => {
+export const _calculateCartTotal = (items: CartItem[]): number => {
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
 // Add item to cart
-export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
-  const existingItem = cart.find(cartItem => cartItem.id === item.id);
+export const _addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
+  const _existingItem = cart.find(cartItem => cartItem.id === item.id);
 
   if (existingItem) {
     return cart.map(cartItem =>
@@ -38,12 +40,12 @@ export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
 };
 
 // Remove item from cart
-export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => {
+export const _removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => {
   return cart.filter(item => item.id !== itemId);
 };
 
 // Update item quantity
-export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {
+export const _updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {
   if (quantity <= 0) {
     return removeFromCart(cart, itemId);
   }
@@ -54,21 +56,21 @@ export const updateQuantity = (cart: CartItem[], itemId: string, quantity: numbe
 };
 
 // Clear entire cart
-export const clearCart = (): CartItem[] => {
+export const _clearCart = (): CartItem[] => {
   return [];
 };
 
 // Get cart key for localStorage
-export const getCartKey = (userId: string): string => {
+export const _getCartKey = (userId: string): string => {
   return `cart_${userId}`;
 };
 
 // Merge cart items from different sources
-export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]): CartItem[] => {
-  const merged = [...existingItems];
+export const _mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]): CartItem[] => {
+  const _merged = [...existingItems];
 
   newItems.forEach(newItem => {
-    const existingIndex = merged.findIndex(item => item.id === newItem.id);
+    const _existingIndex = merged.findIndex(item => item.id === newItem.id);
     if (existingIndex >= 0 && merged[existingIndex]) {
       merged[existingIndex].quantity += newItem.quantity;
     } else {
@@ -80,17 +82,17 @@ export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]):
 };
 
 // Get cart item count
-export const getCartItemCount = (items: CartItem[]): number => {
+export const _getCartItemCount = (items: CartItem[]): number => {
   return items.reduce((count, item) => count + item.quantity, 0);
 };
 
 // Check if cart is empty
-export const isCartEmpty = (items: CartItem[]): boolean => {
+export const _isCartEmpty = (items: CartItem[]): boolean => {
   return items.length === 0;
 };
 
 // Validate cart item
-export const validateCartItem = (item: CartItem): boolean => {
+export const _validateCartItem = (item: CartItem): boolean => {
   return (
     item.id &&
     item.name &&
@@ -103,11 +105,11 @@ export const validateCartItem = (item: CartItem): boolean => {
 };
 
 // Get cart summary
-export const getCartSummary = (items: CartItem[]) => {
-  const total = calculateCartTotal(items);
-  const itemCount = getCartItemCount(items);
-  const categories = [...new Set(items.map(item => item.category).filter(Boolean))];
-  const types = [...new Set(items.map(item => item.type))];
+export const _getCartSummary = (items: CartItem[]) => {
+  const _total = calculateCartTotal(items);
+  const _itemCount = getCartItemCount(items);
+  const _categories = [...new Set(items.map(item => item.category).filter(Boolean))];
+  const _types = [...new Set(items.map(item => item.type))];
 
   return {
     total,
@@ -119,24 +121,24 @@ export const getCartSummary = (items: CartItem[]) => {
 };
 
 // Apply discount to cart
-export const applyDiscount = (items: CartItem[], discountPercent: number): number => {
-  const total = calculateCartTotal(items);
-  const discount = total * (discountPercent / 100);
+export const _applyDiscount = (items: CartItem[], discountPercent: number): number => {
+  const _total = calculateCartTotal(items);
+  const _discount = total * (discountPercent / 100);
   return Math.max(0, total - discount);
 };
 
 // Get cart items by type
-export const getCartItemsByType = (items: CartItem[], type: CartItem['type']): CartItem[] => {
+export const _getCartItemsByType = (items: CartItem[], type: CartItem['type']): CartItem[] => {
   return items.filter(item => item.type === type);
 };
 
 // Get cart items by category
-export const getCartItemsByCategory = (items: CartItem[], category: string): CartItem[] => {
+export const _getCartItemsByCategory = (items: CartItem[], category: string): CartItem[] => {
   return items.filter(item => item.category === category);
 };
 
 // Sort cart items
-export const sortCartItems = (items: CartItem[], sortBy: 'name' | 'price' | 'quantity' | 'type' = 'name'): CartItem[] => {
+export const _sortCartItems = (items: CartItem[], sortBy: 'name' | 'price' | 'quantity' | 'type' = 'name'): CartItem[] => {
   return [...items].sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -153,7 +155,7 @@ export const sortCartItems = (items: CartItem[], sortBy: 'name' | 'price' | 'qua
 };
 
 // Filter cart items
-export const filterCartItems = (
+export const _filterCartItems = (
   items: CartItem[],
   filters: {
     minPrice?: number;

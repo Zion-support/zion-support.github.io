@@ -39,7 +39,4 @@ export function SelectItem({ children, className = '', value, ...props }: Select
       {children}
     </div>
   );
-<<<<<<< HEAD
-=======
 export function SelectContent({ children }: { children: React.ReactNode }) {
-  return <div className="relative">{children}</div>;=======}

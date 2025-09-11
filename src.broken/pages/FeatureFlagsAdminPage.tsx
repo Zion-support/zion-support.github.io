@@ -1,7 +1,7 @@
-import React from 'react';
-import AdminLayout from '@/components/admin/AdminLayout';
+import React from 'react',
+import AdminLayout from '@/components/admin/AdminLayout',
 export default function FeatureFlagsAdminPage() {
-  const url = $2;
+  const url = process.env.UNLEASH_URL || '',
   return (
     <AdminLayout>
       <div className="space-y-4">
@@ -10,12 +10,11 @@ export default function FeatureFlagsAdminPage() {
           Manage flags in the{' '}
           <a href={url} className="text-blue-600 underline">
             Unleash admin UI
-          </a>
+          </Link>
           .
         </p>
       </div>
     </AdminLayout>
   )
 }
-  );
-};
+;

@@ -1,76 +1,34 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+;
 const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navigationItems = [
+  const [is_open, setIsOpen] = useState (false);
+  const navigation_items = [;
     { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' }
   ];
-
+;
   return (
-    <nav className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
-            </Link>
-          </div>
-
-          <div className="hidden md:flex space-x-8">
-            {navigationItems.map(item => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-gray-900"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navigationItems.map(item => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-};
-
-export default EnhancedNavigation;
+    <nav className="bg - white shadow - lg">;
+      <div className="container mx - auto px - 4">;
+        <div className="flex items - center justify - between h - 16">;
+          <Link href="/" className="text - xl font - bold text - gray - 800">;
+            Zion Tech Group;
+          </Link>;
+          <div className="hidden md:flex items - center space - x-8">;
+            {navigation_items.map ((item) => (
+              <Link;
+              </Link>))}
+          </div>;
+          <button;
+            on_click={() => setIsOpen (!is_open)}
+            className="md:hidden p - 2 text - gray - 700 hover:text - blue - 600";
+          >;
+            {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+          </button>;
+        </div>;
+        {is_open && (
+          <div className="md:hidden bg - white border - t border - gray - 200">;
+            <div className="px - 4 py - 2 space - y-2">;
+              {navigation_items.map ((item) => (
+                <Link;
