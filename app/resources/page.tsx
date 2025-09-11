@@ -139,6 +139,78 @@ export default function ResourcesPage() {
         'Security integration',
         'Team collaboration practices'
       ]
+    },
+    {
+      id: 'ai-cost-optimization-toolkit',
+      title: 'AI Cost Optimization Toolkit 2025',
+      description: 'Complete toolkit to reduce AI infrastructure costs by 40-70% while improving performance',
+      category: 'AI & Automation',
+      type: 'Toolkit',
+      downloadCount: '3.2K',
+      rating: 4.9,
+      icon: '💰',
+      color: 'purple',
+      features: [
+        'Model selection framework',
+        'Prompt optimization techniques',
+        'Caching implementation guide',
+        'Cost monitoring dashboard',
+        'ROI calculation templates'
+      ]
+    },
+    {
+      id: 'enterprise-rag-implementation-guide',
+      title: 'Enterprise RAG Implementation Guide',
+      description: 'Step-by-step guide to building production-ready RAG systems with governance and cost controls',
+      category: 'AI & Automation',
+      type: 'Guide',
+      downloadCount: '2.8K',
+      rating: 4.8,
+      icon: '📚',
+      color: 'indigo',
+      features: [
+        'Reference architecture patterns',
+        'Hybrid retrieval strategies',
+        'Governance and compliance controls',
+        'Cost optimization techniques',
+        'Monitoring and evaluation framework'
+      ]
+    },
+    {
+      id: 'ai-automation-roi-calculator',
+      title: 'AI Automation ROI Calculator',
+      description: 'Interactive calculator to estimate potential savings and ROI from AI automation projects',
+      category: 'Business Strategy',
+      type: 'Calculator',
+      downloadCount: '4.1K',
+      rating: 4.9,
+      icon: '🧮',
+      color: 'green',
+      features: [
+        'Customizable cost inputs',
+        'Multiple scenario modeling',
+        'Payback period calculations',
+        'Risk assessment framework',
+        'Executive summary templates'
+      ]
+    },
+    {
+      id: 'startup-funding-ai-era-guide',
+      title: 'Startup Funding in the AI Era: Complete Guide',
+      description: 'Navigate the new funding landscape and position your AI startup for success in 2025',
+      category: 'Startup Strategy',
+      type: 'Guide',
+      downloadCount: '2.9K',
+      rating: 4.8,
+      icon: '🚀',
+      color: 'orange',
+      features: [
+        'AI startup valuation frameworks',
+        'Investor pitch templates',
+        'Due diligence preparation',
+        'Term sheet negotiation guide',
+        'Post-funding growth strategies'
+      ]
     }
   ];
 
