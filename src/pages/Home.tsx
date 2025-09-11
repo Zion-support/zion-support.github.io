@@ -9,6 +9,8 @@ import { HeroSection } from "@/components/HeroSection";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 
 export default function Home() {
   return (
@@ -23,6 +25,34 @@ export default function Home() {
       <ITServiceRequestHero />
       <HeroSection />
       <FeatureHighlights />
+      {/* New & Featured Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white mb-8">New & Featured</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {MICRO_SAAS_SERVICES.filter(s => [
+              "ai-agent-016",
+              "sales-copilot-017",
+              "sec-compliance-018"
+            ].includes(s.id)).map(item => (
+              <ProductListingCard key={item.id} listing={{
+                id: item.id,
+                title: item.title,
+                description: item.description,
+                price: Number(item.price.replace(/[^0-9.]/g, "")),
+                currency: item.price.replace(/[0-9.]/g, "") || "$",
+                category: item.category,
+                images: item.images,
+                rating: item.rating,
+                reviewCount: item.reviewCount,
+                aiScore: item.aiScore,
+                link: item.link,
+                featured: true
+              }} />
+            ))}
+          </div>
+        </div>
+      </section>
       <TestimonialsSection />
       <CategoriesSection />
       <BenefitsSection />
