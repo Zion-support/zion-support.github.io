@@ -1,19 +1,106 @@
-// @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
 import ROICalculator from '../components/ROICalculator';
 import StructuredData from '../components/StructuredData';
+
+// TypeScript interfaces for better type safety
+interface CardProps {
+  title: string;
+  href: string;
+  description: string;
+  icon: string;
+}
+
+interface FeatureCardProps {
+  title: string;
+  description: string;
+}
+
+interface TestimonialCardProps {
+  company: string;
+  industry: string;
+  result: string;
+  description: string;
+  savings: string;
+}
+
+// Enhanced Card component with better accessibility and performance
+const Card: React.FC<CardProps> = ({ title, href, description, icon }) => (
+  <Link
+    href={href}
+    className="group block bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-blue-300"
+    aria-label={`Learn more about ${title}`}
+  >
+    <div className="text-4xl mb-4" role="img" aria-label={`${title} service icon`}>
+      {icon}
+    </div>
+    <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+      {title}
+    </h3>
+    <p className="text-gray-600 leading-relaxed">
+      {description}
+    </p>
+    <div className="mt-4 text-blue-600 font-medium group-hover:underline">
+      Learn More →
+    </div>
+  </Link>
+);
+
+// Enhanced FeatureCard component
+const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => (
+  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+      {title}
+    </h3>
+    <p className="text-gray-600 text-sm leading-relaxed">
+      {description}
+    </p>
+  </div>
+);
+
+// Enhanced TestimonialCard component
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ company, industry, result, description, savings }) => (
+  <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+        <span className="text-blue-600 font-bold text-lg">
+          {company.charAt(0)}
+        </span>
+      </div>
+      <div>
+        <h4 className="font-semibold text-gray-900">{company}</h4>
+        <p className="text-sm text-gray-600">{industry}</p>
+      </div>
+    </div>
+    <div className="mb-4">
+      <div className="text-2xl font-bold text-green-600 mb-1">{result}</div>
+      <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
+    </div>
+    <div className="text-sm text-gray-600">
+      <strong>Savings:</strong> {savings}
+    </div>
+  </div>
+);
 
 export default function HomePage() {
   return (
     <div className='min-h-screen bg-white'>
       <StructuredData 
         type="Organization" 
-        data={{}} 
+        data={{
+          name: "Zion Tech Group",
+          description: "Transforming businesses through cutting-edge technology solutions",
+          url: "https://zion.app",
+          logo: "https://zion.app/logo.png"
+        }} 
       />
       <StructuredData 
         type="WebSite" 
-        data={{}} 
+        data={{
+          name: "Zion Tech Group",
+          url: "https://zion.app",
+          description: "AI, micro SaaS, and enterprise technology solutions"
+        }} 
       />
       {/* Hero Section */}
       <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100' aria-labelledby="hero-heading">
@@ -30,13 +117,15 @@ export default function HomePage() {
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
                 href='/services'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
+                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                aria-label='Explore our comprehensive services'
               >
                 Explore Services
               </Link>
               <Link
                 href='/contact'
-                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
+                className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                aria-label='Get started with our team'
               >
                 Get Started
               </Link>
@@ -46,10 +135,10 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className='py-16'>
+      <section className='py-16' aria-labelledby="services-heading">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-12'>
-            <h2 className='text-3xl font-bold text-gray-900 mb-4'>
+            <h2 id="services-heading" className='text-3xl font-bold text-gray-900 mb-4'>
               Our Services
             </h2>
             <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
