@@ -1,10 +1,88 @@
-import React from 'react';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
+import { useCart } from "@/context/CartContext";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { useWishlist } from "@/hooks/useWishlist";
+import { useCart } from '@/context/CartContext';
+import { logWarn } from '@/utils/productionLogger';
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
+
+
+
+
+
+
+
 
 interface MobileBottomNavProps {
   unreadCount?: number;
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+  const router = useRouter();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const { items } = useCart();
+  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
+
+  const navItems = [
+    {
+      name: "Home",
+      href: "/",
+      icon: Home,
+      matches: (path: string) => path === "/"
+    },
+    {
+      name: "Browse",
+      href: "/talent",
+      icon: Search,
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+    },
+    {
+      name: "Community",
+      href: "/community",
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+    },
+    {
+      name: "Wishlist",
+      href: "/wishlist",
+      icon: Heart,
+      matches: (path: string) => path.startsWith("/wishlist"),
+      badge: favoritesCount,
+      authRequired: true
+    },
+    {
+      name: "Messages",
+      href: "/messages",
+      icon: MessageSquare,
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
+      badge: unreadCount,
+      authRequired: true
+    },
+    {
+      name: "Cart",
+      href: "/cart",
+      icon: ShoppingCart,
+      matches: (path: string) => path.startsWith("/cart"),
+      badge: cartCount
+    },
+    {
+      name: "Dashboard",
+      href: "/dashboard",
+      icon: User,
+      matches: (path: string) => path.startsWith("/dashboard"),
+      authRequired: true
+    }
+  ];
+
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(item => 
+    !item.authRequired || (item.authRequired && isAuthenticated)
+  );
+
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-background border-t border-zion-slate/20 lg:hidden">
       <div className="flex justify-around py-2">

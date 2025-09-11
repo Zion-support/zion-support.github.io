@@ -14,19 +14,26 @@ interface ThemeProviderProps {
   defaultTheme?: Theme;
 }
 
-export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
+const initialState: ThemeProviderState = {
+  theme: "dark",
+  setTheme: () => null,
+}
+
+export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
+
+export function ThemeProvider({ children }: ThemeProviderProps) {
+  const [theme] = useState<Theme>("dark")
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-    } else {
-      root.classList.add(theme);
-    }
-  }, [theme]);
+    const root = window.document.documentElement
+    root.classList.remove("light", "dark")
+    root.classList.add("dark")
+  }, [])
+
+  const value = {
+    theme,
+    setTheme: () => {},
+  }
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

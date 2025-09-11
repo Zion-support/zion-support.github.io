@@ -1,6 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { Center } from '@chakra-ui/react';
+import { NextSeo } from '@/components/NextSeo';
+import { useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { captureException } from '@/utils/sentry';
+import { useTranslation } from 'react-i18next';
+import { Button } from '@/components/ui/button';
+import { logInfo } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
 
 export default function Custom500() {
   return (

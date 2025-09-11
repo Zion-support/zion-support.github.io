@@ -1,44 +1,31 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
+import { useSnackbar, VariantType, OptionsObject } from 'notistack';
 
-export interface ToastOptions {
-  id: string;
-  title: string;
-  description?: string;
-  type?: 'success' | 'error' | 'warning' | 'info';
-  duration?: number;
+export type ToastOptions = OptionsObject & { variant?: VariantType };
+
+export function useToast() {
+  const { enqueueSnackbar } = useSnackbar();
+  const toast = React.useCallback((message: string, options?: ToastOptions) => {
+    enqueueSnackbar(message, options);
+  }, [enqueueSnackbar]);
+
+  toast.error = (msg: string) => enqueueSnackbar(msg, { variant: 'error' });
+  toast.success = (msg: string) => enqueueSnackbar(msg, { variant: 'success' });
+
+  return { toast } as { toast: typeof toast };
 }
 
-export const useToast = () => {
-  const [toasts, setToasts] = useState<ToastOptions[]>([]);
+let globalEnqueue: (msg: string, opts?: OptionsObject) => void;
 
-  const toast = useCallback((options: Omit<ToastOptions, 'id'>) => {
-    const newToast: ToastOptions = {
-      id: Math.random().toString(36).substr(2, 9),
-      duration: 5000,
-      ...options,
-    };
+export function ToastInitializer() {
+  const { enqueueSnackbar } = useSnackbar();
+  React.useEffect(() => {
+    globalEnqueue = enqueueSnackbar;
+  }, [enqueueSnackbar]);
+  return null;
+}
 
-    setToasts(prev => [...prev, newToast]);
-
-    if (newToast.duration) {
-      setTimeout(() => {
-        setToasts(prev => prev.filter(t => t !== newToast));
-      }, newToast.duration);
-    }
-  }, []);
-
-  const dismiss = useCallback((toastToDismiss: ToastOptions) => {
-    setToasts(prev => prev.filter(t => t !== toastToDismiss));
-  }, []);
-
-  const dismissAll = useCallback(() => {
-    setToasts([]);
-  }, []);
-
-  return {
-    toasts,
-    toast,
-    dismiss,
-    dismissAll,
-  };
+export const toast = {
+  error: (msg: string) => globalEnqueue?.(msg, { variant: 'error' }),
+  success: (msg: string) => globalEnqueue?.(msg, { variant: 'success' }),
 };

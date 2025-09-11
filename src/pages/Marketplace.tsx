@@ -5,32 +5,39 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components/auth/AuthModal';
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react'
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { ErrorState } from '@/components/jobs/applications/ErrorState';
-import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-import { ProductListing } from '@/types/listings';
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import { useToast } from '@/hooks/use-toast';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { MARKETPLACE_LISTINGS } from '@/data/listingData';
-import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react';
 
+import React, { useState, useEffect, useMemo } from "react";
+import { useTranslation } from 'react-i18next';
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { FilterSidebar } from "@/components/search/FilterSidebar";
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { ProductListing } from "@/types/listings";
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { generateRandomListing } from "@/utils/generateRandomListing";
+import { toast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
+import { SearchSuggestion } from "@/types/search";
+import styles from './Marketplace.module.css';
+import { useViewMode } from '@/context/ViewModeContext';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
 
-/**
- * Marketplace component props
- */
-export interface MarketplaceProps {
-  // All props removed - component now fetches data independently
+interface ProductContainerProps {
+  listings: ProductListing[];
+  onRequestQuote: (id: string) => void;
 }
-
-// Market insights component
-const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
+const MarketInsights: React.FC<{ stats: MarketStats }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -228,13 +235,29 @@ const FilterControls: React.FC<{
  * Includes intelligent filtering, sorting, and recommendation features
  */
 export default function Marketplace() {
-  const router = useRouter();
+  const navigate = useNavigate();
   const { t } = useTranslation();
-  const { toast } = useToast();
-  const { isAuthenticated, user } = useAuth();
-  const firstRenderRef = useRef(true);
-  const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+  const [isLoading, setIsLoading] = useState(false);
+  const { viewMode, setViewMode } = useViewMode();
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  // Automatically append a new listing every 2 minutes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setListings(prev => [...prev, generateRandomListing()]);
+    }, 120000); // 2 minutes
+    return () => clearInterval(interval);
+  }, []);
+  
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
+  const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]);
 
   const [sortBy, setSortBy] = useState('newest');
   const [filterCategory, setFilterCategory] = useState('');
@@ -312,160 +335,12 @@ export default function Marketplace() {
         );
       });
 
-      items.sort((a, b) => {
-        switch (sortBy) {
-          case 'price-low':
-            return (a.price || 0) - (b.price || 0);
-          case 'price-high':
-            return (b.price || 0) - (a.price || 0);
-          case 'rating':
-            return (b.rating || 0) - (a.rating || 0);
-          case 'popular':
-            return (b.reviewCount || 0) - (a.reviewCount || 0);
-          case 'ai-score':
-            return (b.aiScore || 0) - (a.aiScore || 0);
-          case 'newest':
-          default:
-            // Ensure createdAt exists and is a valid date string before parsing
-            const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-            const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-
-            // Handle NaN cases that might arise from invalid date strings
-            if (isNaN(timeB) && isNaN(timeA)) return 0; // Both invalid, treat as equal
-            if (isNaN(timeB)) return -1; // b is invalid, a comes first (appears newer)
-            if (isNaN(timeA)) return 1;  // a is invalid, b comes first
-
-            return timeB - timeA; // Both valid, sort by time
-        }
-      });
-
-      // Apply pagination
-      const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
-      const paginatedItems = items.slice(startIndex, endIndex);
-      
-      return {
-        items: paginatedItems,
-        hasMore: endIndex < items.length,
-        total: items.length
-      };
-    } catch (err: any) {
-      // Log the error and allow useInfiniteScrollPagination to handle it
-      logErrorToProduction('Error in Marketplace fetchProducts:', { data: err });
-      
-      // Show more specific error messages based on the error type
-      if (err.response?.status === 403) {
-        logErrorToProduction("403 Forbidden error - authentication issue");
-        // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip
-      } else if (err.response?.status === 500) {
-        logErrorToProduction("500 Server error");
-        toast({
-          title: "Server Error", 
-          description: "The marketplace is temporarily unavailable. Please try again later.",
-          variant: "destructive",
-        });
-      } else {
-        handleApiError(err); // This might show a toast or log to Sentry
-      }
-      
-      throw err; // Re-throw to let useInfiniteScrollPagination know about the failure
-    }
-  }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
-
-  // useInfiniteScrollPagination hook
-  const {
-    items: products, // These are the products to render
-    loading,          // True when initially loading or when fetchProducts is running
-    error,            // Contains the error object if fetchProducts throws
-    hasMore,          // True if the API indicates more items are available
-    isFetching,       // True if fetching more items (for infinite scroll)
-    lastElementRef,   // Ref for the last element to trigger loading more
-    refresh,          // Function to reload data from page 1
-    scrollToTop       // Function to scroll to the top of the page
-  } = useInfiniteScrollPagination(fetchProducts, 16); // 16 items per page
-
-  // Effect to refresh data when filters change
-  useEffect(() => {
-    if (firstRenderRef.current) {
-      firstRenderRef.current = false;
-      // On initial mount, useInfiniteScrollPagination handles the first load.
-      // We don't want to call refresh() here immediately if it's the very first render
-      // unless specifically needed. The new effect below handles re-mounts.
-      return;
-    }
-    logInfo('Filters changed, initiating refresh. Filters:', { filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation });
-    isRefreshingAfterFilterChange.current = true; // Set flag before refresh
-    refresh();
-    // scrollToTop(); // Removed from here
-  }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, refresh, toast]); // Added all filter dependencies
-
-  // Effect to explicitly refresh data when the component mounts or re-mounts
-  useEffect(() => {
-    logInfo('Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.');
-    // We call refresh directly to ensure data is re-fetched.
-    // The useInfiniteScrollPagination hook's internal logic will manage its state.
-    refresh();
-    // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.
-    firstRenderRef.current = true;
-  }, [refresh]); // `refresh` is a dependency. Ensure it's stable.
-
-  // New effect to scroll to top AFTER products have been updated and refresh flag is set
-  useEffect(() => {
-    if (isRefreshingAfterFilterChange.current && !loading) { // Check flag and ensure loading is false
-      logInfo('Refresh complete and products updated, scrolling to top.');
-      scrollToTop();
-      isRefreshingAfterFilterChange.current = false; // Reset flag
-      // Optionally, provide user feedback about the filter change
-      // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' });
-    }
-  }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
-
-  // Calculate market stats
-  const marketStats = useMemo(() => {
-    if (products.length === 0) return null;
-    return {
-      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
-      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
-      totalProducts: products.length,
-      categoriesCount: Array.from(new Set(products.map(p => p.category))).length
-    };
-  }, [products]);
-
-  // Get unique categories and other filter values
-  const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category)));
-  }, []);
-  const locations = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean)));
-  }, []).filter(Boolean) as string[];
-  const availabilityOptions = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean)));
-  }, []).filter(Boolean) as string[];
-
-  // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Loading state with skeleton
-  if (loading && products.length === 0) {
-    return (
-      <div className="container py-8" data-testid="marketplace-loading">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
-        >
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            {t('marketplace.hero_title')}
-          </h1>
-          <p className="text-muted-foreground text-lg">
-            {t('marketplace.hero_subtitle')}
+  return (
+    <main className="flex-grow container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto mb-8">
+          <h1 className="text-3xl font-bold text-white mb-4">{t('marketplace.title')}</h1>
+          <p className="text-zion-slate-light">
+            {t('marketplace.description')}
           </p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -487,152 +362,17 @@ export default function Marketplace() {
             Try Again
           </Button>
         </div>
-      </div>
-    );
-  }
-
-  // Empty state (only show when not loading and no products)
-  if (!loading && products.length === 0 && !error) {
-    return (
-      <div className="container py-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
-        >
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            {t('marketplace.hero_title')}
-          </h1>
-          <p className="text-muted-foreground text-lg">
-            {t('marketplace.hero_subtitle')}
-          </p>
-        </motion.div>
         
-        <ProductsEmptyState />
-      </div>
-    );
-  }
-
-  // Main marketplace render
-  return (
-    <div className="container py-8">
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        returnUrl={router.asPath} // Pass current path for better UX on return
-      />
-      {/* Header */}
-      <motion.div 
-        className="text-center mb-8"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          {t('marketplace.hero_title')}
-        </h1>
-        <p className="text-muted-foreground text-lg">
-          {t('marketplace.hero_subtitle')}
-        </p>
-      </motion.div>
-
-      {/* Market Insights */}
-      {marketStats && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          <MarketInsights stats={marketStats} />
-        </motion.div>
-      )}
-
-      {/* Filter Controls */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-      >
-        <FilterControls
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          priceRange={priceRange}
-          setPriceRange={setPriceRange}
-          minAiScore={minAiScore}
-          setMinAiScore={setMinAiScore}
-          minRating={minRating}
-          setMinRating={setMinRating}
-          filterAvailability={filterAvailability}
-          setFilterAvailability={setFilterAvailability}
-          availabilityOptions={availabilityOptions.filter(Boolean) as string[]}
-          filterLocation={filterLocation}
-          setFilterLocation={setFilterLocation}
-          locations={locations}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
-        />
-      </motion.div>
-
-      {/* Product Grid */}
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        <AnimatePresence mode="popLayout">
-          {products.map((product, index) => (
-            <motion.div
-              key={product.id}
-              ref={index === products.length - 1 ? lastElementRef : null}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }}
-              whileHover={{ scale: 1.02 }}
-              className="relative group"
-            >
-              <ProductCard
-                product={{
-                  id: product.id,
-                  name: product.title,
-                  title: product.title,
-                  description: product.description || '',
-                  price: product.price || 0,
-                  currency: product.currency,
-                  category: product.category,
-                  tags: product.tags,
-                  images: product.images,
-                  rating: product.rating || 0,
-                  reviewCount: product.reviewCount || 0,
-                  created_at: product.createdAt,
-                  updated_at: product.createdAt, // Use createdAt for both
-                  stock: product.stock,
-                  in_stock: (product.stock || 0) > 0
-                }}
-                onBuy={async () => {
-                  if (!isAuthenticated) {
-                    setIsAuthModalOpen(true);
-                    return; // Stop further execution
-                  }
-                  try {
-                    await router.push(`/checkout/${product.id}`);
-                  } catch (error) {
-                    logErrorToProduction('Failed to navigate to checkout:', { data: error });
-                    toast({
-                      title: "Navigation Error",
-                      description: "Could not navigate to checkout. Please try again.",
-                      variant: "destructive",
-                    });
-                    // Re-throw to allow ProductCard's catch to also run if needed,
-                    // though ProductCard will reset its state in .finally() regardless.
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
+        {/* Search and filter bar */}
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="relative flex-1">
+              <EnhancedSearchInput
+                value={searchQuery}
+                onChange={setSearchQuery}
+                onSelectSuggestion={setSearchQuery}
+                placeholder={t('marketplace.search_placeholder')}
+                searchSuggestions={searchSuggestions}
               />
               
               {/* AI Score Badge */}

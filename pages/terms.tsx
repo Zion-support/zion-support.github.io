@@ -1405,10 +1405,6 @@ export default function Terms() {
       </div>
     </Layout>
   );
-};
-
-export default Terms;
-=======
             </div>
           </section>
 
@@ -1453,3 +1449,6 @@ export default Terms;
 };
 
 export default TermsPage;
+=======
+}
+Terms.displayName = "Terms";

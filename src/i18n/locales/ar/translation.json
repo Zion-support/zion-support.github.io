@@ -11,7 +11,12 @@
     "yes": "نعم",
     "no": "لا",
     "success": "نجاح",
-    "error": "خطأ"
+    "error": "خطأ",
+    "open_main_menu": "افتح القائمة الرئيسية",
+    "toggle_mobile_menu": "تبديل قائمة الجوال",
+    "greeting_user": "مرحباً، {{name}}!",
+    "status_page": "صفحة الحالة",
+    "check_status_page": "يمكنك محاولة تحديث الصفحة أو زيارة"
   },
   "nav": {
     "home": "الرئيسية",
@@ -62,5 +67,9 @@
     "ar": "العربية",
     "language_changed": "تم تغيير اللغة إلى {{language}}",
     "switch_to_detected": "التبديل إلى {{language}}؟"
+  },
+  "error_boundary": {
+    "message": "حدث خطأ ما.",
+    "retry": "إعادة المحاولة"
   }
 }

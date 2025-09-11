@@ -1,12 +1,10 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-export interface Toast {
-  id: string;
-  title?: string;
-  description?: string;
-  action?: React.ReactNode;
-  variant?: 'default' | 'destructive';
+export function Toaster() {
+  return (
+    <HotToaster position="top-right" />
+  );
 }
 
 export interface ToasterProps {
