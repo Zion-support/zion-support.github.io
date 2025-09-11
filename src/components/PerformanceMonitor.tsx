@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Activity } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -46,41 +45,14 @@ const PerformanceMonitor: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50">
-      <div className="p-4 border-b border-gray-700">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-white flex items-center">
-            <Activity className="w-5 h-5 mr-2 text-cyan-400" />
-            Performance Monitor
-          </h3>
-          <button
-            onClick={() => setMetrics(prev => ({ ...prev, isSlow: false }))}
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            ×
-          </button>
-        </div>
-      </div>
-
-      <div className="p-4">
-        <div className="space-y-2 text-sm">
-          <div className="flex justify-between">
-            <span className="text-gray-400">Load Time:</span>
-            <span className={metrics.loadTime > 3000 ? 'text-red-400' : 'text-green-400'}>
-              {metrics.loadTime}ms
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">Memory Usage:</span>
-            <span className={metrics.memoryUsage > 50 ? 'text-red-400' : 'text-green-400'}>
-              {metrics.memoryUsage}MB
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">Render Time:</span>
-            <span className="text-blue-400">{metrics.renderTime}ms</span>
-          </div>
-        </div>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
+      <div className="space-y-1">
+        <div>Load: {metrics.loadTime}ms</div>
+        <div>Render: {metrics.renderTime}ms</div>
+        <div>Memory: {metrics.memoryUsage}MB</div>
+        {metrics.isSlow && (
+          <div className="text-red-400 font-bold">⚠️ Slow Performance</div>
+        )}
       </div>
     </div>
   );
