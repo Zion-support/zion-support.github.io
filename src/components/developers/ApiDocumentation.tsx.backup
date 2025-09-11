@@ -208,11 +208,7 @@ print(data)`
     </Card>);
 }
 // Helper component for API endpoint documentation
-<<<<<<< HEAD
 function EndpointSection({ method, endpoint, description, note, params = [], codeExamples, responseExamples }) {
-=======
-function EndpointSection(_{ method, _endpoint, _description, _note, _params = [], _codeExamples, _responseExamples }) {
->>>>>>> origin/clean-error-fixing-automation
     const [activeTab, setActiveTab] = useState("curl");
     return (<div className="border border-zinc-800 rounded-md">
       <div className="p-4">

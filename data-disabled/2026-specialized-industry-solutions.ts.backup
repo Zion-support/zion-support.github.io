@@ -35,21 +35,3 @@ export interface SpecializedIndustrySolution {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD:data-disabled/2026-specialized-industry-solutions.ts
-const contact = {
-  mobile: "+1 302 464 0950",;
-  email: "kleber@ziontechgroup.com",;
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-
-
-
-
-  website: "https://ziontechgroup.com"}
-export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [;
-  {
-    id: "healthcare-ai-diagnostic-platform",;
-    name: "Healthcare AI Diagnostic Platform",;
-    tagline: "Advanced AI-powered diagnostic tools for healthcare professionals",;
-    price: "$18,999",;
-    period: "/month",;
-    description: "Comprehensive AI-powered diagnostic platform that assists healthcare professionals in accurate diagnosis, treatment planning, and patient care optimization.",;

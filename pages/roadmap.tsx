@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import RoadmapPage from './roadmap/index';
+export default RoadmapPage;
+=======
 
 import Head from 'next / head',
 import React, { useMemo, useState } from 'react',
@@ -583,3 +587,4 @@ export default function RoadmapPage(): JSX.Element {;
 }
 
 
+>>>>>>> main

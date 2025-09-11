@@ -1,21 +1,12 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-=======
-=======
-=======
-==============>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
 // Final targeted fixes for remaining syntax errors
 const fixes = [// Fix missing semicolons in import statements
   {
     "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
     "replacement": 'import { $1 } from \'$2\';'
   },
-=======    // Fix use-toast.ts
     if (filePath.includes('use-toast.ts')) {
         // Fix malformed interface
         content = content.replace(/position\?\: "top-right" \| "top-center" \| "top-left" \| "bottom-right" \| "bottom-center" \| "bottom-left"\}\s*$/g, 'position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";\n}');
@@ -97,29 +88,6 @@ if (require.main === module) {
 }
 
 module.exports = { fixFile, findFiles };=======>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     "replacement"
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
     "replacement"
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
     "replacement"
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

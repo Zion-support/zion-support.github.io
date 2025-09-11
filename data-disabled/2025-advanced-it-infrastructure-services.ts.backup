@@ -38,11 +38,3 @@ export interface AdvancedITInfrastructureService {
   rating: number;
 export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [;
   // Multi-Cloud Orchestration Platform;
-<<<<<<< HEAD:data-disabled/2025-advanced-it-infrastructure-services.ts
-  {
-    id: "multi-cloud-orchestration",;
-    name: "Multi-Cloud Orchestration Platform",;
-    tagline: "Unified management across AWS, Azure, Google Cloud, and private clouds",;
-    price: "$1,299",;
-    period: "/month",;
-    description: "Enterprise-grade multi-cloud orchestration platform that provides unified management, monitoring, and optimization across multiple cloud providers. Features intelligent workload placement, cost optimization, and seamless migration capabilities.",;

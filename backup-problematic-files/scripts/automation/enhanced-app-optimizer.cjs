@@ -315,8 +315,4 @@ if ( {})
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
   optimizer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = EnhancedAppOptimizer;
-=======
-module.exports = EnhancedAppOptimizer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -107,6 +107,7 @@ export default [
         process: 'readonly',
         PerformanceObserver: 'readonly',
         JSX: 'readonly',
+        navigator: 'readonly',
       },
     },
     plugins: {

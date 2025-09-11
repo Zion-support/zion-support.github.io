@@ -114,11 +114,3 @@ try {
   console.log('⚠️  Build still has issues, but merge conflicts should be resolved');
   console.log('Build error:', error.message);
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('\n✨ Merge conflict resolution script completed!');
-=======
-console.log('\n✨ Merge conflict resolution script completed!');>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-console.log('\n✨ Merge conflict resolution script completed!');

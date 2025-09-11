@@ -12,10 +12,3 @@ export interface EmergingTechnologyService {
     mobile: string;
     email: string;
 export const emergingTechnologyServices: EmergingTechnologyService[] = [;
-<<<<<<< HEAD:data-disabled/emerging-technology-services.ts
-  {
-    id: "blockchain-platform",;
-    name: "Blockchain Development Platform",;
-    tagline: "Build and deploy blockchain applications",;
-    price: "$179/month",;
-    description: "Comprehensive blockchain development platform for creating decentralized applications.",;

@@ -17,7 +17,6 @@ export default function ServicesPricingPage() {
         }
         return acc;
     }, {});
-=======
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -248,9 +247,5 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>);
 }
-=======
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation

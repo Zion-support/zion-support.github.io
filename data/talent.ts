@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// Stub talent data - placeholder for missing functionality
+export const TALENT_PROFILES = [
+  {
+=======
   {
 
 
@@ -38,6 +43,7 @@ export const TALENT_PROFILES = [
 translations: {}
 export const TALENT_PROFILES = [
   {
+>>>>>>> main
     id: '1',
     slug: 'sample-talent',
     name: 'Sample Talent',
@@ -46,7 +52,10 @@ export const TALENT_PROFILES = [
     location: 'Remote',
     timezone: 'UTC',
     region: 'Global',
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
     skills: ['React', 'Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -61,6 +70,11 @@ export const TALENT_PROFILES = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
+<<<<<<< HEAD
+    translations: {}
+  }
+];
+=======
 translations: {},
   },;
 ];
@@ -115,3 +129,4 @@ export const TALENT_PROFILES = [;
     createdAt: new Date().toISOString(), originalLanguage: 'en',
     translations: {}
   }
+>>>>>>> main

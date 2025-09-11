@@ -102,8 +102,4 @@ export const SEO: React.FC<SEOProps> = ({
       </script>
     </Helmet>
   );
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> f3efe67bd5a40cdc9a4ceb0ddb44619b451a40c5

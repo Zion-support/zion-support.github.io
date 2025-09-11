@@ -35,11 +35,3 @@ export interface FuturisticInnovation2028 {
   rating: number;
 export const futuristic2028Services: Futuristic2028Service[] = [;
   // AI-Powered Climate Prediction Platform;
-<<<<<<< HEAD:data-disabled/2028-futuristic-innovations.ts
-  {
-    id: "ai-climate-prediction-platform",;
-    name: "AI Climate Prediction Platform",;
-    tagline: "Predict climate changes with 99.9% accuracy using AI",;
-    price: "$2,999",;
-    period: "/month",;
-    description: "Advanced AI platform that analyzes satellite data, ocean currents, atmospheric patterns, and historical climate data to predict weather patterns, natural disasters, and climate changes with unprecedented accuracy.",;

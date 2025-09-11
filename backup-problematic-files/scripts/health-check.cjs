@@ -9,8 +9,4 @@ console.log('� Running Health Check...')
     execSync('npm run build', { "stdio"})
     execSync('npm run lint', { "stdio"})
     execSync('npm run type-check', { "stdio"})
-<<<<<<< HEAD
 console.log('� Overall "status")
-=======
-console.log('� Overall "status")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

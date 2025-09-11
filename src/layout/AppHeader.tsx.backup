@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import ThemeToggle from '../components/ThemeToggle';
-=======
-import { Menu, X, Search, User, Bell, ChevronDown, Globe, Zap, Shield, Brain } from 'lucide-react';
->>>>>>> f3efe67bd5a40cdc9a4ceb0ddb44619b451a40c5
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -87,7 +87,6 @@ function fixFile(filePath) {
       .replace(/\s+$/gm, '') // Remove trailing whitespace
       .replace(/\n\s*\n\s*\n/g, '\n\n'); // Fix multiple newlines
     
-=======
 console.log('🔧 Starting syntax error fixes...');
 
 function fixSyntaxErrors(filePath) {
@@ -125,82 +124,3 @@ function fixSyntaxErrors(filePath) {
     }
     return false;
   } catch (error) {
-<<<<<<< HEAD
-function findFiles(dir, extensions) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          // Skip certain directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'cache'].includes(item)) {
-            traverse(fullPath);
-          }
-        } else if (stat.isFile()) {
-          const ext = path.extname(item);
-          if (extensions.includes(ext)) {
-            files.push(fullPath);
-          }
-        }
-=======
-function processDirectory(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += processDirectory(filePath);
-    } else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;      }
-    } catch (error) {
-      // Skip directories we can't read
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-console.log(`📁 Scanning ${targetDir} for files with extensions: ${extensions.join(', ')}`);
-
-const files = findFiles(targetDir, extensions);
-console.log(`📄 Found ${files.length} files to check`);
-
-let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of files) {
-  try {
-    if (fixFile(file)) {
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`❌ Error processing ${file}:`, error.message);
-    errorCount++;
-  }
-}
-
-console.log(`\n🎉 Syntax fix complete!`);
-console.log(`✅ Fixed: ${fixedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-
-// Run linter to check remaining issues
-console.log('\n🔍 Running linter to check remaining issues...');
-try {
-  execSync('npm run lint', { stdio: 'inherit' });
-} catch (error) {
-  console.log('⚠️  Linter found remaining issues (this is expected)');
-}
-=======
-const fixedCount = processDirectory('/workspace');
-console.log(`🎉 Fixed ${fixedCount} files with syntax errors`);

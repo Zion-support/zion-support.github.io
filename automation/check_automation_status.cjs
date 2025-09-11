@@ -17,10 +17,3 @@ async function checkAutomationStatus() {
     try {
       const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
       );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

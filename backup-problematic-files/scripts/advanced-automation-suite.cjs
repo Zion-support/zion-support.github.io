@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Advanced Automation Suite");"console.log("");''"
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -548,28 +527,12 @@ console.log('⚡ Performance optimization completed!');
       fs.mkdirSync(path.dirname(resultsPath), { recursive: true });
     }
     fs.writeFileSync(resultsPath, JSON.stringify(this.results, null, 2));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     this.log('\\n🎉 Advanced automation suite completed!');
   }
 }
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.log('\\n🎉 Advanced automation suite completed!');
   }
 }
@@ -614,23 +577,4 @@ async function main() {
 main().catch(console.error);
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
-<<<<<<< HEAD
 automation.runAllAutomations().catch(console.error);
-=======
-<<<<<<< HEAD
-automation.runAllAutomations().catch(console.error);
-=======
-<<<<<<< HEAD
-automation.runAllAutomations().catch(console.error);
-=======
-automation.runAllAutomations().catch(console.error);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
