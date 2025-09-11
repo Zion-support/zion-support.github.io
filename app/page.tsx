@@ -376,6 +376,13 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
+            <Link href='/blog/ai-architecture-cost-governance-2025' className='group md:col-span-3'>
+              <div className='mt-2 bg-white bg-opacity-10 p-6 rounded-lg text-center hover:bg-opacity-20 transition-colors'>
+                <div className='text-3xl mb-2'>🧩</div>
+                <h3 className='text-lg font-semibold mb-2 group-hover:underline'>AI Architecture & Cost Governance in 2025</h3>
+                <p className='text-sm opacity-90'>Guardrails and observability patterns to keep AI reliable and affordable</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -400,6 +407,13 @@ export default function HomePage() {
             >
               View All Articles
               <span>→</span>
+            </Link>
+            <Link href='/blog/startup-pricing-strategy-2025' className='group'>
+              <div className='rounded-lg border border-yellow-200 bg-yellow-50 p-6 hover:bg-yellow-100 transition-colors'>
+                <div className='text-sm font-medium text-yellow-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-yellow-900 group-hover:underline'>Startup Pricing Strategy 2025</h3>
+                <p className='text-yellow-800 mt-2'>Validate willingness to pay and scale with confidence.</p>
+              </div>
             </Link>
           </div>
 
