@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import AnimatedSection from '../components/AnimatedSection';
 import './HomePage.css';
+import { BLOG_POSTS } from '../data/blog-posts';
 
 const HomePage: React.FC = () => {
   return (
@@ -121,6 +122,33 @@ const HomePage: React.FC = () => {
                   <p className="promo-text">Explore fresh offerings like AI RFP Response Copilot, SEO Change Monitor, and more—priced and packaged for fast ROI.</p>
                 </div>
                 <a href="/services-advertising" className="btn btn-primary">See What's New →</a>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection animation="slideUp" delay={200}>
+          <section className="blog-preview">
+            <div className="container">
+              <h2 className="section-title">From the Blog</h2>
+              <div className="blog-grid">
+                {BLOG_POSTS.slice(0, 2).map(post => (
+                  <article key={post.id} className="blog-card">
+                    <div className="blog-card-image" style={{ backgroundImage: `url(${post.featuredImage})` }} />
+                    <div className="blog-card-content">
+                      <div className="blog-meta">
+                        <span className="blog-category">{post.category}</span>
+                        <span className="blog-dot">•</span>
+                        <span className="blog-date">{new Date(post.publishedAt).toLocaleDateString()}</span>
+                        <span className="blog-dot">•</span>
+                        <span className="blog-readtime">{post.readTime} min read</span>
+                      </div>
+                      <h3 className="blog-title">{post.title}</h3>
+                      <p className="blog-excerpt">{post.excerpt}</p>
+                      <a href="/blog" className="service-link">Read on the blog →</a>
+                    </div>
+                  </article>
+                ))}
               </div>
             </div>
           </section>
