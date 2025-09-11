@@ -112,6 +112,20 @@ const HomePage: React.FC = () => {
           </section>
         </AnimatedSection>
 
+        <AnimatedSection animation="slideUp" delay={200}>
+          <section className="promo-section">
+            <div className="container">
+              <div className="promo-card">
+                <div className="promo-content">
+                  <h2 className="section-title">New in September 2025</h2>
+                  <p className="promo-text">Explore fresh offerings like AI RFP Response Copilot, SEO Change Monitor, and more—priced and packaged for fast ROI.</p>
+                </div>
+                <a href="/services-advertising" className="btn btn-primary">See What's New →</a>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
+
         <AnimatedSection animation="scale" delay={200}>
           <section className="cta-section">
             <div className="container">
