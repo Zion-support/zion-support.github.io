@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 
 export default function AIAutomationEnterprise2025() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
         {/* Back Navigation */}
@@ -297,10 +296,6 @@ export default function AIAutomationEnterprise2025() {
                   className="border border-blue-500 text-blue-400 hover:bg-blue-500/10 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
                   Explore Our Services
-=======
-    <div className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
@@ -977,18 +972,12 @@ export default function AIAutomationEnterprise2025() {
                 </Link>
                 <Link href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">
                   Contact Our Team
->>>>>>> 9b17bf25f876af74ba4e80da89e3965d1ff2fd4f
                 </Link>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </article>
       </div>
-=======
-        </div>
-
-        {/* Related Articles */}
         <div className="border-t border-gray-200 pt-8 mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
@@ -1022,7 +1011,6 @@ export default function AIAutomationEnterprise2025() {
           </div>
         </div>
       </article>
->>>>>>> 9b17bf25f876af74ba4e80da89e3965d1ff2fd4f
     </div>
   );
 }

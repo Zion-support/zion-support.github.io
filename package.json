@@ -38,8 +38,8 @@
     "readme:generate": "node scripts/generate-readme.js",
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
-    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
-    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
+    "dev": "vite",
+    "build": "vite build --mode production && cp -f _redirects dist/_redirects || true && cp -f public/_headers dist/_headers || true",
     "prebuild": "echo 'Skipping prebuild checks'",
     "export": "rm -rf .next out tsconfig.tsbuildinfo && mkdir -p .temp && mv pages/reports .temp/ 2>/dev/null || true && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build --no-lint && mv .temp/reports pages/ 2>/dev/null || true && rm -rf .temp",
     "start": "next start",
@@ -778,12 +778,14 @@
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "^7.8.2",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
+    "@tailwindcss/postcss": "^4.1.13",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^14.3.1",
     "@types/node": "24.2.1",
@@ -792,6 +794,7 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
+    "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.0.0",
@@ -802,8 +805,11 @@
     "postcss": "^8.4.32",
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.12",
+    "terser": "^5.44.0",
     "ts-node": "^10.9.2",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "vite": "^7.1.5",
+    "vite-bundle-analyzer": "^1.2.3"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
