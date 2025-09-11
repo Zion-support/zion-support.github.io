@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import Analytics from './components/Analytics';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -187,6 +189,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='min-h-screen bg-white text-gray-900'>
+        <PerformanceOptimizer />
+        <Analytics />
         <Header />
         <main className='max-w-6xl mx-auto px-4 py-6 min-h-screen'>
           {children}
