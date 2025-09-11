@@ -1397,6 +1397,25 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             className='text-center py-20'            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
+          >
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
+            <p className="text-gray-400 mb-8">
+              Try adjusting your search terms or category filter to find what you're looking for.
+            </p>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+              }}
+              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Clear Filters
+            </button>
+          </motion.div>
+        )}
+=======
           >          <motion.div
 =======
 
@@ -1409,6 +1428,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </AnimatePresence>
 
 
+>>>>>>> main
 
         {/* CTA Section */}
 
@@ -1518,6 +1538,33 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
+<<<<<<< HEAD
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Our team of experts is ready to help you implement these revolutionary services 
+              and achieve unprecedented growth. Let's build the future together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                href="/contact"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25"
+              >
+                <span>Get Started Today</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link 
+                href="/pricing"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50"
+              >
+                <span>View Pricing</span>
+                <TrendingUp className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+=======
 
 };
 
@@ -1678,6 +1725,7 @@ export default Enhanced2027ServicesShowcase;
 export default Enhanced2027ServicesShowcase;
 
 
+>>>>>>> main
   );
 };
 

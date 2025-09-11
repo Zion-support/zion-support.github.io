@@ -258,11 +258,7 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAppImprover;>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
   this.log(`Fatal "error": ${error.message}`, ``)
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 class ComprehensiveAppImprover {
   constructor() {
     this.reportsDir = './automation-reports';
@@ -523,13 +519,8 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAppImprover;>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
   this.log(`Fatal "error": ${error.message}`, ``)
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -1133,7 +1124,6 @@ scanner.runSecurityScan().catch(console.error)`;
 }
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run the improver
 if (require.main === module) {
   const improver = new ComprehensiveAppImprover();
@@ -1143,10 +1133,3 @@ if (require.main === module) {
   });
 }
 module.exports = ComprehensiveAppImprover;>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

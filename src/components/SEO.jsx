@@ -11,4 +11,19 @@ export const SEO = ({ title, description, keywords, children }) => {
   );
 };
 
+// SEO hook for dynamic content
+export const useSEO = (pageData = {}) => {
+  const defaultSEO = {
+    title: 'Zion Tech Group - AI-Powered Business Transformation',
+    description: 'Leading provider of AI solutions, quantum computing, and cloud infrastructure. Transform your business with cutting-edge technology.',
+    keywords: 'AI, artificial intelligence, quantum computing, cloud infrastructure, digital transformation, Zion Tech Group',
+    canonical: '/'
+  };
+
+  return {
+    ...defaultSEO,
+    ...pageData
+  };
+};
+
 export default SEO;

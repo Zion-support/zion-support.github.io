@@ -38,11 +38,3 @@ export interface PracticalBusinessSolution2029 {
   rating: number;
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
-<<<<<<< HEAD:data-disabled/2029-practical-business-solutions-v2.ts
-  {
-    id: "ai-business-intelligence-suite",;
-    name: "AI Business Intelligence Suite",;
-    tagline: "Intelligent insights and predictive analytics for business growth",;
-    price: "$2,499",;
-    period: "/month",;
-    description: "Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.",;

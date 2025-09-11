@@ -553,8 +553,14 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = (_{_service, 
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
     </motion.div>
+<<<<<<< HEAD
+  );
+});
+
+=======
   )
 });
+>>>>>>> main
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 

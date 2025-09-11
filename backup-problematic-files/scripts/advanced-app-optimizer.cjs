@@ -1,21 +1,10 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
  * Comprehensive optimization for the Zion Tech Group application;
  */
 
->>>>>>> origin/main
-=======
  * Comprehensive optimization for the Zion Tech Group application;
  */
 
-=======
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -324,15 +313,4 @@ if (require.main === module) {
 }
 
 module.exports = AdvancedAppOptimizer;>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 module.exports = AdvancedAppOptimizer;>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

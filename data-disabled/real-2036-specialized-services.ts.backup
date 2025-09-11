@@ -18,12 +18,3 @@ export type Real2036SpecializedService = {
   technology?: string[]}
 export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   // Neuromorphic Computing Platform;
-<<<<<<< HEAD:data-disabled/real-2036-specialized-services.ts
-  {
-    id: "neuromorphic-computing-platform",;
-    name: "Neuromorphic Computing Platform",;
-    tagline: "Brain-inspired computing for next-generation AI applications",;
-    description: "Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra-efficient AI applications and edge computing.",;
-    category: "Emerging Technology",;
-    price: "$3,999",;
-    period: "/month",;

@@ -135,8 +135,4 @@ console.log(" Applied ${updatesApplied} smart updates")
       "dependencies"
 // console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
-<<<<<<< HEAD
   console.error(` Smart Dependency Manager "failed": "`)
-=======
-  console.error(` Smart Dependency Manager "failed": "`)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

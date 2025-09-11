@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 import {
   Zap
@@ -40,6 +42,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> main
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
@@ -1222,8 +1225,11 @@ export default PerformanceOptimizer;
 }
 
 export default PerformanceOptimizer;
+<<<<<<< HEAD
+=======
 };export default PerformanceOptimizer;
 
 export default PerformanceOptimizer;
 
 >>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+>>>>>>> main

@@ -34,8 +34,4 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
   .replace(/featured: tru e/g, '"featured")
   .replace(/"isAuthenticated": tru e/g, '"isAuthenticated")
   .replace(/isLoading: fals e/g, '"isLoading")
-<<<<<<< HEAD
   .replace(/user: nul l/g, '"user")
-=======
-  .replace(/user: nul l/g, '"user")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

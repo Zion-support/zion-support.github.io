@@ -39,11 +39,3 @@ export interface RealMarketService {
   rating: number;
 export const realMarketServices: RealMarketService[] = [;
   // AI-Powered Business Intelligence;
-<<<<<<< HEAD:data-disabled/2024-real-market-services.ts
-  {
-    id: "ai-business-intelligence-pro",;
-    name: "AI Business Intelligence Pro",;
-    tagline: "Transform data into actionable insights with AI",;
-    price: "$299",;
-    period: "/month",;
-    description: "Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.",;
