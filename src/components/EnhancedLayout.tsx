@@ -1,32 +1,40 @@
-import SEO from '../components/SEO';
-const services = [];
-const solutions = [];
+import React from 'react';
+import { ReactNode } from 'react';
+import { FuturisticNavigation } from './FuturisticNavigation';
+import { FuturisticFooter } from './FuturisticFooter';
+import { EnhancedSidebar } from './EnhancedSidebar';
+import { FuturisticAnimatedBackground } from './FuturisticAnimatedBackground';
 
-"children": "ReactNod e;
-  title?: string;
-  description?: string;
-  keywords?: string",;
-  ogImage?: "string",;
-  canonical?: "string",,;
-  noindex?: "boolean",;
-  showPerformanceMetrics?: "boolean",;
-  showSEOAnalysis?: "boolean"}
-;
-export const "EnhancedLayout": "React.FC<EnhancedLayoutProps> = ({ children",";
-  title = "Zion Tech Group - Leading Technology Solutions Provider",";
-  description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",";
-  keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development",";
-  ogImage = ""https": "// comment;
-  canonical",;
-  noindex = false,;
-  showPerformanceMetrics = false,;
-  showSEOAnalysis = false}) => {;
-  const _fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
-  const _canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");          {/* comment */}"
-          <meta property="og: titl e" content="{fullTitle}"    />"
-          <meta property="og: descriptio n" content="{description}"    />"
-          <meta property="og: imag e" content="{ogImage}"    />"
-          <meta property="og: ur l" content="{canonicalUrl}"    />"
-          <meta property="og: typ e" content="website"    />"
-          <meta property="og: site_nam e" content="Zion Tech Group"    />"
-          <meta property="og: local e" content="en_US"    />
+interface EnhancedLayoutProps {
+  children: ReactNode;
+  showSidebar?: boolean;
+}
+
+export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ 
+  children, 
+  showSidebar = true 
+}) => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
+      {/* Futuristic Animated Background */}
+      <FuturisticAnimatedBackground />
+      
+      {/* Navigation */}
+      <FuturisticNavigation />
+      
+      {/* Main Content with Sidebar */}
+      <div className="flex relative z-10">
+        {/* Sidebar */}
+        {showSidebar && <EnhancedSidebar />}
+        
+        {/* Main Content */}
+        <main className={`flex-1 ${showSidebar ? 'lg:ml-80' : ''}`}>
+          {children}
+        </main>
+      </div>
+      
+      {/* Footer */}
+      <FuturisticFooter />
+    </div>
+  );
+};

@@ -1,8 +1,45 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, memo, useCallback, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Search, 
+  Phone, 
+  Mail,
+  MapPin,
+  Brain,
+  Shield,
+  Cloud,
+  Code,
+  Smartphone,
+  Zap,
+  Rocket
+} from 'lucide-react';
 
-const EnhancedHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+const EnhancedHeader: React.FC = memo(() => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
+
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
+
+  const handleDropdownToggle = useCallback((dropdown: string) => {
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header className="bg-white shadow-lg border-b border-gray-200">
@@ -146,7 +183,10 @@ const EnhancedHeader: React.FC = () => {
         )}
       </div>
     </header>
-  )
-}
+  );
+});
 
-export { EnhancedHeader }
+EnhancedHeader.displayName = 'EnhancedHeader';
+
+export { EnhancedHeader };
+export default EnhancedHeader;
