@@ -15,7 +15,7 @@
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "lint:check": "eslint --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx}\" --ignore-pattern \"**/*.test.*\" --ignore-pattern \"**/*.spec.*\" --ignore-pattern \"**/tests/**\" --ignore-pattern \"**/types/**\" --ignore-pattern \"**/utils/**\" --max-warnings 0",
     "lint:fix": "eslint \"src/AppMinimal.tsx\" \"src/main.tsx\" --fix",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --noEmit -p tsconfig.ci.json",
     "test": "vitest",
     "test:watch": "jest --watch",
     "test:coverage": "vitest --coverage",
@@ -179,6 +179,7 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.35.0",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@types/node": "^20.14.15",
     "@types/react": "^18.3.12",
@@ -188,6 +189,7 @@
     "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.35.0",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "postcss": "^8.4.47",
