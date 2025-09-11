@@ -3,56 +3,65 @@ import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
-  memoryUsage: number;
-  isSlow: boolean;
+  memoryUsage?: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isSlow: false
-  });
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') return;
+
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       
-      const memory = (performance as any).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
-      
-      const isSlow = loadTime > 3000 || memoryUsage > 50; // 3s or 50MB threshold
-      
+      // Get memory usage if available
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize;
+
       setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(performance.now()),
-        memoryUsage: Math.round(memoryUsage * 100) / 100,
-        isSlow
+        loadTime,
+        renderTime,
+        memoryUsage
       });
     };
 
-    // Measure performance after component mounts
+    // Measure after component mount
     const timer = setTimeout(measurePerformance, 1000);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
-  // Only show in development or if performance is poor
-  if (process.env.NODE_ENV !== 'development' && !metrics.isSlow) {
-    return null;
-  }
+  // Toggle visibility with Ctrl+Shift+P
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  if (!isVisible || !metrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
-      <div className="space-y-1">
-        <div>Load: {metrics.loadTime}ms</div>
-        <div>Render: {metrics.renderTime}ms</div>
-        <div>Memory: {metrics.memoryUsage}MB</div>
-        {metrics.isSlow && (
-          <div className="text-red-400 font-bold">⚠️ Slow Performance</div>
-        )}
+    <div className="fixed bottom-4 left-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
+      <div className="mb-2 font-bold">Performance Metrics</div>
+      <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
+      {metrics.memoryUsage && (
+        <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+      )}
+      <div className="mt-2 text-gray-400 text-xs">
+        Press Ctrl+Shift+P to toggle
       </div>
     </div>
   );
