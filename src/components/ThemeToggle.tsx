@@ -6,7 +6,8 @@ const ThemeToggle: React.FC = () => {
   const { theme, setTheme, resolvedTheme } = useTheme();
 
   const handleThemeChange = () => {
-    const newTheme = theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light';
+    const newTheme =
+      theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light';
     setTheme(newTheme);
   };
 
@@ -26,15 +27,15 @@ const ThemeToggle: React.FC = () => {
 
   return (
     <button
-      className="theme-toggle"
+      className='theme-toggle'
       onClick={handleThemeChange}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light'} theme`}
       title={`Current: ${getLabel()} theme`}
     >
-      <span className="theme-toggle__icon" role="img" aria-hidden="true">
+      <span className='theme-toggle__icon' role='img' aria-hidden='true'>
         {getIcon()}
       </span>
-      <span className="theme-toggle__label">{getLabel()}</span>
+      <span className='theme-toggle__label'>{getLabel()}</span>
     </button>
   );
 };

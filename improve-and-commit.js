@@ -120,8 +120,11 @@ Technical improvements:
 - Build process improvements and asset optimization
 
 All changes tested and verified for production readiness.`;
-    
-    runCommand(`git commit -m "${commitMessage}"`, 'Committing comprehensive improvements');
+
+    runCommand(
+      `git commit -m "${commitMessage}"`,
+      'Committing comprehensive improvements'
+    );
 
     // 5. Push to main
     runCommand('git push origin main', 'Pushing improvements to main branch');
@@ -134,7 +137,6 @@ All changes tested and verified for production readiness.`;
     console.log('  - Performance optimizations');
     console.log('  - Build process improved');
     console.log('  - All changes committed and pushed');
-
   } catch (error) {
     console.error('❌ Error during improvements:', error.message);
     process.exit(1);

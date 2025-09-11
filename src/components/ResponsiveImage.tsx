@@ -71,15 +71,15 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
       style={{ width, height }}
     >
       {placeholder && !isLoaded && !hasError && (
-        <div className="responsive-image__placeholder">
+        <div className='responsive-image__placeholder'>
           <img
             src={placeholder}
-            alt=""
-            className="responsive-image__placeholder-img"
+            alt=''
+            className='responsive-image__placeholder-img'
           />
         </div>
       )}
-      
+
       {shouldLoad && (
         <img
           ref={imgRef}
@@ -89,15 +89,15 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
           alt={alt}
           width={width}
           height={height}
-          className="responsive-image__img"
+          className='responsive-image__img'
           onLoad={handleLoad}
           onError={handleError}
           loading={loading}
         />
       )}
-      
+
       {hasError && (
-        <div className="responsive-image__error">
+        <div className='responsive-image__error'>
           <span>Failed to load image</span>
         </div>
       )}

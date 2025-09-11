@@ -84,7 +84,7 @@
   .loading-spinner__ring {
     animation: none;
   }
-  
+
   .loading-spinner__ring::after {
     content: '';
     position: absolute;

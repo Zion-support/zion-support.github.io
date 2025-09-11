@@ -62,12 +62,12 @@
     width: 0.3125rem;
     height: 0.3125rem;
   }
-  
+
   .loading-dots--medium .loading-dots__dot {
     width: 0.4375rem;
     height: 0.4375rem;
   }
-  
+
   .loading-dots--large .loading-dots__dot {
     width: 0.625rem;
     height: 0.625rem;

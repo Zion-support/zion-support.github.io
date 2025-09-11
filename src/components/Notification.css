@@ -139,11 +139,11 @@
     max-width: calc(100vw - 2rem);
     padding: 0.875rem;
   }
-  
+
   .notification__title {
     font-size: 0.8125rem;
   }
-  
+
   .notification__message {
     font-size: 0.6875rem;
   }
@@ -161,11 +161,11 @@
     transition: opacity 0.2s ease;
     transform: none;
   }
-  
+
   .notification--visible {
     transform: none;
   }
-  
+
   .notification--leaving {
     transform: none;
   }

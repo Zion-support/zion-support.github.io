@@ -18,7 +18,11 @@
   align-items: center;
   padding: 4rem 2rem;
   min-height: 80vh;
-  background: linear-gradient(135deg, var(--surface-color) 0%, var(--background-color) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--surface-color) 0%,
+    var(--background-color) 100%
+  );
 }
 
 .hero-content {
@@ -30,7 +34,11 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -226,7 +234,11 @@
 /* CTA Section */
 .cta-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
   color: white;
   text-align: center;
 }

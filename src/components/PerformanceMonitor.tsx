@@ -26,7 +26,9 @@ const PerformanceMonitor: React.FC<{ showInDevelopment?: boolean }> = ({
 
       // Get navigation timing
       if (performance.getEntriesByType) {
-        const navigationEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
+        const navigationEntries = performance.getEntriesByType(
+          'navigation'
+        ) as PerformanceNavigationTiming[];
         if (navigationEntries.length > 0) {
           const nav = navigationEntries[0];
           newMetrics.ttfb = nav.responseStart - nav.requestStart;
@@ -36,7 +38,7 @@ const PerformanceMonitor: React.FC<{ showInDevelopment?: boolean }> = ({
       // Get paint timing
       if (performance.getEntriesByType) {
         const paintEntries = performance.getEntriesByType('paint');
-        paintEntries.forEach((entry) => {
+        paintEntries.forEach(entry => {
           if (entry.name === 'first-contentful-paint') {
             newMetrics.fcp = entry.startTime;
           }
@@ -46,7 +48,7 @@ const PerformanceMonitor: React.FC<{ showInDevelopment?: boolean }> = ({
       // Get LCP
       if ('PerformanceObserver' in window) {
         try {
-          const lcpObserver = new PerformanceObserver((list) => {
+          const lcpObserver = new PerformanceObserver(list => {
             const entries = list.getEntries();
             const lastEntry = entries[entries.length - 1];
             newMetrics.lcp = lastEntry.startTime;
@@ -61,7 +63,7 @@ const PerformanceMonitor: React.FC<{ showInDevelopment?: boolean }> = ({
       if ('PerformanceObserver' in window) {
         try {
           let clsValue = 0;
-          const clsObserver = new PerformanceObserver((list) => {
+          const clsObserver = new PerformanceObserver(list => {
             for (const entry of list.getEntries()) {
               if (!(entry as any).hadRecentInput) {
                 clsValue += (entry as any).value;
@@ -96,24 +98,47 @@ const PerformanceMonitor: React.FC<{ showInDevelopment?: boolean }> = ({
     };
   }, [showInDevelopment]);
 
-  if (!isVisible || (process.env.NODE_ENV !== 'development' && !showInDevelopment)) {
+  if (
+    !isVisible ||
+    (process.env.NODE_ENV !== 'development' && !showInDevelopment)
+  ) {
     return null;
   }
 
   const getScoreColor = (metric: string, value?: number) => {
     if (value === undefined) return 'metric--unknown';
-    
+
     switch (metric) {
       case 'fcp':
-        return value <= 1800 ? 'metric--good' : value <= 3000 ? 'metric--needs-improvement' : 'metric--poor';
+        return value <= 1800
+          ? 'metric--good'
+          : value <= 3000
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
       case 'lcp':
-        return value <= 2500 ? 'metric--good' : value <= 4000 ? 'metric--needs-improvement' : 'metric--poor';
+        return value <= 2500
+          ? 'metric--good'
+          : value <= 4000
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
       case 'fid':
-        return value <= 100 ? 'metric--good' : value <= 300 ? 'metric--needs-improvement' : 'metric--poor';
+        return value <= 100
+          ? 'metric--good'
+          : value <= 300
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
       case 'cls':
-        return value <= 0.1 ? 'metric--good' : value <= 0.25 ? 'metric--needs-improvement' : 'metric--poor';
+        return value <= 0.1
+          ? 'metric--good'
+          : value <= 0.25
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
       case 'ttfb':
-        return value <= 800 ? 'metric--good' : value <= 1800 ? 'metric--needs-improvement' : 'metric--poor';
+        return value <= 800
+          ? 'metric--good'
+          : value <= 1800
+            ? 'metric--needs-improvement'
+            : 'metric--poor';
       default:
         return 'metric--unknown';
     }
@@ -121,7 +146,7 @@ const PerformanceMonitor: React.FC<{ showInDevelopment?: boolean }> = ({
 
   const formatValue = (metric: string, value?: number) => {
     if (value === undefined) return 'N/A';
-    
+
     switch (metric) {
       case 'fcp':
       case 'lcp':
@@ -137,22 +162,25 @@ const PerformanceMonitor: React.FC<{ showInDevelopment?: boolean }> = ({
   };
 
   return (
-    <div className="performance-monitor">
-      <div className="performance-monitor__header">
+    <div className='performance-monitor'>
+      <div className='performance-monitor__header'>
         <h4>Performance Metrics</h4>
         <button
-          className="performance-monitor__close"
+          className='performance-monitor__close'
           onClick={() => setIsVisible(false)}
-          aria-label="Close performance monitor"
+          aria-label='Close performance monitor'
         >
           ×
         </button>
       </div>
-      <div className="performance-monitor__metrics">
+      <div className='performance-monitor__metrics'>
         {Object.entries(metrics).map(([key, value]) => (
-          <div key={key} className={`performance-monitor__metric ${getScoreColor(key, value)}`}>
-            <span className="metric-label">{key.toUpperCase()}</span>
-            <span className="metric-value">{formatValue(key, value)}</span>
+          <div
+            key={key}
+            className={`performance-monitor__metric ${getScoreColor(key, value)}`}
+          >
+            <span className='metric-label'>{key.toUpperCase()}</span>
+            <span className='metric-value'>{formatValue(key, value)}</span>
           </div>
         ))}
       </div>

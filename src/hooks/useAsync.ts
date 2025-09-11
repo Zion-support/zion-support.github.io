@@ -19,32 +19,32 @@ interface UseAsyncOptions {
 export function useAsync<T>(
   asyncFunction: (...args: any[]) => Promise<T>,
   options: UseAsyncOptions = {}
-): [
-  AsyncState<T>,
-  (...args: any[]) => Promise<T | undefined>,
-  () => void
-] {
+): [AsyncState<T>, (...args: any[]) => Promise<T | undefined>, () => void] {
   const { immediate = false } = options;
-  
+
   const [state, setState] = useState<AsyncState<T>>({
     data: null,
     loading: false,
     error: null,
   });
 
-  const execute = useCallback(async (...args: any[]): Promise<T | undefined> => {
-    setState(prev => ({ ...prev, loading: true, error: null }));
-    
-    try {
-      const result = await asyncFunction(...args);
-      setState({ data: result, loading: false, error: null });
-      return result;
-    } catch (error) {
-      const errorObj = error instanceof Error ? error : new Error(String(error));
-      setState({ data: null, loading: false, error: errorObj });
-      throw errorObj;
-    }
-  }, [asyncFunction]);
+  const execute = useCallback(
+    async (...args: any[]): Promise<T | undefined> => {
+      setState(prev => ({ ...prev, loading: true, error: null }));
+
+      try {
+        const result = await asyncFunction(...args);
+        setState({ data: result, loading: false, error: null });
+        return result;
+      } catch (error) {
+        const errorObj =
+          error instanceof Error ? error : new Error(String(error));
+        setState({ data: null, loading: false, error: errorObj });
+        throw errorObj;
+      }
+    },
+    [asyncFunction]
+  );
 
   const reset = useCallback(() => {
     setState({ data: null, loading: false, error: null });

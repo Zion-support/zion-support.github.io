@@ -149,17 +149,17 @@
     min-height: 1.875rem;
     padding: 0 0.625rem;
   }
-  
+
   .input-wrapper--medium {
     min-height: 2.25rem;
     padding: 0 0.875rem;
   }
-  
+
   .input-wrapper--large {
     min-height: 2.75rem;
     padding: 0 1rem;
   }
-  
+
   .input {
     font-size: 0.9375rem;
   }
