@@ -1,4 +1,28 @@
+<<<<<<< HEAD
+=======
+
 import { ReactNode } from "react";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function AdminLayout({ children }: { children: ReactNode }) {;
+  return (;
+
+
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
+<<<<<<< HEAD
+=======
+=======
+import { ReactNode  } from './react';
+export default /**
+ * AdminLayout - Function description
+ */
+function AdminLayout() {
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { ReactNode } from "react";
+export default function AdminLayout({ children }: { children: ReactNode }) {return (;
 export default function AdminLayout({ children }: { children: ReactNode }) {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
@@ -39,6 +63,25 @@ export default function AdminLayout({ children }: { children: ReactNode }) {;
       <div className="py-8">;
         {children}
       </div>;
+<<<<<<< HEAD
+=======
+
+    </div>;
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+};
+
+export default Layout;
+
+
+<<<<<<< HEAD
     </div>;
   );
 }
+};
+
+export default Layout;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

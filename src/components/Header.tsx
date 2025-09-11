@@ -1,8 +1,11 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 const services = [];
 const solutions = [];
 
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     },
   ];
@@ -209,3 +212,4 @@ const solutions = [];
     </div>
     );
 
+export default Header;

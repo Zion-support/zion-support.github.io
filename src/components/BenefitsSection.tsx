@@ -1,7 +1,264 @@
+<<<<<<< HEAD
+import { GradientHeading } from "./GradientHeading",
+import { FeatureCard } from "./FeatureCard",
+import { GradientHeading } from "./GradientHeading";
+import { FeatureCard } from "./FeatureCard";
+import { GradientHeading } from './GradientHeading'
+import { FeatureCard } from './FeatureCard'
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+interface BenefitsSectionProps {
+  className?: string;
+  style?: React.CSSProperties
+const getBenefits = (t: any,) => [
+
+import { GradientHeading } from "./GradientHeading",
+import { FeatureCard } from "./FeatureCard",
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { useTranslation } from "react-i18next",
+interface BenefitsSectionProps {
+  className?: string,
+  style?: React.CSSProperties
+const getBenefits = (t: any,) => [
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const getBenefits = (t: any) => [
+
+
+  {
+
+<<<<<<< HEAD
+    icon: <TrendingDown className="w-8 h-8" />}],
+
+export function BenefitsSection({ className, style }: BenefitsSectionProps) {
+  const { t } = useTranslation(),
+  const benefits = getBenefits(t),
+  
+  return (
+    <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+
+const getBenefits = (t: any) => [
+}
+
+const getBenefits = (t: any) => [
+  {
+    title: t('benefits.ai_matchmaking')
+    description: t('benefits.ai_matchmaking_desc')
+    icon: <Bot className='w-8 h-8' />
+  }
+  {
+    title: t('benefits.global_availability')
+    description: t('benefits.global_availability_desc')
+    icon: <Globe className='w-8 h-8' />
+  }
+  {
+    title: t('benefits.support_24_7')
+    description: t('benefits.support_24_7_desc')
+    icon: <Clock className='w-8 h-8' />
+  }
+  {
+    title: t('benefits.cost_reduction')
+    description: t('benefits.cost_reduction_desc')
+    icon: <TrendingDown className='w-8 h-8' />
+  }
+]
+export function BenefitsSection({ className, style }: BenefitsSectionProps) {
+  const { t } = useTranslation()
+  const benefits = getBenefits(t)
+    >
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-16'>
+          <GradientHeading>{t('home.benefits_title')}</GradientHeading>
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
+            {t('home.benefits_subtitle')}
+          </p>
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {benefits.map((benefit, index) => (
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    title: t('benefits.ai_matchmaking'),
+    description: t('benefits.ai_matchmaking_desc'),
+    icon: <Bot className="w-8 h-8" />},
+  {
+    title: t('benefits.global_availability'),
+    description: t('benefits.global_availability_desc'),
+    icon: <Globe className="w-8 h-8" />},
+  {
+    title: t('benefits.support_24_7'),
+    description: t('benefits.support_24_7_desc'),
+    icon: <Clock className="w-8 h-8" />},
+  {
+    title: t('benefits.cost_reduction'),
+    description: t('benefits.cost_reduction_desc'),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <GradientHeading>{t('home.benefits_title')}</GradientHeading>
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
+            {t('home.benefits_subtitle')}
+          </p>
+        </div>
+
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {benefits.map((benefit, index) => (
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+import { GradientHeading } from './GradientHeading';
+import { FeatureCard } from './FeatureCard';
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useTranslation } from 'react-i18next';
+interface BenefitsSectionProps {;
+  className?: string;
+  style?: React && React.CSSProperties;
+const getBenefits = (t: any,) => [;
+  {;
+    title: t('benefits && benefits.ai_matchmaking'),;
+    description: t('benefits && benefits.ai_matchmaking_desc'),;
+    icon: <Bot className='w-8 h-8' />,;
+  },;
+  {;
+    title: t('benefits && benefits.global_availability'),;
+    description: t('benefits && benefits.global_availability_desc'),;
+    icon: <Globe className='w-8 h-8' />,;
+  },;
+  {;
+    title: t('benefits && benefits.support_24_7'),;
+    description: t('benefits && benefits.support_24_7_desc'),;
+    icon: <Clock className='w-8 h-8' />,;
+  },;
+  {;
+    title: t('benefits && benefits.cost_reduction'),;
+    description: t('benefits && benefits.cost_reduction_desc'),;
+    icon: <TrendingDown className='w-8 h-8' />,;
+  },;
+];
+export function BenefitsSection(): any ({ className, style }: BenefitsSectionProps) {;
+  const { t } = useTranslation();
+  const benefits = getBenefits(t);
+    >;
+      <div className='container mx-auto px-4'>;
+        <div className='text-center mb-16'>;
+          <GradientHeading>{t('home && home.benefits_title')}</GradientHeading>;
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>;
+            {t('home && home.benefits_subtitle')}
+          </p>;
+        </div>;
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map((benefit, index) => (        ;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
+          {benefits && benefits.map((benefit, index) => (;
+            <FeatureCard
+import { GradientHeading } from './GradientHeading';
+import { FeatureCard } from './FeatureCard';
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { use_translation } from 'react - i18next';
+interface BenefitsSectionProps {
+  class_name?: string;
+  style?: React.CSSProperties;
+const get_benefits = (t: any, ) =>: any [;
+  {
+    title: t ('benefits.ai_matchmaking'),
+    description: t ('benefits.ai_matchmaking_desc'),
+    icon: <Bot className='w - 8 h - 8' />,
+  },
+  {
+    title: t ('benefits.global_availability'),
+    description: t ('benefits.global_availability_desc'),
+    icon: <Globe className='w - 8 h - 8' />,
+  },
+  {
+    title: t ('benefits.support_24_7'),
+    description: t ('benefits.support_24_7_desc'),
+    icon: <Clock className='w - 8 h - 8' />,
+  },
+  {
+    title: t ('benefits.cost_reduction'),
+    description: t ('benefits.cost_reduction_desc'),
+    icon: <TrendingDown className='w - 8 h - 8' />,
+  },
+];
+export /**
+ * BenefitsSection - Function description
+ */
+function BenefitsSection() {
+  const { t } = use_translation ();
+  const benefits = get_benefits (t);
+    >;
+      <div className='container mx - auto px - 4'>;
+        <div className='text - center mb - 16'>;
+          <GradientHeading>{t ('home.benefits_title')}</GradientHeading>;
+          <p className='text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto'>;
+            {t ('home.benefits_subtitle')}
+          </p>;
+        </div>;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto'>          {benefits.map ((benefit, index) => (
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
+          {benefits.map ((benefit, index) => (
+            <FeatureCard;
+              key={index}
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+      "Direct provider connections","
+      "Competitive pricing","
+      "Bulk discount options","
+      "Transparent cost structure" ]
+              key={index}
+
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+
+          ))}
+
+              className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
+              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
+            />))}
+        </div>;
+      </div>;
+    </section>);
+}
 import React, { useState } from 'react';
 
-import { _motion } from 'framer-motion';
-import { _Bot, Clock, Globe, TrendingDown, Zap, Shield, Users } from 'lucide-react';
+export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
+import { GradientHeading } from './ui / GradientHeading';
+export default /**
+ * Page - Function description
+ */
+function Page() {
+  {
 
 import { motion } from 'framer-motion';
 import { Shield } from 'lucide-react';
@@ -12,54 +269,19 @@ const benefits = [];
 const services = [];
 const solutions = [];
 
-export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+      "Direct provider connections",";
+      "Competitive pricing",";
+      "Bulk discount options",";
+      "Transparent cost structure" ];
 
-  const _benefits = [
-    {
-      title: "AI-Powered Matchmaking",
-      description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-      icon: <Bot className="w-8 h-8" />,
-      color: "from-zion-cyan to-zion-purple",
-      bgColor: "from-zion-cyan/20 to-zion-purple/20",
-      stats: "95% Match Rate",
-      features: ["Smart algorithms", "Real-time matching", "Personalized results"]
-    },
-    {
-      title: "Global Availability",
-      description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-zion-purple to-zion-cyan",
-      bgColor: "from-zion-purple/20 to-zion-cyan/20",
-      stats: "150+ Countries",
-      features: ["Worldwide network", "Local expertise", "Global reach"]
-    },
-    {
-      title: "24/7 Support",
-      description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
-      icon: <Clock className="w-8 h-8" />,
-      color: "from-zion-cyan-light to-zion-blue",
-      bgColor: "from-zion-cyan-light/20 to-zion-blue/20",
-      stats: "24/7 Available",
-      features: ["Round-the-clock support", "Expert assistance", "Quick response"]
-    },
-    {
-      title: "Cost Reduction",
-      description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
-      icon: <TrendingDown className="w-8 h-8" />,
-      color: "from-zion-purple to-zion-cyan-light",
-      bgColor: "from-zion-purple/20 to-zion-cyan-light/20",
-      stats: "40% Savings",
-      features: ["Direct connections", "No middlemen", "Competitive pricing"]
-    }
-  ];
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+            />
+          ))}
 
-  const _additionalStats = [
-    { icon: <Zap className="w-6 h-6" />, value: "500+", label: "Projects Completed" },
-    { icon: <Shield className="w-6 h-6" />, value: "99.9%", label: "Uptime Guarantee" },
-    { icon: <Users className="w-6 h-6" />, value: "10K+", label: "Happy Clients" },
-    { icon: <Globe className="w-6 h-6" />, value: "150+", label: "Countries Served" }
-  ];
+        </div>;
+      </div>;
+    </section>;
+  );
 
   const _containerVariants = {
     hidden: { opacity: 0 },
@@ -240,4 +462,10 @@ export function BenefitsSection() {
     </section>
   );
 }
-
+;
+}
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

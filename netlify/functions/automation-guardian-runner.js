@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -7,6 +8,55 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
+    return status
+  }
+  // Generate sitemap for crawling
+
+  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  // Build search index if available
+  try {
+    logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))
+  } catch (error) {
+    logs && logs.push(`Search index generation skipped: ${String(error)}`)
+  }
+  // Commit and push
+<<<<<<< HEAD
+  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
+=  // Run the automation guardian
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
+  // Attempt to push any changes
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+=======
+
+  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
+=  // Run the automation guardian
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
+
+
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
+  // Attempt to push any changes
+
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const { spawn_sync } = require ('child_process');
+/**
+ * run_node - Function description
+ */
+function run_node() {
+  const abs = path.resolve (__dirname, '....', rel_path),
+  const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
 exports.config = {
   schedule: '*/10 * * * *',
 };
@@ -31,15 +81,11 @@ exports.handler = async () => {
   } catch (error) {
     logs.push(`Search index generation skipped: ${String(error)}`);
   }
-
-  // Commit and push
-  logStep('git:sync', () => runNode('automation/git-sync.cjs'));
-=
-  // Run the automation guardian
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
-
-  // Attempt to push any changes
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, body: logs.join('\n') };
-};
+  // Commit and push;
+  log_step ('git:sync', () => run_node ('automation / git - sync.cjs')),
+=  // Run the automation guardian;
+  log_step ('automation:guardian', () => run_node ('automation / automation - guardian - 10min.cjs')),
+  // Attempt to push any changes;
+  log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
+  return { status_code: 200, body: logs.join ('\n') }
+},

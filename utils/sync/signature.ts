@@ -1,6 +1,13 @@
-import crypto from "crypto";
-export function getSyncSecret(): string | null {;
-  const raw = process.env.ZION_SYNC_SECRET || "";
+<<<<<<< HEAD
+// Signature utilities
+export const signature = {
+  // Add signature functionality here
+  verify: (signature: string, message: string, address: string) => false
+  sign: (message: string, privateKey: string) => ''
+  recover: (signature: string, message: string) => ''
+
+export function getSyncSecret(): string | null {
+  const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
 ;
@@ -24,3 +31,26 @@ export function verifySignature(payload: unknown, signature?: string | null): bo
     return false;
   }
 }
+// Signature utilities;
+export const signature = {
+  // Add signature functionality here;
+}
+=======
+
+import crypto from 'crypto';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+}
+  verify: (signature: string, message: string, address: string) => false,
+  sign: (message: string, privateKey: string) => '',
+  recover: (signature: string, message: string) => '';
+}
+};
+
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

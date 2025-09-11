@@ -1,21 +1,22 @@
-export type PaymentTermsType = "hourly" | "fixed" | "milestone";
-export type Milestone = {;
-  id: string;
-  title: string;
-  dueDateIso?: string;
-  amountUsd?: number;
-  status?: "planned" | "in-progress" | "done";
-};
-export type PaymentTerms =;
-  | { type: "hourly", hourlyRateUsd: number }
-  | { type: "fixed", fixedAmountUsd: number }
-  | { type: "milestone", milestones: Milestone[] };
-export type OfferStatus =;
-  | "SENT";
-  | "CONFIRMED";
-  | "CHANGES_REQUESTED";
-  | "DECLINED";
-export type Offer = {;
+
+
+
+
+<<<<<<< HEAD
+// Marketplace types
+export interface Offer {
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export interface Offer {;
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -27,22 +28,39 @@ export type Offer = {;
   status: OfferStatus;
   changeRequestNote?: string;
   projectId?: string;
-};
-export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
-export type ProjectDocument = {;
-  id: string;
-  name: string;
-  url?: string;
-  uploadedAtIso: string;
-};
-export type ProjectNote = {;
-  id: string;
-  authorId: string;
-  authorRole: "client" | "talent";
-  content: string;
-  createdAtIso: string;
-};
-export type Project = {;
+}
+export interface PaymentTerms {
+  type: 'hourly' | 'fixed' | 'milestone';
+  amount?: number;
+  currency?: string;
+  milestones?: Array<{
+    title: string;
+    amount: number;
+    dueDateIso: string;
+  }>;
+}
+export interface Project {
+
+export interface PaymentTerms {;
+  type: 'hourly' | 'fixed' | 'milestone';
+  amount?: number;
+  currency?: string;
+  milestones?: Array<{
+    title: string;
+    amount: number;
+    dueDateIso: string;
+  }>;
+}
+
+export interface Project {;
+=======
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   summary: string;
@@ -53,8 +71,28 @@ export type Project = {;
   timeline: Milestone[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
-};
-export type MarketplaceDb = {;
-  offers: Offer[];
-  projects: Project[];
-};
+}
+export interface ProjectDocument {
+
+export interface ProjectDocument {;
+  id: string;
+  name: string;
+  url?: string;
+  uploadedAtIso: string;
+}
+export interface ProjectNote {
+
+export interface ProjectNote {;
+  id: string;
+  authorId: string;
+  authorRole: string;
+  content: string;
+  createdAtIso: string;
+}
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+

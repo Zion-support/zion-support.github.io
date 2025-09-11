@@ -1,9 +1,5 @@
-import React from "react";
-import Head from "next/head";
-
-import SEO from '@/components/SEO';
-const services = [];
-const solutions = [];
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
@@ -49,4 +45,6 @@ export default function SEOHead({
       )}
     </Head>
   );
-}
+};
+
+export default SEOHead;

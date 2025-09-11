@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function TermsPage() {;
+  return (;
+
+    <div className="min-h-screen bg-white">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default /**
+ * TermsPage - Function description
+ */
+function TermsPage() {
+  return (
+    <div className="min - h-screen bg - white">;
+export default function TermsPage() {return (;
 export default function TermsPage() {;
   return (;
     <div className="min-h-screen bg-white">;
@@ -204,6 +223,5 @@ export default function TermsPage() {;
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>);
 }

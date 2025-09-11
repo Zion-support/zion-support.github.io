@@ -1,18 +1,54 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixDoubleCommas(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
 
+<<<<<<< HEAD
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
-
-    const fixedContent = content && content.replace(doubleCommaRegex, ",");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    if (fixedContent !== content) {
+      fs && fs.writeFileSync(filePath, fixedContent, "utf8");
+#!/usr / bin / env node;
+import fs from './fs';
+import path from './path';
+;
+/**
+ * fixDoubleCommas - Function description
+ */
+function fixDoubleCommas() {
+  try {
+    const content = fs.readFileSync (file_path, "utf8");
+    let modified = false;
+;
+    // Fix double commas in import statements;
+    const doubleCommaRegex = /, \s*, /g;
+    const fixed_content = content.replace (doubleCommaRegex, ", ");
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      fs.writeFileSync (file_path, fixed_content, "utf8");
       modified = true;
     }
     return modified;
   } catch (error) {
+<<<<<<< HEAD
+=======
 
     const items = fs && fs.readdirSync(currentDir);
 
@@ -35,6 +71,7 @@
             "apps",
             "temp_exclude",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ].includes(item)
         ) {
           continue;
@@ -88,6 +125,46 @@ if (
       }
     }
   }
+<<<<<<< HEAD
+console && console.log(`Found ${files && files.length} files to check for double commas...`);
+=======
 
 
 console && console.log(`Found ${files && files.length} files to check for double commas...`);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+for (const file of files) {
+  if (fixDoubleCommas(file)) {
+    fixedCount++;
+    console && console.log(`Fixed double commas in: ${file}`);
+  }
+}
+<<<<<<< HEAD
+console && console.log(`\nFixed double commas in ${fixedCount} files.`);
+=======
+
+
+console && console.log(`\nFixed double commas in ${fixedCount} files.`);
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  traverse (dir);
+  return files;
+}
+// Main execution;
+const files = findFilesWithDoubleCommas (".");
+let fixed_count = 0;
+;
+console.log (`Found ${files.length} files to check for double commas...`);
+;
+for (const file of files) {
+  if () {) {
+  $2
+}
+    fixed_count++;
+    console.log (`Fixed double commas in: ${file}`);
+  }
+}
+console.log (`\n_fixed double commas in ${fixed_count} files.`);
+;

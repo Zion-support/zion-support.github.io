@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+"use client",;
+import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
+import { useAuth } from "@/contexts/AuthContext",;
+import Link from "next/link",;
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
+  const { user, isAuthenticated, logout } = useAuth();
+
+
+  return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+"use client",
+import { useWalkthroughTarget  } from './OnboardingWalkthrough';,
+import { use_auth  } from '@/contexts / AuthContext';,
+import Link from './next / link';,
+export /**
+ * LayoutWrapper - Function description
+ */
+function LayoutWrapper() {
+  const { user, is_authenticated, logout } = use_auth ();
+  return (
+"use client";
+import { useWalkthroughTarget } from "./OnboardingWalkthrough";
+import { useAuth } from "@/contexts/AuthContext";
+import Link from "next/link";
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
 "use client",;
 import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
 import { useAuth } from "@/contexts/AuthContext",;
@@ -31,9 +64,28 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                 >;
                   Dashboard;
                 </Link>;
+
+                <div className="flex items - center gap - 3">;
+                  <span className="text - sm text - zinc - 400">;
+                    Welcome, {user?.name || user?.email}
+
+<<<<<<< HEAD
+
+                    Welcome, {user?.name || user?.email}
+
+                <div className="flex items - center gap - 3">;
+                  <span className="text - sm text - zinc - 400">;
+                    Welcome, {user?.name || user?.email}
                 <div className="flex items-center gap-3">;
                   <span className="text-sm text-zinc-400">;
                     Welcome, {user?.name || user?.email}
+=======
+=======
+
+                    Welcome, {user?.name || user?.email}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </span>;
                   <button;
                     onClick={logout}
@@ -63,6 +115,5 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
         </div>;
       </nav>;
       {children}
-    </>;
-  );
+    </>);
 }

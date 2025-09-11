@@ -1,45 +1,31 @@
-import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-export default function Login() {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
-
-  useEffect(() => {
-    // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
-    const params = new URLSearchParams(location.search);
-    const token = params.get('token');
-    if (token) {
-      safeStorage.setItem('zion_token', token);
-      // Clear token from URL to prevent re-processing
-      router(location.pathname, { replace: true })}
-  }, [location.search, location.pathname, navigate]);
-
-  useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
-      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
-      router(next, { replace: true })}
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
-
-  // Render LoginContent if not authenticated and auth is not loading
-  if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
-      </ErrorBoundary>
-    )}
-
-  // Optional: Render a loading indicator while isLoading is true
-  if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react'; const Login = () => { return ( <div className="min-h-screen bg-gray-50 flex items-center justify-center"> <div className="max-w-md w-full"> <div className="bg-white p-8 rounded-lg shadow-md"> <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center">Login</h1> <form className="space-y-4"> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Email</label> <input type="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Password</label> <input type="password" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"> Sign In </button> </form> </div> </div> </div> )}; export default Login;
 
-  // If authenticated and isLoading is false, the useEffect above should have navigated.
-  // Return null or a minimal layout if needed, though direct navigation is preferred.
-  return null}
+<<<<<<< HEAD
+import React from 'react'; const Login = () =>: any { return ( <div className="min - h-screen bg - gray - 50 flex items - center justify - center"> <div className="max - w-md w - full"> <div className="bg - white p - 8 rounded - lg shadow - md"> <h1 className="text - 2xl font - bold text - gray - 900 mb - 6 text - center">Login</h1> <form className="space - y-4"> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Email</label> <input type="email" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Password</label> <input type="password" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <button type="submit" className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - blue - 500"> Sign In </button> </form> </div> </div> </div> )} export default Login;
+import React from 'react'; const Login = () => { return ( <div className="min-h-screen bg-gray-50 flex items-center justify-center"> <div className="max-w-md w-full"> <div className="bg-white p-8 rounded-lg shadow-md"> <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center">Login</h1> <form className="space-y-4"> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Email</label> <input type="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Password</label> <input type="password" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"> Sign In </button> </form> </div> </div> </div> )}; export default Login;
+import React from 'react'; const Login = () =>: any { return ( <div className="min - h-screen bg - gray - 50 flex items - center justify - center"> <div className="max - w-md w - full"> <div className="bg - white p - 8 rounded - lg shadow - md"> <h1 className="text - 2xl font - bold text - gray - 900 mb - 6 text - center">Login</h1> <form className="space - y-4"> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Email</label> <input type="email" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Password</label> <input type="password" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <button type="submit" className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - blue - 500"> Sign In </button> </form> </div> </div> </div> )} export default Login;
+=======
+import React from 'react'; const Login = () =>: any { return ( <div className="min - h-screen bg - gray - 50 flex items - center justify - center"> <div className="max - w-md w - full"> <div className="bg - white p - 8 rounded - lg shadow - md"> <h1 className="text - 2xl font - bold text - gray - 900 mb - 6 text - center">Login</h1> <form className="space - y-4"> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Email</label> <input type="email" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Password</label> <input type="password" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <button type="submit" className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - blue - 500"> Sign In </button> </form> </div> </div> </div> )} export default Login;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

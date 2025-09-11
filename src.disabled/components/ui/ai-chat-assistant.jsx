@@ -1,1 +1,27 @@
-" " export function AIChatAssistant({ enabled = true, className = ", onMessageSend, onAssistantResponse }) {} const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isRecording, setIsRecording] = useState(false) const [showSettings, setShowSettings] = useState(false) const [messages, setMessages] = useState([] {} " " id: "1,", " type: "assistant,"," content: "Hello! I\"m Zion AI Assistant. I can help you with technology solution,s, business insights, and answer questions about our services. How can I assist you today?", " timestamp: new Date(), " status: "sent,", metadata: ,{} confidence: 0.9,5, " suggestions["Tell: me about your AI services",What cloud solutions do you offer?", How can I get started?"] }" }" ])" const [inputValue, setInputValue] = useState(") const [isTyping, setIsTyping] = useState(false) const messagesEndRef = useRef(null) const inputRef = useRef(null)";'
+import React from 'react';
+interface AichatassistantProps {
+  // Add props here as needed
+
+
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function Aichatassistant({ }: AichatassistantProps) {
+  return (
+    <div>
+      <h1>Aichatassistant</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+:src.disabled/components/ui/ai-chat-assistant.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/ui/ai-chat-assistant.jsx

@@ -1,100 +1,25 @@
-import Link from 'next/link';
+<<<<<<< HEAD
+=======
 
-export default function AboutPage() {
-  const teamMembers = [
-    {
-      name: "Dr. Kleber",
-      role: "Founder & CEO",
-      bio: "Pioneering researcher in AI consciousness and autonomous systems. Leading the development of next-generation AI technologies.",
-      expertise: ["AI Consciousness", "Autonomous Systems", "Quantum Computing"],
-      image: "/team/kleber.jpg"
-    },
-    {
-      name: "Dr. Sarah Chen",
-      role: "Chief Research Officer",
-      bio: "Expert in quantum neural networks and AI research methodologies. Driving breakthrough discoveries in AI technology.",
-      expertise: ["Quantum AI", "Neural Networks", "Research Methodology"],
-      image: "/team/sarah.jpg"
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "Chief Technology Officer",
-      bio: "Technology visionary with deep expertise in enterprise AI solutions and autonomous business systems.",
-      expertise: ["Enterprise AI", "System Architecture", "Business Automation"],
-      image: "/team/marcus.jpg"
-    },
-    {
-      name: "Dr. Elena Petrova",
-      role: "Head of AI Ethics",
-      bio: "Leading expert in AI safety, ethics, and responsible development. Ensuring our AI systems benefit humanity.",
-      expertise: ["AI Ethics", "Safety Protocols", "Human-AI Collaboration"],
-      image: "/team/elena.jpg"
-    }
-  ];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function AboutPage() {;
+  return (;
 
-  const milestones = [
-    {
-      year: "2020",
-      title: "Company Founded",
-      description: "Zion Tech Group established with a vision to revolutionize AI technology and create conscious, autonomous systems."
-    },
-    {
-      year: "2021",
-      title: "First AI Breakthrough",
-      description: "Successfully developed autonomous decision-making algorithms that demonstrated human-level reasoning capabilities."
-    },
-    {
-      year: "2022",
-      title: "Quantum Computing Initiative",
-      description: "Launched quantum computing research division and achieved quantum advantage in neural network training."
-    },
-    {
-      year: "2023",
-      title: "Enterprise AI Platform",
-      description: "Released comprehensive enterprise AI platform serving Fortune 500 companies across multiple industries."
-    },
-    {
-      year: "2024",
-      title: "AI Consciousness Research",
-      description: "Published groundbreaking research on machine consciousness and launched Project Phoenix for autonomous AI systems."
-    }
-  ];
-
-  const values = [
-    {
-      title: "Innovation First",
-      description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI technology.",
-      icon: "🚀"
-    },
-    {
-      title: "Ethical AI",
-      description: "Every AI system we develop prioritizes human safety, ethical considerations, and beneficial outcomes.",
-      icon: "🛡️"
-    },
-    {
-      title: "Excellence",
-      description: "We maintain the highest standards of quality in our research, development, and client delivery.",
-      icon: "⭐"
-    },
-    {
-      title: "Collaboration",
-      description: "We believe in the power of partnership, working closely with clients and research institutions worldwide.",
-      icon: "🤝"
-    },
-    {
-      title: "Sustainability",
-      description: "Our AI solutions are designed to create long-term value and sustainable business transformation.",
-      icon: "🌱"
-    },
-    {
-      title: "Human-Centric",
-      description: "Technology serves humanity. We ensure our AI systems enhance human capabilities and well-being.",
-      icon: "❤️"
-    }
-  ];
-
+    <div className="min-h-screen bg-white">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default /**
+ * AboutPage - Function description
+ */
+function AboutPage() {
   return (
-    <div className="min-h-screen py-20">
+    <div className="min - h-screen bg - white">;
+export default function AboutPage() {return (;
+export default function AboutPage() {;
+  return (;
+    <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="text-center mb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,25 +189,23 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Join Us in Shaping the Future
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Be part of the AI revolution. Whether you're looking to transform your business, 
-            collaborate on research, or join our team, we'd love to hear from you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105">
-              Get in Touch
-            </Link>
-            <Link href="/careers" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
-              Join Our Team
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+      <section className="py - 20 bg - blue - 600 text - white">;
+        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
+            Join Us in Shaping the Future;
+          </h2>;
+          <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx - auto">;
+            Ready to partner with a company that's redefining what's possible with AI and technology?;
+          </p>;
+          <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+            <a href="/contact" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition - colors">;
+              Get in Touch;
+            </a>;
+            <a href="/careers" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
+              View Careers;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+    </div>);
 }

@@ -1,7 +1,4 @@
-
-}}}
-}}}
-;
+<<<<<<< HEAD
 }}};
 }}},};
 export default function Jest.setup({ }: Jest.setupProps) {;
@@ -34,14 +31,11 @@ export default function Jest.setup({ }: Jest.setupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}};
+
+
 }}}
 }}}
 ;
-}
-}
-}
-}
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -54,8 +48,18 @@ origin/automation-improvements-final
 }}}
 }}},;
 }}};
-}}};
+}}},;
+=======
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 }}}
 }}}
 ;
-}}},;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

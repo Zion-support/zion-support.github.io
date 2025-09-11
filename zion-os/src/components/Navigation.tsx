@@ -1,18 +1,54 @@
-"use client";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+
+
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+"use client",
+import { useState, useEffect, useRef  } from './react';,
+import Link from './next / link';,
+export /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
+  const [isSearchOpen, setIsSearchOpen] = useState (false),
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  return (
+"use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-
-export function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-black/90 backdrop-blur-md border-b border-white/20 shadow-lg" 
-          : "bg-black/80 backdrop-blur-md border-b border-white/10"
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+    <nav;
+      className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+        is_scrolled;
+          ? "bg - black / 90 backdrop - blur - md border - b border - white / 20 shadow - lg";
+          : "bg - black / 80 backdrop - blur - md border - b border - white / 10";
       }`}
       role="navigation"
       aria-label="Main navigation"
@@ -197,7 +233,20 @@ export function Navigation() {
             </div>
           </div>
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+          </div>)}
+
+
+;
+
+<<<<<<< HEAD
+;
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate-fade-in">
@@ -255,27 +304,39 @@ export function Navigation() {
               </div>
 
               {/* Other Links */}
-              <a 
-                href="/docs" 
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Documentation
-              </a>
-              <a 
-                href="/multiverse/launch" 
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Launch
-              </a>
-              <button className="w-full mt-4 btn-primary text-sm">
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+              <a;
+                href="/docs";
+                className="block px - 3 py - 2 text - gray - 300 hover:text - white hover:bg - white / 10 rounded - md transition - colors";
+                on_click={() => setIsMobileMenuOpen (false)}
+              >;
+                Documentation;
+              </a>;
+              <a;
+                href="/multiverse / launch";
+                className="block px - 3 py - 2 text - gray - 300 hover:text - white hover:bg - white / 10 rounded - md transition - colors";
+                on_click={() => setIsMobileMenuOpen (false)}
+              >;
+                Launch;
+              </a>;
+              <button className="w - full mt - 4 btn - primary text - sm">;
+                Get Started;
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    </nav>;
   );
 }
+<<<<<<< HEAD
+}
+}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

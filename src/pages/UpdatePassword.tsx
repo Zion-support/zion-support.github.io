@@ -1,28 +1,73 @@
-import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { LockKeyhole } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
-import { toast } from "@/hooks/use-toast";
-import { cleanupAuthState } from "@/utils/authUtils";
+<<<<<<< HEAD
+import { useRouter } from 'next/router'
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm, ControllerRenderProps } from "react-hook-form"
+import { z } from "zod"
+import { LockKeyhole } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import {
+  Form
+  FormControl
+  FormField
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
+import { cleanupAuthState } from "@/utils/authUtils"
+import { logErrorToProduction } from '@/utils/productionLogger'
+
+
+import { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { z } from "zod",
+import { LockKeyhole } from 'lucide-react'
+
+import { supabase } from "@/integrations/supabase/client",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { cleanupAuthState } from "@/utils/authUtils",
+import { logErrorToProduction } from '@/utils/productionLogger',
 // Form validation schema
 const updatePasswordSchema = z
     .object({
     password: z
-        .string()
-        .min(8, "Password must be at least 8 characters")
-        .max(64, "Password must be less than 64 characters"),
-    confirmPassword: z.string(),
-})
-    .refine((data) => data.password === data.confirmPassword, {
+      .string()
+      .min(8, "Password must be at least 8 characters")
+      .max(64, "Password must be less than 64 characters")
+      .max(64, "Password must be less than 64 characters")
+    confirmPassword: z.string()})
+  .refine((data,) => data.password === data.confirmPassword, {
+    message: "Passwords do not match"
+    path: ["confirmPassword"]})
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
+}
+
+  )
+}
+      .max(64, "Password must be less than 64 characters"),
+      .max(64, "Password must be less than 64 characters"),
+    confirmPassword: z.string()})
+  .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path["confirmPassword"],
-});
+    path: ["confirmPassword"]}),
+
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
+}
+  );
+};
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
+
 export default function UpdatePassword() {
     const [isLoading, setIsLoading] = useState(false);
     const [accessToken, setAccessToken] = useState(null);
@@ -163,22 +208,69 @@ export default function UpdatePassword() {
                       </Button>
                     </div>
                   </form>
-                </Form>)}
-            </div>
-          </div>
-        </div>
-        <div className="hidden lg:block relative w-0 flex-1">
-          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
-            <div className="flex flex-col justify-center items-center h-full px-8">
-              <div className="max-w-md text-center">
-                <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>
-                <p className="text-lg text-white/80">
-                  Set a strong password to secure your account and continue your journey in the Zion marketplace.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </>)}
+                </Form>
+              )}
+            </div>;
+          </div>;
+        </div>;
+        <div className="hidden lg: block relative w-0 flex-1">;
+          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
+            <div className="flex flex-col justify-center items-center h-full px-8">;
+              <div className="max-w-md text-center">;
+                <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
+                <p className="text-lg text-white/80">;
+                  Set a strong password to secure your account and continue your journey in the Zion marketplace.;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+}
+;
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+
+
+  )
+}
+
+
+  FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
+import { cleanupAuthState  } from '@/utils / auth_utils';
+import { logErrorToProduction } from '@/utils / production_logger';
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object ({
+    password: z;
+      .string ();
+      .min (8, "Password must be at least 8 characters");
+      .max (64, "Password must be less than 64 characters");
+    confirm_password: z.string ()});
+  .refine ((data, ) => data.password === data.confirm_password, {
+    message: "Passwords do not match",
+    path: ["confirm_password"]}),
+type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
+}
+  );
+}
+
+      .max(64, "Password must be less than 64 characters"),
+      .max(64, "Password must be less than 64 characters"),
+
+    confirmPassword: z.string()})
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+<<<<<<< HEAD
+    path: ["confirmPassword"]}),
+=======
+    path: ["confirmPassword"]}),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

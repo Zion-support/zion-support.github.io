@@ -1,0 +1,222 @@
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {useState} from "react";
+export function NewsletterForm() {;
+<<<<<<< HEAD
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+=======
+
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { Input } from "@/components/ui/input",
+import { useState } from "react",
+export function NewsletterForm() {
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
+
+
+  const handleSubmit = (e: React.FormEvent) => {
+
+<<<<<<< HEAD
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      (setIsSubmitted(true), setEmail(""));
+    }, 1000);
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    e.preventDefault(),
+    setIsSubmitting(true),
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false),
+      setIsSubmitted(true),
+      setEmail("")
+    }, 1000)
+  },
+
+<<<<<<< HEAD
+  const handleSubmit = (e: React.FormEvent) => {
+e.preventDefault();
+    setIsSubmitting(true);
+// Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      (setIsSubmitted(true), setEmail(""));
+    }, 1000);
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  return (
+    <div className="w-full max-w-md mx-auto">
+      {isSubmitted ? (
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
+          <p className="text-white font-medium">Thank you for subscribing!</p>
+          <p className="text-zion-slate-light mt-1">
+            We'll keep you updated with the latest from Zion.
+          </p>
+        </div>
+      ) : (
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
+        >
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+            value={email}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setEmail(e.target.value)
+            }
+            required
+          />
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
+          >
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
+          </Button>
+        </form>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { useState } from "react",;
+export function NewsletterForm() {;
+  const [email, setEmail] = useState(""),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [isSubmitted, setIsSubmitted] = useState(false),;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
+
+    // Simulate API call;
+    setTimeout(() => {;
+      setIsSubmitting(false);
+      setIsSubmitted(true),;
+      setEmail("");
+    }, 1000);
+  };
+  return (
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { useState } from "react",;
+;
+export function NewsletterForm() {;
+  const [email, setEmail] = useState(""),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [isSubmitted, setIsSubmitted] = useState(false),;
+;
+  const handleSubmit = (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
+    ;
+    // Simulate API call;
+    setTimeout(() => {;
+      setIsSubmitting(false),;
+      setIsSubmitted(true),;
+      setEmail("");
+    }, 1000),;
+  },;
+;
+  return (;
+    <div className="w-full max-w-md mx-auto">;
+      {isSubmitted ? (;
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;
+          <p className="text-white font-medium">Thank you for subscribing!</p>;
+          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>;
+        </div>;
+            onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setEmail(e && e.target.value)}
+            required;
+          />;
+          <Button
+            type="submit" 
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">;
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
+      ) :(;
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
+          <Input;
+            type="email";
+            placeholder="Enter your email";
+            className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
+            value={email}
+            onChange={(e:React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+            required;
+          />;
+          <Button ;
+            type="submit" ;
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
+          >;
+            {isSubmitting ? "Subscribing..." :"Subscribe"}
+          </Button>;
+        </form>;
+      )}
+    </div>;
+      )}
+    </div>
+  );
+        </form>)}
+    </div>);
+  ),; const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault ();
+setIsSubmitting (true);
+//Simulate API call setTimeout ( () => {
+  
+};
+}</div>) 
+}
+      )}
+    </div>
+  );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
