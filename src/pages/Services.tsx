@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -17,18 +17,111 @@ import {
   Code
 } from 'lucide-react';
 
-export default function Services() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+// Service card component with enhanced design
+const ServiceCard = memo<{ 
+  service: {
+    id: number;
+    title: string;
+    description: string;
+    icon: string;
+    price: string;
+    features: string[];
+    category: string;
+    popular?: boolean;
+  };
+  onSelect: (service: any) => void;
+}>(({ service, onSelect }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-  const allServices = [
-    ...COMPREHENSIVE_SERVICES,
-    ...INNOVATIVE_MICRO_SAAS_SERVICES,
-    ...ADVANCED_ENTERPRISE_SOLUTIONS,
-    ...SPECIALIZED_IT_SERVICES
-  ];
+  return (
+    <div 
+      className={`
+        relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300
+        hover:bg-white/20 hover:border-white/40 hover:shadow-2xl hover:shadow-blue-500/20
+        transform hover:-translate-y-2 cursor-pointer
+        ${service.popular ? 'border-blue-400 bg-blue-500/10' : 'border-white/20'}
+        ${isHovered ? 'scale-105' : 'scale-100'}
+      `}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={() => onSelect(service)}
+    >
+      {service.popular && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
+        </div>
+      )}
+      
+      <div className="text-center">
+        <div className="text-5xl mb-4">{service.icon}</div>
+        <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+        <p className="text-blue-200 mb-6 leading-relaxed">{service.description}</p>
+        
+        <div className="text-3xl font-bold text-white mb-6">{service.price}</div>
+        
+        <ul className="space-y-3 mb-8">
+          {service.features.map((feature, index) => (
+            <li key={index} className="flex items-center text-blue-300">
+              <svg className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              {feature}
+            </li>
+          ))}
+        </ul>
+        
+        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+          Get Started
+        </button>
+      </div>
+    </div>
+  );
+});
 
-  const serviceCategories = [
+ServiceCard.displayName = 'ServiceCard';
+
+// Category filter component
+const CategoryFilter = memo<{
+  categories: string[];
+  activeCategory: string;
+  onCategoryChange: (category: string) => void;
+}>(({ categories, activeCategory, onCategoryChange }) => (
+  <div className="flex flex-wrap gap-4 justify-center mb-12">
+    <button
+      onClick={() => onCategoryChange('All')}
+      className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+        activeCategory === 'All'
+          ? 'bg-blue-600 text-white'
+          : 'bg-white/10 text-blue-300 hover:bg-white/20'
+      }`}
+    >
+      All Services
+    </button>
+    {categories.map((category) => (
+      <button
+        key={category}
+        onClick={() => onCategoryChange(category)}
+        className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+          activeCategory === category
+            ? 'bg-blue-600 text-white'
+            : 'bg-white/10 text-blue-300 hover:bg-white/20'
+        }`}
+      >
+        {category}
+      </button>
+    ))}
+  </div>
+));
+
+CategoryFilter.displayName = 'CategoryFilter';
+
+const Services: React.FC = memo(() => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedService, setSelectedService] = useState(null);
+
+  const services = [
     {
       id: 'ai-ml',
       title: 'AI & Machine Learning',
@@ -285,43 +378,6 @@ export default function Services() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Comprehensive
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Micro SAAS Services
-            </span>
-          </h1>
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Comprehensive technology solutions designed to transform your business 
-              and drive sustainable growth in the digital age.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/request-quote" 
-                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
-              >
-                Request Quote
-              </Link>
-            </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -754,6 +810,40 @@ import {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
             </div>
+=======
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <div className="text-center py-20">
+        <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent">
+          Our Services
+        </h1>
+        <p className="text-2xl md:text-3xl text-blue-200 mb-4 font-light">
+          Comprehensive Technology Solutions
+        </p>
+        <p className="text-lg text-blue-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          From AI and machine learning to cloud infrastructure and cybersecurity, we provide end-to-end 
+          technology solutions that drive innovation and growth for your business.
+        </p>
+      </div>
+
+      {/* Category Filter */}
+      <div className="max-w-6xl mx-auto px-4">
+        <CategoryFilter
+          categories={categories}
+          activeCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+        />
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
+            <ServiceCard
+              key={service.id}
+              service={service}
+              onSelect={setSelectedService}
+            />
           ))}
         </div>
 
@@ -1584,18 +1674,18 @@ const Services = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Let's discuss how our services can help you achieve your technology goals and drive business growth.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
-              Start a Conversation
+              Start Your Project
             </Link>
-            <Link
-              to="/request-quote"
-              className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+            <Link 
+              to="/about" 
+              className="border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
-              Get a Quote
+              Learn More About Us
             </Link>
           </div>
         </div>

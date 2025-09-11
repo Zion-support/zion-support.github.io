@@ -1,26 +1,4 @@
 {
-  "description": "Leading-edge technology solutions and autonomous innovation platform",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
-  "icons": [
-    {
-      "src": "/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/zion-tech-group-logo-1024.png",
-      "sizes": "1024x1024",
-      "type": "image/png",
-      "purpose": "any maskable"
-=======
       "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
@@ -31,6 +9,8 @@
       "sizes": "180x180",
       "type": "image/png"
 =======
+=======
+  "name": "Zion Tech Group - Micro SAAS Services",
   "short_name": "Zion Tech",
   "name": "Zion Tech Group - AI & Technology Solutions",
   "description": "Empowering businesses with cutting-edge AI solutions and innovative technology services",
@@ -51,51 +31,11 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "orientation": "portrait-primary",
-  "categories": ["business", "productivity", "technology"],
-  "lang": "en-US",
-  "dir": "ltr",
-  "scope": "/",
-  "prefer_related_applications": false,
-  "related_applications": [],
   "screenshots": [
     {
       "src": "screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our technology services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/icon-192x192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "description": "View our technology services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/icon-192x192.png",
-=======
       "name": "AI Solutions",
       "short_name": "AI Solutions",
       "description": "Explore AI solutions",
@@ -121,6 +61,13 @@
     }
       "src": "/screenshot-wide.png",
       "sizes": "1280x720",
+=======
+      "form_factor": "wide",
+      "label": "Zion Tech Group Desktop View"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "390x844",
       "type": "image/png",
       "form_factor": "wide"
     },

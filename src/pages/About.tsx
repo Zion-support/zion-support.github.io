@@ -136,18 +136,6 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech</span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Pioneering the future of technology through innovative micro SAAS solutions, 
-            cutting-edge AI services, and transformative digital solutions.
-=======
     { number: "500+", label: "Enterprise Clients", icon: Users },
     { number: "50+", label: "Countries Served", icon: Globe },
     { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
@@ -245,6 +233,11 @@ const About: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple text-white">
+      <div className="container mx-auto px-4 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent">
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
@@ -697,33 +690,35 @@ export default function About() {
               </div>
             </div>
 
-            {/* Vision */}
-            <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-zion-purple/20 rounded-lg text-zion-purple">
-                  <Rocket className="w-8 h-8" />
-                </div>
-                <h2 className="text-2xl font-bold text-white">Our Vision</h2>
-              </div>
-              <p className="text-zion-slate-light text-lg leading-relaxed mb-6">
-                To be the global leader in AI-powered technology solutions, creating a future where every 
-                organization can leverage intelligent automation, predictive analytics, and quantum computing 
-                to solve humanity's greatest challenges.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-zion-slate-light">
-                  <CheckCircle className="w-5 h-5 text-zion-purple flex-shrink-0" />
-                  <span>AI-first world</span>
-                </div>
-                <div className="flex items-center gap-3 text-zion-slate-light">
-                  <CheckCircle className="w-5 h-5 text-zion-purple flex-shrink-0" />
-                  <span>Sustainable technology</span>
-                </div>
-                <div className="flex items-center gap-3 text-zion-slate-light">
-                  <CheckCircle className="w-5 h-5 text-zion-purple flex-shrink-0" />
-                  <span>Human-AI collaboration</span>
-                </div>
-              </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-white">Why Choose Us</h3>
+              <ul className="space-y-4 text-zion-slate-light">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Proven track record of successful projects
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Cutting-edge technology expertise
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  24/7 support and monitoring
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Scalable and future-proof solutions
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-zion-purple mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />                  </svg>
+                  Competitive pricing and flexible terms
+                </li>
+              </ul>
             </div>
           </div>
         </motion.div>

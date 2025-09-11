@@ -17,8 +17,8 @@ import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 
 export default function TalentProfilePage() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const router = useRouter();
-  // Get id from Next.js router query params
   const { id } = router.query as { id?: string };
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);

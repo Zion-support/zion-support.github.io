@@ -1,10 +1,15 @@
 
-import React from "react";
+import React, { ReactNode, useState } from "react"; // Added useState
 import { Outlet } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
+// Assume useAuth hook exists and provides user object with emailVerified status and email
+import { useAuth } from '@/hooks/useAuth';
+import EmailVerificationBanner from '@/components/EmailVerificationBanner'; // Assuming path
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { SkipLink } from "@/components/SkipLink";
+import { useGlobalLoader } from '@/context/GlobalLoaderContext';
+import LoaderOverlay from '@/components/LoaderOverlay';
+import ErrorOverlay from '@/components/ErrorOverlay';
 
 interface AppLayoutProps {
   children?: React.ReactNode; // Kept ReactNode for consistency

@@ -1,6 +1,3 @@
-
-# Zion Tech Group - Comprehensive Tech & AI Marketplace
-=======
 # Zion Tech Group - Revolutionary Micro SAAS Services & AI Solutions
 
 ## 🚀 2025 Comprehensive Services Portfolio
@@ -147,321 +144,249 @@ If you see a warning about `glob@7.2.3` or `rimraf@3.0.2` being deprecated, run:
 ## 📍 Contact Information
 
 - **Phone**: +1 (302) 464-0950
-- **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown DE 19709
-- **Website**: https://ziontechgroup.com
-
-## 🔗 Quick Links
-
-- [Enhanced Services](/enhanced-services) - Complete service catalog
-- [Services Overview](/services-overview) - Detailed service information
-- [Services Pricing](/services-pricing) - Transparent pricing
-- [IT Onsite Services](/it-onsite-services) - Global IT support
-- [Request Quote](/request-quote) - Get custom pricing
-
----
-
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Run the setup script with your preferred package manager (npm, pnpm, yarn, or bun)
-./setup.sh npm  # Default and most compatible option
-
-# If you're using OpenAI Codex environments, a convenience script is available:
-./.codex/setup.sh  # Installs dependencies using npm
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev  # Use the same package manager you specified in setup.sh
-```
-
-## Getting Started
-
-1.  **Prerequisites:** Node.js (v20+), npm, Python, pip, Docker (recommended).
-
-#### IoT Smart City Infrastructure Management Platform
-- **Price:** $2,800/month
-- **Market Price:** $2,800 - $9,500/month
-- **Features:** Traffic flow optimization, utility management systems, environmental monitoring
-- **Benefits:** Reduce traffic congestion by 30%, lower utility costs by 25%
-- **Use Cases:** Municipal governments, urban planning departments, utility companies
-
-#### IoT Agricultural Precision Farming & Crop Management Platform
-- **Price:** $950/month
-- **Market Price:** $950 - $3,200/month
-- **Features:** Soil monitoring sensors, drone crop imaging, weather integration
-- **Benefits:** Increase crop yields by 30%, reduce water usage by 40%
-- **Use Cases:** Large-scale farming, greenhouse operations, vineyards and orchards
-
-#### IoT Healthcare Remote Monitoring & Telemedicine Platform
-- **Price:** $1,500/month
-- **Market Price:** $1,500 - $5,200/month
-- **Features:** Remote patient monitoring, vital signs tracking, early warning systems
-- **Benefits:** Improve patient outcomes by 45%, reduce hospital readmissions by 30%
-- **Use Cases:** Hospitals and clinics, home healthcare, chronic disease management
-
-### ⚡ Autonomous & AI-Powered Solutions
-
-#### Autonomous Energy Grid Optimization & Management System
-- **Price:** $3,200/month
-- **Market Price:** $3,200 - $12,000/month
-- **Features:** Grid load balancing, demand prediction, renewable energy integration
-- **Benefits:** Reduce energy waste by 25%, improve grid stability by 40%
-- **Use Cases:** Utility companies, grid operators, energy management systems
-
-#### Autonomous Logistics Optimization & Supply Chain AI Platform
-- **Price:** $1,900/month
-- **Market Price:** $1,900 - $6,500/month
-- **Features:** Route optimization, warehouse automation, demand forecasting
-- **Benefits:** Reduce logistics costs by 35%, improve delivery times by 40%
-- **Use Cases:** E-commerce logistics, manufacturing supply chains, retail distribution
-
-## 🎯 Why Choose Zion Tech Group?
-
-### ✨ Innovation Leadership
-- **Cutting-edge Technology:** We leverage the latest in AI, quantum computing, and blockchain
-- **Industry Expertise:** Deep knowledge across multiple technology domains
-- **Future-Proof Solutions:** Built to adapt and scale with emerging technologies
-
-### 🚀 Rapid Implementation
-- **Quick Deployment:** Most services deploy in 2-8 weeks
-- **Proven Methodologies:** Established implementation frameworks
-- **Expert Support:** Dedicated teams for seamless integration
-
-### 💰 Competitive Pricing
-- **Market-Leading Rates:** Up to 70% cost savings vs. market alternatives
-- **Flexible Models:** Monthly, annual, and enterprise pricing options
-- **ROI Focused:** Measurable business impact and value delivery
-
-### 🔒 Enterprise-Grade Security
-- **Advanced Security:** Multi-layered security protocols
-- **Compliance Ready:** Built-in regulatory compliance features
-- **24/7 Monitoring:** Continuous security oversight and threat detection
-
-## 🌍 Industries We Serve
-
-- **Financial Services:** Banking, insurance, investment management
-- **Healthcare:** Hospitals, clinics, pharmaceutical companies
-- **Manufacturing:** Industrial automation, predictive maintenance
-- **Retail & E-commerce:** Omnichannel experiences, supply chain optimization
-- **Government:** Public services, infrastructure management, security
-- **Education:** K-12, higher education, corporate training
-- **Energy:** Grid management, renewable energy, utilities
-- **Agriculture:** Precision farming, sustainability, crop management
-
-## 🚀 Getting Started
-
-### 1. **Consultation**
-- Schedule a free consultation with our experts
-- Discuss your business needs and objectives
-- Identify the best solutions for your requirements
-
-## Testing
-
-Run unit tests with:
-
-## 📞 Ready to Transform Your Business?
-
-**Contact Zion Tech Group today:**
-
-# Zion Tech Group - Revolutionary Technology Solutions
-
-## 🚀 Overview
-
-Zion Tech Group is a cutting-edge technology company pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Our comprehensive portfolio of innovative technology services is designed to drive innovation, enhance security, and accelerate digital transformation.
-
-## ✨ New Features & Improvements
-
-### 🎯 Comprehensive Service Portfolio
-
-We've expanded our services from basic offerings to a comprehensive portfolio of **15+ revolutionary technology solutions**:
-
-#### AI & Machine Learning Services
-- **AI Content Generator Pro** - $299/month (Market: $500-800/month)
-  - Multi-language content generation with SEO optimization
-  - Brand voice customization and plagiarism-free content
-  - Save 80% of content creation time, improve SEO rankings by 40%
-
-- **AI Customer Support Suite** - $199/month (Market: $300-600/month)
-  - 24/7 intelligent customer support automation
-  - Multi-language support with sentiment analysis
-  - Reduce support costs by 60%, improve response time by 90%
-
-- **AI-Powered Business Intelligence** - $499/month (Market: $800-1500/month)
-  - Advanced analytics platform with predictive capabilities
-  - Real-time dashboards and automated insights
-  - Make data-driven decisions faster, improve forecasting accuracy by 85%
-
-#### Cybersecurity Services
-- **Advanced Threat Detection System** - $399/month (Market: $600-1200/month)
-  - AI-powered threat detection with automated response
-  - Real-time monitoring and compliance reporting
-  - Detect threats 90% faster, reduce false positives by 70%
-
-- **Zero Trust Identity Management** - $299/month (Market: $400-800/month)
-  - Multi-factor authentication and behavioral analytics
-  - Single sign-on and role-based access control
-  - Reduce security breaches by 80%, meet compliance requirements
-
-#### Cloud & DevOps Services
-- **Cloud Infrastructure Automation** - $599/month (Market: $800-2000/month)
-  - Infrastructure as Code with auto-scaling
-  - Cost optimization and disaster recovery
-  - Reduce infrastructure costs by 40%, deploy 10x faster
-
-- **Enterprise CI/CD Pipeline** - $399/month (Market: $500-1000/month)
-  - Automated testing and security scanning
-  - Deployment automation with rollback capabilities
-  - Deploy code 50x faster, reduce failures by 90%
-
-#### Blockchain & Web3 Services
-- **DeFi Platform Development** - $2,999/month (Market: $5000-15000/month)
-  - Custom decentralized finance platforms
-  - Smart contracts and liquidity pool management
-  - Launch DeFi protocols faster with smart contract security
-
-- **NFT Marketplace Platform** - $1,999/month (Market: $3000-8000/month)
-  - Complete NFT marketplace with minting tools
-  - Auction system and royalty distribution
-  - Launch NFT marketplace quickly with built-in royalty system
-
-#### IoT & Edge Computing
-- **Enterprise IoT Management Platform** - $799/month (Market: $1000-3000/month)
-  - Device management and real-time monitoring
-  - Data analytics and automation rules
-  - Monitor thousands of devices, reduce operational costs by 30%
-
-- **Edge Computing Solutions** - $1,299/month (Market: $2000-5000/month)
-  - Low-latency applications and real-time processing
-  - Edge node deployment and load balancing
-  - Reduce latency by 90%, process data closer to source
-
-#### Quantum Computing Services
-- **Quantum Algorithm Development** - $3,999/month (Market: $5000-20000/month)
-  - Custom quantum algorithms for optimization
-  - Quantum circuit design and cryptography
-  - Solve complex problems faster, access quantum advantage
-
-#### Data & Analytics Services
-- **Modern Data Warehouse** - $899/month (Market: $1200-3000/month)
-  - Cloud-native data warehouse with real-time analytics
-  - ETL pipeline automation and business intelligence
-  - Unify all data sources, real-time insights
-
-### 🎨 Futuristic Design & UI/UX Improvements
-
-#### Enhanced Visual Design
-- **Animated Backgrounds**: Floating particles, gradient orbs, and dynamic blur effects
-- **Neon Effects**: Glowing elements with custom CSS animations
-- **Gradient Meshes**: Multi-color gradient backgrounds with smooth transitions
-- **Backdrop Blur**: Modern glassmorphism effects throughout the interface
-
-#### Advanced Animations
-- **Framer Motion Integration**: Smooth page transitions and component animations
-- **Staggered Animations**: Sequential loading effects for better user experience
-- **Hover Effects**: Interactive elements with scale, glow, and transform effects
-- **Floating Elements**: Subtle floating animations for dynamic feel
-
-#### Responsive Design
-- **Mobile-First Approach**: Optimized for all screen sizes
-- **Grid Systems**: Flexible layouts that adapt to different devices
-- **Touch-Friendly**: Optimized interactions for mobile and tablet users
-- **Performance Optimized**: Smooth animations and fast loading times
-
-### 🧭 Enhanced Navigation & Structure
-
-#### Improved Header
-- **Sticky Navigation**: Always accessible navigation bar
-- **Search Functionality**: Integrated search with real-time results
-- **Mobile Menu**: Responsive mobile navigation with smooth animations
-- **Brand Identity**: Consistent Zion Tech Group branding
-
-#### Comprehensive Footer
-- **Service Categories**: Organized links to all service areas
-- **Contact Information**: Updated with correct business details
-- **Social Media**: Links to all social platforms
-- **Legal Pages**: Privacy, terms, and accessibility links
-
-#### Page Organization
-- **Home Page**: Hero section, features, stats, and contact information
-- **Services Page**: Comprehensive service catalog with filtering and search
-- **About Page**: Company story, mission, vision, values, and team
-- **Contact Page**: Contact form, location info, and social media
-
-### 📱 Contact Information & Business Details
-
-#### Primary Contact
-- **Phone**: +1 302 464 0950
-- **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
-
-#### Business Hours
-- **Weekdays**: 9AM - 6PM EST
-- **Weekends**: By appointment
-- **Support**: 24/7 technical support for enterprise clients
-
-#### Social Media
-- **LinkedIn**: [Zion Marketplace](https://www.linkedin.com/company/zion-marketplace)
-- **Twitter**: [@lovable_dev](https://twitter.com/lovable_dev)
-- **Facebook**: [Zion Marketplace](https://www.facebook.com/zionmarketplace)
-- **Instagram**: [@ziontechgroup](https://instagram.com)
-- **GitHub**: [Zion Tech Group](https://github.com)
-
-### 🔧 Technical Improvements
-
-#### Performance Enhancements
-- **Optimized Animations**: Smooth 60fps animations with proper easing
-- **Lazy Loading**: Efficient component loading and rendering
-- **CSS Optimization**: Tailwind CSS with custom utilities and animations
-- **Bundle Optimization**: Reduced bundle size and improved loading times
-
-#### Code Quality
-- **TypeScript**: Full type safety and better development experience
-- **Component Architecture**: Reusable, maintainable React components
-- **State Management**: Efficient state handling with React hooks
-- **Error Handling**: Comprehensive error boundaries and user feedback
-
-#### Accessibility
-- **ARIA Labels**: Proper accessibility markup for screen readers
-- **Keyboard Navigation**: Full keyboard accessibility support
-- **Color Contrast**: Optimized colors for better visibility
-- **Focus Management**: Proper focus indicators and management
+=======
+# Zion Tech Group - AI-Powered IT Solutions Platform
+
+# Zion Tech Group - Modern Technology Solutions Platform
+
+## 🚀 Features
+
+- **Modern Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS
+- **AI Integration**: Google Generative AI, OpenAI integration
+- **Authentication**: Supabase Auth with multiple providers
+- **UI Components**: Radix UI components with custom styling
+- **State Management**: React Query for server state, Context API for client state
+- **Performance**: Optimized builds, code splitting, lazy loading
+- **Testing**: Vitest, Cypress, Playwright for comprehensive testing
+- **Deployment**: Netlify-ready with serverless functions
+
+## 🛠️ Tech Stack
+
+## ✨ Recent Improvements & Modernization
+
+### 🎯 What We've Accomplished
+
+1. **Complete Project Restructuring**
+   - Migrated from a complex, multi-framework setup to a clean, modern Vite + React architecture
+   - Eliminated dependency conflicts and outdated packages
+   - Streamlined build process for faster development and deployment
+
+2. **Modern Technology Stack**
+   - **Frontend**: React 18 with TypeScript
+   - **Build Tool**: Vite 5 for lightning-fast builds
+   - **Styling**: Tailwind CSS with custom animations and design system
+   - **Animations**: Framer Motion for smooth, professional animations
+   - **Icons**: Lucide React for consistent, scalable icons
+
+3. **Enhanced User Experience**
+   - Responsive, mobile-first design
+   - Smooth animations and transitions
+   - Modern, professional UI/UX
+   - Optimized performance with code splitting
+   - Accessibility improvements
+
+4. **Clean Architecture**
+   - Simplified component structure
+   - Removed unused dependencies
+   - Optimized bundle size
+   - Better code organization
+
+## 🌟 Our Service Portfolio
+
+### Backend & Services
+- **Supabase** for authentication and database
+- **Netlify Functions** for serverless API
+- **Stripe** for payments
+- **Google Analytics** for tracking
+
+### Development Tools
+- **TypeScript** for type safety
+- **ESLint** for code linting
+- **Prettier** for code formatting
+- **Vitest** for unit testing
+- **Cypress** for E2E testing
+- **Playwright** for cross-browser testing
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **React 18** - Modern React with hooks and concurrent features
+- **TypeScript** - Type-safe development
+- **Vite 5** - Lightning-fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Production-ready motion library
+
+### Development Tools
+- **ESLint** - Code quality and consistency
+- **Prettier** - Code formatting
+- **Vitest** - Fast unit testing framework
+
+### Build & Deployment
+- **Vite** - Modern build tool with HMR
+- **Terser** - JavaScript minification
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixing
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
-- npm or yarn package manager
+- npm 8+
 
 ### Installation
 ```bash
-**Built with ❤️ by the Zion Tech Group Team**
-=======
+# Clone the repository
+git clone <repository-url>
+cd zion-tech-group
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Development Commands
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run test         # Run tests
+```
+
+## 📁 Project Structure
+
+```
+zion-tech-group/
+├── src/
+│   ├── App.tsx              # Main application component
+│   ├── main.tsx             # Application entry point
+│   ├── styles.css           # Global styles and Tailwind imports
+│   └── components/          # Reusable components
+├── public/                  # Static assets
+├── dist/                    # Production build output
+├── package.json             # Dependencies and scripts
+├── vite.config.ts           # Vite configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+└── README.md               # This file
+```
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Cyan (#22ddd2) - Technology and innovation
+- **Secondary**: Blue (#3b82f6) - Trust and reliability
+- **Accent**: Purple (#8b5cf6) - Creativity and excellence
+- **Neutral**: Slate grays for text and backgrounds
+
+### Typography
+- **Headings**: Bold, gradient text with modern fonts
+- **Body**: Clean, readable text optimized for screens
+- **Responsive**: Scales appropriately across all devices
+
+### Animations
+- **Entrance**: Smooth fade-in and slide-up animations
+- **Hover**: Interactive feedback with scale and color transitions
+- **Scroll**: Reveal animations triggered by viewport intersection
+
+## 📱 Responsive Design
+
+- **Mobile First**: Designed for mobile devices first
+- **Breakpoints**: Optimized for all screen sizes
+- **Touch Friendly**: Optimized for touch interactions
+- **Performance**: Fast loading on all devices
+
+## 🚀 Performance Features
+
+- **Code Splitting**: Automatic chunk splitting for optimal loading
+- **Lazy Loading**: Components load only when needed
+- **Optimized Images**: WebP support and responsive images
+- **Minification**: CSS and JavaScript minification for production
+- **Tree Shaking**: Unused code elimination
+
+## 🔧 Configuration
+
+### Environment Variables
+```bash
+# Development
+NODE_ENV=development
+
+# Production
+NODE_ENV=production
+```
+
+### Build Optimization
+- **Bundle Analysis**: Built-in bundle analyzer
+- **Tree Shaking**: Automatic dead code elimination
+- **Minification**: Production-ready minified output
+- **Source Maps**: Optional source maps for debugging
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm run test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+## 📦 Deployment
+
+### Build for Production
+```bash
+npm run build
+```
+
+The build output will be in the `dist/` directory, ready for deployment to any static hosting service.
+
+### Deployment Options
+- **Netlify**: Drag and drop the `dist/` folder
+- **Vercel**: Connect your repository for automatic deployments
+- **AWS S3**: Upload to S3 bucket for static hosting
+- **GitHub Pages**: Deploy directly from GitHub
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is proprietary software owned by Zion Tech Group.
+
+## 📞 Contact & Support
+
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Website**: https://ziontechgroup.com
+
 Visit our live platform at: https://ziontechgroup.com
 
 ## 📈 Business Benefits
@@ -636,3 +561,17 @@ npx deploy-zion-ipfs
 ```
 
 This updates `rimraf` so it no longer relies on the deprecated `glob` version.
+=======
+## 🔄 Changelog
+
+### Version 0.1.0 (Current)
+- ✅ Complete project modernization
+- ✅ Migration to Vite + React architecture
+- ✅ Modern UI/UX design implementation
+- ✅ Performance optimizations
+- ✅ Responsive design implementation
+- ✅ Clean, maintainable codebase
+
+---
+
+**Built with ❤️ by Zion Tech Group**

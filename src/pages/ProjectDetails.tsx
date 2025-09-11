@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { format } from "date-fns";
@@ -9,13 +9,14 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Project, ProjectStatus } from "@/types/projects";
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react';
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import {
   Tabs,
@@ -43,8 +44,9 @@ import { ProjectReviewSection } from "@/components/projects/reviews/ProjectRevie
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
 function ProjectDetailsContent() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter();
-  // Get projectId from Next.js router query params
   const { projectId } = router.query as { projectId?: string };
   const { user } = useAuth();
   const { getProjectById, updateProjectStatus } = useProjects();
@@ -309,7 +311,7 @@ function ProjectDetailsContent() {
               
               {isActiveProject && (
                 <Button variant="default" asChild>
-                  <Link href={`/project/[id]/milestones`}>
+                  <Link href={`/project/${project.id}/milestones`}>
                     <Layers className="mr-2 h-4 w-4" /> Milestones
                   </Link>
                 </Button>
@@ -317,7 +319,7 @@ function ProjectDetailsContent() {
 
               {isActiveProject && (
                 <Button variant="outline" asChild>
-                  <Link href={`/project/[id]/room`}>
+                  <Link href={`/project/${project.id}/room`}>
                     <Video className="mr-2 h-4 w-4" /> Project Room
                   </Link>
                 </Button>

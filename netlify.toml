@@ -1,52 +1,3 @@
-  functions = "netlify/functions"
-
-[build.environment]
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
-  NODE_ENV = "production"
-
-
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
-[[plugins]]
-  package = "./netlify/plugins/run-functions-and-rerun"
-  [plugins.inputs]
-    # Optional: comma-separated includes/excludes
-    include = ""
-    exclude = ""
-    concurrency = 6
-    timeoutMs = 180000
-
-# Scheduled Functions (new automations replacing some GitHub Actions cadence)
-[[scheduled.functions]]
-  name = "homepage_advertiser"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "cloud_orchestrator"
-  schedule = "0 */4 * * *" # every 4 hours
-
-[[scheduled.functions]]
-  name = "front-enhancer"
-  schedule = "*/5 * * * *" # every 5 minutes
-
-[[scheduled.functions]]
-  name = "front-index-orchestrator"
-  schedule = "*/5 * * * *" # every 5 minutes
-
-[[scheduled.functions]]
-  name = "frontpage-enhancer"
-  schedule = "*/20 * * * *" # every 20 minutes
-
-[[scheduled.functions]]
-  name = "marketing-and-features-promo"
-  schedule = "0 */2 * * *" # every 2 hours
-
-[[redirects]]
-  from = "/affiliate-attribution-suite"
-  to = "/services/affiliate-attribution-suite/"
-  status = 301
-=======
 [[redirects]]
   from = "/api/*"
   to = "https://backend.example.com/:splat"
@@ -61,3 +12,34 @@
   [plugins.inputs]
     gzip = true
     brotli = true
+=======
+[build]
+  # Use `npm ci` for deterministic installs
+  command = "npm ci && npm run build && (n=0; until [ $n -ge 3 ]; do curl -sf --connect-timeout 10 $DEPLOY_PRIME_URL/api/health | grep '\"status\":\"ok\"' && break; n=$((n+1)); echo "Health check attempt $n failed, retrying in 15s..."; sleep 15; done; if [ $n -ge 3 ]; then echo "Health check failed after 3 attempts." && exit 1; fi)"
+  publish = ".next"
+
+[build] # touch v4.57 to trigger Netlify rebuild
+  # Build the site with Vite and publish the dist folder
+  # Netlify runs dependency installation before build.command. Avoid redundant npm ci.
+  command = "npm run build:ci"
+  publish = "dist"
+  functions = "netlify/functions"
+  command_timeout = "30m"
+  # Skip TypeScript checking during build
+
+# API functions (if needed)
+# [functions]
+# directory = "netlify/functions"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  # Ensure dev deps are available in prod builds on Netlify
+  NPM_CONFIG_PRODUCTION = "false"
+
+[context.deploy-preview]
+  command = "npm run build:ci"
+
+[context.branch-deploy]
+  command = "npm run build:ci"
+
+# Next.js configuration - no SPA fallback needed

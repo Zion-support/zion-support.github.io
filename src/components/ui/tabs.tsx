@@ -1,6 +1,5 @@
-import * as React from "react";
-import * as TabsPrimitive from "@radix-ui/react-tabs";
-import { cn } from "@/lib/utils";
+import React, { createContext, useContext, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 interface TabsContextType {
   activeTab: string;
@@ -107,4 +106,4 @@ export function TabsContent({ children, value, className = '' }: TabsContentProp
       {children}
     </div>
   );
-}
+};

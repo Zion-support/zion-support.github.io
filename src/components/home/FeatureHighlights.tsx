@@ -1,8 +1,17 @@
-import React from 'react';
-import { Brain, Shield, Zap, Globe, Users, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
-export const FeatureHighlights: React.FC = () => {
-  const features = [
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from 'lucide-react';
+
+import { cn } from "@/lib/utils";
+
+interface FeatureHighlightsProps {
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
+  const highlightsData = [
     {
       title: "For Talent Seekers",
       features: [
@@ -42,15 +51,12 @@ export const FeatureHighlights: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Why Choose Zion Tech Group?
-          </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Discover the key features and capabilities that make us the preferred 
-            technology partner for businesses worldwide.
+    <section className={cn("py-16 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
         
@@ -75,7 +81,6 @@ export const FeatureHighlights: React.FC = () => {
     </section>
   );
 }
-=======
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -282,3 +287,4 @@ export function FeatureHighlights() {
     </section>
   );
 }
+=======
