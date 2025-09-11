@@ -114,7 +114,6 @@ const App = memo(() => {
     return cleanup;
   }, []);
 
-export default function App() {
   return (
     <HelmetProvider>
       <ErrorMonitorProvider>
