@@ -96,6 +96,10 @@ Crawl-delay: 1`;
         const _html = `<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta property="og:title" content="Zion Tech Group" />
+    <meta property="og:description" content="Advanced AI, IT Solutions, and Digital Transformation Services" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - Zion Tech Group</title>
