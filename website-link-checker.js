@@ -82,7 +82,7 @@ function checkUrl(url) {
     req.end()})}
 
 async function checkAllUrls() {
-  // eslint-disable-next-line no-console
+   
   console.log('🔍 Checking all URLs from Zion Tech Group website...\n');
   
   const results = {
@@ -97,54 +97,54 @@ async function checkAllUrls() {
     const result = await checkUrl(url);
     
     if (result.working && !result.redirect) {
-      // eslint-disable-next-line no-console
+       
       console.log(`✅ ${result.status}`);
       results.working.push(result)} else if (result.redirect) {
-      // eslint-disable-next-line no-console
+       
       console.log(`🔄 ${result.status} -> ${result.location}`);
       results.redirects.push(result)} else if (result.error) {
-      // eslint-disable-next-line no-console
+       
       console.log(`❌ ${result.error}`);
       results.errors.push(result)} else {
-      // eslint-disable-next-line no-console
+       
       console.log(`❌ ${result.status}`);
       results.broken.push(result)}
   }
 
-  // eslint-disable-next-line no-console
+   
   console.log('\n📊 SUMMARY:');
-  // eslint-disable-next-line no-console
+   
   console.log(`✅ Working: ${results.working.length}`);
-  // eslint-disable-next-line no-console
+   
   console.log(`🔄 Redirects: ${results.redirects.length}`);
-  // eslint-disable-next-line no-console
+   
   console.log(`❌ Broken: ${results.broken.length}`);
-  // eslint-disable-next-line no-console
+   
   console.log(`⚠️  Errors: ${results.errors.length}`);
-  // eslint-disable-next-line no-console
+   
   console.log(`📈 Total: ${urlsToCheck.length}`);
 
   if (results.broken.length > 0) {
-    // eslint-disable-next-line no-console
+     
     console.log('\n❌ BROKEN LINKS:');
     results.broken.forEach(link => {
-      // eslint-disable-next-line no-console
+       
       console.log(`  - ${link.url} (${link.status})`)})}
 
   if (results.redirects.length > 0) {
-    // eslint-disable-next-line no-console
+     
     console.log('\n🔄 REDIRECTS:');
     results.redirects.forEach(link => {
-      // eslint-disable-next-line no-console
+       
       console.log(`  - ${link.url} -> ${link.location}`)})}
 
   if (results.errors.length > 0) {
-    // eslint-disable-next-line no-console
+     
     console.log('\n⚠️  ERRORS:');
     results.errors.forEach(link => {
-      // eslint-disable-next-line no-console
+       
       console.log(`  - ${link.url}: ${link.error}`)})}
 
   return results}
 
-checkAllUrls().catch(console.error); // eslint-disable-line no-console
+checkAllUrls().catch(console.error);  

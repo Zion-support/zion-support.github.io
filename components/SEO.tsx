@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -57,21 +55,24 @@ import Head from "next/head";
 =======
 import React from './react';
 import Head from './next / head';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import React from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+
+>>>>>>> 6d72fcb6e43ee824c52724609027e0555356221c
 interface SEOProps {
-interface SEOProps {;
   title?: string;
   description?: string;
-
   keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  structuredData?: any;
 }
-
-const SEO: React.FC < SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions",
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting",
 
 }) => {
 
@@ -92,22 +93,29 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   keywords?: string;
 }
-const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions"
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting"
+=======const SEO: React.FC<SEOProps> = ({
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  noIndex = false,
+  structuredData
 }) => {
+  const router = useRouter();
+  const currentUrl = `https://ziontechgroup.com${router.asPath}`;
+  const finalCanonical = canonical || currentUrl;
+  const finalOgTitle = ogTitle || title;
+  const finalOgDescription = ogDescription || description;
+
   return (
     <Head>
+      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
-  );
-}
-};
-
 export default SEO;
 }
 =======
@@ -146,9 +154,7 @@ export default SEO;
 export default SEO;
 ==============
 }
-export default SEO;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
+export default SEO;=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Head>;
       <title>{title}</title>;
@@ -160,15 +166,4 @@ export default SEO;
 ;
 export default SEO;
 ;
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
 export default SEO;
-origin/main
-origin/automation-improvements-final
-}
-export default SEO;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
