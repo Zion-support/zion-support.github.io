@@ -2,7 +2,24 @@ export type InnovativeService = {
   id: string;
   title: string;
   description: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation';
+  category:
+    | 'Micro SaaS'
+    | 'IT Services'
+    | 'AI Solutions'
+    | 'Cybersecurity'
+    | 'Data & Analytics'
+    | 'Cloud & DevOps'
+    | 'Quantum Computing'
+    | 'Blockchain & Web3'
+    | 'IoT & Edge'
+    | 'Green Tech'
+    | 'Space Tech'
+    | 'BioTech & Health'
+    | 'FinTech & DeFi'
+    | 'Metaverse & AR/VR'
+    | 'Autonomous Systems'
+    | 'Sustainability'
+    | 'Digital Transformation';
   price: string;
   billing: 'month' | 'project' | 'hour' | 'year';
   features: string[];
@@ -31,7 +48,8 @@ export const innovativeServices2026: InnovativeService[] = [
   {
     id: 'ai-powered-customer-churn-predictor',
     title: 'AI-Powered Customer Churn Predictor',
-    description: 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',
+    description:
+      'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',
     category: 'Micro SaaS',
     price: '$299',
     billing: 'month',
@@ -42,21 +60,26 @@ export const innovativeServices2026: InnovativeService[] = [
       'Automated retention campaigns',
       'CRM integration (Salesforce, HubSpot)',
       'Custom retention strategies',
-      'ROI tracking and reporting'
+      'ROI tracking and reporting',
     ],
     benefits: [
       'Reduce churn by up to 40%',
       'Increase customer lifetime value',
       'Optimize retention spend',
-      'Proactive customer success'
+      'Proactive customer success',
     ],
     useCases: [
       'SaaS subscription businesses',
       'E-commerce platforms',
       'Subscription box services',
-      'Digital content providers'
+      'Digital content providers',
     ],
-    targetMarket: ['SaaS Companies', 'E-commerce', 'Subscription Services', 'Digital Media'],
+    targetMarket: [
+      'SaaS Companies',
+      'E-commerce',
+      'Subscription Services',
+      'Digital Media',
+    ],
     ctaLabel: 'Start Free Trial',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -70,12 +93,13 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true,
   },
   {
     id: 'intelligent-inventory-optimization',
     title: 'Intelligent Inventory Optimization',
-    description: 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',
+    description:
+      'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',
     category: 'Micro SaaS',
     price: '$199',
     billing: 'month',
@@ -86,19 +110,19 @@ export const innovativeServices2026: InnovativeService[] = [
       'Multi-location management',
       'Supplier performance analytics',
       'Seasonal trend analysis',
-      'Cost optimization recommendations'
+      'Cost optimization recommendations',
     ],
     benefits: [
       'Reduce inventory costs by 25%',
       'Eliminate stockouts',
       'Improve cash flow',
-      'Optimize warehouse space'
+      'Optimize warehouse space',
     ],
     useCases: [
       'Retail chains',
       'E-commerce warehouses',
       'Manufacturing companies',
-      'Distribution centers'
+      'Distribution centers',
     ],
     targetMarket: ['Retail', 'E-commerce', 'Manufacturing', 'Logistics'],
     ctaLabel: 'Optimize Inventory',
@@ -114,12 +138,13 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: false,
-    smb: true
+    smb: true,
   },
   {
     id: 'smart-energy-consumption-monitor',
     title: 'Smart Energy Consumption Monitor',
-    description: 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',
+    description:
+      'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',
     category: 'Micro SaaS',
     price: '$149',
     billing: 'month',
@@ -130,21 +155,26 @@ export const innovativeServices2026: InnovativeService[] = [
       'Energy efficiency recommendations',
       'Carbon footprint calculation',
       'Cost analysis and forecasting',
-      'Mobile app monitoring'
+      'Mobile app monitoring',
     ],
     benefits: [
       'Reduce energy bills by 35%',
       'Improve sustainability score',
       'Comply with green regulations',
-      'Enhance corporate social responsibility'
+      'Enhance corporate social responsibility',
     ],
     useCases: [
       'Office buildings',
       'Manufacturing facilities',
       'Retail stores',
-      'Data centers'
+      'Data centers',
     ],
-    targetMarket: ['Commercial Real Estate', 'Manufacturing', 'Retail', 'Data Centers'],
+    targetMarket: [
+      'Commercial Real Estate',
+      'Manufacturing',
+      'Retail',
+      'Data Centers',
+    ],
     ctaLabel: 'Monitor Energy',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -153,17 +183,22 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '1-2 weeks',
     supportLevel: '24/7 monitoring',
     compliance: ['LEED', 'ISO 50001', 'Energy Star'],
-    integrations: ['Building Management Systems', 'Smart Meters', 'Solar Panels'],
+    integrations: [
+      'Building Management Systems',
+      'Smart Meters',
+      'Solar Panels',
+    ],
     api: true,
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true,
   },
   {
     id: 'automated-compliance-monitor',
     title: 'Automated Compliance Monitor',
-    description: 'Continuous compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory frameworks with automated reporting.',
+    description:
+      'Continuous compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory frameworks with automated reporting.',
     category: 'Micro SaaS',
     price: '$399',
     billing: 'month',
@@ -174,19 +209,19 @@ export const innovativeServices2026: InnovativeService[] = [
       'Automated audit reports',
       'Policy template library',
       'Employee training tracking',
-      'Incident response automation'
+      'Incident response automation',
     ],
     benefits: [
       'Reduce compliance costs by 50%',
       'Eliminate audit surprises',
       'Maintain continuous compliance',
-      'Protect against fines and penalties'
+      'Protect against fines and penalties',
     ],
     useCases: [
       'Healthcare organizations',
       'Financial services',
       'Technology companies',
-      'Government contractors'
+      'Government contractors',
     ],
     targetMarket: ['Healthcare', 'Finance', 'Technology', 'Government'],
     ctaLabel: 'Ensure Compliance',
@@ -202,14 +237,15 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true,
   },
 
   // AI SOLUTIONS
   {
     id: 'autonomous-customer-service-agent',
     title: 'Autonomous Customer Service Agent',
-    description: 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',
+    description:
+      'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',
     category: 'AI Solutions',
     price: '$1,299',
     billing: 'month',
@@ -220,21 +256,27 @@ export const innovativeServices2026: InnovativeService[] = [
       'Seamless human handoff',
       'Sentiment analysis',
       'Knowledge base learning',
-      '24/7 availability'
+      '24/7 availability',
     ],
     benefits: [
       'Reduce support costs by 60%',
       'Improve customer satisfaction by 40%',
       'Handle 10x more inquiries',
-      'Provide instant responses'
+      'Provide instant responses',
     ],
     useCases: [
       'E-commerce customer support',
       'SaaS product support',
       'Banking customer service',
-      'Healthcare patient support'
+      'Healthcare patient support',
     ],
-    targetMarket: ['E-commerce', 'SaaS', 'Banking', 'Healthcare', 'Telecommunications'],
+    targetMarket: [
+      'E-commerce',
+      'SaaS',
+      'Banking',
+      'Healthcare',
+      'Telecommunications',
+    ],
     ctaLabel: 'Deploy AI Agent',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -248,12 +290,13 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true,
   },
   {
     id: 'predictive-maintenance-platform',
     title: 'Predictive Maintenance Platform',
-    description: 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',
+    description:
+      'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',
     category: 'AI Solutions',
     price: '$2,499',
     billing: 'month',
@@ -264,21 +307,27 @@ export const innovativeServices2026: InnovativeService[] = [
       'Spare parts inventory management',
       'Performance analytics dashboard',
       'Mobile technician app',
-      'Integration with CMMS systems'
+      'Integration with CMMS systems',
     ],
     benefits: [
       'Reduce unplanned downtime by 70%',
       'Extend equipment life by 30%',
       'Optimize maintenance costs',
-      'Improve safety and compliance'
+      'Improve safety and compliance',
     ],
     useCases: [
       'Manufacturing plants',
       'Power plants',
       'Oil and gas facilities',
-      'Transportation fleets'
+      'Transportation fleets',
     ],
-    targetMarket: ['Manufacturing', 'Energy', 'Oil & Gas', 'Transportation', 'Utilities'],
+    targetMarket: [
+      'Manufacturing',
+      'Energy',
+      'Oil & Gas',
+      'Transportation',
+      'Utilities',
+    ],
     ctaLabel: 'Predict Maintenance',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -292,12 +341,13 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: false,
-    smb: true
+    smb: true,
   },
   {
     id: 'ai-powered-fraud-detection',
     title: 'AI-Powered Fraud Detection',
-    description: 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',
+    description:
+      'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',
     category: 'AI Solutions',
     price: '$3,999',
     billing: 'month',
@@ -308,19 +358,19 @@ export const innovativeServices2026: InnovativeService[] = [
       'Automated risk scoring',
       'False positive reduction',
       'Compliance reporting',
-      'Machine learning model updates'
+      'Machine learning model updates',
     ],
     benefits: [
       'Reduce fraud losses by 80%',
       'Improve detection accuracy',
       'Reduce false positives by 60%',
-      'Comply with regulatory requirements'
+      'Comply with regulatory requirements',
     ],
     useCases: [
       'Credit card transactions',
       'Online banking',
       'E-commerce payments',
-      'Insurance claims'
+      'Insurance claims',
     ],
     targetMarket: ['Banking', 'E-commerce', 'Insurance', 'Payment Processors'],
     ctaLabel: 'Detect Fraud',
@@ -336,14 +386,15 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true,
   },
 
   // IT SERVICES
   {
     id: 'cloud-migration-accelerator',
     title: 'Cloud Migration Accelerator',
-    description: 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',
+    description:
+      'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',
     category: 'IT Services',
     price: '$15,000',
     billing: 'project',
@@ -354,19 +405,19 @@ export const innovativeServices2026: InnovativeService[] = [
       'Performance optimization',
       'Cost optimization analysis',
       'Security and compliance setup',
-      'Post-migration support'
+      'Post-migration support',
     ],
     benefits: [
       'Reduce migration time by 50%',
       'Ensure zero business disruption',
       'Optimize cloud costs',
-      'Improve scalability and performance'
+      'Improve scalability and performance',
     ],
     useCases: [
       'Legacy system modernization',
       'Data center consolidation',
       'Application modernization',
-      'Disaster recovery setup'
+      'Disaster recovery setup',
     ],
     targetMarket: ['Enterprise', 'Mid-market', 'Government', 'Healthcare'],
     ctaLabel: 'Start Migration',
@@ -382,12 +433,13 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: false,
-    smb: true
+    smb: true,
   },
   {
     id: 'cybersecurity-posture-assessment',
     title: 'Cybersecurity Posture Assessment',
-    description: 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',
+    description:
+      'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',
     category: 'IT Services',
     price: '$8,500',
     billing: 'project',
@@ -398,19 +450,19 @@ export const innovativeServices2026: InnovativeService[] = [
       'Compliance gap analysis',
       'Risk assessment report',
       'Remediation roadmap',
-      'Security training recommendations'
+      'Security training recommendations',
     ],
     benefits: [
       'Identify security gaps',
       'Reduce cyber risk',
       'Comply with regulations',
-      'Improve security posture'
+      'Improve security posture',
     ],
     useCases: [
       'Security audits',
       'Compliance assessments',
       'Merger and acquisition due diligence',
-      'Annual security reviews'
+      'Annual security reviews',
     ],
     targetMarket: ['Enterprise', 'Mid-market', 'Healthcare', 'Finance'],
     ctaLabel: 'Assess Security',
@@ -426,12 +478,13 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true,
   },
   {
     id: 'digital-transformation-consulting',
     title: 'Digital Transformation Consulting',
-    description: 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',
+    description:
+      'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',
     category: 'IT Services',
     price: '$25,000',
     billing: 'project',
@@ -442,19 +495,19 @@ export const innovativeServices2026: InnovativeService[] = [
       'Technology architecture design',
       'Process optimization',
       'Talent development planning',
-      'ROI measurement framework'
+      'ROI measurement framework',
     ],
     benefits: [
       'Accelerate digital transformation',
       'Improve operational efficiency',
       'Enhance customer experience',
-      'Increase competitive advantage'
+      'Increase competitive advantage',
     ],
     useCases: [
       'Digital strategy development',
       'Process digitization',
       'Customer experience transformation',
-      'Operational excellence initiatives'
+      'Operational excellence initiatives',
     ],
     targetMarket: ['Enterprise', 'Mid-market', 'Government', 'Healthcare'],
     ctaLabel: 'Transform Digitally',
@@ -470,14 +523,15 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: false,
-    smb: true
+    smb: true,
   },
 
   // EMERGING TECHNOLOGIES
   {
     id: 'quantum-computing-as-a-service',
     title: 'Quantum Computing as a Service',
-    description: 'Access to quantum computing resources for complex optimization problems and scientific research.',
+    description:
+      'Access to quantum computing resources for complex optimization problems and scientific research.',
     category: 'Quantum Computing',
     price: '$5,999',
     billing: 'month',
@@ -488,21 +542,26 @@ export const innovativeServices2026: InnovativeService[] = [
       'Quantum error correction',
       'Performance optimization',
       'Research collaboration tools',
-      'Educational resources'
+      'Educational resources',
     ],
     benefits: [
       'Solve previously intractable problems',
       'Accelerate research and development',
       'Gain quantum advantage',
-      'Future-proof your technology stack'
+      'Future-proof your technology stack',
     ],
     useCases: [
       'Drug discovery',
       'Financial modeling',
       'Logistics optimization',
-      'Cryptography research'
+      'Cryptography research',
     ],
-    targetMarket: ['Research Institutions', 'Pharmaceutical', 'Finance', 'Technology'],
+    targetMarket: [
+      'Research Institutions',
+      'Pharmaceutical',
+      'Finance',
+      'Technology',
+    ],
     ctaLabel: 'Access Quantum',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -516,12 +575,13 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: false,
-    smb: false
+    smb: false,
   },
   {
     id: 'blockchain-supply-chain-tracking',
     title: 'Blockchain Supply Chain Tracking',
-    description: 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',
+    description:
+      'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',
     category: 'Blockchain & Web3',
     price: '$2,999',
     billing: 'month',
@@ -532,21 +592,26 @@ export const innovativeServices2026: InnovativeService[] = [
       'Quality assurance tracking',
       'Sustainability metrics',
       'Multi-stakeholder access',
-      'Mobile app for field workers'
+      'Mobile app for field workers',
     ],
     benefits: [
       'Improve supply chain transparency',
       'Reduce fraud and counterfeiting',
       'Ensure compliance',
-      'Build consumer trust'
+      'Build consumer trust',
     ],
     useCases: [
       'Food safety tracking',
       'Pharmaceutical supply chain',
       'Luxury goods authentication',
-      'Sustainable sourcing verification'
+      'Sustainable sourcing verification',
     ],
-    targetMarket: ['Food & Beverage', 'Pharmaceutical', 'Luxury Goods', 'Manufacturing'],
+    targetMarket: [
+      'Food & Beverage',
+      'Pharmaceutical',
+      'Luxury Goods',
+      'Manufacturing',
+    ],
     ctaLabel: 'Track Supply Chain',
     href: 'https://ziontechgroup.com/contact',
     featured: true,
@@ -560,12 +625,13 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true,
   },
   {
     id: 'metaverse-commerce-platform',
     title: 'Metaverse Commerce Platform',
-    description: 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',
+    description:
+      'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',
     category: 'Metaverse & AR/VR',
     price: '$4,999',
     billing: 'month',
@@ -576,19 +642,19 @@ export const innovativeServices2026: InnovativeService[] = [
       'Virtual try-on capabilities',
       'Cryptocurrency payments',
       'Social commerce features',
-      'Analytics and insights'
+      'Analytics and insights',
     ],
     benefits: [
       'Create immersive shopping experiences',
       'Reach global audiences',
       'Reduce physical infrastructure costs',
-      'Innovate customer engagement'
+      'Innovate customer engagement',
     ],
     useCases: [
       'Fashion retail',
       'Real estate virtual tours',
       'Automotive showrooms',
-      'Entertainment venues'
+      'Entertainment venues',
     ],
     targetMarket: ['Retail', 'Real Estate', 'Automotive', 'Entertainment'],
     ctaLabel: 'Enter Metaverse',
@@ -604,31 +670,36 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
-  }
+    smb: true,
+  },
 ];
 
 export const serviceCategories = [
   {
     name: 'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
-    services: innovativeServices2026.filter(s => s.category === 'Micro SaaS')
+    services: innovativeServices2026.filter(s => s.category === 'Micro SaaS'),
   },
   {
     name: 'AI Solutions',
-    description: 'Advanced artificial intelligence and machine learning solutions',
-    services: innovativeServices2026.filter(s => s.category === 'AI Solutions')
+    description:
+      'Advanced artificial intelligence and machine learning solutions',
+    services: innovativeServices2026.filter(s => s.category === 'AI Solutions'),
   },
   {
     name: 'IT Services',
     description: 'Comprehensive IT consulting and implementation services',
-    services: innovativeServices2026.filter(s => s.category === 'IT Services')
+    services: innovativeServices2026.filter(s => s.category === 'IT Services'),
   },
   {
     name: 'Emerging Technologies',
     description: 'Cutting-edge technologies shaping the future',
-    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-  }
+    services: innovativeServices2026.filter(s =>
+      ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(
+        s.category
+      )
+    ),
+  },
 ];
 
 export default innovativeServices2026;

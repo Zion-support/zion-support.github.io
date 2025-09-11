@@ -2,11 +2,14 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Absolute Ultimate Final Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Absolute Ultimate Final Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix partners request-payout file - rewrite completely
-const partnersRequestPayoutPath = '/workspace/pages/api/partners/request-payout.ts';
+const partnersRequestPayoutPath =
+  '/workspace/pages/api/partners/request-payout.ts';
 const partnersRequestPayoutContent = `import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -43,30 +46,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }`;
 fs.writeFileSync(partnersRequestPayoutPath, partnersRequestPayoutContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/request-payout.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/request-payout.ts'
+);
 // Fix projects milestones file
-const projectsMilestonesPath = '/workspace/pages/api/projects/[projectId]/milestones.ts';
+const projectsMilestonesPath =
+  '/workspace/pages/api/projects/[projectId]/milestones.ts';
 if (fs.existsSync(projectsMilestonesPath)) {
   let content = fs.readFileSync(projectsMilestonesPath, 'utf8');
   // Fix the syntax error
-  content = content.replace(
-    '  isClient,;',
-    '  isClient,'
-  );
+  content = content.replace('  isClient,;', '  isClient,');
   fs.writeFileSync(projectsMilestonesPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/projects/[projectId]/milestones.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/projects/[projectId]/milestones.ts'
+  );
 }
 // Fix projects milestoneId file
-const projectsMilestoneIdPath = '/workspace/pages/api/projects/[projectId]/milestones/[milestoneId].ts';
+const projectsMilestoneIdPath =
+  '/workspace/pages/api/projects/[projectId]/milestones/[milestoneId].ts';
 if (fs.existsSync(projectsMilestoneIdPath)) {
   let content = fs.readFileSync(projectsMilestoneIdPath, 'utf8');
   // Fix the syntax error
-  content = content.replace(
-    '  isTalent,;',
-    '  isTalent,'
-  );
+  content = content.replace('  isTalent,;', '  isTalent,');
   fs.writeFileSync(projectsMilestoneIdPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/projects/[projectId]/milestones/[milestoneId].ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/projects/[projectId]/milestones/[milestoneId].ts'
+  );
 }
 // Fix proposals comment file - rewrite completely
 const proposalsCommentPath = '/workspace/pages/api/proposals/comment.ts';
@@ -108,7 +113,9 @@ export default async function handler(
   }
 }`;
 fs.writeFileSync(proposalsCommentPath, proposalsCommentContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/comment.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/comment.ts'
+);
 // Create missing proposals data module
 const proposalsDataPath = '/workspace/utils/data/proposals.ts';
 const proposalsDataContent = `// Proposals data store
@@ -189,9 +196,15 @@ console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
 console.log('');
 console.log('✅ Successfully fixed files:');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/partners/request-payout.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/projects/[projectId]/milestones.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/projects/[projectId]/milestones/[milestoneId].ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/partners/request-payout.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/projects/[projectId]/milestones.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/projects/[projectId]/milestones/[milestoneId].ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/proposals/comment.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - utils/data/proposals.ts');
 console.log('');
@@ -205,8 +218,11 @@ const report = {
     'pages/api/projects/[projectId]/milestones.ts',
     'pages/api/projects/[projectId]/milestones/[milestoneId].ts',
     'pages/api/proposals/comment.ts',
-    'utils/data/proposals.ts'
-  ]
+    'utils/data/proposals.ts',
+  ],
 };
-fs.writeFileSync('/workspace/absolute-ultimate-final-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/absolute-ultimate-final-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to absolute-ultimate-final-fix-report.json');

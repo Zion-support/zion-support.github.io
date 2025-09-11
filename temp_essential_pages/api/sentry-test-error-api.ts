@@ -9,10 +9,7 @@ if (process.env.NODE_ENV === 'development') {
   console.log('SENTRY_DSN from API route:', process.env.SENTRY_DSN);
 }
 
-async function handler(
-  _req: NextApiRequest,
-  res: NextApiResponse
-) {
+async function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     // This will intentionally throw an error
     throw new Error('Sentry Test API Error');

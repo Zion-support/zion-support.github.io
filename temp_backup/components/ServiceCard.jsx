@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function ServiceCard({ service, onSelect }) {
   const handleClick = () => {
@@ -11,9 +11,9 @@ export default function ServiceCard({ service, onSelect }) {
     <div
       data-testid={`service-card-${service.id}`}
       onClick={handleClick}
-      className="cursor-pointer p-4 border border-zion-blue-light rounded-lg bg-zion-blue-dark hover:border-zion-purple/50"
+      className='cursor-pointer p-4 border border-zion-blue-light rounded-lg bg-zion-blue-dark hover:border-zion-purple/50'
     >
-      <h3 className="text-white font-medium">{service.title}</h3>
+      <h3 className='text-white font-medium'>{service.title}</h3>
     </div>
   );
 }

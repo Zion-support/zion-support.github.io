@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 // List of missing UI components that are commonly used
 const missingComponents = [
   'select',
-  'tabs', 
+  'tabs',
   'badge',
   'skeleton',
   'input',
@@ -46,13 +46,14 @@ const missingComponents = [
   'sonner',
   'toast',
   'toggle',
-  'toggle-group'
+  'toggle-group',
 ];
 
 // Create a basic component template
 function createComponentTemplate(componentName) {
-  const className = componentName.charAt(0).toUpperCase() + componentName.slice(1);
-  
+  const className =
+    componentName.charAt(0).toUpperCase() + componentName.slice(1);
+
   return `import * as React from "react"
 import { cn } from "@/lib/utils"
 
@@ -81,7 +82,7 @@ if (!fs.existsSync(uiDir)) {
 // Create all missing components
 missingComponents.forEach(componentName => {
   const filePath = path.join(uiDir, `${componentName}.tsx`);
-  
+
   // Only create if it doesn't exist
   if (!fs.existsSync(filePath)) {
     const content = createComponentTemplate(componentName);

@@ -48,7 +48,11 @@ function parseProps(body) {
           break;
         }
       }
-      props.push({ name: propMatch[1], type: propMatch[2].trim(), description: comments.join(' ') });
+      props.push({
+        name: propMatch[1],
+        type: propMatch[2].trim(),
+        description: comments.join(' '),
+      });
     }
   }
   return props;
@@ -56,7 +60,9 @@ function parseProps(body) {
 
 function generateDocsForFile(filePath) {
   const source = readFileSafe(filePath);
-  const defs = extractInterfacesAndTypes(source).filter(d => /Props$/i.test(d.name) || d.name === 'Props');
+  const defs = extractInterfacesAndTypes(source).filter(
+    d => /Props$/i.test(d.name) || d.name === 'Props'
+  );
   const docs = [];
   for (const def of defs) {
     const props = parseProps(def.body);
@@ -69,8 +75,18 @@ function generateDocsForFile(filePath) {
 
 function main() {
   const componentsDir = path.resolve(__dirname, '..', 'components');
-  const outputMarkdown = path.resolve(__dirname, '..', 'docs', 'components-props.md');
-  const outputJson = path.resolve(__dirname, '..', 'public', 'components-props.json');
+  const outputMarkdown = path.resolve(
+    __dirname,
+    '..',
+    'docs',
+    'components-props.md'
+  );
+  const outputJson = path.resolve(
+    __dirname,
+    '..',
+    'public',
+    'components-props.json'
+  );
 
   const pattern = path.join(componentsDir, '**', '*.{ts,tsx,js,jsx}');
   const files = glob.sync(pattern, { nodir: true });
@@ -89,7 +105,14 @@ function main() {
 
   // Write JSON
   fs.ensureDirSync(path.dirname(outputJson));
-  fs.writeFileSync(outputJson, JSON.stringify({ generatedAt: new Date().toISOString(), items: summary }, null, 2));
+  fs.writeFileSync(
+    outputJson,
+    JSON.stringify(
+      { generatedAt: new Date().toISOString(), items: summary },
+      null,
+      2
+    )
+  );
 
   // Write Markdown
   const mdParts = [];

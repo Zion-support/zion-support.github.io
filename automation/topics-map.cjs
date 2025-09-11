@@ -43,7 +43,12 @@ function addToMap(map, heading) {
 
 function main() {
   const root = path.resolve(__dirname, '..');
-  const pagesPattern = path.join(root, 'pages', '**', '*.{md,mdx,tsx,ts,jsx,js}');
+  const pagesPattern = path.join(
+    root,
+    'pages',
+    '**',
+    '*.{md,mdx,tsx,ts,jsx,js}'
+  );
   const docsPattern = path.join(root, 'docs', '**', '*.{md,mdx}');
 
   const files = [
@@ -75,7 +80,19 @@ function main() {
   const outputMarkdown = path.join(root, 'docs', 'topics-map.md');
 
   fs.ensureDirSync(path.dirname(outputJson));
-  fs.writeFileSync(outputJson, JSON.stringify({ generatedAt: new Date().toISOString(), totals: { files: files.length, topics: sorted.length }, byFile, topics: Object.fromEntries(sorted) }, null, 2));
+  fs.writeFileSync(
+    outputJson,
+    JSON.stringify(
+      {
+        generatedAt: new Date().toISOString(),
+        totals: { files: files.length, topics: sorted.length },
+        byFile,
+        topics: Object.fromEntries(sorted),
+      },
+      null,
+      2
+    )
+  );
 
   const md = [];
   md.push('# Topics Map');

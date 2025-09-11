@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const extraServices: MicroSaasService[] = [
@@ -14,21 +14,23 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Expiry, chain, OCSP, and HSTS checks with zero false alarms',
     price: '$39',
     period: '/month',
-    description: 'Continuously monitor TLS/SSL certificates for expiry, SAN/hostname drift, chain trust, OCSP stapling, HSTS, weak ciphers, and protocol regressions. Prevent outages with proactive alerts and auto-create tickets.',
+    description:
+      'Continuously monitor TLS/SSL certificates for expiry, SAN/hostname drift, chain trust, OCSP stapling, HSTS, weak ciphers, and protocol regressions. Prevent outages with proactive alerts and auto-create tickets.',
     features: [
       'Expiry alerts with safe lead windows',
       'Chain trust and intermediate CA checks',
       'OCSP stapling and revocation status',
       'HSTS and weak cipher detection',
       'SAN/hostname drift and redirect loops',
-      'Slack/Email/PagerDuty alerts with runbooks'
+      'Slack/Email/PagerDuty alerts with runbooks',
     ],
     popular: true,
     icon: '🔒',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/tls-certificate-monitor',
-    marketPosition: 'Simple, reliable certificate monitoring without APM bloat.',
+    marketPosition:
+      'Simple, reliable certificate monitoring without APM bloat.',
     targetAudience: 'SaaS teams, SREs, platform engineering, security',
     trialDays: 14,
     setupTime: '10 minutes',
@@ -36,7 +38,9 @@ export const extraServices: MicroSaasService[] = [
     realService: true,
     technology: ['OpenSSL, Node.js, Cron, Prometheus'],
     integrations: ['Slack, PagerDuty, Email, GitHub'],
-    useCases: ['Prevent TLS outages, Compliance evidence, Postmortem artifacts'],
+    useCases: [
+      'Prevent TLS outages, Compliance evidence, Postmortem artifacts',
+    ],
     roi: 'Avoid revenue losses from cert outages; reduce toil 80%',
     competitors: ['Let’s Monitor, Keyhub, Updown cert checks'],
     marketSize: '$1B+ web reliability',
@@ -44,11 +48,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Agentless checker with DNS + HTTP(S) probes, OpenSSL parses, and alerting.',
+    implementationDetails:
+      'Agentless checker with DNS + HTTP(S) probes, OpenSSL parses, and alerting.',
     launchDate: '2025-02-15',
     customers: 110,
     rating: 4.6,
-    reviews: 37
+    reviews: 37,
   },
   {
     id: 'domain-dns-monitor',
@@ -56,14 +61,15 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Expiry, NS/DS drift, MX/SPF/DMARC, DNSSEC and propagation',
     price: '$49',
     period: '/month',
-    description: 'Track domain expiration, DNS provider health, nameserver/DS record drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages or deliverability issues.',
+    description:
+      'Track domain expiration, DNS provider health, nameserver/DS record drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages or deliverability issues.',
     features: [
       'Registrar expiry and auto-renew checks',
       'NS/DS drift and delegation correctness',
       'DNSSEC presence and validity',
       'MX/SPF/DMARC health and alignment',
       'Propagation tests across regions',
-      'Alerts, webhooks and change history'
+      'Alerts, webhooks and change history',
     ],
     popular: true,
     icon: '🌐',
@@ -78,7 +84,9 @@ export const extraServices: MicroSaasService[] = [
     realService: true,
     technology: ['dig, DNS over HTTPS, Node.js, Cron'],
     integrations: ['Slack, PagerDuty, Email'],
-    useCases: ['Prevent domain lapses, Fix email deliverability, Audit changes'],
+    useCases: [
+      'Prevent domain lapses, Fix email deliverability, Audit changes',
+    ],
     roi: 'Eliminate email outages and SEO drops from DNS drift',
     competitors: ['DNS Spy, DNSSpy.io, MXToolbox monitors'],
     marketSize: '$1.2B DNS tooling',
@@ -86,26 +94,29 @@ export const extraServices: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-resolver probes, registrar parsers, DNSSEC validators and webhook alerts.',
+    implementationDetails:
+      'Multi-resolver probes, registrar parsers, DNSSEC validators and webhook alerts.',
     launchDate: '2025-02-15',
     customers: 95,
     rating: 4.5,
-    reviews: 29
+    reviews: 29,
   },
   {
     id: 'audit-log-vault',
     name: 'Audit Log Vault',
-    tagline: 'Immutable, indexed, long-term audit trails for compliance and forensics',
+    tagline:
+      'Immutable, indexed, long-term audit trails for compliance and forensics',
     price: '$89',
     period: '/month',
-    description: 'Centralize application and platform audit logs with WORM storage options, retention policies, fine-grained search, exports, and cryptographic attestations for compliance (SOC 2, HIPAA, ISO).',
+    description:
+      'Centralize application and platform audit logs with WORM storage options, retention policies, fine-grained search, exports, and cryptographic attestations for compliance (SOC 2, HIPAA, ISO).',
     features: [
       'Append-only, tamper-evident storage',
       'Flexible retention and legal holds',
       'Cryptographic digests and attestations',
       'Fine-grained search and export bundles',
       'Chain-of-custody and access reviews',
-      'Alerts for risky access patterns'
+      'Alerts for risky access patterns',
     ],
     popular: false,
     icon: '🧾',
@@ -122,17 +133,20 @@ export const extraServices: MicroSaasService[] = [
     integrations: ['S3/Blob/GCS, SIEM, Slack, Email'],
     useCases: ['SOC 2 evidence, Forensic investigations, Access review'],
     roi: 'Cut audit prep by 60–80%; reduce SIEM ingestion costs',
-    competitors: ['AWS Audit Manager (partial), Drata (evidence), Self-built ELK'],
+    competitors: [
+      'AWS Audit Manager (partial), Drata (evidence), Self-built ELK',
+    ],
     marketSize: '$3B compliance tooling',
     growthRate: '20% CAGR',
     variant: 'holographic-neural',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Write-once buckets with hash-chain indexing and export packager.',
+    implementationDetails:
+      'Write-once buckets with hash-chain indexing and export packager.',
     launchDate: '2025-02-15',
     customers: 40,
     rating: 4.5,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'it-asset-discovery-agent',
@@ -140,21 +154,23 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Agentless network and cloud inventory with CMDB export',
     price: '$129',
     period: '/month',
-    description: 'Continuously discover on-prem, cloud, and SaaS assets. Agentless scans, cloud API inventory, software fingerprinting, vulnerability signals, and CMDB sync.',
+    description:
+      'Continuously discover on-prem, cloud, and SaaS assets. Agentless scans, cloud API inventory, software fingerprinting, vulnerability signals, and CMDB sync.',
     features: [
       'Agentless network scan (ARP/DNS/SNMP/SSH)',
       'AWS/Azure/GCP asset inventory APIs',
       'SaaS app discovery via SSO logs',
       'Software fingerprint and version map',
       'Known CVE signal enrichment',
-      'Export to CMDB (ServiceNow/Jira/DCM)'
+      'Export to CMDB (ServiceNow/Jira/DCM)',
     ],
     popular: true,
     icon: '🛰️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/it-asset-discovery-agent',
-    marketPosition: 'Lightweight alternative to expensive CMDB suites with modern API-first design.',
+    marketPosition:
+      'Lightweight alternative to expensive CMDB suites with modern API-first design.',
     targetAudience: 'IT ops, security, platform engineering',
     trialDays: 14,
     setupTime: '1 hour',
@@ -170,33 +186,37 @@ export const extraServices: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Docker deployable scanner with cloud connectors and export jobs.',
+    implementationDetails:
+      'Docker deployable scanner with cloud connectors and export jobs.',
     launchDate: '2025-02-01',
     customers: 85,
     rating: 4.6,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'serverless-cron-manager',
     name: 'Serverless Cron Manager',
-    tagline: 'Reliable cloud scheduled jobs with retries, alerts, and audit log',
+    tagline:
+      'Reliable cloud scheduled jobs with retries, alerts, and audit log',
     price: '$59',
     period: '/month',
-    description: 'Create, monitor, and audit scheduled jobs across AWS EventBridge, CloudWatch, and GCP Cloud Scheduler with unified UI, webhook runners, and failure alerts.',
+    description:
+      'Create, monitor, and audit scheduled jobs across AWS EventBridge, CloudWatch, and GCP Cloud Scheduler with unified UI, webhook runners, and failure alerts.',
     features: [
       'Unified scheduler UI (AWS/GCP)',
       'Secure webhooks with HMAC',
       'Exponential retries & DLQ',
       'Run history, metrics, and alerts',
       'Multi-env and secrets management',
-      'IaC export for GitOps'
+      'IaC export for GitOps',
     ],
     popular: true,
     icon: '⏱️',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/serverless-cron-manager',
-    marketPosition: 'Safer, simpler alternative to self-managed cron and bespoke lambdas.',
+    marketPosition:
+      'Safer, simpler alternative to self-managed cron and bespoke lambdas.',
     targetAudience: 'Developers, platform teams, growth ops',
     trialDays: 14,
     setupTime: '20 minutes',
@@ -212,11 +232,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Hosted scheduler with runners and audit pipes; IaC emitters.',
+    implementationDetails:
+      'Hosted scheduler with runners and audit pipes; IaC emitters.',
     launchDate: '2025-01-25',
     customers: 140,
     rating: 4.7,
-    reviews: 73
+    reviews: 73,
   },
   {
     id: 'browser-performance-monitor',
@@ -224,14 +245,15 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'RUM + Core Web Vitals with session replays and AI insights',
     price: '$79',
     period: '/month',
-    description: 'Measure Real User Monitoring, Core Web Vitals, and capture session replays. AI highlights regressions by release, geography, and device. Simple script drop-in.',
+    description:
+      'Measure Real User Monitoring, Core Web Vitals, and capture session replays. AI highlights regressions by release, geography, and device. Simple script drop-in.',
     features: [
       'Core Web Vitals (LCP/INP/CLS)',
       'RUM by geo/device/browser',
       'Session replays with PII scrub',
       'Release comparison dashboards',
       'Alerts and anomaly detection',
-      'Export to BigQuery/S3/OTel'
+      'Export to BigQuery/S3/OTel',
     ],
     popular: true,
     icon: '📈',
@@ -254,11 +276,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'quantum-holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'JS snippet with sampling, replay capture, and privacy filters.',
+    implementationDetails:
+      'JS snippet with sampling, replay capture, and privacy filters.',
     launchDate: '2025-02-02',
     customers: 60,
     rating: 4.6,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'managed-postgres-ha',
@@ -266,27 +289,31 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Highly available Postgres with automated failover and tuning',
     price: '$149',
     period: '/month',
-    description: 'Production-grade Postgres clusters with HA, backups, query insights, and performance tuning. Includes read replicas, PITR, and expert support.',
+    description:
+      'Production-grade Postgres clusters with HA, backups, query insights, and performance tuning. Includes read replicas, PITR, and expert support.',
     features: [
       'Automated failover and replication',
       'Point-in-time recovery (PITR)',
       'Slow query capture and tuning',
       'Daily encrypted backups',
       'Zero-downtime minor upgrades',
-      'Kubernetes and VM deployments'
+      'Kubernetes and VM deployments',
     ],
     popular: true,
     icon: '🗄️',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/managed-postgres-ha',
-    marketPosition: 'Comparable to Crunchy, Aiven; simpler pricing and hands-on tuning included.',
+    marketPosition:
+      'Comparable to Crunchy, Aiven; simpler pricing and hands-on tuning included.',
     targetAudience: 'SaaS teams, data platforms, analytics backends',
     trialDays: 14,
     setupTime: '1 hour',
     category: 'Analytics & Databases',
     realService: true,
-    technology: ['PostgreSQL, Patroni, PgBouncer, Prometheus, Grafana, Kubernetes'],
+    technology: [
+      'PostgreSQL, Patroni, PgBouncer, Prometheus, Grafana, Kubernetes',
+    ],
     integrations: ['AWS, GCP, Azure, Grafana, Datadog'],
     useCases: ['SaaS multi-tenant DB, OLTP backends, Read-heavy analytics'],
     roi: 'Reduce incidents 60% and improve p95 by 20-40% in 30 days',
@@ -296,33 +323,37 @@ export const extraServices: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Provisioner with Terraform, HA templates, metrics stack, tuning playbooks.',
+    implementationDetails:
+      'Provisioner with Terraform, HA templates, metrics stack, tuning playbooks.',
     launchDate: '2024-10-01',
     customers: 320,
     rating: 4.7,
-    reviews: 210
+    reviews: 210,
   },
   {
     id: 'iam-access-review',
     name: 'IAM Access Review Automation',
-    tagline: 'Automate quarterly access reviews and certifications for SOC 2/ISO',
+    tagline:
+      'Automate quarterly access reviews and certifications for SOC 2/ISO',
     price: '$2',
     period: '/user/month',
-    description: 'Automate user and role access reviews across Okta, Azure AD, Google Workspace, AWS IAM, and SaaS apps. Send attestations, remediate violations, and export signed reports for audits.',
+    description:
+      'Automate user and role access reviews across Okta, Azure AD, Google Workspace, AWS IAM, and SaaS apps. Send attestations, remediate violations, and export signed reports for audits.',
     features: [
       'Okta/Azure AD/Google Workspace connectors',
       'AWS/GCP/Azure IAM policy diff and drift detection',
       'Manager attestations and delegated approvals',
       'Separation of duties and toxic combinations checks',
       'Evidence exports for SOC 2/ISO 27001/HIPAA',
-      'Webhooks and API for custom workflows'
+      'Webhooks and API for custom workflows',
     ],
     popular: true,
     icon: '🔑',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/iam-access-review',
-    marketPosition: 'Streamlined alternative to SailPoint/OneIdentity for SMB and mid-market.',
+    marketPosition:
+      'Streamlined alternative to SailPoint/OneIdentity for SMB and mid-market.',
     targetAudience: 'Security, GRC, Platform teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -330,7 +361,11 @@ export const extraServices: MicroSaasService[] = [
     realService: true,
     technology: ['Okta', 'Azure AD', 'Google Workspace', 'AWS IAM', 'Next.js'],
     integrations: ['Slack', 'Email', 'Jira', 'ServiceNow'],
-    useCases: ['Quarterly access review', 'Joiner/Mover/Leaver governance', 'Audit evidence'],
+    useCases: [
+      'Quarterly access review',
+      'Joiner/Mover/Leaver governance',
+      'Audit evidence',
+    ],
     roi: 'Reduce review time by 70-90% and cut audit prep by 50%',
     competitors: ['SailPoint', 'OneIdentity', 'Zluri'],
     marketSize: '$15B IAM',
@@ -338,33 +373,37 @@ export const extraServices: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Connectors + policy engine + signer workflow + evidence exports.',
+    implementationDetails:
+      'Connectors + policy engine + signer workflow + evidence exports.',
     launchDate: '2025-01-10',
     customers: 42,
     rating: 4.7,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'security-awareness-phishing',
     name: 'Security Awareness & Phishing Simulator',
-    tagline: 'Train employees with automated phishing campaigns and micro‑learning',
+    tagline:
+      'Train employees with automated phishing campaigns and micro‑learning',
     price: '$2.50',
     period: '/user/month',
-    description: 'Run realistic phishing simulations, assign bite‑sized training, and measure risk score improvements. Mapped to NIST/ISO controls with executive reporting.',
+    description:
+      'Run realistic phishing simulations, assign bite‑sized training, and measure risk score improvements. Mapped to NIST/ISO controls with executive reporting.',
     features: [
       'Template library and domain rotation',
       'Adaptive difficulty and targeting',
       'Just‑in‑time micro‑lessons',
       'Risk scoring and department heatmaps',
       'SCIM/SSO and HRIS sync',
-      'Automated quarterly training plans'
+      'Automated quarterly training plans',
     ],
     popular: false,
     icon: '🎣',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/security-awareness-phishing',
-    marketPosition: 'Comparable to KnowBe4/Proofpoint with cleaner UX and SMB pricing.',
+    marketPosition:
+      'Comparable to KnowBe4/Proofpoint with cleaner UX and SMB pricing.',
     targetAudience: 'IT, Security, HR',
     trialDays: 14,
     setupTime: '2 hours',
@@ -372,7 +411,11 @@ export const extraServices: MicroSaasService[] = [
     realService: true,
     technology: ['Next.js', 'Mail APIs', 'LMS'],
     integrations: ['Okta', 'Azure AD', 'Google Workspace', 'BambooHR'],
-    useCases: ['Reduce phishing risk', 'Compliance training', 'Onboarding security 101'],
+    useCases: [
+      'Reduce phishing risk',
+      'Compliance training',
+      'Onboarding security 101',
+    ],
     roi: 'Reduce click rates by 60%+ in 90 days',
     competitors: ['KnowBe4', 'Proofpoint', 'Cofense'],
     marketSize: '$2B SAT',
@@ -380,11 +423,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Campaign engine + LMS + email deliverability + reporting.',
+    implementationDetails:
+      'Campaign engine + LMS + email deliverability + reporting.',
     launchDate: '2025-01-10',
     customers: 18,
     rating: 4.6,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'mdm-mobile-device-management',
@@ -392,21 +436,23 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Manage macOS, Windows, iOS and Android with policy baselines',
     price: '$3',
     period: '/device/month',
-    description: 'Lightweight MDM with baseline security policies, OS patching, app catalogs, and lost device protections. Ideal for SMBs that outgrew manual management.',
+    description:
+      'Lightweight MDM with baseline security policies, OS patching, app catalogs, and lost device protections. Ideal for SMBs that outgrew manual management.',
     features: [
       'Zero‑touch enrollment and profiles',
       'OS and app patch orchestration',
       'Disk encryption and compliance checks',
       'Remote lock/wipe and geo‑tag last seen',
       'Self‑service app portal',
-      'Asset inventory and reports'
+      'Asset inventory and reports',
     ],
     popular: true,
     icon: '📱',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/mdm-mobile-device-management',
-    marketPosition: 'Alternative to Intune/Jamf/Kandji for SMB with simpler pricing.',
+    marketPosition:
+      'Alternative to Intune/Jamf/Kandji for SMB with simpler pricing.',
     targetAudience: 'IT admins, MSPs, Ops',
     trialDays: 14,
     setupTime: '1 day',
@@ -414,7 +460,11 @@ export const extraServices: MicroSaasService[] = [
     realService: true,
     technology: ['Windows MDM', 'Apple MDM', 'Android Enterprise'],
     integrations: ['Intune import', 'GSuite', 'Okta'],
-    useCases: ['Laptop and mobile fleet management', 'Security baselines', 'Asset tracking'],
+    useCases: [
+      'Laptop and mobile fleet management',
+      'Security baselines',
+      'Asset tracking',
+    ],
     roi: 'Reduce device setup time by 70% and incidents by 40%',
     competitors: ['Intune', 'Jamf', 'Kandji'],
     marketSize: '$16B UEM',
@@ -422,11 +472,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Policy profiles + enrollment flows + agent + dashboards.',
+    implementationDetails:
+      'Policy profiles + enrollment flows + agent + dashboards.',
     launchDate: '2025-01-10',
     customers: 27,
     rating: 4.6,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'backup-dr-orchestrator',
@@ -434,21 +485,23 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Policy‑driven backups with disaster recovery runbooks and tests',
     price: '$199',
     period: '/month',
-    description: 'Unify backups across clouds and databases. Define RPO/RTO policies, generate DR runbooks, and schedule game‑day tests with evidence for audits.',
+    description:
+      'Unify backups across clouds and databases. Define RPO/RTO policies, generate DR runbooks, and schedule game‑day tests with evidence for audits.',
     features: [
       'AWS/Azure/GCP snapshots and lifecycle',
       'Postgres/MySQL/Mongo logical backups',
       'DR runbook generation and approvals',
       'Quarterly DR tests with evidence',
       'Anomaly detection and ransomware flags',
-      'Slack/Jira integrations'
+      'Slack/Jira integrations',
     ],
     popular: false,
     icon: '🛡️',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/backup-dr-orchestrator',
-    marketPosition: 'Simpler alternative to enterprise backup suites for startups and SMBs.',
+    marketPosition:
+      'Simpler alternative to enterprise backup suites for startups and SMBs.',
     targetAudience: 'SRE, Platform, Compliance',
     trialDays: 14,
     setupTime: '1 day',
@@ -456,7 +509,11 @@ export const extraServices: MicroSaasService[] = [
     realService: true,
     technology: ['AWS', 'Azure', 'GCP', 'Postgres', 'MySQL', 'MongoDB'],
     integrations: ['Slack', 'Jira', 'PagerDuty'],
-    useCases: ['RPO/RTO policy enforcement', 'DR evidence', 'Ransomware resilience'],
+    useCases: [
+      'RPO/RTO policy enforcement',
+      'DR evidence',
+      'Ransomware resilience',
+    ],
     roi: 'Cut DR prep time by 80% and recovery drills by 60%',
     competitors: ['Veeam', 'Rubrik', 'AWS Backup'],
     marketSize: '$12B backup/DR',
@@ -464,11 +521,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'neural',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Policy engine + providers + scheduler + evidence store.',
+    implementationDetails:
+      'Policy engine + providers + scheduler + evidence store.',
     launchDate: '2025-01-10',
     customers: 15,
     rating: 4.5,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'wcag-accessibility-scanner',
@@ -476,21 +534,23 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Audit websites and apps for WCAG 2.2 AA compliance',
     price: '$49',
     period: '/month',
-    description: 'Automated accessibility scanning with actionable fixes and CI/CD gates. Improve usability and reduce legal risk with standardized reports.',
+    description:
+      'Automated accessibility scanning with actionable fixes and CI/CD gates. Improve usability and reduce legal risk with standardized reports.',
     features: [
       'WCAG 2.2 AA rule engine',
       'Crawl websites and SPAs',
       'CI integration and quality gates',
       'Issue dedupe and remediation tips',
       'PDF/JSON evidence exports',
-      'ARIA and color contrast helpers'
+      'ARIA and color contrast helpers',
     ],
     popular: true,
     icon: '♿',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/wcag-accessibility-scanner',
-    marketPosition: 'Comparable to axe/Deque with developer‑first workflows and lower cost.',
+    marketPosition:
+      'Comparable to axe/Deque with developer‑first workflows and lower cost.',
     targetAudience: 'Web teams, QA, Compliance',
     trialDays: 14,
     setupTime: '2 hours',
@@ -498,7 +558,11 @@ export const extraServices: MicroSaasService[] = [
     realService: true,
     technology: ['Playwright', 'axe-core', 'Next.js'],
     integrations: ['GitHub', 'GitLab', 'Jenkins'],
-    useCases: ['CI accessibility checks', 'Quarterly audits', 'Legal risk reduction'],
+    useCases: [
+      'CI accessibility checks',
+      'Quarterly audits',
+      'Legal risk reduction',
+    ],
     roi: 'Catch 80% of issues pre‑release and reduce regressions 50%',
     competitors: ['Deque', 'Siteimprove'],
     marketSize: '$1B accessibility tooling',
@@ -510,7 +574,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2025-01-10',
     customers: 33,
     rating: 4.7,
-    reviews: 17
+    reviews: 17,
   },
   {
     id: 'performance-optimization-sre',
@@ -518,21 +582,23 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Fixed‑scope tuning for databases, APIs, and frontends',
     price: '$3,900',
     period: '/fixed',
-    description: 'Four‑week engagement to diagnose and improve latency, throughput, and cost. Includes baselines, dashboards, and a 90‑day follow‑up plan.',
+    description:
+      'Four‑week engagement to diagnose and improve latency, throughput, and cost. Includes baselines, dashboards, and a 90‑day follow‑up plan.',
     features: [
       'Golden signals and SLOs setup',
       'DB index and query tuning',
       'API profiling and caching strategy',
       'Frontend Web Vitals improvements',
       'Load tests and capacity plan',
-      'Executive report and roadmap'
+      'Executive report and roadmap',
     ],
     popular: false,
     icon: '⚙️',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/performance-optimization-sre',
-    marketPosition: 'Outcome‑based alternative to open‑ended consulting retainers.',
+    marketPosition:
+      'Outcome‑based alternative to open‑ended consulting retainers.',
     targetAudience: 'CTOs, Platform, Product teams',
     trialDays: 0,
     setupTime: 'Kickoff in 2 days',
@@ -540,7 +606,11 @@ export const extraServices: MicroSaasService[] = [
     realService: true,
     technology: ['Postgres', 'Kubernetes', 'OpenTelemetry', 'Next.js'],
     integrations: ['Datadog', 'Grafana', 'CloudWatch'],
-    useCases: ['Reduce p95 latency', 'Control cloud spend', 'Prep for launches'],
+    useCases: [
+      'Reduce p95 latency',
+      'Control cloud spend',
+      'Prep for launches',
+    ],
     roi: 'Typical 20‑50% p95 reduction and 10‑30% cost savings',
     competitors: ['General consultancies'],
     marketSize: '$5B performance services',
@@ -548,11 +618,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Engagement playbook + tooling templates + dashboards.',
+    implementationDetails:
+      'Engagement playbook + tooling templates + dashboards.',
     launchDate: '2025-01-10',
     customers: 12,
     rating: 4.8,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'sso-in-a-box',
@@ -560,13 +631,14 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'SAML/OIDC SSO in hours, not weeks',
     price: '$129',
     period: '/month',
-    description: 'Drop-in SSO gateway with SAML/OIDC providers, just-in-time user provisioning, and role mapping. Works with Okta, Azure AD, Google.',
+    description:
+      'Drop-in SSO gateway with SAML/OIDC providers, just-in-time user provisioning, and role mapping. Works with Okta, Azure AD, Google.',
     features: [
       'SAML and OIDC providers',
       'JIT provisioning + SCIM sync',
       'Role/claim mapping and JWE support',
       'Multi-tenant and branded login',
-      'Audit logs and webhook events'
+      'Audit logs and webhook events',
     ],
     popular: true,
     icon: '🔐',
@@ -589,11 +661,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Hosted gateway + SDK with provider templates and admin UI.',
+    implementationDetails:
+      'Hosted gateway + SDK with provider templates and admin UI.',
     launchDate: '2024-08-12',
     customers: 540,
     rating: 4.8,
-    reviews: 310
+    reviews: 310,
   },
   {
     id: 'vector-search-starter',
@@ -601,12 +674,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Production-ready embeddings and search in days',
     price: '$99',
     period: '/month',
-    description: 'End-to-end vector pipelines with ingestion, chunking, hybrid search, and usage analytics. Bring your own LLM and store.',
+    description:
+      'End-to-end vector pipelines with ingestion, chunking, hybrid search, and usage analytics. Bring your own LLM and store.',
     features: [
       'Hybrid BM25 + vector search',
       'Ingestion and chunking jobs',
       'Quality evals and guardrails',
-      'SDKs and query templates'
+      'SDKs and query templates',
     ],
     popular: true,
     icon: '🧭',
@@ -633,7 +707,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-11-05',
     customers: 260,
     rating: 4.7,
-    reviews: 140
+    reviews: 140,
   },
   {
     id: 'agentic-rag-suite',
@@ -641,19 +715,21 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Goal-driven retrieval agents with tools, memory, and evals',
     price: '$299',
     period: '/month',
-    description: 'Production RAG agents with multi-tool orchestration, memory, evals, and guardrails. Designed for enterprise workflows.',
+    description:
+      'Production RAG agents with multi-tool orchestration, memory, evals, and guardrails. Designed for enterprise workflows.',
     features: [
       'Tool use and multi-step planning',
       'Memory and session grounding',
       'Offline evals and benchmarks',
-      'Observability and safety guardrails'
+      'Observability and safety guardrails',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/agentic-rag',
-    marketPosition: 'Delivers agents without bespoke infra; governed by policy.',
+    marketPosition:
+      'Delivers agents without bespoke infra; governed by policy.',
     targetAudience: 'Ops, support, sales, research teams',
     trialDays: 14,
     setupTime: '2 days',
@@ -669,11 +745,12 @@ export const extraServices: MicroSaasService[] = [
     variant: 'quantum-holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Hosted agent runtime with policy engine and eval harness.',
+    implementationDetails:
+      'Hosted agent runtime with policy engine and eval harness.',
     launchDate: '2025-01-01',
     customers: 120,
     rating: 4.6,
-    reviews: 65
+    reviews: 65,
   },
   {
     id: 'api-documentation-generator',
@@ -681,12 +758,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Beautiful, accurate API docs from OpenAPI/GraphQL',
     price: '$49',
     period: '/month',
-    description: 'Generate delightful API docs with SDK snippets, changelogs, versioning, and search. CI-friendly.',
+    description:
+      'Generate delightful API docs with SDK snippets, changelogs, versioning, and search. CI-friendly.',
     features: [
       'OpenAPI/GraphQL import',
       'SDK snippets and code samples',
       'Changelog and versioning',
-      'Search, themes, and export'
+      'Search, themes, and export',
     ],
     popular: true,
     icon: '📘',
@@ -713,7 +791,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-06-15',
     customers: 680,
     rating: 4.8,
-    reviews: 410
+    reviews: 410,
   },
   {
     id: 'synthetic-monitor-recorder',
@@ -721,12 +799,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Click-to-create uptime and journey monitors',
     price: '$89',
     period: '/month',
-    description: 'Record user journeys in the browser and deploy reliable synthetic checks with screenshots, video, and assertions.',
+    description:
+      'Record user journeys in the browser and deploy reliable synthetic checks with screenshots, video, and assertions.',
     features: [
       'Chrome recorder and CLI',
       'Journey assertions and steps',
       'Screenshots and HAR capture',
-      'Alerting and status pages'
+      'Alerting and status pages',
     ],
     popular: true,
     icon: '📹',
@@ -753,7 +832,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-09-01',
     customers: 290,
     rating: 4.6,
-    reviews: 150
+    reviews: 150,
   },
   {
     id: 'ci-cd-security-hardening',
@@ -761,12 +840,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Supply-chain security and guardrails for pipelines',
     price: '$129',
     period: '/month',
-    description: 'Harden your pipelines with signed artifacts, secret scanning, and least-privilege runners. Prebuilt policies and dashboards.',
+    description:
+      'Harden your pipelines with signed artifacts, secret scanning, and least-privilege runners. Prebuilt policies and dashboards.',
     features: [
       'SLSA provenance and signing',
       'Secrets scanning and DLP',
       'Policy as code and approvals',
-      'Runner isolation and IAM baselines'
+      'Runner isolation and IAM baselines',
     ],
     popular: false,
     icon: '🛡️',
@@ -793,7 +873,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-05-10',
     customers: 180,
     rating: 4.5,
-    reviews: 90
+    reviews: 90,
   },
   {
     id: 'cloud-backup-compliance',
@@ -801,12 +881,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Encrypted, policy-driven backups with retention and audits',
     price: '$79',
     period: '/month',
-    description: 'Turnkey multi-cloud backup plans with lifecycle, immutability, and auditor-ready reports. Fit for SOC2 and GDPR.',
+    description:
+      'Turnkey multi-cloud backup plans with lifecycle, immutability, and auditor-ready reports. Fit for SOC2 and GDPR.',
     features: [
       'Lifecycle and retention policies',
       'Immutable vaults and versioning',
       'Drill and restore testing',
-      'Compliance reports'
+      'Compliance reports',
     ],
     popular: false,
     icon: '☁️',
@@ -833,7 +914,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-07-18',
     customers: 140,
     rating: 4.6,
-    reviews: 85
+    reviews: 85,
   },
   {
     id: 'prompt-policy-registry',
@@ -841,12 +922,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Centralize LLM prompts, policies, and tests',
     price: '$59',
     period: '/month',
-    description: 'Versioned prompt and policy store with tests, red-teaming, and approvals. Keep AI behavior governed and reproducible.',
+    description:
+      'Versioned prompt and policy store with tests, red-teaming, and approvals. Keep AI behavior governed and reproducible.',
     features: [
       'Versioned prompts and policies',
       'Test suites and red-teaming',
       'Approval workflows and audit',
-      'SDKs and CI integrations'
+      'SDKs and CI integrations',
     ],
     popular: true,
     icon: '📜',
@@ -873,7 +955,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-12-01',
     customers: 110,
     rating: 4.6,
-    reviews: 60
+    reviews: 60,
   },
   {
     id: 'webhook-relay-replay',
@@ -881,12 +963,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Never lose a webhook; debug and replay with confidence',
     price: '$39',
     period: '/month',
-    description: 'Reliable webhook intake, buffering, and replay with signing, dead-letter queues, and inspector for debugging.',
+    description:
+      'Reliable webhook intake, buffering, and replay with signing, dead-letter queues, and inspector for debugging.',
     features: [
       'Provider signing verification',
       'Retries and DLQ',
       'Inspector UI and payload redaction',
-      'Filter, route, and transform'
+      'Filter, route, and transform',
     ],
     popular: true,
     icon: '🔁',
@@ -913,7 +996,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-04-22',
     customers: 520,
     rating: 4.7,
-    reviews: 300
+    reviews: 300,
   },
   {
     id: 'api-observability-pro',
@@ -921,12 +1004,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Distributed traces, logs, and metrics with SLOs',
     price: '$129',
     period: '/month',
-    description: 'Drop-in OpenTelemetry collectors, dashboards, and API error budget views. Auto-instrumentation included.',
+    description:
+      'Drop-in OpenTelemetry collectors, dashboards, and API error budget views. Auto-instrumentation included.',
     features: [
       'Traces, logs, metrics setup',
       'Error budget and burn alerts',
       'Dashboards and exemplars',
-      'CI gating for SLO regressions'
+      'CI gating for SLO regressions',
     ],
     popular: false,
     icon: '🛰️',
@@ -953,7 +1037,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-08-30',
     customers: 210,
     rating: 4.5,
-    reviews: 95
+    reviews: 95,
   },
   {
     id: 'llm-gateway-pro',
@@ -961,12 +1045,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Unified LLM proxy with cost, safety, and routing',
     price: '$99',
     period: '/month',
-    description: 'One URL for multiple LLMs with cost controls, safety filters, retries, and fallbacks. Works with OpenAI and OSS.',
+    description:
+      'One URL for multiple LLMs with cost controls, safety filters, retries, and fallbacks. Works with OpenAI and OSS.',
     features: [
       'Model routing and fallbacks',
       'Cost budgets and rate limits',
       'Safety filters and guardrails',
-      'Observability and keys management'
+      'Observability and keys management',
     ],
     popular: true,
     icon: '🧰',
@@ -993,7 +1078,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-10-20',
     customers: 350,
     rating: 4.7,
-    reviews: 175
+    reviews: 175,
   },
   {
     id: 'uptime-slo-monitor',
@@ -1001,12 +1086,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'SLIs/SLOs, burn alerts, and synthetic checks',
     price: '$89',
     period: '/month',
-    description: 'Define SLIs and SLOs, get burn-rate alerts, and publish status pages. Native synthetic checks.',
+    description:
+      'Define SLIs and SLOs, get burn-rate alerts, and publish status pages. Native synthetic checks.',
     features: [
       'SLIs/SLOs with templates',
       'Burn-rate paging policies',
       'Synthetic uptime checks',
-      'Public status pages'
+      'Public status pages',
     ],
     popular: false,
     icon: '✅',
@@ -1033,7 +1119,7 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-06-02',
     customers: 260,
     rating: 4.6,
-    reviews: 130
+    reviews: 130,
   },
   {
     id: 'gdpr-dsar-automation',
@@ -1041,12 +1127,13 @@ export const extraServices: MicroSaasService[] = [
     tagline: 'Branded DSAR portal with PII discovery and exports',
     price: '$99',
     period: '/month',
-    description: 'Identity verification, PII discovery across systems, and export packaging to speed DSAR handling safely.',
+    description:
+      'Identity verification, PII discovery across systems, and export packaging to speed DSAR handling safely.',
     features: [
       'DSAR portal and workflows',
       'PII discovery and redaction',
       'Identity verification',
-      'Exports and audit trails'
+      'Exports and audit trails',
     ],
     popular: false,
     icon: '🛡️',
@@ -1073,7 +1160,6 @@ export const extraServices: MicroSaasService[] = [
     launchDate: '2024-05-01',
     customers: 95,
     rating: 4.5,
-    reviews: 55
-  }
+    reviews: 55,
+  },
 ];
-

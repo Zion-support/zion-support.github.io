@@ -1,11 +1,18 @@
 // Analytics and monitoring utilities
 declare global {
   interface Window {
-    gtag?: (command: string, targetId: string, config?: Record<string, any>) => void;
+    gtag?: (
+      command: string,
+      targetId: string,
+      config?: Record<string, any>
+    ) => void;
   }
 }
 
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+export const trackEvent = (
+  eventName: string,
+  properties?: Record<string, any>
+) => {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', eventName, properties ?? {});
   }

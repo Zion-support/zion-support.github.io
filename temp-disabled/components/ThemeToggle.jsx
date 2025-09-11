@@ -9,7 +9,10 @@ export default function ThemeToggle() {
   const handleToggle = () => {
     let currentActualTheme = theme;
     if (theme === 'system') {
-      currentActualTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      currentActualTheme = window.matchMedia('(prefers-color-scheme: dark)')
+        .matches
+        ? 'dark'
+        : 'light';
     }
     setTheme(currentActualTheme === 'light' ? 'dark' : 'light');
   };
@@ -19,13 +22,27 @@ export default function ThemeToggle() {
   if (theme === 'system') {
     // Check system preference for immediate UI update if needed, or rely on useEffect in ThemeProvider
     // For icon display, it's better to reflect the actual current state.
-    displayTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    displayTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
   }
 
   return (
-    <Button aria-label="Toggle theme" onClick={handleToggle} variant="ghost" size="icon"> {/* UPDATED onClick */}
-      {displayTheme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />} {/* UPDATED theme check */}
-      <span className="sr-only">Toggle theme</span>
+    <Button
+      aria-label='Toggle theme'
+      onClick={handleToggle}
+      variant='ghost'
+      size='icon'
+    >
+      {' '}
+      {/* UPDATED onClick */}
+      {displayTheme === 'dark' ? (
+        <Sun className='h-5 w-5' />
+      ) : (
+        <Moon className='h-5 w-5' />
+      )}{' '}
+      {/* UPDATED theme check */}
+      <span className='sr-only'>Toggle theme</span>
     </Button>
   );
 }

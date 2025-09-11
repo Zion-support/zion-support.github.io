@@ -1,2 +1,4 @@
-const AccessibilityManager = dynamic(() => import("./AccessibilityManager"), { loading: () => <p>Loading...</p> });
+const AccessibilityManager = dynamic(() => import('./AccessibilityManager'), {
+  loading: () => <p>Loading...</p>,
+});
 export default AccessibilityManager;

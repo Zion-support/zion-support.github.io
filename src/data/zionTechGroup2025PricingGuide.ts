@@ -37,7 +37,8 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
   {
     id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
-    description: 'Fully autonomous AI system that manages business operations, decision-making, and strategic planning.',
+    description:
+      'Fully autonomous AI system that manages business operations, decision-making, and strategic planning.',
     category: 'AI Solutions',
     pricingTiers: [
       {
@@ -50,19 +51,19 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Real-time business intelligence',
           'Performance monitoring',
           'Email support',
-          'Basic reporting'
+          'Basic reporting',
         ],
         benefits: [
           '24/7 autonomous operation',
           'Reduced operational costs',
           'Improved efficiency',
-          'Data-driven insights'
+          'Data-driven insights',
         ],
         bestFor: [
           'Small businesses (1-10 employees)',
           'Startups',
-          'Local service providers'
-        ]
+          'Local service providers',
+        ],
       },
       {
         name: 'Professional',
@@ -76,21 +77,21 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Multi-channel communication',
           'Priority support',
           'Advanced reporting',
-          'Custom integrations'
+          'Custom integrations',
         ],
         benefits: [
           'Full autonomous operation',
           'Predictive insights',
           'Automated optimization',
           'Scalable management',
-          'Custom workflows'
+          'Custom workflows',
         ],
         bestFor: [
           'Medium businesses (11-50 employees)',
           'E-commerce companies',
-          'Service-based organizations'
+          'Service-based organizations',
         ],
-        popular: true
+        popular: true,
       },
       {
         name: 'Enterprise',
@@ -105,27 +106,28 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Advanced compliance monitoring',
           'Dedicated support team',
           'Custom development',
-          'API access'
+          'API access',
         ],
         benefits: [
           'Enterprise-grade autonomy',
           'Custom AI solutions',
           'Multi-location coordination',
           'Full compliance support',
-          'Dedicated assistance'
+          'Dedicated assistance',
         ],
         bestFor: [
           'Large enterprises (50+ employees)',
           'Multi-location businesses',
-          'Compliance-focused industries'
-        ]
-      }
+          'Compliance-focused industries',
+        ],
+      },
     ],
     marketComparison: {
       averageMarketPrice: '$5,000',
       ourPrice: '$2,500',
       savings: '50%',
-      valueProposition: 'Advanced AI capabilities at half the market price with superior features'
+      valueProposition:
+        'Advanced AI capabilities at half the market price with superior features',
     },
     features: [
       'Autonomous decision-making engine',
@@ -135,7 +137,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Performance optimization algorithms',
       'Multi-channel communication management',
       'Risk assessment and mitigation',
-      'Compliance monitoring and reporting'
+      'Compliance monitoring and reporting',
     ],
     benefits: [
       '24/7 autonomous operation',
@@ -145,26 +147,27 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Scalable business management',
       'Real-time insights and alerts',
       'Proactive problem resolution',
-      'Continuous learning and improvement'
+      'Continuous learning and improvement',
     ],
     useCases: [
       'Small to medium business automation',
       'E-commerce operations management',
       'Service industry optimization',
       'Startup scaling and management',
-      'Multi-location business coordination'
+      'Multi-location business coordination',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'ai-content-optimization-suite-pro',
     title: 'AI Content Optimization Suite Pro',
-    description: 'Advanced AI-powered content creation, optimization, and distribution platform.',
+    description:
+      'Advanced AI-powered content creation, optimization, and distribution platform.',
     category: 'AI Solutions',
     pricingTiers: [
       {
@@ -177,19 +180,15 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Basic SEO optimization',
           'Content performance analytics',
           'Email support',
-          'Standard templates'
+          'Standard templates',
         ],
         benefits: [
           'Improved content quality',
           'Better SEO rankings',
           'Time savings',
-          'Performance insights'
+          'Performance insights',
         ],
-        bestFor: [
-          'Small marketing teams',
-          'Content creators',
-          'Startups'
-        ]
+        bestFor: ['Small marketing teams', 'Content creators', 'Startups'],
       },
       {
         name: 'Professional',
@@ -204,28 +203,29 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Content calendar management',
           'Social media automation',
           'ROI tracking',
-          'Priority support'
+          'Priority support',
         ],
         benefits: [
           'Maximum content engagement',
           'Superior SEO performance',
           'Multi-channel reach',
           'Automated optimization',
-          'Measurable results'
+          'Measurable results',
         ],
         bestFor: [
           'Marketing agencies',
           'E-commerce businesses',
           'Content teams',
-          'B2B organizations'
+          'B2B organizations',
         ],
-        popular: true
+        popular: true,
       },
       {
         name: 'Enterprise',
         price: '$3,500',
         billing: 'month',
-        description: 'Complete content management solution for large organizations',
+        description:
+          'Complete content management solution for large organizations',
         features: [
           'Enterprise AI content generation',
           'Custom AI models',
@@ -234,27 +234,28 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Multi-brand support',
           'Advanced compliance',
           'Dedicated support team',
-          'Custom development'
+          'Custom development',
         ],
         benefits: [
           'Enterprise-grade content management',
           'Custom AI solutions',
           'Multi-brand coordination',
           'Advanced compliance',
-          'Dedicated assistance'
+          'Dedicated assistance',
         ],
         bestFor: [
           'Large enterprises',
           'Multi-brand companies',
-          'Agencies with enterprise clients'
-        ]
-      }
+          'Agencies with enterprise clients',
+        ],
+      },
     ],
     marketComparison: {
       averageMarketPrice: '$2,500',
       ourPrice: '$1,800',
       savings: '28%',
-      valueProposition: 'Professional-grade content optimization with advanced AI capabilities'
+      valueProposition:
+        'Professional-grade content optimization with advanced AI capabilities',
     },
     features: [
       'AI content generation and optimization',
@@ -264,7 +265,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'A/B testing and optimization',
       'Content calendar management',
       'Social media automation',
-      'ROI tracking and reporting'
+      'ROI tracking and reporting',
     ],
     benefits: [
       'Increased content engagement',
@@ -274,26 +275,27 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Data-driven content strategy',
       'Multi-channel reach',
       'Automated optimization',
-      'Measurable results'
+      'Measurable results',
     ],
     useCases: [
       'Digital marketing agencies',
       'E-commerce businesses',
       'Content creators and publishers',
       'B2B marketing teams',
-      'Social media managers'
+      'Social media managers',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'zero-trust-network-architecture',
     title: 'Zero Trust Network Architecture',
-    description: 'Comprehensive zero-trust security implementation with continuous verification.',
+    description:
+      'Comprehensive zero-trust security implementation with continuous verification.',
     category: 'Cybersecurity',
     pricingTiers: [
       {
@@ -307,19 +309,15 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Threat monitoring',
           'Basic compliance reporting',
           'Email support',
-          'Standard security policies'
+          'Standard security policies',
         ],
         benefits: [
           'Enhanced security posture',
           'Basic threat protection',
           'Compliance support',
-          'Improved audit capabilities'
+          'Improved audit capabilities',
         ],
-        bestFor: [
-          'Small organizations',
-          'Startups',
-          'Basic compliance needs'
-        ]
+        bestFor: ['Small organizations', 'Startups', 'Basic compliance needs'],
       },
       {
         name: 'Professional',
@@ -334,22 +332,22 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Advanced compliance reporting',
           'Custom security policies',
           'Priority support',
-          'Integration support'
+          'Integration support',
         ],
         benefits: [
           'Advanced security protection',
           'Automated threat response',
           'Comprehensive compliance',
           'Real-time monitoring',
-          'Custom security policies'
+          'Custom security policies',
         ],
         bestFor: [
           'Medium businesses',
           'Financial institutions',
           'Healthcare organizations',
-          'Compliance-focused industries'
+          'Compliance-focused industries',
         ],
-        popular: true
+        popular: true,
       },
       {
         name: 'Enterprise',
@@ -364,28 +362,29 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Multi-location support',
           'Custom integrations',
           'Dedicated security team',
-          '24/7 monitoring'
+          '24/7 monitoring',
         ],
         benefits: [
           'Enterprise-grade security',
           'Custom security solutions',
           'Full compliance automation',
           'Multi-location protection',
-          'Dedicated security support'
+          'Dedicated security support',
         ],
         bestFor: [
           'Large enterprises',
           'Government agencies',
           'Critical infrastructure',
-          'Multi-location organizations'
-        ]
-      }
+          'Multi-location organizations',
+        ],
+      },
     ],
     marketComparison: {
       averageMarketPrice: '$5,000',
       ourPrice: '$3,500',
       savings: '30%',
-      valueProposition: 'Enterprise-grade zero-trust security at competitive pricing'
+      valueProposition:
+        'Enterprise-grade zero-trust security at competitive pricing',
     },
     features: [
       'Continuous identity verification',
@@ -395,7 +394,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Automated incident response',
       'Compliance reporting',
       'Security policy management',
-      'Integration with existing systems'
+      'Integration with existing systems',
     ],
     benefits: [
       'Enhanced security posture',
@@ -405,26 +404,27 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Automated security responses',
       'Improved audit capabilities',
       'Scalable security architecture',
-      'Cost-effective protection'
+      'Cost-effective protection',
     ],
     useCases: [
       'Financial institutions',
       'Healthcare organizations',
       'Government agencies',
       'Enterprise businesses',
-      'Compliance-focused industries'
+      'Compliance-focused industries',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'cloud-finops-optimizer',
     title: 'Cloud FinOps Optimizer',
-    description: 'Intelligent cloud cost optimization platform with real-time analysis.',
+    description:
+      'Intelligent cloud cost optimization platform with real-time analysis.',
     category: 'Cloud & DevOps',
     pricingTiers: [
       {
@@ -437,19 +437,15 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Simple cost optimization',
           'Basic reporting',
           'Email support',
-          'Single cloud provider'
+          'Single cloud provider',
         ],
         benefits: [
           'Cost visibility',
           'Basic savings',
           'Simple optimization',
-          'Better budgeting'
+          'Better budgeting',
         ],
-        bestFor: [
-          'Small cloud users',
-          'Startups',
-          'Basic cloud needs'
-        ]
+        bestFor: ['Small cloud users', 'Startups', 'Basic cloud needs'],
       },
       {
         name: 'Professional',
@@ -464,22 +460,22 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Multi-cloud support',
           'Automated scaling policies',
           'Advanced reporting',
-          'Priority support'
+          'Priority support',
         ],
         benefits: [
           'Significant cost savings',
           'Automated optimization',
           'Multi-cloud management',
           'Predictable spending',
-          'Enhanced budgeting'
+          'Enhanced budgeting',
         ],
         bestFor: [
           'Medium cloud users',
           'Multi-cloud environments',
           'DevOps teams',
-          'Growing businesses'
+          'Growing businesses',
         ],
-        popular: true
+        popular: true,
       },
       {
         name: 'Enterprise',
@@ -494,28 +490,29 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Custom integrations',
           'Dedicated FinOps team',
           'Custom development',
-          '24/7 monitoring'
+          '24/7 monitoring',
         ],
         benefits: [
           'Maximum cost optimization',
           'Custom FinOps solutions',
           'Full compliance support',
           'Enterprise-grade analytics',
-          'Dedicated support'
+          'Dedicated support',
         ],
         bestFor: [
           'Large enterprises',
           'Multi-cloud enterprises',
           'Complex cloud environments',
-          'Compliance-focused organizations'
-        ]
-      }
+          'Compliance-focused organizations',
+        ],
+      },
     ],
     marketComparison: {
       averageMarketPrice: '$2,200',
       ourPrice: '$1,500',
       savings: '32%',
-      valueProposition: 'Advanced FinOps capabilities with significant cost savings'
+      valueProposition:
+        'Advanced FinOps capabilities with significant cost savings',
     },
     features: [
       'Real-time cost monitoring',
@@ -525,7 +522,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Multi-cloud cost management',
       'Automated scaling policies',
       'Cost allocation and reporting',
-      'Integration with cloud providers'
+      'Integration with cloud providers',
     ],
     benefits: [
       'Significant cost savings',
@@ -535,26 +532,27 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Predictable cloud spending',
       'Enhanced budgeting capabilities',
       'Multi-cloud cost control',
-      'ROI optimization'
+      'ROI optimization',
     ],
     useCases: [
       'Cloud-native applications',
       'Multi-cloud environments',
       'DevOps teams',
       'Enterprise cloud users',
-      'Startup cloud optimization'
+      'Startup cloud optimization',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
+      website: 'https://ziontechgroup.com',
+    },
   },
   {
     id: 'quantum-computing-platform',
     title: 'Quantum Computing Platform',
-    description: 'Next-generation quantum computing platform for complex problem-solving.',
+    description:
+      'Next-generation quantum computing platform for complex problem-solving.',
     category: 'Emerging Tech',
     pricingTiers: [
       {
@@ -567,19 +565,19 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Standard quantum simulations',
           'Basic problem-solving tools',
           'Email support',
-          'Standard computational resources'
+          'Standard computational resources',
         ],
         benefits: [
           'Quantum computing access',
           'Research capabilities',
           'Basic problem solving',
-          'Future-ready technology'
+          'Future-ready technology',
         ],
         bestFor: [
           'Research institutions',
           'Academic researchers',
-          'Basic quantum needs'
-        ]
+          'Basic quantum needs',
+        ],
       },
       {
         name: 'Professional',
@@ -594,22 +592,22 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Advanced simulations',
           'Priority support',
           'Custom integrations',
-          'Advanced computational resources'
+          'Advanced computational resources',
         ],
         benefits: [
           'Advanced quantum capabilities',
           'Complex problem solving',
           'Quantum advantage',
           'Custom solutions',
-          'Professional support'
+          'Professional support',
         ],
         bestFor: [
           'Technology companies',
           'Financial services',
           'Pharmaceutical research',
-          'Advanced computing needs'
+          'Advanced computing needs',
         ],
-        popular: true
+        popular: true,
       },
       {
         name: 'Enterprise',
@@ -624,28 +622,29 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Custom development',
           'Dedicated quantum team',
           '24/7 support',
-          'Custom integrations'
+          'Custom integrations',
         ],
         benefits: [
           'Enterprise quantum solutions',
           'Custom quantum applications',
           'Full compliance support',
           'Dedicated quantum expertise',
-          'Custom development'
+          'Custom development',
         ],
         bestFor: [
           'Large enterprises',
           'Government agencies',
           'Critical infrastructure',
-          'Advanced research institutions'
-        ]
-      }
+          'Advanced research institutions',
+        ],
+      },
     ],
     marketComparison: {
       averageMarketPrice: '$8,000',
       ourPrice: '$5,000',
       savings: '37.5%',
-      valueProposition: 'Advanced quantum computing at competitive pricing with superior capabilities'
+      valueProposition:
+        'Advanced quantum computing at competitive pricing with superior capabilities',
     },
     features: [
       'Quantum algorithm optimization',
@@ -655,7 +654,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Optimization algorithms',
       'Quantum simulation',
       'Integration with classical systems',
-      'Advanced computational capabilities'
+      'Advanced computational capabilities',
     ],
     benefits: [
       'Exponential computational power',
@@ -665,40 +664,45 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Competitive edge',
       'Innovation leadership',
       'Research capabilities',
-      'Strategic advantage'
+      'Strategic advantage',
     ],
     useCases: [
       'Research institutions',
       'Technology companies',
       'Financial services',
       'Pharmaceutical research',
-      'Advanced computing'
+      'Advanced computing',
     ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
-  }
+      website: 'https://ziontechgroup.com',
+    },
+  },
 ];
 
 export const getPricingByCategory = (category: string) => {
-  return zionTechGroup2025PricingGuide.filter(service => service.category === category);
+  return zionTechGroup2025PricingGuide.filter(
+    service => service.category === category
+  );
 };
 
 export const getPricingByPriceRange = (minPrice: number, maxPrice: number) => {
   return zionTechGroup2025PricingGuide.filter(service => {
-    const basePrice = parseInt(service.pricingTiers[1]?.price.replace(/[^0-9]/g, '') || '0');
+    const basePrice = parseInt(
+      service.pricingTiers[1]?.price.replace(/[^0-9]/g, '') || '0'
+    );
     return basePrice >= minPrice && basePrice <= maxPrice;
   });
 };
 
 export const searchPricing = (query: string) => {
   const lowercaseQuery = query.toLowerCase();
-  return zionTechGroup2025PricingGuide.filter(service =>
-    service.title.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery)
+  return zionTechGroup2025PricingGuide.filter(
+    service =>
+      service.title.toLowerCase().includes(lowercaseQuery) ||
+      service.description.toLowerCase().includes(lowercaseQuery) ||
+      service.category.toLowerCase().includes(lowercaseQuery)
   );
 };

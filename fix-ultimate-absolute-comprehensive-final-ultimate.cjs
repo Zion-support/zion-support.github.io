@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Absolute Comprehensive Final Ultimate Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Absolute Comprehensive Final Ultimate Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix support feedback file - rewrite completely
@@ -40,7 +42,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(supportFeedbackPath, supportFeedbackContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/support/feedback.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/support/feedback.ts'
+);
 // Fix support requests file - rewrite completely
 const supportRequestsPath = '/workspace/pages/api/support/requests.ts';
 const supportRequestsContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -97,7 +101,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }`;
 fs.writeFileSync(supportRequestsPath, supportRequestsContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/support/requests.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/support/requests.ts'
+);
 // Fix support resolve file - rewrite completely
 const supportResolvePath = '/workspace/pages/api/support/resolve.ts';
 const supportResolveContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -132,7 +138,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }`;
 fs.writeFileSync(supportResolvePath, supportResolveContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/support/resolve.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/support/resolve.ts'
+);
 // Fix support session file - rewrite completely
 const supportSessionPath = '/workspace/pages/api/support/session.ts';
 const supportSessionContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -167,7 +175,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }`;
 fs.writeFileSync(supportSessionPath, supportSessionContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/support/session.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/support/session.ts'
+);
 // Fix sync config file - rewrite completely
 const syncConfigPath = '/workspace/pages/api/sync/config.ts';
 const syncConfigContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -246,8 +256,13 @@ const report = {
     'pages/api/support/requests.ts',
     'pages/api/support/resolve.ts',
     'pages/api/support/session.ts',
-    'pages/api/sync/config.ts'
-  ]
+    'pages/api/sync/config.ts',
+  ],
 };
-fs.writeFileSync('/workspace/ultimate-absolute-comprehensive-final-ultimate-fix-report.json', JSON.stringify(report, null, 2));
-console.log('📄 Report saved to ultimate-absolute-comprehensive-final-ultimate-fix-report.json');
+fs.writeFileSync(
+  '/workspace/ultimate-absolute-comprehensive-final-ultimate-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
+console.log(
+  '📄 Report saved to ultimate-absolute-comprehensive-final-ultimate-fix-report.json'
+);

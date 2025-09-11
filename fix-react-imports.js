@@ -15,7 +15,7 @@ const filesToFix = [
   'src/utils/performance-monitor.ts',
   'src/utils/performance.ts',
   'src/utils/pwa.ts',
-  'src/types/app.ts'
+  'src/types/app.ts',
 ];
 
 function fixReactImports(filePath) {
@@ -33,7 +33,7 @@ function fixReactImports(filePath) {
       // Add React import at the top
       const lines = content.split('\n');
       let insertIndex = 0;
-      
+
       // Find the first import statement
       for (let i = 0; i < lines.length; i++) {
         if (lines[i].startsWith('import ')) {

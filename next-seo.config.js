@@ -12,15 +12,15 @@ const config = {
         url: 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Marketplace'
-      }
-    ]
+        alt: 'Zion Tech Marketplace',
+      },
+    ],
   },
   twitter: {
     handle: '@lovable_dev',
     site: '@lovable_dev',
-    cardType: 'summary_large_image'
-  }
+    cardType: 'summary_large_image',
+  },
 };
 
 export default config;

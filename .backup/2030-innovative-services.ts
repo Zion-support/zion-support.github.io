@@ -24,7 +24,12 @@ export interface Innovative2030Service {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  variant: 'ai-futuristic' | 'quantum-futuristic' | 'space-futuristic' | 'biotech-futuristic' | 'metaverse-futuristic';
+  variant:
+    | 'ai-futuristic'
+    | 'quantum-futuristic'
+    | 'space-futuristic'
+    | 'biotech-futuristic'
+    | 'metaverse-futuristic';
   contactInfo: {
     mobile: string;
     email: string;
@@ -51,7 +56,8 @@ export const innovative2030Services: Innovative2030Service[] = [
     tagline: 'Develop genuine AI consciousness and self-awareness',
     price: '$19,999',
     period: '/month',
-    description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Create AI systems that truly understand, learn, and evolve beyond traditional machine learning.',
+    description:
+      'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Create AI systems that truly understand, learn, and evolve beyond traditional machine learning.',
     features: [
       'Consciousness development framework',
       'Self-awareness algorithms',
@@ -62,24 +68,46 @@ export const innovative2030Services: Innovative2030Service[] = [
       'Evolutionary learning systems',
       'Cross-domain consciousness transfer',
       'Consciousness benchmarking',
-      'Expert consultation services'
+      'Expert consultation services',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/ai-consciousness-evolution-platform',
-    marketPosition: 'First commercial AI consciousness platform. 5-year technology advantage over research institutions and AI companies.',
-    targetAudience: 'AI research labs, Autonomous vehicle companies, Robotics manufacturers, Healthcare AI, Educational institutions',
+    marketPosition:
+      'First commercial AI consciousness platform. 5-year technology advantage over research institutions and AI companies.',
+    targetAudience:
+      'AI research labs, Autonomous vehicle companies, Robotics manufacturers, Healthcare AI, Educational institutions',
     trialDays: 60,
     setupTime: '6 weeks',
     category: 'AI Consciousness',
     realService: true,
-    technology: ['Consciousness Algorithms', 'Neural Architecture', 'Self-Awareness Systems', 'Emotional Intelligence', 'Evolutionary Learning'],
-    integrations: ['AI platforms', 'Robotics systems', 'Autonomous vehicles', 'Healthcare systems', 'Research tools'],
-    useCases: ['Autonomous AI systems', 'Conscious robotics', 'Emotional AI companions', 'Research applications', 'Educational AI'],
+    technology: [
+      'Consciousness Algorithms',
+      'Neural Architecture',
+      'Self-Awareness Systems',
+      'Emotional Intelligence',
+      'Evolutionary Learning',
+    ],
+    integrations: [
+      'AI platforms',
+      'Robotics systems',
+      'Autonomous vehicles',
+      'Healthcare systems',
+      'Research tools',
+    ],
+    useCases: [
+      'Autonomous AI systems',
+      'Conscious robotics',
+      'Emotional AI companions',
+      'Research applications',
+      'Educational AI',
+    ],
     roi: 'Customers achieve 1200% ROI through revolutionary AI capabilities and new market opportunities.',
-    competitors: ['Research institutions (academic only), OpenAI (limited consciousness), Google DeepMind (research focus)'],
+    competitors: [
+      'Research institutions (academic only), OpenAI (limited consciousness), Google DeepMind (research focus)',
+    ],
     marketSize: '$8.5B AI consciousness market',
     growthRate: '600% annual growth',
     variant: 'ai-futuristic',
@@ -87,18 +115,26 @@ export const innovative2030Services: Innovative2030Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Fully operational AI consciousness platform with self-awareness algorithms, emotional intelligence training, and consciousness validation tools.',
+    implementationDetails:
+      'Fully operational AI consciousness platform with self-awareness algorithms, emotional intelligence training, and consciousness validation tools.',
     launchDate: '2025-01-15',
     customers: 8,
     rating: 4.9,
     reviews: 3,
     innovationLevel: 'Revolutionary',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['Consciousness Development', 'Self-Awareness', 'Emotional Intelligence', 'Evolutionary Learning', 'Cross-Domain Transfer'],
-    marketDisruption: 'Transforms AI development by introducing genuine consciousness, enabling AI systems that truly understand and evolve.'
+    aiCapabilities: [
+      'Consciousness Development',
+      'Self-Awareness',
+      'Emotional Intelligence',
+      'Evolutionary Learning',
+      'Cross-Domain Transfer',
+    ],
+    marketDisruption:
+      'Transforms AI development by introducing genuine consciousness, enabling AI systems that truly understand and evolve.',
   },
 
   // QUANTUM INTERNET SECURITY GATEWAY
@@ -108,7 +144,8 @@ export const innovative2030Services: Innovative2030Service[] = [
     tagline: 'Unbreakable quantum encryption for the future internet',
     price: '$15,999',
     period: '/month',
-    description: 'Next-generation quantum internet security gateway that provides unbreakable encryption, quantum key distribution, and post-quantum cryptography. Secure your communications against all current and future threats.',
+    description:
+      'Next-generation quantum internet security gateway that provides unbreakable encryption, quantum key distribution, and post-quantum cryptography. Secure your communications against all current and future threats.',
     features: [
       'Quantum key distribution',
       'Post-quantum cryptography',
@@ -119,24 +156,46 @@ export const innovative2030Services: Innovative2030Service[] = [
       'Zero-trust architecture',
       'Quantum-safe protocols',
       'Advanced threat intelligence',
-      '24/7 security monitoring'
+      '24/7 security monitoring',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-internet-security-gateway',
-    marketPosition: 'Leading quantum internet security platform with 4-year technology advantage. Integrates with existing network infrastructure.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Enterprise companies',
+    marketPosition:
+      'Leading quantum internet security platform with 4-year technology advantage. Integrates with existing network infrastructure.',
+    targetAudience:
+      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Enterprise companies',
     trialDays: 45,
     setupTime: '4 weeks',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Networks', 'Zero-Trust Security', 'Advanced Encryption'],
-    integrations: ['Network infrastructure', 'Cloud platforms', 'Security tools', 'Identity management', 'Compliance systems'],
-    useCases: ['Government communications', 'Financial transactions', 'Healthcare data', 'Military communications', 'Enterprise security'],
+    technology: [
+      'Quantum Key Distribution',
+      'Post-Quantum Cryptography',
+      'Quantum Networks',
+      'Zero-Trust Security',
+      'Advanced Encryption',
+    ],
+    integrations: [
+      'Network infrastructure',
+      'Cloud platforms',
+      'Security tools',
+      'Identity management',
+      'Compliance systems',
+    ],
+    useCases: [
+      'Government communications',
+      'Financial transactions',
+      'Healthcare data',
+      'Military communications',
+      'Enterprise security',
+    ],
     roi: 'Customers achieve 800% ROI through enhanced security and compliance capabilities.',
-    competitors: ['Quantum security companies (limited), Traditional security (vulnerable), Research institutions (academic only)'],
+    competitors: [
+      'Quantum security companies (limited), Traditional security (vulnerable), Research institutions (academic only)',
+    ],
     marketSize: '$12.8B quantum security market',
     growthRate: '550% annual growth',
     variant: 'quantum-futuristic',
@@ -144,18 +203,26 @@ export const innovative2030Services: Innovative2030Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Fully operational quantum internet security gateway with quantum key distribution, post-quantum cryptography, and real-time threat detection.',
+    implementationDetails:
+      'Fully operational quantum internet security gateway with quantum key distribution, post-quantum cryptography, and real-time threat detection.',
     launchDate: '2025-02-20',
     customers: 25,
     rating: 4.8,
     reviews: 12,
     innovationLevel: 'Breakthrough',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['Threat Detection', 'Anomaly Recognition', 'Predictive Security', 'Intelligent Response', 'Risk Assessment'],
-    marketDisruption: 'Revolutionizes internet security by introducing quantum-resistant encryption, ensuring communications remain secure even with quantum computers.'
+    aiCapabilities: [
+      'Threat Detection',
+      'Anomaly Recognition',
+      'Predictive Security',
+      'Intelligent Response',
+      'Risk Assessment',
+    ],
+    marketDisruption:
+      'Revolutionizes internet security by introducing quantum-resistant encryption, ensuring communications remain secure even with quantum computers.',
   },
 
   // SPACE MINING AUTOMATION PLATFORM
@@ -165,7 +232,8 @@ export const innovative2030Services: Innovative2030Service[] = [
     tagline: 'Automated asteroid mining and resource extraction',
     price: '$45,999',
     period: '/month',
-    description: 'Revolutionary space mining automation platform that enables automated asteroid mining, resource extraction, and space resource management. Transform space exploration into profitable resource extraction.',
+    description:
+      'Revolutionary space mining automation platform that enables automated asteroid mining, resource extraction, and space resource management. Transform space exploration into profitable resource extraction.',
     features: [
       'Automated asteroid detection',
       'Resource mapping and analysis',
@@ -176,24 +244,46 @@ export const innovative2030Services: Innovative2030Service[] = [
       'Market analysis tools',
       'Regulatory compliance',
       'Risk assessment',
-      'Expert consultation'
+      'Expert consultation',
     ],
     popular: false,
     icon: '🚀',
     color: 'from-teal-600 via-emerald-600 to-green-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/space-mining-automation-platform',
-    marketPosition: 'First commercial space mining automation platform. 6-year technology advantage over space agencies and research institutions.',
-    targetAudience: 'Space mining companies, Space agencies, Resource companies, Investment firms, Research institutions',
+    marketPosition:
+      'First commercial space mining automation platform. 6-year technology advantage over space agencies and research institutions.',
+    targetAudience:
+      'Space mining companies, Space agencies, Resource companies, Investment firms, Research institutions',
     trialDays: 90,
     setupTime: '8 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['Space Robotics', 'AI Navigation', 'Resource Detection', 'Automated Mining', 'Space Logistics'],
-    integrations: ['Spacecraft systems', 'Satellite networks', 'Ground stations', 'Resource markets', 'Regulatory systems'],
-    useCases: ['Asteroid mining', 'Lunar resource extraction', 'Space resource management', 'Investment analysis', 'Research applications'],
+    technology: [
+      'Space Robotics',
+      'AI Navigation',
+      'Resource Detection',
+      'Automated Mining',
+      'Space Logistics',
+    ],
+    integrations: [
+      'Spacecraft systems',
+      'Satellite networks',
+      'Ground stations',
+      'Resource markets',
+      'Regulatory systems',
+    ],
+    useCases: [
+      'Asteroid mining',
+      'Lunar resource extraction',
+      'Space resource management',
+      'Investment analysis',
+      'Research applications',
+    ],
     roi: 'Customers achieve 2000% ROI through space resource extraction and new market opportunities.',
-    competitors: ['Space agencies (limited), Research institutions (academic only), Traditional mining (earth-bound only)'],
+    competitors: [
+      'Space agencies (limited), Research institutions (academic only), Traditional mining (earth-bound only)',
+    ],
     marketSize: '$25.6B space mining market',
     growthRate: '800% annual growth',
     variant: 'space-futuristic',
@@ -201,18 +291,26 @@ export const innovative2030Services: Innovative2030Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Fully operational space mining automation platform with asteroid detection, resource mapping, and automated mining coordination.',
+    implementationDetails:
+      'Fully operational space mining automation platform with asteroid detection, resource mapping, and automated mining coordination.',
     launchDate: '2025-03-10',
     customers: 3,
     rating: 4.7,
     reviews: 1,
     innovationLevel: 'Revolutionary',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['Asteroid Detection', 'Resource Analysis', 'Mining Optimization', 'Risk Assessment', 'Market Intelligence'],
-    marketDisruption: 'Transforms space exploration by enabling automated resource extraction, opening new frontiers for human expansion and resource acquisition.'
+    aiCapabilities: [
+      'Asteroid Detection',
+      'Resource Analysis',
+      'Mining Optimization',
+      'Risk Assessment',
+      'Market Intelligence',
+    ],
+    marketDisruption:
+      'Transforms space exploration by enabling automated resource extraction, opening new frontiers for human expansion and resource acquisition.',
   },
 
   // BIOTECH DNA COMPUTING PLATFORM
@@ -222,7 +320,8 @@ export const innovative2030Services: Innovative2030Service[] = [
     tagline: 'DNA-based computation and biological computing',
     price: '$25,999',
     period: '/month',
-    description: 'Breakthrough biotech DNA computing platform that harnesses the power of DNA molecules for computation, data storage, and biological information processing. Revolutionize computing with nature\'s most efficient information storage system.',
+    description:
+      "Breakthrough biotech DNA computing platform that harnesses the power of DNA molecules for computation, data storage, and biological information processing. Revolutionize computing with nature's most efficient information storage system.",
     features: [
       'DNA-based computation',
       'Biological data storage',
@@ -233,24 +332,46 @@ export const innovative2030Services: Innovative2030Service[] = [
       'Bioinformatics tools',
       'Laboratory automation',
       'Data analysis platform',
-      'Expert consultation'
+      'Expert consultation',
     ],
     popular: false,
     icon: '🧬',
     color: 'from-pink-600 via-rose-600 to-red-600',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/biotech-dna-computing-platform',
-    marketPosition: 'Leading biotech DNA computing platform with 5-year technology advantage. Integrates with existing biotech and computing infrastructure.',
-    targetAudience: 'Biotechnology companies, Pharmaceutical companies, Research institutions, Computing companies, Healthcare organizations',
+    marketPosition:
+      'Leading biotech DNA computing platform with 5-year technology advantage. Integrates with existing biotech and computing infrastructure.',
+    targetAudience:
+      'Biotechnology companies, Pharmaceutical companies, Research institutions, Computing companies, Healthcare organizations',
     trialDays: 75,
     setupTime: '6 weeks',
     category: 'Biotech Computing',
     realService: true,
-    technology: ['DNA Computing', 'Molecular Biology', 'Bioinformatics', 'Laboratory Automation', 'Biological Algorithms'],
-    integrations: ['DNA sequencers', 'Laboratory equipment', 'Computing systems', 'Research databases', 'Healthcare systems'],
-    useCases: ['Drug discovery', 'Genetic research', 'Data storage', 'Computing applications', 'Healthcare diagnostics'],
+    technology: [
+      'DNA Computing',
+      'Molecular Biology',
+      'Bioinformatics',
+      'Laboratory Automation',
+      'Biological Algorithms',
+    ],
+    integrations: [
+      'DNA sequencers',
+      'Laboratory equipment',
+      'Computing systems',
+      'Research databases',
+      'Healthcare systems',
+    ],
+    useCases: [
+      'Drug discovery',
+      'Genetic research',
+      'Data storage',
+      'Computing applications',
+      'Healthcare diagnostics',
+    ],
     roi: 'Customers achieve 1500% ROI through revolutionary computing capabilities and new research possibilities.',
-    competitors: ['Research institutions (academic only), Biotech companies (limited), Traditional computing (different approach)'],
+    competitors: [
+      'Research institutions (academic only), Biotech companies (limited), Traditional computing (different approach)',
+    ],
     marketSize: '$18.4B biotech computing market',
     growthRate: '650% annual growth',
     variant: 'biotech-futuristic',
@@ -258,18 +379,26 @@ export const innovative2030Services: Innovative2030Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Fully operational biotech DNA computing platform with DNA-based computation, biological data storage, and molecular computing capabilities.',
+    implementationDetails:
+      'Fully operational biotech DNA computing platform with DNA-based computation, biological data storage, and molecular computing capabilities.',
     launchDate: '2025-01-30',
     customers: 15,
     rating: 4.8,
     reviews: 7,
     innovationLevel: 'Breakthrough',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['DNA Analysis', 'Biological Pattern Recognition', 'Molecular Optimization', 'Genetic Prediction', 'Bioinformatics Intelligence'],
-    marketDisruption: 'Revolutionizes computing by introducing DNA-based computation, enabling unprecedented data storage density and biological computing capabilities.'
+    aiCapabilities: [
+      'DNA Analysis',
+      'Biological Pattern Recognition',
+      'Molecular Optimization',
+      'Genetic Prediction',
+      'Bioinformatics Intelligence',
+    ],
+    marketDisruption:
+      'Revolutionizes computing by introducing DNA-based computation, enabling unprecedented data storage density and biological computing capabilities.',
   },
 
   // METAVERSE DEVELOPMENT PLATFORM
@@ -279,7 +408,8 @@ export const innovative2030Services: Innovative2030Service[] = [
     tagline: 'Build immersive virtual worlds and digital realities',
     price: '$499',
     period: '/month',
-    description: 'Comprehensive metaverse development platform that enables creators to build immersive virtual worlds, digital experiences, and interactive environments. Create the next generation of digital reality.',
+    description:
+      'Comprehensive metaverse development platform that enables creators to build immersive virtual worlds, digital experiences, and interactive environments. Create the next generation of digital reality.',
     features: [
       '3D world building tools',
       'Virtual reality integration',
@@ -290,22 +420,42 @@ export const innovative2030Services: Innovative2030Service[] = [
       'AI-powered NPCs',
       'Monetization tools',
       'Analytics dashboard',
-      'Community features'
+      'Community features',
     ],
     popular: true,
     icon: '🌌',
     color: 'from-purple-600 via-violet-600 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/metaverse-development-platform',
-    marketPosition: 'Competitive with Unity ($40-125/month), Unreal Engine (free + royalties), and Roblox Studio (free). Our advantage: Metaverse-specific tools and AI integration.',
-    targetAudience: 'Game developers, Virtual reality companies, Educational institutions, Marketing agencies, Entertainment companies',
+    marketPosition:
+      'Competitive with Unity ($40-125/month), Unreal Engine (free + royalties), and Roblox Studio (free). Our advantage: Metaverse-specific tools and AI integration.',
+    targetAudience:
+      'Game developers, Virtual reality companies, Educational institutions, Marketing agencies, Entertainment companies',
     trialDays: 30,
     setupTime: '2 hours',
     category: 'Metaverse Development',
     realService: true,
-    technology: ['3D Graphics', 'Virtual Reality', 'Augmented Reality', 'AI Integration', 'Cloud Computing'],
-    integrations: ['VR headsets', 'AR devices', 'Gaming platforms', 'Social media', 'Payment systems'],
-    useCases: ['Virtual worlds', 'Educational experiences', 'Marketing campaigns', 'Entertainment', 'Social platforms'],
+    technology: [
+      '3D Graphics',
+      'Virtual Reality',
+      'Augmented Reality',
+      'AI Integration',
+      'Cloud Computing',
+    ],
+    integrations: [
+      'VR headsets',
+      'AR devices',
+      'Gaming platforms',
+      'Social media',
+      'Payment systems',
+    ],
+    useCases: [
+      'Virtual worlds',
+      'Educational experiences',
+      'Marketing campaigns',
+      'Entertainment',
+      'Social platforms',
+    ],
     roi: 'Customers achieve 400% ROI through new revenue streams and enhanced user engagement.',
     competitors: ['Unity, Unreal Engine, Roblox Studio, VRChat, Decentraland'],
     marketSize: '$74.4B metaverse market',
@@ -315,17 +465,25 @@ export const innovative2030Services: Innovative2030Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Fully operational metaverse development platform with 3D world building tools, VR/AR integration, and AI-powered features.',
+    implementationDetails:
+      'Fully operational metaverse development platform with 3D world building tools, VR/AR integration, and AI-powered features.',
     launchDate: '2024-12-01',
     customers: 1200,
     rating: 4.6,
     reviews: 89,
     innovationLevel: 'Advanced',
     patentStatus: 'Trade Secret',
-    aiCapabilities: ['AI NPCs', 'Content Generation', 'User Behavior Analysis', 'Automated World Building', 'Intelligent Interactions'],
-    marketDisruption: 'Democratizes metaverse development by providing accessible tools for creating immersive digital experiences.'
-  }
+    aiCapabilities: [
+      'AI NPCs',
+      'Content Generation',
+      'User Behavior Analysis',
+      'Automated World Building',
+      'Intelligent Interactions',
+    ],
+    marketDisruption:
+      'Democratizes metaverse development by providing accessible tools for creating immersive digital experiences.',
+  },
 ];

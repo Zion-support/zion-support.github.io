@@ -18,20 +18,20 @@ class MasterAutomationOrchestrator {
         performanceMonitor: { status: 'pending' },
         codeQuality: { status: 'pending' },
         testRunner: { status: 'pending' },
-        gitOperations: { status: 'pending' }
+        gitOperations: { status: 'pending' },
       },
       summary: {
         scriptsRun: 0,
         testsPassed: 0,
         testsFailed: 0,
         improvementsCreated: 0,
-        gitOperationsCompleted: 0
-      }
+        gitOperationsCompleted: 0,
+      },
     };
-    
+
     this.logFile = 'master-automation-log.txt';
     this.reportsDir = 'automation-reports';
-    
+
     // Create reports directory
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
@@ -48,7 +48,7 @@ class MasterAutomationOrchestrator {
   async runScript(scriptPath, description) {
     try {
       this.log(`🚀 Running: ${description}`);
-      
+
       // Check if script exists
       if (!fs.existsSync(scriptPath)) {
         this.log(`⚠️ Script not found: ${scriptPath}`);
@@ -57,7 +57,7 @@ class MasterAutomationOrchestrator {
 
       // Try to run as a command first
       execSync(`node ${scriptPath}`, { stdio: 'inherit' });
-      
+
       this.log(`✅ Completed: ${description}`);
       this.results.summary.scriptsRun++;
       return true;
@@ -70,7 +70,7 @@ class MasterAutomationOrchestrator {
   async runHealthCheck() {
     this.log('🔍 Phase 1: Running Health Check...');
     this.results.phases.healthCheck.status = 'running';
-    
+
     try {
       // Check if health check script exists, if not create a basic one
       if (!fs.existsSync('./scripts/health-check.cjs')) {
@@ -110,7 +110,10 @@ if (allPassed) {
         fs.writeFileSync('./scripts/health-check.cjs', healthCheckScript);
       }
 
-      const success = await this.runScript('./scripts/health-check.cjs', 'Health Check');
+      const success = await this.runScript(
+        './scripts/health-check.cjs',
+        'Health Check'
+      );
       this.results.phases.healthCheck.status = success ? 'completed' : 'failed';
       this.results.phases.healthCheck.success = success;
     } catch (error) {
@@ -123,10 +126,15 @@ if (allPassed) {
   async runPerformanceMonitor() {
     this.log('📊 Phase 2: Running Performance Monitor...');
     this.results.phases.performanceMonitor.status = 'running';
-    
+
     try {
-      const success = await this.runScript('./scripts/simple-performance-monitor.cjs', 'Performance Monitor');
-      this.results.phases.performanceMonitor.status = success ? 'completed' : 'failed';
+      const success = await this.runScript(
+        './scripts/simple-performance-monitor.cjs',
+        'Performance Monitor'
+      );
+      this.results.phases.performanceMonitor.status = success
+        ? 'completed'
+        : 'failed';
       this.results.phases.performanceMonitor.success = success;
     } catch (error) {
       this.log(`❌ Performance monitor failed: ${error.message}`);
@@ -138,9 +146,12 @@ if (allPassed) {
   async runCodeQuality() {
     this.log('🔍 Phase 3: Running Code Quality Check...');
     this.results.phases.codeQuality.status = 'running';
-    
+
     try {
-      const success = await this.runScript('./scripts/simple-code-quality.cjs', 'Code Quality Check');
+      const success = await this.runScript(
+        './scripts/simple-code-quality.cjs',
+        'Code Quality Check'
+      );
       this.results.phases.codeQuality.status = success ? 'completed' : 'failed';
       this.results.phases.codeQuality.success = success;
     } catch (error) {
@@ -153,9 +164,12 @@ if (allPassed) {
   async runTestRunner() {
     this.log('🧪 Phase 4: Running Test Runner...');
     this.results.phases.testRunner.status = 'running';
-    
+
     try {
-      const success = await this.runScript('./scripts/automation-test-runner.cjs', 'Test Runner');
+      const success = await this.runScript(
+        './scripts/automation-test-runner.cjs',
+        'Test Runner'
+      );
       this.results.phases.testRunner.status = success ? 'completed' : 'failed';
       this.results.phases.testRunner.success = success;
     } catch (error) {
@@ -168,10 +182,15 @@ if (allPassed) {
   async runGitOperations() {
     this.log('📝 Phase 5: Running Git Operations...');
     this.results.phases.gitOperations.status = 'running';
-    
+
     try {
-      const success = await this.runScript('./scripts/git-automation.cjs', 'Git Operations');
-      this.results.phases.gitOperations.status = success ? 'completed' : 'failed';
+      const success = await this.runScript(
+        './scripts/git-automation.cjs',
+        'Git Operations'
+      );
+      this.results.phases.gitOperations.status = success
+        ? 'completed'
+        : 'failed';
       this.results.phases.gitOperations.success = success;
       if (success) {
         this.results.summary.gitOperationsCompleted++;
@@ -185,7 +204,7 @@ if (allPassed) {
 
   async createAdditionalScripts() {
     this.log('🔧 Creating additional improvement scripts...');
-    
+
     // Create a comprehensive build script
     const buildScript = `#!/usr/bin/env node
 const { execSync } = require('child_process');
@@ -275,54 +294,64 @@ module.exports = MonitoringDashboard;
 
   async runAll() {
     this.log('🚀 Starting Master Automation Orchestrator...\n');
-    
+
     try {
       // Phase 1: Health Check
       await this.runHealthCheck();
-      
+
       // Phase 2: Performance Monitor
       await this.runPerformanceMonitor();
-      
+
       // Phase 3: Code Quality
       await this.runCodeQuality();
-      
+
       // Phase 4: Test Runner
       await this.runTestRunner();
-      
+
       // Phase 5: Create Additional Scripts
       await this.createAdditionalScripts();
-      
+
       // Phase 6: Git Operations
       await this.runGitOperations();
-      
+
       // Finalize results
       this.results.status = 'completed';
       this.results.completedAt = new Date().toISOString();
-      
+
       // Save final report
-      const reportPath = path.join(this.reportsDir, 'master-automation-report.json');
+      const reportPath = path.join(
+        this.reportsDir,
+        'master-automation-report.json'
+      );
       fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-      
+
       this.log('\n🎉 Master Automation Orchestrator completed successfully!');
       this.log(`📄 Final report saved to: ${reportPath}`);
       this.log(`📝 Detailed log saved to: ${this.logFile}`);
-      
+
       // Print summary
       console.log('\n📊 SUMMARY:');
       console.log(`- Scripts Run: ${this.results.summary.scriptsRun}`);
-      console.log(`- Improvements Created: ${this.results.summary.improvementsCreated}`);
-      console.log(`- Git Operations Completed: ${this.results.summary.gitOperationsCompleted}`);
-      
+      console.log(
+        `- Improvements Created: ${this.results.summary.improvementsCreated}`
+      );
+      console.log(
+        `- Git Operations Completed: ${this.results.summary.gitOperationsCompleted}`
+      );
+
       return this.results;
     } catch (error) {
       this.log(`❌ Master automation failed: ${error.message}`);
       this.results.status = 'failed';
       this.results.error = error.message;
       this.results.failedAt = new Date().toISOString();
-      
-      const reportPath = path.join(this.reportsDir, 'master-automation-report.json');
+
+      const reportPath = path.join(
+        this.reportsDir,
+        'master-automation-report.json'
+      );
       fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-      
+
       throw error;
     }
   }

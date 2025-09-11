@@ -8,7 +8,7 @@ describe('Search Bar Mobile Responsiveness', () => {
 
     // Check for the absence of a horizontal scrollbar
     // Ensure the body's scrollWidth is less than or equal to its clientWidth
-    cy.get('body').should(($body) => {
+    cy.get('body').should($body => {
       expect($body[0].scrollWidth).to.be.lte($body[0].clientWidth);
     });
 

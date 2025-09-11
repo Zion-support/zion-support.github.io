@@ -10,7 +10,7 @@ const criticalFiles = [
   '/workspace/vite.config.ts',
   '/workspace/App.tsx',
   '/workspace/src/main.tsx',
-  '/workspace/tsconfig.json'
+  '/workspace/tsconfig.json',
 ];
 
 function fixConflictsInFile(filePath) {

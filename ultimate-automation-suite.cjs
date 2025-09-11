@@ -13,7 +13,10 @@ class UltimateAutomationSuite {
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const prefix = {'INFO': 'ℹ️', 'SUCCESS': '✅', 'ERROR': '❌', 'WARNING': '⚠️', 'PROGRESS': '🔄'}[type] || 'ℹ️';
+    const prefix =
+      { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️', PROGRESS: '🔄' }[
+        type
+      ] || 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
@@ -26,7 +29,7 @@ class UltimateAutomationSuite {
         encoding: 'utf8',
         timeout: 300000,
         maxBuffer: 1024 * 1024 * 10,
-        ...options
+        ...options,
       });
       this.log(`${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
@@ -39,7 +42,7 @@ class UltimateAutomationSuite {
 
   fixAllSyntaxErrors() {
     this.log('🔧 Fixing all remaining syntax errors...');
-    
+
     // Fix ESLint configuration
     const eslintConfig = `module.exports = {
   "extends": [
@@ -61,7 +64,7 @@ class UltimateAutomationSuite {
     "sourceType": "module"
   }
 };`;
-    
+
     fs.writeFileSync('eslint.config.cjs', eslintConfig);
     this.log('Created proper ESLint configuration', 'SUCCESS');
   }
@@ -74,11 +77,14 @@ class UltimateAutomationSuite {
     this.fixAllSyntaxErrors();
 
     const automations = [
-      { name: 'Install Dependencies', command: 'npm install --legacy-peer-deps' },
+      {
+        name: 'Install Dependencies',
+        command: 'npm install --legacy-peer-deps',
+      },
       { name: 'Lint Check', command: 'npm run lint' },
       { name: 'Type Check', command: 'npm run type-check' },
       { name: 'Build Application', command: 'npm run build' },
-      { name: 'Run Tests', command: 'npm test -- --passWithNoTests' }
+      { name: 'Run Tests', command: 'npm test -- --passWithNoTests' },
     ];
 
     for (const automation of automations) {
@@ -124,11 +130,14 @@ class UltimateAutomationSuite {
         'Created proper ESLint configuration',
         'Fixed Jest test configuration',
         'Resolved import/export issues',
-        'Fixed JSX syntax errors'
-      ]
+        'Fixed JSX syntax errors',
+      ],
     };
 
-    fs.writeFileSync('ultimate-automation-report.json', JSON.stringify(reportData, null, 2));
+    fs.writeFileSync(
+      'ultimate-automation-report.json',
+      JSON.stringify(reportData, null, 2)
+    );
     this.log(`\n📊 Report saved to: ultimate-automation-report.json`);
   }
 

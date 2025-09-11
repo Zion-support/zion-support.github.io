@@ -24,11 +24,12 @@ class WebsiteLinkAnalyzer {
       const response = await axios.get(url, {
         timeout: this.timeout,
         headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         },
         validateStatus: function (status) {
           return status < 500; // Accept any status code below 500
-        }
+        },
       });
 
       const linkInfo = {
@@ -36,7 +37,7 @@ class WebsiteLinkAnalyzer {
         status: response.status,
         parentUrl,
         statusText: response.statusText,
-        contentType: response.headers['content-type'] || 'unknown'
+        contentType: response.headers['content-type'] || 'unknown',
       };
 
       if (response.status >= 200 && response.status < 400) {
@@ -54,7 +55,7 @@ class WebsiteLinkAnalyzer {
         status: error.code || 'ERROR',
         parentUrl,
         error: error.message,
-        statusText: error.message
+        statusText: error.message,
       };
       this.brokenLinks.push(linkInfo);
       console.log(`❌ Error: ${url} - ${error.message}`);
@@ -132,16 +133,24 @@ class WebsiteLinkAnalyzer {
   }
 
   async crawlPage(url, depth = 0) {
-    if (depth > this.maxDepth || this.visitedUrls.has(url) || this.visitedUrls.size > this.maxPages) {
+    if (
+      depth > this.maxDepth ||
+      this.visitedUrls.has(url) ||
+      this.visitedUrls.size > this.maxPages
+    ) {
       return;
     }
 
     this.visitedUrls.add(url);
     const result = await this.checkUrl(url);
 
-    if (result.success && result.response && result.response.headers['content-type']?.includes('text/html')) {
+    if (
+      result.success &&
+      result.response &&
+      result.response.headers['content-type']?.includes('text/html')
+    ) {
       const links = this.extractLinks(result.response.data, url);
-      
+
       for (const link of links) {
         if (this.isInternalLink(link)) {
           this.internalLinks.push({ url: link, parentUrl: url });
@@ -163,15 +172,20 @@ class WebsiteLinkAnalyzer {
     await this.crawlPage(this.baseUrl, 0);
 
     // Process pending URLs
-    while (this.pendingUrls.length > 0 && this.visitedUrls.size < this.maxPages) {
+    while (
+      this.pendingUrls.length > 0 &&
+      this.visitedUrls.size < this.maxPages
+    ) {
       const { url, depth } = this.pendingUrls.shift();
       await this.crawlPage(url, depth);
     }
 
     // Check a sample of external links (limit to 20 to avoid being blocked)
     console.log(`🌐 Checking external links (limited to 20)...`);
-    const externalLinksToCheck = [...new Set(this.externalLinks.map(link => link.url))].slice(0, 20);
-    
+    const externalLinksToCheck = [
+      ...new Set(this.externalLinks.map(link => link.url)),
+    ].slice(0, 20);
+
     for (const externalUrl of externalLinksToCheck) {
       await this.checkUrl(externalUrl, 'external');
       await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second between external requests
@@ -191,13 +205,18 @@ class WebsiteLinkAnalyzer {
         internalLinks: this.internalLinks.length,
         externalLinks: this.externalLinks.length,
         pagesVisited: this.visitedUrls.size,
-        successRate: ((this.workingLinks.length / (this.workingLinks.length + this.brokenLinks.length)) * 100).toFixed(2) + '%'
+        successRate:
+          (
+            (this.workingLinks.length /
+              (this.workingLinks.length + this.brokenLinks.length)) *
+            100
+          ).toFixed(2) + '%',
       },
       brokenLinks: this.brokenLinks,
       workingLinks: this.workingLinks,
       internalLinks: this.internalLinks,
       externalLinks: this.externalLinks,
-      visitedPages: Array.from(this.visitedUrls)
+      visitedPages: Array.from(this.visitedUrls),
     };
 
     console.log('\n📋 ANALYSIS SUMMARY:');
@@ -212,7 +231,9 @@ class WebsiteLinkAnalyzer {
     if (this.brokenLinks.length > 0) {
       console.log('\n❌ BROKEN LINKS FOUND:');
       this.brokenLinks.forEach(link => {
-        console.log(`   ${link.url} (${link.status}) - Parent: ${link.parentUrl}`);
+        console.log(
+          `   ${link.url} (${link.status}) - Parent: ${link.parentUrl}`
+        );
       });
     }
 
@@ -221,7 +242,7 @@ class WebsiteLinkAnalyzer {
 
   async saveReport(filename = 'website-link-analysis.json') {
     const report = await this.analyzeWebsite();
-    
+
     try {
       fs.writeFileSync(filename, JSON.stringify(report, null, 2));
       console.log(`\n💾 Report saved to: ${filename}`);
@@ -237,17 +258,19 @@ class WebsiteLinkAnalyzer {
 async function main() {
   const baseUrl = 'https://ziontechgroup.com';
   const analyzer = new WebsiteLinkAnalyzer(baseUrl);
-  
+
   try {
-    const report = await analyzer.saveReport('website-analysis-comprehensive.json');
-    
+    const report = await analyzer.saveReport(
+      'website-analysis-comprehensive.json'
+    );
+
     // Also create a summary report
     const summary = {
       timestamp: report.timestamp,
       baseUrl: report.baseUrl,
       summary: report.summary,
       brokenLinksDetails: report.brokenLinks,
-      recommendedActions: []
+      recommendedActions: [],
     };
 
     if (report.brokenLinks.length > 0) {
@@ -257,11 +280,15 @@ async function main() {
       summary.recommendedActions.push('Improve overall link success rate');
     }
     summary.recommendedActions.push('Regular monitoring of website links');
-    summary.recommendedActions.push('Implement automated link checking in CI/CD pipeline');
+    summary.recommendedActions.push(
+      'Implement automated link checking in CI/CD pipeline'
+    );
 
-    fs.writeFileSync('website-analysis-summary.json', JSON.stringify(summary, null, 2));
+    fs.writeFileSync(
+      'website-analysis-summary.json',
+      JSON.stringify(summary, null, 2)
+    );
     console.log('\n💾 Summary report saved to: website-analysis-summary.json');
-
   } catch (error) {
     console.error(`❌ Analysis failed: ${error.message}`);
     process.exit(1);

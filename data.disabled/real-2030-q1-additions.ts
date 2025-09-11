@@ -12,13 +12,13 @@ export const real2030Q1Additions: Real2030Q1Addition[] = [
     name: 'Q1 2030 AI Service',
     tagline: 'First quarter 2030 AI innovations',
     price: '$1099',
-    category: 'AI & Machine Learning'
+    category: 'AI & Machine Learning',
   },
   {
     id: 'q1-2030-2',
     name: 'Q1 2030 Cloud Service',
     tagline: 'First quarter 2030 cloud solutions',
     price: '$999',
-    category: 'Cloud & Infrastructure'
-  }
+    category: 'Cloud & Infrastructure',
+  },
 ];

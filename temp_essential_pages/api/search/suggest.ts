@@ -21,8 +21,13 @@ export default async function handler(
   }
 
   try {
-    const query = String(req.query.q || '').toLowerCase().trim();
-    const limit = Math.min(10, parseInt((req.query.limit as string) || '5', 10));
+    const query = String(req.query.q || '')
+      .toLowerCase()
+      .trim();
+    const limit = Math.min(
+      10,
+      parseInt((req.query.limit as string) || '5', 10)
+    );
 
     if (!query || query.length < 2) {
       return res.status(200).json([]);
@@ -82,4 +87,4 @@ export default async function handler(
   } finally {
     await prisma.$disconnect();
   }
-} 
+}

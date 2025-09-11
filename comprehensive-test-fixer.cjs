@@ -36,7 +36,7 @@ class ComprehensiveTestFixer {
       '@testing-library/react',
       '@testing-library/jest-dom',
       '@testing-library/user-event',
-      'jest-environment-jsdom'
+      'jest-environment-jsdom',
     ];
     for (const dep of dependencies) {
       try {
@@ -72,7 +72,13 @@ class ComprehensiveTestFixer {
           const stat = fs.statSync(fullPath);
           if (stat.isDirectory()) {
             searchDirectory(fullPath);
-          } else if (stat.isFile() && (item.endsWith('.test.js') || item.endsWith('.test.ts') || item.endsWith('.test.tsx') || item.endsWith('.test.jsx'))) {
+          } else if (
+            stat.isFile() &&
+            (item.endsWith('.test.js') ||
+              item.endsWith('.test.ts') ||
+              item.endsWith('.test.tsx') ||
+              item.endsWith('.test.jsx'))
+          ) {
             files.push(fullPath);
           }
         }
@@ -104,8 +110,14 @@ class ComprehensiveTestFixer {
     content = content.replace(/'([^']*)$/gm, "'$1'");
     content = content.replace(/"([^"]*)$/gm, '"$1"');
     // Fix malformed require statements
-    content = content.replace(/require\(\s*'([^']*)\s*'\s*\)/g, "require('$1')");
-    content = content.replace(/require\(\s*"([^"]*)\s*"\s*\)/g, 'require("$1")');
+    content = content.replace(
+      /require\(\s*'([^']*)\s*'\s*\)/g,
+      "require('$1')"
+    );
+    content = content.replace(
+      /require\(\s*"([^"]*)\s*"\s*\)/g,
+      'require("$1")'
+    );
     // Fix extra quotes and semicolons
     content = content.replace(/'([^']*)'\s*'/g, "'$1'");
     content = content.replace(/"([^"]*)"\s*"/g, '"$1"');
@@ -119,15 +131,25 @@ class ComprehensiveTestFixer {
   }
   fixImports(content) {
     // Fix @testing-library imports
-    content = content.replace(/@testing-library\/react/g, '@testing-library/react');
-    content = content.replace(/@testing-library\/jest-dom/g, '@testing-library/jest-dom');
+    content = content.replace(
+      /@testing-library\/react/g,
+      '@testing-library/react'
+    );
+    content = content.replace(
+      /@testing-library\/jest-dom/g,
+      '@testing-library/jest-dom'
+    );
     // Fix malformed import statements
     content = content.replace(/import\s+([^;]*);\s*$/gm, 'import $1;');
     return content;
   }
   fixTestStructure(content) {
     // If file is mostly empty or has no tests, add a basic test
-    if (!content.includes('describe(') && !content.includes('test(') && !content.includes('it(')) {
+    if (
+      !content.includes('describe(') &&
+      !content.includes('test(') &&
+      !content.includes('it(')
+    ) {
       content = `import React from 'react';
 import { render, screen } from '@testing-library/react';
 describe('Basic Test', () => {
@@ -146,8 +168,12 @@ describe('Basic Test', () => {
       try {
         const content = fs.readFileSync(file, 'utf8');
         // Check if file is empty or has no meaningful content
-        if (content.trim().length < 50 || 
-            (!content.includes('describe(') && !content.includes('test(') && !content.includes('it('))) {
+        if (
+          content.trim().length < 50 ||
+          (!content.includes('describe(') &&
+            !content.includes('test(') &&
+            !content.includes('it('))
+        ) {
           // Instead of removing, create a basic test
           const basicTest = `import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -193,7 +219,10 @@ describe('Smoke Tests', () => {
     this.log('🧪 Testing the fixes...');
     try {
       // Try running Jest with a minimal config
-      execSync('npx jest --config jest.minimal.cjs --testPathPattern="smoke" --passWithNoTests', { stdio: 'inherit' });
+      execSync(
+        'npx jest --config jest.minimal.cjs --testPathPattern="smoke" --passWithNoTests',
+        { stdio: 'inherit' }
+      );
       this.log('✅ Smoke tests passed!');
     } catch (error) {
       this.log(`⚠️  Smoke tests failed: ${error.message}`);

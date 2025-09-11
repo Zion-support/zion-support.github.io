@@ -5,7 +5,10 @@ export function AppHeader() {
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('zion-theme') as 'light' | 'dark' | 'system';
+    const savedTheme = localStorage.getItem('zion-theme') as
+      | 'light'
+      | 'dark'
+      | 'system';
     if (savedTheme) {
       setTheme(savedTheme);
     }
@@ -16,10 +19,5 @@ export function AppHeader() {
     localStorage.setItem('zion-theme', newTheme);
   };
 
-  return (
-    <EnhancedNavigation 
-      onThemeChange={handleThemeChange}
-      className=""
-    />
-  );
+  return <EnhancedNavigation onThemeChange={handleThemeChange} className='' />;
 }

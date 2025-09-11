@@ -3,8 +3,15 @@ const { spawnSync } = require('child_process');
 
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe',
+    encoding: 'utf8',
+  });
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
+  };
 }
 
 exports.config = {
@@ -26,12 +33,17 @@ exports.handler = async () => {
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
 
   // Ping search engines
-  const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || 'https://ziontechgroup.com').replace(/\/$/, '');
+  const baseUrl = (
+    process.env.SITE_URL ||
+    process.env.URL ||
+    process.env.DEPLOY_PRIME_URL ||
+    'https://ziontechgroup.com'
+  ).replace(/\/$/, '');
   try {
     const sitemapUrl = `${baseUrl}/sitemap.xml`;
     const pingUrls = [
       `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,
-      `https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`
+      `https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,
     ];
     for (const pingUrl of pingUrls) {
       await fetch(pingUrl);

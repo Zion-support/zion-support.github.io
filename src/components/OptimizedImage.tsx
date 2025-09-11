@@ -66,11 +66,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       style={{ width, height }}
     >
       {placeholder && !isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Loading...</div>
+        <div className='absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center'>
+          <div className='text-gray-400 text-sm'>Loading...</div>
         </div>
       )}
-      
+
       {isInView && (
         <motion.img
           src={src}
@@ -84,13 +84,13 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           animate={{ opacity: isLoaded ? 1 : 0 }}
           transition={{ duration: 0.3 }}
           loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
+          decoding='async'
         />
       )}
-      
+
       {hasError && (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load</div>
+        <div className='absolute inset-0 bg-gray-100 flex items-center justify-center'>
+          <div className='text-gray-400 text-sm'>Failed to load</div>
         </div>
       )}
     </div>

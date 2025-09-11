@@ -17,7 +17,10 @@ export interface MonitoredSource {
   id: string;
 }
 
-export function evaluateHeuristics(text: string, source: MonitoredSource): HeuristicEvaluation {
+export function evaluateHeuristics(
+  text: string,
+  source: MonitoredSource
+): HeuristicEvaluation {
   const flags: string[] = [];
   let score = 0;
 
@@ -47,6 +50,6 @@ export function evaluateHeuristics(text: string, source: MonitoredSource): Heuri
   return {
     score,
     flags,
-    recommendation
+    recommendation,
   };
 }

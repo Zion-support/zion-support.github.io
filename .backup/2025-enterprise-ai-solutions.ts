@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const enterpriseAISolutions: EnterpriseAISolution[] = [
   {
     id: 'enterprise-ai-governance-platform',
     name: 'Enterprise AI Governance Platform',
-    tagline: 'Ensure responsible AI deployment with comprehensive governance and compliance',
+    tagline:
+      'Ensure responsible AI deployment with comprehensive governance and compliance',
     price: '$499',
     period: '/month',
-    description: 'Enterprise-grade AI governance platform that provides comprehensive oversight, compliance monitoring, and risk management for AI systems across your organization.',
+    description:
+      'Enterprise-grade AI governance platform that provides comprehensive oversight, compliance monitoring, and risk management for AI systems across your organization.',
     features: [
       'AI model lifecycle management',
       'Compliance monitoring and reporting',
@@ -65,42 +67,53 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Data lineage and provenance tracking',
       'Audit trails and documentation',
       'Integration with enterprise systems',
-      'Customizable governance policies'
+      'Customizable governance policies',
     ],
     popular: true,
     icon: '🏛️',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-400',
     link: 'https://ziontechgroup.com/enterprise-ai-governance',
-    marketPosition: 'Competes with IBM AI Governance, Microsoft Responsible AI, and Google AI Principles; more comprehensive for enterprise needs.',
-    targetAudience: 'Large enterprises, Financial institutions, Healthcare organizations, Government agencies',
+    marketPosition:
+      'Competes with IBM AI Governance, Microsoft Responsible AI, and Google AI Principles; more comprehensive for enterprise needs.',
+    targetAudience:
+      'Large enterprises, Financial institutions, Healthcare organizations, Government agencies',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI Governance & Compliance',
     realService: true,
-    technology: ['Machine Learning, Compliance frameworks, Risk assessment, Data governance'],
+    technology: [
+      'Machine Learning, Compliance frameworks, Risk assessment, Data governance',
+    ],
     integrations: ['SAP, Oracle, Salesforce, Microsoft 365, Google Workspace'],
-    useCases: ['AI compliance, Risk management, Regulatory reporting, Model governance'],
+    useCases: [
+      'AI compliance, Risk management, Regulatory reporting, Model governance',
+    ],
     roi: 'Reduce AI compliance risks by 80% and accelerate AI deployment by 40%.',
-    competitors: ['IBM AI Governance, Microsoft Responsible AI, Google AI Principles, DataRobot MLOps'],
+    competitors: [
+      'IBM AI Governance, Microsoft Responsible AI, Google AI Principles, DataRobot MLOps',
+    ],
     marketSize: '$4.2B AI governance market',
     growthRate: '45% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise platform with governance engine, compliance monitoring, and risk management.',
+    implementationDetails:
+      'Enterprise platform with governance engine, compliance monitoring, and risk management.',
     launchDate: '2025-01-05',
     customers: 23,
     rating: 4.9,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'ai-powered-data-quality-management',
     name: 'AI-Powered Data Quality Management',
-    tagline: 'Automate data quality assessment and improvement with intelligent AI',
+    tagline:
+      'Automate data quality assessment and improvement with intelligent AI',
     price: '$349',
     period: '/month',
-    description: 'Advanced data quality platform that uses AI to automatically detect, assess, and improve data quality issues across your enterprise data landscape.',
+    description:
+      'Advanced data quality platform that uses AI to automatically detect, assess, and improve data quality issues across your enterprise data landscape.',
     features: [
       'Automated data quality assessment',
       'Intelligent data profiling and analysis',
@@ -110,42 +123,55 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Integration with data pipelines',
       'Customizable quality rules and policies',
       'Data lineage and impact analysis',
-      'Comprehensive reporting and dashboards'
+      'Comprehensive reporting and dashboards',
     ],
     popular: true,
     icon: '📊',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-data-quality-management',
-    marketPosition: 'Alternative to Informatica Data Quality, Talend Data Quality, and IBM InfoSphere; more AI-driven approach.',
-    targetAudience: 'Data teams, Analytics teams, Business intelligence teams, Data engineers',
+    marketPosition:
+      'Alternative to Informatica Data Quality, Talend Data Quality, and IBM InfoSphere; more AI-driven approach.',
+    targetAudience:
+      'Data teams, Analytics teams, Business intelligence teams, Data engineers',
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI & Data Management',
     realService: true,
-    technology: ['Machine Learning, Data profiling, Data cleansing, Data validation'],
-    integrations: ['Snowflake, Databricks, AWS Glue, Azure Data Factory, Google BigQuery'],
-    useCases: ['Data quality improvement, Data governance, Analytics accuracy, Compliance'],
+    technology: [
+      'Machine Learning, Data profiling, Data cleansing, Data validation',
+    ],
+    integrations: [
+      'Snowflake, Databricks, AWS Glue, Azure Data Factory, Google BigQuery',
+    ],
+    useCases: [
+      'Data quality improvement, Data governance, Analytics accuracy, Compliance',
+    ],
     roi: 'Improve data quality by 60% and reduce data processing errors by 75%.',
-    competitors: ['Informatica Data Quality, Talend Data Quality, IBM InfoSphere, Great Expectations'],
+    competitors: [
+      'Informatica Data Quality, Talend Data Quality, IBM InfoSphere, Great Expectations',
+    ],
     marketSize: '$8.5B data quality tools market',
     growthRate: '25% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native data quality platform with AI models, automated workflows, and enterprise integration.',
+    implementationDetails:
+      'Cloud-native data quality platform with AI models, automated workflows, and enterprise integration.',
     launchDate: '2025-01-12',
     customers: 67,
     rating: 4.8,
-    reviews: 42
+    reviews: 42,
   },
   {
     id: 'intelligent-business-process-mining',
     name: 'Intelligent Business Process Mining',
-    tagline: 'Discover, analyze, and optimize business processes with AI-powered insights',
+    tagline:
+      'Discover, analyze, and optimize business processes with AI-powered insights',
     price: '$399',
     period: '/month',
-    description: 'Advanced process mining platform that uses AI to automatically discover, analyze, and optimize business processes by analyzing event logs and system data.',
+    description:
+      'Advanced process mining platform that uses AI to automatically discover, analyze, and optimize business processes by analyzing event logs and system data.',
     features: [
       'Automated process discovery and mapping',
       'AI-powered process analysis and optimization',
@@ -155,22 +181,28 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Real-time process monitoring',
       'Integration with enterprise systems',
       'Customizable dashboards and reports',
-      'Process improvement recommendations'
+      'Process improvement recommendations',
     ],
     popular: false,
     icon: '🔍',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/intelligent-process-mining',
-    marketPosition: 'Competes with Celonis, UiPath Process Mining, and ProcessGold; more accessible for mid-market enterprises.',
-    targetAudience: 'Business process managers, Operations teams, Digital transformation leaders, Consultants',
+    marketPosition:
+      'Competes with Celonis, UiPath Process Mining, and ProcessGold; more accessible for mid-market enterprises.',
+    targetAudience:
+      'Business process managers, Operations teams, Digital transformation leaders, Consultants',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'AI & Process Optimization',
     realService: true,
-    technology: ['Process mining, Machine Learning, Data analytics, Process optimization'],
+    technology: [
+      'Process mining, Machine Learning, Data analytics, Process optimization',
+    ],
     integrations: ['SAP, Oracle, Salesforce, Microsoft Dynamics, ERP systems'],
-    useCases: ['Process optimization, Digital transformation, Compliance monitoring, Efficiency improvement'],
+    useCases: [
+      'Process optimization, Digital transformation, Compliance monitoring, Efficiency improvement',
+    ],
     roi: 'Identify 30-50% process improvement opportunities and reduce operational costs by 20%.',
     competitors: ['Celonis, UiPath Process Mining, ProcessGold, Minit'],
     marketSize: '$1.8B process mining market',
@@ -178,19 +210,22 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Process mining platform with AI analysis, visualization tools, and enterprise integration.',
+    implementationDetails:
+      'Process mining platform with AI analysis, visualization tools, and enterprise integration.',
     launchDate: '2025-01-18',
     customers: 34,
     rating: 4.7,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'ai-powered-customer-intelligence-platform',
     name: 'AI-Powered Customer Intelligence Platform',
-    tagline: 'Unlock customer insights with AI-driven analytics and predictive modeling',
+    tagline:
+      'Unlock customer insights with AI-driven analytics and predictive modeling',
     price: '$299',
     period: '/month',
-    description: 'Comprehensive customer intelligence platform that uses AI to analyze customer behavior, predict future actions, and provide actionable insights for business growth.',
+    description:
+      'Comprehensive customer intelligence platform that uses AI to analyze customer behavior, predict future actions, and provide actionable insights for business growth.',
     features: [
       'Customer behavior analysis and segmentation',
       'Predictive customer modeling',
@@ -200,22 +235,28 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Real-time customer insights',
       'Integration with CRM and marketing platforms',
       'Customizable analytics and dashboards',
-      'Automated insight generation'
+      'Automated insight generation',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-intelligence',
-    marketPosition: 'Alternative to Salesforce Einstein, HubSpot AI, and Adobe Sensei; more focused on customer intelligence.',
-    targetAudience: 'Marketing teams, Sales teams, Customer success teams, Business analysts',
+    marketPosition:
+      'Alternative to Salesforce Einstein, HubSpot AI, and Adobe Sensei; more focused on customer intelligence.',
+    targetAudience:
+      'Marketing teams, Sales teams, Customer success teams, Business analysts',
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI & Customer Analytics',
     realService: true,
-    technology: ['Machine Learning, Predictive analytics, Customer analytics, Data science'],
+    technology: [
+      'Machine Learning, Predictive analytics, Customer analytics, Data science',
+    ],
     integrations: ['Salesforce, HubSpot, Adobe, Marketo, Pardot, CRM systems'],
-    useCases: ['Customer insights, Marketing optimization, Sales intelligence, Customer retention'],
+    useCases: [
+      'Customer insights, Marketing optimization, Sales intelligence, Customer retention',
+    ],
     roi: 'Increase customer lifetime value by 25% and reduce churn by 30%.',
     competitors: ['Salesforce Einstein, HubSpot AI, Adobe Sensei, Segment'],
     marketSize: '$18B customer analytics market',
@@ -223,19 +264,22 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Customer intelligence platform with AI models, analytics engine, and marketing automation.',
+    implementationDetails:
+      'Customer intelligence platform with AI models, analytics engine, and marketing automation.',
     launchDate: '2025-01-25',
     customers: 89,
     rating: 4.8,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'enterprise-ai-model-operations',
     name: 'Enterprise AI Model Operations (MLOps)',
-    tagline: 'Streamline AI model deployment and management with enterprise-grade MLOps',
+    tagline:
+      'Streamline AI model deployment and management with enterprise-grade MLOps',
     price: '$599',
     period: '/month',
-    description: 'Comprehensive MLOps platform that provides end-to-end management of AI models from development to production, ensuring reliability, scalability, and governance.',
+    description:
+      'Comprehensive MLOps platform that provides end-to-end management of AI models from development to production, ensuring reliability, scalability, and governance.',
     features: [
       'Model development and training pipelines',
       'Automated model deployment and scaling',
@@ -245,22 +289,28 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Integration with CI/CD pipelines',
       'Multi-cloud and hybrid deployment',
       'Customizable model serving options',
-      'Comprehensive monitoring and logging'
+      'Comprehensive monitoring and logging',
     ],
     popular: true,
     icon: '🚀',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/enterprise-mlops',
-    marketPosition: 'Competes with DataRobot MLOps, MLflow, and Kubeflow; more enterprise-focused with governance.',
-    targetAudience: 'Data science teams, ML engineers, DevOps teams, Platform engineers',
+    marketPosition:
+      'Competes with DataRobot MLOps, MLflow, and Kubeflow; more enterprise-focused with governance.',
+    targetAudience:
+      'Data science teams, ML engineers, DevOps teams, Platform engineers',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI & MLOps',
     realService: true,
     technology: ['Kubernetes, Docker, Machine Learning, CI/CD, Monitoring'],
-    integrations: ['AWS SageMaker, Azure ML, Google AI Platform, Databricks, MLflow'],
-    useCases: ['Model deployment, Production ML, Model governance, AI operations'],
+    integrations: [
+      'AWS SageMaker, Azure ML, Google AI Platform, Databricks, MLflow',
+    ],
+    useCases: [
+      'Model deployment, Production ML, Model governance, AI operations',
+    ],
     roi: 'Reduce model deployment time by 70% and improve model reliability by 50%.',
     competitors: ['DataRobot MLOps, MLflow, Kubeflow, Weights & Biases'],
     marketSize: '$6.8B MLOps market',
@@ -268,19 +318,22 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise MLOps platform with Kubernetes orchestration, monitoring, and governance.',
+    implementationDetails:
+      'Enterprise MLOps platform with Kubernetes orchestration, monitoring, and governance.',
     launchDate: '2025-01-08',
     customers: 45,
     rating: 4.9,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'ai-powered-supply-chain-optimization',
     name: 'AI-Powered Supply Chain Optimization',
-    tagline: 'Optimize supply chain operations with intelligent AI-driven insights',
+    tagline:
+      'Optimize supply chain operations with intelligent AI-driven insights',
     price: '$449',
     period: '/month',
-    description: 'Advanced supply chain optimization platform that uses AI to analyze complex supply chain networks, predict disruptions, and optimize inventory and logistics.',
+    description:
+      'Advanced supply chain optimization platform that uses AI to analyze complex supply chain networks, predict disruptions, and optimize inventory and logistics.',
     features: [
       'Supply chain network optimization',
       'Demand forecasting and planning',
@@ -290,22 +343,30 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Real-time supply chain monitoring',
       'Integration with ERP and WMS systems',
       'Customizable optimization models',
-      'Performance analytics and reporting'
+      'Performance analytics and reporting',
     ],
     popular: false,
     icon: '📦',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-supply-chain-optimization',
-    marketPosition: 'Alternative to SAP IBP, Oracle SCM, and Blue Yonder; more AI-focused and accessible.',
-    targetAudience: 'Supply chain managers, Operations teams, Logistics managers, Procurement teams',
+    marketPosition:
+      'Alternative to SAP IBP, Oracle SCM, and Blue Yonder; more AI-focused and accessible.',
+    targetAudience:
+      'Supply chain managers, Operations teams, Logistics managers, Procurement teams',
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'AI & Supply Chain',
     realService: true,
-    technology: ['Machine Learning, Optimization algorithms, Supply chain analytics, Predictive modeling'],
-    integrations: ['SAP, Oracle, Microsoft Dynamics, WMS systems, TMS platforms'],
-    useCases: ['Supply chain optimization, Inventory management, Logistics optimization, Risk management'],
+    technology: [
+      'Machine Learning, Optimization algorithms, Supply chain analytics, Predictive modeling',
+    ],
+    integrations: [
+      'SAP, Oracle, Microsoft Dynamics, WMS systems, TMS platforms',
+    ],
+    useCases: [
+      'Supply chain optimization, Inventory management, Logistics optimization, Risk management',
+    ],
     roi: 'Reduce supply chain costs by 20% and improve service levels by 15%.',
     competitors: ['SAP IBP, Oracle SCM, Blue Yonder, Manhattan Associates'],
     marketSize: '$12B supply chain optimization market',
@@ -313,19 +374,22 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Supply chain optimization platform with AI models, optimization engines, and enterprise integration.',
+    implementationDetails:
+      'Supply chain optimization platform with AI models, optimization engines, and enterprise integration.',
     launchDate: '2025-01-30',
     customers: 28,
     rating: 4.7,
-    reviews: 16
+    reviews: 16,
   },
   {
     id: 'intelligent-document-processing-platform',
     name: 'Intelligent Document Processing Platform',
-    tagline: 'Automate document processing with AI-powered OCR and intelligent extraction',
+    tagline:
+      'Automate document processing with AI-powered OCR and intelligent extraction',
     price: '$199',
     period: '/month',
-    description: 'Advanced document processing platform that uses AI to automatically extract, classify, and process information from various document types including invoices, contracts, and forms.',
+    description:
+      'Advanced document processing platform that uses AI to automatically extract, classify, and process information from various document types including invoices, contracts, and forms.',
     features: [
       'AI-powered OCR and text extraction',
       'Intelligent document classification',
@@ -335,42 +399,53 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Compliance and audit trails',
       'Multi-language document support',
       'Customizable extraction rules',
-      'Real-time processing and validation'
+      'Real-time processing and validation',
     ],
     popular: true,
     icon: '📄',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/intelligent-document-processing',
-    marketPosition: 'Competes with UiPath Document Understanding, Automation Anywhere IQ Bot, and ABBYY; more accessible pricing.',
-    targetAudience: 'Accounts payable teams, HR teams, Legal teams, Document processing teams',
+    marketPosition:
+      'Competes with UiPath Document Understanding, Automation Anywhere IQ Bot, and ABBYY; more accessible pricing.',
+    targetAudience:
+      'Accounts payable teams, HR teams, Legal teams, Document processing teams',
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI & Document Automation',
     realService: true,
-    technology: ['OCR, Machine Learning, Natural Language Processing, Computer Vision'],
+    technology: [
+      'OCR, Machine Learning, Natural Language Processing, Computer Vision',
+    ],
     integrations: ['SAP, Oracle, QuickBooks, Workday, Legal document systems'],
-    useCases: ['Invoice processing, Contract analysis, Form processing, Document automation'],
+    useCases: [
+      'Invoice processing, Contract analysis, Form processing, Document automation',
+    ],
     roi: 'Reduce document processing time by 80% and improve accuracy by 90%.',
-    competitors: ['UiPath Document Understanding, Automation Anywhere IQ Bot, ABBYY, Rossum'],
+    competitors: [
+      'UiPath Document Understanding, Automation Anywhere IQ Bot, ABBYY, Rossum',
+    ],
     marketSize: '$4.5B intelligent document processing market',
     growthRate: '35% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Document processing platform with AI models, OCR engines, and workflow automation.',
+    implementationDetails:
+      'Document processing platform with AI models, OCR engines, and workflow automation.',
     launchDate: '2025-02-01',
     customers: 134,
     rating: 4.7,
-    reviews: 78
+    reviews: 78,
   },
   {
     id: 'ai-powered-financial-planning-platform',
     name: 'AI-Powered Financial Planning Platform',
-    tagline: 'Transform financial planning with AI-driven insights and automation',
+    tagline:
+      'Transform financial planning with AI-driven insights and automation',
     price: '$379',
     period: '/month',
-    description: 'Intelligent financial planning platform that uses AI to automate budgeting, forecasting, and financial analysis, providing real-time insights and recommendations.',
+    description:
+      'Intelligent financial planning platform that uses AI to automate budgeting, forecasting, and financial analysis, providing real-time insights and recommendations.',
     features: [
       'AI-powered financial forecasting',
       'Automated budgeting and planning',
@@ -380,22 +455,28 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Customizable financial models',
       'Performance tracking and reporting',
       'Risk assessment and monitoring',
-      'Collaborative planning workflows'
+      'Collaborative planning workflows',
     ],
     popular: false,
     icon: '💰',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-financial-planning',
-    marketPosition: 'Alternative to Adaptive Insights, Anaplan, and Oracle EPM; more AI-focused and accessible.',
-    targetAudience: 'Finance teams, CFOs, Financial analysts, Business planners',
+    marketPosition:
+      'Alternative to Adaptive Insights, Anaplan, and Oracle EPM; more AI-focused and accessible.',
+    targetAudience:
+      'Finance teams, CFOs, Financial analysts, Business planners',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'AI & Financial Planning',
     realService: true,
-    technology: ['Machine Learning, Financial modeling, Predictive analytics, Statistical analysis'],
+    technology: [
+      'Machine Learning, Financial modeling, Predictive analytics, Statistical analysis',
+    ],
     integrations: ['QuickBooks, Xero, Sage, SAP, Oracle, Microsoft Dynamics'],
-    useCases: ['Financial planning, Budgeting, Forecasting, Financial analysis'],
+    useCases: [
+      'Financial planning, Budgeting, Forecasting, Financial analysis',
+    ],
     roi: 'Improve forecast accuracy by 40% and reduce planning cycle time by 60%.',
     competitors: ['Adaptive Insights, Anaplan, Oracle EPM, SAP BPC'],
     marketSize: '$8.2B financial planning market',
@@ -403,11 +484,12 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Financial planning platform with AI models, forecasting engines, and enterprise integration.',
+    implementationDetails:
+      'Financial planning platform with AI models, forecasting engines, and enterprise integration.',
     launchDate: '2025-01-15',
     customers: 56,
     rating: 4.8,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'enterprise-ai-security-platform',
@@ -415,7 +497,8 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     tagline: 'Protect AI systems with advanced security and threat detection',
     price: '$429',
     period: '/month',
-    description: 'Comprehensive AI security platform that protects AI systems from adversarial attacks, data poisoning, and other security threats while ensuring model integrity.',
+    description:
+      'Comprehensive AI security platform that protects AI systems from adversarial attacks, data poisoning, and other security threats while ensuring model integrity.',
     features: [
       'AI model security assessment',
       'Adversarial attack detection and prevention',
@@ -425,21 +508,27 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Privacy-preserving AI techniques',
       'Compliance and audit reporting',
       'Integration with security tools',
-      'Real-time threat monitoring'
+      'Real-time threat monitoring',
     ],
     popular: false,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/enterprise-ai-security',
-    marketPosition: 'Early mover in AI security; complements existing cybersecurity solutions.',
-    targetAudience: 'Security teams, AI teams, Risk managers, Compliance officers',
+    marketPosition:
+      'Early mover in AI security; complements existing cybersecurity solutions.',
+    targetAudience:
+      'Security teams, AI teams, Risk managers, Compliance officers',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI & Cybersecurity',
     realService: true,
-    technology: ['AI security, Adversarial ML, Privacy-preserving AI, Threat detection'],
-    integrations: ['SIEM systems, Security tools, AI platforms, Compliance frameworks'],
+    technology: [
+      'AI security, Adversarial ML, Privacy-preserving AI, Threat detection',
+    ],
+    integrations: [
+      'SIEM systems, Security tools, AI platforms, Compliance frameworks',
+    ],
     useCases: ['AI security, Model protection, Compliance, Risk management'],
     roi: 'Protect AI investments and ensure compliance with security standards.',
     competitors: ['Calypso AI, Robust Intelligence, Adversa AI, HiddenLayer'],
@@ -448,11 +537,12 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI security platform with threat detection, model protection, and security monitoring.',
+    implementationDetails:
+      'AI security platform with threat detection, model protection, and security monitoring.',
     launchDate: '2025-01-20',
     customers: 18,
     rating: 4.9,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'ai-powered-hr-analytics-platform',
@@ -460,7 +550,8 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     tagline: 'Transform HR with AI-driven insights and predictive analytics',
     price: '$249',
     period: '/month',
-    description: 'Intelligent HR analytics platform that uses AI to analyze employee data, predict turnover, optimize recruitment, and provide actionable insights for HR decision-making.',
+    description:
+      'Intelligent HR analytics platform that uses AI to analyze employee data, predict turnover, optimize recruitment, and provide actionable insights for HR decision-making.',
     features: [
       'Employee performance analytics',
       'Turnover prediction and prevention',
@@ -470,22 +561,28 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
       'Diversity and inclusion metrics',
       'Integration with HR systems',
       'Customizable dashboards and reports',
-      'Predictive HR insights'
+      'Predictive HR insights',
     ],
     popular: true,
     icon: '👥',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-hr-analytics',
-    marketPosition: 'Alternative to Visier, Tableau HR, and Power BI HR; more AI-focused and specialized.',
-    targetAudience: 'HR teams, People analytics teams, HR managers, Business leaders',
+    marketPosition:
+      'Alternative to Visier, Tableau HR, and Power BI HR; more AI-focused and specialized.',
+    targetAudience:
+      'HR teams, People analytics teams, HR managers, Business leaders',
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI & HR Analytics',
     realService: true,
-    technology: ['Machine Learning, People analytics, Predictive modeling, Statistical analysis'],
+    technology: [
+      'Machine Learning, People analytics, Predictive modeling, Statistical analysis',
+    ],
     integrations: ['Workday, BambooHR, ADP, SAP SuccessFactors, Oracle HCM'],
-    useCases: ['Employee analytics, Turnover prediction, Recruitment optimization, Workforce planning'],
+    useCases: [
+      'Employee analytics, Turnover prediction, Recruitment optimization, Workforce planning',
+    ],
     roi: 'Reduce turnover by 25% and improve recruitment efficiency by 40%.',
     competitors: ['Visier, Tableau HR, Power BI HR, Crunchr'],
     marketSize: '$6.5B HR analytics market',
@@ -493,10 +590,11 @@ export const enterpriseAISolutions: EnterpriseAISolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'HR analytics platform with AI models, people analytics, and predictive insights.',
+    implementationDetails:
+      'HR analytics platform with AI models, people analytics, and predictive insights.',
     launchDate: '2025-02-05',
     customers: 78,
     rating: 4.7,
-    reviews: 45
-  }
+    reviews: 45,
+  },
 ];

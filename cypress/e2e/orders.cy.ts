@@ -6,7 +6,13 @@ describe('orders page', () => {
       Cypress.env('EXISTING_USER_PASSWORD')
     );
     const orders = [
-      { orderId: 'ORD-1', date: '2024-05-01', total: 99.99, status: 'paid', invoiceUrl: '/inv1.pdf' }
+      {
+        orderId: 'ORD-1',
+        date: '2024-05-01',
+        total: 99.99,
+        status: 'paid',
+        invoiceUrl: '/inv1.pdf',
+      },
     ];
     cy.intercept('GET', '/api/orders*', {
       statusCode: 200,

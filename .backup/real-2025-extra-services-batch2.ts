@@ -5,7 +5,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2025ExtraServicesBatch2: ExtraService[] = [
@@ -15,19 +15,21 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Pinpoint slow endpoints with trace-level insights',
     price: '$49',
     period: '/month',
-    description: 'Lightweight agent and edge probes that profile endpoint latency, tail percentiles and cold starts with suggested remediations.',
+    description:
+      'Lightweight agent and edge probes that profile endpoint latency, tail percentiles and cold starts with suggested remediations.',
     features: [
       'Tail latency (p95/p99) tracking',
       'Endpoint heatmaps and traces',
       'Cold start and cache-miss detection',
-      'CI budgets and alert routing'
+      'CI budgets and alert routing',
     ],
     popular: true,
     icon: '⏱️',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/api-latency-profiler',
-    marketPosition: 'Observability without the heavyweight vendor tax for SMB APIs.',
+    marketPosition:
+      'Observability without the heavyweight vendor tax for SMB APIs.',
     targetAudience: 'Founders, platform, SRE',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -43,11 +45,12 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     variant: 'monitoring-futuristic' as ServiceVariant,
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'OTel collectors, edge probes, trace store, budget rules.',
+    implementationDetails:
+      'OTel collectors, edge probes, trace store, budget rules.',
     launchDate: '2025-03-01',
     customers: 62,
     rating: 4.7,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'postgres-query-insights-cloud',
@@ -55,12 +58,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Slow query finder with safe index PRs',
     price: '$79',
     period: '/month',
-    description: 'Continuously capture Postgres stats, surface heavy queries and propose index/plan fixes with auto-generated safe migration PRs.',
+    description:
+      'Continuously capture Postgres stats, surface heavy queries and propose index/plan fixes with auto-generated safe migration PRs.',
     features: [
       'Top N slow queries by db/schema',
       'Auto EXPLAIN and plan diffing',
       'Index recommendations with PRs',
-      'Rollback on regression'
+      'Rollback on regression',
     ],
     popular: true,
     icon: '🗄️',
@@ -87,7 +91,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-01',
     customers: 41,
     rating: 4.6,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'web-vitals-rum-booster',
@@ -95,19 +99,21 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Field data for LCP/INP/CLS with UX tips',
     price: '$39',
     period: '/month',
-    description: 'Collect Core Web Vitals from real users and correlate with pages, geo and device. Ship targeted UX fixes to lift conversions.',
+    description:
+      'Collect Core Web Vitals from real users and correlate with pages, geo and device. Ship targeted UX fixes to lift conversions.',
     features: [
       'INP/LCP/CLS collection',
       'Geo/device segmentation',
       'Page and route insights',
-      'Fix playbooks and alerts'
+      'Fix playbooks and alerts',
     ],
     popular: false,
     icon: '📈',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/web-vitals-rum-booster',
-    marketPosition: 'RUM that’s easy to deploy and understand for product teams.',
+    marketPosition:
+      'RUM that’s easy to deploy and understand for product teams.',
     targetAudience: 'Product, growth, engineering',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -127,7 +133,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-02',
     customers: 33,
     rating: 4.5,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'stripe-revenue-analytics-hub',
@@ -135,12 +141,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'MRR, churn, cohorts and pricing insights',
     price: '$59',
     period: '/month',
-    description: 'Self-serve revenue dashboards across MRR, churn, expansion and cohorts with plan experiments and alerts.',
+    description:
+      'Self-serve revenue dashboards across MRR, churn, expansion and cohorts with plan experiments and alerts.',
     features: [
       'Cohorts and retention',
       'Expansion and contraction tracking',
       'Plan/pricing experiments',
-      'Slack and email alerts'
+      'Slack and email alerts',
     ],
     popular: true,
     icon: '💳',
@@ -167,7 +174,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-02',
     customers: 58,
     rating: 4.6,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'sla-uptime-synthetics',
@@ -175,12 +182,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Record, replay, and alert on critical journeys',
     price: '$39',
     period: '/month',
-    description: 'Chrome-based journey recorder with schedules, SLO/error budget tracking and incident comms integration.',
+    description:
+      'Chrome-based journey recorder with schedules, SLO/error budget tracking and incident comms integration.',
     features: [
       'Synthetic recorder',
       'SLO budgets and burn rates',
       'Status page updates',
-      'Pager/Slack routing'
+      'Pager/Slack routing',
     ],
     popular: false,
     icon: '🛰️',
@@ -207,7 +215,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-02',
     customers: 44,
     rating: 4.5,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'soc2-control-evidence-collector',
@@ -215,12 +223,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Continuous evidence mapped to controls',
     price: '$99',
     period: '/month',
-    description: 'Automate SOC 2 evidence collection across cloud, Git and CI/CD with control mapping and auditor exports.',
+    description:
+      'Automate SOC 2 evidence collection across cloud, Git and CI/CD with control mapping and auditor exports.',
     features: [
       'Collectors for AWS/Azure/GCP',
       'Control mapping engine',
       'Screenshot and artifact bundles',
-      'Auditor-ready exports'
+      'Auditor-ready exports',
     ],
     popular: true,
     icon: '🔒',
@@ -247,7 +256,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-03',
     customers: 27,
     rating: 4.6,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'edge-caching-rules-manager',
@@ -255,12 +264,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Smart cache keys and rules without redeploys',
     price: '$29',
     period: '/month',
-    description: 'Control cache behavior by route, device, geo and AB group with instant rule updates at the edge.',
+    description:
+      'Control cache behavior by route, device, geo and AB group with instant rule updates at the edge.',
     features: [
       'Per-route rules',
       'Device/geo cache keys',
       'AB-test aware policies',
-      'Instant invalidations'
+      'Instant invalidations',
     ],
     popular: false,
     icon: '🧊',
@@ -287,7 +297,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-03',
     customers: 39,
     rating: 4.5,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'ai-prompt-policy-registry-pro',
@@ -295,12 +305,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Centralized prompts with safety checks and rollbacks',
     price: '$69',
     period: '/month',
-    description: 'Versioned prompt registry with approval flows, evaluations, and guardrail enforcement across environments.',
+    description:
+      'Versioned prompt registry with approval flows, evaluations, and guardrail enforcement across environments.',
     features: [
       'Versioned prompts and metadata',
       'Approval and rollback workflows',
       'Eval gates and scorecards',
-      'SDKs and audit logs'
+      'SDKs and audit logs',
     ],
     popular: true,
     icon: '🧠',
@@ -327,7 +338,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-04',
     customers: 22,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'chatbot-training-dataset-builder',
@@ -335,12 +346,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Curate intents, slots, and golden QA sets',
     price: '$29',
     period: '/month',
-    description: 'Create labeled datasets for chatbots and RAG systems with deduplication, variant generation and golden QA sets.',
+    description:
+      'Create labeled datasets for chatbots and RAG systems with deduplication, variant generation and golden QA sets.',
     features: [
       'Intent/slot labeling',
       'Deduplication and variants',
       'Golden set export',
-      'Eval harness integration'
+      'Eval harness integration',
     ],
     popular: false,
     icon: '🗂️',
@@ -367,7 +379,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-04',
     customers: 47,
     rating: 4.5,
-    reviews: 17
+    reviews: 17,
   },
   {
     id: 'ci-pipeline-cost-analyzer',
@@ -375,12 +387,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Find expensive jobs and optimize runners',
     price: '$35',
     period: '/month',
-    description: 'Analyze CI job duration, concurrency and cache hits across repos. Recommend optimizations and show realized savings.',
+    description:
+      'Analyze CI job duration, concurrency and cache hits across repos. Recommend optimizations and show realized savings.',
     features: [
       'Per-job cost heatmaps',
       'Cache hit/miss analysis',
       'Parallelism tuning suggestions',
-      'Savings tracking and reports'
+      'Savings tracking and reports',
     ],
     popular: false,
     icon: '🧪',
@@ -407,7 +420,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-05',
     customers: 35,
     rating: 4.5,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'feature-flag-auditor-pro',
@@ -415,12 +428,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Find stale flags and rollout risks automatically',
     price: '$29',
     period: '/month',
-    description: 'Static and runtime analysis to detect stale flags, orphaned variants and unsafe defaults with PR suggestions.',
+    description:
+      'Static and runtime analysis to detect stale flags, orphaned variants and unsafe defaults with PR suggestions.',
     features: [
       'Stale/orphan detection',
       'Safe default checks',
       'Env parity and cleanup PRs',
-      'Ownership and audit trails'
+      'Ownership and audit trails',
     ],
     popular: false,
     icon: '🚩',
@@ -447,7 +461,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-05',
     customers: 29,
     rating: 4.5,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'kubernetes-rbac-auditor-pro',
@@ -455,12 +469,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Least-privilege recommendations with diffs and PRs',
     price: '$69',
     period: '/cluster/month',
-    description: 'Continuously analyze RBAC roles and bindings to suggest least-privilege policies with safe rollout PRs.',
+    description:
+      'Continuously analyze RBAC roles and bindings to suggest least-privilege policies with safe rollout PRs.',
     features: [
       'Excess privilege detection',
       'Role/Binding visualizations',
       'Policy simulators',
-      'PR automation and rollbacks'
+      'PR automation and rollbacks',
     ],
     popular: true,
     icon: '🛡️',
@@ -487,7 +502,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-06',
     customers: 24,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'email-warmup-reputation-monitor',
@@ -495,12 +510,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Inbox placement tests, warmup and spam trap alerts',
     price: '$39',
     period: '/month',
-    description: 'Automated warmup schedules, seed inbox tests and spam trap monitoring with actionable guidance.',
+    description:
+      'Automated warmup schedules, seed inbox tests and spam trap monitoring with actionable guidance.',
     features: [
       'Warmup scheduler and ramp',
       'Seed inbox placement tests',
       'Spam trap and blocklist checks',
-      'Content scoring and tips'
+      'Content scoring and tips',
     ],
     popular: false,
     icon: '📬',
@@ -527,7 +543,7 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-06',
     customers: 66,
     rating: 4.6,
-    reviews: 25
+    reviews: 25,
   },
   {
     id: 'warehouse-cost-optimizer-pro',
@@ -535,12 +551,13 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     tagline: 'Rightsize warehouses and schedules with PRs',
     price: '$99',
     period: '/month',
-    description: 'Analyze warehouse workloads and recommend size/schedule policies with PRs to dbt or IaC for safer rollouts.',
+    description:
+      'Analyze warehouse workloads and recommend size/schedule policies with PRs to dbt or IaC for safer rollouts.',
     features: [
       'Workload and concurrency profiling',
       'Cost and performance tradeoffs',
       'Schedule optimizations',
-      'PRs to IaC/dbt'
+      'PRs to IaC/dbt',
     ],
     popular: true,
     icon: '🧮',
@@ -567,6 +584,6 @@ export const real2025ExtraServicesBatch2: ExtraService[] = [
     launchDate: '2025-03-07',
     customers: 19,
     rating: 4.5,
-    reviews: 7
-  }
+    reviews: 7,
+  },
 ];

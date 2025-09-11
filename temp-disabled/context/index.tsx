@@ -8,11 +8,19 @@ export function MessagingProvider({ children }: { children: React.ReactNode }) {
   return <React.Fragment>{children}</React.Fragment>;
 }
 
-export function NotificationProvider({ children }: { children: React.ReactNode }) {
+export function NotificationProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <React.Fragment>{children}</React.Fragment>;
 }
 
-export function RequestQuoteWizardProvider({ children }: { children: React.ReactNode }) {
+export function RequestQuoteWizardProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <React.Fragment>{children}</React.Fragment>;
 }
 

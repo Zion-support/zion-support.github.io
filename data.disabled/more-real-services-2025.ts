@@ -12,13 +12,13 @@ export const moreRealServices2025: MoreRealService2025[] = [
     name: 'Advanced AI Platform',
     tagline: 'Enterprise AI solutions',
     price: '$799',
-    category: 'AI & Machine Learning'
+    category: 'AI & Machine Learning',
   },
   {
     id: 'more-real-2025-2',
     name: 'Cloud Infrastructure Suite',
     tagline: 'Scalable cloud solutions',
     price: '$499',
-    category: 'Cloud & Infrastructure'
-  }
+    category: 'Cloud & Infrastructure',
+  },
 ];

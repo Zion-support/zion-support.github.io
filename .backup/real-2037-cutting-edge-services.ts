@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
@@ -55,7 +55,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Direct brain-computer interface powered by quantum computing',
     price: '$2,999',
     period: '/month',
-    description: 'Revolutionary brain-computer interface that uses quantum computing to process neural signals in real-time, enabling direct thought-to-action control for applications in healthcare, gaming, and productivity.',
+    description:
+      'Revolutionary brain-computer interface that uses quantum computing to process neural signals in real-time, enabling direct thought-to-action control for applications in healthcare, gaming, and productivity.',
     features: [
       'Real-time neural signal processing',
       'Quantum-enhanced pattern recognition',
@@ -65,7 +66,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Healthcare compliance (HIPAA, FDA)',
       'Gaming integration APIs',
       'Productivity workflow automation',
-      '24/7 technical support'
+      '24/7 technical support',
     ],
     popular: true,
     icon: '🧠⚛️',
@@ -73,14 +74,19 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-neural-interface',
     marketPosition: 'First commercial quantum-enhanced BCI platform',
-    targetAudience: 'Healthcare providers, gaming companies, productivity tools',
+    targetAudience:
+      'Healthcare providers, gaming companies, productivity tools',
     trialDays: 14,
     setupTime: '4 weeks',
     category: 'Quantum Computing',
     realService: true,
-    technology: ['Quantum algorithms, Neural networks, Signal processing, React, Python'],
+    technology: [
+      'Quantum algorithms, Neural networks, Signal processing, React, Python',
+    ],
     integrations: ['Unity, Unreal Engine, Slack, Notion, Microsoft Office'],
-    useCases: ['Medical rehabilitation, Gaming control, Productivity automation, Research'],
+    useCases: [
+      'Medical rehabilitation, Gaming control, Productivity automation, Research',
+    ],
     roi: 'Increase productivity by 300% and reduce medical costs by 40%',
     competitors: ['Neuralink, CTRL-labs, Kernel'],
     marketSize: '$15B+ BCI market by 2035',
@@ -88,11 +94,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant quantum BCI platform with healthcare compliance',
+    implementationDetails:
+      'Multi-tenant quantum BCI platform with healthcare compliance',
     launchDate: '2027-01-15',
     customers: 23,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'holographic-metaverse-platform',
@@ -100,7 +107,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Create immersive 3D holographic experiences in the metaverse',
     price: '$1,799',
     period: '/month',
-    description: 'Advanced metaverse platform that enables users to create, share, and experience immersive 3D holographic content with real-time collaboration and AI-powered content generation.',
+    description:
+      'Advanced metaverse platform that enables users to create, share, and experience immersive 3D holographic content with real-time collaboration and AI-powered content generation.',
     features: [
       '3D holographic content creation',
       'Real-time collaboration tools',
@@ -110,7 +118,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Virtual event hosting',
       'Monetization tools',
       'Analytics dashboard',
-      'API for developers'
+      'API for developers',
     ],
     popular: true,
     icon: '🌐✨',
@@ -118,14 +126,17 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/holographic-metaverse-platform',
     marketPosition: 'Leading holographic metaverse creation platform',
-    targetAudience: 'Content creators, businesses, event organizers, developers',
+    targetAudience:
+      'Content creators, businesses, event organizers, developers',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Metaverse',
     realService: true,
     technology: ['WebGL, Three.js, WebXR, AI/ML, React, Node.js'],
     integrations: ['Unity, Unreal Engine, Discord, Zoom, Slack'],
-    useCases: ['Virtual events, Training simulations, Product demos, Social networking'],
+    useCases: [
+      'Virtual events, Training simulations, Product demos, Social networking',
+    ],
     roi: 'Reduce event costs by 70% and increase engagement by 200%',
     competitors: ['Meta Horizon, VRChat, AltspaceVR'],
     marketSize: '$800B+ metaverse market by 2030',
@@ -137,7 +148,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     launchDate: '2027-02-01',
     customers: 156,
     rating: 4.7,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'quantum-cybersecurity-suite',
@@ -145,7 +156,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Unbreakable security powered by quantum cryptography',
     price: '$3,499',
     period: '/month',
-    description: 'Next-generation cybersecurity platform that uses quantum cryptography to provide unbreakable encryption, advanced threat detection, and automated incident response for enterprise-level security.',
+    description:
+      'Next-generation cybersecurity platform that uses quantum cryptography to provide unbreakable encryption, advanced threat detection, and automated incident response for enterprise-level security.',
     features: [
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography',
@@ -155,7 +167,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Compliance automation',
       'Real-time monitoring',
       'Advanced analytics',
-      '24/7 SOC support'
+      '24/7 SOC support',
     ],
     popular: true,
     icon: '🔐⚛️',
@@ -169,8 +181,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     category: 'Cybersecurity',
     realService: true,
     technology: ['Quantum cryptography, AI/ML, Blockchain, Python, Rust'],
-    integrations: ['SIEM systems, EDR platforms, Cloud providers, Identity providers'],
-    useCases: ['Data protection, Network security, Compliance, Incident response'],
+    integrations: [
+      'SIEM systems, EDR platforms, Cloud providers, Identity providers',
+    ],
+    useCases: [
+      'Data protection, Network security, Compliance, Incident response',
+    ],
     roi: 'Prevent 99.9% of cyber attacks and reduce security costs by 50%',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet'],
     marketSize: '$400B+ cybersecurity market by 2030',
@@ -178,11 +194,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise quantum cybersecurity platform with SOC integration',
+    implementationDetails:
+      'Enterprise quantum cybersecurity platform with SOC integration',
     launchDate: '2027-01-01',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'ai-autonomous-enterprise',
@@ -190,7 +207,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Fully autonomous business operations powered by AI',
     price: '$4,999',
     period: '/month',
-    description: 'Revolutionary platform that enables businesses to operate autonomously using advanced AI agents that handle decision-making, operations, and customer interactions without human intervention.',
+    description:
+      'Revolutionary platform that enables businesses to operate autonomously using advanced AI agents that handle decision-making, operations, and customer interactions without human intervention.',
     features: [
       'Autonomous decision-making AI',
       'Self-optimizing operations',
@@ -200,7 +218,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Continuous learning systems',
       'Multi-agent coordination',
       'Human oversight controls',
-      'Comprehensive reporting'
+      'Comprehensive reporting',
     ],
     popular: true,
     icon: '🤖🏢',
@@ -208,14 +226,19 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-autonomous-enterprise',
     marketPosition: 'First fully autonomous enterprise platform',
-    targetAudience: 'Large enterprises, Fortune 500 companies, government agencies',
+    targetAudience:
+      'Large enterprises, Fortune 500 companies, government agencies',
     trialDays: 60,
     setupTime: '8 weeks',
     category: 'AI & Automation',
     realService: true,
-    technology: ['Advanced AI/ML, Multi-agent systems, NLP, Computer vision, Python'],
+    technology: [
+      'Advanced AI/ML, Multi-agent systems, NLP, Computer vision, Python',
+    ],
     integrations: ['ERP systems, CRM platforms, Cloud services, IoT devices'],
-    useCases: ['Business automation, Customer service, Operations management, Strategic planning'],
+    useCases: [
+      'Business automation, Customer service, Operations management, Strategic planning',
+    ],
     roi: 'Reduce operational costs by 60% and increase efficiency by 300%',
     competitors: ['UiPath, Automation Anywhere, Blue Prism'],
     marketSize: '$50B+ autonomous systems market by 2035',
@@ -223,11 +246,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant autonomous enterprise platform with AI agents',
+    implementationDetails:
+      'Multi-tenant autonomous enterprise platform with AI agents',
     launchDate: '2027-03-01',
     customers: 34,
     rating: 4.9,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'quantum-space-mining',
@@ -235,7 +259,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Revolutionary space resource extraction using quantum technology',
     price: '$5,999',
     period: '/month',
-    description: 'Advanced space mining platform that uses quantum computing and AI to identify, extract, and process valuable resources from asteroids, moons, and other celestial bodies.',
+    description:
+      'Advanced space mining platform that uses quantum computing and AI to identify, extract, and process valuable resources from asteroids, moons, and other celestial bodies.',
     features: [
       'Quantum-enhanced resource detection',
       'AI-powered extraction planning',
@@ -245,7 +270,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Supply chain management',
       'Regulatory compliance',
       'Environmental impact assessment',
-      'Investment tracking'
+      'Investment tracking',
     ],
     popular: true,
     icon: '🚀⛏️',
@@ -259,8 +284,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     category: 'Space Technology',
     realService: true,
     technology: ['Quantum computing, AI/ML, Robotics, IoT, Python, C++'],
-    integrations: ['Space agencies, Mining equipment, Financial systems, Logistics platforms'],
-    useCases: ['Asteroid mining, Lunar resource extraction, Space exploration, Resource trading'],
+    integrations: [
+      'Space agencies, Mining equipment, Financial systems, Logistics platforms',
+    ],
+    useCases: [
+      'Asteroid mining, Lunar resource extraction, Space exploration, Resource trading',
+    ],
     roi: 'Generate $10M+ per mission and reduce costs by 40%',
     competitors: ['Planetary Resources, Deep Space Industries, AstroForge'],
     marketSize: '$3T+ space economy by 2040',
@@ -268,11 +297,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     variant: 'space-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-enhanced space mining platform with autonomous operations',
+    implementationDetails:
+      'Quantum-enhanced space mining platform with autonomous operations',
     launchDate: '2027-04-01',
     customers: 12,
     rating: 4.9,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'biocomputing-ai-platform',
@@ -280,7 +310,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'AI powered by living biological systems',
     price: '$2,499',
     period: '/month',
-    description: 'Revolutionary AI platform that uses living biological systems, including DNA computing and synthetic biology, to perform complex computations and solve problems that traditional computers cannot.',
+    description:
+      'Revolutionary AI platform that uses living biological systems, including DNA computing and synthetic biology, to perform complex computations and solve problems that traditional computers cannot.',
     features: [
       'DNA-based computing',
       'Synthetic biology integration',
@@ -290,7 +321,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Climate modeling',
       'Biological data processing',
       'Ethical AI guidelines',
-      'Research collaboration tools'
+      'Research collaboration tools',
     ],
     popular: true,
     icon: '🧬🧠',
@@ -298,14 +329,21 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/biocomputing-ai-platform',
     marketPosition: 'First commercial biocomputing AI platform',
-    targetAudience: 'Pharmaceutical companies, research institutions, environmental organizations',
+    targetAudience:
+      'Pharmaceutical companies, research institutions, environmental organizations',
     trialDays: 45,
     setupTime: '10 weeks',
     category: 'AI & Biotechnology',
     realService: true,
-    technology: ['DNA computing, Synthetic biology, AI/ML, Bioinformatics, Python'],
-    integrations: ['Research databases, Laboratory equipment, Cloud platforms, Analysis tools'],
-    useCases: ['Drug discovery, Climate research, Genetic analysis, Environmental monitoring'],
+    technology: [
+      'DNA computing, Synthetic biology, AI/ML, Bioinformatics, Python',
+    ],
+    integrations: [
+      'Research databases, Laboratory equipment, Cloud platforms, Analysis tools',
+    ],
+    useCases: [
+      'Drug discovery, Climate research, Genetic analysis, Environmental monitoring',
+    ],
     roi: 'Accelerate research by 500% and reduce costs by 70%',
     competitors: ['Ginkgo Bioworks, Zymergen, Twist Bioscience'],
     marketSize: '$100B+ biocomputing market by 2035',
@@ -313,11 +351,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     variant: 'biotech-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant biocomputing platform with research tools',
+    implementationDetails:
+      'Multi-tenant biocomputing platform with research tools',
     launchDate: '2027-05-01',
     customers: 67,
     rating: 4.8,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'quantum-financial-trading',
@@ -325,7 +364,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Superior trading performance with quantum computing',
     price: '$3,999',
     period: '/month',
-    description: 'Advanced financial trading platform that leverages quantum computing to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.',
+    description:
+      'Advanced financial trading platform that leverages quantum computing to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.',
     features: [
       'Quantum-enhanced market analysis',
       'Real-time trading algorithms',
@@ -335,7 +375,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Regulatory compliance',
       'Advanced analytics',
       'Multi-asset support',
-      'Professional trading tools'
+      'Professional trading tools',
     ],
     popular: true,
     icon: '💰⚛️',
@@ -348,9 +388,15 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     setupTime: '4 weeks',
     category: 'Financial Services',
     realService: true,
-    technology: ['Quantum computing, AI/ML, Blockchain, High-frequency trading, Python'],
-    integrations: ['Trading platforms, Market data providers, Banking systems, Compliance tools'],
-    useCases: ['Algorithmic trading, Portfolio management, Risk assessment, Market analysis'],
+    technology: [
+      'Quantum computing, AI/ML, Blockchain, High-frequency trading, Python',
+    ],
+    integrations: [
+      'Trading platforms, Market data providers, Banking systems, Compliance tools',
+    ],
+    useCases: [
+      'Algorithmic trading, Portfolio management, Risk assessment, Market analysis',
+    ],
     roi: 'Increase trading returns by 200% and reduce risk by 60%',
     competitors: ['Bloomberg Terminal, Thomson Reuters, Interactive Brokers'],
     marketSize: '$50B+ algorithmic trading market by 2030',
@@ -358,11 +404,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-enhanced trading platform with institutional features',
+    implementationDetails:
+      'Quantum-enhanced trading platform with institutional features',
     launchDate: '2027-06-01',
     customers: 45,
     rating: 4.9,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'holographic-healthcare',
@@ -370,7 +417,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Revolutionary medical imaging and treatment planning',
     price: '$2,799',
     period: '/month',
-    description: 'Advanced healthcare platform that uses holographic technology for medical imaging, surgical planning, and patient education, providing doctors with unprecedented insights into patient conditions.',
+    description:
+      'Advanced healthcare platform that uses holographic technology for medical imaging, surgical planning, and patient education, providing doctors with unprecedented insights into patient conditions.',
     features: [
       '3D holographic imaging',
       'Surgical planning tools',
@@ -380,7 +428,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'AI-powered diagnostics',
       'Training simulations',
       'Collaborative tools',
-      'HIPAA compliance'
+      'HIPAA compliance',
     ],
     popular: true,
     icon: '🏥✨',
@@ -388,14 +436,19 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/holographic-healthcare',
     marketPosition: 'First commercial holographic healthcare platform',
-    targetAudience: 'Hospitals, medical centers, research institutions, medical device companies',
+    targetAudience:
+      'Hospitals, medical centers, research institutions, medical device companies',
     trialDays: 60,
     setupTime: '8 weeks',
     category: 'Healthcare Technology',
     realService: true,
     technology: ['Holographic displays, AI/ML, Medical imaging, React, Python'],
-    integrations: ['PACS systems, EMR platforms, Medical devices, Telemedicine tools'],
-    useCases: ['Medical imaging, Surgical planning, Medical training, Patient education'],
+    integrations: [
+      'PACS systems, EMR platforms, Medical devices, Telemedicine tools',
+    ],
+    useCases: [
+      'Medical imaging, Surgical planning, Medical training, Patient education',
+    ],
     roi: 'Improve diagnostic accuracy by 40% and reduce surgery time by 30%',
     competitors: ['Intuitive Surgical, Medtronic, Johnson & Johnson'],
     marketSize: '$800B+ medical imaging market by 2030',
@@ -403,11 +456,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     variant: 'healthcare-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant holographic healthcare platform with medical compliance',
+    implementationDetails:
+      'Multi-tenant holographic healthcare platform with medical compliance',
     launchDate: '2027-07-01',
     customers: 78,
     rating: 4.8,
-    reviews: 56
+    reviews: 56,
   },
   {
     id: 'quantum-logistics-optimization',
@@ -415,7 +469,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Perfect supply chain optimization with quantum computing',
     price: '$1,899',
     period: '/month',
-    description: 'Advanced logistics platform that uses quantum computing to optimize supply chains, reduce costs, and improve efficiency across global operations.',
+    description:
+      'Advanced logistics platform that uses quantum computing to optimize supply chains, reduce costs, and improve efficiency across global operations.',
     features: [
       'Quantum route optimization',
       'Real-time tracking',
@@ -425,7 +480,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Cost analysis',
       'Sustainability metrics',
       'Compliance monitoring',
-      'Performance reporting'
+      'Performance reporting',
     ],
     popular: true,
     icon: '📦⚛️',
@@ -433,14 +488,19 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-logistics-optimization',
     marketPosition: 'Leading quantum-enhanced logistics platform',
-    targetAudience: 'Manufacturing companies, retailers, logistics providers, e-commerce platforms',
+    targetAudience:
+      'Manufacturing companies, retailers, logistics providers, e-commerce platforms',
     trialDays: 30,
     setupTime: '6 weeks',
     category: 'Supply Chain',
     realService: true,
     technology: ['Quantum computing, AI/ML, IoT, Blockchain, Python'],
-    integrations: ['ERP systems, WMS platforms, Transportation systems, E-commerce platforms'],
-    useCases: ['Route optimization, Inventory management, Supplier management, Cost reduction'],
+    integrations: [
+      'ERP systems, WMS platforms, Transportation systems, E-commerce platforms',
+    ],
+    useCases: [
+      'Route optimization, Inventory management, Supplier management, Cost reduction',
+    ],
     roi: 'Reduce logistics costs by 35% and improve delivery times by 50%',
     competitors: ['Flexport, Convoy, Uber Freight'],
     marketSize: '$200B+ logistics optimization market by 2030',
@@ -448,11 +508,12 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-enhanced logistics platform with real-time optimization',
+    implementationDetails:
+      'Quantum-enhanced logistics platform with real-time optimization',
     launchDate: '2027-08-01',
     customers: 134,
     rating: 4.7,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'ai-climate-prediction',
@@ -460,7 +521,8 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     tagline: 'Predict climate changes with unprecedented accuracy',
     price: '$1,599',
     period: '/month',
-    description: 'Advanced climate prediction platform that uses AI and machine learning to analyze environmental data and predict climate changes with unprecedented accuracy.',
+    description:
+      'Advanced climate prediction platform that uses AI and machine learning to analyze environmental data and predict climate changes with unprecedented accuracy.',
     features: [
       'AI-powered climate modeling',
       'Real-time data analysis',
@@ -470,7 +532,7 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
       'Policy recommendations',
       'Public awareness tools',
       'Research collaboration',
-      'Data visualization'
+      'Data visualization',
     ],
     popular: true,
     icon: '🌍🤖',
@@ -478,25 +540,33 @@ export const real2037CuttingEdgeServices: Real2037CuttingEdgeService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-climate-prediction',
     marketPosition: 'Leading AI-powered climate prediction platform',
-    targetAudience: 'Government agencies, environmental organizations, research institutions, insurance companies',
+    targetAudience:
+      'Government agencies, environmental organizations, research institutions, insurance companies',
     trialDays: 45,
     setupTime: '4 weeks',
     category: 'Environmental Technology',
     realService: true,
     technology: ['AI/ML, Climate modeling, Data science, Python, R'],
-    integrations: ['Weather APIs, Satellite data, Environmental sensors, Research databases'],
-    useCases: ['Climate modeling, Risk assessment, Policy planning, Research collaboration'],
+    integrations: [
+      'Weather APIs, Satellite data, Environmental sensors, Research databases',
+    ],
+    useCases: [
+      'Climate modeling, Risk assessment, Policy planning, Research collaboration',
+    ],
     roi: 'Improve prediction accuracy by 300% and reduce costs by 60%',
-    competitors: ['Climate Central, The Climate Corporation, Jupiter Intelligence'],
+    competitors: [
+      'Climate Central, The Climate Corporation, Jupiter Intelligence',
+    ],
     marketSize: '$50B+ climate technology market by 2030',
     growthRate: '160% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant climate prediction platform with AI models',
+    implementationDetails:
+      'Multi-tenant climate prediction platform with AI models',
     launchDate: '2027-09-01',
     customers: 92,
     rating: 4.8,
-    reviews: 67
-  }
+    reviews: 67,
+  },
 ];

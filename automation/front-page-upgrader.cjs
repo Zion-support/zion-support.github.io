@@ -25,7 +25,7 @@ function titleCase(slug) {
     .replace(/\s+/g, ' ')
     .trim()
     .split(' ')
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+    .map(w => (w ? w[0].toUpperCase() + w.slice(1) : w))
     .join(' ');
 }
 
@@ -34,21 +34,62 @@ function discoverCards() {
   const pagesDir = path.join(ROOT, 'pages');
 
   const internalTargets = [
-    { href: '/features', prefer: true, label: 'Features', desc: 'Futuristic modules and templates' },
-    { href: '/capabilities', prefer: true, label: 'Capabilities', desc: 'What the system can do across domains' },
-    { href: '/benefits', prefer: true, label: 'Benefits', desc: 'Outcomes and value delivered' },
-    { href: '/automation', prefer: false, label: 'Automations', desc: 'Factories, agents, and live workflows' },
-    { href: '/site-health', prefer: false, label: 'Site Health', desc: 'A11y, performance, link integrity' },
-    { href: '/newsroom', prefer: false, label: 'Newsroom', desc: 'Autonomous updates and evolution' },
+    {
+      href: '/features',
+      prefer: true,
+      label: 'Features',
+      desc: 'Futuristic modules and templates',
+    },
+    {
+      href: '/capabilities',
+      prefer: true,
+      label: 'Capabilities',
+      desc: 'What the system can do across domains',
+    },
+    {
+      href: '/benefits',
+      prefer: true,
+      label: 'Benefits',
+      desc: 'Outcomes and value delivered',
+    },
+    {
+      href: '/automation',
+      prefer: false,
+      label: 'Automations',
+      desc: 'Factories, agents, and live workflows',
+    },
+    {
+      href: '/site-health',
+      prefer: false,
+      label: 'Site Health',
+      desc: 'A11y, performance, link integrity',
+    },
+    {
+      href: '/newsroom',
+      prefer: false,
+      label: 'Newsroom',
+      desc: 'Autonomous updates and evolution',
+    },
   ];
 
   for (const t of internalTargets) {
-    const checkPath = t.href === '/automation'
-      ? path.join(pagesDir, 'automation', 'index.tsx')
-      : path.join(pagesDir, t.href.replace(/^\//, '') + (t.href.split('/').length > 2 ? '' : '.tsx'));
+    const checkPath =
+      t.href === '/automation'
+        ? path.join(pagesDir, 'automation', 'index.tsx')
+        : path.join(
+            pagesDir,
+            t.href.replace(/^\//, '') +
+              (t.href.split('/').length > 2 ? '' : '.tsx')
+          );
 
     if (ensureFileExists(checkPath)) {
-      cards.push({ type: 'internal', href: t.href, title: t.label, desc: t.desc, weight: t.prefer ? 0 : 1 });
+      cards.push({
+        type: 'internal',
+        href: t.href,
+        title: t.label,
+        desc: t.desc,
+        weight: t.prefer ? 0 : 1,
+      });
     }
   }
 
@@ -60,8 +101,14 @@ function discoverCards() {
         const idx = path.join(pagesDir, entry.name, 'index.tsx');
         if (ensureFileExists(idx)) {
           const href = `/${entry.name}`;
-          if (cards.find((c) => c.href === href)) continue;
-          cards.push({ type: 'internal', href, title: titleCase(entry.name), desc: 'Explore more', weight: 2 });
+          if (cards.find(c => c.href === href)) continue;
+          cards.push({
+            type: 'internal',
+            href,
+            title: titleCase(entry.name),
+            desc: 'Explore more',
+            weight: 2,
+          });
         }
       }
     }
@@ -72,7 +119,8 @@ function discoverCards() {
 }
 
 function buildCard(item) {
-  const wrapper = 'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover';
+  const wrapper =
+    'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover';
   return (
     `            <Link href="${item.href}"><a className="${wrapper}">\n` +
     `              <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\" />\n` +
@@ -90,10 +138,7 @@ function generateSectionTSX(cards) {
     '  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">',
   ].join('\n');
   const body = cards.map(buildCard).join('\n');
-  const footer = [
-    '  </div>',
-    '</section>',
-  ].join('\n');
+  const footer = ['  </div>', '</section>'].join('\n');
   return `${header}\n${body}\n${footer}`;
 }
 

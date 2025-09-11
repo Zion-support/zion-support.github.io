@@ -24,7 +24,10 @@ function getAllBranches() {
 function canMergeWithoutConflicts(branch) {
   try {
     execSync(`git merge-base main origin/${branch}`, { stdio: 'pipe' });
-    execSync(`git merge-tree $(git merge-base main origin/${branch}) main origin/${branch}`, { stdio: 'pipe' });
+    execSync(
+      `git merge-tree $(git merge-base main origin/${branch}) main origin/${branch}`,
+      { stdio: 'pipe' }
+    );
     return true;
   } catch (error) {
     return false;
@@ -35,22 +38,27 @@ function canMergeWithoutConflicts(branch) {
 function mergeBranch(branch) {
   try {
     console.log(`📦 Merging branch: ${branch}`);
-    
+
     // Checkout the branch
-    execSync(`git checkout -b temp-merge-${branch} origin/${branch}`, { stdio: 'pipe' });
-    
+    execSync(`git checkout -b temp-merge-${branch} origin/${branch}`, {
+      stdio: 'pipe',
+    });
+
     // Try to merge into main
     execSync(`git checkout main`, { stdio: 'pipe' });
-    execSync(`git merge temp-merge-${branch} --no-ff -m "Merge branch ${branch} into main"`, { stdio: 'pipe' });
-    
+    execSync(
+      `git merge temp-merge-${branch} --no-ff -m "Merge branch ${branch} into main"`,
+      { stdio: 'pipe' }
+    );
+
     // Clean up
     execSync(`git branch -D temp-merge-${branch}`, { stdio: 'pipe' });
-    
+
     console.log(`✅ Successfully merged: ${branch}`);
     return { success: true, branch };
   } catch (error) {
     console.log(`❌ Failed to merge: ${branch} - ${error.message}`);
-    
+
     // Clean up on failure
     try {
       execSync(`git checkout main`, { stdio: 'pipe' });
@@ -58,7 +66,7 @@ function mergeBranch(branch) {
     } catch (cleanupError) {
       // Ignore cleanup errors
     }
-    
+
     return { success: false, branch, error: error.message };
   }
 }
@@ -67,19 +75,21 @@ function mergeBranch(branch) {
 async function main() {
   const branches = getAllBranches();
   console.log(`Found ${branches.length} branches to process\n`);
-  
+
   const results = {
     successful: [],
     failed: [],
-    total: branches.length
+    total: branches.length,
   };
-  
+
   // Process branches in batches to avoid overwhelming the system
   const batchSize = 10;
   for (let i = 0; i < branches.length; i += batchSize) {
     const batch = branches.slice(i, i + batchSize);
-    console.log(`\n🔄 Processing batch ${Math.floor(i/batchSize) + 1}/${Math.ceil(branches.length/batchSize)}`);
-    
+    console.log(
+      `\n🔄 Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(branches.length / batchSize)}`
+    );
+
     for (const branch of batch) {
       const result = mergeBranch(branch);
       if (result.success) {
@@ -88,32 +98,34 @@ async function main() {
         results.failed.push({ branch: result.branch, error: result.error });
       }
     }
-    
+
     // Small delay between batches
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
-  
+
   // Generate report
   console.log('\n📊 MERGE SUMMARY');
   console.log('================');
   console.log(`Total branches processed: ${results.total}`);
   console.log(`Successfully merged: ${results.successful.length}`);
   console.log(`Failed to merge: ${results.failed.length}`);
-  
+
   if (results.successful.length > 0) {
     console.log('\n✅ Successfully merged branches:');
     results.successful.forEach(branch => console.log(`  - ${branch}`));
   }
-  
+
   if (results.failed.length > 0) {
     console.log('\n❌ Failed to merge branches:');
-    results.failed.forEach(({ branch, error }) => console.log(`  - ${branch}: ${error}`));
+    results.failed.forEach(({ branch, error }) =>
+      console.log(`  - ${branch}: ${error}`)
+    );
   }
-  
+
   // Save results to file
   fs.writeFileSync('merge-results.json', JSON.stringify(results, null, 2));
   console.log('\n💾 Results saved to merge-results.json');
-  
+
   // Push changes
   try {
     console.log('\n🚀 Pushing changes to remote...');

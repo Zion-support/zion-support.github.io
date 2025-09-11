@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
   {
     id: 'quantum-ai-trading-platform',
     name: 'Quantum AI Trading Platform',
-    tagline: 'Next-generation algorithmic trading with quantum computing optimization',
+    tagline:
+      'Next-generation algorithmic trading with quantum computing optimization',
     price: '$2,499',
     period: '/month',
-    description: 'Advanced algorithmic trading platform leveraging quantum computing principles for portfolio optimization, risk management, and market prediction with real-time execution capabilities.',
+    description:
+      'Advanced algorithmic trading platform leveraging quantum computing principles for portfolio optimization, risk management, and market prediction with real-time execution capabilities.',
     features: [
       'Quantum-inspired portfolio optimization algorithms',
       'Real-time market data integration and analysis',
@@ -65,22 +67,29 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Compliance and audit trail management',
       'API integration with major exchanges',
       'Custom strategy builder and deployment',
-      'Performance analytics and reporting dashboard'
+      'Performance analytics and reporting dashboard',
     ],
     popular: true,
     icon: '⚛️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-trading-platform',
-    marketPosition: 'Enterprise-grade alternative to Alpaca, Interactive Brokers; focuses on quantum optimization and AI-driven strategies.',
+    marketPosition:
+      'Enterprise-grade alternative to Alpaca, Interactive Brokers; focuses on quantum optimization and AI-driven strategies.',
     targetAudience: 'Hedge funds, institutional traders, quantitative analysts',
     trialDays: 30,
     setupTime: '1 week',
     category: 'AI & Finance',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Quantum Libraries, Redis, PostgreSQL'],
-    integrations: ['Alpaca, Interactive Brokers, Coinbase Pro, Binance, MetaTrader'],
-    useCases: ['Algorithmic trading, Portfolio optimization, Risk management, Market prediction'],
+    technology: [
+      'Python, TensorFlow, PyTorch, Quantum Libraries, Redis, PostgreSQL',
+    ],
+    integrations: [
+      'Alpaca, Interactive Brokers, Coinbase Pro, Binance, MetaTrader',
+    ],
+    useCases: [
+      'Algorithmic trading, Portfolio optimization, Risk management, Market prediction',
+    ],
     roi: 'Improve trading performance by 15-35% through quantum-optimized strategies.',
     competitors: ['Alpaca, Interactive Brokers, QuantConnect, MetaTrader'],
     marketSize: '$25B algorithmic trading platforms',
@@ -88,11 +97,12 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'quantum-ai-finance',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-inspired algorithms, real-time data processing, multi-exchange connectivity, and compliance framework.',
+    implementationDetails:
+      'Quantum-inspired algorithms, real-time data processing, multi-exchange connectivity, and compliance framework.',
     launchDate: '2025-01-15',
     customers: 28,
     rating: 4.9,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'autonomous-devops-orchestrator',
@@ -100,7 +110,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'Self-healing infrastructure with AI-driven incident prevention',
     price: '$899',
     period: '/month',
-    description: 'Intelligent DevOps platform that autonomously manages infrastructure, predicts failures, and automatically resolves issues before they impact users.',
+    description:
+      'Intelligent DevOps platform that autonomously manages infrastructure, predicts failures, and automatically resolves issues before they impact users.',
     features: [
       'AI-powered incident prediction and prevention',
       'Automated root cause analysis and resolution',
@@ -110,22 +121,27 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Security vulnerability scanning and patching',
       'Cost optimization and resource management',
       'Compliance automation and reporting',
-      'Team collaboration and knowledge sharing'
+      'Team collaboration and knowledge sharing',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/autonomous-devops-orchestrator',
-    marketPosition: 'Advanced alternative to GitLab CI/CD, Jenkins; adds AI-driven automation and predictive capabilities.',
+    marketPosition:
+      'Advanced alternative to GitLab CI/CD, Jenkins; adds AI-driven automation and predictive capabilities.',
     targetAudience: 'DevOps engineers, SREs, platform teams, IT operations',
     trialDays: 21,
     setupTime: '3 days',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['Kubernetes, Docker, Terraform, Ansible, Python, Machine Learning'],
+    technology: [
+      'Kubernetes, Docker, Terraform, Ansible, Python, Machine Learning',
+    ],
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'],
-    useCases: ['Continuous deployment, Infrastructure automation, Incident management, Cost optimization'],
+    useCases: [
+      'Continuous deployment, Infrastructure automation, Incident management, Cost optimization',
+    ],
     roi: 'Reduce deployment time by 60% and eliminate 80% of manual incident response.',
     competitors: ['GitLab CI/CD, Jenkins, CircleCI, Harness'],
     marketSize: '$8B DevOps tools market',
@@ -133,11 +149,12 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'devops-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI models for failure prediction, automated remediation workflows, and intelligent resource allocation.',
+    implementationDetails:
+      'AI models for failure prediction, automated remediation workflows, and intelligent resource allocation.',
     launchDate: '2025-02-01',
     customers: 45,
     rating: 4.8,
-    reviews: 32
+    reviews: 32,
   },
   {
     id: 'quantum-cybersecurity-suite',
@@ -145,7 +162,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'Post-quantum cryptography and AI threat detection',
     price: '$1,299',
     period: '/month',
-    description: 'Future-proof cybersecurity platform combining post-quantum cryptography, AI-powered threat detection, and zero-trust architecture for enterprise-grade protection.',
+    description:
+      'Future-proof cybersecurity platform combining post-quantum cryptography, AI-powered threat detection, and zero-trust architecture for enterprise-grade protection.',
     features: [
       'Post-quantum cryptography algorithms',
       'AI-powered threat detection and response',
@@ -155,22 +173,27 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Compliance automation (SOC2, ISO27001)',
       'Incident response automation',
       'Security awareness training platform',
-      'Real-time threat intelligence feeds'
+      'Real-time threat intelligence feeds',
     ],
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity-suite',
-    marketPosition: 'Next-generation alternative to CrowdStrike, Palo Alto Networks; focuses on quantum-resistant security.',
+    marketPosition:
+      'Next-generation alternative to CrowdStrike, Palo Alto Networks; focuses on quantum-resistant security.',
     targetAudience: 'CISOs, security teams, compliance officers, enterprise IT',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Post-quantum cryptography, AI/ML, Zero-trust architecture, Blockchain'],
+    technology: [
+      'Post-quantum cryptography, AI/ML, Zero-trust architecture, Blockchain',
+    ],
     integrations: ['Active Directory, Okta, CrowdStrike, Palo Alto, Splunk'],
-    useCases: ['Threat prevention, Compliance management, Incident response, Security training'],
+    useCases: [
+      'Threat prevention, Compliance management, Incident response, Security training',
+    ],
     roi: 'Reduce security incidents by 70% and achieve 100% compliance automation.',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point'],
     marketSize: '$200B cybersecurity market',
@@ -178,11 +201,12 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Post-quantum cryptographic implementations, AI threat models, and automated compliance frameworks.',
+    implementationDetails:
+      'Post-quantum cryptographic implementations, AI threat models, and automated compliance frameworks.',
     launchDate: '2025-01-20',
     customers: 67,
     rating: 4.9,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'ai-powered-supply-chain-intelligence',
@@ -190,7 +214,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'Predictive analytics and optimization for global supply chains',
     price: '$799',
     period: '/month',
-    description: 'Intelligent supply chain platform that predicts disruptions, optimizes inventory, and provides real-time visibility across global operations.',
+    description:
+      'Intelligent supply chain platform that predicts disruptions, optimizes inventory, and provides real-time visibility across global operations.',
     features: [
       'AI-powered demand forecasting and planning',
       'Real-time supply chain visibility and tracking',
@@ -200,22 +225,28 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Sustainability and ESG compliance tracking',
       'Cost optimization and spend analysis',
       'Multi-modal transportation optimization',
-      'Blockchain-based traceability'
+      'Blockchain-based traceability',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-supply-chain-intelligence',
-    marketPosition: 'Advanced alternative to SAP SCM, Oracle SCM; adds AI-driven insights and real-time optimization.',
-    targetAudience: 'Supply chain managers, operations directors, procurement teams',
+    marketPosition:
+      'Advanced alternative to SAP SCM, Oracle SCM; adds AI-driven insights and real-time optimization.',
+    targetAudience:
+      'Supply chain managers, operations directors, procurement teams',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Supply Chain & Operations',
     realService: true,
-    technology: ['Machine Learning, IoT, Blockchain, Big Data, Cloud Computing'],
+    technology: [
+      'Machine Learning, IoT, Blockchain, Big Data, Cloud Computing',
+    ],
     integrations: ['SAP, Oracle, Salesforce, Microsoft Dynamics, ERP systems'],
-    useCases: ['Demand planning, Inventory optimization, Risk management, Cost reduction'],
+    useCases: [
+      'Demand planning, Inventory optimization, Risk management, Cost reduction',
+    ],
     roi: 'Reduce inventory costs by 25% and improve on-time delivery by 40%.',
     competitors: ['SAP SCM, Oracle SCM, Blue Yonder, Manhattan Associates'],
     marketSize: '$15B supply chain management market',
@@ -223,11 +254,12 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML models for demand forecasting, IoT integration for real-time tracking, and blockchain for transparency.',
+    implementationDetails:
+      'ML models for demand forecasting, IoT integration for real-time tracking, and blockchain for transparency.',
     launchDate: '2025-02-10',
     customers: 38,
     rating: 4.7,
-    reviews: 24
+    reviews: 24,
   },
   {
     id: 'quantum-machine-learning-platform',
@@ -235,7 +267,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'Accelerate ML training with quantum computing principles',
     price: '$1,599',
     period: '/month',
-    description: 'Advanced machine learning platform that leverages quantum computing principles to accelerate model training, optimization, and deployment.',
+    description:
+      'Advanced machine learning platform that leverages quantum computing principles to accelerate model training, optimization, and deployment.',
     features: [
       'Quantum-inspired optimization algorithms',
       'Distributed ML training and inference',
@@ -245,22 +278,28 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Multi-cloud ML orchestration',
       'Advanced model versioning and management',
       'Integration with popular ML frameworks',
-      'Enterprise-grade security and compliance'
+      'Enterprise-grade security and compliance',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-ml-platform',
-    marketPosition: 'Advanced alternative to Databricks, Dataiku; focuses on quantum-accelerated ML workflows.',
-    targetAudience: 'Data scientists, ML engineers, AI researchers, enterprise teams',
+    marketPosition:
+      'Advanced alternative to Databricks, Dataiku; focuses on quantum-accelerated ML workflows.',
+    targetAudience:
+      'Data scientists, ML engineers, AI researchers, enterprise teams',
     trialDays: 30,
     setupTime: '1 week',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['Quantum Computing Libraries, TensorFlow, PyTorch, Kubernetes, Python'],
+    technology: [
+      'Quantum Computing Libraries, TensorFlow, PyTorch, Kubernetes, Python',
+    ],
     integrations: ['AWS SageMaker, Azure ML, Google AI Platform, Databricks'],
-    useCases: ['Model training acceleration, Feature optimization, Automated ML, Model deployment'],
+    useCases: [
+      'Model training acceleration, Feature optimization, Automated ML, Model deployment',
+    ],
     roi: 'Reduce ML model training time by 50-80% and improve accuracy by 15-25%.',
     competitors: ['Databricks, Dataiku, H2O.ai, DataRobot'],
     marketSize: '$30B ML platforms market',
@@ -268,11 +307,12 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'quantum-ai-revolutionary',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-inspired optimization algorithms, distributed training frameworks, and automated ML pipelines.',
+    implementationDetails:
+      'Quantum-inspired optimization algorithms, distributed training frameworks, and automated ML pipelines.',
     launchDate: '2025-01-25',
     customers: 52,
     rating: 4.8,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'autonomous-iot-edge-platform',
@@ -280,7 +320,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'Self-managing edge computing for industrial IoT',
     price: '$649',
     period: '/month',
-    description: 'Intelligent edge computing platform that autonomously manages IoT devices, processes data locally, and provides real-time insights for industrial applications.',
+    description:
+      'Intelligent edge computing platform that autonomously manages IoT devices, processes data locally, and provides real-time insights for industrial applications.',
     features: [
       'Autonomous device management and provisioning',
       'Edge AI processing and inference',
@@ -290,34 +331,43 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Multi-protocol support (MQTT, CoAP, HTTP)',
       'Cloud-edge synchronization and backup',
       'Scalable edge computing infrastructure',
-      'Industrial-grade reliability and security'
+      'Industrial-grade reliability and security',
     ],
     popular: false,
     icon: '📡',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/autonomous-iot-edge-platform',
-    marketPosition: 'Advanced alternative to AWS IoT Greengrass, Azure IoT Edge; adds autonomous management and edge AI.',
-    targetAudience: 'IoT engineers, industrial automation teams, smart city planners',
+    marketPosition:
+      'Advanced alternative to AWS IoT Greengrass, Azure IoT Edge; adds autonomous management and edge AI.',
+    targetAudience:
+      'IoT engineers, industrial automation teams, smart city planners',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'IoT & Edge Computing',
     realService: true,
     technology: ['Edge Computing, AI/ML, IoT Protocols, Kubernetes, Docker'],
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'],
-    useCases: ['Industrial automation, Smart cities, Predictive maintenance, Real-time monitoring'],
+    integrations: [
+      'AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols',
+    ],
+    useCases: [
+      'Industrial automation, Smart cities, Predictive maintenance, Real-time monitoring',
+    ],
     roi: 'Reduce IoT management overhead by 60% and improve system reliability by 40%.',
-    competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Cloud IoT, Particle'],
+    competitors: [
+      'AWS IoT Greengrass, Azure IoT Edge, Google Cloud IoT, Particle',
+    ],
     marketSize: '$12B edge computing market',
     growthRate: '35% YoY',
     variant: 'edge-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Autonomous device management, edge AI processing, and industrial-grade security protocols.',
+    implementationDetails:
+      'Autonomous device management, edge AI processing, and industrial-grade security protocols.',
     launchDate: '2025-02-15',
     customers: 41,
     rating: 4.6,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'quantum-blockchain-enterprise',
@@ -325,7 +375,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'Quantum-resistant blockchain for enterprise applications',
     price: '$1,199',
     period: '/month',
-    description: 'Enterprise-grade blockchain platform with quantum-resistant cryptography, smart contract automation, and seamless integration with existing business systems.',
+    description:
+      'Enterprise-grade blockchain platform with quantum-resistant cryptography, smart contract automation, and seamless integration with existing business systems.',
     features: [
       'Quantum-resistant cryptographic algorithms',
       'Smart contract development and deployment',
@@ -335,22 +386,30 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'High-performance consensus mechanisms',
       'Integration with ERP and CRM systems',
       'Tokenization and asset management',
-      'Advanced analytics and reporting'
+      'Advanced analytics and reporting',
     ],
     popular: true,
     icon: '⛓️',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-blockchain-enterprise',
-    marketPosition: 'Advanced alternative to Hyperledger, Ethereum Enterprise; focuses on quantum resistance and enterprise integration.',
-    targetAudience: 'Blockchain developers, enterprise architects, compliance officers',
+    marketPosition:
+      'Advanced alternative to Hyperledger, Ethereum Enterprise; focuses on quantum resistance and enterprise integration.',
+    targetAudience:
+      'Blockchain developers, enterprise architects, compliance officers',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Blockchain, Post-quantum cryptography, Smart contracts, Web3'],
-    integrations: ['Ethereum, Hyperledger, SAP, Salesforce, Microsoft Dynamics'],
-    useCases: ['Supply chain transparency, Digital identity, Asset tokenization, Compliance automation'],
+    technology: [
+      'Blockchain, Post-quantum cryptography, Smart contracts, Web3',
+    ],
+    integrations: [
+      'Ethereum, Hyperledger, SAP, Salesforce, Microsoft Dynamics',
+    ],
+    useCases: [
+      'Supply chain transparency, Digital identity, Asset tokenization, Compliance automation',
+    ],
     roi: 'Reduce transaction costs by 40% and improve transparency by 100%.',
     competitors: ['Hyperledger, Ethereum Enterprise, R3 Corda, ConsenSys'],
     marketSize: '$20B enterprise blockchain market',
@@ -358,11 +417,12 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'blockchain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-resistant cryptographic implementations, smart contract frameworks, and enterprise integration APIs.',
+    implementationDetails:
+      'Quantum-resistant cryptographic implementations, smart contract frameworks, and enterprise integration APIs.',
     launchDate: '2025-01-30',
     customers: 35,
     rating: 4.7,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'ai-powered-hr-intelligence-suite',
@@ -370,7 +430,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'Intelligent human resources management and analytics',
     price: '$599',
     period: '/month',
-    description: 'Comprehensive HR platform that uses AI to automate recruitment, employee engagement, performance management, and workforce analytics.',
+    description:
+      'Comprehensive HR platform that uses AI to automate recruitment, employee engagement, performance management, and workforce analytics.',
     features: [
       'AI-powered candidate screening and matching',
       'Employee engagement and sentiment analysis',
@@ -380,22 +441,28 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Diversity and inclusion analytics',
       'Compensation benchmarking and optimization',
       'Compliance and policy management',
-      'Integration with payroll and benefits systems'
+      'Integration with payroll and benefits systems',
     ],
     popular: false,
     icon: '👥',
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-hr-intelligence-suite',
-    marketPosition: 'Advanced alternative to Workday, BambooHR; adds AI-driven insights and automation.',
-    targetAudience: 'HR professionals, talent acquisition teams, people operations',
+    marketPosition:
+      'Advanced alternative to Workday, BambooHR; adds AI-driven insights and automation.',
+    targetAudience:
+      'HR professionals, talent acquisition teams, people operations',
     trialDays: 21,
     setupTime: '1 week',
     category: 'HR & People Operations',
     realService: true,
-    technology: ['AI/ML, Natural Language Processing, Analytics, Cloud Computing'],
+    technology: [
+      'AI/ML, Natural Language Processing, Analytics, Cloud Computing',
+    ],
     integrations: ['Workday, BambooHR, ADP, Paychex, Slack, Microsoft Teams'],
-    useCases: ['Recruitment automation, Employee engagement, Performance management, Workforce analytics'],
+    useCases: [
+      'Recruitment automation, Employee engagement, Performance management, Workforce analytics',
+    ],
     roi: 'Reduce time-to-hire by 40% and improve employee retention by 25%.',
     competitors: ['Workday, BambooHR, Greenhouse, Lever'],
     marketSize: '$25B HR software market',
@@ -403,11 +470,12 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'hr-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI models for candidate matching, sentiment analysis, and predictive analytics for HR processes.',
+    implementationDetails:
+      'AI models for candidate matching, sentiment analysis, and predictive analytics for HR processes.',
     launchDate: '2025-02-20',
     customers: 48,
     rating: 4.6,
-    reviews: 26
+    reviews: 26,
   },
   {
     id: 'quantum-financial-modeling-platform',
@@ -415,7 +483,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'Advanced financial modeling with quantum computing optimization',
     price: '$1,899',
     period: '/month',
-    description: 'Sophisticated financial modeling platform that leverages quantum computing principles for portfolio optimization, risk assessment, and financial forecasting.',
+    description:
+      'Sophisticated financial modeling platform that leverages quantum computing principles for portfolio optimization, risk assessment, and financial forecasting.',
     features: [
       'Quantum-optimized portfolio construction',
       'Advanced risk modeling and stress testing',
@@ -425,22 +494,30 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Regulatory compliance and reporting',
       'API integration with financial data providers',
       'Custom model development and deployment',
-      'Collaborative modeling and version control'
+      'Collaborative modeling and version control',
     ],
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-modeling',
-    marketPosition: 'Advanced alternative to Bloomberg Terminal, FactSet; focuses on quantum-optimized financial modeling.',
-    targetAudience: 'Financial analysts, portfolio managers, risk managers, investment banks',
+    marketPosition:
+      'Advanced alternative to Bloomberg Terminal, FactSet; focuses on quantum-optimized financial modeling.',
+    targetAudience:
+      'Financial analysts, portfolio managers, risk managers, investment banks',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Finance & Investment',
     realService: true,
-    technology: ['Quantum Computing, Financial Modeling, Python, R, Cloud Computing'],
-    integrations: ['Bloomberg, FactSet, Refinitiv, S&P Global, Financial data APIs'],
-    useCases: ['Portfolio optimization, Risk management, Financial forecasting, Investment analysis'],
+    technology: [
+      'Quantum Computing, Financial Modeling, Python, R, Cloud Computing',
+    ],
+    integrations: [
+      'Bloomberg, FactSet, Refinitiv, S&P Global, Financial data APIs',
+    ],
+    useCases: [
+      'Portfolio optimization, Risk management, Financial forecasting, Investment analysis',
+    ],
     roi: 'Improve portfolio performance by 20-35% and reduce risk by 25-40%.',
     competitors: ['Bloomberg Terminal, FactSet, Refinitiv, S&P Global'],
     marketSize: '$35B financial data and analytics market',
@@ -448,11 +525,12 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'quantum-financial',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-inspired optimization algorithms, advanced financial models, and real-time data processing.',
+    implementationDetails:
+      'Quantum-inspired optimization algorithms, advanced financial models, and real-time data processing.',
     launchDate: '2025-02-25',
     customers: 31,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'autonomous-customer-success-platform',
@@ -460,7 +538,8 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     tagline: 'AI-driven customer success automation and optimization',
     price: '$449',
     period: '/month',
-    description: 'Intelligent customer success platform that automatically identifies at-risk customers, personalizes engagement, and drives product adoption and retention.',
+    description:
+      'Intelligent customer success platform that automatically identifies at-risk customers, personalizes engagement, and drives product adoption and retention.',
     features: [
       'AI-powered customer health scoring',
       'Automated engagement and outreach campaigns',
@@ -470,22 +549,26 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
       'Customer feedback and sentiment analysis',
       'Success metric tracking and reporting',
       'Integration with CRM and support systems',
-      'Automated renewal and expansion workflows'
+      'Automated renewal and expansion workflows',
     ],
     popular: false,
     icon: '🎯',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/autonomous-customer-success',
-    marketPosition: 'Advanced alternative to Gainsight, Totango; adds AI-driven automation and predictive insights.',
-    targetAudience: 'Customer success managers, account managers, product teams',
+    marketPosition:
+      'Advanced alternative to Gainsight, Totango; adds AI-driven automation and predictive insights.',
+    targetAudience:
+      'Customer success managers, account managers, product teams',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Customer Success',
     realService: true,
     technology: ['AI/ML, Analytics, Automation, CRM Integration'],
     integrations: ['Salesforce, HubSpot, Zendesk, Intercom, Slack'],
-    useCases: ['Customer health monitoring, Churn prevention, Product adoption, Revenue expansion'],
+    useCases: [
+      'Customer health monitoring, Churn prevention, Product adoption, Revenue expansion',
+    ],
     roi: 'Increase customer retention by 30% and reduce churn by 50%.',
     competitors: ['Gainsight, Totango, ClientSuccess, ChurnZero'],
     marketSize: '$8B customer success software market',
@@ -493,10 +576,11 @@ export const advancedEnterpriseSolutions: AdvancedEnterpriseService[] = [
     variant: 'customer-service-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI models for customer health scoring, automated engagement workflows, and predictive analytics.',
+    implementationDetails:
+      'AI models for customer health scoring, automated engagement workflows, and predictive analytics.',
     launchDate: '2025-03-01',
     customers: 56,
     rating: 4.7,
-    reviews: 33
-  }
+    reviews: 33,
+  },
 ];

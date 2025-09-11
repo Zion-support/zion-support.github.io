@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2036ITServicesAdditions: Real2036ITService[] = [
   {
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
-    tagline: 'Next-generation cloud infrastructure powered by quantum computing',
+    tagline:
+      'Next-generation cloud infrastructure powered by quantum computing',
     price: '$4,999',
     period: '/month',
-    description: 'Revolutionary cloud infrastructure platform that leverages quantum computing to provide unprecedented performance, security, and scalability for enterprise applications.',
+    description:
+      'Revolutionary cloud infrastructure platform that leverages quantum computing to provide unprecedented performance, security, and scalability for enterprise applications.',
     features: [
       'Quantum-enhanced computing resources',
       'Advanced quantum cryptography and security',
@@ -65,7 +67,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
       'Automated disaster recovery',
       'Compliance and governance tools',
       '24/7 expert support',
-      'Custom infrastructure design'
+      'Custom infrastructure design',
     ],
     popular: true,
     icon: '⚛️☁️',
@@ -80,7 +82,9 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     realService: true,
     technology: ['Quantum computing, Kubernetes, Docker, Terraform, AWS/Azure'],
     integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker'],
-    useCases: ['High-performance computing, secure applications, scalable infrastructure'],
+    useCases: [
+      'High-performance computing, secure applications, scalable infrastructure',
+    ],
     roi: 'Improve performance by 10-100x and reduce infrastructure costs by 40%',
     competitors: ['AWS, Azure, Google Cloud, IBM Cloud'],
     marketSize: '$500B+ cloud infrastructure market',
@@ -92,7 +96,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     launchDate: '2026-01-10',
     customers: 23,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'ai-powered-devops-automation',
@@ -100,7 +104,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     tagline: 'Intelligent DevOps automation with AI-driven insights',
     price: '$2,199',
     period: '/month',
-    description: 'Advanced DevOps automation platform that uses artificial intelligence to streamline development workflows, automate deployments, and optimize infrastructure management.',
+    description:
+      'Advanced DevOps automation platform that uses artificial intelligence to streamline development workflows, automate deployments, and optimize infrastructure management.',
     features: [
       'AI-powered CI/CD pipeline optimization',
       'Intelligent infrastructure provisioning',
@@ -110,7 +115,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
       'Advanced security scanning and compliance',
       'Multi-environment management',
       'Integration with existing tools',
-      'Custom automation workflows'
+      'Custom automation workflows',
     ],
     popular: false,
     icon: '🤖⚙️',
@@ -137,7 +142,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     launchDate: '2026-01-18',
     customers: 67,
     rating: 4.8,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'quantum-network-security',
@@ -145,7 +150,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     tagline: 'Unbreakable security with quantum cryptography',
     price: '$3,599',
     period: '/month',
-    description: 'Revolutionary network security platform that uses quantum cryptography and advanced AI to provide unprecedented protection against cyber threats and attacks.',
+    description:
+      'Revolutionary network security platform that uses quantum cryptography and advanced AI to provide unprecedented protection against cyber threats and attacks.',
     features: [
       'Quantum key distribution (QKD)',
       'Advanced threat detection and prevention',
@@ -155,7 +161,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
       'Compliance and audit tools',
       '24/7 security monitoring',
       'Incident response and recovery',
-      'Custom security policies'
+      'Custom security policies',
     ],
     popular: true,
     icon: '⚛️🔒',
@@ -163,7 +169,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-network-security',
     marketPosition: 'First quantum-enhanced network security platform',
-    targetAudience: 'Cybersecurity teams, network administrators, IT security professionals',
+    targetAudience:
+      'Cybersecurity teams, network administrators, IT security professionals',
     trialDays: 30,
     setupTime: '1 month',
     category: 'Quantum Security',
@@ -182,7 +189,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     launchDate: '2026-01-12',
     customers: 41,
     rating: 4.9,
-    reviews: 31
+    reviews: 31,
   },
   {
     id: 'ai-powered-data-management',
@@ -190,7 +197,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     tagline: 'Intelligent data management with AI automation',
     price: '$1,899',
     period: '/month',
-    description: 'Advanced data management platform that uses artificial intelligence to automate data governance, quality management, and lifecycle management across enterprise data assets.',
+    description:
+      'Advanced data management platform that uses artificial intelligence to automate data governance, quality management, and lifecycle management across enterprise data assets.',
     features: [
       'AI-powered data quality assessment',
       'Automated data governance and compliance',
@@ -200,7 +208,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
       'Multi-source data integration',
       'Custom data workflows',
       'API for data operations',
-      'Advanced analytics and reporting'
+      'Advanced analytics and reporting',
     ],
     popular: false,
     icon: '🤖📊',
@@ -227,7 +235,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     launchDate: '2026-01-25',
     customers: 83,
     rating: 4.7,
-    reviews: 64
+    reviews: 64,
   },
   {
     id: 'quantum-edge-computing',
@@ -235,7 +243,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     tagline: 'Quantum computing at the edge of the network',
     price: '$2,999',
     period: '/month',
-    description: 'Revolutionary edge computing platform that brings quantum computing capabilities to edge devices, enabling real-time processing and analysis at the network edge.',
+    description:
+      'Revolutionary edge computing platform that brings quantum computing capabilities to edge devices, enabling real-time processing and analysis at the network edge.',
     features: [
       'Quantum-enhanced edge processing',
       'Real-time data analysis and insights',
@@ -245,7 +254,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
       'Advanced monitoring and analytics',
       'Custom edge applications',
       'Integration with existing edge infrastructure',
-      '24/7 technical support'
+      '24/7 technical support',
     ],
     popular: true,
     icon: '⚛️🌐',
@@ -253,7 +262,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-edge-computing',
     marketPosition: 'First quantum-enhanced edge computing platform',
-    targetAudience: 'Edge computing engineers, IoT developers, network architects',
+    targetAudience:
+      'Edge computing engineers, IoT developers, network architects',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum Edge',
@@ -272,7 +282,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     launchDate: '2026-01-20',
     customers: 37,
     rating: 4.8,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'ai-powered-api-management',
@@ -280,7 +290,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     tagline: 'Intelligent API management with AI automation',
     price: '$1,599',
     period: '/month',
-    description: 'Advanced API management platform that uses artificial intelligence to automate API design, testing, monitoring, and optimization, enabling seamless integration and management.',
+    description:
+      'Advanced API management platform that uses artificial intelligence to automate API design, testing, monitoring, and optimization, enabling seamless integration and management.',
     features: [
       'AI-powered API design and optimization',
       'Automated API testing and validation',
@@ -290,7 +301,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
       'API versioning and lifecycle management',
       'Developer portal and documentation',
       'Integration with existing systems',
-      'Custom API workflows'
+      'Custom API workflows',
     ],
     popular: false,
     icon: '🤖🔌',
@@ -317,7 +328,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     launchDate: '2026-01-28',
     customers: 71,
     rating: 4.8,
-    reviews: 55
+    reviews: 55,
   },
   {
     id: 'quantum-blockchain-platform',
@@ -325,7 +336,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     tagline: 'Quantum-secured blockchain for the future',
     price: '$3,299',
     period: '/month',
-    description: 'Revolutionary blockchain platform that combines quantum computing with blockchain technology to provide unprecedented security, scalability, and performance for decentralized applications.',
+    description:
+      'Revolutionary blockchain platform that combines quantum computing with blockchain technology to provide unprecedented security, scalability, and performance for decentralized applications.',
     features: [
       'Quantum-enhanced consensus mechanisms',
       'Advanced quantum cryptography',
@@ -335,7 +347,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
       'Advanced security and privacy',
       'Multi-chain interoperability',
       'Developer tools and SDKs',
-      'Enterprise-grade infrastructure'
+      'Enterprise-grade infrastructure',
     ],
     popular: true,
     icon: '⚛️⛓️',
@@ -343,7 +355,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/quantum-blockchain',
     marketPosition: 'First quantum-enhanced blockchain platform',
-    targetAudience: 'Blockchain developers, DeFi teams, enterprise blockchain teams',
+    targetAudience:
+      'Blockchain developers, DeFi teams, enterprise blockchain teams',
     trialDays: 30,
     setupTime: '1 month',
     category: 'Quantum Blockchain',
@@ -362,7 +375,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     launchDate: '2026-01-15',
     customers: 29,
     rating: 4.9,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'ai-powered-enterprise-integration',
@@ -370,7 +383,8 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     tagline: 'Intelligent enterprise integration with AI automation',
     price: '$2,499',
     period: '/month',
-    description: 'Advanced enterprise integration platform that uses artificial intelligence to automate data integration, workflow orchestration, and system connectivity across complex enterprise environments.',
+    description:
+      'Advanced enterprise integration platform that uses artificial intelligence to automate data integration, workflow orchestration, and system connectivity across complex enterprise environments.',
     features: [
       'AI-powered data mapping and transformation',
       'Intelligent workflow orchestration',
@@ -380,7 +394,7 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
       'Custom integration workflows',
       'Advanced monitoring and analytics',
       'Compliance and governance tools',
-      '24/7 technical support'
+      '24/7 technical support',
     ],
     popular: false,
     icon: '🤖🔗',
@@ -403,10 +417,11 @@ export const real2036ITServicesAdditions: Real2036ITService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native enterprise integration platform with AI/ML',
+    implementationDetails:
+      'Cloud-native enterprise integration platform with AI/ML',
     launchDate: '2026-01-22',
     customers: 58,
     rating: 4.7,
-    reviews: 44
-  }
+    reviews: 44,
+  },
 ];

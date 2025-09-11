@@ -19,11 +19,14 @@ export const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Only run in production and if PerformanceObserver is available
-    if (process.env.NODE_ENV !== 'production' || !('PerformanceObserver' in window)) {
+    if (
+      process.env.NODE_ENV !== 'production' ||
+      !('PerformanceObserver' in window)
+    ) {
       return;
     }
 
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         switch (entry.entryType) {
           case 'paint':
@@ -36,16 +39,26 @@ export const PerformanceMonitor: React.FC = () => {
             break;
           case 'first-input':
             const fidEntry = entry as any;
-            setMetrics(prev => ({ ...prev, fid: (fidEntry.processingStart || 0) - entry.startTime }));
+            setMetrics(prev => ({
+              ...prev,
+              fid: (fidEntry.processingStart || 0) - entry.startTime,
+            }));
             break;
           case 'layout-shift':
             if (!(entry as any).hadRecentInput) {
-              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+              setMetrics(prev => ({
+                ...prev,
+                cls: (prev.cls || 0) + (entry as any).value,
+              }));
             }
             break;
           case 'navigation':
             const navEntry = entry as any;
-            setMetrics(prev => ({ ...prev, ttfb: (navEntry.responseStart || 0) - (navEntry.requestStart || 0) }));
+            setMetrics(prev => ({
+              ...prev,
+              ttfb:
+                (navEntry.responseStart || 0) - (navEntry.requestStart || 0),
+            }));
             break;
         }
       }
@@ -53,7 +66,15 @@ export const PerformanceMonitor: React.FC = () => {
 
     // Observe different types of performance entries
     try {
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
+      observer.observe({
+        entryTypes: [
+          'paint',
+          'largest-contentful-paint',
+          'first-input',
+          'layout-shift',
+          'navigation',
+        ],
+      });
     } catch (e) {
       // Fallback for browsers that don't support all entry types
       observer.observe({ entryTypes: ['paint', 'navigation'] });
@@ -64,14 +85,20 @@ export const PerformanceMonitor: React.FC = () => {
 
   // Log metrics to console in development
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(v => v !== null)) {
+    if (
+      process.env.NODE_ENV === 'development' &&
+      Object.values(metrics).some(v => v !== null)
+    ) {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
 
   // Send metrics to analytics in production
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production' && Object.values(metrics).every(v => v !== null)) {
+    if (
+      process.env.NODE_ENV === 'production' &&
+      Object.values(metrics).every(v => v !== null)
+    ) {
       // Send to analytics service
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'web_vitals', {
@@ -84,7 +111,7 @@ export const PerformanceMonitor: React.FC = () => {
             fid: metrics.fid,
             cls: metrics.cls,
             ttfb: metrics.ttfb,
-          }
+          },
         });
       }
     }

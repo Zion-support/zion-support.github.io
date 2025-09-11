@@ -45,7 +45,5 @@
       "critical": false
     }
   ],
-  "recommendations": [
-    "Verify all required environment variables are set"
-  ]
+  "recommendations": ["Verify all required environment variables are set"]
 }

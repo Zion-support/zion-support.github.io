@@ -3,8 +3,6 @@
   "@type": "Organization",
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
-  "sameAs": [
-    "https://github.com/Zion-Holdings"
-  ],
+  "sameAs": ["https://github.com/Zion-Holdings"],
   "logo": "https://ziontechgroup.com/favicon.ico"
 }

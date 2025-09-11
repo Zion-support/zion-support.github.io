@@ -41,13 +41,16 @@ module.exports = {
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { 
-      presets: [
-        ['@babel/preset-env', { targets: { node: 'current' } }],
-        ['@babel/preset-react', { runtime: 'automatic' }],
-        '@babel/preset-typescript'
-      ]
-    }],
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        presets: [
+          ['@babel/preset-env', { targets: { node: 'current' } }],
+          ['@babel/preset-react', { runtime: 'automatic' }],
+          '@babel/preset-typescript',
+        ],
+      },
+    ],
   },
   transformIgnorePatterns: [
     '/node_modules/(?!(.*\\.mjs$|@testing-library|@jest))',

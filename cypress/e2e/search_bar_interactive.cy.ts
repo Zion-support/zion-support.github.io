@@ -11,7 +11,8 @@ describe('Search Bar Interaction', () => {
   // Based on PrimaryNav.tsx, the form around EnhancedSearchInput can be a good target
   // Or the input itself if it has a consistent placeholder or data-testid.
   // Let's assume the input placeholder is "Search..."
-  const searchInputSelector = 'header[data-testid="header"] input[placeholder="Search..."]';
+  const searchInputSelector =
+    'header[data-testid="header"] input[placeholder="Search..."]';
 
   pagesToTest.forEach(page => {
     it(`should be interactive on the ${page.name}`, () => {
@@ -53,6 +54,9 @@ describe('Search Bar Interaction', () => {
     // Check for the appearance of the suggestions dropdown
     // This selector might need adjustment based on AutocompleteSuggestions.tsx
     cy.get('div[role="listbox"][aria-expanded="true"]').should('be.visible');
-    cy.get('div[role="listbox"] div[role="option"]').should('have.length.greaterThan', 0);
+    cy.get('div[role="listbox"] div[role="option"]').should(
+      'have.length.greaterThan',
+      0
+    );
   });
 });

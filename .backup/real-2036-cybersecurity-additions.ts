@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
@@ -55,7 +55,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Future-proof cryptography against quantum threats',
     price: '$2,499',
     period: '/month',
-    description: 'Comprehensive cryptography suite that implements post-quantum cryptographic algorithms to protect data and communications against future quantum computing threats.',
+    description:
+      'Comprehensive cryptography suite that implements post-quantum cryptographic algorithms to protect data and communications against future quantum computing threats.',
     features: [
       'Post-quantum cryptographic algorithms',
       'Hybrid encryption systems',
@@ -65,22 +66,30 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Compliance with NIST standards',
       'API for integration',
       'Migration tools and guidance',
-      '24/7 security monitoring'
+      '24/7 security monitoring',
     ],
     popular: true,
     icon: '🔐⚛️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-resistant-cryptography-suite',
-    marketPosition: 'Leading post-quantum cryptography platform for enterprises',
-    targetAudience: 'Financial institutions, government agencies, healthcare, enterprises',
+    marketPosition:
+      'Leading post-quantum cryptography platform for enterprises',
+    targetAudience:
+      'Financial institutions, government agencies, healthcare, enterprises',
     trialDays: 60,
     setupTime: '4 weeks',
     category: 'Cybersecurity & Quantum',
     realService: true,
-    technology: ['Post-quantum algorithms, Hybrid cryptography, Key management'],
+    technology: [
+      'Post-quantum algorithms, Hybrid cryptography, Key management',
+    ],
     integrations: ['PKI systems, VPNs, secure messaging, cloud platforms'],
-    useCases: ['Data protection', 'secure communications', 'compliance requirements'],
+    useCases: [
+      'Data protection',
+      'secure communications',
+      'compliance requirements',
+    ],
     roi: 'Future-proof security and maintain compliance with emerging standards',
     competitors: ['Entrust, DigiCert, Sectigo'],
     marketSize: '$18B+ cryptography market by 2030',
@@ -92,7 +101,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     launchDate: '2026-03-20',
     customers: 67,
     rating: 4.8,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'ai-powered-threat-hunting-platform',
@@ -100,7 +109,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Hunt threats with AI-powered intelligence',
     price: '$1,899',
     period: '/month',
-    description: 'Advanced threat hunting platform that uses AI and machine learning to proactively detect, analyze, and respond to sophisticated cyber threats before they cause damage.',
+    description:
+      'Advanced threat hunting platform that uses AI and machine learning to proactively detect, analyze, and respond to sophisticated cyber threats before they cause damage.',
     features: [
       'AI-powered threat detection',
       'Behavioral analysis engine',
@@ -110,7 +120,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Threat hunting playbooks',
       'Incident response automation',
       'Performance analytics dashboard',
-      'Integration with SIEM systems'
+      'Integration with SIEM systems',
     ],
     popular: true,
     icon: '🔍🤖',
@@ -118,12 +128,15 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-threat-hunting-platform',
     marketPosition: 'Leading AI-powered threat hunting platform',
-    targetAudience: 'Security operations centers, MSSPs, enterprises, government',
+    targetAudience:
+      'Security operations centers, MSSPs, enterprises, government',
     trialDays: 45,
     setupTime: '3 weeks',
     category: 'Threat Detection & AI',
     realService: true,
-    technology: ['AI/ML, Behavioral analytics, Threat intelligence, Automation'],
+    technology: [
+      'AI/ML, Behavioral analytics, Threat intelligence, Automation',
+    ],
     integrations: ['SIEM, EDR, firewall, network monitoring tools'],
     useCases: ['Threat hunting', 'incident response', 'security monitoring'],
     roi: 'Reduce threat detection time by 60% and improve response efficiency by 40%',
@@ -137,7 +150,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     launchDate: '2026-05-15',
     customers: 89,
     rating: 4.7,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'quantum-enhanced-zero-trust-security',
@@ -145,7 +158,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Zero trust security powered by quantum computing',
     price: '$3,299',
     period: '/month',
-    description: 'Next-generation zero trust security platform that leverages quantum computing to provide ultra-secure identity verification, access control, and continuous monitoring.',
+    description:
+      'Next-generation zero trust security platform that leverages quantum computing to provide ultra-secure identity verification, access control, and continuous monitoring.',
     features: [
       'Quantum-enhanced identity verification',
       'Zero trust access control',
@@ -155,7 +169,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Privileged access management',
       'Compliance and audit tools',
       'API for integration',
-      'Real-time security analytics'
+      'Real-time security analytics',
     ],
     popular: true,
     icon: '🛡️⚛️',
@@ -168,9 +182,15 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     setupTime: '5 weeks',
     category: 'Zero Trust & Quantum',
     realService: true,
-    technology: ['Quantum algorithms, Zero trust architecture, Identity management'],
+    technology: [
+      'Quantum algorithms, Zero trust architecture, Identity management',
+    ],
     integrations: ['Active Directory, LDAP, SSO, cloud identity platforms'],
-    useCases: ['Identity verification', 'access control', 'security compliance'],
+    useCases: [
+      'Identity verification',
+      'access control',
+      'security compliance',
+    ],
     roi: 'Eliminate security breaches and maintain compliance with zero trust principles',
     competitors: ['Okta, Ping Identity, ForgeRock'],
     marketSize: '$30B+ zero trust market by 2030',
@@ -182,7 +202,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     launchDate: '2026-07-10',
     customers: 45,
     rating: 4.9,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'ai-powered-vulnerability-management-suite',
@@ -190,7 +210,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Manage vulnerabilities with AI intelligence',
     price: '$1,299',
     period: '/month',
-    description: 'Comprehensive vulnerability management platform that uses AI to scan, assess, prioritize, and remediate security vulnerabilities across enterprise infrastructure.',
+    description:
+      'Comprehensive vulnerability management platform that uses AI to scan, assess, prioritize, and remediate security vulnerabilities across enterprise infrastructure.',
     features: [
       'AI-powered vulnerability scanning',
       'Risk assessment and prioritization',
@@ -200,7 +221,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Integration with security tools',
       'Performance analytics',
       'Custom scanning policies',
-      'API for automation'
+      'API for automation',
     ],
     popular: true,
     icon: '🔒🤖',
@@ -215,7 +236,11 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     realService: true,
     technology: ['AI/ML, Vulnerability scanning, Risk assessment, Automation'],
     integrations: ['SIEM, EDR, patch management, ticketing systems'],
-    useCases: ['Vulnerability assessment', 'risk management', 'compliance reporting'],
+    useCases: [
+      'Vulnerability assessment',
+      'risk management',
+      'compliance reporting',
+    ],
     roi: 'Reduce vulnerability remediation time by 50% and improve security posture',
     competitors: ['Qualys, Rapid7, Tenable'],
     marketSize: '$20B+ vulnerability management market by 2030',
@@ -223,11 +248,12 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     variant: 'cybersecurity-ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered vulnerability management and remediation platform',
+    implementationDetails:
+      'AI-powered vulnerability management and remediation platform',
     launchDate: '2026-04-25',
     customers: 134,
     rating: 4.6,
-    reviews: 98
+    reviews: 98,
   },
   {
     id: 'quantum-secure-blockchain-platform',
@@ -235,7 +261,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Blockchain security with quantum resistance',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced blockchain platform that implements quantum-resistant cryptographic algorithms to ensure long-term security for digital assets and smart contracts.',
+    description:
+      'Advanced blockchain platform that implements quantum-resistant cryptographic algorithms to ensure long-term security for digital assets and smart contracts.',
     features: [
       'Quantum-resistant blockchain consensus',
       'Post-quantum smart contracts',
@@ -245,22 +272,30 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Regulatory compliance tools',
       'Performance optimization',
       'Developer SDK and APIs',
-      'Enterprise integration tools'
+      'Enterprise integration tools',
     ],
     popular: true,
     icon: '⛓️⚛️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-secure-blockchain-platform',
-    marketPosition: 'First quantum-resistant blockchain platform for enterprises',
-    targetAudience: 'Financial institutions, DeFi platforms, enterprise blockchain',
+    marketPosition:
+      'First quantum-resistant blockchain platform for enterprises',
+    targetAudience:
+      'Financial institutions, DeFi platforms, enterprise blockchain',
     trialDays: 60,
     setupTime: '4 weeks',
     category: 'Blockchain & Quantum',
     realService: true,
-    technology: ['Post-quantum cryptography, Blockchain, Smart contracts, DeFi'],
+    technology: [
+      'Post-quantum cryptography, Blockchain, Smart contracts, DeFi',
+    ],
     integrations: ['Ethereum, Polygon, Solana, enterprise blockchain networks'],
-    useCases: ['Secure DeFi', 'enterprise blockchain', 'digital asset protection'],
+    useCases: [
+      'Secure DeFi',
+      'enterprise blockchain',
+      'digital asset protection',
+    ],
     roi: 'Future-proof blockchain security and maintain regulatory compliance',
     competitors: ['Ethereum, Polygon, Solana'],
     marketSize: '$35B+ blockchain market by 2030',
@@ -268,11 +303,12 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     variant: 'blockchain-quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-resistant blockchain infrastructure platform',
+    implementationDetails:
+      'Quantum-resistant blockchain infrastructure platform',
     launchDate: '2026-08-15',
     customers: 78,
     rating: 4.8,
-    reviews: 62
+    reviews: 62,
   },
   {
     id: 'ai-powered-incident-response-automation',
@@ -280,7 +316,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Automate incident response with AI intelligence',
     price: '$1,599',
     period: '/month',
-    description: 'Comprehensive incident response automation platform that uses AI to detect, analyze, and respond to security incidents in real-time, reducing response time and minimizing damage.',
+    description:
+      'Comprehensive incident response automation platform that uses AI to detect, analyze, and respond to security incidents in real-time, reducing response time and minimizing damage.',
     features: [
       'AI-powered incident detection',
       'Automated response workflows',
@@ -290,7 +327,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Performance metrics tracking',
       'Integration with security tools',
       'Custom automation rules',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     popular: true,
     icon: '🚨🤖',
@@ -303,9 +340,17 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     setupTime: '3 weeks',
     category: 'Incident Response & AI',
     realService: true,
-    technology: ['AI/ML, Automation, Workflow orchestration, Security analytics'],
-    integrations: ['SIEM, EDR, firewall, ticketing systems, communication platforms'],
-    useCases: ['Incident response automation', 'security orchestration', 'compliance'],
+    technology: [
+      'AI/ML, Automation, Workflow orchestration, Security analytics',
+    ],
+    integrations: [
+      'SIEM, EDR, firewall, ticketing systems, communication platforms',
+    ],
+    useCases: [
+      'Incident response automation',
+      'security orchestration',
+      'compliance',
+    ],
     roi: 'Reduce incident response time by 70% and minimize security damage',
     competitors: ['Demisto, Phantom, Swimlane'],
     marketSize: '$15B+ security orchestration market by 2030',
@@ -317,7 +362,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     launchDate: '2026-06-20',
     customers: 67,
     rating: 4.7,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'quantum-enhanced-penetration-testing',
@@ -325,7 +370,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Penetration testing with quantum computing power',
     price: '$3,999',
     period: '/month',
-    description: 'Advanced penetration testing platform that leverages quantum computing to identify security vulnerabilities, test quantum-resistant defenses, and provide comprehensive security assessments.',
+    description:
+      'Advanced penetration testing platform that leverages quantum computing to identify security vulnerabilities, test quantum-resistant defenses, and provide comprehensive security assessments.',
     features: [
       'Quantum-enhanced vulnerability scanning',
       'Quantum-resistant security testing',
@@ -335,7 +381,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Remediation guidance',
       'Compliance validation',
       'API for integration',
-      'Continuous security testing'
+      'Continuous security testing',
     ],
     popular: true,
     icon: '🔓⚛️',
@@ -348,9 +394,15 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     setupTime: '6 weeks',
     category: 'Penetration Testing & Quantum',
     realService: true,
-    technology: ['Quantum algorithms, Security testing, Vulnerability assessment'],
+    technology: [
+      'Quantum algorithms, Security testing, Vulnerability assessment',
+    ],
     integrations: ['Security tools, reporting platforms, compliance systems'],
-    useCases: ['Security assessment', 'compliance testing', 'vulnerability discovery'],
+    useCases: [
+      'Security assessment',
+      'compliance testing',
+      'vulnerability discovery',
+    ],
     roi: 'Comprehensive security testing and future-proof vulnerability assessment',
     competitors: ['Core Security, Rapid7, Metasploit'],
     marketSize: '$12B+ penetration testing market by 2030',
@@ -358,11 +410,12 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     variant: 'cybersecurity-quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-enhanced penetration testing and security assessment platform',
+    implementationDetails:
+      'Quantum-enhanced penetration testing and security assessment platform',
     launchDate: '2026-09-25',
     customers: 34,
     rating: 4.9,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'ai-powered-security-awareness-training',
@@ -370,7 +423,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Train employees with AI-powered security education',
     price: '$799',
     period: '/month',
-    description: 'Comprehensive security awareness training platform that uses AI to personalize training content, assess employee knowledge, and improve organizational security culture.',
+    description:
+      'Comprehensive security awareness training platform that uses AI to personalize training content, assess employee knowledge, and improve organizational security culture.',
     features: [
       'AI-powered content personalization',
       'Interactive training modules',
@@ -380,7 +434,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Compliance reporting',
       'Multi-language support',
       'Mobile learning platform',
-      'Integration with HR systems'
+      'Integration with HR systems',
     ],
     popular: true,
     icon: '🎓🤖',
@@ -388,14 +442,21 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-powered-security-awareness-training',
     marketPosition: 'Leading AI-powered security awareness training platform',
-    targetAudience: 'Enterprises, government agencies, educational institutions',
+    targetAudience:
+      'Enterprises, government agencies, educational institutions',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Security Training & AI',
     realService: true,
-    technology: ['AI/ML, Learning management, Content personalization, Analytics'],
+    technology: [
+      'AI/ML, Learning management, Content personalization, Analytics',
+    ],
     integrations: ['HR systems, SSO, learning platforms, communication tools'],
-    useCases: ['Employee training', 'compliance education', 'security culture building'],
+    useCases: [
+      'Employee training',
+      'compliance education',
+      'security culture building',
+    ],
     roi: 'Reduce security incidents by 40% and improve compliance scores by 35%',
     competitors: ['KnowBe4, SANS, Security Awareness Company'],
     marketSize: '$8B+ security training market by 2030',
@@ -407,7 +468,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     launchDate: '2026-02-15',
     customers: 234,
     rating: 4.6,
-    reviews: 189
+    reviews: 189,
   },
   {
     id: 'quantum-enhanced-cloud-security-platform',
@@ -415,7 +476,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Cloud security with quantum computing protection',
     price: '$2,799',
     period: '/month',
-    description: 'Advanced cloud security platform that implements quantum-resistant security measures to protect cloud infrastructure, applications, and data from emerging threats.',
+    description:
+      'Advanced cloud security platform that implements quantum-resistant security measures to protect cloud infrastructure, applications, and data from emerging threats.',
     features: [
       'Quantum-resistant cloud encryption',
       'Multi-cloud security management',
@@ -425,7 +487,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Security monitoring and alerting',
       'API for integration',
       'Performance optimization',
-      '24/7 security operations'
+      '24/7 security operations',
     ],
     popular: true,
     icon: '☁️⚛️',
@@ -438,9 +500,16 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     setupTime: '4 weeks',
     category: 'Cloud Security & Quantum',
     realService: true,
-    technology: ['Post-quantum cryptography, Cloud security, Zero trust, Automation'],
+    technology: [
+      'Post-quantum cryptography, Cloud security, Zero trust, Automation',
+    ],
     integrations: ['AWS, Azure, GCP, cloud security tools, SIEM systems'],
-    useCases: ['Cloud security', 'compliance', 'threat protection', 'data protection'],
+    useCases: [
+      'Cloud security',
+      'compliance',
+      'threat protection',
+      'data protection',
+    ],
     roi: 'Future-proof cloud security and maintain regulatory compliance',
     competitors: ['Palo Alto Networks, Check Point, Fortinet'],
     marketSize: '$45B+ cloud security market by 2030',
@@ -452,7 +521,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     launchDate: '2026-10-30',
     customers: 56,
     rating: 4.8,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-compliance-automation-suite',
@@ -460,7 +529,8 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     tagline: 'Automate compliance with AI intelligence',
     price: '$1,499',
     period: '/month',
-    description: 'Comprehensive compliance automation platform that uses AI to streamline compliance processes, automate audits, and ensure regulatory requirements are met across various industries.',
+    description:
+      'Comprehensive compliance automation platform that uses AI to streamline compliance processes, automate audits, and ensure regulatory requirements are met across various industries.',
     features: [
       'AI-powered compliance monitoring',
       'Automated audit workflows',
@@ -470,7 +540,7 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
       'Integration with security tools',
       'Multi-regulation support',
       'Performance analytics',
-      'Custom compliance frameworks'
+      'Custom compliance frameworks',
     ],
     popular: true,
     icon: '📋🤖',
@@ -478,13 +548,18 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-powered-compliance-automation-suite',
     marketPosition: 'Leading AI-powered compliance automation platform',
-    targetAudience: 'Enterprises, financial institutions, healthcare, government',
+    targetAudience:
+      'Enterprises, financial institutions, healthcare, government',
     trialDays: 45,
     setupTime: '3 weeks',
     category: 'Compliance & AI',
     realService: true,
-    technology: ['AI/ML, Compliance automation, Risk assessment, Workflow management'],
-    integrations: ['GRC platforms, security tools, audit systems, reporting platforms'],
+    technology: [
+      'AI/ML, Compliance automation, Risk assessment, Workflow management',
+    ],
+    integrations: [
+      'GRC platforms, security tools, audit systems, reporting platforms',
+    ],
     useCases: ['Compliance automation', 'audit management', 'risk assessment'],
     roi: 'Reduce compliance costs by 35% and improve audit efficiency by 50%',
     competitors: ['MetricStream, LogicGate, ServiceNow GRC'],
@@ -493,10 +568,11 @@ export const real2036CybersecurityAdditions: Real2036CybersecurityService[] = [
     variant: 'cybersecurity-ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered compliance automation and management platform',
+    implementationDetails:
+      'AI-powered compliance automation and management platform',
     launchDate: '2026-05-30',
     customers: 89,
     rating: 4.7,
-    reviews: 67
-  }
+    reviews: 67,
+  },
 ];

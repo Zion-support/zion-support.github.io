@@ -25,7 +25,7 @@ const handler = async (req, res) => {
     };
 
     const file = path.join(process.cwd(), 'data', 'feedback.json');
-    
+
     let existing = [];
     try {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -36,7 +36,9 @@ const handler = async (req, res) => {
     existing.push(feedback);
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
 
-    res.status(200).json({ success: true, message: 'Feedback saved successfully' });
+    res
+      .status(200)
+      .json({ success: true, message: 'Feedback saved successfully' });
   } catch (error) {
     console.error('Feedback API error:', error);
     res.status(500).json({ error: 'Failed to save feedback' });

@@ -17,7 +17,9 @@ function readTalent() {
   // naive parse: extract TALENT_PROFILES array JSON-like by eval via temporary module
   // safer: a regex to pull objects; but we can import ts via ts-node/register, which is heavy.
   // Instead, fallback to a tiny heuristic JSON conversion.
-  const match = src.match(/TALENT_PROFILES:\s*TalentProfile\[]\s*=\s*\[(\s|\S)*?\];/);
+  const match = src.match(
+    /TALENT_PROFILES:\s*TalentProfile\[]\s*=\s*\[(\s|\S)*?\];/
+  );
   if (!match) return [];
   const arrText = match[0].replace(/^[\s\S]*?=\s*/, '').replace(/;\s*$/, '');
   // Replace quotes in types like 'Full‑Stack' are fine; keep as JS
@@ -30,7 +32,7 @@ function readTalent() {
   } catch (e) {
     list = [];
   }
-  return list.map((p) => ({
+  return list.map(p => ({
     type: 'talent',
     id: p.slug,
     title: p.name,
@@ -44,12 +46,17 @@ function readTalent() {
 }
 
 function main() {
-  const idx = [
-    ...readTalent(),
-  ];
+  const idx = [...readTalent()];
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
   const out = path.join(publicDir, 'search-index.json');
-  fs.writeFileSync(out, JSON.stringify({ generatedAt: new Date().toISOString(), items: idx }, null, 2));
+  fs.writeFileSync(
+    out,
+    JSON.stringify(
+      { generatedAt: new Date().toISOString(), items: idx },
+      null,
+      2
+    )
+  );
   console.log(`Wrote ${idx.length} items to ${out}`);
 }
 

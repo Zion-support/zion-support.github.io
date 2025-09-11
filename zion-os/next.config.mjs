@@ -7,17 +7,17 @@ const nextConfig = {
       rules: {
         '*.svg': {
           loaders: ['@svgr/webpack'],
-          as: '*.js'
-        }
-      }
-    }
+          as: '*.js',
+        },
+      },
+    },
   },
   // Image optimization
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60
+    minimumCacheTTL: 60,
   },
   // Compression and optimization
   compress: true,
@@ -31,22 +31,22 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY'
+            value: 'DENY',
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff'
+            value: 'nosniff',
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
+            value: 'origin-when-cross-origin',
           },
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()'
-          }
-        ]
-      }
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
     ];
   },
   // Webpack optimizations
@@ -59,20 +59,20 @@ const nextConfig = {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
-            chunks: 'all'
-          }
-        }
+            chunks: 'all',
+          },
+        },
       };
     }
 
     // SVG optimization
     config.module.rules.push({
       test: /\.svg$/,
-      use: ['@svgr/webpack']
+      use: ['@svgr/webpack'],
     });
 
     return config;
-  }
+  },
   // Bundle analyzer (optional, uncomment for analysis)
   // bundleAnalyzer: process.env.ANALYZE === 'true'
 };

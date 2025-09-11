@@ -21,6 +21,6 @@ export const useToast = () => {
     successToast,
     errorToast,
     infoToast,
-    loadingToast
+    loadingToast,
   };
 };

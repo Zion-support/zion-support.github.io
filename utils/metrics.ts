@@ -3,7 +3,13 @@ import os from 'os';
 export type ApiSample = { path: string; ms: number; ts: number };
 export type PageLoadSample = { route: string; ms: number; ts: number };
 export type DbSample = { name: string; ms: number; ts: number };
-export type Alert = { type: 'cpu' | 'memory' | 'network'; level: 'warning' | 'critical'; message: string; value?: number; ts: number };
+export type Alert = {
+  type: 'cpu' | 'memory' | 'network';
+  level: 'warning' | 'critical';
+  message: string;
+  value?: number;
+  ts: number;
+};
 
 const MAX_SAMPLES = 500;
 
@@ -55,7 +61,9 @@ export function getMetricsSummary() {
     apiByPath[s.path].push(s.ms);
   }
   const apiSummary: Record<string, ReturnType<typeof summarize>> = {};
-  Object.keys(apiByPath).forEach((k) => (apiSummary[k] = summarize(apiByPath[k])));
+  Object.keys(apiByPath).forEach(
+    k => (apiSummary[k] = summarize(apiByPath[k]))
+  );
 
   const pageByRoute: Record<string, number[]> = {};
   for (const s of pageLoadSamples) {
@@ -63,7 +71,9 @@ export function getMetricsSummary() {
     pageByRoute[s.route].push(s.ms);
   }
   const pageSummary: Record<string, ReturnType<typeof summarize>> = {};
-  Object.keys(pageByRoute).forEach((k) => (pageSummary[k] = summarize(pageByRoute[k])));
+  Object.keys(pageByRoute).forEach(
+    k => (pageSummary[k] = summarize(pageByRoute[k]))
+  );
 
   const dbByName: Record<string, number[]> = {};
   for (const s of dbSamples) {
@@ -71,7 +81,7 @@ export function getMetricsSummary() {
     dbByName[s.name].push(s.ms);
   }
   const dbSummary: Record<string, ReturnType<typeof summarize>> = {};
-  Object.keys(dbByName).forEach((k) => (dbSummary[k] = summarize(dbByName[k])));
+  Object.keys(dbByName).forEach(k => (dbSummary[k] = summarize(dbByName[k])));
 
   const uptimeSeconds = process.uptime();
   const memoryUsage = process.memoryUsage();
@@ -90,12 +100,12 @@ export function getMetricsSummary() {
       load5: loadAvg[1],
       load15: loadAvg[2],
       cpuCores,
-      rssBytes: memoryUsage.rss
+      rssBytes: memoryUsage.rss,
     },
     api: apiSummary,
     pageLoad: pageSummary,
     db: dbSummary,
-    alerts: [...alerts].slice(-50)
+    alerts: [...alerts].slice(-50),
   };
 }
 
@@ -109,13 +119,21 @@ export function getPrometheus(): string {
 
   lines.push('# HELP zion_system_used_memory_percent Used memory percent');
   lines.push('# TYPE zion_system_used_memory_percent gauge');
-  lines.push(`zion_system_used_memory_percent ${summary.system.usedMemPct.toFixed(2)}`);
+  lines.push(
+    `zion_system_used_memory_percent ${summary.system.usedMemPct.toFixed(2)}`
+  );
 
   lines.push('# HELP zion_system_load_avg Load average');
   lines.push('# TYPE zion_system_load_avg gauge');
-  lines.push(`zion_system_load_avg{period="1"} ${summary.system.load1.toFixed(2)}`);
-  lines.push(`zion_system_load_avg{period="5"} ${summary.system.load5.toFixed(2)}`);
-  lines.push(`zion_system_load_avg{period="15"} ${summary.system.load15.toFixed(2)}`);
+  lines.push(
+    `zion_system_load_avg{period="1"} ${summary.system.load1.toFixed(2)}`
+  );
+  lines.push(
+    `zion_system_load_avg{period="5"} ${summary.system.load5.toFixed(2)}`
+  );
+  lines.push(
+    `zion_system_load_avg{period="15"} ${summary.system.load15.toFixed(2)}`
+  );
 
   Object.entries(summary.api).forEach(([path, s]) => {
     lines.push('# HELP zion_api_response_ms API response time ms');

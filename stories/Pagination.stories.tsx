@@ -23,18 +23,18 @@ const Example = ({ total }: { total: number }) => {
         <PaginationItem>
           <PaginationPrevious
             href={`?page=${current - 1}`}
-            onClick={(e) => {
+            onClick={e => {
               e.preventDefault();
-              setCurrent((c) => Math.max(1, c - 1));
+              setCurrent(c => Math.max(1, c - 1));
             }}
           />
         </PaginationItem>
-        {Array.from({ length: total }, (_, i) => i + 1).map((page) => (
+        {Array.from({ length: total }, (_, i) => i + 1).map(page => (
           <PaginationItem key={page}>
             <PaginationButton
               page={page}
               isActive={page === current}
-              onClick={(e) => {
+              onClick={e => {
                 e.preventDefault();
                 setCurrent(page);
               }}
@@ -44,9 +44,9 @@ const Example = ({ total }: { total: number }) => {
         <PaginationItem>
           <PaginationNext
             href={`?page=${current + 1}`}
-            onClick={(e) => {
+            onClick={e => {
               e.preventDefault();
-              setCurrent((c) => Math.min(total, c + 1));
+              setCurrent(c => Math.min(total, c + 1));
             }}
           />
         </PaginationItem>

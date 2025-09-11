@@ -597,49 +597,64 @@ createDashboard();
 async function main() {
   try {
     console.log('🔄 Creating advanced automation scripts...');
-    
+
     // Create all advanced scripts
     createSEOOptimizer();
     createAccessibilityChecker();
     createPerformanceOptimizer();
     createDeploymentAutomation();
     createMonitoringDashboard();
-    
+
     // Run the new scripts
     console.log('🔄 Running advanced automation scripts...');
-    
+
     const { execSync } = require('child_process');
-    
+
     try {
-      execSync('node seo-optimizer.cjs', { stdio: 'inherit', cwd: '/workspace' });
+      execSync('node seo-optimizer.cjs', {
+        stdio: 'inherit',
+        cwd: '/workspace',
+      });
     } catch (error) {
       console.log('⚠️  SEO optimizer had issues:', error.message);
     }
-    
+
     try {
-      execSync('node accessibility-checker.cjs', { stdio: 'inherit', cwd: '/workspace' });
+      execSync('node accessibility-checker.cjs', {
+        stdio: 'inherit',
+        cwd: '/workspace',
+      });
     } catch (error) {
       console.log('⚠️  Accessibility checker had issues:', error.message);
     }
-    
+
     try {
-      execSync('node performance-optimizer.cjs', { stdio: 'inherit', cwd: '/workspace' });
+      execSync('node performance-optimizer.cjs', {
+        stdio: 'inherit',
+        cwd: '/workspace',
+      });
     } catch (error) {
       console.log('⚠️  Performance optimizer had issues:', error.message);
     }
-    
+
     try {
-      execSync('node deployment-automation.cjs', { stdio: 'inherit', cwd: '/workspace' });
+      execSync('node deployment-automation.cjs', {
+        stdio: 'inherit',
+        cwd: '/workspace',
+      });
     } catch (error) {
       console.log('⚠️  Deployment automation had issues:', error.message);
     }
-    
+
     try {
-      execSync('node monitoring-dashboard.cjs', { stdio: 'inherit', cwd: '/workspace' });
+      execSync('node monitoring-dashboard.cjs', {
+        stdio: 'inherit',
+        cwd: '/workspace',
+      });
     } catch (error) {
       console.log('⚠️  Monitoring dashboard had issues:', error.message);
     }
-    
+
     // Generate final report
     const finalReport = {
       timestamp: new Date().toISOString(),
@@ -649,30 +664,36 @@ async function main() {
         'Accessibility checker script created',
         'Performance optimizer script created',
         'Deployment automation script created',
-        'Monitoring dashboard script created'
+        'Monitoring dashboard script created',
       ],
       reports: [
         'seo-optimization-report.json',
         'accessibility-report.json',
         'performance-optimization-report.json',
         'deployment-report.json',
-        'monitoring-dashboard.json'
+        'monitoring-dashboard.json',
       ],
       nextSteps: [
         'Review all generated reports',
         'Implement recommended optimizations',
         'Set up automated monitoring',
         'Configure deployment pipeline',
-        'Schedule regular health checks'
-      ]
+        'Schedule regular health checks',
+      ],
     };
-    
-    fs.writeFileSync('/workspace/advanced-automation-report.json', JSON.stringify(finalReport, null, 2));
-    
+
+    fs.writeFileSync(
+      '/workspace/advanced-automation-report.json',
+      JSON.stringify(finalReport, null, 2)
+    );
+
     console.log('🎉 Advanced Automation Suite completed successfully!');
-    console.log('📊 Check the generated reports and dashboard for detailed information.');
-    console.log('🌐 Open monitoring-dashboard.html in your browser to view the monitoring dashboard.');
-    
+    console.log(
+      '📊 Check the generated reports and dashboard for detailed information.'
+    );
+    console.log(
+      '🌐 Open monitoring-dashboard.html in your browser to view the monitoring dashboard.'
+    );
   } catch (error) {
     console.error('❌ Advanced automation failed:', error.message);
     process.exit(1);

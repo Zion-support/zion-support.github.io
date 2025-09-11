@@ -10,7 +10,7 @@ describe('add to cart', () => {
     // The deployed site can take a moment to load, so wait up to 10s
     cy.get('[data-testid="add-to-cart-button"]', { timeout: 10000 }).click();
     cy.url().should('include', '/cart');
-    cy.window().then((win) => {
+    cy.window().then(win => {
       const cart = JSON.parse(win.localStorage.getItem('cart') || '[]');
       expect(cart.length).to.be.greaterThan(0);
       expect(cart[0].id).to.eq('pro-camera-x1000');
@@ -33,22 +33,29 @@ describe('add to cart', () => {
     cy.contains('added', { matchCase: false }).should('be.visible');
 
     // Verify item in localStorage (using 'zion_cart' as per cartSlice.ts)
-    cy.window().then((win) => {
+    cy.window().then(win => {
       // Wait for localStorage to update
-      return cy.waitUntil(() => {
-        const cartData = win.localStorage.getItem('zion_cart');
-        return cartData && JSON.parse(cartData).length > 0;
-      }, {
-        timeout: 5000,
-        interval: 500,
-        errorMsg: 'Cart in localStorage was not updated in time'
-      }).then(() => {
-        const cart = JSON.parse(win.localStorage.getItem('zion_cart') || '[]');
-        expect(cart.length).to.be.greaterThan(0);
-        // We don't know the exact ID of the first product, so just check that something was added
-        expect(cart[0]).to.have.property('id');
-        expect(cart[0].quantity).to.eq(1);
-      });
+      return cy
+        .waitUntil(
+          () => {
+            const cartData = win.localStorage.getItem('zion_cart');
+            return cartData && JSON.parse(cartData).length > 0;
+          },
+          {
+            timeout: 5000,
+            interval: 500,
+            errorMsg: 'Cart in localStorage was not updated in time',
+          }
+        )
+        .then(() => {
+          const cart = JSON.parse(
+            win.localStorage.getItem('zion_cart') || '[]'
+          );
+          expect(cart.length).to.be.greaterThan(0);
+          // We don't know the exact ID of the first product, so just check that something was added
+          expect(cart[0]).to.have.property('id');
+          expect(cart[0].quantity).to.eq(1);
+        });
     });
 
     // Ensure the URL is still /marketplace

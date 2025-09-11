@@ -6,21 +6,30 @@ interface NotificationContextType {
   removeNotification: (id: string) => void;
 }
 
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
+const NotificationContext = createContext<NotificationContextType | undefined>(
+  undefined
+);
 
-export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [notifications, setNotifications] = useState<any[]>([]);
-  
+
   const addNotification = (notification: any) => {
-    setNotifications(prev => [...prev, { ...notification, id: Date.now().toString() }]);
+    setNotifications(prev => [
+      ...prev,
+      { ...notification, id: Date.now().toString() },
+    ]);
   };
-  
+
   const removeNotification = (id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
-  
+
   return (
-    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
+    <NotificationContext.Provider
+      value={{ notifications, addNotification, removeNotification }}
+    >
       {children}
     </NotificationContext.Provider>
   );
@@ -29,7 +38,9 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw new Error(
+      'useNotifications must be used within a NotificationProvider'
+    );
   }
   return context;
 };

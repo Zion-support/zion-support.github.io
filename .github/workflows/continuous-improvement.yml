@@ -33,8 +33,8 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(improvement): continuous improvement + diversity results"
-          title: "chore(improvement): apply continuous improvement and diversity results"
+          commit-message: 'chore(improvement): continuous improvement + diversity results'
+          title: 'chore(improvement): apply continuous improvement and diversity results'
           body: |
             Automated improvement and diversity loop.
 

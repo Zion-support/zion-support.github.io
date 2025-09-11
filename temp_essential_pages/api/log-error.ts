@@ -7,7 +7,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { withErrorLogging } from '@/utils/withErrorLogging';
 
 const prisma = new PrismaClient();
-const CODEX_SCRIPT_PATH = path.resolve(process.cwd(), 'scripts/codex-bug-fix.js');
+const CODEX_SCRIPT_PATH = path.resolve(
+  process.cwd(),
+  'scripts/codex-bug-fix.js'
+);
 
 interface ErrorDetails {
   message: string;
@@ -26,21 +29,30 @@ interface CodexOutput {
   model?: string;
 }
 
-function generateErrorSignature(errorDetails: Pick<ErrorDetails, 'message' | 'stack'>): string {
+function generateErrorSignature(
+  errorDetails: Pick<ErrorDetails, 'message' | 'stack'>
+): string {
   const { message, stack } = errorDetails;
   let signatureData = message || '';
   if (stack) {
     const stackLines = stack.split('\n');
     const significantLines = stackLines.slice(1, 5).map(line => {
-      return line.replace(/\(.*\)/, '').replace(/at .*(\/|\\)/, '').trim();
+      return line
+        .replace(/\(.*\)/, '')
+        .replace(/at .*(\/|\\)/, '')
+        .trim();
     });
     signatureData += significantLines.join('\n');
   }
   return crypto.createHash('md5').update(signatureData).digest('hex');
 }
 
-function formulateCodexPrompt(errorDetails: ErrorDetails, signature: string): string {
-  const { message, stack, componentStack, url, source, timestamp } = errorDetails;
+function formulateCodexPrompt(
+  errorDetails: ErrorDetails,
+  signature: string
+): string {
+  const { message, stack, componentStack, url, source, timestamp } =
+    errorDetails;
   let prompt = `Analyze the following JavaScript error and provide a potential fix.\n`;
   prompt += `Error Signature: ${signature}\n`;
   prompt += `Source: ${source || 'N/A'}\n`;
@@ -78,9 +90,19 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   console.log('Received error report request');
   const errorDetails = req.body as ErrorDetails; // Type assertion for req.body
 
-  if (!errorDetails || typeof errorDetails !== 'object' || !errorDetails.message || !errorDetails.stack) {
-    console.error('Invalid error report: Missing body, message, or stack.', errorDetails);
-    res.status(400).json({ error: 'Invalid request body: message and stack are required.' });
+  if (
+    !errorDetails ||
+    typeof errorDetails !== 'object' ||
+    !errorDetails.message ||
+    !errorDetails.stack
+  ) {
+    console.error(
+      'Invalid error report: Missing body, message, or stack.',
+      errorDetails
+    );
+    res
+      .status(400)
+      .json({ error: 'Invalid request body: message and stack are required.' });
     return;
   }
 
@@ -88,7 +110,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const errorForSentry = new Error(errorDetails.message);
   errorForSentry.stack = errorDetails.stack;
   // Pass all errorDetails, and specify source context
-  captureException(errorForSentry, { extra: { ...errorDetails, sourceContext: 'pages/api/log-error' } });
+  captureException(errorForSentry, {
+    extra: { ...errorDetails, sourceContext: 'pages/api/log-error' },
+  });
   console.log('Error reported to Sentry');
 
   const errorSignature = generateErrorSignature(errorDetails);
@@ -103,7 +127,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     });
 
     if (dbRecord) {
-      console.log(`Recurring error found (ID: ${dbRecord.id}, Signature: ${errorSignature}). Updating count.`);
+      console.log(
+        `Recurring error found (ID: ${dbRecord.id}, Signature: ${errorSignature}). Updating count.`
+      );
       dbRecord = await prisma.errorAnalysisSuggestion.update({
         where: { error_signature: errorSignature },
         data: {
@@ -132,22 +158,35 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     dbRecordId = dbRecord.id;
 
     formulatedPrompt = formulateCodexPrompt(errorDetails, errorSignature);
-    console.log(`Formulated Codex prompt (ID: ${dbRecordId}, first 100 chars): ${formulatedPrompt.substring(0, 100)}...`);
+    console.log(
+      `Formulated Codex prompt (ID: ${dbRecordId}, first 100 chars): ${formulatedPrompt.substring(0, 100)}...`
+    );
 
-    res.status(202).json({ success: true, message: 'Error report received, analysis initiated.', signature: errorSignature, dbId: dbRecordId });
+    res
+      .status(202)
+      .json({
+        success: true,
+        message: 'Error report received, analysis initiated.',
+        signature: errorSignature,
+        dbId: dbRecordId,
+      });
 
     console.log(`Executing Codex script for DB record ID: ${dbRecordId}`);
     // Ensure prompt is correctly escaped for command line, using base64 is a robust way
     const command = `node "${CODEX_SCRIPT_PATH}" --prompt "${Buffer.from(formulatedPrompt).toString('base64')}"`;
 
     exec(command, async (execError, stdout, stderr) => {
-      if (!dbRecordId) { // Type guard
-          console.error("dbRecordId is not defined in exec callback");
-          return;
+      if (!dbRecordId) {
+        // Type guard
+        console.error('dbRecordId is not defined in exec callback');
+        return;
       }
       try {
         if (execError) {
-          console.error(`Error executing Codex script (ID: ${dbRecordId}): ${execError.message}`, { stderrPartial: stderr ? stderr.substring(0, 500) : null });
+          console.error(
+            `Error executing Codex script (ID: ${dbRecordId}): ${execError.message}`,
+            { stderrPartial: stderr ? stderr.substring(0, 500) : null }
+          );
           await prisma.errorAnalysisSuggestion.update({
             where: { id: dbRecordId },
             data: {
@@ -161,12 +200,16 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
         if (stderr) {
           console.warn(`Codex script STDERR (ID: ${dbRecordId}): ${stderr}`);
-          let scriptErrorOutput = { error: "Unknown error from script stderr." };
+          let scriptErrorOutput = {
+            error: 'Unknown error from script stderr.',
+          };
           try {
             scriptErrorOutput = JSON.parse(stderr);
           } catch (parseError: any) {
-            console.error(`Failed to parse stderr JSON from Codex script (ID: ${dbRecordId}): ${parseError.message}`);
-            scriptErrorOutput.error = `Non-JSON stderr: ${stderr.substring(0,1000)}`;
+            console.error(
+              `Failed to parse stderr JSON from Codex script (ID: ${dbRecordId}): ${parseError.message}`
+            );
+            scriptErrorOutput.error = `Non-JSON stderr: ${stderr.substring(0, 1000)}`;
           }
           await prisma.errorAnalysisSuggestion.update({
             where: { id: dbRecordId },
@@ -179,23 +222,39 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
           return;
         }
 
-        console.log(`Codex script STDOUT (ID: ${dbRecordId}, first 100 chars): ${stdout.substring(0, 100)}...`);
+        console.log(
+          `Codex script STDOUT (ID: ${dbRecordId}, first 100 chars): ${stdout.substring(0, 100)}...`
+        );
         let parsedOutput: CodexOutput;
         try {
           parsedOutput = JSON.parse(stdout) as CodexOutput;
 
-          if (!parsedOutput.explanation || !parsedOutput.suggestedFixCode || !parsedOutput.impactAssessment) {
-            const missingFields = (['explanation', 'suggestedFixCode', 'impactAssessment'] as (keyof CodexOutput)[]).filter(f => !parsedOutput[f]);
-            throw new Error(`Missing required fields in Codex output: ${missingFields.join(', ')}`);
+          if (
+            !parsedOutput.explanation ||
+            !parsedOutput.suggestedFixCode ||
+            !parsedOutput.impactAssessment
+          ) {
+            const missingFields = (
+              [
+                'explanation',
+                'suggestedFixCode',
+                'impactAssessment',
+              ] as (keyof CodexOutput)[]
+            ).filter(f => !parsedOutput[f]);
+            throw new Error(
+              `Missing required fields in Codex output: ${missingFields.join(', ')}`
+            );
           }
-
         } catch (parseError: any) {
-          console.error(`Failed to parse or validate stdout JSON from Codex script (ID: ${dbRecordId}): ${parseError.message}`, { stdoutPreview: stdout.substring(0,1000) });
+          console.error(
+            `Failed to parse or validate stdout JSON from Codex script (ID: ${dbRecordId}): ${parseError.message}`,
+            { stdoutPreview: stdout.substring(0, 1000) }
+          );
           await prisma.errorAnalysisSuggestion.update({
             where: { id: dbRecordId },
             data: {
               codex_prompt: formulatedPrompt,
-              analysis_error: `Failed to parse or validate script output: ${parseError.message}. Output preview: ${stdout.substring(0,1000)}`,
+              analysis_error: `Failed to parse or validate script output: ${parseError.message}. Output preview: ${stdout.substring(0, 1000)}`,
               status: ErrorAnalysisStatus.ANALYZED,
             },
           });
@@ -215,18 +274,27 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
             analysis_error: null,
           },
         });
-        console.log(`Successfully processed and stored structured Codex suggestion for ID: ${dbRecordId}`);
-
+        console.log(
+          `Successfully processed and stored structured Codex suggestion for ID: ${dbRecordId}`
+        );
       } catch (dbUpdateError: any) {
-        console.error(`Failed to update DB record ${dbRecordId} after Codex script execution:`, dbUpdateError);
+        console.error(
+          `Failed to update DB record ${dbRecordId} after Codex script execution:`,
+          dbUpdateError
+        );
       }
     });
-
   } catch (error: any) {
-    console.error('log-error API critical error during initial processing:', error.message, error.stack);
+    console.error(
+      'log-error API critical error during initial processing:',
+      error.message,
+      error.stack
+    );
     const resWithHeaders = res as NextApiResponse & { headersSent?: boolean };
     if (!resWithHeaders.headersSent) {
-      resWithHeaders.status(500).json({ error: 'Server error during error processing.' });
+      resWithHeaders
+        .status(500)
+        .json({ error: 'Server error during error processing.' });
     }
   }
 }

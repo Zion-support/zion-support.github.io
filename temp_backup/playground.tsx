@@ -12,29 +12,29 @@ export default function PlaygroundPage() {
       name: 'AI Content Generation',
       description: 'Generate content using our AI-powered system',
       icon: '✍️',
-      placeholder: 'Enter a topic or description...'
+      placeholder: 'Enter a topic or description...',
     },
     {
       id: 'cloud-automation',
       name: 'Cloud Automation',
       description: 'Test autonomous cloud management features',
       icon: '☁️',
-      placeholder: 'Enter cloud configuration...'
+      placeholder: 'Enter cloud configuration...',
     },
     {
       id: 'devops-pipeline',
       name: 'DevOps Pipeline',
       description: 'Experience self-healing CI/CD workflows',
       icon: '🔄',
-      placeholder: 'Enter deployment parameters...'
+      placeholder: 'Enter deployment parameters...',
     },
     {
       id: 'security-scan',
       name: 'Security Scanner',
       description: 'Test automated security analysis',
       icon: '🔒',
-      placeholder: 'Enter security test case...'
-    }
+      placeholder: 'Enter security test case...',
+    },
   ];
 
   const runDemo = () => {
@@ -42,7 +42,7 @@ export default function PlaygroundPage() {
 
     // Simulate AI processing
     setDemoOutput('Processing...');
-    
+
     setTimeout(() => {
       let output = '';
       switch (selectedDemo) {
@@ -69,27 +69,33 @@ export default function PlaygroundPage() {
     <>
       <Head>
         <title>Playground | Zion - Try AI & Automation</title>
-        <meta name="description" content="Experience Zion's autonomous systems firsthand with interactive demos and live demonstrations." />
+        <meta
+          name='description'
+          content="Experience Zion's autonomous systems firsthand with interactive demos and live demonstrations."
+        />
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+
+      <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'>
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <div className='bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h1 className='text-4xl md:text-6xl font-bold mb-6'>
               Zion Playground
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Experience autonomous automation firsthand with interactive demos and live demonstrations
+            <p className='text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto'>
+              Experience autonomous automation firsthand with interactive demos
+              and live demonstrations
             </p>
           </div>
         </div>
 
         {/* Demo Selection */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Choose Your Demo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {demos.map((demo) => (
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+          <h2 className='text-3xl font-bold text-gray-900 mb-8 text-center'>
+            Choose Your Demo
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {demos.map(demo => (
               <button
                 key={demo.id}
                 onClick={() => setSelectedDemo(demo.id)}
@@ -99,48 +105,52 @@ export default function PlaygroundPage() {
                     : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-md'
                 }`}
               >
-                <div className="text-4xl mb-4">{demo.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{demo.name}</h3>
-                <p className="text-gray-600 text-sm">{demo.description}</p>
+                <div className='text-4xl mb-4'>{demo.icon}</div>
+                <h3 className='text-lg font-bold text-gray-900 mb-2'>
+                  {demo.name}
+                </h3>
+                <p className='text-gray-600 text-sm'>{demo.description}</p>
               </button>
             ))}
           </div>
         </div>
 
         {/* Interactive Demo */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="text-center mb-8">
-              <div className="text-6xl mb-4">
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+          <div className='bg-white rounded-2xl shadow-xl p-8'>
+            <div className='text-center mb-8'>
+              <div className='text-6xl mb-4'>
                 {demos.find(d => d.id === selectedDemo)?.icon}
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              <h2 className='text-2xl font-bold text-gray-900 mb-2'>
                 {demos.find(d => d.id === selectedDemo)?.name}
               </h2>
-              <p className="text-gray-600">
+              <p className='text-gray-600'>
                 {demos.find(d => d.id === selectedDemo)?.description}
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className='space-y-6'>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Input
                 </label>
                 <textarea
                   value={demoInput}
-                  onChange={(e) => setDemoInput(e.target.value)}
-                  placeholder={demos.find(d => d.id === selectedDemo)?.placeholder}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  onChange={e => setDemoInput(e.target.value)}
+                  placeholder={
+                    demos.find(d => d.id === selectedDemo)?.placeholder
+                  }
+                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none'
                   rows={4}
                 />
               </div>
 
-              <div className="text-center">
+              <div className='text-center'>
                 <button
                   onClick={runDemo}
                   disabled={!demoInput.trim()}
-                  className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+                  className='bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-8 rounded-lg transition-colors'
                 >
                   Run Demo
                 </button>
@@ -148,11 +158,11 @@ export default function PlaygroundPage() {
 
               {demoOutput && (
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className='block text-sm font-medium text-gray-700 mb-2'>
                     Output
                   </label>
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                    <pre className="whitespace-pre-wrap text-sm text-gray-800 font-mono">
+                  <div className='bg-gray-50 border border-gray-200 rounded-lg p-4'>
+                    <pre className='whitespace-pre-wrap text-sm text-gray-800 font-mono'>
                       {demoOutput}
                     </pre>
                   </div>
@@ -163,48 +173,60 @@ export default function PlaygroundPage() {
         </div>
 
         {/* Demo Features */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">What You Can Experience</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Intelligence</h3>
-              <p className="text-gray-600">
-                See how our AI systems understand context, learn from interactions, and provide intelligent responses.
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+          <h2 className='text-3xl font-bold text-gray-900 mb-8 text-center'>
+            What You Can Experience
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='bg-white rounded-xl shadow-lg p-6 text-center'>
+              <div className='text-4xl mb-4'>🤖</div>
+              <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                AI Intelligence
+              </h3>
+              <p className='text-gray-600'>
+                See how our AI systems understand context, learn from
+                interactions, and provide intelligent responses.
               </p>
             </div>
-            
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Real-time Processing</h3>
-              <p className="text-gray-600">
-                Experience the speed and efficiency of autonomous systems that process requests in real-time.
+
+            <div className='bg-white rounded-xl shadow-lg p-6 text-center'>
+              <div className='text-4xl mb-4'>⚡</div>
+              <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                Real-time Processing
+              </h3>
+              <p className='text-gray-600'>
+                Experience the speed and efficiency of autonomous systems that
+                process requests in real-time.
               </p>
             </div>
-            
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Continuous Learning</h3>
-              <p className="text-gray-600">
-                Watch as our systems improve with each interaction, demonstrating true autonomous behavior.
+
+            <div className='bg-white rounded-xl shadow-lg p-6 text-center'>
+              <div className='text-4xl mb-4'>🔄</div>
+              <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                Continuous Learning
+              </h3>
+              <p className='text-gray-600'>
+                Watch as our systems improve with each interaction,
+                demonstrating true autonomous behavior.
               </p>
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center'>
+          <h2 className='text-3xl font-bold text-gray-900 mb-6'>
             Ready to Experience More?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            The playground is just the beginning. Discover how Zion can transform your operations with autonomous automation.
+          <p className='text-xl text-gray-600 mb-8 max-w-2xl mx-auto'>
+            The playground is just the beginning. Discover how Zion can
+            transform your operations with autonomous automation.
           </p>
-          <div className="space-x-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+          <div className='space-x-4'>
+            <button className='bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors'>
               Get Started
             </button>
-            <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors">
+            <button className='bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors'>
               Schedule Demo
             </button>
           </div>

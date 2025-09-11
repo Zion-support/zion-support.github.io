@@ -8,9 +8,5 @@
     "types": ["react", "react-dom", "node"],
     "esModuleInterop": true
   },
-  "files": [
-    "src/AppMinimal.tsx",
-    "types/global.d.ts"
-  ]
+  "files": ["src/AppMinimal.tsx", "types/global.d.ts"]
 }
-

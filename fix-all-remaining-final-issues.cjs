@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting All Remaining Final Issues Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting All Remaining Final Issues Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix meetings invite file - rewrite completely
@@ -37,7 +39,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(meetingsInvitePath, meetingsInviteContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/meetings/invite.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/meetings/invite.ts'
+);
 // Fix messages file - rewrite completely
 const messagesPath = '/workspace/pages/api/messages.ts';
 const messagesContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -82,7 +86,9 @@ if (fs.existsSync(messagesComposePath)) {
     content += '\n}';
   }
   fs.writeFileSync(messagesComposePath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/messages/compose.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/messages/compose.ts'
+  );
 }
 // Fix messages inbox file
 const messagesInboxPath = '/workspace/pages/api/messages/inbox.ts';
@@ -93,19 +99,20 @@ if (fs.existsSync(messagesInboxPath)) {
     content += '\n}';
   }
   fs.writeFileSync(messagesInboxPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/messages/inbox.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/messages/inbox.ts'
+  );
 }
 // Fix messages read file
 const messagesReadPath = '/workspace/pages/api/messages/read.ts';
 if (fs.existsSync(messagesReadPath)) {
   let content = fs.readFileSync(messagesReadPath, 'utf8');
   // Fix the syntax error
-  content = content.replace(
-    '  markAsRead,;',
-    '  markAsRead,'
-  );
+  content = content.replace('  markAsRead,;', '  markAsRead,');
   fs.writeFileSync(messagesReadPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/messages/read.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/messages/read.ts'
+  );
 }
 console.log('');
 console.log('📊 ALL REMAINING FINAL ISSUES FIX REPORT');
@@ -131,8 +138,11 @@ const report = {
     'pages/api/messages.ts',
     'pages/api/messages/compose.ts',
     'pages/api/messages/inbox.ts',
-    'pages/api/messages/read.ts'
-  ]
+    'pages/api/messages/read.ts',
+  ],
 };
-fs.writeFileSync('/workspace/all-remaining-final-issues-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/all-remaining-final-issues-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to all-remaining-final-issues-fix-report.json');

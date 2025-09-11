@@ -14,6 +14,6 @@ export async function analyzeText(text: string): Promise<any> {
   return {
     sentiment: 'positive',
     keywords: ['technology', 'innovation'],
-    confidence: 0.85
+    confidence: 0.85,
   };
 }

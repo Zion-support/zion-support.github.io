@@ -10,13 +10,8 @@
       "restarts": 0,
       "health": {
         "score": 75,
-        "issues": [
-          "High CPU usage",
-          "Recent restart"
-        ],
-        "recommendations": [
-          "Investigate CPU-intensive operations"
-        ],
+        "issues": ["High CPU usage", "Recent restart"],
+        "recommendations": ["Investigate CPU-intensive operations"],
         "status": "warning"
       }
     },
@@ -28,9 +23,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -43,9 +36,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -58,9 +49,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -73,9 +62,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -88,9 +75,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -103,9 +88,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -118,9 +101,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -133,9 +114,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -148,9 +127,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -163,9 +140,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -178,9 +153,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -193,9 +166,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -208,9 +179,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -223,9 +192,7 @@
       "restarts": 2,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -238,9 +205,7 @@
       "restarts": 1,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -253,9 +218,7 @@
       "restarts": 1,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -268,9 +231,7 @@
       "restarts": 0,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -283,9 +244,7 @@
       "restarts": 1,
       "health": {
         "score": 90,
-        "issues": [
-          "Recent restart"
-        ],
+        "issues": ["Recent restart"],
         "recommendations": [],
         "status": "healthy"
       }
@@ -299,18 +258,12 @@
       "usagePercent": "13.74"
     },
     "cpu": {
-      "loadAverage": [
-        1.02,
-        1.74,
-        3.44
-      ],
+      "loadAverage": [1.02, 1.74, 3.44],
       "cores": 4
     },
     "uptime": 255895.69,
     "platform": "linux",
     "arch": "x64"
   },
-  "recommendations": [
-    "Monitor closely: 1 processes showing warnings"
-  ]
+  "recommendations": ["Monitor closely: 1 processes showing warnings"]
 }

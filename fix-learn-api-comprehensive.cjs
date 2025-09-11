@@ -2,11 +2,14 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Learn API Comprehensive Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Learn API Comprehensive Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix certificates [courseId] file - rewrite completely
-const certificatesPath = '/workspace/pages/api/learn/certificates/[courseId].ts';
+const certificatesPath =
+  '/workspace/pages/api/learn/certificates/[courseId].ts';
 const certificatesContent = `import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -46,7 +49,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(certificatesPath, certificatesContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/learn/certificates/[courseId].ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/learn/certificates/[courseId].ts'
+);
 // Fix coach file - rewrite completely
 const coachPath = '/workspace/pages/api/learn/coach.ts';
 const coachContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -140,7 +145,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(coursesPath, coursesContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/learn/courses.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/learn/courses.ts'
+);
 // Fix courses [id] file - rewrite completely
 const coursesIdPath = '/workspace/pages/api/learn/courses/[id].ts';
 const coursesIdContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -172,7 +179,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(coursesIdPath, coursesIdContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/learn/courses/[id].ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/learn/courses/[id].ts'
+);
 // Fix leaderboard file - rewrite completely
 const leaderboardPath = '/workspace/pages/api/learn/leaderboard.ts';
 const leaderboardContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -197,7 +206,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(leaderboardPath, leaderboardContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/learn/leaderboard.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/learn/leaderboard.ts'
+);
 console.log('');
 console.log('📊 LEARN API COMPREHENSIVE FIX REPORT');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] =');
@@ -206,10 +217,14 @@ console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
 console.log('');
 console.log('✅ Successfully fixed files:');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/learn/certificates/[courseId].ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/learn/certificates/[courseId].ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/learn/coach.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/learn/courses.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/learn/courses/[id].ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/learn/courses/[id].ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/learn/leaderboard.ts');
 console.log('');
 // Save report
@@ -222,8 +237,11 @@ const report = {
     'pages/api/learn/coach.ts',
     'pages/api/learn/courses.ts',
     'pages/api/learn/courses/[id].ts',
-    'pages/api/learn/leaderboard.ts'
-  ]
+    'pages/api/learn/leaderboard.ts',
+  ],
 };
-fs.writeFileSync('/workspace/learn-api-comprehensive-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/learn-api-comprehensive-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to learn-api-comprehensive-fix-report.json');

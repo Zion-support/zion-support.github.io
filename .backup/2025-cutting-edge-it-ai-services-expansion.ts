@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const cuttingEdgeITServices: CuttingEdgeITService[] = [
@@ -55,7 +55,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'Next-generation cloud computing with quantum optimization',
     price: '$1,799',
     period: '/month',
-    description: 'Advanced cloud infrastructure platform that leverages quantum computing principles for resource optimization, cost management, and performance enhancement.',
+    description:
+      'Advanced cloud infrastructure platform that leverages quantum computing principles for resource optimization, cost management, and performance enhancement.',
     features: [
       'Quantum-optimized resource allocation',
       'Multi-cloud orchestration and management',
@@ -65,22 +66,28 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Advanced security and compliance',
       'Disaster recovery automation',
       'Custom infrastructure templates',
-      'API-first architecture and integration'
+      'API-first architecture and integration',
     ],
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
-    marketPosition: 'Advanced alternative to AWS, Azure, GCP; focuses on quantum optimization and AI-driven management.',
-    targetAudience: 'Enterprise IT teams, cloud architects, DevOps engineers, platform teams',
+    marketPosition:
+      'Advanced alternative to AWS, Azure, GCP; focuses on quantum optimization and AI-driven management.',
+    targetAudience:
+      'Enterprise IT teams, cloud architects, DevOps engineers, platform teams',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Cloud Infrastructure',
     realService: true,
-    technology: ['Quantum Computing, Cloud Computing, AI/ML, Kubernetes, Docker'],
+    technology: [
+      'Quantum Computing, Cloud Computing, AI/ML, Kubernetes, Docker',
+    ],
     integrations: ['AWS, Azure, GCP, VMware, OpenStack, Terraform'],
-    useCases: ['Multi-cloud management, Cost optimization, Performance enhancement, Infrastructure automation'],
+    useCases: [
+      'Multi-cloud management, Cost optimization, Performance enhancement, Infrastructure automation',
+    ],
     roi: 'Reduce cloud costs by 30-50% and improve performance by 40-60%.',
     competitors: ['AWS, Microsoft Azure, Google Cloud Platform, VMware'],
     marketSize: '$500B cloud computing market',
@@ -88,11 +95,12 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-inspired optimization algorithms, multi-cloud orchestration, and AI-driven cost management.',
+    implementationDetails:
+      'Quantum-inspired optimization algorithms, multi-cloud orchestration, and AI-driven cost management.',
     launchDate: '2025-01-15',
     customers: 42,
     rating: 4.9,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'autonomous-network-security-orchestrator',
@@ -100,7 +108,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'Self-healing network security with AI threat prevention',
     price: '$1,099',
     period: '/month',
-    description: 'Intelligent network security platform that autonomously detects, prevents, and responds to threats while optimizing network performance and compliance.',
+    description:
+      'Intelligent network security platform that autonomously detects, prevents, and responds to threats while optimizing network performance and compliance.',
     features: [
       'AI-powered threat detection and prevention',
       'Autonomous incident response and remediation',
@@ -110,22 +119,28 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Real-time security monitoring',
       'Integration with security tools',
       'Custom security policies and rules',
-      'Performance analytics and reporting'
+      'Performance analytics and reporting',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/autonomous-network-security',
-    marketPosition: 'Advanced alternative to Palo Alto Networks, Fortinet; adds AI-driven automation and autonomous response.',
-    targetAudience: 'Network security teams, CISOs, IT security professionals, enterprise IT',
+    marketPosition:
+      'Advanced alternative to Palo Alto Networks, Fortinet; adds AI-driven automation and autonomous response.',
+    targetAudience:
+      'Network security teams, CISOs, IT security professionals, enterprise IT',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Network Security',
     realService: true,
-    technology: ['AI/ML, Network Security, Automation, Zero-trust Architecture'],
+    technology: [
+      'AI/ML, Network Security, Automation, Zero-trust Architecture',
+    ],
     integrations: ['Palo Alto Networks, Fortinet, Cisco, Check Point, Splunk'],
-    useCases: ['Threat prevention, Network optimization, Compliance management, Incident response'],
+    useCases: [
+      'Threat prevention, Network optimization, Compliance management, Incident response',
+    ],
     roi: 'Reduce security incidents by 80% and improve network performance by 30%.',
     competitors: ['Palo Alto Networks, Fortinet, Cisco, Check Point'],
     marketSize: '$45B network security market',
@@ -133,11 +148,12 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI threat detection models, autonomous response systems, and network optimization algorithms.',
+    implementationDetails:
+      'AI threat detection models, autonomous response systems, and network optimization algorithms.',
     launchDate: '2025-01-20',
     customers: 67,
     rating: 4.8,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'quantum-data-warehouse-platform',
@@ -145,7 +161,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'Accelerate data processing with quantum computing optimization',
     price: '$2,199',
     period: '/month',
-    description: 'Advanced data warehouse platform that leverages quantum computing principles for faster data processing, advanced analytics, and real-time insights.',
+    description:
+      'Advanced data warehouse platform that leverages quantum computing principles for faster data processing, advanced analytics, and real-time insights.',
     features: [
       'Quantum-optimized query processing',
       'Real-time data streaming and analytics',
@@ -155,22 +172,30 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Custom analytics and reporting',
       'API-first data access',
       'Enterprise-grade security and encryption',
-      'Scalable architecture and performance'
+      'Scalable architecture and performance',
     ],
     popular: true,
     icon: '🗄️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-data-warehouse',
-    marketPosition: 'Advanced alternative to Snowflake, Amazon Redshift; focuses on quantum optimization and real-time processing.',
-    targetAudience: 'Data engineers, data scientists, BI analysts, enterprise teams',
+    marketPosition:
+      'Advanced alternative to Snowflake, Amazon Redshift; focuses on quantum optimization and real-time processing.',
+    targetAudience:
+      'Data engineers, data scientists, BI analysts, enterprise teams',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Data & Analytics',
     realService: true,
-    technology: ['Quantum Computing, Data Warehousing, AI/ML, Real-time Processing'],
-    integrations: ['Snowflake, Amazon Redshift, Google BigQuery, Azure Synapse'],
-    useCases: ['Data warehousing, Real-time analytics, Machine learning, Business intelligence'],
+    technology: [
+      'Quantum Computing, Data Warehousing, AI/ML, Real-time Processing',
+    ],
+    integrations: [
+      'Snowflake, Amazon Redshift, Google BigQuery, Azure Synapse',
+    ],
+    useCases: [
+      'Data warehousing, Real-time analytics, Machine learning, Business intelligence',
+    ],
     roi: 'Improve query performance by 50-80% and reduce data processing costs by 40%.',
     competitors: ['Snowflake, Amazon Redshift, Google BigQuery, Azure Synapse'],
     marketSize: '$25B data warehouse market',
@@ -178,11 +203,12 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-inspired query optimization, real-time data processing, and advanced analytics capabilities.',
+    implementationDetails:
+      'Quantum-inspired query optimization, real-time data processing, and advanced analytics capabilities.',
     launchDate: '2025-01-25',
     customers: 38,
     rating: 4.9,
-    reviews: 24
+    reviews: 24,
   },
   {
     id: 'ai-powered-it-service-management',
@@ -190,7 +216,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'Intelligent IT service delivery with AI automation',
     price: '$799',
     period: '/month',
-    description: 'Comprehensive IT service management platform that uses AI to automate service delivery, predict issues, and optimize IT operations.',
+    description:
+      'Comprehensive IT service management platform that uses AI to automate service delivery, predict issues, and optimize IT operations.',
     features: [
       'AI-powered incident prediction and prevention',
       'Automated service request routing',
@@ -200,22 +227,26 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Integration with IT tools and systems',
       'Custom workflows and automation',
       'Performance analytics and reporting',
-      'Mobile app for field technicians'
+      'Mobile app for field technicians',
     ],
     popular: false,
     icon: '🔧',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-it-service-management',
-    marketPosition: 'Advanced alternative to ServiceNow, BMC Helix; adds AI-driven automation and predictive capabilities.',
-    targetAudience: 'IT service managers, IT operations teams, enterprise IT, MSPs',
+    marketPosition:
+      'Advanced alternative to ServiceNow, BMC Helix; adds AI-driven automation and predictive capabilities.',
+    targetAudience:
+      'IT service managers, IT operations teams, enterprise IT, MSPs',
     trialDays: 21,
     setupTime: '1 week',
     category: 'IT Service Management',
     realService: true,
     technology: ['AI/ML, ITSM, Automation, Cloud Computing'],
     integrations: ['ServiceNow, BMC, Jira, Slack, Microsoft Teams'],
-    useCases: ['Incident management, Service automation, Predictive maintenance, IT optimization'],
+    useCases: [
+      'Incident management, Service automation, Predictive maintenance, IT optimization',
+    ],
     roi: 'Reduce IT service costs by 35% and improve service quality by 50%.',
     competitors: ['ServiceNow, BMC Helix, Ivanti, Freshservice'],
     marketSize: '$8B ITSM market',
@@ -223,11 +254,12 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'itsm-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI incident prediction models, automated service workflows, and intelligent knowledge management.',
+    implementationDetails:
+      'AI incident prediction models, automated service workflows, and intelligent knowledge management.',
     launchDate: '2025-02-01',
     customers: 89,
     rating: 4.6,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'quantum-iot-platform-enterprise',
@@ -235,7 +267,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'Enterprise IoT platform with quantum computing optimization',
     price: '$1,499',
     period: '/month',
-    description: 'Advanced IoT platform that leverages quantum computing for device management, data processing, and real-time analytics at enterprise scale.',
+    description:
+      'Advanced IoT platform that leverages quantum computing for device management, data processing, and real-time analytics at enterprise scale.',
     features: [
       'Quantum-optimized device management',
       'Real-time data processing and analytics',
@@ -245,22 +278,30 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Custom dashboard and reporting',
       'Integration with business systems',
       'Scalable architecture and performance',
-      'AI-powered insights and automation'
+      'AI-powered insights and automation',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-iot-platform-enterprise',
-    marketPosition: 'Advanced alternative to AWS IoT, Azure IoT; focuses on quantum optimization and enterprise features.',
-    targetAudience: 'IoT architects, enterprise IT teams, industrial automation, smart city planners',
+    marketPosition:
+      'Advanced alternative to AWS IoT, Azure IoT; focuses on quantum optimization and enterprise features.',
+    targetAudience:
+      'IoT architects, enterprise IT teams, industrial automation, smart city planners',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'IoT & Edge Computing',
     realService: true,
-    technology: ['Quantum Computing, IoT, Edge Computing, AI/ML, Cloud Computing'],
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'],
-    useCases: ['Industrial IoT, Smart cities, Enterprise automation, Real-time monitoring'],
+    technology: [
+      'Quantum Computing, IoT, Edge Computing, AI/ML, Cloud Computing',
+    ],
+    integrations: [
+      'AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols',
+    ],
+    useCases: [
+      'Industrial IoT, Smart cities, Enterprise automation, Real-time monitoring',
+    ],
     roi: 'Improve IoT efficiency by 40% and reduce operational costs by 30%.',
     competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'],
     marketSize: '$15B enterprise IoT market',
@@ -268,11 +309,12 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'iot-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-inspired device optimization, real-time data processing, and enterprise-grade security.',
+    implementationDetails:
+      'Quantum-inspired device optimization, real-time data processing, and enterprise-grade security.',
     launchDate: '2025-02-05',
     customers: 56,
     rating: 4.7,
-    reviews: 33
+    reviews: 33,
   },
   {
     id: 'autonomous-backup-disaster-recovery',
@@ -280,7 +322,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'Self-managing backup and recovery with AI optimization',
     price: '$899',
     period: '/month',
-    description: 'Intelligent backup and disaster recovery platform that automatically manages data protection, optimizes storage, and ensures business continuity.',
+    description:
+      'Intelligent backup and disaster recovery platform that automatically manages data protection, optimizes storage, and ensures business continuity.',
     features: [
       'AI-powered backup optimization',
       'Automated disaster recovery testing',
@@ -290,22 +333,28 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Compliance and audit automation',
       'Custom recovery plans and workflows',
       'Performance analytics and reporting',
-      'Integration with business systems'
+      'Integration with business systems',
     ],
     popular: false,
     icon: '💾',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/autonomous-backup-disaster-recovery',
-    marketPosition: 'Advanced alternative to Veeam, Commvault; adds AI-driven automation and optimization.',
-    targetAudience: 'IT administrators, backup specialists, enterprise IT, MSPs',
+    marketPosition:
+      'Advanced alternative to Veeam, Commvault; adds AI-driven automation and optimization.',
+    targetAudience:
+      'IT administrators, backup specialists, enterprise IT, MSPs',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Backup & Recovery',
     realService: true,
     technology: ['AI/ML, Backup Software, Cloud Computing, Automation'],
-    integrations: ['Veeam, Commvault, AWS S3, Azure Blob, Google Cloud Storage'],
-    useCases: ['Data backup, Disaster recovery, Storage optimization, Business continuity'],
+    integrations: [
+      'Veeam, Commvault, AWS S3, Azure Blob, Google Cloud Storage',
+    ],
+    useCases: [
+      'Data backup, Disaster recovery, Storage optimization, Business continuity',
+    ],
     roi: 'Reduce backup costs by 40% and improve recovery time by 60%.',
     competitors: ['Veeam, Commvault, Veritas, Acronis'],
     marketSize: '$12B backup software market',
@@ -313,11 +362,12 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'backup-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI backup optimization, automated disaster recovery, and intelligent storage management.',
+    implementationDetails:
+      'AI backup optimization, automated disaster recovery, and intelligent storage management.',
     launchDate: '2025-02-10',
     customers: 134,
     rating: 4.5,
-    reviews: 78
+    reviews: 78,
   },
   {
     id: 'quantum-api-gateway-platform',
@@ -325,7 +375,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'High-performance API management with quantum optimization',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced API gateway platform that leverages quantum computing for optimal routing, load balancing, and performance enhancement.',
+    description:
+      'Advanced API gateway platform that leverages quantum computing for optimal routing, load balancing, and performance enhancement.',
     features: [
       'Quantum-optimized API routing',
       'Advanced load balancing and scaling',
@@ -335,34 +386,45 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Custom API policies and rules',
       'Integration with development tools',
       'Analytics and reporting dashboard',
-      'Developer portal and documentation'
+      'Developer portal and documentation',
     ],
     popular: true,
     icon: '🔌',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-api-gateway',
-    marketPosition: 'Advanced alternative to Kong, AWS API Gateway; focuses on quantum optimization and high performance.',
-    targetAudience: 'API developers, platform engineers, DevOps teams, enterprise IT',
+    marketPosition:
+      'Advanced alternative to Kong, AWS API Gateway; focuses on quantum optimization and high performance.',
+    targetAudience:
+      'API developers, platform engineers, DevOps teams, enterprise IT',
     trialDays: 30,
     setupTime: '1 week',
     category: 'API Management',
     realService: true,
-    technology: ['Quantum Computing, API Gateway, Load Balancing, Cloud Computing'],
-    integrations: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'],
-    useCases: ['API management, Load balancing, Performance optimization, Developer experience'],
+    technology: [
+      'Quantum Computing, API Gateway, Load Balancing, Cloud Computing',
+    ],
+    integrations: [
+      'Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints',
+    ],
+    useCases: [
+      'API management, Load balancing, Performance optimization, Developer experience',
+    ],
     roi: 'Improve API performance by 50% and reduce latency by 40%.',
-    competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'],
+    competitors: [
+      'Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints',
+    ],
     marketSize: '$8B API management market',
     growthRate: '40% YoY',
     variant: 'api-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-inspired routing algorithms, advanced load balancing, and performance optimization.',
+    implementationDetails:
+      'Quantum-inspired routing algorithms, advanced load balancing, and performance optimization.',
     launchDate: '2025-02-15',
     customers: 78,
     rating: 4.8,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-monitoring-intelligence',
@@ -370,7 +432,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'Intelligent monitoring with AI-driven insights and automation',
     price: '$649',
     period: '/month',
-    description: 'Advanced monitoring platform that uses AI to automatically detect issues, predict failures, and provide intelligent insights for better system management.',
+    description:
+      'Advanced monitoring platform that uses AI to automatically detect issues, predict failures, and provide intelligent insights for better system management.',
     features: [
       'AI-powered anomaly detection',
       'Predictive failure analysis',
@@ -380,14 +443,15 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Integration with monitoring tools',
       'Machine learning insights',
       'Custom alert rules and policies',
-      'Mobile app for monitoring'
+      'Mobile app for monitoring',
     ],
     popular: true,
     icon: '📊',
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-monitoring-intelligence',
-    marketPosition: 'Advanced alternative to Datadog, New Relic; adds AI-driven insights and predictive capabilities.',
+    marketPosition:
+      'Advanced alternative to Datadog, New Relic; adds AI-driven insights and predictive capabilities.',
     targetAudience: 'DevOps engineers, SREs, IT operations, platform teams',
     trialDays: 21,
     setupTime: '1 week',
@@ -395,7 +459,9 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     realService: true,
     technology: ['AI/ML, Monitoring, Analytics, Cloud Computing'],
     integrations: ['Datadog, New Relic, Grafana, Prometheus, Splunk'],
-    useCases: ['System monitoring, Performance optimization, Issue prevention, Capacity planning'],
+    useCases: [
+      'System monitoring, Performance optimization, Issue prevention, Capacity planning',
+    ],
     roi: 'Reduce incident response time by 50% and prevent 70% of system failures.',
     competitors: ['Datadog, New Relic, Grafana, Splunk'],
     marketSize: '$10B monitoring market',
@@ -403,11 +469,12 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI anomaly detection models, predictive failure analysis, and automated alert management.',
+    implementationDetails:
+      'AI anomaly detection models, predictive failure analysis, and automated alert management.',
     launchDate: '2025-02-20',
     customers: 156,
     rating: 4.6,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'quantum-integration-platform',
@@ -415,7 +482,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'High-performance data integration with quantum optimization',
     price: '$1,099',
     period: '/month',
-    description: 'Advanced data integration platform that leverages quantum computing for optimal data processing, transformation, and synchronization across systems.',
+    description:
+      'Advanced data integration platform that leverages quantum computing for optimal data processing, transformation, and synchronization across systems.',
     features: [
       'Quantum-optimized data processing',
       'Real-time data synchronization',
@@ -425,22 +493,26 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Performance monitoring and optimization',
       'API-first architecture',
       'Enterprise-grade security',
-      'Custom connectors and adapters'
+      'Custom connectors and adapters',
     ],
     popular: false,
     icon: '🔗',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-integration-platform',
-    marketPosition: 'Advanced alternative to MuleSoft, Informatica; focuses on quantum optimization and high performance.',
-    targetAudience: 'Data engineers, integration specialists, enterprise IT, platform teams',
+    marketPosition:
+      'Advanced alternative to MuleSoft, Informatica; focuses on quantum optimization and high performance.',
+    targetAudience:
+      'Data engineers, integration specialists, enterprise IT, platform teams',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Data Integration',
     realService: true,
     technology: ['Quantum Computing, Data Integration, ETL, Cloud Computing'],
     integrations: ['MuleSoft, Informatica, Talend, Apache NiFi, AWS Glue'],
-    useCases: ['Data integration, ETL processes, Real-time synchronization, System connectivity'],
+    useCases: [
+      'Data integration, ETL processes, Real-time synchronization, System connectivity',
+    ],
     roi: 'Improve data processing speed by 60% and reduce integration costs by 40%.',
     competitors: ['MuleSoft, Informatica, Talend, Apache NiFi'],
     marketSize: '$12B data integration market',
@@ -448,11 +520,12 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-inspired data processing, real-time synchronization, and advanced transformation capabilities.',
+    implementationDetails:
+      'Quantum-inspired data processing, real-time synchronization, and advanced transformation capabilities.',
     launchDate: '2025-02-25',
     customers: 67,
     rating: 4.7,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'autonomous-ai-model-management',
@@ -460,7 +533,8 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     tagline: 'Self-managing AI model lifecycle with automated optimization',
     price: '$1,899',
     period: '/month',
-    description: 'Intelligent AI model management platform that automatically handles model training, deployment, monitoring, and optimization throughout the lifecycle.',
+    description:
+      'Intelligent AI model management platform that automatically handles model training, deployment, monitoring, and optimization throughout the lifecycle.',
     features: [
       'AI-powered model optimization',
       'Automated model training and deployment',
@@ -470,22 +544,26 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
       'Custom model workflows',
       'Integration with ML frameworks',
       'Performance analytics and reporting',
-      'Enterprise-grade security and compliance'
+      'Enterprise-grade security and compliance',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/autonomous-ai-model-management',
-    marketPosition: 'Advanced alternative to MLflow, Kubeflow; adds AI-driven automation and autonomous management.',
-    targetAudience: 'ML engineers, data scientists, AI teams, enterprise organizations',
+    marketPosition:
+      'Advanced alternative to MLflow, Kubeflow; adds AI-driven automation and autonomous management.',
+    targetAudience:
+      'ML engineers, data scientists, AI teams, enterprise organizations',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'AI & Machine Learning',
     realService: true,
     technology: ['AI/ML, Model Management, Automation, Cloud Computing'],
     integrations: ['MLflow, Kubeflow, TensorFlow, PyTorch, AWS SageMaker'],
-    useCases: ['Model lifecycle management, Automated training, Performance optimization, Model deployment'],
+    useCases: [
+      'Model lifecycle management, Automated training, Performance optimization, Model deployment',
+    ],
     roi: 'Reduce model management overhead by 70% and improve model performance by 30%.',
     competitors: ['MLflow, Kubeflow, Weights & Biases, Neptune'],
     marketSize: '$8B MLOps market',
@@ -493,10 +571,11 @@ export const cuttingEdgeITServices: CuttingEdgeITService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI model optimization, automated lifecycle management, and intelligent performance monitoring.',
+    implementationDetails:
+      'AI model optimization, automated lifecycle management, and intelligent performance monitoring.',
     launchDate: '2025-03-01',
     customers: 45,
     rating: 4.9,
-    reviews: 26
-  }
+    reviews: 26,
+  },
 ];

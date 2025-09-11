@@ -17,21 +17,25 @@ const ContactPage = lazy(() => import('./pages/contact.tsx'));
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div className='min-h-screen bg-gray-50'>
         <SEOEnhancer />
         <SecurityEnhancer />
         <PerformanceOptimizer />
         <AccessibilityEnhancer />
         <AppHeader />
-        <main className="flex-1">
-          <Suspense fallback={<div className="flex justify-center items-center min-h-screen">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-          </div>}>
+        <main className='flex-1'>
+          <Suspense
+            fallback={
+              <div className='flex justify-center items-center min-h-screen'>
+                <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
+              </div>
+            }
+          >
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
+              <Route path='/' element={<HomePage />} />
+              <Route path='/services' element={<ServicesPage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/contact' element={<ContactPage />} />
             </Routes>
           </Suspense>
         </main>

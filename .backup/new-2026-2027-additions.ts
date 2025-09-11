@@ -5,20 +5,22 @@ export const newDiversifiedServices = [
     tagline: 'Predict churn and expansion with explainable AI',
     price: '$129',
     period: '/month',
-    description: 'Track product usage, support signals, and billing events to score customer health and predict churn or expansion with explainable features.',
+    description:
+      'Track product usage, support signals, and billing events to score customer health and predict churn or expansion with explainable features.',
     features: [
       'Unified product + billing + support signals',
       'Explainable health scoring models',
       'Churn prediction and expansion propensity',
       'Playbooks and CRM tasks',
-      'Slack and email alerts'
+      'Slack and email alerts',
     ],
     popular: true,
     icon: '📊',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-customer-health-scoring',
-    marketPosition: 'Alternative to Gainsight PX and Catalyst for SMBs; faster to deploy.',
+    marketPosition:
+      'Alternative to Gainsight PX and Catalyst for SMBs; faster to deploy.',
     targetAudience: 'CS, growth, and product teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -36,14 +38,15 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Event ingestion, model training, scoring jobs, and alerting.',
+    implementationDetails:
+      'Event ingestion, model training, scoring jobs, and alerting.',
     launchDate: '2025-03-10',
     customers: 44,
     rating: 4.6,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'vector-search-starter-pro',
@@ -51,20 +54,22 @@ export const newDiversifiedServices = [
     tagline: 'Production-ready RAG with governance and search analytics',
     price: '$99',
     period: '/month',
-    description: 'Spin up RAG over your docs with connectors, embeddings, redaction, and search analytics. Includes eval sets and quality tracking.',
+    description:
+      'Spin up RAG over your docs with connectors, embeddings, redaction, and search analytics. Includes eval sets and quality tracking.',
     features: [
       'Connectors for Google Drive, Confluence, GitHub',
       'Chunking, embeddings, and hybrid search',
       'PII redaction and access controls',
       'Search analytics and eval sets',
-      'SDK and webhook integration'
+      'SDK and webhook integration',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/vector-search-starter-pro',
-    marketPosition: 'Comparable to Pinecone starter kits; adds governance and analytics.',
+    marketPosition:
+      'Comparable to Pinecone starter kits; adds governance and analytics.',
     targetAudience: 'Dev teams, platform engineering, knowledge ops',
     trialDays: 14,
     setupTime: '2 hours',
@@ -82,14 +87,15 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Multi-tenant ingestion, eval dashboards, quality tracking.',
+    implementationDetails:
+      'Multi-tenant ingestion, eval dashboards, quality tracking.',
     launchDate: '2025-02-20',
     customers: 31,
     rating: 4.5,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'api-latency-optimizer',
@@ -97,20 +103,22 @@ export const newDiversifiedServices = [
     tagline: 'Profiling, caching, and routing suggestions to cut p95',
     price: '$59',
     period: '/month',
-    description: 'Continuously profile endpoints, identify slow queries and N+1s, apply caching hints, and recommend edge routing/prefetch strategies.',
+    description:
+      'Continuously profile endpoints, identify slow queries and N+1s, apply caching hints, and recommend edge routing/prefetch strategies.',
     features: [
       'Endpoint profiling and traces',
       'DB slow query surfacing',
       'Cache key suggestions',
       'Edge routing recommendations',
-      'p95/p99 trend alerts'
+      'p95/p99 trend alerts',
     ],
     popular: false,
     icon: '⚡',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/api-latency-optimizer',
-    marketPosition: 'Lightweight complement to APM tools focusing on actionable speedups.',
+    marketPosition:
+      'Lightweight complement to APM tools focusing on actionable speedups.',
     targetAudience: 'Backend engineers, performance leads',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -128,14 +136,15 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Agentless probes, suggestions engine, and CI checks.',
+    implementationDetails:
+      'Agentless probes, suggestions engine, and CI checks.',
     launchDate: '2025-03-01',
     customers: 27,
     rating: 4.5,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'cloud-security-posture-starter',
@@ -143,20 +152,22 @@ export const newDiversifiedServices = [
     tagline: 'Guardrails for S3, IAM, VPC, and container misconfigs',
     price: '$149',
     period: '/month',
-    description: 'Opinionated CSPM starter with 50+ checks for buckets, IAM roles, security groups, ECR images, and KMS with Jira/Slack workflows.',
+    description:
+      'Opinionated CSPM starter with 50+ checks for buckets, IAM roles, security groups, ECR images, and KMS with Jira/Slack workflows.',
     features: [
       '50+ best-practice cloud checks',
       'Auto-ticket creation and playbooks',
       'Owner tagging and recurrence',
       'Evidence exports for audits',
-      'Weekly risk digest'
+      'Weekly risk digest',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/cloud-security-posture-starter',
-    marketPosition: 'Complements Wiz/Prisma with practical, action-first starter for SMBs.',
+    marketPosition:
+      'Complements Wiz/Prisma with practical, action-first starter for SMBs.',
     targetAudience: 'Security, platform engineering',
     trialDays: 14,
     setupTime: '1 day',
@@ -174,14 +185,14 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Least-privileged read-only scanning and reports.',
     launchDate: '2025-02-15',
     customers: 22,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'seo-content-optimizer-pro',
@@ -189,13 +200,14 @@ export const newDiversifiedServices = [
     tagline: 'Topic clustering, briefs, and outline scoring with SERP data',
     price: '$39',
     period: '/month',
-    description: 'Generate briefs and outlines from target keywords with clustering, SERP analysis, and score improvements recommendations.',
+    description:
+      'Generate briefs and outlines from target keywords with clustering, SERP analysis, and score improvements recommendations.',
     features: [
       'Keyword clustering',
       'SERP feature analysis',
       'Brief and outline generator',
       'Entity coverage scoring',
-      'CMS export'
+      'CMS export',
     ],
     popular: false,
     icon: '📝',
@@ -220,14 +232,14 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'SERP ingestion, entity scoring, brief templates.',
     launchDate: '2025-03-05',
     customers: 18,
     rating: 4.4,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'finops-rightsizing-advisor',
@@ -235,13 +247,14 @@ export const newDiversifiedServices = [
     tagline: 'Automated rightsizing hints and savings plan coverage',
     price: '$59',
     period: '/month',
-    description: 'Analyze compute/storage footprints to suggest reservations, schedules, and lifecycle policies with weekly savings reports.',
+    description:
+      'Analyze compute/storage footprints to suggest reservations, schedules, and lifecycle policies with weekly savings reports.',
     features: [
       'Idle/underutilized resource detection',
       'Schedule and lifecycle hints',
       'Savings plan coverage tracker',
       'Weekly savings digests',
-      'Integrations to Jira'
+      'Integrations to Jira',
     ],
     popular: true,
     icon: '💸',
@@ -266,14 +279,14 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Read-only billing roles and policy engine.',
     launchDate: '2025-02-22',
     customers: 25,
     rating: 4.6,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'privacy-dsar-portal-lite',
@@ -281,13 +294,14 @@ export const newDiversifiedServices = [
     tagline: 'Intake, verify, and export DSAR requests with audit trails',
     price: '$79',
     period: '/month',
-    description: 'Hosted DSAR intake with identity verification, connector-based discovery, and export packs for compliance teams.',
+    description:
+      'Hosted DSAR intake with identity verification, connector-based discovery, and export packs for compliance teams.',
     features: [
       'Secure intake portal',
       'Identity verification',
       'Connector-based discovery',
       'Audit logs and exports',
-      'SLA tracking'
+      'SLA tracking',
     ],
     popular: false,
     icon: '🛡️',
@@ -312,14 +326,14 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Prebuilt portal, connectors, export packs.',
     launchDate: '2025-03-12',
     customers: 12,
     rating: 4.4,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'meeting-notes-copilot-pro',
@@ -327,20 +341,22 @@ export const newDiversifiedServices = [
     tagline: 'Multilingual transcription, action items, and CRM sync',
     price: '$29',
     period: '/month',
-    description: 'Auto-transcribe meetings, summarize key decisions, extract action items, and sync to tickets/CRM with speaker attribution.',
+    description:
+      'Auto-transcribe meetings, summarize key decisions, extract action items, and sync to tickets/CRM with speaker attribution.',
     features: [
       'LLM summaries and action items',
       'Speaker attribution and diarization',
       'CRM and ticket sync',
       'Multi-language support',
-      'Model safety and redaction'
+      'Model safety and redaction',
     ],
     popular: true,
     icon: '🎙️',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/meeting-notes-copilot-pro',
-    marketPosition: 'Alternative to Fireflies.ai and Otter with stronger CRM sync.',
+    marketPosition:
+      'Alternative to Fireflies.ai and Otter with stronger CRM sync.',
     targetAudience: 'Sales, success, and ops teams',
     trialDays: 7,
     setupTime: '10 minutes',
@@ -358,14 +374,15 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Web recorder/ingest, diarization, summary jobs, CRM sync.',
+    implementationDetails:
+      'Web recorder/ingest, diarization, summary jobs, CRM sync.',
     launchDate: '2025-02-08',
     customers: 58,
     rating: 4.6,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'incident-copilot-lite',
@@ -373,13 +390,14 @@ export const newDiversifiedServices = [
     tagline: 'AI incident summaries, status page posts, and timelines',
     price: '$49',
     period: '/month',
-    description: 'Summarize incidents from logs and traces, draft status page posts, and produce timelines with role-based approvals.',
+    description:
+      'Summarize incidents from logs and traces, draft status page posts, and produce timelines with role-based approvals.',
     features: [
       'Incident detection and clustering',
       'Draft comms for review',
       'Timeline builder',
       'Role-based approvals',
-      'Post-incident pack'
+      'Post-incident pack',
     ],
     popular: false,
     icon: '🚨',
@@ -404,14 +422,15 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Ingest traces/logs, LLM draft, approval flows, status APIs.',
+    implementationDetails:
+      'Ingest traces/logs, LLM draft, approval flows, status APIs.',
     launchDate: '2025-03-07',
     customers: 14,
     rating: 4.4,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'ai-sales-email-studio',
@@ -419,13 +438,14 @@ export const newDiversifiedServices = [
     tagline: 'Personalized outreach with firmographics and tone control',
     price: '$39',
     period: '/month',
-    description: 'Generate personalized emails using ICP firmographics and public signals with tone control, variants, and spam-safe checks.',
+    description:
+      'Generate personalized emails using ICP firmographics and public signals with tone control, variants, and spam-safe checks.',
     features: [
       'Firmographic enrichment',
       'Tone control and variants',
       'Spam-safe and DKIM/DMARC checks',
       'CRM sync and sequencing',
-      'A/B testing'
+      'A/B testing',
     ],
     popular: false,
     icon: '✉️',
@@ -450,14 +470,15 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Templates, personalization, spam-safe checks, CRM sync.',
+    implementationDetails:
+      'Templates, personalization, spam-safe checks, CRM sync.',
     launchDate: '2025-02-02',
     customers: 42,
     rating: 4.5,
-    reviews: 16
+    reviews: 16,
   },
   {
     id: 'etl-quality-guard',
@@ -465,13 +486,14 @@ export const newDiversifiedServices = [
     tagline: 'Detect schema drift, null explosions, and freshness gaps',
     price: '$49',
     period: '/month',
-    description: 'Monitor pipelines for schema drift and data quality regressions with rules and anomaly detection. Ship alerts with remediation tips.',
+    description:
+      'Monitor pipelines for schema drift and data quality regressions with rules and anomaly detection. Ship alerts with remediation tips.',
     features: [
       'Schema drift detection',
       'Anomaly detection on nulls/outliers',
       'Freshness and completeness checks',
       'Owner routing and on-call',
-      'Lineage snapshots'
+      'Lineage snapshots',
     ],
     popular: false,
     icon: '🧪',
@@ -496,14 +518,14 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Metadata collectors, rules engine, alert routing.',
     launchDate: '2025-02-28',
     customers: 20,
     rating: 4.5,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'sso-user-lifecycle-lite',
@@ -511,13 +533,14 @@ export const newDiversifiedServices = [
     tagline: 'SCIM, role provisioning, and offboarding audits',
     price: '$79',
     period: '/month',
-    description: 'Add SCIM, roles, and lifecycle policies to your SaaS with ready-made connectors and offboarding audit reports.',
+    description:
+      'Add SCIM, roles, and lifecycle policies to your SaaS with ready-made connectors and offboarding audit reports.',
     features: [
       'SSO + SCIM quickstart',
       'Role and group mapping',
       'Lifecycle policies',
       'Offboarding audits',
-      'Compliance exports'
+      'Compliance exports',
     ],
     popular: true,
     icon: '🔐',
@@ -542,14 +565,14 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Hosted SCIM broker, mapping UI, audit exports.',
     launchDate: '2025-03-03',
     customers: 16,
     rating: 4.6,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-qa-assistant',
@@ -557,13 +580,14 @@ export const newDiversifiedServices = [
     tagline: 'Generate tests, fuzz inputs, and draft bug repros',
     price: '$49',
     period: '/month',
-    description: 'Automate QA workflows with test generation, input fuzzing, screenshot diffs, and bug reproduction notes integrated to your tracker.',
+    description:
+      'Automate QA workflows with test generation, input fuzzing, screenshot diffs, and bug reproduction notes integrated to your tracker.',
     features: [
       'Test and scenario generation',
       'Fuzzing and boundary checks',
       'Visual regression diffs',
       'Bug repro drafts',
-      'Tracker integration'
+      'Tracker integration',
     ],
     popular: false,
     icon: '🔧',
@@ -588,14 +612,14 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Repo-aware assistant and CI hooks.',
     launchDate: '2025-02-18',
     customers: 19,
     rating: 4.4,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'ai-legal-clause-analyzer-pro',
@@ -603,13 +627,14 @@ export const newDiversifiedServices = [
     tagline: 'Risk scoring, fallback clause suggestions, and diff tracking',
     price: '$99',
     period: '/month',
-    description: 'Analyze contracts for risky clauses, suggest fallbacks, and track redlines with audit trails and playbooks.',
+    description:
+      'Analyze contracts for risky clauses, suggest fallbacks, and track redlines with audit trails and playbooks.',
     features: [
       'Clause extraction and risk scoring',
       'Fallback suggestions',
       'Redline and diff tracking',
       'Audit trails',
-      'Export packs for counsel'
+      'Export packs for counsel',
     ],
     popular: true,
     icon: '⚖️',
@@ -634,13 +659,13 @@ export const newDiversifiedServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Ingestion, clause library, risk models, exports.',
     launchDate: '2025-03-11',
     customers: 13,
     rating: 4.5,
-    reviews: 5
-  }
+    reviews: 5,
+  },
 ];

@@ -6,17 +6,21 @@ interface WhitelabelContextType {
   logo: string;
 }
 
-const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(
+  undefined
+);
 
 interface WhitelabelProviderProps {
   children: ReactNode;
 }
 
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {
+export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({
+  children,
+}) => {
   const value = {
     isWhitelabel: false,
     brandName: 'Zion Tech Group',
-    logo: '/logos/zion-logo.png'
+    logo: '/logos/zion-logo.png',
   };
 
   return (

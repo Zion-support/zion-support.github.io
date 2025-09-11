@@ -1,6 +1,6 @@
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   console.log('Test function executed successfully');
-  
+
   return {
     statusCode: 200,
     body: JSON.stringify({
@@ -9,11 +9,11 @@ exports.handler = async function(event, context) {
       event: event,
       context: {
         awsRequestId: context.awsRequestId,
-        functionName: context.functionName
-      }
+        functionName: context.functionName,
+      },
     }),
     headers: {
-      'Content-Type': 'application/json'
-    }
+      'Content-Type': 'application/json',
+    },
   };
 };

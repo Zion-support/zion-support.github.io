@@ -16,7 +16,7 @@ class SEOAuditor {
       headings: 0,
       images: 0,
       links: 0,
-      performance: 0
+      performance: 0,
     };
   }
 
@@ -38,7 +38,6 @@ class SEOAuditor {
 
       console.log('✅ SEO audit completed successfully');
       return report;
-
     } catch (error) {
       console.error('❌ SEO audit failed:', error.message);
       throw error;
@@ -102,8 +101,8 @@ class SEOAuditor {
   generateReport() {
     const timestamp = new Date().toISOString();
     const overallScore = Math.round(
-      Object.values(this.seoMetrics).reduce((sum, score) => sum + score, 0) / 
-      Object.values(this.seoMetrics).length
+      Object.values(this.seoMetrics).reduce((sum, score) => sum + score, 0) /
+        Object.values(this.seoMetrics).length
     );
 
     const report = {
@@ -111,7 +110,7 @@ class SEOAuditor {
       overallScore,
       metrics: this.seoMetrics,
       summary: this.generateSummary(overallScore),
-      recommendations: this.generateRecommendations()
+      recommendations: this.generateRecommendations(),
     };
 
     return report;
@@ -137,7 +136,7 @@ class SEOAuditor {
     return {
       status,
       grade,
-      score: overallScore
+      score: overallScore,
     };
   }
 
@@ -145,7 +144,9 @@ class SEOAuditor {
     const recommendations = [];
 
     if (this.seoMetrics.metaTags < 80) {
-      recommendations.push('Optimize meta titles and descriptions for better click-through rates');
+      recommendations.push(
+        'Optimize meta titles and descriptions for better click-through rates'
+      );
       recommendations.push('Ensure all pages have unique meta tags');
     }
 
@@ -155,7 +156,9 @@ class SEOAuditor {
     }
 
     if (this.seoMetrics.images < 80) {
-      recommendations.push('Optimize images with proper alt text and compression');
+      recommendations.push(
+        'Optimize images with proper alt text and compression'
+      );
       recommendations.push('Implement lazy loading for images');
     }
 
@@ -275,7 +278,8 @@ class SEOAuditor {
 // CLI interface
 if (require.main === module) {
   const auditor = new SEOAuditor();
-  auditor.runAudit()
+  auditor
+    .runAudit()
     .then(report => {
       auditor.printReport(report);
       process.exit(0);

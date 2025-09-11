@@ -34,11 +34,11 @@ const urlsToCheck = [
   'https://ziontechgroup.com/white-papers',
   'https://ziontechgroup.com/webinars',
   'https://ziontechgroup.com/team',
-  'https://ziontechgroup.com/sitemap'
+  'https://ziontechgroup.com/sitemap',
 ];
 
 function checkUrl(url) {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     const urlObj = new URL(url);
     const options = {
       hostname: urlObj.hostname,
@@ -47,28 +47,30 @@ function checkUrl(url) {
       method: 'HEAD',
       timeout: 10000,
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; Website Link Checker)'
-      }
+        'User-Agent': 'Mozilla/5.0 (compatible; Website Link Checker)',
+      },
     };
 
     const client = urlObj.protocol === 'https:' ? https : http;
-    
-    const req = client.request(options, (res) => {
+
+    const req = client.request(options, res => {
       resolve({
         url,
         status: res.statusCode,
         working: res.statusCode >= 200 && res.statusCode < 400,
         redirect: res.statusCode >= 300 && res.statusCode < 400,
-        location: res.headers.location
-      })});
+        location: res.headers.location,
+      });
+    });
 
-    req.on('error', (err) => {
+    req.on('error', err => {
       resolve({
         url,
         status: 'ERROR',
         working: false,
-        error: err.message
-      })});
+        error: err.message,
+      });
+    });
 
     req.on('timeout', () => {
       req.destroy();
@@ -76,75 +78,77 @@ function checkUrl(url) {
         url,
         status: 'TIMEOUT',
         working: false,
-        error: 'Request timeout'
-      })});
+        error: 'Request timeout',
+      });
+    });
 
-    req.end()})}
+    req.end();
+  });
+}
 
 async function checkAllUrls() {
-   
   console.log('🔍 Checking all URLs from Zion Tech Group website...\n');
-  
+
   const results = {
     working: [],
     broken: [],
     redirects: [],
-    errors: []
+    errors: [],
   };
 
   for (const url of urlsToCheck) {
     process.stdout.write(`Checking ${url}... `);
     const result = await checkUrl(url);
-    
+
     if (result.working && !result.redirect) {
-       
       console.log(`✅ ${result.status}`);
-      results.working.push(result)} else if (result.redirect) {
-       
+      results.working.push(result);
+    } else if (result.redirect) {
       console.log(`🔄 ${result.status} -> ${result.location}`);
-      results.redirects.push(result)} else if (result.error) {
-       
+      results.redirects.push(result);
+    } else if (result.error) {
       console.log(`❌ ${result.error}`);
-      results.errors.push(result)} else {
-       
+      results.errors.push(result);
+    } else {
       console.log(`❌ ${result.status}`);
-      results.broken.push(result)}
+      results.broken.push(result);
+    }
   }
 
-   
   console.log('\n📊 SUMMARY:');
-   
+
   console.log(`✅ Working: ${results.working.length}`);
-   
+
   console.log(`🔄 Redirects: ${results.redirects.length}`);
-   
+
   console.log(`❌ Broken: ${results.broken.length}`);
-   
+
   console.log(`⚠️  Errors: ${results.errors.length}`);
-   
+
   console.log(`📈 Total: ${urlsToCheck.length}`);
 
   if (results.broken.length > 0) {
-     
     console.log('\n❌ BROKEN LINKS:');
     results.broken.forEach(link => {
-       
-      console.log(`  - ${link.url} (${link.status})`)})}
+      console.log(`  - ${link.url} (${link.status})`);
+    });
+  }
 
   if (results.redirects.length > 0) {
-     
     console.log('\n🔄 REDIRECTS:');
     results.redirects.forEach(link => {
-       
-      console.log(`  - ${link.url} -> ${link.location}`)})}
+      console.log(`  - ${link.url} -> ${link.location}`);
+    });
+  }
 
   if (results.errors.length > 0) {
-     
     console.log('\n⚠️  ERRORS:');
     results.errors.forEach(link => {
-       
-      console.log(`  - ${link.url}: ${link.error}`)})}
+      console.log(`  - ${link.url}: ${link.error}`);
+    });
+  }
 
-  return results}
+  return results;
+}
 
-checkAllUrls().catch(console.error);  
+checkAllUrls().catch(console.error);

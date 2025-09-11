@@ -1,10 +1,11 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers':
+    'authorization, x-client-info, apikey, content-type',
 };
 
 interface SectionSuggestionsParams {
@@ -12,21 +13,25 @@ interface SectionSuggestionsParams {
   sectionContent: string;
 }
 
-serve(async (req) => {
+serve(async req => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { sectionTitle, sectionContent }: SectionSuggestionsParams = await req.json();
+    const { sectionTitle, sectionContent }: SectionSuggestionsParams =
+      await req.json();
 
     if (!sectionTitle || !sectionContent) {
       return new Response(
-        JSON.stringify({ error: "Missing required parameters: sectionTitle and sectionContent are required." }),
+        JSON.stringify({
+          error:
+            'Missing required parameters: sectionTitle and sectionContent are required.',
+        }),
         {
           status: 400,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         }
       );
     }
@@ -37,13 +42,18 @@ serve(async (req) => {
     const supabaseClient = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
       Deno.env.get('SUPABASE_ANON_KEY') ?? '',
-      { global: { headers: { Authorization: req.headers.get('Authorization')! } } }
+      {
+        global: {
+          headers: { Authorization: req.headers.get('Authorization')! },
+        },
+      }
     );
 
     // Call the zion-gpt function
-    const { data: gptData, error: gptError } = await supabaseClient.functions.invoke("zion-gpt", {
-      body: { prompt: prompt, maxTokens: 300, temperature: 0.6 }, // Shorter response for suggestions
-    });
+    const { data: gptData, error: gptError } =
+      await supabaseClient.functions.invoke('zion-gpt', {
+        body: { prompt: prompt, maxTokens: 300, temperature: 0.6 }, // Shorter response for suggestions
+      });
 
     if (gptError) {
       // console.error("Error invoking zion-gpt for section suggestions:", gptError);
@@ -52,24 +62,19 @@ serve(async (req) => {
 
     if (!gptData || !gptData.completion) {
       // console.error("Invalid response from zion-gpt for section suggestions:", gptData);
-      throw new Error("Failed to get completion for suggestions from zion-gpt function.");
+      throw new Error(
+        'Failed to get completion for suggestions from zion-gpt function.'
+      );
     }
 
-    return new Response(
-      JSON.stringify({ suggestions: gptData.completion }),
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    );
-
+    return new Response(JSON.stringify({ suggestions: gptData.completion }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   } catch (error) {
     // console.error("Error in get-whitepaper-section-suggestions function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    );
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   }
 });

@@ -13,7 +13,7 @@ export function generateUser(email: string, role: string): User {
   return {
     id: Date.now().toString(),
     email,
-    role
+    role,
   };
 }
 

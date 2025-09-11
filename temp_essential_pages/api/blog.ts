@@ -13,7 +13,8 @@ export default function handler(
 
   try {
     const queryParam = req.query.query;
-    const query = typeof queryParam === 'string' ? queryParam.toLowerCase() : '';
+    const query =
+      typeof queryParam === 'string' ? queryParam.toLowerCase() : '';
     const match = (text?: string) => text?.toLowerCase().includes(query);
     const results = BLOG_POSTS.filter(
       p =>
@@ -26,6 +27,8 @@ export default function handler(
     return res.status(200).json(results);
   } catch (err) {
     console.error('Blog API error:', err);
-    return res.status(500).json({ error: 'Internal Server Error: Failed to fetch blog posts' });
+    return res
+      .status(500)
+      .json({ error: 'Internal Server Error: Failed to fetch blog posts' });
   }
 }

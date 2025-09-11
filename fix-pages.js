@@ -112,7 +112,7 @@ export default function Account() {
       </div>
     </>
   );
-}`
+}`,
 };
 
 // Apply fixes
@@ -125,4 +125,6 @@ Object.entries(pageFixes).forEach(([filePath, content]) => {
   }
 });
 
-console.log('Page fixes applied. Run the build again to check for remaining issues.');
+console.log(
+  'Page fixes applied. Run the build again to check for remaining issues.'
+);

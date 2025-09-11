@@ -24,7 +24,9 @@ async function handler(
   const { productId } = req.query as { productId: string | string[] };
 
   if (!productId || typeof productId !== 'string') {
-    return res.status(400).json({ error: 'Product ID is required and must be a string.' });
+    return res
+      .status(400)
+      .json({ error: 'Product ID is required and must be a string.' });
   }
 
   res.setHeader('Access-Control-Allow-Origin', '*'); // CORS header
@@ -56,7 +58,9 @@ async function handler(
   } catch (e) {
     console.error(`Error fetching product ${productId}:`, e);
     // More specific error checking can be done here (e.g., Prisma known errors)
-    return res.status(500).json({ error: 'Internal server error while fetching product details.' });
+    return res
+      .status(500)
+      .json({ error: 'Internal server error while fetching product details.' });
   } finally {
     await prisma.$disconnect();
   }

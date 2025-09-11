@@ -16,4 +16,4 @@ describe('Marketplace dropdown navigation', () => {
     cy.contains('a', /Categories/i).click();
     cy.url().should('include', '/categories');
   });
-}); 
+});

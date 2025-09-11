@@ -34,7 +34,7 @@ export default [
       'types/**',
       'supabase/**',
       'scripts/**',
-      'automation/**'
+      'automation/**',
     ],
   },
   js.configs.recommended,
@@ -46,20 +46,20 @@ export default [
       parser: tsParser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
-        project: false
+        project: false,
       },
       globals: {
-        ...globals.browser
-      }
+        ...globals.browser,
+      },
     },
     settings: {
-      react: { version: 'detect' }
+      react: { version: 'detect' },
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
       react,
       'react-hooks': reactHooks,
-      '@typescript-eslint': tsPlugin
+      '@typescript-eslint': tsPlugin,
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -70,7 +70,7 @@ export default [
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  }
+      'react/react-in-jsx-scope': 'off',
+    },
+  },
 ];

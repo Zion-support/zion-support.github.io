@@ -14,9 +14,7 @@
   "issues": [
     {
       "type": "seo",
-      "issues": [
-        "Missing SEO meta tags in test.tsx"
-      ],
+      "issues": ["Missing SEO meta tags in test.tsx"],
       "recommendation": "Add proper meta tags, titles, and descriptions to all pages"
     },
     {

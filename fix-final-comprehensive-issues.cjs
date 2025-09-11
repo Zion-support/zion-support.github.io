@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Final Comprehensive Issues Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Final Comprehensive Issues Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix enterpriseStore to match expected interface
@@ -117,7 +119,9 @@ class EnterpriseStore {
 export const enterpriseStore = new EnterpriseStore();
 `;
 fs.writeFileSync(enterpriseStorePath, enterpriseStoreContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed utils/data/enterpriseStore.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed utils/data/enterpriseStore.ts'
+);
 // Fix integrations registry file
 const registryPath = '/workspace/lib/integrations/registry.ts';
 if (fs.existsSync(registryPath)) {
@@ -127,10 +131,13 @@ if (fs.existsSync(registryPath)) {
     content += '\n}';
   }
   fs.writeFileSync(registryPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed lib/integrations/registry.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed lib/integrations/registry.ts'
+  );
 }
 // Fix generate service description file
-const generateServicePath = '/workspace/pages/api/generate-service-description.ts';
+const generateServicePath =
+  '/workspace/pages/api/generate-service-description.ts';
 if (fs.existsSync(generateServicePath)) {
   let content = fs.readFileSync(generateServicePath, 'utf8');
   // Add missing closing brace
@@ -138,7 +145,9 @@ if (fs.existsSync(generateServicePath)) {
     content += '\n}';
   }
   fs.writeFileSync(generateServicePath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts'
+  );
 }
 // Fix integrations disconnect file
 const disconnectPath = '/workspace/pages/api/integrations/disconnect.ts';
@@ -149,7 +158,9 @@ if (fs.existsSync(disconnectPath)) {
     content += '\n}';
   }
   fs.writeFileSync(disconnectPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/disconnect.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/disconnect.ts'
+  );
 }
 console.log('');
 console.log('📊 FINAL COMPREHENSIVE ISSUES FIX REPORT');
@@ -161,8 +172,12 @@ console.log('');
 console.log('✅ Successfully fixed files:');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - utils/data/enterpriseStore.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - lib/integrations/registry.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/generate-service-description.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/disconnect.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/generate-service-description.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/disconnect.ts'
+);
 console.log('');
 // Save report
 const report = {
@@ -173,8 +188,11 @@ const report = {
     'utils/data/enterpriseStore.ts',
     'lib/integrations/registry.ts',
     'pages/api/generate-service-description.ts',
-    'pages/api/integrations/disconnect.ts'
-  ]
+    'pages/api/integrations/disconnect.ts',
+  ],
 };
-fs.writeFileSync('/workspace/final-comprehensive-issues-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/final-comprehensive-issues-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to final-comprehensive-issues-fix-report.json');

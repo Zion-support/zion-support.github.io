@@ -18,7 +18,7 @@ export const usePerformanceMonitor = () => {
     cls: null,
     ttfb: null,
     domLoadTime: null,
-    resourceLoadTime: null
+    resourceLoadTime: null,
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -27,9 +27,11 @@ export const usePerformanceMonitor = () => {
   const measureCoreWebVitals = useCallback(() => {
     if ('PerformanceObserver' in window) {
       // Measure First Contentful Paint (FCP)
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        const fcpEntry = entries.find(
+          entry => entry.name === 'first-contentful-paint'
+        );
         if (fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
@@ -37,7 +39,7 @@ export const usePerformanceMonitor = () => {
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Measure Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
@@ -45,17 +47,20 @@ export const usePerformanceMonitor = () => {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // Measure First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          setMetrics(prev => ({
+            ...prev,
+            fid: entry.processingStart - entry.startTime,
+          }));
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Measure Cumulative Layout Shift (CLS)
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
@@ -67,26 +72,33 @@ export const usePerformanceMonitor = () => {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       // Measure Time to First Byte (TTFB)
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigationEntry = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        setMetrics(prev => ({
+          ...prev,
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
         }));
       }
 
       // Measure DOM Load Time
       if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          domLoadTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart 
+        setMetrics(prev => ({
+          ...prev,
+          domLoadTime:
+            navigationEntry.domContentLoadedEventEnd -
+            navigationEntry.domContentLoadedEventStart,
         }));
       }
 
       // Measure Resource Load Time
       const resourceEntries = performance.getEntriesByType('resource');
       if (resourceEntries.length > 0) {
-        const totalResourceTime = resourceEntries.reduce((total, entry) => total + entry.duration, 0);
+        const totalResourceTime = resourceEntries.reduce(
+          (total, entry) => total + entry.duration,
+          0
+        );
         setMetrics(prev => ({ ...prev, resourceLoadTime: totalResourceTime }));
       }
 
@@ -98,7 +110,7 @@ export const usePerformanceMonitor = () => {
           lcpObserver.disconnect();
           fidObserver.disconnect();
           clsObserver.disconnect();
-        }
+        },
       };
     }
   }, []);
@@ -123,7 +135,7 @@ export const usePerformanceMonitor = () => {
       cls: null,
       ttfb: null,
       domLoadTime: null,
-      resourceLoadTime: null
+      resourceLoadTime: null,
     });
   }, []);
 
@@ -143,7 +155,10 @@ export const usePerformanceMonitor = () => {
     startMonitoring,
     stopMonitoring,
     resetMetrics,
-    isGoodPerformance: metrics.fcp && metrics.fcp < 1800 && metrics.lcp && metrics.lcp < 2500,
-    isSlowPerformance: metrics.fcp && metrics.fcp > 3000 || metrics.lcp && metrics.lcp > 4000
+    isGoodPerformance:
+      metrics.fcp && metrics.fcp < 1800 && metrics.lcp && metrics.lcp < 2500,
+    isSlowPerformance:
+      (metrics.fcp && metrics.fcp > 3000) ||
+      (metrics.lcp && metrics.lcp > 4000),
   };
 };

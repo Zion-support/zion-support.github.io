@@ -8,7 +8,10 @@ class ComprehensiveMergeConflictResolver {
     this.rootPath = rootPath;
     this.resolvedFiles = [];
     this.failedFiles = [];
-    this.logFile = path.join(this.rootPath, 'comprehensive-merge-resolution.log');
+    this.logFile = path.join(
+      this.rootPath,
+      'comprehensive-merge-resolution.log'
+    );
     this.ensureLogDir();
   }
 
@@ -28,7 +31,11 @@ class ComprehensiveMergeConflictResolver {
   async runCommand(command, description) {
     this.log(`🚀 ${description}: ${command}`);
     try {
-      const output = execSync(command, { cwd: this.rootPath, encoding: 'utf8', stdio: 'pipe' });
+      const output = execSync(command, {
+        cwd: this.rootPath,
+        encoding: 'utf8',
+        stdio: 'pipe',
+      });
       this.log(`✅ ${description} successful.`);
       return output;
     } catch (error) {
@@ -42,11 +49,16 @@ class ComprehensiveMergeConflictResolver {
     const command = `git status --porcelain | grep "^UU\\|^AA\\|^DD\\|^AU\\|^UA\\|^DU\\|^UD" | cut -c4-`;
     try {
       const output = await this.runCommand(command, 'Find conflicted files');
-      const files = output.split('\n').filter(line => line.trim()).map(line => line.trim());
+      const files = output
+        .split('\n')
+        .filter(line => line.trim())
+        .map(line => line.trim());
       this.log(`Found ${files.length} files with merge conflicts.`);
       return files;
     } catch (error) {
-      this.log(`No merge conflicts found or error during git status: ${error.message}`);
+      this.log(
+        `No merge conflicts found or error during git status: ${error.message}`
+      );
       return [];
     }
   }
@@ -62,21 +74,31 @@ class ComprehensiveMergeConflictResolver {
       let content = fs.readFileSync(filePath, 'utf8');
 
       // Check if file has merge conflict markers
-      if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+      if (
+        !content.includes('<<<<<<<') &&
+        !content.includes('=======') &&
+        !content.includes('>>>>>>>')
+      ) {
         this.log(`File ${filePath} has no merge conflict markers, skipping...`);
         return;
       }
 
       // Strategy 1: Try to resolve by keeping HEAD version (our changes)
       content = content
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-          const parts = match.split('=======');
-          return parts[0].replace('<<<<<<< HEAD', '').trim();
-        })
-        .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-          const parts = match.split('=======');
-          return parts[0].replace(/<<<<<<< [^\n]+/, '').trim();
-        });
+        .replace(
+          /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
+          match => {
+            const parts = match.split('=======');
+            return parts[0].replace('<<<<<<< HEAD', '').trim();
+          }
+        )
+        .replace(
+          /<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
+          match => {
+            const parts = match.split('=======');
+            return parts[0].replace(/<<<<<<< [^\n]+/, '').trim();
+          }
+        );
 
       // Strategy 2: Remove any remaining markers
       content = content
@@ -91,7 +113,9 @@ class ComprehensiveMergeConflictResolver {
       this.log(`✅ Resolved conflict in ${filePath}`);
       this.resolvedFiles.push(filePath);
     } catch (error) {
-      this.log(`❌ Failed to resolve conflict in ${filePath}: ${error.message}`);
+      this.log(
+        `❌ Failed to resolve conflict in ${filePath}: ${error.message}`
+      );
       this.failedFiles.push(filePath);
     }
   }
@@ -100,9 +124,15 @@ class ComprehensiveMergeConflictResolver {
     this.log('🗑️ Removing files that were deleted in remote...');
     try {
       // Get list of deleted files
-      const deletedFiles = await this.runCommand('git status --porcelain | grep "^DU\\|^UD" | cut -c4-', 'Get deleted files');
-      const files = deletedFiles.split('\n').filter(line => line.trim()).map(line => line.trim());
-      
+      const deletedFiles = await this.runCommand(
+        'git status --porcelain | grep "^DU\\|^UD" | cut -c4-',
+        'Get deleted files'
+      );
+      const files = deletedFiles
+        .split('\n')
+        .filter(line => line.trim())
+        .map(line => line.trim());
+
       for (const file of files) {
         if (fs.existsSync(file)) {
           fs.unlinkSync(file);
@@ -154,13 +184,18 @@ class ComprehensiveMergeConflictResolver {
       this.failedFiles.forEach(file => this.log(`  - ${file}`));
 
       if (this.failedFiles.length > 0) {
-        this.log('⚠️ Some conflicts could not be resolved automatically. Manual intervention may be required.');
+        this.log(
+          '⚠️ Some conflicts could not be resolved automatically. Manual intervention may be required.'
+        );
       } else {
-        this.log('🎉 All detected merge conflicts have been resolved automatically.');
+        this.log(
+          '🎉 All detected merge conflicts have been resolved automatically.'
+        );
       }
-
     } catch (error) {
-      this.log(`🚨 An error occurred during the resolution process: ${error.message}`);
+      this.log(
+        `🚨 An error occurred during the resolution process: ${error.message}`
+      );
     }
   }
 }

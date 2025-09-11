@@ -22,7 +22,10 @@ export function setVendorApproval(vendorId: string, approved: boolean): void {
   }
 }
 
-export function setVendorCommission(vendorId: string, commission: number): void {
+export function setVendorCommission(
+  vendorId: string,
+  commission: number
+): void {
   const vendor = vendorStore.get(vendorId);
   if (vendor) {
     vendor.commission = commission;
@@ -48,7 +51,9 @@ export function getAllVendors(): Vendor[] {
   return Array.from(vendorStore.values());
 }
 
-export function createVendor(vendor: Omit<Vendor, 'id' | 'createdAt' | 'updatedAt'>): Vendor {
+export function createVendor(
+  vendor: Omit<Vendor, 'id' | 'createdAt' | 'updatedAt'>
+): Vendor {
   const id = `vendor-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const newVendor: Vendor = {
     ...vendor,

@@ -17,13 +17,13 @@ class PM2AutomationLauncher {
       'security-scanner',
       'automation-factory',
       'automation-dashboard',
-      'launch-all-automation'
+      'launch-all-automation',
     ];
   }
 
   async start() {
     console.log('🚀 Starting PM2 automation ecosystem...');
-    
+
     try {
       // Check if ecosystem file exists
       if (!fs.existsSync(this.ecosystemFile)) {
@@ -32,13 +32,12 @@ class PM2AutomationLauncher {
 
       // Start all processes
       execSync(`pm2 start ${this.ecosystemFile}`, { stdio: 'inherit' });
-      
+
       // Save PM2 configuration
       execSync('pm2 save', { stdio: 'inherit' });
-      
+
       console.log('✅ PM2 automation ecosystem started successfully!');
       this.showStatus();
-      
     } catch (error) {
       console.error('❌ Error starting PM2 ecosystem:', error.message);
       process.exit(1);
@@ -47,7 +46,7 @@ class PM2AutomationLauncher {
 
   async stop() {
     console.log('⏹️  Stopping PM2 automation ecosystem...');
-    
+
     try {
       execSync('pm2 stop all', { stdio: 'inherit' });
       console.log('✅ PM2 automation ecosystem stopped successfully!');
@@ -58,7 +57,7 @@ class PM2AutomationLauncher {
 
   async restart() {
     console.log('🔄 Restarting PM2 automation ecosystem...');
-    
+
     try {
       execSync('pm2 restart all', { stdio: 'inherit' });
       console.log('✅ PM2 automation ecosystem restarted successfully!');
@@ -70,7 +69,7 @@ class PM2AutomationLauncher {
 
   async reload() {
     console.log('🔄 Reloading PM2 automation ecosystem...');
-    
+
     try {
       execSync(`pm2 reload ${this.ecosystemFile}`, { stdio: 'inherit' });
       console.log('✅ PM2 automation ecosystem reloaded successfully!');
@@ -82,7 +81,7 @@ class PM2AutomationLauncher {
 
   async delete() {
     console.log('🗑️  Deleting PM2 automation ecosystem...');
-    
+
     try {
       execSync('pm2 delete all', { stdio: 'inherit' });
       console.log('✅ PM2 automation ecosystem deleted successfully!');
@@ -124,7 +123,9 @@ class PM2AutomationLauncher {
       const output = execSync('pm2 startup', { encoding: 'utf8' });
       console.log('📝 Startup command output:');
       console.log(output);
-      console.log('\n⚠️  Please run the sudo command shown above to complete startup setup');
+      console.log(
+        '\n⚠️  Please run the sudo command shown above to complete startup setup'
+      );
     } catch (error) {
       console.error('❌ Error setting up startup:', error.message);
     }
@@ -132,30 +133,31 @@ class PM2AutomationLauncher {
 
   async healthCheck() {
     console.log('🏥 Performing PM2 health check...');
-    
+
     try {
       const status = execSync('pm2 status --no-daemon', { encoding: 'utf8' });
       const lines = status.split('\n');
-      
+
       let onlineCount = 0;
       let erroredCount = 0;
       let stoppedCount = 0;
-      
+
       lines.forEach(line => {
         if (line.includes('online')) onlineCount++;
         if (line.includes('errored')) erroredCount++;
         if (line.includes('stopped')) stoppedCount++;
       });
-      
+
       console.log(`📊 Health Summary:`);
       console.log(`   ✅ Online: ${onlineCount}`);
       console.log(`   ❌ Errored: ${erroredCount}`);
       console.log(`   ⏸️  Stopped: ${stoppedCount}`);
-      
+
       if (erroredCount > 0) {
-        console.log('\n⚠️  Some processes are in error state. Check logs with: pm2 logs');
+        console.log(
+          '\n⚠️  Some processes are in error state. Check logs with: pm2 logs'
+        );
       }
-      
     } catch (error) {
       console.error('❌ Error during health check:', error.message);
     }
@@ -166,7 +168,7 @@ class PM2AutomationLauncher {
 async function main() {
   const launcher = new PM2AutomationLauncher();
   const command = process.argv[2] || 'start';
-  
+
   switch (command) {
     case 'start':
       await launcher.start();

@@ -19,9 +19,9 @@ const options = {
 };
 
 console.log('🔍 Checking for open pull requests...');
-const req = https.get(options, (res) => {
+const req = https.get(options, res => {
   let data = '';
-  res.on('data', (chunk) => {
+  res.on('data', chunk => {
     data += chunk;
   });
   res.on('end', () => {
@@ -45,7 +45,7 @@ const req = https.get(options, (res) => {
     }
   });
 });
-req.on('error', (error) => {
+req.on('error', error => {
   console.error('❌ Error checking PRs:', error.message);
 });
 req.end();

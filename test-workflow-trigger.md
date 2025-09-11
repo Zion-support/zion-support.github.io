@@ -3,11 +3,13 @@
 This file is used to test GitHub Actions workflows.
 
 ## Test Details
+
 - Created: $(date)
 - Purpose: Trigger workflow testing
 - Status: Active
 
 ## Workflows to Test
+
 1. Simple Test Workflow
 2. Test Suite
 3. Playwright Smoke Tests
@@ -18,4 +20,5 @@ This file is used to test GitHub Actions workflows.
 8. YAML Auto Fixer
 
 ## Expected Results
+
 All workflows should run successfully without errors.

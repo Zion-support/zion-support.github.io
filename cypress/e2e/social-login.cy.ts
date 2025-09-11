@@ -4,8 +4,11 @@ describe('social login buttons redirect through NextAuth', () => {
   });
 
   it('google button triggers NextAuth sign-in', () => {
-    cy.intercept('GET', '/api/auth/signin/google', (req) => {
-      req.reply({ statusCode: 302, headers: { location: '/api/auth/callback/google' } });
+    cy.intercept('GET', '/api/auth/signin/google', req => {
+      req.reply({
+        statusCode: 302,
+        headers: { location: '/api/auth/callback/google' },
+      });
     }).as('google');
 
     cy.contains('button', 'Sign in with Google').click();
@@ -13,8 +16,11 @@ describe('social login buttons redirect through NextAuth', () => {
   });
 
   it('facebook button triggers NextAuth sign-in', () => {
-    cy.intercept('GET', '/api/auth/signin/facebook', (req) => {
-      req.reply({ statusCode: 302, headers: { location: '/api/auth/callback/facebook' } });
+    cy.intercept('GET', '/api/auth/signin/facebook', req => {
+      req.reply({
+        statusCode: 302,
+        headers: { location: '/api/auth/callback/facebook' },
+      });
     }).as('facebook');
 
     cy.contains('button', 'Sign in with Facebook').click();

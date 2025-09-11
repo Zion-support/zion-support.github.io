@@ -1,10 +1,10 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
 const contact = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
 };
 
 export const newlyAddedServices: MicroSaasService[] = [
@@ -14,20 +14,22 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Production-ready feature store with governance and lineage',
     price: '$249',
     period: '/month',
-    description: 'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.',
+    description:
+      'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.',
     features: [
       'Online/offline consistency checks',
       'Schema/version governance',
       'Backfills and point-in-time joins',
       'Drift alerts and quality tests',
-      'RBAC and audit logs'
+      'RBAC and audit logs',
     ],
     popular: true,
     icon: '🧬',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter',
-    marketPosition: 'Accelerates ML platform maturity versus building from scratch.',
+    marketPosition:
+      'Accelerates ML platform maturity versus building from scratch.',
     targetAudience: 'ML platform teams and data engineering',
     trialDays: 14,
     setupTime: '1-3 days',
@@ -43,11 +45,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Provisioned infra, SDKs, CI templates, and dashboards.',
+    implementationDetails:
+      'Provisioned infra, SDKs, CI templates, and dashboards.',
     launchDate: '2025-03-15',
     customers: 7,
     rating: 4.7,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'agentic-browser-recorder-pro',
@@ -55,13 +58,14 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Record workflows; export resilient agent scripts with retries',
     price: '$89',
     period: '/month',
-    description: 'Point-and-click recorder producing deterministic agent scripts with selector healing, backoff, and CAPTCHA strategies.',
+    description:
+      'Point-and-click recorder producing deterministic agent scripts with selector healing, backoff, and CAPTCHA strategies.',
     features: [
       'DOM diff–based selector healing',
       'Auto-wait and idempotent steps',
       'Proxies and device profiles',
       'Run history and replays',
-      'Webhooks and schedules'
+      'Webhooks and schedules',
     ],
     popular: false,
     icon: '🕹️',
@@ -88,7 +92,7 @@ export const newlyAddedServices: MicroSaasService[] = [
     launchDate: '2025-03-16',
     customers: 5,
     rating: 4.6,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'sso-scim-accelerator',
@@ -96,20 +100,22 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Enterprise SSO and user provisioning templates and adapters',
     price: '$299',
     period: '/month',
-    description: 'Production-grade SSO (SAML/OIDC) with SCIM provisioning adapters, test suites, branding, and audit logs.',
+    description:
+      'Production-grade SSO (SAML/OIDC) with SCIM provisioning adapters, test suites, branding, and audit logs.',
     features: [
       'SAML/OIDC providers ready-to-go',
       'SCIM provisioning adapters',
       'End-to-end test suites',
       'Branding and theming',
-      'Audit logs and support runbooks'
+      'Audit logs and support runbooks',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/sso-scim-accelerator',
-    marketPosition: 'Faster enterprise deals with standard-compliant integration.',
+    marketPosition:
+      'Faster enterprise deals with standard-compliant integration.',
     targetAudience: 'SaaS teams targeting enterprise',
     trialDays: 14,
     setupTime: '3-7 days',
@@ -129,29 +135,32 @@ export const newlyAddedServices: MicroSaasService[] = [
     launchDate: '2025-03-17',
     customers: 4,
     rating: 4.8,
-    reviews: 2
+    reviews: 2,
   },
   {
     id: 'api-performance-optimizer-pro',
     name: 'API Performance Optimizer Pro',
-    tagline: 'Latency reduction, rate-limit tuning, and load testing as-a-service',
+    tagline:
+      'Latency reduction, rate-limit tuning, and load testing as-a-service',
     price: '$99',
     period: '/month',
-    description: 'Continuously measure and improve your API latency with synthetic tests, adaptive rate-limit tuning, and contract-aware caching. Export recommendations as IaC.',
+    description:
+      'Continuously measure and improve your API latency with synthetic tests, adaptive rate-limit tuning, and contract-aware caching. Export recommendations as IaC.',
     features: [
       'Synthetic latency monitoring',
       'Adaptive rate-limit tuner',
       'Multi-region load testing',
       'Schema & contract validation',
       'Auto-caching recommendations',
-      'Change-impact reports'
+      'Change-impact reports',
     ],
     popular: true,
     icon: '⚡',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/api-performance-optimizer-pro',
-    marketPosition: 'Faster and cheaper than custom JMeter/K6 pipelines with expert guidance.',
+    marketPosition:
+      'Faster and cheaper than custom JMeter/K6 pipelines with expert guidance.',
     targetAudience: 'Platform and API teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -167,11 +176,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Synthetic test agents, results store, optimization engine, and IaC exporter.',
+    implementationDetails:
+      'Synthetic test agents, results store, optimization engine, and IaC exporter.',
     launchDate: '2025-03-01',
     customers: 12,
     rating: 4.8,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'ai-rag-starter-blueprint',
@@ -179,14 +189,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Production-ready retrieval augmented generation stack with evals',
     price: '$149',
     period: '/month',
-    description: 'Deploy a secure RAG stack with ingestion pipeline, chunking, embeddings, vector DB, and evaluation harness. Includes observability and guardrails.',
+    description:
+      'Deploy a secure RAG stack with ingestion pipeline, chunking, embeddings, vector DB, and evaluation harness. Includes observability and guardrails.',
     features: [
       'Document ingestion & chunking',
       'Embeddings & vector DB (Pinecone/Weaviate/PGVector)',
       'Prompt templates & guardrails',
       'Evaluation harness (quality, toxicity, grounding)',
       'Observability dashboards',
-      'One-click deploys'
+      'One-click deploys',
     ],
     popular: true,
     icon: '🧠',
@@ -199,7 +210,14 @@ export const newlyAddedServices: MicroSaasService[] = [
     setupTime: '1 day',
     category: 'AI & Data',
     realService: true,
-    technology: ['Next.js', 'LangChain', 'Pinecone', 'OpenAI', 'Weaviate', 'PGVector'],
+    technology: [
+      'Next.js',
+      'LangChain',
+      'Pinecone',
+      'OpenAI',
+      'Weaviate',
+      'PGVector',
+    ],
     integrations: ['Slack', 'Notion', 'Google Drive', 'S3'],
     useCases: ['Internal KB', 'Agent assist', 'Search augmentation'],
     roi: 'Ship a quality RAG MVP in days, not months',
@@ -209,11 +227,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Templates, infra modules, eval notebooks, and dashboards.',
+    implementationDetails:
+      'Templates, infra modules, eval notebooks, and dashboards.',
     launchDate: '2025-03-08',
     customers: 15,
     rating: 4.8,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'browser-automation-copilot',
@@ -221,21 +240,23 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Headless browser workflows with resilient selectors and retries',
     price: '$79',
     period: '/month',
-    description: 'Define robust browser automation using plain-language steps. Includes anti-fingerprint profiles, CAPTCHA strategies, and failure replay.',
+    description:
+      'Define robust browser automation using plain-language steps. Includes anti-fingerprint profiles, CAPTCHA strategies, and failure replay.',
     features: [
       'Step-based DSL',
       'Resilient selectors & healing',
       'Proxy pools & rotation',
       'Captcha solve workflows',
       'Audit logs & video replay',
-      'Scheduler & webhooks'
+      'Scheduler & webhooks',
     ],
     popular: false,
     icon: '🧩',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/browser-automation-copilot',
-    marketPosition: 'Cheaper than bespoke Playwright farms, with managed reliability',
+    marketPosition:
+      'Cheaper than bespoke Playwright farms, with managed reliability',
     targetAudience: 'Ops, growth, QA teams',
     trialDays: 14,
     setupTime: '2 hours',
@@ -251,11 +272,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'network-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Runner fleet, state store, DSL compiler, and replay UI.',
+    implementationDetails:
+      'Runner fleet, state store, DSL compiler, and replay UI.',
     launchDate: '2025-03-05',
     customers: 22,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'cloud-cost-anomaly-guard',
@@ -263,14 +285,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
     price: '$69',
     period: '/month',
-    description: 'Continuously monitor cloud bills and usage for anomalies, surface drivers, and open GitHub issues with Terraform recommendations.',
+    description:
+      'Continuously monitor cloud bills and usage for anomalies, surface drivers, and open GitHub issues with Terraform recommendations.',
     features: [
       'Anomaly detection & seasonality',
       'Service & tag attribution',
       'Slack and email alerts',
       'Terraform fix suggestions',
       'Forecast & budget guardrails',
-      'Multi-cloud support'
+      'Multi-cloud support',
     ],
     popular: true,
     icon: '💸',
@@ -297,29 +320,32 @@ export const newlyAddedServices: MicroSaasService[] = [
     launchDate: '2025-03-09',
     customers: 11,
     rating: 4.7,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'serverless-batch-orchestrator-pro',
     name: 'Serverless Batch Orchestrator',
-    tagline: 'Cron-scale workflows with retries, DLQs, and cost-aware scheduling',
+    tagline:
+      'Cron-scale workflows with retries, DLQs, and cost-aware scheduling',
     price: '$79',
     period: '/month',
-    description: 'Define data and maintenance jobs using a YAML spec. We provision serverless cron, retries, dead-letter queues, and cost-aware schedules across AWS/Azure/GCP.',
+    description:
+      'Define data and maintenance jobs using a YAML spec. We provision serverless cron, retries, dead-letter queues, and cost-aware schedules across AWS/Azure/GCP.',
     features: [
       'YAML job specs',
       'Cross-cloud scheduler',
       'Retries & DLQ',
       'Notification hooks',
       'Cost-aware windows',
-      'Audit & run history'
+      'Audit & run history',
     ],
     popular: false,
     icon: '⏱️',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/services/serverless-batch-orchestrator-pro',
-    marketPosition: 'Lower cost than managed workflow engines for periodic jobs.',
+    marketPosition:
+      'Lower cost than managed workflow engines for periodic jobs.',
     targetAudience: 'Data engineering, platform, ops',
     trialDays: 14,
     setupTime: '2 hours',
@@ -335,11 +361,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Managed specs, runners, and observability with audit trails.',
+    implementationDetails:
+      'Managed specs, runners, and observability with audit trails.',
     launchDate: '2025-02-10',
     customers: 34,
     rating: 4.6,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'seo-technical-auditor-pro',
@@ -347,21 +374,23 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Edge-rendered crawler with Core Web Vitals and schema fixes',
     price: '$59',
     period: '/month',
-    description: 'Continuously crawl your site, detect Core Web Vitals regressions, broken links, and missing structured data. Auto-open PRs with fixes.',
+    description:
+      'Continuously crawl your site, detect Core Web Vitals regressions, broken links, and missing structured data. Auto-open PRs with fixes.',
     features: [
       'Automated crawling',
       'CWV and Lighthouse checks',
       'Broken link detection',
       'Schema.org suggestions',
       'PR autofix workflows',
-      'Sitemap & robots validation'
+      'Sitemap & robots validation',
     ],
     popular: true,
     icon: '🔍',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/seo-technical-auditor-pro',
-    marketPosition: 'Dev-friendly alternative to enterprise SEO suites for tech hygiene.',
+    marketPosition:
+      'Dev-friendly alternative to enterprise SEO suites for tech hygiene.',
     targetAudience: 'Growth, web, SEO engineering',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -377,11 +406,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Crawl scheduler, render lab, rules engine, and PR bot.',
+    implementationDetails:
+      'Crawl scheduler, render lab, rules engine, and PR bot.',
     launchDate: '2025-02-15',
     customers: 58,
     rating: 4.7,
-    reviews: 31
+    reviews: 31,
   },
   {
     id: 'gdpr-cookie-consent-manager-pro',
@@ -389,14 +419,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
     price: '$49',
     period: '/month',
-    description: 'Deploy multi-region consent banners with IAB TCF compliance, A/B testing, and consent logs. Export DPIA and audit trails.',
+    description:
+      'Deploy multi-region consent banners with IAB TCF compliance, A/B testing, and consent logs. Export DPIA and audit trails.',
     features: [
       'IAB TCF support',
       'Region-based policies',
       'Consent logs & exports',
       'A/B banner optimization',
       'CMP integrations',
-      'Accessibility first UI'
+      'Accessibility first UI',
     ],
     popular: false,
     icon: '🛡️',
@@ -419,11 +450,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Hosted CMP with edge storage and region-aware rendering.',
+    implementationDetails:
+      'Hosted CMP with edge storage and region-aware rendering.',
     launchDate: '2025-03-03',
     customers: 40,
     rating: 4.5,
-    reviews: 16
+    reviews: 16,
   },
   {
     id: 'ai-meeting-notes-summarizer-pro',
@@ -431,21 +463,23 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Auto-recording, diarization, action items, and CRM sync',
     price: '$39',
     period: '/month',
-    description: 'Capture meeting audio, generate summaries with speakers, and push action items to Jira/HubSpot/Salesforce with privacy controls.',
+    description:
+      'Capture meeting audio, generate summaries with speakers, and push action items to Jira/HubSpot/Salesforce with privacy controls.',
     features: [
       'Auto-record & transcribe',
       'Speaker diarization',
       'Action item extraction',
       'CRM & PM sync',
       'PII redaction',
-      'Team workspace'
+      'Team workspace',
     ],
     popular: true,
     icon: '📝',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/services/ai-meeting-notes-summarizer-pro',
-    marketPosition: 'Lightweight, privacy-first alternative to heavy meeting bots.',
+    marketPosition:
+      'Lightweight, privacy-first alternative to heavy meeting bots.',
     targetAudience: 'Sales, success, product, ops',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -461,11 +495,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'neural-quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Recording bot, summarization pipeline, and secure storage.',
+    implementationDetails:
+      'Recording bot, summarization pipeline, and secure storage.',
     launchDate: '2025-02-01',
     customers: 120,
     rating: 4.6,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'ai-code-migration-assistant-pro',
@@ -473,14 +508,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Framework upgrades, typed refactors, and safe PR generation',
     price: '$199',
     period: '/month',
-    description: 'Automate upgrades across frameworks and libraries. Typed codemods, test-aware refactors, and PRs with diffs and rollback plans.',
+    description:
+      'Automate upgrades across frameworks and libraries. Typed codemods, test-aware refactors, and PRs with diffs and rollback plans.',
     features: [
       'Typed codemods',
       'Test-aware refactors',
       'Multi-repo orchestration',
       'Risk scoring & rollbacks',
       'CI validation',
-      'Changelogs & docs'
+      'Changelogs & docs',
     ],
     popular: false,
     icon: '🧩',
@@ -495,7 +531,9 @@ export const newlyAddedServices: MicroSaasService[] = [
     realService: true,
     technology: ['TypeScript, AST, LLM'],
     integrations: ['GitHub, GitLab, Bitbucket'],
-    useCases: ['Next.js/React upgrades, Typescript migrations, Policy refactors'],
+    useCases: [
+      'Next.js/React upgrades, Typescript migrations, Policy refactors',
+    ],
     roi: 'Cut upgrade time by 60–80%',
     competitors: ['Sourcegraph Cody, AWS CodeGuru'],
     marketSize: '$9B DevTools AI',
@@ -503,11 +541,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AST-driven codemods with safety rails and CI checks.',
+    implementationDetails:
+      'AST-driven codemods with safety rails and CI checks.',
     launchDate: '2025-02-18',
     customers: 18,
     rating: 4.5,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'incident-statuspage-automation-pro',
@@ -515,14 +554,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'SLO-aware updates, RCA templates, and subscriber comms',
     price: '$79',
     period: '/month',
-    description: 'Automate incident status updates based on SLO breaches. Standardize RCAs, postmortems, and subscriber communication.',
+    description:
+      'Automate incident status updates based on SLO breaches. Standardize RCAs, postmortems, and subscriber communication.',
     features: [
       'SLO-triggered updates',
       'RCA templates',
       'Subscriber messaging',
       'Incident timeline',
       'Webhook & chat ops',
-      'Analytics & CSAT'
+      'Analytics & CSAT',
     ],
     popular: false,
     icon: '🚨',
@@ -545,11 +585,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'neural-cyberpunk',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'SLO integrations, templates, and messaging pipeline.',
+    implementationDetails:
+      'SLO integrations, templates, and messaging pipeline.',
     launchDate: '2025-02-22',
     customers: 25,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'multi-cloud-backup-automation-pro',
@@ -557,14 +598,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Policy-based snapshots, immutability, and cross-cloud recovery',
     price: '$149',
     period: '/month',
-    description: 'Protect databases and object stores with policy-based snapshots, immutability, encryption, and cross-cloud recovery runbooks.',
+    description:
+      'Protect databases and object stores with policy-based snapshots, immutability, encryption, and cross-cloud recovery runbooks.',
     features: [
       'Snapshot policies',
       'Immutability & WORM',
       'Cross-cloud recovery',
       'Key rotation & KMS',
       'Drills & audit logs',
-      'Cost-aware tiers'
+      'Cost-aware tiers',
     ],
     popular: true,
     icon: '🗄️',
@@ -587,11 +629,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Policy engine, snapshot orchestrator, and drill runner.',
+    implementationDetails:
+      'Policy engine, snapshot orchestrator, and drill runner.',
     launchDate: '2025-03-05',
     customers: 14,
     rating: 4.7,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'customer-feedback-insights-pro',
@@ -599,14 +642,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'NLP tagging, themes, and voice-of-customer dashboards',
     price: '$69',
     period: '/month',
-    description: 'Aggregate NPS, reviews, and support tickets. Use LLMs to cluster themes, detect churn signals, and prioritize roadmap items.',
+    description:
+      'Aggregate NPS, reviews, and support tickets. Use LLMs to cluster themes, detect churn signals, and prioritize roadmap items.',
     features: [
       'Omnichannel ingestion',
       'LLM theme clustering',
       'Churn signal alerts',
       'Roadmap prioritization',
       'VOC dashboards',
-      'CSV & API export'
+      'CSV & API export',
     ],
     popular: false,
     icon: '💬',
@@ -633,7 +677,7 @@ export const newlyAddedServices: MicroSaasService[] = [
     launchDate: '2025-02-12',
     customers: 63,
     rating: 4.5,
-    reviews: 24
+    reviews: 24,
   },
   {
     id: 'ai-sales-sequences-pro',
@@ -641,14 +685,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Persona-aware sequences with channel optimization',
     price: '$99',
     period: '/month',
-    description: 'Generate compliant, persona-aware sequences across email and LinkedIn. Test copy variants and optimize send windows.',
+    description:
+      'Generate compliant, persona-aware sequences across email and LinkedIn. Test copy variants and optimize send windows.',
     features: [
       'ICP & persona modeling',
       'Sequence generator',
       'Deliverability checks',
       'Send window optimizer',
       'A/B copy testing',
-      'CRM sync'
+      'CRM sync',
     ],
     popular: true,
     icon: '📈',
@@ -675,7 +720,7 @@ export const newlyAddedServices: MicroSaasService[] = [
     launchDate: '2025-01-28',
     customers: 210,
     rating: 4.8,
-    reviews: 77
+    reviews: 77,
   },
   {
     id: 'data-pipeline-optimizer-pro',
@@ -683,14 +728,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Throughput tuning, schema drift alerts, and cost guards',
     price: '$129',
     period: '/month',
-    description: 'Profile jobs, detect bottlenecks, and tune parallelism. Catch schema drift early and enforce cost guardrails with auto-remediation.',
+    description:
+      'Profile jobs, detect bottlenecks, and tune parallelism. Catch schema drift early and enforce cost guardrails with auto-remediation.',
     features: [
       'Throughput profiler',
       'Parallelism tuner',
       'Schema drift alerts',
       'Cost guardrails',
       'Auto-remediation',
-      'Runbook suggestions'
+      'Runbook suggestions',
     ],
     popular: false,
     icon: '📦',
@@ -717,7 +763,7 @@ export const newlyAddedServices: MicroSaasService[] = [
     launchDate: '2025-03-02',
     customers: 11,
     rating: 4.4,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'sso-rapid-integration-pro',
@@ -725,14 +771,15 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'One-click SAML/OIDC setup with branded login and SCIM',
     price: '$99',
     period: '/month',
-    description: 'Offer SSO to your customers in days, not months. Support SAML/OIDC, branded login pages, SCIM provisioning, and role mapping.',
+    description:
+      'Offer SSO to your customers in days, not months. Support SAML/OIDC, branded login pages, SCIM provisioning, and role mapping.',
     features: [
       'SAML & OIDC',
       'SCIM provisioning',
       'Branded login pages',
       'Role & group mapping',
       'Audit logs',
-      'Tenant isolation'
+      'Tenant isolation',
     ],
     popular: true,
     icon: '🔐',
@@ -755,42 +802,54 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Config UI, metadata exchange, and provisioning agent.',
+    implementationDetails:
+      'Config UI, metadata exchange, and provisioning agent.',
     launchDate: '2025-01-30',
     customers: 45,
     rating: 4.7,
-    reviews: 19
-  }
-  ,
+    reviews: 19,
+  },
   {
     id: 'finops-cost-anomaly-guard',
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real-time',
     price: '$129',
     period: '/month',
-    description: 'Continuous cloud spend monitoring with anomaly detection, budget guardrails, auto-tagging checks, and actionable playbooks that reduce waste fast.',
+    description:
+      'Continuous cloud spend monitoring with anomaly detection, budget guardrails, auto-tagging checks, and actionable playbooks that reduce waste fast.',
     features: [
       'Real-time anomaly detection',
       'Budget guardrails & alerts',
       'Auto-tagging verification',
       'Savings recommendations',
       'Slack/Email integrations',
-      'Multi-cloud coverage (AWS/Azure/GCP)'
+      'Multi-cloud coverage (AWS/Azure/GCP)',
     ],
     popular: true,
     icon: '💸',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/finops-cost-anomaly-guard',
-    marketPosition: 'Alternative to building internal FinOps bots and dashboards; quick ROI.',
+    marketPosition:
+      'Alternative to building internal FinOps bots and dashboards; quick ROI.',
     targetAudience: 'FinOps, platform and SRE teams',
     trialDays: 14,
     setupTime: '1 day',
     category: 'Cloud & FinOps',
     realService: true,
-    technology: ['AWS Cost Explorer', 'GCP Billing', 'Azure Cost', 'Node.js', 'Next.js'],
+    technology: [
+      'AWS Cost Explorer',
+      'GCP Billing',
+      'Azure Cost',
+      'Node.js',
+      'Next.js',
+    ],
     integrations: ['Slack', 'Email', 'PagerDuty', 'Jira'],
-    useCases: ['Budget overrun prevention', 'Tag hygiene', 'Commitment utilization'],
+    useCases: [
+      'Budget overrun prevention',
+      'Tag hygiene',
+      'Commitment utilization',
+    ],
     roi: '5–20% monthly savings within 60 days',
     competitors: ['Anodot', 'CloudZero', 'Vantage'],
     marketSize: '$10B cloud cost optimization',
@@ -798,11 +857,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Connect billing export, train anomaly baselines, configure guardrails and alert routes.',
+    implementationDetails:
+      'Connect billing export, train anomaly baselines, configure guardrails and alert routes.',
     launchDate: '2025-03-10',
     customers: 11,
     rating: 4.7,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'gdpr-dsar-automation-suite',
@@ -810,21 +870,23 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Automate data subject access requests with auditability',
     price: '$199',
     period: '/month',
-    description: 'End-to-end DSAR workflows: identity verification, data discovery, redaction, secure delivery, and complete audit trails.',
+    description:
+      'End-to-end DSAR workflows: identity verification, data discovery, redaction, secure delivery, and complete audit trails.',
     features: [
       'Identity verification & consent',
       'Cross-system data discovery',
       'Automatic PII redaction',
       'Deadline tracking & SLAs',
       'Export bundles & receipts',
-      'Policy templates'
+      'Policy templates',
     ],
     popular: true,
     icon: '✅',
     color: 'from-sky-600 to-blue-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/services/gdpr-dsar-automation-suite',
-    marketPosition: 'Comparable to Transcend and OneTrust modules; simpler setup for SMBs.',
+    marketPosition:
+      'Comparable to Transcend and OneTrust modules; simpler setup for SMBs.',
     targetAudience: 'Legal, security, and data teams',
     trialDays: 14,
     setupTime: '3 days',
@@ -840,33 +902,37 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Configurable workflows, connectors, and export pipeline with redaction.',
+    implementationDetails:
+      'Configurable workflows, connectors, and export pipeline with redaction.',
     launchDate: '2025-03-12',
     customers: 8,
     rating: 4.8,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'incident-copilot-pro',
     name: 'Incident Copilot Pro',
-    tagline: 'AI-assisted on-call with runbooks, timelines, and auto-postmortems',
+    tagline:
+      'AI-assisted on-call with runbooks, timelines, and auto-postmortems',
     price: '$149',
     period: '/month',
-    description: 'Reduce MTTR with incident detection, guided diagnostics, automated status updates, and post-incident summaries.',
+    description:
+      'Reduce MTTR with incident detection, guided diagnostics, automated status updates, and post-incident summaries.',
     features: [
       'Playbook suggestions',
       'Auto status page updates',
       'Root-cause timelines',
       'Slack/PagerDuty bridges',
       'Postmortem drafts',
-      'Service dependency mapping'
+      'Service dependency mapping',
     ],
     popular: false,
     icon: '🆘',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/incident-copilot-pro',
-    marketPosition: 'Complements PagerDuty/Statuspage with AI-assisted analysis and docs.',
+    marketPosition:
+      'Complements PagerDuty/Statuspage with AI-assisted analysis and docs.',
     targetAudience: 'SRE, platform and support teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -882,11 +948,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Ingestion of alerts, timeline builder, and report generator.',
+    implementationDetails:
+      'Ingestion of alerts, timeline builder, and report generator.',
     launchDate: '2025-03-14',
     customers: 9,
     rating: 4.7,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'ai-sales-prospecting-studio',
@@ -894,21 +961,23 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Personalized multi-channel outreach with compliance and warm-up',
     price: '$99',
     period: '/month',
-    description: 'Find ICP-fit accounts, generate tailored messaging, schedule sequences across email/LinkedIn, and track replies with deliverability best practices.',
+    description:
+      'Find ICP-fit accounts, generate tailored messaging, schedule sequences across email/LinkedIn, and track replies with deliverability best practices.',
     features: [
       'ICP filters & enrichment',
       'Personalized sequences',
       'Deliverability checks',
       'LinkedIn assist',
       'Reply classification',
-      'CRM sync'
+      'CRM sync',
     ],
     popular: true,
     icon: '📈',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/services/ai-sales-prospecting-studio',
-    marketPosition: 'Faster personalization than generic sequencers; built-in compliance.',
+    marketPosition:
+      'Faster personalization than generic sequencers; built-in compliance.',
     targetAudience: 'Growth and sales teams',
     trialDays: 14,
     setupTime: '2 hours',
@@ -916,7 +985,11 @@ export const newlyAddedServices: MicroSaasService[] = [
     realService: true,
     technology: ['Next.js', 'OpenAI', 'PostgreSQL'],
     integrations: ['HubSpot', 'Salesforce', 'SendGrid', 'LinkedIn'],
-    useCases: ['Outbound campaigns', 'Lead activation', 'Pipeline acceleration'],
+    useCases: [
+      'Outbound campaigns',
+      'Lead activation',
+      'Pipeline acceleration',
+    ],
     roi: '2–5x reply rates vs. generic templates',
     competitors: ['Apollo', 'Smartlead', 'Lemlist'],
     marketSize: '$20B sales tech',
@@ -928,7 +1001,7 @@ export const newlyAddedServices: MicroSaasService[] = [
     launchDate: '2025-03-15',
     customers: 17,
     rating: 4.8,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'data-contracts-health-monitor',
@@ -936,21 +1009,23 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams',
     price: '$119',
     period: '/month',
-    description: 'Define data contracts, detect breaking changes, monitor SLAs, and auto-open tickets with owners enriched from lineage.',
+    description:
+      'Define data contracts, detect breaking changes, monitor SLAs, and auto-open tickets with owners enriched from lineage.',
     features: [
       'Schema diff & validation',
       'Data quality checks',
       'Lineage-based ownership',
       'SLA monitors',
       'Contract registry',
-      'Auto ticketing'
+      'Auto ticketing',
     ],
     popular: false,
     icon: '🧾',
     color: 'from-indigo-600 to-violet-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/data-contracts-health-monitor',
-    marketPosition: 'Pragmatic contracts vs. bespoke dbt rules; team-friendly UX.',
+    marketPosition:
+      'Pragmatic contracts vs. bespoke dbt rules; team-friendly UX.',
     targetAudience: 'Data platform & analytics engineering',
     trialDays: 14,
     setupTime: '2 days',
@@ -966,41 +1041,53 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Registry UI, checks engine, and connectors for lineage & tickets.',
+    implementationDetails:
+      'Registry UI, checks engine, and connectors for lineage & tickets.',
     launchDate: '2025-03-16',
     customers: 6,
     rating: 4.6,
-    reviews: 3
-  }
-  ,
+    reviews: 3,
+  },
   {
     id: 'affiliate-marketing-tracking-suite',
     name: 'Affiliate Marketing Tracking Suite',
     tagline: 'End-to-end partner attribution, fraud protection, and payouts',
     price: '$149',
     period: '/month',
-    description: 'Launch a full-featured affiliate program with cross-device attribution, coupon and link tracking, fraud detection, commission rules, and automated payouts.',
+    description:
+      'Launch a full-featured affiliate program with cross-device attribution, coupon and link tracking, fraud detection, commission rules, and automated payouts.',
     features: [
       'Cross-device attribution & UTM normalization',
       'Customizable commission rules & tiers',
       'Fraud detection and anomaly alerts',
       'Automatic payouts and tax forms support',
-      'Branded partner portal and link builder'
+      'Branded partner portal and link builder',
     ],
     popular: true,
     icon: '🔗',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/affiliate-marketing-tracking-suite',
-    marketPosition: 'Simpler than enterprise platforms; faster onboarding for SMBs and agencies.',
+    marketPosition:
+      'Simpler than enterprise platforms; faster onboarding for SMBs and agencies.',
     targetAudience: 'E-commerce, SaaS, content creators, marketplaces',
     trialDays: 14,
     setupTime: '1 day',
     category: 'Growth & Marketing',
     realService: true,
     technology: ['Next.js', 'Node.js', 'PostgreSQL', 'Workers'],
-    integrations: ['Shopify', 'Stripe', 'WooCommerce', 'Google Analytics', 'Segment'],
-    useCases: ['Affiliate programs', 'Influencer attribution', 'Ambassador referrals'],
+    integrations: [
+      'Shopify',
+      'Stripe',
+      'WooCommerce',
+      'Google Analytics',
+      'Segment',
+    ],
+    useCases: [
+      'Affiliate programs',
+      'Influencer attribution',
+      'Ambassador referrals',
+    ],
     roi: 'Grow referred revenue by 20–40% with channel clarity',
     competitors: ['Impact.com', 'PartnerStack', 'Refersion', 'LeadDyno'],
     marketSize: '$18B performance marketing',
@@ -1008,32 +1095,36 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Hosted partner portal, tracking beacons, fraud heuristics, and payout scheduler.',
+    implementationDetails:
+      'Hosted partner portal, tracking beacons, fraud heuristics, and payout scheduler.',
     launchDate: '2025-08-20',
     customers: 9,
     rating: 4.6,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'smb-website-analytics-dashboard',
     name: 'SMB Website Analytics Dashboard',
-    tagline: 'Non-technical analytics with conversions, calls, and form attribution',
+    tagline:
+      'Non-technical analytics with conversions, calls, and form attribution',
     price: '$29',
     period: '/month',
-    description: 'Privacy-friendly, lightweight analytics for small businesses. Tracks traffic, conversions, phone calls, email clicks, and downloads with human-readable insights.',
+    description:
+      'Privacy-friendly, lightweight analytics for small businesses. Tracks traffic, conversions, phone calls, email clicks, and downloads with human-readable insights.',
     features: [
       'Cookieless page analytics and funnels',
       'Form, phone, and email click tracking',
       'Campaign UTM and source/medium insights',
       'Goal tracking and weekly reports',
-      'Embeddable dashboards and exports'
+      'Embeddable dashboards and exports',
     ],
     popular: false,
     icon: '📈',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/smb-website-analytics-dashboard',
-    marketPosition: 'Cleaner UX than GA; simpler than enterprise tools; great for SMBs.',
+    marketPosition:
+      'Cleaner UX than GA; simpler than enterprise tools; great for SMBs.',
     targetAudience: 'Local businesses, agencies, startups',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -1049,11 +1140,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Drop-in script, dashboard app, and weekly email summaries.',
+    implementationDetails:
+      'Drop-in script, dashboard app, and weekly email summaries.',
     launchDate: '2025-08-20',
     customers: 17,
     rating: 4.5,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'customer-support-helpdesk-pro',
@@ -1061,20 +1153,22 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Tickets, knowledge base, live chat, and AI assist—all in one',
     price: '$79',
     period: '/month',
-    description: 'A modern helpdesk for SMBs with shared inbox, SLAs, automations, chatbot handoff, and a searchable knowledge base.',
+    description:
+      'A modern helpdesk for SMBs with shared inbox, SLAs, automations, chatbot handoff, and a searchable knowledge base.',
     features: [
       'Shared inbox with collision detection',
       'SLA policies and automations',
       'Knowledge base and feedback widgets',
       'Live chat with AI assistant handoff',
-      'CSAT surveys and analytics'
+      'CSAT surveys and analytics',
     ],
     popular: true,
     icon: '💬',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/customer-support-helpdesk-pro',
-    marketPosition: 'Opinionated and simpler than enterprise tools for fast setup.',
+    marketPosition:
+      'Opinionated and simpler than enterprise tools for fast setup.',
     targetAudience: 'SMBs, startups, agencies',
     trialDays: 14,
     setupTime: '1 day',
@@ -1090,32 +1184,36 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'itsm-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Ticketing engine, KB CMS, chat widget, and AI deflection flows.',
+    implementationDetails:
+      'Ticketing engine, KB CMS, chat widget, and AI deflection flows.',
     launchDate: '2025-08-20',
     customers: 11,
     rating: 4.6,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'ecommerce-returns-management',
     name: 'E-commerce Returns Management',
-    tagline: 'Automated RMAs, labels, and status tracking for happier customers',
+    tagline:
+      'Automated RMAs, labels, and status tracking for happier customers',
     price: '$59',
     period: '/month',
-    description: 'Streamline returns with branded portals, label generation, disposition rules, and notifications. Reduce WISMO and support load.',
+    description:
+      'Streamline returns with branded portals, label generation, disposition rules, and notifications. Reduce WISMO and support load.',
     features: [
       'Self-serve returns portal',
       'Label generation and RMA IDs',
       'Return status tracking and emails',
       'Disposition rules and restocking',
-      'Analytics on reasons and costs'
+      'Analytics on reasons and costs',
     ],
     popular: false,
     icon: '📦',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/ecommerce-returns-management',
-    marketPosition: 'Affordable alternative with fast setup and essential workflows.',
+    marketPosition:
+      'Affordable alternative with fast setup and essential workflows.',
     targetAudience: 'E-commerce shops, DTC brands, marketplaces',
     trialDays: 14,
     setupTime: '2 hours',
@@ -1123,7 +1221,11 @@ export const newlyAddedServices: MicroSaasService[] = [
     realService: true,
     technology: ['Next.js', 'Cloud Functions', 'Label APIs'],
     integrations: ['Shopify', 'Shippo', 'UPS', 'FedEx'],
-    useCases: ['Self-serve returns', 'Refund or store credit', 'WISMO reduction'],
+    useCases: [
+      'Self-serve returns',
+      'Refund or store credit',
+      'WISMO reduction',
+    ],
     roi: 'Reduce support tickets by 20–40%',
     competitors: ['Loop Returns', 'Returnly', 'AfterShip Returns'],
     marketSize: '$9B returns tech',
@@ -1131,11 +1233,12 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'mobility-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Branded portal, label providers, webhook automations, and analytics.',
+    implementationDetails:
+      'Branded portal, label providers, webhook automations, and analytics.',
     launchDate: '2025-08-20',
     customers: 8,
     rating: 4.5,
-    reviews: 4
+    reviews: 4,
   },
   {
     id: 'wordpress-internal-linking-automation',
@@ -1143,13 +1246,14 @@ export const newlyAddedServices: MicroSaasService[] = [
     tagline: 'Automatic internal links that boost SEO and reduce bounce rates',
     price: '$39',
     period: '/month',
-    description: 'Continuously analyzes your content, suggests and injects contextual internal links with guardrails, and exports editor-ready suggestions.',
+    description:
+      'Continuously analyzes your content, suggests and injects contextual internal links with guardrails, and exports editor-ready suggestions.',
     features: [
       'Semantic content analysis and keyword clustering',
       'Context-aware internal link suggestions',
       'Bulk editor and export to CSV/Google Sheets',
       'Anchor text variety and caps',
-      'Safety guards to avoid overlinking'
+      'Safety guards to avoid overlinking',
     ],
     popular: false,
     icon: '🔍',
@@ -1172,11 +1276,11 @@ export const newlyAddedServices: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Content crawler, embeddings index, suggestion engine, and editor tooling.',
+    implementationDetails:
+      'Content crawler, embeddings index, suggestion engine, and editor tooling.',
     launchDate: '2025-08-20',
     customers: 12,
     rating: 4.5,
-    reviews: 7
-  }
+    reviews: 7,
+  },
 ];
-

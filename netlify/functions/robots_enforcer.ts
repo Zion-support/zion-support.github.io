@@ -2,7 +2,7 @@
 // Scheduled in netlify.toml -> [[scheduled]] path = "/.netlify/functions/robots_enforcer"
 
 export const config = {
-  path: "/.netlify/functions/robots_enforcer",
+  path: '/.netlify/functions/robots_enforcer',
 };
 
 import type { Handler } from '@netlify/functions';
@@ -23,7 +23,12 @@ function generateRobots() {
 export const handler: Handler = async () => {
   try {
     const desired = generateRobots();
-    const commit = await commitToRepo({ path: 'public/robots.txt', content: desired, message: 'chore(seo): enforce robots.txt', branch: 'main' });
+    const commit = await commitToRepo({
+      path: 'public/robots.txt',
+      content: desired,
+      message: 'chore(seo): enforce robots.txt',
+      branch: 'main',
+    });
     return { statusCode: 200, body: JSON.stringify({ ok: commit.committed }) };
   } catch (e: any) {
     return { statusCode: 500, body: String(e?.message || e) };

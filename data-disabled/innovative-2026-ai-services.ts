@@ -27,7 +27,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     features: [
       'Advanced AI capabilities',
       'Real-time processing',
-      'Scalable architecture'
+      'Scalable architecture',
     ],
     popular: true,
     icon: '🤖',
@@ -36,6 +36,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     link: '/services/ai-2026-service',
     marketPosition: 'Leading',
     targetAudience: 'Enterprises',
-    realImplementation: true
-  }
+    realImplementation: true,
+  },
 ];

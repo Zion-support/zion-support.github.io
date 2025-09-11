@@ -3,7 +3,7 @@ const syncStore = require('../utils/syncStore');
 
 // Merge incoming arrays by id to avoid duplicates
 function mergeRecords(targetMap, incoming) {
-  incoming.forEach((item) => {
+  incoming.forEach(item => {
     if (!item || !item.id) return;
     const existing = targetMap.get(item.id);
     if (!existing || existing.version < (item.version || 0)) {
@@ -13,10 +13,28 @@ function mergeRecords(targetMap, incoming) {
 }
 
 exports.receiveSyncUpdate = (req, res) => {
-  const { proposals = [], tokenTransfers = [], talentMoves = [], resolutions = [], leaderboard = [], merkleRoot } = req.body;
+  const {
+    proposals = [],
+    tokenTransfers = [],
+    talentMoves = [],
+    resolutions = [],
+    leaderboard = [],
+    merkleRoot,
+  } = req.body;
 
   if (merkleRoot) {
-    const hash = crypto.createHash('sha256').update(JSON.stringify({ proposals, tokenTransfers, talentMoves, resolutions, leaderboard })).digest('hex');
+    const hash = crypto
+      .createHash('sha256')
+      .update(
+        JSON.stringify({
+          proposals,
+          tokenTransfers,
+          talentMoves,
+          resolutions,
+          leaderboard,
+        })
+      )
+      .digest('hex');
     if (hash !== merkleRoot) {
       return res.status(400).json({ error: 'Invalid merkle root' });
     }

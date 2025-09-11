@@ -5,6 +5,7 @@ This document describes the comprehensive automation systems designed to prevent
 ## 🎯 **Overview**
 
 The build automation systems provide:
+
 - **Prevention**: Catch issues before they break builds
 - **Detection**: Identify problems early in the development cycle
 - **Recovery**: Automatically fix common build issues
@@ -40,6 +41,7 @@ The build automation systems provide:
 **Purpose**: Validates all page files for proper React component structure
 
 **Features**:
+
 - Checks for missing `export default` statements
 - Validates component declarations (function/class/const)
 - Ensures proper return statements
@@ -47,6 +49,7 @@ The build automation systems provide:
 - Generates detailed reports with line numbers
 
 **Usage**:
+
 ```bash
 npm run build:validate
 ```
@@ -58,6 +61,7 @@ npm run build:validate
 **Purpose**: Comprehensive pre-build validation system
 
 **Checks**:
+
 - ✅ Page structure validation (CRITICAL)
 - ✅ Dependencies installation (CRITICAL)
 - ✅ Next.js configuration (CRITICAL)
@@ -66,6 +70,7 @@ npm run build:validate
 - ✅ Build artifacts management
 
 **Usage**:
+
 ```bash
 npm run build:health-check
 ```
@@ -77,6 +82,7 @@ npm run build:health-check
 **Purpose**: Automatically fixes common build issues
 
 **Auto-Fix Capabilities**:
+
 - 🧩 **Missing React Components**: Generates proper component templates
 - 📦 **Dependency Issues**: Reinstalls packages
 - 🔧 **Export Issues**: Fixes missing exports
@@ -84,6 +90,7 @@ npm run build:health-check
 - 🏗️ **Module Issues**: Resolves import/export problems
 
 **Usage**:
+
 ```bash
 npm run build:recovery
 ```
@@ -95,6 +102,7 @@ npm run build:recovery
 **Purpose**: Real-time monitoring of file changes and build health
 
 **Features**:
+
 - 👀 **File Watching**: Monitors pages/, components/, config files
 - ⚡ **Smart Queuing**: Prevents build spam with cooldown
 - 🔄 **Auto-Recovery**: Attempts fixes when issues detected
@@ -102,6 +110,7 @@ npm run build:recovery
 - 🎯 **Pattern Learning**: Identifies problematic file patterns
 
 **Usage**:
+
 ```bash
 npm run build:monitor
 ```
@@ -113,6 +122,7 @@ npm run build:monitor
 **Purpose**: Intelligent Netlify deployment recovery
 
 **Features**:
+
 - 🚑 **Local Recovery**: Fixes issues before triggering rebuilds
 - 🔄 **Smart Fallback**: Uses existing auto-healer as backup
 - 📡 **Build Hook Integration**: Triggers rebuilds via hooks or API
@@ -120,6 +130,7 @@ npm run build:monitor
 - 📊 **Recovery Reports**: Detailed healing documentation
 
 **Usage**:
+
 ```bash
 node automation/enhanced-netlify-healer.cjs
 ```
@@ -131,6 +142,7 @@ node automation/enhanced-netlify-healer.cjs
 **Purpose**: Central coordination of all build automation systems
 
 **Features**:
+
 - 🎛️ **System Management**: Initializes and monitors all systems
 - 🧪 **System Testing**: Validates each automation component
 - 🏥 **Health Monitoring**: Continuous system health checks
@@ -138,6 +150,7 @@ node automation/enhanced-netlify-healer.cjs
 - 📊 **Unified Reporting**: Centralized status and history
 
 **Usage**:
+
 ```bash
 npm run build:orchestrator:start
 npm run build:orchestrator:status
@@ -149,6 +162,7 @@ npm run build:smart:full
 ## 🚀 **Quick Start Commands**
 
 ### **Basic Usage**
+
 ```bash
 # Validate page structure
 npm run build:validate
@@ -167,6 +181,7 @@ npm run build:orchestrator:start
 ```
 
 ### **Advanced Usage**
+
 ```bash
 # Full smart build with orchestration
 npm run build:smart:full
@@ -184,15 +199,17 @@ node automation/enhanced-netlify-healer.cjs
 ## 📋 **Integration Points**
 
 ### **Pre-Build Hooks**
+
 The systems automatically integrate with your existing build process:
 
 ```json
 {
- "prebuild": "npm run build:health-check && npm run netlify:manifest"
+  "prebuild": "npm run build:health-check && npm run netlify:manifest"
 }
 ```
 
 ### **Git Pre-Commit Hook**
+
 Enhanced pre-commit hook prevents broken code from being committed:
 
 ```bash
@@ -203,6 +220,7 @@ npm run lint
 ```
 
 ### **Netlify Integration**
+
 Enhanced auto-healer integrates with your existing Netlify automation:
 
 ```javascript
@@ -213,11 +231,13 @@ await this.fallbackToAutoHealer();
 ## 📊 **Monitoring & Reporting**
 
 ### **Real-Time Monitoring**
+
 - **Continuous Build Monitor**: Watches file changes and validates builds
 - **System Health Checks**: Monitors automation system health
 - **Build History Tracking**: Records success/failure patterns
 
 ### **Comprehensive Reports**
+
 All systems generate detailed HTML and JSON reports:
 
 ```
@@ -231,6 +251,7 @@ public/reports/
 ```
 
 ### **Report Features**
+
 - 📈 **Visual Dashboards**: HTML reports with status indicators
 - 📊 **Metrics & Analytics**: Success rates, failure patterns
 - 🔍 **Detailed Analysis**: Line-by-line issue identification
@@ -240,17 +261,20 @@ public/reports/
 ## 🧠 **Intelligent Features**
 
 ### **Pattern Recognition**
+
 - **Build Error Patterns**: Identifies common failure types
 - **File Change Patterns**: Tracks problematic file modifications
 - **Recovery Success Patterns**: Learns from successful fixes
 
 ### **Auto-Recovery**
+
 - **Component Generation**: Creates proper React components
 - **Template Selection**: Chooses appropriate page templates
 - **Content Preservation**: Maintains existing content during fixes
 - **Backup Creation**: Safeguards original files
 
 ### **Smart Scheduling**
+
 - **Build Cooldown**: Prevents excessive build triggers
 - **Queue Management**: Intelligent build queuing
 - **Priority Handling**: Critical issues get immediate attention
@@ -258,6 +282,7 @@ public/reports/
 ## 🔧 **Configuration**
 
 ### **Environment Variables**
+
 ```bash
 # Netlify Integration
 NETLIFY_AUTH_TOKEN=your_token
@@ -270,6 +295,7 @@ NODE_VERSION=20
 ```
 
 ### **Customization Options**
+
 - **Build Cooldown**: Adjustable delay between builds (default: 5s)
 - **Queue Size**: Maximum pending builds (default: 10)
 - **History Size**: Build history retention (default: 50-100)
@@ -280,6 +306,7 @@ NODE_VERSION=20
 ### **Common Issues**
 
 #### **System Won't Start**
+
 ```bash
 # Check system dependencies
 npm install
@@ -292,6 +319,7 @@ tail -f automation/logs/*.log
 ```
 
 #### **Build Recovery Fails**
+
 ```bash
 # Manual validation
 npm run build:validate
@@ -304,6 +332,7 @@ tail -f automation/logs/build-failure-recovery.log
 ```
 
 #### **Continuous Monitor Issues**
+
 ```bash
 # Check file watcher
 npm run build:monitor
@@ -316,6 +345,7 @@ lsof | grep automation
 ```
 
 ### **Debug Mode**
+
 Enable verbose logging by setting environment variables:
 
 ```bash
@@ -326,12 +356,14 @@ export LOG_LEVEL=debug
 ## 📈 **Performance & Scalability**
 
 ### **Resource Usage**
+
 - **Memory**: Minimal overhead (~50-100MB)
 - **CPU**: Low background usage
 - **Disk**: Log files and reports (~10-50MB)
 - **Network**: Only when triggering rebuilds
 
 ### **Optimization Tips**
+
 - **Selective Watching**: Limit watched directories
 - **Report Cleanup**: Regular cleanup of old reports
 - **Log Rotation**: Implement log rotation for long-running systems
@@ -340,6 +372,7 @@ export LOG_LEVEL=debug
 ## 🔮 **Future Enhancements**
 
 ### **Planned Features**
+
 - **AI-Powered Fixes**: Machine learning for better issue resolution
 - **Predictive Analysis**: Identify potential issues before they occur
 - **Team Collaboration**: Share build insights across development teams
@@ -347,21 +380,22 @@ export LOG_LEVEL=debug
 - **Mobile Monitoring**: Mobile app for build status monitoring
 
 ### **Extensibility**
+
 The system is designed for easy extension:
 
 ```javascript
 // Add custom health checks
 class CustomHealthChecker extends PreBuildHealthChecker {
- async customCheck() {
- // Your custom validation logic
- }
+  async customCheck() {
+    // Your custom validation logic
+  }
 }
 
 // Add custom recovery strategies
 class CustomRecovery extends BuildFailureRecovery {
- async customFix(error) {
- // Your custom fix logic
- }
+  async customFix(error) {
+    // Your custom fix logic
+  }
 }
 ```
 
@@ -370,6 +404,7 @@ class CustomRecovery extends BuildFailureRecovery {
 ### **Core Classes**
 
 #### **PreBuildHealthChecker**
+
 ```javascript
 const checker = new PreBuildHealthChecker();
 checker.addCheck('Custom Check', customCheckFn, true);
@@ -377,12 +412,14 @@ const report = await checker.runChecks();
 ```
 
 #### **BuildFailureRecovery**
+
 ```javascript
 const recovery = new BuildFailureRecovery();
 const report = await recovery.analyzeBuildError(errorLog);
 ```
 
 #### **ContinuousBuildMonitor**
+
 ```javascript
 const monitor = new ContinuousBuildMonitor();
 monitor.start();
@@ -391,6 +428,7 @@ monitor.stop();
 ```
 
 #### **MasterBuildOrchestrator**
+
 ```javascript
 const orchestrator = new MasterBuildOrchestrator();
 await orchestrator.start();
@@ -401,18 +439,21 @@ orchestrator.stop();
 ## 🤝 **Contributing**
 
 ### **Adding New Checks**
+
 1. Extend the appropriate base class
 2. Implement your validation logic
 3. Add tests for your new functionality
 4. Update documentation
 
 ### **Adding New Recovery Strategies**
+
 1. Identify the error pattern
 2. Implement the fix logic
 3. Add to the pattern matcher
 4. Test with various error scenarios
 
 ### **Reporting Issues**
+
 - Check existing logs first
 - Provide error messages and stack traces
 - Include system information (OS, Node version, etc.)

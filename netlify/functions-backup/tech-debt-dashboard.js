@@ -5,7 +5,11 @@ const { spawnSync } = require('child_process');
 
 function run(cmd, args = []) {
   const res = spawnSync(cmd, args, { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
+  };
 }
 
 async function ensureDir(dirPath) {
@@ -13,7 +17,18 @@ async function ensureDir(dirPath) {
 }
 
 function shouldSkipDir(dirName) {
-  return ['node_modules','.git','.next','out','.cache','dist','.husky','.cursor','.github','netlify/plugins'].includes(dirName);
+  return [
+    'node_modules',
+    '.git',
+    '.next',
+    'out',
+    '.cache',
+    'dist',
+    '.husky',
+    '.cursor',
+    '.github',
+    'netlify/plugins',
+  ].includes(dirName);
 }
 
 function isScanFile(file) {
@@ -55,15 +70,23 @@ function walk(dir, base = dir, acc = []) {
 
 function renderHtml(data, repoSlug = 'Zion-Holdings/zion.app') {
   const total = data.items.reduce((sum, f) => sum + f.findings.length, 0);
-  const rows = data.items.map(item => {
-    const fileLink = `https://github.com/${repoSlug}/blob/main/${item.file}`;
-    const lines = item.findings.slice(0, 5).map(m => `<div style="font-family:monospace;color:#ccd"><a style="color:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g,'<')}</div>`).join('');
-    return `<tr>
+  const rows = data.items
+    .map(item => {
+      const fileLink = `https://github.com/${repoSlug}/blob/main/${item.file}`;
+      const lines = item.findings
+        .slice(0, 5)
+        .map(
+          m =>
+            `<div style="font-family:monospace;color:#ccd"><a style="color:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g, '<')}</div>`
+        )
+        .join('');
+      return `<tr>
       <td style="padding:8px;border-bottom:1px solid #223;"><a style="color:#9ad" href="${fileLink}">${item.file}</a></td>
       <td style="padding:8px;border-bottom:1px solid #223;">${item.findings.length}</td>
       <td style="padding:8px;border-bottom:1px solid #223;">${lines}</td>
     </tr>`;
-  }).join('\n');
+    })
+    .join('\n');
   return `<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8" />
@@ -92,7 +115,11 @@ exports.handler = async () => {
 
   const items = walk(root, root, []);
   items.sort((a, b) => b.findings.length - a.findings.length);
-  const payload = { generatedAt: new Date().toISOString(), totalFiles: items.length, items };
+  const payload = {
+    generatedAt: new Date().toISOString(),
+    totalFiles: items.length,
+    items,
+  };
 
   await ensureDir(outDir);
   await fsp.writeFile(jsonPath, JSON.stringify(payload, null, 2));
@@ -101,6 +128,13 @@ exports.handler = async () => {
   // Sync changes to repo
   const sync = run('node', [path.join(root, 'automation', 'git-sync.cjs')]);
 
-  const body = { ok: sync.status === 0, report: { json: '/reports/tech-debt/latest.json', html: '/reports/tech-debt/' }, totalFiles: items.length };
+  const body = {
+    ok: sync.status === 0,
+    report: {
+      json: '/reports/tech-debt/latest.json',
+      html: '/reports/tech-debt/',
+    },
+    totalFiles: items.length,
+  };
   return { statusCode: 200, body: JSON.stringify(body) };
 };

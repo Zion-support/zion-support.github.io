@@ -45,13 +45,15 @@ export class PerformanceMonitor {
 
   public async measurePerformance(): Promise<PerformanceMetrics> {
     if (typeof window === 'undefined') {
-      throw new Error('Performance monitoring is only available in the browser');
+      throw new Error(
+        'Performance monitoring is only available in the browser'
+      );
     }
 
-    return new Promise((resolve) => {
-      const observer = new PerformanceObserver((list) => {
+    return new Promise(resolve => {
+      const observer = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        
+
         const metrics: PerformanceMetrics = {
           loadTime: 0,
           firstContentfulPaint: 0,
@@ -61,7 +63,7 @@ export class PerformanceMonitor {
           timeToInteractive: 0,
         };
 
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           switch (entry.entryType) {
             case 'navigation':
               if (entry.name === 'navigation') {
@@ -84,7 +86,8 @@ export class PerformanceMonitor {
               break;
             case 'first-input':
               const fidEntry = entry as PerformanceEventTiming;
-              metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
+              metrics.firstInputDelay =
+                fidEntry.processingStart - fidEntry.startTime;
               break;
           }
         });
@@ -93,7 +96,15 @@ export class PerformanceMonitor {
         resolve(metrics);
       });
 
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      observer.observe({
+        entryTypes: [
+          'navigation',
+          'paint',
+          'largest-contentful-paint',
+          'layout-shift',
+          'first-input',
+        ],
+      });
 
       // Fallback timeout
       setTimeout(() => {
@@ -143,7 +154,9 @@ export class PerformanceMonitor {
 export function reportWebVitals(metric: any) {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      value: Math.round(
+        metric.name === 'CLS' ? metric.value * 1000 : metric.value
+      ),
       event_label: metric.id,
       non_interaction: true,
     });
@@ -156,7 +169,7 @@ export function checkPerformanceBudget(metrics: PerformanceMetrics): {
   violations: string[];
 } {
   const violations: string[] = [];
-  
+
   // Performance budgets (in milliseconds)
   const budgets = {
     loadTime: 3000,
@@ -167,23 +180,33 @@ export function checkPerformanceBudget(metrics: PerformanceMetrics): {
   };
 
   if (metrics.loadTime > budgets.loadTime) {
-    violations.push(`Load time exceeded budget: ${metrics.loadTime}ms > ${budgets.loadTime}ms`);
+    violations.push(
+      `Load time exceeded budget: ${metrics.loadTime}ms > ${budgets.loadTime}ms`
+    );
   }
 
   if (metrics.firstContentfulPaint > budgets.firstContentfulPaint) {
-    violations.push(`FCP exceeded budget: ${metrics.firstContentfulPaint}ms > ${budgets.firstContentfulPaint}ms`);
+    violations.push(
+      `FCP exceeded budget: ${metrics.firstContentfulPaint}ms > ${budgets.firstContentfulPaint}ms`
+    );
   }
 
   if (metrics.largestContentfulPaint > budgets.largestContentfulPaint) {
-    violations.push(`LCP exceeded budget: ${metrics.largestContentfulPaint}ms > ${budgets.largestContentfulPaint}ms`);
+    violations.push(
+      `LCP exceeded budget: ${metrics.largestContentfulPaint}ms > ${budgets.largestContentfulPaint}ms`
+    );
   }
 
   if (metrics.cumulativeLayoutShift > budgets.cumulativeLayoutShift) {
-    violations.push(`CLS exceeded budget: ${metrics.cumulativeLayoutShift} > ${budgets.cumulativeLayoutShift}`);
+    violations.push(
+      `CLS exceeded budget: ${metrics.cumulativeLayoutShift} > ${budgets.cumulativeLayoutShift}`
+    );
   }
 
   if (metrics.firstInputDelay > budgets.firstInputDelay) {
-    violations.push(`FID exceeded budget: ${metrics.firstInputDelay}ms > ${budgets.firstInputDelay}ms`);
+    violations.push(
+      `FID exceeded budget: ${metrics.firstInputDelay}ms > ${budgets.firstInputDelay}ms`
+    );
   }
 
   return {

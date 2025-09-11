@@ -1,8 +1,3 @@
+import { Resume } from '@/types / resume';
 
-import { Resume  } from '@/types / resume';
-
-export interface ResumeOption {
-
-
-
-}
+export interface ResumeOption {}

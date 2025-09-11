@@ -2,13 +2,14 @@ export const innovativeITInfrastructureExpansionV22025 = [
   {
     id: 'quantum-edge-computing-platform',
     name: 'Quantum Edge Computing Platform',
-    description: 'Revolutionary edge computing platform that leverages quantum computing principles to process data at the edge with unprecedented speed and efficiency, enabling real-time AI applications.',
+    description:
+      'Revolutionary edge computing platform that leverages quantum computing principles to process data at the edge with unprecedented speed and efficiency, enabling real-time AI applications.',
     category: 'Edge Computing & AI',
     type: 'Quantum-Enhanced Infrastructure',
     pricing: {
       starter: '$499/month',
       professional: '$999/month',
-      enterprise: '$2,499/month'
+      enterprise: '$2,499/month',
     },
     features: [
       'Quantum-enhanced edge processing',
@@ -18,7 +19,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Edge AI model deployment',
       'Real-time analytics',
       'IoT device integration',
-      '5G network optimization'
+      '5G network optimization',
     ],
     benefits: [
       'Reduce latency by 90%',
@@ -26,7 +27,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Real-time AI capabilities',
       'Cost-effective edge computing',
       'Scalable infrastructure',
-      'Future-proof technology'
+      'Future-proof technology',
     ],
     useCases: [
       'Autonomous vehicles',
@@ -34,28 +35,40 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Industrial IoT',
       'Healthcare monitoring',
       'Financial trading',
-      'Gaming platforms'
+      'Gaming platforms',
     ],
-    technologies: ['Quantum Computing', 'Edge Computing', 'AI/ML', '5G Networks', 'IoT Integration'],
+    technologies: [
+      'Quantum Computing',
+      'Edge Computing',
+      'AI/ML',
+      '5G Networks',
+      'IoT Integration',
+    ],
     marketSize: '$25.8B',
     growthRate: '58% annually',
-    competitors: ['AWS Edge', 'Azure Edge', 'Google Edge', 'Cloudflare Workers'],
+    competitors: [
+      'AWS Edge',
+      'Azure Edge',
+      'Google Edge',
+      'Cloudflare Workers',
+    ],
     website: 'https://ziontechgroup.com/quantum-edge-computing-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: 'neuromorphic-computing-infrastructure',
     name: 'Neuromorphic Computing Infrastructure',
-    description: 'Brain-inspired computing infrastructure that mimics neural networks for ultra-efficient AI processing, enabling advanced machine learning and cognitive computing applications.',
+    description:
+      'Brain-inspired computing infrastructure that mimics neural networks for ultra-efficient AI processing, enabling advanced machine learning and cognitive computing applications.',
     category: 'AI Infrastructure & Computing',
     type: 'Neuromorphic Computing',
     pricing: {
       starter: '$799/month',
       professional: '$1,599/month',
-      enterprise: '$3,999/month'
+      enterprise: '$3,999/month',
     },
     features: [
       'Brain-inspired architecture',
@@ -65,7 +78,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Real-time learning',
       'Energy-efficient computing',
       'Advanced pattern recognition',
-      'Scalable neural networks'
+      'Scalable neural networks',
     ],
     benefits: [
       'Reduce energy consumption by 80%',
@@ -73,7 +86,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Real-time learning capabilities',
       'Cognitive computing power',
       'Future-proof architecture',
-      'Sustainable computing'
+      'Sustainable computing',
     ],
     useCases: [
       'AI research institutions',
@@ -81,28 +94,35 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Cognitive computing',
       'Neural network training',
       'Brain-computer interfaces',
-      'Advanced robotics'
+      'Advanced robotics',
     ],
-    technologies: ['Neuromorphic Computing', 'Neural Networks', 'AI/ML', 'Cognitive Computing', 'Brain-inspired Architecture'],
+    technologies: [
+      'Neuromorphic Computing',
+      'Neural Networks',
+      'AI/ML',
+      'Cognitive Computing',
+      'Brain-inspired Architecture',
+    ],
     marketSize: '$18.9B',
     growthRate: '65% annually',
     competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense'],
     website: 'https://ziontechgroup.com/neuromorphic-computing-infrastructure',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: 'holographic-data-center-platform',
     name: 'Holographic Data Center Platform',
-    description: 'Next-generation data center platform using holographic storage and 3D computing architectures to achieve unprecedented data density and processing capabilities.',
+    description:
+      'Next-generation data center platform using holographic storage and 3D computing architectures to achieve unprecedented data density and processing capabilities.',
     category: 'Data Center & Storage',
     type: 'Holographic Computing',
     pricing: {
       starter: '$1,199/month',
       professional: '$2,399/month',
-      enterprise: '$5,999/month'
+      enterprise: '$5,999/month',
     },
     features: [
       'Holographic storage technology',
@@ -112,7 +132,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Holographic displays',
       'Advanced cooling systems',
       'Energy optimization',
-      'Scalable infrastructure'
+      'Scalable infrastructure',
     ],
     benefits: [
       'Increase storage density by 1000x',
@@ -120,7 +140,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       '3D computing capabilities',
       'Future-proof technology',
       'Scalable infrastructure',
-      'Innovative architecture'
+      'Innovative architecture',
     ],
     useCases: [
       'Large-scale data centers',
@@ -128,28 +148,35 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Government agencies',
       'Financial institutions',
       'Healthcare organizations',
-      'Entertainment industry'
+      'Entertainment industry',
     ],
-    technologies: ['Holographic Storage', '3D Computing', 'Advanced Cooling', 'Energy Management', 'Holographic Displays'],
+    technologies: [
+      'Holographic Storage',
+      '3D Computing',
+      'Advanced Cooling',
+      'Energy Management',
+      'Holographic Displays',
+    ],
     marketSize: '$32.1B',
     growthRate: '72% annually',
     competitors: ['Microsoft Azure', 'AWS', 'Google Cloud', 'IBM Cloud'],
     website: 'https://ziontechgroup.com/holographic-data-center-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: 'bio-computing-infrastructure',
     name: 'Bio-Computing Infrastructure',
-    description: 'Revolutionary computing infrastructure that combines biological systems with digital technology, enabling bio-inspired algorithms and sustainable computing solutions.',
+    description:
+      'Revolutionary computing infrastructure that combines biological systems with digital technology, enabling bio-inspired algorithms and sustainable computing solutions.',
     category: 'Bio-Computing & Sustainability',
     type: 'Bio-Inspired Computing',
     pricing: {
       starter: '$599/month',
       professional: '$1,199/month',
-      enterprise: '$2,999/month'
+      enterprise: '$2,999/month',
     },
     features: [
       'Bio-inspired algorithms',
@@ -159,7 +186,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Bio-sensors integration',
       'Environmental monitoring',
       'Green computing',
-      'Biomimetic systems'
+      'Biomimetic systems',
     ],
     benefits: [
       'Reduce environmental impact by 90%',
@@ -167,7 +194,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Sustainable technology',
       'Bio-inspired innovation',
       'Environmental monitoring',
-      'Future-proof computing'
+      'Future-proof computing',
     ],
     useCases: [
       'Environmental research',
@@ -175,28 +202,35 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Sustainable computing',
       'Climate monitoring',
       'Biological research',
-      'Green technology'
+      'Green technology',
     ],
-    technologies: ['Bio-Computing', 'DNA Computing', 'Bio-Sensors', 'Sustainable Computing', 'Biomimetic Systems'],
+    technologies: [
+      'Bio-Computing',
+      'DNA Computing',
+      'Bio-Sensors',
+      'Sustainable Computing',
+      'Biomimetic Systems',
+    ],
     marketSize: '$15.6B',
     growthRate: '55% annually',
     competitors: ['Microsoft', 'IBM', 'Google', 'Intel'],
     website: 'https://ziontechgroup.com/bio-computing-infrastructure',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: 'quantum-internet-backbone',
     name: 'Quantum Internet Backbone',
-    description: 'Advanced quantum internet infrastructure that provides ultra-secure, high-speed communication networks using quantum entanglement and quantum cryptography.',
+    description:
+      'Advanced quantum internet infrastructure that provides ultra-secure, high-speed communication networks using quantum entanglement and quantum cryptography.',
     category: 'Quantum Networking & Security',
     type: 'Quantum Internet',
     pricing: {
       starter: '$899/month',
       professional: '$1,799/month',
-      enterprise: '$4,499/month'
+      enterprise: '$4,499/month',
     },
     features: [
       'Quantum entanglement networks',
@@ -206,7 +240,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'High-speed quantum channels',
       'Quantum repeaters',
       'Network security',
-      'Global quantum network'
+      'Global quantum network',
     ],
     benefits: [
       'Unbreakable encryption',
@@ -214,7 +248,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Quantum security',
       'Future-proof networking',
       'Global connectivity',
-      'Advanced security'
+      'Advanced security',
     ],
     useCases: [
       'Government agencies',
@@ -222,28 +256,35 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Healthcare organizations',
       'Military communications',
       'Research institutions',
-      'Secure enterprises'
+      'Secure enterprises',
     ],
-    technologies: ['Quantum Entanglement', 'Quantum Cryptography', 'Quantum Key Distribution', 'Quantum Networks', 'Quantum Security'],
+    technologies: [
+      'Quantum Entanglement',
+      'Quantum Cryptography',
+      'Quantum Key Distribution',
+      'Quantum Networks',
+      'Quantum Security',
+    ],
     marketSize: '$28.7B',
     growthRate: '68% annually',
     competitors: ['Cisco', 'Juniper', 'Huawei', 'Nokia'],
     website: 'https://ziontechgroup.com/quantum-internet-backbone',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: '5g-private-network-solutions',
     name: '5G Private Network Solutions',
-    description: 'Enterprise-grade 5G private network solutions that provide ultra-fast, low-latency connectivity for industrial applications, IoT deployments, and mission-critical operations.',
+    description:
+      'Enterprise-grade 5G private network solutions that provide ultra-fast, low-latency connectivity for industrial applications, IoT deployments, and mission-critical operations.',
     category: '5G & Private Networks',
     type: '5G Infrastructure',
     pricing: {
       starter: '$399/month',
       professional: '$799/month',
-      enterprise: '$1,999/month'
+      enterprise: '$1,999/month',
     },
     features: [
       'Private 5G networks',
@@ -253,7 +294,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Network slicing',
       'Edge computing integration',
       'Security features',
-      'Scalable infrastructure'
+      'Scalable infrastructure',
     ],
     benefits: [
       'Reduce latency by 95%',
@@ -261,7 +302,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Private network security',
       'IoT device support',
       'Scalable infrastructure',
-      'Future-proof technology'
+      'Future-proof technology',
     ],
     useCases: [
       'Manufacturing plants',
@@ -269,28 +310,35 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Warehouses',
       'Hospitals',
       'Universities',
-      'Government facilities'
+      'Government facilities',
     ],
-    technologies: ['5G Networks', 'Private Networks', 'Network Slicing', 'Edge Computing', 'IoT Integration'],
+    technologies: [
+      '5G Networks',
+      'Private Networks',
+      'Network Slicing',
+      'Edge Computing',
+      'IoT Integration',
+    ],
     marketSize: '$19.8B',
     growthRate: '52% annually',
     competitors: ['Ericsson', 'Nokia', 'Huawei', 'Samsung'],
     website: 'https://ziontechgroup.com/5g-private-network-solutions',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: 'quantum-cloud-infrastructure-2044',
     name: 'Quantum Cloud Infrastructure 2044',
-    description: 'Futuristic quantum cloud infrastructure that combines quantum computing, quantum storage, and quantum networking for next-generation cloud services and applications.',
+    description:
+      'Futuristic quantum cloud infrastructure that combines quantum computing, quantum storage, and quantum networking for next-generation cloud services and applications.',
     category: 'Quantum Cloud & Computing',
     type: 'Quantum Cloud Infrastructure',
     pricing: {
       starter: '$699/month',
       professional: '$1,399/month',
-      enterprise: '$3,499/month'
+      enterprise: '$3,499/month',
     },
     features: [
       'Quantum cloud computing',
@@ -300,7 +348,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Scalable quantum resources',
       'Quantum API access',
       'Real-time quantum processing',
-      'Future-ready architecture'
+      'Future-ready architecture',
     ],
     benefits: [
       'Quantum computing power',
@@ -308,7 +356,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Quantum security',
       'Future-proof technology',
       'Advanced capabilities',
-      'Innovative solutions'
+      'Innovative solutions',
     ],
     useCases: [
       'Quantum research',
@@ -316,28 +364,40 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Cryptography research',
       'Scientific computing',
       'Financial modeling',
-      'Drug discovery'
+      'Drug discovery',
     ],
-    technologies: ['Quantum Computing', 'Quantum Storage', 'Quantum Networking', 'Quantum Security', 'Cloud Infrastructure'],
+    technologies: [
+      'Quantum Computing',
+      'Quantum Storage',
+      'Quantum Networking',
+      'Quantum Security',
+      'Cloud Infrastructure',
+    ],
     marketSize: '$35.2B',
     growthRate: '75% annually',
-    competitors: ['AWS Quantum', 'Azure Quantum', 'Google Quantum', 'IBM Quantum'],
+    competitors: [
+      'AWS Quantum',
+      'Azure Quantum',
+      'Google Quantum',
+      'IBM Quantum',
+    ],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-2044',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: 'autonomous-devops-platform-2044',
     name: 'Autonomous DevOps Platform 2044',
-    description: 'Next-generation DevOps platform that autonomously manages infrastructure, deploys applications, and optimizes performance using AI and machine learning.',
+    description:
+      'Next-generation DevOps platform that autonomously manages infrastructure, deploys applications, and optimizes performance using AI and machine learning.',
     category: 'DevOps & Automation',
     type: 'AI Autonomous Platform',
     pricing: {
       starter: '$299/month',
       professional: '$599/month',
-      enterprise: '$1,499/month'
+      enterprise: '$1,499/month',
     },
     features: [
       'Autonomous infrastructure management',
@@ -347,7 +407,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Self-healing systems',
       'Intelligent scaling',
       'Security automation',
-      'Cost optimization'
+      'Cost optimization',
     ],
     benefits: [
       'Reduce deployment time by 90%',
@@ -355,7 +415,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Automated operations',
       'Cost optimization',
       '24/7 autonomous management',
-      'Scalable platform'
+      'Scalable platform',
     ],
     useCases: [
       'Development teams',
@@ -363,28 +423,35 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Platform teams',
       'SRE teams',
       'Startups',
-      'Enterprise organizations'
+      'Enterprise organizations',
     ],
-    technologies: ['AI/ML', 'DevOps Automation', 'Infrastructure as Code', 'Container Orchestration', 'Cloud Native'],
+    technologies: [
+      'AI/ML',
+      'DevOps Automation',
+      'Infrastructure as Code',
+      'Container Orchestration',
+      'Cloud Native',
+    ],
     marketSize: '$22.4B',
     growthRate: '48% annually',
     competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     website: 'https://ziontechgroup.com/autonomous-devops-platform-2044',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: 'quantum-cybersecurity-platform-2044',
     name: 'Quantum Cybersecurity Platform 2044',
-    description: 'Advanced cybersecurity platform that leverages quantum computing for threat detection, encryption, and security analysis, providing next-generation protection.',
+    description:
+      'Advanced cybersecurity platform that leverages quantum computing for threat detection, encryption, and security analysis, providing next-generation protection.',
     category: 'Quantum Security & Cybersecurity',
     type: 'Quantum Cybersecurity',
     pricing: {
       starter: '$499/month',
       professional: '$999/month',
-      enterprise: '$2,499/month'
+      enterprise: '$2,499/month',
     },
     features: [
       'Quantum threat detection',
@@ -394,7 +461,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Automated response',
       'Quantum key distribution',
       'Security automation',
-      'Compliance management'
+      'Compliance management',
     ],
     benefits: [
       'Unbreakable encryption',
@@ -402,7 +469,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Quantum security',
       'Automated protection',
       'Compliance automation',
-      'Future-proof security'
+      'Future-proof security',
     ],
     useCases: [
       'Financial institutions',
@@ -410,28 +477,35 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Healthcare organizations',
       'Military organizations',
       'Critical infrastructure',
-      'Enterprise security'
+      'Enterprise security',
     ],
-    technologies: ['Quantum Computing', 'Quantum Cryptography', 'AI/ML', 'Threat Intelligence', 'Security Automation'],
+    technologies: [
+      'Quantum Computing',
+      'Quantum Cryptography',
+      'AI/ML',
+      'Threat Intelligence',
+      'Security Automation',
+    ],
     marketSize: '$31.8B',
     growthRate: '62% annually',
     competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
     website: 'https://ziontechgroup.com/quantum-cybersecurity-platform-2044',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
+      email: 'kleber@ziontechgroup.com',
+    },
   },
   {
     id: 'quantum-data-center-management-2044',
     name: 'Quantum Data Center Management 2044',
-    description: 'Revolutionary data center management platform that uses quantum computing for optimization, automation, and intelligent resource management.',
+    description:
+      'Revolutionary data center management platform that uses quantum computing for optimization, automation, and intelligent resource management.',
     category: 'Data Center & Management',
     type: 'Quantum Data Center',
     pricing: {
       starter: '$799/month',
       professional: '$1,599/month',
-      enterprise: '$3,999/month'
+      enterprise: '$3,999/month',
     },
     features: [
       'Quantum optimization algorithms',
@@ -441,7 +515,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Predictive maintenance',
       'Real-time monitoring',
       'Automated scaling',
-      'Cost optimization'
+      'Cost optimization',
     ],
     benefits: [
       'Reduce energy costs by 60%',
@@ -449,7 +523,7 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Automated management',
       'Predictive maintenance',
       'Cost optimization',
-      'Future-proof technology'
+      'Future-proof technology',
     ],
     useCases: [
       'Large data centers',
@@ -457,16 +531,22 @@ export const innovativeITInfrastructureExpansionV22025 = [
       'Enterprise organizations',
       'Colocation facilities',
       'Edge computing',
-      'HPC centers'
+      'HPC centers',
     ],
-    technologies: ['Quantum Computing', 'AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Energy Management'],
+    technologies: [
+      'Quantum Computing',
+      'AI/ML',
+      'IoT Sensors',
+      'Predictive Analytics',
+      'Energy Management',
+    ],
     marketSize: '$26.9B',
     growthRate: '55% annually',
     competitors: ['Schneider Electric', 'Eaton', 'Vertiv', 'ABB'],
     website: 'https://ziontechgroup.com/quantum-data-center-management-2044',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
-    }
-  }
+      email: 'kleber@ziontechgroup.com',
+    },
+  },
 ];

@@ -4,9 +4,20 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
-function read(file) { try { return fs.readFileSync(file, 'utf8'); } catch { return ''; } }
-function write(file, content) { ensureDir(path.dirname(file)); fs.writeFileSync(file, content); }
+function ensureDir(p) {
+  fs.mkdirSync(p, { recursive: true });
+}
+function read(file) {
+  try {
+    return fs.readFileSync(file, 'utf8');
+  } catch {
+    return '';
+  }
+}
+function write(file, content) {
+  ensureDir(path.dirname(file));
+  fs.writeFileSync(file, content);
+}
 
 function analyze(content) {
   const hasMain = /<main\b|role\s*=\s*"main"/i.test(content);
@@ -17,14 +28,17 @@ function analyze(content) {
 }
 
 function generateHtml(rows) {
-  const tr = rows.map(r => {
-    const missing = [];
-    if (!r.hasMain) missing.push('main');
-    if (!r.hasNav) missing.push('nav');
-    if (!r.hasHeader) missing.push('header');
-    if (!r.hasFooter) missing.push('footer');
-    const badge = missing.length ? `<span class="badge danger">${missing.length} missing</span>` : `<span class="badge ok">OK</span>`;
-    return `<tr>
+  const tr = rows
+    .map(r => {
+      const missing = [];
+      if (!r.hasMain) missing.push('main');
+      if (!r.hasNav) missing.push('nav');
+      if (!r.hasHeader) missing.push('header');
+      if (!r.hasFooter) missing.push('footer');
+      const badge = missing.length
+        ? `<span class="badge danger">${missing.length} missing</span>`
+        : `<span class="badge ok">OK</span>`;
+      return `<tr>
       <td>${r.relPath}</td>
       <td>${r.hasMain ? '✔' : '✖'}</td>
       <td>${r.hasNav ? '✔' : '✖'}</td>
@@ -32,9 +46,18 @@ function generateHtml(rows) {
       <td>${r.hasFooter ? '✔' : '✖'}</td>
       <td>${missing.length ? missing.join(', ') : '—'} ${badge}</td>
     </tr>`;
-  }).join('\n');
+    })
+    .join('\n');
 
-  const totalMissing = rows.reduce((a,b)=>a + (b.hasMain?0:1) + (b.hasNav?0:1) + (b.hasHeader?0:1) + (b.hasFooter?0:1), 0);
+  const totalMissing = rows.reduce(
+    (a, b) =>
+      a +
+      (b.hasMain ? 0 : 1) +
+      (b.hasNav ? 0 : 1) +
+      (b.hasHeader ? 0 : 1) +
+      (b.hasFooter ? 0 : 1),
+    0
+  );
 
   return `<!doctype html>
 <html>
@@ -68,9 +91,19 @@ function generateHtml(rows) {
 </html>`;
 }
 
-(function main(){
-  const roots = [path.join(process.cwd(),'pages'), path.join(process.cwd(),'public')];
-  const files = roots.flatMap(root => glob.sync('**/*.{html,htm,tsx,jsx}', { cwd: root, absolute: true, dot: false, nodir: true }));
+(function main() {
+  const roots = [
+    path.join(process.cwd(), 'pages'),
+    path.join(process.cwd(), 'public'),
+  ];
+  const files = roots.flatMap(root =>
+    glob.sync('**/*.{html,htm,tsx,jsx}', {
+      cwd: root,
+      absolute: true,
+      dot: false,
+      nodir: true,
+    })
+  );
   const rows = [];
   for (const file of files) {
     const content = read(file);
@@ -80,7 +113,13 @@ function generateHtml(rows) {
     rows.push({ relPath: rel, ...res });
   }
   const html = generateHtml(rows);
-  const out = path.join(process.cwd(), 'public', 'reports', 'a11y-landmarks', 'index.html');
+  const out = path.join(
+    process.cwd(),
+    'public',
+    'reports',
+    'a11y-landmarks',
+    'index.html'
+  );
   write(out, html);
   console.log(`[a11y-landmarks-auditor] wrote ${out}`);
 })();

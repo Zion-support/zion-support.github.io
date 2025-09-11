@@ -23,7 +23,8 @@ export class ServiceWorkerManager {
 
     try {
       // Check if service worker is already registered
-      const existingRegistration = await navigator.serviceWorker.getRegistration();
+      const existingRegistration =
+        await navigator.serviceWorker.getRegistration();
       if (existingRegistration) {
         console.log('Service Worker already registered');
         this.swRegistration = existingRegistration;
@@ -33,7 +34,7 @@ export class ServiceWorkerManager {
       // Register new service worker with better error handling
       const registration = await navigator.serviceWorker.register('/sw.js', {
         scope: '/',
-        updateViaCache: 'none'
+        updateViaCache: 'none',
       });
 
       console.log('Service Worker registered successfully:', registration);
@@ -63,7 +64,10 @@ export class ServiceWorkerManager {
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
             try {
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              if (
+                newWorker.state === 'installed' &&
+                navigator.serviceWorker.controller
+              ) {
                 // New version available
                 this.showUpdateNotification();
               }
@@ -92,10 +96,10 @@ export class ServiceWorkerManager {
   }
 
   private handleMessages() {
-    navigator.serviceWorker.addEventListener('message', (event) => {
+    navigator.serviceWorker.addEventListener('message', event => {
       try {
         console.log('Message from Service Worker:', event.data);
-        
+
         switch (event.data.type) {
           case 'CACHE_UPDATED':
             console.log('Cache updated:', event.data.payload);
@@ -119,8 +123,9 @@ export class ServiceWorkerManager {
     try {
       // Create update notification
       const notification = document.createElement('div');
-      notification.className = 'fixed top-4 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
-    notification.innerHTML = `
+      notification.className =
+        'fixed top-4 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+      notification.innerHTML = `
       <div class="flex items-center space-x-3">
         <span>🔄 New version available</span>
         <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">
@@ -132,31 +137,31 @@ export class ServiceWorkerManager {
       </div>
     `;
 
-    document.body.appendChild(notification);
+      document.body.appendChild(notification);
 
-    // Handle update button
-    const updateBtn = notification.querySelector('#sw-update-btn');
-    if (updateBtn) {
-      updateBtn.addEventListener('click', () => {
-        this.updateServiceWorker();
-        notification.remove();
-      });
-    }
-
-    // Handle dismiss button
-    const dismissBtn = notification.querySelector('#sw-dismiss-btn');
-    if (dismissBtn) {
-      dismissBtn.addEventListener('click', () => {
-        notification.remove();
-      });
-    }
-
-    // Auto-remove after 10 seconds
-    setTimeout(() => {
-      if (notification.parentNode) {
-        notification.remove();
+      // Handle update button
+      const updateBtn = notification.querySelector('#sw-update-btn');
+      if (updateBtn) {
+        updateBtn.addEventListener('click', () => {
+          this.updateServiceWorker();
+          notification.remove();
+        });
       }
-    }, 10000);
+
+      // Handle dismiss button
+      const dismissBtn = notification.querySelector('#sw-dismiss-btn');
+      if (dismissBtn) {
+        dismissBtn.addEventListener('click', () => {
+          notification.remove();
+        });
+      }
+
+      // Auto-remove after 10 seconds
+      setTimeout(() => {
+        if (notification.parentNode) {
+          notification.remove();
+        }
+      }, 10000);
     } catch (error) {
       console.error('Error showing update notification:', error);
     }
@@ -210,9 +215,7 @@ export class ServiceWorkerManager {
 
     try {
       const cacheNames = await caches.keys();
-      await Promise.all(
-        cacheNames.map(cacheName => caches.delete(cacheName))
-      );
+      await Promise.all(cacheNames.map(cacheName => caches.delete(cacheName)));
       console.log('All caches cleared');
     } catch (error) {
       console.error('Failed to clear caches:', error);
@@ -229,7 +232,7 @@ export class ServiceWorkerManager {
       for (const cacheName of cacheNames) {
         const cache = await caches.open(cacheName);
         const keys = await cache.keys();
-        
+
         for (const request of keys) {
           const response = await cache.match(request);
           if (response) {
@@ -302,7 +305,9 @@ export class ServiceWorkerManager {
 
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
+        applicationServerKey: this.urlBase64ToUint8Array(
+          process.env['REACT_APP_VAPID_PUBLIC_KEY'] || ''
+        ),
       });
 
       console.log('Push subscription created:', subscription);
@@ -314,7 +319,7 @@ export class ServiceWorkerManager {
   }
 
   private urlBase64ToUint8Array(base64String: string): Uint8Array {
-    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
     const base64 = (base64String + padding)
       .replace(/-/g, '+')
       .replace(/_/g, '/');
@@ -337,6 +342,9 @@ export const registerServiceWorker = () => serviceWorkerManager.register();
 export const unregisterServiceWorker = () => serviceWorkerManager.unregister();
 export const clearCaches = () => serviceWorkerManager.clearCaches();
 export const getCacheSize = () => serviceWorkerManager.getCacheSize();
-export const requestBackgroundSync = (tag: string) => serviceWorkerManager.requestBackgroundSync(tag);
-export const requestNotificationPermission = () => serviceWorkerManager.requestNotificationPermission();
-export const subscribeToPushNotifications = () => serviceWorkerManager.subscribeToPushNotifications();
+export const requestBackgroundSync = (tag: string) =>
+  serviceWorkerManager.requestBackgroundSync(tag);
+export const requestNotificationPermission = () =>
+  serviceWorkerManager.requestNotificationPermission();
+export const subscribeToPushNotifications = () =>
+  serviceWorkerManager.subscribeToPushNotifications();

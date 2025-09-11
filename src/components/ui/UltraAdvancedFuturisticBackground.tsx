@@ -7,11 +7,9 @@ interface UltraAdvancedFuturisticBackgroundProps {
   theme?: 'quantum' | 'neon' | 'holographic' | 'matrix';
 }
 
-export const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
-  children,
-  intensity = 'medium',
-  theme = 'quantum'
-}) => {
+export const UltraAdvancedFuturisticBackground: React.FC<
+  UltraAdvancedFuturisticBackgroundProps
+> = ({ children, intensity = 'medium', theme = 'quantum' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
 
@@ -41,13 +39,13 @@ export const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturistic
     const intensityMultiplier = {
       low: 0.5,
       medium: 1,
-      high: 1.5
+      high: 1.5,
     }[intensity];
 
     const createParticle = () => {
       const types = ['quantum', 'neon', 'holographic', 'matrix'] as const;
       const type = types[Math.floor(Math.random() * types.length)];
-      
+
       let color: string;
       switch (type) {
         case 'quantum':
@@ -73,7 +71,7 @@ export const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturistic
         life: 1,
         maxLife: Math.random() * 100 + 50,
         color,
-        type
+        type,
       };
     };
 
@@ -104,13 +102,13 @@ export const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturistic
         }
 
         // Draw particle with glow effect
-        const alpha = 1 - (particle.life / particle.maxLife);
+        const alpha = 1 - particle.life / particle.maxLife;
         ctx.save();
-        
+
         // Glow effect
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = particle.size * 3;
-        
+
         // Draw particle
         ctx.globalAlpha = alpha;
         ctx.fillStyle = particle.color;
@@ -121,10 +119,13 @@ export const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturistic
         // Add quantum entanglement lines
         if (particle.type === 'quantum' && Math.random() < 0.1) {
           particles.forEach(otherParticle => {
-            if (otherParticle !== particle && otherParticle.type === 'quantum') {
+            if (
+              otherParticle !== particle &&
+              otherParticle.type === 'quantum'
+            ) {
               const distance = Math.sqrt(
-                Math.pow(particle.x - otherParticle.x, 2) + 
-                Math.pow(particle.y - otherParticle.y, 2)
+                Math.pow(particle.x - otherParticle.x, 2) +
+                  Math.pow(particle.y - otherParticle.y, 2)
               );
               if (distance < 100) {
                 ctx.strokeStyle = `rgba(0, 255, 255, ${alpha * 0.3})`;
@@ -186,107 +187,109 @@ export const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturistic
   }, [intensity, theme]);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className='relative w-full h-full overflow-hidden'>
       {/* Quantum Canvas Background */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        className='absolute inset-0 w-full h-full pointer-events-none'
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,20,40,0.9) 50%, rgba(0,0,0,1) 100%)'
+          background:
+            'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,20,40,0.9) 50%, rgba(0,0,0,1) 100%)',
         }}
       />
 
       {/* Holographic Grid Overlay */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="w-full h-full opacity-20"
+      <div className='absolute inset-0 pointer-events-none'>
+        <div
+          className='w-full h-full opacity-20'
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px'
+            backgroundSize: '50px 50px',
           }}
         />
       </div>
 
       {/* Floating Quantum Orbs */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className='absolute inset-0 pointer-events-none'>
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
+            className='absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60'
             style={{
-              left: `${20 + (i * 10)}%`,
-              top: `${30 + (i * 8)}%`
+              left: `${20 + i * 10}%`,
+              top: `${30 + i * 8}%`,
             }}
             animate={{
               y: [0, -20, 0],
               opacity: [0.6, 1, 0.6],
-              scale: [1, 1.2, 1]
+              scale: [1, 1.2, 1],
             }}
             transition={{
               duration: 3 + i * 0.5,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: 'easeInOut',
             }}
           />
         ))}
       </div>
 
       {/* Neon Energy Waves */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className='absolute inset-0 pointer-events-none'>
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-40"
+            className='absolute w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-40'
             style={{
-              top: `${40 + (i * 20)}%`
+              top: `${40 + i * 20}%`,
             }}
             animate={{
-              x: ['-100%', '100%']
+              x: ['-100%', '100%'],
             }}
             transition={{
               duration: 8 + i * 2,
               repeat: Infinity,
-              ease: "linear"
+              ease: 'linear',
             }}
           />
         ))}
       </div>
 
       {/* Quantum Field Distortion */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className='absolute inset-0 pointer-events-none'>
         <motion.div
-          className="absolute w-96 h-96 rounded-full opacity-20"
+          className='absolute w-96 h-96 rounded-full opacity-20'
           style={{
             left: '50%',
             top: '50%',
             transform: 'translate(-50%, -50%)',
-            background: 'radial-gradient(circle, rgba(0,255,255,0.3) 0%, transparent 70%)'
+            background:
+              'radial-gradient(circle, rgba(0,255,255,0.3) 0%, transparent 70%)',
           }}
           animate={{
             scale: [1, 1.5, 1],
-            opacity: [0.2, 0.4, 0.2]
+            opacity: [0.2, 0.4, 0.2],
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full h-full">
-        {children}
-      </div>
+      <div className='relative z-10 w-full h-full'>{children}</div>
 
       {/* Quantum Noise Effect */}
-      <div className="absolute inset-0 pointer-events-none opacity-5">
-        <div className="w-full h-full"
+      <div className='absolute inset-0 pointer-events-none opacity-5'>
+        <div
+          className='w-full h-full'
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-            backgroundSize: '200px 200px'
+            backgroundSize: '200px 200px',
           }}
         />
       </div>

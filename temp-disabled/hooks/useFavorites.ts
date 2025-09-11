@@ -45,16 +45,18 @@ export function useFavorites() {
         await safeFetch('/api/favorites', {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ user_id: user.id, item_type, item_id })
+          body: JSON.stringify({ user_id: user.id, item_type, item_id }),
         });
         setFavorites(prev =>
-          prev.filter(f => !(f.item_type === item_type && f.item_id === item_id))
+          prev.filter(
+            f => !(f.item_type === item_type && f.item_id === item_id)
+          )
         );
       } else {
         await safeFetch('/api/favorites', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ user_id: user.id, item_type, item_id })
+          body: JSON.stringify({ user_id: user.id, item_type, item_id }),
         });
         setFavorites(prev => [...prev, { item_type, item_id }]);
       }
@@ -66,5 +68,12 @@ export function useFavorites() {
   const isFavorite = (item_type: string, item_id: string) =>
     favorites.some(f => f.item_type === item_type && f.item_id === item_id);
 
-  return { favorites, count: favorites.length, loading, isFavorite, toggleFavorite, refetch: fetchFavorites };
+  return {
+    favorites,
+    count: favorites.length,
+    loading,
+    isFavorite,
+    toggleFavorite,
+    refetch: fetchFavorites,
+  };
 }

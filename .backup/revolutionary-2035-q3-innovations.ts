@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
@@ -53,10 +53,12 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
   {
     id: 'ai-emotional-intelligence-engine',
     name: 'AI Emotional Intelligence Engine',
-    tagline: 'Real-time emotion detection and response optimization across all channels',
+    tagline:
+      'Real-time emotion detection and response optimization across all channels',
     price: '$499',
     period: '/month',
-    description: 'Advanced AI system that analyzes customer emotions in real-time across text, voice, and video interactions, automatically adjusting responses and routing to optimize customer satisfaction and business outcomes.',
+    description:
+      'Advanced AI system that analyzes customer emotions in real-time across text, voice, and video interactions, automatically adjusting responses and routing to optimize customer satisfaction and business outcomes.',
     features: [
       'Multi-modal emotion detection (text, voice, video)',
       'Real-time sentiment analysis and mood tracking',
@@ -65,22 +67,26 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Predictive churn prevention through emotional signals',
       'Integration with CRM and support systems',
       'Custom emotion models for industry-specific use cases',
-      'Privacy-compliant emotional data processing'
+      'Privacy-compliant emotional data processing',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/ai-emotional-intelligence-engine',
-    marketPosition: 'First-to-market emotional AI platform with enterprise-grade privacy and compliance.',
-    targetAudience: 'Customer service teams, marketing departments, product managers',
+    marketPosition:
+      'First-to-market emotional AI platform with enterprise-grade privacy and compliance.',
+    targetAudience:
+      'Customer service teams, marketing departments, product managers',
     trialDays: 21,
     setupTime: '2-3 days',
     category: 'AI & Machine Learning',
     realService: true,
     technology: ['TensorFlow, PyTorch, OpenCV, NLP, Computer Vision'],
     integrations: ['Salesforce, Zendesk, Intercom, HubSpot, Slack'],
-    useCases: ['Customer service optimization, Marketing personalization, Product feedback analysis'],
+    useCases: [
+      'Customer service optimization, Marketing personalization, Product feedback analysis',
+    ],
     roi: 'Increase customer satisfaction by 35-50% and reduce churn by 25-40%.',
     competitors: ['Affectiva, Realeyes, Emotient'],
     marketSize: '$15B+ emotional AI market',
@@ -88,11 +94,12 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'ai-emotional',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-modal AI models, real-time processing pipeline, enterprise security framework.',
+    implementationDetails:
+      'Multi-modal AI models, real-time processing pipeline, enterprise security framework.',
     launchDate: '2035-07-15',
     customers: 127,
     rating: 4.9,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'quantum-ai-drug-discovery-platform',
@@ -100,7 +107,8 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     tagline: 'Accelerate pharmaceutical research with quantum computing and AI',
     price: '$2,999',
     period: '/month',
-    description: 'Revolutionary platform combining quantum computing power with advanced AI algorithms to accelerate drug discovery, molecular modeling, and clinical trial optimization for pharmaceutical companies.',
+    description:
+      'Revolutionary platform combining quantum computing power with advanced AI algorithms to accelerate drug discovery, molecular modeling, and clinical trial optimization for pharmaceutical companies.',
     features: [
       'Quantum molecular dynamics simulations',
       'AI-powered drug target identification',
@@ -109,22 +117,28 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Real-time collaboration tools for research teams',
       'Regulatory compliance documentation',
       'Integration with laboratory information systems',
-      'Advanced visualization and reporting'
+      'Advanced visualization and reporting',
     ],
     popular: true,
     icon: '💊',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-200',
     link: 'https://ziontechgroup.com/quantum-ai-drug-discovery',
-    marketPosition: 'Industry-leading quantum-AI platform for pharmaceutical research and development.',
-    targetAudience: 'Pharmaceutical companies, research institutions, biotech startups',
+    marketPosition:
+      'Industry-leading quantum-AI platform for pharmaceutical research and development.',
+    targetAudience:
+      'Pharmaceutical companies, research institutions, biotech startups',
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'Healthcare & Biotech',
     realService: true,
     technology: ['Quantum Computing, TensorFlow, PyTorch, Molecular Dynamics'],
-    integrations: ['LabVantage, LIMS, Electronic Lab Notebooks, Clinical Trial Management Systems'],
-    useCases: ['Drug discovery acceleration, Clinical trial optimization, Molecular modeling'],
+    integrations: [
+      'LabVantage, LIMS, Electronic Lab Notebooks, Clinical Trial Management Systems',
+    ],
+    useCases: [
+      'Drug discovery acceleration, Clinical trial optimization, Molecular modeling',
+    ],
     roi: 'Reduce drug development time by 40-60% and increase success rates by 25-35%.',
     competitors: ['Schrödinger, BioSolveIT, OpenEye Scientific'],
     marketSize: '$45B+ drug discovery market',
@@ -132,19 +146,22 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'quantum-ai-revolutionary',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum computing infrastructure, AI model training pipeline, enterprise security.',
+    implementationDetails:
+      'Quantum computing infrastructure, AI model training pipeline, enterprise security.',
     launchDate: '2035-07-20',
     customers: 34,
     rating: 4.8,
-    reviews: 23
+    reviews: 23,
   },
   {
     id: 'ai-autonomous-vehicle-simulation',
     name: 'AI Autonomous Vehicle Simulation Platform',
-    tagline: 'Comprehensive testing and validation for autonomous driving systems',
+    tagline:
+      'Comprehensive testing and validation for autonomous driving systems',
     price: '$1,499',
     period: '/month',
-    description: 'Advanced simulation platform for testing autonomous vehicle algorithms, scenarios, and edge cases in virtual environments, ensuring safety and compliance before real-world deployment.',
+    description:
+      'Advanced simulation platform for testing autonomous vehicle algorithms, scenarios, and edge cases in virtual environments, ensuring safety and compliance before real-world deployment.',
     features: [
       'Realistic 3D driving environments and scenarios',
       'Edge case generation and testing',
@@ -153,22 +170,26 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Multi-vehicle simulation and traffic modeling',
       'Weather and lighting condition variations',
       'Integration with vehicle control systems',
-      'Comprehensive reporting and analytics'
+      'Comprehensive reporting and analytics',
     ],
     popular: false,
     icon: '🚗',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/ai-autonomous-vehicle-simulation',
-    marketPosition: 'Leading simulation platform for autonomous vehicle development and testing.',
-    targetAudience: 'Automotive manufacturers, autonomous vehicle startups, research institutions',
+    marketPosition:
+      'Leading simulation platform for autonomous vehicle development and testing.',
+    targetAudience:
+      'Automotive manufacturers, autonomous vehicle startups, research institutions',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Transportation & Logistics',
     realService: true,
     technology: ['Unity3D, Unreal Engine, ROS, Python, C++'],
     integrations: ['Autoware, Apollo, ROS2, Vehicle ECUs'],
-    useCases: ['Autonomous vehicle testing, Safety validation, Algorithm development'],
+    useCases: [
+      'Autonomous vehicle testing, Safety validation, Algorithm development',
+    ],
     roi: 'Reduce testing costs by 60-80% and accelerate time-to-market by 40-50%.',
     competitors: ['CARLA, LGSVL, AirSim'],
     marketSize: '$8B+ autonomous vehicle simulation market',
@@ -176,21 +197,24 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'ai-autonomous-vehicles',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: '3D simulation engine, AI scenario generation, vehicle integration framework.',
+    implementationDetails:
+      '3D simulation engine, AI scenario generation, vehicle integration framework.',
     launchDate: '2035-07-10',
     customers: 28,
     rating: 4.7,
-    reviews: 19
+    reviews: 19,
   },
 
   // IT Infrastructure & Cloud Services
   {
     id: 'quantum-cloud-security-fortress',
     name: 'Quantum Cloud Security Fortress',
-    tagline: 'Next-generation cybersecurity powered by quantum-resistant encryption',
+    tagline:
+      'Next-generation cybersecurity powered by quantum-resistant encryption',
     price: '$899',
     period: '/month',
-    description: 'Revolutionary cybersecurity platform that uses quantum-resistant algorithms and AI-powered threat detection to protect cloud infrastructure, applications, and data from emerging cyber threats.',
+    description:
+      'Revolutionary cybersecurity platform that uses quantum-resistant algorithms and AI-powered threat detection to protect cloud infrastructure, applications, and data from emerging cyber threats.',
     features: [
       'Quantum-resistant encryption algorithms',
       'AI-powered threat detection and response',
@@ -199,20 +223,24 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Automated incident response and remediation',
       'Compliance and audit reporting',
       'Multi-cloud security management',
-      'Advanced threat intelligence feeds'
+      'Advanced threat intelligence feeds',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-200',
     link: 'https://ziontechgroup.com/quantum-cloud-security-fortress',
-    marketPosition: 'First quantum-resistant cybersecurity platform for enterprise cloud environments.',
-    targetAudience: 'Enterprise IT teams, cybersecurity professionals, cloud architects',
+    marketPosition:
+      'First quantum-resistant cybersecurity platform for enterprise cloud environments.',
+    targetAudience:
+      'Enterprise IT teams, cybersecurity professionals, cloud architects',
     trialDays: 21,
     setupTime: '3-5 days',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Quantum-resistant algorithms, AI/ML, Zero-trust architecture'],
+    technology: [
+      'Quantum-resistant algorithms, AI/ML, Zero-trust architecture',
+    ],
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker'],
     useCases: ['Cloud security, Threat detection, Compliance management'],
     roi: 'Reduce security incidents by 70-90% and achieve 99.99% threat detection accuracy.',
@@ -222,11 +250,12 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-resistant cryptography, AI threat detection engine, zero-trust framework.',
+    implementationDetails:
+      'Quantum-resistant cryptography, AI threat detection engine, zero-trust framework.',
     launchDate: '2035-07-25',
     customers: 156,
     rating: 4.9,
-    reviews: 112
+    reviews: 112,
   },
   {
     id: 'edge-computing-orchestrator',
@@ -234,7 +263,8 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     tagline: 'Intelligent edge infrastructure management and optimization',
     price: '$399',
     period: '/month',
-    description: 'Advanced platform for managing, monitoring, and optimizing edge computing infrastructure across distributed locations, enabling real-time processing and reduced latency for IoT and edge applications.',
+    description:
+      'Advanced platform for managing, monitoring, and optimizing edge computing infrastructure across distributed locations, enabling real-time processing and reduced latency for IoT and edge applications.',
     features: [
       'Distributed edge node management',
       'Intelligent workload distribution',
@@ -243,22 +273,26 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Edge-to-cloud data synchronization',
       'Security and compliance management',
       'Multi-vendor edge hardware support',
-      'Advanced analytics and reporting'
+      'Advanced analytics and reporting',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/edge-computing-orchestrator',
-    marketPosition: 'Leading edge computing management platform for enterprise IoT deployments.',
-    targetAudience: 'IoT platform providers, manufacturing companies, smart city operators',
+    marketPosition:
+      'Leading edge computing management platform for enterprise IoT deployments.',
+    targetAudience:
+      'IoT platform providers, manufacturing companies, smart city operators',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Edge Computing & IoT',
     realService: true,
     technology: ['Kubernetes, Docker, MQTT, WebRTC, AI/ML'],
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers'],
-    useCases: ['IoT platform management, Edge AI deployment, Real-time processing'],
+    useCases: [
+      'IoT platform management, Edge AI deployment, Real-time processing',
+    ],
     roi: 'Reduce edge infrastructure costs by 30-50% and improve performance by 40-60%.',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'],
     marketSize: '$12B+ edge computing market',
@@ -266,21 +300,24 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'edge-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Edge orchestration engine, workload optimization algorithms, multi-vendor support.',
+    implementationDetails:
+      'Edge orchestration engine, workload optimization algorithms, multi-vendor support.',
     launchDate: '2035-07-18',
     customers: 89,
     rating: 4.6,
-    reviews: 45
+    reviews: 45,
   },
 
   // Micro SAAS & Business Solutions
   {
     id: 'ai-powered-legal-contract-analyzer',
     name: 'AI-Powered Legal Contract Analyzer',
-    tagline: 'Intelligent contract review, risk assessment, and compliance checking',
+    tagline:
+      'Intelligent contract review, risk assessment, and compliance checking',
     price: '$199',
     period: '/month',
-    description: 'Advanced AI platform that analyzes legal contracts, identifies risks, ensures compliance, and provides actionable insights to legal teams and business stakeholders.',
+    description:
+      'Advanced AI platform that analyzes legal contracts, identifies risks, ensures compliance, and provides actionable insights to legal teams and business stakeholders.',
     features: [
       'Intelligent contract analysis and review',
       'Risk identification and assessment',
@@ -289,21 +326,25 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Automated clause suggestions',
       'Legal research integration',
       'Collaborative review workflows',
-      'Comprehensive reporting and analytics'
+      'Comprehensive reporting and analytics',
     ],
     popular: true,
     icon: '⚖️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
-    marketPosition: 'Leading AI-powered legal technology platform for contract analysis and management.',
-    targetAudience: 'Legal departments, law firms, compliance officers, business executives',
+    marketPosition:
+      'Leading AI-powered legal technology platform for contract analysis and management.',
+    targetAudience:
+      'Legal departments, law firms, compliance officers, business executives',
     trialDays: 14,
     setupTime: '2-3 days',
     category: 'Legal & Compliance',
     realService: true,
     technology: ['NLP, Machine Learning, Legal AI, Document Processing'],
-    integrations: ['DocuSign, Adobe Sign, Microsoft Word, Legal research databases'],
+    integrations: [
+      'DocuSign, Adobe Sign, Microsoft Word, Legal research databases',
+    ],
     useCases: ['Contract review, Risk assessment, Compliance management'],
     roi: 'Reduce contract review time by 60-80% and improve risk identification by 40-60%.',
     competitors: ['Kira Systems, eBrevia, Luminance'],
@@ -312,11 +353,12 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Legal AI models, contract analysis engine, compliance framework.',
+    implementationDetails:
+      'Legal AI models, contract analysis engine, compliance framework.',
     launchDate: '2035-07-22',
     customers: 203,
     rating: 4.8,
-    reviews: 156
+    reviews: 156,
   },
   {
     id: 'intelligent-supply-chain-optimizer',
@@ -324,7 +366,8 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     tagline: 'AI-driven supply chain optimization and risk management',
     price: '$299',
     period: '/month',
-    description: 'Comprehensive platform that uses AI and machine learning to optimize supply chain operations, predict disruptions, and improve efficiency across the entire value chain.',
+    description:
+      'Comprehensive platform that uses AI and machine learning to optimize supply chain operations, predict disruptions, and improve efficiency across the entire value chain.',
     features: [
       'Demand forecasting and planning',
       'Inventory optimization and management',
@@ -333,22 +376,28 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Real-time supply chain visibility',
       'Predictive analytics and insights',
       'Automated decision support',
-      'Integration with ERP and WMS systems'
+      'Integration with ERP and WMS systems',
     ],
     popular: false,
     icon: '📦',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-200',
     link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer',
-    marketPosition: 'Advanced AI-powered supply chain optimization platform for enterprise operations.',
-    targetAudience: 'Manufacturing companies, retailers, logistics providers, supply chain managers',
+    marketPosition:
+      'Advanced AI-powered supply chain optimization platform for enterprise operations.',
+    targetAudience:
+      'Manufacturing companies, retailers, logistics providers, supply chain managers',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Supply Chain & Logistics',
     realService: true,
-    technology: ['Machine Learning, Predictive Analytics, Optimization Algorithms'],
+    technology: [
+      'Machine Learning, Predictive Analytics, Optimization Algorithms',
+    ],
     integrations: ['SAP, Oracle, Microsoft Dynamics, WMS systems'],
-    useCases: ['Supply chain optimization, Inventory management, Risk mitigation'],
+    useCases: [
+      'Supply chain optimization, Inventory management, Risk mitigation',
+    ],
     roi: 'Reduce supply chain costs by 15-25% and improve efficiency by 30-40%.',
     competitors: ['SAP Ariba, Oracle Supply Chain, Manhattan Associates'],
     marketSize: '$18B+ supply chain management market',
@@ -356,11 +405,12 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI optimization engine, predictive analytics models, integration framework.',
+    implementationDetails:
+      'AI optimization engine, predictive analytics models, integration framework.',
     launchDate: '2035-07-28',
     customers: 167,
     rating: 4.7,
-    reviews: 98
+    reviews: 98,
   },
 
   // Creative & Media Services
@@ -370,7 +420,8 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     tagline: 'Generate immersive 3D holographic content with AI',
     price: '$599',
     period: '/month',
-    description: 'Revolutionary platform that uses AI to create stunning 3D holographic content for marketing, entertainment, education, and virtual experiences, revolutionizing how brands engage with audiences.',
+    description:
+      'Revolutionary platform that uses AI to create stunning 3D holographic content for marketing, entertainment, education, and virtual experiences, revolutionizing how brands engage with audiences.',
     features: [
       'AI-powered 3D content generation',
       'Holographic video creation',
@@ -379,22 +430,26 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Multi-platform content distribution',
       'Custom branding and templates',
       'Analytics and engagement tracking',
-      'Integration with AR/VR platforms'
+      'Integration with AR/VR platforms',
     ],
     popular: true,
     icon: '🎭',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-200',
     link: 'https://ziontechgroup.com/ai-holographic-content-creator',
-    marketPosition: 'First AI-powered holographic content creation platform for immersive experiences.',
-    targetAudience: 'Marketing agencies, entertainment companies, educational institutions, brands',
+    marketPosition:
+      'First AI-powered holographic content creation platform for immersive experiences.',
+    targetAudience:
+      'Marketing agencies, entertainment companies, educational institutions, brands',
     trialDays: 14,
     setupTime: '3-5 days',
     category: 'Creative & Media',
     realService: true,
     technology: ['Computer Vision, 3D Graphics, AI/ML, Holographic Display'],
     integrations: ['Unity, Unreal Engine, AR/VR platforms, Social media'],
-    useCases: ['Marketing campaigns, Virtual events, Educational content, Entertainment'],
+    useCases: [
+      'Marketing campaigns, Virtual events, Educational content, Entertainment',
+    ],
     roi: 'Increase audience engagement by 200-400% and reduce content creation costs by 50-70%.',
     competitors: ['Magic Leap, Microsoft HoloLens, Meta Reality Labs'],
     marketSize: '$8B+ holographic display market',
@@ -402,11 +457,12 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'holographic-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI content generation engine, 3D rendering pipeline, holographic optimization.',
+    implementationDetails:
+      'AI content generation engine, 3D rendering pipeline, holographic optimization.',
     launchDate: '2035-07-30',
     customers: 78,
     rating: 4.9,
-    reviews: 67
+    reviews: 67,
   },
 
   // Financial Technology Services
@@ -416,7 +472,8 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     tagline: 'Ultra-fast trading with quantum computing and AI algorithms',
     price: '$1,999',
     period: '/month',
-    description: 'Next-generation financial trading platform that leverages quantum computing power and advanced AI algorithms to provide ultra-fast execution, predictive analytics, and risk management for institutional traders.',
+    description:
+      'Next-generation financial trading platform that leverages quantum computing power and advanced AI algorithms to provide ultra-fast execution, predictive analytics, and risk management for institutional traders.',
     features: [
       'Quantum-powered trading algorithms',
       'Real-time market data analysis',
@@ -425,20 +482,24 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Multi-asset trading support',
       'Compliance and regulatory reporting',
       'High-frequency trading capabilities',
-      'Integration with major exchanges'
+      'Integration with major exchanges',
     ],
     popular: false,
     icon: '💰',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-200',
     link: 'https://ziontechgroup.com/quantum-financial-trading-platform',
-    marketPosition: 'Industry-leading quantum-powered trading platform for institutional investors.',
-    targetAudience: 'Investment banks, hedge funds, institutional traders, asset managers',
+    marketPosition:
+      'Industry-leading quantum-powered trading platform for institutional investors.',
+    targetAudience:
+      'Investment banks, hedge funds, institutional traders, asset managers',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Financial Technology',
     realService: true,
-    technology: ['Quantum Computing, AI/ML, High-Frequency Trading, Blockchain'],
+    technology: [
+      'Quantum Computing, AI/ML, High-Frequency Trading, Blockchain',
+    ],
     integrations: ['Major exchanges, Bloomberg, Reuters, Trading platforms'],
     useCases: ['Algorithmic trading, Risk management, Market analysis'],
     roi: 'Improve trading performance by 20-40% and reduce execution costs by 30-50%.',
@@ -448,11 +509,12 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'quantum-ai-finance',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum computing infrastructure, AI trading algorithms, exchange integration.',
+    implementationDetails:
+      'Quantum computing infrastructure, AI trading algorithms, exchange integration.',
     launchDate: '2035-08-01',
     customers: 45,
     rating: 4.8,
-    reviews: 34
+    reviews: 34,
   },
 
   // Education & Research Services
@@ -462,7 +524,8 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     tagline: 'Adaptive education powered by artificial intelligence',
     price: '$149',
     period: '/month',
-    description: 'Revolutionary learning platform that uses AI to create personalized educational experiences, adapting content and pace to individual student needs, improving learning outcomes and engagement.',
+    description:
+      'Revolutionary learning platform that uses AI to create personalized educational experiences, adapting content and pace to individual student needs, improving learning outcomes and engagement.',
     features: [
       'Personalized learning paths and content',
       'Adaptive difficulty adjustment',
@@ -471,15 +534,17 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Multi-modal content delivery',
       'Collaborative learning features',
       'Comprehensive analytics and reporting',
-      'Integration with LMS and educational tools'
+      'Integration with LMS and educational tools',
     ],
     popular: true,
     icon: '🎓',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/ai-personalized-learning-platform',
-    marketPosition: 'Leading AI-powered personalized learning platform for K-12 and higher education.',
-    targetAudience: 'Educational institutions, corporate training departments, online learning providers',
+    marketPosition:
+      'Leading AI-powered personalized learning platform for K-12 and higher education.',
+    targetAudience:
+      'Educational institutions, corporate training departments, online learning providers',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Education & Research',
@@ -494,11 +559,12 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI learning engine, adaptive algorithms, content personalization system.',
+    implementationDetails:
+      'AI learning engine, adaptive algorithms, content personalization system.',
     launchDate: '2035-08-05',
     customers: 234,
     rating: 4.7,
-    reviews: 178
+    reviews: 178,
   },
 
   // Space Technology Services
@@ -508,7 +574,8 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     tagline: 'Intelligent exploration and extraction of space resources',
     price: '$3,999',
     period: '/month',
-    description: 'Advanced AI platform for identifying, analyzing, and planning extraction of valuable resources from asteroids, moons, and other celestial bodies, revolutionizing space exploration and resource utilization.',
+    description:
+      'Advanced AI platform for identifying, analyzing, and planning extraction of valuable resources from asteroids, moons, and other celestial bodies, revolutionizing space exploration and resource utilization.',
     features: [
       'AI-powered resource identification',
       '3D mapping and analysis of celestial bodies',
@@ -517,15 +584,17 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
       'Resource value estimation',
       'Mission planning and simulation',
       'Integration with space missions',
-      'Real-time data analysis and reporting'
+      'Real-time data analysis and reporting',
     ],
     popular: false,
     icon: '🚀',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/space-resource-mining-ai',
-    marketPosition: 'Pioneering AI platform for space resource exploration and mining operations.',
-    targetAudience: 'Space agencies, private space companies, mining corporations, research institutions',
+    marketPosition:
+      'Pioneering AI platform for space resource exploration and mining operations.',
+    targetAudience:
+      'Space agencies, private space companies, mining corporations, research institutions',
     trialDays: 45,
     setupTime: '3-4 weeks',
     category: 'Space Technology',
@@ -540,10 +609,11 @@ export const revolutionary2035Q3Innovations: Revolutionary2035Q3Service[] = [
     variant: 'space-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Space AI models, resource analysis engine, mission planning system.',
+    implementationDetails:
+      'Space AI models, resource analysis engine, mission planning system.',
     launchDate: '2035-08-10',
     customers: 12,
     rating: 4.9,
-    reviews: 8
-  }
+    reviews: 8,
+  },
 ];

@@ -22,7 +22,10 @@ export function formatCurrency(amount: number, currency = 'USD'): string {
 /**
  * Format date
  */
-export function formatDate(date: Date | string, options?: Intl.DateTimeFormatOptions): string {
+export function formatDate(
+  date: Date | string,
+  options?: Intl.DateTimeFormatOptions
+): string {
   const dateObj = typeof date === 'string' ? new Date(date) : date;
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
@@ -66,7 +69,8 @@ export function formatRelativeTime(date: Date | string): string {
  * Generate a random ID
  */
 export function generateId(length = 8): string {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const chars =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
   for (let i = 0; i < length; i++) {
     result += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -84,8 +88,8 @@ export function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait)
-};
+    timeout = setTimeout(() => func(...args), wait);
+  };
 }
 
 /**
@@ -244,7 +248,11 @@ export async function copyToClipboard(text: string): Promise<boolean> {
 /**
  * Download a file
  */
-export function downloadFile(data: string, filename: string, type = 'text/plain'): void {
+export function downloadFile(
+  data: string,
+  filename: string,
+  type = 'text/plain'
+): void {
   const blob = new Blob([data], { type });
   const url = window.URL.createObjectURL(blob);
   const link = document.createElement('a');
@@ -268,7 +276,8 @@ export function isValidEmail(email: string): boolean {
  * Validate phone number (US format)
  */
 export function isValidPhone(phone: string): boolean {
-  const phoneRegex = /^\+?1?[-.\s]?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$/;
+  const phoneRegex =
+    /^\+?1?[-.\s]?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$/;
   return phoneRegex.test(phone);
 }
 

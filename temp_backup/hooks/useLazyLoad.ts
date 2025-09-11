@@ -15,12 +15,10 @@ interface UseLazyLoadReturn {
 /**
  * Hook for lazy loading elements using Intersection Observer
  */
-export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
-  const {
-    rootMargin = '50px',
-    threshold = 0.1,
-    triggerOnce = true,
-  } = options;
+export const useLazyLoad = (
+  options: UseLazyLoadOptions = {}
+): UseLazyLoadReturn => {
+  const { rootMargin = '50px', threshold = 0.1, triggerOnce = true } = options;
 
   const [isVisible, setIsVisible] = useState(false);
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
@@ -29,7 +27,7 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn
   const handleIntersection = useCallback(
     (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
-      
+
       if (entry.isIntersecting) {
         setIsVisible(true);
         if (!hasBeenVisible) {
@@ -116,7 +114,7 @@ export const useLazyComponent = <T extends React.ComponentType<any>>(
     if (isVisible && !Component && !isLoading) {
       setIsLoading(true);
       importFn()
-        .then((module) => {
+        .then(module => {
           setComponent(() => module.default);
           setIsError(false);
         })

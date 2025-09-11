@@ -1,13 +1,13 @@
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   try {
     console.log('front-enhancer function triggered');
-    
+
     // Front enhancement simulation
     const result = {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         message: 'Front enhancer executed successfully',
@@ -17,11 +17,11 @@ exports.handler = async function(event, context, callback) {
         enhancement: {
           status: 'active',
           enhancements: 0,
-          lastEnhancement: new Date().toISOString()
-        }
-      })
+          lastEnhancement: new Date().toISOString(),
+        },
+      }),
     };
-    
+
     return result;
   } catch (error) {
     console.error('Error in front-enhancer:', error);
@@ -29,13 +29,13 @@ exports.handler = async function(event, context, callback) {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'front-enhancer'
-      })
+        function: 'front-enhancer',
+      }),
     };
   }
 };

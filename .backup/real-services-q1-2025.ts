@@ -4,31 +4,34 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const realServicesQ12025: MicroSaasService[] = [
   {
     id: 'affiliate-attribution-guard',
     name: 'Affiliate Attribution Guard',
-    tagline: 'Cross-device referral tracking with fraud prevention and automated payouts',
+    tagline:
+      'Cross-device referral tracking with fraud prevention and automated payouts',
     price: '$149',
     period: '/month',
-    description: 'Specialized affiliate tracking for SMBs with multi-touch, cross-device attribution, fraud scoring, and automated commission payouts. Includes out-of-the-box JS SDK, webhook ingestion, and reconciliation reports.',
+    description:
+      'Specialized affiliate tracking for SMBs with multi-touch, cross-device attribution, fraud scoring, and automated commission payouts. Includes out-of-the-box JS SDK, webhook ingestion, and reconciliation reports.',
     features: [
       'Cross-device, multi-touch attribution',
       'Fraud scoring and anomaly detection',
       'Automated commission calculations and payouts',
       'JS SDK + server APIs + webhooks',
       'UTM normalization and link shortener',
-      'Dashboards with cohort and LTV views'
+      'Dashboards with cohort and LTV views',
     ],
     popular: true,
     icon: '🔗',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/affiliate-attribution-guard',
-    marketPosition: 'Simple, trustworthy attribution for small teams without enterprise bloat.',
+    marketPosition:
+      'Simple, trustworthy attribution for small teams without enterprise bloat.',
     targetAudience: 'D2C, SaaS, marketplaces',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -36,7 +39,9 @@ export const realServicesQ12025: MicroSaasService[] = [
     realService: true,
     technology: ['Node.js, PostgreSQL, ClickHouse, Kafka'],
     integrations: ['Shopify, Stripe, WooCommerce, Google Ads, Facebook Ads'],
-    useCases: ['Track influencer referrals, Prevent affiliate fraud, Automate commissions'],
+    useCases: [
+      'Track influencer referrals, Prevent affiliate fraud, Automate commissions',
+    ],
     roi: 'Increase affiliate-driven revenue by 20–40% while cutting fraud 60%',
     competitors: ['Refersion, LeadDyno, FirstPromoter'],
     marketSize: '$4B affiliate software',
@@ -44,33 +49,37 @@ export const realServicesQ12025: MicroSaasService[] = [
     variant: 'holographic-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Attribution windows, fingerprinting fallback, payout exports, and anti-fraud rules.',
+    implementationDetails:
+      'Attribution windows, fingerprinting fallback, payout exports, and anti-fraud rules.',
     launchDate: '2025-02-01',
     customers: 42,
     rating: 4.7,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'smb-website-analytics',
     name: 'SMB Website Analytics',
-    tagline: 'Privacy-first analytics with conversions and call/email attribution',
+    tagline:
+      'Privacy-first analytics with conversions and call/email attribution',
     price: '$19',
     period: '/month',
-    description: 'Lightweight, cookie-less analytics for small businesses with conversions, call tracking, and email click attribution. Easy dashboards with weekly email digests.',
+    description:
+      'Lightweight, cookie-less analytics for small businesses with conversions, call tracking, and email click attribution. Easy dashboards with weekly email digests.',
     features: [
       'Pageviews, sessions, sources, geo',
       'Conversions: forms, calls, emails, WhatsApp',
       'Campaign UTM and goal funnels',
       'Weekly actionable insights email',
       'No cookies, GDPR-friendly',
-      'CSV export and API access'
+      'CSV export and API access',
     ],
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/smb-website-analytics',
-    marketPosition: 'Actionable analytics for non-technical owners; no complex setup.',
+    marketPosition:
+      'Actionable analytics for non-technical owners; no complex setup.',
     targetAudience: 'Local SMB, agencies, startups',
     trialDays: 30,
     setupTime: '10 minutes',
@@ -78,7 +87,9 @@ export const realServicesQ12025: MicroSaasService[] = [
     realService: true,
     technology: ['Next.js, Edge Functions, ClickHouse'],
     integrations: ['Plausible, Fathom, Zapier'],
-    useCases: ['Track calls from site, Attribute email clicks, Understand traffic sources'],
+    useCases: [
+      'Track calls from site, Attribute email clicks, Understand traffic sources',
+    ],
     roi: 'Improve conversion rate 10–25% via insights and simple funnels',
     competitors: ['Plausible, Fathom Analytics'],
     marketSize: '$1B web analytics (SMB segment)',
@@ -86,26 +97,29 @@ export const realServicesQ12025: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Script tag + server ingestion; call tracking via tel: link events.',
+    implementationDetails:
+      'Script tag + server ingestion; call tracking via tel: link events.',
     launchDate: '2025-02-05',
     customers: 63,
     rating: 4.6,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'msp-helpdesk-suite',
     name: 'MSP Helpdesk Suite',
-    tagline: 'Ticketing, SLAs, and client portal purpose-built for managed IT providers',
+    tagline:
+      'Ticketing, SLAs, and client portal purpose-built for managed IT providers',
     price: '$299',
     period: '/month',
-    description: 'All-in-one helpdesk with SLA policies, automation rules, knowledge base, and client portal for MSPs. Integrates with RMM tools and network monitoring.',
+    description:
+      'All-in-one helpdesk with SLA policies, automation rules, knowledge base, and client portal for MSPs. Integrates with RMM tools and network monitoring.',
     features: [
       'Email-to-ticket and portal intake',
       'SLAs, routing, and escalation policies',
       'Knowledge base and runbooks',
       'Client portal: tickets, invoices, assets',
       'RMM and monitoring integrations',
-      'Reports and billable time exports'
+      'Reports and billable time exports',
     ],
     popular: false,
     icon: '🛠️',
@@ -132,22 +146,24 @@ export const realServicesQ12025: MicroSaasService[] = [
     launchDate: '2025-02-10',
     customers: 21,
     rating: 4.5,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'incident-postmortem-copilot',
     name: 'Incident Postmortem Copilot',
-    tagline: 'Generate blameless postmortems with timelines, impact, and action items',
+    tagline:
+      'Generate blameless postmortems with timelines, impact, and action items',
     price: '$69',
     period: '/month',
-    description: 'Connect alerts and logs to auto-generate draft postmortems with timelines, contributing factors, impact analysis, and follow-up actions. Export to Google Docs or Confluence.',
+    description:
+      'Connect alerts and logs to auto-generate draft postmortems with timelines, contributing factors, impact analysis, and follow-up actions. Export to Google Docs or Confluence.',
     features: [
       'Alert and incident timeline synthesis',
       'Impact and contributing factors summaries',
       'Action items with owners and due dates',
       'One-click export to Docs/Confluence',
       'Templates for SEV1–SEV3',
-      'Evidence attachments and links'
+      'Evidence attachments and links',
     ],
     popular: true,
     icon: '📄',
@@ -170,26 +186,29 @@ export const realServicesQ12025: MicroSaasService[] = [
     variant: 'quantum-holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Event ingestion, semantic grouping, template filling, export connectors.',
+    implementationDetails:
+      'Event ingestion, semantic grouping, template filling, export connectors.',
     launchDate: '2025-02-12',
     customers: 33,
     rating: 4.7,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'accessibility-scanner',
     name: 'Accessibility Scanner',
-    tagline: 'Automated WCAG checks with prioritized fixes and Lighthouse integration',
+    tagline:
+      'Automated WCAG checks with prioritized fixes and Lighthouse integration',
     price: '$39',
     period: '/month',
-    description: 'Automated accessibility scans with WCAG 2.2 checks, prioritized remediation tips, and PR annotations. Integrates with CI and Lighthouse budgets.',
+    description:
+      'Automated accessibility scans with WCAG 2.2 checks, prioritized remediation tips, and PR annotations. Integrates with CI and Lighthouse budgets.',
     features: [
       'WCAG 2.2 rules and contrast checks',
       'Keyboard navigation and ARIA validation',
       'Screenshots and DOM snapshots',
       'CI integration and PR annotations',
       'Exports for compliance evidence',
-      'Weekly trend reports'
+      'Weekly trend reports',
     ],
     popular: false,
     icon: '♿',
@@ -212,11 +231,12 @@ export const realServicesQ12025: MicroSaasService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Headless scans, rule engine, annotations, and evidence bundles.',
+    implementationDetails:
+      'Headless scans, rule engine, annotations, and evidence bundles.',
     launchDate: '2025-02-14',
     customers: 27,
     rating: 4.6,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'kubernetes-rightsizer',
@@ -224,14 +244,15 @@ export const realServicesQ12025: MicroSaasService[] = [
     tagline: 'Automated CPU/memory rightsizing and savings recommendations',
     price: '$199',
     period: '/month',
-    description: 'Analyze cluster utilization and recommend workload rightsizing, autoscaling policies, and node class optimizations. Export cost savings and apply via GitOps.',
+    description:
+      'Analyze cluster utilization and recommend workload rightsizing, autoscaling policies, and node class optimizations. Export cost savings and apply via GitOps.',
     features: [
       'HPA/VPA recommendations',
       'Rightsizing for CPU/memory/requests',
       'Node class and spot savings analysis',
       'GitOps-ready manifests',
       'FinOps reports and alerts',
-      'Multi-cloud support'
+      'Multi-cloud support',
     ],
     popular: false,
     icon: '☸️',
@@ -254,26 +275,29 @@ export const realServicesQ12025: MicroSaasService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Metrics ingestion, models for usage, GitOps patches, savings reports.',
+    implementationDetails:
+      'Metrics ingestion, models for usage, GitOps patches, savings reports.',
     launchDate: '2025-02-08',
     customers: 17,
     rating: 4.5,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'oncall-optimizer',
     name: 'On-call Optimizer',
-    tagline: 'Reduce alert noise and balance rotations with automatic suggestions',
+    tagline:
+      'Reduce alert noise and balance rotations with automatic suggestions',
     price: '$59',
     period: '/month',
-    description: 'Analyze alert history and on-call load to reduce noise, rebalance rotations, and improve MTTR. Provides auto-snooze rules and incident tagging.',
+    description:
+      'Analyze alert history and on-call load to reduce noise, rebalance rotations, and improve MTTR. Provides auto-snooze rules and incident tagging.',
     features: [
       'Alert noise clustering and deduping',
       'Rotation load analysis',
       'Suggested schedules and escalations',
       'Auto-snooze and tagging rules',
       'MTTR trend dashboards',
-      'Weekly improvement plan'
+      'Weekly improvement plan',
     ],
     popular: false,
     icon: '⏰',
@@ -296,10 +320,11 @@ export const realServicesQ12025: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Ingest incidents, cluster alerts, propose schedule tweaks and rules.',
+    implementationDetails:
+      'Ingest incidents, cluster alerts, propose schedule tweaks and rules.',
     launchDate: '2025-02-04',
     customers: 24,
     rating: 4.6,
-    reviews: 8
-  }
+    reviews: 8,
+  },
 ];

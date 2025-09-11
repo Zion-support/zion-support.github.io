@@ -63,7 +63,10 @@ export const BOARD_CONFIGS: Record<BoardName, BoardConfig> = {
   },
 };
 
-export function applyBoardConstraints(board: BoardName, formatted: FormattedJob): FormattedJob {
+export function applyBoardConstraints(
+  board: BoardName,
+  formatted: FormattedJob
+): FormattedJob {
   const cfg = BOARD_CONFIGS[board]?.requirements;
   if (!cfg) return formatted;
 

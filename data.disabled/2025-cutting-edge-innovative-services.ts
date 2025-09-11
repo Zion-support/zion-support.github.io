@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
   {
     id: 'ai-powered-code-review-assistant',
     name: 'AI-Powered Code Review Assistant',
-    tagline: 'Automate code reviews with intelligent analysis and actionable insights',
+    tagline:
+      'Automate code reviews with intelligent analysis and actionable insights',
     price: '$199',
     period: '/month',
-    description: 'Advanced AI-powered code review platform that analyzes pull requests, identifies potential issues, suggests improvements, and ensures code quality standards across your development team.',
+    description:
+      'Advanced AI-powered code review platform that analyzes pull requests, identifies potential issues, suggests improvements, and ensures code quality standards across your development team.',
     features: [
       'Intelligent code analysis and pattern recognition',
       'Security vulnerability detection',
@@ -65,22 +67,27 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Customizable review rules and policies',
       'Team collaboration and review workflows',
       'Analytics and code quality metrics',
-      'Automated review assignment and scheduling'
+      'Automated review assignment and scheduling',
     ],
     popular: true,
     icon: '🔍',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
-    marketPosition: 'Competes with CodeClimate, SonarQube, and DeepCode; offers more advanced AI capabilities.',
+    marketPosition:
+      'Competes with CodeClimate, SonarQube, and DeepCode; offers more advanced AI capabilities.',
     targetAudience: 'Development teams, Engineering managers, DevOps engineers',
     trialDays: 14,
     setupTime: '2 hours',
     category: 'AI & Development',
     realService: true,
-    technology: ['OpenAI GPT-4, Claude, Code analysis engines, Node.js, Python'],
+    technology: [
+      'OpenAI GPT-4, Claude, Code analysis engines, Node.js, Python',
+    ],
     integrations: ['GitHub, GitLab, Bitbucket, Slack, Microsoft Teams, Jira'],
-    useCases: ['Code quality improvement, Security compliance, Team productivity enhancement'],
+    useCases: [
+      'Code quality improvement, Security compliance, Team productivity enhancement',
+    ],
     roi: 'Reduce code review time by 60% and improve code quality by 40%.',
     competitors: ['CodeClimate, SonarQube, DeepCode, Sourcery'],
     marketSize: '$2.5B code quality tools market',
@@ -88,19 +95,22 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with AI models, code analysis engines, and CI/CD integration.',
+    implementationDetails:
+      'Multi-tenant SaaS platform with AI models, code analysis engines, and CI/CD integration.',
     launchDate: '2025-01-15',
     customers: 45,
     rating: 4.9,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'intelligent-customer-support-automation',
     name: 'Intelligent Customer Support Automation',
-    tagline: 'Transform customer support with AI-powered automation and intelligent routing',
+    tagline:
+      'Transform customer support with AI-powered automation and intelligent routing',
     price: '$299',
     period: '/month',
-    description: 'Comprehensive customer support automation platform that uses AI to handle inquiries, route tickets intelligently, and provide instant responses while maintaining human touch.',
+    description:
+      'Comprehensive customer support automation platform that uses AI to handle inquiries, route tickets intelligently, and provide instant responses while maintaining human touch.',
     features: [
       'AI-powered ticket classification and routing',
       'Intelligent chatbot with natural language processing',
@@ -110,22 +120,28 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Knowledge base management and auto-updates',
       'Performance analytics and insights',
       'Integration with CRM and help desk systems',
-      'Customizable workflows and automation rules'
+      'Customizable workflows and automation rules',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/intelligent-support-automation',
-    marketPosition: 'Alternative to Zendesk AI, Intercom, and Freshdesk; offers more advanced automation capabilities.',
-    targetAudience: 'Customer support teams, E-commerce businesses, SaaS companies',
+    marketPosition:
+      'Alternative to Zendesk AI, Intercom, and Freshdesk; offers more advanced automation capabilities.',
+    targetAudience:
+      'Customer support teams, E-commerce businesses, SaaS companies',
     trialDays: 21,
     setupTime: '1 day',
     category: 'AI & Customer Service',
     realService: true,
-    technology: ['OpenAI GPT-4, Claude, Natural Language Processing, Machine Learning'],
+    technology: [
+      'OpenAI GPT-4, Claude, Natural Language Processing, Machine Learning',
+    ],
     integrations: ['Zendesk, Intercom, Freshdesk, Salesforce, HubSpot, Slack'],
-    useCases: ['Customer support automation, Ticket management, Response time improvement'],
+    useCases: [
+      'Customer support automation, Ticket management, Response time improvement',
+    ],
     roi: 'Reduce support costs by 30% and improve customer satisfaction by 25%.',
     competitors: ['Zendesk AI, Intercom, Freshdesk, Helpscout'],
     marketSize: '$15B customer service software market',
@@ -133,11 +149,12 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native platform with AI models, workflow engine, and multi-tenant architecture.',
+    implementationDetails:
+      'Cloud-native platform with AI models, workflow engine, and multi-tenant architecture.',
     launchDate: '2025-02-01',
     customers: 78,
     rating: 4.7,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'predictive-maintenance-platform',
@@ -145,7 +162,8 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     tagline: 'Prevent equipment failures with AI-driven predictive analytics',
     price: '$399',
     period: '/month',
-    description: 'Advanced IoT and AI-powered platform that monitors equipment health, predicts maintenance needs, and optimizes operational efficiency to prevent costly downtime.',
+    description:
+      'Advanced IoT and AI-powered platform that monitors equipment health, predicts maintenance needs, and optimizes operational efficiency to prevent costly downtime.',
     features: [
       'Real-time equipment monitoring and data collection',
       'AI-powered failure prediction algorithms',
@@ -155,22 +173,28 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Customizable alerting and notifications',
       'Maintenance cost tracking and ROI analysis',
       'Mobile app for field technicians',
-      'API for enterprise system integration'
+      'API for enterprise system integration',
     ],
     popular: true,
     icon: '⚙️',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/predictive-maintenance-platform',
-    marketPosition: 'Competes with Uptake, C3.ai, and GE Digital; focuses on mid-market and SMB.',
-    targetAudience: 'Manufacturing companies, Facility managers, Equipment operators',
+    marketPosition:
+      'Competes with Uptake, C3.ai, and GE Digital; focuses on mid-market and SMB.',
+    targetAudience:
+      'Manufacturing companies, Facility managers, Equipment operators',
     trialDays: 30,
     setupTime: '1 week',
     category: 'IoT & AI',
     realService: true,
-    technology: ['Machine Learning, IoT protocols, Time series analysis, Edge computing'],
+    technology: [
+      'Machine Learning, IoT protocols, Time series analysis, Edge computing',
+    ],
     integrations: ['Modbus, OPC UA, MQTT, REST APIs, Enterprise systems'],
-    useCases: ['Equipment maintenance optimization, Downtime prevention, Cost reduction'],
+    useCases: [
+      'Equipment maintenance optimization, Downtime prevention, Cost reduction',
+    ],
     roi: 'Reduce maintenance costs by 25% and increase equipment uptime by 15%.',
     competitors: ['Uptake, C3.ai, GE Digital, PTC ThingWorx'],
     marketSize: '$6.5B predictive maintenance market',
@@ -178,19 +202,22 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     variant: 'iot-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Edge-to-cloud platform with ML models, IoT gateway, and real-time analytics.',
+    implementationDetails:
+      'Edge-to-cloud platform with ML models, IoT gateway, and real-time analytics.',
     launchDate: '2025-01-20',
     customers: 32,
     rating: 4.8,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'blockchain-supply-chain-tracking',
     name: 'Blockchain Supply Chain Tracking',
-    tagline: 'End-to-end transparency and traceability for global supply chains',
+    tagline:
+      'End-to-end transparency and traceability for global supply chains',
     price: '$249',
     period: '/month',
-    description: 'Blockchain-based platform that provides complete visibility into supply chain operations, from raw materials to final delivery, ensuring authenticity and compliance.',
+    description:
+      'Blockchain-based platform that provides complete visibility into supply chain operations, from raw materials to final delivery, ensuring authenticity and compliance.',
     features: [
       'End-to-end supply chain traceability',
       'Smart contract automation',
@@ -200,22 +227,26 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Integration with ERP and logistics systems',
       'Mobile app for field verification',
       'API for third-party integrations',
-      'Customizable dashboards and reporting'
+      'Customizable dashboards and reporting',
     ],
     popular: false,
     icon: '🔗',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/blockchain-supply-chain-tracking',
-    marketPosition: 'Alternative to IBM Food Trust, VeChain, and Provenance; more accessible for mid-market.',
-    targetAudience: 'Manufacturing companies, Logistics providers, Retail chains',
+    marketPosition:
+      'Alternative to IBM Food Trust, VeChain, and Provenance; more accessible for mid-market.',
+    targetAudience:
+      'Manufacturing companies, Logistics providers, Retail chains',
     trialDays: 14,
     setupTime: '2 weeks',
     category: 'Blockchain & Supply Chain',
     realService: true,
     technology: ['Hyperledger Fabric, Ethereum, Smart contracts, IoT sensors'],
     integrations: ['SAP, Oracle, Salesforce, WMS systems, Logistics platforms'],
-    useCases: ['Supply chain transparency, Compliance management, Quality assurance'],
+    useCases: [
+      'Supply chain transparency, Compliance management, Quality assurance',
+    ],
     roi: 'Reduce supply chain costs by 15% and improve compliance by 90%.',
     competitors: ['IBM Food Trust, VeChain, Provenance, OriginTrail'],
     marketSize: '$3.2B blockchain supply chain market',
@@ -223,11 +254,12 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     variant: 'blockchain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant blockchain platform with smart contracts, IoT integration, and enterprise APIs.',
+    implementationDetails:
+      'Multi-tenant blockchain platform with smart contracts, IoT integration, and enterprise APIs.',
     launchDate: '2025-02-10',
     customers: 28,
     rating: 4.6,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'quantum-resistant-encryption-service',
@@ -235,7 +267,8 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     tagline: 'Future-proof your data with post-quantum cryptography',
     price: '$179',
     period: '/month',
-    description: 'Advanced encryption service that implements quantum-resistant algorithms to protect sensitive data against future quantum computing threats while maintaining current security standards.',
+    description:
+      'Advanced encryption service that implements quantum-resistant algorithms to protect sensitive data against future quantum computing threats while maintaining current security standards.',
     features: [
       'Post-quantum cryptography algorithms',
       'Hybrid encryption (classical + quantum-resistant)',
@@ -245,22 +278,28 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Integration with existing security infrastructure',
       'Real-time threat monitoring',
       'Automated key rotation',
-      'Comprehensive audit logging'
+      'Comprehensive audit logging',
     ],
     popular: false,
     icon: '🔐',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-resistant-encryption',
-    marketPosition: 'Early mover in quantum-resistant encryption; complements existing security solutions.',
-    targetAudience: 'Financial institutions, Healthcare organizations, Government agencies',
+    marketPosition:
+      'Early mover in quantum-resistant encryption; complements existing security solutions.',
+    targetAudience:
+      'Financial institutions, Healthcare organizations, Government agencies',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Cybersecurity & Quantum',
     realService: true,
-    technology: ['Post-quantum algorithms, Lattice-based cryptography, Hash-based signatures'],
+    technology: [
+      'Post-quantum algorithms, Lattice-based cryptography, Hash-based signatures',
+    ],
     integrations: ['TLS/SSL, VPN, File encryption, Database encryption'],
-    useCases: ['Data protection, Regulatory compliance, Future-proofing security'],
+    useCases: [
+      'Data protection, Regulatory compliance, Future-proofing security',
+    ],
     roi: 'Protect against future quantum threats while maintaining current security posture.',
     competitors: ['ISARA, PQShield, Crypto Quantique, Post-Quantum'],
     marketSize: '$1.8B quantum cryptography market',
@@ -268,11 +307,12 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native encryption service with quantum-resistant algorithms and enterprise integration.',
+    implementationDetails:
+      'Cloud-native encryption service with quantum-resistant algorithms and enterprise integration.',
     launchDate: '2025-01-25',
     customers: 15,
     rating: 4.9,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-powered-financial-fraud-detection',
@@ -280,7 +320,8 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     tagline: 'Detect and prevent financial fraud in real-time with advanced AI',
     price: '$349',
     period: '/month',
-    description: 'Real-time fraud detection platform that uses machine learning to identify suspicious transactions, patterns, and behaviors across multiple financial channels.',
+    description:
+      'Real-time fraud detection platform that uses machine learning to identify suspicious transactions, patterns, and behaviors across multiple financial channels.',
     features: [
       'Real-time transaction monitoring',
       'Machine learning fraud detection models',
@@ -290,21 +331,27 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Integration with payment processors',
       'Automated fraud response workflows',
       'Comprehensive fraud analytics',
-      'Regulatory compliance reporting'
+      'Regulatory compliance reporting',
     ],
     popular: true,
     icon: '🕵️',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-fraud-detection',
-    marketPosition: 'Competes with Sift, Signifyd, and Forter; more accessible pricing for mid-market.',
-    targetAudience: 'E-commerce businesses, Financial institutions, Payment processors',
+    marketPosition:
+      'Competes with Sift, Signifyd, and Forter; more accessible pricing for mid-market.',
+    targetAudience:
+      'E-commerce businesses, Financial institutions, Payment processors',
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI & Financial Security',
     realService: true,
-    technology: ['Machine Learning, Deep Learning, Real-time analytics, Graph databases'],
-    integrations: ['Stripe, PayPal, Square, Shopify, WooCommerce, Banking APIs'],
+    technology: [
+      'Machine Learning, Deep Learning, Real-time analytics, Graph databases',
+    ],
+    integrations: [
+      'Stripe, PayPal, Square, Shopify, WooCommerce, Banking APIs',
+    ],
     useCases: ['Fraud prevention, Risk management, Compliance automation'],
     roi: 'Reduce fraud losses by 80% and false positives by 60%.',
     competitors: ['Sift, Signifyd, Forter, Riskified'],
@@ -313,11 +360,12 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Real-time ML platform with fraud detection models, risk scoring, and automated workflows.',
+    implementationDetails:
+      'Real-time ML platform with fraud detection models, risk scoring, and automated workflows.',
     launchDate: '2025-02-05',
     customers: 67,
     rating: 4.8,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'edge-computing-optimization-platform',
@@ -325,7 +373,8 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     tagline: 'Optimize edge computing performance and reduce latency',
     price: '$199',
     period: '/month',
-    description: 'Intelligent edge computing platform that optimizes application performance, reduces latency, and manages distributed computing resources across edge locations.',
+    description:
+      'Intelligent edge computing platform that optimizes application performance, reduces latency, and manages distributed computing resources across edge locations.',
     features: [
       'Edge workload optimization',
       'Intelligent resource allocation',
@@ -335,42 +384,55 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Automated scaling and load balancing',
       'Integration with major cloud providers',
       'Custom edge deployment templates',
-      'Real-time performance insights'
+      'Real-time performance insights',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/edge-computing-optimization',
-    marketPosition: 'Alternative to AWS Greengrass, Azure IoT Edge, and Google Cloud IoT Edge.',
-    targetAudience: 'IoT companies, Edge computing providers, Application developers',
+    marketPosition:
+      'Alternative to AWS Greengrass, Azure IoT Edge, and Google Cloud IoT Edge.',
+    targetAudience:
+      'IoT companies, Edge computing providers, Application developers',
     trialDays: 14,
     setupTime: '3 days',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['Edge computing, Container orchestration, Load balancing, Performance optimization'],
-    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker, IoT platforms'],
-    useCases: ['Performance optimization, Latency reduction, Resource management'],
+    technology: [
+      'Edge computing, Container orchestration, Load balancing, Performance optimization',
+    ],
+    integrations: [
+      'AWS, Azure, Google Cloud, Kubernetes, Docker, IoT platforms',
+    ],
+    useCases: [
+      'Performance optimization, Latency reduction, Resource management',
+    ],
     roi: 'Reduce latency by 40% and improve edge computing efficiency by 35%.',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'],
+    competitors: [
+      'AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry',
+    ],
     marketSize: '$4.5B edge computing market',
     growthRate: '40% YoY',
     variant: 'edge-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Edge computing platform with optimization algorithms, monitoring, and cloud integration.',
+    implementationDetails:
+      'Edge computing platform with optimization algorithms, monitoring, and cloud integration.',
     launchDate: '2025-01-30',
     customers: 23,
     rating: 4.7,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'ai-powered-content-generation-suite',
     name: 'AI-Powered Content Generation Suite',
-    tagline: 'Create high-quality content at scale with intelligent AI assistance',
+    tagline:
+      'Create high-quality content at scale with intelligent AI assistance',
     price: '$129',
     period: '/month',
-    description: 'Comprehensive content creation platform that uses AI to generate, optimize, and manage various types of content including articles, social media posts, and marketing materials.',
+    description:
+      'Comprehensive content creation platform that uses AI to generate, optimize, and manage various types of content including articles, social media posts, and marketing materials.',
     features: [
       'AI-powered content generation',
       'Multi-format content creation',
@@ -380,21 +442,26 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Plagiarism detection and originality checking',
       'Content performance analytics',
       'Integration with CMS and social platforms',
-      'Team collaboration tools'
+      'Team collaboration tools',
     ],
     popular: true,
     icon: '✍️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-content-generation-suite',
-    marketPosition: 'Competes with Jasper, Copy.ai, and Writesonic; offers more comprehensive content management.',
+    marketPosition:
+      'Competes with Jasper, Copy.ai, and Writesonic; offers more comprehensive content management.',
     targetAudience: 'Marketing teams, Content creators, Digital agencies',
     trialDays: 14,
     setupTime: '1 day',
     category: 'AI & Content Marketing',
     realService: true,
-    technology: ['OpenAI GPT-4, Claude, Natural Language Generation, Content optimization'],
-    integrations: ['WordPress, Shopify, HubSpot, Social media platforms, CMS systems'],
+    technology: [
+      'OpenAI GPT-4, Claude, Natural Language Generation, Content optimization',
+    ],
+    integrations: [
+      'WordPress, Shopify, HubSpot, Social media platforms, CMS systems',
+    ],
     useCases: ['Content creation, Marketing automation, SEO optimization'],
     roi: 'Increase content production by 300% and improve SEO performance by 40%.',
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'],
@@ -403,11 +470,12 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered content platform with generation models, optimization tools, and workflow automation.',
+    implementationDetails:
+      'AI-powered content platform with generation models, optimization tools, and workflow automation.',
     launchDate: '2025-02-15',
     customers: 156,
     rating: 4.6,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'intelligent-workflow-automation-platform',
@@ -415,7 +483,8 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     tagline: 'Automate complex business processes with AI-driven intelligence',
     price: '$279',
     period: '/month',
-    description: 'Advanced workflow automation platform that uses AI to analyze, optimize, and automate complex business processes across departments and systems.',
+    description:
+      'Advanced workflow automation platform that uses AI to analyze, optimize, and automate complex business processes across departments and systems.',
     features: [
       'AI-powered process discovery and mapping',
       'Intelligent workflow optimization',
@@ -425,34 +494,43 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Exception handling and error recovery',
       'Compliance and audit trails',
       'Mobile workflow management',
-      'Real-time process monitoring'
+      'Real-time process monitoring',
     ],
     popular: true,
     icon: '⚡',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/intelligent-workflow-automation',
-    marketPosition: 'Alternative to UiPath, Automation Anywhere, and Blue Prism; more accessible for mid-market.',
-    targetAudience: 'Business process managers, Operations teams, Digital transformation leaders',
+    marketPosition:
+      'Alternative to UiPath, Automation Anywhere, and Blue Prism; more accessible for mid-market.',
+    targetAudience:
+      'Business process managers, Operations teams, Digital transformation leaders',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Automation & AI',
     realService: true,
     technology: ['RPA, Machine Learning, Process mining, Workflow engines'],
-    integrations: ['ERP systems, CRM platforms, HR systems, Accounting software'],
-    useCases: ['Process automation, Efficiency improvement, Digital transformation'],
+    integrations: [
+      'ERP systems, CRM platforms, HR systems, Accounting software',
+    ],
+    useCases: [
+      'Process automation, Efficiency improvement, Digital transformation',
+    ],
     roi: 'Reduce process costs by 25% and improve efficiency by 40%.',
-    competitors: ['UiPath, Automation Anywhere, Blue Prism, Microsoft Power Automate'],
+    competitors: [
+      'UiPath, Automation Anywhere, Blue Prism, Microsoft Power Automate',
+    ],
     marketSize: '$25B RPA market',
     growthRate: '35% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native automation platform with AI capabilities, process mining, and enterprise integration.',
+    implementationDetails:
+      'Cloud-native automation platform with AI capabilities, process mining, and enterprise integration.',
     launchDate: '2025-02-20',
     customers: 89,
     rating: 4.8,
-    reviews: 56
+    reviews: 56,
   },
   {
     id: 'quantum-machine-learning-platform',
@@ -460,7 +538,8 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     tagline: 'Accelerate ML with quantum computing capabilities',
     price: '$599',
     period: '/month',
-    description: 'Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems and accelerate AI model training.',
+    description:
+      'Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems and accelerate AI model training.',
     features: [
       'Quantum algorithm implementations',
       'Hybrid quantum-classical ML models',
@@ -470,22 +549,30 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
       'Performance benchmarking and analysis',
       'Cloud quantum computing access',
       'Custom quantum algorithm development',
-      'Real-time quantum resource management'
+      'Real-time quantum resource management',
     ],
     popular: false,
     icon: '⚛️',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
-    marketPosition: 'Early mover in quantum ML; complements existing ML platforms.',
-    targetAudience: 'Research institutions, AI companies, Financial services, Pharmaceutical companies',
+    marketPosition:
+      'Early mover in quantum ML; complements existing ML platforms.',
+    targetAudience:
+      'Research institutions, AI companies, Financial services, Pharmaceutical companies',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum & AI',
     realService: true,
-    technology: ['Quantum computing, Machine Learning, Quantum algorithms, Hybrid computing'],
-    integrations: ['TensorFlow, PyTorch, Scikit-learn, IBM Qiskit, Google Cirq'],
-    useCases: ['Optimization problems, Drug discovery, Financial modeling, AI acceleration'],
+    technology: [
+      'Quantum computing, Machine Learning, Quantum algorithms, Hybrid computing',
+    ],
+    integrations: [
+      'TensorFlow, PyTorch, Scikit-learn, IBM Qiskit, Google Cirq',
+    ],
+    useCases: [
+      'Optimization problems, Drug discovery, Financial modeling, AI acceleration',
+    ],
     roi: 'Solve complex problems 100x faster than classical computing for specific use cases.',
     competitors: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti'],
     marketSize: '$1.2B quantum computing market',
@@ -493,10 +580,11 @@ export const cuttingEdgeInnovativeServices: CuttingEdgeInnovativeService[] = [
     variant: 'quantum-ai-revolutionary',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum ML platform with hybrid algorithms, cloud quantum access, and classical ML integration.',
+    implementationDetails:
+      'Quantum ML platform with hybrid algorithms, cloud quantum access, and classical ML integration.',
     launchDate: '2025-01-10',
     customers: 12,
     rating: 4.9,
-    reviews: 6
-  }
+    reviews: 6,
+  },
 ];

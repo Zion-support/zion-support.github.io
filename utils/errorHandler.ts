@@ -23,7 +23,10 @@ class ErrorHandler {
     // Set up global error handlers
     if (typeof window !== 'undefined') {
       window.addEventListener('error', this.handleGlobalError.bind(this));
-      window.addEventListener('unhandledrejection', this.handleUnhandledRejection.bind(this));
+      window.addEventListener(
+        'unhandledrejection',
+        this.handleUnhandledRejection.bind(this)
+      );
     }
   }
 
@@ -43,9 +46,9 @@ class ErrorHandler {
         action: 'JavaScript Error',
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       },
-      severity: 'high'
+      severity: 'high',
     });
   }
 
@@ -58,16 +61,16 @@ class ErrorHandler {
         action: 'Promise Rejection',
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       },
-      severity: 'medium'
+      severity: 'medium',
     });
   }
 
   reportError(error: ErrorReport): void {
     // Add to queue
     this.errorQueue.push(error);
-    
+
     // Maintain queue size
     if (this.errorQueue.length > this.maxQueueSize) {
       this.errorQueue.shift();
@@ -89,7 +92,7 @@ class ErrorHandler {
       // This would typically send to a service like Sentry, LogRocket, etc.
       // For now, we'll just log to console
       console.error('Production error report:', error);
-      
+
       // Example of sending to an API endpoint
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -102,14 +105,19 @@ class ErrorHandler {
   }
 
   // Utility method to create error context
-  createContext(component: string, action: string, additionalData?: Record<string, any>): ErrorContext {
+  createContext(
+    component: string,
+    action: string,
+    additionalData?: Record<string, any>
+  ): ErrorContext {
     return {
       component,
       action,
       timestamp: Date.now(),
-      userAgent: typeof window !== 'undefined' ? navigator.userAgent : undefined,
+      userAgent:
+        typeof window !== 'undefined' ? navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined,
-      ...additionalData
+      ...additionalData,
     };
   }
 
@@ -119,7 +127,7 @@ class ErrorHandler {
       message: error.message,
       stack: error.stack,
       context: this.createContext(component, 'Component Error', { errorInfo }),
-      severity: 'high'
+      severity: 'high',
     });
   }
 
@@ -128,21 +136,27 @@ class ErrorHandler {
     this.reportError({
       message: error.message,
       stack: error.stack,
-      context: this.createContext('API', 'Request Error', { endpoint, statusCode }),
-      severity: statusCode && statusCode >= 500 ? 'critical' : 'medium'
+      context: this.createContext('API', 'Request Error', {
+        endpoint,
+        statusCode,
+      }),
+      severity: statusCode && statusCode >= 500 ? 'critical' : 'medium',
     });
   }
 
   // Get error statistics
   getErrorStats(): { total: number; bySeverity: Record<string, number> } {
-    const bySeverity = this.errorQueue.reduce((acc, error) => {
-      acc[error.severity] = (acc[error.severity] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const bySeverity = this.errorQueue.reduce(
+      (acc, error) => {
+        acc[error.severity] = (acc[error.severity] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>
+    );
 
     return {
       total: this.errorQueue.length,
-      bySeverity
+      bySeverity,
     };
   }
 

@@ -4,7 +4,5 @@
   "memoryUsage": 4.591163635253906,
   "cpuUsage": 0.025654,
   "lastUpdated": "2025-09-06T08:50:12.320Z",
-  "recommendations": [
-    "Consider code splitting - bundle size is large"
-  ]
+  "recommendations": ["Consider code splitting - bundle size is large"]
 }

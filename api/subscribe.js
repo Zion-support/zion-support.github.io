@@ -1,7 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const FILE_PATH = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
+const FILE_PATH = path.join(
+  process.cwd(),
+  'data',
+  'newsletter-subscriptions.json'
+);
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {

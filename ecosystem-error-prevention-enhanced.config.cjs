@@ -11,10 +11,10 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_MODE: 'continuous',
         SCAN_INTERVAL: 300000, // 5 minutes
-        FIX_INTERVAL: 600000,  // 10 minutes
+        FIX_INTERVAL: 600000, // 10 minutes
         LOG_LEVEL: 'info',
         BACKUP_BEFORE_FIX: 'true',
-        MAX_RETRIES: '3'
+        MAX_RETRIES: '3',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -36,7 +36,7 @@ module.exports = {
       pmx: true,
       // Health checks
       health_check_grace_period: 30000,
-      health_check_fatal_exceptions: true
+      health_check_fatal_exceptions: true,
     },
 
     // Syntax Error Fixer Service
@@ -45,14 +45,27 @@ module.exports = {
       script: './scripts/automation/syntax-error-fixer.cjs',
       args: 'fix',
       cwd: './',
-      watch: ['src/**/*.{ts,tsx,js,jsx}', 'components/**/*.{ts,tsx,js,jsx}', 'pages/**/*.{ts,tsx,js,jsx}'],
-      ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', '*.backup', '*.tsbackup', 'backups/*'],
+      watch: [
+        'src/**/*.{ts,tsx,js,jsx}',
+        'components/**/*.{ts,tsx,js,jsx}',
+        'pages/**/*.{ts,tsx,js,jsx}',
+      ],
+      ignore_watch: [
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+        '*.tsbackup',
+        'backups/*',
+      ],
       env: {
         NODE_ENV: 'production',
         AUTOMATION_MODE: 'watch',
         FIX_INTERVAL: 300000, // 5 minutes
         LOG_LEVEL: 'info',
-        BACKUP_ENABLED: 'true'
+        BACKUP_ENABLED: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -69,7 +82,7 @@ module.exports = {
       restart_delay: 10000,
       kill_timeout: 10000,
       wait_ready: true,
-      listen_timeout: 15000
+      listen_timeout: 15000,
     },
 
     // Continuous Error Monitoring Service
@@ -84,7 +97,7 @@ module.exports = {
         MONITOR_MODE: 'continuous',
         SCAN_INTERVAL: 180000, // 3 minutes
         LOG_LEVEL: 'info',
-        ALERT_THRESHOLD: '100'
+        ALERT_THRESHOLD: '100',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -101,7 +114,7 @@ module.exports = {
       restart_delay: 10000,
       kill_timeout: 10000,
       wait_ready: true,
-      listen_timeout: 15000
+      listen_timeout: 15000,
     },
 
     // Automated Error Fixing Service
@@ -117,7 +130,7 @@ module.exports = {
         FIX_INTERVAL: 900000, // 15 minutes
         LOG_LEVEL: 'info',
         BACKUP_BEFORE_FIX: 'true',
-        MAX_FIX_ATTEMPTS: '3'
+        MAX_FIX_ATTEMPTS: '3',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -134,7 +147,7 @@ module.exports = {
       restart_delay: 15000,
       kill_timeout: 15000,
       wait_ready: true,
-      listen_timeout: 20000
+      listen_timeout: 20000,
     },
 
     // Health Monitoring Service
@@ -149,7 +162,7 @@ module.exports = {
         HEALTH_CHECK_MODE: 'continuous',
         CHECK_INTERVAL: 120000, // 2 minutes
         LOG_LEVEL: 'info',
-        ALERT_ENABLED: 'true'
+        ALERT_ENABLED: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -166,7 +179,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 10000
+      listen_timeout: 10000,
     },
 
     // Report Generation Service
@@ -181,7 +194,7 @@ module.exports = {
         REPORT_MODE: 'scheduled',
         REPORT_INTERVAL: 3600000, // 1 hour
         LOG_LEVEL: 'info',
-        REPORT_FORMATS: 'json,html,markdown'
+        REPORT_FORMATS: 'json,html,markdown',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -198,8 +211,8 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 10000
-    }
+      listen_timeout: 10000,
+    },
   ],
 
   deploy: {
@@ -209,14 +222,16 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:your-username/zion-app.git',
       path: '/var/www/zion-app',
-      'pre-deploy-local': 'echo "Starting enhanced error prevention automation deployment"',
+      'pre-deploy-local':
+        'echo "Starting enhanced error prevention automation deployment"',
       'post-deploy': [
         'npm install',
         'pm2 reload ecosystem-error-prevention-enhanced.config.cjs --env production',
         'pm2 save',
-        'echo "Enhanced error prevention automation deployed successfully"'
+        'echo "Enhanced error prevention automation deployed successfully"',
       ],
-      'pre-setup': 'echo "Setting up enhanced error prevention automation environment"'
+      'pre-setup':
+        'echo "Setting up enhanced error prevention automation environment"',
     },
     staging: {
       user: 'ubuntu',
@@ -224,15 +239,17 @@ module.exports = {
       ref: 'origin/develop',
       repo: 'git@github.com:your-username/zion-app.git',
       path: '/var/www/zion-app-staging',
-      'pre-deploy-local': 'echo "Starting enhanced error prevention automation deployment to staging"',
+      'pre-deploy-local':
+        'echo "Starting enhanced error prevention automation deployment to staging"',
       'post-deploy': [
         'npm install',
         'pm2 reload ecosystem-error-prevention-enhanced.config.cjs --env staging',
         'pm2 save',
-        'echo "Enhanced error prevention automation deployed to staging successfully"'
+        'echo "Enhanced error prevention automation deployed to staging successfully"',
       ],
-      'pre-setup': 'echo "Setting up enhanced error prevention automation environment for staging"'
-    }
+      'pre-setup':
+        'echo "Setting up enhanced error prevention automation environment for staging"',
+    },
   },
 
   // PM2 configuration
@@ -262,11 +279,18 @@ module.exports = {
     node_args: '--max-old-space-size=2048',
     // Watch settings
     watch: false,
-    ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', 'backups/*'],
+    ignore_watch: [
+      'node_modules',
+      'dist',
+      '.git',
+      '*.log',
+      'logs/*',
+      'backups/*',
+    ],
     // Environment variables
     env: {
       NODE_ENV: 'production',
-      PM2_HOME: './.pm2'
-    }
-  }
+      PM2_HOME: './.pm2',
+    },
+  },
 };

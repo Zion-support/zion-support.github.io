@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2025ExtraServices: ExtraService[] = [
@@ -55,20 +55,22 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Autonomous replies, prioritization, CRM notes in minutes',
     price: '$29',
     period: '/user/month',
-    description: 'AI-powered triage and reply suggestions with tone controls, auto-drafts, CRM sync, and follow-ups. Works with Gmail, Outlook, and custom IMAP.',
+    description:
+      'AI-powered triage and reply suggestions with tone controls, auto-drafts, CRM sync, and follow-ups. Works with Gmail, Outlook, and custom IMAP.',
     features: [
       'Smart triage and priorities',
       'Auto-draft replies with tone/style',
       'CRM sync (HubSpot, Salesforce)',
       'Follow-up reminders and SLAs',
-      'PII redaction and audit logs'
+      'PII redaction and audit logs',
     ],
     popular: true,
     icon: '✉️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/ai-email-responder-pro',
-    marketPosition: 'Gmail/Outlook add-ons plus CRM sync; faster to adopt than full helpdesk migration.',
+    marketPosition:
+      'Gmail/Outlook add-ons plus CRM sync; faster to adopt than full helpdesk migration.',
     targetAudience: 'Sales, support, founders, account managers',
     trialDays: 14,
     setupTime: '10 minutes',
@@ -76,7 +78,11 @@ export const real2025ExtraServices: ExtraService[] = [
     realService: true,
     technology: ['Next.js', 'OpenAI/Anthropic', 'OAuth', 'PostgreSQL'],
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Salesforce'],
-    useCases: ['Reduce inbox time', 'Maintain SLAs', 'Better customer experience'],
+    useCases: [
+      'Reduce inbox time',
+      'Maintain SLAs',
+      'Better customer experience',
+    ],
     roi: 'Cut average reply time 40–60%; raise CSAT by 10–15%.',
     competitors: ['Superhuman AI', 'Front AI add-ons'],
     marketSize: '$10B+ email productivity',
@@ -84,11 +90,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'OAuth connectors, IMAP sync, embeddings for thread context, CRM webhooks.',
+    implementationDetails:
+      'OAuth connectors, IMAP sync, embeddings for thread context, CRM webhooks.',
     launchDate: '2025-02-20',
     customers: 180,
     rating: 4.8,
-    reviews: 61
+    reviews: 61,
   },
   {
     id: 'mobile-first-survey-studio',
@@ -96,20 +103,22 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Adaptive surveys with logic and real-time dashboards',
     price: '$39',
     period: '/month',
-    description: 'Create interactive mobile-ready surveys with branching logic, templates, and live dashboards. Export to CSV/Sheets and sync to CRMs.',
+    description:
+      'Create interactive mobile-ready surveys with branching logic, templates, and live dashboards. Export to CSV/Sheets and sync to CRMs.',
     features: [
       'Branching and conditional logic',
       'Question templates and themes',
       'Link, QR, and embed modes',
       'Real-time dashboards and exports',
-      'Webhooks and API access'
+      'Webhooks and API access',
     ],
     popular: false,
     icon: '📱',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/mobile-first-survey-studio',
-    marketPosition: 'Streamlined alternative to SurveyMonkey with modern UI and developer APIs.',
+    marketPosition:
+      'Streamlined alternative to SurveyMonkey with modern UI and developer APIs.',
     targetAudience: 'Marketing, research, SMBs, agencies',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -125,11 +134,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Form builder, results store, webhook runners, embeddable widgets.',
+    implementationDetails:
+      'Form builder, results store, webhook runners, embeddable widgets.',
     launchDate: '2025-02-20',
     customers: 95,
     rating: 4.6,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'returns-hub',
@@ -137,20 +147,22 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Self-serve returns, labels, and status tracking',
     price: '$79',
     period: '/month',
-    description: 'Automate returns with branded portal, label generation, status tracking, and refund workflows. Reduce support tickets and errors.',
+    description:
+      'Automate returns with branded portal, label generation, status tracking, and refund workflows. Reduce support tickets and errors.',
     features: [
       'Branded returns portal',
       'Label generation (UPS/USPS)',
       'Status tracking and notifications',
       'Refund/exchange workflows',
-      'Fraud rules and analytics'
+      'Fraud rules and analytics',
     ],
     popular: true,
     icon: '📦',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/returns-hub',
-    marketPosition: 'Fast setup alternative to enterprise suites; ideal for Shopify/WooCommerce.',
+    marketPosition:
+      'Fast setup alternative to enterprise suites; ideal for Shopify/WooCommerce.',
     targetAudience: 'E‑commerce brands and ops',
     trialDays: 14,
     setupTime: '1 hour',
@@ -166,11 +178,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'quantum-neural-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Carrier API adapters, webhook workflows, admin dashboards.',
+    implementationDetails:
+      'Carrier API adapters, webhook workflows, admin dashboards.',
     launchDate: '2025-02-20',
     customers: 60,
     rating: 4.7,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'podcast-transcription-studio',
@@ -178,13 +191,14 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Transcripts, chapters, notes, and SEO pages',
     price: '$19',
     period: '/hour audio',
-    description: 'Upload episodes to get accurate transcripts, speaker labels, chapters, show notes, and SEO-friendly blog posts with exports.',
+    description:
+      'Upload episodes to get accurate transcripts, speaker labels, chapters, show notes, and SEO-friendly blog posts with exports.',
     features: [
       'High-accuracy transcripts',
       'Speaker diarization',
       'Chapters and key moments',
       'SEO blog page generation',
-      'Batch exports and APIs'
+      'Batch exports and APIs',
     ],
     popular: false,
     icon: '🎙️',
@@ -211,7 +225,7 @@ export const real2025ExtraServices: ExtraService[] = [
     launchDate: '2025-02-20',
     customers: 140,
     rating: 4.6,
-    reviews: 47
+    reviews: 47,
   },
   {
     id: 'freelancer-portfolio-builder',
@@ -219,20 +233,22 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Beautiful case studies with client proof in minutes',
     price: '$9',
     period: '/month',
-    description: 'Generate a client-ready portfolio with verified testimonials, image/video galleries, and proposal templates.',
+    description:
+      'Generate a client-ready portfolio with verified testimonials, image/video galleries, and proposal templates.',
     features: [
       'Theme templates and sections',
       'SEO and analytics built-in',
       'Testimonial verification links',
       'Case study generator',
-      'Custom domain and CDN'
+      'Custom domain and CDN',
     ],
     popular: true,
     icon: '🧰',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/freelancer-portfolio-builder',
-    marketPosition: 'Purpose-built for freelancers; faster than building from scratch.',
+    marketPosition:
+      'Purpose-built for freelancers; faster than building from scratch.',
     targetAudience: 'Freelancers, consultants',
     trialDays: 14,
     setupTime: '10 minutes',
@@ -248,11 +264,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'holographic-quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Theme editor, publish pipeline, testimonial verifier.',
+    implementationDetails:
+      'Theme editor, publish pipeline, testimonial verifier.',
     launchDate: '2025-02-20',
     customers: 220,
     rating: 4.7,
-    reviews: 88
+    reviews: 88,
   },
   {
     id: 'micro-crm-local',
@@ -260,20 +277,22 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Contacts, deals, appointments without enterprise baggage',
     price: '$19',
     period: '/user/month',
-    description: 'Simple CRM with contacts, deals, reminders, and appointment scheduling. SMS/email notifications and pipeline views.',
+    description:
+      'Simple CRM with contacts, deals, reminders, and appointment scheduling. SMS/email notifications and pipeline views.',
     features: [
       'Kanban pipeline',
       'Appointments and reminders',
       'Email/SMS notifications',
       'Import/export CSV',
-      'Mobile-friendly UI'
+      'Mobile-friendly UI',
     ],
     popular: true,
     icon: '📇',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/micro-crm-local',
-    marketPosition: 'Focus on simplicity and speed; ideal for SMBs and agencies.',
+    marketPosition:
+      'Focus on simplicity and speed; ideal for SMBs and agencies.',
     targetAudience: 'Local SMBs, agencies, solo founders',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -289,11 +308,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'CRUD, reminders queue, calendar sync, mobile views.',
+    implementationDetails:
+      'CRUD, reminders queue, calendar sync, mobile views.',
     launchDate: '2025-02-20',
     customers: 310,
     rating: 4.6,
-    reviews: 102
+    reviews: 102,
   },
   {
     id: 'github-secrets-scanner-plus',
@@ -301,20 +321,22 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'High-signal detectors, CI blocking and auto-rotation',
     price: '$49',
     period: '/repo/month',
-    description: 'Detect credentials and tokens, block merges, and trigger rotation playbooks automatically with audit artifacts.',
+    description:
+      'Detect credentials and tokens, block merges, and trigger rotation playbooks automatically with audit artifacts.',
     features: [
       'Detectors for 120+ providers',
       'PR and CI annotations',
       'Auto-rotation workflows',
       'Evidence bundles and reports',
-      'SIEM/webhook integrations'
+      'SIEM/webhook integrations',
     ],
     popular: false,
     icon: '🕵️',
     color: 'from-red-600 to-rose-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/github-secrets-scanner-plus',
-    marketPosition: 'Augments GitHub native scanning with rotation and evidence.',
+    marketPosition:
+      'Augments GitHub native scanning with rotation and evidence.',
     targetAudience: 'Security, platform, dev teams',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -330,11 +352,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'quantum-cyberpunk',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Pre-commit hooks, CI actions, rotation runners, evidence store.',
+    implementationDetails:
+      'Pre-commit hooks, CI actions, rotation runners, evidence store.',
     launchDate: '2025-02-20',
     customers: 75,
     rating: 4.7,
-    reviews: 34
+    reviews: 34,
   },
   {
     id: 'k8s-cost-rightsizer',
@@ -342,20 +365,22 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'SLO-aware CPU/memory rightsizing with PRs',
     price: '$69',
     period: '/cluster/month',
-    description: 'Analyze utilization and SLOs to recommend safe requests/limits and open PRs. Track realized savings and performance drift.',
+    description:
+      'Analyze utilization and SLOs to recommend safe requests/limits and open PRs. Track realized savings and performance drift.',
     features: [
       'Recommendations by service',
       'Manifest PR automation',
       'Savings reports',
       'SLO/SLI aware policies',
-      'Alerts and rollbacks'
+      'Alerts and rollbacks',
     ],
     popular: true,
     icon: '⚙️',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/k8s-cost-rightsizer',
-    marketPosition: 'Faster ROI than full-blown FinOps platforms for SMB clusters.',
+    marketPosition:
+      'Faster ROI than full-blown FinOps platforms for SMB clusters.',
     targetAudience: 'Platform, SRE, DevOps',
     trialDays: 14,
     setupTime: '2 hours',
@@ -371,11 +396,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'quantum-neural-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Metrics scrapers, advisor engine, PR bot, dashboards.',
+    implementationDetails:
+      'Metrics scrapers, advisor engine, PR bot, dashboards.',
     launchDate: '2025-02-20',
     customers: 55,
     rating: 4.7,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'pii-redaction-proxy',
@@ -383,13 +409,14 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Lossless masking for logs, prompts, and events',
     price: '$99',
     period: '/month',
-    description: 'Inline tokenization and redaction for PII/PHI across observability and AI pipelines. Sub-20ms latency with audit trails.',
+    description:
+      'Inline tokenization and redaction for PII/PHI across observability and AI pipelines. Sub-20ms latency with audit trails.',
     features: [
       'Pattern and ML-based detectors',
       'Vault-backed tokenization',
       'SDKs and sidecar proxy',
       'Audit logs and re-identification',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     popular: false,
     icon: '🔒',
@@ -412,11 +439,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'quantum-neural-advanced',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'NFA patterns, MPC-compatible tokenization, exporters.',
+    implementationDetails:
+      'NFA patterns, MPC-compatible tokenization, exporters.',
     launchDate: '2025-02-20',
     customers: 42,
     rating: 4.6,
-    reviews: 16
+    reviews: 16,
   },
   {
     id: 'postgres-index-advisor-pro',
@@ -424,13 +452,14 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Query-aware index recommendations with safe rollout',
     price: '$79',
     period: '/month',
-    description: 'Analyze slow queries and suggest indexes with PRs and rollback plans. Safe by default and CI-integrated.',
+    description:
+      'Analyze slow queries and suggest indexes with PRs and rollback plans. Safe by default and CI-integrated.',
     features: [
       'Query sampling and analysis',
       'Index candidate scoring',
       'PR generation with rollback',
       'Regression checks',
-      'Dashboards and alerts'
+      'Dashboards and alerts',
     ],
     popular: false,
     icon: '🗃️',
@@ -453,11 +482,12 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'holographic-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Query sampler, advisor engine, PR bot, regression tests.',
+    implementationDetails:
+      'Query sampler, advisor engine, PR bot, regression tests.',
     launchDate: '2025-02-20',
     customers: 33,
     rating: 4.7,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 's3-lifecycle-optimizer',
@@ -465,20 +495,22 @@ export const real2025ExtraServices: ExtraService[] = [
     tagline: 'Automate storage class transitions and retention',
     price: '$59',
     period: '/bucket/month',
-    description: 'Analyze object access patterns to apply Intelligent-Tiering, IA/Glacier transitions, and retention policies automatically.',
+    description:
+      'Analyze object access patterns to apply Intelligent-Tiering, IA/Glacier transitions, and retention policies automatically.',
     features: [
       'Access pattern analysis',
       'Policy generation and apply',
       'Savings and drift reports',
       'Alerting and approvals',
-      'Multi-account support'
+      'Multi-account support',
     ],
     popular: false,
     icon: '🗄️',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/s3-lifecycle-optimizer',
-    marketPosition: 'Lightweight, policy-first approach vs heavy FinOps suites.',
+    marketPosition:
+      'Lightweight, policy-first approach vs heavy FinOps suites.',
     targetAudience: 'Cloud, data, platform teams',
     trialDays: 14,
     setupTime: '1 hour',
@@ -494,10 +526,11 @@ export const real2025ExtraServices: ExtraService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Inventory scans, analyzers, policy applier, dashboards.',
+    implementationDetails:
+      'Inventory scans, analyzers, policy applier, dashboards.',
     launchDate: '2025-02-20',
     customers: 48,
     rating: 4.6,
-    reviews: 18
-  }
+    reviews: 18,
+  },
 ];

@@ -4,7 +4,6 @@ import path from 'path';
 import * as Sentry from '@sentry/nextjs';
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 
-
 // Type for individual log entry coming from ProductionLogger
 interface ClientLogEntry {
   level: 'debug' | 'info' | 'warn' | 'error';
@@ -30,7 +29,7 @@ function ensureLogDir(dir: string) {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -40,7 +39,11 @@ export default async function handler(
   const { entries } = req.body as { entries?: ClientLogEntry[] };
 
   if (!Array.isArray(entries) || entries.length === 0) {
-    return res.status(400).json({ message: 'Invalid payload – expected { entries: ClientLogEntry[] }' });
+    return res
+      .status(400)
+      .json({
+        message: 'Invalid payload – expected { entries: ClientLogEntry[] }',
+      });
   }
 
   try {
@@ -50,10 +53,10 @@ export default async function handler(
 
     const filePath = path.join(
       logDir,
-      `client-${new Date().toISOString().slice(0, 10)}.log`, // yyyy-mm-dd
+      `client-${new Date().toISOString().slice(0, 10)}.log` // yyyy-mm-dd
     );
 
-    const serialized = entries.map((e) => JSON.stringify(e)).join('\n') + '\n';
+    const serialized = entries.map(e => JSON.stringify(e)).join('\n') + '\n';
 
     try {
       fs.appendFileSync(filePath, serialized, 'utf8');
@@ -63,10 +66,11 @@ export default async function handler(
 
     // 2. Forward errors/warnings to Sentry if configured
     if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.level === 'error' || entry.level === 'warn') {
           // Map our log levels to Sentry's SeverityLevel
-          const sentryLevel: Sentry.SeverityLevel = entry.level === 'warn' ? 'warning' : entry.level;
+          const sentryLevel: Sentry.SeverityLevel =
+            entry.level === 'warn' ? 'warning' : entry.level;
           Sentry.captureMessage(entry.message, {
             level: sentryLevel,
             extra: {
@@ -86,7 +90,10 @@ export default async function handler(
     // 3. Optional: Forward to external webhook if configured via env
     if (process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL) {
       try {
-        const doFetch = typeof fetch !== 'undefined' ? fetch : (await import('node-fetch')).default as unknown as typeof fetch;
+        const doFetch =
+          typeof fetch !== 'undefined'
+            ? fetch
+            : ((await import('node-fetch')).default as unknown as typeof fetch);
         await doFetch(process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -105,4 +112,4 @@ export default async function handler(
     Sentry.captureException(error);
     return res.status(500).json({ message: 'Internal Server Error' });
   }
-} 
+}

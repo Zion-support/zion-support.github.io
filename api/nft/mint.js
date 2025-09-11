@@ -1,4 +1,3 @@
-
 const chains = {
   ethereum: 'Ethereum Mainnet',
   polygon: 'Polygon',

@@ -10,25 +10,25 @@ class WorkflowHealthChecker {
     this.results = [];
     this.categories = {
       'ci-cd': ['ci', 'build', 'deploy', 'release'],
-      'testing': ['test', 'playwright', 'smoke'],
-      'security': ['security', 'audit', 'scan', 'gitleaks'],
-      'quality': ['lint', 'type-check', 'format'],
-      'performance': ['performance', 'lighthouse', 'pa11y'],
-      'automation': ['auto', 'autonomous', 'workflow'],
-      'maintenance': ['maintenance', 'cleanup', 'deps'],
-      'monitoring': ['monitor', 'health', 'watchdog']
+      testing: ['test', 'playwright', 'smoke'],
+      security: ['security', 'audit', 'scan', 'gitleaks'],
+      quality: ['lint', 'type-check', 'format'],
+      performance: ['performance', 'lighthouse', 'pa11y'],
+      automation: ['auto', 'autonomous', 'workflow'],
+      maintenance: ['maintenance', 'cleanup', 'deps'],
+      monitoring: ['monitor', 'health', 'watchdog'],
     };
   }
 
   categorizeWorkflow(filename) {
     const lowerName = filename.toLowerCase();
-    
+
     for (const [category, keywords] of Object.entries(this.categories)) {
       if (keywords.some(keyword => lowerName.includes(keyword))) {
         return category;
       }
     }
-    
+
     return 'other';
   }
 
@@ -45,7 +45,7 @@ class WorkflowHealthChecker {
       hasConcurrency: !!workflow.concurrency,
       hasTimeout: false,
       hasEnvironment: false,
-      issues: []
+      issues: [],
     };
 
     // Check for common issues
@@ -54,19 +54,21 @@ class WorkflowHealthChecker {
         if (!job.runs_on && job.runs_on !== 'self-hosted') {
           analysis.issues.push(`Job '${jobName}' missing runs_on`);
         }
-        
+
         if (job.timeout_minutes) {
           analysis.hasTimeout = true;
         }
-        
+
         if (job.environment) {
           analysis.hasEnvironment = true;
         }
-        
+
         if (job.steps) {
           job.steps.forEach((step, index) => {
             if (!step.name && !step.uses && !step.run) {
-              analysis.issues.push(`Job '${jobName}' step ${index + 1} missing name/uses/run`);
+              analysis.issues.push(
+                `Job '${jobName}' step ${index + 1} missing name/uses/run`
+              );
             }
           });
         }
@@ -80,34 +82,38 @@ class WorkflowHealthChecker {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const workflow = yaml.load(content);
-      
+
       if (!workflow) {
         return {
           filename: path.basename(filePath),
           valid: false,
-          error: 'Empty or invalid YAML'
+          error: 'Empty or invalid YAML',
         };
       }
 
-      const analysis = this.analyzeWorkflowStructure(workflow, path.basename(filePath));
-      
+      const analysis = this.analyzeWorkflowStructure(
+        workflow,
+        path.basename(filePath)
+      );
+
       return {
         filename: path.basename(filePath),
         valid: true,
         analysis,
-        error: null
+        error: null,
       };
     } catch (error) {
       return {
         filename: path.basename(filePath),
         valid: false,
-        error: `YAML parsing error: ${error.message}`
+        error: `YAML parsing error: ${error.message}`,
       };
     }
   }
 
   generateReport() {
-    const workflowFiles = fs.readdirSync(this.workflowsDir)
+    const workflowFiles = fs
+      .readdirSync(this.workflowsDir)
       .filter(f => f.endsWith('.yml') || f.endsWith('.yaml'))
       .sort();
 
@@ -127,11 +133,11 @@ class WorkflowHealthChecker {
         totalValid++;
         const category = result.analysis.category;
         categoryStats[category] = (categoryStats[category] || 0) + 1;
-        
+
         if (result.analysis.issues.length > 0) {
           issues.push({
             filename: result.filename,
-            issues: result.analysis.issues
+            issues: result.analysis.issues,
           });
         }
       } else {
@@ -147,12 +153,14 @@ class WorkflowHealthChecker {
     console.log(`Total workflows: ${workflowFiles.length}`);
     console.log(`Valid: ${totalValid}`);
     console.log(`Invalid: ${totalInvalid}`);
-    console.log(`Success rate: ${((totalValid / workflowFiles.length) * 100).toFixed(1)}%`);
+    console.log(
+      `Success rate: ${((totalValid / workflowFiles.length) * 100).toFixed(1)}%`
+    );
 
     // Display category breakdown
     console.log('\n📁 WORKFLOW CATEGORIES:');
     Object.entries(categoryStats)
-      .sort(([,a], [,b]) => b - a)
+      .sort(([, a], [, b]) => b - a)
       .forEach(([category, count]) => {
         console.log(`  ${category}: ${count} workflows`);
       });
@@ -191,7 +199,7 @@ class WorkflowHealthChecker {
       valid: totalValid,
       invalid: totalInvalid,
       categoryStats,
-      issues
+      issues,
     };
   }
 
@@ -201,9 +209,9 @@ class WorkflowHealthChecker {
       summary: {
         total: this.results.length,
         valid: this.results.filter(r => r.valid).length,
-        invalid: this.results.filter(r => !r.valid).length
+        invalid: this.results.filter(r => !r.valid).length,
       },
-      workflows: this.results
+      workflows: this.results,
     };
 
     fs.writeFileSync(outputPath, JSON.stringify(report, null, 2));
@@ -215,7 +223,7 @@ class WorkflowHealthChecker {
 if (require.main === module) {
   const checker = new WorkflowHealthChecker();
   const report = checker.generateReport();
-  
+
   // Export results
   const outputDir = path.join(__dirname, 'public', 'reports', 'workflows');
   fs.mkdirSync(outputDir, { recursive: true });

@@ -45,14 +45,15 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Seamlessly manage and optimize across multiple cloud providers',
-    description: 'Advanced platform that provides unified management, cost optimization, and performance monitoring across AWS, Azure, Google Cloud, and other cloud providers with intelligent resource allocation.',
+    description:
+      'Advanced platform that provides unified management, cost optimization, and performance monitoring across AWS, Azure, Google Cloud, and other cloud providers with intelligent resource allocation.',
     category: 'Cloud Infrastructure & DevOps',
     type: 'IT Service',
     pricing: {
       starter: '$159/month',
       professional: '$399/month',
       enterprise: '$999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Multi-cloud resource management',
@@ -66,7 +67,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Real-time cost analytics',
       'Resource utilization tracking',
       'Multi-region deployment',
-      'White-label solutions'
+      'White-label solutions',
     ],
     benefits: [
       '30% reduction in cloud costs',
@@ -76,7 +77,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Better disaster recovery',
       'Reduced operational overhead',
       'Scalable infrastructure',
-      'Vendor lock-in prevention'
+      'Vendor lock-in prevention',
     ],
     useCases: [
       'Enterprise IT departments',
@@ -86,29 +87,46 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Financial institutions',
       'Healthcare organizations',
       'Government agencies',
-      'Educational institutions'
+      'Educational institutions',
     ],
     marketSize: '$9.8B by 2025',
     targetAudience: 'Cloud architects, DevOps engineers, IT managers, CTOs',
-    competitiveAdvantage: 'Intelligent multi-cloud orchestration with automated cost optimization and unified security management',
+    competitiveAdvantage:
+      'Intelligent multi-cloud orchestration with automated cost optimization and unified security management',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/multi-cloud-orchestration-platform',
     realService: true,
-    technology: ['Kubernetes', 'Docker', 'Terraform', 'Cloud APIs', 'AI', 'Machine Learning'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Oracle Cloud', 'IBM Cloud', 'Kubernetes', 'Docker'],
+    technology: [
+      'Kubernetes',
+      'Docker',
+      'Terraform',
+      'Cloud APIs',
+      'AI',
+      'Machine Learning',
+    ],
+    integrations: [
+      'AWS',
+      'Azure',
+      'Google Cloud',
+      'Oracle Cloud',
+      'IBM Cloud',
+      'Kubernetes',
+      'Docker',
+    ],
     roi: '400% within 12 months',
     competitors: ['Terraform', 'Ansible', 'Chef', 'Puppet'],
     growthRate: '65% annually',
     variant: 'cloud-futuristic',
     realImplementation: true,
-    implementationDetails: 'Cloud-native platform with AI-powered optimization and multi-cloud orchestration',
+    implementationDetails:
+      'Cloud-native platform with AI-powered optimization and multi-cloud orchestration',
     launchDate: '2025-01-18',
     customers: 2100,
     rating: 4.8,
-    reviews: 445
+    reviews: 445,
   },
 
   // Zero-Trust Network Architecture Platform
@@ -116,14 +134,15 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
     id: 'zero-trust-network-architecture-platform',
     name: 'Zero-Trust Network Architecture Platform',
     tagline: 'Next-generation network security with zero-trust principles',
-    description: 'Comprehensive zero-trust security platform that implements advanced authentication, micro-segmentation, and continuous monitoring to protect enterprise networks from modern cyber threats.',
+    description:
+      'Comprehensive zero-trust security platform that implements advanced authentication, micro-segmentation, and continuous monitoring to protect enterprise networks from modern cyber threats.',
     category: 'Network Security & Zero Trust',
     type: 'IT Service',
     pricing: {
       starter: '$199/month',
       professional: '$499/month',
       enterprise: '$1299/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Identity-based access control',
@@ -137,7 +156,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Mobile device management',
       'API security',
       'Cloud workload protection',
-      'White-label solutions'
+      'White-label solutions',
     ],
     benefits: [
       '99.9% threat prevention',
@@ -147,7 +166,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Automated security',
       'Cost-effective protection',
       'Scalable security',
-      'Future-proof architecture'
+      'Future-proof architecture',
     ],
     useCases: [
       'Financial institutions',
@@ -157,29 +176,46 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Manufacturing firms',
       'Educational institutions',
       'Retail businesses',
-      'Critical infrastructure'
+      'Critical infrastructure',
     ],
     marketSize: '$7.2B by 2025',
-    targetAudience: 'CISOs, network security engineers, IT security managers, compliance officers',
-    competitiveAdvantage: 'Advanced zero-trust implementation with AI-powered threat detection and automated policy enforcement',
+    targetAudience:
+      'CISOs, network security engineers, IT security managers, compliance officers',
+    competitiveAdvantage:
+      'Advanced zero-trust implementation with AI-powered threat detection and automated policy enforcement',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/zero-trust-network-architecture-platform',
     realService: true,
-    technology: ['Zero Trust', 'AI', 'Machine Learning', 'SDN', 'Cloud Security', 'Identity Management'],
-    integrations: ['Active Directory', 'Okta', 'Ping Identity', 'CrowdStrike', 'Palo Alto Networks', 'Cisco'],
+    technology: [
+      'Zero Trust',
+      'AI',
+      'Machine Learning',
+      'SDN',
+      'Cloud Security',
+      'Identity Management',
+    ],
+    integrations: [
+      'Active Directory',
+      'Okta',
+      'Ping Identity',
+      'CrowdStrike',
+      'Palo Alto Networks',
+      'Cisco',
+    ],
     roi: '500% within 18 months',
     competitors: ['Cisco', 'Palo Alto Networks', 'Fortinet', 'Check Point'],
     growthRate: '70% annually',
     variant: 'security-futuristic',
     realImplementation: true,
-    implementationDetails: 'Advanced zero-trust platform with AI-powered security and automated policy management',
+    implementationDetails:
+      'Advanced zero-trust platform with AI-powered security and automated policy management',
     launchDate: '2025-01-22',
     customers: 1850,
     rating: 4.9,
-    reviews: 334
+    reviews: 334,
   },
 
   // Autonomous DevOps Automation Platform
@@ -187,14 +223,15 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
     id: 'autonomous-devops-automation-platform',
     name: 'Autonomous DevOps Automation Platform',
     tagline: 'AI-powered DevOps automation for continuous delivery excellence',
-    description: 'Intelligent DevOps platform that automates the entire software development lifecycle, from code commit to production deployment, with AI-powered optimization and self-healing capabilities.',
+    description:
+      'Intelligent DevOps platform that automates the entire software development lifecycle, from code commit to production deployment, with AI-powered optimization and self-healing capabilities.',
     category: 'DevOps & Automation',
     type: 'IT Service',
     pricing: {
       starter: '$129/month',
       professional: '$299/month',
       enterprise: '$699/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Automated CI/CD pipelines',
@@ -208,7 +245,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Cost optimization',
       'API for custom workflows',
       'Multi-environment support',
-      'White-label solutions'
+      'White-label solutions',
     ],
     benefits: [
       '80% faster deployment',
@@ -218,7 +255,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Better team productivity',
       'Enhanced security',
       'Faster time to market',
-      'Automated operations'
+      'Automated operations',
     ],
     useCases: [
       'Software development teams',
@@ -228,29 +265,48 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Enterprise IT',
       'Cloud-native companies',
       'Financial services',
-      'Healthcare technology'
+      'Healthcare technology',
     ],
     marketSize: '$6.5B by 2025',
     targetAudience: 'DevOps engineers, SREs, software developers, IT managers',
-    competitiveAdvantage: 'AI-powered automation with self-healing infrastructure and intelligent optimization',
+    competitiveAdvantage:
+      'AI-powered automation with self-healing infrastructure and intelligent optimization',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/autonomous-devops-automation-platform',
     realService: true,
-    technology: ['AI', 'Machine Learning', 'Kubernetes', 'Docker', 'Jenkins', 'GitLab CI'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Teams', 'AWS', 'Azure', 'GCP'],
+    technology: [
+      'AI',
+      'Machine Learning',
+      'Kubernetes',
+      'Docker',
+      'Jenkins',
+      'GitLab CI',
+    ],
+    integrations: [
+      'GitHub',
+      'GitLab',
+      'Bitbucket',
+      'Jira',
+      'Slack',
+      'Teams',
+      'AWS',
+      'Azure',
+      'GCP',
+    ],
     roi: '450% within 12 months',
     competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     growthRate: '75% annually',
     variant: 'devops-futuristic',
     realImplementation: true,
-    implementationDetails: 'AI-powered DevOps platform with automated CI/CD and self-healing capabilities',
+    implementationDetails:
+      'AI-powered DevOps platform with automated CI/CD and self-healing capabilities',
     launchDate: '2025-01-25',
     customers: 1680,
     rating: 4.8,
-    reviews: 289
+    reviews: 289,
   },
 
   // Edge Computing Intelligence Platform
@@ -258,14 +314,15 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
     id: 'edge-computing-intelligence-platform',
     name: 'Edge Computing Intelligence Platform',
     tagline: 'Intelligent edge computing for real-time data processing',
-    description: 'Advanced edge computing platform that brings AI and machine learning capabilities to the edge, enabling real-time data processing, reduced latency, and improved user experiences.',
+    description:
+      'Advanced edge computing platform that brings AI and machine learning capabilities to the edge, enabling real-time data processing, reduced latency, and improved user experiences.',
     category: 'Edge Computing & AI',
     type: 'IT Service',
     pricing: {
       starter: '$179/month',
       professional: '$449/month',
       enterprise: '$1099/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Edge AI deployment',
@@ -279,7 +336,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'API for edge applications',
       'Multi-cloud edge support',
       'Mobile edge computing',
-      'White-label solutions'
+      'White-label solutions',
     ],
     benefits: [
       '90% reduction in latency',
@@ -289,7 +346,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Better scalability',
       'Real-time processing',
       'Cost-effective computing',
-      'Future-ready architecture'
+      'Future-ready architecture',
     ],
     useCases: [
       'IoT applications',
@@ -299,29 +356,50 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Healthcare monitoring',
       'Retail analytics',
       'Gaming platforms',
-      'Financial services'
+      'Financial services',
     ],
     marketSize: '$4.7B by 2025',
-    targetAudience: 'IoT developers, cloud architects, system engineers, solution architects',
-    competitiveAdvantage: 'Advanced edge computing with AI capabilities and intelligent load balancing',
+    targetAudience:
+      'IoT developers, cloud architects, system engineers, solution architects',
+    competitiveAdvantage:
+      'Advanced edge computing with AI capabilities and intelligent load balancing',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/edge-computing-intelligence-platform',
     realService: true,
-    technology: ['Edge Computing', 'AI', 'Machine Learning', '5G', 'IoT', 'Cloud Computing'],
-    integrations: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Kubernetes', 'Docker'],
+    technology: [
+      'Edge Computing',
+      'AI',
+      'Machine Learning',
+      '5G',
+      'IoT',
+      'Cloud Computing',
+    ],
+    integrations: [
+      'AWS Greengrass',
+      'Azure IoT Edge',
+      'Google Cloud IoT',
+      'Kubernetes',
+      'Docker',
+    ],
     roi: '350% within 15 months',
-    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'FogHorn'],
+    competitors: [
+      'AWS Greengrass',
+      'Azure IoT Edge',
+      'Google Cloud IoT',
+      'FogHorn',
+    ],
     growthRate: '60% annually',
     variant: 'edge-futuristic',
     realImplementation: true,
-    implementationDetails: 'Advanced edge computing platform with AI capabilities and real-time processing',
+    implementationDetails:
+      'Advanced edge computing platform with AI capabilities and real-time processing',
     launchDate: '2025-01-28',
     customers: 1250,
     rating: 4.7,
-    reviews: 234
+    reviews: 234,
   },
 
   // Quantum-Ready Database Platform
@@ -329,14 +407,15 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
     id: 'quantum-ready-database-platform',
     name: 'Quantum-Ready Database Platform',
     tagline: 'Future-proof database platform ready for quantum computing',
-    description: 'Next-generation database platform designed to work seamlessly with both classical and quantum computing, providing superior performance, security, and scalability for modern applications.',
+    description:
+      'Next-generation database platform designed to work seamlessly with both classical and quantum computing, providing superior performance, security, and scalability for modern applications.',
     category: 'Database & Quantum Computing',
     type: 'IT Service',
     pricing: {
       starter: '$89/month',
       professional: '$249/month',
       enterprise: '$599/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Quantum-ready architecture',
@@ -350,7 +429,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'API for applications',
       'Multi-model support',
       'Cloud-native design',
-      'White-label solutions'
+      'White-label solutions',
     ],
     benefits: [
       'Future-proof architecture',
@@ -360,7 +439,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Reduced costs',
       'Easier maintenance',
       'Quantum advantage',
-      'Competitive edge'
+      'Competitive edge',
     ],
     useCases: [
       'Financial applications',
@@ -370,29 +449,45 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Healthcare databases',
       'Government systems',
       'Research institutions',
-      'Technology companies'
+      'Technology companies',
     ],
     marketSize: '$3.8B by 2025',
-    targetAudience: 'Database administrators, data architects, developers, IT managers',
-    competitiveAdvantage: 'Quantum-ready architecture with hybrid classical-quantum capabilities and advanced security',
+    targetAudience:
+      'Database administrators, data architects, developers, IT managers',
+    competitiveAdvantage:
+      'Quantum-ready architecture with hybrid classical-quantum capabilities and advanced security',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/quantum-ready-database-platform',
     realService: true,
-    technology: ['Quantum Computing', 'Database Technology', 'AI', 'Machine Learning', 'Cloud Computing'],
-    integrations: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'AWS RDS', 'Azure SQL'],
+    technology: [
+      'Quantum Computing',
+      'Database Technology',
+      'AI',
+      'Machine Learning',
+      'Cloud Computing',
+    ],
+    integrations: [
+      'PostgreSQL',
+      'MongoDB',
+      'Redis',
+      'Elasticsearch',
+      'AWS RDS',
+      'Azure SQL',
+    ],
     roi: '300% within 18 months',
     competitors: ['Oracle', 'Microsoft SQL Server', 'PostgreSQL', 'MongoDB'],
     growthRate: '55% annually',
     variant: 'quantum-futuristic',
     realImplementation: true,
-    implementationDetails: 'Advanced database platform with quantum-ready architecture and hybrid computing capabilities',
+    implementationDetails:
+      'Advanced database platform with quantum-ready architecture and hybrid computing capabilities',
     launchDate: '2025-02-01',
     customers: 950,
     rating: 4.8,
-    reviews: 178
+    reviews: 178,
   },
 
   // Autonomous Data Center Management
@@ -400,14 +495,15 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
     id: 'autonomous-data-center-management',
     name: 'Autonomous Data Center Management',
     tagline: 'AI-powered data center automation and optimization',
-    description: 'Intelligent data center management platform that uses AI and machine learning to automate operations, optimize performance, and reduce costs while ensuring maximum uptime and efficiency.',
+    description:
+      'Intelligent data center management platform that uses AI and machine learning to automate operations, optimize performance, and reduce costs while ensuring maximum uptime and efficiency.',
     category: 'Data Center & AI',
     type: 'IT Service',
     pricing: {
       starter: '$299/month',
       professional: '$799/month',
       enterprise: '$1999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'AI-powered automation',
@@ -421,7 +517,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Real-time analytics',
       'API for integration',
       'Mobile app access',
-      'White-label solutions'
+      'White-label solutions',
     ],
     benefits: [
       '40% reduction in operational costs',
@@ -431,7 +527,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Better capacity utilization',
       'Enhanced security',
       'Faster incident response',
-      'Cost optimization'
+      'Cost optimization',
     ],
     useCases: [
       'Enterprise data centers',
@@ -441,29 +537,46 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Healthcare organizations',
       'Government agencies',
       'Educational institutions',
-      'Technology companies'
+      'Technology companies',
     ],
     marketSize: '$5.2B by 2025',
-    targetAudience: 'Data center managers, IT directors, facility managers, CTOs',
-    competitiveAdvantage: 'AI-powered automation with predictive maintenance and intelligent optimization',
+    targetAudience:
+      'Data center managers, IT directors, facility managers, CTOs',
+    competitiveAdvantage:
+      'AI-powered automation with predictive maintenance and intelligent optimization',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/autonomous-data-center-management',
     realService: true,
-    technology: ['AI', 'Machine Learning', 'IoT', 'Big Data', 'Cloud Computing', 'Automation'],
-    integrations: ['VMware', 'Hyper-V', 'OpenStack', 'Kubernetes', 'Docker', 'Monitoring tools'],
+    technology: [
+      'AI',
+      'Machine Learning',
+      'IoT',
+      'Big Data',
+      'Cloud Computing',
+      'Automation',
+    ],
+    integrations: [
+      'VMware',
+      'Hyper-V',
+      'OpenStack',
+      'Kubernetes',
+      'Docker',
+      'Monitoring tools',
+    ],
     roi: '500% within 24 months',
     competitors: ['VMware', 'Microsoft', 'IBM', 'HPE'],
     growthRate: '65% annually',
     variant: 'itsm-futuristic',
     realImplementation: true,
-    implementationDetails: 'AI-powered data center management platform with automated operations and optimization',
+    implementationDetails:
+      'AI-powered data center management platform with automated operations and optimization',
     launchDate: '2025-02-05',
     customers: 1350,
     rating: 4.9,
-    reviews: 267
+    reviews: 267,
   },
 
   // Blockchain Enterprise Integration Platform
@@ -471,14 +584,15 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
     id: 'blockchain-enterprise-integration-platform',
     name: 'Blockchain Enterprise Integration Platform',
     tagline: 'Seamless blockchain integration for enterprise applications',
-    description: 'Comprehensive platform that enables enterprises to easily integrate blockchain technology into their existing systems, providing transparency, security, and efficiency for business processes.',
+    description:
+      'Comprehensive platform that enables enterprises to easily integrate blockchain technology into their existing systems, providing transparency, security, and efficiency for business processes.',
     category: 'Blockchain & Enterprise',
     type: 'IT Service',
     pricing: {
       starter: '$149/month',
       professional: '$399/month',
       enterprise: '$999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Multi-blockchain support',
@@ -492,7 +606,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Analytics dashboard',
       'Custom development',
       'Training and support',
-      'White-label solutions'
+      'White-label solutions',
     ],
     benefits: [
       'Enhanced transparency',
@@ -502,7 +616,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Better compliance',
       'Automated processes',
       'Competitive advantage',
-      'Future-ready technology'
+      'Future-ready technology',
     ],
     useCases: [
       'Supply chain management',
@@ -512,29 +626,48 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Voting systems',
       'Identity management',
       'Intellectual property',
-      'Energy trading'
+      'Energy trading',
     ],
     marketSize: '$4.3B by 2025',
-    targetAudience: 'Enterprise architects, blockchain developers, business analysts, IT managers',
-    competitiveAdvantage: 'Multi-blockchain support with enterprise integration and comprehensive security',
+    targetAudience:
+      'Enterprise architects, blockchain developers, business analysts, IT managers',
+    competitiveAdvantage:
+      'Multi-blockchain support with enterprise integration and comprehensive security',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/blockchain-enterprise-integration-platform',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'AI', 'Cloud Computing', 'API Integration'],
-    integrations: ['Ethereum', 'Hyperledger', 'Corda', 'Enterprise systems', 'Cloud platforms'],
+    technology: [
+      'Blockchain',
+      'Smart Contracts',
+      'AI',
+      'Cloud Computing',
+      'API Integration',
+    ],
+    integrations: [
+      'Ethereum',
+      'Hyperledger',
+      'Corda',
+      'Enterprise systems',
+      'Cloud platforms',
+    ],
     roi: '400% within 18 months',
-    competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain'],
+    competitors: [
+      'IBM Blockchain',
+      'Microsoft Azure Blockchain',
+      'Amazon Managed Blockchain',
+    ],
     growthRate: '70% annually',
     variant: 'blockchain-futuristic',
     realImplementation: true,
-    implementationDetails: 'Advanced blockchain platform with enterprise integration and multi-chain support',
+    implementationDetails:
+      'Advanced blockchain platform with enterprise integration and multi-chain support',
     launchDate: '2025-02-08',
     customers: 890,
     rating: 4.8,
-    reviews: 156
+    reviews: 156,
   },
 
   // AI-Powered IT Service Management
@@ -542,14 +675,15 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
     id: 'ai-powered-it-service-management',
     name: 'AI-Powered IT Service Management',
     tagline: 'Intelligent IT service management with AI automation',
-    description: 'Advanced ITSM platform that leverages AI and machine learning to automate service requests, predict issues, and optimize IT operations for improved efficiency and user satisfaction.',
+    description:
+      'Advanced ITSM platform that leverages AI and machine learning to automate service requests, predict issues, and optimize IT operations for improved efficiency and user satisfaction.',
     category: 'ITSM & AI',
     type: 'IT Service',
     pricing: {
       starter: '$99/month',
       professional: '$249/month',
       enterprise: '$599/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'AI-powered automation',
@@ -563,7 +697,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Asset management',
       'Mobile app access',
       'API for integration',
-      'White-label solutions'
+      'White-label solutions',
     ],
     benefits: [
       '60% faster ticket resolution',
@@ -573,7 +707,7 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Proactive issue prevention',
       'Cost optimization',
       'Enhanced compliance',
-      'Data-driven decisions'
+      'Data-driven decisions',
     ],
     useCases: [
       'IT departments',
@@ -583,28 +717,50 @@ export const advancedITServices2025V2: AdvancedITService2025V2[] = [
       'Managed service providers',
       'Educational institutions',
       'Healthcare IT',
-      'Government IT'
+      'Government IT',
     ],
     marketSize: '$6.8B by 2025',
-    targetAudience: 'IT service managers, help desk managers, IT directors, service desk analysts',
-    competitiveAdvantage: 'AI-powered automation with predictive analytics and intelligent service management',
+    targetAudience:
+      'IT service managers, help desk managers, IT directors, service desk analysts',
+    competitiveAdvantage:
+      'AI-powered automation with predictive analytics and intelligent service management',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/ai-powered-it-service-management',
     realService: true,
-    technology: ['AI', 'Machine Learning', 'ITSM', 'Automation', 'Cloud Computing', 'Analytics'],
-    integrations: ['ServiceNow', 'Jira Service Management', 'Freshservice', 'Zendesk', 'Slack', 'Teams'],
+    technology: [
+      'AI',
+      'Machine Learning',
+      'ITSM',
+      'Automation',
+      'Cloud Computing',
+      'Analytics',
+    ],
+    integrations: [
+      'ServiceNow',
+      'Jira Service Management',
+      'Freshservice',
+      'Zendesk',
+      'Slack',
+      'Teams',
+    ],
     roi: '350% within 12 months',
-    competitors: ['ServiceNow', 'Jira Service Management', 'Freshservice', 'Zendesk'],
+    competitors: [
+      'ServiceNow',
+      'Jira Service Management',
+      'Freshservice',
+      'Zendesk',
+    ],
     growthRate: '55% annually',
     variant: 'itsm-futuristic',
     realImplementation: true,
-    implementationDetails: 'AI-powered ITSM platform with automated service management and predictive analytics',
+    implementationDetails:
+      'AI-powered ITSM platform with automated service management and predictive analytics',
     launchDate: '2025-02-12',
     customers: 2100,
     rating: 4.7,
-    reviews: 445
-  }
+    reviews: 445,
+  },
 ];
