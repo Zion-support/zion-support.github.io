@@ -350,6 +350,13 @@ export default function HomePage() {
                 <p className='text-green-800 mt-2'>Navigate the new funding landscape and position your AI startup for success.</p>
               </div>
             </Link>
+            <Link href='/blog/zero-trust-ai-security-2025' className='group'>
+              <div className='rounded-lg border border-purple-200 bg-purple-50 p-6 hover:bg-purple-100 transition-colors'>
+                <div className='text-sm font-medium text-purple-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>Zero-Trust for AI Systems: Security Guide 2025</h3>
+                <p className='text-purple-800 mt-2'>Practical controls for prompts, tools, retrieval, and outputs in production.</p>
+              </div>
+            </Link>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card
@@ -375,6 +382,12 @@ export default function HomePage() {
               href='/blog/genai-observability-checklist-2025'
               description='Telemetry that matters across prompts, tools, retrieval, and costs.'
               icon='🔍'
+            />
+            <Card
+              title='Zero-Trust AI Security: A Practical 2025 Guide'
+              href='/blog/zero-trust-ai-security-2025'
+              description='Layered defenses to keep AI systems safe in production.'
+              icon='🛡️'
             />
           </div>
         </div>
