@@ -107,6 +107,31 @@ export default function Landing() {
           </div>
         </section>
 
+        {/* New & Noteworthy */}
+        <section className="mx-auto max-w-7xl px-6 pb-16">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-bold tracking-wide text-white/90">New & Noteworthy</h2>
+            <p className="mt-2 text-white/70 text-sm">Freshly launched capabilities you can adopt today.</p>
+          </div>
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {[ 
+              { title: 'AI API Security Gateway', desc: 'Autonomous protection and schema drift detection.', href: '/services' },
+              { title: 'GenAI Support Studio', desc: 'Multimodal agents across chat, email & voice.', href: '/services' },
+              { title: 'Realtime Analytics Lakehouse', desc: 'Sub‑second analytics for streaming + batch.', href: '/services' },
+              { title: 'Edge Observability Kit', desc: 'Lightweight telemetry and remote profiling.', href: '/services' },
+            ].map((item) => (
+              <Link key={item.title} href={item.href}>
+                <a className="group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30 transition-colors">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <h3 className="text-base font-semibold">{item.title}</h3>
+                  <p className="mt-1 text-sm text-white/75">{item.desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm text-cyan-300">View services <span>→</span></span>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Benefits */}
         <section className="mx-auto max-w-7xl px-6 pb-20">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>

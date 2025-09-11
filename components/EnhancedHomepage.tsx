@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
   ArrowRight,
+  ArrowRight, 
   TrendingUp, 
   Brain, 
   Shield, 
@@ -31,6 +32,15 @@ import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-
 import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
 import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+// Import service data from available files
+import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025';
+import { zionTechServices } from '../data/enhanced-zion-tech-services-2025';
+import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
+import { innovativeAIServicesExpansion } from '../data/2025-innovative-ai-services-expansion';
+import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
+import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
+import { innovative2025AIAutonomousEcosystem } from '../data/2025-innovative-ai-autonomous-ecosystem';
+import { comprehensiveServicesExpansion } from '../data/2025-comprehensive-services-expansion';
 
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,6 +62,7 @@ const EnhancedHomepage: React.FC = () => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
+    
     // Show performance monitor after 5 seconds
     const performanceTimer = setTimeout(() => {
       setShowPerformanceMonitor(true);
@@ -76,6 +87,14 @@ const EnhancedHomepage: React.FC = () => {
     ...innovativeAIServicesExpansion2025V3,
     ...innovative2025ITInfrastructureServices,
     ...innovative2025AIAutonomousServices
+    ...enhancedMicroSaasServices,
+    ...zionTechServices,
+    ...innovativeAIServicesEnhanced2025,
+    ...innovativeAIServicesExpansion,
+    ...innovativeAIServices2025ExpansionV2,
+    ...cuttingEdgeITInfrastructureInnovations2025,
+    ...innovative2025AIAutonomousEcosystem,
+    ...comprehensiveServicesExpansion
   ];
 
   // Filter services by category
@@ -212,7 +231,7 @@ const EnhancedHomepage: React.FC = () => {
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div
+            <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}
             >
@@ -329,7 +348,7 @@ const EnhancedHomepage: React.FC = () => {
         </motion.section>
 
         {/* Services Grid */}
-        <motion.section
+        <motion.section 
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -446,7 +465,7 @@ const EnhancedHomepage: React.FC = () => {
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 <motion.div
                   key={currentServiceIndex}
                   initial={{ opacity: 0, x: 20 }}

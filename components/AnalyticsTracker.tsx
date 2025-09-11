@@ -1,143 +1,135 @@
-import React, { useEffect, useCallback } from 'react';
-import { useRouter } from 'next/router';
-
-// Global type declarations
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
+import React, { useEffect } from 'react';
 
 interface AnalyticsTrackerProps {
-  pageTitle?: string;
-  pagePath?: string;
-  customEvents?: Array<{ action: string; parameters: Record<string, unknown> }>;
+  pageName: string;
+  customEvents?: Array<{
+    event: string;
+    data?: Record<string, any>;
+  }>;
 }
 
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
-  pageTitle,
-  pagePath,
-  customEvents = []
-}) => {
-  const router = useRouter();
-
-  // Track page view
-  const trackPageView = useCallback((title: string, path: string) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics 4
-      if (window.gtag) {
-        window.gtag('config', 'G-XXXXXXXXXX', {
-          page_title: title,
+// Analytics tracking component with performance monitoring
+const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ pageName, customEvents = [] }) => {
+  useEffect(() => {
+    // Track page view
+    const trackPageView = () => {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: pageName,
           page_location: window.location.href,
-          page_path: path
+          page_path: window.location.pathname,
         });
       }
-
-      // Custom analytics
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Page View:', { title, path, url: window.location.href });
-      }
-    }
-  }, []);
-
-  // Helper function to track events
-  const trackEvent = useCallback((action: string, parameters: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', action, {
-        ...parameters,
-        timestamp: Date.now(),
-        page_url: window.location.href
-      });
-    }
-  }, []);
-
-  // Track custom events
-  const trackCustomEvent = useCallback((eventName: string, parameters?: Record<string, unknown>) => {
-    trackEvent(eventName, parameters || {});
-  }, [trackEvent]);
-
-  // Track interaction events
-  const trackInteraction = useCallback((event: Event) => {
-    const target = event.target as HTMLElement;
-    if (target) {
-      const tagName = target.tagName.toLowerCase();
-      const text = target.textContent?.trim() || '';
-      const href = (target as HTMLAnchorElement).href;
-      
-      trackEvent('Interaction', {
-        element: tagName,
-        text: text.substring(0, 50),
-        href: href || undefined,
-        timestamp: Date.now()
-      });
-    }
-  }, [trackEvent]);
-
-  // Track viewport changes
-  const trackViewport = useCallback(() => {
-    trackEvent('ViewportChange', {
-      width: window.innerWidth,
-      height: window.innerHeight,
-      orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait'
-    });
-  }, [trackEvent]);
-
-  // Track performance metrics
-  const trackMetric = useCallback((name: string, value: number) => {
-    trackEvent('Performance', {
-      metric: name,
-      value: Math.round(value * 100) / 100,
-      timestamp: Date.now()
-    });
-  }, [trackEvent]);
-
-  // Initialize analytics
-  useEffect(() => {
-    if (pageTitle && pagePath) {
-      trackPageView(pageTitle, pagePath);
-    }
+    };
 
     // Track custom events
-    customEvents.forEach(event => {
-      trackCustomEvent(event.action, event.parameters);
-    });
-
-    // Add event listeners
-    document.addEventListener('click', trackInteraction);
-    document.addEventListener('scroll', trackInteraction);
-    document.addEventListener('keydown', trackInteraction);
-
-    // Track viewport
-    trackViewport();
-    window.addEventListener('resize', trackViewport);
-
-    // Cleanup function
-    return () => {
-      document.removeEventListener('click', trackInteraction);
-      document.removeEventListener('scroll', trackInteraction);
-      document.removeEventListener('keydown', trackInteraction);
-      window.removeEventListener('resize', trackViewport);
-    };
-  }, [pageTitle, pagePath, customEvents, trackPageView, trackCustomEvent, trackInteraction, trackViewport]);
-
-  // Track route changes
-  useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      trackEvent('RouteChange', {
-        from: router.asPath,
-        to: url,
-        timestamp: Date.now()
+    const trackCustomEvents = () => {
+      customEvents.forEach(({ event, data }) => {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', event, data);
+        }
       });
     };
 
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router, trackEvent]);
+    // Performance monitoring
+    const trackPerformance = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+            const paint = performance.getEntriesByType('paint');
+            
+            const metrics = {
+              page_load_time: navigation.loadEventEnd - navigation.fetchStart,
+              dom_content_loaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+              first_paint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+              first_contentful_paint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+            };
 
-  // This component doesn't render anything
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'page_performance', {
+                page_name: pageName,
+                ...metrics
+              });
+            }
+          }, 0);
+        });
+      }
+    };
+
+    // Core Web Vitals tracking
+    const trackCoreWebVitals = () => {
+      if (typeof window !== 'undefined') {
+        import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+          onCLS((metric) => {
+            if (window.gtag) {
+              window.gtag('event', 'web_vital', {
+                name: 'CLS',
+                value: Math.round(metric.value * 1000),
+                page_name: pageName
+              });
+            }
+          });
+
+          onINP((metric) => {
+            if (window.gtag) {
+              window.gtag('event', 'web_vital', {
+                name: 'INP',
+                value: Math.round(metric.value),
+                page_name: pageName
+              });
+            }
+          });
+
+          onFCP((metric) => {
+            if (window.gtag) {
+              window.gtag('event', 'web_vital', {
+                name: 'FCP',
+                value: Math.round(metric.value),
+                page_name: pageName
+              });
+            }
+          });
+
+          onLCP((metric) => {
+            if (window.gtag) {
+              window.gtag('event', 'web_vital', {
+                name: 'LCP',
+                value: Math.round(metric.value),
+                page_name: pageName
+              });
+            }
+          });
+
+          onTTFB((metric) => {
+            if (window.gtag) {
+              window.gtag('event', 'web_vital', {
+                name: 'TTFB',
+                value: Math.round(metric.value),
+                page_name: pageName
+              });
+            }
+          });
+        }).catch(() => {
+          // Silently fail if web-vitals is not available
+        });
+      }
+    };
+
+    trackPageView();
+    trackCustomEvents();
+    trackPerformance();
+    trackCoreWebVitals();
+  }, [pageName, customEvents]);
+
   return null;
 };
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
 
 export default AnalyticsTracker;
