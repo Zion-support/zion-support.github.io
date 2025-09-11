@@ -12,19 +12,12 @@
     "categories": {
       "home": {
         "count": 1,
-        "routes": [
-          "/"
-        ],
+        "routes": ["/"],
         "averagePriority": "1.00"
       },
       "company": {
         "count": 4,
-        "routes": [
-          "/about",
-          "/contact",
-          "/leadership",
-          "/careers"
-        ],
+        "routes": ["/about", "/contact", "/leadership", "/careers"],
         "averagePriority": "0.65"
       },
       "other": {
@@ -61,12 +54,7 @@
       },
       "content": {
         "count": 4,
-        "routes": [
-          "/news",
-          "/blog",
-          "/white-papers",
-          "/case-studies"
-        ],
+        "routes": ["/news", "/blog", "/white-papers", "/case-studies"],
         "averagePriority": "0.57"
       },
       "showcase": {
@@ -302,15 +290,8 @@
   "navigationAnalysis": {
     "totalRoutes": 113,
     "categories": {
-      "home": [
-        "/"
-      ],
-      "company": [
-        "/about",
-        "/contact",
-        "/leadership",
-        "/careers"
-      ],
+      "home": ["/"],
+      "company": ["/about", "/contact", "/leadership", "/careers"],
       "other": [
         "/services",
         "/ai-services",
@@ -339,12 +320,7 @@
         "/request-quote",
         "/marketplace"
       ],
-      "content": [
-        "/news",
-        "/blog",
-        "/white-papers",
-        "/case-studies"
-      ],
+      "content": ["/news", "/blog", "/white-papers", "/case-studies"],
       "showcase": [
         "/pricing",
         "/comprehensive-services-showcase-2025",
@@ -424,13 +400,7 @@
         "/solutions/iot-edge-computing",
         "/solutions/space-tech"
       ],
-      "legal": [
-        "/privacy",
-        "/terms",
-        "/cookies",
-        "/security",
-        "/compliance"
-      ]
+      "legal": ["/privacy", "/terms", "/cookies", "/security", "/compliance"]
     },
     "brokenRoutes": [],
     "warnings": [],

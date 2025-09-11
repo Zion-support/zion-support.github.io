@@ -6,7 +6,7 @@ exports.config = {
 
 exports.handler = async () => {
   const logs = [];
-  const step = (cmd) => {
+  const step = cmd => {
     try {
       logs.push(`$ ${cmd}`);
       execSync(cmd, { stdio: 'inherit', shell: true });

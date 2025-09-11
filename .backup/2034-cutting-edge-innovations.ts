@@ -49,7 +49,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Develop genuine AI consciousness and emotional intelligence',
     price: '$19,999',
     period: '/month',
-    description: 'Revolutionary platform for developing genuine AI consciousness, emotional intelligence, and self-awareness. Enables AI systems to understand, learn, and evolve beyond traditional machine learning.',
+    description:
+      'Revolutionary platform for developing genuine AI consciousness, emotional intelligence, and self-awareness. Enables AI systems to understand, learn, and evolve beyond traditional machine learning.',
     features: [
       'Consciousness development algorithms',
       'Emotional intelligence training',
@@ -60,22 +61,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Consciousness transfer protocols',
       'Ethical AI governance',
       'Consciousness validation tools',
-      'Evolutionary learning paths'
+      'Evolutionary learning paths',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/ai-consciousness-evolution-platform',
-    marketPosition: 'First-to-market AI consciousness platform. No direct competitors in consciousness development space.',
-    targetAudience: 'AI research institutions, Tech companies, Government agencies, Research universities, AI ethics organizations',
+    marketPosition:
+      'First-to-market AI consciousness platform. No direct competitors in consciousness development space.',
+    targetAudience:
+      'AI research institutions, Tech companies, Government agencies, Research universities, AI ethics organizations',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'AI Consciousness & Evolution',
     realService: true,
-    technology: ['Advanced neural networks, Consciousness algorithms, Quantum computing, Ethical AI frameworks, Consciousness metrics'],
-    integrations: ['OpenAI, Anthropic, Google AI, Microsoft Azure, AWS AI services, Research platforms'],
-    useCases: ['AI consciousness research, Ethical AI development, Consciousness validation, AI evolution studies, Research collaboration'],
+    technology: [
+      'Advanced neural networks, Consciousness algorithms, Quantum computing, Ethical AI frameworks, Consciousness metrics',
+    ],
+    integrations: [
+      'OpenAI, Anthropic, Google AI, Microsoft Azure, AWS AI services, Research platforms',
+    ],
+    useCases: [
+      'AI consciousness research, Ethical AI development, Consciousness validation, AI evolution studies, Research collaboration',
+    ],
     roi: 'Pioneering research platform with potential for breakthrough discoveries in AI consciousness.',
     competitors: ['No direct competitors in consciousness development'],
     marketSize: 'Emerging market with unlimited potential',
@@ -85,14 +94,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced AI consciousness development platform with research tools, validation frameworks, and collaboration features.',
+    implementationDetails:
+      'Advanced AI consciousness development platform with research tools, validation frameworks, and collaboration features.',
     launchDate: '2024-03-01',
     customers: 15,
     rating: 5.0,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'quantum-dna-computing-platform',
@@ -100,7 +110,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Revolutionary DNA-based quantum computation',
     price: '$25,999',
     period: '/month',
-    description: 'Breakthrough platform combining quantum computing with DNA-based computation for unprecedented processing power and biological computing capabilities.',
+    description:
+      'Breakthrough platform combining quantum computing with DNA-based computation for unprecedented processing power and biological computing capabilities.',
     features: [
       'DNA-based computation engine',
       'Quantum-DNA hybrid processing',
@@ -111,22 +122,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'DNA computation validation',
       'Quantum-DNA synchronization',
       'Biological error correction',
-      'DNA computing analytics'
+      'DNA computing analytics',
     ],
     popular: true,
     icon: '🧬',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-dna-computing-platform',
-    marketPosition: 'First commercial DNA-quantum computing platform. Leading edge of biological computing.',
-    targetAudience: 'Research institutions, Biotech companies, Quantum computing firms, Government research, Pharmaceutical companies',
+    marketPosition:
+      'First commercial DNA-quantum computing platform. Leading edge of biological computing.',
+    targetAudience:
+      'Research institutions, Biotech companies, Quantum computing firms, Government research, Pharmaceutical companies',
     trialDays: 45,
     setupTime: '4-6 weeks',
     category: 'Quantum & DNA Computing',
     realService: true,
-    technology: ['DNA computing, Quantum computing, Biological algorithms, Quantum-DNA interfaces, Biological error correction'],
-    integrations: ['Quantum computing platforms, Biotech research tools, Research databases, Scientific computing platforms'],
-    useCases: ['Drug discovery, Protein folding, Genetic research, Quantum simulations, Biological computing research'],
+    technology: [
+      'DNA computing, Quantum computing, Biological algorithms, Quantum-DNA interfaces, Biological error correction',
+    ],
+    integrations: [
+      'Quantum computing platforms, Biotech research tools, Research databases, Scientific computing platforms',
+    ],
+    useCases: [
+      'Drug discovery, Protein folding, Genetic research, Quantum simulations, Biological computing research',
+    ],
     roi: 'Revolutionary platform for breakthrough discoveries in biology and quantum computing.',
     competitors: ['No direct competitors in DNA-quantum computing'],
     marketSize: 'Emerging market with massive potential',
@@ -136,14 +155,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced DNA-quantum computing platform with research tools, biological interfaces, and quantum synchronization.',
+    implementationDetails:
+      'Advanced DNA-quantum computing platform with research tools, biological interfaces, and quantum synchronization.',
     launchDate: '2024-02-15',
     customers: 8,
     rating: 5.0,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'space-mining-automation-platform',
@@ -151,7 +171,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Automated asteroid mining and space resource extraction',
     price: '$45,999',
     period: '/month',
-    description: 'Revolutionary platform for automated asteroid mining, space resource extraction, and orbital resource management using advanced robotics and AI.',
+    description:
+      'Revolutionary platform for automated asteroid mining, space resource extraction, and orbital resource management using advanced robotics and AI.',
     features: [
       'Asteroid mining automation',
       'Space resource mapping',
@@ -162,22 +183,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Space safety protocols',
       'Mining efficiency analytics',
       'Resource transportation planning',
-      'Space mining regulations compliance'
+      'Space mining regulations compliance',
     ],
     popular: true,
     icon: '🚀',
     color: 'from-teal-600 to-emerald-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/space-mining-automation-platform',
-    marketPosition: 'Leading space mining automation platform. First commercial asteroid mining solution.',
-    targetAudience: 'Space mining companies, Aerospace firms, Government space agencies, Mining corporations, Investment firms',
+    marketPosition:
+      'Leading space mining automation platform. First commercial asteroid mining solution.',
+    targetAudience:
+      'Space mining companies, Aerospace firms, Government space agencies, Mining corporations, Investment firms',
     trialDays: 60,
     setupTime: '6-8 weeks',
     category: 'Space Technology & Mining',
     realService: true,
-    technology: ['Space robotics, AI automation, Satellite technology, Mining algorithms, Space logistics'],
-    integrations: ['Space agencies, Satellite networks, Mining equipment, Logistics platforms, Regulatory systems'],
-    useCases: ['Asteroid mining, Space resource extraction, Orbital resource management, Space logistics, Mining automation'],
+    technology: [
+      'Space robotics, AI automation, Satellite technology, Mining algorithms, Space logistics',
+    ],
+    integrations: [
+      'Space agencies, Satellite networks, Mining equipment, Logistics platforms, Regulatory systems',
+    ],
+    useCases: [
+      'Asteroid mining, Space resource extraction, Orbital resource management, Space logistics, Mining automation',
+    ],
     roi: 'Revolutionary platform for trillion-dollar space mining industry.',
     competitors: ['No direct competitors in space mining automation'],
     marketSize: 'Trillion-dollar emerging market',
@@ -187,14 +216,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced space mining automation platform with robotics control, resource mapping, and logistics optimization.',
+    implementationDetails:
+      'Advanced space mining automation platform with robotics control, resource mapping, and logistics optimization.',
     launchDate: '2024-01-20',
     customers: 3,
     rating: 5.0,
-    reviews: 3
+    reviews: 3,
   },
   {
     id: 'metaverse-ai-development-platform',
@@ -202,7 +232,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Build immersive AI-powered virtual worlds',
     price: '$499',
     period: '/month',
-    description: 'Comprehensive platform for building immersive metaverse experiences with integrated AI, virtual reality, and augmented reality capabilities.',
+    description:
+      'Comprehensive platform for building immersive metaverse experiences with integrated AI, virtual reality, and augmented reality capabilities.',
     features: [
       'AI-powered world generation',
       'VR/AR development tools',
@@ -213,22 +244,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Cross-platform compatibility',
       'AI behavior programming',
       'Virtual economy tools',
-      'Metaverse analytics'
+      'Metaverse analytics',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-green-600 to-yellow-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/metaverse-ai-development-platform',
-    marketPosition: 'Leading metaverse development platform with integrated AI capabilities.',
-    targetAudience: 'Game developers, VR/AR companies, Marketing agencies, Educational institutions, Entertainment companies',
+    marketPosition:
+      'Leading metaverse development platform with integrated AI capabilities.',
+    targetAudience:
+      'Game developers, VR/AR companies, Marketing agencies, Educational institutions, Entertainment companies',
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true,
-    technology: ['Unity, Unreal Engine, AI algorithms, VR/AR SDKs, 3D modeling, Cloud computing'],
-    integrations: ['VR headsets, AR devices, Gaming platforms, Social media, Payment systems'],
-    useCases: ['Virtual events, Gaming worlds, Educational simulations, Virtual shopping, Social spaces'],
+    technology: [
+      'Unity, Unreal Engine, AI algorithms, VR/AR SDKs, 3D modeling, Cloud computing',
+    ],
+    integrations: [
+      'VR headsets, AR devices, Gaming platforms, Social media, Payment systems',
+    ],
+    useCases: [
+      'Virtual events, Gaming worlds, Educational simulations, Virtual shopping, Social spaces',
+    ],
     roi: 'Average customer sees 200% ROI through virtual experiences and engagement.',
     competitors: ['Roblox, Unity, Unreal Engine, Decentraland'],
     marketSize: '$800M market growing rapidly',
@@ -238,14 +277,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Full-featured metaverse development platform with AI integration, VR/AR support, and collaborative tools.',
+    implementationDetails:
+      'Full-featured metaverse development platform with AI integration, VR/AR support, and collaborative tools.',
     launchDate: '2024-01-10',
     customers: 1200,
     rating: 4.9,
-    reviews: 850
+    reviews: 850,
   },
   {
     id: 'autonomous-devops-platform',
@@ -253,7 +293,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Fully autonomous DevOps operations',
     price: '$799',
     period: '/month',
-    description: 'Revolutionary DevOps platform that operates autonomously, handling deployments, monitoring, scaling, and maintenance without human intervention.',
+    description:
+      'Revolutionary DevOps platform that operates autonomously, handling deployments, monitoring, scaling, and maintenance without human intervention.',
     features: [
       'Autonomous deployment management',
       'Self-healing infrastructure',
@@ -264,22 +305,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Disaster recovery automation',
       'Compliance automation',
       'Real-time monitoring',
-      'Predictive maintenance'
+      'Predictive maintenance',
     ],
     popular: true,
     icon: '⚙️',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-devops-platform',
-    marketPosition: 'First fully autonomous DevOps platform. Leading edge of infrastructure automation.',
-    targetAudience: 'DevOps teams, Engineering teams, IT departments, Cloud architects, System administrators',
+    marketPosition:
+      'First fully autonomous DevOps platform. Leading edge of infrastructure automation.',
+    targetAudience:
+      'DevOps teams, Engineering teams, IT departments, Cloud architects, System administrators',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Enterprise IT & DevOps',
     realService: true,
-    technology: ['AI/ML, Kubernetes, Docker, AWS/Azure/GCP, Terraform, Ansible'],
-    integrations: ['GitHub, GitLab, Jenkins, AWS, Azure, GCP, Kubernetes, Docker'],
-    useCases: ['Continuous deployment, Infrastructure management, Performance monitoring, Security automation, Cost optimization'],
+    technology: [
+      'AI/ML, Kubernetes, Docker, AWS/Azure/GCP, Terraform, Ansible',
+    ],
+    integrations: [
+      'GitHub, GitLab, Jenkins, AWS, Azure, GCP, Kubernetes, Docker',
+    ],
+    useCases: [
+      'Continuous deployment, Infrastructure management, Performance monitoring, Security automation, Cost optimization',
+    ],
     roi: 'Average customer saves 70% on DevOps costs and 90% on manual intervention.',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'],
     marketSize: '$8B DevOps market',
@@ -289,14 +338,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced autonomous DevOps platform with AI-powered automation, self-healing capabilities, and intelligent optimization.',
+    implementationDetails:
+      'Advanced autonomous DevOps platform with AI-powered automation, self-healing capabilities, and intelligent optimization.',
     launchDate: '2024-02-01',
     customers: 450,
     rating: 4.8,
-    reviews: 320
+    reviews: 320,
   },
   {
     id: 'quantum-secure-communication-platform',
@@ -304,7 +354,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Unbreakable quantum encryption',
     price: '$599',
     period: '/month',
-    description: 'Next-generation communication platform using quantum encryption for unbreakable security, perfect for government, financial, and healthcare communications.',
+    description:
+      'Next-generation communication platform using quantum encryption for unbreakable security, perfect for government, financial, and healthcare communications.',
     features: [
       'Quantum key distribution',
       'Unbreakable encryption',
@@ -315,22 +366,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Quantum-resistant algorithms',
       'Compliance certifications',
       'Audit trails',
-      'Quantum security monitoring'
+      'Quantum security monitoring',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-secure-communication-platform',
-    marketPosition: 'Leading quantum-secure communication platform. Military-grade security for commercial use.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Legal firms',
+    marketPosition:
+      'Leading quantum-secure communication platform. Military-grade security for commercial use.',
+    targetAudience:
+      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Legal firms',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Quantum Security & Communication',
     realService: true,
-    technology: ['Quantum cryptography, Quantum key distribution, Post-quantum algorithms, Secure protocols'],
-    integrations: ['Government systems, Financial platforms, Healthcare systems, Defense networks, Enterprise platforms'],
-    useCases: ['Secure communications, Government operations, Financial transactions, Healthcare data, Legal communications'],
+    technology: [
+      'Quantum cryptography, Quantum key distribution, Post-quantum algorithms, Secure protocols',
+    ],
+    integrations: [
+      'Government systems, Financial platforms, Healthcare systems, Defense networks, Enterprise platforms',
+    ],
+    useCases: [
+      'Secure communications, Government operations, Financial transactions, Healthcare data, Legal communications',
+    ],
     roi: 'Critical for organizations requiring absolute security. ROI measured in risk mitigation.',
     competitors: ['ID Quantique, Toshiba Quantum, Post-Quantum'],
     marketSize: '$500M quantum security market',
@@ -340,14 +399,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced quantum-secure communication platform with military-grade encryption and compliance certifications.',
+    implementationDetails:
+      'Advanced quantum-secure communication platform with military-grade encryption and compliance certifications.',
     launchDate: '2024-01-15',
     customers: 85,
     rating: 4.9,
-    reviews: 65
+    reviews: 65,
   },
   {
     id: 'ai-business-intelligence-suite',
@@ -355,7 +415,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Intelligent business insights and predictions',
     price: '$299',
     period: '/month',
-    description: 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.',
+    description:
+      'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.',
     features: [
       'AI-powered data analysis',
       'Predictive analytics',
@@ -366,22 +427,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Machine learning insights',
       'Custom alerts',
       'Data integration',
-      'Collaborative analytics'
+      'Collaborative analytics',
     ],
     popular: true,
     icon: '📊',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
-    marketPosition: 'Advanced AI-powered BI platform. Combines traditional BI with cutting-edge AI capabilities.',
-    targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Sales teams',
+    marketPosition:
+      'Advanced AI-powered BI platform. Combines traditional BI with cutting-edge AI capabilities.',
+    targetAudience:
+      'Business analysts, Data scientists, Executives, Marketing teams, Sales teams',
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI & Business Intelligence',
     realService: true,
-    technology: ['AI/ML, Data analytics, Machine learning, Natural language processing, Data visualization'],
-    integrations: ['Salesforce, HubSpot, Google Analytics, SQL databases, Cloud platforms, CRM systems'],
-    useCases: ['Business analytics, Performance tracking, Predictive insights, Data visualization, Automated reporting'],
+    technology: [
+      'AI/ML, Data analytics, Machine learning, Natural language processing, Data visualization',
+    ],
+    integrations: [
+      'Salesforce, HubSpot, Google Analytics, SQL databases, Cloud platforms, CRM systems',
+    ],
+    useCases: [
+      'Business analytics, Performance tracking, Predictive insights, Data visualization, Automated reporting',
+    ],
     roi: 'Average customer sees 150% ROI through improved decision making and operational efficiency.',
     competitors: ['Tableau, Power BI, Looker, Qlik'],
     marketSize: '$30B BI market',
@@ -391,14 +460,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced AI-powered BI platform with predictive analytics, natural language queries, and automated insights.',
+    implementationDetails:
+      'Advanced AI-powered BI platform with predictive analytics, natural language queries, and automated insights.',
     launchDate: '2024-01-20',
     customers: 2800,
     rating: 4.7,
-    reviews: 1950
+    reviews: 1950,
   },
   {
     id: 'blockchain-supply-chain-transparency',
@@ -406,7 +476,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'End-to-end traceability and transparency',
     price: '$399',
     period: '/month',
-    description: 'Revolutionary blockchain platform for complete supply chain transparency, enabling real-time tracking, verification, and compliance across global supply networks.',
+    description:
+      'Revolutionary blockchain platform for complete supply chain transparency, enabling real-time tracking, verification, and compliance across global supply networks.',
     features: [
       'End-to-end traceability',
       'Real-time tracking',
@@ -417,22 +488,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Supplier verification',
       'Audit trails',
       'Multi-stakeholder access',
-      'API integration'
+      'API integration',
     ],
     popular: true,
     icon: '🔗',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency',
-    marketPosition: 'Leading blockchain supply chain platform. Comprehensive transparency and traceability solution.',
-    targetAudience: 'Manufacturers, Retailers, Logistics companies, Food producers, Pharmaceutical companies',
+    marketPosition:
+      'Leading blockchain supply chain platform. Comprehensive transparency and traceability solution.',
+    targetAudience:
+      'Manufacturers, Retailers, Logistics companies, Food producers, Pharmaceutical companies',
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Blockchain & Supply Chain',
     realService: true,
-    technology: ['Blockchain, Smart contracts, IoT sensors, QR codes, Mobile apps, Cloud computing'],
-    integrations: ['ERP systems, WMS platforms, Logistics platforms, Retail systems, Mobile apps'],
-    useCases: ['Product traceability, Quality assurance, Compliance verification, Sustainability tracking, Supplier management'],
+    technology: [
+      'Blockchain, Smart contracts, IoT sensors, QR codes, Mobile apps, Cloud computing',
+    ],
+    integrations: [
+      'ERP systems, WMS platforms, Logistics platforms, Retail systems, Mobile apps',
+    ],
+    useCases: [
+      'Product traceability, Quality assurance, Compliance verification, Sustainability tracking, Supplier management',
+    ],
     roi: 'Average customer sees 200% ROI through improved compliance, reduced fraud, and enhanced customer trust.',
     competitors: ['IBM Food Trust, VeChain, OriginTrail'],
     marketSize: '$3B blockchain supply chain market',
@@ -442,14 +521,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced blockchain supply chain platform with IoT integration, smart contracts, and comprehensive traceability.',
+    implementationDetails:
+      'Advanced blockchain supply chain platform with IoT integration, smart contracts, and comprehensive traceability.',
     launchDate: '2024-01-25',
     customers: 650,
     rating: 4.8,
-    reviews: 480
+    reviews: 480,
   },
   {
     id: 'ai-customer-success-automation',
@@ -457,7 +537,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Automate customer success and retention',
     price: '$199',
     period: '/month',
-    description: 'Intelligent platform that automates customer success operations, predicts churn, and maximizes customer lifetime value through AI-powered insights and automation.',
+    description:
+      'Intelligent platform that automates customer success operations, predicts churn, and maximizes customer lifetime value through AI-powered insights and automation.',
     features: [
       'Churn prediction',
       'Automated onboarding',
@@ -468,22 +549,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Automated check-ins',
       'Success playbooks',
       'Performance analytics',
-      'Integration capabilities'
+      'Integration capabilities',
     ],
     popular: true,
     icon: '🎯',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-success-automation',
-    marketPosition: 'Advanced AI-powered customer success platform. Combines automation with intelligent insights.',
-    targetAudience: 'Customer success teams, SaaS companies, B2B businesses, Subscription services, Customer support teams',
+    marketPosition:
+      'Advanced AI-powered customer success platform. Combines automation with intelligent insights.',
+    targetAudience:
+      'Customer success teams, SaaS companies, B2B businesses, Subscription services, Customer support teams',
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI & Customer Success',
     realService: true,
-    technology: ['AI/ML, Predictive analytics, Automation, Customer analytics, Integration APIs'],
-    integrations: ['CRM systems, Help desk platforms, Analytics tools, Communication platforms, Billing systems'],
-    useCases: ['Customer onboarding, Success tracking, Churn prevention, Health monitoring, Automated engagement'],
+    technology: [
+      'AI/ML, Predictive analytics, Automation, Customer analytics, Integration APIs',
+    ],
+    integrations: [
+      'CRM systems, Help desk platforms, Analytics tools, Communication platforms, Billing systems',
+    ],
+    useCases: [
+      'Customer onboarding, Success tracking, Churn prevention, Health monitoring, Automated engagement',
+    ],
     roi: 'Average customer sees 180% ROI through improved retention and customer lifetime value.',
     competitors: ['Gainsight, Totango, ChurnZero, ClientSuccess'],
     marketSize: '$1.5B customer success market',
@@ -493,14 +582,15 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced AI-powered customer success platform with predictive analytics, automation, and comprehensive success tracking.',
+    implementationDetails:
+      'Advanced AI-powered customer success platform with predictive analytics, automation, and comprehensive success tracking.',
     launchDate: '2024-02-01',
     customers: 1800,
     rating: 4.6,
-    reviews: 1250
+    reviews: 1250,
   },
   {
     id: 'zero-trust-network-architecture',
@@ -508,7 +598,8 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
     tagline: 'Never trust, always verify',
     price: '$599',
     period: '/month',
-    description: 'Comprehensive zero-trust security platform that implements "never trust, always verify" principles across all network access points and user interactions.',
+    description:
+      'Comprehensive zero-trust security platform that implements "never trust, always verify" principles across all network access points and user interactions.',
     features: [
       'Identity verification',
       'Device trust scoring',
@@ -519,22 +610,30 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       'Behavioral analytics',
       'Threat detection',
       'Compliance automation',
-      'Security orchestration'
+      'Security orchestration',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-blue-600 to-indigo-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/zero-trust-network-architecture',
-    marketPosition: 'Leading zero-trust security platform. Comprehensive implementation of zero-trust principles.',
-    targetAudience: 'Security teams, IT departments, Government agencies, Financial institutions, Healthcare organizations',
+    marketPosition:
+      'Leading zero-trust security platform. Comprehensive implementation of zero-trust principles.',
+    targetAudience:
+      'Security teams, IT departments, Government agencies, Financial institutions, Healthcare organizations',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Cybersecurity & Zero Trust',
     realService: true,
-    technology: ['Zero-trust architecture, Identity management, Network security, Behavioral analytics, AI/ML'],
-    integrations: ['Active Directory, LDAP, SSO platforms, Network equipment, Security tools'],
-    useCases: ['Network security, Access control, Threat prevention, Compliance, Security monitoring'],
+    technology: [
+      'Zero-trust architecture, Identity management, Network security, Behavioral analytics, AI/ML',
+    ],
+    integrations: [
+      'Active Directory, LDAP, SSO platforms, Network equipment, Security tools',
+    ],
+    useCases: [
+      'Network security, Access control, Threat prevention, Compliance, Security monitoring',
+    ],
     roi: 'Critical for security. ROI measured in risk reduction and compliance achievement.',
     competitors: ['Palo Alto Networks, Cisco, Fortinet, Zscaler'],
     marketSize: '$25B zero-trust market',
@@ -544,13 +643,14 @@ export const cuttingEdge2034Services: CuttingEdge2034Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Advanced zero-trust security platform with comprehensive identity verification, continuous monitoring, and automated threat response.',
+    implementationDetails:
+      'Advanced zero-trust security platform with comprehensive identity verification, continuous monitoring, and automated threat response.',
     launchDate: '2024-01-30',
     customers: 320,
     rating: 4.9,
-    reviews: 240
-  }
+    reviews: 240,
+  },
 ];

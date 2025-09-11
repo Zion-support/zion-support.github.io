@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2025AdvancedITServices: AdvancedITService[] = [
   {
     id: 'zero-trust-security-framework',
     name: 'Zero Trust Security Framework',
-    tagline: 'Comprehensive zero trust implementation with continuous verification',
+    tagline:
+      'Comprehensive zero trust implementation with continuous verification',
     price: '$599',
     period: '/month',
-    description: 'Enterprise-grade zero trust security framework that implements continuous verification, least privilege access, and micro-segmentation. Provides comprehensive security monitoring and threat detection.',
+    description:
+      'Enterprise-grade zero trust security framework that implements continuous verification, least privilege access, and micro-segmentation. Provides comprehensive security monitoring and threat detection.',
     features: [
       'Identity and access management (IAM)',
       'Multi-factor authentication (MFA)',
@@ -65,14 +67,15 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
       'Compliance reporting (SOC2, HIPAA, PCI)',
       'API security and monitoring',
       'Cloud security posture management',
-      'Security automation and orchestration'
+      'Security automation and orchestration',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-security-framework',
-    marketPosition: 'Competes with Palo Alto Networks, CrowdStrike, and Okta; provides comprehensive zero trust implementation.',
+    marketPosition:
+      'Competes with Palo Alto Networks, CrowdStrike, and Okta; provides comprehensive zero trust implementation.',
     targetAudience: 'Enterprise security teams, CTOs, Compliance officers',
     trialDays: 30,
     setupTime: '2 weeks',
@@ -80,7 +83,9 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     realService: true,
     technology: ['Kubernetes, Istio, OAuth 2.0, SAML, OpenID Connect'],
     integrations: ['Active Directory, LDAP, SAML providers, SIEM systems'],
-    useCases: ['Enterprise security, Compliance requirements, Threat prevention'],
+    useCases: [
+      'Enterprise security, Compliance requirements, Threat prevention',
+    ],
     roi: 'Reduce security incidents by 80% and achieve compliance faster.',
     competitors: ['Palo Alto Networks, CrowdStrike, Okta, ForgeRock'],
     marketSize: '$45B+ cybersecurity market',
@@ -88,11 +93,12 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with zero trust architecture, continuous monitoring, and automated threat response.',
+    implementationDetails:
+      'Multi-tenant SaaS with zero trust architecture, continuous monitoring, and automated threat response.',
     launchDate: '2025-01-10',
     customers: 23,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'multi-cloud-orchestration-platform',
@@ -100,7 +106,8 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     tagline: 'Unified management across AWS, Azure, GCP, and private clouds',
     price: '$449',
     period: '/month',
-    description: 'Advanced multi-cloud orchestration platform that provides unified management, cost optimization, and governance across multiple cloud providers. Features automated resource provisioning and cost management.',
+    description:
+      'Advanced multi-cloud orchestration platform that provides unified management, cost optimization, and governance across multiple cloud providers. Features automated resource provisioning and cost management.',
     features: [
       'Multi-cloud resource management',
       'Automated cost optimization',
@@ -110,14 +117,15 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
       'Cost allocation and budgeting',
       'Performance optimization',
       'Disaster recovery orchestration',
-      'Compliance and audit reporting'
+      'Compliance and audit reporting',
     ],
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/multi-cloud-orchestration',
-    marketPosition: 'Alternative to Terraform Cloud, CloudHealth, and Flexera; provides unified multi-cloud management.',
+    marketPosition:
+      'Alternative to Terraform Cloud, CloudHealth, and Flexera; provides unified multi-cloud management.',
     targetAudience: 'Cloud architects, DevOps teams, IT operations',
     trialDays: 21,
     setupTime: '1 week',
@@ -125,7 +133,9 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     realService: true,
     technology: ['Kubernetes, Terraform, Ansible, Python, Go'],
     integrations: ['AWS, Azure, GCP, VMware, OpenStack'],
-    useCases: ['Multi-cloud management, Cost optimization, Resource governance'],
+    useCases: [
+      'Multi-cloud management, Cost optimization, Resource governance',
+    ],
     roi: 'Reduce cloud costs by 25% and improve resource utilization by 40%.',
     competitors: ['Terraform Cloud, CloudHealth, Flexera, RightScale'],
     marketSize: '$28B+ cloud management market',
@@ -133,19 +143,22 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with cloud provider integrations, cost optimization engine, and governance framework.',
+    implementationDetails:
+      'Multi-tenant SaaS with cloud provider integrations, cost optimization engine, and governance framework.',
     launchDate: '2025-01-20',
     customers: 38,
     rating: 4.7,
-    reviews: 25
+    reviews: 25,
   },
   {
     id: 'ai-powered-devops-automation',
     name: 'AI-Powered DevOps Automation',
-    tagline: 'Intelligent CI/CD pipeline optimization and deployment automation',
+    tagline:
+      'Intelligent CI/CD pipeline optimization and deployment automation',
     price: '$329',
     period: '/month',
-    description: 'Next-generation DevOps automation platform that uses AI to optimize CI/CD pipelines, predict deployment risks, and automate infrastructure management. Reduces deployment failures and improves release velocity.',
+    description:
+      'Next-generation DevOps automation platform that uses AI to optimize CI/CD pipelines, predict deployment risks, and automate infrastructure management. Reduces deployment failures and improves release velocity.',
     features: [
       'AI-powered pipeline optimization',
       'Automated testing and quality gates',
@@ -155,14 +168,15 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
       'Rollback automation',
       'Security scanning integration',
       'Team collaboration tools',
-      'Comprehensive analytics and reporting'
+      'Comprehensive analytics and reporting',
     ],
     popular: true,
     icon: '🚀',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-powered-devops-automation',
-    marketPosition: 'Competes with GitLab CI/CD, Jenkins, and CircleCI; adds AI-powered optimization and automation.',
+    marketPosition:
+      'Competes with GitLab CI/CD, Jenkins, and CircleCI; adds AI-powered optimization and automation.',
     targetAudience: 'DevOps engineers, Platform teams, Development teams',
     trialDays: 14,
     setupTime: '3 days',
@@ -170,7 +184,9 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     realService: true,
     technology: ['Kubernetes, Docker, Jenkins, GitLab, Python'],
     integrations: ['GitHub, GitLab, Bitbucket, Slack, Jira, PagerDuty'],
-    useCases: ['CI/CD optimization, Deployment automation, Infrastructure management'],
+    useCases: [
+      'CI/CD optimization, Deployment automation, Infrastructure management',
+    ],
     roi: 'Reduce deployment failures by 70% and improve release velocity by 50%.',
     competitors: ['GitLab CI/CD, Jenkins, CircleCI, GitHub Actions'],
     marketSize: '$20B+ DevOps tools market',
@@ -178,19 +194,22 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     variant: 'devops-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with AI optimization engine, CI/CD automation, and comprehensive DevOps tools.',
+    implementationDetails:
+      'Multi-tenant SaaS with AI optimization engine, CI/CD automation, and comprehensive DevOps tools.',
     launchDate: '2025-01-25',
     customers: 52,
     rating: 4.8,
-    reviews: 37
+    reviews: 37,
   },
   {
     id: 'enterprise-data-governance-suite',
     name: 'Enterprise Data Governance Suite',
-    tagline: 'Comprehensive data governance with privacy compliance and quality management',
+    tagline:
+      'Comprehensive data governance with privacy compliance and quality management',
     price: '$499',
     period: '/month',
-    description: 'Enterprise-grade data governance platform that ensures data quality, privacy compliance, and regulatory adherence. Features data lineage tracking, quality monitoring, and automated compliance reporting.',
+    description:
+      'Enterprise-grade data governance platform that ensures data quality, privacy compliance, and regulatory adherence. Features data lineage tracking, quality monitoring, and automated compliance reporting.',
     features: [
       'Data lineage and cataloging',
       'Data quality monitoring',
@@ -200,15 +219,17 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
       'Regulatory reporting automation',
       'Data retention policies',
       'Integration with data warehouses',
-      'Real-time data quality alerts'
+      'Real-time data quality alerts',
     ],
     popular: true,
     icon: '📊',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/enterprise-data-governance',
-    marketPosition: 'Competes with Collibra, Alation, and Informatica; provides comprehensive data governance.',
-    targetAudience: 'Data governance teams, Compliance officers, Data architects',
+    marketPosition:
+      'Competes with Collibra, Alation, and Informatica; provides comprehensive data governance.',
+    targetAudience:
+      'Data governance teams, Compliance officers, Data architects',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Data Management',
@@ -223,11 +244,12 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with data governance engine, compliance framework, and quality monitoring.',
+    implementationDetails:
+      'Multi-tenant SaaS with data governance engine, compliance framework, and quality monitoring.',
     launchDate: '2025-02-01',
     customers: 28,
     rating: 4.8,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'intelligent-network-monitoring',
@@ -235,7 +257,8 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     tagline: 'AI-powered network performance monitoring and troubleshooting',
     price: '$279',
     period: '/month',
-    description: 'Advanced network monitoring platform that uses AI to detect network issues, predict failures, and provide automated troubleshooting. Features real-time monitoring, performance analytics, and alert management.',
+    description:
+      'Advanced network monitoring platform that uses AI to detect network issues, predict failures, and provide automated troubleshooting. Features real-time monitoring, performance analytics, and alert management.',
     features: [
       'Real-time network monitoring',
       'AI-powered issue detection',
@@ -245,14 +268,15 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
       'Bandwidth utilization tracking',
       'Security threat detection',
       'Mobile app for network engineers',
-      'Integration with network devices'
+      'Integration with network devices',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/intelligent-network-monitoring',
-    marketPosition: 'Alternative to SolarWinds, PRTG, and Nagios; adds AI-powered monitoring and automation.',
+    marketPosition:
+      'Alternative to SolarWinds, PRTG, and Nagios; adds AI-powered monitoring and automation.',
     targetAudience: 'Network engineers, IT operations, System administrators',
     trialDays: 14,
     setupTime: '2 days',
@@ -260,7 +284,9 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     realService: true,
     technology: ['Python, SNMP, NetFlow, Elasticsearch, Redis'],
     integrations: ['Cisco, Juniper, Arista, VMware, AWS, Azure'],
-    useCases: ['Network monitoring, Performance optimization, Issue resolution'],
+    useCases: [
+      'Network monitoring, Performance optimization, Issue resolution',
+    ],
     roi: 'Reduce network downtime by 60% and improve issue resolution time by 50%.',
     competitors: ['SolarWinds, PRTG, Nagios, Zabbix'],
     marketSize: '$15B+ network monitoring market',
@@ -268,19 +294,22 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with AI monitoring engine, network device integrations, and automated troubleshooting.',
+    implementationDetails:
+      'Multi-tenant SaaS with AI monitoring engine, network device integrations, and automated troubleshooting.',
     launchDate: '2025-01-30',
     customers: 67,
     rating: 4.7,
-    reviews: 48
+    reviews: 48,
   },
   {
     id: 'container-security-platform',
     name: 'Container Security Platform',
-    tagline: 'Comprehensive container security with vulnerability scanning and runtime protection',
+    tagline:
+      'Comprehensive container security with vulnerability scanning and runtime protection',
     price: '$199',
     period: '/month',
-    description: 'Enterprise container security platform that provides vulnerability scanning, runtime protection, and compliance monitoring for containerized applications. Integrates with major container platforms and CI/CD tools.',
+    description:
+      'Enterprise container security platform that provides vulnerability scanning, runtime protection, and compliance monitoring for containerized applications. Integrates with major container platforms and CI/CD tools.',
     features: [
       'Container vulnerability scanning',
       'Runtime security monitoring',
@@ -290,14 +319,15 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
       'Security policy enforcement',
       'Threat detection and response',
       'Comprehensive reporting',
-      'API for custom integrations'
+      'API for custom integrations',
     ],
     popular: true,
     icon: '📦',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/container-security-platform',
-    marketPosition: 'Competes with Aqua Security, Snyk, and Twistlock; provides comprehensive container security.',
+    marketPosition:
+      'Competes with Aqua Security, Snyk, and Twistlock; provides comprehensive container security.',
     targetAudience: 'DevOps engineers, Security teams, Platform engineers',
     trialDays: 14,
     setupTime: '1 day',
@@ -313,19 +343,22 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with container security engine, vulnerability scanning, and runtime protection.',
+    implementationDetails:
+      'Multi-tenant SaaS with container security engine, vulnerability scanning, and runtime protection.',
     launchDate: '2025-02-05',
     customers: 43,
     rating: 4.8,
-    reviews: 31
+    reviews: 31,
   },
   {
     id: 'api-gateway-and-management',
     name: 'API Gateway and Management',
-    tagline: 'Enterprise API gateway with security, monitoring, and developer portal',
+    tagline:
+      'Enterprise API gateway with security, monitoring, and developer portal',
     price: '$249',
     period: '/month',
-    description: 'Comprehensive API gateway platform that provides security, rate limiting, monitoring, and developer portal capabilities. Features advanced authentication, analytics, and API versioning.',
+    description:
+      'Comprehensive API gateway platform that provides security, rate limiting, monitoring, and developer portal capabilities. Features advanced authentication, analytics, and API versioning.',
     features: [
       'API gateway and routing',
       'Authentication and authorization',
@@ -335,14 +368,15 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
       'API versioning and lifecycle management',
       'Security policies and threat protection',
       'Integration with identity providers',
-      'Comprehensive API analytics'
+      'Comprehensive API analytics',
     ],
     popular: true,
     icon: '🔌',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/api-gateway-management',
-    marketPosition: 'Alternative to Kong, AWS API Gateway, and Azure API Management; provides comprehensive API management.',
+    marketPosition:
+      'Alternative to Kong, AWS API Gateway, and Azure API Management; provides comprehensive API management.',
     targetAudience: 'API developers, Platform engineers, DevOps teams',
     trialDays: 14,
     setupTime: '2 days',
@@ -358,19 +392,22 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     variant: 'api-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with API gateway engine, security framework, and developer portal.',
+    implementationDetails:
+      'Multi-tenant SaaS with API gateway engine, security framework, and developer portal.',
     launchDate: '2025-02-10',
     customers: 56,
     rating: 4.7,
-    reviews: 39
+    reviews: 39,
   },
   {
     id: 'disaster-recovery-as-a-service',
     name: 'Disaster Recovery as a Service',
-    tagline: 'Automated disaster recovery with RTO/RPO optimization and testing',
+    tagline:
+      'Automated disaster recovery with RTO/RPO optimization and testing',
     price: '$399',
     period: '/month',
-    description: 'Enterprise disaster recovery platform that provides automated backup, replication, and recovery capabilities. Features RTO/RPO optimization, automated testing, and multi-cloud recovery options.',
+    description:
+      'Enterprise disaster recovery platform that provides automated backup, replication, and recovery capabilities. Features RTO/RPO optimization, automated testing, and multi-cloud recovery options.',
     features: [
       'Automated backup and replication',
       'RTO/RPO optimization',
@@ -380,14 +417,15 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
       'Compliance and audit reporting',
       'Integration with cloud providers',
       'Real-time monitoring and alerting',
-      'Recovery time objectives (RTO) management'
+      'Recovery time objectives (RTO) management',
     ],
     popular: true,
     icon: '🔄',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/disaster-recovery-service',
-    marketPosition: 'Competes with AWS DR, Azure Site Recovery, and Veeam; provides comprehensive DRaaS.',
+    marketPosition:
+      'Competes with AWS DR, Azure Site Recovery, and Veeam; provides comprehensive DRaaS.',
     targetAudience: 'IT operations, Business continuity teams, Risk managers',
     trialDays: 30,
     setupTime: '2 weeks',
@@ -403,10 +441,11 @@ export const real2025AdvancedITServices: AdvancedITService[] = [
     variant: 'backup-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS with DR orchestration engine, cloud integrations, and automated testing.',
+    implementationDetails:
+      'Multi-tenant SaaS with DR orchestration engine, cloud integrations, and automated testing.',
     launchDate: '2025-02-15',
     customers: 34,
     rating: 4.8,
-    reviews: 24
-  }
+    reviews: 24,
+  },
 ];

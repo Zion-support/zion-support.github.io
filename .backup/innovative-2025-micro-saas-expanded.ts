@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
@@ -53,10 +53,12 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
   {
     id: 'ai-content-automation-engine',
     name: 'AI Content Automation Engine',
-    tagline: 'Automate content creation, optimization, and distribution across all channels',
+    tagline:
+      'Automate content creation, optimization, and distribution across all channels',
     price: '$199',
     period: '/month',
-    description: 'Advanced AI-powered content automation platform that generates, optimizes, and distributes content across multiple channels with intelligent scheduling and performance analytics.',
+    description:
+      'Advanced AI-powered content automation platform that generates, optimizes, and distributes content across multiple channels with intelligent scheduling and performance analytics.',
     features: [
       'AI-powered content generation for blogs, social media, and emails',
       'Multi-channel content distribution automation',
@@ -66,22 +68,26 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Brand voice consistency management',
       'Content calendar and workflow automation',
       'Integration with major CMS platforms',
-      'Real-time content performance tracking'
+      'Real-time content performance tracking',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-content-automation',
-    marketPosition: 'Competes with Buffer, Hootsuite, and ContentCal; adds AI generation and automation.',
-    targetAudience: 'Marketing teams, content creators, small businesses, agencies',
+    marketPosition:
+      'Competes with Buffer, Hootsuite, and ContentCal; adds AI generation and automation.',
+    targetAudience:
+      'Marketing teams, content creators, small businesses, agencies',
     trialDays: 14,
     setupTime: '2 hours',
     category: 'AI & Marketing',
     realService: true,
     technology: ['OpenAI GPT-4, React, Node.js, PostgreSQL, Redis'],
     integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Buffer, Hootsuite'],
-    useCases: ['Content marketing automation, Social media management, SEO optimization'],
+    useCases: [
+      'Content marketing automation, Social media management, SEO optimization',
+    ],
     roi: 'Reduce content creation time by 70% and increase engagement by 40%.',
     competitors: ['Buffer, Hootsuite, ContentCal, CoSchedule'],
     marketSize: '$15B+ content marketing automation market',
@@ -89,11 +95,12 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with AI content generation, workflow automation, and analytics dashboard.',
+    implementationDetails:
+      'Multi-tenant SaaS platform with AI content generation, workflow automation, and analytics dashboard.',
     launchDate: '2025-01-15',
     customers: 120,
     rating: 4.9,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'quantum-encrypted-messaging',
@@ -101,7 +108,8 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     tagline: 'Unbreakable quantum encryption for enterprise communications',
     price: '$299',
     period: '/month',
-    description: 'Next-generation quantum-resistant encryption platform for secure enterprise messaging, file sharing, and collaboration with military-grade security protocols.',
+    description:
+      'Next-generation quantum-resistant encryption platform for secure enterprise messaging, file sharing, and collaboration with military-grade security protocols.',
     features: [
       'Quantum-resistant encryption algorithms',
       'End-to-end encryption for all communications',
@@ -111,22 +119,26 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Cross-platform compatibility (web, mobile, desktop)',
       'Real-time threat detection and response',
       'Integration with existing enterprise systems',
-      'Zero-knowledge architecture'
+      'Zero-knowledge architecture',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-cyan-600 to-blue-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-encrypted-messaging',
-    marketPosition: 'Advanced security beyond Signal and Telegram; quantum-resistant encryption.',
-    targetAudience: 'Financial institutions, healthcare, government, defense contractors',
+    marketPosition:
+      'Advanced security beyond Signal and Telegram; quantum-resistant encryption.',
+    targetAudience:
+      'Financial institutions, healthcare, government, defense contractors',
     trialDays: 7,
     setupTime: '1 day',
     category: 'Security & Communications',
     realService: true,
     technology: ['Post-quantum cryptography, WebRTC, React Native, Node.js'],
     integrations: ['Active Directory, Okta, Slack, Microsoft Teams, Zoom'],
-    useCases: ['Secure enterprise communications, Compliance and audit, Government communications'],
+    useCases: [
+      'Secure enterprise communications, Compliance and audit, Government communications',
+    ],
     roi: 'Meet regulatory requirements and reduce security incidents by 90%.',
     competitors: ['Signal, Telegram, Wickr, Wire'],
     marketSize: '$8B+ enterprise messaging security market',
@@ -134,19 +146,22 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade messaging platform with quantum-resistant encryption, compliance tools, and admin dashboard.',
+    implementationDetails:
+      'Enterprise-grade messaging platform with quantum-resistant encryption, compliance tools, and admin dashboard.',
     launchDate: '2025-02-01',
     customers: 45,
     rating: 4.8,
-    reviews: 32
+    reviews: 32,
   },
   {
     id: 'autonomous-devops-orchestrator',
     name: 'Autonomous DevOps Orchestrator',
-    tagline: 'Self-healing infrastructure with intelligent automation and predictive analytics',
+    tagline:
+      'Self-healing infrastructure with intelligent automation and predictive analytics',
     price: '$399',
     period: '/month',
-    description: 'AI-powered DevOps automation platform that continuously monitors, optimizes, and self-heals infrastructure while providing predictive insights and automated incident response.',
+    description:
+      'AI-powered DevOps automation platform that continuously monitors, optimizes, and self-heals infrastructure while providing predictive insights and automated incident response.',
     features: [
       'Intelligent infrastructure monitoring and alerting',
       'Automated incident detection and resolution',
@@ -156,22 +171,27 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Performance optimization and cost management',
       'Compliance and security automation',
       'Real-time dashboards and reporting',
-      'Integration with major cloud providers'
+      'Integration with major cloud providers',
     ],
     popular: true,
     icon: '⚡',
     color: 'from-emerald-600 to-teal-600',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/autonomous-devops',
-    marketPosition: 'Goes beyond traditional monitoring tools; adds AI-powered automation and self-healing.',
+    marketPosition:
+      'Goes beyond traditional monitoring tools; adds AI-powered automation and self-healing.',
     targetAudience: 'DevOps teams, SREs, cloud architects, platform engineers',
     trialDays: 21,
     setupTime: '4 hours',
     category: 'DevOps & Infrastructure',
     realService: true,
     technology: ['Machine Learning, Kubernetes, Docker, AWS/GCP/Azure APIs'],
-    integrations: ['AWS, Google Cloud, Azure, Kubernetes, Docker, Jenkins, GitLab'],
-    useCases: ['Infrastructure automation, Incident response, Performance optimization'],
+    integrations: [
+      'AWS, Google Cloud, Azure, Kubernetes, Docker, Jenkins, GitLab',
+    ],
+    useCases: [
+      'Infrastructure automation, Incident response, Performance optimization',
+    ],
     roi: 'Reduce downtime by 80% and operational costs by 30%.',
     competitors: ['DataDog, New Relic, PagerDuty, Splunk'],
     marketSize: '$12B+ DevOps automation market',
@@ -179,19 +199,22 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with AI-powered monitoring, automation engine, and predictive analytics.',
+    implementationDetails:
+      'Multi-tenant SaaS platform with AI-powered monitoring, automation engine, and predictive analytics.',
     launchDate: '2025-01-20',
     customers: 78,
     rating: 4.7,
-    reviews: 56
+    reviews: 56,
   },
   {
     id: 'blockchain-supply-chain-tracker',
     name: 'Blockchain Supply Chain Tracker',
-    tagline: 'Transparent, immutable supply chain tracking with real-time visibility',
+    tagline:
+      'Transparent, immutable supply chain tracking with real-time visibility',
     price: '$249',
     period: '/month',
-    description: 'Enterprise blockchain platform for end-to-end supply chain transparency, enabling real-time tracking, authentication, and compliance across global supply networks.',
+    description:
+      'Enterprise blockchain platform for end-to-end supply chain transparency, enabling real-time tracking, authentication, and compliance across global supply networks.',
     features: [
       'End-to-end supply chain visibility and tracking',
       'Smart contract automation for compliance',
@@ -201,22 +224,26 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'IoT sensor integration and data collection',
       'Analytics and performance insights',
       'Mobile app for field operations',
-      'API integration with existing systems'
+      'API integration with existing systems',
     ],
     popular: false,
     icon: '⛓️',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/blockchain-supply-chain',
-    marketPosition: 'Competes with IBM Food Trust and VeChain; adds IoT integration and analytics.',
-    targetAudience: 'Manufacturing, logistics, retail, food safety, pharmaceuticals',
+    marketPosition:
+      'Competes with IBM Food Trust and VeChain; adds IoT integration and analytics.',
+    targetAudience:
+      'Manufacturing, logistics, retail, food safety, pharmaceuticals',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Blockchain & Supply Chain',
     realService: true,
     technology: ['Hyperledger Fabric, Ethereum, React, Node.js, IoT protocols'],
     integrations: ['SAP, Oracle, Salesforce, IoT devices, RFID systems'],
-    useCases: ['Supply chain transparency, Compliance tracking, Product authentication'],
+    useCases: [
+      'Supply chain transparency, Compliance tracking, Product authentication',
+    ],
     roi: 'Improve supply chain efficiency by 25% and reduce fraud by 95%.',
     competitors: ['IBM Food Trust, VeChain, OriginTrail, WaltonChain'],
     marketSize: '$9B+ blockchain supply chain market',
@@ -224,19 +251,22 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'blockchain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise blockchain platform with IoT integration, smart contracts, and analytics dashboard.',
+    implementationDetails:
+      'Enterprise blockchain platform with IoT integration, smart contracts, and analytics dashboard.',
     launchDate: '2025-02-15',
     customers: 23,
     rating: 4.6,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'ai-powered-customer-intelligence',
     name: 'AI-Powered Customer Intelligence',
-    tagline: 'Predict customer behavior and optimize experiences with machine learning',
+    tagline:
+      'Predict customer behavior and optimize experiences with machine learning',
     price: '$179',
     period: '/month',
-    description: 'Advanced customer intelligence platform that uses AI to analyze customer behavior, predict churn, and optimize customer experiences across all touchpoints.',
+    description:
+      'Advanced customer intelligence platform that uses AI to analyze customer behavior, predict churn, and optimize customer experiences across all touchpoints.',
     features: [
       'Real-time customer behavior analysis',
       'Predictive churn modeling and prevention',
@@ -246,15 +276,17 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Customer lifetime value prediction',
       'A/B testing and optimization tools',
       'Integration with CRM and marketing platforms',
-      'Advanced analytics and reporting'
+      'Advanced analytics and reporting',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-pink-600 to-rose-600',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-customer-intelligence',
-    marketPosition: 'Competes with Segment and Amplitude; adds AI-powered insights and predictions.',
-    targetAudience: 'E-commerce, SaaS companies, retail, subscription businesses',
+    marketPosition:
+      'Competes with Segment and Amplitude; adds AI-powered insights and predictions.',
+    targetAudience:
+      'E-commerce, SaaS companies, retail, subscription businesses',
     trialDays: 14,
     setupTime: '3 hours',
     category: 'AI & Analytics',
@@ -269,11 +301,12 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant SaaS platform with ML models, real-time analytics, and predictive insights.',
+    implementationDetails:
+      'Multi-tenant SaaS platform with ML models, real-time analytics, and predictive insights.',
     launchDate: '2025-01-10',
     customers: 156,
     rating: 4.8,
-    reviews: 112
+    reviews: 112,
   },
   {
     id: 'quantum-machine-learning-platform',
@@ -281,7 +314,8 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     tagline: 'Accelerate ML training with quantum computing power',
     price: '$599',
     period: '/month',
-    description: 'Revolutionary quantum machine learning platform that accelerates model training and optimization using quantum computing algorithms and hybrid quantum-classical approaches.',
+    description:
+      'Revolutionary quantum machine learning platform that accelerates model training and optimization using quantum computing algorithms and hybrid quantum-classical approaches.',
     features: [
       'Quantum-enhanced ML model training',
       'Hybrid quantum-classical algorithms',
@@ -291,15 +325,17 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Quantum error correction and noise mitigation',
       'Integration with popular ML frameworks',
       'Scalable quantum computing resources',
-      'Advanced analytics and visualization'
+      'Advanced analytics and visualization',
     ],
     popular: false,
     icon: '⚛️',
     color: 'from-violet-600 to-purple-600',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-ml-platform',
-    marketPosition: 'First-to-market quantum ML platform; accelerates training by 1000x for certain problems.',
-    targetAudience: 'AI research labs, pharmaceutical companies, financial institutions, universities',
+    marketPosition:
+      'First-to-market quantum ML platform; accelerates training by 1000x for certain problems.',
+    targetAudience:
+      'AI research labs, pharmaceutical companies, financial institutions, universities',
     trialDays: 7,
     setupTime: '2 days',
     category: 'Quantum Computing & AI',
@@ -314,11 +350,12 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum ML platform with hybrid algorithms, cloud integration, and model management tools.',
+    implementationDetails:
+      'Quantum ML platform with hybrid algorithms, cloud integration, and model management tools.',
     launchDate: '2025-03-01',
     customers: 12,
     rating: 4.9,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'autonomous-financial-advisor',
@@ -326,7 +363,8 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     tagline: 'AI-powered investment management and financial planning',
     price: '$99',
     period: '/month',
-    description: 'Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and automated wealth management using advanced AI algorithms.',
+    description:
+      'Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and automated wealth management using advanced AI algorithms.',
     features: [
       'AI-powered investment recommendations',
       'Automated portfolio rebalancing',
@@ -336,21 +374,25 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Real-time market analysis and alerts',
       'Goal-based financial planning',
       'Integration with major brokerages',
-      'Comprehensive reporting and analytics'
+      'Comprehensive reporting and analytics',
     ],
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/autonomous-financial-advisor',
-    marketPosition: 'Competes with Betterment and Wealthfront; adds AI-powered insights and automation.',
-    targetAudience: 'Individual investors, financial advisors, wealth management firms',
+    marketPosition:
+      'Competes with Betterment and Wealthfront; adds AI-powered insights and automation.',
+    targetAudience:
+      'Individual investors, financial advisors, wealth management firms',
     trialDays: 30,
     setupTime: '1 hour',
     category: 'AI & FinTech',
     realService: true,
     technology: ['Machine Learning, Python, React, Node.js, Financial APIs'],
-    integrations: ['TD Ameritrade, E*TRADE, Fidelity, Charles Schwab, Robinhood'],
+    integrations: [
+      'TD Ameritrade, E*TRADE, Fidelity, Charles Schwab, Robinhood',
+    ],
     useCases: ['Portfolio management, Retirement planning, Tax optimization'],
     roi: 'Improve portfolio returns by 20% and reduce fees by 60%.',
     competitors: ['Betterment, Wealthfront, M1 Finance, SoFi'],
@@ -359,11 +401,12 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered financial advisory platform with automated portfolio management and planning tools.',
+    implementationDetails:
+      'AI-powered financial advisory platform with automated portfolio management and planning tools.',
     launchDate: '2025-01-25',
     customers: 234,
     rating: 4.7,
-    reviews: 167
+    reviews: 167,
   },
   {
     id: 'quantum-secure-cloud-storage',
@@ -371,7 +414,8 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     tagline: 'Future-proof storage with quantum-resistant encryption',
     price: '$149',
     period: '/month',
-    description: 'Next-generation cloud storage platform with quantum-resistant encryption, ensuring data security against future quantum computing threats while providing enterprise-grade performance and reliability.',
+    description:
+      'Next-generation cloud storage platform with quantum-resistant encryption, ensuring data security against future quantum computing threats while providing enterprise-grade performance and reliability.',
     features: [
       'Quantum-resistant encryption algorithms',
       'Zero-knowledge architecture',
@@ -381,22 +425,26 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Compliance and audit reporting',
       'High-performance file synchronization',
       'Mobile and desktop applications',
-      'API integration capabilities'
+      'API integration capabilities',
     ],
     popular: false,
     icon: '☁️',
     color: 'from-sky-600 to-blue-600',
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/quantum-secure-storage',
-    marketPosition: 'First quantum-resistant cloud storage; future-proofs data security.',
-    targetAudience: 'Healthcare, finance, government, legal, research institutions',
+    marketPosition:
+      'First quantum-resistant cloud storage; future-proofs data security.',
+    targetAudience:
+      'Healthcare, finance, government, legal, research institutions',
     trialDays: 14,
     setupTime: '2 hours',
     category: 'Security & Cloud Storage',
     realService: true,
     technology: ['Post-quantum cryptography, AWS S3, React, Node.js'],
     integrations: ['AWS, Google Cloud, Azure, Active Directory, Okta'],
-    useCases: ['Secure file storage, Compliance requirements, Long-term data protection'],
+    useCases: [
+      'Secure file storage, Compliance requirements, Long-term data protection',
+    ],
     roi: 'Future-proof data security and meet regulatory requirements.',
     competitors: ['Dropbox, Box, Google Drive, OneDrive'],
     marketSize: '$50B+ cloud storage market',
@@ -404,11 +452,12 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-resistant cloud storage platform with enterprise security and compliance features.',
+    implementationDetails:
+      'Quantum-resistant cloud storage platform with enterprise security and compliance features.',
     launchDate: '2025-02-20',
     customers: 67,
     rating: 4.8,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-hr-automation',
@@ -416,7 +465,8 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     tagline: 'Streamline HR processes with intelligent automation and insights',
     price: '$129',
     period: '/month',
-    description: 'Comprehensive HR automation platform that uses AI to streamline recruitment, employee management, performance reviews, and workforce analytics.',
+    description:
+      'Comprehensive HR automation platform that uses AI to streamline recruitment, employee management, performance reviews, and workforce analytics.',
     features: [
       'AI-powered candidate screening and matching',
       'Automated interview scheduling and feedback',
@@ -426,22 +476,26 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Compliance and policy management',
       'Integration with HRIS systems',
       'Mobile app for employees',
-      'Advanced reporting and dashboards'
+      'Advanced reporting and dashboards',
     ],
     popular: true,
     icon: '👥',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-hr-automation',
-    marketPosition: 'Competes with BambooHR and Workday; adds AI-powered automation and insights.',
-    targetAudience: 'HR departments, recruitment agencies, small to medium businesses',
+    marketPosition:
+      'Competes with BambooHR and Workday; adds AI-powered automation and insights.',
+    targetAudience:
+      'HR departments, recruitment agencies, small to medium businesses',
     trialDays: 21,
     setupTime: '1 day',
     category: 'AI & HR Tech',
     realService: true,
     technology: ['Machine Learning, React, Node.js, PostgreSQL, AI APIs'],
     integrations: ['Workday, BambooHR, ADP, Greenhouse, Lever'],
-    useCases: ['Recruitment automation, Performance management, Employee engagement'],
+    useCases: [
+      'Recruitment automation, Performance management, Employee engagement',
+    ],
     roi: 'Reduce HR administrative time by 60% and improve hiring quality by 40%.',
     competitors: ['BambooHR, Workday, Zenefits, Gusto'],
     marketSize: '$20B+ HR tech market',
@@ -449,11 +503,12 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered HR platform with automation, analytics, and employee management tools.',
+    implementationDetails:
+      'AI-powered HR platform with automation, analytics, and employee management tools.',
     launchDate: '2025-01-30',
     customers: 89,
     rating: 4.6,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'quantum-optimization-engine',
@@ -461,7 +516,8 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     tagline: 'Solve complex optimization problems with quantum computing',
     price: '$799',
     period: '/month',
-    description: 'Advanced quantum optimization platform that solves complex combinatorial optimization problems in logistics, manufacturing, finance, and research using quantum algorithms.',
+    description:
+      'Advanced quantum optimization platform that solves complex combinatorial optimization problems in logistics, manufacturing, finance, and research using quantum algorithms.',
     features: [
       'Quantum optimization algorithms',
       'Multi-objective optimization solver',
@@ -471,22 +527,26 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
       'Performance benchmarking tools',
       'API for integration',
       'Advanced visualization and reporting',
-      'Expert consultation services'
+      'Expert consultation services',
     ],
     popular: false,
     icon: '🎯',
     color: 'from-amber-600 to-orange-600',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/quantum-optimization',
-    marketPosition: 'Specialized quantum optimization platform; solves problems impossible for classical computers.',
-    targetAudience: 'Logistics companies, manufacturers, financial institutions, research labs',
+    marketPosition:
+      'Specialized quantum optimization platform; solves problems impossible for classical computers.',
+    targetAudience:
+      'Logistics companies, manufacturers, financial institutions, research labs',
     trialDays: 14,
     setupTime: '1 week',
     category: 'Quantum Computing & Optimization',
     realService: true,
     technology: ['Qiskit, D-Wave, Python, React, Quantum algorithms'],
     integrations: ['SAP, Oracle, MATLAB, Python scientific libraries'],
-    useCases: ['Supply chain optimization, Financial portfolio optimization, Research problems'],
+    useCases: [
+      'Supply chain optimization, Financial portfolio optimization, Research problems',
+    ],
     roi: 'Solve optimization problems 1000x faster and reduce operational costs by 25%.',
     competitors: ['D-Wave, IBM Quantum, Google Quantum, Rigetti'],
     marketSize: '$3B+ quantum optimization market',
@@ -494,12 +554,13 @@ export const innovativeMicroSAASServices: InnovativeMicroSAASService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum optimization platform with custom algorithms, benchmarking, and expert support.',
+    implementationDetails:
+      'Quantum optimization platform with custom algorithms, benchmarking, and expert support.',
     launchDate: '2025-03-15',
     customers: 8,
     rating: 4.9,
-    reviews: 6
-  }
+    reviews: 6,
+  },
 ];
 
 export default innovativeMicroSAASServices;

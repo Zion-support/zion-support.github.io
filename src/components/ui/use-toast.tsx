@@ -23,13 +23,15 @@ export const useToast = () => {
   return context;
 };
 
-export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
   const toast = useCallback((newToast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     setToasts(prev => [...prev, { ...newToast, id }]);
-    
+
     // Auto dismiss after 5 seconds
     setTimeout(() => {
       setToasts(prev => prev.filter(t => t.id !== id));

@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
   {
     id: 'ai-content-optimization-engine',
     name: 'AI Content Optimization Engine',
-    tagline: 'Automatically optimize content for SEO, engagement, and conversion',
+    tagline:
+      'Automatically optimize content for SEO, engagement, and conversion',
     price: '$89',
     period: '/month',
-    description: 'Intelligent content optimization platform that analyzes and improves your content for better search rankings, user engagement, and conversion rates.',
+    description:
+      'Intelligent content optimization platform that analyzes and improves your content for better search rankings, user engagement, and conversion rates.',
     features: [
       'AI-powered content analysis and scoring',
       'SEO optimization recommendations',
@@ -65,22 +67,26 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Content calendar and scheduling',
       'Performance tracking and analytics',
       'Integration with popular CMS platforms',
-      'Automated content improvement suggestions'
+      'Automated content improvement suggestions',
     ],
     popular: true,
     icon: '✍️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-content-optimization-engine',
-    marketPosition: 'Affordable alternative to Clearscope, MarketMuse; focuses on automated optimization.',
-    targetAudience: 'Content marketers, SEO specialists, bloggers, small businesses',
+    marketPosition:
+      'Affordable alternative to Clearscope, MarketMuse; focuses on automated optimization.',
+    targetAudience:
+      'Content marketers, SEO specialists, bloggers, small businesses',
     trialDays: 14,
     setupTime: '30 minutes',
     category: 'Content Marketing & SEO',
     realService: true,
     technology: ['AI/ML, Natural Language Processing, SEO APIs, Analytics'],
     integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Google Analytics'],
-    useCases: ['Content optimization, SEO improvement, Engagement increase, Conversion optimization'],
+    useCases: [
+      'Content optimization, SEO improvement, Engagement increase, Conversion optimization',
+    ],
     roi: 'Improve search rankings by 30% and increase engagement by 40%.',
     competitors: ['Clearscope, MarketMuse, Surfer SEO, Frase'],
     marketSize: '$5B content optimization market',
@@ -88,19 +94,22 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI content analysis models, SEO optimization algorithms, and automated improvement workflows.',
+    implementationDetails:
+      'AI content analysis models, SEO optimization algorithms, and automated improvement workflows.',
     launchDate: '2025-01-10',
     customers: 156,
     rating: 4.6,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'smart-invoice-automation-suite',
     name: 'Smart Invoice Automation Suite',
-    tagline: 'Automate invoicing, payment tracking, and financial reconciliation',
+    tagline:
+      'Automate invoicing, payment tracking, and financial reconciliation',
     price: '$69',
     period: '/month',
-    description: 'Comprehensive invoice automation platform that handles creation, sending, tracking, and reconciliation with intelligent payment matching and financial reporting.',
+    description:
+      'Comprehensive invoice automation platform that handles creation, sending, tracking, and reconciliation with intelligent payment matching and financial reporting.',
     features: [
       'Automated invoice generation and sending',
       'Payment tracking and reminders',
@@ -110,14 +119,15 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Automated reconciliation',
       'Financial reporting and analytics',
       'Mobile app for on-the-go management',
-      'Custom invoice templates and branding'
+      'Custom invoice templates and branding',
     ],
     popular: false,
     icon: '🧾',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/smart-invoice-automation-suite',
-    marketPosition: 'Affordable alternative to FreshBooks, QuickBooks; focuses on automation and reconciliation.',
+    marketPosition:
+      'Affordable alternative to FreshBooks, QuickBooks; focuses on automation and reconciliation.',
     targetAudience: 'Small businesses, freelancers, accountants, bookkeepers',
     trialDays: 21,
     setupTime: '1 day',
@@ -125,7 +135,9 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     realService: true,
     technology: ['Automation, Cloud Computing, APIs, Mobile Development'],
     integrations: ['QuickBooks, Xero, Stripe, PayPal, Bank APIs'],
-    useCases: ['Invoice automation, Payment tracking, Financial reconciliation, Cash flow management'],
+    useCases: [
+      'Invoice automation, Payment tracking, Financial reconciliation, Cash flow management',
+    ],
     roi: 'Reduce invoice processing time by 80% and improve cash flow by 25%.',
     competitors: ['FreshBooks, QuickBooks, Xero, Wave'],
     marketSize: '$8B accounting software market',
@@ -133,19 +145,22 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'finance-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Automated invoice workflows, payment matching algorithms, and financial reconciliation engines.',
+    implementationDetails:
+      'Automated invoice workflows, payment matching algorithms, and financial reconciliation engines.',
     launchDate: '2025-01-20',
     customers: 89,
     rating: 4.5,
-    reviews: 47
+    reviews: 47,
   },
   {
     id: 'ai-powered-customer-feedback-analyzer',
     name: 'AI-Powered Customer Feedback Analyzer',
-    tagline: 'Transform customer feedback into actionable insights automatically',
+    tagline:
+      'Transform customer feedback into actionable insights automatically',
     price: '$79',
     period: '/month',
-    description: 'Intelligent feedback analysis platform that automatically categorizes, analyzes, and extracts insights from customer feedback across multiple channels.',
+    description:
+      'Intelligent feedback analysis platform that automatically categorizes, analyzes, and extracts insights from customer feedback across multiple channels.',
     features: [
       'Multi-channel feedback collection',
       'AI-powered sentiment analysis',
@@ -155,22 +170,28 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Integration with support platforms',
       'Real-time feedback monitoring',
       'Custom dashboard and reporting',
-      'Automated alert system'
+      'Automated alert system',
     ],
     popular: true,
     icon: '📊',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-feedback-analyzer',
-    marketPosition: 'Affordable alternative to Qualtrics, SurveyMonkey; focuses on AI-powered analysis.',
-    targetAudience: 'Product managers, customer success teams, marketers, small businesses',
+    marketPosition:
+      'Affordable alternative to Qualtrics, SurveyMonkey; focuses on AI-powered analysis.',
+    targetAudience:
+      'Product managers, customer success teams, marketers, small businesses',
     trialDays: 14,
     setupTime: '1 day',
     category: 'Customer Experience & Analytics',
     realService: true,
     technology: ['AI/ML, Natural Language Processing, Analytics, APIs'],
-    integrations: ['Zendesk, Intercom, SurveyMonkey, Google Forms, Social Media'],
-    useCases: ['Customer feedback analysis, Product improvement, Customer satisfaction tracking, Market research'],
+    integrations: [
+      'Zendesk, Intercom, SurveyMonkey, Google Forms, Social Media',
+    ],
+    useCases: [
+      'Customer feedback analysis, Product improvement, Customer satisfaction tracking, Market research',
+    ],
     roi: 'Improve customer satisfaction by 20% and reduce churn by 30%.',
     competitors: ['Qualtrics, SurveyMonkey, Typeform, Hotjar'],
     marketSize: '$3B feedback analytics market',
@@ -178,11 +199,12 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'analytics-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI sentiment analysis models, feedback categorization algorithms, and automated insight generation.',
+    implementationDetails:
+      'AI sentiment analysis models, feedback categorization algorithms, and automated insight generation.',
     launchDate: '2025-01-25',
     customers: 134,
     rating: 4.7,
-    reviews: 72
+    reviews: 72,
   },
   {
     id: 'smart-project-management-automation',
@@ -190,7 +212,8 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     tagline: 'AI-driven project planning, tracking, and resource optimization',
     price: '$99',
     period: '/month',
-    description: 'Intelligent project management platform that automates planning, tracks progress, optimizes resource allocation, and predicts project risks.',
+    description:
+      'Intelligent project management platform that automates planning, tracks progress, optimizes resource allocation, and predicts project risks.',
     features: [
       'AI-powered project planning and scheduling',
       'Automated task assignment and tracking',
@@ -200,22 +223,26 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Team collaboration tools',
       'Integration with popular tools',
       'Customizable workflows and templates',
-      'Performance analytics and reporting'
+      'Performance analytics and reporting',
     ],
     popular: true,
     icon: '📋',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/smart-project-management-automation',
-    marketPosition: 'Affordable alternative to Asana, Monday.com; adds AI-driven automation and optimization.',
-    targetAudience: 'Project managers, team leaders, small businesses, consultants',
+    marketPosition:
+      'Affordable alternative to Asana, Monday.com; adds AI-driven automation and optimization.',
+    targetAudience:
+      'Project managers, team leaders, small businesses, consultants',
     trialDays: 21,
     setupTime: '2 days',
     category: 'Project Management',
     realService: true,
     technology: ['AI/ML, Automation, Cloud Computing, Mobile Development'],
     integrations: ['Slack, Microsoft Teams, Google Workspace, Trello, Jira'],
-    useCases: ['Project planning, Team collaboration, Resource optimization, Risk management'],
+    useCases: [
+      'Project planning, Team collaboration, Resource optimization, Risk management',
+    ],
     roi: 'Improve project delivery time by 25% and reduce resource waste by 30%.',
     competitors: ['Asana, Monday.com, Trello, Basecamp'],
     marketSize: '$6B project management software market',
@@ -223,19 +250,22 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'project-management-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI project planning algorithms, resource optimization models, and automated workflow management.',
+    implementationDetails:
+      'AI project planning algorithms, resource optimization models, and automated workflow management.',
     launchDate: '2025-02-01',
     customers: 178,
     rating: 4.6,
-    reviews: 95
+    reviews: 95,
   },
   {
     id: 'ai-powered-social-media-scheduler',
     name: 'AI-Powered Social Media Scheduler',
-    tagline: 'Intelligent social media scheduling with optimal timing and content optimization',
+    tagline:
+      'Intelligent social media scheduling with optimal timing and content optimization',
     price: '$59',
     period: '/month',
-    description: 'Smart social media management platform that automatically schedules posts at optimal times, optimizes content, and provides performance analytics.',
+    description:
+      'Smart social media management platform that automatically schedules posts at optimal times, optimizes content, and provides performance analytics.',
     features: [
       'AI-powered optimal posting time detection',
       'Automated content scheduling',
@@ -245,22 +275,26 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Analytics and performance tracking',
       'Integration with design tools',
       'Bulk content upload and scheduling',
-      'Team collaboration and approval workflows'
+      'Team collaboration and approval workflows',
     ],
     popular: false,
     icon: '📱',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-social-media-scheduler',
-    marketPosition: 'Affordable alternative to Buffer, Hootsuite; focuses on AI-driven optimization.',
-    targetAudience: 'Social media managers, marketers, small businesses, influencers',
+    marketPosition:
+      'Affordable alternative to Buffer, Hootsuite; focuses on AI-driven optimization.',
+    targetAudience:
+      'Social media managers, marketers, small businesses, influencers',
     trialDays: 14,
     setupTime: '30 minutes',
     category: 'Social Media Marketing',
     realService: true,
     technology: ['AI/ML, Social Media APIs, Analytics, Automation'],
     integrations: ['Facebook, Instagram, Twitter, LinkedIn, TikTok, Canva'],
-    useCases: ['Social media scheduling, Content optimization, Performance tracking, Team collaboration'],
+    useCases: [
+      'Social media scheduling, Content optimization, Performance tracking, Team collaboration',
+    ],
     roi: 'Increase social media engagement by 40% and save 5 hours per week.',
     competitors: ['Buffer, Hootsuite, Later, Sprout Social'],
     marketSize: '$4B social media management market',
@@ -268,11 +302,12 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI timing optimization algorithms, content performance models, and automated scheduling workflows.',
+    implementationDetails:
+      'AI timing optimization algorithms, content performance models, and automated scheduling workflows.',
     launchDate: '2025-02-05',
     customers: 203,
     rating: 4.5,
-    reviews: 108
+    reviews: 108,
   },
   {
     id: 'smart-email-marketing-automation',
@@ -280,7 +315,8 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     tagline: 'AI-driven email campaigns with personalization and optimization',
     price: '$89',
     period: '/month',
-    description: 'Intelligent email marketing platform that automatically personalizes content, optimizes send times, and provides detailed analytics for better campaign performance.',
+    description:
+      'Intelligent email marketing platform that automatically personalizes content, optimizes send times, and provides detailed analytics for better campaign performance.',
     features: [
       'AI-powered personalization and segmentation',
       'Automated email sequence creation',
@@ -290,22 +326,26 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Integration with CRM systems',
       'Custom email templates and design',
       'Automated list management',
-      'Compliance and deliverability tools'
+      'Compliance and deliverability tools',
     ],
     popular: true,
     icon: '📧',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/smart-email-marketing-automation',
-    marketPosition: 'Affordable alternative to Mailchimp, ConvertKit; adds AI-driven personalization.',
-    targetAudience: 'Email marketers, small businesses, e-commerce stores, consultants',
+    marketPosition:
+      'Affordable alternative to Mailchimp, ConvertKit; adds AI-driven personalization.',
+    targetAudience:
+      'Email marketers, small businesses, e-commerce stores, consultants',
     trialDays: 21,
     setupTime: '1 day',
     category: 'Email Marketing',
     realService: true,
     technology: ['AI/ML, Email APIs, Analytics, Automation'],
     integrations: ['Salesforce, HubSpot, Shopify, WooCommerce, Zapier'],
-    useCases: ['Email automation, Personalization, Campaign optimization, List management'],
+    useCases: [
+      'Email automation, Personalization, Campaign optimization, List management',
+    ],
     roi: 'Increase email open rates by 35% and click-through rates by 50%.',
     competitors: ['Mailchimp, ConvertKit, ActiveCampaign, Drip'],
     marketSize: '$7B email marketing market',
@@ -313,11 +353,12 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'marketing-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI personalization algorithms, send time optimization models, and automated campaign management.',
+    implementationDetails:
+      'AI personalization algorithms, send time optimization models, and automated campaign management.',
     launchDate: '2025-02-10',
     customers: 267,
     rating: 4.7,
-    reviews: 143
+    reviews: 143,
   },
   {
     id: 'ai-powered-customer-support-chatbot',
@@ -325,7 +366,8 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     tagline: 'Intelligent chatbot that handles customer inquiries 24/7',
     price: '$129',
     period: '/month',
-    description: 'Advanced customer support chatbot that uses AI to understand customer queries, provide accurate answers, and escalate complex issues to human agents.',
+    description:
+      'Advanced customer support chatbot that uses AI to understand customer queries, provide accurate answers, and escalate complex issues to human agents.',
     features: [
       'Natural language understanding and processing',
       '24/7 automated customer support',
@@ -335,22 +377,26 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Custom chatbot personality and branding',
       'Analytics and performance tracking',
       'Integration with popular platforms',
-      'Continuous learning and improvement'
+      'Continuous learning and improvement',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-customer-support-chatbot',
-    marketPosition: 'Affordable alternative to Intercom, Drift; focuses on AI-powered support automation.',
-    targetAudience: 'Customer support teams, e-commerce stores, SaaS companies, small businesses',
+    marketPosition:
+      'Affordable alternative to Intercom, Drift; focuses on AI-powered support automation.',
+    targetAudience:
+      'Customer support teams, e-commerce stores, SaaS companies, small businesses',
     trialDays: 14,
     setupTime: '2 days',
     category: 'Customer Support & AI',
     realService: true,
     technology: ['AI/ML, Natural Language Processing, Chat APIs, Analytics'],
     integrations: ['Zendesk, Intercom, Slack, WhatsApp, Facebook Messenger'],
-    useCases: ['24/7 customer support, FAQ automation, Lead qualification, Support ticket creation'],
+    useCases: [
+      '24/7 customer support, FAQ automation, Lead qualification, Support ticket creation',
+    ],
     roi: 'Reduce support costs by 40% and improve response time by 80%.',
     competitors: ['Intercom, Drift, Zendesk Chat, Freshchat'],
     marketSize: '$2B chatbot market',
@@ -358,19 +404,22 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI language models, natural language processing, and automated support workflows.',
+    implementationDetails:
+      'AI language models, natural language processing, and automated support workflows.',
     launchDate: '2025-02-15',
     customers: 189,
     rating: 4.6,
-    reviews: 97
+    reviews: 97,
   },
   {
     id: 'smart-inventory-management-system',
     name: 'Smart Inventory Management System',
-    tagline: 'AI-powered inventory tracking and optimization for small businesses',
+    tagline:
+      'AI-powered inventory tracking and optimization for small businesses',
     price: '$79',
     period: '/month',
-    description: 'Intelligent inventory management platform that automatically tracks stock levels, predicts demand, and optimizes ordering to prevent stockouts and overstock.',
+    description:
+      'Intelligent inventory management platform that automatically tracks stock levels, predicts demand, and optimizes ordering to prevent stockouts and overstock.',
     features: [
       'Real-time inventory tracking and monitoring',
       'AI-powered demand forecasting',
@@ -380,22 +429,26 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Integration with e-commerce platforms',
       'Cost tracking and profit analysis',
       'Supplier management and ordering',
-      'Customizable reports and analytics'
+      'Customizable reports and analytics',
     ],
     popular: false,
     icon: '📦',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/smart-inventory-management-system',
-    marketPosition: 'Affordable alternative to TradeGecko, Zoho Inventory; focuses on AI-driven optimization.',
-    targetAudience: 'Retail stores, e-commerce businesses, wholesalers, small manufacturers',
+    marketPosition:
+      'Affordable alternative to TradeGecko, Zoho Inventory; focuses on AI-driven optimization.',
+    targetAudience:
+      'Retail stores, e-commerce businesses, wholesalers, small manufacturers',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Inventory & Supply Chain',
     realService: true,
     technology: ['AI/ML, Cloud Computing, Mobile Development, APIs'],
     integrations: ['Shopify, WooCommerce, QuickBooks, Xero, Stripe'],
-    useCases: ['Inventory tracking, Demand forecasting, Stock optimization, Cost management'],
+    useCases: [
+      'Inventory tracking, Demand forecasting, Stock optimization, Cost management',
+    ],
     roi: 'Reduce inventory costs by 25% and prevent 90% of stockouts.',
     competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Odoo'],
     marketSize: '$3B inventory management market',
@@ -403,11 +456,12 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'supply-chain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI demand forecasting models, automated inventory tracking, and optimization algorithms.',
+    implementationDetails:
+      'AI demand forecasting models, automated inventory tracking, and optimization algorithms.',
     launchDate: '2025-02-20',
     customers: 145,
     rating: 4.5,
-    reviews: 78
+    reviews: 78,
   },
   {
     id: 'ai-powered-lead-scoring-platform',
@@ -415,7 +469,8 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     tagline: 'Automatically score and prioritize leads for better conversion',
     price: '$149',
     period: '/month',
-    description: 'Intelligent lead scoring platform that uses AI to analyze lead behavior, engagement, and demographics to automatically score and prioritize prospects.',
+    description:
+      'Intelligent lead scoring platform that uses AI to analyze lead behavior, engagement, and demographics to automatically score and prioritize prospects.',
     features: [
       'AI-powered lead scoring algorithms',
       'Behavioral tracking and analysis',
@@ -425,22 +480,26 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Real-time lead prioritization',
       'Performance analytics and reporting',
       'Automated lead nurturing workflows',
-      'Multi-channel lead capture'
+      'Multi-channel lead capture',
     ],
     popular: true,
     icon: '🎯',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-lead-scoring-platform',
-    marketPosition: 'Advanced alternative to HubSpot Lead Scoring, Pardot; focuses on AI-driven automation.',
-    targetAudience: 'Sales teams, marketers, B2B companies, lead generation agencies',
+    marketPosition:
+      'Advanced alternative to HubSpot Lead Scoring, Pardot; focuses on AI-driven automation.',
+    targetAudience:
+      'Sales teams, marketers, B2B companies, lead generation agencies',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Sales & Lead Generation',
     realService: true,
     technology: ['AI/ML, Analytics, CRM Integration, Automation'],
     integrations: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, ActiveCampaign'],
-    useCases: ['Lead qualification, Sales prioritization, Lead nurturing, Conversion optimization'],
+    useCases: [
+      'Lead qualification, Sales prioritization, Lead nurturing, Conversion optimization',
+    ],
     roi: 'Increase lead conversion rates by 35% and reduce sales cycle time by 25%.',
     competitors: ['HubSpot Lead Scoring, Pardot, Marketo, SalesLoft'],
     marketSize: '$4B lead management market',
@@ -448,11 +507,12 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'sales-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI lead scoring models, behavioral analysis algorithms, and automated qualification workflows.',
+    implementationDetails:
+      'AI lead scoring models, behavioral analysis algorithms, and automated qualification workflows.',
     launchDate: '2025-02-25',
     customers: 98,
     rating: 4.7,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'smart-business-intelligence-dashboard',
@@ -460,7 +520,8 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     tagline: 'AI-powered business analytics and insights for small businesses',
     price: '$199',
     period: '/month',
-    description: 'Comprehensive business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable insights for better decision-making.',
+    description:
+      'Comprehensive business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable insights for better decision-making.',
     features: [
       'AI-powered data analysis and insights',
       'Custom dashboard creation and management',
@@ -470,22 +531,26 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
       'Integration with business applications',
       'Mobile app for on-the-go access',
       'Team collaboration and sharing',
-      'Custom alerts and notifications'
+      'Custom alerts and notifications',
     ],
     popular: true,
     icon: '📊',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/smart-business-intelligence-dashboard',
-    marketPosition: 'Affordable alternative to Tableau, Power BI; focuses on AI-driven insights and ease of use.',
-    targetAudience: 'Business owners, executives, analysts, small to medium businesses',
+    marketPosition:
+      'Affordable alternative to Tableau, Power BI; focuses on AI-driven insights and ease of use.',
+    targetAudience:
+      'Business owners, executives, analysts, small to medium businesses',
     trialDays: 30,
     setupTime: '1 week',
     category: 'Business Intelligence & Analytics',
     realService: true,
     technology: ['AI/ML, Data Analytics, Cloud Computing, Visualization'],
     integrations: ['QuickBooks, Salesforce, HubSpot, Google Analytics, Stripe'],
-    useCases: ['Business performance tracking, Data analysis, Decision making, Performance optimization'],
+    useCases: [
+      'Business performance tracking, Data analysis, Decision making, Performance optimization',
+    ],
     roi: 'Improve business decision-making by 40% and identify 30% more growth opportunities.',
     competitors: ['Tableau, Power BI, Looker, Sisense'],
     marketSize: '$12B business intelligence market',
@@ -493,10 +558,11 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     variant: 'business-intelligence-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI analytics models, automated data processing, and intelligent insight generation.',
+    implementationDetails:
+      'AI analytics models, automated data processing, and intelligent insight generation.',
     launchDate: '2025-03-01',
     customers: 76,
     rating: 4.8,
-    reviews: 41
-  }
+    reviews: 41,
+  },
 ];

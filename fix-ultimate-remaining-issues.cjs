@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Remaining Issues Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Ultimate Remaining Issues Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix livekit room file - rewrite completely
@@ -98,7 +100,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(marketplaceOffersPath, marketplaceOffersContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/marketplace/offers.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/marketplace/offers.ts'
+);
 // Fix marketplace projects file - rewrite completely
 const marketplaceProjectsPath = '/workspace/pages/api/marketplace/projects.ts';
 const marketplaceProjectsContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -151,7 +155,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }`;
 fs.writeFileSync(marketplaceProjectsPath, marketplaceProjectsContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/marketplace/projects.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/marketplace/projects.ts'
+);
 // Fix media generate file - rewrite completely
 const mediaGeneratePath = '/workspace/pages/api/media/generate.ts';
 const mediaGenerateContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -184,7 +190,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }`;
 fs.writeFileSync(mediaGeneratePath, mediaGenerateContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/media/generate.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/media/generate.ts'
+);
 // Fix meetings invite file
 const meetingsInvitePath = '/workspace/pages/api/meetings/invite.ts';
 if (fs.existsSync(meetingsInvitePath)) {
@@ -194,7 +202,9 @@ if (fs.existsSync(meetingsInvitePath)) {
     content += '\n}';
   }
   fs.writeFileSync(meetingsInvitePath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/meetings/invite.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/meetings/invite.ts'
+  );
 }
 console.log('');
 console.log('📊 ULTIMATE REMAINING ISSUES FIX REPORT');
@@ -205,8 +215,12 @@ console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
 console.log('');
 console.log('✅ Successfully fixed files:');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/livekit/room.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/marketplace/offers.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/marketplace/projects.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/marketplace/offers.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/marketplace/projects.ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/media/generate.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/meetings/invite.ts');
 console.log('');
@@ -220,8 +234,11 @@ const report = {
     'pages/api/marketplace/offers.ts',
     'pages/api/marketplace/projects.ts',
     'pages/api/media/generate.ts',
-    'pages/api/meetings/invite.ts'
-  ]
+    'pages/api/meetings/invite.ts',
+  ],
 };
-fs.writeFileSync('/workspace/ultimate-remaining-issues-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/ultimate-remaining-issues-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to ultimate-remaining-issues-fix-report.json');

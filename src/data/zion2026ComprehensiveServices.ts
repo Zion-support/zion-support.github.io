@@ -40,7 +40,8 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
   {
     id: 'ai-autonomous-business-operations',
     title: 'AI Autonomous Business Operations Platform',
-    description: 'Revolutionary autonomous business process management platform that operates independently, making real-time decisions and optimizing operations without human intervention.',
+    description:
+      'Revolutionary autonomous business process management platform that operates independently, making real-time decisions and optimizing operations without human intervention.',
     category: 'Artificial Intelligence',
     subcategory: 'Autonomous Operations',
     price: {
@@ -49,7 +50,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 14999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'Fully autonomous decision-making engine',
@@ -59,7 +60,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Multi-tenant cloud deployment',
       'Advanced security and compliance',
       '24/7 autonomous monitoring',
-      'Intelligent resource allocation'
+      'Intelligent resource allocation',
     ],
     benefits: [
       '99.9% operational efficiency improvement',
@@ -67,41 +68,41 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Real-time decision making',
       'Zero downtime operations',
       'Scalable to enterprise level',
-      'Compliance automation'
+      'Compliance automation',
     ],
     targetAudience: [
       'Enterprise corporations',
       'Financial institutions',
       'Healthcare organizations',
       'Manufacturing companies',
-      'Government agencies'
+      'Government agencies',
     ],
     useCases: [
       'Supply chain optimization',
       'Financial trading automation',
       'Healthcare process management',
       'Manufacturing automation',
-      'Customer service automation'
+      'Customer service automation',
     ],
     integration: [
       'ERP systems',
       'CRM platforms',
       'Cloud infrastructure',
       'IoT devices',
-      'Blockchain networks'
+      'Blockchain networks',
     ],
     technology: [
       'Advanced AI/ML algorithms',
       'Quantum computing integration',
       'Edge computing',
       '5G networks',
-      'Blockchain technology'
+      'Blockchain technology',
     ],
     website: 'https://ziontechgroup.com/ai-autonomous-operations',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.9,
     reviewCount: 247,
@@ -112,12 +113,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: '24/7 dedicated support with SLA guarantees',
     compliance: ['SOC 2 Type II', 'GDPR', 'HIPAA', 'PCI DSS'],
     roi: '300% within 12 months',
-    implementation: 'Cloud-native deployment with on-premise options'
+    implementation: 'Cloud-native deployment with on-premise options',
   },
   {
     id: 'quantum-ai-analytics-platform',
     title: 'Quantum-Enhanced AI Analytics Platform',
-    description: 'Cutting-edge analytics platform combining quantum computing power with advanced AI algorithms for unprecedented data processing and insights.',
+    description:
+      'Cutting-edge analytics platform combining quantum computing power with advanced AI algorithms for unprecedented data processing and insights.',
     category: 'Quantum Computing',
     subcategory: 'AI Analytics',
     price: {
@@ -126,7 +128,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 19999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'Quantum machine learning algorithms',
@@ -136,48 +138,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Multi-dimensional data analysis',
       'Automated insight generation',
       'Quantum neural networks',
-      'Hybrid classical-quantum processing'
+      'Hybrid classical-quantum processing',
     ],
     benefits: [
       '1000x faster data processing',
       'Unprecedented accuracy in predictions',
       'Real-time complex analysis',
       'Quantum-level security',
-      'Scalable quantum solutions'
+      'Scalable quantum solutions',
     ],
     targetAudience: [
       'Data scientists',
       'Research institutions',
       'Financial analysts',
       'Healthcare researchers',
-      'Government agencies'
+      'Government agencies',
     ],
     useCases: [
       'Drug discovery and development',
       'Financial risk modeling',
       'Climate change prediction',
       'Genomic analysis',
-      'Cybersecurity threat detection'
+      'Cybersecurity threat detection',
     ],
     integration: [
       'Data warehouses',
       'Cloud platforms',
       'Scientific computing tools',
       'Business intelligence systems',
-      'Research databases'
+      'Research databases',
     ],
     technology: [
       'Quantum computing',
       'Machine learning',
       'Deep learning',
       'Quantum algorithms',
-      'Quantum cryptography'
+      'Quantum cryptography',
     ],
     website: 'https://ziontechgroup.com/quantum-ai-analytics',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.9,
     reviewCount: 189,
@@ -188,12 +190,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: '24/7 quantum computing support',
     compliance: ['ISO 27001', 'NIST', 'GDPR'],
     roi: '500% within 18 months',
-    implementation: 'Hybrid quantum-classical deployment'
+    implementation: 'Hybrid quantum-classical deployment',
   },
   {
     id: 'neuromorphic-computing-platform',
     title: 'Neuromorphic Computing Platform',
-    description: 'Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing and edge computing applications.',
+    description:
+      'Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing and edge computing applications.',
     category: 'Neuromorphic Computing',
     subcategory: 'Edge AI',
     price: {
@@ -202,7 +205,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 9999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'Brain-inspired neural architecture',
@@ -212,48 +215,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Adaptive neural networks',
       'Spiking neural networks',
       'Hardware acceleration',
-      'IoT integration ready'
+      'IoT integration ready',
     ],
     benefits: [
       '90% reduction in power consumption',
       'Real-time learning and adaptation',
       'Ultra-fast processing',
       'Edge device optimization',
-      'Scalable neural solutions'
+      'Scalable neural solutions',
     ],
     targetAudience: [
       'IoT device manufacturers',
       'Edge computing companies',
       'Mobile app developers',
       'Automotive industry',
-      'Smart city developers'
+      'Smart city developers',
     ],
     useCases: [
       'Autonomous vehicles',
       'Smart sensors',
       'Mobile AI applications',
       'Industrial IoT',
-      'Wearable technology'
+      'Wearable technology',
     ],
     integration: [
       'IoT platforms',
       'Edge computing infrastructure',
       'Mobile applications',
       'Automotive systems',
-      'Industrial equipment'
+      'Industrial equipment',
     ],
     technology: [
       'Neuromorphic chips',
       'Spiking neural networks',
       'Edge computing',
       'IoT protocols',
-      'Hardware acceleration'
+      'Hardware acceleration',
     ],
     website: 'https://ziontechgroup.com/neuromorphic-computing',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.8,
     reviewCount: 156,
@@ -264,12 +267,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: 'Technical support with hardware integration assistance',
     compliance: ['ISO 27001', 'IEC 62443'],
     roi: '400% within 15 months',
-    implementation: 'Hardware-software co-design deployment'
+    implementation: 'Hardware-software co-design deployment',
   },
   {
     id: 'synthetic-biology-ai-platform',
     title: 'Synthetic Biology AI Platform',
-    description: 'Revolutionary platform combining AI with synthetic biology for designing, testing, and optimizing biological systems and processes.',
+    description:
+      'Revolutionary platform combining AI with synthetic biology for designing, testing, and optimizing biological systems and processes.',
     category: 'Synthetic Biology',
     subcategory: 'AI Design',
     price: {
@@ -278,7 +282,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 24999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'AI-powered DNA design',
@@ -288,48 +292,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'CRISPR design tools',
       'Metabolic pathway optimization',
       'Protein structure prediction',
-      'Biological safety assessment'
+      'Biological safety assessment',
     ],
     benefits: [
       '10x faster biological design',
       'Reduced laboratory costs',
       'Improved accuracy in predictions',
       'Automated safety assessments',
-      'Scalable biological solutions'
+      'Scalable biological solutions',
     ],
     targetAudience: [
       'Biotechnology companies',
       'Pharmaceutical companies',
       'Research institutions',
       'Agricultural companies',
-      'Environmental organizations'
+      'Environmental organizations',
     ],
     useCases: [
       'Drug development',
       'Agricultural optimization',
       'Environmental remediation',
       'Biofuel production',
-      'Medical diagnostics'
+      'Medical diagnostics',
     ],
     integration: [
       'Laboratory information systems',
       'DNA sequencing platforms',
       'Biological databases',
       'Research tools',
-      'Clinical systems'
+      'Clinical systems',
     ],
     technology: [
       'Machine learning',
       'Computational biology',
       'DNA synthesis',
       'CRISPR technology',
-      'Bioinformatics'
+      'Bioinformatics',
     ],
     website: 'https://ziontechgroup.com/synthetic-biology-ai',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.9,
     reviewCount: 98,
@@ -340,12 +344,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: 'Specialized biological research support',
     compliance: ['FDA', 'EPA', 'Biosafety regulations'],
     roi: '600% within 24 months',
-    implementation: 'Cloud-based platform with laboratory integration'
+    implementation: 'Cloud-based platform with laboratory integration',
   },
   {
     id: 'quantum-blockchain-platform',
     title: 'Quantum-Secured Blockchain Platform',
-    description: 'Next-generation blockchain platform with quantum-resistant cryptography and advanced consensus mechanisms for ultra-secure decentralized applications.',
+    description:
+      'Next-generation blockchain platform with quantum-resistant cryptography and advanced consensus mechanisms for ultra-secure decentralized applications.',
     category: 'Blockchain',
     subcategory: 'Quantum Security',
     price: {
@@ -354,7 +359,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 7999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'Quantum-resistant cryptography',
@@ -364,48 +369,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Zero-knowledge proofs',
       'Decentralized identity',
       'Quantum key distribution',
-      'Scalable blockchain architecture'
+      'Scalable blockchain architecture',
     ],
     benefits: [
       'Quantum-resistant security',
       'Ultra-fast transactions',
       'Low energy consumption',
       'Cross-chain compatibility',
-      'Future-proof technology'
+      'Future-proof technology',
     ],
     targetAudience: [
       'Financial institutions',
       'Healthcare organizations',
       'Government agencies',
       'Supply chain companies',
-      'DeFi platforms'
+      'DeFi platforms',
     ],
     useCases: [
       'Secure financial transactions',
       'Healthcare data management',
       'Supply chain tracking',
       'Digital identity verification',
-      'Decentralized finance'
+      'Decentralized finance',
     ],
     integration: [
       'Existing blockchain networks',
       'Financial systems',
       'Healthcare platforms',
       'Supply chain systems',
-      'Identity management systems'
+      'Identity management systems',
     ],
     technology: [
       'Blockchain technology',
       'Quantum cryptography',
       'Smart contracts',
       'Consensus algorithms',
-      'Zero-knowledge proofs'
+      'Zero-knowledge proofs',
     ],
     website: 'https://ziontechgroup.com/quantum-blockchain',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.8,
     reviewCount: 203,
@@ -416,12 +421,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: '24/7 blockchain support with security consulting',
     compliance: ['GDPR', 'SOX', 'PCI DSS'],
     roi: '350% within 12 months',
-    implementation: 'Cloud deployment with on-premise options'
+    implementation: 'Cloud deployment with on-premise options',
   },
   {
     id: 'ai-cybersecurity-suite',
     title: 'AI-Powered Cybersecurity Suite',
-    description: 'Comprehensive cybersecurity solution using advanced AI to detect, prevent, and respond to cyber threats in real-time.',
+    description:
+      'Comprehensive cybersecurity solution using advanced AI to detect, prevent, and respond to cyber threats in real-time.',
     category: 'Cybersecurity',
     subcategory: 'AI Defense',
     price: {
@@ -430,7 +436,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 4999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'AI-powered threat detection',
@@ -440,48 +446,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Vulnerability assessment',
       'Security automation',
       'Compliance monitoring',
-      'Real-time protection'
+      'Real-time protection',
     ],
     benefits: [
       '99.9% threat detection rate',
       'Real-time protection',
       'Automated response',
       'Reduced false positives',
-      'Compliance automation'
+      'Compliance automation',
     ],
     targetAudience: [
       'Enterprise organizations',
       'Financial institutions',
       'Healthcare providers',
       'Government agencies',
-      'Educational institutions'
+      'Educational institutions',
     ],
     useCases: [
       'Network security',
       'Endpoint protection',
       'Cloud security',
       'Data protection',
-      'Compliance management'
+      'Compliance management',
     ],
     integration: [
       'SIEM systems',
       'Firewalls',
       'Endpoint protection',
       'Cloud platforms',
-      'Security tools'
+      'Security tools',
     ],
     technology: [
       'Machine learning',
       'Deep learning',
       'Behavioral analytics',
       'Threat intelligence',
-      'Automation'
+      'Automation',
     ],
     website: 'https://ziontechgroup.com/ai-cybersecurity',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.9,
     reviewCount: 312,
@@ -492,12 +498,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: '24/7 security operations center support',
     compliance: ['SOC 2', 'ISO 27001', 'NIST', 'GDPR'],
     roi: '250% within 9 months',
-    implementation: 'Cloud-native deployment with hybrid options'
+    implementation: 'Cloud-native deployment with hybrid options',
   },
   {
     id: 'quantum-iot-platform',
     title: 'Quantum-Enhanced IoT Platform',
-    description: 'Advanced IoT platform leveraging quantum computing for ultra-secure, high-performance connected device management and data processing.',
+    description:
+      'Advanced IoT platform leveraging quantum computing for ultra-secure, high-performance connected device management and data processing.',
     category: 'Internet of Things',
     subcategory: 'Quantum IoT',
     price: {
@@ -506,7 +513,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 3999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'Quantum-secured communications',
@@ -516,48 +523,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Data analytics',
       'Security monitoring',
       'Scalable architecture',
-      'Multi-protocol support'
+      'Multi-protocol support',
     ],
     benefits: [
       'Quantum-level security',
       'Real-time processing',
       'Scalable IoT solutions',
       'Low latency',
-      'High reliability'
+      'High reliability',
     ],
     targetAudience: [
       'IoT device manufacturers',
       'Smart city developers',
       'Industrial companies',
       'Healthcare providers',
-      'Automotive industry'
+      'Automotive industry',
     ],
     useCases: [
       'Smart cities',
       'Industrial IoT',
       'Connected vehicles',
       'Smart homes',
-      'Healthcare monitoring'
+      'Healthcare monitoring',
     ],
     integration: [
       'IoT devices',
       'Cloud platforms',
       'Edge computing',
       'Data analytics',
-      'Security systems'
+      'Security systems',
     ],
     technology: [
       'Quantum computing',
       'IoT protocols',
       'Edge computing',
       'Machine learning',
-      'Blockchain'
+      'Blockchain',
     ],
     website: 'https://ziontechgroup.com/quantum-iot',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.7,
     reviewCount: 178,
@@ -568,12 +575,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: 'Technical support with IoT consulting',
     compliance: ['ISO 27001', 'IEC 62443', 'GDPR'],
     roi: '300% within 12 months',
-    implementation: 'Cloud deployment with edge computing integration'
+    implementation: 'Cloud deployment with edge computing integration',
   },
   {
     id: 'ai-metaverse-platform',
     title: 'AI-Powered Metaverse Platform',
-    description: 'Next-generation metaverse platform with AI-driven content creation, virtual experiences, and immersive digital environments.',
+    description:
+      'Next-generation metaverse platform with AI-driven content creation, virtual experiences, and immersive digital environments.',
     category: 'Metaverse',
     subcategory: 'AI Creation',
     price: {
@@ -582,7 +590,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 9999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'AI content generation',
@@ -592,48 +600,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Virtual commerce',
       'Gaming integration',
       'VR/AR support',
-      'Blockchain integration'
+      'Blockchain integration',
     ],
     benefits: [
       'Automated content creation',
       'Immersive experiences',
       'Scalable virtual worlds',
       'Monetization opportunities',
-      'Cross-platform compatibility'
+      'Cross-platform compatibility',
     ],
     targetAudience: [
       'Gaming companies',
       'Entertainment industry',
       'Educational institutions',
       'Retail companies',
-      'Real estate companies'
+      'Real estate companies',
     ],
     useCases: [
       'Virtual gaming',
       'Virtual events',
       'Virtual education',
       'Virtual commerce',
-      'Virtual real estate'
+      'Virtual real estate',
     ],
     integration: [
       'VR/AR devices',
       'Gaming platforms',
       'Social media',
       'E-commerce systems',
-      'Payment platforms'
+      'Payment platforms',
     ],
     technology: [
       'Artificial intelligence',
       'Virtual reality',
       'Augmented reality',
       'Blockchain',
-      '3D graphics'
+      '3D graphics',
     ],
     website: 'https://ziontechgroup.com/ai-metaverse',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.8,
     reviewCount: 145,
@@ -644,12 +652,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: 'Creative and technical support',
     compliance: ['GDPR', 'COPPA', 'Content moderation'],
     roi: '400% within 18 months',
-    implementation: 'Cloud deployment with VR/AR integration'
+    implementation: 'Cloud deployment with VR/AR integration',
   },
   {
     id: 'quantum-robotics-platform',
     title: 'Quantum-Enhanced Robotics Platform',
-    description: 'Advanced robotics platform using quantum computing for ultra-precise control, learning, and autonomous decision-making in complex environments.',
+    description:
+      'Advanced robotics platform using quantum computing for ultra-precise control, learning, and autonomous decision-making in complex environments.',
     category: 'Robotics',
     subcategory: 'Quantum Control',
     price: {
@@ -658,7 +667,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 14999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'Quantum control algorithms',
@@ -668,48 +677,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Precision control',
       'Multi-robot coordination',
       'Safety systems',
-      'Human-robot interaction'
+      'Human-robot interaction',
     ],
     benefits: [
       'Ultra-precise control',
       'Real-time learning',
       'Enhanced safety',
       'Scalable robotics',
-      'Cost optimization'
+      'Cost optimization',
     ],
     targetAudience: [
       'Manufacturing companies',
       'Healthcare providers',
       'Logistics companies',
       'Research institutions',
-      'Automotive industry'
+      'Automotive industry',
     ],
     useCases: [
       'Manufacturing automation',
       'Surgical robotics',
       'Warehouse automation',
       'Research robotics',
-      'Autonomous vehicles'
+      'Autonomous vehicles',
     ],
     integration: [
       'Robotic systems',
       'Manufacturing equipment',
       'Healthcare systems',
       'Logistics platforms',
-      'Safety systems'
+      'Safety systems',
     ],
     technology: [
       'Quantum computing',
       'Robotics',
       'Machine learning',
       'Computer vision',
-      'Control systems'
+      'Control systems',
     ],
     website: 'https://ziontechgroup.com/quantum-robotics',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.9,
     reviewCount: 167,
@@ -720,12 +729,13 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: 'Technical support with robotics consulting',
     compliance: ['ISO 13485', 'IEC 60601', 'Safety standards'],
     roi: '450% within 18 months',
-    implementation: 'Hardware-software co-deployment'
+    implementation: 'Hardware-software co-deployment',
   },
   {
     id: 'ai-space-technology-platform',
     title: 'AI-Powered Space Technology Platform',
-    description: 'Revolutionary space technology platform using AI for satellite management, space exploration, and extraterrestrial research.',
+    description:
+      'Revolutionary space technology platform using AI for satellite management, space exploration, and extraterrestrial research.',
     category: 'Space Technology',
     subcategory: 'AI Space',
     price: {
@@ -734,7 +744,7 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       enterprise: 24999,
       currency: 'USD',
       billingCycle: 'monthly',
-      customPricing: true
+      customPricing: true,
     },
     features: [
       'AI satellite management',
@@ -744,48 +754,48 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
       'Resource optimization',
       'Risk assessment',
       'Communication systems',
-      'Research automation'
+      'Research automation',
     ],
     benefits: [
       'Automated space operations',
       'Enhanced mission success',
       'Cost optimization',
       'Risk reduction',
-      'Scalable space solutions'
+      'Scalable space solutions',
     ],
     targetAudience: [
       'Space agencies',
       'Satellite companies',
       'Research institutions',
       'Defense contractors',
-      'Commercial space companies'
+      'Commercial space companies',
     ],
     useCases: [
       'Satellite operations',
       'Space exploration',
       'Earth observation',
       'Communication systems',
-      'Research missions'
+      'Research missions',
     ],
     integration: [
       'Satellite systems',
       'Ground stations',
       'Communication networks',
       'Research platforms',
-      'Data centers'
+      'Data centers',
     ],
     technology: [
       'Artificial intelligence',
       'Space technology',
       'Satellite communications',
       'Robotics',
-      'Data analytics'
+      'Data analytics',
     ],
     website: 'https://ziontechgroup.com/ai-space-technology',
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     rating: 4.9,
     reviewCount: 89,
@@ -796,8 +806,8 @@ export const zion2026ComprehensiveServices: Zion2026ComprehensiveService[] = [
     support: 'Specialized space technology support',
     compliance: ['ITAR', 'Space regulations', 'Safety standards'],
     roi: '600% within 24 months',
-    implementation: 'Custom deployment with space-grade hardware'
-  }
+    implementation: 'Custom deployment with space-grade hardware',
+  },
 ];
 
 export default zion2026ComprehensiveServices;

@@ -4,10 +4,10 @@ import Blog from '../../src/pages/Blog';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
-    props: {}
+    props: {},
   };
 };
 
 export default function CommunityBlogPage() {
   return <Blog />;
-} 
+}

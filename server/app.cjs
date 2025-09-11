@@ -33,7 +33,7 @@ try {
 } catch (_error) {
   console.warn(
     '⚠️ Failed to initialize dd-trace, using mock implementation:',
-    error.message,
+    error.message
   );
   // Fallback mock tracer
   tracer = {
@@ -129,7 +129,7 @@ app.use(
         baseUri: ["'self'"],
       },
     },
-  }),
+  })
 );
 
 // Enable CORS for allowed origins
@@ -190,13 +190,21 @@ app.post('/api/codex/suggest-fix', (req, res) => {
   // 2. Restrict to a known subset of folders where source files live to avoid
   //    arbitrary file references. Adjust `ALLOWED_PREFIXES` if your layout
   //    changes.
-  const ALLOWED_PREFIXES = ['src/', 'pages/', 'server/', 'backend/', 'public_api/'];
+  const ALLOWED_PREFIXES = [
+    'src/',
+    'pages/',
+    'server/',
+    'backend/',
+    'public_api/',
+  ];
 
   if (filePath) {
     const normalizedPath = path.posix.normalize(filePath).replace(/^\/+/, ''); // Remove leading slash
 
     const isTraversal = normalizedPath.includes('..');
-    const hasAllowedPrefix = ALLOWED_PREFIXES.some((prefix) => normalizedPath.startsWith(prefix));
+    const hasAllowedPrefix = ALLOWED_PREFIXES.some(prefix =>
+      normalizedPath.startsWith(prefix)
+    );
 
     if (isTraversal || !hasAllowedPrefix) {
       return res.status(400).json({ error: 'Invalid file path provided.' });
@@ -248,7 +256,7 @@ app.post('/api/codex/suggest-fix', (req, res) => {
     if (error) {
       console.error(`Codex execution error: ${error.message}`);
       logAndAlert(
-        `Codex execution failed. File: ${filePath || route || 'N/A'}. Error: ${error.message}`,
+        `Codex execution failed. File: ${filePath || route || 'N/A'}. Error: ${error.message}`
       );
       return res.status(500).json({
         error: 'Codex fix process failed to start or execute.',
@@ -287,7 +295,7 @@ app.use((err, req, res, next) => {
   console.error(error);
   logAndAlert(err.stack || err.message);
   if (err.status === 404 || err.status === 403) {
-    Sentry.withScope((scope) => {
+    Sentry.withScope(scope => {
       if (req.user) {
         scope.setUser({ id: req.user.id, email: req.user.email });
       }
@@ -300,7 +308,7 @@ app.use((err, req, res, next) => {
 });
 
 // Global unhandled error logging
-process.on('unhandledRejection', (reason) => {
+process.on('unhandledRejection', reason => {
   const message =
     reason instanceof Error
       ? reason.stack || reason.message
@@ -319,7 +327,7 @@ process.on('unhandledRejection', (reason) => {
   }
 });
 
-process.on('uncaughtException', (error) => {
+process.on('uncaughtException', error => {
   const message = error.stack || error.message;
   console.error('Uncaught Exception:', message);
   logAndAlert(`Uncaught Exception: ${message}`);

@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const new2025Q1RealServices: MicroSaasService[] = [
@@ -14,21 +14,23 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     tagline: 'Data curation, evals, and rollout guardrails for tuned models',
     price: '$249',
     period: '/month',
-    description: 'End-to-end fine-tuning operations: dataset hygiene, eval pipelines, Canary + feature flags, and rollback protections. Works with OpenAI-compatible and OSS models.',
+    description:
+      'End-to-end fine-tuning operations: dataset hygiene, eval pipelines, Canary + feature flags, and rollback protections. Works with OpenAI-compatible and OSS models.',
     features: [
       'Dataset curation & de-duplication',
       'Golden set evals with promptfoo integration',
       'Safety & jailbreak tests pre-release',
       'Shadow deploys and canary rollout',
       'Cost + latency regression alerts',
-      'One-click rollback to prior checkpoint'
+      'One-click rollback to prior checkpoint',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-400',
     link: '/services',
-    marketPosition: 'Operational layer that complements OpenAI fine-tuning and Anyscale serving with governance and safety.',
+    marketPosition:
+      'Operational layer that complements OpenAI fine-tuning and Anyscale serving with governance and safety.',
     targetAudience: 'AI product teams and platform engineers',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -36,7 +38,11 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     realService: true,
     technology: ['Next.js', 'OpenAI-compatible', 'Promptfoo', 'PostgreSQL'],
     integrations: ['OpenAI', 'Anthropic', 'OpenRouter', 'Weights & Biases'],
-    useCases: ['Fine-tuned chatbots', 'Domain-specific assistants', 'Internal copilots'],
+    useCases: [
+      'Fine-tuned chatbots',
+      'Domain-specific assistants',
+      'Internal copilots',
+    ],
     roi: 'Reduce model regressions 30–60% and time-to-release by 40%',
     competitors: ['Humanloop', 'Weights & Biases'],
     marketSize: '$5B+ AI Ops',
@@ -44,32 +50,36 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     variant: 'holographic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Pipelines with eval harness, shadow traffic, and rollout gates.',
+    implementationDetails:
+      'Pipelines with eval harness, shadow traffic, and rollout gates.',
     launchDate: '2025-02-01',
     customers: 12,
     rating: 4.7,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'kubernetes-cost-guard',
     name: 'Kubernetes Cost Guard',
-    tagline: 'Right-size clusters with autoscaling, spot guardrails and budgets',
+    tagline:
+      'Right-size clusters with autoscaling, spot guardrails and budgets',
     price: '$199',
     period: '/month',
-    description: 'Automated K8s cost controls: HPA/VPA suggestions, spot-on safeguards, budget policies and PRs for limits/requests drift.',
+    description:
+      'Automated K8s cost controls: HPA/VPA suggestions, spot-on safeguards, budget policies and PRs for limits/requests drift.',
     features: [
       'HPA/VPA recommendations from usage',
       'Spot safeguards with budget ceilings',
       'Requests/limits drift detection PRs',
       'Namespace cost breakdown & alerts',
-      'Cluster rightsizing playbooks'
+      'Cluster rightsizing playbooks',
     ],
     popular: true,
     icon: '⚙️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: '/services',
-    marketPosition: 'Practical FinOps for SMB teams; complements CloudZero/Cast.ai with GitOps remediation.',
+    marketPosition:
+      'Practical FinOps for SMB teams; complements CloudZero/Cast.ai with GitOps remediation.',
     targetAudience: 'Platform and FinOps teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -85,11 +95,12 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     variant: 'quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Analyzers, SLOs, and PR-generators for resource configs.',
+    implementationDetails:
+      'Analyzers, SLOs, and PR-generators for resource configs.',
     launchDate: '2025-02-05',
     customers: 20,
     rating: 4.6,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'sre-error-budget-guard',
@@ -97,19 +108,21 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     tagline: 'Track SLIs/SLOs and auto-throttle risky rollouts',
     price: '$149',
     period: '/month',
-    description: 'Service-level objectives with release guardrails. Block or slow deploys when burn rates spike. Works with GitHub Actions and popular CD tools.',
+    description:
+      'Service-level objectives with release guardrails. Block or slow deploys when burn rates spike. Works with GitHub Actions and popular CD tools.',
     features: [
       'SLI/SLO templates & burn-rate alerts',
       'Release gates for CI/CD',
       'Progressive delivery support',
-      'Incident comms to Slack/Teams'
+      'Incident comms to Slack/Teams',
     ],
     popular: false,
     icon: '🛡️',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: '/services',
-    marketPosition: 'Lighter than enterprise APM with actionable release controls.',
+    marketPosition:
+      'Lighter than enterprise APM with actionable release controls.',
     targetAudience: 'SRE and platform teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -129,7 +142,7 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     launchDate: '2025-02-06',
     customers: 10,
     rating: 4.6,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'data-contracts-as-code',
@@ -137,12 +150,13 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     tagline: 'Schema versioning, lineage and breaking-change protection',
     price: '$129',
     period: '/month',
-    description: 'Protect downstream systems with declarative data contracts, lineage, and break detection. CI checks prevent incompatible schema releases.',
+    description:
+      'Protect downstream systems with declarative data contracts, lineage, and break detection. CI checks prevent incompatible schema releases.',
     features: [
       'Declarative contracts (OpenAPI/JSON Schema)',
       'Lineage maps & impact analysis',
       'CI checks for breaks',
-      'Docs portal & alerts'
+      'Docs portal & alerts',
     ],
     popular: false,
     icon: '📊',
@@ -165,11 +179,12 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'CLI + CI plugins; contract registry and docs portal.',
+    implementationDetails:
+      'CLI + CI plugins; contract registry and docs portal.',
     launchDate: '2025-02-03',
     customers: 14,
     rating: 4.5,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'privacy-vault-integration',
@@ -177,19 +192,21 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     tagline: 'Tokenize PII/PHI with policy-based access and DSAR automation',
     price: '$199',
     period: '/month',
-    description: 'Seamless integration with leading privacy vaults to tokenize sensitive data, enforce access policies, and automate DSAR exports.',
+    description:
+      'Seamless integration with leading privacy vaults to tokenize sensitive data, enforce access policies, and automate DSAR exports.',
     features: [
       'PII/PHI tokenization adapters',
       'Policy-based access control',
       'DSAR/subject export automation',
-      'Audit logs & evidence'
+      'Audit logs & evidence',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: '/services',
-    marketPosition: 'Fast path to Skyflow/VGS/Transcend with productized blueprints.',
+    marketPosition:
+      'Fast path to Skyflow/VGS/Transcend with productized blueprints.',
     targetAudience: 'Security & privacy teams',
     trialDays: 14,
     setupTime: '2–3 days',
@@ -209,7 +226,6 @@ export const new2025Q1RealServices: MicroSaasService[] = [
     launchDate: '2025-02-02',
     customers: 9,
     rating: 4.7,
-    reviews: 7
-  }
+    reviews: 7,
+  },
 ];
-

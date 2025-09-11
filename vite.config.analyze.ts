@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { visualizer } from 'rollup-plugin-visualizer'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
+import path from 'path';
 
 // Bundle analyzer configuration
 export default defineConfig({
@@ -53,17 +53,10 @@ export default defineConfig({
             'date-fns',
             'lodash.debounce',
 
-
-
             'clsx',
             'tailwind-merge',
           ],
-          forms: [
-            'react-hook-form',
-            '@hookform/resolvers',
-            'yup',
-            'zod',
-          ],
+          forms: ['react-hook-form', '@hookform/resolvers', 'yup', 'zod'],
           charts: ['recharts'],
           animations: ['framer-motion', 'lottie-react'],
         },
@@ -72,7 +65,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
-    }
+      '@': path.resolve(__dirname, './src'),
+    },
   },
 });

@@ -42,7 +42,7 @@ export default [
       'types/**',
       '*.cjs',
       '*.mjs',
-      'supabase/**'
+      'supabase/**',
     ],
   },
   js.configs.recommended,
@@ -63,7 +63,7 @@ export default [
     },
     plugins: {
       '@typescript-eslint': tseslint,
-      'react': react,
+      react: react,
       'react-hooks': reactHooks,
     },
     rules: {
@@ -71,8 +71,7 @@ export default [
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  }
+      'react/react-in-jsx-scope': 'off',
+    },
+  },
 ];
-

@@ -35,5 +35,5 @@ export interface AppInstallClickEvent {
   id: string;
   timestampISO: string;
   sourcePath?: string; // page path that triggered
-  platform?: "ios" | "android" | "unknown";
+  platform?: 'ios' | 'android' | 'unknown';
 }

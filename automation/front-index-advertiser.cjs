@@ -16,7 +16,7 @@ function titleCase(slug) {
     .replace(/\s+/g, ' ')
     .trim()
     .split(' ')
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+    .map(w => (w ? w[0].toUpperCase() + w.slice(1) : w))
     .join(' ');
 }
 
@@ -29,18 +29,38 @@ function discoverInternalPages() {
   }
 
   const priority = [
-    { href: '/automation', label: 'Automation Hub', tagline: 'Live agents & workflows' },
-    { href: '/site-health', label: 'Site Health', tagline: 'A11y, performance, links' },
-    { href: '/reports/seo', label: 'SEO Audit', tagline: 'Continuous improvements' },
-    { href: '/reports/ai-trends', label: 'AI Trends', tagline: 'Intelligence signals' },
-    { href: '/newsroom', label: 'Newsroom', tagline: 'Latest autonomous updates' },
+    {
+      href: '/automation',
+      label: 'Automation Hub',
+      tagline: 'Live agents & workflows',
+    },
+    {
+      href: '/site-health',
+      label: 'Site Health',
+      tagline: 'A11y, performance, links',
+    },
+    {
+      href: '/reports/seo',
+      label: 'SEO Audit',
+      tagline: 'Continuous improvements',
+    },
+    {
+      href: '/reports/ai-trends',
+      label: 'AI Trends',
+      tagline: 'Intelligence signals',
+    },
+    {
+      href: '/newsroom',
+      label: 'Newsroom',
+      tagline: 'Latest autonomous updates',
+    },
   ];
   for (const p of priority) {
     const check = p.href.startsWith('/reports/')
       ? path.join(ROOT, 'pages', 'reports', p.href.split('/').pop() + '.tsx')
       : p.href === '/automation'
-      ? path.join(ROOT, 'pages', 'automation', 'index.tsx')
-      : path.join(ROOT, 'pages', p.href.replace(/^\//, '') + '.tsx');
+        ? path.join(ROOT, 'pages', 'automation', 'index.tsx')
+        : path.join(ROOT, 'pages', p.href.replace(/^\//, '') + '.tsx');
     if (fs.existsSync(check)) push(p.href, p.label, p.tagline);
   }
 
@@ -56,7 +76,13 @@ function discoverInternalPages() {
       if (entry.isDirectory()) {
         const indexPath = path.join(pagesDir, entry.name, 'index.tsx');
         if (fs.existsSync(indexPath)) {
-          push('/' + entry.name, titleCase(entry.name), entry.name === 'automation' ? 'Live agents & workflows' : 'Explore more');
+          push(
+            '/' + entry.name,
+            titleCase(entry.name),
+            entry.name === 'automation'
+              ? 'Live agents & workflows'
+              : 'Explore more'
+          );
         }
       }
     }
@@ -76,14 +102,30 @@ function discoverInternalPages() {
 function discoverExternalLinks() {
   const repoUrl = 'https://github.com/Zion-Holdings/zion.app';
   return [
-    { type: 'external', href: repoUrl + '/actions', label: 'Live Pipelines', tagline: 'CI logs & artifacts' },
-    { type: 'external', href: repoUrl + '/tree/main/docs', label: 'Documentation', tagline: 'Technical notes & guides' },
-    { type: 'external', href: repoUrl + '/blob/main/docs/CHANGELOG_AI.md', label: 'AI Changelog', tagline: 'Summarized updates' },
+    {
+      type: 'external',
+      href: repoUrl + '/actions',
+      label: 'Live Pipelines',
+      tagline: 'CI logs & artifacts',
+    },
+    {
+      type: 'external',
+      href: repoUrl + '/tree/main/docs',
+      label: 'Documentation',
+      tagline: 'Technical notes & guides',
+    },
+    {
+      type: 'external',
+      href: repoUrl + '/blob/main/docs/CHANGELOG_AI.md',
+      label: 'AI Changelog',
+      tagline: 'Summarized updates',
+    },
   ];
 }
 
 function buildCard(item) {
-  const common = 'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo';
+  const common =
+    'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo';
   const inner = `\n  <div className=\"text-base font-semibold\">${item.label}</div>\n  <div className=\"mt-1 text-sm text-white/75\">${item.tagline || ''}</div>\n`;
   if (item.type === 'external') {
     return `              <a href=\"${item.href}\" target=\"_blank\" rel=\"noopener\" className=\"${common}\">${inner}  <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90\">Open <span aria-hidden>↗</span></div></a>`;
@@ -99,7 +141,7 @@ function generateSection(items) {
     '  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">',
     items.map(buildCard).join('\n'),
     '  </div>',
-    '</section>'
+    '</section>',
   ].join('\n');
 }
 

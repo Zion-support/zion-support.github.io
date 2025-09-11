@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Absolute Final Issues Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Absolute Final Issues Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix messages thread file
@@ -14,7 +16,9 @@ if (fs.existsSync(messagesThreadPath)) {
     content += '\n}';
   }
   fs.writeFileSync(messagesThreadPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/messages/thread.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/messages/thread.ts'
+  );
 }
 // Fix partners export file
 const partnersExportPath = '/workspace/pages/api/partners/export.ts';
@@ -25,7 +29,9 @@ if (fs.existsSync(partnersExportPath)) {
     content += '\n}';
   }
   fs.writeFileSync(partnersExportPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/export.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/export.ts'
+  );
 }
 // Fix partners leaderboard file
 const partnersLeaderboardPath = '/workspace/pages/api/partners/leaderboard.ts';
@@ -36,7 +42,9 @@ if (fs.existsSync(partnersLeaderboardPath)) {
     content += '\n}';
   }
   fs.writeFileSync(partnersLeaderboardPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/leaderboard.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/leaderboard.ts'
+  );
 }
 // Fix partners metrics file
 const partnersMetricsPath = '/workspace/pages/api/partners/metrics.ts';
@@ -44,11 +52,13 @@ if (fs.existsSync(partnersMetricsPath)) {
   let content = fs.readFileSync(partnersMetricsPath, 'utf8');
   // Fix the syntax error
   content = content.replace(
-    '     = await supabase        .from(\'referral_events\')',
-    '    const { data } = await supabase.from(\'referral_events\')'
+    "     = await supabase        .from('referral_events')",
+    "    const { data } = await supabase.from('referral_events')"
   );
   fs.writeFileSync(partnersMetricsPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/metrics.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/metrics.ts'
+  );
 }
 // Fix partners register file - rewrite completely
 const partnersRegisterPath = '/workspace/pages/api/partners/register.ts';
@@ -100,7 +110,9 @@ export default async function handler(
   }
 }`;
 fs.writeFileSync(partnersRegisterPath, partnersRegisterContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/register.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/partners/register.ts'
+);
 console.log('');
 console.log('📊 ABSOLUTE FINAL ISSUES FIX REPORT');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] =');
@@ -111,7 +123,9 @@ console.log('');
 console.log('✅ Successfully fixed files:');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/messages/thread.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/partners/export.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/partners/leaderboard.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/partners/leaderboard.ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/partners/metrics.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/partners/register.ts');
 console.log('');
@@ -125,8 +139,11 @@ const report = {
     'pages/api/partners/export.ts',
     'pages/api/partners/leaderboard.ts',
     'pages/api/partners/metrics.ts',
-    'pages/api/partners/register.ts'
-  ]
+    'pages/api/partners/register.ts',
+  ],
 };
-fs.writeFileSync('/workspace/absolute-final-issues-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/absolute-final-issues-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to absolute-final-issues-fix-report.json');

@@ -4,11 +4,14 @@ import { useNavigate } from 'react-router-dom';
 export const useAuthEventHandlers = () => {
   const navigate = useNavigate();
 
-  const handleLoginSuccess = useCallback((user: any) => {
-    // Handle successful login
-    console.log('Login successful:', user);
-    navigate('/dashboard');
-  }, [navigate]);
+  const handleLoginSuccess = useCallback(
+    (user: any) => {
+      // Handle successful login
+      console.log('Login successful:', user);
+      navigate('/dashboard');
+    },
+    [navigate]
+  );
 
   const handleLogout = useCallback(() => {
     // Handle logout

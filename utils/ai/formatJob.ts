@@ -6,18 +6,30 @@ const SYSTEM_PROMPT = `You convert internal job descriptions into external job-b
 function naiveExtract(job: JobInput): FormattedJob {
   const text = job.internalDescription || '';
   const firstLine = (text.split('\n')[0] || '').trim();
-  const title = job.internalTitle || firstLine.slice(0, 80) || 'Software Engineer';
+  const title =
+    job.internalTitle || firstLine.slice(0, 80) || 'Software Engineer';
 
   const skills = Array.from(
     new Set(
-      (text.match(/\b(JavaScript|TypeScript|React|Node|Go|Python|AWS|GCP|Azure|Docker|Kubernetes|SQL|NoSQL|GraphQL|CI\/CD|Terraform)\b/gi) || [])
-        .map((s) => s.trim())
+      (
+        text.match(
+          /\b(JavaScript|TypeScript|React|Node|Go|Python|AWS|GCP|Azure|Docker|Kubernetes|SQL|NoSQL|GraphQL|CI\/CD|Terraform)\b/gi
+        ) || []
+      ).map(s => s.trim())
     )
   ).slice(0, 10);
 
-  const summary = (text.replace(/\s+/g, ' ').slice(0, 380) + (text.length > 380 ? '…' : '')) || 'Exciting role with impact.';
+  const summary =
+    text.replace(/\s+/g, ' ').slice(0, 380) + (text.length > 380 ? '…' : '') ||
+    'Exciting role with impact.';
 
-  const tags = Array.from(new Set([...(skills as string[]), job.remote ? 'Remote' : '', job.employmentType || 'Full-time']))
+  const tags = Array.from(
+    new Set([
+      ...(skills as string[]),
+      job.remote ? 'Remote' : '',
+      job.employmentType || 'Full-time',
+    ])
+  )
     .filter(Boolean)
     .slice(0, 10) as string[];
 
@@ -26,7 +38,9 @@ function naiveExtract(job: JobInput): FormattedJob {
   return { title, summary, skills, tags, markdown };
 }
 
-export async function formatJobForExternalBoards(job: JobInput): Promise<FormattedJob> {
+export async function formatJobForExternalBoards(
+  job: JobInput
+): Promise<FormattedJob> {
   try {
     const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
@@ -49,7 +63,8 @@ export async function formatJobForExternalBoards(job: JobInput): Promise<Formatt
     const content = response.choices?.[0]?.message?.content || '';
     const parsed = JSON.parse(content || '{}');
 
-    const title: string = parsed.title || job.internalTitle || 'Software Engineer';
+    const title: string =
+      parsed.title || job.internalTitle || 'Software Engineer';
     const summary: string = parsed.summary || '';
     const skills: string[] = Array.isArray(parsed.skills) ? parsed.skills : [];
     const tags: string[] = Array.isArray(parsed.tags) ? parsed.tags : [];

@@ -13,15 +13,17 @@ module.exports = {
         SCAN_INTERVAL: 300000, // 5 minutes
         LOG_LEVEL: 'info',
         MAX_RETRIES: 3,
-        BACKUP_ENABLED: 'true'
+        BACKUP_ENABLED: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
       autorestart: true,
       max_memory_restart: '1G',
-      error_file: './logs/comprehensive-error-prevention-orchestrator-error.log',
+      error_file:
+        './logs/comprehensive-error-prevention-orchestrator-error.log',
       out_file: './logs/comprehensive-error-prevention-orchestrator-out.log',
-      log_file: './logs/comprehensive-error-prevention-orchestrator-combined.log',
+      log_file:
+        './logs/comprehensive-error-prevention-orchestrator-combined.log',
       time: true,
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
@@ -30,7 +32,7 @@ module.exports = {
       restart_delay: 10000,
       kill_timeout: 10000,
       wait_ready: true,
-      listen_timeout: 15000
+      listen_timeout: 15000,
     },
 
     // Real-time Error Monitor
@@ -39,15 +41,28 @@ module.exports = {
       script: './scripts/automation/error-prevention-automation.cjs',
       args: 'watch',
       cwd: './',
-      watch: ['src/**/*.{ts,tsx,js,jsx}', 'components/**/*.{ts,tsx,js,jsx}', 'pages/**/*.{ts,tsx,js,jsx}'],
-      ignore_watch: ['node_modules', 'dist', '.git', '*.log', 'logs/*', '*.backup', '*.tsbackup', 'backup/*'],
+      watch: [
+        'src/**/*.{ts,tsx,js,jsx}',
+        'components/**/*.{ts,tsx,js,jsx}',
+        'pages/**/*.{ts,tsx,js,jsx}',
+      ],
+      ignore_watch: [
+        'node_modules',
+        'dist',
+        '.git',
+        '*.log',
+        'logs/*',
+        '*.backup',
+        '*.tsbackup',
+        'backup/*',
+      ],
       env: {
         NODE_ENV: 'production',
         MONITOR_MODE: 'realtime',
         SCAN_INTERVAL: 60000, // 1 minute
         LOG_LEVEL: 'info',
         ALERT_THRESHOLD: 10,
-        AUTO_FIX_ENABLED: 'true'
+        AUTO_FIX_ENABLED: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -64,7 +79,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Intelligent Code Quality Monitor
@@ -81,7 +96,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         AI_ANALYSIS_ENABLED: 'true',
         PREDICTIVE_FIXING: 'true',
-        QUALITY_THRESHOLD: 0.8
+        QUALITY_THRESHOLD: 0.8,
       },
       instances: 1,
       exec_mode: 'fork',
@@ -98,7 +113,7 @@ module.exports = {
       restart_delay: 10000,
       kill_timeout: 10000,
       wait_ready: true,
-      listen_timeout: 15000
+      listen_timeout: 15000,
     },
 
     // Automated Code Refactoring Engine
@@ -115,7 +130,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         AUTO_REFACTOR_ENABLED: 'true',
         SAFETY_CHECKS: 'true',
-        BACKUP_BEFORE_REFACTOR: 'true'
+        BACKUP_BEFORE_REFACTOR: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -132,7 +147,7 @@ module.exports = {
       restart_delay: 15000,
       kill_timeout: 15000,
       wait_ready: true,
-      listen_timeout: 20000
+      listen_timeout: 20000,
     },
 
     // Continuous Integration Automation
@@ -149,7 +164,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         AUTO_DEPLOY_ENABLED: 'false',
         TEST_AUTOMATION: 'true',
-        QUALITY_GATES: 'true'
+        QUALITY_GATES: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -166,7 +181,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Performance and Security Monitor
@@ -183,7 +198,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         SECURITY_SCANNING: 'true',
         PERFORMANCE_MONITORING: 'true',
-        VULNERABILITY_ALERTS: 'true'
+        VULNERABILITY_ALERTS: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -200,7 +215,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Smart Dependency Manager
@@ -217,7 +232,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         AUTO_UPDATE_ENABLED: 'true',
         SECURITY_UPDATES: 'true',
-        COMPATIBILITY_CHECKS: 'true'
+        COMPATIBILITY_CHECKS: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -234,7 +249,7 @@ module.exports = {
       restart_delay: 10000,
       kill_timeout: 10000,
       wait_ready: true,
-      listen_timeout: 15000
+      listen_timeout: 15000,
     },
 
     // Automated Testing and Quality Assurance
@@ -251,7 +266,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         AUTO_TEST_GENERATION: 'true',
         COVERAGE_ANALYSIS: 'true',
-        QUALITY_REPORTS: 'true'
+        QUALITY_REPORTS: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -268,7 +283,7 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 8000,
     },
 
     // Project Health Dashboard
@@ -285,7 +300,7 @@ module.exports = {
         LOG_LEVEL: 'info',
         METRICS_COLLECTION: 'true',
         ALERT_SYSTEM: 'true',
-        REPORTING: 'true'
+        REPORTING: 'true',
       },
       instances: 1,
       exec_mode: 'fork',
@@ -302,8 +317,8 @@ module.exports = {
       restart_delay: 5000,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 8000
-    }
+      listen_timeout: 8000,
+    },
   ],
 
   deploy: {
@@ -313,9 +328,12 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:your-username/zion-app.git',
       path: '/var/www/zion-app',
-      'pre-deploy-local': 'echo "Starting comprehensive error prevention automation deployment"',
-      'post-deploy': 'npm install && pm2 reload ecosystem-comprehensive-error-prevention.config.cjs --env production',
-      'pre-setup': 'echo "Setting up comprehensive error prevention automation environment"'
+      'pre-deploy-local':
+        'echo "Starting comprehensive error prevention automation deployment"',
+      'post-deploy':
+        'npm install && pm2 reload ecosystem-comprehensive-error-prevention.config.cjs --env production',
+      'pre-setup':
+        'echo "Setting up comprehensive error prevention automation environment"',
     },
     staging: {
       user: 'ubuntu',
@@ -323,9 +341,12 @@ module.exports = {
       ref: 'origin/develop',
       repo: 'git@github.com:your-username/zion-app.git',
       path: '/var/www/zion-app-staging',
-      'pre-deploy-local': 'echo "Starting comprehensive error prevention automation deployment"',
-      'post-deploy': 'npm install && pm2 reload ecosystem-comprehensive-error-prevention.config.cjs --env production',
-      'pre-setup': 'echo "Setting up comprehensive error prevention automation environment"'
-    }
-  }
+      'pre-deploy-local':
+        'echo "Starting comprehensive error prevention automation deployment"',
+      'post-deploy':
+        'npm install && pm2 reload ecosystem-comprehensive-error-prevention.config.cjs --env production',
+      'pre-setup':
+        'echo "Setting up comprehensive error prevention automation environment"',
+    },
+  },
 };

@@ -24,12 +24,15 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     if (!mounted) return;
 
     const root = document.documentElement;
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+      .matches
+      ? 'dark'
+      : 'light';
     const effectiveTheme = theme === 'system' ? systemTheme : theme;
 
     root.classList.remove('light', 'dark');
     root.classList.add(effectiveTheme);
-    
+
     // Update CSS custom properties for smooth transitions
     if (effectiveTheme === 'dark') {
       root.style.setProperty('--zion-bg-primary', '#0f172a');
@@ -50,30 +53,36 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     setTheme(newTheme);
   };
 
-  const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = [
+  const themes: {
+    value: Theme;
+    label: string;
+    icon: React.ComponentType<any>;
+  }[] = [
     { value: 'light', label: 'Light theme', icon: Sun },
     { value: 'dark', label: 'Dark theme', icon: Moon },
-    { value: 'system', label: 'System theme', icon: Monitor }
+    { value: 'system', label: 'System theme', icon: Monitor },
   ];
 
   if (!mounted) {
     return (
-      <div className={`w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse ${className}`} />
+      <div
+        className={`w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse ${className}`}
+      />
     );
   }
 
   return (
     <div className={`relative ${className}`}>
       <motion.div
-        className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1"
+        className='flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1'
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
       >
-        {themes.map((themeOption) => {
+        {themes.map(themeOption => {
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
-          
+
           return (
             <motion.button
               key={themeOption.value}
@@ -88,12 +97,12 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               aria-label={themeOption.label}
               title={themeOption.label}
             >
-              <Icon className="w-4 h-4" />
+              <Icon className='w-4 h-4' />
               {isActive && (
                 <motion.div
-                  className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
-                  layoutId="activeTheme"
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  className='absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500'
+                  layoutId='activeTheme'
+                  transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                 />
               )}
             </motion.button>

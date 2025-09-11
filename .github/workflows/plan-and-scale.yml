@@ -2,7 +2,7 @@ name: Plan and scale agents
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -14,17 +14,17 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BASE: "2"
-  GROWTH: "1.5"
-  MAX_AGENTS: "64"
-  MAX_PARALLEL: "8"
+  BASE: '2'
+  GROWTH: '1.5'
+  MAX_AGENTS: '64'
+  MAX_PARALLEL: '8'
   DEFAULT_PROFILES: '["code","web","data","ops"]'
-  MAX_DELEGATION: "0.9"
-  MIN_DELEGATION: "0.3"
-  DELEGATION_STEP: "0.05"
-  ESTIMATED_COST_PER_AGENT_USD: "1.5"
-  BUDGET_REMAINING_USD: "${{ vars.FACTORY_BUDGET_REMAINING_USD }}"
-  FACTORY_DRY_RUN: "${{ vars.FACTORY_DRY_RUN }}"
+  MAX_DELEGATION: '0.9'
+  MIN_DELEGATION: '0.3'
+  DELEGATION_STEP: '0.05'
+  ESTIMATED_COST_PER_AGENT_USD: '1.5'
+  BUDGET_REMAINING_USD: '${{ vars.FACTORY_BUDGET_REMAINING_USD }}'
+  FACTORY_DRY_RUN: '${{ vars.FACTORY_DRY_RUN }}'
 
 jobs:
   plan:
@@ -107,10 +107,10 @@ jobs:
       - name: Open PR with updated state
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "factory(state): epoch ${{ steps.plan.outputs.epoch }}"
-          title: "Factory state update (epoch ${{ steps.plan.outputs.epoch }})"
-          body: "Automated update of factory state."
-          branch: "factory/state-epoch-${{ steps.plan.outputs.epoch }}"
+          commit-message: 'factory(state): epoch ${{ steps.plan.outputs.epoch }}'
+          title: 'Factory state update (epoch ${{ steps.plan.outputs.epoch }})'
+          body: 'Automated update of factory state.'
+          branch: 'factory/state-epoch-${{ steps.plan.outputs.epoch }}'
           labels: factory,automation
 
   spawn_and_run:
@@ -154,16 +154,16 @@ jobs:
       - name: Commit agent config and PR
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "agents: add ${{ matrix.agent_id }} @ delegation=${{ matrix.delegation }}"
-          title: "Agent ${{ matrix.agent_id }} (delegation=${{ matrix.delegation }})"
-          body: "Spawned by factory at epoch ${{ needs.plan.outputs.epoch }}."
-          branch: "agents/${{ matrix.agent_id }}"
+          commit-message: 'agents: add ${{ matrix.agent_id }} @ delegation=${{ matrix.delegation }}'
+          title: 'Agent ${{ matrix.agent_id }} (delegation=${{ matrix.delegation }})'
+          body: 'Spawned by factory at epoch ${{ needs.plan.outputs.epoch }}.'
+          branch: 'agents/${{ matrix.agent_id }}'
           labels: agent,automation
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
           cache: 'pip'
 
       - name: Install dependencies
@@ -190,5 +190,5 @@ jobs:
       - name: Commit metrics
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "metrics: ${{ matrix.agent_id }}"
+          commit_message: 'metrics: ${{ matrix.agent_id }}'
           file_pattern: metrics/${{ matrix.agent_id }}.json

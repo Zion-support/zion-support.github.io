@@ -12,8 +12,10 @@ function hasAccessibleName($, el) {
 }
 
 (async function runA11yAudit() {
-  const baseUrl = process.env.URL || process.env.DEPLOY_URL || process.env.SITE_URL || '';
-  const fallbackBase = baseUrl && /^https?:\/\//.test(baseUrl) ? baseUrl.replace(/\/$/, '') : '';
+  const baseUrl =
+    process.env.URL || process.env.DEPLOY_URL || process.env.SITE_URL || '';
+  const fallbackBase =
+    baseUrl && /^https?:\/\//.test(baseUrl) ? baseUrl.replace(/\/$/, '') : '';
   const siteBase = fallbackBase || 'https://zion.app';
 
   const pages = [
@@ -21,7 +23,7 @@ function hasAccessibleName($, el) {
     '/main/front',
     '/automation',
     '/site-health',
-    '/newsroom'
+    '/newsroom',
   ];
 
   const pageReports = [];
@@ -29,7 +31,10 @@ function hasAccessibleName($, el) {
   for (const p of pages) {
     const url = `${siteBase}${p}`;
     try {
-      const res = await axios.get(url, { headers: { 'User-Agent': 'Zion-A11y-Auditor/1.0' }, timeout: 25000 });
+      const res = await axios.get(url, {
+        headers: { 'User-Agent': 'Zion-A11y-Auditor/1.0' },
+        timeout: 25000,
+      });
       const $ = cheerio.load(res.data);
 
       const issues = [];
@@ -39,16 +44,27 @@ function hasAccessibleName($, el) {
       if (!htmlLang) issues.push('html element is missing a lang attribute');
 
       // Images without alt
-      const imgsWithoutAlt = $('img').filter((_, el) => !$(el).attr('alt')).length;
-      if (imgsWithoutAlt > 0) issues.push(`${imgsWithoutAlt} <img> elements are missing alt attributes`);
+      const imgsWithoutAlt = $('img').filter(
+        (_, el) => !$(el).attr('alt')
+      ).length;
+      if (imgsWithoutAlt > 0)
+        issues.push(
+          `${imgsWithoutAlt} <img> elements are missing alt attributes`
+        );
 
       // Links with no text
       const linksNoText = $('a').filter((_, el) => !$(el).text().trim()).length;
-      if (linksNoText > 0) issues.push(`${linksNoText} <a> elements have no text content`);
+      if (linksNoText > 0)
+        issues.push(`${linksNoText} <a> elements have no text content`);
 
       // Buttons without accessible name
-      const buttonsNoName = $('button').filter((_, el) => !hasAccessibleName($, el)).length;
-      if (buttonsNoName > 0) issues.push(`${buttonsNoName} <button> elements lack an accessible name`);
+      const buttonsNoName = $('button').filter(
+        (_, el) => !hasAccessibleName($, el)
+      ).length;
+      if (buttonsNoName > 0)
+        issues.push(
+          `${buttonsNoName} <button> elements lack an accessible name`
+        );
 
       // Inputs without labels
       const inputsNoLabel = $('input:not([type="hidden"])').filter((_, el) => {
@@ -58,11 +74,17 @@ function hasAccessibleName($, el) {
         const aria = $el.attr('aria-label') || $el.attr('aria-labelledby');
         return !(byLabel || aria);
       }).length;
-      if (inputsNoLabel > 0) issues.push(`${inputsNoLabel} <input> elements lack a label or aria-label`);
+      if (inputsNoLabel > 0)
+        issues.push(
+          `${inputsNoLabel} <input> elements lack a label or aria-label`
+        );
 
       pageReports.push({ url, issues });
     } catch (e) {
-      pageReports.push({ url, issues: [`Fetch failed: ${String(e.message || e)}`] });
+      pageReports.push({
+        url,
+        issues: [`Fetch failed: ${String(e.message || e)}`],
+      });
     }
   }
 
@@ -88,7 +110,9 @@ function hasAccessibleName($, el) {
 
   const reportsDir = path.resolve(__dirname, '..', 'docs', 'reports');
   const reportPath = path.resolve(reportsDir, 'a11y-report.md');
-  try { fs.mkdirSync(reportsDir, { recursive: true }); } catch {}
+  try {
+    fs.mkdirSync(reportsDir, { recursive: true });
+  } catch {}
   fs.writeFileSync(reportPath, mdLines.join('\n'));
   console.log('A11y report written to', reportPath);
 })();

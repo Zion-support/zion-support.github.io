@@ -12,7 +12,8 @@ export const cleanupAuthState = () => {
 export const isAuthenticated = (): boolean => {
   try {
     if (typeof window !== 'undefined') {
-      const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+      const auth =
+        localStorage.getItem('auth') || sessionStorage.getItem('auth');
       return !!auth;
     }
     return false;
@@ -25,7 +26,8 @@ export const isAuthenticated = (): boolean => {
 export const getAuthToken = (): string | null => {
   try {
     if (typeof window !== 'undefined') {
-      const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+      const auth =
+        localStorage.getItem('auth') || sessionStorage.getItem('auth');
       if (auth) {
         const parsed = JSON.parse(auth);
         return parsed.token || null;
@@ -41,7 +43,8 @@ export const getAuthToken = (): string | null => {
 export const getUserData = (): unknown => {
   try {
     if (typeof window !== 'undefined') {
-      const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+      const auth =
+        localStorage.getItem('auth') || sessionStorage.getItem('auth');
       if (auth) {
         const parsed = JSON.parse(auth);
         return parsed.user || null;

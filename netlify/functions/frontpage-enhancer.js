@@ -7,18 +7,23 @@ const path = require('path');
 function runNodeScript(scriptRelativePath, args = []) {
   const cwd = path.resolve(__dirname, '../../');
   const scriptPath = path.resolve(cwd, scriptRelativePath);
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     const startedAt = Date.now();
-    const child = execFile('node', [scriptPath, ...args], { cwd, env: process.env }, (error, stdout, stderr) => {
-      resolve({
-        script: scriptRelativePath,
-        ok: !error,
-        code: error ? error.code : 0,
-        durationMs: Date.now() - startedAt,
-        stdout: stdout ? stdout.toString() : '',
-        stderr: stderr ? stderr.toString() : '',
-      });
-    });
+    const child = execFile(
+      'node',
+      [scriptPath, ...args],
+      { cwd, env: process.env },
+      (error, stdout, stderr) => {
+        resolve({
+          script: scriptRelativePath,
+          ok: !error,
+          code: error ? error.code : 0,
+          durationMs: Date.now() - startedAt,
+          stdout: stdout ? stdout.toString() : '',
+          stderr: stderr ? stderr.toString() : '',
+        });
+      }
+    );
     child.on('error', () => {});
   });
 }
@@ -37,7 +42,14 @@ exports.handler = async function () {
     try {
       results.push(await runNodeScript(script, arg ? [arg] : []));
     } catch (err) {
-      results.push({ script, ok: false, code: -1, durationMs: 0, stdout: '', stderr: String(err) });
+      results.push({
+        script,
+        ok: false,
+        code: -1,
+        durationMs: 0,
+        stdout: '',
+        stderr: String(err),
+      });
     }
   }
 
@@ -47,7 +59,9 @@ exports.handler = async function () {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({
       engine: 'frontpage-enhancer',
-      message: ok ? 'Frontpage enhancement completed' : 'Frontpage enhancement completed with warnings',
+      message: ok
+        ? 'Frontpage enhancement completed'
+        : 'Frontpage enhancement completed with warnings',
       results,
       timestamp: new Date().toISOString(),
     }),

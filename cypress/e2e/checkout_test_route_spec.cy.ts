@@ -27,7 +27,7 @@ describe('Checkout Test Route', () => {
     cy.contains('button', 'Buy Now (Test)').click();
 
     // Wait for the API call to be made
-    cy.wait('@createCheckoutSession').then((interception) => {
+    cy.wait('@createCheckoutSession').then(interception => {
       expect(interception.request.method).to.equal('POST');
       expect(interception.response.statusCode).to.be.oneOf([200, 303]); // 303 is also possible if API redirects directly
 
@@ -42,7 +42,9 @@ describe('Checkout Test Route', () => {
     // We can check if the page initiates a navigation.
     // cy.location('hostname').should('not.eq', 'localhost'); // This assertion depends on Stripe's domain.
     // This is a basic check. A more robust test would involve cy.origin for Stripe.
-    cy.log('Redirect to Stripe initiated. Further interaction with Stripe page is out of scope for this basic test.');
+    cy.log(
+      'Redirect to Stripe initiated. Further interaction with Stripe page is out of scope for this basic test.'
+    );
   });
 
   // Placeholder for a test that mocks the Stripe success and checks the order confirmation page.
@@ -54,7 +56,9 @@ describe('Checkout Test Route', () => {
     // 3. Verify navigation to /order-confirmation with the session_id
     // 4. Verify the content of the order confirmation page
 
-    cy.log('Test for successful payment and redirection to order confirmation is skipped.');
+    cy.log(
+      'Test for successful payment and redirection to order confirmation is skipped.'
+    );
     // Example of how one might start (needs stripe.js stubbing):
     // const mockSessionId = 'cs_test_mock12345';
     // cy.intercept('POST', '/api/checkout-session', {

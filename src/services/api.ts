@@ -12,7 +12,10 @@ interface ApiResponse<T = any> {
 
 // Generic API error
 class ApiError extends Error {
-  constructor(public status: number, message: string) {
+  constructor(
+    public status: number,
+    message: string
+  ) {
     super(message);
     this.name = 'ApiError';
   }
@@ -24,7 +27,7 @@ async function apiRequest<T>(
   options: RequestInit = {}
 ): Promise<ApiResponse<T>> {
   const url = `${API_BASE_URL}${endpoint}`;
-  
+
   const config: RequestInit = {
     headers: {
       'Content-Type': 'application/json',
@@ -35,18 +38,24 @@ async function apiRequest<T>(
 
   try {
     const response = await fetch(url, config);
-    
+
     if (!response.ok) {
-      throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
+      throw new ApiError(
+        response.status,
+        `HTTP error! status: ${response.status}`
+      );
     }
-    
+
     const data = await response.json();
     return data;
   } catch (error) {
     if (error instanceof ApiError) {
       throw error;
     }
-    throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    throw new ApiError(
+      500,
+      `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`
+    );
   }
 }
 
@@ -56,9 +65,12 @@ interface ApiClientOptions {
   headers?: Record<string, string>;
 }
 
-export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {
+export async function apiClient(
+  endpoint: string,
+  options: ApiClientOptions = {}
+) {
   const { method = 'GET', body, headers = {} } = options;
-  
+
   const config: RequestInit = {
     method,
     headers: {
@@ -73,11 +85,11 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
 
   try {
     const response = await fetch(endpoint, config);
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
+
     return await response.json();
   } catch (error) {
     console.error('API request failed:', error);
@@ -86,16 +98,20 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
 }
 
 export const api = {
-  get: (endpoint: string, headers?: Record<string, string>) => 
+  get: (endpoint: string, headers?: Record<string, string>) =>
     apiClient(endpoint, { method: 'GET', headers }),
-  
-  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers }),
-  
-  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
+
+  post: (endpoint: string, data: any, headers?: Record<string, string>) =>
+    apiClient(endpoint, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers,
+    }),
+
+  put: (endpoint: string, data: any, headers?: Record<string, string>) =>
     apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
-  
-  delete: (endpoint: string, headers?: Record<string, string>) => 
+
+  delete: (endpoint: string, headers?: Record<string, string>) =>
     apiClient(endpoint, { method: 'DELETE', headers }),
 };
 

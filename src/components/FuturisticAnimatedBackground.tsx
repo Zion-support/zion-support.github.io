@@ -40,7 +40,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       const y = Math.random() * canvas.height;
       const angle = Math.random() * Math.PI * 2;
       const speed = Math.random() * 0.5 + 0.1;
-      
+
       particles.push({
         x,
         y,
@@ -49,14 +49,14 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         size: Math.random() * 3 + 1,
         color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`,
         life: 1,
-        maxLife: Math.random() * 100 + 50
+        maxLife: Math.random() * 100 + 50,
       });
     };
 
     // Update and draw particles
     const animate = () => {
       time += 0.01;
-      
+
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -69,7 +69,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       // Update and draw particles
       for (let i = particles.length - 1; i >= 0; i--) {
         const particle = particles[i];
-        
+
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -82,7 +82,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         }
 
         // Draw particle with glow effect
-        const alpha = 1 - (particle.life / particle.maxLife);
+        const alpha = 1 - particle.life / particle.maxLife;
         const size = particle.size * (1 - alpha * 0.5);
 
         // Outer glow
@@ -106,7 +106,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
-      
+
       const gridSize = 50;
       const offsetX = (time * 10) % gridSize;
       const offsetY = (time * 5) % gridSize;
@@ -165,11 +165,11 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       // Draw energy waves
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
       ctx.lineWidth = 3;
-      
+
       for (let i = 0; i < 3; i++) {
         const waveOffset = (time * 50 + i * 100) % (canvas.width + 200);
         const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
-        
+
         ctx.beginPath();
         ctx.moveTo(waveOffset - 100, waveY);
         ctx.lineTo(waveOffset, waveY + 20);
@@ -191,8 +191,11 @@ export const FuturisticAnimatedBackground: React.FC = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03), transparent 60%)' }}
+      className='fixed inset-0 w-full h-full pointer-events-none z-0'
+      style={{
+        background:
+          'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03), transparent 60%)',
+      }}
     />
   );
 };

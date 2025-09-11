@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const marketReadyServices: MicroSaasService[] = [
@@ -14,12 +14,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Cited, grounded answers with workflow actions',
     price: '$129',
     period: '/month',
-    description: 'Embed a secure help widget that answers with citations, files forms, and escalates to human. Connects to Zendesk/Intercom and your docs with vector search.',
+    description:
+      'Embed a secure help widget that answers with citations, files forms, and escalates to human. Connects to Zendesk/Intercom and your docs with vector search.',
     features: [
       'Citations and source links',
       'PII redaction and access control',
       'Form flows and human handoff',
-      'Analytics and CSAT tracking'
+      'Analytics and CSAT tracking',
     ],
     popular: true,
     icon: '🧭',
@@ -46,7 +47,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-13',
     customers: 44,
     rating: 4.7,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'ai-soc2-evidence-vault',
@@ -54,12 +55,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Collect, normalize and map evidence to controls',
     price: '$199',
     period: '/month',
-    description: 'Continuously collect audit evidence from cloud, Git, CI/CD and SaaS. Map to SOC2/ISO controls, auto-generate screenshots and attestations, export auditor-ready packs.',
+    description:
+      'Continuously collect audit evidence from cloud, Git, CI/CD and SaaS. Map to SOC2/ISO controls, auto-generate screenshots and attestations, export auditor-ready packs.',
     features: [
       'Control mapping engine',
       'Evidence collectors for AWS/Azure/GCP',
       'Git/CI automations',
-      'Auditor export packs'
+      'Auditor export packs',
     ],
     popular: false,
     icon: '🧾',
@@ -86,7 +88,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-11',
     customers: 17,
     rating: 4.6,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'api-security-wall',
@@ -94,12 +96,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Runtime protection, schema validation and anomaly detection',
     price: '$149',
     period: '/month',
-    description: 'Protect public and internal APIs with schema validation, behavioral anomaly detection, IP reputation and token abuse defenses at the edge.',
+    description:
+      'Protect public and internal APIs with schema validation, behavioral anomaly detection, IP reputation and token abuse defenses at the edge.',
     features: [
       'Schema and contract checks',
       'Anomaly scoring',
       'Bot and token abuse defense',
-      'Edge and gateway deployment'
+      'Edge and gateway deployment',
     ],
     popular: true,
     icon: '🛡️',
@@ -126,7 +129,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-14',
     customers: 23,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'vector-search-starter-pack',
@@ -134,12 +137,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Add semantic search to your app in hours',
     price: '$99',
     period: '/month',
-    description: 'Drop-in SDK and infra templates to index documents and power semantic search with filters, synonyms and hybrid lexical/semantic ranking.',
+    description:
+      'Drop-in SDK and infra templates to index documents and power semantic search with filters, synonyms and hybrid lexical/semantic ranking.',
     features: [
       'Embeddings pipeline',
       'Hybrid ranking (BM25 + vectors)',
       'Multi-tenant indexing',
-      'Synonyms and filters'
+      'Synonyms and filters',
     ],
     popular: false,
     icon: '🧱',
@@ -166,7 +170,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-08',
     customers: 28,
     rating: 4.5,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'email-deliverability-guard',
@@ -174,12 +178,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Warmup, health checks and spam trap monitoring',
     price: '$79',
     period: '/month',
-    description: 'Improve inbox placement with domain health checks, gradual warmup, content scoring and spam trap monitoring with alerts.',
+    description:
+      'Improve inbox placement with domain health checks, gradual warmup, content scoring and spam trap monitoring with alerts.',
     features: [
       'SPF/DKIM/DMARC checks',
       'Inbox placement tests',
       'Warmup scheduler',
-      'Spam trap analytics'
+      'Spam trap analytics',
     ],
     popular: true,
     icon: '📧',
@@ -206,7 +211,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-04',
     customers: 61,
     rating: 4.6,
-    reviews: 33
+    reviews: 33,
   },
   {
     id: 'ai-analytics-copilot',
@@ -214,12 +219,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Ask questions of your product data in plain English',
     price: '$139',
     period: '/month',
-    description: 'Semantic layer and natural language interface over your events and warehouse with guardrails, saved questions and anomaly alerts.',
+    description:
+      'Semantic layer and natural language interface over your events and warehouse with guardrails, saved questions and anomaly alerts.',
     features: [
       'NL to SQL with validation',
       'Cohorts and funnels',
       'Anomaly detection',
-      'Warehouse-first design'
+      'Warehouse-first design',
     ],
     popular: false,
     icon: '📊',
@@ -246,7 +252,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-06',
     customers: 34,
     rating: 4.5,
-    reviews: 16
+    reviews: 16,
   },
   {
     id: 'cloud-postgres-ha',
@@ -254,12 +260,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Pro-grade HA, backups and observability for Postgres',
     price: '$229',
     period: '/month',
-    description: 'Hands-free high availability setup with automated backups, point-in-time recovery, query insights and alerting. GitOps friendly.',
+    description:
+      'Hands-free high availability setup with automated backups, point-in-time recovery, query insights and alerting. GitOps friendly.',
     features: [
       'Streaming replication and failover',
       'Automated backups and PITR',
       'Query insights and tuning',
-      'Encrypted at rest and in transit'
+      'Encrypted at rest and in transit',
     ],
     popular: true,
     icon: '🗄️',
@@ -286,7 +293,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-05',
     customers: 12,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'pii-privacy-proxy',
@@ -294,12 +301,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Safe data sharing via tokenization and policy controls',
     price: '$179',
     period: '/month',
-    description: 'Replace sensitive fields with tokens and enforce field-level access policies. Maintain audit trails and easy detokenization for authorized actors.',
+    description:
+      'Replace sensitive fields with tokens and enforce field-level access policies. Maintain audit trails and easy detokenization for authorized actors.',
     features: [
       'Field-level tokenization',
       'Attribute-based access',
       'Audit trails',
-      'HSM/KMS integrations'
+      'HSM/KMS integrations',
     ],
     popular: false,
     icon: '🔏',
@@ -326,7 +334,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-07',
     customers: 10,
     rating: 4.6,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-seo-growth-engine',
@@ -334,12 +342,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Plan, brief, write and publish search content faster',
     price: '$119',
     period: '/month',
-    description: 'Research topics, generate optimized briefs, draft content in your brand voice and schedule publication. Track rankings with alerts.',
+    description:
+      'Research topics, generate optimized briefs, draft content in your brand voice and schedule publication. Track rankings with alerts.',
     features: [
       'Topic discovery and clustering',
       'Brief and outline generator',
       'Brand voice writer',
-      'Rank tracking'
+      'Rank tracking',
     ],
     popular: true,
     icon: '🚀',
@@ -366,7 +375,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-10',
     customers: 57,
     rating: 4.6,
-    reviews: 29
+    reviews: 29,
   },
   {
     id: 'genai-evals-lab',
@@ -374,12 +383,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Offline/online evals with rubric and golden sets',
     price: '$149',
     period: '/month',
-    description: 'Define rubrics, upload golden datasets, run batch evals and canary online tests. Track regressions with dashboards and alerts.',
+    description:
+      'Define rubrics, upload golden datasets, run batch evals and canary online tests. Track regressions with dashboards and alerts.',
     features: [
       'Rubric and datasets',
       'Batch + online evals',
       'Regression detection',
-      'CI integration'
+      'CI integration',
     ],
     popular: false,
     icon: '🧪',
@@ -406,7 +416,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-02',
     customers: 22,
     rating: 4.5,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'edge-function-orchestrator',
@@ -414,12 +424,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Ship compliant edge functions with safe rollout',
     price: '$139',
     period: '/month',
-    description: 'Author, test and safely roll out edge functions with traffic shadowing, gradual ramp and instant rollback. Audit trails included.',
+    description:
+      'Author, test and safely roll out edge functions with traffic shadowing, gradual ramp and instant rollback. Audit trails included.',
     features: [
       'Shadow traffic and canaries',
       'Per-route policies',
       'Secrets and audit',
-      'CI integration'
+      'CI integration',
     ],
     popular: false,
     icon: '🛰️',
@@ -446,7 +457,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-03',
     customers: 15,
     rating: 4.5,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'data-contract-monitor',
@@ -454,12 +465,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Schema, freshness and SLOs for your pipelines',
     price: '$109',
     period: '/month',
-    description: 'Define data contracts and monitor schema changes, freshness and SLOs. Alert to Slack/Teams and open fix PRs automatically.',
+    description:
+      'Define data contracts and monitor schema changes, freshness and SLOs. Alert to Slack/Teams and open fix PRs automatically.',
     features: [
       'Schema and freshness checks',
       'SLA/SLO tracking',
       'Incident routing',
-      'Auto-fix PRs'
+      'Auto-fix PRs',
     ],
     popular: true,
     icon: '📈',
@@ -486,7 +498,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-02',
     customers: 19,
     rating: 4.5,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'customer-journey-orchestrator',
@@ -494,12 +506,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Design and automate journeys across email and in-app',
     price: '$129',
     period: '/month',
-    description: 'Visual builder to create multi-step journeys triggered by product events. In-app, email and push actions with holdout testing.',
+    description:
+      'Visual builder to create multi-step journeys triggered by product events. In-app, email and push actions with holdout testing.',
     features: [
       'Visual journey builder',
       'Real-time triggers',
       'In-app and email actions',
-      'Holdout testing'
+      'Holdout testing',
     ],
     popular: false,
     icon: '🧩',
@@ -526,7 +539,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-09',
     customers: 31,
     rating: 4.6,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'cost-anomaly-guard',
@@ -534,12 +547,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Detect cost spikes and auto-open saving PRs',
     price: '$159',
     period: '/month',
-    description: 'Detect unusual cloud spend, route incidents and open rightsizing PRs. FinOps guardrails that take action.',
+    description:
+      'Detect unusual cloud spend, route incidents and open rightsizing PRs. FinOps guardrails that take action.',
     features: [
       'Anomaly detection',
       'Rightsizing PRs',
       'Budget and alerts',
-      'Tag hygiene'
+      'Tag hygiene',
     ],
     popular: true,
     icon: '💸',
@@ -566,7 +580,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-03',
     customers: 13,
     rating: 4.5,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'ai-fraud-shield',
@@ -574,12 +588,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Graph anomalies with explainable outcomes',
     price: '$169',
     period: '/month',
-    description: 'Detect and act on fraud patterns using graph analytics and explainable models. Integrates with payment and risk systems.',
+    description:
+      'Detect and act on fraud patterns using graph analytics and explainable models. Integrates with payment and risk systems.',
     features: [
       'Graph embeddings',
       'Explainability reports',
       'Risk scoring API',
-      'Review workflows'
+      'Review workflows',
     ],
     popular: false,
     icon: '🕵️',
@@ -606,7 +621,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-09',
     customers: 9,
     rating: 4.5,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'ai-sales-copilot-pro',
@@ -614,12 +629,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Omnichannel outbound with personalization at scale',
     price: '$139',
     period: '/month',
-    description: 'Research prospects, generate tailored emails and LinkedIn messages, schedule follow-ups and measure outcomes with A/B tests.',
+    description:
+      'Research prospects, generate tailored emails and LinkedIn messages, schedule follow-ups and measure outcomes with A/B tests.',
     features: [
       'Prospect enrichment',
       'Sequence scheduling',
       'Brand-safe copy',
-      'A/B and analytics'
+      'A/B and analytics',
     ],
     popular: true,
     icon: '✉️',
@@ -646,7 +662,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2024-12-28',
     customers: 73,
     rating: 4.7,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'etl-health-check-lite',
@@ -654,12 +670,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Freshness, volume and errors in one dashboard',
     price: '$89',
     period: '/month',
-    description: 'Simple checks for freshness, volume and error spikes across your ETL with one-click setup and Slack alerts.',
+    description:
+      'Simple checks for freshness, volume and error spikes across your ETL with one-click setup and Slack alerts.',
     features: [
       'Freshness and volume',
       'Error spike alerts',
       'Slack notifications',
-      'Warehouse connectors'
+      'Warehouse connectors',
     ],
     popular: false,
     icon: '🪄',
@@ -686,7 +703,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-01',
     customers: 21,
     rating: 4.4,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'ai-website-personalizer',
@@ -694,12 +711,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Real-time experiences based on intent and segment',
     price: '$129',
     period: '/month',
-    description: 'Adapt content, CTAs and offers per visitor intent with privacy-safe signals. No-code rules and AI suggestions.',
+    description:
+      'Adapt content, CTAs and offers per visitor intent with privacy-safe signals. No-code rules and AI suggestions.',
     features: [
       'Segment builder',
       'No-code rules',
       'AI copy suggestions',
-      'A/B testing'
+      'A/B testing',
     ],
     popular: false,
     icon: '🎯',
@@ -726,7 +744,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-12',
     customers: 26,
     rating: 4.5,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'ai-guardrails-proxy',
@@ -734,12 +752,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Drop-in safety, rate limits and logging for LLM apps',
     price: '$119',
     period: '/month',
-    description: 'Proxy requests through a policy and safety layer with PII redaction, prompt injection detection, rate limiting and full tracing.',
+    description:
+      'Proxy requests through a policy and safety layer with PII redaction, prompt injection detection, rate limiting and full tracing.',
     features: [
       'Policy engine',
       'PII redaction',
       'Jailbreak detection',
-      'Full tracing'
+      'Full tracing',
     ],
     popular: true,
     icon: '🧠',
@@ -766,7 +785,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-06',
     customers: 39,
     rating: 4.6,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'incident-auto-router',
@@ -774,12 +793,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Route incidents by service ownership and runbooks',
     price: '$99',
     period: '/month',
-    description: 'Enrich incidents with metadata, route to correct owners, attach runbooks and trigger auto-remediation actions.',
+    description:
+      'Enrich incidents with metadata, route to correct owners, attach runbooks and trigger auto-remediation actions.',
     features: [
       'Service catalog integration',
       'Ownership routing',
       'Runbook attachments',
-      'Auto-remediation hooks'
+      'Auto-remediation hooks',
     ],
     popular: false,
     icon: '🚨',
@@ -806,7 +826,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-05',
     customers: 18,
     rating: 4.5,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'security-posture-packs',
@@ -814,12 +834,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'CIS/NIST policy bundles with fix PRs',
     price: '$209',
     period: '/month',
-    description: 'Apply curated policy packs across cloud and K8s. Get drift alerts and auto-generated PRs with policy explanations.',
+    description:
+      'Apply curated policy packs across cloud and K8s. Get drift alerts and auto-generated PRs with policy explanations.',
     features: [
       'CIS/NIST policy as code',
       'K8s and cloud scanners',
       'Auto-fix PRs',
-      'Evidence exports'
+      'Evidence exports',
     ],
     popular: true,
     icon: '🛡️',
@@ -846,7 +867,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-05',
     customers: 11,
     rating: 4.6,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'api-performance-booster',
@@ -854,12 +875,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Caching, rate limits and backpressure controls',
     price: '$129',
     period: '/month',
-    description: 'Accelerate APIs with smart caching, dynamic limits and backpressure to keep p99s low even under bursts.',
+    description:
+      'Accelerate APIs with smart caching, dynamic limits and backpressure to keep p99s low even under bursts.',
     features: [
       'Route-based caching',
       'Adaptive rate limits',
       'Backpressure',
-      'Shadow deploys'
+      'Shadow deploys',
     ],
     popular: true,
     icon: '⚡',
@@ -886,7 +908,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-15',
     customers: 14,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'ai-product-insights',
@@ -894,12 +916,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Auto-segment funnels and find drop-offs',
     price: '$119',
     period: '/month',
-    description: 'Turn event streams into insights with automatic funnel discovery, cohorting and plain-English explanations.',
+    description:
+      'Turn event streams into insights with automatic funnel discovery, cohorting and plain-English explanations.',
     features: [
       'Auto-segmentation',
       'Funnel discovery',
       'NL insights',
-      'Anomaly alerts'
+      'Anomaly alerts',
     ],
     popular: false,
     icon: '📈',
@@ -926,7 +949,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-02',
     customers: 33,
     rating: 4.5,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'ai-support-copilot-lite',
@@ -934,12 +957,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Assist agents with grounded suggestions and macros',
     price: '$89',
     period: '/month',
-    description: 'In-agent suggestions, macro drafting and knowledge lookup with citations. Respect permissions and privacy.',
+    description:
+      'In-agent suggestions, macro drafting and knowledge lookup with citations. Respect permissions and privacy.',
     features: [
       'Grounded suggestions',
       'Macro drafting',
       'KB lookup with citations',
-      'Privacy and permissions'
+      'Privacy and permissions',
     ],
     popular: true,
     icon: '💬',
@@ -966,7 +990,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2024-12-22',
     customers: 47,
     rating: 4.6,
-    reviews: 24
+    reviews: 24,
   },
   {
     id: 'llm-gateway-proxy',
@@ -974,12 +998,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Multi-provider routing, caching and cost controls',
     price: '$99',
     period: '/month',
-    description: 'Switch models per route, cache responses, enforce budgets and collect traces. Works with OpenAI-compatible endpoints.',
+    description:
+      'Switch models per route, cache responses, enforce budgets and collect traces. Works with OpenAI-compatible endpoints.',
     features: [
       'Smart routing',
       'Caching and budgets',
       'Safety and PII filters',
-      'Tracing and analytics'
+      'Tracing and analytics',
     ],
     popular: false,
     icon: '🧠',
@@ -1006,7 +1031,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-10',
     customers: 29,
     rating: 4.5,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'browser-performance-guard',
@@ -1014,12 +1039,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'RUM, web vitals and synthetic checks',
     price: '$89',
     period: '/month',
-    description: 'Monitor real user performance, Core Web Vitals and run synthetic checks on key flows with alerts and dashboards.',
+    description:
+      'Monitor real user performance, Core Web Vitals and run synthetic checks on key flows with alerts and dashboards.',
     features: [
       'RUM SDK',
       'Synthetic flows',
       'CLS/LCP/INP tracking',
-      'Alerting and dashboards'
+      'Alerting and dashboards',
     ],
     popular: false,
     icon: '📱',
@@ -1046,7 +1072,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-08',
     customers: 20,
     rating: 4.4,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'gdpr-dsar-copilot',
@@ -1054,12 +1080,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Automate subject requests with audit trails',
     price: '$119',
     period: '/month',
-    description: 'Automate discovery and export of user data across systems with approvals, redaction and secure delivery.',
+    description:
+      'Automate discovery and export of user data across systems with approvals, redaction and secure delivery.',
     features: [
       'System connectors',
       'Search and redaction',
       'Approvals and audit',
-      'Secure delivery'
+      'Secure delivery',
     ],
     popular: true,
     icon: '📜',
@@ -1086,7 +1113,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-07',
     customers: 8,
     rating: 4.5,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'sso-in-a-box-starter',
@@ -1094,12 +1121,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Add SSO and SCIM in a weekend',
     price: '$149',
     period: '/month',
-    description: 'Drop-in SAML/OIDC and SCIM with tenant admin UI, branding and audit logs. Works with major IdPs.',
+    description:
+      'Drop-in SAML/OIDC and SCIM with tenant admin UI, branding and audit logs. Works with major IdPs.',
     features: [
       'SAML/OIDC providers',
       'SCIM provisioning',
       'Tenant admin UI',
-      'Branding and audit'
+      'Branding and audit',
     ],
     popular: false,
     icon: '🔐',
@@ -1126,7 +1154,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2024-12-30',
     customers: 16,
     rating: 4.6,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'browser-automation-recorder',
@@ -1134,12 +1162,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Record flows, run headless checks and export scripts',
     price: '$79',
     period: '/month',
-    description: 'Chrome extension and cloud runner to record user flows, export Playwright scripts and run scheduled checks with screenshots.',
+    description:
+      'Chrome extension and cloud runner to record user flows, export Playwright scripts and run scheduled checks with screenshots.',
     features: [
       'Recorder extension',
       'Script export',
       'Scheduled runs',
-      'Screenshots and diffs'
+      'Screenshots and diffs',
     ],
     popular: true,
     icon: '🎥',
@@ -1166,7 +1195,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-04',
     customers: 42,
     rating: 4.5,
-    reviews: 20
+    reviews: 20,
   },
   {
     id: 'ai-legal-contract-copilot',
@@ -1174,12 +1203,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Review, redline and summarize with policy guardrails',
     price: '$159',
     period: '/month',
-    description: 'Analyze contracts, suggest redlines and summarize obligations with organization-specific policy guardrails and approval workflows.',
+    description:
+      'Analyze contracts, suggest redlines and summarize obligations with organization-specific policy guardrails and approval workflows.',
     features: [
       'Clause detection',
       'Risk scoring',
       'Policy guardrails',
-      'Approval workflows'
+      'Approval workflows',
     ],
     popular: false,
     icon: '⚖️',
@@ -1206,7 +1236,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-07',
     customers: 7,
     rating: 4.4,
-    reviews: 5
+    reviews: 5,
   },
   {
     id: 'ai-hr-screener',
@@ -1214,12 +1244,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Shortlist candidates with structured, fair assessments',
     price: '$109',
     period: '/month',
-    description: 'Score resumes against structured rubrics, generate fair interview plans and schedule candidates with ATS integrations.',
+    description:
+      'Score resumes against structured rubrics, generate fair interview plans and schedule candidates with ATS integrations.',
     features: [
       'Rubric-based scoring',
       'Bias mitigations',
       'Interview plans',
-      'ATS integrations'
+      'ATS integrations',
     ],
     popular: true,
     icon: '👥',
@@ -1246,7 +1277,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-01-06',
     customers: 24,
     rating: 4.5,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'github-compliance-bot',
@@ -1254,19 +1285,21 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Automate policy checks, secrets scans, and evidence collection',
     price: '$49',
     period: '/month',
-    description: 'Continuously scan repos and pipelines for policy violations, exposed secrets, dependency risks, and generate auditor-ready evidence mapped to SOC2/ISO controls.',
+    description:
+      'Continuously scan repos and pipelines for policy violations, exposed secrets, dependency risks, and generate auditor-ready evidence mapped to SOC2/ISO controls.',
     features: [
       'Secrets and keys scanner',
       'Policy-as-code checks (OPA)',
       'Dependency and SCA alerts',
-      'Evidence export packs (SOC2/ISO)'
+      'Evidence export packs (SOC2/ISO)',
     ],
     popular: true,
     icon: '🧩',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/github-compliance-bot',
-    marketPosition: 'Developer-first alternative to heavyweight GRC suites; integrates natively with GitHub.',
+    marketPosition:
+      'Developer-first alternative to heavyweight GRC suites; integrates natively with GitHub.',
     targetAudience: 'Platform, security and compliance teams',
     trialDays: 14,
     setupTime: '1 hour',
@@ -1274,7 +1307,11 @@ export const marketReadyServices: MicroSaasService[] = [
     realService: true,
     technology: ['GitHub Actions', 'Open Policy Agent', 'Semgrep'],
     integrations: ['GitHub, GitLab, Bitbucket', 'Slack', 'Jira'],
-    useCases: ['Secrets prevention', 'Policy enforcement', 'Audit evidence generation'],
+    useCases: [
+      'Secrets prevention',
+      'Policy enforcement',
+      'Audit evidence generation',
+    ],
     roi: 'Reduce audit prep time by 60% and security incidents from secrets by 80%.',
     competitors: ['GitGuardian', 'Snyk Code', 'Semgrep Cloud'],
     marketSize: '$5B DevSecOps',
@@ -1282,11 +1319,12 @@ export const marketReadyServices: MicroSaasService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Action workflows + OPA policies + evidence pack generator.',
+    implementationDetails:
+      'Action workflows + OPA policies + evidence pack generator.',
     launchDate: '2025-02-10',
     customers: 38,
     rating: 4.6,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'incident-postmortem-generator',
@@ -1294,19 +1332,21 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Automated timelines, contributing factors, and action items',
     price: '$59',
     period: '/month',
-    description: 'Generate consistent, blameless postmortems from alerts, logs, commits and chat transcripts with suggested mitigations and follow-up tasks.',
+    description:
+      'Generate consistent, blameless postmortems from alerts, logs, commits and chat transcripts with suggested mitigations and follow-up tasks.',
     features: [
       'Automated incident timeline',
       'Root cause and factor analysis',
       'Action item drafting with owners',
-      'Export to Docs/Confluence'
+      'Export to Docs/Confluence',
     ],
     popular: true,
     icon: '🧯',
     color: 'from-rose-600 to-orange-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/incident-postmortem-generator',
-    marketPosition: 'Faster and more consistent than manual postmortems; complements PagerDuty/Datadog.',
+    marketPosition:
+      'Faster and more consistent than manual postmortems; complements PagerDuty/Datadog.',
     targetAudience: 'SRE, platform, engineering managers',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -1322,11 +1362,12 @@ export const marketReadyServices: MicroSaasService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Ingest alerts/logs/chats; generate draft; export and track tasks.',
+    implementationDetails:
+      'Ingest alerts/logs/chats; generate draft; export and track tasks.',
     launchDate: '2025-02-08',
     customers: 21,
     rating: 4.7,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'serverless-cron-manager',
@@ -1334,12 +1375,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Reliable scheduled jobs across Vercel/Netlify/Cloudflare',
     price: '$29',
     period: '/month',
-    description: 'Unified UI and health checks for edge/serverless cron jobs with retries, alerts, and drift detection across providers.',
+    description:
+      'Unified UI and health checks for edge/serverless cron jobs with retries, alerts, and drift detection across providers.',
     features: [
       'Unified job dashboard',
       'Retries and jitter scheduling',
       'Failure alerts and SLOs',
-      'Drift detection and audits'
+      'Drift detection and audits',
     ],
     popular: false,
     icon: '⏰',
@@ -1354,7 +1396,11 @@ export const marketReadyServices: MicroSaasService[] = [
     realService: true,
     technology: ['Workers', 'Cloudflare', 'Vercel', 'Netlify'],
     integrations: ['Slack', 'Webhook', 'Email'],
-    useCases: ['Scheduled jobs health', 'SLO tracking', 'Cross-provider consistency'],
+    useCases: [
+      'Scheduled jobs health',
+      'SLO tracking',
+      'Cross-provider consistency',
+    ],
     roi: 'Reduce failed jobs and on-call by 50%.',
     competitors: ['cron-job.org', 'EasyCron'],
     marketSize: '$1B+ Scheduling tools',
@@ -1362,31 +1408,35 @@ export const marketReadyServices: MicroSaasService[] = [
     variant: 'devops-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Job registry + checks + alerting + provider adapters.',
+    implementationDetails:
+      'Job registry + checks + alerting + provider adapters.',
     launchDate: '2025-02-05',
     customers: 33,
     rating: 4.5,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'api-schema-diff-registry',
     name: 'API Schema Diff & Registry',
-    tagline: 'Versioned OpenAPI registry with CI diffs and breaking-change alerts',
+    tagline:
+      'Versioned OpenAPI registry with CI diffs and breaking-change alerts',
     price: '$39',
     period: '/month',
-    description: 'Detect breaking changes, generate changelogs, publish docs, and gate CI merges using your central OpenAPI registry.',
+    description:
+      'Detect breaking changes, generate changelogs, publish docs, and gate CI merges using your central OpenAPI registry.',
     features: [
       'Breaking change detection',
       'Changelog generation',
       'Docs portal per service',
-      'CI merge gates and webhooks'
+      'CI merge gates and webhooks',
     ],
     popular: true,
     icon: '🔗',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/api-schema-diff-registry',
-    marketPosition: 'Lightweight alternative to SwaggerHub for teams shipping fast.',
+    marketPosition:
+      'Lightweight alternative to SwaggerHub for teams shipping fast.',
     targetAudience: 'API and platform teams',
     trialDays: 14,
     setupTime: '1 hour',
@@ -1406,7 +1456,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-02-06',
     customers: 46,
     rating: 4.6,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'edge-ab-testing-kit',
@@ -1414,12 +1464,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Audience and geo-targeted experiments at the edge',
     price: '$49',
     period: '/month',
-    description: 'Run fast, privacy-safe experiments at the CDN edge with audience targeting and gradual rollouts.',
+    description:
+      'Run fast, privacy-safe experiments at the CDN edge with audience targeting and gradual rollouts.',
     features: [
       'Geo and audience targeting',
       'Gradual rollouts and holdouts',
       'Metrics and guardrails',
-      'SDKs and server adapters'
+      'SDKs and server adapters',
     ],
     popular: false,
     icon: '🧪',
@@ -1446,7 +1497,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-02-03',
     customers: 29,
     rating: 4.5,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'customer-interview-insights',
@@ -1454,12 +1505,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Auto-transcribe, tag themes, and extract jobs-to-be-done',
     price: '$39',
     period: '/month',
-    description: 'Record or upload interviews, get transcripts, themes, quotes, and JTBD summaries with shareable reports.',
+    description:
+      'Record or upload interviews, get transcripts, themes, quotes, and JTBD summaries with shareable reports.',
     features: [
       'Accurate transcription',
       'Theme tagging and clustering',
       'JTBD summaries and quotes',
-      'Report exports to Docs/Slides'
+      'Report exports to Docs/Slides',
     ],
     popular: true,
     icon: '🎙️',
@@ -1486,7 +1538,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-02-02',
     customers: 41,
     rating: 4.6,
-    reviews: 16
+    reviews: 16,
   },
   {
     id: 'iam-permission-graph',
@@ -1494,12 +1546,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Visualize who can do what across AWS/GCP/Azure',
     price: '$79',
     period: '/month',
-    description: 'Continuously scan cloud IAM and build a graph of effective permissions, risky paths, and misconfigurations with remediation guidance.',
+    description:
+      'Continuously scan cloud IAM and build a graph of effective permissions, risky paths, and misconfigurations with remediation guidance.',
     features: [
       'Effective permission graph',
       'Risky path detection',
       'Least-privilege recommendations',
-      'Change tracking and alerts'
+      'Change tracking and alerts',
     ],
     popular: true,
     icon: '🗺️',
@@ -1526,7 +1579,7 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-02-04',
     customers: 18,
     rating: 4.5,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'kubernetes-policy-auditor',
@@ -1534,12 +1587,13 @@ export const marketReadyServices: MicroSaasService[] = [
     tagline: 'Detect drift and policy violations across clusters',
     price: '$69',
     period: '/month',
-    description: 'Continuously evaluate Kubernetes clusters against OPA/Gatekeeper policies and CIS benchmarks with fix suggestions.',
+    description:
+      'Continuously evaluate Kubernetes clusters against OPA/Gatekeeper policies and CIS benchmarks with fix suggestions.',
     features: [
       'OPA/Gatekeeper policy checks',
       'CIS Kubernetes benchmark',
       'Drift and change detection',
-      'Fix guidance and exportable reports'
+      'Fix guidance and exportable reports',
     ],
     popular: false,
     icon: '🧭',
@@ -1566,7 +1620,6 @@ export const marketReadyServices: MicroSaasService[] = [
     launchDate: '2025-02-07',
     customers: 12,
     rating: 4.4,
-    reviews: 6
-  }
+    reviews: 6,
+  },
 ];
-

@@ -17,7 +17,9 @@ async function handler(req, res) {
 
     // Here you would typically send the message via email service
     // For now, just return success
-    res.status(200).json({ success: true, message: 'Message received successfully' });
+    res
+      .status(200)
+      .json({ success: true, message: 'Message received successfully' });
   } catch (error) {
     console.error('Contact API error:', error);
     res.status(500).json({ error: error.message || 'Failed to send message' });

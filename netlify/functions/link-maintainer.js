@@ -3,8 +3,15 @@ const { spawnSync } = require('child_process');
 
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe',
+    encoding: 'utf8',
+  });
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
+  };
 }
 
 exports.config = {
@@ -23,7 +30,8 @@ exports.handler = async () => {
   }
 
   // Make base URL available to crawler
-  process.env.CANONICAL_URL = process.env.CANONICAL_URL || process.env.SITE_URL || '';
+  process.env.CANONICAL_URL =
+    process.env.CANONICAL_URL || process.env.SITE_URL || '';
 
   logStep('links:crawl', () => runNode('automation/site-link-crawler.cjs'));
   logStep('links:fix', () => runNode('automation/site-link-fixer.cjs'));

@@ -7,21 +7,25 @@ This directory contains a **comprehensive redundancy automation system** that pr
 The comprehensive redundancy system automatically detects and creates backups for:
 
 ### ✅ PM2 Processes
+
 - **zion-auto-sync** - Auto-sync process
 - **zion-auto-sync-cron** - Cron-based sync process
 - Any additional PM2 processes defined in `ecosystem.pm2.cjs`
 
 ### ✅ GitHub Actions Workflows
+
 - **marketing-sync.yml** - Marketing synchronization workflow
 - **sync-health.yml** - Sync health monitoring workflow
 - Any additional workflows in `.github/workflows/`
 
 ### ✅ Netlify Functions
+
 - **All 100+ functions** from `netlify/functions/functions-manifest.json`
 - Functions include: accessibility, AI tools, content generation, SEO, security, and more
 - Automatic backup function creation with error handling
 
 ### ✅ Shell Scripts
+
 - **git-sync-cron.sh** - Git synchronization cron script
 - **start-pm2-auto-sync.sh** - PM2 auto-sync starter
 - **enhanced-git-sync.sh** - Enhanced git synchronization
@@ -29,6 +33,7 @@ The comprehensive redundancy system automatically detects and creates backups fo
 - Any additional `.sh` scripts in `automation/` and `automation/scripts/`
 
 ### ✅ Node.js Scripts
+
 - **pm2-auto-sync.js** - PM2 auto-sync logic
 - **marketing-sync.js** - Marketing synchronization
 - **build-failure-recovery.cjs** - Build failure recovery
@@ -160,6 +165,7 @@ node master-redundancy-orchestrator.cjs [start|stop|status|health|report|recover
 ## 📊 What Gets Backed Up
 
 ### PM2 Processes
+
 - **Original**: `ecosystem.pm2.cjs`
 - **Backup**: Enhanced ecosystem with backup processes
 - **Backup Processes**:
@@ -168,24 +174,28 @@ node master-redundancy-orchestrator.cjs [start|stop|status|health|report|recover
 - `zion-monitoring-backup` - Dedicated monitoring process
 
 ### GitHub Actions Workflows
+
 - **Original**: `marketing-sync.yml`, `sync-health.yml`
 - **Backup**: `marketing-sync-backup.yml`, `sync-health-backup.yml`
 - **Schedule**: Reduced to daily to avoid conflicts
 - **Features**: Maintains manual dispatch, adds backup indicators
 
 ### Netlify Functions
+
 - **Original**: All 100+ functions from manifest
 - **Backup**: `{function-name}-backup` directories
 - **Structure**: Complete backup with package.json and index.js
 - **Logic**: Wrapper that tries original function, falls back to backup response
 
 ### Shell Scripts
+
 - **Original**: All `.sh` scripts in automation directories
 - **Backup**: `{script-name}-backup.sh` files
 - **Permissions**: Automatically made executable
 - **Logic**: Backup versions with enhanced error handling
 
 ### Node.js Scripts
+
 - **Original**: All `.js` and `.cjs` automation scripts
 - **Backup**: `{script-name}-backup.cjs` files
 - **Structure**: Complete backup classes with error handling
@@ -220,12 +230,14 @@ automation/backups/YYYY-MM-DD/
 ## 🔍 Health Monitoring
 
 ### Monitoring Schedule
+
 - **Component Health**: Every 10 minutes
 - **Backup Creation**: Every 6 hours
 - **System Reports**: Every 2 hours
 - **Individual Manager Health**: Every 5-15 minutes
 
 ### Health Indicators
+
 - **Healthy**: Component operating normally
 - **Unhealthy**: Component has issues but recovery is possible
 - **Failed**: Component has failed and needs manual intervention
@@ -233,6 +245,7 @@ automation/backups/YYYY-MM-DD/
 - **Error**: Health check failed
 
 ### Recovery Procedures
+
 1. **Automatic Recovery**: Up to 3 attempts per component
 2. **Manager Restart**: Failed managers are automatically restarted
 3. **Emergency Recovery**: Full system restart when health < 50%
@@ -241,6 +254,7 @@ automation/backups/YYYY-MM-DD/
 ## 📈 Reports and Logging
 
 ### Log Files
+
 - `comprehensive-redundancy.log` - Main comprehensive manager logs
 - `pm2-redundancy.log` - PM2 manager logs
 - `github-actions-redundancy.log` - GitHub manager logs
@@ -248,12 +262,14 @@ automation/backups/YYYY-MM-DD/
 - `master-redundancy.log` - Master orchestrator logs
 
 ### Report Files
+
 - `comprehensive-redundancy-report.json` - Complete system status
 - `pm2-redundancy-report.json` - PM2 backup status
 - `github-actions-redundancy-report.json` - Workflow backup status
 - `netlify-functions-redundancy-report.json` - Function backup status
 
 ### Report Contents
+
 - **Summary**: Total components, health metrics, backup coverage
 - **Components**: Detailed status of each component type
 - **Recommendations**: Actionable advice for system health
@@ -264,6 +280,7 @@ automation/backups/YYYY-MM-DD/
 ### Common Issues
 
 #### 1. PM2 Process Failures
+
 ```bash
 # Check PM2 status
 pm2 status
@@ -276,6 +293,7 @@ node pm2-redundancy-manager.cjs status
 ```
 
 #### 2. GitHub Workflow Issues
+
 ```bash
 # Check workflow health
 node github-actions-redundancy-manager.cjs health
@@ -285,6 +303,7 @@ node github-actions-redundancy-manager.cjs backup
 ```
 
 #### 3. Netlify Function Problems
+
 ```bash
 # Test functions
 node netlify-functions-redundancy-manager.cjs test
@@ -294,6 +313,7 @@ node netlify-functions-redundancy-manager.cjs deploy
 ```
 
 #### 4. Shell Script Issues
+
 ```bash
 # Check script permissions
 ls -la automation/*.sh
@@ -303,6 +323,7 @@ chmod +x automation/script-name.sh
 ```
 
 #### 5. Node.js Script Issues
+
 ```bash
 # Validate script
 node -c automation/script-name.cjs
@@ -314,22 +335,26 @@ node comprehensive-redundancy-manager.cjs health
 ### Emergency Procedures
 
 #### 1. Force Stop All
+
 ```bash
 ./stop-comprehensive-redundancy.sh force
 ```
 
 #### 2. Emergency Recovery
+
 ```bash
 node master-redundancy-orchestrator.cjs recovery
 ```
 
 #### 3. Clean Restart
+
 ```bash
 ./stop-comprehensive-redundancy.sh
 ./start-comprehensive-redundancy.sh
 ```
 
 #### 4. Manual Component Recovery
+
 ```bash
 # Restart specific manager
 node pm2-redundancy-manager.cjs start
@@ -341,12 +366,14 @@ node comprehensive-redundancy-manager.cjs backup
 ## 🔒 Security Considerations
 
 ### Access Control
+
 - **Process Isolation**: Each manager runs independently
 - **File Permissions**: Logs and reports use appropriate permissions
 - **Environment Variables**: Sensitive data stored in environment
 - **Network Security**: Minimal external network access
 
 ### Best Practices
+
 - Keep environment variables secure
 - Regularly rotate access tokens
 - Monitor log files for suspicious activity
@@ -355,12 +382,14 @@ node comprehensive-redundancy-manager.cjs backup
 ## 📊 Performance Considerations
 
 ### Resource Usage
+
 - **Memory**: ~50-100MB per manager process
 - **CPU**: Minimal during idle, spikes during operations
 - **Disk**: Log files grow ~1-5MB per day
 - **Network**: Minimal for health checks, moderate for deployments
 
 ### Optimization
+
 - **Log Rotation**: Logs are automatically managed
 - **Health Check Throttling**: Configurable intervals
 - **Process Pooling**: Efficient process management
@@ -369,13 +398,16 @@ node comprehensive-redundancy-manager.cjs backup
 ## 🔄 Integration
 
 ### With Existing Systems
+
 The redundancy system is designed to work alongside existing automation:
+
 - **Non-Intrusive**: Doesn't modify existing processes
 - **Parallel Operation**: Runs independently of primary systems
 - **Failover Ready**: Automatically takes over when needed
 - **Graceful Handoff**: Returns control when primary systems recover
 
 ### Customization
+
 Each manager can be customized:
 
 ```javascript
@@ -388,16 +420,19 @@ manager.backupInterval = 21600000; // 6 hours
 ## 📚 Maintenance
 
 ### Regular Tasks
+
 - **Weekly**: Review logs and reports
 - **Monthly**: Update backup strategies
 - **Quarterly**: Performance review and optimization
 
 ### Updates
+
 - **Automatic**: System updates itself when possible
 - **Manual**: Critical updates require manual intervention
 - **Rollback**: Previous versions can be restored
 
 ### Monitoring
+
 - **Real-time**: Live status monitoring
 - **Historical**: Trend analysis and reporting
 - **Alerts**: Automatic notification of issues
@@ -406,37 +441,41 @@ manager.backupInterval = 21600000; // 6 hours
 
 With this comprehensive redundancy system, you now have:
 
-✅ **Complete Coverage**: Every automation component is backed up 
-✅ **Automatic Failover**: Backup systems take over when primary fails 
-✅ **Health Monitoring**: Continuous monitoring of all components 
-✅ **Self-Healing**: Automatic recovery and restart capabilities 
-✅ **Comprehensive Reporting**: Complete visibility into system health 
-✅ **Easy Management**: Simple start/stop/status commands 
-✅ **Professional Grade**: Enterprise-level redundancy and reliability 
+✅ **Complete Coverage**: Every automation component is backed up
+✅ **Automatic Failover**: Backup systems take over when primary fails
+✅ **Health Monitoring**: Continuous monitoring of all components
+✅ **Self-Healing**: Automatic recovery and restart capabilities
+✅ **Comprehensive Reporting**: Complete visibility into system health
+✅ **Easy Management**: Simple start/stop/status commands
+✅ **Professional Grade**: Enterprise-level redundancy and reliability
 
 ## 🚀 Getting Started Right Now
 
 1. **Start the system**:
- ```bash
- cd automation/redundancy
- chmod +x start-comprehensive-redundancy.sh
- ./start-comprehensive-redundancy.sh
- ```
+
+```bash
+cd automation/redundancy
+chmod +x start-comprehensive-redundancy.sh
+./start-comprehensive-redundancy.sh
+```
 
 2. **Check status**:
- ```bash
- ./start-comprehensive-redundancy.sh status
- ```
+
+```bash
+./start-comprehensive-redundancy.sh status
+```
 
 3. **Generate report**:
- ```bash
- ./start-comprehensive-redundancy.sh report
- ```
+
+```bash
+./start-comprehensive-redundancy.sh report
+```
 
 4. **Monitor health**:
- ```bash
- ./start-comprehensive-redundancy.sh health
- ```
+
+```bash
+./start-comprehensive-redundancy.sh health
+```
 
 Your automation infrastructure is now bulletproof! 🛡️✨
 

@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2032AdditionalServices: MicroSaasService[] = [
@@ -14,20 +14,22 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'Triage and reply to emails with on-brand AI assistants',
     price: '$29',
     period: '/user/month',
-    description: 'Autonomously drafts, classifies, and schedules responses across shared inboxes. Includes policy guardrails, approval queues, and CRM sync.',
+    description:
+      'Autonomously drafts, classifies, and schedules responses across shared inboxes. Includes policy guardrails, approval queues, and CRM sync.',
     features: [
       'Priority classification and SLAs',
       'On-brand response generation',
       'Approvals and audit trails',
       'Shared inbox support',
-      'CRM + ticketing sync'
+      'CRM + ticketing sync',
     ],
     popular: true,
     icon: '📬',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-email-responder-pro',
-    marketPosition: 'Competitive vs. Superhuman AI and Front AI with better approvals and CRM sync.',
+    marketPosition:
+      'Competitive vs. Superhuman AI and Front AI with better approvals and CRM sync.',
     targetAudience: 'Sales, support, success teams',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -43,11 +45,12 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'OAuth mailbox connect, policy templates, reply suggestions, approvals.',
+    implementationDetails:
+      'OAuth mailbox connect, policy templates, reply suggestions, approvals.',
     launchDate: '2025-04-01',
     customers: 38,
     rating: 4.7,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'mobile-first-survey-tool',
@@ -55,20 +58,22 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'Modern surveys with high completion on any device',
     price: '$25',
     period: '/project/month',
-    description: 'Create mobile-optimized surveys with skip logic, NPS/CSAT/CES templates, and live dashboards. Export to BI and trigger webhooks.',
+    description:
+      'Create mobile-optimized surveys with skip logic, NPS/CSAT/CES templates, and live dashboards. Export to BI and trigger webhooks.',
     features: [
       'Responsive templates',
       'Skip/branch logic',
       'Real-time analytics',
       'Link/QR/email distribution',
-      'Webhook + CSV export'
+      'Webhook + CSV export',
     ],
     popular: false,
     icon: '📱',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/mobile-first-survey-tool',
-    marketPosition: 'Lightweight vs. Typeform/SurveyMonkey with better mobile performance.',
+    marketPosition:
+      'Lightweight vs. Typeform/SurveyMonkey with better mobile performance.',
     targetAudience: 'Product, growth, research teams',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -84,11 +89,12 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     variant: 'micro-saas-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Form builder, response store, dashboards, webhooks.',
+    implementationDetails:
+      'Form builder, response store, dashboards, webhooks.',
     launchDate: '2025-04-05',
     customers: 21,
     rating: 4.6,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'ecommerce-returns-automation',
@@ -96,13 +102,14 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'Labels, tracking, and refunds—fully automated',
     price: '$79',
     period: '/store/month',
-    description: 'Self-serve return portal with label generation, RMA rules, and status tracking. Syncs with your storefront and carrier accounts.',
+    description:
+      'Self-serve return portal with label generation, RMA rules, and status tracking. Syncs with your storefront and carrier accounts.',
     features: [
       'Return rules and RMA numbers',
       'Carrier label generation',
       'Status page and notifications',
       'Warehouse disposition codes',
-      'Refund/exchange flows'
+      'Refund/exchange flows',
     ],
     popular: true,
     icon: '📦',
@@ -125,11 +132,12 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     variant: 'saas-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Embedded app, webhooks, and carrier API integration.',
+    implementationDetails:
+      'Embedded app, webhooks, and carrier API integration.',
     launchDate: '2025-04-08',
     customers: 12,
     rating: 4.6,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'podcast-transcription-studio',
@@ -137,20 +145,22 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'Accurate AI transcripts with speakers, chapters, and SEO',
     price: '$0.15',
     period: '/min',
-    description: 'Batch or live transcriptions with diarization, timestamps, and blog-ready summaries. Export SRT/VTT and publish to CMS.',
+    description:
+      'Batch or live transcriptions with diarization, timestamps, and blog-ready summaries. Export SRT/VTT and publish to CMS.',
     features: [
       'Speaker diarization',
       'Timestamps and chapters',
       'Summaries and highlights',
       'Export SRT/VTT/Docx',
-      'CMS publish'
+      'CMS publish',
     ],
     popular: false,
     icon: '🎙️',
     color: 'from-rose-600 to-pink-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
-    marketPosition: 'Comparable to Rev/Descript at transparent per-minute pricing.',
+    marketPosition:
+      'Comparable to Rev/Descript at transparent per-minute pricing.',
     targetAudience: 'Podcasters, media teams, agencies',
     trialDays: 0,
     setupTime: 'Instant',
@@ -170,7 +180,7 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     launchDate: '2025-04-04',
     customers: 16,
     rating: 4.5,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'micro-crm-local-business',
@@ -178,13 +188,14 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'Contacts, appointments, and simple sales pipeline',
     price: '$19',
     period: '/user/month',
-    description: 'Lightweight CRM focused on SMB workflows: appointments, reminders, and a simple kanban for deals with email/text nudges.',
+    description:
+      'Lightweight CRM focused on SMB workflows: appointments, reminders, and a simple kanban for deals with email/text nudges.',
     features: [
       'Contact and company records',
       'Calendar and reminders',
       'Simple pipeline/Kanban',
       'Email/SMS nudges',
-      'Basic reporting'
+      'Basic reporting',
     ],
     popular: false,
     icon: '📇',
@@ -207,11 +218,12 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     variant: 'business-intelligence-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant auth, contacts, pipeline, calendar sync.',
+    implementationDetails:
+      'Multi-tenant auth, contacts, pipeline, calendar sync.',
     launchDate: '2025-04-06',
     customers: 18,
     rating: 4.5,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'ai-seo-content-optimizer',
@@ -219,13 +231,14 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'On-page analysis, keywords, and competitor gaps',
     price: '$59',
     period: '/month',
-    description: 'Optimize pages with live audits, keyword clusters, SERP diffing, and content briefs. Integrates with your CMS and analytics.',
+    description:
+      'Optimize pages with live audits, keyword clusters, SERP diffing, and content briefs. Integrates with your CMS and analytics.',
     features: [
       'On-page audits and scoring',
       'Keyword clusters and briefs',
       'Competitor SERP analysis',
       'Change tracking and diffs',
-      'CMS integrations'
+      'CMS integrations',
     ],
     popular: true,
     icon: '🔎',
@@ -252,7 +265,7 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     launchDate: '2025-04-02',
     customers: 25,
     rating: 4.7,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'event-management-dashboard',
@@ -260,13 +273,14 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'Tickets, check-in, and post‑event analytics',
     price: '$99',
     period: '/event',
-    description: 'Plan events, sell tickets, manage check‑in, and publish recaps. Includes seating, sponsor booths, and feedback automations.',
+    description:
+      'Plan events, sell tickets, manage check‑in, and publish recaps. Includes seating, sponsor booths, and feedback automations.',
     features: [
       'Ticketing and registration',
       'Check‑in and QR badges',
       'Schedules and sessions',
       'Sponsored booths',
-      'Post‑event analytics'
+      'Post‑event analytics',
     ],
     popular: false,
     icon: '🎟️',
@@ -293,7 +307,7 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     launchDate: '2025-04-09',
     customers: 9,
     rating: 4.4,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'ai-code-review-assistant',
@@ -301,13 +315,14 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'Automated PR reviews with security and performance hints',
     price: '$49',
     period: '/repo/month',
-    description: 'Analyzes PRs for issues, anti‑patterns, and secrets. Leaves actionable comments and links to docs; integrates into CI.',
+    description:
+      'Analyzes PRs for issues, anti‑patterns, and secrets. Leaves actionable comments and links to docs; integrates into CI.',
     features: [
       'Static analysis and heuristics',
       'Secrets/leak detection',
       'Performance and complexity hints',
       'Auto‑fix suggestions',
-      'CI checks and status'
+      'CI checks and status',
     ],
     popular: true,
     icon: '🧠',
@@ -334,7 +349,7 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     launchDate: '2025-04-07',
     customers: 14,
     rating: 4.6,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'media-cdn-optimizer',
@@ -342,13 +357,14 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     tagline: 'Smart image/video transforms to speed up every page',
     price: '$49',
     period: '/site/month',
-    description: 'Automatic format negotiation, resizing, and lazy loading with signed URLs and per‑route budgets. Works with multiple CDNs.',
+    description:
+      'Automatic format negotiation, resizing, and lazy loading with signed URLs and per‑route budgets. Works with multiple CDNs.',
     features: [
       'AVIF/WebP negotiation',
       'Transform presets and DPR',
       'Signed URLs and cache keys',
       'CLS/LCP budgets and alerts',
-      'Origin shield and resize queues'
+      'Origin shield and resize queues',
     ],
     popular: false,
     icon: '🖼️',
@@ -375,6 +391,6 @@ export const real2032AdditionalServices: MicroSaasService[] = [
     launchDate: '2025-04-03',
     customers: 11,
     rating: 4.5,
-    reviews: 7
-  }
+    reviews: 7,
+  },
 ];

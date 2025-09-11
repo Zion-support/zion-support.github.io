@@ -9,7 +9,9 @@ const ROOT = process.cwd();
 const DOCS_DIR = path.join(ROOT, 'docs');
 const REPORT_DIR = path.join(ROOT, 'public', 'reports', 'anchor-links');
 
-function ensureDir(p) { if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true }); }
+function ensureDir(p) {
+  if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
+}
 ensureDir(REPORT_DIR);
 
 function slugify(s) {
@@ -43,7 +45,7 @@ function listMarkdown(dir) {
       const m = /^(#{1,6})\s+(.+?)(\s*\{#.+\})?$/.exec(lines[i]);
       if (!m) continue;
       const hashes = m[1];
-      const title = m[2].replace(/\{#.*\}$/,'').trim();
+      const title = m[2].replace(/\{#.*\}$/, '').trim();
       const hasId = /\{#.+\}\s*$/.test(lines[i]);
       if (!hasId) {
         const id = slugify(title);
@@ -56,7 +58,15 @@ function listMarkdown(dir) {
       changes.push({ file: path.relative(ROOT, file) });
     }
   }
-  const report = { generatedAt: new Date().toISOString(), totalFiles: files.length, changed: changes.length, changes };
-  fs.writeFileSync(path.join(REPORT_DIR, 'report.json'), JSON.stringify(report, null, 2));
+  const report = {
+    generatedAt: new Date().toISOString(),
+    totalFiles: files.length,
+    changed: changes.length,
+    changes,
+  };
+  fs.writeFileSync(
+    path.join(REPORT_DIR, 'report.json'),
+    JSON.stringify(report, null, 2)
+  );
   console.log(`Anchor Links Auto-Fixer updated ${changes.length} files.`);
 })();

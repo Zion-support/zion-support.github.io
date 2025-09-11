@@ -9,7 +9,7 @@ describe('Signup and Auto-Login Flow', () => {
     const mockSupabaseUserID = `test-user-id-${testTimestamp}`;
 
     // Mock the API response for registration
-    cy.intercept('POST', '/api/auth/register', (req) => {
+    cy.intercept('POST', '/api/auth/register', req => {
       expect(req.body.email).to.equal(uniqueEmail);
       expect(req.body.name).to.equal(userName);
       // Simulate a successful response where email verification is not required
@@ -83,10 +83,11 @@ describe('Signup and Auto-Login Flow', () => {
     cy.request({
       method: 'GET',
       url: '/api/users/me',
-    }).then((response) => {
+    }).then(response => {
       expect(response.status).to.eq(200);
       expect(response.body.email).to.eq(uniqueEmail);
-      if (response.body.id) { // check if id is returned by /api/users/me
+      if (response.body.id) {
+        // check if id is returned by /api/users/me
         expect(response.body.id).to.eq(mockSupabaseUserID);
       }
     });

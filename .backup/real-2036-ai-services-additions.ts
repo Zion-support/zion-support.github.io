@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2036AIServicesAdditions: Real2036AIService[] = [
@@ -55,7 +55,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     tagline: 'Revolutionary NLP powered by quantum computing',
     price: '$2,799',
     period: '/month',
-    description: 'Advanced natural language processing platform that leverages quantum computing to achieve unprecedented accuracy in language understanding, translation, and generation tasks.',
+    description:
+      'Advanced natural language processing platform that leverages quantum computing to achieve unprecedented accuracy in language understanding, translation, and generation tasks.',
     features: [
       'Quantum-enhanced language models',
       'Multi-language understanding and translation',
@@ -65,14 +66,15 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
       'Real-time language processing',
       'Custom model training and fine-tuning',
       'API for seamless integration',
-      'Enterprise-grade security and compliance'
+      'Enterprise-grade security and compliance',
     ],
     popular: true,
     icon: '⚛️💬',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-enhanced-nlp',
-    marketPosition: 'First quantum-enhanced NLP platform for enterprise applications',
+    marketPosition:
+      'First quantum-enhanced NLP platform for enterprise applications',
     targetAudience: 'AI researchers, NLP engineers, enterprise AI teams',
     trialDays: 30,
     setupTime: '2 weeks',
@@ -88,11 +90,12 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant quantum NLP platform with hybrid algorithms',
+    implementationDetails:
+      'Multi-tenant quantum NLP platform with hybrid algorithms',
     launchDate: '2026-01-15',
     customers: 52,
     rating: 4.9,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'ai-powered-computer-vision-suite',
@@ -100,7 +103,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     tagline: 'Advanced computer vision with real-time AI processing',
     price: '$1,899',
     period: '/month',
-    description: 'Comprehensive computer vision platform that provides real-time image and video analysis, object detection, facial recognition, and automated visual inspection capabilities.',
+    description:
+      'Comprehensive computer vision platform that provides real-time image and video analysis, object detection, facial recognition, and automated visual inspection capabilities.',
     features: [
       'Real-time object detection and tracking',
       'Advanced facial recognition and analysis',
@@ -110,15 +114,17 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
       'Custom model training and deployment',
       'Edge computing optimization',
       'Multi-format support (images, videos, streams)',
-      'API and SDK for integration'
+      'API and SDK for integration',
     ],
     popular: false,
     icon: '👁️🤖',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-computer-vision',
-    marketPosition: 'Leading AI-powered computer vision platform for enterprises',
-    targetAudience: 'Computer vision engineers, AI developers, manufacturing teams',
+    marketPosition:
+      'Leading AI-powered computer vision platform for enterprises',
+    targetAudience:
+      'Computer vision engineers, AI developers, manufacturing teams',
     trialDays: 21,
     setupTime: '2 weeks',
     category: 'Computer Vision',
@@ -133,11 +139,12 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native computer vision platform with edge optimization',
+    implementationDetails:
+      'Cloud-native computer vision platform with edge optimization',
     launchDate: '2026-01-25',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'quantum-reinforcement-learning',
@@ -145,7 +152,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     tagline: 'Supercharge RL with quantum computing acceleration',
     price: '$3,299',
     period: '/month',
-    description: 'Advanced reinforcement learning platform that leverages quantum computing to solve complex optimization problems, enabling faster convergence and better solutions for autonomous systems.',
+    description:
+      'Advanced reinforcement learning platform that leverages quantum computing to solve complex optimization problems, enabling faster convergence and better solutions for autonomous systems.',
     features: [
       'Quantum-enhanced RL algorithms',
       'Multi-agent reinforcement learning',
@@ -155,7 +163,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
       'Performance monitoring and analytics',
       'Integration with simulation platforms',
       'API for custom RL applications',
-      'Enterprise-grade scalability'
+      'Enterprise-grade scalability',
     ],
     popular: true,
     icon: '⚛️🎯',
@@ -163,7 +171,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/quantum-reinforcement-learning',
     marketPosition: 'Leading quantum-enhanced reinforcement learning platform',
-    targetAudience: 'RL researchers, autonomous systems engineers, AI scientists',
+    targetAudience:
+      'RL researchers, autonomous systems engineers, AI scientists',
     trialDays: 30,
     setupTime: '1 month',
     category: 'Quantum RL',
@@ -178,11 +187,12 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise quantum RL platform with hybrid algorithms',
+    implementationDetails:
+      'Enterprise quantum RL platform with hybrid algorithms',
     launchDate: '2026-02-01',
     customers: 31,
     rating: 4.9,
-    reviews: 24
+    reviews: 24,
   },
   {
     id: 'ai-powered-predictive-analytics',
@@ -190,7 +200,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     tagline: 'Predict the future with advanced AI analytics',
     price: '$1,599',
     period: '/month',
-    description: 'Comprehensive predictive analytics platform that uses machine learning and artificial intelligence to forecast trends, identify patterns, and provide actionable insights for business decision-making.',
+    description:
+      'Comprehensive predictive analytics platform that uses machine learning and artificial intelligence to forecast trends, identify patterns, and provide actionable insights for business decision-making.',
     features: [
       'Advanced time series forecasting',
       'Pattern recognition and anomaly detection',
@@ -200,7 +211,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
       'Model interpretability and explainability',
       'Custom dashboard creation',
       'Integration with data sources',
-      'API for custom applications'
+      'API for custom applications',
     ],
     popular: false,
     icon: '📊🔮',
@@ -223,11 +234,12 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native predictive analytics platform with AI/ML engines',
+    implementationDetails:
+      'Cloud-native predictive analytics platform with AI/ML engines',
     launchDate: '2026-01-30',
     customers: 76,
     rating: 4.7,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'quantum-generative-ai',
@@ -235,7 +247,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     tagline: 'Create the impossible with quantum-enhanced generative AI',
     price: '$2,999',
     period: '/month',
-    description: 'Revolutionary generative AI platform that combines quantum computing with advanced generative models to create unprecedented content, designs, and solutions.',
+    description:
+      'Revolutionary generative AI platform that combines quantum computing with advanced generative models to create unprecedented content, designs, and solutions.',
     features: [
       'Quantum-enhanced generative models',
       'Multi-modal content generation (text, image, video, 3D)',
@@ -245,7 +258,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
       'Enterprise-grade content filtering',
       'API for seamless integration',
       'Scalable infrastructure',
-      'Compliance and governance tools'
+      'Compliance and governance tools',
     ],
     popular: true,
     icon: '⚛️🎨',
@@ -272,7 +285,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     launchDate: '2026-01-20',
     customers: 45,
     rating: 4.8,
-    reviews: 33
+    reviews: 33,
   },
   {
     id: 'ai-powered-automated-machine-learning',
@@ -280,7 +293,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     tagline: 'Democratize ML with intelligent automation',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced automated machine learning platform that uses artificial intelligence to automate the entire ML pipeline, from data preparation to model deployment and monitoring.',
+    description:
+      'Advanced automated machine learning platform that uses artificial intelligence to automate the entire ML pipeline, from data preparation to model deployment and monitoring.',
     features: [
       'Automated data preprocessing and feature engineering',
       'Intelligent algorithm selection and hyperparameter tuning',
@@ -290,7 +304,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
       'Explainable AI and model interpretability',
       'Integration with existing ML workflows',
       'Custom model development tools',
-      'Enterprise-grade security and compliance'
+      'Enterprise-grade security and compliance',
     ],
     popular: false,
     icon: '🤖⚙️',
@@ -317,7 +331,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     launchDate: '2026-01-28',
     customers: 94,
     rating: 4.8,
-    reviews: 71
+    reviews: 71,
   },
   {
     id: 'quantum-federated-learning',
@@ -325,7 +339,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     tagline: 'Secure, distributed learning with quantum enhancement',
     price: '$2,199',
     period: '/month',
-    description: 'Advanced federated learning platform that combines quantum computing with distributed machine learning, enabling secure, privacy-preserving model training across multiple organizations.',
+    description:
+      'Advanced federated learning platform that combines quantum computing with distributed machine learning, enabling secure, privacy-preserving model training across multiple organizations.',
     features: [
       'Quantum-enhanced federated learning algorithms',
       'Secure multi-party computation',
@@ -335,7 +350,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
       'Advanced encryption and security protocols',
       'Performance monitoring and analytics',
       'Integration with existing ML frameworks',
-      'Compliance and audit tools'
+      'Compliance and audit tools',
     ],
     popular: true,
     icon: '⚛️🤝',
@@ -343,7 +358,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-federated-learning',
     marketPosition: 'Leading quantum-enhanced federated learning platform',
-    targetAudience: 'AI researchers, healthcare organizations, financial institutions',
+    targetAudience:
+      'AI researchers, healthcare organizations, financial institutions',
     trialDays: 30,
     setupTime: '1 month',
     category: 'Quantum Federated Learning',
@@ -362,7 +378,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     launchDate: '2026-02-05',
     customers: 38,
     rating: 4.9,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'ai-powered-knowledge-graphs',
@@ -370,7 +386,8 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     tagline: 'Build intelligent knowledge graphs with AI automation',
     price: '$1,799',
     period: '/month',
-    description: 'Advanced knowledge graph platform that uses artificial intelligence to automatically extract, organize, and connect information from diverse data sources, creating intelligent knowledge networks.',
+    description:
+      'Advanced knowledge graph platform that uses artificial intelligence to automatically extract, organize, and connect information from diverse data sources, creating intelligent knowledge networks.',
     features: [
       'AI-powered entity extraction and linking',
       'Automated knowledge graph construction',
@@ -380,7 +397,7 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
       'Multi-source data integration',
       'Custom ontology development',
       'API for graph operations',
-      'Visualization and exploration tools'
+      'Visualization and exploration tools',
     ],
     popular: false,
     icon: '🧠🕸️',
@@ -403,10 +420,11 @@ export const real2036AIServicesAdditions: Real2036AIService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native knowledge graph platform with AI/ML automation',
+    implementationDetails:
+      'Cloud-native knowledge graph platform with AI/ML automation',
     launchDate: '2026-01-22',
     customers: 62,
     rating: 4.7,
-    reviews: 47
-  }
+    reviews: 47,
+  },
 ];

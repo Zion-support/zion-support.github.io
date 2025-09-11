@@ -29,7 +29,10 @@ export default async function handler(req: Req, res: JsonRes) {
   }
 
   const idParam = req.query?.userId || req.query?.user_id;
-  const userId = idParam === 'me' ? (req.headers['x-user-id'] as string | undefined) : idParam;
+  const userId =
+    idParam === 'me'
+      ? (req.headers['x-user-id'] as string | undefined)
+      : idParam;
   if (!userId) {
     res.status(400).json({ error: 'Missing userId' });
     return;

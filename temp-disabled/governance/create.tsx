@@ -9,23 +9,44 @@ import * as z from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { PROPOSAL_TEMPLATES } from '@/data/proposalTemplates';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';
 
 // import MainLayout from '@/components/layout/MainLayout'; // If exists
 // import { useAuth } from '@/hooks/useAuth'; // If frontend auth is needed for API calls
 // import { useWallet } from '@/context/WalletContext'; // If wallet info is needed
 
-const proposalTypes = ['FEATURE', 'BUDGET', 'COMMUNITY_GRANT', 'GENERAL'] as const;
+const proposalTypes = [
+  'FEATURE',
+  'BUDGET',
+  'COMMUNITY_GRANT',
+  'GENERAL',
+] as const;
 
 const proposalSchema = z.object({
-  title: z.string().min(5, { message: "Title must be at least 5 characters." }),
-  summary: z.string().min(20, { message: "Summary must be at least 20 characters." }),
+  title: z.string().min(5, { message: 'Title must be at least 5 characters.' }),
+  summary: z
+    .string()
+    .min(20, { message: 'Summary must be at least 20 characters.' }),
   proposal_type: z.enum(proposalTypes),
   voting_starts_at: z.string().optional().nullable(), // Using string for datetime-local
-  voting_ends_at: z.string().optional().nullable(),   // Using string for datetime-local
+  voting_ends_at: z.string().optional().nullable(), // Using string for datetime-local
   quorum_percentage: z.coerce.number().min(0).max(1).optional().nullable(),
   funding_ask_amount: z.coerce.number().positive().optional().nullable(),
   funding_ask_token_symbol: z.string().optional().nullable(),
@@ -60,9 +81,11 @@ const CreateProposalPage: React.FC = () => {
   const { query } = router;
 
   useEffect(() => {
-    const templateId = Array.isArray(query.template) ? query.template[0] : query.template;
+    const templateId = Array.isArray(query.template)
+      ? query.template[0]
+      : query.template;
     if (templateId) {
-      const template = PROPOSAL_TEMPLATES.find((t) => t.id === templateId);
+      const template = PROPOSAL_TEMPLATES.find(t => t.id === templateId);
       if (template) {
         form.reset({
           title: template.title,
@@ -85,8 +108,11 @@ const CreateProposalPage: React.FC = () => {
 
     const { reference_links_input, ...restOfData } = data;
     const reference_links = reference_links_input
-        ? reference_links_input.split('\n').map(link => link.trim()).filter(link => link)
-        : [];
+      ? reference_links_input
+          .split('\n')
+          .map(link => link.trim())
+          .filter(link => link)
+      : [];
 
     const apiData = {
       ...restOfData,
@@ -101,15 +127,15 @@ const CreateProposalPage: React.FC = () => {
 
     // Remove undefined values which might be problematic for JSON
     Object.keys(apiData).forEach(key => {
-        const K = key as keyof typeof apiData;
-        if (apiData[K] === undefined) {
-            delete apiData[K];
-        }
+      const K = key as keyof typeof apiData;
+      if (apiData[K] === undefined) {
+        delete apiData[K];
+      }
     });
 
-
     try {
-      const response = await fetch('/api/governance/proposals/', { // Adjust API endpoint as needed
+      const response = await fetch('/api/governance/proposals/', {
+        // Adjust API endpoint as needed
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -122,14 +148,18 @@ const CreateProposalPage: React.FC = () => {
       if (!response.ok) {
         const errorData = await response.json();
         logErrorToProduction('Submission error:', { data: errorData });
-        throw new Error(errorData.detail || Object.values(errorData).join(', ') || `Error: ${response.status}`);
+        throw new Error(
+          errorData.detail ||
+            Object.values(errorData).join(', ') ||
+            `Error: ${response.status}`
+        );
       }
 
       const newProposal = await response.json();
       router.push(`/governance/${newProposal.id}`);
     } catch (err: any) {
       setApiError(err.message || 'Failed to create proposal.');
-      logErrorToProduction("Error:", { error: err });
+      logErrorToProduction('Error:', { error: err });
     } finally {
       setIsLoading(false);
     }
@@ -137,18 +167,18 @@ const CreateProposalPage: React.FC = () => {
 
   return (
     // <MainLayout>
-    <div className="container mx-auto p-4 max-w-2xl">
-      <h1 className="text-3xl font-bold mb-6">Create New Proposal</h1>
+    <div className='container mx-auto p-4 max-w-2xl'>
+      <h1 className='text-3xl font-bold mb-6'>Create New Proposal</h1>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
           <FormField
             control={form.control}
-            name="title"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Title</FormLabel>
+            name='title'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Title</FormLabel>
                 <FormControl>
-                  <Input placeholder="Proposal Title" {...field} />
+                  <Input placeholder='Proposal Title' {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -157,12 +187,16 @@ const CreateProposalPage: React.FC = () => {
 
           <FormField
             control={form.control}
-            name="summary"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Summary</FormLabel>
+            name='summary'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Summary</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Detailed summary of the proposal..." {...field} rows={5} />
+                  <Textarea
+                    placeholder='Detailed summary of the proposal...'
+                    {...field}
+                    rows={5}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -171,19 +205,24 @@ const CreateProposalPage: React.FC = () => {
 
           <FormField
             control={form.control}
-            name="proposal_type"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Proposal Type</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+            name='proposal_type'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Proposal Type</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a proposal type" />
+                      <SelectValue placeholder='Select a proposal type' />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
                     {proposalTypes.map(type => (
-                      <SelectItem key={type} value={type}>{type.replace('_', ' ')}</SelectItem>
+                      <SelectItem key={type} value={type}>
+                        {type.replace('_', ' ')}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -194,12 +233,16 @@ const CreateProposalPage: React.FC = () => {
 
           <FormField
             control={form.control}
-            name="voting_starts_at"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Voting Starts At (Optional)</FormLabel>
+            name='voting_starts_at'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Voting Starts At (Optional)</FormLabel>
                 <FormControl>
-                  <Input type="datetime-local" {...field} value={field.value || ''} />
+                  <Input
+                    type='datetime-local'
+                    {...field}
+                    value={field.value || ''}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -208,12 +251,16 @@ const CreateProposalPage: React.FC = () => {
 
           <FormField
             control={form.control}
-            name="voting_ends_at"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Voting Ends At (Optional)</FormLabel>
+            name='voting_ends_at'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Voting Ends At (Optional)</FormLabel>
                 <FormControl>
-                  <Input type="datetime-local" {...field} value={field.value || ''} />
+                  <Input
+                    type='datetime-local'
+                    {...field}
+                    value={field.value || ''}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -222,16 +269,35 @@ const CreateProposalPage: React.FC = () => {
 
           <FormField
             control={form.control}
-            name="quorum_percentage"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Quorum Percentage (e.g., 0.2 for 20%)</FormLabel>
+            name='quorum_percentage'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Quorum Percentage (e.g., 0.2 for 20%)</FormLabel>
                 <FormControl>
-                  <Input type="number" step="0.01" min="0" max="1" placeholder="0.20" {...field}
-                         onChange={e => field.onChange(e.target.value === '' ? undefined : parseFloat(e.target.value))}
-                         value={field.value === undefined || field.value === null ? '' : field.value} />
+                  <Input
+                    type='number'
+                    step='0.01'
+                    min='0'
+                    max='1'
+                    placeholder='0.20'
+                    {...field}
+                    onChange={e =>
+                      field.onChange(
+                        e.target.value === ''
+                          ? undefined
+                          : parseFloat(e.target.value)
+                      )
+                    }
+                    value={
+                      field.value === undefined || field.value === null
+                        ? ''
+                        : field.value
+                    }
+                  />
                 </FormControl>
-                <FormDescription>Required participation rate (0.0 to 1.0).</FormDescription>
+                <FormDescription>
+                  Required participation rate (0.0 to 1.0).
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -239,14 +305,29 @@ const CreateProposalPage: React.FC = () => {
 
           <FormField
             control={form.control}
-            name="funding_ask_amount"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Funding Ask Amount (Optional)</FormLabel>
+            name='funding_ask_amount'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Funding Ask Amount (Optional)</FormLabel>
                 <FormControl>
-                  <Input type="number" step="any" placeholder="1000" {...field}
-                         onChange={e => field.onChange(e.target.value === '' ? undefined : parseFloat(e.target.value))}
-                         value={field.value === undefined || field.value === null ? '' : field.value} />
+                  <Input
+                    type='number'
+                    step='any'
+                    placeholder='1000'
+                    {...field}
+                    onChange={e =>
+                      field.onChange(
+                        e.target.value === ''
+                          ? undefined
+                          : parseFloat(e.target.value)
+                      )
+                    }
+                    value={
+                      field.value === undefined || field.value === null
+                        ? ''
+                        : field.value
+                    }
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -255,12 +336,16 @@ const CreateProposalPage: React.FC = () => {
 
           <FormField
             control={form.control}
-            name="funding_ask_token_symbol"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Funding Token Symbol (Optional)</FormLabel>
+            name='funding_ask_token_symbol'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Funding Token Symbol (Optional)</FormLabel>
                 <FormControl>
-                  <Input placeholder="e.g., USD, ZION$" {...field} value={field.value || ''} />
+                  <Input
+                    placeholder='e.g., USD, ZION$'
+                    {...field}
+                    value={field.value || ''}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -269,12 +354,17 @@ const CreateProposalPage: React.FC = () => {
 
           <FormField
             control={form.control}
-            name="reference_links_input"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Reference Links (Optional)</FormLabel>
+            name='reference_links_input'
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel>Reference Links (Optional)</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="https://example.com/doc1\nhttps://example.com/discussion" {...field} value={field.value || ''} rows={3}/>
+                  <Textarea
+                    placeholder='https://example.com/doc1\nhttps://example.com/discussion'
+                    {...field}
+                    value={field.value || ''}
+                    rows={3}
+                  />
                 </FormControl>
                 <FormDescription>One URL per line.</FormDescription>
                 <FormMessage />
@@ -282,9 +372,11 @@ const CreateProposalPage: React.FC = () => {
             )}
           />
 
-          {apiError && <p className="text-sm font-medium text-destructive">{apiError}</p>}
+          {apiError && (
+            <p className='text-sm font-medium text-destructive'>{apiError}</p>
+          )}
 
-          <Button type="submit" disabled={isLoading} className="w-full">
+          <Button type='submit' disabled={isLoading} className='w-full'>
             {isLoading ? 'Submitting...' : 'Submit Proposal'}
           </Button>
         </form>

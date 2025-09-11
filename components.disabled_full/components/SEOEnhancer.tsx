@@ -9,7 +9,8 @@ interface SEOEnhancerProps {
   canonicalUrl?: string;
   structuredData?: object;
   noindex?: boolean;
-  nofollow?: boolean}
+  nofollow?: boolean;
+}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
@@ -19,10 +20,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   canonicalUrl = 'https://ziontechgroup.com',
   structuredData,
   noindex = false,
-  nofollow = false }) => {
-  const defaultStructuredData = {
-
-  };
+  nofollow = false,
+}) => {
+  const defaultStructuredData = {};
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
@@ -30,78 +30,80 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     <Head>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <meta name='description' content={description} />
+      <meta name='keywords' content={keywords} />
       <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=5"
+        name='viewport'
+        content='width=device-width, initial-scale=1, maximum-scale=5'
       />
       <meta
-        name="robots"
+        name='robots'
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="generator" content="Next.js" />
+      <meta name='author' content='Zion Tech Group' />
+      <meta name='generator' content='Next.js' />
 
       {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
+      <link rel='canonical' href={canonicalUrl} />
 
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={description} />
+      <meta property='og:image' content={ogImage} />
+      <meta property='og:image:width' content='1200' />
+      <meta property='og:image:height' content='630' />
+      <meta property='og:image:alt' content={title} />
+      <meta property='og:type' content='website' />
+      <meta property='og:url' content={canonicalUrl} />
+      <meta property='og:site_name' content='Zion Tech Group' />
+      <meta property='og:locale' content='en_US' />
 
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={title} />
-      <meta name="twitter:site" content="@ZionTechGroup" />
-      <meta name="twitter:creator" content="@ZionTechGroup" />
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content={ogImage} />
+      <meta name='twitter:image:alt' content={title} />
+      <meta name='twitter:site' content='@ZionTechGroup' />
+      <meta name='twitter:creator' content='@ZionTechGroup' />
 
       {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name='theme-color' content='#2563eb' />
+      <meta name='msapplication-TileColor' content='#2563eb' />
+      <meta name='apple-mobile-web-app-capable' content='yes' />
+      <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
 
       {/* Structured Data */}
       <script
-        type="application/ld+json"
+        type='application/ld+json'
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(finalStructuredData) }}
+          __html: JSON.stringify(finalStructuredData),
+        }}
       />
 
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
+      <link rel='icon' href='/favicon.ico' />
       <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='/apple-touch-icon.png'
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/favicon-32x32.png'
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/favicon-16x16.png'
       />
-      <link rel="manifest" href="/site.webmanifest" />
+      <link rel='manifest' href='/site.webmanifest' />
     </Head>
-  )};
+  );
+};
 
 export default SEOEnhancer;

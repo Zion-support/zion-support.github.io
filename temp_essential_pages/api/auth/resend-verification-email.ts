@@ -27,7 +27,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (error) {
     return res
       .status(error.status || 500)
-      .json({ message: error.message || 'Failed to resend verification email' });
+      .json({
+        message: error.message || 'Failed to resend verification email',
+      });
   }
 
   return res

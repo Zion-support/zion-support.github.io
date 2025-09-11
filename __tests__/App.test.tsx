@@ -12,7 +12,7 @@ const MockApp = () => (
 describe('App', () => {
   it('renders without crashing', () => {
     render(<MockApp />);
-    expect(screen.getByRole("main")).toBeInTheDocument();
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   it('displays correct content', () => {

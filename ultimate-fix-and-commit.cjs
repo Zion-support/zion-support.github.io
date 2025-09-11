@@ -13,13 +13,14 @@ class UltimateFixAndCommit {
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
+    const prefix =
+      {
+        INFO: 'ℹ️',
+        SUCCESS: '✅',
+        ERROR: '❌',
+        WARNING: '⚠️',
+        PROGRESS: '🔄',
+      }[type] || 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
@@ -28,7 +29,7 @@ class UltimateFixAndCommit {
 
     const servicePages = [
       'app/services/automation/page.tsx',
-      'app/services/consulting/page.tsx'
+      'app/services/consulting/page.tsx',
     ];
 
     for (const pagePath of servicePages) {
@@ -36,10 +37,10 @@ class UltimateFixAndCommit {
       if (fs.existsSync(fullPath)) {
         try {
           let content = fs.readFileSync(fullPath, 'utf8');
-          
+
           // Remove extra closing braces
           content = content.replace(/\n}\n}$/g, '\n}');
-          
+
           fs.writeFileSync(fullPath, content);
           this.fixedFiles.push(pagePath);
           this.log(`Fixed ${pagePath}`, 'SUCCESS');
@@ -53,22 +54,19 @@ class UltimateFixAndCommit {
   fixImportSyntax() {
     this.log('🔧 Fixing import syntax...', 'PROGRESS');
 
-    const filesToFix = [
-      'src/pages/Blog.tsx',
-      'src/pages/BlogPost.tsx'
-    ];
+    const filesToFix = ['src/pages/Blog.tsx', 'src/pages/BlogPost.tsx'];
 
     for (const filePath of filesToFix) {
       const fullPath = path.join(this.projectRoot, filePath);
       if (fs.existsSync(fullPath)) {
         try {
           let content = fs.readFileSync(fullPath, 'utf8');
-          
+
           // Fix import statements - replace commas with semicolons
-          content = content.replace(/import\s+[^;]+,\s*$/gm, (match) => {
+          content = content.replace(/import\s+[^;]+,\s*$/gm, match => {
             return match.replace(/,\s*$/, ';');
           });
-          
+
           fs.writeFileSync(fullPath, content);
           this.fixedFiles.push(filePath);
           this.log(`Fixed ${filePath}`, 'SUCCESS');
@@ -83,7 +81,12 @@ class UltimateFixAndCommit {
     this.log('🔧 Creating missing components...', 'PROGRESS');
 
     // Create SEO component
-    const seoComponentPath = path.join(this.projectRoot, 'src', 'components', 'SEO.tsx');
+    const seoComponentPath = path.join(
+      this.projectRoot,
+      'src',
+      'components',
+      'SEO.tsx'
+    );
     const seoDir = path.dirname(seoComponentPath);
     if (!fs.existsSync(seoDir)) {
       fs.mkdirSync(seoDir, { recursive: true });
@@ -133,7 +136,12 @@ export function SEO({
     this.fixedFiles.push('src/components/SEO.tsx');
 
     // Create JsonLd component
-    const jsonLdComponentPath = path.join(this.projectRoot, 'src', 'components', 'JsonLd.tsx');
+    const jsonLdComponentPath = path.join(
+      this.projectRoot,
+      'src',
+      'components',
+      'JsonLd.tsx'
+    );
     const jsonLdContent = `import React from 'react';
 
 interface JsonLdProps {
@@ -153,7 +161,13 @@ export default function JsonLd({ data }: JsonLdProps) {
     this.fixedFiles.push('src/components/JsonLd.tsx');
 
     // Create Button component
-    const buttonComponentPath = path.join(this.projectRoot, 'src', 'components', 'ui', 'button.tsx');
+    const buttonComponentPath = path.join(
+      this.projectRoot,
+      'src',
+      'components',
+      'ui',
+      'button.tsx'
+    );
     const buttonDir = path.dirname(buttonComponentPath);
     if (!fs.existsSync(buttonDir)) {
       fs.mkdirSync(buttonDir, { recursive: true });
@@ -211,10 +225,10 @@ export { Button };`;
 
     try {
       // Run smoke tests
-      const testResult = execSync('npm run test:smoke', { 
-        encoding: 'utf8', 
+      const testResult = execSync('npm run test:smoke', {
+        encoding: 'utf8',
         cwd: this.projectRoot,
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       this.log('Smoke tests passed', 'SUCCESS');
       return true;
@@ -267,7 +281,7 @@ Automation completed: ${new Date().toISOString()}`;
 
       this.log('🎉 Ultimate fix completed!', 'SUCCESS');
       this.log(`✅ Fixed files: ${this.fixedFiles.length}`, 'SUCCESS');
-      
+
       if (this.errors.length > 0) {
         this.log(`⚠️ Errors encountered: ${this.errors.length}`, 'WARNING');
         this.errors.forEach(error => this.log(`   ${error}`, 'ERROR'));
@@ -284,7 +298,7 @@ Automation completed: ${new Date().toISOString()}`;
       return {
         fixedFiles: this.fixedFiles,
         errors: this.errors,
-        success: this.errors.length === 0
+        success: this.errors.length === 0,
       };
     } catch (error) {
       this.log(`❌ Ultimate fix failed: ${error.message}`, 'ERROR');

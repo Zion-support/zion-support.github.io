@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Final Build Issues Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Final Build Issues Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Create missing enterpriseStore module
@@ -118,37 +120,52 @@ class EnterpriseStore {
 export const enterpriseStore = new EnterpriseStore();
 `;
   fs.writeFileSync(enterpriseStorePath, enterpriseStoreContent);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Created utils/data/enterpriseStore.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Created utils/data/enterpriseStore.ts'
+  );
 }
 // Fix fraud settings file
 const fraudSettingsPath = '/workspace/pages/api/fraud/settings/opt-out.ts';
 if (fs.existsSync(fraudSettingsPath)) {
   let content = fs.readFileSync(fraudSettingsPath, 'utf8');
   // Fix syntax error at line 24
-  content = content.replace(/res\.status\(405\)\.json\(\{ error: 'Method not allowed' \}\);\s*$/, 
-    'res.status(405).json({ error: \'Method not allowed\' });\n}');
+  content = content.replace(
+    /res\.status\(405\)\.json\(\{ error: 'Method not allowed' \}\);\s*$/,
+    "res.status(405).json({ error: 'Method not allowed' });\n}"
+  );
   fs.writeFileSync(fraudSettingsPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/fraud/settings/opt-out.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/fraud/settings/opt-out.ts'
+  );
 }
 // Fix generate service description file
-const generateServicePath = '/workspace/pages/api/generate-service-description.ts';
+const generateServicePath =
+  '/workspace/pages/api/generate-service-description.ts';
 if (fs.existsSync(generateServicePath)) {
   let content = fs.readFileSync(generateServicePath, 'utf8');
   // Fix syntax error at line 88
-  content = content.replace(/return res\.status\(500\)\.json\(\{ error: 'Failed to generate description' \}\);\s*$/, 
-    'return res.status(500).json({ error: \'Failed to generate description\' });\n}');
+  content = content.replace(
+    /return res\.status\(500\)\.json\(\{ error: 'Failed to generate description' \}\);\s*$/,
+    "return res.status(500).json({ error: 'Failed to generate description' });\n}"
+  );
   fs.writeFileSync(generateServicePath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts'
+  );
 }
 // Fix homepage content file
 const homepageContentPath = '/workspace/pages/api/homepage/content.ts';
 if (fs.existsSync(homepageContentPath)) {
   let content = fs.readFileSync(homepageContentPath, 'utf8');
   // Fix syntax error - looks like there's a malformed try-catch
-  content = content.replace(/} catch \{\s*\/\/ fall back to remote\s*\}\s*}/, 
-    '} catch {\n    // fall back to remote\n  }\n}');
+  content = content.replace(
+    /} catch \{\s*\/\/ fall back to remote\s*\}\s*}/,
+    '} catch {\n    // fall back to remote\n  }\n}'
+  );
   fs.writeFileSync(homepageContentPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/homepage/content.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/homepage/content.ts'
+  );
 }
 console.log('');
 console.log('📊 FINAL BUILD ISSUES FIX REPORT');
@@ -159,8 +176,12 @@ console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
 console.log('');
 console.log('✅ Successfully fixed files:');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - utils/data/enterpriseStore.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/fraud/settings/opt-out.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/generate-service-description.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/fraud/settings/opt-out.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/generate-service-description.ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/homepage/content.ts');
 console.log('');
 // Save report
@@ -172,8 +193,11 @@ const report = {
     'utils/data/enterpriseStore.ts',
     'pages/api/fraud/settings/opt-out.ts',
     'pages/api/generate-service-description.ts',
-    'pages/api/homepage/content.ts'
-  ]
+    'pages/api/homepage/content.ts',
+  ],
 };
-fs.writeFileSync('/workspace/final-build-issues-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/final-build-issues-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to final-build-issues-fix-report.json');

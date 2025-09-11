@@ -41,15 +41,17 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
   {
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
-    tagline: 'Next-generation cloud infrastructure with quantum computing capabilities',
-    description: 'Revolutionary cloud platform that combines traditional cloud services with quantum computing resources, enabling businesses to leverage quantum algorithms for complex computational tasks.',
+    tagline:
+      'Next-generation cloud infrastructure with quantum computing capabilities',
+    description:
+      'Revolutionary cloud platform that combines traditional cloud services with quantum computing resources, enabling businesses to leverage quantum algorithms for complex computational tasks.',
     category: 'Cloud & Infrastructure',
     price: {
       monthly: 399,
       yearly: 3990,
       currency: 'USD',
       trialDays: 14,
-      setupTime: '6 hours'
+      setupTime: '6 hours',
     },
     features: [
       'Quantum computing resources',
@@ -61,14 +63,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Advanced monitoring',
       'Disaster recovery',
       'API management',
-      'Developer tools'
+      'Developer tools',
     ],
     benefits: [
       'Access quantum computing power',
       'Reduce infrastructure costs by 30%',
       'Improve computational performance',
       'Enhanced security with quantum resistance',
-      'Scalable and flexible infrastructure'
+      'Scalable and flexible infrastructure',
     ],
     targetAudience: [
       'Technology companies',
@@ -76,13 +78,17 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Financial services',
       'Healthcare organizations',
       'Government agencies',
-      'Startups and enterprises'
+      'Startups and enterprises',
     ],
-    marketPosition: 'Competitive with AWS ($0.50-5.00 per hour), Azure ($0.50-5.00 per hour), and Google Cloud ($0.50-5.00 per hour). Our advantage: Quantum computing integration, competitive pricing, and advanced features.',
+    marketPosition:
+      'Competitive with AWS ($0.50-5.00 per hour), Azure ($0.50-5.00 per hour), and Google Cloud ($0.50-5.00 per hour). Our advantage: Quantum computing integration, competitive pricing, and advanced features.',
     competitors: ['AWS, Azure, Google Cloud, IBM Cloud, Oracle Cloud'],
-    techStack: ['Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum computing frameworks'],
+    techStack: [
+      'Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum computing frameworks',
+    ],
     realImplementation: true,
-    implementationDetails: 'Advanced cloud platform with quantum computing integration, hybrid architecture, and comprehensive infrastructure management. Includes mobile apps and extensive API.',
+    implementationDetails:
+      'Advanced cloud platform with quantum computing integration, hybrid architecture, and comprehensive infrastructure management. Includes mobile apps and extensive API.',
     roi: 'Organizations typically see 200-400% ROI within 18 months through improved performance and reduced costs.',
     useCases: [
       'Complex computational tasks',
@@ -90,10 +96,13 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Financial modeling',
       'Scientific research',
       'Data analytics',
-      'Quantum algorithm development'
+      'Quantum algorithm development',
     ],
-    integrations: ['Kubernetes, Docker, Terraform, Ansible, CI/CD tools, Monitoring systems'],
-    support: '24/7 support, dedicated cloud specialist, training sessions, and comprehensive documentation.',
+    integrations: [
+      'Kubernetes, Docker, Terraform, Ansible, CI/CD tools, Monitoring systems',
+    ],
+    support:
+      '24/7 support, dedicated cloud specialist, training sessions, and comprehensive documentation.',
     compliance: ['SOC 2 Type II, ISO 27001, HIPAA, PCI DSS, GDPR, FedRAMP'],
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
     icon: '☁️',
@@ -105,20 +114,21 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 480,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   },
   {
     id: 'ai-powered-devops-automation',
     name: 'AI-Powered DevOps Automation',
     tagline: 'Intelligent DevOps automation with AI-driven insights',
-    description: 'Advanced DevOps platform that uses artificial intelligence to automate deployment processes, predict failures, and optimize infrastructure performance in real-time.',
+    description:
+      'Advanced DevOps platform that uses artificial intelligence to automate deployment processes, predict failures, and optimize infrastructure performance in real-time.',
     category: 'DevOps & Automation',
     price: {
       monthly: 179,
       yearly: 1790,
       currency: 'USD',
       trialDays: 21,
-      setupTime: '4 hours'
+      setupTime: '4 hours',
     },
     features: [
       'AI-powered deployment automation',
@@ -130,14 +140,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Compliance automation',
       'Team collaboration tools',
       'Advanced analytics',
-      'Mobile management apps'
+      'Mobile management apps',
     ],
     benefits: [
       'Reduce deployment time by 80%',
       'Predict and prevent failures',
       'Optimize resource utilization',
       'Improve team productivity',
-      'Enhance security posture'
+      'Enhance security posture',
     ],
     targetAudience: [
       'Development teams',
@@ -145,13 +155,19 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'System administrators',
       'Technology companies',
       'Digital agencies',
-      'Enterprise IT teams'
+      'Enterprise IT teams',
     ],
-    marketPosition: 'Competitive with GitLab ($19-99), GitHub Actions ($0-44), and Jenkins (Free). Our advantage: AI-powered automation, predictive capabilities, and comprehensive features.',
-    competitors: ['GitLab, GitHub Actions, Jenkins, CircleCI, Travis CI, Azure DevOps'],
-    techStack: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
+    marketPosition:
+      'Competitive with GitLab ($19-99), GitHub Actions ($0-44), and Jenkins (Free). Our advantage: AI-powered automation, predictive capabilities, and comprehensive features.',
+    competitors: [
+      'GitLab, GitHub Actions, Jenkins, CircleCI, Travis CI, Azure DevOps',
+    ],
+    techStack: [
+      'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes',
+    ],
     realImplementation: true,
-    implementationDetails: 'Comprehensive DevOps platform with AI automation, predictive analytics, and intelligent resource management. Includes mobile apps and extensive API.',
+    implementationDetails:
+      'Comprehensive DevOps platform with AI automation, predictive analytics, and intelligent resource management. Includes mobile apps and extensive API.',
     roi: 'Teams typically see 250-400% ROI within 8 months through improved efficiency and reduced failures.',
     useCases: [
       'Continuous integration',
@@ -159,10 +175,11 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Infrastructure automation',
       'Performance optimization',
       'Security automation',
-      'Team collaboration'
+      'Team collaboration',
     ],
     integrations: ['GitHub, GitLab, Bitbucket, AWS, Azure, GCP, Slack, Jira'],
-    support: '24/7 support, dedicated DevOps specialist, training sessions, and comprehensive documentation.',
+    support:
+      '24/7 support, dedicated DevOps specialist, training sessions, and comprehensive documentation.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR'],
     link: 'https://ziontechgroup.com/ai-powered-devops-automation',
     icon: '🤖',
@@ -174,20 +191,21 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 780,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   },
   {
     id: 'quantum-database-platform',
     name: 'Quantum Database Platform',
     tagline: 'Next-generation database with quantum computing optimization',
-    description: 'Revolutionary database platform that leverages quantum computing principles to provide unprecedented performance, scalability, and security for modern applications.',
+    description:
+      'Revolutionary database platform that leverages quantum computing principles to provide unprecedented performance, scalability, and security for modern applications.',
     category: 'Database & Data Management',
     price: {
       monthly: 249,
       yearly: 2490,
       currency: 'USD',
       trialDays: 14,
-      setupTime: '3 hours'
+      setupTime: '3 hours',
     },
     features: [
       'Quantum-optimized queries',
@@ -199,14 +217,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Backup and recovery',
       'Performance monitoring',
       'API management',
-      'Mobile apps'
+      'Mobile apps',
     ],
     benefits: [
       'Improve query performance by 10x',
       'Reduce database costs by 40%',
       'Enhanced security with quantum resistance',
       'Automatic optimization',
-      'Scalable architecture'
+      'Scalable architecture',
     ],
     targetAudience: [
       'Technology companies',
@@ -214,13 +232,19 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Healthcare organizations',
       'E-commerce businesses',
       'Data analytics teams',
-      'Enterprise IT departments'
+      'Enterprise IT departments',
     ],
-    marketPosition: 'Competitive with MongoDB ($57-200), PostgreSQL (Free), and Oracle ($47-948). Our advantage: Quantum optimization, AI-powered indexing, and competitive pricing.',
-    competitors: ['MongoDB, PostgreSQL, Oracle, MySQL, Microsoft SQL Server, Amazon RDS'],
-    techStack: ['Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum algorithms'],
+    marketPosition:
+      'Competitive with MongoDB ($57-200), PostgreSQL (Free), and Oracle ($47-948). Our advantage: Quantum optimization, AI-powered indexing, and competitive pricing.',
+    competitors: [
+      'MongoDB, PostgreSQL, Oracle, MySQL, Microsoft SQL Server, Amazon RDS',
+    ],
+    techStack: [
+      'Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum algorithms',
+    ],
     realImplementation: true,
-    implementationDetails: 'Advanced database platform with quantum optimization, AI indexing, and comprehensive data management. Includes mobile apps and extensive API.',
+    implementationDetails:
+      'Advanced database platform with quantum optimization, AI indexing, and comprehensive data management. Includes mobile apps and extensive API.',
     roi: 'Organizations typically see 200-350% ROI within 12 months through improved performance and reduced costs.',
     useCases: [
       'High-performance applications',
@@ -228,10 +252,11 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Big data processing',
       'Financial transactions',
       'Healthcare data management',
-      'E-commerce platforms'
+      'E-commerce platforms',
     ],
     integrations: ['Python, Node.js, Java, .NET, PHP, Ruby, Go, REST APIs'],
-    support: '24/7 support, dedicated database specialist, training sessions, and comprehensive documentation.',
+    support:
+      '24/7 support, dedicated database specialist, training sessions, and comprehensive documentation.',
     compliance: ['SOC 2 Type II, ISO 27001, HIPAA, PCI DSS, GDPR, CCPA'],
     link: 'https://ziontechgroup.com/quantum-database-platform',
     icon: '🗄️',
@@ -243,20 +268,21 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 320,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   },
   {
     id: 'ai-network-optimization',
     name: 'AI Network Optimization Platform',
     tagline: 'Intelligent network management and optimization',
-    description: 'Advanced network platform that uses artificial intelligence to optimize network performance, predict issues, and automate network management tasks.',
+    description:
+      'Advanced network platform that uses artificial intelligence to optimize network performance, predict issues, and automate network management tasks.',
     category: 'Networking & Security',
     price: {
       monthly: 199,
-    yearly: 1990,
-    currency: 'USD',
-    trialDays: 14,
-    setupTime: '4 hours'
+      yearly: 1990,
+      currency: 'USD',
+      trialDays: 14,
+      setupTime: '4 hours',
     },
     features: [
       'AI-powered network optimization',
@@ -268,14 +294,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Quality of service management',
       'Network analytics',
       'Mobile management',
-      'API access'
+      'API access',
     ],
     benefits: [
       'Improve network performance by 40%',
       'Reduce network downtime by 80%',
       'Automate routine tasks',
       'Enhance security posture',
-      'Lower operational costs'
+      'Lower operational costs',
     ],
     targetAudience: [
       'Network administrators',
@@ -283,13 +309,17 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Technology companies',
       'Educational institutions',
       'Healthcare organizations',
-      'Government agencies'
+      'Government agencies',
     ],
-    marketPosition: 'Competitive with Cisco ($100-1000), Juniper ($50-500), and Arista ($50-500). Our advantage: AI-powered optimization, competitive pricing, and modern interface.',
+    marketPosition:
+      'Competitive with Cisco ($100-1000), Juniper ($50-500), and Arista ($50-500). Our advantage: AI-powered optimization, competitive pricing, and modern interface.',
     competitors: ['Cisco, Juniper, Arista, HP, Dell, Extreme Networks'],
-    techStack: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Network protocols'],
+    techStack: [
+      'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Network protocols',
+    ],
     realImplementation: true,
-    implementationDetails: 'Comprehensive network platform with AI optimization, predictive analytics, and automated management. Includes mobile apps and extensive API.',
+    implementationDetails:
+      'Comprehensive network platform with AI optimization, predictive analytics, and automated management. Includes mobile apps and extensive API.',
     roi: 'Organizations typically see 200-300% ROI within 12 months through improved performance and reduced downtime.',
     useCases: [
       'Network optimization',
@@ -297,10 +327,13 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Security management',
       'Traffic analysis',
       'Quality of service',
-      'Network automation'
+      'Network automation',
     ],
-    integrations: ['SNMP, NetFlow, Syslog, REST APIs, Network management systems'],
-    support: '24/7 support, dedicated network specialist, training sessions, and comprehensive documentation.',
+    integrations: [
+      'SNMP, NetFlow, Syslog, REST APIs, Network management systems',
+    ],
+    support:
+      '24/7 support, dedicated network specialist, training sessions, and comprehensive documentation.',
     compliance: ['SOC 2 Type II, ISO 27001, HIPAA, PCI DSS, GDPR'],
     link: 'https://ziontechgroup.com/ai-network-optimization',
     icon: '🌐',
@@ -312,20 +345,21 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 620,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   },
   {
     id: 'quantum-storage-solution',
     name: 'Quantum Storage Solution',
     tagline: 'Next-generation storage with quantum encryption',
-    description: 'Revolutionary storage platform that combines quantum-resistant encryption with advanced data management to provide secure, scalable, and high-performance storage solutions.',
+    description:
+      'Revolutionary storage platform that combines quantum-resistant encryption with advanced data management to provide secure, scalable, and high-performance storage solutions.',
     category: 'Storage & Backup',
     price: {
       monthly: 159,
       yearly: 1590,
       currency: 'USD',
       trialDays: 14,
-      setupTime: '2 hours'
+      setupTime: '2 hours',
     },
     features: [
       'Quantum-resistant encryption',
@@ -337,14 +371,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Multi-cloud support',
       'Compliance tools',
       'Mobile access',
-      'API management'
+      'API management',
     ],
     benefits: [
       'Enhanced security with quantum resistance',
       'Reduce storage costs by 30%',
       'Automated data management',
       'Improved performance',
-      'Comprehensive compliance'
+      'Comprehensive compliance',
     ],
     targetAudience: [
       'Technology companies',
@@ -352,13 +386,19 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Financial services',
       'Government agencies',
       'Educational institutions',
-      'Enterprise businesses'
+      'Enterprise businesses',
     ],
-    marketPosition: 'Competitive with AWS S3 ($0.023 per GB), Azure Blob ($0.0184 per GB), and Google Cloud Storage ($0.020 per GB). Our advantage: Quantum encryption, AI optimization, and competitive pricing.',
-    competitors: ['AWS S3, Azure Blob, Google Cloud Storage, Dropbox Business, Box'],
-    techStack: ['Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum encryption'],
+    marketPosition:
+      'Competitive with AWS S3 ($0.023 per GB), Azure Blob ($0.0184 per GB), and Google Cloud Storage ($0.020 per GB). Our advantage: Quantum encryption, AI optimization, and competitive pricing.',
+    competitors: [
+      'AWS S3, Azure Blob, Google Cloud Storage, Dropbox Business, Box',
+    ],
+    techStack: [
+      'Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum encryption',
+    ],
     realImplementation: true,
-    implementationDetails: 'Advanced storage platform with quantum encryption, AI optimization, and comprehensive data management. Includes mobile apps and extensive API.',
+    implementationDetails:
+      'Advanced storage platform with quantum encryption, AI optimization, and comprehensive data management. Includes mobile apps and extensive API.',
     roi: 'Organizations typically see 150-250% ROI within 12 months through cost reduction and improved security.',
     useCases: [
       'Data storage',
@@ -366,10 +406,11 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'File sharing',
       'Compliance management',
       'Data archiving',
-      'Cloud migration'
+      'Cloud migration',
     ],
     integrations: ['AWS, Azure, GCP, Dropbox, Box, Local storage systems'],
-    support: '24/7 support, dedicated storage specialist, training sessions, and comprehensive documentation.',
+    support:
+      '24/7 support, dedicated storage specialist, training sessions, and comprehensive documentation.',
     compliance: ['SOC 2 Type II, ISO 27001, HIPAA, PCI DSS, GDPR, CCPA'],
     link: 'https://ziontechgroup.com/quantum-storage-solution',
     icon: '💾',
@@ -381,20 +422,21 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 420,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   },
   {
     id: 'ai-monitoring-intelligence',
     name: 'AI Monitoring Intelligence',
     tagline: 'Intelligent monitoring and observability platform',
-    description: 'Advanced monitoring platform that uses artificial intelligence to provide intelligent insights, predictive analytics, and automated response capabilities for complex IT environments.',
+    description:
+      'Advanced monitoring platform that uses artificial intelligence to provide intelligent insights, predictive analytics, and automated response capabilities for complex IT environments.',
     category: 'Monitoring & Observability',
     price: {
       monthly: 129,
       yearly: 1290,
       currency: 'USD',
       trialDays: 21,
-      setupTime: '3 hours'
+      setupTime: '3 hours',
     },
     features: [
       'AI-powered monitoring',
@@ -406,14 +448,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Cost optimization',
       'Compliance monitoring',
       'Mobile dashboards',
-      'API access'
+      'API access',
     ],
     benefits: [
       'Reduce incident response time by 70%',
       'Predict issues before they occur',
       'Automate routine monitoring tasks',
       'Improve system performance',
-      'Lower operational costs'
+      'Lower operational costs',
     ],
     targetAudience: [
       'DevOps teams',
@@ -421,13 +463,19 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'IT managers',
       'Technology companies',
       'Digital agencies',
-      'Enterprise IT departments'
+      'Enterprise IT departments',
     ],
-    marketPosition: 'Competitive with Datadog ($15-23), New Relic ($99-149), and Splunk ($150-2000). Our advantage: AI-powered intelligence, competitive pricing, and comprehensive features.',
-    competitors: ['Datadog, New Relic, Splunk, Dynatrace, AppDynamics, Elastic'],
-    techStack: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Monitoring protocols'],
+    marketPosition:
+      'Competitive with Datadog ($15-23), New Relic ($99-149), and Splunk ($150-2000). Our advantage: AI-powered intelligence, competitive pricing, and comprehensive features.',
+    competitors: [
+      'Datadog, New Relic, Splunk, Dynatrace, AppDynamics, Elastic',
+    ],
+    techStack: [
+      'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Monitoring protocols',
+    ],
     realImplementation: true,
-    implementationDetails: 'Comprehensive monitoring platform with AI intelligence, predictive analytics, and automated response. Includes mobile apps and extensive API.',
+    implementationDetails:
+      'Comprehensive monitoring platform with AI intelligence, predictive analytics, and automated response. Includes mobile apps and extensive API.',
     roi: 'Teams typically see 200-350% ROI within 10 months through improved incident response and reduced downtime.',
     useCases: [
       'Application monitoring',
@@ -435,10 +483,13 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Performance optimization',
       'Incident management',
       'Capacity planning',
-      'Cost optimization'
+      'Cost optimization',
     ],
-    integrations: ['Prometheus, Grafana, Elasticsearch, Logstash, Beats, Cloud platforms'],
-    support: '24/7 support, dedicated monitoring specialist, training sessions, and comprehensive documentation.',
+    integrations: [
+      'Prometheus, Grafana, Elasticsearch, Logstash, Beats, Cloud platforms',
+    ],
+    support:
+      '24/7 support, dedicated monitoring specialist, training sessions, and comprehensive documentation.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR'],
     link: 'https://ziontechgroup.com/ai-monitoring-intelligence',
     icon: '📊',
@@ -450,20 +501,21 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 890,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   },
   {
     id: 'quantum-api-gateway',
     name: 'Quantum API Gateway',
     tagline: 'Next-generation API management with quantum security',
-    description: 'Revolutionary API gateway that combines quantum-resistant security with advanced API management capabilities to provide secure, scalable, and high-performance API services.',
+    description:
+      'Revolutionary API gateway that combines quantum-resistant security with advanced API management capabilities to provide secure, scalable, and high-performance API services.',
     category: 'API & Integration',
     price: {
       monthly: 139,
       yearly: 1390,
       currency: 'USD',
       trialDays: 14,
-      setupTime: '2 hours'
+      setupTime: '2 hours',
     },
     features: [
       'Quantum-resistant security',
@@ -475,14 +527,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Documentation tools',
       'Testing environment',
       'Mobile management',
-      'Comprehensive API'
+      'Comprehensive API',
     ],
     benefits: [
       'Enhanced security with quantum resistance',
       'Improve API performance by 50%',
       'Reduce development time',
       'Better developer experience',
-      'Comprehensive analytics'
+      'Comprehensive analytics',
     ],
     targetAudience: [
       'API developers',
@@ -490,13 +542,19 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Digital agencies',
       'Startups',
       'Enterprise IT departments',
-      'Integration teams'
+      'Integration teams',
     ],
-    marketPosition: 'Competitive with Kong ($250-500), AWS API Gateway ($3.50 per million calls), and Azure API Management ($0.50-4.00 per 1,000 calls). Our advantage: Quantum security, AI optimization, and competitive pricing.',
-    competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints, Tyk'],
-    techStack: ['Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum security'],
+    marketPosition:
+      'Competitive with Kong ($250-500), AWS API Gateway ($3.50 per million calls), and Azure API Management ($0.50-4.00 per 1,000 calls). Our advantage: Quantum security, AI optimization, and competitive pricing.',
+    competitors: [
+      'Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints, Tyk',
+    ],
+    techStack: [
+      'Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum security',
+    ],
     realImplementation: true,
-    implementationDetails: 'Advanced API gateway with quantum security, AI optimization, and comprehensive management tools. Includes mobile apps and extensive API.',
+    implementationDetails:
+      'Advanced API gateway with quantum security, AI optimization, and comprehensive management tools. Includes mobile apps and extensive API.',
     roi: 'Developers typically see 200-300% ROI within 8 months through improved performance and reduced development time.',
     useCases: [
       'API management',
@@ -504,11 +562,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Rate limiting',
       'Analytics and monitoring',
       'Developer experience',
-      'Integration management'
+      'Integration management',
     ],
     integrations: ['OAuth 2.0, JWT, OpenID Connect, GraphQL, REST, gRPC'],
-    support: '24/7 support, dedicated API specialist, training sessions, and comprehensive documentation.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, CCPA, API security standards'],
+    support:
+      '24/7 support, dedicated API specialist, training sessions, and comprehensive documentation.',
+    compliance: [
+      'SOC 2 Type II, ISO 27001, GDPR, CCPA, API security standards',
+    ],
     link: 'https://ziontechgroup.com/quantum-api-gateway',
     icon: '🔗',
     color: 'from-green-500 to-teal-600',
@@ -519,20 +580,21 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 480,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   },
   {
     id: 'ai-disaster-recovery',
     name: 'AI Disaster Recovery Platform',
     tagline: 'Intelligent disaster recovery and business continuity',
-    description: 'Advanced disaster recovery platform that uses artificial intelligence to automate backup processes, predict failures, and optimize recovery strategies for maximum business continuity.',
+    description:
+      'Advanced disaster recovery platform that uses artificial intelligence to automate backup processes, predict failures, and optimize recovery strategies for maximum business continuity.',
     category: 'Disaster Recovery & Business Continuity',
     price: {
       monthly: 219,
       yearly: 2190,
       currency: 'USD',
       trialDays: 14,
-      setupTime: '5 hours'
+      setupTime: '5 hours',
     },
     features: [
       'AI-powered backup automation',
@@ -544,14 +606,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Performance optimization',
       'Cost optimization',
       'Mobile management',
-      'API access'
+      'API access',
     ],
     benefits: [
       'Reduce recovery time by 80%',
       'Predict and prevent failures',
       'Automate recovery processes',
       'Improve compliance posture',
-      'Lower operational costs'
+      'Lower operational costs',
     ],
     targetAudience: [
       'IT managers',
@@ -559,13 +621,17 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Technology companies',
       'Financial services',
       'Healthcare organizations',
-      'Government agencies'
+      'Government agencies',
     ],
-    marketPosition: 'Competitive with Veeam ($1,000-10,000), Commvault ($1,500-15,000), and Rubrik ($2,000-20,000). Our advantage: AI-powered automation, competitive pricing, and comprehensive features.',
+    marketPosition:
+      'Competitive with Veeam ($1,000-10,000), Commvault ($1,500-15,000), and Rubrik ($2,000-20,000). Our advantage: AI-powered automation, competitive pricing, and comprehensive features.',
     competitors: ['Veeam, Commvault, Rubrik, Cohesity, Druva, Zerto'],
-    techStack: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Backup technologies'],
+    techStack: [
+      'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Backup technologies',
+    ],
     realImplementation: true,
-    implementationDetails: 'Comprehensive disaster recovery platform with AI automation, predictive analytics, and intelligent recovery planning. Includes mobile apps and extensive API.',
+    implementationDetails:
+      'Comprehensive disaster recovery platform with AI automation, predictive analytics, and intelligent recovery planning. Includes mobile apps and extensive API.',
     roi: 'Organizations typically see 200-400% ROI within 12 months through improved recovery times and reduced downtime.',
     useCases: [
       'Backup automation',
@@ -573,11 +639,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Business continuity',
       'Compliance management',
       'Testing automation',
-      'Performance optimization'
+      'Performance optimization',
     ],
     integrations: ['VMware, Hyper-V, AWS, Azure, GCP, Local infrastructure'],
-    support: '24/7 support, dedicated disaster recovery specialist, training sessions, and comprehensive documentation.',
-    compliance: ['SOC 2 Type II, ISO 27001, HIPAA, PCI DSS, GDPR, Business continuity standards'],
+    support:
+      '24/7 support, dedicated disaster recovery specialist, training sessions, and comprehensive documentation.',
+    compliance: [
+      'SOC 2 Type II, ISO 27001, HIPAA, PCI DSS, GDPR, Business continuity standards',
+    ],
     link: 'https://ziontechgroup.com/ai-disaster-recovery',
     icon: '🔄',
     color: 'from-yellow-500 to-orange-600',
@@ -588,20 +657,21 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 420,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   },
   {
     id: 'quantum-mobile-development',
     name: 'Quantum Mobile Development Platform',
     tagline: 'Next-generation mobile app development with quantum capabilities',
-    description: 'Revolutionary mobile development platform that combines quantum computing principles with modern mobile development tools to create high-performance, secure, and intelligent mobile applications.',
+    description:
+      'Revolutionary mobile development platform that combines quantum computing principles with modern mobile development tools to create high-performance, secure, and intelligent mobile applications.',
     category: 'Mobile Development',
     price: {
       monthly: 189,
       yearly: 1890,
       currency: 'USD',
       trialDays: 21,
-      setupTime: '4 hours'
+      setupTime: '4 hours',
     },
     features: [
       'Quantum-optimized development',
@@ -613,14 +683,14 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Testing automation',
       'Deployment tools',
       'Developer collaboration',
-      'Mobile management'
+      'Mobile management',
     ],
     benefits: [
       'Improve app performance by 50%',
       'Reduce development time by 40%',
       'Enhanced security with quantum resistance',
       'Better user experience',
-      'Lower development costs'
+      'Lower development costs',
     ],
     targetAudience: [
       'Mobile developers',
@@ -628,13 +698,19 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Digital agencies',
       'Startups',
       'Enterprise IT departments',
-      'App development teams'
+      'App development teams',
     ],
-    marketPosition: 'Competitive with React Native (Free), Flutter (Free), and Xamarin ($25-99). Our advantage: Quantum optimization, AI assistance, and comprehensive development tools.',
-    competitors: ['React Native, Flutter, Xamarin, Ionic, NativeScript, AppGyver'],
-    techStack: ['React Native, Flutter, Python, TensorFlow, Node.js, Quantum algorithms'],
+    marketPosition:
+      'Competitive with React Native (Free), Flutter (Free), and Xamarin ($25-99). Our advantage: Quantum optimization, AI assistance, and comprehensive development tools.',
+    competitors: [
+      'React Native, Flutter, Xamarin, Ionic, NativeScript, AppGyver',
+    ],
+    techStack: [
+      'React Native, Flutter, Python, TensorFlow, Node.js, Quantum algorithms',
+    ],
     realImplementation: true,
-    implementationDetails: 'Advanced mobile development platform with quantum optimization, AI assistance, and comprehensive development tools. Includes collaboration features and extensive API.',
+    implementationDetails:
+      'Advanced mobile development platform with quantum optimization, AI assistance, and comprehensive development tools. Includes collaboration features and extensive API.',
     roi: 'Developers typically see 200-350% ROI within 10 months through improved performance and reduced development time.',
     useCases: [
       'Mobile app development',
@@ -642,11 +718,16 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
       'Performance optimization',
       'Security testing',
       'Testing automation',
-      'Deployment management'
+      'Deployment management',
     ],
-    integrations: ['GitHub, GitLab, Bitbucket, CI/CD tools, Testing frameworks, Analytics platforms'],
-    support: '24/7 support, dedicated mobile development specialist, training sessions, and comprehensive documentation.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, CCPA, Mobile app security standards'],
+    integrations: [
+      'GitHub, GitLab, Bitbucket, CI/CD tools, Testing frameworks, Analytics platforms',
+    ],
+    support:
+      '24/7 support, dedicated mobile development specialist, training sessions, and comprehensive documentation.',
+    compliance: [
+      'SOC 2 Type II, ISO 27001, GDPR, CCPA, Mobile app security standards',
+    ],
     link: 'https://ziontechgroup.com/quantum-mobile-development',
     icon: '📱',
     color: 'from-pink-500 to-rose-600',
@@ -657,6 +738,6 @@ export const innovativeITServices2025V2: InnovativeITService[] = [
     reviews: 620,
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  },
 ];

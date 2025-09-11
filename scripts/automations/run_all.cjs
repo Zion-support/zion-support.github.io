@@ -18,7 +18,7 @@ class AutomationRunner {
 
   async runAll() {
     console.log('🚀 Starting automation bundle execution...');
-    
+
     try {
       // Run various automation tasks
       await this.runTask('Dependency Check', () => this.checkDependencies());
@@ -26,31 +26,33 @@ class AutomationRunner {
       await this.runTask('Build Check', () => this.runBuildCheck());
       await this.runTask('Test Suite', () => this.runTestSuite());
       await this.runTask('Security Scan', () => this.runSecurityScan());
-      
+
       // Generate summary
       this.generateSummary();
-      
+
       console.log('✅ All automations completed successfully');
       return true;
-      
     } catch (error) {
       console.error('❌ Automation bundle failed:', error.message);
-      this.logs.push({ task: 'Error', status: 'failed', message: error.message });
+      this.logs.push({
+        task: 'Error',
+        status: 'failed',
+        message: error.message,
+      });
       return false;
     }
   }
 
   async runTask(name, taskFunction) {
     console.log(`\n📋 Running: ${name}`);
-    
+
     try {
       const startTime = Date.now();
       await taskFunction();
       const duration = Date.now() - startTime;
-      
+
       this.logs.push({ task: name, status: 'success', duration });
       console.log(`✅ ${name} completed in ${duration}ms`);
-      
     } catch (error) {
       this.logs.push({ task: name, status: 'failed', message: error.message });
       console.log(`❌ ${name} failed: ${error.message}`);
@@ -59,23 +61,23 @@ class AutomationRunner {
 
   checkDependencies() {
     console.log('  📦 Checking dependencies...');
-    
+
     // Check if package.json exists
     if (!fs.existsSync('package.json')) {
       throw new Error('package.json not found');
     }
-    
+
     // Check if node_modules exists
     if (!fs.existsSync('node_modules')) {
       console.log('  ⚠️ node_modules not found, consider running npm install');
     }
-    
+
     console.log('  ✅ Dependencies check completed');
   }
 
   runCodeQuality() {
     console.log('  🔍 Running code quality checks...');
-    
+
     try {
       // Run linting
       execSync('npm run lint', { stdio: 'pipe' });
@@ -83,7 +85,7 @@ class AutomationRunner {
     } catch (error) {
       console.log('  ⚠️ Linting failed, but continuing...');
     }
-    
+
     try {
       // Run type checking
       execSync('npm run type-check', { stdio: 'pipe' });
@@ -95,7 +97,7 @@ class AutomationRunner {
 
   runBuildCheck() {
     console.log('  🏗️ Running build check...');
-    
+
     try {
       // Check if build script exists
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -111,7 +113,7 @@ class AutomationRunner {
 
   runTestSuite() {
     console.log('  🧪 Running test suite...');
-    
+
     try {
       // Check if test script exists
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -127,7 +129,7 @@ class AutomationRunner {
 
   runSecurityScan() {
     console.log('  🔒 Running security scan...');
-    
+
     try {
       // Check if security script exists
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -144,15 +146,15 @@ class AutomationRunner {
   generateSummary() {
     console.log('\n📊 Automation Summary');
     console.log('====================');
-    
+
     const successful = this.logs.filter(log => log.status === 'success').length;
     const failed = this.logs.filter(log => log.status === 'failed').length;
     const total = this.logs.length;
-    
+
     console.log(`Total tasks: ${total}`);
     console.log(`Successful: ${successful}`);
     console.log(`Failed: ${failed}`);
-    
+
     if (failed > 0) {
       console.log('\n❌ Failed tasks:');
       this.logs
@@ -161,7 +163,7 @@ class AutomationRunner {
           console.log(`  - ${log.task}: ${log.message || 'Unknown error'}`);
         });
     }
-    
+
     if (successful === total) {
       console.log('\n🎉 All automations completed successfully!');
     } else {
@@ -173,7 +175,8 @@ class AutomationRunner {
 // CLI interface
 if (require.main === module) {
   const runner = new AutomationRunner();
-  runner.runAll()
+  runner
+    .runAll()
     .then(success => {
       process.exit(success ? 0 : 1);
     })

@@ -43,7 +43,8 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
   {
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
-    description: 'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.',
+    description:
+      'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.',
     category: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD', 'Monitoring'],
     price: '$6,999/month',
     features: [
@@ -54,7 +55,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Performance optimization',
       'Security automation',
       'Cost optimization',
-      'Predictive maintenance'
+      'Predictive maintenance',
     ],
     benefits: [
       'Reduce operational costs by 90%',
@@ -62,7 +63,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Accelerate deployment cycles by 10x',
       'Eliminate manual interventions',
       'Enhance security posture',
-      'Optimize resource utilization'
+      'Optimize resource utilization',
     ],
     useCases: [
       'Enterprise DevOps transformation',
@@ -70,13 +71,17 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Microservices deployment',
       'Continuous integration/deployment',
       'Infrastructure automation',
-      'Performance optimization'
+      'Performance optimization',
     ],
     marketSize: '$25.8B by 2029',
     competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     technology: ['AI/ML', 'Kubernetes', 'Terraform', 'Monitoring Tools'],
     integration: ['Cloud platforms', 'CI/CD tools', 'Monitoring systems'],
-    support: ['24/7 enterprise support', 'DevOps experts', 'Implementation team'],
+    support: [
+      '24/7 enterprise support',
+      'DevOps experts',
+      'Implementation team',
+    ],
     compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'HIPAA'],
     scalability: 'Enterprise-grade, multi-cloud support',
     roi: '500% within 12 months',
@@ -101,14 +106,21 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
   {
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
-    description: 'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.',
-    category: ['Cloud Computing', 'Quantum Computing', 'Infrastructure', 'Security', 'Performance'],
+    description:
+      'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.',
+    category: [
+      'Cloud Computing',
+      'Quantum Computing',
+      'Infrastructure',
+      'Security',
+      'Performance',
+    ],
     price: '$18,999/month',
     features: [
       'Quantum computing resources',
@@ -118,7 +130,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Quantum storage solutions',
       'Quantum security protocols',
       'Performance optimization',
-      'Scalable quantum resources'
+      'Scalable quantum resources',
     ],
     benefits: [
       'Quantum computing capabilities',
@@ -126,7 +138,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Exponential performance gains',
       'Future-proof infrastructure',
       'Competitive advantage',
-      'Long-term investment value'
+      'Long-term investment value',
     ],
     useCases: [
       'Scientific computing',
@@ -134,12 +146,21 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Cryptography research',
       'Machine learning acceleration',
       'Optimization problems',
-      'Research and development'
+      'Research and development',
     ],
     marketSize: '$35.2B by 2029',
     competitors: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud'],
-    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Security', 'Hybrid Computing'],
-    integration: ['Existing cloud platforms', 'Quantum applications', 'Enterprise systems'],
+    technology: [
+      'Quantum Computing',
+      'Cloud Infrastructure',
+      'Quantum Security',
+      'Hybrid Computing',
+    ],
+    integration: [
+      'Existing cloud platforms',
+      'Quantum applications',
+      'Enterprise systems',
+    ],
     support: ['24/7 quantum support', 'Quantum experts', 'Implementation team'],
     compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Quantum standards'],
     scalability: 'Enterprise-grade, global quantum network',
@@ -165,14 +186,21 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
   {
     id: 'ai-powered-enterprise-security',
     name: 'AI-Powered Enterprise Security',
-    description: 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.',
-    category: ['Cybersecurity', 'AI', 'Enterprise Security', 'Threat Detection', 'Automation'],
+    description:
+      'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.',
+    category: [
+      'Cybersecurity',
+      'AI',
+      'Enterprise Security',
+      'Threat Detection',
+      'Automation',
+    ],
     price: '$9,999/month',
     features: [
       'AI-powered threat detection',
@@ -182,7 +210,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Behavioral analysis',
       'Zero-day threat protection',
       'Security automation',
-      'Compliance management'
+      'Compliance management',
     ],
     benefits: [
       'Detect threats 10x faster',
@@ -190,7 +218,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Automate security responses',
       'Improve threat prevention',
       'Enhance compliance posture',
-      'Reduce security team workload'
+      'Reduce security team workload',
     ],
     useCases: [
       'Enterprise security operations',
@@ -198,13 +226,22 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Incident response',
       'Compliance management',
       'Security automation',
-      'Risk assessment'
+      'Risk assessment',
     ],
     marketSize: '$38.7B by 2029',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
-    technology: ['AI/ML', 'Machine Learning', 'Behavioral Analysis', 'Security'],
+    technology: [
+      'AI/ML',
+      'Machine Learning',
+      'Behavioral Analysis',
+      'Security',
+    ],
     integration: ['SIEM systems', 'EDR platforms', 'Security tools'],
-    support: ['24/7 security support', 'Security experts', 'Implementation team'],
+    support: [
+      '24/7 security support',
+      'Security experts',
+      'Implementation team',
+    ],
     compliance: ['SOC 2', 'ISO 27001', 'NIST', 'GDPR'],
     scalability: 'Enterprise-grade, global deployment',
     roi: '600% within 15 months',
@@ -229,14 +266,21 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
   {
     id: 'autonomous-it-operations-center',
     name: 'Autonomous IT Operations Center',
-    description: 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',
-    category: ['IT Operations', 'Automation', 'Infrastructure', 'Monitoring', 'Management'],
+    description:
+      'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',
+    category: [
+      'IT Operations',
+      'Automation',
+      'Infrastructure',
+      'Monitoring',
+      'Management',
+    ],
     price: '$14,999/month',
     features: [
       'Autonomous infrastructure management',
@@ -246,7 +290,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Capacity planning',
       'Automated troubleshooting',
       'Intelligent resource allocation',
-      'Continuous optimization'
+      'Continuous optimization',
     ],
     benefits: [
       'Achieve 99.99% uptime',
@@ -254,7 +298,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Eliminate manual interventions',
       'Improve system performance',
       'Enhance user experience',
-      'Optimize resource utilization'
+      'Optimize resource utilization',
     ],
     useCases: [
       'Enterprise IT operations',
@@ -262,7 +306,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Application performance management',
       'Infrastructure automation',
       'Service desk automation',
-      'IT service management'
+      'IT service management',
     ],
     marketSize: '$28.9B by 2029',
     competitors: ['ServiceNow', 'BMC', 'Micro Focus', 'Ivanti'],
@@ -293,7 +337,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
 ];

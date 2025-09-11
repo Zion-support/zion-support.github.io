@@ -29,8 +29,14 @@ interface SidebarProps {
   className?: string;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) => {
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+const Sidebar: React.FC<SidebarProps> = ({
+  isOpen,
+  onClose,
+  className = '',
+}) => {
+  const [expandedSections, setExpandedSections] = useState<string[]>([
+    'services',
+  ]);
 
   const toggleSection = (sectionId: string) => {
     setExpandedSections(prev =>
@@ -46,12 +52,42 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
       title: 'Our Services',
       icon: Settings,
       items: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Code, description: 'Comprehensive IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
-        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
-        { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' },
+        {
+          name: 'AI Services',
+          href: '/ai-services',
+          icon: Brain,
+          description: 'Cutting-edge AI solutions',
+        },
+        {
+          name: 'IT Services',
+          href: '/it-services',
+          icon: Code,
+          description: 'Comprehensive IT solutions',
+        },
+        {
+          name: 'Micro SaaS',
+          href: '/micro-saas',
+          icon: Cloud,
+          description: 'Scalable SaaS applications',
+        },
+        {
+          name: 'Cybersecurity',
+          href: '/cybersecurity',
+          icon: Shield,
+          description: 'Advanced security solutions',
+        },
+        {
+          name: 'Cloud Solutions',
+          href: '/cloud-solutions',
+          icon: Cloud,
+          description: 'Cloud infrastructure & services',
+        },
+        {
+          name: 'Database Solutions',
+          href: '/database-solutions',
+          icon: Database,
+          description: 'Database management & optimization',
+        },
       ],
     },
     {
@@ -59,12 +95,42 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
       title: 'Solutions',
       icon: Building2,
       items: [
-        { name: 'Enterprise Solutions', href: '/enterprise-solutions', icon: Building2, description: 'Large-scale business solutions' },
-        { name: 'Startup Solutions', href: '/startup-solutions', icon: Rocket, description: 'Scalable startup solutions' },
-        { name: 'Industry Solutions', href: '/industries', icon: Factory, description: 'Industry-specific solutions' },
-        { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
-        { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' },
+        {
+          name: 'Enterprise Solutions',
+          href: '/enterprise-solutions',
+          icon: Building2,
+          description: 'Large-scale business solutions',
+        },
+        {
+          name: 'Startup Solutions',
+          href: '/startup-solutions',
+          icon: Rocket,
+          description: 'Scalable startup solutions',
+        },
+        {
+          name: 'Industry Solutions',
+          href: '/industries',
+          icon: Factory,
+          description: 'Industry-specific solutions',
+        },
+        {
+          name: 'Custom Development',
+          href: '/custom-development',
+          icon: Code,
+          description: 'Tailored software development',
+        },
+        {
+          name: 'Digital Transformation',
+          href: '/digital-transformation',
+          icon: Network,
+          description: 'Complete digital transformation',
+        },
+        {
+          name: 'Technology Consulting',
+          href: '/consulting',
+          icon: Users,
+          description: 'Strategic technology consulting',
+        },
       ],
     },
     {
@@ -72,12 +138,42 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
       title: 'Company',
       icon: Building2,
       items: [
-        { name: 'About Us', href: '/about', icon: Building2, description: 'Learn about our company' },
-        { name: 'Our Team', href: '/team', icon: Users, description: 'Meet our expert team' },
-        { name: 'Careers', href: '/careers', icon: Award, description: 'Join our team' },
-        { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
-        { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
-        { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' },
+        {
+          name: 'About Us',
+          href: '/about',
+          icon: Building2,
+          description: 'Learn about our company',
+        },
+        {
+          name: 'Our Team',
+          href: '/team',
+          icon: Users,
+          description: 'Meet our expert team',
+        },
+        {
+          name: 'Careers',
+          href: '/careers',
+          icon: Award,
+          description: 'Join our team',
+        },
+        {
+          name: 'Case Studies',
+          href: '/case-studies',
+          icon: CheckCircle,
+          description: 'Success stories',
+        },
+        {
+          name: 'News & Updates',
+          href: '/news',
+          icon: ArrowRight,
+          description: 'Latest news',
+        },
+        {
+          name: 'Partners',
+          href: '/partners',
+          icon: Users,
+          description: 'Our partners',
+        },
       ],
     },
   ];
@@ -108,19 +204,23 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
       transition={{ duration: 0.3, ease: 'easeInOut' }}
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`}
     >
-      <div className="p-6">
+      <div className='p-6'>
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <Link to="/" className="flex items-center space-x-2" onClick={() => onClose?.()}>
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+        <div className='flex items-center justify-between mb-8'>
+          <Link
+            to='/'
+            className='flex items-center space-x-2'
+            onClick={() => onClose?.()}
+          >
+            <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
+              <Brain className='w-5 h-5 text-white' />
             </div>
-            <span className="text-lg font-bold text-gray-900">Zion Tech</span>
+            <span className='text-lg font-bold text-gray-900'>Zion Tech</span>
           </Link>
           {onClose && (
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors"
+              className='p-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors'
             >
               ×
             </button>
@@ -128,10 +228,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
         </div>
 
         {/* Quick Links */}
-        <div className="mb-8">
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>
-          <div className="space-y-2">
-            {quickLinks.map((link) => {
+        <div className='mb-8'>
+          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>
+            Quick Actions
+          </h3>
+          <div className='space-y-2'>
+            {quickLinks.map(link => {
               const IconComponent = link.icon;
               return (
                 <button
@@ -143,8 +245,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
                       : 'text-gray-700 hover:bg-gray-100'
                   }`}
                 >
-                  <IconComponent className="w-5 h-5" />
-                  <span className="font-medium">{link.name}</span>
+                  <IconComponent className='w-5 h-5' />
+                  <span className='font-medium'>{link.name}</span>
                 </button>
               );
             })}
@@ -152,8 +254,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
         </div>
 
         {/* Navigation Sections */}
-        <div className="space-y-6">
-          {navigationSections.map((section) => {
+        <div className='space-y-6'>
+          {navigationSections.map(section => {
             const isExpanded = expandedSections.includes(section.id);
             const IconComponent = section.icon;
 
@@ -161,16 +263,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
               <div key={section.id}>
                 <button
                   onClick={() => toggleSection(section.id)}
-                  className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                  className='w-full flex items-center justify-between px-4 py-3 text-left text-gray-700 hover:bg-gray-100 rounded-lg transition-colors'
                 >
-                  <div className="flex items-center space-x-3">
-                    <IconComponent className="w-5 h-5" />
-                    <span className="font-medium">{section.title}</span>
+                  <div className='flex items-center space-x-3'>
+                    <IconComponent className='w-5 h-5' />
+                    <span className='font-medium'>{section.title}</span>
                   </div>
                   {isExpanded ? (
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className='w-4 h-4' />
                   ) : (
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className='w-4 h-4' />
                   )}
                 </button>
                 {isExpanded && (
@@ -178,20 +280,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-2 space-y-1"
+                    className='mt-2 space-y-1'
                   >
-                    {section.items.map((item) => {
+                    {section.items.map(item => {
                       const ItemIconComponent = item.icon;
                       return (
                         <button
                           key={item.name}
                           onClick={() => handleLinkClick(item.href)}
-                          className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600 hover:bg-gray-50 rounded-lg transition-colors group"
+                          className='w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600 hover:bg-gray-50 rounded-lg transition-colors group'
                         >
-                          <ItemIconComponent className="w-4 h-4 mt-0.5 text-gray-400 group-hover:text-blue-600" />
-                          <div className="flex-1 min-w-0">
-                            <div className="font-medium text-sm group-hover:text-blue-600">{item.name}</div>
-                            <div className="text-xs text-gray-500 mt-1">{item.description}</div>
+                          <ItemIconComponent className='w-4 h-4 mt-0.5 text-gray-400 group-hover:text-blue-600' />
+                          <div className='flex-1 min-w-0'>
+                            <div className='font-medium text-sm group-hover:text-blue-600'>
+                              {item.name}
+                            </div>
+                            <div className='text-xs text-gray-500 mt-1'>
+                              {item.description}
+                            </div>
                           </div>
                         </button>
                       );
@@ -204,42 +310,44 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, className = '' }) =>
         </div>
 
         {/* Contact Info */}
-        <div className="mt-8 pt-6 border-t border-gray-200">
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Contact Info</h3>
-          <div className="space-y-3">
-            <div className="flex items-center space-x-3 text-sm text-gray-600">
-              <Phone className="w-4 h-4 text-blue-600" />
+        <div className='mt-8 pt-6 border-t border-gray-200'>
+          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>
+            Contact Info
+          </h3>
+          <div className='space-y-3'>
+            <div className='flex items-center space-x-3 text-sm text-gray-600'>
+              <Phone className='w-4 h-4 text-blue-600' />
               <span>{contactInfo.phone}</span>
             </div>
-            <div className="flex items-center space-x-3 text-sm text-gray-600">
-              <Mail className="w-4 h-4 text-blue-600" />
-              <span className="truncate">{contactInfo.email}</span>
+            <div className='flex items-center space-x-3 text-sm text-gray-600'>
+              <Mail className='w-4 h-4 text-blue-600' />
+              <span className='truncate'>{contactInfo.email}</span>
             </div>
-            <div className="flex items-start space-x-3 text-sm text-gray-600">
-              <MapPin className="w-4 h-4 text-blue-600 mt-0.5" />
-              <span className="text-xs">{contactInfo.address}</span>
+            <div className='flex items-start space-x-3 text-sm text-gray-600'>
+              <MapPin className='w-4 h-4 text-blue-600 mt-0.5' />
+              <span className='text-xs'>{contactInfo.address}</span>
             </div>
           </div>
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="text-center">
-              <div className="text-lg font-bold text-blue-600">99.9%</div>
-              <div className="text-xs text-gray-500">Uptime</div>
+        <div className='mt-6 pt-6 border-t border-gray-200'>
+          <div className='grid grid-cols-2 gap-4'>
+            <div className='text-center'>
+              <div className='text-lg font-bold text-blue-600'>99.9%</div>
+              <div className='text-xs text-gray-500'>Uptime</div>
             </div>
-            <div className="text-center">
-              <div className="text-lg font-bold text-green-600">500+</div>
-              <div className="text-xs text-gray-500">Projects</div>
+            <div className='text-center'>
+              <div className='text-lg font-bold text-green-600'>500+</div>
+              <div className='text-xs text-gray-500'>Projects</div>
             </div>
-            <div className="text-center">
-              <div className="text-lg font-bold text-purple-600">50+</div>
-              <div className="text-xs text-gray-500">Experts</div>
+            <div className='text-center'>
+              <div className='text-lg font-bold text-purple-600'>50+</div>
+              <div className='text-xs text-gray-500'>Experts</div>
             </div>
-            <div className="text-center">
-              <div className="text-lg font-bold text-yellow-600">24/7</div>
-              <div className="text-xs text-gray-500">Support</div>
+            <div className='text-center'>
+              <div className='text-lg font-bold text-yellow-600'>24/7</div>
+              <div className='text-xs text-gray-500'>Support</div>
             </div>
           </div>
         </div>

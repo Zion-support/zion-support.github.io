@@ -8,7 +8,7 @@ function cleanFile(filePath) {
   try {
     const ext = path.extname(filePath);
     let content = '';
-    
+
     switch (ext) {
       case '.js':
       case '.jsx':
@@ -18,7 +18,11 @@ function cleanFile(filePath) {
 export default {};`;
         break;
       case '.json':
-        if (filePath.includes('index') || filePath.includes('list') || filePath.includes('array')) {
+        if (
+          filePath.includes('index') ||
+          filePath.includes('list') ||
+          filePath.includes('array')
+        ) {
           content = '[]';
         } else {
           content = '{}';
@@ -47,7 +51,7 @@ export default {};`;
       default:
         content = '';
     }
-    
+
     fs.writeFileSync(filePath, content);
     console.log(`Cleaned: ${filePath}`);
   } catch (error) {
@@ -58,15 +62,15 @@ export default {};`;
 // Function to find files with merge conflicts
 function findConflictFiles(dir) {
   const conflictFiles = [];
-  
+
   function scanDirectory(currentDir) {
     try {
       const files = fs.readdirSync(currentDir);
-      
+
       for (const file of files) {
         const filePath = path.join(currentDir, file);
         const stat = fs.statSync(filePath);
-        
+
         if (stat.isDirectory()) {
           // Skip certain directories
           if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {
@@ -74,10 +78,25 @@ function findConflictFiles(dir) {
           }
         } else if (stat.isFile()) {
           const ext = path.extname(file);
-          if (['.js', '.jsx', '.ts', '.tsx', '.json', '.html', '.md', '.xml'].includes(ext)) {
+          if (
+            [
+              '.js',
+              '.jsx',
+              '.ts',
+              '.tsx',
+              '.json',
+              '.html',
+              '.md',
+              '.xml',
+            ].includes(ext)
+          ) {
             try {
               const content = fs.readFileSync(filePath, 'utf8');
-              if (content.includes('<<<<<<< ') || content.includes('=======') || content.includes('>>>>>>> ')) {
+              if (
+                content.includes('<<<<<<< ') ||
+                content.includes('=======') ||
+                content.includes('>>>>>>> ')
+              ) {
                 conflictFiles.push(filePath);
               }
             } catch (error) {
@@ -90,7 +109,7 @@ function findConflictFiles(dir) {
       // Skip directories that can't be read
     }
   }
-  
+
   scanDirectory(dir);
   return conflictFiles;
 }
@@ -106,8 +125,10 @@ console.log(`Found ${conflictFiles.length} files with merge conflicts`);
 const batchSize = 50;
 for (let i = 0; i < conflictFiles.length; i += batchSize) {
   const batch = conflictFiles.slice(i, i + batchSize);
-  console.log(`Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(conflictFiles.length / batchSize)}`);
-  
+  console.log(
+    `Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(conflictFiles.length / batchSize)}`
+  );
+
   batch.forEach(filePath => {
     cleanFile(filePath);
   });

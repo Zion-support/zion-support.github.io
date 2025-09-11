@@ -2,7 +2,7 @@
 describe('Temporary Login Test', () => {
   it('should successfully login via API', () => {
     cy.loginByApi('test@example.com', 'password')
-      .then((response) => {
+      .then(response => {
         // Ensure the request within loginByApi was successful
         expect(response.status).to.be.oneOf([200, 201]);
       })

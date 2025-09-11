@@ -6,9 +6,9 @@ const CybersecurityBestPractices: NextPage = () => {
     <div>
       <Head>
         <title>CybersecurityBestPractices - Zion Tech Solutions</title>
-        <meta name="description" content="CybersecurityBestPractices page" />
+        <meta name='description' content='CybersecurityBestPractices page' />
       </Head>
-      
+
       <main>
         <h1>CybersecurityBestPractices</h1>
         <p>This page is under construction.</p>

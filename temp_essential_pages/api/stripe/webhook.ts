@@ -10,20 +10,27 @@ const useTest = process.env.STRIPE_TEST_MODE === 'true';
 export const config = { api: { bodyParser: false } };
 
 const stripe = new Stripe(
-  useTest ? process.env.STRIPE_TEST_SECRET_KEY || '' : process.env.STRIPE_SECRET_KEY || '',
+  useTest
+    ? process.env.STRIPE_TEST_SECRET_KEY || ''
+    : process.env.STRIPE_SECRET_KEY || '',
   {
     apiVersion: '2025-05-28.basil',
   }
 );
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET || '';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
   }
 
-  const sig = (req.headers as Record<string, string | string[] | undefined>)['stripe-signature'] as string;
+  const sig = (req.headers as Record<string, string | string[] | undefined>)[
+    'stripe-signature'
+  ] as string;
   let event: any;
   try {
     const buf = await buffer(req as any);
@@ -51,7 +58,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const userId = session.metadata?.userId;
     if (userId) {
-      const points = Math.floor(((session.amount_total || 0) / 10000)) * 10;
+      const points = Math.floor((session.amount_total || 0) / 10000) * 10;
       if (points > 0) {
         const file = path.join(process.cwd(), 'data', 'points.json');
         let ledger: any[] = [];

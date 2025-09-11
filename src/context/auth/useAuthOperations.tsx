@@ -8,12 +8,15 @@ export const useAuthOperations = () => {
     return { user: { id: '1', email, name: 'User' } };
   }, []);
 
-  const register = useCallback(async (email: string, password: string, name?: string) => {
-    // Mock register operation
-    console.log('Registering with:', email, name);
-    // In a real app, this would make an API call
-    return { user: { id: '1', email, name: name || 'User' } };
-  }, []);
+  const register = useCallback(
+    async (email: string, password: string, name?: string) => {
+      // Mock register operation
+      console.log('Registering with:', email, name);
+      // In a real app, this would make an API call
+      return { user: { id: '1', email, name: name || 'User' } };
+    },
+    []
+  );
 
   const logout = useCallback(async () => {
     // Mock logout operation

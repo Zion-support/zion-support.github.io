@@ -4,14 +4,14 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "dist",
+    outDir: 'dist',
   },
   css: {
     postcss: false,
     preprocessorOptions: {
       css: {
-        charset: false
-      }
-    }
-  }
+        charset: false,
+      },
+    },
+  },
 });

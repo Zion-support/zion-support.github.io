@@ -11,20 +11,20 @@
     {
       "file": "pages/_app.js",
       "issues": [],
-              "warnings": [
-          {
-            "type": "WARNING",
-            "code": "INCOMPLETE_HTML",
-            "message": "Incomplete HTML tags detected",
-            "line": 0,
-            "severity": "warning"
-          }
-        ]
-      },
-      {
-        "file": "pages/admin/kpi.tsx",
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "INCOMPLETE_HTML",
+          "message": "Incomplete HTML tags detected",
+          "line": 0,
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "file": "pages/admin/kpi.tsx",
       "issues": [],
-              "warnings": [
+      "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
@@ -37,7 +37,7 @@
     {
       "file": "pages/ai-consciousness-evolution-2025.tsx",
       "issues": [],
-              "warnings": [
+      "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
@@ -50,7 +50,7 @@
     {
       "file": "pages/ai-customer-service-platform.tsx",
       "issues": [],
-              "warnings": [
+      "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",

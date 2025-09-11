@@ -24,7 +24,11 @@ async function checkSignupPage() {
     // ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
     browser = await puppeteer.launch({
       headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+      ],
     });
     const page = await browser.newPage();
 
@@ -35,7 +39,10 @@ async function checkSignupPage() {
     });
 
     console.log('Navigating to http://localhost:5178/signup...');
-    await page.goto('http://localhost:5178/signup', { waitUntil: 'networkidle2', timeout: 30000 });
+    await page.goto('http://localhost:5178/signup', {
+      waitUntil: 'networkidle2',
+      timeout: 30000,
+    });
 
     console.log('Page loaded. Checking for elements...');
 
@@ -58,7 +65,6 @@ async function checkSignupPage() {
     if (await page.$('[data-testid="create-account-button"]')) {
       results.elements.createAccountButton = true;
     }
-
   } catch (error) {
     console.error('Error during Puppeteer script execution:', error);
     results.genericErrors.push(error.message);

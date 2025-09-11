@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
   {
     id: 'ai-powered-sales-intelligence',
     name: 'AI-Powered Sales Intelligence',
-    tagline: 'Predictive sales insights with AI-driven lead scoring and forecasting',
+    tagline:
+      'Predictive sales insights with AI-driven lead scoring and forecasting',
     price: '$199',
     period: '/month',
-    description: 'Intelligent sales platform that uses AI to predict customer behavior, score leads, and forecast revenue. Features automated lead qualification, sales forecasting, and customer journey mapping.',
+    description:
+      'Intelligent sales platform that uses AI to predict customer behavior, score leads, and forecast revenue. Features automated lead qualification, sales forecasting, and customer journey mapping.',
     features: [
       'AI-powered lead scoring',
       'Predictive sales forecasting',
@@ -64,7 +66,7 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
       'Sales performance analytics',
       'Revenue optimization insights',
       'CRM integration',
-      'Real-time alerts'
+      'Real-time alerts',
     ],
     popular: true,
     icon: '📊',
@@ -87,11 +89,12 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered sales intelligence with predictive analytics engines',
+    implementationDetails:
+      'AI-powered sales intelligence with predictive analytics engines',
     launchDate: '2025-01-10',
     customers: 234,
     rating: 4.8,
-    reviews: 167
+    reviews: 167,
   },
   {
     id: 'quantum-financial-trading-platform',
@@ -99,7 +102,8 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     tagline: 'Quantum-powered algorithmic trading with AI optimization',
     price: '$1,499',
     period: '/month',
-    description: 'Advanced trading platform that leverages quantum computing for enhanced market analysis and AI-powered trading strategies. Features quantum risk assessment, predictive modeling, and automated trading execution.',
+    description:
+      'Advanced trading platform that leverages quantum computing for enhanced market analysis and AI-powered trading strategies. Features quantum risk assessment, predictive modeling, and automated trading execution.',
     features: [
       'Quantum market analysis',
       'AI-powered trading strategies',
@@ -108,7 +112,7 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
       'Automated trading execution',
       'Real-time market data',
       'Portfolio optimization',
-      'Compliance monitoring'
+      'Compliance monitoring',
     ],
     popular: false,
     icon: '💰',
@@ -131,11 +135,12 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-powered trading platform with AI optimization',
+    implementationDetails:
+      'Quantum-powered trading platform with AI optimization',
     launchDate: '2025-02-01',
     customers: 23,
     rating: 4.9,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'autonomous-hr-platform',
@@ -143,7 +148,8 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     tagline: 'Self-managing HR operations with AI-driven decision making',
     price: '$299',
     period: '/month',
-    description: 'Intelligent HR platform that autonomously manages recruitment, employee engagement, and performance management. Features AI-powered candidate matching, automated onboarding, and predictive analytics.',
+    description:
+      'Intelligent HR platform that autonomously manages recruitment, employee engagement, and performance management. Features AI-powered candidate matching, automated onboarding, and predictive analytics.',
     features: [
       'AI-powered candidate matching',
       'Automated onboarding',
@@ -152,7 +158,7 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
       'Predictive HR insights',
       'Compliance automation',
       'Talent management',
-      'Workforce planning'
+      'Workforce planning',
     ],
     popular: true,
     icon: '👥',
@@ -167,7 +173,9 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     realService: true,
     technology: ['AI/ML, HR systems, Predictive analytics'],
     integrations: ['Workday, BambooHR, Greenhouse, Lever'],
-    useCases: ['Recruitment automation, Employee engagement, Performance management'],
+    useCases: [
+      'Recruitment automation, Employee engagement, Performance management',
+    ],
     roi: 'Reduce HR overhead by 40-70% with autonomous operations',
     competitors: ['Workday, BambooHR, Greenhouse'],
     marketSize: '$30B HR technology market',
@@ -175,11 +183,12 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered HR platform with autonomous decision making',
+    implementationDetails:
+      'AI-powered HR platform with autonomous decision making',
     launchDate: '2025-01-15',
     customers: 189,
     rating: 4.7,
-    reviews: 134
+    reviews: 134,
   },
   {
     id: 'quantum-logistics-optimization',
@@ -187,7 +196,8 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     tagline: 'Quantum-powered supply chain optimization with AI insights',
     price: '$599',
     period: '/month',
-    description: 'Advanced logistics platform that uses quantum computing to optimize supply chains, routes, and inventory management. Features quantum route optimization, predictive demand forecasting, and AI-powered logistics insights.',
+    description:
+      'Advanced logistics platform that uses quantum computing to optimize supply chains, routes, and inventory management. Features quantum route optimization, predictive demand forecasting, and AI-powered logistics insights.',
     features: [
       'Quantum route optimization',
       'Predictive demand forecasting',
@@ -196,14 +206,15 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
       'Supply chain analytics',
       'Real-time tracking',
       'Cost optimization',
-      'Sustainability metrics'
+      'Sustainability metrics',
     ],
     popular: false,
     icon: '🚚',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-logistics-optimization',
-    marketPosition: 'Pioneering quantum-powered logistics optimization platform',
+    marketPosition:
+      'Pioneering quantum-powered logistics optimization platform',
     targetAudience: 'Logistics companies, supply chain managers, e-commerce',
     trialDays: 30,
     setupTime: '2 weeks',
@@ -211,7 +222,9 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     realService: true,
     technology: ['Quantum computing, AI/ML, Logistics optimization'],
     integrations: ['WMS systems, TMS platforms, ERP systems'],
-    useCases: ['Route optimization, Inventory management, Supply chain planning'],
+    useCases: [
+      'Route optimization, Inventory management, Supply chain planning',
+    ],
     roi: 'Optimize logistics costs by 30-60% with quantum algorithms',
     competitors: ['Flexport, Convoy, Uber Freight'],
     marketSize: '$18B logistics technology market',
@@ -219,19 +232,22 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-powered logistics optimization with AI insights',
+    implementationDetails:
+      'Quantum-powered logistics optimization with AI insights',
     launchDate: '2025-02-15',
     customers: 67,
     rating: 4.8,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-customer-success',
     name: 'AI-Powered Customer Success',
-    tagline: 'Intelligent customer success with predictive analytics and automation',
+    tagline:
+      'Intelligent customer success with predictive analytics and automation',
     price: '$249',
     period: '/month',
-    description: 'Smart customer success platform that uses AI to predict churn, optimize customer journeys, and automate success operations. Features predictive churn analysis, automated onboarding, and customer health scoring.',
+    description:
+      'Smart customer success platform that uses AI to predict churn, optimize customer journeys, and automate success operations. Features predictive churn analysis, automated onboarding, and customer health scoring.',
     features: [
       'Predictive churn analysis',
       'Automated onboarding',
@@ -240,7 +256,7 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
       'Journey optimization',
       'Performance analytics',
       'Integration management',
-      'Real-time insights'
+      'Real-time insights',
     ],
     popular: true,
     icon: '🎯',
@@ -263,10 +279,11 @@ export const innovativeMicroSaas2025: InnovativeMicroSaas2025[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered customer success with predictive analytics',
+    implementationDetails:
+      'AI-powered customer success with predictive analytics',
     launchDate: '2025-01-25',
     customers: 156,
     rating: 4.8,
-    reviews: 98
-  }
+    reviews: 98,
+  },
 ];

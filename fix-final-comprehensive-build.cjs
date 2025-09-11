@@ -2,11 +2,14 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Final Comprehensive Build Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Final Comprehensive Build Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix generate service description file - completely rewrite it
-const generateServicePath = '/workspace/pages/api/generate-service-description.ts';
+const generateServicePath =
+  '/workspace/pages/api/generate-service-description.ts';
 const generateServiceContent = `import { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -43,9 +46,12 @@ Contact our team to learn more about implementing this service for your organiza
   }
 }`;
 fs.writeFileSync(generateServicePath, generateServiceContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts'
+);
 // Fix webhook job-posted file
-const jobPostedPath = '/workspace/pages/api/integrations/webhooks/job-posted.ts';
+const jobPostedPath =
+  '/workspace/pages/api/integrations/webhooks/job-posted.ts';
 if (fs.existsSync(jobPostedPath)) {
   let content = fs.readFileSync(jobPostedPath, 'utf8');
   // Fix the syntax error - add missing variable declaration
@@ -54,10 +60,13 @@ if (fs.existsSync(jobPostedPath)) {
     '  const results: any[] = [];\n  const syncResult = await crm.syncContact(conn, {'
   );
   fs.writeFileSync(jobPostedPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/webhooks/job-posted.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/webhooks/job-posted.ts'
+  );
 }
 // Fix webhook resume-viewed file
-const resumeViewedPath = '/workspace/pages/api/integrations/webhooks/resume-viewed.ts';
+const resumeViewedPath =
+  '/workspace/pages/api/integrations/webhooks/resume-viewed.ts';
 if (fs.existsSync(resumeViewedPath)) {
   let content = fs.readFileSync(resumeViewedPath, 'utf8');
   // Fix the syntax error - add missing variable declaration
@@ -66,10 +75,13 @@ if (fs.existsSync(resumeViewedPath)) {
     '  const results: any[] = [];\n  const touchpointResult = await crm.addEmailTouchpoint(conn, {'
   );
   fs.writeFileSync(resumeViewedPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/webhooks/resume-viewed.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/webhooks/resume-viewed.ts'
+  );
 }
 // Fix webhook talent-hired file
-const talentHiredPath = '/workspace/pages/api/integrations/webhooks/talent-hired.ts';
+const talentHiredPath =
+  '/workspace/pages/api/integrations/webhooks/talent-hired.ts';
 if (fs.existsSync(talentHiredPath)) {
   let content = fs.readFileSync(talentHiredPath, 'utf8');
   // Fix the syntax error - add missing variable declaration
@@ -78,10 +90,13 @@ if (fs.existsSync(talentHiredPath)) {
     '  const results: any[] = [];\n  const statusResult = await ats.updateStatus(conn, {'
   );
   fs.writeFileSync(talentHiredPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/webhooks/talent-hired.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/webhooks/talent-hired.ts'
+  );
 }
 // Fix webhook talent-matched file
-const talentMatchedPath = '/workspace/pages/api/integrations/webhooks/talent-matched.ts';
+const talentMatchedPath =
+  '/workspace/pages/api/integrations/webhooks/talent-matched.ts';
 if (fs.existsSync(talentMatchedPath)) {
   let content = fs.readFileSync(talentMatchedPath, 'utf8');
   // Fix the syntax error - add missing variable declaration
@@ -90,7 +105,9 @@ if (fs.existsSync(talentMatchedPath)) {
     '  );\n  const noteResult = await crm.addProjectNote(conn, {'
   );
   fs.writeFileSync(talentMatchedPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/webhooks/talent-matched.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/integrations/webhooks/talent-matched.ts'
+  );
 }
 console.log('');
 console.log('📊 FINAL COMPREHENSIVE BUILD FIX REPORT');
@@ -100,11 +117,21 @@ console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');
 console.log('');
 console.log('✅ Successfully fixed files:');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/generate-service-description.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/webhooks/job-posted.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/webhooks/resume-viewed.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/webhooks/talent-hired.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/webhooks/talent-matched.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/generate-service-description.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/webhooks/job-posted.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/webhooks/resume-viewed.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/webhooks/talent-hired.ts'
+);
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/integrations/webhooks/talent-matched.ts'
+);
 console.log('');
 // Save report
 const report = {
@@ -116,8 +143,11 @@ const report = {
     'pages/api/integrations/webhooks/job-posted.ts',
     'pages/api/integrations/webhooks/resume-viewed.ts',
     'pages/api/integrations/webhooks/talent-hired.ts',
-    'pages/api/integrations/webhooks/talent-matched.ts'
-  ]
+    'pages/api/integrations/webhooks/talent-matched.ts',
+  ],
 };
-fs.writeFileSync('/workspace/final-comprehensive-build-fix-report.json', JSON.stringify(report, null, 2));
+fs.writeFileSync(
+  '/workspace/final-comprehensive-build-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
 console.log('📄 Report saved to final-comprehensive-build-fix-report.json');

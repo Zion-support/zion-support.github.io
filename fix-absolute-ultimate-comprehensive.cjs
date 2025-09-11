@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Absolute Ultimate Comprehensive Fix...');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Absolute Ultimate Comprehensive Fix...'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 // Fix proposals list file - rewrite completely
@@ -37,7 +39,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }`;
 fs.writeFileSync(proposalsListPath, proposalsListContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/list.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/list.ts'
+);
 // Fix proposals status file - rewrite completely
 const proposalsStatusPath = '/workspace/pages/api/proposals/status.ts';
 const proposalsStatusContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -68,18 +72,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }`;
 fs.writeFileSync(proposalsStatusPath, proposalsStatusContent);
-console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/status.ts');
+console.log(
+  '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/status.ts'
+);
 // Fix proposals submit file
 const proposalsSubmitPath = '/workspace/pages/api/proposals/submit.ts';
 if (fs.existsSync(proposalsSubmitPath)) {
   let content = fs.readFileSync(proposalsSubmitPath, 'utf8');
   // Fix the syntax error
-  content = content.replace(
-    '  updateArtifacts,;',
-    '  updateArtifacts,'
-  );
+  content = content.replace('  updateArtifacts,;', '  updateArtifacts,');
   fs.writeFileSync(proposalsSubmitPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/submit.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/submit.ts'
+  );
 }
 // Fix proposals translate file
 const proposalsTranslatePath = '/workspace/pages/api/proposals/translate.ts';
@@ -90,7 +95,9 @@ if (fs.existsSync(proposalsTranslatePath)) {
     content += '\n}';
   }
   fs.writeFileSync(proposalsTranslatePath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/translate.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/proposals/translate.ts'
+  );
 }
 // Fix referrals track file
 const referralsTrackPath = '/workspace/pages/api/referrals/track.ts';
@@ -101,7 +108,9 @@ if (fs.existsSync(referralsTrackPath)) {
     content += '\n}';
   }
   fs.writeFileSync(referralsTrackPath, content);
-  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/referrals/track.ts');
+  console.log(
+    '✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/referrals/track.ts'
+  );
 }
 console.log('');
 console.log('📊 ABSOLUTE ULTIMATE COMPREHENSIVE FIX REPORT');
@@ -114,7 +123,9 @@ console.log('✅ Successfully fixed files:');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/proposals/list.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/proposals/status.ts');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/proposals/submit.ts');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/proposals/translate.ts');
+console.log(
+  'ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/proposals/translate.ts'
+);
 console.log('ℹ️ [2025-09-06T09:26:05.802Z]   - pages/api/referrals/track.ts');
 console.log('');
 // Save report
@@ -127,8 +138,13 @@ const report = {
     'pages/api/proposals/status.ts',
     'pages/api/proposals/submit.ts',
     'pages/api/proposals/translate.ts',
-    'pages/api/referrals/track.ts'
-  ]
+    'pages/api/referrals/track.ts',
+  ],
 };
-fs.writeFileSync('/workspace/absolute-ultimate-comprehensive-fix-report.json', JSON.stringify(report, null, 2));
-console.log('📄 Report saved to absolute-ultimate-comprehensive-fix-report.json');
+fs.writeFileSync(
+  '/workspace/absolute-ultimate-comprehensive-fix-report.json',
+  JSON.stringify(report, null, 2)
+);
+console.log(
+  '📄 Report saved to absolute-ultimate-comprehensive-fix-report.json'
+);

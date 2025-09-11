@@ -16,9 +16,16 @@ async function main() {
     await sendWebhookNotification(payload);
     logger.info('CLI: Notification sent successfully.');
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    logger.error('CLI Error: Failed to parse payload or send notification:', { error: errorMessage, stack: error instanceof Error ? error.stack : undefined });
-    console.error('CLI Error: Failed to parse payload or send notification:', errorMessage);
+    const errorMessage =
+      error instanceof Error ? error.message : 'Unknown error';
+    logger.error('CLI Error: Failed to parse payload or send notification:', {
+      error: errorMessage,
+      stack: error instanceof Error ? error.stack : undefined,
+    });
+    console.error(
+      'CLI Error: Failed to parse payload or send notification:',
+      errorMessage
+    );
     process.exit(1);
   }
 }
@@ -26,7 +33,10 @@ async function main() {
 main().catch(error => {
   // Catch unhandled promise rejections from main
   const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-  logger.error('CLI Error: Unhandled error in main function:', { error: errorMessage, stack: error instanceof Error ? error.stack : undefined });
+  logger.error('CLI Error: Unhandled error in main function:', {
+    error: errorMessage,
+    stack: error instanceof Error ? error.stack : undefined,
+  });
   console.error('CLI Error: Unhandled error in main function:', errorMessage);
   process.exit(1);
 });

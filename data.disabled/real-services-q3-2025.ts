@@ -12,13 +12,13 @@ export const realServicesQ32025: RealServiceQ32025[] = [
     name: 'Q3 2025 AI Service',
     tagline: 'Third quarter AI innovations',
     price: '$499',
-    category: 'AI & Machine Learning'
+    category: 'AI & Machine Learning',
   },
   {
     id: 'q3-2025-2',
     name: 'Q3 2025 Cloud Service',
     tagline: 'Third quarter cloud solutions',
     price: '$399',
-    category: 'Cloud & Infrastructure'
-  }
+    category: 'Cloud & Infrastructure',
+  },
 ];

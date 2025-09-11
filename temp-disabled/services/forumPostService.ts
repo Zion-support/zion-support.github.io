@@ -1,7 +1,9 @@
 import { supabase } from '@/integrations/supabase/client';
 import { ForumPost } from '@/types/community';
 
-export async function fetchPostsByCategory(categoryId: string): Promise<ForumPost[]> {
+export async function fetchPostsByCategory(
+  categoryId: string
+): Promise<ForumPost[]> {
   try {
     const { data, error } = await supabase
       .from('forum_posts')

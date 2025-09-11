@@ -12,16 +12,16 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
       env_development: {
         NODE_ENV: 'development',
-        PORT: 3000
+        PORT: 3000,
       },
       log_file: './logs/web.log',
       out_file: './logs/web-out.log',
       error_file: './logs/web-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🤖 AI-Powered Code Analyzer
@@ -37,12 +37,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        ANALYSIS_MODE: 'comprehensive'
+        ANALYSIS_MODE: 'comprehensive',
       },
       log_file: './logs/ai-code-analyzer.log',
       out_file: './logs/ai-code-analyzer-out.log',
       error_file: './logs/ai-code-analyzer-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🚀 Smart Deployment Optimizer
@@ -59,12 +59,12 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         DEPLOYMENT_STRATEGY: 'intelligent',
-        AUTO_ROLLBACK: 'true'
+        AUTO_ROLLBACK: 'true',
       },
       log_file: './logs/smart-deployment.log',
       out_file: './logs/smart-deployment-out.log',
       error_file: './logs/smart-deployment-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🔄 Intelligent Git Workflow
@@ -81,12 +81,12 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         GIT_STRATEGY: 'intelligent',
-        AUTO_MERGE: 'true'
+        AUTO_MERGE: 'true',
       },
       log_file: './logs/intelligent-git-workflow.log',
       out_file: './logs/intelligent-git-workflow-out.log',
       error_file: './logs/intelligent-git-workflow-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 📊 AI Performance Predictor
@@ -103,12 +103,12 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         MONITORING_INTERVAL: '30000',
-        PREDICTION_WINDOW: '24'
+        PREDICTION_WINDOW: '24',
       },
       log_file: './logs/ai-performance-predictor.log',
       out_file: './logs/ai-performance-predictor-out.log',
       error_file: './logs/ai-performance-predictor-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🔒 Advanced Security Scanner
@@ -125,12 +125,12 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         SCAN_TYPES: 'dependencies,code,secrets,infrastructure,compliance',
-        THREAT_INTELLIGENCE: 'true'
+        THREAT_INTELLIGENCE: 'true',
       },
       log_file: './logs/advanced-security-scanner.log',
       out_file: './logs/advanced-security-scanner-out.log',
       error_file: './logs/advanced-security-scanner-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🚀 Intelligent DevOps Orchestrator
@@ -148,12 +148,12 @@ module.exports = {
         NODE_ENV: 'production',
         PIPELINE_MODE: 'intelligent',
         AUTO_ROLLBACK: 'true',
-        QUALITY_GATES: 'true'
+        QUALITY_GATES: 'true',
       },
       log_file: './logs/intelligent-devops-orchestrator.log',
       out_file: './logs/intelligent-devops-orchestrator-out.log',
       error_file: './logs/intelligent-devops-orchestrator-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 📈 Performance Monitor
@@ -169,12 +169,12 @@ module.exports = {
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        MONITORING_INTERVAL: '30000'
+        MONITORING_INTERVAL: '30000',
       },
       log_file: './logs/performance-monitor.log',
       out_file: './logs/performance-monitor-out.log',
       error_file: './logs/performance-monitor-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🔍 Health Check Monitor
@@ -190,12 +190,12 @@ module.exports = {
       max_memory_restart: '128M',
       env: {
         NODE_ENV: 'production',
-        HEALTH_CHECK_INTERVAL: '120000'
+        HEALTH_CHECK_INTERVAL: '120000',
       },
       log_file: './logs/health-check-monitor.log',
       out_file: './logs/health-check-monitor-out.log',
       error_file: './logs/health-check-monitor-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🛡️ Security Monitor
@@ -211,12 +211,12 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        SECURITY_SCAN_INTERVAL: '14400000'
+        SECURITY_SCAN_INTERVAL: '14400000',
       },
       log_file: './logs/security-monitor.log',
       out_file: './logs/security-monitor-out.log',
       error_file: './logs/security-monitor-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🔧 Code Quality Monitor
@@ -232,12 +232,12 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        QUALITY_CHECK_INTERVAL: '21600000'
+        QUALITY_CHECK_INTERVAL: '21600000',
       },
       log_file: './logs/code-quality-monitor.log',
       out_file: './logs/code-quality-monitor-out.log',
       error_file: './logs/code-quality-monitor-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 📊 Build Monitor
@@ -253,12 +253,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        BUILD_CHECK_INTERVAL: '7200000'
+        BUILD_CHECK_INTERVAL: '7200000',
       },
       log_file: './logs/build-monitor.log',
       out_file: './logs/build-monitor-out.log',
       error_file: './logs/build-monitor-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🔄 Dependency Monitor
@@ -274,12 +274,12 @@ module.exports = {
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        DEPENDENCY_CHECK_INTERVAL: '604800000'
+        DEPENDENCY_CHECK_INTERVAL: '604800000',
       },
       log_file: './logs/dependency-monitor.log',
       out_file: './logs/dependency-monitor-out.log',
       error_file: './logs/dependency-monitor-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🎯 SEO Optimizer
@@ -295,12 +295,12 @@ module.exports = {
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        SEO_CHECK_INTERVAL: '43200000'
+        SEO_CHECK_INTERVAL: '43200000',
       },
       log_file: './logs/seo-optimizer.log',
       out_file: './logs/seo-optimizer-out.log',
       error_file: './logs/seo-optimizer-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // 🖼️ Image Optimizer
@@ -316,13 +316,13 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        IMAGE_OPTIMIZATION_INTERVAL: '86400000'
+        IMAGE_OPTIMIZATION_INTERVAL: '86400000',
       },
       log_file: './logs/image-optimizer.log',
       out_file: './logs/image-optimizer-out.log',
       error_file: './logs/image-optimizer-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    }
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
   ],
 
   // PM2 Configuration
@@ -333,7 +333,8 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:username/ziontechgroup.com.git',
       path: '/var/www/ziontechgroup.com',
-      'post-deploy': 'npm install && pm2 reload ecosystem.intelligent.cjs --env production'
+      'post-deploy':
+        'npm install && pm2 reload ecosystem.intelligent.cjs --env production',
     },
     staging: {
       user: 'deploy',
@@ -341,7 +342,8 @@ module.exports = {
       ref: 'origin/develop',
       repo: 'git@github.com:username/ziontechgroup.com.git',
       path: '/var/www/ziontechgroup-staging.com',
-      'post-deploy': 'npm install && pm2 reload ecosystem.intelligent.cjs --env staging'
-    }
-  }
+      'post-deploy':
+        'npm install && pm2 reload ecosystem.intelligent.cjs --env staging',
+    },
+  },
 };

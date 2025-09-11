@@ -15,7 +15,7 @@ export const generateSEOMeta = (data: SEOData) => {
     keywords = [],
     image = '/og-image.jpg',
     url = typeof window !== 'undefined' ? window.location.href : '',
-    type = 'website'
+    type = 'website',
   } = data;
 
   return {
@@ -52,7 +52,8 @@ export const generateStructuredData = (data: any) => {
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-    description: 'Leading technology solutions provider specializing in AI, cloud computing, and digital transformation.',
+    description:
+      'Leading technology solutions provider specializing in AI, cloud computing, and digital transformation.',
     ...data,
   };
 };

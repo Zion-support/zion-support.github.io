@@ -2,7 +2,7 @@
 // Scheduled in netlify.toml -> [[scheduled]] path = "/.netlify/functions/sitemap_refresh"
 
 export const config = {
-  path: "/.netlify/functions/sitemap_refresh",
+  path: '/.netlify/functions/sitemap_refresh',
 };
 
 import type { Handler } from '@netlify/functions';
@@ -15,9 +15,12 @@ function normalize(u: string) {
   try {
     const url = new URL(u, BASE_URL);
     url.hash = '';
-    if (url.pathname.endsWith('/') && url.pathname !== '/') url.pathname = url.pathname.slice(0, -1);
+    if (url.pathname.endsWith('/') && url.pathname !== '/')
+      url.pathname = url.pathname.slice(0, -1);
     return url.toString();
-  } catch { return ''; }
+  } catch {
+    return '';
+  }
 }
 
 function extractLinks(html: string, current: string): string[] {
@@ -38,7 +41,7 @@ function xmlEscape(s: string) {
 function stamp() {
   const d = new Date();
   const p = (n: number) => String(n).padStart(2, '0');
-  return `${d.getUTCFullYear()}-${p(d.getUTCMonth()+1)}-${p(d.getUTCDate())}`;
+  return `${d.getUTCFullYear()}-${p(d.getUTCMonth() + 1)}-${p(d.getUTCDate())}`;
 }
 
 export const handler: Handler = async () => {
@@ -53,10 +56,14 @@ export const handler: Handler = async () => {
       visited.add(url);
       let html = '';
       try {
-        const res = await fetch(url, { headers: { 'User-Agent': 'zion-app-sitemap' } });
+        const res = await fetch(url, {
+          headers: { 'User-Agent': 'zion-app-sitemap' },
+        });
         if (!res.ok) continue;
         html = await res.text();
-      } catch { continue; }
+      } catch {
+        continue;
+      }
       for (const l of extractLinks(html, url)) {
         if (!visited.has(l)) toVisit.push(l);
       }
@@ -67,9 +74,17 @@ export const handler: Handler = async () => {
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${xmlEscape(u)}</loc><lastmod>${stamp()}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 
-    const commit = await commitToRepo({ path: 'public/sitemap.xml', content: xml, message: 'chore(sitemap): automated sitemap refresh', branch: 'main' });
+    const commit = await commitToRepo({
+      path: 'public/sitemap.xml',
+      content: xml,
+      message: 'chore(sitemap): automated sitemap refresh',
+      branch: 'main',
+    });
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: urls.length, commit }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, count: urls.length, commit }),
+    };
   } catch (e: any) {
     return { statusCode: 500, body: String(e?.message || e) };
   }

@@ -31,7 +31,7 @@ export function usePostsByCategory({
   categoryId,
   page = 1,
   limit = 20,
-  sortBy = 'newest'
+  sortBy = 'newest',
 }: UsePostsByCategoryOptions) {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
@@ -42,32 +42,33 @@ export function usePostsByCategory({
   useEffect(() => {
     const fetchPosts = async () => {
       if (!categoryId) return;
-      
+
       setLoading(true);
       setError(null);
-      
+
       try {
         // Simulate API call - replace with actual API endpoint
-        const response = await fetch(`/api/categories/${categoryId}/posts?page=${page}&limit=${limit}&sortBy=${sortBy}`);
-        
+        const response = await fetch(
+          `/api/categories/${categoryId}/posts?page=${page}&limit=${limit}&sortBy=${sortBy}`
+        );
+
         if (!response.ok) {
           throw new Error('Failed to fetch posts');
         }
-        
+
         const data = await response.json();
-        
+
         if (page === 1) {
           setPosts(data.posts);
         } else {
           setPosts(prev => [...prev, ...data.posts]);
         }
-        
+
         setTotalPosts(data.total);
         setHasMore(data.posts.length === limit);
-        
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
-        
+
         // Fallback to mock data for development
         const mockPosts: Post[] = Array.from({ length: limit }, (_, i) => ({
           id: `post-${page}-${i}`,
@@ -76,25 +77,29 @@ export function usePostsByCategory({
           author: {
             id: `user-${i}`,
             name: `User ${i + 1}`,
-            avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=user${i}`
+            avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=user${i}`,
           },
           category: categoryId,
-          createdAt: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(),
-          updatedAt: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(),
+          createdAt: new Date(
+            Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000
+          ).toISOString(),
+          updatedAt: new Date(
+            Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000
+          ).toISOString(),
           likes: Math.floor(Math.random() * 100),
           replies: Math.floor(Math.random() * 50),
           views: Math.floor(Math.random() * 1000),
           isPinned: i < 2, // First 2 posts are pinned
           isLocked: false,
-          tags: ['sample', 'demo', 'category']
+          tags: ['sample', 'demo', 'category'],
         }));
-        
+
         if (page === 1) {
           setPosts(mockPosts);
         } else {
           setPosts(prev => [...prev, ...mockPosts]);
         }
-        
+
         setTotalPosts(100); // Mock total
         setHasMore(page < 5); // Mock pagination
       } finally {
@@ -117,17 +122,21 @@ export function usePostsByCategory({
       ...newPost,
       id: `post-${Date.now()}`,
       createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      updatedAt: new Date().toISOString(),
     };
-    
+
     setPosts(prev => [post, ...prev]);
     setTotalPosts(prev => prev + 1);
   };
 
   const updatePost = (postId: string, updates: Partial<Post>) => {
-    setPosts(prev => prev.map(post => 
-      post.id === postId ? { ...post, ...updates, updatedAt: new Date().toISOString() } : post
-    ));
+    setPosts(prev =>
+      prev.map(post =>
+        post.id === postId
+          ? { ...post, ...updates, updatedAt: new Date().toISOString() }
+          : post
+      )
+    );
   };
 
   const deletePost = (postId: string) => {
@@ -136,15 +145,21 @@ export function usePostsByCategory({
   };
 
   const likePost = (postId: string) => {
-    setPosts(prev => prev.map(post => 
-      post.id === postId ? { ...post, likes: post.likes + 1 } : post
-    ));
+    setPosts(prev =>
+      prev.map(post =>
+        post.id === postId ? { ...post, likes: post.likes + 1 } : post
+      )
+    );
   };
 
   const unlikePost = (postId: string) => {
-    setPosts(prev => prev.map(post => 
-      post.id === postId ? { ...post, likes: Math.max(0, post.likes - 1) } : post
-    ));
+    setPosts(prev =>
+      prev.map(post =>
+        post.id === postId
+          ? { ...post, likes: Math.max(0, post.likes - 1) }
+          : post
+      )
+    );
   };
 
   return {
@@ -158,6 +173,6 @@ export function usePostsByCategory({
     updatePost,
     deletePost,
     likePost,
-    unlikePost
+    unlikePost,
   };
 }

@@ -11,7 +11,11 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+    if (
+      !content.includes('<<<<<<<') &&
+      !content.includes('') &&
+      !content.includes('>>>>>>>')
+    ) {
       return false; // No conflicts in this file
     }
 
@@ -21,23 +25,38 @@ function resolveMergeConflicts(filePath) {
     let resolvedContent = content;
 
     // Pattern 1: Conflicts with file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n(.*?)\n>>>>>>>[^\n]*\n?/gs, '$1');
+    resolvedContent = resolvedContent.replace(
+      /<<<<<<<[^\n]*\n.*?\n\n(.*?)\n>>>>>>>[^\n]*\n?/gs,
+      '$1'
+    );
 
     // Pattern 2: Simple conflicts without file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n(.*?)\n>>>>>>>[^\n]*\n?/gs, '$1');
+    resolvedContent = resolvedContent.replace(
+      /<<<<<<<[^\n]*\n.*?\n\n(.*?)\n>>>>>>>[^\n]*\n?/gs,
+      '$1'
+    );
 
     // Pattern 3: Handle any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
+    resolvedContent = resolvedContent.replace(
+      /<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs,
+      ''
+    );
 
     // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
+    resolvedContent = resolvedContent.replace(
+      /<<<<<<<[^\n]*\n.*?\n\n.*?\n>>>>>>>[^\n]*\n?/gs,
+      ''
+    );
 
     // Write resolved content back to file
     fs.writeFileSync(filePath, resolvedContent);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
   } catch (error) {
-    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    console.error(
+      `❌ Error resolving conflicts in ${filePath}:`,
+      error.message
+    );
     return false;
   }
 }
@@ -56,14 +75,22 @@ function findConflictFiles(dir) {
 
         if (stat.isDirectory()) {
           // Skip certain directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
+          if (
+            !['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(
+              item
+            )
+          ) {
             scanDirectory(fullPath);
           }
         } else if (stat.isFile()) {
           // Check if file has merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+            if (
+              content.includes('<<<<<<<') ||
+              content.includes('') ||
+              content.includes('>>>>>>>')
+            ) {
               conflictFiles.push(fullPath);
             }
           } catch (error) {
@@ -108,17 +135,19 @@ try {
       'Run: git commit -m "Resolve all merge conflicts automatically"',
       'Run: git push origin main',
       'Check GitHub for open PRs: https://github.com/Zion-Holdings/zion.app/pulls',
-      'Merge any remaining PRs into main branch'
-    ]
+      'Merge any remaining PRs into main branch',
+    ],
   };
 
-  fs.writeFileSync('/workspace/conflict-resolution-summary.json', JSON.stringify(summary, null, 2));
+  fs.writeFileSync(
+    '/workspace/conflict-resolution-summary.json',
+    JSON.stringify(summary, null, 2)
+  );
 
   console.log('🎉 Complete merge process finished!');
   console.log('📄 Summary saved to conflict-resolution-summary.json');
   console.log('📋 Next steps:');
   summary.nextSteps.forEach(step => console.log(`   ${step}`));
-
 } catch (error) {
   console.error('❌ Error during merge process:', error.message);
   process.exit(1);

@@ -36,7 +36,9 @@ function mergeBranch(branchName) {
   console.log(`📋 Processing branch: ${branchName}`);
 
   if (!branchExists(branchName)) {
-    console.log(`❌ Branch ${branchName} does not exist on origin, skipping...`);
+    console.log(
+      `❌ Branch ${branchName} does not exist on origin, skipping...`
+    );
     return false;
   }
 
@@ -58,19 +60,27 @@ function mergeBranch(branchName) {
 
     // Check for conflicts
     const status = runGitCommand('git status --porcelain');
-    if (status && (status.includes('UU') || status.includes('AA') || status.includes('DD'))) {
+    if (
+      status &&
+      (status.includes('UU') || status.includes('AA') || status.includes('DD'))
+    ) {
       console.log(`🔧 Resolving merge conflicts in ${branchName}...`);
 
       // Auto-resolve conflicts
       const conflictFiles = status
         .split('\n')
-        .filter((line) => line.match(/^(UU|AA|DD)/))
-        .map((line) => line.replace(/^(UU|AA|DD)\s+/, ''));
+        .filter(line => line.match(/^(UU|AA|DD)/))
+        .map(line => line.replace(/^(UU|AA|DD)\s+/, ''));
 
       for (const file of conflictFiles) {
         console.log(`  - Resolving conflict in: ${file}`);
 
-        if (file === 'package.json' || file === 'package-lock.json' || file === 'pnpm-lock.yaml' || file === 'yarn.lock') {
+        if (
+          file === 'package.json' ||
+          file === 'package-lock.json' ||
+          file === 'pnpm-lock.yaml' ||
+          file === 'yarn.lock'
+        ) {
           // Prefer incoming changes for dependency manifests
           runGitCommand(`git checkout --theirs "${file}"`);
         } else {
@@ -88,7 +98,9 @@ function mergeBranch(branchName) {
       // Complete the merge
       const commitResult = runGitCommand('git commit --no-edit');
       if (commitResult !== null) {
-        console.log(`✅ Successfully resolved conflicts and merged ${branchName}`);
+        console.log(
+          `✅ Successfully resolved conflicts and merged ${branchName}`
+        );
         return true;
       } else {
         console.log(`❌ Failed to complete merge for ${branchName}`);
@@ -108,7 +120,9 @@ function parseOrigin() {
   if (!originUrl) {
     throw new Error('Cannot determine origin URL');
   }
-  const match = originUrl.match(/x-access-token:([^@]+)@github\.com\/([^/]+)\/([^\s]+?)(?:\.git)?$/);
+  const match = originUrl.match(
+    /x-access-token:([^@]+)@github\.com\/([^/]+)\/([^\s]+?)(?:\.git)?$/
+  );
   if (!match) {
     throw new Error('Failed to parse token/owner/repo from origin URL');
   }
@@ -134,10 +148,19 @@ async function fetchOpenPrBranches() {
   }
   const prs = await res.json();
   const branches = prs
-    .map((pr) => ({ number: pr.number, title: pr.title, headRef: pr.head.ref, headRepo: pr.head.repo?.full_name }))
+    .map(pr => ({
+      number: pr.number,
+      title: pr.title,
+      headRef: pr.head.ref,
+      headRepo: pr.head.repo?.full_name,
+    }))
     // Only merge PRs whose head repo is the same origin (we only have origin access)
-    .filter((pr) => pr.headRepo && pr.headRepo.toLowerCase() === `${owner}/${repo}`.toLowerCase())
-    .map((pr) => pr.headRef);
+    .filter(
+      pr =>
+        pr.headRepo &&
+        pr.headRepo.toLowerCase() === `${owner}/${repo}`.toLowerCase()
+    )
+    .map(pr => pr.headRef);
 
   // De-duplicate
   return Array.from(new Set(branches));
@@ -163,7 +186,7 @@ async function main() {
     }
 
     console.log(`Found ${prBranches.length} PR branch(es):`);
-    prBranches.forEach((b) => console.log(` - ${b}`));
+    prBranches.forEach(b => console.log(` - ${b}`));
 
     let successCount = 0;
 
@@ -174,7 +197,9 @@ async function main() {
       }
     }
 
-    console.log(`🎉 Processed ${successCount}/${prBranches.length} PRs successfully!`);
+    console.log(
+      `🎉 Processed ${successCount}/${prBranches.length} PRs successfully!`
+    );
 
     // Push changes to main
     console.log('📤 Pushing changes to main...');

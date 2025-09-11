@@ -12,13 +12,13 @@ export const real2026Q4ExpansionsV2: Real2026Q4ExpansionV2[] = [
     name: 'Q4 2026 V2 AI Service',
     tagline: 'Fourth quarter 2026 V2 AI innovations',
     price: '$799',
-    category: 'AI & Machine Learning'
+    category: 'AI & Machine Learning',
   },
   {
     id: 'q4-2026-v2-2',
     name: 'Q4 2026 V2 Cloud Service',
     tagline: 'Fourth quarter 2026 V2 cloud solutions',
     price: '$699',
-    category: 'Cloud & Infrastructure'
-  }
+    category: 'Cloud & Infrastructure',
+  },
 ];

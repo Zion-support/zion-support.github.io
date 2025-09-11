@@ -2,7 +2,7 @@
 // Scheduled in netlify.toml -> [[scheduled]] path = "/.netlify/functions/uptime_synthetic"
 
 export const config = {
-  path: "/.netlify/functions/uptime_synthetic",
+  path: '/.netlify/functions/uptime_synthetic',
 };
 
 import type { Handler } from '@netlify/functions';
@@ -18,7 +18,10 @@ async function ping(path: string) {
   const start = Date.now();
   const id = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(url, { signal: ctrl.signal, headers: { 'User-Agent': 'zion-app-uptime' } });
+    const res = await fetch(url, {
+      signal: ctrl.signal,
+      headers: { 'User-Agent': 'zion-app-uptime' },
+    });
     const ms = Date.now() - start;
     return { path, status: res.status, ok: res.ok, ms };
   } catch {
@@ -41,9 +44,16 @@ export const handler: Handler = async () => {
     for (const e of ENDPOINTS) {
       checks.push(await ping(e));
     }
-    const content = JSON.stringify({ timestamp: new Date().toISOString(), checks }, null, 2) + '\n';
+    const content =
+      JSON.stringify({ timestamp: new Date().toISOString(), checks }, null, 2) +
+      '\n';
     const dest = `data/reports/uptime/uptime-${stamp()}.json`;
-    const commit = await commitToRepo({ path: dest, content, message: 'chore(uptime): synthetic checks', branch: 'main' });
+    const commit = await commitToRepo({
+      path: dest,
+      content,
+      message: 'chore(uptime): synthetic checks',
+      branch: 'main',
+    });
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit }) };
   } catch (e: any) {
     return { statusCode: 500, body: String(e?.message || e) };

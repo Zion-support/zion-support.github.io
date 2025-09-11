@@ -19,7 +19,10 @@ describe('buy now full checkout', () => {
 
     cy.window().then(win => {
       win.Stripe = () => ({
-        confirmCardPayment: () => Promise.resolve({ paymentIntent: { id: 'pi_test123', status: 'succeeded' } }),
+        confirmCardPayment: () =>
+          Promise.resolve({
+            paymentIntent: { id: 'pi_test123', status: 'succeeded' },
+          }),
         elements: () => ({ getElement: () => ({}) }),
       });
     });

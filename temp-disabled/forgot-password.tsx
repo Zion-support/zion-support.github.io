@@ -8,7 +8,7 @@ import { AuthLayout } from '@/layout';
 import { toast } from '@/hooks/use-toast';
 
 async function resetPassword(
-  email: string,
+  email: string
 ): Promise<{ ok: boolean; error?: string }> {
   try {
     const res = await fetch('/api/auth/forgot', {
@@ -41,18 +41,18 @@ const ForgotPassword = () => {
     try {
       const { ok, error } = await resetPassword(email);
       if (!ok) throw new Error(error || 'Reset failed');
-      
+
       // Clear any previous errors and show success message
       setError(null);
       setMessage(
-        'If your email address is registered, you will receive a password reset link shortly.',
+        'If your email address is registered, you will receive a password reset link shortly.'
       );
-      
+
       // Also show a toast for better user feedback
       toast({
-        title: "Reset Link Sent",
-        description: "Please check your email for password reset instructions.",
-        variant: "default",
+        title: 'Reset Link Sent',
+        description: 'Please check your email for password reset instructions.',
+        variant: 'default',
       });
     } catch (err: any) {
       Sentry.captureException(err);
@@ -67,43 +67,43 @@ const ForgotPassword = () => {
 
   return (
     <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center bg-background p-4">
-        <div className="w-full max-w-sm rounded-lg border border-border bg-card p-8 shadow-lg">
-          <h1 className="mb-6 text-center text-2xl font-bold">
+      <div className='flex min-h-screen items-center justify-center bg-background p-4'>
+        <div className='w-full max-w-sm rounded-lg border border-border bg-card p-8 shadow-lg'>
+          <h1 className='mb-6 text-center text-2xl font-bold'>
             Forgot Password
           </h1>
 
-          <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+          <form onSubmit={handleSubmit} className='space-y-4' noValidate>
             <div>
-              <label htmlFor="email" className="mb-1 block text-sm font-medium">
+              <label htmlFor='email' className='mb-1 block text-sm font-medium'>
                 Email Address
               </label>
               <Input
-                type="email"
-                id="email"
+                type='email'
+                id='email'
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={e => setEmail(e.target.value)}
                 required
                 disabled={loading}
               />
             </div>
-            <Button type="submit" className="w-full" disabled={loading}>
+            <Button type='submit' className='w-full' disabled={loading}>
               {loading ? 'Sending...' : 'Send Reset Link'}
             </Button>
           </form>
 
           {message && (
-            <p className="mt-4 text-center text-sm text-green-600">{message}</p>
+            <p className='mt-4 text-center text-sm text-green-600'>{message}</p>
           )}
           {error && (
-            <Alert status="error" mt={4}>
+            <Alert status='error' mt={4}>
               <AlertIcon />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
-          <p className="mt-4 text-center text-sm">
+          <p className='mt-4 text-center text-sm'>
             Remember your password?{' '}
-                          <Link href="/auth/login" className="underline">
+            <Link href='/auth/login' className='underline'>
               Login
             </Link>
           </p>

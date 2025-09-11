@@ -5,10 +5,10 @@ function fixTypes(content) {
   // Fix any types to more specific types
   content = content.replace(/:\s*any\b/g, ': unknown');
   content = content.replace(/<any>/g, '<unknown>');
-  
+
   // Fix console statements
   content = content.replace(/console\.(log|warn|error)\(/g, '// console.$1(');
-  
+
   return content;
 }
 
@@ -36,7 +36,7 @@ const files = [
   'src/utils/security.ts',
   'src/utils/seo.ts',
   'src/types/components.ts',
-  'src/vite-env.d.ts'
+  'src/vite-env.d.ts',
 ];
 
 files.forEach(file => {

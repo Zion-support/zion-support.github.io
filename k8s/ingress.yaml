@@ -5,21 +5,21 @@ metadata:
   namespace: ziontechgroup
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: 'letsencrypt-prod'
 spec:
   tls:
-  - hosts:
-    - ziontechgroup.com
-    - www.ziontechgroup.com
-    secretName: ziontechgroup-tls
+    - hosts:
+        - ziontechgroup.com
+        - www.ziontechgroup.com
+      secretName: ziontechgroup-tls
   rules:
-  - host: ziontechgroup.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: ziontechgroup-service
-            port:
-              number: 80
+    - host: ziontechgroup.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ziontechgroup-service
+                port:
+                  number: 80

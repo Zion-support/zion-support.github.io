@@ -42,7 +42,5 @@
       "error": 2
     }
   },
-  "recommendations": [
-    "Fix build errors to ensure project can be deployed"
-  ]
+  "recommendations": ["Fix build errors to ensure project can be deployed"]
 }

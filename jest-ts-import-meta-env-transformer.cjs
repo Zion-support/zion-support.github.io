@@ -8,7 +8,7 @@ const transformerVersion = 2; // Incremented version
 // For `isolatedModules: true`, ts-jest often passes only the TransformationContext.
 function factory(ctx) {
   // ctx is ts.TransformationContext
-  return (sourceFile) => {
+  return sourceFile => {
     // This function is ts.Transformer<ts.SourceFile>
     function visitor(node) {
       // node is ts.Node
@@ -26,11 +26,11 @@ function factory(ctx) {
             ts.factory.createPropertyAssignment(
               ts.factory.createIdentifier('VITE_REOWN_PROJECT_ID'),
               ts.factory.createStringLiteral(
-                'test_project_id_from_jest_transformer',
-              ),
+                'test_project_id_from_jest_transformer'
+              )
             ),
           ],
-          false, // multiLine
+          false // multiLine
         );
       }
       return ts.visitEachChild(node, visitor, ctx);

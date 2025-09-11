@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
   try {
     const startTime = Date.now();
     const memoryUsage = process.memoryUsage();
-    
+
     // Perform health checks
     const checks = {
       build: true,
@@ -67,29 +67,33 @@ exports.handler = async (event, context) => {
     };
   } catch (error) {
     console.error('Health check failed:', error);
-    
+
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({
-        status: 'unhealthy',
-        timestamp: new Date().toISOString(),
-        error: error.message,
-        checks: {
-          build: false,
-          dependencies: false,
-          performance: false,
-          netlify: false,
-          memory: false,
-          uptime: false,
+      body: JSON.stringify(
+        {
+          status: 'unhealthy',
+          timestamp: new Date().toISOString(),
+          error: error.message,
+          checks: {
+            build: false,
+            dependencies: false,
+            performance: false,
+            netlify: false,
+            memory: false,
+            uptime: false,
+          },
+          services: {
+            netlify: 'down',
+            build: 'down',
+            deployment: 'down',
+            functions: 'down',
+          },
         },
-        services: {
-          netlify: 'down',
-          build: 'down',
-          deployment: 'down',
-          functions: 'down',
-        },
-      }, null, 2),
+        null,
+        2
+      ),
     };
   }
 };

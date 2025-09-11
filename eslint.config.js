@@ -17,8 +17,8 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
       globals: {
         ...globals.browser,
@@ -45,14 +45,14 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-        afterAll: 'readonly'
-      }
+        afterAll: 'readonly',
+      },
     },
     plugins: {
       react,
       'react-hooks': reactHooks,
       '@typescript-eslint': tseslint,
-      'jsx-a11y': jsxA11y
+      'jsx-a11y': jsxA11y,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
@@ -63,20 +63,20 @@ export default [
       //   "warn",
       //   { allowConstantExport: true }
       // ],
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "react-hooks/exhaustive-deps": "warn",
-      "no-undef": "off",
-      "no-unused-vars": "off",
-      "no-console": "warn",
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off"
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
     },
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
     ignores: [
@@ -207,7 +207,7 @@ export default [
       '**/pages/**',
       'test*.js',
       'test*.ts',
-      'test*.tsx'
-    ]
-  }
+      'test*.tsx',
+    ],
+  },
 ];

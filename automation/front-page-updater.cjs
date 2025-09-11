@@ -16,13 +16,14 @@ function titleCase(slug) {
     .replace(/\s+/g, ' ')
     .trim()
     .split(' ')
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+    .map(w => (w ? w[0].toUpperCase() + w.slice(1) : w))
     .join(' ');
 }
 
 function discoverInternal() {
   const items = [];
-  const add = (href, label, desc) => items.push({ type: 'internal', href, label, desc });
+  const add = (href, label, desc) =>
+    items.push({ type: 'internal', href, label, desc });
 
   const pages = [
     ['/automation', 'Automation Hub', 'Factories & live workflows'],
@@ -38,14 +39,30 @@ function discoverInternal() {
 function discoverExternal() {
   const repo = 'https://github.com/Zion-Holdings/zion.app';
   return [
-    { type: 'external', href: `${repo}/actions`, label: 'Live Pipelines', desc: 'CI logs & artifacts' },
-    { type: 'external', href: `${repo}/tree/main/docs`, label: 'Documentation', desc: 'Technical notes & guides' },
-    { type: 'external', href: `${repo}/blob/main/docs/CHANGELOG_AI.md`, label: 'AI Changelog', desc: 'Summarized autonomous changes' },
+    {
+      type: 'external',
+      href: `${repo}/actions`,
+      label: 'Live Pipelines',
+      desc: 'CI logs & artifacts',
+    },
+    {
+      type: 'external',
+      href: `${repo}/tree/main/docs`,
+      label: 'Documentation',
+      desc: 'Technical notes & guides',
+    },
+    {
+      type: 'external',
+      href: `${repo}/blob/main/docs/CHANGELOG_AI.md`,
+      label: 'AI Changelog',
+      desc: 'Summarized autonomous changes',
+    },
   ];
 }
 
 function buildCard(item) {
-  const common = 'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover';
+  const common =
+    'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover';
   const body = `\n                  <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\" />\n\n                  <div className=\"text-base font-semibold\">${item.label}</div>\n                  <div className=\"mt-1 text-sm text-white/75\">${item.desc}</div>\n                  <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90\">Open <span aria-hidden>${item.type === 'external' ? '↗' : '→'}</span></div>\n`;
   if (item.type === 'external') {
     return `            <a href=\"${item.href}\" target=\"_blank\" rel=\"noopener\" className=\"${common}\">${body}            </a>`;

@@ -1,19 +1,28 @@
-exports.handler = async function() {
-  const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
-  const buildHook = process.env.NETLIFY_BUILD_HOOK_URL || process.env.BUILD_HOOK_URL || '';
+exports.handler = async function () {
+  const baseUrl = (
+    process.env.SITE_URL ||
+    process.env.URL ||
+    process.env.DEPLOY_PRIME_URL ||
+    ''
+  ).replace(/\/$/, '');
+  const buildHook =
+    process.env.NETLIFY_BUILD_HOOK_URL || process.env.BUILD_HOOK_URL || '';
   const githubToken = process.env.GITHUB_TOKEN || '';
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
   const githubBranch = process.env.GIT_BRANCH || 'main';
   const requestTimeoutMs = 15000;
   const maxConcurrency = 12;
 
-  function log(msg) { console.log(`[cloud-conductor] ${msg}`); }
+  function log(msg) {
+    console.log(`[cloud-conductor] ${msg}`);
+  }
 
   // Load manifest functions
   let manifestFunctions = [];
   try {
     const manifest = require('./functions-manifest.json');
-    if (Array.isArray(manifest.functions)) manifestFunctions = manifest.functions;
+    if (Array.isArray(manifest.functions))
+      manifestFunctions = manifest.functions;
   } catch {
     manifestFunctions = [];
   }
@@ -38,7 +47,12 @@ exports.handler = async function() {
 
   // Build the execution plan
   const unique = new Set();
-  function pushUnique(arr, name) { if (name && !unique.has(name)) { unique.add(name); arr.push(name); } }
+  function pushUnique(arr, name) {
+    if (name && !unique.has(name)) {
+      unique.add(name);
+      arr.push(name);
+    }
+  }
 
   const plan = [];
   // 1) Priority set
@@ -53,12 +67,16 @@ exports.handler = async function() {
 
   async function invoke(name) {
     const startedAt = Date.now();
-    if (!baseUrl) return { name, status: 0, ok: false, ms: 0, error: 'No base URL' };
+    if (!baseUrl)
+      return { name, status: 0, ok: false, ms: 0, error: 'No base URL' };
     const controller = new AbortController();
     const url = `${baseUrl}/.netlify/functions/${name}`;
     const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
     try {
-      const res = await fetch(url, { method: 'GET', signal: controller.signal });
+      const res = await fetch(url, {
+        method: 'GET',
+        signal: controller.signal,
+      });
       clearTimeout(timeout);
       const ms = Date.now() - startedAt;
       return { name, status: res.status, ok: res.ok, ms };
@@ -79,13 +97,21 @@ exports.handler = async function() {
         results.push(await invoke(current));
       }
     }
-    const workers = Array.from({ length: Math.min(maxConcurrency, names.length) }, () => worker());
+    const workers = Array.from(
+      { length: Math.min(maxConcurrency, names.length) },
+      () => worker()
+    );
     await Promise.all(workers);
     return results;
   }
 
   async function triggerBuildHook() {
-    if (!buildHook) return { ok: false, status: 0, error: 'No NETLIFY_BUILD_HOOK_URL provided' };
+    if (!buildHook)
+      return {
+        ok: false,
+        status: 0,
+        error: 'No NETLIFY_BUILD_HOOK_URL provided',
+      };
     try {
       const res = await fetch(buildHook, { method: 'POST' });
       return { ok: res.ok, status: res.status };
@@ -95,17 +121,21 @@ exports.handler = async function() {
   }
 
   async function commitFile(path, contentText, messageSuffix) {
-    if (!githubToken) return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
+    if (!githubToken)
+      return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' };
     const content = Buffer.from(contentText, 'utf8').toString('base64');
     const headers = {
       Authorization: `token ${githubToken}`,
       'Content-Type': 'application/json',
-      'User-Agent': 'netlify-cloud-conductor'
+      'User-Agent': 'netlify-cloud-conductor',
     };
     // get existing sha
     let sha;
     try {
-      const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}?ref=${encodeURIComponent(githubBranch)}`, { headers });
+      const getRes = await fetch(
+        `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}?ref=${encodeURIComponent(githubBranch)}`,
+        { headers }
+      );
       if (getRes.ok) {
         const json = await getRes.json();
         sha = json.sha;
@@ -117,18 +147,25 @@ exports.handler = async function() {
       message: `chore: cloud conductor ${messageSuffix} (${new Date().toISOString()})`,
       content,
       branch: githubBranch,
-      sha
+      sha,
     };
-    const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}`, {
-      method: 'PUT',
-      headers,
-      body: JSON.stringify(body)
-    });
+    const putRes = await fetch(
+      `https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}`,
+      {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify(body),
+      }
+    );
     const ok = putRes.ok;
     const status = putRes.status;
     let error;
     if (!ok) {
-      try { error = await putRes.text(); } catch (e) { error = String(e); }
+      try {
+        error = await putRes.text();
+      } catch (e) {
+        error = String(e);
+      }
     }
     return { ok, status, error };
   }
@@ -140,7 +177,9 @@ exports.handler = async function() {
       attempted: functionNames.length,
       ok: results.filter(r => r.ok).length,
       failed: results.filter(r => !r.ok).length,
-      avgMs: Math.round(results.reduce((a, r) => a + r.ms, 0) / Math.max(1, results.length))
+      avgMs: Math.round(
+        results.reduce((a, r) => a + r.ms, 0) / Math.max(1, results.length)
+      ),
     };
 
     // Prepare report
@@ -153,16 +192,25 @@ exports.handler = async function() {
       totals,
       priority,
       functionNames,
-      results
+      results,
     };
 
     // Commit latest and timestamped reports
     const latestPath = 'data/reports/cloud-conductor/latest.json';
     const datedPath = `data/reports/cloud-conductor/report-${iso}.json`;
-    let commitLatest = { ok: false }, commitDated = { ok: false };
+    let commitLatest = { ok: false },
+      commitDated = { ok: false };
     if (githubToken) {
-      commitLatest = await commitFile(latestPath, JSON.stringify(report, null, 2), 'latest report');
-      commitDated = await commitFile(datedPath, JSON.stringify(report, null, 2), 'report snapshot');
+      commitLatest = await commitFile(
+        latestPath,
+        JSON.stringify(report, null, 2),
+        'latest report'
+      );
+      commitDated = await commitFile(
+        datedPath,
+        JSON.stringify(report, null, 2),
+        'report snapshot'
+      );
     }
 
     // Prefer build hook; otherwise rely on commit to trigger build
@@ -171,8 +219,15 @@ exports.handler = async function() {
       buildResult = { method: 'build_hook', ...(await triggerBuildHook()) };
     } else if (githubToken) {
       // Also drop a small stamp to ensure site rebuilds even if repo ignores report paths
-      await commitFile('automation/cloud-conductor-stamp.txt', `Triggered at ${new Date().toISOString()}\n`, 'stamp');
-      buildResult = { method: 'github_commit', ok: commitLatest.ok || commitDated.ok };
+      await commitFile(
+        'automation/cloud-conductor-stamp.txt',
+        `Triggered at ${new Date().toISOString()}\n`,
+        'stamp'
+      );
+      buildResult = {
+        method: 'github_commit',
+        ok: commitLatest.ok || commitDated.ok,
+      };
     }
 
     return {
@@ -184,8 +239,8 @@ exports.handler = async function() {
         totals,
         buildResult,
         commit: { latest: commitLatest, dated: commitDated },
-        results
-      })
+        results,
+      }),
     };
   } catch (err) {
     log(String(err));

@@ -25,12 +25,13 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     tagline: 'Generate high-quality content with AI',
     price: '$29',
     period: '/month',
-    description: 'AI-powered content generation for blogs, social media, and marketing materials.',
+    description:
+      'AI-powered content generation for blogs, social media, and marketing materials.',
     features: [
       'AI content generation',
       'Multiple content types',
       'SEO optimization',
-      'Brand voice customization'
+      'Brand voice customization',
     ],
     popular: true,
     icon: '📝',
@@ -41,6 +42,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     targetAudience: 'Content creators',
     realImplementation: true,
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  }
+    website: 'https://ziontechgroup.com',
+  },
 ];

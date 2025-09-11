@@ -11,16 +11,28 @@ export type EncryptedPayload = {
   createdAt: string;
 };
 
-export async function deriveKeyFromPassphrase(passphrase: string, salt: Buffer): Promise<Buffer> {
+export async function deriveKeyFromPassphrase(
+  passphrase: string,
+  salt: Buffer
+): Promise<Buffer> {
   return new Promise((resolve, reject) => {
-    crypto.scrypt(passphrase, salt, 32, { N: 16384, r: 8, p: 1 }, (err, derivedKey) => {
-      if (err) return reject(err);
-      resolve(derivedKey as Buffer);
-    });
+    crypto.scrypt(
+      passphrase,
+      salt,
+      32,
+      { N: 16384, r: 8, p: 1 },
+      (err, derivedKey) => {
+        if (err) return reject(err);
+        resolve(derivedKey as Buffer);
+      }
+    );
   });
 }
 
-export async function encryptJsonObject<T extends object>(data: T, passphrase: string): Promise<EncryptedPayload> {
+export async function encryptJsonObject<T extends object>(
+  data: T,
+  passphrase: string
+): Promise<EncryptedPayload> {
   const salt = crypto.randomBytes(16);
   const iv = crypto.randomBytes(12);
   const key = await deriveKeyFromPassphrase(passphrase, salt);
@@ -38,7 +50,10 @@ export async function encryptJsonObject<T extends object>(data: T, passphrase: s
   };
 }
 
-export async function decryptToJsonObject<T = unknown>(payload: EncryptedPayload, passphrase: string): Promise<T> {
+export async function decryptToJsonObject<T = unknown>(
+  payload: EncryptedPayload,
+  passphrase: string
+): Promise<T> {
   const iv = Buffer.from(payload.iv, 'hex');
   const salt = Buffer.from(payload.salt, 'hex');
   const authTag = Buffer.from(payload.authTag, 'hex');
@@ -46,7 +61,10 @@ export async function decryptToJsonObject<T = unknown>(payload: EncryptedPayload
   const key = await deriveKeyFromPassphrase(passphrase, salt);
   const decipher = crypto.createDecipheriv('aes-256-gcm', key, iv);
   decipher.setAuthTag(authTag);
-  const decrypted = Buffer.concat([decipher.update(ciphertext), decipher.final()]);
+  const decrypted = Buffer.concat([
+    decipher.update(ciphertext),
+    decipher.final(),
+  ]);
   const json = JSON.parse(decrypted.toString('utf8')) as T;
   return json;
 }
@@ -76,7 +94,10 @@ export function getVaultFilePath(vaultId: string): string {
   return path.join(getVaultsDir(), `${vaultId}.json`);
 }
 
-export function writeVaultFile(vaultId: string, data: PersistedVaultFile): void {
+export function writeVaultFile(
+  vaultId: string,
+  data: PersistedVaultFile
+): void {
   const filePath = getVaultFilePath(vaultId);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 }

@@ -14,7 +14,7 @@ function log(message, color = '') {
     yellow: '\x1b[33m',
     blue: '\x1b[34m',
     cyan: '\x1b[36m',
-    reset: '\x1b[0m'
+    reset: '\x1b[0m',
   };
   console.log(`${colors[color]}${message}${colors.reset}`);
 }
@@ -35,44 +35,36 @@ function runCommand(command, description) {
 // Function to optimize TypeScript configuration
 function optimizeTypeScriptConfig() {
   log('🔧 Optimizing TypeScript configuration...', 'cyan');
-  
+
   const tsconfig = {
-    "compilerOptions": {
-      "target": "ES2020",
-      "lib": ["DOM", "DOM.Iterable", "ES6"],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "module": "ESNext",
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "noEmit": true,
-      "jsx": "react-jsx",
-      "incremental": true,
-      "noUnusedLocals": false,
-      "noUnusedParameters": false,
-      "exactOptionalPropertyTypes": false,
-      "noImplicitReturns": true,
-      "noFallthroughCasesInSwitch": true,
-      "noUncheckedIndexedAccess": false,
-      "noImplicitOverride": true,
-      "allowUnusedLabels": false,
-      "allowUnreachableCode": false
+    compilerOptions: {
+      target: 'ES2020',
+      lib: ['DOM', 'DOM.Iterable', 'ES6'],
+      allowJs: true,
+      skipLibCheck: true,
+      esModuleInterop: true,
+      allowSyntheticDefaultImports: true,
+      strict: true,
+      forceConsistentCasingInFileNames: true,
+      module: 'ESNext',
+      moduleResolution: 'node',
+      resolveJsonModule: true,
+      isolatedModules: true,
+      noEmit: true,
+      jsx: 'react-jsx',
+      incremental: true,
+      noUnusedLocals: false,
+      noUnusedParameters: false,
+      exactOptionalPropertyTypes: false,
+      noImplicitReturns: true,
+      noFallthroughCasesInSwitch: true,
+      noUncheckedIndexedAccess: false,
+      noImplicitOverride: true,
+      allowUnusedLabels: false,
+      allowUnreachableCode: false,
     },
-    "include": [
-      "src/**/*",
-      "**/*.ts",
-      "**/*.tsx"
-    ],
-    "exclude": [
-      "node_modules",
-      "dist",
-      "build"
-    ]
+    include: ['src/**/*', '**/*.ts', '**/*.tsx'],
+    exclude: ['node_modules', 'dist', 'build'],
   };
 
   fs.writeFileSync('tsconfig.json', JSON.stringify(tsconfig, null, 2));
@@ -82,7 +74,7 @@ function optimizeTypeScriptConfig() {
 // Function to create performance optimization utilities
 function createPerformanceUtils() {
   log('🔧 Creating performance optimization utilities...', 'cyan');
-  
+
   const performanceUtils = `// Performance optimization utilities
 export const debounce = (func: Function, wait: number) => {
   let timeout: NodeJS.Timeout;
@@ -135,7 +127,7 @@ export const measurePerformance = (name: string, fn: Function) => {
 // Function to create SEO optimization utilities
 function createSEOUtils() {
   log('🔧 Creating SEO optimization utilities...', 'cyan');
-  
+
   const seoUtils = `// SEO optimization utilities
 export const generateMetaTags = (title: string, description: string, url: string) => {
   return {
@@ -176,7 +168,7 @@ export const generateSitemap = (routes: string[]) => {
 // Function to create error boundary component
 function createErrorBoundary() {
   log('🔧 Creating error boundary component...', 'cyan');
-  
+
   const errorBoundary = `import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -226,27 +218,26 @@ export class ErrorBoundary extends Component<Props, State> {
 async function main() {
   try {
     log('🚀 Starting comprehensive improvements...', 'cyan');
-    
+
     // Optimize configurations
     optimizeTypeScriptConfig();
-    
+
     // Create utility functions
     createPerformanceUtils();
     createSEOUtils();
     createErrorBoundary();
-    
+
     // Try to install dependencies
     log('📦 Installing dependencies...', 'blue');
     runCommand('npm install --legacy-peer-deps', 'Installing dependencies');
-    
+
     // Try to build
     log('🔨 Building project...', 'blue');
     runCommand('npm run build', 'Building project');
-    
+
     log('🎉 Comprehensive improvements completed!', 'green');
     log('✅ All optimizations and utilities have been created', 'green');
     log('✅ Project is ready for deployment', 'green');
-    
   } catch (error) {
     log(`❌ Error during improvements: ${error.message}`, 'red');
     process.exit(1);

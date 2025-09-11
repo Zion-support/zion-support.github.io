@@ -6,6 +6,9 @@ describe('Marketplace Page', () => {
     cy.get('[data-testid="category-card"]', { timeout: 10000 }).should('exist');
 
     // Assert that at least one category card is rendered
-    cy.get('[data-testid="category-card"]').should('have.length.greaterThan', 0);
+    cy.get('[data-testid="category-card"]').should(
+      'have.length.greaterThan',
+      0
+    );
   });
 });

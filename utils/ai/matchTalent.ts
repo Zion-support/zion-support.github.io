@@ -4,7 +4,9 @@ import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
-export async function normalizeJobWithAI(job: JobSubmission): Promise<NormalizedJobProfile> {
+export async function normalizeJobWithAI(
+  job: JobSubmission
+): Promise<NormalizedJobProfile> {
   const systemPrompt = `You normalize tech skill tags. Convert variants to canonical forms (e.g., "node js", "NodeJS" => "Node.js"). Extract 3-7 key requirements.`;
   const user = {
     title: job.title,
@@ -29,8 +31,12 @@ export async function normalizeJobWithAI(job: JobSubmission): Promise<Normalized
     const parsed = JSON.parse(content);
     const normalized: NormalizedJobProfile = {
       title: job.title,
-      normalizedSkills: Array.isArray(parsed.normalizedSkills) ? parsed.normalizedSkills : job.requiredSkills,
-      keyRequirements: Array.isArray(parsed.keyRequirements) ? parsed.keyRequirements : [],
+      normalizedSkills: Array.isArray(parsed.normalizedSkills)
+        ? parsed.normalizedSkills
+        : job.requiredSkills,
+      keyRequirements: Array.isArray(parsed.keyRequirements)
+        ? parsed.keyRequirements
+        : [],
       category: job.category,
       budget: job.budget,
       timeline: job.timeline,
@@ -49,7 +55,10 @@ export async function normalizeJobWithAI(job: JobSubmission): Promise<Normalized
   }
 }
 
-export function buildMatchPrompt(job: NormalizedJobProfile, talents: TalentProfile[]): string {
+export function buildMatchPrompt(
+  job: NormalizedJobProfile,
+  talents: TalentProfile[]
+): string {
   return [
     'Based on this job description and required skills, identify the top 5 matching talent profiles from the database. Consider experience, skill tags, availability, and hourly rate.',
     '',
@@ -57,26 +66,35 @@ export function buildMatchPrompt(job: NormalizedJobProfile, talents: TalentProfi
     JSON.stringify(job, null, 2),
     '',
     'Talent Profiles JSON:',
-    JSON.stringify(talents.map(t => ({
-      slug: t.slug,
-      title: t.title,
-      skills: t.skills,
-      availability: t.availability,
-      hourlyRateUsd: t.hourlyRateUsd,
-    })), null, 2),
+    JSON.stringify(
+      talents.map(t => ({
+        slug: t.slug,
+        title: t.title,
+        skills: t.skills,
+        availability: t.availability,
+        hourlyRateUsd: t.hourlyRateUsd,
+      })),
+      null,
+      2
+    ),
     '',
     'Return strictly JSON with { matches: Array<{ slug: string; score: number }> }',
   ].join('\n');
 }
 
-export async function rankTalentsWithAI(job: NormalizedJobProfile): Promise<{ slug: string; score: number }[]> {
+export async function rankTalentsWithAI(
+  job: NormalizedJobProfile
+): Promise<{ slug: string; score: number }[]> {
   const prompt = buildMatchPrompt(job, TALENT_PROFILES);
   try {
     const resp = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       temperature: 0.1,
       messages: [
-        { role: 'system', content: 'You are a precise ranking engine that outputs strict JSON.' },
+        {
+          role: 'system',
+          content: 'You are a precise ranking engine that outputs strict JSON.',
+        },
         { role: 'user', content: prompt },
       ],
       response_format: { type: 'json_object' },
@@ -85,7 +103,10 @@ export async function rankTalentsWithAI(job: NormalizedJobProfile): Promise<{ sl
     const parsed = JSON.parse(content);
     if (Array.isArray(parsed.matches)) {
       return parsed.matches
-        .filter((m: any) => m && typeof m.slug === 'string' && typeof m.score === 'number')
+        .filter(
+          (m: any) =>
+            m && typeof m.slug === 'string' && typeof m.score === 'number'
+        )
         .slice(0, 5);
     }
   } catch (e) {}
@@ -93,23 +114,41 @@ export async function rankTalentsWithAI(job: NormalizedJobProfile): Promise<{ sl
   return scoreTalentsLocally(job, TALENT_PROFILES).slice(0, 5);
 }
 
-function scoreTalentsLocally(job: NormalizedJobProfile, talents: TalentProfile[]): { slug: string; score: number }[] {
-  const jobSkills = new Set(job.normalizedSkills.map(s => canonicalizeSkill(s)));
+function scoreTalentsLocally(
+  job: NormalizedJobProfile,
+  talents: TalentProfile[]
+): { slug: string; score: number }[] {
+  const jobSkills = new Set(
+    job.normalizedSkills.map(s => canonicalizeSkill(s))
+  );
   const maxHourly = job.budget?.hourlyMax ?? Infinity;
 
   const scored = talents.map(t => {
     const skills = new Set(t.skills.map(canonicalizeSkill));
     let overlap = 0;
-    Array.from(skills).forEach((s) => { if (jobSkills.has(s)) overlap++; });
+    Array.from(skills).forEach(s => {
+      if (jobSkills.has(s)) overlap++;
+    });
     const overlapScore = overlap / Math.max(1, jobSkills.size);
 
-    const rateScore = t.hourlyRateUsd <= maxHourly ? 1 : Math.max(0, 1 - (t.hourlyRateUsd - maxHourly) / (maxHourly || t.hourlyRateUsd || 1));
+    const rateScore =
+      t.hourlyRateUsd <= maxHourly
+        ? 1
+        : Math.max(
+            0,
+            1 -
+              (t.hourlyRateUsd - maxHourly) /
+                (maxHourly || t.hourlyRateUsd || 1)
+          );
 
     const availabilityScore = job.timeline?.toLowerCase().includes('full')
-      ? (t.availability === 'full-time' ? 1 : 0.5)
+      ? t.availability === 'full-time'
+        ? 1
+        : 0.5
       : 1;
 
-    const score = 0.6 * overlapScore + 0.25 * rateScore + 0.15 * availabilityScore;
+    const score =
+      0.6 * overlapScore + 0.25 * rateScore + 0.15 * availabilityScore;
     return { slug: t.slug, score: Number(score.toFixed(3)) };
   });
 
@@ -139,7 +178,19 @@ function extractKeywordRequirements(description: string): string[] {
     .split(/[^a-zA-Z0-9\-\+\.]/)
     .map(t => t.trim())
     .filter(Boolean);
-  const common = new Set(['the', 'and', 'a', 'to', 'of', 'in', 'for', 'with', 'we', 'you', 'our']);
+  const common = new Set([
+    'the',
+    'and',
+    'a',
+    'to',
+    'of',
+    'in',
+    'for',
+    'with',
+    'we',
+    'you',
+    'our',
+  ]);
   const freq = new Map<string, number>();
   for (const t of tokens) {
     if (t.length < 2) continue;

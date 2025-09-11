@@ -1,13 +1,22 @@
 describe('logout flow', () => {
   beforeEach(() => {
-    expect(Cypress.env('TEST_USER_EMAIL'), 'TEST_USER_EMAIL was not set').to.be.a('string');
-    expect(Cypress.env('TEST_USER_PASSWORD'), 'TEST_USER_PASSWORD was not set').to.be.a('string');
+    expect(
+      Cypress.env('TEST_USER_EMAIL'),
+      'TEST_USER_EMAIL was not set'
+    ).to.be.a('string');
+    expect(
+      Cypress.env('TEST_USER_PASSWORD'),
+      'TEST_USER_PASSWORD was not set'
+    ).to.be.a('string');
   });
 
   it('logs out and shows login link', () => {
     cy.intercept('POST', '/auth/login', {
       statusCode: 200,
-      body: { token: 'jwt', user: { id: '1', email: Cypress.env('TEST_USER_EMAIL') } },
+      body: {
+        token: 'jwt',
+        user: { id: '1', email: Cypress.env('TEST_USER_EMAIL') },
+      },
     }).as('login');
 
     cy.intercept('POST', '/api/auth/logout', {

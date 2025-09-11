@@ -1,5 +1,4 @@
 // comment;
-export const _performanceOptimizer = {}
-
+export const _performanceOptimizer = {};
 
 export default performanceOptimizer;

@@ -35,9 +35,7 @@
         "success": true
       }
     ],
-    "fixes": [
-      "Created TestimonialCard component"
-    ],
+    "fixes": ["Created TestimonialCard component"],
     "tests": [
       {
         "name": "Jest tests",

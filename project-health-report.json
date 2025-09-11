@@ -2,9 +2,7 @@
   "timestamp": "2025-08-29T23:28:04.715Z",
   "overallHealth": "poor",
   "issues": [],
-  "fixes": [
-    "Updated outdated dependencies"
-  ],
+  "fixes": ["Updated outdated dependencies"],
   "recommendations": [
     "Update outdated packages and fix security vulnerabilities immediately",
     "Address security vulnerabilities as a top priority",
@@ -7693,10 +7691,7 @@
   },
   "build": {
     "status": "failing",
-    "issues": [
-      "Build failed",
-      "Build directory not found"
-    ],
+    "issues": ["Build failed", "Build directory not found"],
     "score": 0
   },
   "performance": {

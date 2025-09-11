@@ -4,7 +4,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
@@ -15,7 +15,8 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     tagline: 'Quantum-resistant network security with AI threat detection',
     price: '$699',
     period: '/month',
-    description: 'Advanced network security platform that combines quantum-resistant encryption with AI-powered threat detection. Features real-time network monitoring, automated threat response, and quantum-safe communication protocols.',
+    description:
+      'Advanced network security platform that combines quantum-resistant encryption with AI-powered threat detection. Features real-time network monitoring, automated threat response, and quantum-safe communication protocols.',
     features: [
       'Quantum-resistant encryption',
       'AI-powered threat detection',
@@ -28,22 +29,30 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
       'Compliance reporting',
       'Custom security policies',
       'Multi-layer protection',
-      '24/7 monitoring'
+      '24/7 monitoring',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/services/quantum-network-security-platform',
-    marketPosition: 'Competitive with Palo Alto Networks ($variable), Fortinet ($variable), and Cisco ($variable). Our advantage: Quantum-resistant encryption, AI-powered detection, and comprehensive network protection.',
-    targetAudience: 'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Technology companies',
+    marketPosition:
+      'Competitive with Palo Alto Networks ($variable), Fortinet ($variable), and Cisco ($variable). Our advantage: Quantum-resistant encryption, AI-powered detection, and comprehensive network protection.',
+    targetAudience:
+      'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Technology companies',
     trialDays: 30,
     setupTime: '2 days',
     category: 'Network Security',
     realService: true,
-    technology: ['Quantum-resistant algorithms, AI/ML, Python, React, Node.js, Network security frameworks'],
-    integrations: ['Firewalls, IDS/IPS, SIEM systems, Network monitoring tools, Compliance platforms'],
-    useCases: ['Network threat detection, Intrusion prevention, Security policy enforcement, Compliance monitoring, Risk assessment, Security training'],
+    technology: [
+      'Quantum-resistant algorithms, AI/ML, Python, React, Node.js, Network security frameworks',
+    ],
+    integrations: [
+      'Firewalls, IDS/IPS, SIEM systems, Network monitoring tools, Compliance platforms',
+    ],
+    useCases: [
+      'Network threat detection, Intrusion prevention, Security policy enforcement, Compliance monitoring, Risk assessment, Security training',
+    ],
     roi: 'Average customer sees 500% ROI through reduced security incidents and network protection.',
     competitors: ['Palo Alto Networks, Fortinet, Cisco, Check Point, Juniper'],
     marketSize: '$45.2B market',
@@ -51,11 +60,12 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade network security platform with quantum-resistant encryption, AI threat detection, and comprehensive network protection tools. Includes mobile app and extensive API.',
+    implementationDetails:
+      'Enterprise-grade network security platform with quantum-resistant encryption, AI threat detection, and comprehensive network protection tools. Includes mobile app and extensive API.',
     launchDate: '2025-02-01',
     customers: 420,
     rating: 4.8,
-    reviews: 210
+    reviews: 210,
   },
 
   // Autonomous IT Operations Center
@@ -65,7 +75,8 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     tagline: 'AI-powered IT operations with zero human intervention',
     price: '$599',
     period: '/month',
-    description: 'Revolutionary IT operations platform that uses AI to automate all aspects of IT management. Features autonomous monitoring, automated incident response, and intelligent resource optimization.',
+    description:
+      'Revolutionary IT operations platform that uses AI to automate all aspects of IT management. Features autonomous monitoring, automated incident response, and intelligent resource optimization.',
     features: [
       'Autonomous IT monitoring',
       'AI-powered incident response',
@@ -78,34 +89,41 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
       'Custom workflow automation',
       'Multi-cloud management',
       'Comprehensive analytics',
-      'API integration suite'
+      'API integration suite',
     ],
     popular: true,
     icon: '🏢',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/autonomous-it-operations-center',
-    marketPosition: 'Competitive with ServiceNow ($variable), BMC Helix ($variable), and Ivanti ($variable). Our advantage: Full automation, AI-powered intelligence, and autonomous operations.',
-    targetAudience: 'IT operations teams, DevOps teams, System administrators, IT managers, Technology companies',
+    marketPosition:
+      'Competitive with ServiceNow ($variable), BMC Helix ($variable), and Ivanti ($variable). Our advantage: Full automation, AI-powered intelligence, and autonomous operations.',
+    targetAudience:
+      'IT operations teams, DevOps teams, System administrators, IT managers, Technology companies',
     trialDays: 21,
     setupTime: '1 week',
     category: 'IT Operations',
     realService: true,
     technology: ['AI/ML algorithms, Python, React, Node.js, PostgreSQL, Redis'],
     integrations: ['ServiceNow, BMC, Ivanti, AWS, Azure, GCP'],
-    useCases: ['IT monitoring automation, Incident response automation, Resource optimization, Performance monitoring, Capacity planning, Backup automation'],
+    useCases: [
+      'IT monitoring automation, Incident response automation, Resource optimization, Performance monitoring, Capacity planning, Backup automation',
+    ],
     roi: 'Average customer sees 600% ROI through reduced IT incidents and improved operational efficiency.',
-    competitors: ['ServiceNow, BMC Helix, Ivanti, Cherwell, Jira Service Management'],
+    competitors: [
+      'ServiceNow, BMC Helix, Ivanti, Cherwell, Jira Service Management',
+    ],
     marketSize: '$12.8B market',
     growthRate: '20.1% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Full-stack IT operations platform with AI engine, automation workflows, monitoring systems, and analytics dashboard. Includes mobile app and extensive API documentation.',
+    implementationDetails:
+      'Full-stack IT operations platform with AI engine, automation workflows, monitoring systems, and analytics dashboard. Includes mobile app and extensive API documentation.',
     launchDate: '2025-01-25',
     customers: 680,
     rating: 4.7,
-    reviews: 340
+    reviews: 340,
   },
 
   // Quantum Data Center Management
@@ -115,7 +133,8 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     tagline: 'Quantum-powered data center optimization with consciousness',
     price: '$899',
     period: '/month',
-    description: 'Next-generation data center management platform that combines quantum computing with AI consciousness. Features quantum-powered optimization, consciousness-driven resource management, and autonomous scaling.',
+    description:
+      'Next-generation data center management platform that combines quantum computing with AI consciousness. Features quantum-powered optimization, consciousness-driven resource management, and autonomous scaling.',
     features: [
       'Quantum-powered optimization',
       'Consciousness-driven management',
@@ -128,22 +147,28 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
       'Custom deployment options',
       'API management',
       'White-label solutions',
-      'Multi-site management'
+      'Multi-site management',
     ],
     popular: true,
     icon: '🏗️',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/services/quantum-data-center-management',
-    marketPosition: 'Competitive with VMware ($variable), Nutanix ($variable), and HPE ($variable). Our advantage: Quantum computing integration, consciousness-driven management, and advanced optimization.',
-    targetAudience: 'Data center operators, Cloud providers, Technology companies, Government agencies, Financial institutions',
+    marketPosition:
+      'Competitive with VMware ($variable), Nutanix ($variable), and HPE ($variable). Our advantage: Quantum computing integration, consciousness-driven management, and advanced optimization.',
+    targetAudience:
+      'Data center operators, Cloud providers, Technology companies, Government agencies, Financial institutions',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Data Center Management',
     realService: true,
-    technology: ['Quantum computing, Data center orchestration, Python, React, Node.js'],
+    technology: [
+      'Quantum computing, Data center orchestration, Python, React, Node.js',
+    ],
     integrations: ['VMware, Nutanix, HPE, AWS, Azure, GCP'],
-    useCases: ['Data center optimization, Resource management, Multi-site orchestration, Quantum computing, High-performance computing, Research platforms'],
+    useCases: [
+      'Data center optimization, Resource management, Multi-site orchestration, Quantum computing, High-performance computing, Research platforms',
+    ],
     roi: 'Average customer sees 700% ROI through quantum-powered optimization and resource management.',
     competitors: ['VMware, Nutanix, HPE, Dell EMC, Cisco'],
     marketSize: '$18.7B market',
@@ -151,11 +176,12 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced data center management platform with quantum computing integration, consciousness-driven optimization, and comprehensive management tools. Includes mobile app and extensive API.',
+    implementationDetails:
+      'Advanced data center management platform with quantum computing integration, consciousness-driven optimization, and comprehensive management tools. Includes mobile app and extensive API.',
     launchDate: '2025-02-15',
     customers: 180,
     rating: 4.9,
-    reviews: 95
+    reviews: 95,
   },
 
   // Autonomous Network Management
@@ -165,7 +191,8 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     tagline: 'AI-powered network management with autonomous optimization',
     price: '$499',
     period: '/month',
-    description: 'Revolutionary network management platform that uses AI to automate all aspects of network operations. Features autonomous monitoring, automated optimization, and intelligent resource management.',
+    description:
+      'Revolutionary network management platform that uses AI to automate all aspects of network operations. Features autonomous monitoring, automated optimization, and intelligent resource management.',
     features: [
       'Autonomous network monitoring',
       'AI-powered optimization',
@@ -178,22 +205,26 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
       'Custom workflow automation',
       'Multi-vendor support',
       'Comprehensive analytics',
-      'API integration suite'
+      'API integration suite',
     ],
     popular: true,
     icon: '📡',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/services/autonomous-network-management',
-    marketPosition: 'Competitive with SolarWinds ($variable), PRTG ($variable), and Nagios ($variable). Our advantage: Full automation, AI-powered intelligence, and autonomous network management.',
-    targetAudience: 'Network administrators, IT operations teams, System administrators, Technology companies',
+    marketPosition:
+      'Competitive with SolarWinds ($variable), PRTG ($variable), and Nagios ($variable). Our advantage: Full automation, AI-powered intelligence, and autonomous network management.',
+    targetAudience:
+      'Network administrators, IT operations teams, System administrators, Technology companies',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Network Management',
     realService: true,
     technology: ['AI/ML algorithms, Python, React, Node.js, PostgreSQL, Redis'],
     integrations: ['SolarWinds, PRTG, Nagios, Cisco, Juniper, Arista'],
-    useCases: ['Network monitoring automation, Performance optimization, Resource management, Capacity planning, Backup automation, Multi-vendor support'],
+    useCases: [
+      'Network monitoring automation, Performance optimization, Resource management, Capacity planning, Backup automation, Multi-vendor support',
+    ],
     roi: 'Average customer sees 500% ROI through reduced network incidents and improved performance.',
     competitors: ['SolarWinds, PRTG, Nagios, Zabbix, Icinga'],
     marketSize: '$8.9B market',
@@ -201,11 +232,12 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Full-stack network management platform with AI engine, automation workflows, monitoring systems, and analytics dashboard. Includes mobile app and extensive API documentation.',
+    implementationDetails:
+      'Full-stack network management platform with AI engine, automation workflows, monitoring systems, and analytics dashboard. Includes mobile app and extensive API documentation.',
     launchDate: '2025-01-30',
     customers: 520,
     rating: 4.6,
-    reviews: 260
+    reviews: 260,
   },
 
   // Quantum Storage Solutions
@@ -215,7 +247,8 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     tagline: 'Quantum-powered storage with consciousness-driven optimization',
     price: '$799',
     period: '/month',
-    description: 'Next-generation storage platform that combines quantum computing with AI consciousness. Features quantum-powered optimization, consciousness-driven data management, and autonomous storage scaling.',
+    description:
+      'Next-generation storage platform that combines quantum computing with AI consciousness. Features quantum-powered optimization, consciousness-driven data management, and autonomous storage scaling.',
     features: [
       'Quantum-powered optimization',
       'Consciousness-driven management',
@@ -228,22 +261,30 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
       'Custom deployment options',
       'API management',
       'White-label solutions',
-      'Multi-site replication'
+      'Multi-site replication',
     ],
     popular: true,
     icon: '💾',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/services/quantum-storage-solutions',
-    marketPosition: 'Competitive with NetApp ($variable), Pure Storage ($variable), and Dell EMC ($variable). Our advantage: Quantum computing integration, consciousness-driven management, and advanced optimization.',
-    targetAudience: 'Storage administrators, Data center operators, Cloud providers, Technology companies',
+    marketPosition:
+      'Competitive with NetApp ($variable), Pure Storage ($variable), and Dell EMC ($variable). Our advantage: Quantum computing integration, consciousness-driven management, and advanced optimization.',
+    targetAudience:
+      'Storage administrators, Data center operators, Cloud providers, Technology companies',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Storage Solutions',
     realService: true,
-    technology: ['Quantum computing, Storage orchestration, Python, React, Node.js'],
-    integrations: ['NetApp, Pure Storage, Dell EMC, AWS S3, Azure Blob, GCP Storage'],
-    useCases: ['Storage optimization, Data management, Multi-site replication, Quantum computing, High-performance storage, Research platforms'],
+    technology: [
+      'Quantum computing, Storage orchestration, Python, React, Node.js',
+    ],
+    integrations: [
+      'NetApp, Pure Storage, Dell EMC, AWS S3, Azure Blob, GCP Storage',
+    ],
+    useCases: [
+      'Storage optimization, Data management, Multi-site replication, Quantum computing, High-performance storage, Research platforms',
+    ],
     roi: 'Average customer sees 600% ROI through quantum-powered optimization and storage management.',
     competitors: ['NetApp, Pure Storage, Dell EMC, HPE, IBM'],
     marketSize: '$15.3B market',
@@ -251,11 +292,12 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Advanced storage platform with quantum computing integration, consciousness-driven optimization, and comprehensive storage management tools. Includes mobile app and extensive API.',
+    implementationDetails:
+      'Advanced storage platform with quantum computing integration, consciousness-driven optimization, and comprehensive storage management tools. Includes mobile app and extensive API.',
     launchDate: '2025-02-20',
     customers: 150,
     rating: 4.8,
-    reviews: 80
+    reviews: 80,
   },
 
   // Autonomous Security Operations Center
@@ -265,7 +307,8 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     tagline: 'AI-powered security operations with autonomous threat response',
     price: '$699',
     period: '/month',
-    description: 'Revolutionary security operations platform that uses AI to automate all aspects of security management. Features autonomous threat detection, automated response, and intelligent security optimization.',
+    description:
+      'Revolutionary security operations platform that uses AI to automate all aspects of security management. Features autonomous threat detection, automated response, and intelligent security optimization.',
     features: [
       'Autonomous threat detection',
       'AI-powered response automation',
@@ -278,22 +321,26 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
       'Custom workflow automation',
       'Multi-layer security',
       'Comprehensive analytics',
-      'API integration suite'
+      'API integration suite',
     ],
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/services/autonomous-security-operations-center',
-    marketPosition: 'Competitive with Splunk ($variable), IBM QRadar ($variable), and Exabeam ($variable). Our advantage: Full automation, AI-powered intelligence, and autonomous security operations.',
-    targetAudience: 'Security operations teams, SOC analysts, Security managers, Technology companies',
+    marketPosition:
+      'Competitive with Splunk ($variable), IBM QRadar ($variable), and Exabeam ($variable). Our advantage: Full automation, AI-powered intelligence, and autonomous security operations.',
+    targetAudience:
+      'Security operations teams, SOC analysts, Security managers, Technology companies',
     trialDays: 21,
     setupTime: '1 week',
     category: 'Security Operations',
     realService: true,
     technology: ['AI/ML algorithms, Python, React, Node.js, PostgreSQL, Redis'],
     integrations: ['Splunk, IBM QRadar, Exabeam, SIEM systems, Security tools'],
-    useCases: ['Threat detection automation, Incident response automation, Security optimization, Threat analysis, Security planning, Multi-layer protection'],
+    useCases: [
+      'Threat detection automation, Incident response automation, Security optimization, Threat analysis, Security planning, Multi-layer protection',
+    ],
     roi: 'Average customer sees 550% ROI through reduced security incidents and improved threat response.',
     competitors: ['Splunk, IBM QRadar, Exabeam, LogRhythm, Securonix'],
     marketSize: '$22.4B market',
@@ -301,11 +348,12 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Full-stack security operations platform with AI engine, automation workflows, monitoring systems, and analytics dashboard. Includes mobile app and extensive API documentation.',
+    implementationDetails:
+      'Full-stack security operations platform with AI engine, automation workflows, monitoring systems, and analytics dashboard. Includes mobile app and extensive API documentation.',
     launchDate: '2025-02-05',
     customers: 380,
     rating: 4.7,
-    reviews: 190
+    reviews: 190,
   },
 
   // Quantum Internet Security Gateway
@@ -315,7 +363,8 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     tagline: 'Quantum-resistant internet security with AI protection',
     price: '$599',
     period: '/month',
-    description: 'Advanced internet security gateway that combines quantum-resistant encryption with AI-powered protection. Features quantum-safe protocols, real-time threat detection, and automated security response.',
+    description:
+      'Advanced internet security gateway that combines quantum-resistant encryption with AI-powered protection. Features quantum-safe protocols, real-time threat detection, and automated security response.',
     features: [
       'Quantum-resistant encryption',
       'AI-powered threat detection',
@@ -328,22 +377,28 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
       'Compliance reporting',
       'Custom security policies',
       'Multi-layer protection',
-      '24/7 monitoring'
+      '24/7 monitoring',
     ],
     popular: true,
     icon: '🌍',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/quantum-internet-security-gateway',
-    marketPosition: 'Competitive with Cloudflare ($20/month), Akamai ($variable), and Imperva ($variable). Our advantage: Quantum-resistant encryption, AI-powered protection, and comprehensive internet security.',
-    targetAudience: 'Internet service providers, Cloud providers, Technology companies, Government agencies',
+    marketPosition:
+      'Competitive with Cloudflare ($20/month), Akamai ($variable), and Imperva ($variable). Our advantage: Quantum-resistant encryption, AI-powered protection, and comprehensive internet security.',
+    targetAudience:
+      'Internet service providers, Cloud providers, Technology companies, Government agencies',
     trialDays: 30,
     setupTime: '1 day',
     category: 'Internet Security',
     realService: true,
-    technology: ['Quantum-resistant algorithms, AI/ML, Python, React, Node.js, Security frameworks'],
+    technology: [
+      'Quantum-resistant algorithms, AI/ML, Python, React, Node.js, Security frameworks',
+    ],
     integrations: ['Cloudflare, Akamai, Imperva, CDN services, Security tools'],
-    useCases: ['Internet threat protection, Content filtering, DDoS protection, Security monitoring, Compliance requirements, Multi-layer security'],
+    useCases: [
+      'Internet threat protection, Content filtering, DDoS protection, Security monitoring, Compliance requirements, Multi-layer security',
+    ],
     roi: 'Average customer sees 450% ROI through reduced security incidents and internet protection.',
     competitors: ['Cloudflare, Akamai, Imperva, Fastly, AWS Shield'],
     marketSize: '$12.6B market',
@@ -351,11 +406,12 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     variant: 'quantum-matrix',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade internet security gateway with quantum-resistant encryption, AI threat detection, and comprehensive protection tools. Includes mobile app and extensive API.',
+    implementationDetails:
+      'Enterprise-grade internet security gateway with quantum-resistant encryption, AI threat detection, and comprehensive protection tools. Includes mobile app and extensive API.',
     launchDate: '2025-02-10',
     customers: 280,
     rating: 4.8,
-    reviews: 140
+    reviews: 140,
   },
 
   // Autonomous IT Service Management
@@ -365,7 +421,8 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
     tagline: 'AI-powered IT service management with autonomous operations',
     price: '$399',
     period: '/month',
-    description: 'Revolutionary IT service management platform that uses AI to automate all aspects of IT services. Features autonomous service delivery, automated incident management, and intelligent service optimization.',
+    description:
+      'Revolutionary IT service management platform that uses AI to automate all aspects of IT services. Features autonomous service delivery, automated incident management, and intelligent service optimization.',
     features: [
       'Autonomous service delivery',
       'AI-powered incident management',
@@ -378,33 +435,40 @@ export const ultimate2025ITServicesExpansion: MicroSaasService[] = [
       'Custom workflow automation',
       'Multi-service support',
       'Comprehensive analytics',
-      'API integration suite'
+      'API integration suite',
     ],
     popular: true,
     icon: '⚙️',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/services/autonomous-it-service-management',
-    marketPosition: 'Competitive with ServiceNow ($variable), BMC Helix ($variable), and Ivanti ($variable). Our advantage: Full automation, AI-powered intelligence, and autonomous service management.',
-    targetAudience: 'IT service teams, Service desk analysts, IT managers, Technology companies',
+    marketPosition:
+      'Competitive with ServiceNow ($variable), BMC Helix ($variable), and Ivanti ($variable). Our advantage: Full automation, AI-powered intelligence, and autonomous service management.',
+    targetAudience:
+      'IT service teams, Service desk analysts, IT managers, Technology companies',
     trialDays: 21,
     setupTime: '1 week',
     category: 'IT Service Management',
     realService: true,
     technology: ['AI/ML algorithms, Python, React, Node.js, PostgreSQL, Redis'],
     integrations: ['ServiceNow, BMC, Ivanti, Jira, Zendesk, Freshdesk'],
-    useCases: ['Service delivery automation, Incident management automation, Service optimization, Change management, Service planning, Multi-service support'],
+    useCases: [
+      'Service delivery automation, Incident management automation, Service optimization, Change management, Service planning, Multi-service support',
+    ],
     roi: 'Average customer sees 500% ROI through reduced service incidents and improved service delivery.',
-    competitors: ['ServiceNow, BMC Helix, Ivanti, Jira Service Management, Zendesk'],
+    competitors: [
+      'ServiceNow, BMC Helix, Ivanti, Jira Service Management, Zendesk',
+    ],
     marketSize: '$8.9B market',
     growthRate: '18.3% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Full-stack IT service management platform with AI engine, automation workflows, monitoring systems, and analytics dashboard. Includes mobile app and extensive API documentation.',
+    implementationDetails:
+      'Full-stack IT service management platform with AI engine, automation workflows, monitoring systems, and analytics dashboard. Includes mobile app and extensive API documentation.',
     launchDate: '2025-01-28',
     customers: 450,
     rating: 4.6,
-    reviews: 225
-  }
+    reviews: 225,
+  },
 ];

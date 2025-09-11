@@ -45,7 +45,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const real2037ITServices: Real2037ITService[] = [
@@ -55,7 +55,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Next-generation cloud computing with quantum capabilities',
     price: '$4,999',
     period: '/month',
-    description: 'Revolutionary cloud infrastructure platform that integrates quantum computing capabilities with traditional cloud services, enabling unprecedented computational power and efficiency.',
+    description:
+      'Revolutionary cloud infrastructure platform that integrates quantum computing capabilities with traditional cloud services, enabling unprecedented computational power and efficiency.',
     features: [
       'Quantum computing integration',
       'Hybrid classical-quantum workflows',
@@ -65,7 +66,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Advanced monitoring',
       'Disaster recovery',
       'Compliance automation',
-      '24/7 support'
+      '24/7 support',
     ],
     popular: true,
     icon: '☁️⚛️',
@@ -73,14 +74,17 @@ export const real2037ITServices: Real2037ITService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
     marketPosition: 'First quantum-enhanced cloud infrastructure platform',
-    targetAudience: 'Enterprises, research institutions, financial services, healthcare',
+    targetAudience:
+      'Enterprises, research institutions, financial services, healthcare',
     trialDays: 30,
     setupTime: '8 weeks',
     category: 'Cloud Infrastructure',
     realService: true,
     technology: ['Quantum computing, Kubernetes, Docker, Python, Go'],
     integrations: ['AWS, Azure, GCP, On-premises, Hybrid environments'],
-    useCases: ['Scientific computing, Financial modeling, Drug discovery, AI training'],
+    useCases: [
+      'Scientific computing, Financial modeling, Drug discovery, AI training',
+    ],
     roi: 'Reduce computing costs by 70% and increase performance by 1000x',
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'],
     marketSize: '$1T+ cloud infrastructure market by 2030',
@@ -88,11 +92,12 @@ export const real2037ITServices: Real2037ITService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant quantum cloud platform with hybrid capabilities',
+    implementationDetails:
+      'Multi-tenant quantum cloud platform with hybrid capabilities',
     launchDate: '2027-01-01',
     customers: 67,
     rating: 4.9,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-devops-automation',
@@ -100,7 +105,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Intelligent DevOps with AI-driven automation',
     price: '$2,499',
     period: '/month',
-    description: 'Advanced DevOps platform that uses artificial intelligence to automate deployment, monitoring, and operations, reducing human error and improving system reliability.',
+    description:
+      'Advanced DevOps platform that uses artificial intelligence to automate deployment, monitoring, and operations, reducing human error and improving system reliability.',
     features: [
       'AI-powered deployment automation',
       'Intelligent monitoring',
@@ -110,7 +116,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Compliance automation',
       'Performance optimization',
       'Incident response',
-      'Analytics dashboard'
+      'Analytics dashboard',
     ],
     popular: true,
     icon: '🤖🔧',
@@ -118,14 +124,17 @@ export const real2037ITServices: Real2037ITService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-powered-devops-automation',
     marketPosition: 'Leading AI-powered DevOps automation platform',
-    targetAudience: 'Development teams, DevOps engineers, IT operations, SRE teams',
+    targetAudience:
+      'Development teams, DevOps engineers, IT operations, SRE teams',
     trialDays: 30,
     setupTime: '4 weeks',
     category: 'DevOps',
     realService: true,
     technology: ['AI/ML, Kubernetes, Docker, Terraform, Python, Go'],
     integrations: ['GitHub, GitLab, Jenkins, AWS, Azure, GCP'],
-    useCases: ['CI/CD automation, Infrastructure management, Monitoring, Security'],
+    useCases: [
+      'CI/CD automation, Infrastructure management, Monitoring, Security',
+    ],
     roi: 'Reduce deployment time by 80% and increase system reliability by 99.9%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'],
     marketSize: '$50B+ DevOps market by 2030',
@@ -133,11 +142,12 @@ export const real2037ITServices: Real2037ITService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant AI DevOps platform with automation tools',
+    implementationDetails:
+      'Multi-tenant AI DevOps platform with automation tools',
     launchDate: '2027-02-01',
     customers: 234,
     rating: 4.8,
-    reviews: 156
+    reviews: 156,
   },
   {
     id: 'quantum-database-platform',
@@ -145,7 +155,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Database operations with quantum computing power',
     price: '$3,299',
     period: '/month',
-    description: 'Revolutionary database platform that leverages quantum computing to perform complex queries, data analysis, and optimization tasks with unprecedented speed and efficiency.',
+    description:
+      'Revolutionary database platform that leverages quantum computing to perform complex queries, data analysis, and optimization tasks with unprecedented speed and efficiency.',
     features: [
       'Quantum-enhanced query processing',
       'Real-time analytics',
@@ -155,7 +166,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Backup automation',
       'Performance monitoring',
       'Scalability',
-      'Multi-database support'
+      'Multi-database support',
     ],
     popular: true,
     icon: '🗄️⚛️',
@@ -163,14 +174,19 @@ export const real2037ITServices: Real2037ITService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-database-platform',
     marketPosition: 'First quantum-enhanced database platform',
-    targetAudience: 'Data scientists, database administrators, enterprises, research institutions',
+    targetAudience:
+      'Data scientists, database administrators, enterprises, research institutions',
     trialDays: 30,
     setupTime: '6 weeks',
     category: 'Database',
     realService: true,
     technology: ['Quantum computing, SQL, NoSQL, Python, Rust'],
-    integrations: ['PostgreSQL, MongoDB, Redis, Elasticsearch, Data warehouses'],
-    useCases: ['Big data analytics, Real-time processing, Complex queries, Data optimization'],
+    integrations: [
+      'PostgreSQL, MongoDB, Redis, Elasticsearch, Data warehouses',
+    ],
+    useCases: [
+      'Big data analytics, Real-time processing, Complex queries, Data optimization',
+    ],
     roi: 'Increase query performance by 1000x and reduce storage costs by 60%',
     competitors: ['Oracle, Microsoft SQL Server, PostgreSQL, MongoDB'],
     marketSize: '$100B+ database market by 2030',
@@ -178,11 +194,12 @@ export const real2037ITServices: Real2037ITService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant quantum database platform with hybrid capabilities',
+    implementationDetails:
+      'Multi-tenant quantum database platform with hybrid capabilities',
     launchDate: '2027-03-01',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
   {
     id: 'edge-computing-orchestrator',
@@ -190,7 +207,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Intelligent edge computing management and orchestration',
     price: '$1,899',
     period: '/month',
-    description: 'Advanced edge computing platform that intelligently manages and orchestrates distributed computing resources, enabling real-time processing and reduced latency.',
+    description:
+      'Advanced edge computing platform that intelligently manages and orchestrates distributed computing resources, enabling real-time processing and reduced latency.',
     features: [
       'Intelligent resource allocation',
       'Real-time monitoring',
@@ -200,7 +218,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Performance optimization',
       'Multi-location support',
       'Analytics dashboard',
-      'API management'
+      'API management',
     ],
     popular: true,
     icon: '🌐⚡',
@@ -208,14 +226,17 @@ export const real2037ITServices: Real2037ITService[] = [
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestrator',
     marketPosition: 'Leading intelligent edge computing orchestration platform',
-    targetAudience: 'IoT companies, edge computing providers, telecommunications, manufacturing',
+    targetAudience:
+      'IoT companies, edge computing providers, telecommunications, manufacturing',
     trialDays: 30,
     setupTime: '4 weeks',
     category: 'Edge Computing',
     realService: true,
     technology: ['Kubernetes, Docker, AI/ML, Python, Go, Rust'],
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Kubernetes'],
-    useCases: ['IoT management, Real-time processing, Low-latency applications, Edge AI'],
+    useCases: [
+      'IoT management, Real-time processing, Low-latency applications, Edge AI',
+    ],
     roi: 'Reduce latency by 90% and increase processing efficiency by 300%',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'],
     marketSize: '$80B+ edge computing market by 2030',
@@ -227,7 +248,7 @@ export const real2037ITServices: Real2037ITService[] = [
     launchDate: '2027-04-01',
     customers: 156,
     rating: 4.7,
-    reviews: 98
+    reviews: 98,
   },
   {
     id: 'quantum-network-security',
@@ -235,7 +256,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Unbreakable network security with quantum cryptography',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced network security platform that uses quantum cryptography to provide unbreakable encryption and protection for enterprise networks and communications.',
+    description:
+      'Advanced network security platform that uses quantum cryptography to provide unbreakable encryption and protection for enterprise networks and communications.',
     features: [
       'Quantum key distribution',
       'Post-quantum cryptography',
@@ -245,7 +267,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Compliance automation',
       'Real-time alerts',
       'Advanced analytics',
-      '24/7 monitoring'
+      '24/7 monitoring',
     ],
     popular: true,
     icon: '🛡️⚛️',
@@ -253,14 +275,19 @@ export const real2037ITServices: Real2037ITService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-network-security',
     marketPosition: 'First quantum-enhanced network security platform',
-    targetAudience: 'Enterprises, government agencies, financial institutions, healthcare',
+    targetAudience:
+      'Enterprises, government agencies, financial institutions, healthcare',
     trialDays: 30,
     setupTime: '6 weeks',
     category: 'Network Security',
     realService: true,
     technology: ['Quantum cryptography, AI/ML, Network protocols, Python, C++'],
-    integrations: ['Firewalls, IDS/IPS, SIEM systems, Network monitoring tools'],
-    useCases: ['Network protection, Data encryption, Threat prevention, Compliance'],
+    integrations: [
+      'Firewalls, IDS/IPS, SIEM systems, Network monitoring tools',
+    ],
+    useCases: [
+      'Network protection, Data encryption, Threat prevention, Compliance',
+    ],
     roi: 'Prevent 99.9% of network attacks and reduce security costs by 50%',
     competitors: ['Cisco, Palo Alto Networks, Fortinet, Check Point'],
     marketSize: '$200B+ network security market by 2030',
@@ -272,7 +299,7 @@ export const real2037ITServices: Real2037ITService[] = [
     launchDate: '2027-05-01',
     customers: 123,
     rating: 4.8,
-    reviews: 89
+    reviews: 89,
   },
   {
     id: 'ai-powered-it-service-management',
@@ -280,7 +307,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Intelligent IT service management with AI automation',
     price: '$1,799',
     period: '/month',
-    description: 'Advanced IT service management platform that uses artificial intelligence to automate ticket routing, problem resolution, and service delivery.',
+    description:
+      'Advanced IT service management platform that uses artificial intelligence to automate ticket routing, problem resolution, and service delivery.',
     features: [
       'AI-powered ticket routing',
       'Intelligent problem resolution',
@@ -290,7 +318,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Service catalog',
       'Change management',
       'Asset management',
-      'Reporting dashboard'
+      'Reporting dashboard',
     ],
     popular: true,
     icon: '🎫🤖',
@@ -305,7 +333,9 @@ export const real2037ITServices: Real2037ITService[] = [
     realService: true,
     technology: ['AI/ML, NLP, Workflow automation, React, Python'],
     integrations: ['ServiceNow, Jira, Slack, Microsoft Teams, Email systems'],
-    useCases: ['Service desk automation, Problem management, Change management, Asset tracking'],
+    useCases: [
+      'Service desk automation, Problem management, Change management, Asset tracking',
+    ],
     roi: 'Reduce ticket resolution time by 70% and increase customer satisfaction by 40%',
     competitors: ['ServiceNow, BMC Helix, Ivanti, Atlassian'],
     marketSize: '$30B+ IT service management market by 2030',
@@ -317,7 +347,7 @@ export const real2037ITServices: Real2037ITService[] = [
     launchDate: '2027-06-01',
     customers: 189,
     rating: 4.7,
-    reviews: 134
+    reviews: 134,
   },
   {
     id: 'quantum-data-center-optimization',
@@ -325,7 +355,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Optimize data centers with quantum computing power',
     price: '$3,799',
     period: '/month',
-    description: 'Advanced data center optimization platform that uses quantum computing to optimize resource allocation, energy consumption, and performance.',
+    description:
+      'Advanced data center optimization platform that uses quantum computing to optimize resource allocation, energy consumption, and performance.',
     features: [
       'Quantum resource optimization',
       'Energy efficiency management',
@@ -335,7 +366,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Sustainability metrics',
       'Real-time analytics',
       'Predictive maintenance',
-      'Automated optimization'
+      'Automated optimization',
     ],
     popular: true,
     icon: '🏢⚛️',
@@ -343,14 +374,17 @@ export const real2037ITServices: Real2037ITService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-data-center-optimization',
     marketPosition: 'First quantum-enhanced data center optimization platform',
-    targetAudience: 'Data center operators, cloud providers, enterprises, colocation providers',
+    targetAudience:
+      'Data center operators, cloud providers, enterprises, colocation providers',
     trialDays: 45,
     setupTime: '8 weeks',
     category: 'Data Center',
     realService: true,
     technology: ['Quantum computing, AI/ML, IoT, Python, Go'],
     integrations: ['DCIM systems, BMS, Power management, Cooling systems'],
-    useCases: ['Resource optimization, Energy management, Capacity planning, Cost reduction'],
+    useCases: [
+      'Resource optimization, Energy management, Capacity planning, Cost reduction',
+    ],
     roi: 'Reduce energy costs by 40% and increase efficiency by 60%',
     competitors: ['Schneider Electric, Vertiv, Eaton, ABB'],
     marketSize: '$150B+ data center market by 2030',
@@ -358,11 +392,12 @@ export const real2037ITServices: Real2037ITService[] = [
     variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant quantum data center optimization platform',
+    implementationDetails:
+      'Multi-tenant quantum data center optimization platform',
     launchDate: '2027-07-01',
     customers: 67,
     rating: 4.8,
-    reviews: 45
+    reviews: 45,
   },
   {
     id: 'ai-powered-software-testing',
@@ -370,7 +405,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Intelligent software testing with AI automation',
     price: '$1,599',
     period: '/month',
-    description: 'Advanced software testing platform that uses artificial intelligence to automate test case generation, execution, and analysis.',
+    description:
+      'Advanced software testing platform that uses artificial intelligence to automate test case generation, execution, and analysis.',
     features: [
       'AI test case generation',
       'Automated test execution',
@@ -380,7 +416,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Test analytics',
       'CI/CD integration',
       'Cross-platform testing',
-      'Reporting dashboard'
+      'Reporting dashboard',
     ],
     popular: true,
     icon: '🧪🤖',
@@ -388,14 +424,17 @@ export const real2037ITServices: Real2037ITService[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-powered-software-testing',
     marketPosition: 'Leading AI-powered software testing platform',
-    targetAudience: 'Development teams, QA engineers, DevOps teams, enterprises',
+    targetAudience:
+      'Development teams, QA engineers, DevOps teams, enterprises',
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'Software Testing',
     realService: true,
     technology: ['AI/ML, Computer vision, NLP, Python, JavaScript'],
     integrations: ['Jenkins, GitHub Actions, GitLab CI, Jira, TestRail'],
-    useCases: ['Automated testing, Bug detection, Performance testing, Security testing'],
+    useCases: [
+      'Automated testing, Bug detection, Performance testing, Security testing',
+    ],
     roi: 'Reduce testing time by 80% and increase test coverage by 90%',
     competitors: ['Selenium, Appium, TestComplete, Katalon Studio'],
     marketSize: '$40B+ software testing market by 2030',
@@ -407,7 +446,7 @@ export const real2037ITServices: Real2037ITService[] = [
     launchDate: '2027-08-01',
     customers: 234,
     rating: 4.8,
-    reviews: 167
+    reviews: 167,
   },
   {
     id: 'quantum-api-gateway',
@@ -415,7 +454,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'High-performance API management with quantum computing',
     price: '$2,199',
     period: '/month',
-    description: 'Advanced API gateway platform that uses quantum computing to optimize API routing, caching, and performance.',
+    description:
+      'Advanced API gateway platform that uses quantum computing to optimize API routing, caching, and performance.',
     features: [
       'Quantum-enhanced routing',
       'Intelligent caching',
@@ -425,7 +465,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'API documentation',
       'Developer portal',
       'Monitoring tools',
-      'Performance optimization'
+      'Performance optimization',
     ],
     popular: true,
     icon: '🔌⚛️',
@@ -433,16 +473,21 @@ export const real2037ITServices: Real2037ITService[] = [
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/quantum-api-gateway',
     marketPosition: 'First quantum-enhanced API gateway platform',
-    targetAudience: 'API developers, enterprises, microservices architectures, cloud providers',
+    targetAudience:
+      'API developers, enterprises, microservices architectures, cloud providers',
     trialDays: 30,
     setupTime: '4 weeks',
     category: 'API Management',
     realService: true,
     technology: ['Quantum computing, API protocols, Python, Go, Node.js'],
-    integrations: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'],
+    integrations: [
+      'Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints',
+    ],
     useCases: ['API routing, Caching, Security, Performance optimization'],
     roi: 'Increase API performance by 500% and reduce latency by 90%',
-    competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'],
+    competitors: [
+      'Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints',
+    ],
     marketSize: '$20B+ API management market by 2030',
     growthRate: '140% YoY',
     variant: 'quantum-futuristic',
@@ -452,7 +497,7 @@ export const real2037ITServices: Real2037ITService[] = [
     launchDate: '2027-09-01',
     customers: 145,
     rating: 4.7,
-    reviews: 98
+    reviews: 98,
   },
   {
     id: 'ai-powered-infrastructure-monitoring',
@@ -460,7 +505,8 @@ export const real2037ITServices: Real2037ITService[] = [
     tagline: 'Intelligent infrastructure monitoring with AI insights',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced infrastructure monitoring platform that uses artificial intelligence to provide real-time insights, predictive analytics, and automated problem resolution.',
+    description:
+      'Advanced infrastructure monitoring platform that uses artificial intelligence to provide real-time insights, predictive analytics, and automated problem resolution.',
     features: [
       'AI-powered monitoring',
       'Predictive analytics',
@@ -470,7 +516,7 @@ export const real2037ITServices: Real2037ITService[] = [
       'Capacity planning',
       'Cost optimization',
       'Compliance monitoring',
-      'Custom dashboards'
+      'Custom dashboards',
     ],
     popular: true,
     icon: '📊🤖',
@@ -485,7 +531,9 @@ export const real2037ITServices: Real2037ITService[] = [
     realService: true,
     technology: ['AI/ML, Time series databases, Python, Go, React'],
     integrations: ['Prometheus, Grafana, Datadog, New Relic, Splunk'],
-    useCases: ['Infrastructure monitoring, Performance optimization, Capacity planning, Cost management'],
+    useCases: [
+      'Infrastructure monitoring, Performance optimization, Capacity planning, Cost management',
+    ],
     roi: 'Reduce downtime by 90% and increase system reliability by 99.9%',
     competitors: ['Datadog, New Relic, Splunk, Dynatrace'],
     marketSize: '$60B+ monitoring market by 2030',
@@ -497,6 +545,6 @@ export const real2037ITServices: Real2037ITService[] = [
     launchDate: '2027-10-01',
     customers: 267,
     rating: 4.8,
-    reviews: 189
-  }
+    reviews: 189,
+  },
 ];

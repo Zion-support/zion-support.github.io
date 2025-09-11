@@ -12,7 +12,7 @@ const MarketplaceListing: React.FC<ListingProps> = ({ listing }) => {
     return <div>Listing removed</div>;
   }
   return (
-    <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+    <main className='prose dark:prose-invert max-w-3xl mx-auto py-8'>
       <h1>{listing.title}</h1>
       <p>{listing.description}</p>
     </main>
@@ -24,7 +24,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: 'blocking' };
 };
 
-export const getStaticProps: GetStaticProps<ListingProps> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<ListingProps> = async ({
+  params,
+}) => {
   const slug = params?.slug as string;
   const listing = MARKETPLACE_LISTINGS.find(l => l.id === slug) || null;
   if (!listing) {

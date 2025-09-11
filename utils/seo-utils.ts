@@ -25,7 +25,14 @@ export interface PageSEOData extends SEOData {
   path: string;
   lastModified?: string;
   priority?: number;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  changefreq?:
+    | 'always'
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'yearly'
+    | 'never';
 }
 
 export class SEOManager {
@@ -35,8 +42,17 @@ export class SEOManager {
   private constructor() {
     this.defaultSEO = {
       title: 'Zion Tech Group - Leading AI and Technology Solutions',
-      description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
-      keywords: ['AI', 'artificial intelligence', 'technology solutions', 'cloud computing', 'cybersecurity', 'data analytics', 'digital transformation'],
+      description:
+        'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+      keywords: [
+        'AI',
+        'artificial intelligence',
+        'technology solutions',
+        'cloud computing',
+        'cybersecurity',
+        'data analytics',
+        'digital transformation',
+      ],
       ogType: 'website',
       twitterCard: 'summary_large_image',
       robots: 'index, follow',
@@ -53,7 +69,7 @@ export class SEOManager {
 
   public generateMetaTags(seoData: Partial<SEOData>): Record<string, string> {
     const data = { ...this.defaultSEO, ...seoData };
-    
+
     return {
       title: data.title,
       description: data.description,
@@ -69,15 +85,17 @@ export class SEOManager {
       'twitter:image': data.ogImage || '/og-image.jpg',
       'twitter:site': data.twitterSite || '@ziontechgroup',
       'twitter:creator': data.twitterCreator || '@ziontechgroup',
-      'robots': data.robots || 'index, follow',
-      'author': data.author || 'Zion Tech Group',
-      'canonical': data.canonicalUrl || '',
+      robots: data.robots || 'index, follow',
+      author: data.author || 'Zion Tech Group',
+      canonical: data.canonicalUrl || '',
     };
   }
 
-  public generateStructuredData(seoData: Partial<SEOData>): Record<string, any> {
+  public generateStructuredData(
+    seoData: Partial<SEOData>
+  ): Record<string, any> {
     const data = { ...this.defaultSEO, ...seoData };
-    
+
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -113,7 +131,9 @@ export class SEOManager {
     return structuredData;
   }
 
-  public generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): Record<string, any> {
+  public generateBreadcrumbStructuredData(
+    breadcrumbs: Array<{ name: string; url: string }>
+  ): Record<string, any> {
     return {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -185,12 +205,16 @@ export class SEOManager {
   public generateSitemapData(pages: PageSEOData[]): string {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+${pages
+  .map(
+    page => `  <url>
     <loc>${page.canonicalUrl || `https://ziontechgroup.com${page.path}`}</loc>
     <lastmod>${page.lastModified || new Date().toISOString()}</lastmod>
     <changefreq>${page.changefreq || 'weekly'}</changefreq>
     <priority>${page.priority || 0.5}</priority>
-  </url>`).join('\n')}
+  </url>`
+  )
+  .join('\n')}
 </urlset>`;
 
     return sitemap;
@@ -221,7 +245,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
     // Try to cut at word boundary
     const truncated = title.substring(0, maxLength - 3);
     const lastSpace = truncated.lastIndexOf(' ');
-    
+
     if (lastSpace > maxLength * 0.7) {
       return truncated.substring(0, lastSpace) + '...';
     }
@@ -229,14 +253,17 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
     return truncated + '...';
   }
 
-  public optimizeDescription(description: string, maxLength: number = 160): string {
+  public optimizeDescription(
+    description: string,
+    maxLength: number = 160
+  ): string {
     if (description.length <= maxLength) {
       return description;
     }
 
     const truncated = description.substring(0, maxLength - 3);
     const lastSpace = truncated.lastIndexOf(' ');
-    
+
     if (lastSpace > maxLength * 0.7) {
       return truncated.substring(0, lastSpace) + '...';
     }
@@ -304,30 +331,42 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
 }
 
 // Utility functions
-export function generatePageTitle(pageName: string, siteName: string = 'Zion Tech Group'): string {
+export function generatePageTitle(
+  pageName: string,
+  siteName: string = 'Zion Tech Group'
+): string {
   return `${pageName} | ${siteName}`;
 }
 
-export function generatePageDescription(content: string, maxLength: number = 160): string {
+export function generatePageDescription(
+  content: string,
+  maxLength: number = 160
+): string {
   const manager = SEOManager.getInstance();
   return manager.optimizeDescription(content, maxLength);
 }
 
-export function generateCanonicalUrl(path: string, baseUrl: string = 'https://ziontechgroup.com'): string {
+export function generateCanonicalUrl(
+  path: string,
+  baseUrl: string = 'https://ziontechgroup.com'
+): string {
   return `${baseUrl}${path}`;
 }
 
-export function generateOGImageUrl(imagePath: string, baseUrl: string = 'https://ziontechgroup.com'): string {
+export function generateOGImageUrl(
+  imagePath: string,
+  baseUrl: string = 'https://ziontechgroup.com'
+): string {
   return `${baseUrl}${imagePath}`;
 }
 
 // React hook for SEO
 export function useSEO(seoData: Partial<SEOData>) {
   const manager = SEOManager.getInstance();
-  
+
   React.useEffect(() => {
     const metaTags = manager.generateMetaTags(seoData);
-    
+
     // Update document title
     if (metaTags.title) {
       document.title = metaTags.title;
@@ -336,12 +375,16 @@ export function useSEO(seoData: Partial<SEOData>) {
     // Update meta tags
     Object.entries(metaTags).forEach(([name, content]) => {
       if (name === 'title') return; // Already handled above
-      
-      let element = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+
+      let element = document.querySelector(
+        `meta[name="${name}"]`
+      ) as HTMLMetaElement;
       if (!element) {
-        element = document.querySelector(`meta[property="${name}"]`) as HTMLMetaElement;
+        element = document.querySelector(
+          `meta[property="${name}"]`
+        ) as HTMLMetaElement;
       }
-      
+
       if (!element) {
         element = document.createElement('meta');
         if (name.startsWith('og:') || name.startsWith('twitter:')) {
@@ -351,7 +394,7 @@ export function useSEO(seoData: Partial<SEOData>) {
         }
         document.head.appendChild(element);
       }
-      
+
       element.setAttribute('content', content);
     });
 

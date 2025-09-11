@@ -2,7 +2,7 @@ name: Cleanup stale agents
 
 on:
   schedule:
-    - cron: "30 2 * * *"
+    - cron: '30 2 * * *'
   workflow_dispatch:
 
 permissions:
@@ -34,4 +34,4 @@ jobs:
           done
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "cleanup: prune stale/low-performer agents"
+          commit_message: 'cleanup: prune stale/low-performer agents'

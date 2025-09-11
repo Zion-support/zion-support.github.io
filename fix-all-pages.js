@@ -3,15 +3,20 @@ const path = require('path');
 
 function fixPageContent(content, filePath) {
   let fixed = content;
-  
+
   // Fix missing export default
   if (!content.includes('export default')) {
-    const componentName = path.basename(filePath, path.extname(filePath))
+    const componentName = path
+      .basename(filePath, path.extname(filePath))
       .replace(/[^a-zA-Z0-9]/g, '')
       .replace(/^[0-9]/, '') // Remove leading numbers
-      .replace(/^([a-z])/, (match) => match.toUpperCase()); // Capitalize first letter
-    
-    if (!content.includes('function') && !content.includes('const') && !content.includes('class')) {
+      .replace(/^([a-z])/, match => match.toUpperCase()); // Capitalize first letter
+
+    if (
+      !content.includes('function') &&
+      !content.includes('const') &&
+      !content.includes('class')
+    ) {
       // Add complete component structure
       fixed = `import React from 'react';
 import Head from 'next/head';
@@ -47,16 +52,20 @@ export default function ${componentName}() {
       fixed = lines.join('\n');
     }
   }
-  
+
   // Fix incomplete JSX
   if (content.includes('<') && !content.includes('</')) {
-    if (!content.includes('return') && !content.includes('React.createElement')) {
+    if (
+      !content.includes('return') &&
+      !content.includes('React.createElement')
+    ) {
       // Wrap in proper component structure
-      const componentName = path.basename(filePath, path.extname(filePath))
+      const componentName = path
+        .basename(filePath, path.extname(filePath))
         .replace(/[^a-zA-Z0-9]/g, '')
         .replace(/^[0-9]/, '')
-        .replace(/^([a-z])/, (match) => match.toUpperCase());
-      
+        .replace(/^([a-z])/, match => match.toUpperCase());
+
       fixed = `import React from 'react';
 import Head from 'next/head';
 
@@ -81,15 +90,16 @@ export default function ${componentName}() {
 }`;
     }
   }
-  
+
   // Fix missing return statement
   if (!content.includes('return') && !content.includes('React.createElement')) {
     if (content.includes('export default')) {
-      const componentName = path.basename(filePath, path.extname(filePath))
+      const componentName = path
+        .basename(filePath, path.extname(filePath))
         .replace(/[^a-zA-Z0-9]/g, '')
         .replace(/^[0-9]/, '')
-        .replace(/^([a-z])/, (match) => match.toUpperCase());
-      
+        .replace(/^([a-z])/, match => match.toUpperCase());
+
       fixed = `import React from 'react';
 import Head from 'next/head';
 
@@ -114,7 +124,7 @@ export default function ${componentName}() {
 }`;
     }
   }
-  
+
   return fixed;
 }
 
@@ -124,7 +134,12 @@ function walkDir(dir, callback) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
-      if (file !== 'node_modules' && file !== '.git' && file !== '.next' && file !== 'out') {
+      if (
+        file !== 'node_modules' &&
+        file !== '.git' &&
+        file !== '.next' &&
+        file !== 'out'
+      ) {
         walkDir(filePath, callback);
       }
     } else {
@@ -137,15 +152,15 @@ function fixPages() {
   const pagesDir = path.join(process.cwd(), 'pages');
   let fixedCount = 0;
   let totalCount = 0;
-  
-  walkDir(pagesDir, (filePath) => {
+
+  walkDir(pagesDir, filePath => {
     const ext = path.extname(filePath).toLowerCase();
     if (['.tsx', '.ts', '.jsx', '.js'].includes(ext)) {
       totalCount++;
       try {
         const content = fs.readFileSync(filePath, 'utf8');
         const fixed = fixPageContent(content, filePath);
-        
+
         if (fixed !== content) {
           fs.writeFileSync(filePath, fixed);
           console.log(`✅ Fixed: ${path.relative(process.cwd(), filePath)}`);
@@ -156,7 +171,7 @@ function fixPages() {
       }
     }
   });
-  
+
   console.log(`\n📊 Summary: Fixed ${fixedCount} out of ${totalCount} pages`);
   return fixedCount;
 }
