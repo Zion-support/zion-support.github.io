@@ -118,7 +118,6 @@ export default function ServicesComparisonPage() {
         </div>
       </section>
 
-=======
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -422,9 +421,5 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>);
 }
-=======
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation

@@ -146,8 +146,4 @@ class DependencyManager {
 }
 // Run the dependency manager
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
-<<<<<<< HEAD
 module.exports = DependencyManager;
-=======
-module.exports = DependencyManager;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

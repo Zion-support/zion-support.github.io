@@ -27,26 +27,6 @@ class SecurityAuditor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-<<<<<<< HEAD
-=======
-      child.on('close', (code) => {}
-        if ( {})
-          console.log('Security audit passed ✓')) {}
-     {}
-          console.log('Security audit passed ✓')}} else {}
-          console.log('Security audit found issues ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
-          
-          // Attempt to auto-fix security issues;
-          this.attemptSecurityFix()};
-      })} catch (error) {}
-      console.error('Error running security "audit": ', error.message)};
-  };
-  async attemptSecurityFix() {}
-    try {}
-      console.log('Attempting to fix security issues...');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -85,7 +65,3 @@ if ( {})
 });
   
   auditor.start().catch(console.error)};
-<<<<<<< HEAD
-module.exports = SecurityAuditor;
-=======
-module.exports = SecurityAuditor;

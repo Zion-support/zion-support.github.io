@@ -13,7 +13,6 @@
     "error": "Error",
     "explore": "Explore",
     "menu": "Menu",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "saving": "Saving...",
     "open_main_menu": "Open main menu",
     "toggle_mobile_menu": "Toggle mobile menu";
@@ -21,7 +20,6 @@
     "faq": "FAQ",
     "help": "Help Center",
 
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -35,7 +33,6 @@ origin/chore/build-setup
 :temp_exclude/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
     "post_job": "Post Job"
   },
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -103,7 +100,6 @@ origin/chore/build-setup
     "submitting": "Submitting...",
     "post_job_button": "Post Job"
   },
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "language": {
     "en": "English",
     "es": "Español",
@@ -154,6 +150,3 @@ origin/chore/build-setup
   }
 ursor/automate-test-improve-and-merge-code-2480:dist/locales/en-US/common.json
 }
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
-=======>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

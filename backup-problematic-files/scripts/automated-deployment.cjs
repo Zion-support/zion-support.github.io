@@ -27,8 +27,4 @@ const { execSync } = require('child_process')
         "failedSteps"
         "skippedSteps"
 // console.log('\n Deployment "Report")
-<<<<<<< HEAD
       console.log('\n Errors "encountered")
-=======
-      console.log('\n Errors "encountered")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

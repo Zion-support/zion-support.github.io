@@ -27,8 +27,4 @@ const path = require("path")
         "
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
-<<<<<<< HEAD
     console.log(`� Report saved "to"`)
-=======
-    console.log(`� Report saved "to"`)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Generate comprehensive report
 function generateReport(results) {
   const report = {
@@ -41,25 +40,4 @@ async function main() {
     const results = await runAllAutomations();
     const report = generateReport(results);
     console.log('\n📊 AUTOMATION SUMMARY');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    console.log('======');
-=======
-<<<<<<< HEAD=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======main();
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 main();
-=======main();main();=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

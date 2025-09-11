@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -79,7 +78,3 @@ const fs = require('fs')
               "fontWeight"
               "display"
               "border"
-<<<<<<< HEAD
-              "transition"
-=======
-              "transition"

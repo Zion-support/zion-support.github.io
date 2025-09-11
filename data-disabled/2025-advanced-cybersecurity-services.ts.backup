@@ -36,21 +36,3 @@ export interface AdvancedCybersecurityService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD:data-disabled/2025-advanced-cybersecurity-services.ts
-const contact = {
-  mobile: "+1 302 464 0950",;
-  email: "kleber@ziontechgroup.com",;
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-
-
-
-
-  website: "https://ziontechgroup.com"}
-export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [;
-  {
-    id: "ai-threat-hunting-platform",;
-    name: "AI Threat Hunting Platform",;
-    tagline: "Proactively hunt and eliminate cyber threats before they strike",;
-    price: "$1,299",;
-    period: "/month",;
-    description: "Advanced AI-powered threat hunting platform that proactively identifies, analyzes, and eliminates cyber threats before they can cause damage. Features behavioral analysis, threat intelligence, and automated response.",;

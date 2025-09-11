@@ -35,11 +35,3 @@ export interface EmergingTechService2028 {
   rating: number;
 export const emergingTech2028Services: EmergingTech2028Service[] = [;
   // Biometric Authentication Platform;
-<<<<<<< HEAD:data-disabled/2028-emerging-tech-services.ts
-  {
-    id: "biometric-authentication-platform",;
-    name: "Biometric Authentication Platform",;
-    tagline: "Secure identity verification with advanced biometrics",;
-    price: "$1,999",;
-    period: "/month",;
-    description: "Next-generation biometric authentication platform that uses facial recognition, fingerprint scanning, voice analysis, and behavioral biometrics to provide secure, frictionless identity verification.",;

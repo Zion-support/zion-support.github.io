@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React, { ReactNode } from 'react';
+import Sidebar from './Sidebar';
+
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -169,6 +174,7 @@ const Layout: React.FC < LayoutProps> = ({
       <main>{children}</main>
       <Footer />
     </div>
+>>>>>>> main
 interface LayoutProps {
   children: ReactNode,
 }
@@ -248,6 +254,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   );
 }
+<<<<<<< HEAD
+=======
 export default Layout;
 import React, { ReactNode } from "react";
 interface LayoutProps {
@@ -286,3 +294,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 export default Layout;
 export default Layout;
+>>>>>>> main

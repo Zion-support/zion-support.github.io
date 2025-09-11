@@ -54,33 +54,4 @@
 const resolver = new MergeConflictResolver()
 resolver.resolveConflicts().then(() => {
   })
-<<<<<<< HEAD
-=======
-=======>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-// console.log(' Merge Conflict Resolver')
-console.log('=====')
-      const conflictFiles = execSync('git diff --name-only --diff-filter=U')
-        "encoding"
-        console.log('\"nErrors")
-      console.error('Error resolving "conflicts")
-  console.log('Run "git add ." and "git commit")
-<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
->>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -94,7 +94,3 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
   console.error('Failed to start Build "Monitor": ', error);
   process.exit(1)}
-<<<<<<< HEAD
-});
-=======
-});
