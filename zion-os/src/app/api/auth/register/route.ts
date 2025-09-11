@@ -1,11 +1,32 @@
-import { NextRequest, NextResponse } from "next/server";
-import bcrypt from "bcryptjs";
-import { prisma } from "@/lib/prisma";
-import { z } from "zod";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+import { NextRequest, NextResponse  } from './next / server';,
+import bcrypt from './bcryptjs';,
+import { prisma  } from '@/lib / prisma';,
+import { z  } from './zod';,
+const register_schema = z.object ({
+  name: z.string ().min (2, "Name must be at least 2 characters"),
+  email: z.string ().email ("Invalid email address"),
+  password: z.string ().min (8, "Password must be at least 8 characters")}),
+export async /**
+ * POST - Function description
+ */
+function POST() {
+  try {
+    const body = await request.json (),
+    const { name, email, password } = register_schema.parse (body),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        { status: 400 }
+      );
+    }
+    // Hash password;
+      { error: "Internal server error" }import bcrypt from "bcryptjs",;
+import { prisma } from "@/lib/prisma",;
+import { z } from "zod",;
 const registerSchema = z.object({;
-  name: z.string().min(2, "Name must be at least 2 characters");
-  email: z.string().email("Invalid email address");
-  password: z.string().min(8, "Password must be at least 8 characters")});
+  name: z.string().min(2, "Name must be at least 2 characters"),;
+  email: z.string().email("Invalid email address"),;
+  password: z.string().min(8, "Password must be at least 8 characters")}),;
 export async function POST(request: NextRequest) {;
   try {;
     const body = await request.json();
@@ -50,7 +71,10 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       { status: 500 }
     );
   }
 }
+=======
+=======

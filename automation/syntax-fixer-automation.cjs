@@ -114,9 +114,6 @@ class SyntaxFixerAutomation {
 
       // Remove merge conflict markers
       content = content.replace(
-<<<<<<< HEAD
-        ''
-=======
         /[\s\S]*?[\s\S]*?        ''
       );
       content = content.replace(

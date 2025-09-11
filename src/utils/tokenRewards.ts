@@ -35,5 +35,3 @@ export async function earnTokensForAction(userId: string, action: EarnAction, am
     body: JSON.stringify({ userId, action, amount }),
   });
 }
-
-export default earnTokensForAction;

@@ -1,0 +1,14 @@
+{
+  "optimization": {
+    "splitChunks": {
+      "chunks": "all",
+      "cacheGroups": {
+        "vendor": {
+          "test": {},
+          "name": "vendors",
+          "chunks": "all"
+        }
+      }
+    }
+  }
+}

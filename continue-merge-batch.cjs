@@ -2,7 +2,6 @@
 const { execSync } = require('child_process');
 
 console.log('🚀 Continuing Merge Batch Processing');
-console.log('====================================');
 
 class ContinueMergeBatch {
   constructor() {
@@ -82,13 +81,6 @@ class ContinueMergeBatch {
 
       // Strategy: Keep our changes (HEAD) for most conflicts
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*/gs,
-        '$1'
-      );
-
-      // Handle any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> .*/gs, '');
-      resolvedContent = resolvedContent.replace(/=======\n.*?\n>>>>>>> .*/gs, '');
 
       // Write the resolved content
       fs.writeFileSync(filePath, resolvedContent);
@@ -179,7 +171,6 @@ class ContinueMergeBatch {
     const duration = Math.round((endTime - this.startTime) / 1000);
 
     console.log('\n🎉 Batch 2 Merge Resolution Complete!');
-    console.log('======================================');
     console.log(`Total branches processed: ${this.processedBranches.length}`);
     console.log(`Successfully merged: ${this.mergedBranches.length}`);
     console.log(`Failed branches: ${this.failedBranches.length}`);

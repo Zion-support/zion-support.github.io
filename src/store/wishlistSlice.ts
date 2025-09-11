@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { _createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 
 export interface WishlistItem {
   id: string;
@@ -21,26 +21,26 @@ const initialState: WishlistState = {
   error: null,
 };
 
-export const getApiUrl = () => {
-  const env = import.meta?.env || process.env;
+export const _getApiUrl = () => {
+  const _env = import.meta?.env || process.env;
   return env.VITE_API_URL || env.API_URL || '';
 };
 
-export const loadWishlistFromDB = createAsyncThunk(
+export const _loadWishlistFromDB = createAsyncThunk(
   'wishlist/loadFromDB',
   async (userId: string) => {
-    const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);
+    const _res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);
     if (!res.ok) throw new Error('Failed to load wishlist');
     return await res.json();
   }
 );
 
-const wishlistSlice = createSlice({
+const _wishlistSlice = createSlice({
   name: 'wishlist',
   initialState,
   reducers: {
     addToWishlist: (state, action: PayloadAction<WishlistItem>) => {
-      const exists = state.items.some(
+      const _exists = state.items.some(
         item => item.id === action.payload.id && item.type === action.payload.type
       );
       if (!exists) {

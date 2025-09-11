@@ -581,7 +581,6 @@
     },;
     "competitors": "["Tableau"", "Power BI", "Looker", "Domo", "Sisense"],;
     "marketSize": "$33.3 billion by 2025";
-=======
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
   // Social Media Management & Analytics Platform;,
   {}
@@ -1703,8 +1702,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     },
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],",
     marketSize: "$5.9 billion by 2025";,",
-=======
-=======export interface MicroSaasService {
   id: string;
   title: string;
   description: string;
@@ -2838,21 +2835,10 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       uptime: &quot;99.9%&quot;,
       security: [&quot;Data encryption&quot;, &quot;Access control&quot;, &quot;Audit logging&quot;, &quot;Privacy protection&quot;]
     },
-<<<<<<< HEAD:backup-merge-conflicts/microSaasServicesData.ts.backup
-<<<<<<< HEAD
-    competitors: [&quot;BambooHR&quot;, &quot;Workday&quot;, &quot;ADP&quot;, &quot;Zenefits&quot;, &quot;Gusto&quot;],
-    marketSize: &quot;$5.9 billion by 2025&quot;
-=======
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],
-    marketSize: "$5.9 billion by 2025">>>>>>> main:src_backup_temp/data/microSaasServicesData.ts
->>>>>>> main
->>>>>>> main
   }
 ];
->>>>>>> main
-=======
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],
     marketSize: "$5.9 billion by 2025"
   }
 ];
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/data/microSaasServicesData.ts

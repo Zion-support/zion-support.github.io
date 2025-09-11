@@ -17,4 +17,3 @@ describe('NewsletterSubscription placeholder', () => {
     expect(true).toBe(true);
   });
 });
-

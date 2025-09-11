@@ -1,4 +1,9 @@
-import { ProductListing  } from '@/types/listings';
+import { _ProductListing  } from '../types/listings';
+
+import { Cloud } from 'lucide-react';
+const integrations = [];
+const applications = [];
+const solutions = [];
 // Advanced AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions with real market applications
 export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [

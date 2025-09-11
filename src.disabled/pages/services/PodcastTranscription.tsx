@@ -12,4 +12,3 @@ import: SEO from '@/src/src/components/SEO';';
     </div>
   );
 
-

@@ -19,5 +19,3 @@ ${allPages.map((page) => {,
 ")}</urlset>";
 ";
   res.setHeader("Content-Type", "text/xml");
-}
-  res.status(200).send(sitemap);"

@@ -46,7 +46,6 @@ export default function AboutPage() {
                 and unwavering commitment to excellence.
               </p>
             </div>
-=======
 export const metadata = {
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a pioneering company in AI-powered digital economies, quantum computing, and autonomous business solutions.',
@@ -289,7 +288,6 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-=======
       {/* Company Values */}
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
@@ -342,27 +340,6 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Join Our Mission
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Ready to transform your business with cutting-edge technology solutions? 
-              Let's work together to build the future.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
-                Get Started
-              </Link>
-              <Link href="/careers" className="btn-secondary text-lg px-8 py-4">
-                Join Our Team
-              </Link>
-            </div>
-          </div>
-=======
       <section className="text-center py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Us in Shaping the Future</h2>
         <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
@@ -381,7 +358,6 @@ export default function AboutPage() {
           >
             Get in Touch
           </a>
->>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
         </div>
       </section>
     </div>
