@@ -1,0 +1,259 @@
+{
+  "timestamp": "2025-09-06T05:00:59.946Z",
+  "totalFiles": 50,
+  "successfulFiles": 50,
+  "failedFiles": 0,
+  "totalChanges": 414,
+  "results": [
+    {
+      "file": "../src/components/AIListingGenerator.tsx",
+      "changes": 11,
+      "success": true
+    },
+    {
+      "file": "../src/components/AIMatchingResults.tsx",
+      "changes": 10,
+      "success": true
+    },
+    {
+      "file": "../src/components/AIMatchmaker.tsx",
+      "changes": 11,
+      "success": true
+    },
+    {
+      "file": "../src/components/ApiErrorBoundary.tsx",
+      "changes": 7,
+      "success": true
+    },
+    {
+      "file": "../src/components/AuthButtons.tsx",
+      "changes": 5,
+      "success": true
+    },
+    {
+      "file": "../src/components/AuthGuard.tsx",
+      "changes": 6,
+      "success": true
+    },
+    {
+      "file": "../src/components/BackToTopButton.tsx",
+      "changes": 3,
+      "success": true
+    },
+    {
+      "file": "../src/components/BenefitsSection.tsx",
+      "changes": 7,
+      "success": true
+    },
+    {
+      "file": "../src/components/CategoriesSection.tsx",
+      "changes": 10,
+      "success": true
+    },
+    {
+      "file": "../src/components/CategoryListingPage.tsx",
+      "changes": 10,
+      "success": true
+    },
+    {
+      "file": "../src/components/ChatAssistant/ChatAssistant.tsx",
+      "changes": 8,
+      "success": true
+    },
+    {
+      "file": "../src/components/ChatAssistant/ChatInput.tsx",
+      "changes": 3,
+      "success": true
+    },
+    {
+      "file": "../src/components/ChatAssistantTrigger.tsx",
+      "changes": 5,
+      "success": true
+    },
+    {
+      "file": "../src/components/CommunityDiscussion.tsx",
+      "changes": 8,
+      "success": true
+    },
+    {
+      "file": "../src/components/ComparisonSection.tsx",
+      "changes": 4,
+      "success": true
+    },
+    {
+      "file": "../src/components/ContactSection.tsx",
+      "changes": 13,
+      "success": true
+    },
+    {
+      "file": "../src/components/DynamicListingPage.tsx",
+      "changes": 18,
+      "success": true
+    },
+    {
+      "file": "../src/components/EnhancedNewsletterForm.tsx",
+      "changes": 7,
+      "success": true
+    },
+    {
+      "file": "../src/components/EquipmentErrorBoundary.tsx",
+      "changes": 5,
+      "success": true
+    },
+    {
+      "file": "../src/components/FaqSection.tsx",
+      "changes": 2,
+      "success": true
+    },
+    {
+      "file": "../src/components/FavoriteButton.tsx",
+      "changes": 9,
+      "success": true
+    },
+    {
+      "file": "../src/components/FeaturesGuideSection.tsx",
+      "changes": 6,
+      "success": true
+    },
+    {
+      "file": "../src/components/FloatingCTA.tsx",
+      "changes": 4,
+      "success": true
+    },
+    {
+      "file": "../src/components/Footer.tsx",
+      "changes": 4,
+      "success": true
+    },
+    {
+      "file": "../src/components/FooterNewsletter.tsx",
+      "changes": 6,
+      "success": true
+    },
+    {
+      "file": "../src/components/GlobalErrorHandler.tsx",
+      "changes": 6,
+      "success": true
+    },
+    {
+      "file": "../src/components/GlobalServiceSection.tsx",
+      "changes": 3,
+      "success": true
+    },
+    {
+      "file": "../src/components/HowItWorksSection.tsx",
+      "changes": 7,
+      "success": true
+    },
+    {
+      "file": "../src/components/InstallPrompt.tsx",
+      "changes": 5,
+      "success": true
+    },
+    {
+      "file": "../src/components/ListingCard.tsx",
+      "changes": 6,
+      "success": true
+    },
+    {
+      "file": "../src/components/ListingScoreCard.tsx",
+      "changes": 8,
+      "success": true
+    },
+    {
+      "file": "../src/components/MarketplaceErrorBoundary.tsx",
+      "changes": 8,
+      "success": true
+    },
+    {
+      "file": "../src/components/ModeToggle.tsx",
+      "changes": 10,
+      "success": true
+    },
+    {
+      "file": "../src/components/NotificationCenter.tsx",
+      "changes": 8,
+      "success": true
+    },
+    {
+      "file": "../src/components/OfflineIndicator.tsx",
+      "changes": 3,
+      "success": true
+    },
+    {
+      "file": "../src/components/PageErrorBoundary.tsx",
+      "changes": 6,
+      "success": true
+    },
+    {
+      "file": "../src/components/PerformanceDashboard.tsx",
+      "changes": 7,
+      "success": true
+    },
+    {
+      "file": "../src/components/ProductCard.tsx",
+      "changes": 17,
+      "success": true
+    },
+    {
+      "file": "../src/components/ProductListingCard.tsx",
+      "changes": 20,
+      "success": true
+    },
+    {
+      "file": "../src/components/ProductSubmissionForm.tsx",
+      "changes": 17,
+      "success": true
+    },
+    {
+      "file": "../src/components/PwaInstallButton.tsx",
+      "changes": 7,
+      "success": true
+    },
+    {
+      "file": "../src/components/QuoteRequestForm/ServiceTypeStep.tsx",
+      "changes": 16,
+      "success": true
+    },
+    {
+      "file": "../src/components/QuoteRequestForm/StepProgress.tsx",
+      "changes": 5,
+      "success": true
+    },
+    {
+      "file": "../src/components/QuoteRequestForm/TimelineStep.tsx",
+      "changes": 12,
+      "success": true
+    },
+    {
+      "file": "../src/components/QuoteRequestForm.tsx",
+      "changes": 18,
+      "success": true
+    },
+    {
+      "file": "../src/components/RatingStars.tsx",
+      "changes": 2,
+      "success": true
+    },
+    {
+      "file": "../src/components/SearchBar.tsx",
+      "changes": 10,
+      "success": true
+    },
+    {
+      "file": "../src/components/ServiceQuoteModal.tsx",
+      "changes": 21,
+      "success": true
+    },
+    {
+      "file": "../src/components/SitemapPage.tsx",
+      "changes": 5,
+      "success": true
+    },
+    {
+      "file": "../src/components/SocialShareSection.tsx",
+      "changes": 5,
+      "success": true
+    }
+  ]
+}

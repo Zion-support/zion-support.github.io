@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-09-11T11:52:22.473Z",
+  "build": {
+    "success": true,
+    "result": "\n> zion-tech-group-website@0.1.0 build\n> vite build --mode production && cp -f _redirects dist/_redirects || true && cp -f public/_headers dist/_headers || true\n\nvite v5.4.20 building for production...\ntransforming...\n✓ 38 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.69 kB │ gzip:  0.37 kB\ndist/assets/index-Xy9jNAu1.css  349.33 kB │ gzip: 42.33 kB\ndist/assets/ui-aGJvxzQz.js        0.70 kB │ gzip:  0.46 kB │ map:   2.40 kB\ndist/assets/router-B51WvhLW.js    5.34 kB │ gzip:  2.26 kB │ map: 333.42 kB\ndist/assets/index-ys5ChKa9.js     5.67 kB │ gzip:  2.46 kB │ map:  37.69 kB\ndist/assets/vendor-CyvzqkFf.js  140.15 kB │ gzip: 45.04 kB │ map: 348.31 kB\n✓ built in 7.43s\n"
+  },
+  "tests": {
+    "success": true,
+    "result": "\n RUN  v2.1.9 /workspace\n\n ✓ __tests__/App.test.tsx (3 tests) 47ms\n\n Test Files  1 passed (1)\n      Tests  3 passed (3)\n   Start at  11:52:30\n   Duration  935ms (transform 29ms, setup 50ms, collect 87ms, tests 47ms, environment 339ms, prepare 50ms)\n\n"
+  },
+  "security": {
+    "success": true,
+    "result": "🔒 Running security audit...\n✅ Security audit completed\n"
+  },
+  "performance": {
+    "success": true,
+    "result": "Optimizing performance...\nPerformance issues found:\n- Unused CSS classes in src/App.css: .6, .2, .5rem, .25rem, .7, .3s, .btn, .75rem, .btn-primary, .3, .btn-secondary, .container, .section, .text-center, .mb-1, .mb-2, .mb-4, .mb-6, .mb-8, .mt-1, .mt-2, .mt-4, .mt-6, .mt-8, .grid, .grid-cols-1, .grid-cols-2, .grid-cols-3, .grid-cols-4, .md, .lg, .flex, .flex-col, .items-center, .justify-center, .justify-between, .gap-1, .gap-2, .gap-4, .gap-6, .gap-8, .p-1, .p-2, .p-4, .p-6, .p-8, .px-1, .px-2, .px-4, .px-6, .px-8, .py-1, .py-2, .py-4, .py-6, .py-8, .sm, .125rem, .875rem, .transition, .hover, .05, .1, .loading, .fade-in, .5s, .gradient-text, .card, .form-input, .5, .hidden, .block, .inline-block, .inline, .rounded, .rounded-lg, .rounded-xl, .rounded-2xl, .shadow, .06, .shadow-lg, .shadow-xl, .04, .opacity-0, .opacity-25, .25, .opacity-50, .opacity-75, .75, .opacity-100, .zion-gradient, .zion-text-gradient, .zion-border, .zion-shadow\n- Unused CSS classes in src/styles/accessibility.css: .high-contrast, .reduced-motion, .01ms, .skip-link, .sr-only, .animate-spin, .animate-pulse, .animate-bounce, .transition-all, .transition-transform, .transition-opacity, .focus-trap\n"
+  },
+  "codeQuality": {
+    "success": true,
+    "result": "\n> zion-tech-group-website@0.1.0 lint:check\n> eslint --no-error-on-unmatched-pattern src/AppMinimal.tsx --max-warnings 0\n\n"
+  },
+  "automation": {
+    "success": false,
+    "error": "Command failed: node scripts/master-automation-orchestrator.cjs"
+  },
+  "overall": {
+    "status": "excellent",
+    "score": 90
+  }
+}

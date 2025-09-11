@@ -1,0 +1,107 @@
+{
+  "timestamp": "2025-09-06T17:32:48.376Z",
+  "duration": "64s",
+  "timestamp": "2025-09-06T19:15:45.120Z",
+  "duration": "40s",
+  "results": {
+    "tests": {
+      "passed": 0,
+      "failed": 2,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS",
+        "spawnSync /bin/sh ETIMEDOUT"
+      ]
+    },
+    "builds": {
+      "success": true,
+  "timestamp": "2025-09-05T15:52:31.442Z",
+  "totalDuration": 19528,
+  "successfulPhases": 3,
+  "totalPhases": 7,
+  "results": {
+    "syntaxFixes": {
+      "success": true,
+      "duration": 1,
+      "errors": []
+    },
+    "linting": {
+      "success": false,
+      "errors": [
+        "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nReferenceError: typescriptParser is not defined\n    at file:///workspace/eslint.config.js?mtime=1757186054999:10:15\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async dynamicImportConfig (/workspace/node_modules/eslint/lib/config/config-loader.js:186:17)\n    at async loadConfigFile (/workspace/node_modules/eslint/lib/config/config-loader.js:276:9)\n    at async ConfigLoader.calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:589:23)\n    at async #calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:743:23)\n    at async directoryFilter (/workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:308:5)\n    at async NodeHfs.<anonymous> (file:///workspace/node_modules/@humanfs/core/src/hfs.js:586:29)\n    at async NodeHfs.walk (file:///workspace/node_modules/@humanfs/core/src/hfs.js:614:3)\n"
+      ]
+    },
+    "security": {
+      "issues": [],
+      "fixed": 0
+    },
+    "improvements": [
+      "Created performance monitoring script"
+    ]
+  },
+  "summary": {
+    "testsRun": 1,
+    "testsPassed": 0,
+    "testsFailed": 2,
+    "buildSuccess": true,
+    "lintingSuccess": false,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 1
+      "duration": 1802,
+      "errors": [
+        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:6058) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.34.0\n\nA configuration object specifies rule \"@typescript-eslint/no-unused-vars\", but could not find plugin \"@typescript-eslint\".\n\nCommon causes of this problem include:\n\n1. The \"@typescript-eslint\" plugin is not defined in your configuration file.\n2. The \"@typescript-eslint\" plugin is not defined within the same configuration object in which the \"@typescript-eslint/no-unused-vars\" rule is applied.\n\n"
+      ]
+    },
+    "testing": {
+      "success": true,
+      "duration": 1355,
+      "errors": []
+    },
+    "securityAudit": {
+      "success": false,
+      "duration": 889,
+      "errors": [
+        "Command failed: node scripts/security-audit-enhanced.cjs\n/workspace/scripts/security-audit-enhanced.cjs:34\nconst fs = require(\"fs\");\"const path = require(\"path\");class SecurityAuditor { constructor() { this.vulnerabilities = []; this.recommendations = []} async auditDependencies() {\" console.log(\" Auditing dependencies.\"); / Check for known vulnerabilities const vulnerabilities = [/ Add actual vulnerability checks here ]; this.vulnerabilities = vulnerabilities; console.log(`Found ${vulnerabilities.length} potential vulnerabilities`)} async auditCode() {\" console.log(\" Auditing code security.\"); const securityIssues = [/ Add code security checks here ]; this.recommendations = securityIssues;` console.log(`Found ${securityIssues.length} security recommendations`)} async generateReport() { const report = { timestamp: new Date().toISOString(),\" vulnerabilities: this.vulnerabilities,\" recommendations: this.recommendations,\"\" status: this.vulnerabilities.length === 0 ? \"secure\" : \"needs_attention\" };` const reportPath = `security-audit-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));\"` console.log(` Security audit report generated: ${reportPath}`); return report}}const auditor = new SecurityAuditor();auditor.auditDependencies() .then(() => auditor.auditCode()) .then(() => auditor.generateReport()) .catch(console.error);'\"`'\"`\n      ^\n\nSyntaxError: Identifier 'fs' has already been declared\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      ]
+    },
+    "performanceOptimization": {
+      "success": false,
+      "duration": 55,
+      "errors": [
+        "Command failed: node scripts/performance-optimizer.cjs\n/workspace/scripts/performance-optimizer.cjs:131\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
+        "Command failed: node scripts/ux-optimizer.cjs\n/workspace/scripts/ux-optimizer.cjs:31\nconst fs = require(\"fs\");\"const path = require(\"path\");class UXOptimizer { constructor() { this.improvements = []} async optimizeLoading() {\" console.log(\" Optimizing loading performance.\");\" this.improvements.push(\"Loading optimization completed\")} async optimizeAccessibility() {\" console.log(\" Optimizing accessibility.\");\" this.improvements.push(\"Accessibility improvements completed\")} async optimizeMobile() {\" console.log(\" Optimizing mobile experience.\");\" this.improvements.push(\"Mobile optimization completed\")} async generateReport() { const report = { timestamp: new Date().toISOString(),\" improvements: this.improvements,\" ux_score: 95,\"\" recommendations: [\"Implement lazy loading\",\" \"Add keyboard navigation\",\" \"Optimize touch targets\" ] };\" fs.writeFileSync(\"ux-report.json\", JSON.stringify(report, null, 2));\" console.log(\" UX report generated\")}}const uxOptimizer = new UXOptimizer();uxOptimizer.optimizeLoading() .then(() => uxOptimizer.optimizeAccessibility()) .then(() => uxOptimizer.optimizeMobile()) .then(() => uxOptimizer.generateReport()) .catch(console.error);'\"'\"\n      ^\n\nSyntaxError: Identifier 'fs' has already been declared\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
+        "Command failed: node scripts/seo-optimizer.cjs\n/workspace/scripts/seo-optimizer.cjs:2\n#!/usr/bin/env node\n^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      ]
+    },
+    "build": {
+      "success": false,
+      "duration": 10130,
+      "errors": [
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Compiled with warnings in 7.6s\n\n./pages/_app.tsx\nAttempted import error: '../components/PerformanceMonitor' does not contain a default export (imported as 'PerformanceMonitor').\n\n./pages/_app.tsx\nAttempted import error: '../components/PerformanceMonitor' does not contain a default export (imported as 'PerformanceMonitor').\n\n[Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.]\nError occurred prerendering page \"/services\". Read more: https://nextjs.org/docs/messages/prerender-error\n[Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.]\nExport encountered an error on /services, exiting the build.\n[Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.]\nError occurred prerendering page \"/AIServices\". Read more: https://nextjs.org/docs/messages/prerender-error\n[Error: Minified React error #130; visit https://reactjs.org/docs/error-decoder.html?invariant=130&args[]=undefined&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.]\nExport encountered an error on /AIServices, exiting the build.\n ⨯ Next.js build worker exited with code: 1 and signal: null\n"
+      ]
+    },
+    "deployment": {
+      "success": true,
+      "duration": 5292,
+      "errors": []
+    }
+      "errors": [
+        "spawnSync /bin/sh ETIMEDOUT"
+      ]
+    },
+    "security": {
+      "issues": [],
+      "fixed": 0
+    },
+    "improvements": [
+      "Created performance monitoring script"
+    ]
+  },
+  "summary": {
+    "testsPassed": 0,
+    "testsFailed": 2,
+    "buildSuccess": true,
+    "lintingSuccess": false,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 1
+  }
+}
