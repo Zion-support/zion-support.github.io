@@ -1,4 +1,7 @@
+import React from 'react';
 
+interface SEOProps {
+  title?: string;
   description?: string;
   keywords?: string;
   image?: string;
@@ -12,7 +15,10 @@ export const SEO: React.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-
+  type = 'website'
+}) => {
+  return (
+    <>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -25,7 +31,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -34,36 +39,25 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
 
-      {/* Additional SEO */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.svg",
-          "description": description,
-          "sameAs": ["https://linkedin.com/company/zion-tech-group",
-            "https://twitter.com/ziontechgroup"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
-            "contactType": "customer service"
-          }
-        })}
-
-import Head from "next/head"
-import React from "react"
-import { Helmet  } from "react - helmet-async", SEOProps {title?: string;description?: string
-export const SEO: React.FC < SEOProps> = ({,
-"
-export default function Page() {
-export default function Page() {;
-
-interface SEOProps {
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": url,
+            "logo": image,
+            "description": description,
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-555-ZION-TECH",
+              "contactType": "customer service"
+            }
+          })
+        }}
+      />
+    </>
+  );
+};
