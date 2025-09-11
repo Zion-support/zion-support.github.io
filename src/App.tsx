@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
@@ -10,18 +10,18 @@ import { Button } from './components/ui/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
 
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+// Lazy load pages with better error handling
+const Home = React.lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading Home page</div> })));
+const About = React.lazy(() => import('./pages/About').catch(() => ({ default: () => <div>Error loading About page</div> })));
+const Services = React.lazy(() => import('./pages/Services').catch(() => ({ default: () => <div>Error loading Services page</div> })));
+const Pricing = React.lazy(() => import('./pages/Pricing').catch(() => ({ default: () => <div>Error loading Pricing page</div> })));
+const Contact = React.lazy(() => import('./pages/Contact').catch(() => ({ default: () => <div>Error loading Contact page</div> })));
 
-// Service pages
-const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity'));
-const CloudMigration = React.lazy(() => import('./pages/CloudMigrationServices'));
-const DevOps = React.lazy(() => import('./pages/CloudDevOpsServices'));
-const MobileDevelopment = React.lazy(() => import('./pages/MobileAppPage'));
+// Service pages with error handling
+const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity').catch(() => ({ default: () => <div>Error loading Cybersecurity page</div> })));
+const CloudMigration = React.lazy(() => import('./pages/CloudMigrationServices').catch(() => ({ default: () => <div>Error loading Cloud Migration page</div> })));
+const DevOps = React.lazy(() => import('./pages/CloudDevOpsServices').catch(() => ({ default: () => <div>Error loading DevOps page</div> })));
+const MobileDevelopment = React.lazy(() => import('./pages/MobileAppPage').catch(() => ({ default: () => <div>Error loading Mobile Development page</div> })));
 
 const App = () => {
   return (
@@ -30,7 +30,7 @@ const App = () => {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
           <Header />
           <Sidebar />
-          <React.Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -42,7 +42,7 @@ const App = () => {
               <Route path="/devops" element={<DevOps />} />
               <Route path="/mobile-development" element={<MobileDevelopment />} />
             </Routes>
-          </React.Suspense>
+          </Suspense>
           <Footer />
           <PerformanceMonitor />
         </div>
