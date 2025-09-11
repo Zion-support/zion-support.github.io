@@ -40,24 +40,10 @@ const nextConfig = {
   },
 
   experimental: {
-    optimizePackageImports: [
-      'lucide-react', 
-      '@radix-ui/react-icons',
-      'recharts',
-      'react-window',
-      'fuse.js'
-    ],
-    // ESM configuration for problematic packages
-    esmExternals: 'loose', // Allow loose ESM handling
-    
-    // Enable CSS optimization for production
-    optimizeCss: process.env.NODE_ENV === 'production', 
-    // Memory and performance optimizations
-    largePageDataBytes: 128 * 1000, // Reduced to 128KB for better performance
-    workerThreads: false, // Disable worker threads to reduce memory usage
-    cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
-    // Disable profiling for faster builds
-    swcTraceProfiling: false,
+    // Keep only supported/stable experimental flags
+    optimizeCss: process.env.NODE_ENV === 'production',
+    largePageDataBytes: 128 * 1000,
+    cpus: Math.min(2, require('os').cpus().length),
     newNextLinkBehavior: true,
     scrollRestoration: true
   },
