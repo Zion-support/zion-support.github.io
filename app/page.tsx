@@ -401,6 +401,13 @@ export default function HomePage() {
               View All Articles
               <span>→</span>
             </Link>
+            <Link href='/blog/enterprise-rag-architecture-2025' className='group'>
+              <div className='rounded-lg border border-purple-200 bg-purple-50 p-6 hover:bg-purple-100 transition-colors'>
+                <div className='text-sm font-medium text-purple-700 mb-1'>New</div>
+                <h3 className='text-xl font-semibold text-purple-900 group-hover:underline'>Enterprise RAG Architecture 2025</h3>
+                <p className='text-purple-800 mt-2'>Reliable, governed, and cost-aware Retrieval-Augmented Generation in production.</p>
+              </div>
+            </Link>
           </div>
 
           {/* Featured Articles Grid */}
