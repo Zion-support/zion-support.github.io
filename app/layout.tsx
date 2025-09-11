@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
+import PromotionalBanner from '../components/PromotionalBanner';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
@@ -192,6 +193,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <PromotionalBanner />
       </body>
     </html>
   );
