@@ -1,15 +1,15 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Implementation Checklist 2025: 200+ Actionable Steps for Success',
+  description: 'Comprehensive AI implementation checklist with 200+ actionable steps. Download our free guide covering strategy, technology, people, and processes for successful AI deployment.',
+  keywords: 'AI implementation checklist, AI deployment guide, AI strategy, AI project management, AI best practices, AI roadmap',
+};
 
 export default function AIImplementationChecklist2025() {
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI Implementation Checklist 2025: 200+ Actionable Steps for Success"
-        description="Comprehensive AI implementation checklist with 200+ actionable steps. Download our free guide covering strategy, technology, people, and processes for successful AI deployment."
-        keywords="AI implementation checklist, AI deployment guide, AI strategy, AI project management, AI best practices, AI roadmap"
-        url="/resources/ai-implementation-checklist-2025"
-      />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none">
