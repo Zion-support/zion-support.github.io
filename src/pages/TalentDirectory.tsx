@@ -129,4 +129,6 @@ const TalentDirectory: React.FC = () => {
       </div>
     </div>
   );
-}
+};
+
+export default TalentDirectory;
