@@ -330,8 +330,8 @@ export default function HomePage() {
               🚀 Fresh Insights & Expert Guides
             </h2>
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              New this week: AI Automation ROI Calculator, Enterprise AI Security Best Practices, 
-              and Fortune 500 Transformation Case Study. Practical tools to accelerate your AI journey.
+              New this week: AI Procurement Playbook 2025 and Agent Safety & Guardrails 2025.
+              Practical guidance to buy faster, reduce risk, and ship reliable agentic systems.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
@@ -351,26 +351,26 @@ export default function HomePage() {
 
           {/* Featured Content Grid */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            <Link href='/blog/product-analytics-2025' className='group'>
+            <Link href='/blog/ai-procurement-playbook-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🤖</div>
-                <h3 className='text-lg font-semibold mb-2'>Product Analytics 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>From dashboards to decisions</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛒</div>
+                <h3 className='text-lg font-semibold mb-2'>AI Procurement Playbook 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Buy fast, avoid regret</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>9 min read</span>
+                  <span>10 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
               </div>
             </Link>
             
-            <Link href='/blog/finops-ai-2025' className='group'>
+            <Link href='/blog/agent-safety-guardrails-2025' className='group'>
               <div className='bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20'>
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>💸</div>
-                <h3 className='text-lg font-semibold mb-2'>FinOps for AI 2025</h3>
-                <p className='text-sm opacity-90 mb-3'>Cut LLM spend without slowing teams</p>
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform'>🛡️</div>
+                <h3 className='text-lg font-semibold mb-2'>Agent Safety & Guardrails 2025</h3>
+                <p className='text-sm opacity-90 mb-3'>Reliable agentic systems in production</p>
                 <div className='flex items-center text-xs opacity-75'>
-                  <span>8 min read</span>
+                  <span>11 min read</span>
                   <span className='mx-2'>•</span>
                   <span>New</span>
                 </div>
