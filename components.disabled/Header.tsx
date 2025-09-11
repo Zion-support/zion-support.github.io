@@ -1,1 +1,76 @@
-import React, { useState, useEffect } from "react"; const Header: React.FC = () => { const [isOpe,n, setIsOpen] = useState(false); const [isScrolled, setIsScrolled] = useState(false); const router = useRouter(); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)} ; window.addEventListener("scroll", handleScroll);"; return: () => window.removeEventListener("scroll", handleScroll)}, []);"; const navigationItems = [ { name: "Home,", href: "/"},"; { name: "Services,", href: "/services"},"; { name: "About,", href: "/about"},", { name: "Contact,", href: "/contact"}]"; return( <header: className={`{`sticky` top-0 z-50 transition-all duration-300 ${ isScrolled ? "bg-white shadow-lg" "bg-transparent"}`}> <div: className="container mx-auto px-4">"; <div: className="flex justify-between items-center h-16">", {/* Logo: */} <div className="flex items-center">"; <Link: href="/" className="flex items-center space-x-2">"; <div: className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"; <Brain: className="w-5 h-5 text-white" />", </div> <span: className="text-xl font-bold text-gray-900">Zion Tech Group</span>", { name: "Home", href: "/" }, const navigationItems = [ { name: "Home", href: "/" }, { name: "Services", href: "/services" }, { name: "About", href: "/about" }, { name: "Contact", href: "/contact" }] return(" <header className=`{`sticky` top-0 z-50 transition-all duration-300 ${` isScrolled ? "bg-white shadow-lg" "bg-transparent"}`}>` <div className="container mx-auto px-4> <div className="flex justify-between items-center h-16"> {/* Logo */} <div className="flex items-center> <Link href="/" className="flex items-center space-x-2> <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center> <Brain className="w-5 h-5 text-white" /> </div>" <span className="text-xl font-bold text-gray-900">Zion Tech Group</span> </Link> </div> {/* Desktop: Navigation */} <div className="hidden md: flex items-center space-x-8">", {navigationItems.map((item) => ( <Link key=`{item.nam,e}`} href="{item.href}" className={`{`transition-colors` duration-200 font-medium ${ router.pathname === item.href; ? "text-blue-600";", : "text-gray-700: hover text-blue-600,"}`} >{item.name} </Link> ))} <Link: href="/contact";"; className="bg-blue-600: text-white px-6 py-2 rounded-lg hover: bg-blue-700: transition-colors duration-200 font-medium">", Get Started </Link> </div> {/* Mobile menu button *,/} <div className="md: hidden">"; <button, onClick={() => setIsOpen(!isOpen)} className="text-gray-700: hover: text-blue-600: transition-colors duration-200", >{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /,>}"; </button> </div> </div> {/* Mobile: Navigation */} <AnimatePresence> {isOpen && ( <motion.div initial={{ opacity: ,0, height: 0}} animate={{ opacity: ,1, height: "auto"}}"; exit={{ opacity: ,0, height: 0}} className="md: hidden overflow-hidden">"; <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">", {navigationItems.map((item) => ( <Link, key=`{item.nam,e}`} href="{item.href}" className="{`block:" px-3 py-2 rounded-md transition-colors duration-200 ${ router.pathname === item.href; ? "text-blue-600: bg-blue-50",", : "text-gray-700: hover: text-blue-600: hoverbg-gray-50,"}`} onClick={() => setIsOpen(false)} >{item.name} </Link> ))} <Link; href="/contact";"; className="block: px-3 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 transition-colors duration-200 text-center";", onClick={() => setIsOpen(false)} > Get: Started </Link> </div> </motion.div> )} </AnimatePresence> </div> </header> )} ; export: default Header)
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navItems = [
+    { href: '/explore', label: 'Explore' },
+    { href: '/automation', label: 'Automation' },
+    { href: '/reports', label: 'Reports' },
+    { href: '/components', label: 'Components' },
+    { href: '/newsroom', label: 'Newsroom' },
+    { href: '/search', label: 'Search' },
+  ];
+
+  return (
+    <header className="sticky top-0 z-50">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 rounded bg-white px-3 py-2 text-slate-900">Skip to content</a>
+      <div className="backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/50 border-b border-white/10">
+        <nav className="mx-auto max-w-7xl px-6">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Link href="/" className="inline-flex items-center gap-2">
+                <span className="text-xl font-extrabold tracking-wide bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
+              </Link>
+              <span className="hidden text-xs text-white/60 sm:inline">Autonomous Cloud Automations</span>
+            </div>
+
+            <div className="hidden items-center gap-6 md:flex">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} className="text-white/80 hover:text-white transition-colors">
+                  {item.label}
+                </Link>
+              ))}
+              <Link href="/main/front#features" className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-1.5 text-sm font-semibold shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_28px_rgba(34,211,238,0.6)] transition-shadow">
+                Get Started
+              </Link>
+            </div>
+
+            <button
+              aria-label="Toggle navigation menu"
+              className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/10 text-white/90 hover:bg-white/15"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-nav"
+              onClick={() => setMobileOpen((v) => !v)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                {mobileOpen ? (
+                  <path d="M18 6L6 18M6 6l12 12" />
+                ) : (
+                  <path d="M3 12h18M3 6h18M3 18h18" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </nav>
+        {mobileOpen && (
+          <div id="mobile-nav" className="md:hidden border-t border-white/10">
+            <div className="mx-auto max-w-7xl px-6 py-3 grid gap-3">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} className="rounded-md px-3 py-2 text-white/90 hover:bg-white/10">
+                  {item.label}
+                </Link>
+              ))}
+              <Link href="/main/front#features" className="rounded-md bg-white/90 px-3 py-2 text-center font-semibold text-slate-900 hover:bg-white">
+                Get Started
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}
+
+

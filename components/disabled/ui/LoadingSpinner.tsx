@@ -1,2 +1,0 @@
-import React from "react" "interface LoadingSpinnerProps { size?: "sm" | "md" | "lg"; className? string;"} const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", className = "" "}) => {" const sizeClasses = {}' return ( <div className="{"{"flex"" items-center justify-center ${className}"}>" <motion.div className=""{"${sizeClasses[size]}"}" border-2 border-blue-200 border-t-blue-600 rounded-full"}" animate="{{" rotate: 360 }} transition="{{;" duration: 1, repeat: Infinity, ease: "linear }}" /> <// comment;
-export default Component;

@@ -1,37 +1,6 @@
 .next
 node_modules
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-package-lock.json
-yarn.lock
-public/toolkit_assets/media_kit.zip
-__pycache__/
-
-# Build outputs
-dist/
-
-# Automation logs and data (continuously changing)
-automation/logs/*.log
-automation/logs/*.runtime.log
-automation/data/*.json
-!automation/data/autonomous-config.json
+.env*
 .next/
-
-# TypeScript build info
-*.tsbuildinfo
-
-# npm cache
-.npm-cache/
-
-# Ignore core dumps
-core
-core.*
-*.core
-
-core
-
+tsconfig.tsbuildinfo

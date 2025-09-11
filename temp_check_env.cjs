@@ -4,8 +4,7 @@
 
 // Simplified logger functions - using proper structured logging
 function logInfo(message, ...args) {
-  // eslint-disable-next-line no-console
-  console.log(`[INFO] ${message}`, ...args);
+  // console.log(`[INFO] ${message}`, ...args);
 }
 
 function logWarn(message, ...args) {
@@ -46,7 +45,7 @@ function isPlaceholderValue(value) {
     return false; // Real JWT token
   }
 
-  return placeholderPatterns.some(pattern => lowerValue.includes(pattern));
+  return placeholderPatterns.some((pattern) => lowerValue.includes(pattern));
 }
 
 // Simplified getEnvironmentConfig function
@@ -121,7 +120,7 @@ function validateProductionEnvironment() {
       warnings.push('Sentry is not configured - error monitoring disabled');
     if (!config.reown.isConfigured)
       warnings.push(
-        'Reown wallet is not configured - wallet features disabled'
+        'Reown wallet is not configured - wallet features disabled',
       );
     if (!config.datadog.enabled)
       warnings.push('Datadog logging is not configured');
@@ -130,11 +129,11 @@ function validateProductionEnvironment() {
     if (warnings.length > 0) {
       logWarn(
         '⚠️ Development Environment Warnings:\n' +
-          warnings.map(w => `  • ${w}`).join('\n')
+          warnings.map((w) => `  • ${w}`).join('\n'),
       );
     } else {
       logInfo(
-        '✅ Development environment configuration looks good (based on available fallbacks).'
+        '✅ Development environment configuration looks good (based on available fallbacks).',
       );
     }
     return;
@@ -145,12 +144,12 @@ function validateProductionEnvironment() {
 
   if (!config.supabase.isConfigured) {
     errors.push(
-      'Supabase configuration must be complete in production (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)'
+      'Supabase configuration must be complete in production (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)',
     );
   }
   if (!config.sentry.isConfigured) {
     warnings.push(
-      'NEXT_PUBLIC_SENTRY_DSN not configured - error monitoring disabled'
+      'NEXT_PUBLIC_SENTRY_DSN not configured - error monitoring disabled',
     );
   }
   if (!config.datadog.enabled) {
@@ -163,7 +162,7 @@ function validateProductionEnvironment() {
   if (errors.length > 0) {
     const errorMessage =
       'Production Environment Configuration Errors:\n' +
-      errors.map(e => `  • ${e}`).join('\n');
+      errors.map((e) => `  • ${e}`).join('\n');
     // Mimicking the original script's throw
     const error = new Error(errorMessage);
     logWarn('⚠️ Environment validation warning:'); // As per original script's catch block
@@ -178,7 +177,7 @@ function validateProductionEnvironment() {
     // only show warnings if no critical errors
     logWarn(
       '⚠️ Production Environment Warnings:\n' +
-        warnings.map(w => `  • ${w}`).join('\n')
+        warnings.map((w) => `  • ${w}`).join('\n'),
     );
   }
 }
@@ -192,7 +191,7 @@ try {
     // Assuming default to dev if not set
     // logInfo('✅ Environment configuration looks good.'); // This might be redundant
   }
-} catch (err) {
+} catch (_err) {
   // This catch is if validateProductionEnvironment itself throws an unhandled error,
   // not for the configuration errors it's designed to report.
   // The original `scripts/check-env.ts` has a top-level catch.

@@ -1,5 +1,5 @@
-import { Toaster as HotToaster } from 'react-hot-toast';
+import React from 'react';
 
 export function Toaster() {
-  return <HotToaster />;
+  return <div id="toaster" />;
 }
