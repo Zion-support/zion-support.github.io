@@ -51,7 +51,7 @@ export default function HomePage() {
       </section>
 
       {/* New Content Banner - Top */}
-      <NewContentBanner variant="default" maxItems={4} />
+      <NewContentBanner variant="featured" maxItems={4} />
 
       {/* Latest Content Drop - Prominent Banner */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
@@ -780,7 +780,7 @@ export default function HomePage() {
       <EnhancedNewsletterSignup variant="default" showContentPreview={true} />
 
       {/* Trending Content Showcase */}
-      <NewContentShowcase variant="trending" maxItems={4} />
+      <NewContentBanner variant="trending" maxItems={4} />
 
       {/* Enhanced Latest Articles Section */}
       <section className='py-20 bg-gray-50'>

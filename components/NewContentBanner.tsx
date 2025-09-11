@@ -1,211 +1,228 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface ContentItem {
-  title: string;
-  description: string;
-  href: string;
-  category: string;
-  readTime: string;
-  isNew?: boolean;
-  isHot?: boolean;
-  icon: string;
-  stats?: string;
+interface NewContentBannerProps {
+  variant?: 'default' | 'featured' | 'trending';
+  maxItems?: number;
+  className?: string;
 }
 
-const hotContent: ContentItem[] = [
+const newContent = [
   {
-    title: "AI Business Automation 2025: Complete Implementation Guide",
-    description: "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 2025.",
-    href: "/blog/ai-business-automation-2025",
-    category: "AI & Automation",
-    readTime: "12 min read",
-    isNew: true,
-    isHot: true,
-    icon: "🤖",
-    stats: "40% productivity boost"
+    id: 'ai-enterprise-integration-2025',
+    title: 'AI Enterprise Integration 2025',
+    description: 'Complete implementation guide for enterprise AI transformation',
+    type: 'blog',
+    category: 'Enterprise AI',
+    readTime: '25 min',
+    status: 'New',
+    emoji: '🏢',
+    href: '/blog/ai-enterprise-integration-2025',
+    featured: true,
+    trending: false,
   },
   {
-    title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
-    href: "/blog/ai-startup-funding-playbook-2025",
-    category: "Startup Strategy",
-    readTime: "22 min read",
-    isNew: true,
-    isHot: true,
-    icon: "💰",
-    stats: "$47B+ funding insights"
+    id: 'ai-productivity-automation-2025',
+    title: 'AI Productivity Automation: 300% Boost',
+    description: 'Achieve unprecedented productivity gains with AI automation',
+    type: 'blog',
+    category: 'Productivity',
+    readTime: '22 min',
+    status: 'Trending',
+    emoji: '⚡',
+    href: '/blog/ai-productivity-automation-2025',
+    featured: true,
+    trending: true,
   },
   {
-    title: "AI Financial Services Transformation: $50M Cost Savings Case Study",
-    description: "Discover how a leading financial services company achieved $50M cost savings and 300% efficiency gains through comprehensive AI transformation.",
-    href: "/case-studies/ai-financial-services-transformation-2025",
-    category: "Case Study",
-    readTime: "18 min read",
-    isNew: true,
-    isHot: true,
-    icon: "🏦",
-    stats: "$50M savings achieved"
+    id: 'ai-cybersecurity-threats-2025',
+    title: 'AI Cybersecurity Threats 2025',
+    description: 'Complete defense guide against AI-powered cyber attacks',
+    type: 'blog',
+    category: 'Cybersecurity',
+    readTime: '16 min',
+    status: 'Critical',
+    emoji: '🛡️',
+    href: '/blog/ai-cybersecurity-threats-2025',
+    featured: true,
+    trending: false,
   },
   {
-    title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
-    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
-    href: "/resources/ai-implementation-master-guide-2025",
-    category: "Master Guide",
-    readTime: "150 pages",
-    isNew: true,
-    isHot: true,
-    icon: "📚",
-    stats: "500+ companies using this"
-  }
+    id: 'ai-transformation-manufacturing-2025',
+    title: 'AI Manufacturing Transformation',
+    description: '85% defect reduction case study in manufacturing',
+    type: 'case-study',
+    category: 'Manufacturing',
+    readTime: '12 min',
+    status: 'Success Story',
+    emoji: '🏭',
+    href: '/case-studies/ai-transformation-manufacturing-2025',
+    featured: true,
+    trending: true,
+  },
+  {
+    id: 'ai-2026-breakthrough-predictions',
+    title: 'AI 2026 Breakthrough Predictions',
+    description: 'Expert predictions for the next frontier of AI technology',
+    type: 'blog',
+    category: 'Future Predictions',
+    readTime: '25 min',
+    status: 'New',
+    emoji: '🔮',
+    href: '/blog/ai-2026-breakthrough-predictions',
+    featured: false,
+    trending: true,
+  },
+  {
+    id: 'ai-startup-funding-masterclass-2025',
+    title: 'AI Startup Funding Masterclass',
+    description: 'Complete guide to raising capital in the AI era',
+    type: 'blog',
+    category: 'Startup Funding',
+    readTime: '22 min',
+    status: 'New',
+    emoji: '💰',
+    href: '/blog/ai-startup-funding-masterclass-2025',
+    featured: false,
+    trending: false,
+  },
 ];
 
-interface NewContentBannerProps {
-  variant?: 'default' | 'gradient' | 'minimal';
-  showStats?: boolean;
-  maxItems?: number;
-}
+const getStatusColor = (status: string) => {
+  switch (status) {
+    case 'New':
+      return 'bg-green-100 text-green-800';
+    case 'Trending':
+      return 'bg-blue-100 text-blue-800';
+    case 'Critical':
+      return 'bg-red-100 text-red-800';
+    case 'Success Story':
+      return 'bg-purple-100 text-purple-800';
+    default:
+      return 'bg-gray-100 text-gray-800';
+  }
+};
 
-const NewContentBanner: React.FC<NewContentBannerProps> = ({ 
-  variant = 'default',
-  showStats = true,
-  maxItems = 4 
-}) => {
-  const content = hotContent.slice(0, maxItems);
+const getCategoryColor = (category: string) => {
+  switch (category) {
+    case 'Enterprise AI':
+      return 'bg-blue-100 text-blue-800';
+    case 'Productivity':
+      return 'bg-green-100 text-green-800';
+    case 'Cybersecurity':
+      return 'bg-red-100 text-red-800';
+    case 'Manufacturing':
+      return 'bg-purple-100 text-purple-800';
+    case 'Future Predictions':
+      return 'bg-indigo-100 text-indigo-800';
+    case 'Startup Funding':
+      return 'bg-yellow-100 text-yellow-800';
+    default:
+      return 'bg-gray-100 text-gray-800';
+  }
+};
 
-  const getVariantClasses = () => {
+export default function NewContentBanner({ 
+  variant = 'default', 
+  maxItems = 4, 
+  className = '' 
+}: NewContentBannerProps) {
+  const getFilteredContent = () => {
     switch (variant) {
-      case 'gradient':
-        return 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden';
-      case 'minimal':
-        return 'bg-white border-2 border-blue-200 text-gray-900';
+      case 'featured':
+        return newContent.filter(item => item.featured).slice(0, maxItems);
+      case 'trending':
+        return newContent.filter(item => item.trending).slice(0, maxItems);
       default:
-        return 'bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden';
+        return newContent.slice(0, maxItems);
     }
   };
 
-  const getCardClasses = () => {
-    switch (variant) {
-      case 'gradient':
-        return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20';
-      case 'minimal':
-        return 'bg-gray-50 hover:bg-gray-100 border border-gray-200';
-      default:
-        return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20';
-    }
-  };
+  const content = getFilteredContent();
 
-  const getTextClasses = () => {
-    switch (variant) {
-      case 'gradient':
-        return 'text-white';
-      case 'minimal':
-        return 'text-gray-900';
-      default:
-        return 'text-white';
-    }
-  };
+  if (content.length === 0) return null;
 
   return (
-    <section className={`py-20 ${getVariantClasses()}`}>
-      {variant !== 'minimal' && <div className="absolute inset-0 bg-black opacity-10"></div>}
-      
+    <section className={`py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden ${className}`}>
+      <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className={`inline-flex items-center ${variant === 'minimal' ? 'bg-blue-100 text-blue-800' : 'bg-white bg-opacity-20'} rounded-full px-6 py-2 mb-6`}>
-            <span className="text-sm font-medium">🔥 HOT THIS WEEK - JANUARY 2025</span>
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">
+              {variant === 'featured' ? '✨ FEATURED CONTENT' : 
+               variant === 'trending' ? '🔥 TRENDING NOW' : '📚 NEW CONTENT'}
+            </span>
           </div>
-          
-          <h2 className={`text-4xl md:text-6xl font-bold mb-6 ${getTextClasses()}`}>
-            🚀 Fresh AI & Business Content Just Dropped
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {variant === 'featured' ? '🚀 Featured AI Insights & Guides' :
+             variant === 'trending' ? '🔥 Trending Content This Week' : '📚 Fresh AI & Tech Content'}
           </h2>
-          
-          <p className={`text-xl md:text-2xl ${variant === 'minimal' ? 'text-gray-600' : 'opacity-90'} mb-8 max-w-4xl mx-auto leading-relaxed`}>
-            Discover our latest expert insights, case studies, and resources. From AI predictions and automation trends 
-            to retail transformation success stories, get the knowledge you need to succeed in 2025.
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            {variant === 'featured' ? 
+              'Discover our most comprehensive and impactful content covering AI implementation, productivity automation, cybersecurity, and real-world success stories.' :
+             variant === 'trending' ?
+              'Explore the most popular and highly-rated content from our AI experts. Fresh insights, practical guides, and proven strategies.' :
+              'Stay ahead with our latest articles, case studies, and resources covering the most important trends in AI, automation, and business growth.'}
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               href="/blog"
-              className={`${variant === 'minimal' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-white text-blue-600 hover:bg-gray-100'} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
+              className="bg-white text-indigo-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
             >
               📚 Read Latest Articles
             </Link>
             <Link
-              href="/resources"
-              className={`${variant === 'minimal' ? 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-600'} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
+              href="/case-studies"
+              className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
             >
-              📋 Download Free Resources
+              📋 View Case Studies
             </Link>
           </div>
         </div>
 
-        {/* Featured Content Grid */}
+        {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {content.map((item, index) => (
-            <Link key={item.href} href={item.href} className="group">
-              <div className={`${getCardClasses()} p-6 rounded-xl transition-all duration-300`}>
+          {content.map((item) => (
+            <Link key={item.id} href={item.href} className="group">
+              <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 h-full">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.icon}
+                  {item.emoji}
                 </div>
-                
-                <div className="flex items-center gap-2 mb-3">
-                  {item.isNew && (
-                    <span className={`${variant === 'minimal' ? 'bg-green-100 text-green-800' : 'bg-white bg-opacity-20 text-white'} text-xs font-medium px-2 py-1 rounded-full`}>
-                      NEW
-                    </span>
-                  )}
-                  {item.isHot && (
-                    <span className={`${variant === 'minimal' ? 'bg-orange-100 text-orange-800' : 'bg-white bg-opacity-20 text-white'} text-xs font-medium px-2 py-1 rounded-full`}>
-                      HOT
-                    </span>
-                  )}
-                </div>
-                
-                <h3 className={`text-lg font-semibold mb-2 ${getTextClasses()}`}>
+                <h3 className="text-lg font-semibold mb-2 line-clamp-2">
                   {item.title}
                 </h3>
-                
-                <p className={`text-sm ${variant === 'minimal' ? 'text-gray-600' : 'opacity-90'} mb-3 line-clamp-3`}>
+                <p className="text-sm opacity-90 mb-3 line-clamp-2">
                   {item.description}
                 </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className={`flex items-center text-xs ${variant === 'minimal' ? 'text-gray-500' : 'opacity-75'}`}>
-                    <span>{item.readTime}</span>
-                    <span className="mx-2">•</span>
-                    <span>{item.category}</span>
-                  </div>
-                  {showStats && item.stats && (
-                    <div className={`text-xs ${variant === 'minimal' ? 'text-blue-600' : 'opacity-75'}`}>
-                      {item.stats}
-                    </div>
-                  )}
+                <div className="flex items-center justify-between mb-3">
+                  <span className={`text-xs px-2 py-1 rounded-full ${getCategoryColor(item.category)}`}>
+                    {item.category}
+                  </span>
+                  <span className={`text-xs px-2 py-1 rounded-full ${getStatusColor(item.status)}`}>
+                    {item.status}
+                  </span>
+                </div>
+                <div className="flex items-center text-xs opacity-75">
+                  <span>{item.readTime} read</span>
+                  <span className="mx-2">•</span>
+                  <span className="capitalize">{item.type.replace('-', ' ')}</span>
                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        <div className="text-center mt-8">
+        {/* View All Button */}
+        <div className="text-center mt-12">
           <Link
-            href="/blog"
-            className={`${variant === 'minimal' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-white text-blue-600 hover:bg-gray-100'} px-8 py-3 rounded-lg font-semibold transition-colors inline-block mr-4`}
+            href={variant === 'trending' ? '/blog?filter=trending' : '/blog'}
+            className="inline-flex items-center gap-2 bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
           >
-            View All Articles
-          </Link>
-          <Link
-            href="/resources"
-            className={`${variant === 'minimal' ? 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-600'} px-8 py-3 rounded-lg font-semibold transition-colors inline-block`}
-          >
-            Download Resources
+            View All {variant === 'trending' ? 'Trending' : 'Content'}
+            <span>→</span>
           </Link>
         </div>
       </div>
     </section>
   );
-};
-
-export default NewContentBanner;
-export { hotContent };
+}
