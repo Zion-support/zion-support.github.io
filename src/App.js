@@ -13,10 +13,14 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const baseRoutes = [
     { path: '/', element: _jsx(Home, {}) },
     { path: '/about', element: _jsx(About, {}) },
     { path: '/contact', element: _jsx(Contact, {}) },
+    { path: '/blog', element: _jsx(Blog, {}) },
+    { path: '/blog/:slug', element: _jsx(BlogPost, {}) },
 ];
 function EnhancedSuspenseFallback() {
     return (_jsx(PageLoader, { text: "Loading Zion Tech Group...", className: "bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark" }));

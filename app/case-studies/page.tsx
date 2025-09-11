@@ -3,6 +3,27 @@ import Link from 'next/link';
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
+      id: 'fortune-500-ai-transformation',
+      title: 'Fortune 500 Manufacturing: AI-Powered Supply Chain Transformation',
+      client: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge:
+        'Manual supply chain processes across 15 countries causing delays, errors, and $500K annual losses',
+      solution:
+        'Comprehensive AI automation platform with demand forecasting, inventory optimization, and supplier communication',
+      results: [
+        '40% reduction in supply chain costs',
+        '60% faster order processing',
+        '$2.3M annual savings',
+        '95% accuracy in demand forecasting',
+      ],
+      technologies: ['Python', 'TensorFlow', 'AWS SageMaker', 'React', 'Kubernetes'],
+      duration: '8 months',
+      team: '12 developers',
+      image: '/api/placeholder/600/400',
+      featured: true,
+    },
+    {
       id: 'fintech-ai-platform',
       title: 'AI-Powered Financial Analytics Platform',
       client: 'Fortune 500 Fintech Company',
@@ -221,6 +242,34 @@ export default function CaseStudiesPage() {
       image: '/api/placeholder/600/400',
       featured: false,
     },
+    {
+      id: 'ai-healthcare-diagnosis-2025',
+      title: 'AI-Powered Medical Diagnosis Platform',
+      client: 'MedCenter Plus',
+      industry: 'Healthcare',
+      challenge:
+        'Diagnostic accuracy varied significantly between physicians (60-85%) with average diagnosis time of 45 minutes per patient',
+      solution:
+        'Comprehensive AI diagnostic platform combining computer vision, NLP, and machine learning to analyze medical images, lab results, and symptoms',
+      results: [
+        '95% diagnostic accuracy achieved',
+        '70% reduction in diagnosis time',
+        '85% reduction in misdiagnosis rate',
+        '$2.3M annual cost savings',
+      ],
+      technologies: [
+        'TensorFlow',
+        'PyTorch',
+        'OpenCV',
+        'BERT',
+        'AWS SageMaker',
+        'Kubernetes',
+      ],
+      duration: '12 months',
+      team: '15 developers',
+      image: '/api/placeholder/600/400',
+      featured: true,
+    },
   ];
 
   const featuredStudies = caseStudies.filter(study => study.featured);
@@ -356,66 +405,77 @@ export default function CaseStudiesPage() {
 }
 
 function FeaturedCaseStudy({ study }: { study: any }) {
+  const href = study.id === 'fortune-500-ai-transformation' 
+    ? `/case-studies/${study.id}` 
+    : '/case-studies';
+    
   return (
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-      <div className='md:flex'>
-        <div className='md:w-1/2'>
-          <div className='aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center'>
-            <div className='text-6xl'>📊</div>
-          </div>
-        </div>
-        <div className='md:w-1/2 p-8'>
-          <div className='mb-4'>
-            <span className='bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full'>
-              {study.industry}
-            </span>
-          </div>
-          <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-            {study.title}
-          </h3>
-          <p className='text-gray-600 mb-4'>
-            <strong>Client:</strong> {study.client}
-          </p>
-
-          <div className='mb-6'>
-            <h4 className='font-semibold text-gray-900 mb-2'>Challenge:</h4>
-            <p className='text-gray-600 text-sm mb-4'>{study.challenge}</p>
-
-            <h4 className='font-semibold text-gray-900 mb-2'>Solution:</h4>
-            <p className='text-gray-600 text-sm mb-4'>{study.solution}</p>
-          </div>
-
-          <div className='mb-6'>
-            <h4 className='font-semibold text-gray-900 mb-3'>Key Results:</h4>
-            <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
-              {study.results.map((result: string, index: number) => (
-                <div key={index} className='flex items-center gap-2'>
-                  <div className='w-2 h-2 bg-green-500 rounded-full'></div>
-                  <span className='text-sm text-gray-700'>{result}</span>
-                </div>
-              ))}
+    <Link href={href} className='group'>
+      <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+        <div className='md:flex'>
+          <div className='md:w-1/2'>
+            <div className='aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center'>
+              <div className='text-6xl'>📊</div>
             </div>
           </div>
-
-          <div className='flex flex-wrap gap-2 mb-4'>
-            {study.technologies.map((tech: string, index: number) => (
-              <span
-                key={index}
-                className='bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded'
-              >
-                {tech}
+          <div className='md:w-1/2 p-8'>
+            <div className='mb-4'>
+              <span className='bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full'>
+                {study.industry}
               </span>
-            ))}
-          </div>
+            </div>
+            <h3 className='text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors'>
+              {study.title}
+            </h3>
+            <p className='text-gray-600 mb-4'>
+              <strong>Client:</strong> {study.client}
+            </p>
 
-          <div className='text-sm text-gray-500'>
-            <span>
-              {study.duration} • {study.team}
-            </span>
+            <div className='mb-6'>
+              <h4 className='font-semibold text-gray-900 mb-2'>Challenge:</h4>
+              <p className='text-gray-600 text-sm mb-4'>{study.challenge}</p>
+
+              <h4 className='font-semibold text-gray-900 mb-2'>Solution:</h4>
+              <p className='text-gray-600 text-sm mb-4'>{study.solution}</p>
+            </div>
+
+            <div className='mb-6'>
+              <h4 className='font-semibold text-gray-900 mb-3'>Key Results:</h4>
+              <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
+                {study.results.map((result: string, index: number) => (
+                  <div key={index} className='flex items-center gap-2'>
+                    <div className='w-2 h-2 bg-green-500 rounded-full'></div>
+                    <span className='text-sm text-gray-700'>{result}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className='flex flex-wrap gap-2 mb-4'>
+              {study.technologies.map((tech: string, index: number) => (
+                <span
+                  key={index}
+                  className='bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded'
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className='flex items-center justify-between'>
+              <div className='text-sm text-gray-500'>
+                <span>
+                  {study.duration} • {study.team}
+                </span>
+              </div>
+              <span className='text-blue-600 font-medium group-hover:underline'>
+                Read Full Case Study →
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
