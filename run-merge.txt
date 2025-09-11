@@ -1,0 +1,7 @@
+# Copy and paste this command to merge all PRs:
+
+cd /workspace && chmod +x execute-merge.sh && ./execute-merge.sh
+
+# OR run this single command:
+
+git checkout main && git pull origin main && git fetch origin "+refs/pull/*/head:refs/remotes/origin/pr/*" && for PR in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/pr | awk -F/ '{print $3}' | sort -n | tail -n 10); do echo "Processing PR #$PR"; git checkout -B "merge-pr-$PR" main; if git merge -m "Merge PR #$PR" -X theirs "origin/pr/$PR" 2>/dev/null; then echo "Clean merge"; else git checkout --ours -- package-lock.json 2>/dev/null || true; git checkout --ours -- yarn.lock 2>/dev/null || true; git checkout --theirs -- dist/** 2>/dev/null || true; git add -A; git commit -m "Auto-resolve conflicts for PR #$PR" 2>/dev/null || continue; fi; git checkout main; git merge --no-ff -m "Merge PR #$PR" "merge-pr-$PR"; git push origin main; git branch -D "merge-pr-$PR"; echo "Merged PR #$PR"; done

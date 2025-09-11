@@ -1,0 +1,18 @@
+import React from 'react';
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+const APIReference: NextPage = () => {;
+  return (;
+    <MainLayout;
+      title="API Reference - Zion Tech Group";
+      description="Complete API reference for Zion Tech Group services";
+      keywords="API reference, REST API, SDK, authentication">;
+      <div className="container mx-auto px-4 py-16">;
+        <h1 className="text-4xl font-bold mb-8">API Reference</h1>;
+        <p className="text-lg text-gray-600">;
+          Complete API documentation for integrating with Zion Tech Group services.;
+        </p>;
+      </div>;
+    </MainLayout>;
+  );
+};

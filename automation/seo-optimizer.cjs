@@ -1,92 +1,202 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+const fs = require("fs");
+const path = require("path");
+
+=======
+/**
+ * SEO Optimizer
+ * Automatically optimizes SEO for the application
+ */
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+
+>>>>>>> origin/main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+const { execSync } = require('child_process');
+>>>>>>> origin/main
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+console.log('🔍 Starting SEO Optimizer...');
+
 class SEOOptimizer {
   constructor() {
-    this.seoData = new Map();
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.ensureReportsDir();
   }
 
-  async analyzeSEO() {
-    const pagesDir = path.join(__dirname, '..', '..', 'pages');
-    this.scanPages(pagesDir);
-    
-    const issues = this.findSEOIssues();
-    const suggestions = this.generateSuggestions(issues);
-    
-    console.log('SEO analysis completed');
-    return { issues, suggestions };
-  }
-
-  scanPages(dir) {
-    if (!fs.existsSync(dir)) return;
-    
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        this.scanPages(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-        this.analyzePage(filePath);
-      }
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
 
-  analyzePage(filePath) {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const route = filePath.replace(path.join(__dirname, '..', '..', 'pages'), '').replace(/\.[jt]sx?$/, '');
-    
-    const seoData = {
-      hasTitle: /<title>/.test(content),
-      hasDescription: /meta.*description/.test(content),
-      hasKeywords: /meta.*keywords/.test(content),
-      hasOpenGraph: /og:/i.test(content),
-      hasTwitterCard: /twitter:/i.test(content),
-      hasStructuredData: /application\/ld\+json/.test(content)
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async optimizeSEO() {
+    const seoOptimizations = [
+      { name: 'Sitemap Generation', command: 'npm run sitemap:generate', description: 'Generating sitemap for search engines' },
+      { name: 'Search Index', command: 'npm run search:index', description: 'Generating search index' },
+      { name: 'Meta Tags Check', command: 'npm run test:accessibility', description: 'Checking meta tags and accessibility' },
+      { name: 'Robots.txt Check', command: 'ls -la public/robots.txt', description: 'Checking robots.txt file' }
+    ];
+
+    const results = [];
+    let successfulOptimizations = 0;
+
+    for (const optimization of seoOptimizations) {
+      try {
+        this.log(`🔧 Running ${optimization.name}...`);
+        this.log(`📝 ${optimization.description}`);
+        
+        execSync(optimization.command, { stdio: 'pipe' });
+        
+        console.log(`✅ ${optimization.name} completed successfully`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'success', 
+          description: optimization.description,
+          error: null 
+        });
+        successfulOptimizations++;
+      } catch (error) {
+        console.log(`❌ ${optimization.name} failed`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'failed', 
+          description: optimization.description,
+          error: error.message 
+        });
+      }
+    }
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalOptimizations: seoOptimizations.length,
+      successfulOptimizations,
+      failedOptimizations: seoOptimizations.length - successfulOptimizations,
+      results,
+      seoScore: Math.round((successfulOptimizations / seoOptimizations.length) * 100)
     };
+
+    const reportPath = path.join(this.reportsDir, 'seo-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    this.seoData.set(route, seoData);
+    this.log(`📊 SEO optimization completed! Report saved to: ${reportPath}`);
+    this.log(`🔍 SEO Score: ${report.seoScore}% (${successfulOptimizations}/${seoOptimizations.length} optimizations successful)`);
+    
+    return report;
+  }
+}
+<<<<<<< HEAD
+// Generate SEO report
+const report = {
+  "timestamp": new Date().toISOString(),
+  "checks": seoChecks.map(check => ({
+    name: check.name,
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
+};
+
+<<<<<<< HEAD
+class SEOOptimizer {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
+    this.ensureLogDir();
   }
 
-  findSEOIssues() {
-    const issues = [];
-    
-    for (const [route, data] of this.seoData) {
-      if (!data.hasTitle) issues.push({ route, type: 'missing-title', severity: 'high' });
-      if (!data.hasDescription) issues.push({ route, type: 'missing-description', severity: 'medium' });
-      if (!data.hasOpenGraph) issues.push({ route, type: 'missing-og', severity: 'medium' });
-      if (!data.hasStructuredData) issues.push({ route, type: 'missing-structured-data', severity: 'low' });
+  ensureLogDir() {
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
     }
     
-    return issues;
-  }
-
-  generateSuggestions(issues) {
-    const suggestions = [];
-    
-    for (const issue of issues) {
-      switch (issue.type) {
-        case 'missing-title':
-          suggestions.push(`Add <title> tag to ${issue.route}`);
-          break;
-        case 'missing-description':
-          suggestions.push(`Add meta description to ${issue.route}`);
-          break;
-        case 'missing-og':
-          suggestions.push(`Add Open Graph tags to ${issue.route}`);
-          break;
-        case 'missing-structured-data':
-          suggestions.push(`Add structured data to ${issue.route}`);
-          break;
-      }
+    // Check for meta description
+    if (content.includes('name="description"')) {
+      checks.push({ type: "meta_description", status: "ok", message: "Meta description found" });
+    } else {
+      checks.push({ type: "meta_description", status: "warning", message: "Meta description missing" });
     }
     
-    return suggestions;
+    // Check for Open Graph tags
+    if (content.includes('property="og:title"')) {
+      checks.push({ type: "og_title", status: "ok", message: "Open Graph title found" });
+    } else {
+      checks.push({ type: "og_title", status: "warning", message: "Open Graph title missing" });
+    }
+    
+    // Check for canonical URL
+    if (content.includes('rel="canonical"')) {
+      checks.push({ type: "canonical", status: "ok", message: "Canonical URL found" });
+    } else {
+      checks.push({ type: "canonical", status: "warning", message: "Canonical URL missing" });
+    }
+    
+    return checks;
+  } catch (error) {
+    return [{ type: "file_read", status: "error", message: `Failed to read file: ${error.message}` }];
   }
 }
 
+// Check for sitemap
+function checkSitemap() {
+  const sitemapFiles = ["sitemap.xml", "sitemap.txt", "sitemap.json"];
+  const found = sitemapFiles.find(file => fs.existsSync(file));
+  
+  if (found) {
+    return { type: "sitemap", status: "ok", message: `Sitemap found: ${found}` };
+  } else {
+    return { type: "sitemap", status: "warning", message: "No sitemap found" };
+  }
+}
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+// Run if called directly
+if (require.main === module) {
+  const optimizer = new SEOOptimizer();
+  optimizer.start().catch(console.error);
+}
+
+module.exports = SEOOptimizer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
+// Run SEO optimization
 const optimizer = new SEOOptimizer();
-optimizer.analyzeSEO();
+optimizer.optimizeSEO().catch(console.error);
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
