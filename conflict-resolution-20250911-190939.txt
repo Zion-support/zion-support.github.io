@@ -23983,3 +23983,9 @@
 2025-09-11 19:17:17 - Resolving conflicts in tsconfig.json for branch backup-main-20250823-225952
 2025-09-11 19:17:17 - Resolving conflicts in types.disabled/service-variants.ts for branch backup-main-20250823-225952
 2025-09-11 19:17:17 - Resolving conflicts in types.disabled/service-variants.ts.backup.1755989974 for branch backup-main-20250823-225952
+2025-09-11 19:17:19 - Merge conflicts detected in backup-main-20250823-231016
+2025-09-11 19:17:20 - Resolving conflicts in public/automation/content-registry.json for branch backup-main-20250823-231016
+2025-09-11 19:17:20 - Resolving conflicts in public/automation/new-content-registry.json for branch backup-main-20250823-231016
+2025-09-11 19:17:20 - Resolving conflicts in temp_components.disabled/reports/cases/case-2025-08-14-140146.tsx for branch backup-main-20250823-231016
+2025-09-11 19:17:20 - Resolving conflicts in temp_components.disabled/reports/guides/guide-2025-08-14-140146.tsx for branch backup-main-20250823-231016
+2025-09-11 19:17:20 - Resolving conflicts in temp_components.disabled/reports/patterns/pattern-2025-08-14-140146.tsx for branch backup-main-20250823-231016
