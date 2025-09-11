@@ -1,5 +1,8 @@
 
 import React from 'react';
+<<<<<<< HEAD
+import Card from '../ui/Card';
+=======
 
 
 import React from 'react',
@@ -46,6 +49,7 @@ const Features: React.FC<FeaturesProps> = ({;
             {title}
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+>>>>>>> main
 
 interface Feature {
   icon: React.ReactNode,
@@ -166,12 +170,15 @@ const Features: React.FC<FeaturesProps> = ({
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
               </div>
+<<<<<<< HEAD
+=======
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
+>>>>>>> main
             </Card>
           ))}
         </div>

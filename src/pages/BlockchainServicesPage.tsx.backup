@@ -175,7 +175,6 @@ const _useCases = [
         icon: <Shield className="h-6 w-6"/>
     },
     {
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -395,9 +394,5 @@ export default function BlockchainServicesPage() {
       </section>
 
       <TrustedBySection />
-<<<<<<< HEAD
     </div>);
 }
-=======
-    </div>)}
->>>>>>> origin/clean-error-fixing-automation

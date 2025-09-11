@@ -27,16 +27,8 @@ function buildItems(repoUrl, workspaceRoot) {
     if (fileExists(c.check)) items.push({ type: 'internal', href: c.href, label: c.label });
   });
 
-<<<<<<< HEAD
-  // External useful links (avoid GitHub Actions; prefer on-site resources)
-=======
-  // External useful links
-<<<<<<< HEAD
->>>>>>> origin/chore/futuristic-home-automations
-=======
   items.push({ type: 'external', href: '/.netlify/functions/homepage-automation', label: 'Netlify Functions — homepage automation' });
   items.push({ type: 'external', href: '/.netlify/functions/maintenance-scheduler', label: 'Netlify Functions — maintenance scheduler' });
->>>>>>> origin/chore/netlify-automations-futuristic-home
   if (fileExists(path.join(workspaceRoot, 'docs'))) {
     items.push({ type: 'internal', href: '/docs', label: 'Docs — technical notes & guides' });
   }

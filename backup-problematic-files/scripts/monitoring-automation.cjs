@@ -31,8 +31,4 @@ const path = require('path')
         "type"
         "severity"
                 console.error('Failed to load "metrics")
-<<<<<<< HEAD
     console.error('Monitoring automation "failed")
-=======
-    console.error('Monitoring automation "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

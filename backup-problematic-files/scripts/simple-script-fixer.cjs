@@ -91,8 +91,4 @@ class SimpleScriptFixer {}
 if (require.main === module) {}
   const fixer = new SimpleScriptFixer();
   fixer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = SimpleScriptFixer;
-=======
-module.exports = SimpleScriptFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

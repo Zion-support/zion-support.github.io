@@ -6,12 +6,6 @@
       <stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
   </defs>
-<<<<<<< HEAD:out/favicon.svg
   <rect width="64" height="64" rx="12" fill="#0b0b0f"/>
   <path d="M16 18h32l-6 8H26l20 20H16l6-8h16L16 18z" fill="url(#g)"/>
 </svg>
-=======
-  <rect width="64" height="64" rx="12" fill="#0a0a0a"/>
-  <path d="M12 44 L32 12 L52 44 Z" fill="url(#g)"/>
-</svg>
->>>>>>> origin/chore/site-link-fixes:dist/favicon.svg

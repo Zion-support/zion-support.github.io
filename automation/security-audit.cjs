@@ -25,7 +25,6 @@ const securityChecks = [{
         }
       });
       >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
       >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           ) {
@@ -37,36 +36,3 @@ const securityChecks = [{
         }
       } else {
       }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-=======>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-console.log('� Security Audit Starting...\n')
-    "name"
-        execSync('npm audit --audit-level=moderate', { "stdio"})
-    "name"
-    "name"
-            !content.includes('// "Security")
-    "name"
-    "name"
-<<<<<<< HEAD
-    "status"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    "status"
-    "status"
-    "status"
-    "status">>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
