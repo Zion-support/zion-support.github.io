@@ -1,11 +1,3 @@
-import { Cloud } from 'lucide-react';
-import { Brain } from 'lucide-react';
-const features = [];
-const benefits = [];
-const useCases = [];
-const integrations = [];
-const applications = [];
-
 export interface EmergingTechService2027 {
   id: string;
   title: string;
@@ -28,18 +20,21 @@ export interface EmergingTechService2027 {
   featured: boolean;
   location: string;
   availability: string;
-author: {
+  author: {
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean};
+    verified: boolean;
+  };
   images: string[];
   createdAt: string;
   technologyStack: string[];
   useCases: string[];
   integrations: string[];
   compliance: string[];
-  support: string[]}
+  support: string[];
+}
+
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   // Blockchain & DeFi Platform
   {
@@ -82,17 +77,18 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
-    technologyStack["Solidity", "Rust", "JavaScript", "Python", "Web3.js"],
+    technologyStack: ["Solidity", "Rust", "JavaScript", "Python", "Web3.js"],
     useCases: ["DeFi Applications", "Smart Contracts", "NFT Marketplaces", "Cross-chain Operations"],
     integrations: ["MetaMask", "WalletConnect", "Chainlink", "Uniswap", "OpenSea"],
-    compliance["AML/KYC", "Regulatory Compliance", "Security Audits", "Privacy Standards"],
+    compliance: ["AML/KYC", "Regulatory Compliance", "Security Audits", "Privacy Standards"],
     support: ["24/7 Support", "Developer Resources", "Security Audits", "Training"]
   },
+
   // Advanced IoT Platform
   {
     id: "advanced-iot-platform",
@@ -137,14 +133,15 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
-    technologyStack["Python", "Node.js", "Kubernetes", "Docker", "MQTT"],
+    technologyStack: ["Python", "Node.js", "Kubernetes", "Docker", "MQTT"],
     useCases: ["Smart Manufacturing", "Connected Healthcare", "Precision Agriculture", "Smart Cities"],
     integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT Brokers", "Analytics Tools"],
-    compliance["ISO 27001", "GDPR", "Industry Standards", "Security Protocols"],
+    compliance: ["ISO 27001", "GDPR", "Industry Standards", "Security Protocols"],
     support: ["24/7 Support", "Implementation", "Training", "Custom Development"]
   },
+
   // Robotics & Automation Platform
   {
     id: "robotics-automation-platform",
@@ -189,14 +186,15 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
-    technologyStack["ROS", "Python", "C++", "TensorFlow", "Computer Vision"],
+    technologyStack: ["ROS", "Python", "C++", "TensorFlow", "Computer Vision"],
     useCases: ["Assembly Lines", "Quality Inspection", "Material Handling", "Packaging"],
     integrations: ["PLC Systems", "MES Systems", "ERP Systems", "Vision Cameras", "Sensors"],
-    compliance["Safety Standards", "Industry Regulations", "Quality Standards", "ISO Certifications"],
+    compliance: ["Safety Standards", "Industry Regulations", "Quality Standards", "ISO Certifications"],
     support: ["24/7 Support", "Installation", "Training", "Maintenance"]
   },
+
   // Augmented Reality Platform
   {
     id: "ar-vr-enterprise-platform",
@@ -241,14 +239,15 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
-    technologyStack["Unity", "Unreal Engine", "WebXR", "Three.js", "ARCore/ARKit"],
+    technologyStack: ["Unity", "Unreal Engine", "WebXR", "Three.js", "ARCore/ARKit"],
     useCases: ["Employee Training", "Product Design", "Virtual Meetings", "Customer Experiences"],
     integrations: ["Microsoft HoloLens", "Meta Quest", "Magic Leap", "Mobile Devices", "Web Browsers"],
-    compliance["Accessibility Standards", "Privacy Regulations", "Content Guidelines", "Platform Requirements"],
+    compliance: ["Accessibility Standards", "Privacy Regulations", "Content Guidelines", "Platform Requirements"],
     support: ["24/7 Support", "Content Creation", "Training", "Custom Development"]
   },
+
   // Digital Twin Platform
   {
     id: "digital-twin-platform",
@@ -293,14 +292,15 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
-    technologyStack["Unity", "Unreal Engine", "Python", "Three.js", "IoT Platforms"],
+    technologyStack: ["Unity", "Unreal Engine", "Python", "Three.js", "IoT Platforms"],
     useCases: ["Asset Monitoring", "Process Optimization", "Predictive Maintenance", "Training & Simulation"],
     integrations: ["IoT Sensors", "CAD Systems", "PLM Systems", "Analytics Tools", "Cloud Platforms"],
-    compliance["Industry Standards", "Data Security", "Privacy Regulations", "Quality Standards"],
+    compliance: ["Industry Standards", "Data Security", "Privacy Regulations", "Quality Standards"],
     support: ["24/7 Support", "Implementation", "Training", "Custom Development"]
   },
+
   // Biometric Security Platform
   {
     id: "biometric-security-platform",
@@ -345,14 +345,15 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
-    technologyStack["Python", "TensorFlow", "OpenCV", "React Native", "Node.js"],
+    technologyStack: ["Python", "TensorFlow", "OpenCV", "React Native", "Node.js"],
     useCases: ["Access Control", "Identity Verification", "Fraud Prevention", "Secure Authentication"],
     integrations: ["Active Directory", "LDAP", "SSO Systems", "Mobile Apps", "Web Applications"],
-    compliance["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
+    compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
     support: ["24/7 Support", "Implementation", "Training", "Custom Development"]
   },
+
   // Neuromorphic Computing Platform
   {
     id: "neuromorphic-computing-platform",
@@ -397,12 +398,12 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2027-01-15T10:00:00.000Z",
-    technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],;
-    useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],;
-    integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],;
-    compliance: ["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],;
-    support: ["24/7 Support", "Research Collaboration", "Training", "Custom Development"];
-  };
+    technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],
+    useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],
+    integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],
+    compliance: ["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],
+    support: ["24/7 Support", "Research Collaboration", "Training", "Custom Development"]
+  }
 ];

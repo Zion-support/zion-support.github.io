@@ -1,7 +1,9 @@
-import React from 'react';
-// Next.js routing - no need for react-router-dom
+// Developer routes - imports removed as pages are not found
+
 export default function DeveloperRoutes() {
-    return (<>
+  return (
+    <>
       {/* Developer portal routes can be added here */}
-    </>);
+    </>
+  );
 }
